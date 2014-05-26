@@ -1,0 +1,11 @@
+name: "Papers We Love"
+markdown: redcarpet
+#pygments: true
+highlighter: pygments
+permalink: :categories/:title
+exclude: [README.md, LICENSE, Makefile]
+
+# Information for the Atom feed
+gereksiz:
+   author: "Andrea Giardini"
+   email: "contact@andreagiardini.com"
