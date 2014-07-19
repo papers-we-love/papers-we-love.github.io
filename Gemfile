@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 gem "middleman", "~> 3.3.3"
 gem "middleman-blog", "~> 3.5.3"
 gem "middleman-deploy"
+gem "middleman-livereload"
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"
@@ -16,7 +17,3 @@ gem "nokogiri"
 gem 'sass'
 gem 'bourbon'
 gem 'neat'
-
-group :development do
-  gem 'middleman-livereload'
-end
