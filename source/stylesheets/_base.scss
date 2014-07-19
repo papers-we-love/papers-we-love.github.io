@@ -1,0 +1,25 @@
+
+// Badges
+
+%badge {
+  display: inline-block;
+  padding: 4px 10px 2px 10px;
+  margin: 0 .6em 0 0;
+  border-radius: 3px;
+  text-decoration: none;
+  font-family: 'Computer Modern Sans';
+  background-color: #ccc;
+  color: #fff;
+  &:hover {
+    background-color: $blue-link;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Computer Modern Serif';
+  @include media($desktop) {
+    padding: 0 4em;
+  }
+}
