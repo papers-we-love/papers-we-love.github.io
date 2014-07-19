@@ -130,3 +130,30 @@ body {
   }
 
 }
+
+footer.nav-footer {
+  @include outer-container;
+
+  h3 {
+    text-align: center;
+    font-size: 1em;
+    margin: 1em 0;
+    padding: 0;
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  @include media($desktop) {
+    nav {
+      border: #eee 1px solid;
+      border-left: 0;
+      border-right: 0;
+      margin-top: 2em;
+    }
+    .nav-footer-list {
+      text-align: center;
+      padding: 1em 0;
+    }
+  }
+}

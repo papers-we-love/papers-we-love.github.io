@@ -4,7 +4,6 @@ date: 2012-01-01
 author: Zeeshan
 category: meetup
 tags: haskell, video
-type: meetup
 label: Meetup NYC
 label_url: http://google.command
 presenter: Erik Hinton

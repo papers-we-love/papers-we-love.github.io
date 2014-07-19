@@ -1,6 +1,20 @@
 <% wrap_layout :layout do %>
-  <h1><%= current_page.title %></h1>
-  <article>
-    <%= yield %>
-  </article>
+    <% @art = current_page %>
+    <article class="article">
+        <h1><%= current_page.title %></h1>
+        <% if current_page.data.category == "meetup" %>
+            <%= partial 'partials/_presenter' %>
+        <% end %>
+        <%= yield %>
+        <footer class="article-metadata">
+            <em>Tags:</em>
+            <% current_page.tags.each do |tag| %>
+                <%= link_to tag, "/tags/#{tag}" %>
+            <% end %>
+            <em>Category:</em>
+            <%= link_to current_page.data.category, "/categories/#{current_page.data.category}"%>
+            <em>Posted by:</em>
+            <%= current_page.data.author %>
+        </footer>
+    </article>
 <% end %>

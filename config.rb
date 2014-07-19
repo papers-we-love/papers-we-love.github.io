@@ -36,12 +36,6 @@ ready do
   sitemap.resources.group_by {|p| p.data["category"] }.each do |category, pages|
     @category_list << { :category => category, :pages => pages }
   end
-
-  archive_resources = []
-  blog.articles.group_by {|a| a.date.year }.each do |year, year_articles|
-    archive_resources << {:year => year, :articles => year_articles}
-  end
-  proxy "/archives.html", "archive.html", locals: { archives: archive_resources }
 end
 
 ###
@@ -132,16 +126,4 @@ activate :deploy do |deploy|
   # deploy.remote   = "custom-remote" # remote name or git url, default: origin
   # deploy.branch   = "custom-branch" # default: gh-pages
   # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
-end
-
-###
-# Custom Helpers
-###
-helpers do
-  def home_meta(article)
-    text = <<OUT
-
-OUT
-    ERB.new(text).result()
-  end
 end
