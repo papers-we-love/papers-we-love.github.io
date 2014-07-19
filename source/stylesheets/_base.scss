@@ -23,3 +23,109 @@ body {
     padding: 0 4em;
   }
 }
+
+// Top Navigation
+// ==============
+.nav-top {
+  @include outer-container;
+
+  @include media($desktop) {
+    border-bottom: #ddd 1px solid;
+  }
+
+  .nav-top-img {
+    @include span-columns(4);
+    text-align: center;
+
+    img {
+      margin: 1em 0 0 0;
+      padding: 0;
+    }
+
+    @include media($desktop) {
+      @include span-columns(1);
+      text-align: left;
+      img {
+        margin-top: 1.5em;
+      }
+    }
+
+  }
+
+  nav {
+    @include span-columns(4);
+    text-align: center;
+
+    @include media($desktop) {
+      @include span-columns(3);
+      text-align: right;
+    }
+
+  }
+}
+
+// Horizontal menu
+@mixin nav-list-links {
+  a {
+    color: #666;
+    text-decoration: none;
+    &:hover {
+      color: $blue-link;
+    }
+  }
+}
+
+@mixin nav-list-horizontal {
+  padding: 2em 0;
+
+  li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 0 10px;
+    margin: 0;
+    border-right: #ddd 1px solid;
+    background-color: #fff;
+
+    &:last-child {
+      border-right: 0px;
+      padding-right: 0;
+    }
+
+    &:hover {
+      background-color: #fff;
+      a {
+        color: #666;
+      }
+    }
+
+    @include nav-list-links;
+  }
+}
+
+.nav-top-list {
+  margin: 0;
+  padding: 0;
+
+  li {
+    text-align: center;
+    list-style-type: none;
+    padding: .5em 0;
+    margin: 0 0 1px 0;
+    background-color: #eee;
+
+    @include nav-list-links;
+
+    &:hover {
+      background-color: $blue;
+      cursor: pointer;
+      a {
+        color: #fff;
+      }
+    }
+  }
+
+  @include media($desktop) {
+    @include nav-list-horizontal;
+  }
+
+}

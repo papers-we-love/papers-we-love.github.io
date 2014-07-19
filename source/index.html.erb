@@ -2,23 +2,51 @@
 pageable: true
 per_page: 10
 ---
-<% if paginate && num_pages > 1 %>
-  <p>Page <%= page_number %> of <%= num_pages %></p>
 
-  <% if prev_page %>
-    <p><%= link_to 'Previous page', prev_page %></p>
-  <% end %>
-<% end %>
+<section class="home-abstract">
+    <div class="home-abstract-shim">
+        <h1>Papers We Love is a <a href="">repository</a> of academic computer science research papers and a <a href="">community</a> who loves reading them.</h1>
+    </div>
+</section>
 
-<% page_articles.each_with_index do |article, i| %>
-  <h2><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></h2>
-  <!-- use article.summary(250) if you have Nokogiri available to show just
-       the first 250 characters -->
-  <%= article.body %>
-<% end %>
+<section class="home-chapters">
+    <h1>Chapters:</h1>
+    <ul class="home-chapters-list">
+        <li><%= link_to 'New York City', '/nyc' %></li>
+        <li><%= link_to 'San Francisco', '/sfo' %></li>
+        <li><%= link_to 'Boulder', '/bo' %></li>
+        <li><%= link_to 'London', '/lon' %></li>
+    </ul>
+</section>
 
-<% if paginate %>
-  <% if next_page %>
-    <p><%= link_to 'Next page', next_page %></p>
-  <% end %>
-<% end %>
+<div class="home-container">
+    <% if paginate && num_pages > 1 %>
+        <p>Page <%= page_number %> of <%= num_pages %></p>
+
+        <% if prev_page %>
+            <p><%= link_to 'Previous page', prev_page %></p>
+        <% end %>
+    <% end %>
+
+    <% page_articles.each_with_index do |article, i| %>
+        <% @art = article %>
+        <section class="home-entry article">
+            <h2><%= link_to article.title, article %></h2>
+            <% if article.data.category == "meetup" %>
+                <%= partial 'partials/_presenter' %>
+            <% end %>
+            <%= article.summary(500) %>
+            <footer>
+                <% link_to article do %>
+                    <i class="fa fa-arrow-right"></i> Read more about this meetup
+                <% end %>
+            </footer>
+        </section>
+    <% end %>
+
+    <% if paginate %>
+        <% if next_page %>
+            <p><%= link_to 'Next page', next_page %></p>
+        <% end %>
+    <% end %>
+</div>

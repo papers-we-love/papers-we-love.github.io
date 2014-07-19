@@ -1,0 +1,60 @@
+// Article
+// =======
+
+section.article {
+  h2 {
+    margin: 0 0 .8em 0;
+    font-size: 1.6em;
+  }
+
+  a {
+    text-decoration: none;
+    color: $blue;
+    &:hover {
+      color: $blue-link;
+      text-decoration: underline;
+    }
+  }
+
+  p {
+    margin: 1em 0;
+    font-size: 1.2em;
+    line-height: 140%;
+    color: #333;
+  }
+
+  @include media($desktop) {
+    p {
+      font-size: 1.1em;
+    }
+  }
+}
+
+.entry-meta {
+  font-family: 'Computer Modern Sans';
+}
+
+section.article .entry-meta .meta-label {
+  display: inline-block;
+  padding: 4px 10px 2px 10px;
+  margin: 0 .6em 0 0;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #ccc;
+  text-decoration: none;
+  &:hover {
+    background-color: $blue-link;
+  }
+}
+
+section.article .entry-meta .meta-presenter a {
+  color: $blue-link;
+  &:hover {
+    color: $blue;
+  }
+}
+
+.meta-date,
+.meta-presenter {
+  color: #666;
+}
