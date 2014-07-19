@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Papers We Love</title>
+  <subtitle>A repository of academic computer science research papers and a community who loves reading them.</subtitle>
+  <id>http://papers-we-love.github.io/</id>
+  <link href="http://papers-we-love.github.io/"/>
+  <link href="http://papers-we-love.github.io/feed.xml" rel="self"/>
+  <updated>2011-12-31T19:00:00-05:00</updated>
+  <author>
+    <name>Papers We Love</name>
+  </author>
+  <entry>
+    <title>The Derivative of a Regular Type is its Type of One-Hole Contexts</title>
+    <link rel="alternate" href="http://papers-we-love.github.io/2012/meetup/example-article/"/>
+    <id>http://papers-we-love.github.io/2012/meetup/example-article/</id>
+    <published>2011-12-31T19:00:00-05:00</published>
+    <updated>2014-07-19T19:25:22-04:00</updated>
+    <author>
+      <name>Zeeshan</name>
+    </author>
+    <content type="html">&lt;p&gt;Papers are generally loved for one of two reasons. Either the paper is foundational, siring a lineage of important research, or the paper is useful, guiding readers toward clever optimizations, fault-tolerant solutions, and non-intuitive hacks. "The Derivative of a Regular Type is its Type of One-Hole Contexts" is neither. Only a few papers build on McBride's work and the conclusions of the paper, though promising, haven't yet found any real employ.&lt;/p&gt;
+
+&lt;p&gt;This paper is lovable, fun, and important because it is a radical thought experiment in the limits of abstraction. The paper poses the question: we call data types "algebraic", so can we "do calculus" on them? Surely, the nomenclature is just coincidental? What would it even mean to take the derivative of a data type? The paper stretches algebraic data types to what should be their breaking point and then demonstrates that it's not a breaking point ay all. By considering the paper's set-up and implications, we gain a deeper understanding of types and what they abstract.&lt;/p&gt;
+</content>
+  </entry>
+</feed>
