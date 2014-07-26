@@ -1,32 +1,34 @@
 ---
 pageable: true
 ---
-<h1>Archive for <%= category %></h1>
+<article class="tags">
+    <h1>Archive for <em><%= category.capitalize %></em></h1>
 
-<% if paginate && num_pages > 1 %>
-  <p>Page <%= page_number %> of <%= num_pages %></p>
+    <% if paginate && num_pages > 1 %>
+        <p>Page <%= page_number %> of <%= num_pages %></p>
 
-  <% if prev_page %>
-    <p><%= link_to 'Previous page', prev_page %></p>
-  <% end %>
-<% end %>
-
-<ul>
-  <% page_articles.each_with_index do |article, i| %>
-    <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
-  <% end %>
-</ul>
-
-<ul>
-  <% @category_list.each do |cat| %>
-    <% if cat[:category] %>
-      <li><%= cat[:category] %></li>
+        <% if prev_page %>
+            <p><%= link_to 'Previous page', prev_page %></p>
+        <% end %>
     <% end %>
-  <% end %>
-</ul>
 
-<% if paginate %>
-  <% if next_page %>
-    <p><%= link_to 'Next page', next_page %></p>
-  <% end %>
-<% end %>
+    <ul class="main">
+        <% page_articles.each_with_index do |article, i| %>
+            <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
+        <% end %>
+    </ul>
+
+    <ul class="sidebar">
+        <% @category_list.each do |cat| %>
+            <% if cat[:category] %>
+                <li><%= link_to cat[:category].capitalize, cat[:category] %></li>
+            <% end %>
+        <% end %>
+    </ul>
+
+    <% if paginate %>
+        <% if next_page %>
+            <p><%= link_to 'Next page', next_page %></p>
+        <% end %>
+    <% end %>
+</article>

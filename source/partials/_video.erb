@@ -1,0 +1,7 @@
+<div class="entry-meta">
+    <% link_to @art.data.label_url, :class => "meta-label" do %>
+        <i class="fa fa-video-camera"></i> <%= @art.data.label %>
+    <% end %>
+    <span class="meta-presenter"><strong>Posted by:</strong> <%= @art.data.author %></span> |
+    <span class="meta-date"><%= @art.date.strftime('%b %e, %Y') %></span>
+</div>

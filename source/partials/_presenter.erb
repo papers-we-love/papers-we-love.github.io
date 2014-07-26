@@ -3,5 +3,5 @@
         <i class="fa fa-users"></i> <%= @art.data.label %>
     <% end %>
     <span class="meta-presenter"><strong>Presenter:</strong> <%= link_to @art.data.presenter, @art.data.presenter_url %></span> |
-    <span class="meta-date"><%= @art.date.strftime('%b %e %Y') %></span>
+    <span class="meta-date"><%= @art.date.strftime('%b %e, %Y') %></span>
 </div>

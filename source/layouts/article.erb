@@ -2,9 +2,12 @@
     <% @art = current_page %>
     <article class="article">
         <h1><%= current_page.title %></h1>
-        <% if current_page.data.category == "meetup" %>
-            <%= partial 'partials/_presenter' %>
-        <% end %>
+        <%=
+          case current_page.data.category
+          when "meetup" then partial 'partials/_presenter'
+          when "news" then partial 'partials/_news'
+          end
+        %>
         <%= yield %>
         <footer class="article-metadata">
             <em>Tags:</em>

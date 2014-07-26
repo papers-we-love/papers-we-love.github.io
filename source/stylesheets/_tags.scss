@@ -1,0 +1,37 @@
+article.tags {
+  @include outer-container;
+  padding: 0 20px;
+
+  h1 {
+    color: #666;
+    font-weight: normal;
+    em {
+      color: #333;
+      font-weight: bold;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      font-size: 1.2em;
+      list-style-type: none;
+      padding: 0;
+      margin: 1em 0;
+      a {
+        color: $blue-link;
+        text-decoration: none;
+      }
+    }
+  }
+
+  ul.main {
+    @include span-columns(3);
+  }
+
+  ul.sidebar {
+    @include span-columns(1);
+  }
+
+}

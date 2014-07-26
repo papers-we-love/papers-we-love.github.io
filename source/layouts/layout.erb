@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
-    <title><%= ' - ' + current_article.title unless current_article.nil? %> | Papers We Love</title>
+    <title><%= "#{current_article.title} |" unless current_article.nil? %> Papers We Love</title>
     <%= stylesheet_link_tag "font-awesome.min","screen" %>
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
   </head>
