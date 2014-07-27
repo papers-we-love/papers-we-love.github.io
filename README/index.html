@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+            <meta name="description" content="A repository of computer science papers and a community of people who love reading them" />
+        <title> Papers We Love</title>
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" type="text/css" /><link href="/stylesheets/screen.css" rel="stylesheet" type="text/css" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="http://schema.org/WebPage">
+        <section class="nav-top">
+    <div class="nav-top-img">
+<a href="/">            <img alt="Papers We Love" title="Papers We Love | A community for computer science papers" src="/images/logo-top.svg" />
+</a>    </div>
+    <nav>
+        <ul class="nav-top-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="http://findpaperswelove.com/#!/">Papers</a></li>
+            <li><a href="https://github.com/papers-we-love/papers-we-love#chapters">Chapters</a></li>
+            <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+        </ul>
+    </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <h1 id="papers-we-love">Papers We Love</h1>
+
+<h2 id="how-to-work-with-the-site">How to work with the site</h2>
+
+<p>The site is static and generated with <a href="http://middlemanapp.com/">Middleman</a>. Middleman is a Ruby app, so you will need at least Ruby 1.9.3 installed, but preferably 2+. All of the dependencies are provided for you in the <code>Gemfile</code>.</p>
+
+<h3 id="installation-instruction">Installation instruction:</h3>
+
+<ol>
+  <li>Install <a href="https://www.ruby-lang.org/en/">Ruby</a></li>
+  <li>Install <a href="http://bundler.io/">Bundler</a> <code>$ gem install bundler</code></li>
+  <li>Checkout this repo, switch to the <strong>middleman</strong> branch and <code>cd papers-we-love.github.io</code></li>
+  <li>Install your dependencies <code>bundle install</code></li>
+  <li>Fire up the dev server <code>$ bundle exec middleman server</code> and hit <code>http://0.0.0.0:4567/</code></li>
+</ol>
+
+<h3 id="middleman">Middleman</h3>
+
+<p>The site leans heavily on Middleman's <a href="http://middlemanapp.com/basics/blogging/">Blogging</a> plugin. Articles are written in <a href="http://daringfireball.net/projects/markdown/">Markdown</a> and pulled into templates. Middleman comes with lots of <a href="http://middlemanapp.com/basics/helpers/">template helpers</a> to help you create links and such. Check them out.</p>
+
+<p><strong>Create a new post:</strong> <code>$ bundle exec middleman article My Cool Article</code> - this will generate a file in <code>/source</code> like <code>2014-07-26-my-cool-article.html.markdown</code>. Open this in your text editor of choice.</p>
+
+<p><strong>Frontmatter:</strong> Like Jekyll, Middleman leans on <a href="http://middlemanapp.com/basics/frontmatter/">frontmatter</a> at the top of the articles to provide data to the generator. We have some specific front matter setup for you to use.</p>
+
+<p>Example:</p>
+
+<pre><code>---
+title: A general announcement post
+date: 2014-07-26 22:23 UTC
+author: Ines
+category: news
+tags: meetup, sfo
+label: Conferences
+label_url: http://strangeloop.com
+presenter: Erik Hinton
+presenter_url: http://erikhinton.com
+description: The description that appeats in the meta-desc tag in the HTML
+---
+</code></pre>
+
+<p>Title, date and author are fairly explanatory. The date will be generated for you, as well as the title. Feel free to fine-tune the title.</p>
+
+<p><strong><em>category</em></strong> is specific - currently we have two types of posts, <code>news</code> and <code>meetup</code>. These determine what type of icon is placed in the <em>label</em> field in the article metadata.</p>
+
+<p><strong><em>tags</em></strong> are tags as you know them. Keep them limited to a few key concepts about this post that would relate it to other posts.</p>
+
+<p><strong><em>label</em></strong> is the text that appears in the little rounded gray boxes underneath post titles, such as 'Meetup NYC'. The icon that appears next to this text is determined by the <em>category</em> entry above.</p>
+
+<p><strong><em>label_url</em></strong> is a URL related to the label. For instance, this could link to the Meetup.com page for a specific meetup.</p>
+
+<p><strong><em>presenter</em></strong> this field only appears in <strong>meetup</strong> category posts. This is the name of the presenter for the meet up.</p>
+
+<p><strong><em>presenter_url</em></strong> this field only appears in <strong>meetup</strong> category posts. This is the URL to the presenter's homepage, article or other relevant link.</p>
+
+<p><strong><em>description</em></strong> is the information for the post that appears in the <code>meta</code> tag in the page header - used for Google search results. This should be kept to 150 characters and consist of a simple description of the post, perhaps with relevant dates.</p>
+
+<h3 id="publishing">Publishing</h3>
+
+<p>Once you've written a post and read it a few times looking for typos and grammar issues, you can publish. Commit the changes to the <strong>middleman</strong> branch and push to the remote. To deploy the changes to the live site simply <code>$ bundle exec middleman deploy</code> - if you have commit rights the site will build and the static files will get pushed into <strong>master</strong>.</p>
+
+<p>If you don't have commit rights, then you need to submit your changes as a Pull Request to the repo for review by the maintainers.</p>
+
+        </div>
+
+        <footer class="nav-footer" itemscope itemtype="http://schema.org/Organization">
+    <nav>
+        <ul class="nav-top-list nav-footer-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="http://findpaperswelove.com/#!/">Papers</a></li>
+            <li><a href="https://github.com/papers-we-love/papers-we-love#chapters">Chapters</a></li>
+            <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+        </ul>
+    </nav>
+    <h3>&copy; 2014 <span itemprop="name">Papers We Love</span>, all rights reserved</h3>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2014
+Papers We Love, all rights reserved
+-->
