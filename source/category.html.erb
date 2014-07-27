@@ -23,7 +23,7 @@ pageable: true
         <li><strong>Categories</strong></li>
         <% @category_list.each do |cat| %>
             <% if cat[:category] %>
-                <li><%= link_to cat[:category].capitalize, cat[:category] %></li>
+                <li><%= link_to cat[:category].capitalize, "/categories/#{cat[:category]}" %></li>
             <% end %>
         <% end %>
     </ul>
