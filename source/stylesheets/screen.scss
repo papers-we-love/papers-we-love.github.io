@@ -16,6 +16,9 @@ $blue-link: lighten($blue, 30);
 // Font stacks
 @import "fonts";
 
+$serif:  'Computer Modern Serif', 'Palatino', Georgia, Times, serif;
+$sans: 'Computer Modern Sans', 'Gill Sans', Verdana, sans;
+
 // Base styles
 @import "base";
 @import "home";

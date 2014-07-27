@@ -8,6 +8,7 @@ label: Meetup NYC
 label_url: http://google.com
 presenter: Erik Hinton
 presenter_url: http://erikhinton.com
+description: Erik Hinton explains Types in One-Hole Contexts
 ---
 
 ![Aysulu Greenberg](http://photos1.meetupstatic.com/photos/event/4/0/5/8/600_377356472.jpeg)Papers are generally loved for one of two reasons. Either the paper is foundational, siring a lineage of important research, or the paper is useful, guiding readers toward clever optimizations, fault-tolerant solutions, and non-intuitive hacks. "The Derivative of a Regular Type is its Type of One-Hole Contexts" is neither. Only a few papers build on McBride's work and the conclusions of the paper, though promising, haven't yet found any real employ.READMORE

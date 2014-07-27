@@ -1,11 +1,11 @@
-<footer class="nav-footer">
+<footer class="nav-footer" itemscope itemtype="http://schema.org/Organization">
     <nav>
         <ul class="nav-top-list nav-footer-list">
             <li><%= link_to 'Home', '/' %></li>
-            <li><%= link_to 'Papers', '/papers' %></li>
-            <li><%= link_to 'Chapters', '/chapters' %></li>
-            <li><%= link_to 'Submission Guidelines', '/guidelines' %></li>
+            <li><%= link_to 'Papers', 'http://findpaperswelove.com/#!/' %></li>
+            <li><%= link_to 'Chapters', 'https://github.com/papers-we-love/papers-we-love#chapters' %></li>
+            <li><%= link_to 'Submission Guidelines', 'https://github.com/papers-we-love/papers-we-love#contributing-guidelines' %></li>
         </ul>
     </nav>
-    <h3>&copy; <%= Date.today.year %> Papers We Love, all rights reserved</h3>
+    <h3>&copy; <%= Date.today.year %> <span itemprop="name">Papers We Love</span>, all rights reserved</h3>
 </footer>

@@ -2,7 +2,7 @@
 pageable: true
 ---
 <article class="tags">
-    <h1>Archive for <em><%= category.capitalize %></em></h1>
+    <h1>Archives for the <em><%= category.capitalize %></em> category</h1>
 
     <% if paginate && num_pages > 1 %>
         <p>Page <%= page_number %> of <%= num_pages %></p>
@@ -12,13 +12,15 @@ pageable: true
         <% end %>
     <% end %>
 
-    <ul class="main">
+    <ul class="main categories">
+        <li><strong>Articles</strong></li>
         <% page_articles.each_with_index do |article, i| %>
-            <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
+            <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e, %Y') %></span></li>
         <% end %>
     </ul>
 
     <ul class="sidebar">
+        <li><strong>Categories</strong></li>
         <% @category_list.each do |cat| %>
             <% if cat[:category] %>
                 <li><%= link_to cat[:category].capitalize, cat[:category] %></li>

@@ -7,7 +7,7 @@
   margin: 0 .6em 0 0;
   border-radius: 3px;
   text-decoration: none;
-  font-family: 'Computer Modern Sans';
+  font-family: $sans;
   background-color: #ccc;
   color: #fff;
   &:hover {
@@ -18,7 +18,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Computer Modern Serif';
+  font-family: $serif;
   text-rendering: optimizeLegibility;
   @include media($desktop) {
     padding: 0 4em;

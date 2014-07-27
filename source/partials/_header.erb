@@ -1,13 +1,15 @@
 <section class="nav-top">
     <div class="nav-top-img">
-        <%= image_tag 'logo-top.svg', :alt => "Papers We Love f(x)=x" %>
+        <% link_to "/" do %>
+            <%= image_tag 'logo-top.svg', :alt => "Papers We Love", :title => "Papers We Love | A community for computer science papers" %>
+        <% end %>
     </div>
     <nav>
         <ul class="nav-top-list">
             <li><%= link_to 'Home', '/' %></li>
-            <li><%= link_to 'Papers', '/papers' %></li>
-            <li><%= link_to 'Chapters', '/chapters' %></li>
-            <li><%= link_to 'Submission Guidelines', '/guidelines' %></li>
+            <li><%= link_to 'Papers', 'http://findpaperswelove.com/#!/' %></li>
+            <li><%= link_to 'Chapters', 'https://github.com/papers-we-love/papers-we-love#chapters' %></li>
+            <li><%= link_to 'Submission Guidelines', 'https://github.com/papers-we-love/papers-we-love#contributing-guidelines' %></li>
         </ul>
     </nav>
 </section>

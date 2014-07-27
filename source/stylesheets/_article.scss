@@ -63,11 +63,13 @@ iframe.video {
 }
 
 .entry-meta {
-  font-family: 'Computer Modern Sans';
+  font-family: $sans;
 }
 
 .article .entry-meta .meta-label {
-  display: inline-block;
+  @include media($desktop) {
+    display: inline-block;
+  }
   padding: 4px 10px 2px 10px;
   margin: 0 .6em 0 0;
   border-radius: 3px;
@@ -76,6 +78,15 @@ iframe.video {
   text-decoration: none;
   &:hover {
     background-color: $blue-link;
+  }
+}
+
+.article .entry-meta .meta-text {
+  display: block;
+  margin: 1em 0 0 0;
+  @include media($desktop) {
+    display: inline;
+    margin: 0;
   }
 }
 
@@ -101,7 +112,7 @@ article.article {
 }
 
 .article-metadata {
-  font-family: 'Computer Modern Sans';
+  font-family: $sans;
   padding: 1em 0 0 0;
   em {
     color: #999;
