@@ -1,0 +1,60 @@
+.chapter {
+  @include outer-container;
+  @include clearfix;
+  @include media($desktop) {
+    .primary {
+      @include span-columns(3);
+    }
+    .secondary {
+      @include span-columns(1);
+    }
+  }
+}
+
+.primary {
+  padding: 2em 0 0 0;
+  h1 {
+    font-size: 2em;
+    margin: 0 0 1em 0;
+    padding: 0;
+  }
+
+  @extend %text;
+
+  img {
+    width: 100%;
+    border: #fff 3px solid;
+    box-shadow: #666 0 0 2px 0;
+  }
+
+}
+
+.secondary {
+  padding: 2.6em 0 0 0;
+  h2 {
+    font-size: 1.4em;
+    margin: 0 0 1em 0;
+    padding: 0 0 .4em 0;
+    border-bottom: #ccc 1px solid;
+    color: #333;
+  }
+  @extend %text;
+  p {
+    @include media($desktop) {
+      font-size: 1em;
+    }
+  }
+  p.sponsor {
+    font-family: $sans;
+    text-align: center;
+    color: #999;
+    margin-bottom: 2em;
+    img {
+      display: block;
+      float: none;
+      width: 100%;
+      margin: 0;
+      box-shadow: none;
+    }
+  }
+}

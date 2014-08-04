@@ -15,6 +15,49 @@
   }
 }
 
+%text {
+
+  p {
+    margin: 1em 0;
+    font-size: 1.2em;
+    line-height: 140%;
+    color: #333;
+
+    a {
+      text-decoration: none;
+      color: $blue-link;
+      &:hover {
+        color: $blue-link;
+        text-decoration: underline;
+      }
+    }
+
+
+    img {
+      border: #fff 4px solid;
+      box-shadow: #999 0 0 3px 0;
+      display: block;
+      clear: both;
+      text-align: center;
+      width: 100%;
+      margin: 0 0 1em 0;
+    }
+  }
+
+  @include media($desktop) {
+    p {
+      font-size: 1.1em;
+      img {
+        float: right;
+        margin: 0 0 1em 1em;
+        width: 40%;
+      }
+    }
+  }
+
+}
+
+
 body {
   margin: 0;
   padding: 0;

@@ -39,15 +39,6 @@ ready do
 end
 
 ###
-# Compass
-###
-
-# Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
-
-###
 # Page options, layouts, aliases and proxies
 ###
 
@@ -63,6 +54,22 @@ end
 # with_layout :admin do
 #   page "/admin/*"
 # end
+
+chapters = [{:name => 'newyork', :title => 'New York Chapter', :description => "New York City's chapter of Papers We Love"},
+            {:name => 'sanfrancisco', :title => 'San Francisco Chapter', :description => "The Bay Area chapter of Papers We Love"},
+            {:name => 'boulder', :title => 'Boulder Chapter', :description => "The Boulder chapter of Papers We Love"},
+            {:name => 'london', :title => 'London Chapter', :description => "The London chapter of Papers We Love"},
+            {:name => 'stlouis', :title => 'St. Louis Chapter', :description => "The St. Louis chapter of Papers We Love"},
+            {:name => 'columbus', :title => 'Columbus Chapter', :description => "The Columbus chapter of Papers We Love"},
+            {:name => 'berlin', :title => 'Berlin Chapter', :description => "The Berlin chapter of Papers We Love"},
+            {:name => 'pune', :title => 'Pune Chapter', :description => "The Pune chapter of Papers We Love"},
+            {:name => 'boston', :title => 'Boston Chapter', :description => "The Boston chapter of Papers We Love"}
+           ]
+
+# Chapter pages
+chapters.each do |chapter|
+  proxy "/chapter/#{chapter[:name]}.html", "/chapter.html", :locals => { :chapter => chapter }, :ignore => true
+end
 
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
@@ -121,9 +128,6 @@ end
 ###
 activate :deploy do |deploy|
   deploy.build_before = true # default: false
-  deploy.method = :git
-  # Optional Settings
-  # deploy.remote   = "custom-remote" # remote name or git url, default: origin
-  deploy.branch   = "master" # default: gh-pages
-  # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
+  deploy.method       = :git
+  deploy.branch       = "master" # default: gh-pages
 end
