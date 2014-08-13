@@ -45,4 +45,14 @@ We hope that you'll read the paper before the meetup, but don't stress if you ca
 
 Additionally, if you have any papers you want to add to the repository above (papers that you love!), please send us a [pull request](https://github.com/papers-we-love/papers-we-love/pulls). Also, if you have any ideas/questions about this meetup or the Papers-We-Love org, just open up an issue.
 
+## Sponsors
+
+### Pizza & Beers
+
+[SFX Entertainment](https://sfx.recruiterbox.com/)
+
+### Audio & Video
+
+[Hakka Labs](http://www.hakkalabs.co/)
+
 

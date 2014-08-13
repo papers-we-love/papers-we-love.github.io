@@ -38,3 +38,9 @@ Additionally, if you have any papers you want to add to the repository above, pl
 ## Slides
 
 <script async class="speakerdeck-embed" data-id="1005d940ab440131ea7c0ec58324872e" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+
+## Sponsors
+
+### Pizza & Beers
+
+[SFX Entertainment](https://sfx.recruiterbox.com/)

@@ -42,3 +42,13 @@ Additionally, if you have any papers you want to add to the [repository](https:/
 ## Slides 
 
 <script async class="speakerdeck-embed" data-id="5e526240bf290131ae3666fdbbb32492" data-ratio="1.33159947984395" src="//speakerdeck.com/assets/embed.js"></script>
+
+## Sponsors
+
+### Pizza & Beers
+
+[SFX Entertainment](https://sfx.recruiterbox.com/)
+
+### Audio & Video
+
+[Hakka Labs](http://www.hakkalabs.co/)

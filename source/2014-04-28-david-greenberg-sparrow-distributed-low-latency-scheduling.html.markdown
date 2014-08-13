@@ -36,3 +36,13 @@ Additionally, if you have any papers you want to add to the repository above, pl
 ## Video
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/rTTVSUw1wio" frameborder="0" allowfullscreen></iframe>
+
+## Sponsors
+
+### Pizza & Beers
+
+[SFX Entertainment](https://sfx.recruiterbox.com/)
+
+### Audio & Video
+
+[Hakka Labs](http://www.hakkalabs.co/)
