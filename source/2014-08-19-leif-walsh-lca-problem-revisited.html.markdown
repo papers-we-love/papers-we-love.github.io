@@ -3,7 +3,7 @@ title: The LCA Problem Revisited
 date: 2014-08-19
 author: Brian
 category: meetup
-tags: types 
+tags: types
 label: Meetup NYC
 label_url: http://www.meetup.com/papers-we-love/events/184704082/
 presenter: Leif Walsh
@@ -11,7 +11,7 @@ presenter_url: http://leifwalsh.com/
 description: Leif Walsh on The LCA Problem Revisited
 ---
 
-We're elated to have [Leif Walsh](http://leifwalsh.com/), engineer at [Tokutek](http://www.tokutek.com/), presenting on [The LCA Problem Revisited](http://www.ics.uci.edu/~eppstein/261/BenFar-LCA-00.pdf) by Michael A. Bender and Martin Farach-Colton. 
+We're elated to have [Leif Walsh](http://leifwalsh.com/), engineer at [Tokutek](http://www.tokutek.com/), presenting on [The LCA Problem Revisited](http://www.ics.uci.edu/~eppstein/261/BenFar-LCA-00.pdf) by Michael A. Bender and Martin Farach-Colton. READMORE
 
 ## Intro
 
@@ -25,9 +25,9 @@ Leif Walsh ([@leifwalsh](https://twitter.com/leifwalsh)) is a professional cat w
 
 ## Details
 
-Doors open at 7 pm; the presentation will begin at 7:30 pm; and, yes, there will be beer and pizza. 
+Doors open at 7 pm; the presentation will begin at 7:30 pm; and, yes, there will be beer and pizza.
 
-After Leif presents the paper, we will open up the floor to discussion and questions.  
+After Leif presents the paper, we will open up the floor to discussion and questions.
 
 We hope that you'll read the paper before the meetup, but don't stress if you can't.  If you have any questions, thoughts, or related information, please visit our [*github-thread*](https://github.com/papers-we-love/papers-we-love/issues/123) on the matter.
 

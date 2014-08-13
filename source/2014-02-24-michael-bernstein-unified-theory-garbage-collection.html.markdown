@@ -11,7 +11,7 @@ presenter_url: http://michaelrbernste.in/
 description: Michael Bernstein on A Uniﬁed Theory of Garbage Collection
 ---
 
-This our inaugural Meetup, and we're excited to have [Michael Bernstein](http://michaelrbernste.in/) presenting the paper [A Uniﬁed Theory of Garbage Collection](http://www.cs.virginia.edu/~cs415/reading/bacon-garbage.pdf) by David F. Bacon, Perry Cheng, and V.T. Rajan. 
+This our inaugural Meetup, and we're excited to have [Michael Bernstein](http://michaelrbernste.in/) presenting the paper [A Uniﬁed Theory of Garbage Collection](http://www.cs.virginia.edu/~cs415/reading/bacon-garbage.pdf) by David F. Bacon, Perry Cheng, and V.T. Rajan. READMORE
 
 ## Bio
 
@@ -19,17 +19,17 @@ Mike Bernstein is obsessed. Not with anything in particular, just in general. He
 
 ## Details
 
-Doors open at 7 pm; the presentation will begin at 7:30 pm; and, yes, there will be beer and pizza.   
+Doors open at 7 pm; the presentation will begin at 7:30 pm; and, yes, there will be beer and pizza.
 
-After Michael presents the paper, we will open up the floor to discussion and questions.  
+After Michael presents the paper, we will open up the floor to discussion and questions.
 
 We hope that you'll read the paper before the Meetup (and if you don't, no worries, be happy now!), and if you have any questions, thoughts, or related information, please visit our *github-thread* on the matter: [https://github.com/papers-we-love/papers-we-love/issues/1](https://github.com/papers-we-love/papers-we-love/issues/1).
 
-Additionally, if you have any papers you want to add to the repository above, please send us a pull request. 
+Additionally, if you have any papers you want to add to the repository above, please send us a pull request.
 
 ## Video
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/XtUtfARSIv8" frameborder="0" allowfullscreen></iframe>
+<iframe class="video" src="//www.youtube.com/embed/XtUtfARSIv8" frameborder="0" allowfullscreen></iframe>
 
 ## Slides
 

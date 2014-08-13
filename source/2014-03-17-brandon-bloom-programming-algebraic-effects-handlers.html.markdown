@@ -11,7 +11,7 @@ presenter_url: http://www.brandonbloom.name/
 description: Brandon Bloom on Programming with Algebraic Effects and Handlers
 ---
 
-For our second meetup, we're excited to have [Brandon Bloom](https://twitter.com/BrandonBloom) presenting the paper [Programming with Algebraic Effects and Handlers](https://github.com/papers-we-love/papers-we-love/blob/master/plt/programming-with-algebraic-effects-and-handlers.pdf?raw=true) by Andrej Bauer and Matija Pretnar.
+For our second meetup, we're excited to have [Brandon Bloom](https://twitter.com/BrandonBloom) presenting the paper [Programming with Algebraic Effects and Handlers](https://github.com/papers-we-love/papers-we-love/blob/master/plt/programming-with-algebraic-effects-and-handlers.pdf?raw=true) by Andrej Bauer and Matija Pretnar. READMORE
 
 ## Intro
 
@@ -19,13 +19,13 @@ Some great papers embody insights, others package up those insights into digesti
 
 ## Bio
 
-Brandon Bloom walks a fine line between laser focused pragmatism and broad academic interests. Most recently in his varied career, Brandon worked on Code.org's Hour Of Code campaign. In the past, he's founded and sold a startup, as well as worked on Microsoft Xbox and Google Translate. Now, he's indulging his inner scientist and exploring technology for his next venture. Find him on the web at <[http://www.brandonbloom.name/](http://www.brandonbloom.name/)>.
+Brandon Bloom walks a fine line between laser focused pragmatism and broad academic interests. Most recently in his varied career, Brandon worked on Code.org's Hour Of Code campaign. In the past, he's founded and sold a startup, as well as worked on Microsoft Xbox and Google Translate. Now, he's indulging his inner scientist and exploring technology for his next venture. Find him on the web at [http://www.brandonbloom.name/](http://www.brandonbloom.name/).
 
 ## Details
 
-Doors open at 7 pm; the presentation will begin at 7:30 pm; and, yes, there will be beer and pizza. 
+Doors open at 7 pm; the presentation will begin at 7:30 pm; and, yes, there will be beer and pizza.
 
-After Brandon presents the paper, we will open up the floor to discussion and questions.  
+After Brandon presents the paper, we will open up the floor to discussion and questions.
 
 We hope that you'll read the paper before the meetup, but don't stress if you never get around to it, and if you have any questions, thoughts, or related information, please visit our [*github-thread*](https://github.com/papers-we-love/papers-we-love/issues/9) on the matter.
 
