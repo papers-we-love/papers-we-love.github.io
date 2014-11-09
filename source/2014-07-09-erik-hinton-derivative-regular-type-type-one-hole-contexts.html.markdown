@@ -13,7 +13,12 @@ description: Erik Hinton on The Derivative of a Reg. Type is its Type of One-Hol
 
 We're happy to have [Erik Hinton](https://source.opennews.org/en-US/articles/model-analysis/), developer at the New York Times, presenting on [The Derivative of a Regular Type is its Type of One-Hole Contexts](http://strictlypositive.org/diff.pdf) by Conor McBride. READMORE
 
-## Intro
+<iframe class="video" src="//www.youtube.com/embed/8CXODALwjRc" frameborder="0" allowfullscreen></iframe>
+
+If you have any questions, thoughts, or related information, please visit our [*github-thread*](https://github.com/papers-we-love/papers-we-love/issues/118) on the matter.
+
+
+## Introduction
 
 Papers are generally loved for one of two reasons. Either the paper is foundational, siring a lineage of important research, or the paper is useful, guiding readers toward clever optimizations, fault-tolerant solutions, and non-intuitive hacks. "The Derivative of a Regular Type is its Type of One-Hole Contexts" is neither. Only a few papers build on McBride's work and the conclusions of the paper, though promising, haven't yet found any real employ.
 
@@ -34,16 +39,6 @@ This talk will cover:
 ## Bio
 
 Erik Hinton ([@erikhinton](https://twitter.com/erikhinton)) is an interactive developer for The New York Times. His interests include building a platform for the digital humanities, subversively deploying Haskell applications when no one is watching, analytic philosophy, and the connections between medieval mystical Judaism and all of the above.
-
-## Details
-
-Doors open at 7 pm; the presentation will begin at 7:30 pm; and, yes, there will be beer and pizza.
-
-After Erik presents the paper, we will open up the floor to discussion and questions.
-
-We hope that you'll read the paper before the meetup, but don't stress if you can't.  If you have any questions, thoughts, or related information, please visit our [*github-thread*](https://github.com/papers-we-love/papers-we-love/issues/118) on the matter.
-
-Additionally, if you have any papers you want to add to the repository above (papers that you love!), please send us a [pull request](https://github.com/papers-we-love/papers-we-love/pulls). Also, if you have any ideas/questions about this meetup or the Papers-We-Love org, just open up an issue.
 
 ## Sponsors
 
