@@ -95,6 +95,8 @@ activate :automatic_image_sizes
 #   end
 # end
 
+set :markdown, parse_block_html: true
+
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'

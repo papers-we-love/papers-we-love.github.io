@@ -1,7 +1,9 @@
 .chapter {
   @include outer-container;
   @include clearfix;
+  padding: 1em;
   @include media($desktop) {
+    padding: 0;
     .primary {
       @include span-columns(3);
     }
@@ -19,15 +21,43 @@
     padding: 0;
   }
 
-  @extend %text;
-
-  img {
-    width: 100%;
-    border: #fff 3px solid;
-    box-shadow: #666 0 0 2px 0;
+  h2 {
+    font-size: 1.2em;
+    margin: 1em 0 0 0;
+    padding: .5em 1.2em;
+    display: inline-block;
+    background: #ccc;
+    border-radius: 0.5em;
+    color: #333;
+    font-family: $sans;
   }
 
+  h3 {
+    margin: 2em 0 .5em 0;
+    padding: 2em 0 0 0;
+    border-top: #ddd 1px solid;
+    font-size: 1.4em;
+  }
+
+  h3:first-of-type {
+    margin-top: 0;
+    border-top: #fff 0px solid;
+  }
+
+  @extend %text;
+
+  span.meta {
+    font-family: $sans;
+    color: #666;
+  }
 }
+
+.primary > p > img {
+    border: #fff 3px solid;
+    box-shadow: #666 0 0 2px 0;
+    margin: 0 1em 1em 0;
+    float: left;
+  }
 
 .secondary {
   padding: 2.6em 0 0 0;
