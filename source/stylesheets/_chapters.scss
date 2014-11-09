@@ -22,14 +22,12 @@
   }
 
   h2 {
-    font-size: 1.2em;
-    margin: 1em 0 0 0;
-    padding: .5em 1.2em;
-    display: inline-block;
-    background: #ccc;
-    border-radius: 0.5em;
-    color: #333;
-    font-family: $sans;
+    font-size: 1.4em;
+    margin: 2em 0 0 0;
+    padding: 0 0 .5em 0;
+    border-bottom: #ccc 2px solid;
+    color: #666;
+    font-weight: normal;
   }
 
   h3 {

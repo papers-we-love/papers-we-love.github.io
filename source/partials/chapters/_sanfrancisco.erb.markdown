@@ -9,7 +9,7 @@ We'll be using [papers-we-love's curated repository](https://github.com/papers-w
 
 PWL SF strictly adheres to the [Code of Conduct](https://github.com/papers-we-love/papers-we-love/blob/master/CODE_OF_CONDUCT.md) set forth by all PWL charters.
 
-## Meetups
+## Chapter Meetups
 
 ### Dapper, a Distributed Systems Tracing Infrastructure
 <span class="meta">

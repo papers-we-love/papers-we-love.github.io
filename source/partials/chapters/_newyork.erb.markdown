@@ -12,7 +12,7 @@ The **New York Chapter** meets monthly in the Flatiron District at <a href="http
 
 Papers We Love has a **[Code of Conduct](https://github.com/papers-we-love/papers-we-love/blob/master/CODE_OF_CONDUCT.md)**. Please contact one of the Meetup's organizers if anyone is not following it. Be good to each other and to the PWL community!
 
-<h2 style="clear: both;">Meetups</h2>
+## Chapter Meetups
 
 ### On the resemblance and containment of documents
 <span class="meta">
