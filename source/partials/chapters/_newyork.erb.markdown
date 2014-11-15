@@ -148,7 +148,7 @@ Please RSVP for meetings via <a href="http://www.meetup.com/papers-we-love/">Mee
 <a href="http://viggleinc.com"><img src="http://gadgetnerdly.com/wp-content/uploads/2012/06/logo_viggle.png" /></a>
 Venue sponsor
 </p>
-<p class="sponsor"><a href="http://tech.beatport.com/"><img src="http://sfxii.com/wp-content/uploads/2013/07/Beatport.png" /></a>
+<p class="sponsor"><a href="http://dev.theladders.com/"><img src="http://dev.theladders.com/images/skippy_lightbulb.png" title="The Ladders Dev Team" /></a>
 Food/Beer sponsor</p>
 
 </section>
