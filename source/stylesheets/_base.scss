@@ -31,26 +31,19 @@
       }
     }
 
-
     img {
       border: #fff 4px solid;
       box-shadow: #999 0 0 3px 0;
-      display: block;
-      clear: both;
+      display: inline-block;
       text-align: center;
-      width: 100%;
-      margin: 0 0 1em 0;
+      width: auto;
+      margin: 1em;
     }
   }
 
   @include media($desktop) {
     p {
       font-size: 1.1em;
-      img {
-        float: right;
-        margin: 0 0 1em 1em;
-        width: 40%;
-      }
     }
   }
 

@@ -22,6 +22,13 @@
     }
   }
 
+  hr {
+    height: 1px;
+    margin: 1em 0;
+    border-width: 0;
+    border-top: #eee 1px solid;
+  }
+
 }
 
 iframe.video {
@@ -86,7 +93,9 @@ article.article {
   }
 }
 
-.article-metadata {
+footer.article-metadata {
+  display: block;
+  clear: both;
   font-family: $sans;
   padding: 1em 0 0 0;
   em {
@@ -100,4 +109,14 @@ article.article {
   a {
     color: $blue-link;
   }
+}
+
+img.left {
+  float: left;
+  display: inline-block;
+  margin: 0 1em 1em 0 !important;
+}
+
+img.no-shadow {
+  box-shadow: 0 0 #fff !important;
 }
