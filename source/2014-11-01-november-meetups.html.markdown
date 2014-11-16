@@ -13,9 +13,15 @@ We have another great line-up of meet-ups scheduled for November across a number
 
 **San Francisco 11/13**: [Leif Walsh on Level Ancestor Simplified](http://www.meetup.com/papers-we-love-too/events/197577972/)
 
+**Chicago 11/17**: [Kevin Buchanan on Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I](http://www.meetup.com/Papers-We-Love-Chicago/events/214596222/)
+
 **New York 11/18**: [Jean Yang on An Axiomatic Basis for Computer Programming](http://www.meetup.com/papers-we-love/events/214400572/)
 
-**Washington DC 11/20**: [David Nolen on Worlds: Controlling the Scope of Side Effects](http://www.meetup.com/Papers-We-Love-DC/events/212419432/) READMORE
+**Washington DC 11/20**: [David Nolen on Worlds: Controlling the Scope of Side Effects](http://www.meetup.com/Papers-We-Love-DC/events/212419432/)
+
+**Toronto 11/20**: [Julian Squires on Procedural Modeling of Buildings](http://www.meetup.com/Papers-We-Love-Montreal/events/217560332/)
+
+**Singapore 11/24**: [Security Applications of Formal Language Theory](https://www.facebook.com/events/1487597988178170/) READMORE
 
 ---
 
