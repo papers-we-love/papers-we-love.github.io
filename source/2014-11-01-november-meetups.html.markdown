@@ -19,7 +19,7 @@ We have another great line-up of meet-ups scheduled for November across a number
 
 **Washington DC 11/20**: [David Nolen on Worlds: Controlling the Scope of Side Effects](http://www.meetup.com/Papers-We-Love-DC/events/212419432/)
 
-**Toronto 11/20**: [Julian Squires on Procedural Modeling of Buildings](http://www.meetup.com/Papers-We-Love-Montreal/events/217560332/)
+**Montreal 11/20**: [Julian Squires on Procedural Modeling of Buildings](http://www.meetup.com/Papers-We-Love-Montreal/events/217560332/)
 
 **Singapore 11/24**: [Security Applications of Formal Language Theory](https://www.facebook.com/events/1487597988178170/) READMORE
 
