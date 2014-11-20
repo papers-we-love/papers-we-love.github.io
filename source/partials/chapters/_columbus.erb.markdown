@@ -18,15 +18,15 @@ Date: [July 22, 2014](http://www.meetup.com/Papers-We-Love-Columbus/events/18994
 Links: [Paper](https://github.com/papers-we-love/papers-we-love/blob/master/design/out-of-the-tar-pit.pdf?raw=true)
 </span>
 
-Do a web search for "Out of the Tar Pit," and you'll find 1) the paper itself and 2) a long list of "top 10 papers every programmer should read" type blog posts citing it. The premise of the paper is certainly ambitious: Explain why developing and maintaining large software systems is hard, and how to fix it. 
+Do a web search for "Out of the Tar Pit," and you'll find 1) the paper itself and 2) a long list of "top 10 papers every programmer should read" type blog posts citing it. The premise of the paper is certainly ambitious: Explain why developing and maintaining large software systems is hard, and how to fix it.
 
-Amazingly, this 10 year old paper mostly delivers. Perhaps even more surprisingly, however, its clear explanation, high citation count, and relatively straightforward prescription for dealing with complexity have not translated into a correspondingly large influence on mainstream programming tools and frameworks (with certain notable exceptions, such as the Clojure community). 
+Amazingly, this 10 year old paper mostly delivers. Perhaps even more surprisingly, however, its clear explanation, high citation count, and relatively straightforward prescription for dealing with complexity have not translated into a correspondingly large influence on mainstream programming tools and frameworks (with certain notable exceptions, such as the Clojure community).
 
-In a sense, then, reading the paper informs us not only of the authors' strategy for building large, maintainable systems, but of our own community's ability to digest useful but wide-reaching suggestions for change. We are sure to have a lively discussion! 
+In a sense, then, reading the paper informs us not only of the authors' strategy for building large, maintainable systems, but of our own community's ability to digest useful but wide-reaching suggestions for change. We are sure to have a lively discussion!
 
-It's not necessary to read the entire paper to attend the meetup, but it is a great and accessible paper and you'll probably enjoy it if you do. The presentation should be accessible to and useful people who have read the entire paper multiple times and people who have just skimmed the abstract. 
+It's not necessary to read the entire paper to attend the meetup, but it is a great and accessible paper and you'll probably enjoy it if you do. The presentation should be accessible to and useful people who have read the entire paper multiple times and people who have just skimmed the abstract.
 
-This meeting is sponsored by Improving Enterprises, who will provide food and drinks. 
+This meeting is sponsored by Improving Enterprises, who will provide food and drinks.
 
 About the presenter: Mykola Bilokonsky is a consulting developer working in Columbus. This is his first talk and he's eager to exchange thoughts!
 
@@ -51,7 +51,7 @@ Please RSVP for meetings via <a href="http://www.meetup.com/Papers-We-Love-Colum
 </p>
 <h2>Sponsors</h2>
 <p class="sponsor">
-<a href="http://improvingenterprises.com/"><img src="http://improvingenterprises.com/wp-content/themes/improving2012/images/logo.png" /></a>
+<a href="http://improvingenterprises.com/"><img src="http://www.improvingenterprises.com/wp-content/uploads/2013/01/Improving-logo-JPEG1.jpg" /></a>
 </p>
 </section>
 </article>
