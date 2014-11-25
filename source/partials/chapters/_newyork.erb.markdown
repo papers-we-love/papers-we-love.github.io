@@ -25,6 +25,12 @@ Increasingly Journalists are dealing with ever larger document dumps, and in ord
 
 Jeff Larson will present a novel algorithm called minhashing that was invented at AltaVista in order to loosely cluster similar documents. The paper "On the resemblance and containment of documents" relies on a hash collisions to create document fingerprints and shows that documents can be clustered in linear time without knowledge of the entire document corpus. This algorithm has been a key tool in some of ProPublica's biggest investigations, and has allowed reporters to shine light on topics such as political astroturfing and international money laundering.
 
+<p class="chapter-sponsor">
+December Sponsor
+<a href="http://kisspatent.com/" class="sponsor"><img class="sponsor" src="/images/KISSPatent_Logo-fitted.png" title="KISSPatent" /></a>
+</p>
+
+
 ### An Axiomatic Basis for Computer Programming
 <span class="meta">
 Speaker: [Jean Yang](http://jeanyang.com/)
@@ -32,9 +38,15 @@ Date: [November 18, 2014](http://www.meetup.com/papers-we-love/events/214400572/
 Links: [Paper](http://www.cs.cmu.edu/~crary/819-f09/Hoare69.pdf)
 </span>
 
-Our lives now run on software. Bugs are becoming not just annoyances for software developers, but sources of potentially catastrophic failures. A careless programmer mistake could leak our social security numbers or crash our cars. While testing provides some assurance, it is difficult to test all possibilities in complex systems--and practically impossible in concurrent systems. For the critical systems in our lives, we should demand mathematical guarantees that the software behaves the way the programmer expected.
+![Jean Yang](http://photos1.meetupstatic.com/photos/event/a/7/d/f/600_431862975.jpeg)Our lives now run on software. Bugs are becoming not just annoyances for software developers, but sources of potentially catastrophic failures. A careless programmer mistake could leak our social security numbers or crash our cars. While testing provides some assurance, it is difficult to test all possibilities in complex systems--and practically impossible in concurrent systems. For the critical systems in our lives, we should demand mathematical guarantees that the software behaves the way the programmer expected.
 
 A single paper influenced much of the work towards providing these mathematical guarantees. C.A.R. Hoare’s seminal 1969 paper “An Axiomatic Basis for Computer Programming” introduces a method of reasoning about program correctness now known as Hoare logic. In this paper, Hoare provides a technique that 1) allows programmers to express program properties and 2) allows these properties to be automatically checked. These ideas have influenced decades of research in automated reasoning about software correctness.
+
+<p class="chapter-sponsor">
+November Sponsor
+<a href="http://dev.theladders.com/" class="sponsor"><img class="sponsor" src="/images/ladders_logo.jpg" title="The Ladders Dev Team" /></a>
+</p>
+
 
 ### The Chubby lock service
 <span class="meta">
@@ -44,6 +56,13 @@ Links: [Paper](http://static.googleusercontent.com/media/research.google.com/en/
 </span>
 
 ![camille fournier](http://photos3.meetupstatic.com/photos/event/c/e/4/c/600_424852812.jpeg) Distributed consensus is often discussed in terms of algorithms: Paxos, ZAB, RAFT, etc. But while the algorithms may be more or less mind-bending, for me the more interesting aspect of distributed consensus is creating systems that support it for the general use case. This paper, on Google's Chubby lock service, is the story of happens when a system stops being a polite theory, and starts getting real-world use.
+
+To anyone who has worked in depth as a distributed systems engineer, Chubby is a beautiful paper. It is not a paper about algorithms and their limits, or a toy fringe system created by grad students to test a hypothesis. It is a paper that describes the real tradeoffs that real systems engineers make when designing something to solve a large set of problems well enough. This paper shows the key insights that the authors had as to how such a system might be used, and awareness of what it should do well, and what it should not try to do well. It details how Chubby was designed, but then goes further to describe how it ended up being used when released to the wild, and the surprises and consequences of these design decisions.
+
+<p class="chapter-sponsor">
+October Sponsor
+<a href="http://beatport.com/" class="sponsor"><img class="sponsor" src="/images/beatport_logo.png" title="Beatport" /></a>
+</p>
 
 ### Crossing the Gap from Imperative to Functional Programming through Refactoring
 <span class="meta">
@@ -56,6 +75,10 @@ Links: [Paper](http://dig.cs.illinois.edu/papers/lambdaRefactoring.pdf) **|** [S
 
 While developers of new code will be able to start using the features immediately, what should we do with the billions of lines of code that have already been written? This paper proposes that we can automatically translate the existing body of Java code to make use of the new features.  This improves the readability of the old code, maintains consistency between new and old code, and potentially improves performance.
 
+<p class="chapter-sponsor">
+September Sponsor
+<a href="http://beatport.com/" class="sponsor"><img class="sponsor" src="/images/beatport_logo.png" title="Beatport" /></a>
+</p>
 
 ### The LCA Problem Revisited
 <span class="meta">
@@ -68,6 +91,11 @@ Links: [Paper](http://www.ics.uci.edu/~eppstein/261/BenFar-LCA-00.pdf) | [Video]
 
 The LCA Problem Revisited is a wonderfully curated journey through a deceptively simple problem that comes together in the end in a beautiful way, and it uses techniques that are powerful in plenty of other places.  Plus, it solves another bonus problem along the way!
 
+<p class="chapter-sponsor">
+August Sponsor
+<a href="http://beatport.com/" class="sponsor"><img class="sponsor" src="/images/beatport_logo.png" title="Beatport" /></a>
+</p>
+
 ### The Derivative of a Regular Type is its Type of One-Hole Contexts
 <span class="meta">
 Speaker: [Erik Hinton](https://twitter.com/erikhinton)
@@ -79,6 +107,11 @@ Links: [Paper](http://strictlypositive.org/diff.pdf) | [Video](https://www.youtu
 
 This paper is lovable, fun, and important because it is a radical thought experiment in the limits of abstraction. The paper poses the question: we call data types "algebraic", so can we "do calculus" on them? Surely, the nomenclature is just coincidental? What would it even mean to take the derivative of a data type? The paper stretches algebraic data types to what should be their breaking point and then demonstrates that it's not a breaking point ay all. By considering the paper's set-up and implications, we gain a deeper understanding of types and what they abstract.
 
+<p class="chapter-sponsor">
+July Sponsor
+<a href="http://beatport.com/" class="sponsor"><img class="sponsor" src="/images/beatport_logo.png" title="Beatport" /></a>
+</p>
+
 ### One VM to Rule Them All
 <span class="meta">
 Speaker: [Aysylu Greenberg](http://aysy.lu/)
@@ -87,6 +120,13 @@ Links: [Paper](https://www.cs.purdue.edu/homes/gkrichar/papers/onward2013-wuerth
 </span>
 
 ![aysylu greenberg](http://photos4.meetupstatic.com/photos/event/3/f/f/4/600_377356372.jpeg) The paper explains how you can write an interpreter and get an optimizing just-in-time (JIT) compiler for free. This enables language designers to focus on features without worrying about the complexities of compiler optimizations and code generation. This paper presents a Java Virtual Machine (JVM) that allows the application to control the JIT compiler behavior at runtime. We'll discuss how various programming languages can take advantage of this framework.
+
+To intrigue compiler aficionados, the authors show how combining AST node rewriting during interpretation, optimization, and deoptimization produces high performance code from the interpreter without a language-specific compiler. In addition, they present how features of a variety of programming languages, such as JavaScript, Ruby, Python, R and others, map on the framework.
+
+<p class="chapter-sponsor">
+June Sponsor
+<a href="http://beatport.com/" class="sponsor"><img class="sponsor" src="/images/beatport_logo.png" title="Beatport" /></a>
+</p>
 
 ### A Comparative Study of Convergent & Commutative Replicated Data Types
 <span class="meta">
@@ -97,32 +137,54 @@ Links: [Paper](http://hal.upmc.fr/docs/00/55/55/88/PDF/techreport.pdf) | [Slides
 
 ![peoples](http://photos3.meetupstatic.com/photos/event/5/7/0/600_364021392.jpeg) Conflict-free Replicated Data Types (CRDTs) are a formalism for providing practical data and programming primitives for use in distributed systems applications without necessitating expensive (and sometimes impractical) consensus mechanisms.  Their key characteristic is that they provide conflict-free "merging" of distributed concurrent updates given only the weak guarantees of eventual consistency.
 
+<p class="chapter-sponsor">
+May Sponsor
+<a href="http://beatport.com/" class="sponsor"><img class="sponsor" src="/images/beatport_logo.png" title="Beatport" /></a>
+</p>
+
 ### Sparrow: Distributed, Low Latency Scheduling
 <span class="meta">
 Speaker: [David Greenberg](https://twitter.com/dgrnbrg)
-Date: [May 15, 2014](http://www.meetup.com/papers-we-love/events/174731732/)
+Date: [April 15, 2014](http://www.meetup.com/papers-we-love/events/174731732/)
 Links: [Paper](http://people.csail.mit.edu/matei/papers/2013/sosp_sparrow.pdf) | [Video](http://www.hakkalabs.co/articles/comp-sci-talks-data-engineers-distributed-low-latency-scheduling-sparrow)
 </span>
 
 ![david greenberg](http://photos2.meetupstatic.com/photos/event/a/4/5/8/600_358182072.jpeg) When you need to execute code on a cluster of machines, deciding which machine should run that code becomes a complex problem, known as scheduling. We're all familiar with routing problems, such as the recent RapGenius incident. It turns out that simple improvements to randomized routing can dramatically improve the performance! Sparrow is a distributed scheduling algorithm for low latency, high throughput workloads. We'll review the Sparrow algorithm, and learn the tricks that they used. Then, we'll discuss other applications of Sparrow, besides the big-data map-reduce application it was created for.
 
+<p class="chapter-sponsor">
+April Sponsor
+<a href="http://beatport.com/" class="sponsor"><img class="sponsor" src="/images/beatport_logo.png" title="Beatport" /></a>
+</p>
+
 ### Programming with Algebraic Effects and Handlers
 <span class="meta">
 Speaker: [Brandon Bloom](http://www.brandonbloom.name/)
-Date: [May 15, 2014](http://www.meetup.com/papers-we-love/events/168722902/)
+Date: [March 15, 2014](http://www.meetup.com/papers-we-love/events/168722902/)
 Links: [Paper](https://github.com/papers-we-love/papers-we-love/blob/master/plt/programming-with-algebraic-effects-and-handlers.pdf?raw=true) | [Audio](http://www.mixcloud.com/paperswelove/bbloom_3_17_2014_programming_with_alegebraic_effectshandlers/) | [Notes](https://github.com/papers-we-love/papers-we-love/issues/9)
 </span>
 
 ![brandon bloom](http://photos4.meetupstatic.com/photos/event/8/e/8/2/highres_343416482.jpeg) Some great papers embody insights, others package up those insights into digestible bites. "Programing with Algebraic Effects and Handlers" is the later sort of great paper. After two decades of fundamental research in to the nature of computation, a lot of mysterious ideas in computer science such as continuations and exception handling finally made sense to a number of mathematically inclined geniuses. Bauer and Pretnar's Eff programming language cuts right through the heart of the theory in a way that makes sense to anybody who has ever written a functional program. This paper uses the Eff language to explore a number of simple computational effects that were traditionally viewed as quite varied and complex.
 
+<p class="chapter-sponsor">
+March Sponsor
+<a href="http://beatport.com/" class="sponsor"><img class="sponsor" src="/images/beatport_logo.png" title="Beatport" /></a>
+</p>
+
 ### A Uniﬁed Theory of Garbage Collection
 <span class="meta">
 Speaker: [Michael Bernstein](http://michaelrbernste.in/)
-Date: [May 15, 2014](http://www.meetup.com/papers-we-love/events/163406212/)
+Date: [February 15, 2014](http://www.meetup.com/papers-we-love/events/163406212/)
 Links: [Paper](http://www.cs.virginia.edu/~cs415/reading/bacon-garbage.pdf) | [Video](http://www.youtube.com/watch?v=XtUtfARSIv8) | [Slides](https://speakerdeck.com/mrb/papers-we-love-a-unified-theory-of-garbage-collection)
 </span>
 
 ![mrb](http://photos3.meetupstatic.com/photos/event/8/1/3/0/highres_337713072.jpeg) Mike Bernstein is obsessed. Not with anything in particular, just in general. He's a Brooklyn, NYC based software developer and amateur Computer Scientist who writes at [http://michaelrbernste.in](http://michaelrbernste.in) and tweets (too much) at @mrb_bk. He's given talks on Garbage Collection and Distributed Systems in the past and is very excited to hang and chat with fellow NYC obsessives.
+
+This our inaugural Meetup, and we're excited to have Michael Bernstein presenting the paper A Uniﬁed Theory of Garbage Collection by David F. Bacon, Perry Cheng, and V.T. Rajan.
+
+<p class="chapter-sponsor">
+February Sponsor
+<a href="http://beatport.com/" class="sponsor"><img class="sponsor" src="/images/beatport_logo.png" title="Beatport" /></a>
+</p>
 
 </section>
 <section class="secondary">
@@ -148,8 +210,7 @@ Please RSVP for meetings via <a href="http://www.meetup.com/papers-we-love/">Mee
 <a href="http://viggleinc.com"><img src="http://gadgetnerdly.com/wp-content/uploads/2012/06/logo_viggle.png" /></a>
 Venue sponsor
 </p>
-<p class="sponsor"><a href="http://dev.theladders.com/"><img src="/images/ladders_logo.jpg" title="The Ladders Dev Team" /></a>
-Food/Refreshments sponsor</p>
+<p class="sponsor"><a href="http://kisspatent.com/" class="sponsor"><img class="sponsor" src="/images/KISSPatent_Logo-fitted.png" title="KISSPatent" /></a>Food/Refreshments sponsor</p>
 
 </section>
 </article>

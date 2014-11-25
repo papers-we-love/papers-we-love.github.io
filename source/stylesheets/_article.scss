@@ -120,3 +120,19 @@ img.left {
 img.no-shadow {
   box-shadow: 0 0 #fff !important;
 }
+
+img.sponsor {
+  margin: .5em 0 .5em 0 !important;
+  max-width: 200px;
+  display: block;
+}
+
+p.chapter-sponsor {
+  font-family: $sans;
+  text-align: center;
+  display: inline-block;
+  color: #999;
+  a {
+    display: block;
+  }
+}
