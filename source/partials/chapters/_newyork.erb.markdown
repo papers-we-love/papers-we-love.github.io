@@ -17,7 +17,7 @@ Papers We Love has a **[Code of Conduct](https://github.com/papers-we-love/paper
 ### On the resemblance and containment of documents
 <span class="meta">
 Speaker: [Jeff Larson](http://www.propublica.org/site/author/jeff_larson)
-Date: [TBD](http://www.meetup.com/papers-we-love/events/214029542/)
+Date: [December 16, 2014](http://www.meetup.com/papers-we-love/events/214029542/)
 Links: [Paper](http://gatekeeper.dec.com/ftp/pub/dec/SRC/publications/broder/positano-final-wpnums.pdf)
 </span>
 
@@ -207,7 +207,7 @@ Please RSVP for meetings via <a href="http://www.meetup.com/papers-we-love/">Mee
 </p>
 <h2>Sponsors</h2>
 <p class="sponsor">
-<a href="http://viggleinc.com"><img src="http://gadgetnerdly.com/wp-content/uploads/2012/06/logo_viggle.png" /></a>
+<a href="http://refinery29.com"><img src="/images/refinery29.png" /></a>
 Venue sponsor
 </p>
 <p class="sponsor"><a href="http://kisspatent.com/" class="sponsor"><img class="sponsor" src="/images/KISSPatent_Logo-fitted.png" title="KISSPatent" />
