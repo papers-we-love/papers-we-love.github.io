@@ -17,7 +17,7 @@ Papers We Love has a **[Code of Conduct](https://github.com/papers-we-love/paper
 ### On the resemblance and containment of documents
 <span class="meta">
 Speaker: [Jeff Larson](http://www.propublica.org/site/author/jeff_larson)
-Date: [TBD](http://www.meetup.com/papers-we-love/events/214029542/)
+Date: [December 16, 2014](http://www.meetup.com/papers-we-love/events/214029542/)
 Links: [Paper](http://gatekeeper.dec.com/ftp/pub/dec/SRC/publications/broder/positano-final-wpnums.pdf)
 </span>
 
@@ -26,8 +26,9 @@ Increasingly Journalists are dealing with ever larger document dumps, and in ord
 Jeff Larson will present a novel algorithm called minhashing that was invented at AltaVista in order to loosely cluster similar documents. The paper "On the resemblance and containment of documents" relies on a hash collisions to create document fingerprints and shows that documents can be clustered in linear time without knowledge of the entire document corpus. This algorithm has been a key tool in some of ProPublica's biggest investigations, and has allowed reporters to shine light on topics such as political astroturfing and international money laundering.
 
 <p class="chapter-sponsor">
-December Sponsor
+December Sponsors
 <a href="http://kisspatent.com/" class="sponsor"><img class="sponsor" src="/images/KISSPatent_Logo-fitted.png" title="KISSPatent" /></a>
+<a href="http://dev.theladders.com/" class="sponsor"><img class="sponsor" src="/images/ladders_logo.jpg" title="The Ladders Dev Team" /></a>
 </p>
 
 
@@ -46,7 +47,6 @@ A single paper influenced much of the work towards providing these mathematical 
 November Sponsor
 <a href="http://dev.theladders.com/" class="sponsor"><img class="sponsor" src="/images/ladders_logo.jpg" title="The Ladders Dev Team" /></a>
 </p>
-
 
 ### The Chubby lock service
 <span class="meta">
@@ -207,10 +207,10 @@ Please RSVP for meetings via <a href="http://www.meetup.com/papers-we-love/">Mee
 </p>
 <h2>Sponsors</h2>
 <p class="sponsor">
-<a href="http://viggleinc.com"><img src="http://gadgetnerdly.com/wp-content/uploads/2012/06/logo_viggle.png" /></a>
+<a href="http://refinery29.com"><img src="/images/refinery29.png" /></a>
 Venue sponsor
 </p>
-<p class="sponsor"><a href="http://kisspatent.com/" class="sponsor"><img class="sponsor" src="/images/KISSPatent_Logo-fitted.png" title="KISSPatent" /></a>Food/Refreshments sponsor</p>
-
+<p class="sponsor"><a href="http://kisspatent.com/" class="sponsor"><img class="sponsor" src="/images/KISSPatent_Logo-fitted.png" title="KISSPatent" />
+<a href="http://dev.theladders.com/" class="sponsor"><img class="sponsor" src="/images/ladders_logo.jpg" title="The Ladders Dev Team" /></a>Food/Refreshments sponsor</p>
 </section>
 </article>
