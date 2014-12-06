@@ -2,15 +2,21 @@
 title = ""
 description = "A repository of computer science papers and a community of people who love reading them"
 chapter ||= nil
+unless current_page.data.title.nil?
+  title = current_page.data.title
+end
 unless chapter.nil?
-    title = "#{chapter[:title]} |"
+    title = "#{chapter[:title]} Chapter"
     description = chapter[:description]
 end
 unless current_article.nil?
-    title = "#{current_article.title} |"
+    title = current_article.title
 end
 unless current_page.data.description.nil?
     description = current_page.data.description
+end
+unless title.empty?
+  title = title + ' |'
 end
 %>
 <!doctype html>
