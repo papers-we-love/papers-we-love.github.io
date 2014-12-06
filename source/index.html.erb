@@ -12,23 +12,9 @@ per_page: 10
 <section class="home-chapters">
     <h1>Chapters:</h1>
     <ul class="home-chapters-list">
-        <li><%= link_to 'New York City', '/chapter/newyork' %></li>
-        <li><%= link_to 'San Francisco', '/chapter/sanfrancisco' %></li>
-        <li><%= link_to 'Chicago', 'http://www.meetup.com/Papers-We-Love-Chicago' %></li>
-        <li><%= link_to 'London', 'http://www.meetup.com/papers-we-love-london' %></li>
-        <li><%= link_to 'Colorado', 'http://www.meetup.com/Papers-We-Love-Boulder' %></li>
-        <li><%= link_to 'Columbus', '/chapter/columbus' %></li>
-        <li><%= link_to 'Berlin', 'http://www.meetup.com/Papers-We-Love-Berlin' %></li>
-        <li><%= link_to 'Pune', 'http://www.meetup.com/Doo-Things' %></li>
-        <li><%= link_to 'Boston', 'http://www.meetup.com/Papers-We-Love-Boston' %></li>
-        <li><%= link_to 'Singapore', 'https://www.facebook.com/groups/paperswelovesg/' %></li>
-        <li><%= link_to 'Bangalore', 'http://www.meetup.com/Papers-we-love-Bangalore/' %></li>
-        <li><%= link_to 'Washington, DC', 'http://www.meetup.com/Papers-We-Love-DC/' %></li>
-        <li><%= link_to 'Montreal', 'http://www.meetup.com/Papers-We-Love-Montreal/' %></li>
-        <li><%= link_to 'Seattle', 'http://www.meetup.com/Papers-We-Love-Seattle' %></li>
-        <li><%= link_to 'Toronto', 'http://www.meetup.com/Papers-We-Love-Toronto' %></li>
-        <li><%= link_to 'Hamburg', 'http://www.meetup.com/Papers-We-Love-Hamburg' %></li>
-        <li><%= link_to 'Dallas', 'http://www.meetup.com/Papers-We-Love-Dallas' %></li>
+      <% @chapters.sort! { |h1, h2| h1[:title] <=> h2[:title] }.each do |chapter| %>
+        <li><%= link_to chapter[:title], chapter[:url] %></li>
+      <% end %>
     </ul>
 </section>
 

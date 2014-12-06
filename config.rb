@@ -55,19 +55,11 @@ end
 #   page "/admin/*"
 # end
 
-chapters = [{:name => 'newyork', :title => 'New York Chapter', :description => "New York City's chapter of Papers We Love"},
-            {:name => 'sanfrancisco', :title => 'San Francisco Chapter', :description => "The Bay Area chapter of Papers We Love"},
-            {:name => 'boulder', :title => 'Boulder Chapter', :description => "The Boulder chapter of Papers We Love"},
-            {:name => 'london', :title => 'London Chapter', :description => "The London chapter of Papers We Love"},
-            {:name => 'stlouis', :title => 'St. Louis Chapter', :description => "The St. Louis chapter of Papers We Love"},
-            {:name => 'columbus', :title => 'Columbus Chapter', :description => "The Columbus chapter of Papers We Love"},
-            {:name => 'berlin', :title => 'Berlin Chapter', :description => "The Berlin chapter of Papers We Love"},
-            {:name => 'pune', :title => 'Pune Chapter', :description => "The Pune chapter of Papers We Love"},
-            {:name => 'boston', :title => 'Boston Chapter', :description => "The Boston chapter of Papers We Love"}
-           ]
+# Load Chapters YAML
+@chapters = YAML.load_file('source/chapters.yml')
 
 # Chapter pages
-chapters.each do |chapter|
+@chapters.each do |chapter|
   proxy "/chapter/#{chapter[:name]}.html", "/chapter.html", :locals => { :chapter => chapter }, :ignore => true
 end
 
