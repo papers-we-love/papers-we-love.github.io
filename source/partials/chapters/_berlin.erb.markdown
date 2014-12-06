@@ -22,11 +22,12 @@ For the very first Papers We Love Berlin Meetup, we will have Erik Michaels-Ober
 
 This is particularly interesting for Rubyists, because Ruby 3.0 might ship with such a type system.
 
-<blockquote>This paper presents a soft type systems that retains the expressiveness of dynamic typing, but offers the early error detection and improved optimization capabilities of static typing. The key idea underlying soft typing is that a type checker need not reject programs containing "ill-typed" phrases. Instead, the type checker can insert explicit run-time checks, transforming "ill-typed" programs into type-correct ones.</blockquote>
+> This paper presents a soft type systems that retains the expressiveness of dynamic typing, but offers the early error detection and improved optimization capabilities of static typing. The key idea underlying soft typing is that a type checker need not reject programs containing "ill-typed" phrases. Instead, the type checker can insert explicit run-time checks, transforming "ill-typed" programs into type-correct ones.
 
 Thanks to [ResearchGate](http://www.researchgate.net/) for hosting this first edition!
 
 </section>
+
 <section class="secondary">
 <h2>Chapter details</h2>
 <p>
@@ -47,7 +48,8 @@ Please RSVP for meetings via <a href="http://www.meetup.com/Papers-We-Love-Berli
 </p>
 <h2>Sponsors</h2>
 <p class="sponsor">
-<a href="http://www.researchgate.net/">ResearchGate</a>
+<a href="http://www.researchgate.net/"><img src="/images/ResearchGate_Logo.png" /></a>
 </p>
+
 </section>
 </article>
