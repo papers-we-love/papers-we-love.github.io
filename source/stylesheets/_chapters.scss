@@ -92,3 +92,29 @@
     }
   }
 }
+
+article.chapter {
+  section.chapters {
+    text-align: center;
+    h1 {
+      font-size: 2em;
+    }
+  }
+}
+
+ul.chapter-index-list {
+  text-align: center;
+  li {
+    margin: .7em;
+    display: inline-block;
+    a {
+      font-size: 1.2em;
+      text-decoration: none;
+      color: $blue-link;
+      &:hover {
+        color: $blue-link;
+        text-decoration: underline;
+      }
+    }
+  }
+}
