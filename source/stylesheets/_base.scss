@@ -41,6 +41,15 @@
     }
   }
 
+  blockquote {
+    border-left: #eee 4px solid;
+    margin-left: 0;
+    padding-left: 1.4em;
+    p {
+      color: #666;
+    }
+  }
+
   @include media($desktop) {
     p {
       font-size: 1.1em;
