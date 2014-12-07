@@ -22,7 +22,7 @@ We've added some CLI commands to Middleman to speed up generic tasks, such as ad
 
 #### Adding a chapter
 
-Chapters are managed in `source/chapter.yml`, which is used to dynamically generate links on the site. Chapters can be quickly added with a CLI command:
+Chapters are managed in `source/chapter.yml`, which is used to dynamically generate links on the site. This command will also create a generic template page for the chapter in `/source/partials/chapters`. Chapters can be quickly added with a CLI command:
 
 ```bash
 $ middleman chapter NAME
