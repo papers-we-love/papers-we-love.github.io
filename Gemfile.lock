@@ -80,6 +80,8 @@ GEM
       middleman-core (>= 3.0.2)
       multi_json (~> 1.0)
       rack-livereload
+    middleman-ogp (1.0.4)
+      middleman-core (~> 3.2)
     middleman-sprockets (3.3.3)
       middleman-core (>= 3.2)
       sprockets (~> 2.2)
@@ -144,6 +146,7 @@ DEPENDENCIES
   middleman-blog (~> 3.5.3)
   middleman-deploy
   middleman-livereload
+  middleman-ogp
   neat
   nokogiri
   sass
