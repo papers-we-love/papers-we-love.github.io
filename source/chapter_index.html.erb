@@ -1,0 +1,14 @@
+---
+title: Local Chapters
+---
+<article class="chapter">
+  <section class="chapters">
+    <h1>Papers We Love Chapters</h1>
+    <p>Join the community by finding a chapter near you, or maybe start your own!</p>
+    <ul class="chapter-index-list">
+      <% @chapters.sort! { |h1, h2| h1[:title] <=> h2[:title] }.each do |chapter| %>
+        <li><%= link_to chapter[:title], chapter[:url], :title => chapter[:description] %></li>
+      <% end %>
+    </ul>
+  </section>
+</article>

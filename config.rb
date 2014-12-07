@@ -80,6 +80,9 @@ end
   proxy "/chapter/#{chapter[:name]}.html", "/chapter.html", :locals => { :chapter => chapter }, :ignore => true
 end
 
+# Chapter index
+proxy "/chapter/index.html", "/chapter_index.html", :locals => { :chapters => @chapters }, :ignore => true
+
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
 #  which_fake_page: "Rendering a fake page with a local variable" }
