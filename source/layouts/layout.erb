@@ -24,6 +24,10 @@ end
         <% ogp_tags do |name, value| %>
         <meta name="<%= name %>" content="<%= value %>">
         <% end %>
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@papers_we_love" />
+        <meta name="twitter:title" content="<%= title %> Papers We Love" />
+        <meta name="twitter:description" content="<%= description %>" />
         <%= stylesheet_link_tag "font-awesome.min","screen" %>
         <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
         <%= favicon_tag 'favicon.ico' %>
