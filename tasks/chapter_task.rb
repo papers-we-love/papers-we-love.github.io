@@ -1,5 +1,6 @@
 require 'middleman-core/cli'
 require 'yaml'
+require 'erb'
 
 # Provides a "chapter" command for adding chapters to data
 class Chapter < Thor
@@ -8,6 +9,8 @@ class Chapter < Thor
   namespace :chapter
 
   CHAPTERS = File.join('source', 'chapters.yml')
+
+  attr_reader :output
 
   def self.source_root
     ENV['MM_ROOT']
@@ -40,6 +43,7 @@ class Chapter < Thor
 
     if chapter?.nil?
       add_chapter
+      create_layout
     else
       fail "#{@name} already exists in #{CHAPTERS}!"
     end
@@ -52,12 +56,22 @@ class Chapter < Thor
     @chapters.detect { |chapter| chapter.has_value?(@name) }
   end
 
+  # Adds chapter to YAML
   def add_chapter
     @chapters << { name: @name,
                    title: @title,
                    description: @desc,
                    url: @url }
     File.open(CHAPTERS, 'w+') { |f| f.write(@chapters.to_yaml) }
+  end
+
+  # Generate a generic chapter layout in partials
+  def create_layout
+    b = binding
+    layout = File.join('lib', 'templates', 'chapter_template.erb')
+    filename = File.join('source', 'partials', 'chapters', "_#{@name}.erb.markdown")
+    ERB.new(File.read(layout), 0, '', '@output').result b
+    File.write(filename, @output)
   end
 
 end
