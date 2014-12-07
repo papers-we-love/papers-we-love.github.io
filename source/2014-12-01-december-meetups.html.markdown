@@ -5,8 +5,12 @@ author: Zeeshan
 category: news
 tags: meetup, chapters
 label: Meetups
-label_url:
 description: December 2014 Meetup Schedule
+ogp:
+  og:
+    description: November 2014 Meetup Schedule
+  fb:
+    description: November 2014 Meetup Schedule
 ---
 
 We have another great line-up of meet-ups scheduled for December across a number of our chapters:
