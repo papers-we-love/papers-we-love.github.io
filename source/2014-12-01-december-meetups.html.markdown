@@ -25,6 +25,8 @@ We have another great line-up of meet-ups scheduled for December across a number
 
 **Singapore 12/9**: [Papers We Love SG #005](https://www.facebook.com/events/296425503880154/)
 
+**Vienna 12/10**: [First (Paper) Love](http://www.meetup.com/Papers-We-Love-Vienna/events/218624428/)
+
 **Bangalore 12/13**: [Functional Geometry](http://www.meetup.com/Papers-we-love-Bangalore/events/218973633/)
 
 **New York 12/16**: [Jeff Larson - On the resemblance and containment of documents](http://www.meetup.com/papers-we-love/events/214029542/)
