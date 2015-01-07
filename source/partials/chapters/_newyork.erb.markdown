@@ -35,7 +35,7 @@ January Sponsors
 <span class="meta">
 Speaker: [Jeff Larson](http://www.propublica.org/site/author/jeff_larson)
 Date: [December 16, 2014](http://www.meetup.com/papers-we-love/events/214029542/)
-Links: [Paper](http://gatekeeper.dec.com/ftp/pub/dec/SRC/publications/broder/positano-final-wpnums.pdf)
+Links: [Paper](http://gatekeeper.dec.com/ftp/pub/dec/SRC/publications/broder/positano-final-wpnums.pdf) **|** [Video](https://www.youtube.com/watch?v=zbIt245amAw) **|** [Audio](http://www.mixcloud.com/paperswelove/jeff-larson-on-the-resemblance-and-the-containment-of-documents/)
 </span>
 
 ![Jeff Larson](http://photos3.meetupstatic.com/photos/event/5/b/5/3/highres_432563379.jpeg)Increasingly Journalists are dealing with ever larger document dumps, and in order to find interesting stories in these troves, they have to cluster the documents to separate the wheat from the chaff. The size of these dumps often means that traditional algorithms either are too complex and take too long, or they rely on apriori constants like the number of clusters to search for.
@@ -53,7 +53,7 @@ December Sponsors
 <span class="meta">
 Speaker: [Jean Yang](http://jeanyang.com/)
 Date: [November 18, 2014](http://www.meetup.com/papers-we-love/events/214400572/)
-Links: [Paper](http://www.cs.cmu.edu/~crary/819-f09/Hoare69.pdf) **|** [Video](https://www.youtube.com/watch?v=zbIt245amAw) **|** [Audio](http://www.mixcloud.com/paperswelove/jeff-larson-on-the-resemblance-and-the-containment-of-documents/)
+Links: [Paper](http://www.cs.cmu.edu/~crary/819-f09/Hoare69.pdf) **|** [Slides](https://speakerdeck.com/paperswelove/jean-yang-on-an-axiomatic-basis-for-computer-programming) **|** [Video](https://www.hakkalabs.co/articles/axiomatic-basis-computer-programming-c-r-hoare) **|** [Audio](http://www.mixcloud.com/paperswelove/jean-yang-on-an-axiomatic-basis-for-computer-programming/)
 </span>
 
 ![Jean Yang](http://photos1.meetupstatic.com/photos/event/a/7/d/f/600_431862975.jpeg)Our lives now run on software. Bugs are becoming not just annoyances for software developers, but sources of potentially catastrophic failures. A careless programmer mistake could leak our social security numbers or crash our cars. While testing provides some assurance, it is difficult to test all possibilities in complex systems--and practically impossible in concurrent systems. For the critical systems in our lives, we should demand mathematical guarantees that the software behaves the way the programmer expected.
