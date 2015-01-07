@@ -207,10 +207,6 @@ February Sponsor
 <section class="secondary">
 <h2>Chapter details</h2>
 <p>
-<strong>Location:</strong>
-<a href="http://maps.google.com/maps?f=q&hl=en&q=40.739433,-73.989240">Viggle</a> - 902 Broadway, 11th floor
-</p>
-<p>
 <strong>Sign-up:</strong>
 Please RSVP for meetings via <a href="http://www.meetup.com/papers-we-love/">Meetup.com</a>
 </p>
