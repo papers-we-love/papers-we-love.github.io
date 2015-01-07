@@ -14,6 +14,23 @@ Papers We Love has a **[Code of Conduct](https://github.com/papers-we-love/paper
 
 ## Chapter Meetups
 
+### Incremental Mature Garbage Collection Using Train Algorithm
+<span class="meta">
+Speaker: [Andrew Turley](http://dev.theladders.com/ourteam/andrewturley/)
+Date: [January 26, 2015](http://www.meetup.com/papers-we-love/events/219423215/)
+Links: [Paper](https://github.com/papers-we-love/papers-we-love/blob/master/garbage_collection/incremental_mature_garbage_collection_using_the_train_algorithm.pdf?raw=true)
+</span>
+
+Automatic garbage collection has spared programmers from an entire class of programming errors related to memory leaks and attempting to access objects that were incorrectly freed. As programs have grown in size and complexity, so have the systems that manage garbage collection. The Train Algorithm is an incremental generational garbage collector that was designed to deal with the long and unpredictable pause times caused by other algorithms. In their paper "[Incremental Mature Garbage Collection Using the Train Algorithm](https://github.com/papers-we-love/papers-we-love/blob/master/garbage_collection/incremental_mature_garbage_collection_using_the_train_algorithm.pdf?raw=true)," Seligmann and Grarup describe what they believe is the first implementation of the Train Algorithm, which they used to replace the traditional mark-and-sweep collector that was used in the BETA programming language.
+
+Andrew Turley ([@casio_juarez](https://twitter.com/casio_juarez)) is a lead software engineer on the platform team at [TheLadders](https://www.theladders.com/), where he builds infrastructure by linking Storm topologies together using RabbitMQ. He has also had numerous professional brushes with lower levels of the software stack, including building embedded systems for processing audio at DigiDesign, and helping to improve the performance of iOS at Apple.
+
+<p class="chapter-sponsor">
+January Sponsors
+<a href="http://engineering.tumblr.com/" class="sponsor"><img class="sponsor" src="/images/tumblr_logotype_white_blue_64.png" title="Tumblr Engineering" alt="tumblr" /></a>
+<a href="http://dev.theladders.com/" class="sponsor"><img class="sponsor" src="/images/ladders_logo.jpg" title="The Ladders Dev Team" /></a>
+</p>
+
 ### On the resemblance and containment of documents
 <span class="meta">
 Speaker: [Jeff Larson](http://www.propublica.org/site/author/jeff_larson)
@@ -21,7 +38,7 @@ Date: [December 16, 2014](http://www.meetup.com/papers-we-love/events/214029542/
 Links: [Paper](http://gatekeeper.dec.com/ftp/pub/dec/SRC/publications/broder/positano-final-wpnums.pdf)
 </span>
 
-Increasingly Journalists are dealing with ever larger document dumps, and in order to find interesting stories in these troves, they have to cluster the documents to separate the wheat from the chaff. The size of these dumps often means that traditional algorithms either are too complex and take too long, or they rely on apriori constants like the number of clusters to search for.
+![Jeff Larson](http://photos3.meetupstatic.com/photos/event/5/b/5/3/highres_432563379.jpeg)Increasingly Journalists are dealing with ever larger document dumps, and in order to find interesting stories in these troves, they have to cluster the documents to separate the wheat from the chaff. The size of these dumps often means that traditional algorithms either are too complex and take too long, or they rely on apriori constants like the number of clusters to search for.
 
 Jeff Larson will present a novel algorithm called minhashing that was invented at AltaVista in order to loosely cluster similar documents. The paper "On the resemblance and containment of documents" relies on a hash collisions to create document fingerprints and shows that documents can be clustered in linear time without knowledge of the entire document corpus. This algorithm has been a key tool in some of ProPublica's biggest investigations, and has allowed reporters to shine light on topics such as political astroturfing and international money laundering.
 
@@ -36,7 +53,7 @@ December Sponsors
 <span class="meta">
 Speaker: [Jean Yang](http://jeanyang.com/)
 Date: [November 18, 2014](http://www.meetup.com/papers-we-love/events/214400572/)
-Links: [Paper](http://www.cs.cmu.edu/~crary/819-f09/Hoare69.pdf)
+Links: [Paper](http://www.cs.cmu.edu/~crary/819-f09/Hoare69.pdf) **|** [Video](https://www.youtube.com/watch?v=zbIt245amAw) **|** [Audio](http://www.mixcloud.com/paperswelove/jeff-larson-on-the-resemblance-and-the-containment-of-documents/)
 </span>
 
 ![Jean Yang](http://photos1.meetupstatic.com/photos/event/a/7/d/f/600_431862975.jpeg)Our lives now run on software. Bugs are becoming not just annoyances for software developers, but sources of potentially catastrophic failures. A careless programmer mistake could leak our social security numbers or crash our cars. While testing provides some assurance, it is difficult to test all possibilities in complex systems--and practically impossible in concurrent systems. For the critical systems in our lives, we should demand mathematical guarantees that the software behaves the way the programmer expected.
@@ -207,10 +224,12 @@ Please RSVP for meetings via <a href="http://www.meetup.com/papers-we-love/">Mee
 </p>
 <h2>Sponsors</h2>
 <p class="sponsor">
-<a href="http://refinery29.com"><img src="/images/refinery29.png" /></a>
+<a href="http://engineering.tumblr.com"><img src="/images/tumblr_logotype_white_blue_64.png" /></a>
 Venue sponsor
 </p>
-<p class="sponsor"><a href="http://kisspatent.com/" class="sponsor"><img class="sponsor" src="/images/KISSPatent_Logo-fitted.png" title="KISSPatent" />
-<a href="http://dev.theladders.com/" class="sponsor"><img class="sponsor" src="/images/ladders_logo.jpg" title="The Ladders Dev Team" /></a>Food/Refreshments sponsor</p>
+<p class="sponsor">
+<a href="http://dev.theladders.com/" class="sponsor"><img class="sponsor" src="/images/ladders_logo.jpg" title="The Ladders Dev Team" /></a>
+Food/Refreshments sponsor
+</p>
 </section>
 </article>
