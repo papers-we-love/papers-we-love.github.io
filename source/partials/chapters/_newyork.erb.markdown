@@ -6,9 +6,9 @@
 
 As the original Papers We Love chapter, we've been helping New Yorkers scratch their paper reading itch for most of 2014. We welcome everyone from the programming community for an evening of ideas, vibrant discussions and hanging out with your fellow travellers.
 
-The **New York Chapter** meets monthly in the Flatiron District at <a href="http://maps.google.com/maps?f=q&hl=en&q=40.739433,-73.989240">Viggle</a> - 902 Broadway, 11<sup>th</sup> floor, New York, NY.
+The **New York Chapter** meets monthly at different locations throughout the city. Keep an eye on our [Meetup.com](http://www.meetup.com/papers-we-love/) page to find out the latest address.
 
-**Our meets fill up fast**, so please make sure to RSVP only if you plan on attending. You can find our schedule and RSVP [here on Meetup.com](http://www.meetup.com/papers-we-love/").
+**Our meets fill up fast**, so please make sure to RSVP only if you plan on attending. You can find our schedule and RSVP [here on Meetup.com](http://www.meetup.com/papers-we-love/).
 
 Papers We Love has a **[Code of Conduct](https://github.com/papers-we-love/papers-we-love/blob/master/CODE_OF_CONDUCT.md)**. Please contact one of the Meetup's organizers if anyone is not following it. Be good to each other and to the PWL community!
 
