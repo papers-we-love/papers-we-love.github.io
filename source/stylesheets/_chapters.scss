@@ -118,3 +118,51 @@ ul.chapter-index-list {
     }
   }
 }
+
+div.sponsor-platinum {
+  text-align: center;
+  @include media($desktop) {
+    @include outer-container;
+    text-align: left;
+  }
+  border-radius: .7em;
+  background-color: #eee;
+}
+
+div.sponsor-platinum-img {
+  a {
+    display: inline;
+  }
+  text-align: center;
+  img.sponsor-platinum {
+    width: 80%;
+    margin: 1em 0 0 0;
+  }
+  @include media($desktop) {
+    @include span-columns(2);
+    img.sponsor-platinum {
+      display: block;
+      margin: 0 0 0 1em;
+      width: 100%;
+      vertical-align: middle;
+    }
+  }
+}
+
+div.sponsor-platinum-text {
+  p {
+    margin: 0 2em 1em 2em;
+    padding: 0 0 1em 0;
+    font-family: $sans;
+    font-size: 1em;
+  }
+  @include media($desktop) {
+    @include span-columns(2);
+    p {
+      padding: 2em 1em 0 0;
+      margin: 0;
+      font-size: 1em;
+    }
+  }
+  vertical-align: middle;
+}

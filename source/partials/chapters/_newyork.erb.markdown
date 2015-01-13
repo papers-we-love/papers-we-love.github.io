@@ -12,6 +12,15 @@ The **New York Chapter** meets monthly at different locations throughout the cit
 
 Papers We Love has a **[Code of Conduct](https://github.com/papers-we-love/papers-we-love/blob/master/CODE_OF_CONDUCT.md)**. Please contact one of the Meetup's organizers if anyone is not following it. Be good to each other and to the PWL community!
 
+<div class="sponsor-platinum">
+<div class="sponsor-platinum-img">
+<a href="https://www.twosigma.com/" class="sponsor-platinum"><img src="/images/TwoSigma_RGB.jpg" class="sponsor-platinum" alt="TwoSigma" title="TwoSigma - Platinum Sponsor of Papers We Love NYC" /></a>
+</div>
+<div class="sponsor-platinum-text">
+We'd like to give a special thanks **[TwoSigma](https://www.twosigma.com/)** for supporting the New York Chapter as a Platinum Sponsor.
+</div>
+</div>
+
 ## Chapter Meetups
 
 ### Incremental Mature Garbage Collection Using Train Algorithm
