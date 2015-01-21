@@ -35,7 +35,7 @@ We have another great line-up of meet-ups scheduled for December across a number
 
 ---
 
-<img class="left no-shadow" alt="KISSPatent" style="width: 120px" src="/images/KISSPatent_Logo-fitted.png" />
+<p class="chapter-sponsor-thanks"><img class="left no-shadow" alt="KISSPatent" style="width: 120px" src="/images/KISSPatent_Logo-fitted.png" />
 <img class="left no-shadow" alt="TheLaddersDev" style="width: 120px" src="/images/ladders_logo.jpg" /> The **New York chapter** would like to give special thanks to [KISSPatent](http://kisspatent.com/) and [The Ladders Engineering Team](http://dev.theladders.com/) for sponsoring the food and refreshments for the December meetup.
 
-GitHub: [TheLadders](https://github.com/TheLadders) / Twitter: [@KISSPatent](https://twitter.com/kisspatent), [@TheLaddersDev](https://twitter.com/TheLaddersDev)
+GitHub: [TheLadders](https://github.com/TheLadders) / Twitter: [@KISSPatent](https://twitter.com/kisspatent), [@TheLaddersDev](https://twitter.com/TheLaddersDev)</p>
