@@ -225,7 +225,7 @@ Please RSVP for meetings via <a href="http://www.meetup.com/papers-we-love/">Mee
 </p>
 <p>
 <strong>Organizers:</strong>
-<a href="https://twitter.com/bowmanb">Brian Bowman</a>, <a href="https://twitter.com/CuevasClemente">Clemente Cuevas</a>, <a href="https://twitter.com/jeremyheiler">Jeremy Heiler</a>, <a href="https://twitter.com/zeeshanlakhani">Zeeshan Lakhani</a>, <a href="https://twitter.com/clint_newsom">Clint Newsom</a> and <a href="https://twitter.com/d_run">Darren Newton</a>
+<a href="mailto:bowmanb@gmail.com">Brian Bowman</a>, <a href="https://twitter.com/CuevasClemente">Clemente Cuevas</a>, <a href="https://twitter.com/jeremyheiler">Jeremy Heiler</a>, <a href="https://twitter.com/zeeshanlakhani">Zeeshan Lakhani</a>, <a href="https://twitter.com/clint_newsom">Clint Newsom</a> and <a href="https://twitter.com/d_run">Darren Newton</a>
 </p>
 <h2>Sponsors</h2>
 <p class="sponsor">
