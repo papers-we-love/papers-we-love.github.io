@@ -15,17 +15,17 @@ ogp:
 
 We have another great line-up of meet-ups scheduled for February across a number of our chapters:
 
-**Dallas 2/2**: [Rendering Synthetic Objects into Real Scenes, Paul Debevec, pres. Adam Hill](http://www.meetup.com/papers-we-love/events/219950141/)
+**Dallas 2/2**: [Rendering Synthetic Objects into Real Scenes, Paul Debevec, pres. Adam Hill](http://www.meetup.com/Papers-We-Love-Dallas/events/219950141/)
 
-**Toronto 2/4**: [Chris Saunders on Teaching Garbage Collectors](http://www.meetup.com/papers-we-love/events/219961100/)
+**Toronto 2/4**: [Chris Saunders on Teaching Garbage Collectors](http://www.meetup.com/Papers-We-Love-Toronto/events/219961100/)
 
 **New York 2/5**: [Sam Tobin-Hochstadt on Composable and Compilable Macros](http://www.meetup.com/papers-we-love/events/220021234/)
 
-**Hyderabad 2/14**: [A Theoretician's­ Guide to the Experimental Analysis of Algorithms](http://www.meetup.com/papers-we-love/events/219756952/)
+**Hyderabad 2/14**: [A Theoretician's­ Guide to the Experimental Analysis of Algorithms](http://www.meetup.com/papers-we-love-hyderabad/events/219756952/)
 
-**San Francisco 2/19**: [Caitie McCaffrey on Orleans: A Framework for Cloud Computing](http://www.meetup.com/papers-we-love/events/212147812/)
+**San Francisco 2/19**: [Caitie McCaffrey on Orleans: A Framework for Cloud Computing](http://www.meetup.com/papers-we-love-too/events/212147812/)
 
-**Vienna 2/23**: [Dynamo: Amazon’s Highly Available Key-value Store](http://www.meetup.com/papers-we-love/events/220194070/)
+**Vienna 2/23**: [Dynamo: Amazon’s Highly Available Key-value Store](http://www.meetup.com/Papers-We-Love-Vienna/events/220194070/)
 
 **New York 2/23**: [Andrew Turley on Incremental Mature Garbage Collection Using the Train Algorithm](http://www.meetup.com/papers-we-love/events/220081725/) READMORE
 
