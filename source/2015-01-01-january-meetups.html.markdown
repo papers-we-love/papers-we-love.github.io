@@ -23,8 +23,6 @@ We have another great line-up of meet-ups scheduled for January across a number 
 
 **San Francisco 1/22**: [Alex Rasmussen on Flat Datacenter Storage](http://www.meetup.com/papers-we-love-too/events/212582062/)
 
-**New York 1/26**: [Andrew Turley on Incremental Mature Garbage Collection Using the Train Algorithm](http://www.meetup.com/papers-we-love/events/219423215/)
-
 **Vienna 1/28**: [Being Classless](http://www.meetup.com/Papers-We-Love-Vienna/events/219084988/)
 
 **Bangalore 1/31**: [Ashok Gautham on Data Structures for Text Sequences](http://www.meetup.com/Papers-we-love-Bangalore/events/219735051/) READMORE

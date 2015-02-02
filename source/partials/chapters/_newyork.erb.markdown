@@ -26,7 +26,7 @@ We'd like to give a special thanks **[TwoSigma](https://www.twosigma.com/)** for
 ### Incremental Mature Garbage Collection Using Train Algorithm
 <span class="meta">
 Speaker: [Andrew Turley](http://dev.theladders.com/ourteam/andrewturley/)
-Date: [January 26, 2015](http://www.meetup.com/papers-we-love/events/219423215/)
+Date: [February 23, 2015](http://www.meetup.com/papers-we-love/events/220081725/)
 Links: [Paper](https://github.com/papers-we-love/papers-we-love/blob/master/garbage_collection/incremental_mature_garbage_collection_using_the_train_algorithm.pdf?raw=true)
 </span>
 
@@ -35,10 +35,37 @@ Automatic garbage collection has spared programmers from an entire class of prog
 Andrew Turley ([@casio_juarez](https://twitter.com/casio_juarez)) is a lead software engineer on the platform team at [TheLadders](https://www.theladders.com/), where he builds infrastructure by linking Storm topologies together using RabbitMQ. He has also had numerous professional brushes with lower levels of the software stack, including building embedded systems for processing audio at DigiDesign, and helping to improve the performance of iOS at Apple.
 
 <p class="chapter-sponsor">
-January Sponsors
+February Sponsors
 <a href="http://engineering.tumblr.com/" class="sponsor"><img class="sponsor" src="/images/tumblr_logotype_white_blue_64.png" title="Tumblr Engineering" alt="tumblr" /></a>
 <a href="http://dev.theladders.com/" class="sponsor"><img class="sponsor" src="/images/ladders_logo.jpg" title="The Ladders Dev Team" /></a>
 </p>
+
+### Composable and Compilable Macros
+<span class="meta">
+Speaker: [Sam Tobin-Hochstadt](http://www.ccs.neu.edu/home/samth/)
+Date: [February 5, 2015](http://www.meetup.com/papers-we-love/events/220021234/)
+Links: [Paper](https://www.cs.utah.edu/plt/publications/macromod.pdf)
+</span>
+
+_Composable and Compilable Macros_ introduces the Racket module system, which addresses the following problem: When you have macros that run programs at compile-time, how does this interact with separate compilation and ahead-of-time compilation. The paper introduces "phases", which enable Racket to behave the same regardless of when and how you compile your program. It also introduces the idea of writing different modules in different languages, which is now used for systems like Typed Racket.
+
+Related papers that will be discussed:
+
+- _Syntactic Abstraction in Scheme_. Dybvig Hieb & Bruggeman, Lisp and Symbolic Computation 1993 [PDF](http://www.cs.indiana.edu/~dyb/pubs/LaSC-5-4-pp295-326.pdf)
+- _Macros that Work Together_. Flatt, Findler, Culpepper, & Darais, JFP 2012 [PDF](http://www.cs.utah.edu/plt/publications/jfp12-draft-fcdf.pdf)
+- _Submodules in Racket_. Flatt GPCE 2013 [PDF](http://www.cs.utah.edu/plt/publications/gpce13-f-color.pdf)
+- _Implicit phasing for R6RS libraries_.  Ghuloum & Dybvig, ICFP 2007 [PDF](http://www.cs.indiana.edu/~dyb/pubs/implicit-phasing.pdf)
+- _Extending the scope of syntactic abstraction_. Waddell & Dybvig, POPL 1999 [PDF](http://www.cs.indiana.edu/~dyb/pubs/popl99.pdf)
+
+Sam Tobin-Hochstadt ([@samth](https://twitter.com/samth)) is an Assistant Professor in the School of Informatics and Computing at Indiana University. He has worked on dynamic languages, type systems, module systems, and metaprogramming, including creating the Typed Racket system and popularizing the phrase “scripts to programs.” He is a member of the ECMA TC39 working group responsible for standardizing JavaScript, where he co-designed the module system for ES6, the next version of JavaScript. He received his PhD in 2010 from Northeastern University under Matthias Felleisen.
+
+<p class="chapter-sponsor">
+February Sponsors
+<a href="http://engineering.tumblr.com/" class="sponsor"><img class="sponsor" src="/images/tumblr_logotype_white_blue_64.png" title="Tumblr Engineering" alt="tumblr" /></a>
+<a href="http://dev.theladders.com/" class="sponsor"><img class="sponsor" src="/images/ladders_logo.jpg" title="The Ladders Dev Team" /></a>
+<a href="http://lispnyc.org/" class="sponsor"><img class="sponsor" src="/images/lispNYC.png" title="Lisp NYC" alt="lispNYC" /></a>
+</p>
+
 
 ### On the resemblance and containment of documents
 <span class="meta">
