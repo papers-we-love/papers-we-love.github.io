@@ -23,6 +23,8 @@ We have another great line-up of meet-ups scheduled for February across a number
 
 **Hyderabad 2/14**: [A Theoretician's­ Guide to the Experimental Analysis of Algorithms](http://www.meetup.com/papers-we-love-hyderabad/events/219756952/)
 
+**Montreal 2/18**: [Guy Dumais on "Learning to Rank with Multi-Aspect Relevance for Vertical Search"](http://www.meetup.com/Papers-We-Love-Montreal/events/220181743/)
+
 **San Francisco 2/19**: [Caitie McCaffrey on Orleans: A Framework for Cloud Computing](http://www.meetup.com/papers-we-love-too/events/212147812/)
 
 **Vienna 2/23**: [Dynamo: Amazon’s Highly Available Key-value Store](http://www.meetup.com/Papers-We-Love-Vienna/events/220194070/)
