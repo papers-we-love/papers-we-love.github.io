@@ -21,6 +21,8 @@ We have another great line-up of meet-ups scheduled for January across a number 
 
 **Hyderabad 1/11**: [A Note on Distributed Computing](http://www.meetup.com/papers-we-love-hyderabad/events/219253430/)
 
+**Montreal 1/21**: [Christian Lavoie on Paxos Made Moderately Complex](http://www.meetup.com/Papers-We-Love-Montreal/events/219134793/)
+
 **San Francisco 1/22**: [Alex Rasmussen on Flat Datacenter Storage](http://www.meetup.com/papers-we-love-too/events/212582062/)
 
 **Vienna 1/28**: [Being Classless](http://www.meetup.com/Papers-We-Love-Vienna/events/219084988/)
