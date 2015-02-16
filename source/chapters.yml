@@ -1,85 +1,106 @@
 ---
-- :name: newyork
-  :title: New York
-  :description: New York City\'s chapter of Papers We Love
-  :url: "/chapter/newyork"
-- :name: sanfrancisco
-  :title: San Francisco
-  :description: The Bay Area chapter of Papers We Love
-  :url: "/chapter/sanfrancisco"
-- :name: boulder
-  :title: Boulder
-  :description: The Boulder chapter of Papers We Love
-  :url: http://www.meetup.com/Papers-We-Love-Boulder
-- :name: london
-  :title: London
-  :description: The London chapter of Papers We Love
-  :url: http://www.meetup.com/papers-we-love-london
-- :name: stlouis
-  :title: St. Louis
-  :description: The St. Louis chapter of Papers We Love
-  :url: http://www.meetup.com/Papers-We-Love-in-saint-louis/
-- :name: columbus
-  :title: Columbus
-  :description: The Columbus chapter of Papers We Love
-  :url: "/chapter/columbus"
-- :name: berlin
-  :title: Berlin
-  :description: The Berlin chapter of Papers We Love
-  :url: "/chapter/berlin"
-- :name: pune
-  :title: Pune
-  :description: The Pune chapter of Papers We Love
-  :url: http://www.meetup.com/Doo-Things
-- :name: boston
-  :title: Boston
-  :description: The Boston chapter of Papers We Love
-  :url: http://www.meetup.com/Papers-We-Love-Boston
-- :name: singapore
-  :title: Singapore
-  :description: The Singapore chapter of Papers We Love
-  :url: "/chapter/singapore"
-- :name: bangalore
-  :title: Bangalore
-  :description: The Bangalore chapter of Papers We Love
-  :url: http://www.meetup.com/Papers-we-love-Bangalore/
-- :name: washingtondc
-  :title: Washington DC
-  :description: The Washington DC chapter of Papers We Love
-  :url: http://www.meetup.com/Papers-We-Love-DC/
-- :name: montreal
-  :title: Montreal
-  :description: The Montreal chapter of Papers We Love
-  :url: http://www.meetup.com/Papers-We-Love-Montreal/
-- :name: seattle
-  :title: Seattle
-  :description: The Seattle chapter of Papers We Love
-  :url: http://www.meetup.com/Papers-We-Love-Seattle/
-- :name: toronto
-  :title: Toronto
-  :description: The Toronto chapter of Papers We Love
-  :url: http://www.meetup.com/Papers-We-Love-Toronto/
-- :name: hamburg
-  :title: Hamburg
-  :description: The Hamburg chapter of Papers We Love
-  :url: http://www.meetup.com/Papers-We-Love-Hamburg/
-- :name: dallas
-  :title: Dallas
-  :description: The Dallas chapter of Papers We Love
-  :url: http://www.meetup.com/Papers-We-Love-Dallas/
-- :name: chicago
-  :title: Chicago
-  :description: The Chicago chapter of Papers We Love
-  :url: http://www.meetup.com/Papers-We-Love-Chicago/
-- :name: reykjavik
-  :title: Reykjavik
-  :description: The Reykjavik chapter of Papers We Love
-  :url: http://www.meetup.com/Papers-We-Love-Reykjavik/
-- :name: vienna
-  :title: Vienna
-  :description: The Vienna chapter of Papers We Love
-  :url: "/chapter/vienna"
-- :name: munich
-  :title: Munich
-  :description: The Munich chapter of Papers We Love
-  :url: http://www.meetup.com/Papers-We-Love-Munich/
+- name: newyork
+  title: New York
+  description: New York City\'s chapter of Papers We Love
+  url: "/chapter/newyork"
+  meetup_url: papers-we-love
+- name: sanfrancisco
+  title: San Francisco
+  description: The Bay Area chapter of Papers We Love
+  url: "/chapter/sanfrancisco"
+  meetup_url: papers-we-love-too
+- name: boulder
+  title: Boulder
+  description: The Boulder chapter of Papers We Love
+  url: http://www.meetup.com/Papers-We-Love-Boulder
+  meetup_url: Papers-We-Love-Boulder
+- name: london
+  title: London
+  description: The London chapter of Papers We Love
+  url: http://www.meetup.com/papers-we-love-london
+  meetup_url: papers-we-love-london
+- name: stlouis
+  title: St. Louis
+  description: The St. Louis chapter of Papers We Love
+  url: http://www.meetup.com/Papers-We-Love-in-saint-louis/
+  meetup_url: Papers-We-Love-in-saint-louis
+- name: columbus
+  title: Columbus
+  description: The Columbus chapter of Papers We Love
+  url: "/chapter/columbus"
+  meetup_url: Papers-We-Love-Columbus
+- name: berlin
+  title: Berlin
+  description: The Berlin chapter of Papers We Love
+  url: "/chapter/berlin"
+  meetup_url: Papers-We-Love-Berlin
+- name: pune
+  title: Pune
+  description: The Pune chapter of Papers We Love
+  url: http://www.meetup.com/Doo-Things
+  meetup_url: Doo-Things
+- name: boston
+  title: Boston
+  description: The Boston chapter of Papers We Love
+  url: http://www.meetup.com/Papers-We-Love-Boston
+  meetup_url: Papers-We-Love-Boston
+- name: singapore
+  title: Singapore
+  description: The Singapore chapter of Papers We Love
+  url: "/chapter/singapore"
+  meetup_url: singapore
+- name: bangalore
+  title: Bangalore
+  description: The Bangalore chapter of Papers We Love
+  url: http://www.meetup.com/Papers-we-love-Bangalore/
+  meetup_url: Papers-we-love-Bangalore
+- name: washingtondc
+  title: Washington DC
+  description: The Washington DC chapter of Papers We Love
+  url: http://www.meetup.com/Papers-We-Love-DC/
+  meetup_url: Papers-We-Love-DC
+- name: montreal
+  title: Montreal
+  description: The Montreal chapter of Papers We Love
+  url: http://www.meetup.com/Papers-We-Love-Montreal/
+  meetup_url: Papers-We-Love-Montreal
+- name: seattle
+  title: Seattle
+  description: The Seattle chapter of Papers We Love
+  url: http://www.meetup.com/Papers-We-Love-Seattle/
+  meetup_url: Papers-We-Love-Seattle
+- name: toronto
+  title: Toronto
+  description: The Toronto chapter of Papers We Love
+  url: http://www.meetup.com/Papers-We-Love-Toronto/
+  meetup_url: Papers-We-Love-Toronto
+- name: hamburg
+  title: Hamburg
+  description: The Hamburg chapter of Papers We Love
+  url: http://www.meetup.com/Papers-We-Love-Hamburg/
+  meetup_url: Papers-We-Love-Hamburg
+- name: dallas
+  title: Dallas
+  description: The Dallas chapter of Papers We Love
+  url: http://www.meetup.com/Papers-We-Love-Dallas/
+  meetup_url: Papers-We-Love-Dallas
+- name: chicago
+  title: Chicago
+  description: The Chicago chapter of Papers We Love
+  url: http://www.meetup.com/Papers-We-Love-Chicago/
+  meetup_url: Papers-We-Love-Chicago
+- name: reykjavik
+  title: Reykjavik
+  description: The Reykjavik chapter of Papers We Love
+  url: http://www.meetup.com/Papers-We-Love-Reykjavik/
+  meetup_url: Papers-We-Love-Reykjavik
+- name: vienna
+  title: Vienna
+  description: The Vienna chapter of Papers We Love
+  url: "/chapter/vienna"
+  meetup_url: Papers-We-Love-Vienna
+- name: munich
+  title: Munich
+  description: The Munich chapter of Papers We Love
+  url: http://www.meetup.com/Papers-We-Love-Munich/
+  meetup_url: Papers-We-Love-Munich
