@@ -77,7 +77,7 @@ end
 
 # Chapter pages
 @chapters.each do |chapter|
-  proxy "/chapter/#{chapter[:name]}.html", "/chapter.html", :locals => { :chapter => chapter }, :ignore => true
+  proxy "/chapter/#{chapter['name']}.html", "/chapter.html", :locals => { :chapter => chapter }, :ignore => true
 end
 
 # Chapter index
