@@ -43,7 +43,7 @@ class Chapter < Thor
     @name       = name
     @title      = options[:title] || name.capitalize
     @desc       = options[:description] || "The #{@title} chapter of Papers We Love"
-    @url        = options[:url] || "http://paperswelove.org"
+    @url        = options[:url] || "/chapter/#{name}"
     @meetup_url = options[:meetup] || nil
 
     # No meetup url but url is a meetup.com address
