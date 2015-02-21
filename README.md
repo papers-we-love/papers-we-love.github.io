@@ -37,11 +37,12 @@ Option | Alias | Description
 title | -t | The title of the chapter _optional_
 description | -d | The description of the chapter (for meta tags) _optional_
 url | -u | The url of the chapter page _optional_
+meetup | -m | the Meetup.com url of the chapter _optional_
 
 **Example:**
 
 ```bash
-$ bundle exec middleman chapter washington-dc -t "Washington, DC" -u "/chapters/washington-dc"
+$ bundle exec middleman chapter washington-dc -t "Washington, DC" -u "/chapters/washington-dc" -m "http://meetup.com/Papers-We-Love-DC"
 ```
 
 Appends the following YAML to `chapter.yml`:
