@@ -12,6 +12,11 @@ $desktop: new-breakpoint(min-width 768px 4);
 // Colors
 $blue: #036;
 $blue-link: lighten($blue, 30);
+$gray-1: #333;
+$gray-2: #666;
+$gray-3: #999;
+$gray-4: #ccc;
+$gray-5: #eee;
 
 // Font stacks
 @import "fonts";

@@ -6,8 +6,8 @@ unless current_page.data.title.nil?
   title = current_page.data.title
 end
 unless chapter.nil?
-    title = "#{chapter[:title]} Chapter"
-    description = chapter[:description]
+    title = "#{chapter['title']} Chapter"
+    description = chapter['description']
 end
 unless current_article.nil?
     title = current_article.title
