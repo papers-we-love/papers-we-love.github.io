@@ -11,6 +11,23 @@ PWL Columbus strictly adheres to the [Code of Conduct](https://github.com/papers
 
 ## Chapter Meetups
 
+### Computing Arbitrary Functions of Encrypted Data
+<span class="meta">
+Speaker: [Craig Stuntz](https://twitter.com/craigstuntz)
+Date: [July 22, 2014](http://www.meetup.com/Papers-We-Love-Columbus/events/220427574/)
+Links: [Paper](https://crypto.stanford.edu/craig/easy-fhe.pdf)
+</span>
+
+Online tax preparation or financial advice sounds like a viable business, but "secure" sites are broken every day. Consumers are rightly wary of disclosing their personal information to cloud-based service providers. How can you build a service which delivers real value and is backed by a hard, cryptographic guarantee of security?
+
+What if it were possible for a customer to give their data to a cloud provider in encrypted form, and for that provider to perform useful computations on that data without ever decrypting it? The results would be delivered to the customer, encrypted with a key that only they knew. It sounds like an ideal solution, but maybe impossible?
+
+This is the promise of homomorphic encryption. The idea has been around for some time, but it was considered intriguing but maybe not possible until Craig Gentry's groundbreaking thesis. Gentry later published a much more accessible paper called "Computing Arbitrary Functions of Encrypted Data".
+
+Research on homomorphic encryption is fast-moving, and the state of the art is improving every year. The presenter's opinion is that homomorphic encryption will change cloud computing in a way similar to how SSL/TLS changed online commerce. It is the future of online privacy.
+
+This event is presented in cooperation with Franklin University's Computer Science program. 
+
 ### Out of the Tar Pit
 <span class="meta">
 Speaker: [Mykola Bilokonsky](https://twitter.com/mykola)
