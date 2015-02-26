@@ -29,6 +29,6 @@ We have another great line-up of meet-ups scheduled for November across a number
 
 ---
 
-<p class="chapter-sponsor-thanks"><img class="left no-shadow" alt="TheLaddersDev" style="width: 120px" src="/images/ladders_logo.jpg" /> The **New York chapter** would like to give special thanks to [The Ladders Engineering Team](http://dev.theladders.com/) for sponsoring the food and refreshments for the November meetup.
+<img class="left no-shadow" alt="TheLaddersDev" style="width: 120px" src="/images/ladders_logo.jpg" /> The **New York chapter** would like to give special thanks to [The Ladders Engineering Team](http://dev.theladders.com/) for sponsoring the food and refreshments for the November meetup.
 
-GitHub: [TheLadders](https://github.com/TheLadders) / Twitter: [@TheLaddersDev](https://twitter.com/TheLaddersDev)</p>
+GitHub: [TheLadders](https://github.com/TheLadders) / Twitter: [@TheLaddersDev](https://twitter.com/TheLaddersDev)

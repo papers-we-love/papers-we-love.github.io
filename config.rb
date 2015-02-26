@@ -109,7 +109,7 @@ activate :automatic_image_sizes
 #   end
 # end
 
-#set :markdown
+#set :markdown, :parse_block_html => true
 
 set :css_dir, 'stylesheets'
 
