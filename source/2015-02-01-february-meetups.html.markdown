@@ -31,7 +31,9 @@ We have another great line-up of meet-ups scheduled for February across a number
 
 **Vienna 2/23**: [Dynamo: Amazon’s Highly Available Key-value Store](http://www.meetup.com/Papers-We-Love-Vienna/events/220194070/)
 
-**New York 2/23**: [Andrew Turley on Incremental Mature Garbage Collection Using the Train Algorithm](http://www.meetup.com/papers-we-love/events/220081725/) READMORE
+**New York 2/23**: [Andrew Turley on Incremental Mature Garbage Collection Using the Train Algorithm](http://www.meetup.com/papers-we-love/events/220081725/)
+
+**Los Angeles 2/25**: [Sam L'ecuyer on The Join Calculus: a Language for Distributed Mobile Programming](http://www.meetup.com/Papers-We-Love-LA/events/220325190/) READMORE
 
 ---
 
