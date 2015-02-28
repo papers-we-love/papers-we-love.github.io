@@ -3,7 +3,7 @@ Papers-We-Love-Toronto:
   who: Readers
   country: CA
   city: Toronto
-  members: 145
+  members: 150
   timezone: Canada/Eastern
   id: 16543502
   utc_offset: -18000000
@@ -156,7 +156,7 @@ Papers-We-Love-Toronto:
     event_url: http://www.meetup.com/Papers-We-Love-Toronto/events/219961100/
   - headcount: 0
     created: 1424886141000
-    yes_rsvp_count: 17
+    yes_rsvp_count: 32
     group: {id: 16543502, created: 1408717699000, group_lat: 43.650001525878906, name: Papers We Love - Toronto,
       group_lon: -79.37999725341797, join_mode: open, urlname: Papers-We-Love-Toronto,
       who: Readers}
@@ -191,7 +191,7 @@ Papers-We-Love-in-saint-louis:
   who: readers
   country: US
   city: Saint Louis
-  members: 35
+  members: 36
   timezone: US/Central
   id: 13206522
   utc_offset: -21600000
@@ -251,23 +251,23 @@ Papers-We-Love-in-saint-louis:
     event_url: http://www.meetup.com/Papers-We-Love-in-saint-louis/events/220109629/
   - headcount: 0
     created: 1422341502000
-    yes_rsvp_count: 2
+    yes_rsvp_count: 3
     group: {id: 13206522, created: 1394176816000, group_lat: 38.70000076293945, name: Papers We Love (Saint Louis Chapter),
       group_lon: -90.45999908447266, join_mode: open, urlname: Papers-We-Love-in-saint-louis,
       who: readers}
     id: '220109644'
     utc_offset: -18000000
     visibility: public
-    name: Paper is TBA
+    name: Out of the Tar Pit (Mosley, Marks)
     maybe_rsvp_count: 0
     status: upcoming
     venue: {address_1: '230 S. Bemiston Ave, Suite 420', country: us, city: Saint Louis,
       repinned: false, id: 23470450, name: Observable Networks, lon: -90.336945, lat: 38.646488,
       state: MO}
     time: 1426548600000
-    updated: 1422341557000
+    updated: 1424929360000
     waitlist_count: 0
-    description: <p>Adam Bowen will speak on a topic yet to be announced.</p>
+    description: <p>Adam Bowen will be speaking on <a href="https://github.com/papers-we-love/papers-we-love/blob/master/design/out-of-the-tar-pit.pdf">Out of the Tar Pit</a>. </p> <p>This paper build on Brooks' work of defining accidental and essential difficulty. It then goes on to identify common causes of complexity and covers ways to eliminate some of them.</p> <p>This paper has gotten a lot of attention lately &amp; I know there were several people interested in it from the signup survey.</p> <p>Like last time, doors will open at 6:30 with food and the meeting will start at 7.</p> <p>Food will be sponsored by Lisa Rokusek of Agent HR.</p>
     event_url: http://www.meetup.com/Papers-We-Love-in-saint-louis/events/220109644/
   - headcount: 0
     created: 1422341602000
@@ -447,6 +447,28 @@ papers-we-love-london:
     rating: {count: 0, average: 0}
     description: <p>Relational programming, or logic programming, is a programming paradigm that exhibits remarkable and powerful properties, to the extent that its implementation seems frightfully daunting to the layman. µKanren is a minimal relational language that seeks to strip the paradigm down to its core, leaving us with a succinct, elegant and above all <i>simple</i> set of primitives on top of which we can rebuild even the most powerful relational constructs.</p> <p>In this talk, we will explore the µKanren language by implementing it from first principles in a simple functional programming language, going on to demonstrate how you can assemble these simple building blocks into a semblance of its richer parent, miniKanren, and maybe solve a logic puzzle or two to make sure it’s working as advertised.</p> <p>The µKanren paper, and the original µKanren implementation, were authored by Jason Hemann and Daniel P. Friedman. The paper is available at <a href="http://webyrd.net/scheme-2013/papers/HemannMuKanren2013.pdf"><a href="http://webyrd.net/scheme-2013/papers/HemannMuKanren2013.pdf" class="linkified">http://webyrd.net/scheme-2013/papers/HemannMuKanren2013.pdf</a></a>, and the Scheme implementation at <a href="https://github.com/jasonhemann/microKanren"><a href="https://github.com/jasonhemann/microKanren" class="linkified">https://github.com/jasonhemann/microKanren</a></a>.</p> <p>About Bodil:<br/>A compulsive conference speaker in the fields of functional programming and internets technologies, and a co-organiser of multiple developer conferences in Scandinavia and the UK, mostly because she’s still learning how to stop.</p>
     event_url: http://www.meetup.com/Papers-We-Love-London/events/220542230/
+  - headcount: 0
+    created: 1424639054000
+    yes_rsvp_count: 2
+    group: {id: 13111022, created: 1393622100000, group_lat: 51.5099983215332, name: Papers We Love - London,
+      group_lon: -0.10000000149011612, join_mode: open, urlname: Papers-We-Love-London,
+      who: readers}
+    id: '220691457'
+    utc_offset: 0
+    visibility: public
+    name: Adam Johnson on Why Complex Systems Fail
+    maybe_rsvp_count: 0
+    status: upcoming
+    venue: {address_2: SE1 9EU, address_1: 'Notcutt House, 36 Southwark Bridge Road',
+      country: gb, city: London, repinned: false, id: 17300632, name: uSwitch, lon: -0.095859,
+      lat: 51.50612}
+    time: 1426705200000
+    duration: 7200000
+    updated: 1425066337000
+    waitlist_count: 0
+    rsvp_limit: 40
+    description: <p>In ‘the real world’, nothing is simple and failure is unavoidable. “How Complex Systems Fail” was discovered by Adam when he followed a reference in a database book. It expanded his mind on the similarities between hospitals, nuclear weapons, and databases, and now he’d like to share these with you.</p> <p><br/>The paper is available at <a href="http://webyrd.net/scheme-2013/papers/HemannMuKanren2013.pdf">&lt;/a&gt;&lt;a href="http://web.mit.edu/2.75/resources/random/How%20Complex%20Systems%20Fail.pdf"&gt;<a href="http://web.mit.edu/2.75/resources/random/How%20Complex%20Systems%20Fail.pdf" class="linkified">http://web.mit.edu/2.75/resources/random/How%20Complex%20Systems%20Fail.pdf</a></a> . Its subtitle, "Being a Short Treatise on the Nature of Failure;<br/>How Failure is Evaluated; How Failure is Attributed to Proximate<br/>Cause; and the Resulting New Understanding of Patient Safety", serves as a brief abstract.</p> <p><br/>About Adam:</p> <p>Having started programming at the age of 8, Adam has nearly got the hang of running a website. Please don't invent anything that makes this harder for him.</p>
+    event_url: http://www.meetup.com/Papers-We-Love-London/events/220691457/
   link: http://www.meetup.com/Papers-We-Love-London/
   lat: 51.5099983215332
   state: '17'
@@ -571,7 +593,7 @@ papers-we-love-too:
   who: readers
   country: US
   city: San Francisco
-  members: 721
+  members: 726
   timezone: US/Pacific
   id: 13035792
   utc_offset: -28800000
@@ -1014,7 +1036,7 @@ papers-we-love-too:
     event_url: http://www.meetup.com/papers-we-love-too/events/212147812/
   - headcount: 0
     created: 1412748725000
-    yes_rsvp_count: 148
+    yes_rsvp_count: 157
     group: {id: 13035792, created: 1393203829000, group_lat: 37.77000045776367, name: Papers we love too,
       group_lon: -122.4000015258789, join_mode: open, urlname: papers-we-love-too,
       who: readers}
@@ -1028,13 +1050,10 @@ papers-we-love-too:
       id: 10884002, name: Yammer HQ, lon: -122.416924, lat: 37.776806, state: CA,
       zip: '94103'}
     time: 1427419800000
-    updated: 1424760503000
+    updated: 1425063210000
     waitlist_count: 0
     description: |-
-      <p><b>PWL Mini</b></p> <p><br/><a href="https://twitter.com/adereth">Matt Adereth</a> on "<a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.30.5736">The Mode Tree: A Tool for Visualization of Nonparametric Density Features</a>". </p> <p>
-
-
-      <b>Main Talk </b></p> <p><br/><a href="https://twitter.com/armon">Armon Dadgar</a> from HashiCorp takes us on a deep dive of Bloom filters and HyperLogLog.</p> <p>Bloom filter papers:</p> <p>* <a href="http://www.cs.upc.edu/~diaz/p422-bloom.pdf"><a href="http://www.cs.upc.edu/~diaz/p422-bloom.pdf" class="linkified">http://www.cs.upc.edu/~diaz/p422-bloom.pdf</a></a></p> <p>* <a href="http://gsd.di.uminho.pt/members/cbm/ps/dbloom.pdf"><a href="http://gsd.di.uminho.pt/members/cbm/ps/dbloom.pdf" class="linkified">http://gsd.di.uminho.pt/members/cbm/ps/dbloom.pdf</a></a></p> <p>* <a href="http://www.eecs.harvard.edu/%7Ekirsch/pubs/bbbf/esa06.pdf"><a href="http://www.eecs.harvard.edu/%7Ekirsch/pubs/bbbf/esa06.pdf" class="linkified">http://www.eecs.harvard.edu/%7Ekirsch/pubs/bbbf/esa06.pdf</a></a></p> <p>Armon will mostly touch on the first  paper which is the introduction of the technique. The other two are optimizations that he'll discuss briefly but there's no need to dwell on them.</p> <p>HyperLogLog papers:</p> <p>* <a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.142.9475"><a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.142.9475" class="linkified">http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.142.9475</a></a></p> <p>* <a href="http://research.google.com/pubs/pub40671.html"><a href="http://research.google.com/pubs/pub40671.html" class="linkified">http://research.google.com/pubs/pub40671.html</a></a></p> <p>Again, the first one introduces them, and the second one is some optimizations from Google. He won’t spend much time on the second one either.</p> <p>All of these papers are implemented as part of:</p> <p><a href="https://github.com/armon/bloomd"><a href="https://github.com/armon/bloomd" class="linkified">https://github.com/armon/bloomd</a></a></p> <p><a href="https://github.com/armon/hlld"><a href="https://github.com/armon/hlld" class="linkified">https://github.com/armon/hlld</a></a></p> <p>These links may give some context to the work and show the real-world applicability.</p> <p>From Armon on why he loves these papers: <i>"Bloom Filters and HyperLogLog are incredible for their simplicity and the seemingly impossible behavior they have. Both of them are part of the family of “sketching” data structures, which allow for a controllable error that results in a tremendous savings of memory compared to the equivalent exact implementations.</i></p> <p><i>More than just being elegant, these two data structures enable some very cool real-world use cases. In the online advertising company I previously worked for, we used them to track thousands of metrics across billions of data points comfortably in memory on a single machine. "</i></p> <p><i><br/></i></p> <p><b>Armon's Bio</b></p> <p>Armon has a passion for distributed systems and their application to real world problems. He is currently the CTO of HashiCorp, where he brings distributed systems into the world of DevOps tooling. He has worked on Terraform, Consul, and Serf at HashiCorp, and maintains the Statsite and Bloomd OSS projects as well.</p> <p>
+      <p><b>PWL Mini</b></p> <p><br/><a href="https://twitter.com/adereth">Matt Adereth</a> on "<a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.30.5736">The Mode Tree: A Tool for Visualization of Nonparametric Density Features</a>".  From Matt: "<i>We often look at summaries of univariate data using basic descriptive statistics like mean and standard deviation and visualizations like histograms and box plots.  The Mode Tree is a powerful alternative visualization that reveals important details about our distributions that none of the standard approaches can show.</i></p> <p><i>I particularly like this paper because it was really the by-product of some interesting algorithmic work in Computational Statistics.  A lot of the techniques in this area are pretty math heavy and inaccessible, so I appreciated that they dedicated a paper to making a visualization that helps explain the inner workings.  As a bonus, the visualization stands on its own as a useful tool."</i></p> <p><b>Matt's Bio</b></p> <p>Matt Adereth builds tools and infrastructure for quantitative analysis at Two Sigma.  He previously worked at Microsoft on Visio, focusing on ways to connect data to shapes.</p> <p><br/><b>Main Talk </b></p> <p><br/><a href="https://twitter.com/armon">Armon Dadgar</a> from HashiCorp takes us on a deep dive of Bloom filters and HyperLogLog.</p> <p>Bloom filter papers:</p> <p>* <a href="http://www.cs.upc.edu/~diaz/p422-bloom.pdf"><a href="http://www.cs.upc.edu/~diaz/p422-bloom.pdf" class="linkified">http://www.cs.upc.edu/~diaz/p422-bloom.pdf</a></a></p> <p>* <a href="http://gsd.di.uminho.pt/members/cbm/ps/dbloom.pdf"><a href="http://gsd.di.uminho.pt/members/cbm/ps/dbloom.pdf" class="linkified">http://gsd.di.uminho.pt/members/cbm/ps/dbloom.pdf</a></a></p> <p>* <a href="http://www.eecs.harvard.edu/%7Ekirsch/pubs/bbbf/esa06.pdf"><a href="http://www.eecs.harvard.edu/%7Ekirsch/pubs/bbbf/esa06.pdf" class="linkified">http://www.eecs.harvard.edu/%7Ekirsch/pubs/bbbf/esa06.pdf</a></a></p> <p>Armon will mostly touch on the first  paper which is the introduction of the technique. The other two are optimizations that he'll discuss briefly but there's no need to dwell on them.</p> <p>HyperLogLog papers:</p> <p>* <a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.142.9475"><a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.142.9475" class="linkified">http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.142.9475</a></a></p> <p>* <a href="http://research.google.com/pubs/pub40671.html"><a href="http://research.google.com/pubs/pub40671.html" class="linkified">http://research.google.com/pubs/pub40671.html</a></a></p> <p>Again, the first one introduces them, and the second one is some optimizations from Google. He won’t spend much time on the second one either.</p> <p>All of these papers are implemented as part of:</p> <p><a href="https://github.com/armon/bloomd"><a href="https://github.com/armon/bloomd" class="linkified">https://github.com/armon/bloomd</a></a></p> <p><a href="https://github.com/armon/hlld"><a href="https://github.com/armon/hlld" class="linkified">https://github.com/armon/hlld</a></a></p> <p>These links may give some context to the work and show the real-world applicability.</p> <p>From Armon on why he loves these papers: <i>"Bloom Filters and HyperLogLog are incredible for their simplicity and the seemingly impossible behavior they have. Both of them are part of the family of “sketching” data structures, which allow for a controllable error that results in a tremendous savings of memory compared to the equivalent exact implementations.</i></p> <p><i>More than just being elegant, these two data structures enable some very cool real-world use cases. In the online advertising company I previously worked for, we used them to track thousands of metrics across billions of data points comfortably in memory on a single machine. "</i></p> <p><i><br/></i></p> <p><b>Armon's Bio</b></p> <p>Armon has a passion for distributed systems and their application to real world problems. He is currently the CTO of HashiCorp, where he brings distributed systems into the world of DevOps tooling. He has worked on Terraform, Consul, and Serf at HashiCorp, and maintains the Statsite and Bloomd OSS projects as well.</p> <p>
 
 
       <b>Meeting mechanics </b></p> <p>Doors open at 6:30 pm; the presentation will begin at 7:00 pm; and, yes, there will be food provided. </p> <p>After the paper is presented, we will open up the floor for discussion and questions.  </p> <p>We have selected a post meetup bar! After the meetup we'll head to<a href="http://www.thebeerhallsf.com/">The Beer Hall</a> (1 Polk St.) to have some drinks.</p>
@@ -1051,21 +1070,27 @@ papers-we-love-too:
     name: PWL#14 => Jordan West on Logical Time
     maybe_rsvp_count: 0
     status: upcoming
-    venue: {address_1: '651 Brannan Street, Suite. 110', country: us, city: San Francisco,
-      repinned: false, id: 20989402, name: Fastly, lon: -122.399628, lat: 37.775227,
-      state: CA}
+    venue: {address_1: 1355 Market St, country: us, city: San Francisco, repinned: false,
+      id: 10884002, name: Yammer HQ, lon: -122.416924, lat: 37.776806, state: CA,
+      zip: '94103'}
     time: 1430443800000
-    updated: 1421733337000
+    updated: 1425082713000
     waitlist_count: 0
     description: |-
-      <p>More details coming soon!!</p> <p>Jordan West stops by and gives us a survey on Logical Time with three papers that cover from 1978 to present day:</p> <p>1. Time, Clocks, and the Ordering of Events in a Distributed System - Leslie Lamport - 1978 - <a href="http://web.stanford.edu/class/cs240/readings/lamport.pdf"><a href="http://web.stanford.edu/class/cs240/readings/lamport.pdf" class="linkified">http://web.stanford.edu/class/cs240/readings/lamport.pdf</a></a></p> <p>2. Virtual Time and Global States of Distributed Systems - Friedmann Mattern - 1988 - <a href="https://www.vs.inf.ethz.ch/publ/papers/VirtTimeGlobStates.pdf"><a href="https://www.vs.inf.ethz.ch/publ/papers/VirtTimeGlobStates.pdf" class="linkified">https://www.vs.inf.ethz.ch/publ/papers/VirtTimeGlobStates.pdf</a></a></p> <p>3. Dotted Version Vectors: Efficient Causality Tracking for Distributed Key-Value Stores - Prequica et al - 2012 - <a href="http://gsd.di.uminho.pt/members/vff/dotted-version-vectors-2012.pdf"><a href="http://gsd.di.uminho.pt/members/vff/dotted-version-vectors-2012.pdf" class="linkified">http://gsd.di.uminho.pt/members/vff/dotted-version-vectors-2012.pdf</a></a> </p> <p>(note from Jordan: "If you are looking to narrow down the homework, I suggest only reading paper #2, it covers the issues w/ #1, and #3 is an extension. All the maths and such can be found in #2")</p> <p>
+      <p><b>Mini</b></p> <p><a href="http://twitter.com/dijkstracula">Nathan Taylor</a> on "Your computer is already a distributed system. Why isn’t your OS?" (<a href="http://www.barrelfish.org/barrelfish_hotos09.pdf" class="linkified">http://www.barrelfish.org/barrelfish_hotos09.pdf</a>). </p> <p>From Nathan: <i>"This is one in a long line of papers advocating for a loosely-coupled, service-oriented operating system architecture, an argument that extends back to the dawn of systems research.  Alternative OSs like microkernels have long been considered more stable and easier to reason about by the systems community, but the performance overhead that comes with running them means typically our OSs still resemble the ones from the '60s.  The authors have spun the "it will be too slow" argument on its head by extrapolating hardware trends and adopting terminology from the distributed systems community, and end up making a compelling case for their design not only being the _only_ path forward, but the time is now to begin adopting their techniques.  The paper is punchy, argues its point cogently, and served as a springboard for further work by the same group of researchers."</i></p> <p>
+
+
+      <b>Nathan's Bio</b></p> <p>Nathan is currently working on low-latency content distribution at <a href="http://www.fastly.com">Fastly</a> and has previously hacked on improving the performance of language runtimes and OS hypervisors. His first exposure to OS research came as a graduate student at the University of British Columbia.</p> <p>
+
+
+      <b>Main Talk</b></p> <p><br/><a href="http://twitter.com/_jrwest">Jordan West</a> stops by and gives us a survey on Logical Time with three papers that cover from 1978 to present day:</p> <p>1. Time, Clocks, and the Ordering of Events in a Distributed System - Leslie Lamport - 1978 - <a href="http://web.stanford.edu/class/cs240/readings/lamport.pdf"><a href="http://web.stanford.edu/class/cs240/readings/lamport.pdf" class="linkified">http://web.stanford.edu/class/cs240/readings/lamport.pdf</a></a></p> <p>2. Virtual Time and Global States of Distributed Systems - Friedmann Mattern - 1988 - <a href="https://www.vs.inf.ethz.ch/publ/papers/VirtTimeGlobStates.pdf"><a href="https://www.vs.inf.ethz.ch/publ/papers/VirtTimeGlobStates.pdf" class="linkified">https://www.vs.inf.ethz.ch/publ/papers/VirtTimeGlobStates.pdf</a></a></p> <p>3. Dotted Version Vectors: Efficient Causality Tracking for Distributed Key-Value Stores - Prequica et al - 2012 - <a href="http://gsd.di.uminho.pt/members/vff/dotted-version-vectors-2012.pdf"><a href="http://gsd.di.uminho.pt/members/vff/dotted-version-vectors-2012.pdf" class="linkified">http://gsd.di.uminho.pt/members/vff/dotted-version-vectors-2012.pdf</a></a> </p> <p>From Jordan: <i>"If you are looking to narrow down the homework, I suggest only reading paper #2, it covers the issues w/ #1, and #3 is an extension. All the maths and such can be found in #2"</i></p> <p>
 
 
       <b>Jordan's Bio</b></p> <p>Jordan is a senior engineer at Basho where he spends most of his time working on the core components of Riak. When not working on Riak or reading papers on distributed systems, you can usually find Jordan outside with his dogs and posting pictures of them on twitter (@_jrwest).</p>
     event_url: http://www.meetup.com/papers-we-love-too/events/212148242/
   - headcount: 0
     created: 1412823869000
-    yes_rsvp_count: 20
+    yes_rsvp_count: 21
     group: {id: 13035792, created: 1393203829000, group_lat: 37.77000045776367, name: Papers we love too,
       group_lon: -122.4000015258789, join_mode: open, urlname: papers-we-love-too,
       who: readers}
@@ -1079,10 +1104,71 @@ papers-we-love-too:
       repinned: false, id: 20989402, name: Fastly, lon: -122.399628, lat: 37.775227,
       state: CA}
     time: 1432260000000
-    updated: 1412919323000
+    updated: 1425076922000
+    waitlist_count: 0
+    description: |-
+      <p><b>PWL Mini </b></p> <p><a href="http://twitter.com/clarkbreyman">Clark Breyman</a> on "The Magical Number Seven, Plus or Minus Two: Some Limits on Our Capacity for Processing Information" (<a href="http://psychclassics.yorku.ca/Miller/)"><a href="http://psychclassics.yorku.ca/Miller/" class="linkified">http://psychclassics.yorku.ca/Miller/</a>)</a> </p> <p>From Clark:<i>"Through a CS practitioner's lens. It's pretty simple and powerful - I've used it repeatedly as a guiding principle when doing anything from UI to systems design. "</i></p> <p><br/><b>Clark's Bio</b></p> <p>Clark Breyman is an principal engineer with Yammer's infrastructure team where he applies a combination of code, OCD, and war stories to make life easier for our product engineers. When not fighting entropy, he enjoys San Francisco, Lindy Hop, yoga and natural language processing. </p> <p>
+
+
+      <b>Main Talk</b></p> <p>Lindsey Kuper on TBD</p>
+    event_url: http://www.meetup.com/papers-we-love-too/events/212348392/
+  - headcount: 0
+    created: 1425013772000
+    yes_rsvp_count: 1
+    group: {id: 13035792, created: 1393203829000, group_lat: 37.77000045776367, name: Papers we love too,
+      group_lon: -122.4000015258789, join_mode: open, urlname: papers-we-love-too,
+      who: readers}
+    id: '220795812'
+    utc_offset: -25200000
+    visibility: public
+    name: PWL#16=>Sargun Dhillon on TBD
+    maybe_rsvp_count: 0
+    status: upcoming
+    time: 1435282200000
+    updated: 1425014378000
     waitlist_count: 0
     description: <p>More information soon!</p>
-    event_url: http://www.meetup.com/papers-we-love-too/events/212348392/
+    event_url: http://www.meetup.com/papers-we-love-too/events/220795812/
+  - headcount: 0
+    created: 1425014423000
+    yes_rsvp_count: 1
+    group: {id: 13035792, created: 1393203829000, group_lat: 37.77000045776367, name: Papers we love too,
+      group_lon: -122.4000015258789, join_mode: open, urlname: papers-we-love-too,
+      who: readers}
+    id: '220795969'
+    utc_offset: -25200000
+    visibility: public
+    name: PWL#17=> Ben Sigelman on TBD
+    maybe_rsvp_count: 0
+    status: upcoming
+    time: 1437701400000
+    updated: 1425014423000
+    waitlist_count: 0
+    event_url: http://www.meetup.com/papers-we-love-too/events/220795969/
+  - headcount: 0
+    created: 1425013986000
+    yes_rsvp_count: 1
+    group: {id: 13035792, created: 1393203829000, group_lat: 37.77000045776367, name: Papers we love too,
+      group_lon: -122.4000015258789, join_mode: open, urlname: papers-we-love-too,
+      who: readers}
+    id: '220795855'
+    utc_offset: -25200000
+    visibility: public
+    name: Jason Brown on Epidemic Algorithms for Replicated Database Maintenance
+    maybe_rsvp_count: 0
+    status: upcoming
+    time: 1442539800000
+    updated: 1425014127000
+    waitlist_count: 0
+    description: |-
+      <p><b>PWL Mini</b></p> <p>TBD</p> <p>
+
+
+      <b>Main talk</b></p> <p><a href="https://twitter.com/jasobrown">Jason Brown</a> on the Epidemic Algorithms for Replicated Database Maintenance paper (<a href="http://bitsavers.informatik.uni-stuttgart.de/pdf/xerox/parc/techReports/CSL-89-1_Epidemic_Algorithms_for_Replicated_Database_Maintenance.pdf" class="linkified">http://bitsavers.informatik.uni-stuttgart.de/pdf/xerox/parc/techReports/CSL-89-1_Epidemic_Algorithms_for_Replicated_Database_Maintenance.pdf</a>). </p> <p>From Jason: <i>"While published in 1987, it describes an early system that uses gossip replication and eventual consistency (the latter is uncannily like modern NoSQL databases). </i></p> <p><i>The subject of gossip branched into some interesting directions since the '80s, I'd concentrate on the Demers paper, and few others in the 'replication via gossip' vein, and then tie that into some modern, well-known systems (cassandra and riak)." </i></p> <p>
+
+
+      <i><br/></i></p>
+    event_url: http://www.meetup.com/papers-we-love-too/events/220795855/
   link: http://www.meetup.com/papers-we-love-too/
   lat: 37.77000045776367
   state: CA
@@ -1097,12 +1183,265 @@ papers-we-love-too:
 
     </p>
   join_mode: open
+Papers-we-love-Bangalore:
+  created: 1405395667000
+  who: readers
+  country: IN
+  city: Bangalore
+  members: 401
+  timezone: Asia/Calcutta
+  id: 15721132
+  utc_offset: 19800000
+  visibility: public
+  group_photo: {photo_link: 'http://photos4.meetupstatic.com/photos/event/c/1/c/c/600_387229612.jpeg',
+    highres_link: 'http://photos2.meetupstatic.com/photos/event/c/1/c/c/highres_387229612.jpeg',
+    thumb_link: 'http://photos4.meetupstatic.com/photos/event/c/1/c/c/thumb_387229612.jpeg',
+    photo_id: 387229612}
+  name: Papers we love, Bangalore
+  organizer: {name: Ramakrishnan Muthukrishnan, member_id: 11008179}
+  lon: 77.55999755859375
+  events:
+  - headcount: 0
+    created: 1406026605000
+    photo_album_id: 24464522
+    how_to_find_us: Opposite Shell petrol pump near ECO space. Above Ravindu Toyota, 4th floor.
+    yes_rsvp_count: 29
+    group: {id: 15721132, created: 1405395667000, group_lat: 12.970000267028809, name: 'Papers
+        we love, Bangalore', group_lon: 77.55999755859375, join_mode: open, urlname: Papers-we-love-Bangalore,
+      who: readers}
+    id: '196358812'
+    utc_offset: 19800000
+    visibility: public
+    name: First Meetup - "A micro-manual for LISP -- not the whole truth"
+    maybe_rsvp_count: 0
+    status: past
+    venue: {id: 19914122, lon: 0, repinned: false, name: Idea Device, address_1: 'Gayatri
+        Mansion, Parijatha Avenue, Bellandur. Landmark: Above Ravindu Toyota', lat: 0,
+      country: in, city: Bangalore}
+    time: 1410600600000
+    updated: 1410759694000
+    photos:
+    - member: {name: Jaseem Abid, member_id: 68522632}
+      photo_link: http://photos2.meetupstatic.com/photos/event/e/0/8/600_408963592.jpeg
+      created: 1410619550000
+      updated: 1410619552000
+      highres_link: http://photos2.meetupstatic.com/photos/event/e/0/8/highres_408963592.jpeg
+      thumb_link: http://photos2.meetupstatic.com/photos/event/e/0/8/thumb_408963592.jpeg
+      photo_album: {group_id: 15721132, event_id: '196358812', photo_album_id: 24464522}
+      photo_id: 408963592
+    - member: {name: Jaseem Abid, member_id: 68522632}
+      photo_link: http://photos2.meetupstatic.com/photos/event/d/d/6/600_408963542.jpeg
+      created: 1410619536000
+      updated: 1410619537000
+      highres_link: http://photos4.meetupstatic.com/photos/event/d/d/6/highres_408963542.jpeg
+      thumb_link: http://photos2.meetupstatic.com/photos/event/d/d/6/thumb_408963542.jpeg
+      photo_album: {group_id: 15721132, event_id: '196358812', photo_album_id: 24464522}
+      photo_id: 408963542
+    - member: {name: Jaseem Abid, member_id: 68522632}
+      photo_link: http://photos4.meetupstatic.com/photos/event/d/a/e/600_408963502.jpeg
+      created: 1410619512000
+      updated: 1410619514000
+      highres_link: http://photos2.meetupstatic.com/photos/event/d/a/e/highres_408963502.jpeg
+      thumb_link: http://photos4.meetupstatic.com/photos/event/d/a/e/thumb_408963502.jpeg
+      photo_album: {group_id: 15721132, event_id: '196358812', photo_album_id: 24464522}
+      photo_id: 408963502
+    waitlist_count: 0
+    rating: {count: 7, average: 5}
+    description: <p>We will discuss and implement John McCarthy's 1978 paper "A Micro-manual for LISP -- not the whole truth".</p> <p><br/><a href="http://www.ee.ryerson.ca/~elf/pub/misc/micromanualLISP.pdf"><a href="http://www.ee.ryerson.ca/~elf/pub/misc/micromanualLISP.pdf" class="linkified">http://www.ee.ryerson.ca/~elf/pub/misc/micromanualLISP.pdf</a></a></p> <p>Please read up the paper and work through it before coming into the meeting so that everyone benefits from the collective knowledge. The meetup will be very informal.</p>
+    event_url: http://www.meetup.com/Papers-we-love-Bangalore/events/196358812/
+  - headcount: 0
+    created: 1410847206000
+    yes_rsvp_count: 33
+    group: {id: 15721132, created: 1405395667000, group_lat: 12.970000267028809, name: 'Papers
+        we love, Bangalore', group_lon: 77.55999755859375, join_mode: open, urlname: Papers-we-love-Bangalore,
+      who: readers}
+    id: '207538032'
+    utc_offset: 19800000
+    visibility: public
+    name: 'Meetup #2 - QuickCheck by Naren Sundaravaradan'
+    maybe_rsvp_count: 0
+    status: past
+    venue: {id: 19914122, lon: 0, repinned: false, name: Idea Device, address_1: 'Gayatri
+        Mansion, Parijatha Avenue, Bellandur. Landmark: Above Ravindu Toyota', lat: 0,
+      country: in, city: Bangalore}
+    time: 1413019800000
+    updated: 1413042297000
+    waitlist_count: 0
+    rating: {count: 2, average: 4.5}
+    description: '<p>Naren will be talking about the QuickCheck paper from John Hughes:
+      <a href="http://www.cs.tufts.edu/~nr/cs257/archive/john-hughes/quick.pdf"><a
+      href="http://www.cs.tufts.edu/~nr/cs257/archive/john-hughes/quick.pdf" class="linkified">http://www.cs.tufts.edu/~nr/cs257/archive/john-hughes/quick.pdf</a></a> </p>
+      <p>slides and code:</p> <p><a href="http://nanonaren.wordpress.com/2014/10/11/quickcheck/"
+      class="linkified">http://nanonaren.wordpress.com/2014/10/11/quickcheck/</a></p>
+      <p><br/>More details:</p> <p>Many of you have mentioned about this clashing
+      with a talk at FuConf on property-based testing but I suggest we go through
+      with this because I not only plan to cover QuickCheck but also motivate the
+      topic with a little generality with respect to functional programming (to cater
+      to those with a background mainly in imperative languages). Here is an outline
+      of things I will cover</p> <p>Each of these below will be illustrated with plenty
+      of code examples</p> <p><br/>- Why are tests needed? This is not as obvious
+      as it seems when viewed from the point-of-view of the Curry-Howard isomorphism
+      (this will also serve as a hook for a future talk someone will inevitably want
+      to do on type systems)</p> <p><br/>- How Haskell and other functional and type-safe
+      languages can reduce testing needs</p> <p><br/>- What types can tell you about
+      code functionality</p> <p>- Types can get you far but not totally... so testing
+      begins. Starting with the familiar method of unit testing</p> <p>- An alternative
+      mode of testing: invariance testing. Introducing QuickCheck. Include other motivations
+      for invariance testing (from the model-checking world... successfully used in
+      hardware and driver testing)</p> <p>- Work through the paper</p> <p>- Real-world
+      uses of QuickCheck in Haskell packages (vector, lens, etc)</p> <p>- Integration
+      with unit tests and cabal (if people are interested)</p> <p>- and ... pointing
+      to further reading</p> <p>Let me know what you guys think.</p> <p>Thanks,</p>
+      <p>Naren</p>'
+    event_url: http://www.meetup.com/Papers-we-love-Bangalore/events/207538032/
+  - headcount: 0
+    created: 1415718553000
+    yes_rsvp_count: 52
+    group: {id: 15721132, created: 1405395667000, group_lat: 12.970000267028809, name: 'Papers
+        we love, Bangalore', group_lon: 77.55999755859375, join_mode: open, urlname: Papers-we-love-Bangalore,
+      who: readers}
+    id: '218615831'
+    utc_offset: 19800000
+    visibility: public
+    name: Raft/Paxos and other consensus algorithms
+    maybe_rsvp_count: 0
+    status: past
+    venue: {id: 21983682, lon: 77.63871, repinned: false, name: Nilenso Software LLP,
+      address_1: '#105, 10th Cross, Indiranagar Stage 1', lat: 12.98163, country: in,
+      city: Bangalore}
+    time: 1417253400000
+    updated: 1417299013000
+    waitlist_count: 0
+    rating: {count: 5, average: 5}
+    description: <p> Paxos and Raft are two algorithms for getting one answer from a group of unreliable processors. Some of the more popular use-cases for such algorithms are leader election, distributed locking, distributed log replication and so on.</p> <p>Paxos was originally presented by Leslie Lamport in a very entertaining paper (that was rejected for publication many times). However, generalized Paxos is considered extremely hard to implement. </p> <p>Raft was born as a easy to understand consensus algorithm and had several implementations to its credit. </p> <p>In this session, I am planning to go over the problem of distributed log replication, walk through Paxos and its derivatives and then go through Raft. We can take a quick shot at implementing it, if time permits. </p>
+    event_url: http://www.meetup.com/Papers-we-love-Bangalore/events/218615831/
+  - headcount: 0
+    created: 1417272274000
+    yes_rsvp_count: 30
+    group: {id: 15721132, created: 1405395667000, group_lat: 12.970000267028809, name: 'Papers
+        we love, Bangalore', group_lon: 77.55999755859375, join_mode: open, urlname: Papers-we-love-Bangalore,
+      who: readers}
+    id: '218958996'
+    utc_offset: 19800000
+    visibility: public
+    name: Paxos paper discussion by Vaidhy/Anita.
+    maybe_rsvp_count: 0
+    status: past
+    venue: {id: 21983682, lon: 77.63871, repinned: false, name: Nilenso Software LLP,
+      address_1: '#105, 10th Cross, Indiranagar Stage 1', lat: 12.98163, country: in,
+      city: Bangalore}
+    time: 1417843800000
+    updated: 1417874491000
+    waitlist_count: 0
+    rating: {count: 1, average: 5}
+    description: <p>Vaidhy discussed Raft today (29th). He will followup on the Paxos paper by Leslie Lamport.</p>
+    event_url: http://www.meetup.com/Papers-we-love-Bangalore/events/218958996/
+  - headcount: 0
+    created: 1417350123000
+    yes_rsvp_count: 31
+    group: {id: 15721132, created: 1405395667000, group_lat: 12.970000267028809, name: 'Papers
+        we love, Bangalore', group_lon: 77.55999755859375, join_mode: open, urlname: Papers-we-love-Bangalore,
+      who: readers}
+    id: '218973633'
+    utc_offset: 19800000
+    visibility: public
+    name: Functional Geometry
+    maybe_rsvp_count: 0
+    status: past
+    venue: {id: 19914122, lon: 0, repinned: false, name: Idea Device, address_1: 'Gayatri
+        Mansion, Parijatha Avenue, Bellandur. Landmark: Above Ravindu Toyota', lat: 0,
+      country: in, city: Bangalore}
+    time: 1418463000000
+    updated: 1418495240000
+    waitlist_count: 0
+    rating: {count: 2, average: 5}
+    description: |-
+      <p><b>Functional Geometry</b> - <a href="http://users.ecs.soton.ac.uk/peter/funcgeo.pdf" class="linkified">http://users.ecs.soton.ac.uk/peter/funcgeo.pdf</a> and <a href="http://eprints.soton.ac.uk/257577/1/funcgeo2.pdf" class="linkified">http://eprints.soton.ac.uk/257577/1/funcgeo2.pdf</a></p> <p>&lt;rant&gt;</p> <p>Imperative programming is rooted in compulsively thinking of programs as a sequence of instructions given to a machine that manipulates a set of bits. Bits represent state: each bit can be in 2 states, 10 bits in 1024 states, a 100 in 1e301 states. No matter whatever high level abstractions you create for talking about these primitive bits (floats, points, lines, boxes, polygons, fish), as long as you are writing programs that work with state, you are bound to run into this combinatorial explosion as you add complexity. We humans are really bad at keeping track of states in our heads! An average person can keep <a href="http://en.wikipedia.org/wiki/The_Magical_Number_Seven,_Plus_or_Minus_Two">7 ± 2</a> things in his/her working memory. What we are good at though, is <i>narratives and descriptions</i>...</p> <p><br/>The timeless paradigm of functional programming emphasizes thinking of programs as consisting of pure functions akin to mathematical identities. This decouples programming from the idea that programs have to be written for a computer, and as a series of instructions. Instead, in FP, we <i>describe</i> the world and the system we want to create in terms of its constituent parts, which, in turn, are similarly <i>described</i> in terms of their constituent parts.</p> <p>&lt;/rant&gt;</p> <p>Peter Henderson's "Functional Geometry" simply provides an example of a well-written functional program. In particular, the author builds a sequence of functions which start off by describing lines on a 2D plane and build up to a description of an intricate <a href="http://www.mcescher.com/">Escher</a> woodcut called <a href="http://www.wikiart.org/en/m-c-escher/square-limit">Square Limit</a> (final result in the figure). In the process, the author offers insights into how to write other such well-written functional programs.</p> <p><br/><img src="http://photos2.meetupstatic.com/photos/event/5/2/0/a/600_432021002.jpeg" /></p> <p><i>                                    A 600x600 grid of bits!</i></p> <p><br/>In this session we can plan to discuss:</p> <p>
+
+      • Primitives for describing geometry of lines on a 2D plane</p> <p>• <a href="http://mitpress.mit.edu/sicp/full-text/sicp/book/node29.html">Abstraction barriers</a>, and layered design of a richer set of functions (the fish and its poses)</p> <p>• The description of Square Limit</p> <p>• An implementation of a system to draw the primitives</p> <p>• History of this paper, and how other notable works make references to it</p> <p>• (Discussion) concrete lessons you can apply in your day-to-day programming - I am expecting this discussion to be a blast!</p>
+    event_url: http://www.meetup.com/Papers-we-love-Bangalore/events/218973633/
+  - headcount: 0
+    created: 1419874441000
+    photo_album_id: 25839080
+    yes_rsvp_count: 62
+    group: {id: 15721132, created: 1405395667000, group_lat: 12.970000267028809, name: 'Papers
+        we love, Bangalore', group_lon: 77.55999755859375, join_mode: open, urlname: Papers-we-love-Bangalore,
+      who: readers}
+    id: '219477739'
+    utc_offset: 19800000
+    visibility: public
+    name: '"Tierless Programming and Reasoning for Software-Defined Networks"'
+    maybe_rsvp_count: 0
+    status: past
+    venue: {id: 23556488, lon: 77.59566, repinned: true, name: Citrus Cunningham,
+      address_1: '34, Cunningham Road, Vasanth Nagar', lat: 12.98614, country: in,
+      city: Bangalore}
+    time: 1420864200000
+    updated: 1422283500000
+    photos:
+    - photo_link: http://photos1.meetupstatic.com/photos/event/e/e/5/600_433203813.jpeg
+      member: {name: Shravanthi, member_id: 36838582}
+      created: 1420936125000
+      photo_id: 433203813
+      highres_link: http://photos1.meetupstatic.com/photos/event/e/e/5/highres_433203813.jpeg
+      thumb_link: http://photos1.meetupstatic.com/photos/event/e/e/5/thumb_433203813.jpeg
+      updated: 1421148757000
+      caption: after a wonderful talk by Prof Sriram.
+      photo_album: {group_id: 15721132, event_id: '219477739', photo_album_id: 25839080}
+    waitlist_count: 0
+    rating: {count: 7, average: 5}
+    description: '<p>Prof. Shriram Krishnamurthi will be talking about his recent
+      research on software defined networks and around the paper he co-authored "Tierless
+      Programming and Reasoning for Software-Defined Networks". A link to the paper
+      is here: <a href="http://cs.brown.edu/~adf/work/NSDI2014-paper.pdf"><a href="http://cs.brown.edu/~adf/work/NSDI2014-paper.pdf"
+      class="linkified">http://cs.brown.edu/~adf/work/NSDI2014-paper.pdf</a></a></p>
+      <p>Some material to understand the paper better:</p> <p>1. Introduction to the
+      domain, helps to get a brief idea before diving into the paper. <a href="http://blog.brownplt.org/2014/09/30/flowlog1.html"><a
+      href="http://blog.brownplt.org/2014/09/30/flowlog1.html" class="linkified">http://blog.brownplt.org/2014/09/30/flowlog1.html</a></a></p>
+      <p>2. Video lecture: <a href="https://www.usenix.org/conference/nsdi14/technical-sessions/presentation/nelson"
+      class="linkified">https://www.usenix.org/conference/nsdi14/technical-sessions/presentation/nelson</a></p>
+      <p>3. The paper''s web page: <a href="http://cs.brown.edu/~sk/Publications/Papers/Published/nfsk-flowlog-tierless/"
+      class="linkified">http://cs.brown.edu/~sk/Publications/Papers/Published/nfsk-flowlog-tierless/</a></p>'
+    event_url: http://www.meetup.com/Papers-we-love-Bangalore/events/219477739/
+  - headcount: 0
+    created: 1420883095000
+    yes_rsvp_count: 66
+    group: {id: 15721132, created: 1405395667000, group_lat: 12.970000267028809, name: 'Papers
+        we love, Bangalore', group_lon: 77.55999755859375, join_mode: open, urlname: Papers-we-love-Bangalore,
+      who: readers}
+    id: '219735051'
+    utc_offset: 19800000
+    visibility: public
+    name: '"Data Structures for Text Sequences"'
+    maybe_rsvp_count: 0
+    status: past
+    venue: {id: 19914122, lon: 0, repinned: false, name: Idea Device, address_1: 'Gayatri
+        Mansion, Parijatha Avenue, Bellandur. Landmark: Above Ravindu Toyota', lat: 0,
+      country: in, city: Bangalore}
+    time: 1422696600000
+    updated: 1422844951000
+    waitlist_count: 0
+    rating: {count: 1, average: 4}
+    description: <p>Ashok Gautham will be talking about the paper "Data Structures for Text Sequences" by Charles Crowley. </p> <p><a href="https://www.cs.unm.edu/~crowley/papers/sds.pdf" class="linkified">https://www.cs.unm.edu/~crowley/papers/sds.pdf</a></p>
+    event_url: http://www.meetup.com/Papers-we-love-Bangalore/events/219735051/
+  link: http://www.meetup.com/Papers-we-love-Bangalore/
+  lat: 12.970000267028809
+  category: {id: 34, name: tech, shortname: tech}
+  urlname: Papers-we-love-Bangalore
+  rating: 4.79
+  description: |-
+    <p>What was the last paper within the realm of computing you read and loved? What did it inspire you to build or tinker with? Come share the ideas in an awesome academic/research paper with fellow engineers, programmers, and paper-readers. Lead a session and show off code that you wrote that implements these ideas or just give us the lowdown about the paper (because of HARD MATH!). Otherwise, just come, listen, and discuss.</p>
+    <p>Papers We Love has a <b><a href="https://github.com/papers-we-love/papers-we-love/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a></b>. Please contact one of the Meetup's organizers if anyone is not following it. Be good to each other and to the PWL community!</p>
+    <p>If you need to reach out to us or have ideas for papers, just ask us via our <a href="http://twitter.com/papersweloveblr">twitter account</a>.<br>
+
+    </p>
+  join_mode: open
 Papers-We-Love-Hamburg:
   created: 1412851386000
   who: readers
   country: DE
   city: Hamburg
-  members: 75
+  members: 74
   timezone: Europe/Berlin
   id: 17505362
   utc_offset: 3600000
@@ -1183,7 +1522,7 @@ Papers-We-Love-Seattle:
   who: Members
   country: US
   city: Seattle
-  members: 231
+  members: 233
   timezone: US/Pacific
   id: 16583562
   utc_offset: -28800000
@@ -1200,9 +1539,9 @@ Papers-We-Love-Seattle:
     created: 1408938668000
     photo_album_id: 24715452
     yes_rsvp_count: 41
-    group: {id: 16583562, created: 1408937100000, group_lat: 47.61000061035156, name: Papers We Love @ Seattle,
-      group_lon: -122.33000183105469, join_mode: open, urlname: Papers-We-Love-Seattle,
-      who: Members}
+    group: {join_mode: open, created: 1408937100000, name: Papers We Love @ Seattle,
+      group_lon: -122.33000183105469, id: 16583562, urlname: Papers-We-Love-Seattle,
+      group_lat: 47.61000061035156, who: Members}
     id: '202966912'
     utc_offset: -25200000
     visibility: public
@@ -1230,9 +1569,9 @@ Papers-We-Love-Seattle:
   - headcount: 0
     created: 1411600857000
     yes_rsvp_count: 26
-    group: {id: 16583562, created: 1408937100000, group_lat: 47.61000061035156, name: Papers We Love @ Seattle,
-      group_lon: -122.33000183105469, join_mode: open, urlname: Papers-We-Love-Seattle,
-      who: Members}
+    group: {join_mode: open, created: 1408937100000, name: Papers We Love @ Seattle,
+      group_lon: -122.33000183105469, id: 16583562, urlname: Papers-We-Love-Seattle,
+      group_lat: 47.61000061035156, who: Members}
     id: '209319592'
     utc_offset: -25200000
     visibility: public
@@ -1262,9 +1601,9 @@ Papers-We-Love-Seattle:
   - headcount: 28
     created: 1414407550000
     yes_rsvp_count: 28
-    group: {id: 16583562, created: 1408937100000, group_lat: 47.61000061035156, name: Papers We Love @ Seattle,
-      group_lon: -122.33000183105469, join_mode: open, urlname: Papers-We-Love-Seattle,
-      who: Members}
+    group: {join_mode: open, created: 1408937100000, name: Papers We Love @ Seattle,
+      group_lon: -122.33000183105469, id: 16583562, urlname: Papers-We-Love-Seattle,
+      group_lat: 47.61000061035156, who: Members}
     id: '215859342'
     utc_offset: -28800000
     visibility: public
@@ -1283,9 +1622,9 @@ Papers-We-Love-Seattle:
   - headcount: 0
     created: 1421782218000
     yes_rsvp_count: 58
-    group: {id: 16583562, created: 1408937100000, group_lat: 47.61000061035156, name: Papers We Love @ Seattle,
-      group_lon: -122.33000183105469, join_mode: open, urlname: Papers-We-Love-Seattle,
-      who: Members}
+    group: {join_mode: open, created: 1408937100000, name: Papers We Love @ Seattle,
+      group_lon: -122.33000183105469, id: 16583562, urlname: Papers-We-Love-Seattle,
+      group_lat: 47.61000061035156, who: Members}
     id: '219963131'
     utc_offset: -28800000
     visibility: public
@@ -1343,10 +1682,10 @@ Papers-We-Love-Seattle:
     event_url: http://www.meetup.com/Papers-We-Love-Seattle/events/219963131/
   - headcount: 0
     created: 1424129393000
-    yes_rsvp_count: 7
-    group: {id: 16583562, created: 1408937100000, group_lat: 47.61000061035156, name: Papers We Love @ Seattle,
-      group_lon: -122.33000183105469, join_mode: open, urlname: Papers-We-Love-Seattle,
-      who: Members}
+    yes_rsvp_count: 8
+    group: {join_mode: open, created: 1408937100000, name: Papers We Love @ Seattle,
+      group_lon: -122.33000183105469, id: 16583562, urlname: Papers-We-Love-Seattle,
+      group_lat: 47.61000061035156, who: Members}
     id: '220567705'
     utc_offset: -25200000
     visibility: public
@@ -1388,8 +1727,6 @@ Papers-We-Love-Seattle:
 
     Papers We Love has a [url=https://github.com/papers-we-love/papers-we-love/blob/master/CODE_OF_CONDUCT.md]Code of Conduct[/url]. Please contact one of the Meetup's organizers if anyone is not following it. Be good to each other and to the PWL community!</p>
   join_mode: open
-Papers-we-love-Bangalore/:
-  events: []
 Papers-We-Love-Reykjavik:
   created: 1412290750000
   who: Members
@@ -1478,7 +1815,7 @@ Papers-We-Love-Vienna:
   who: Readers
   country: AT
   city: Vienna
-  members: 52
+  members: 53
   timezone: Europe/Vienna
   id: 18007722
   utc_offset: 3600000
@@ -1740,7 +2077,7 @@ Papers-We-Love-Berlin:
   who: Members
   country: DE
   city: Berlin
-  members: 169
+  members: 170
   timezone: Europe/Berlin
   id: 14613232
   utc_offset: 3600000
@@ -1789,7 +2126,7 @@ papers-we-love:
   who: readers
   country: US
   city: New York
-  members: 758
+  members: 765
   timezone: US/Eastern
   id: 11398322
   utc_offset: -18000000
@@ -2509,95 +2846,95 @@ papers-we-love:
     time: 1408489200000
     updated: 1410373314000
     photos:
-    - member: {name: Zeeshan Lakhani, member_id: 11622183}
-      photo_link: http://photos1.meetupstatic.com/photos/event/6/8/5/8/600_404606712.jpeg
-      created: 1409541586000
-      updated: 1409541588000
+    - photo_album: {photo_album_id: 24215472, event_id: '184704082', group_id: 11398322}
       highres_link: http://photos1.meetupstatic.com/photos/event/6/8/5/8/highres_404606712.jpeg
-      thumb_link: http://photos1.meetupstatic.com/photos/event/6/8/5/8/thumb_404606712.jpeg
-      photo_album: {group_id: 11398322, event_id: '184704082', photo_album_id: 24215472}
       photo_id: 404606712
-    - member: {name: Zeeshan Lakhani, member_id: 11622183}
-      photo_link: http://photos4.meetupstatic.com/photos/event/6/8/4/e/600_404606702.jpeg
-      created: 1409541584000
-      updated: 1409541586000
+      created: 1409541586000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos1.meetupstatic.com/photos/event/6/8/5/8/600_404606712.jpeg
+      updated: 1409541588000
+      thumb_link: http://photos1.meetupstatic.com/photos/event/6/8/5/8/thumb_404606712.jpeg
+    - photo_album: {photo_album_id: 24215472, event_id: '184704082', group_id: 11398322}
       highres_link: http://photos4.meetupstatic.com/photos/event/6/8/4/e/highres_404606702.jpeg
-      thumb_link: http://photos2.meetupstatic.com/photos/event/6/8/4/e/thumb_404606702.jpeg
-      photo_album: {group_id: 11398322, event_id: '184704082', photo_album_id: 24215472}
       photo_id: 404606702
-    - member: {name: Zeeshan Lakhani, member_id: 11622183}
-      photo_link: http://photos4.meetupstatic.com/photos/event/6/8/3/a/600_404606682.jpeg
-      created: 1409541581000
-      updated: 1409541584000
+      created: 1409541584000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos4.meetupstatic.com/photos/event/6/8/4/e/600_404606702.jpeg
+      updated: 1409541586000
+      thumb_link: http://photos2.meetupstatic.com/photos/event/6/8/4/e/thumb_404606702.jpeg
+    - photo_album: {photo_album_id: 24215472, event_id: '184704082', group_id: 11398322}
       highres_link: http://photos4.meetupstatic.com/photos/event/6/8/3/a/highres_404606682.jpeg
-      thumb_link: http://photos4.meetupstatic.com/photos/event/6/8/3/a/thumb_404606682.jpeg
-      photo_album: {group_id: 11398322, event_id: '184704082', photo_album_id: 24215472}
       photo_id: 404606682
-    - member: {name: Zeeshan Lakhani, member_id: 11622183}
-      photo_link: http://photos1.meetupstatic.com/photos/event/6/1/e/6/600_404605062.jpeg
-      created: 1409541322000
-      updated: 1409541324000
+      created: 1409541581000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos4.meetupstatic.com/photos/event/6/8/3/a/600_404606682.jpeg
+      updated: 1409541584000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/6/8/3/a/thumb_404606682.jpeg
+    - photo_album: {photo_album_id: 24215472, event_id: '184704082', group_id: 11398322}
       highres_link: http://photos1.meetupstatic.com/photos/event/6/1/e/6/highres_404605062.jpeg
-      thumb_link: http://photos1.meetupstatic.com/photos/event/6/1/e/6/thumb_404605062.jpeg
-      photo_album: {group_id: 11398322, event_id: '184704082', photo_album_id: 24215472}
       photo_id: 404605062
-    - member: {name: Zeeshan Lakhani, member_id: 11622183}
-      photo_link: http://photos4.meetupstatic.com/photos/event/6/1/d/2/600_404605042.jpeg
-      created: 1409541320000
-      updated: 1409541322000
+      created: 1409541322000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos1.meetupstatic.com/photos/event/6/1/e/6/600_404605062.jpeg
+      updated: 1409541324000
+      thumb_link: http://photos1.meetupstatic.com/photos/event/6/1/e/6/thumb_404605062.jpeg
+    - photo_album: {photo_album_id: 24215472, event_id: '184704082', group_id: 11398322}
       highres_link: http://photos4.meetupstatic.com/photos/event/6/1/d/2/highres_404605042.jpeg
-      thumb_link: http://photos4.meetupstatic.com/photos/event/6/1/d/2/thumb_404605042.jpeg
-      photo_album: {group_id: 11398322, event_id: '184704082', photo_album_id: 24215472}
       photo_id: 404605042
-    - member: {name: Zeeshan Lakhani, member_id: 11622183}
-      photo_link: http://photos1.meetupstatic.com/photos/event/6/1/b/e/600_404605022.jpeg
-      created: 1409541319000
-      updated: 1409541320000
+      created: 1409541320000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos4.meetupstatic.com/photos/event/6/1/d/2/600_404605042.jpeg
+      updated: 1409541322000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/6/1/d/2/thumb_404605042.jpeg
+    - photo_album: {photo_album_id: 24215472, event_id: '184704082', group_id: 11398322}
       highres_link: http://photos1.meetupstatic.com/photos/event/6/1/b/e/highres_404605022.jpeg
-      thumb_link: http://photos1.meetupstatic.com/photos/event/6/1/b/e/thumb_404605022.jpeg
-      photo_album: {group_id: 11398322, event_id: '184704082', photo_album_id: 24215472}
       photo_id: 404605022
-    - member: {name: Zeeshan Lakhani, member_id: 11622183}
-      photo_link: http://photos1.meetupstatic.com/photos/event/6/1/b/4/600_404605012.jpeg
-      created: 1409541317000
-      updated: 1409541319000
+      created: 1409541319000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos1.meetupstatic.com/photos/event/6/1/b/e/600_404605022.jpeg
+      updated: 1409541320000
+      thumb_link: http://photos1.meetupstatic.com/photos/event/6/1/b/e/thumb_404605022.jpeg
+    - photo_album: {photo_album_id: 24215472, event_id: '184704082', group_id: 11398322}
       highres_link: http://photos1.meetupstatic.com/photos/event/6/1/b/4/highres_404605012.jpeg
-      thumb_link: http://photos1.meetupstatic.com/photos/event/6/1/b/4/thumb_404605012.jpeg
-      photo_album: {group_id: 11398322, event_id: '184704082', photo_album_id: 24215472}
       photo_id: 404605012
-    - member: {name: Zeeshan Lakhani, member_id: 11622183}
-      photo_link: http://photos2.meetupstatic.com/photos/event/6/1/a/0/600_404604992.jpeg
-      created: 1409541316000
-      updated: 1409541317000
+      created: 1409541317000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos1.meetupstatic.com/photos/event/6/1/b/4/600_404605012.jpeg
+      updated: 1409541319000
+      thumb_link: http://photos1.meetupstatic.com/photos/event/6/1/b/4/thumb_404605012.jpeg
+    - photo_album: {photo_album_id: 24215472, event_id: '184704082', group_id: 11398322}
       highres_link: http://photos2.meetupstatic.com/photos/event/6/1/a/0/highres_404604992.jpeg
-      thumb_link: http://photos2.meetupstatic.com/photos/event/6/1/a/0/thumb_404604992.jpeg
-      photo_album: {group_id: 11398322, event_id: '184704082', photo_album_id: 24215472}
       photo_id: 404604992
-    - member: {name: Zeeshan Lakhani, member_id: 11622183}
-      photo_link: http://photos1.meetupstatic.com/photos/event/6/1/9/6/600_404604982.jpeg
-      created: 1409541314000
+      created: 1409541316000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos2.meetupstatic.com/photos/event/6/1/a/0/600_404604992.jpeg
       updated: 1409541317000
+      thumb_link: http://photos2.meetupstatic.com/photos/event/6/1/a/0/thumb_404604992.jpeg
+    - photo_album: {photo_album_id: 24215472, event_id: '184704082', group_id: 11398322}
       highres_link: http://photos1.meetupstatic.com/photos/event/6/1/9/6/highres_404604982.jpeg
-      thumb_link: http://photos1.meetupstatic.com/photos/event/6/1/9/6/thumb_404604982.jpeg
-      photo_album: {group_id: 11398322, event_id: '184704082', photo_album_id: 24215472}
       photo_id: 404604982
+      created: 1409541314000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos1.meetupstatic.com/photos/event/6/1/9/6/600_404604982.jpeg
+      updated: 1409541317000
+      thumb_link: http://photos1.meetupstatic.com/photos/event/6/1/9/6/thumb_404604982.jpeg
     - photo_link: http://photos1.meetupstatic.com/photos/event/6/1/6/e/600_404604942.jpeg
-      member: {name: Zeeshan Lakhani, member_id: 11622183}
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
       created: 1409541313000
       photo_id: 404604942
       highres_link: http://photos1.meetupstatic.com/photos/event/6/1/6/e/highres_404604942.jpeg
       thumb_link: http://photos1.meetupstatic.com/photos/event/6/1/6/e/thumb_404604942.jpeg
       updated: 1424654356000
       caption: _SPEAKER_
-      photo_album: {group_id: 11398322, event_id: '184704082', photo_album_id: 24215472}
-    - member: {name: Zeeshan Lakhani, member_id: 11622183}
-      photo_link: http://photos4.meetupstatic.com/photos/event/6/1/4/6/600_404604902.jpeg
-      created: 1409541311000
-      updated: 1409541312000
+      photo_album: {photo_album_id: 24215472, event_id: '184704082', group_id: 11398322}
+    - photo_album: {photo_album_id: 24215472, event_id: '184704082', group_id: 11398322}
       highres_link: http://photos2.meetupstatic.com/photos/event/6/1/4/6/highres_404604902.jpeg
-      thumb_link: http://photos4.meetupstatic.com/photos/event/6/1/4/6/thumb_404604902.jpeg
-      photo_album: {group_id: 11398322, event_id: '184704082', photo_album_id: 24215472}
       photo_id: 404604902
+      created: 1409541311000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos4.meetupstatic.com/photos/event/6/1/4/6/600_404604902.jpeg
+      updated: 1409541312000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/6/1/4/6/thumb_404604902.jpeg
     waitlist_count: 0
     rating: {count: 5, average: 4.599999904632568}
     description: '<p>We''re elated to have <a href="http://leifwalsh.com/">Leif Walsh</a>,
@@ -3054,167 +3391,167 @@ papers-we-love:
     time: 1418774400000
     updated: 1418856536000
     photos:
-    - member: {name: Zeeshan Lakhani, member_id: 11622183}
-      photo_link: http://photos4.meetupstatic.com/photos/event/5/b/7/6/600_432563414.jpeg
-      created: 1418832135000
-      updated: 1418832137000
+    - photo_album: {photo_album_id: 25801635, event_id: '214029542', group_id: 11398322}
       highres_link: http://photos2.meetupstatic.com/photos/event/5/b/7/6/highres_432563414.jpeg
-      thumb_link: http://photos4.meetupstatic.com/photos/event/5/b/7/6/thumb_432563414.jpeg
-      photo_album: {group_id: 11398322, event_id: '214029542', photo_album_id: 25801635}
       photo_id: 432563414
-    - member: {name: Zeeshan Lakhani, member_id: 11622183}
-      photo_link: http://photos2.meetupstatic.com/photos/event/5/b/7/3/600_432563411.jpeg
-      created: 1418832131000
-      updated: 1418832133000
+      created: 1418832135000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos4.meetupstatic.com/photos/event/5/b/7/6/600_432563414.jpeg
+      updated: 1418832137000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/5/b/7/6/thumb_432563414.jpeg
+    - photo_album: {photo_album_id: 25801635, event_id: '214029542', group_id: 11398322}
       highres_link: http://photos4.meetupstatic.com/photos/event/5/b/7/3/highres_432563411.jpeg
-      thumb_link: http://photos4.meetupstatic.com/photos/event/5/b/7/3/thumb_432563411.jpeg
-      photo_album: {group_id: 11398322, event_id: '214029542', photo_album_id: 25801635}
       photo_id: 432563411
-    - member: {name: Zeeshan Lakhani, member_id: 11622183}
-      photo_link: http://photos3.meetupstatic.com/photos/event/5/b/7/1/600_432563409.jpeg
-      created: 1418832127000
-      updated: 1418832129000
+      created: 1418832131000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos2.meetupstatic.com/photos/event/5/b/7/3/600_432563411.jpeg
+      updated: 1418832133000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/5/b/7/3/thumb_432563411.jpeg
+    - photo_album: {photo_album_id: 25801635, event_id: '214029542', group_id: 11398322}
       highres_link: http://photos3.meetupstatic.com/photos/event/5/b/7/1/highres_432563409.jpeg
-      thumb_link: http://photos3.meetupstatic.com/photos/event/5/b/7/1/thumb_432563409.jpeg
-      photo_album: {group_id: 11398322, event_id: '214029542', photo_album_id: 25801635}
       photo_id: 432563409
-    - member: {name: Zeeshan Lakhani, member_id: 11622183}
-      photo_link: http://photos1.meetupstatic.com/photos/event/5/b/6/b/600_432563403.jpeg
-      created: 1418832123000
-      updated: 1418832125000
+      created: 1418832127000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos3.meetupstatic.com/photos/event/5/b/7/1/600_432563409.jpeg
+      updated: 1418832129000
+      thumb_link: http://photos3.meetupstatic.com/photos/event/5/b/7/1/thumb_432563409.jpeg
+    - photo_album: {photo_album_id: 25801635, event_id: '214029542', group_id: 11398322}
       highres_link: http://photos1.meetupstatic.com/photos/event/5/b/6/b/highres_432563403.jpeg
-      thumb_link: http://photos1.meetupstatic.com/photos/event/5/b/6/b/thumb_432563403.jpeg
-      photo_album: {group_id: 11398322, event_id: '214029542', photo_album_id: 25801635}
       photo_id: 432563403
-    - member: {name: Zeeshan Lakhani, member_id: 11622183}
-      photo_link: http://photos2.meetupstatic.com/photos/event/5/b/6/9/600_432563401.jpeg
-      created: 1418832119000
-      updated: 1418832121000
+      created: 1418832123000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos1.meetupstatic.com/photos/event/5/b/6/b/600_432563403.jpeg
+      updated: 1418832125000
+      thumb_link: http://photos1.meetupstatic.com/photos/event/5/b/6/b/thumb_432563403.jpeg
+    - photo_album: {photo_album_id: 25801635, event_id: '214029542', group_id: 11398322}
       highres_link: http://photos2.meetupstatic.com/photos/event/5/b/6/9/highres_432563401.jpeg
-      thumb_link: http://photos2.meetupstatic.com/photos/event/5/b/6/9/thumb_432563401.jpeg
-      photo_album: {group_id: 11398322, event_id: '214029542', photo_album_id: 25801635}
       photo_id: 432563401
-    - member: {name: Zeeshan Lakhani, member_id: 11622183}
-      photo_link: http://photos2.meetupstatic.com/photos/event/5/b/6/7/600_432563399.jpeg
-      created: 1418832115000
-      updated: 1418832118000
+      created: 1418832119000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos2.meetupstatic.com/photos/event/5/b/6/9/600_432563401.jpeg
+      updated: 1418832121000
+      thumb_link: http://photos2.meetupstatic.com/photos/event/5/b/6/9/thumb_432563401.jpeg
+    - photo_album: {photo_album_id: 25801635, event_id: '214029542', group_id: 11398322}
       highres_link: http://photos4.meetupstatic.com/photos/event/5/b/6/7/highres_432563399.jpeg
-      thumb_link: http://photos4.meetupstatic.com/photos/event/5/b/6/7/thumb_432563399.jpeg
-      photo_album: {group_id: 11398322, event_id: '214029542', photo_album_id: 25801635}
       photo_id: 432563399
-    - member: {name: Zeeshan Lakhani, member_id: 11622183}
-      photo_link: http://photos4.meetupstatic.com/photos/event/5/b/6/6/600_432563398.jpeg
-      created: 1418832112000
-      updated: 1418832113000
+      created: 1418832115000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos2.meetupstatic.com/photos/event/5/b/6/7/600_432563399.jpeg
+      updated: 1418832118000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/5/b/6/7/thumb_432563399.jpeg
+    - photo_album: {photo_album_id: 25801635, event_id: '214029542', group_id: 11398322}
       highres_link: http://photos2.meetupstatic.com/photos/event/5/b/6/6/highres_432563398.jpeg
-      thumb_link: http://photos4.meetupstatic.com/photos/event/5/b/6/6/thumb_432563398.jpeg
-      photo_album: {group_id: 11398322, event_id: '214029542', photo_album_id: 25801635}
       photo_id: 432563398
-    - member: {name: Zeeshan Lakhani, member_id: 11622183}
-      photo_link: http://photos2.meetupstatic.com/photos/event/5/b/6/5/600_432563397.jpeg
-      created: 1418832108000
-      updated: 1418832109000
+      created: 1418832112000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos4.meetupstatic.com/photos/event/5/b/6/6/600_432563398.jpeg
+      updated: 1418832113000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/5/b/6/6/thumb_432563398.jpeg
+    - photo_album: {photo_album_id: 25801635, event_id: '214029542', group_id: 11398322}
       highres_link: http://photos4.meetupstatic.com/photos/event/5/b/6/5/highres_432563397.jpeg
-      thumb_link: http://photos4.meetupstatic.com/photos/event/5/b/6/5/thumb_432563397.jpeg
-      photo_album: {group_id: 11398322, event_id: '214029542', photo_album_id: 25801635}
       photo_id: 432563397
-    - member: {name: Zeeshan Lakhani, member_id: 11622183}
-      photo_link: http://photos4.meetupstatic.com/photos/event/5/b/6/4/600_432563396.jpeg
-      created: 1418832104000
-      updated: 1418832106000
+      created: 1418832108000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos2.meetupstatic.com/photos/event/5/b/6/5/600_432563397.jpeg
+      updated: 1418832109000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/5/b/6/5/thumb_432563397.jpeg
+    - photo_album: {photo_album_id: 25801635, event_id: '214029542', group_id: 11398322}
       highres_link: http://photos2.meetupstatic.com/photos/event/5/b/6/4/highres_432563396.jpeg
-      thumb_link: http://photos4.meetupstatic.com/photos/event/5/b/6/4/thumb_432563396.jpeg
-      photo_album: {group_id: 11398322, event_id: '214029542', photo_album_id: 25801635}
       photo_id: 432563396
-    - member: {name: Zeeshan Lakhani, member_id: 11622183}
-      photo_link: http://photos2.meetupstatic.com/photos/event/5/b/6/2/600_432563394.jpeg
-      created: 1418832098000
-      updated: 1418832100000
+      created: 1418832104000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos4.meetupstatic.com/photos/event/5/b/6/4/600_432563396.jpeg
+      updated: 1418832106000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/5/b/6/4/thumb_432563396.jpeg
+    - photo_album: {photo_album_id: 25801635, event_id: '214029542', group_id: 11398322}
       highres_link: http://photos2.meetupstatic.com/photos/event/5/b/6/2/highres_432563394.jpeg
-      thumb_link: http://photos4.meetupstatic.com/photos/event/5/b/6/2/thumb_432563394.jpeg
-      photo_album: {group_id: 11398322, event_id: '214029542', photo_album_id: 25801635}
       photo_id: 432563394
-    - member: {name: Zeeshan Lakhani, member_id: 11622183}
-      photo_link: http://photos2.meetupstatic.com/photos/event/5/b/6/0/600_432563392.jpeg
-      created: 1418832093000
-      updated: 1418832095000
+      created: 1418832098000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos2.meetupstatic.com/photos/event/5/b/6/2/600_432563394.jpeg
+      updated: 1418832100000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/5/b/6/2/thumb_432563394.jpeg
+    - photo_album: {photo_album_id: 25801635, event_id: '214029542', group_id: 11398322}
       highres_link: http://photos2.meetupstatic.com/photos/event/5/b/6/0/highres_432563392.jpeg
-      thumb_link: http://photos4.meetupstatic.com/photos/event/5/b/6/0/thumb_432563392.jpeg
-      photo_album: {group_id: 11398322, event_id: '214029542', photo_album_id: 25801635}
       photo_id: 432563392
-    - member: {name: Zeeshan Lakhani, member_id: 11622183}
-      photo_link: http://photos2.meetupstatic.com/photos/event/5/b/5/e/600_432563390.jpeg
-      created: 1418832089000
-      updated: 1418832091000
+      created: 1418832093000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos2.meetupstatic.com/photos/event/5/b/6/0/600_432563392.jpeg
+      updated: 1418832095000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/5/b/6/0/thumb_432563392.jpeg
+    - photo_album: {photo_album_id: 25801635, event_id: '214029542', group_id: 11398322}
       highres_link: http://photos4.meetupstatic.com/photos/event/5/b/5/e/highres_432563390.jpeg
-      thumb_link: http://photos4.meetupstatic.com/photos/event/5/b/5/e/thumb_432563390.jpeg
-      photo_album: {group_id: 11398322, event_id: '214029542', photo_album_id: 25801635}
       photo_id: 432563390
-    - member: {name: Zeeshan Lakhani, member_id: 11622183}
-      photo_link: http://photos3.meetupstatic.com/photos/event/5/b/5/d/600_432563389.jpeg
-      created: 1418832085000
-      updated: 1418832087000
+      created: 1418832089000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos2.meetupstatic.com/photos/event/5/b/5/e/600_432563390.jpeg
+      updated: 1418832091000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/5/b/5/e/thumb_432563390.jpeg
+    - photo_album: {photo_album_id: 25801635, event_id: '214029542', group_id: 11398322}
       highres_link: http://photos3.meetupstatic.com/photos/event/5/b/5/d/highres_432563389.jpeg
-      thumb_link: http://photos3.meetupstatic.com/photos/event/5/b/5/d/thumb_432563389.jpeg
-      photo_album: {group_id: 11398322, event_id: '214029542', photo_album_id: 25801635}
       photo_id: 432563389
-    - member: {name: Zeeshan Lakhani, member_id: 11622183}
-      photo_link: http://photos3.meetupstatic.com/photos/event/5/b/5/b/600_432563387.jpeg
-      created: 1418832082000
-      updated: 1418832083000
+      created: 1418832085000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos3.meetupstatic.com/photos/event/5/b/5/d/600_432563389.jpeg
+      updated: 1418832087000
+      thumb_link: http://photos3.meetupstatic.com/photos/event/5/b/5/d/thumb_432563389.jpeg
+    - photo_album: {photo_album_id: 25801635, event_id: '214029542', group_id: 11398322}
       highres_link: http://photos3.meetupstatic.com/photos/event/5/b/5/b/highres_432563387.jpeg
-      thumb_link: http://photos3.meetupstatic.com/photos/event/5/b/5/b/thumb_432563387.jpeg
-      photo_album: {group_id: 11398322, event_id: '214029542', photo_album_id: 25801635}
       photo_id: 432563387
-    - member: {name: Zeeshan Lakhani, member_id: 11622183}
-      photo_link: http://photos1.meetupstatic.com/photos/event/5/b/5/a/600_432563386.jpeg
-      created: 1418832077000
-      updated: 1418832079000
+      created: 1418832082000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos3.meetupstatic.com/photos/event/5/b/5/b/600_432563387.jpeg
+      updated: 1418832083000
+      thumb_link: http://photos3.meetupstatic.com/photos/event/5/b/5/b/thumb_432563387.jpeg
+    - photo_album: {photo_album_id: 25801635, event_id: '214029542', group_id: 11398322}
       highres_link: http://photos1.meetupstatic.com/photos/event/5/b/5/a/highres_432563386.jpeg
-      thumb_link: http://photos1.meetupstatic.com/photos/event/5/b/5/a/thumb_432563386.jpeg
-      photo_album: {group_id: 11398322, event_id: '214029542', photo_album_id: 25801635}
       photo_id: 432563386
-    - member: {name: Zeeshan Lakhani, member_id: 11622183}
-      photo_link: http://photos2.meetupstatic.com/photos/event/5/b/5/8/600_432563384.jpeg
-      created: 1418832073000
-      updated: 1418832075000
+      created: 1418832077000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos1.meetupstatic.com/photos/event/5/b/5/a/600_432563386.jpeg
+      updated: 1418832079000
+      thumb_link: http://photos1.meetupstatic.com/photos/event/5/b/5/a/thumb_432563386.jpeg
+    - photo_album: {photo_album_id: 25801635, event_id: '214029542', group_id: 11398322}
       highres_link: http://photos2.meetupstatic.com/photos/event/5/b/5/8/highres_432563384.jpeg
-      thumb_link: http://photos2.meetupstatic.com/photos/event/5/b/5/8/thumb_432563384.jpeg
-      photo_album: {group_id: 11398322, event_id: '214029542', photo_album_id: 25801635}
       photo_id: 432563384
-    - member: {name: Zeeshan Lakhani, member_id: 11622183}
-      photo_link: http://photos4.meetupstatic.com/photos/event/5/b/5/6/600_432563382.jpeg
-      created: 1418832070000
-      updated: 1418832072000
+      created: 1418832073000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos2.meetupstatic.com/photos/event/5/b/5/8/600_432563384.jpeg
+      updated: 1418832075000
+      thumb_link: http://photos2.meetupstatic.com/photos/event/5/b/5/8/thumb_432563384.jpeg
+    - photo_album: {photo_album_id: 25801635, event_id: '214029542', group_id: 11398322}
       highres_link: http://photos2.meetupstatic.com/photos/event/5/b/5/6/highres_432563382.jpeg
-      thumb_link: http://photos2.meetupstatic.com/photos/event/5/b/5/6/thumb_432563382.jpeg
-      photo_album: {group_id: 11398322, event_id: '214029542', photo_album_id: 25801635}
       photo_id: 432563382
-    - member: {name: Zeeshan Lakhani, member_id: 11622183}
-      photo_link: http://photos2.meetupstatic.com/photos/event/5/b/5/5/600_432563381.jpeg
-      created: 1418832066000
-      updated: 1418832068000
+      created: 1418832070000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos4.meetupstatic.com/photos/event/5/b/5/6/600_432563382.jpeg
+      updated: 1418832072000
+      thumb_link: http://photos2.meetupstatic.com/photos/event/5/b/5/6/thumb_432563382.jpeg
+    - photo_album: {photo_album_id: 25801635, event_id: '214029542', group_id: 11398322}
       highres_link: http://photos4.meetupstatic.com/photos/event/5/b/5/5/highres_432563381.jpeg
-      thumb_link: http://photos4.meetupstatic.com/photos/event/5/b/5/5/thumb_432563381.jpeg
-      photo_album: {group_id: 11398322, event_id: '214029542', photo_album_id: 25801635}
       photo_id: 432563381
+      created: 1418832066000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos2.meetupstatic.com/photos/event/5/b/5/5/600_432563381.jpeg
+      updated: 1418832068000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/5/b/5/5/thumb_432563381.jpeg
     - photo_link: http://photos3.meetupstatic.com/photos/event/5/b/5/3/600_432563379.jpeg
-      member: {name: Zeeshan Lakhani, member_id: 11622183}
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
       created: 1418832062000
       photo_id: 432563379
       highres_link: http://photos3.meetupstatic.com/photos/event/5/b/5/3/highres_432563379.jpeg
       thumb_link: http://photos3.meetupstatic.com/photos/event/5/b/5/3/thumb_432563379.jpeg
       updated: 1424654253000
       caption: _SPEAKER_
-      photo_album: {group_id: 11398322, event_id: '214029542', photo_album_id: 25801635}
-    - member: {name: Zeeshan Lakhani, member_id: 11622183}
-      photo_link: http://photos3.meetupstatic.com/photos/event/5/b/5/1/600_432563377.jpeg
-      created: 1418832058000
-      updated: 1418832060000
+      photo_album: {photo_album_id: 25801635, event_id: '214029542', group_id: 11398322}
+    - photo_album: {photo_album_id: 25801635, event_id: '214029542', group_id: 11398322}
       highres_link: http://photos3.meetupstatic.com/photos/event/5/b/5/1/highres_432563377.jpeg
-      thumb_link: http://photos3.meetupstatic.com/photos/event/5/b/5/1/thumb_432563377.jpeg
-      photo_album: {group_id: 11398322, event_id: '214029542', photo_album_id: 25801635}
       photo_id: 432563377
+      created: 1418832058000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos3.meetupstatic.com/photos/event/5/b/5/1/600_432563377.jpeg
+      updated: 1418832060000
+      thumb_link: http://photos3.meetupstatic.com/photos/event/5/b/5/1/thumb_432563377.jpeg
     waitlist_count: 0
     rating: {count: 4, average: 5}
     description: '<p>We''re thrilled to have Jeff Larson, data editor Data Editor
@@ -3805,7 +4142,7 @@ Papers-We-Love-Dallas:
   who: Paper Lovers
   country: US
   city: Addison
-  members: 30
+  members: 32
   timezone: US/Central
   id: 16029482
   utc_offset: -21600000
@@ -3908,7 +4245,7 @@ Papers-We-Love-Dallas:
     event_url: http://www.meetup.com/Papers-We-Love-Dallas/events/219950141/
   - headcount: 0
     created: 1424712481000
-    yes_rsvp_count: 4
+    yes_rsvp_count: 8
     group: {id: 16029482, created: 1406562955000, group_lat: 32.959999084472656, name: 'Papers
         We Love, Dallas', group_lon: -96.83000183105469, join_mode: open, urlname: Papers-We-Love-Dallas,
       who: Paper Lovers}
@@ -3938,12 +4275,65 @@ Papers-We-Love-Dallas:
     <p>Share in the love of mathematics with like-minded explorers. Does Gödel give you chills? Does Cantor raise your hackles? Are you Team Turing or Team Church? Each month we will select a paper to review and discuss. One member will lead the discussion, but all participants are expected to share their impressions, findings, and questions. Papers will focus on the application of software to mathematics. Some topics we will cover include Computability, Information Theory, Cryptography, and Distributed Computing. Share your code. Share your thoughts. Share your knowledge. But most importantly, share the love of math with your peers. We meet on the first Monday of the month at Improving Enterprises in Addison, TX. Pizza and networking start at 6:30, followed by discussions at 7:00. If the meeting goes past 9:00, we'll reconvene at a local bar or restaurant.</p>
     <p>We encourage participation from all members of our community. We work hard to make this a safe and friendly environment. Please honor our <a href="https://github.com/papers-we-love/papers-we-love/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>. Thank you.</p>
   join_mode: open
+Papers-We-Love-LA:
+  created: 1422286658000
+  who: readers
+  country: US
+  city: Santa Monica
+  members: 38
+  timezone: US/Pacific
+  id: 18381002
+  utc_offset: -28800000
+  visibility: public
+  group_photo: {photo_link: 'http://photos1.meetupstatic.com/photos/event/b/7/e/3/600_433727075.jpeg',
+    highres_link: 'http://photos1.meetupstatic.com/photos/event/b/7/e/3/highres_433727075.jpeg',
+    thumb_link: 'http://photos1.meetupstatic.com/photos/event/b/7/e/3/thumb_433727075.jpeg',
+    photo_id: 433727075}
+  name: Papers We Love, LA
+  organizer: {name: Sam Lecuyer, member_id: 183919332}
+  lon: -118.47000122070312
+  events:
+  - headcount: 0
+    created: 1423151972000
+    yes_rsvp_count: 16
+    group: {join_mode: open, created: 1422286658000, name: 'Papers We Love, LA', group_lon: -118.47000122070312,
+      id: 18381002, urlname: Papers-We-Love-LA, group_lat: 34.029998779296875, who: readers}
+    id: '220325190'
+    utc_offset: -28800000
+    visibility: public
+    name: 'Sam L''ecuyer on The Join Calculus: a Language for Distributed Mobile Programming'
+    maybe_rsvp_count: 0
+    status: past
+    venue: {address_2: 'Building D, 1st Floor', address_1: 2400 Broadway, country: us,
+      city: Santa Monica, repinned: false, id: 1252286, name: Yahoo Center, lon: -118.474846,
+      lat: 34.030254, state: CA, zip: '90404'}
+    time: 1424919600000
+    duration: 10800000
+    updated: 1424930657000
+    waitlist_count: 0
+    rating: {count: 0, average: 0}
+    description: |-
+      <p>Sam L'ecuyer will present <a href="http://research.microsoft.com/en-us/um/people/fournet/papers/join-tutorial.pdf">The Join Calculus: a Language for Distributed Mobile Programming</a>, by Cedric Fournet and Georges Gonthier.</p> <p>
+
+      --</p> <p>Do semaphores and mutexes, distributed locks and clocks confound you? Does concurrency as an afterthought frustrate and bewilder you? In this paper, Fournet and Gonthier present the join calculus, a modeling language for clean, asynchronous distributed computing. This language builds upon well established techniques of pattern matching, static typing, and local variable declaration to lay the foundation for synchronizing data across multiple machines, code mobility, and failure detection.</p> <p>--</p> <p>Sam L'ecuyer (<a href="https://twitter.com/cateches">@cateches</a>) is a front-end engineer at Yahoo.  You can find a lot of the code he writes at <a href="https://screen.yahoo.com">screen.yahoo.com</a>. He enjoys static typing, text editors from the 1970s, and making his own cocktail bitters.</p>
+    event_url: http://www.meetup.com/Papers-We-Love-LA/events/220325190/
+  link: http://www.meetup.com/Papers-We-Love-LA/
+  lat: 34.029998779296875
+  state: CA
+  category: {id: 34, name: tech, shortname: tech}
+  urlname: Papers-We-Love-LA
+  rating: 0
+  description: |-
+    <p>What was the last paper within the realm of computing you read and loved? What did it inspire you to build or tinker with? Come share the ideas in an awesome academic/research paper with fellow engineers, programmers, and paper-readers. Lead a session and show off code that you wrote that implements these ideas or just give us the lowdown about the paper (because of HARD MATH!). Otherwise, just come, listen, and discuss.</p>
+    <p>We're curating a repository for papers and places-to-find papers. You can contribute by adding PR's for papers, code, and/or links to other repositories.</p>
+    <p>If you need to reach out to us or have ideas for papers, just ask us via our <a href="https://twitter.com/paperswelove_la">twitter account</a>. Papers We Love has a <a href="https://github.com/papers-we-love/papers-we-love/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>. Please contact one of the Meetup's organizers if anyone is not following it. Be good to each other and to the PWL community!</p>
+  join_mode: open
 Doo-Things:
   created: 1389952095000
   who: Dooers
   country: IN
   city: Pune
-  members: 503
+  members: 506
   timezone: Asia/Calcutta
   id: 12214242
   utc_offset: 19800000
@@ -4016,14 +4406,14 @@ Doo-Things:
     duration: 16200000
     updated: 1398689622000
     photos:
-    - member: {name: nishantmodak, member_id: 29807962}
-      photo_link: http://photos1.meetupstatic.com/photos/event/6/f/4/c/600_356548492.jpeg
-      created: 1398531091000
-      updated: 1398670383000
+    - photo_album: {photo_album_id: 21501252, event_id: '171528132', group_id: 12214242}
       highres_link: http://photos1.meetupstatic.com/photos/event/6/f/4/c/highres_356548492.jpeg
-      thumb_link: http://photos1.meetupstatic.com/photos/event/6/f/4/c/thumb_356548492.jpeg
-      photo_album: {group_id: 12214242, event_id: '171528132', photo_album_id: 21501252}
       photo_id: 356548492
+      created: 1398531091000
+      member: {member_id: 29807962, name: nishantmodak}
+      photo_link: http://photos1.meetupstatic.com/photos/event/6/f/4/c/600_356548492.jpeg
+      updated: 1398670383000
+      thumb_link: http://photos1.meetupstatic.com/photos/event/6/f/4/c/thumb_356548492.jpeg
     waitlist_count: 0
     rating: {count: 6, average: 4.670000076293945}
     description: |-
@@ -4286,7 +4676,7 @@ Papers-We-Love-Munich:
   who: Paper Readers
   country: DE
   city: München
-  members: 149
+  members: 152
   timezone: Europe/Berlin
   id: 17614202
   utc_offset: 3600000
@@ -4337,62 +4727,62 @@ Papers-We-Love-Munich:
     time: 1422381600000
     updated: 1422438081000
     photos:
-    - member: {name: Alex P, member_id: 43533372}
-      photo_link: http://photos4.meetupstatic.com/photos/event/5/e/a/8/600_433824232.jpeg
-      created: 1422611287000
-      updated: 1422611288000
+    - photo_album: {photo_album_id: 25882327, event_id: '219418349', group_id: 17614202}
       highres_link: http://photos2.meetupstatic.com/photos/event/5/e/a/8/highres_433824232.jpeg
-      thumb_link: http://photos4.meetupstatic.com/photos/event/5/e/a/8/thumb_433824232.jpeg
-      photo_album: {group_id: 17614202, event_id: '219418349', photo_album_id: 25882327}
       photo_id: 433824232
-    - member: {name: Alex P, member_id: 43533372}
-      photo_link: http://photos2.meetupstatic.com/photos/event/5/e/a/6/600_433824230.jpeg
-      created: 1422611277000
-      updated: 1422611278000
+      created: 1422611287000
+      member: {member_id: 43533372, name: Alex P}
+      photo_link: http://photos4.meetupstatic.com/photos/event/5/e/a/8/600_433824232.jpeg
+      updated: 1422611288000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/5/e/a/8/thumb_433824232.jpeg
+    - photo_album: {photo_album_id: 25882327, event_id: '219418349', group_id: 17614202}
       highres_link: http://photos2.meetupstatic.com/photos/event/5/e/a/6/highres_433824230.jpeg
-      thumb_link: http://photos4.meetupstatic.com/photos/event/5/e/a/6/thumb_433824230.jpeg
-      photo_album: {group_id: 17614202, event_id: '219418349', photo_album_id: 25882327}
       photo_id: 433824230
-    - member: {name: Alex P, member_id: 43533372}
-      photo_link: http://photos3.meetupstatic.com/photos/event/5/e/a/2/600_433824226.jpeg
-      created: 1422611260000
-      updated: 1422611263000
+      created: 1422611277000
+      member: {member_id: 43533372, name: Alex P}
+      photo_link: http://photos2.meetupstatic.com/photos/event/5/e/a/6/600_433824230.jpeg
+      updated: 1422611278000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/5/e/a/6/thumb_433824230.jpeg
+    - photo_album: {photo_album_id: 25882327, event_id: '219418349', group_id: 17614202}
       highres_link: http://photos3.meetupstatic.com/photos/event/5/e/a/2/highres_433824226.jpeg
-      thumb_link: http://photos3.meetupstatic.com/photos/event/5/e/a/2/thumb_433824226.jpeg
-      photo_album: {group_id: 17614202, event_id: '219418349', photo_album_id: 25882327}
       photo_id: 433824226
-    - member: {name: Alex P, member_id: 43533372}
-      photo_link: http://photos3.meetupstatic.com/photos/event/5/e/a/0/600_433824224.jpeg
-      created: 1422611245000
-      updated: 1422611247000
+      created: 1422611260000
+      member: {member_id: 43533372, name: Alex P}
+      photo_link: http://photos3.meetupstatic.com/photos/event/5/e/a/2/600_433824226.jpeg
+      updated: 1422611263000
+      thumb_link: http://photos3.meetupstatic.com/photos/event/5/e/a/2/thumb_433824226.jpeg
+    - photo_album: {photo_album_id: 25882327, event_id: '219418349', group_id: 17614202}
       highres_link: http://photos3.meetupstatic.com/photos/event/5/e/a/0/highres_433824224.jpeg
-      thumb_link: http://photos3.meetupstatic.com/photos/event/5/e/a/0/thumb_433824224.jpeg
-      photo_album: {group_id: 17614202, event_id: '219418349', photo_album_id: 25882327}
       photo_id: 433824224
-    - member: {name: Alex P, member_id: 43533372}
-      photo_link: http://photos3.meetupstatic.com/photos/event/5/e/9/b/600_433824219.jpeg
-      created: 1422611231000
-      updated: 1422611232000
+      created: 1422611245000
+      member: {member_id: 43533372, name: Alex P}
+      photo_link: http://photos3.meetupstatic.com/photos/event/5/e/a/0/600_433824224.jpeg
+      updated: 1422611247000
+      thumb_link: http://photos3.meetupstatic.com/photos/event/5/e/a/0/thumb_433824224.jpeg
+    - photo_album: {photo_album_id: 25882327, event_id: '219418349', group_id: 17614202}
       highres_link: http://photos3.meetupstatic.com/photos/event/5/e/9/b/highres_433824219.jpeg
-      thumb_link: http://photos3.meetupstatic.com/photos/event/5/e/9/b/thumb_433824219.jpeg
-      photo_album: {group_id: 17614202, event_id: '219418349', photo_album_id: 25882327}
       photo_id: 433824219
-    - member: {name: Alex P, member_id: 43533372}
-      photo_link: http://photos2.meetupstatic.com/photos/event/5/e/9/8/600_433824216.jpeg
-      created: 1422611220000
-      updated: 1422611222000
+      created: 1422611231000
+      member: {member_id: 43533372, name: Alex P}
+      photo_link: http://photos3.meetupstatic.com/photos/event/5/e/9/b/600_433824219.jpeg
+      updated: 1422611232000
+      thumb_link: http://photos3.meetupstatic.com/photos/event/5/e/9/b/thumb_433824219.jpeg
+    - photo_album: {photo_album_id: 25882327, event_id: '219418349', group_id: 17614202}
       highres_link: http://photos4.meetupstatic.com/photos/event/5/e/9/8/highres_433824216.jpeg
-      thumb_link: http://photos4.meetupstatic.com/photos/event/5/e/9/8/thumb_433824216.jpeg
-      photo_album: {group_id: 17614202, event_id: '219418349', photo_album_id: 25882327}
       photo_id: 433824216
-    - member: {name: Alex P, member_id: 43533372}
-      photo_link: http://photos4.meetupstatic.com/photos/event/5/e/9/5/600_433824213.jpeg
-      created: 1422611211000
-      updated: 1422611212000
+      created: 1422611220000
+      member: {member_id: 43533372, name: Alex P}
+      photo_link: http://photos2.meetupstatic.com/photos/event/5/e/9/8/600_433824216.jpeg
+      updated: 1422611222000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/5/e/9/8/thumb_433824216.jpeg
+    - photo_album: {photo_album_id: 25882327, event_id: '219418349', group_id: 17614202}
       highres_link: http://photos2.meetupstatic.com/photos/event/5/e/9/5/highres_433824213.jpeg
-      thumb_link: http://photos4.meetupstatic.com/photos/event/5/e/9/5/thumb_433824213.jpeg
-      photo_album: {group_id: 17614202, event_id: '219418349', photo_album_id: 25882327}
       photo_id: 433824213
+      created: 1422611211000
+      member: {member_id: 43533372, name: Alex P}
+      photo_link: http://photos4.meetupstatic.com/photos/event/5/e/9/5/600_433824213.jpeg
+      updated: 1422611212000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/5/e/9/5/thumb_433824213.jpeg
     waitlist_count: 0
     rsvp_limit: 31
     rating: {count: 7, average: 4.429999828338623}
@@ -4460,6 +4850,180 @@ Papers-We-Love-Munich:
   urlname: Papers-We-Love-Munich
   rating: 4.66
   description: <p>What was the last paper within the realm of computing you read and loved? What did it inspire you to build or tinker with? Come share the ideas in an awesome academic/research paper with fellow engineers, programmers, and paper-readers. Lead a session and show off code that you wrote that implements these ideas or just give us the lowdown about the paper (because of HARD MATH!). Otherwise, just come, listen, and discuss. Papers We Love Munich has a <a href="https://github.com/papers-lovers-munich/papers-we-love/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>.</p>
+  join_mode: open
+singapore:
+  events: []
+Papers-We-Love-Madrid:
+  created: 1421099390000
+  who: Readers
+  country: ES
+  city: Madrid
+  members: 102
+  timezone: Europe/Madrid
+  id: 18327969
+  utc_offset: 3600000
+  visibility: public
+  group_photo: {photo_link: 'http://photos2.meetupstatic.com/photos/event/9/7/4/1/600_433298721.jpeg',
+    highres_link: 'http://photos4.meetupstatic.com/photos/event/9/7/4/1/highres_433298721.jpeg',
+    thumb_link: 'http://photos4.meetupstatic.com/photos/event/9/7/4/1/thumb_433298721.jpeg',
+    photo_id: 433298721}
+  name: Papers We Love Madrid
+  organizer: {name: Miguel Pastor, member_id: 21366541}
+  lon: -3.7100000381469727
+  events:
+  - headcount: 0
+    created: 1421270011000
+    photo_album_id: 25913548
+    yes_rsvp_count: 42
+    group: {id: 18327969, created: 1421099390000, group_lat: 40.41999816894531, name: Papers We Love Madrid,
+      group_lon: -3.7100000381469727, join_mode: open, urlname: Papers-We-Love-Madrid,
+      who: Readers}
+    id: '219836948'
+    utc_offset: 3600000
+    visibility: public
+    name: '#1 - Álvaro Videla: Premature optimization is the root of all evil'
+    maybe_rsvp_count: 0
+    status: past
+    venue: {id: 23574260, lon: -3.699189, repinned: false, name: Oficinas de ShuttleCloud,
+      address_1: 'Ronda de Atocha, 37 Oficina Derecha 28012', lat: 40.405968, country: es,
+      city: Madrid}
+    time: 1423764000000
+    updated: 1423836855000
+    photos:
+    - member: {name: Miguel Pastor, member_id: 21366541}
+      photo_link: http://photos4.meetupstatic.com/photos/event/a/d/3/4/600_434264340.jpeg
+      created: 1423819053000
+      updated: 1423819055000
+      highres_link: http://photos2.meetupstatic.com/photos/event/a/d/3/4/highres_434264340.jpeg
+      thumb_link: http://photos2.meetupstatic.com/photos/event/a/d/3/4/thumb_434264340.jpeg
+      photo_album: {group_id: 18327969, event_id: '219836948', photo_album_id: 25913548}
+      photo_id: 434264340
+    - member: {name: Miguel Pastor, member_id: 21366541}
+      photo_link: http://photos3.meetupstatic.com/photos/event/a/d/3/1/600_434264337.jpeg
+      created: 1423819049000
+      updated: 1423819052000
+      highres_link: http://photos3.meetupstatic.com/photos/event/a/d/3/1/highres_434264337.jpeg
+      thumb_link: http://photos3.meetupstatic.com/photos/event/a/d/3/1/thumb_434264337.jpeg
+      photo_album: {group_id: 18327969, event_id: '219836948', photo_album_id: 25913548}
+      photo_id: 434264337
+    - member: {name: Miguel Pastor, member_id: 21366541}
+      photo_link: http://photos1.meetupstatic.com/photos/event/a/d/3/0/600_434264336.jpeg
+      created: 1423819045000
+      updated: 1423819046000
+      highres_link: http://photos1.meetupstatic.com/photos/event/a/d/3/0/highres_434264336.jpeg
+      thumb_link: http://photos1.meetupstatic.com/photos/event/a/d/3/0/thumb_434264336.jpeg
+      photo_album: {group_id: 18327969, event_id: '219836948', photo_album_id: 25913548}
+      photo_id: 434264336
+    - member: {name: Miguel Pastor, member_id: 21366541}
+      photo_link: http://photos3.meetupstatic.com/photos/event/a/d/2/c/600_434264332.jpeg
+      created: 1423819041000
+      updated: 1423819043000
+      highres_link: http://photos3.meetupstatic.com/photos/event/a/d/2/c/highres_434264332.jpeg
+      thumb_link: http://photos3.meetupstatic.com/photos/event/a/d/2/c/thumb_434264332.jpeg
+      photo_album: {group_id: 18327969, event_id: '219836948', photo_album_id: 25913548}
+      photo_id: 434264332
+    - member: {name: Miguel Pastor, member_id: 21366541}
+      photo_link: http://photos1.meetupstatic.com/photos/event/a/d/2/b/600_434264331.jpeg
+      created: 1423819038000
+      updated: 1423819040000
+      highres_link: http://photos1.meetupstatic.com/photos/event/a/d/2/b/highres_434264331.jpeg
+      thumb_link: http://photos1.meetupstatic.com/photos/event/a/d/2/b/thumb_434264331.jpeg
+      photo_album: {group_id: 18327969, event_id: '219836948', photo_album_id: 25913548}
+      photo_id: 434264331
+    - member: {name: Miguel Pastor, member_id: 21366541}
+      photo_link: http://photos3.meetupstatic.com/photos/event/a/d/2/a/600_434264330.jpeg
+      created: 1423819033000
+      updated: 1423819035000
+      highres_link: http://photos3.meetupstatic.com/photos/event/a/d/2/a/highres_434264330.jpeg
+      thumb_link: http://photos3.meetupstatic.com/photos/event/a/d/2/a/thumb_434264330.jpeg
+      photo_album: {group_id: 18327969, event_id: '219836948', photo_album_id: 25913548}
+      photo_id: 434264330
+    - member: {name: Miguel Pastor, member_id: 21366541}
+      photo_link: http://photos1.meetupstatic.com/photos/event/a/d/2/7/600_434264327.jpeg
+      created: 1423819029000
+      updated: 1423819031000
+      highres_link: http://photos1.meetupstatic.com/photos/event/a/d/2/7/highres_434264327.jpeg
+      thumb_link: http://photos1.meetupstatic.com/photos/event/a/d/2/7/thumb_434264327.jpeg
+      photo_album: {group_id: 18327969, event_id: '219836948', photo_album_id: 25913548}
+      photo_id: 434264327
+    - member: {name: Miguel Pastor, member_id: 21366541}
+      photo_link: http://photos3.meetupstatic.com/photos/event/a/d/2/6/600_434264326.jpeg
+      created: 1423819025000
+      updated: 1423819026000
+      highres_link: http://photos3.meetupstatic.com/photos/event/a/d/2/6/highres_434264326.jpeg
+      thumb_link: http://photos3.meetupstatic.com/photos/event/a/d/2/6/thumb_434264326.jpeg
+      photo_album: {group_id: 18327969, event_id: '219836948', photo_album_id: 25913548}
+      photo_id: 434264326
+    - member: {name: Miguel Pastor, member_id: 21366541}
+      photo_link: http://photos1.meetupstatic.com/photos/event/a/d/2/5/600_434264325.jpeg
+      created: 1423819020000
+      updated: 1423819021000
+      highres_link: http://photos1.meetupstatic.com/photos/event/a/d/2/5/highres_434264325.jpeg
+      thumb_link: http://photos1.meetupstatic.com/photos/event/a/d/2/5/thumb_434264325.jpeg
+      photo_album: {group_id: 18327969, event_id: '219836948', photo_album_id: 25913548}
+      photo_id: 434264325
+    - member: {name: Miguel Pastor, member_id: 21366541}
+      photo_link: http://photos1.meetupstatic.com/photos/event/a/d/2/3/600_434264323.jpeg
+      created: 1423819016000
+      updated: 1423819018000
+      highres_link: http://photos1.meetupstatic.com/photos/event/a/d/2/3/highres_434264323.jpeg
+      thumb_link: http://photos1.meetupstatic.com/photos/event/a/d/2/3/thumb_434264323.jpeg
+      photo_album: {group_id: 18327969, event_id: '219836948', photo_album_id: 25913548}
+      photo_id: 434264323
+    - member: {name: Miguel Pastor, member_id: 21366541}
+      photo_link: http://photos3.meetupstatic.com/photos/event/a/d/2/2/600_434264322.jpeg
+      created: 1423819013000
+      updated: 1423819015000
+      highres_link: http://photos3.meetupstatic.com/photos/event/a/d/2/2/highres_434264322.jpeg
+      thumb_link: http://photos3.meetupstatic.com/photos/event/a/d/2/2/thumb_434264322.jpeg
+      photo_album: {group_id: 18327969, event_id: '219836948', photo_album_id: 25913548}
+      photo_id: 434264322
+    - member: {name: Miguel Pastor, member_id: 21366541}
+      photo_link: http://photos1.meetupstatic.com/photos/event/a/d/2/1/600_434264321.jpeg
+      created: 1423819010000
+      updated: 1423819012000
+      highres_link: http://photos1.meetupstatic.com/photos/event/a/d/2/1/highres_434264321.jpeg
+      thumb_link: http://photos1.meetupstatic.com/photos/event/a/d/2/1/thumb_434264321.jpeg
+      photo_album: {group_id: 18327969, event_id: '219836948', photo_album_id: 25913548}
+      photo_id: 434264321
+    - member: {name: Miguel Pastor, member_id: 21366541}
+      photo_link: http://photos3.meetupstatic.com/photos/event/a/d/2/0/600_434264320.jpeg
+      created: 1423819007000
+      updated: 1423819009000
+      highres_link: http://photos3.meetupstatic.com/photos/event/a/d/2/0/highres_434264320.jpeg
+      thumb_link: http://photos3.meetupstatic.com/photos/event/a/d/2/0/thumb_434264320.jpeg
+      photo_album: {group_id: 18327969, event_id: '219836948', photo_album_id: 25913548}
+      photo_id: 434264320
+    waitlist_count: 1
+    rsvp_limit: 50
+    rating: {count: 7, average: 4.710000038146973}
+    description: |-
+      <p>Tenemos el enorme placer de contar con Álvaro Videla como primer ponente de esta primera entrega de Papers We Love Madrid.</p> <p>
+
+
+      <b>Intro</b></p> <p>
+
+      En cuanto Álvaro me pase un pequeño resumen, actualizaré esta sección.</p> <p>
+
+      <b>Biografía</b></p> <p>
+
+      Álvaro (<a href="https://twitter.com/old_sound">@old_sound</a>) trabaja como Developer Advocate para RabbitMQ/Pivotal y es coautor del libro  <a href="http://www.manning.com/videla/">RabbitMQ in Action</a></p> <p>
+
+      <b><br/></b></p>
+    event_url: http://www.meetup.com/Papers-We-Love-Madrid/events/219836948/
+  link: http://www.meetup.com/Papers-We-Love-Madrid/
+  lat: 40.41999816894531
+  category: {id: 34, name: tech, shortname: tech}
+  urlname: Papers-We-Love-Madrid
+  rating: 4.6
+  description: |-
+    <p>Madrid chapter of</p>
+    <p><a href="http://www.meetup.com/papers-we-love">Papers We Love</a></p>
+    <p>What was the last paper within the realm of computing you read? What did it inspire you to build or tinker with? Come share the ideas in an awesome academic/research publication with fellow engineers, programmers, and paper-readers. Lead a session and show off code that you wrote that implements these ideas or just give us the lowdown about the paper. Otherwise, just come, listen, learn, and discuss. We'll be using papers-we-love's curated</p>
+    <p><a href="https://github.com/papers-we-love/papers-we-love">repository</a></p>
+    <p>. Please contribute by adding PR's for papers, code, and/or links to other repositories. PWL SF strictly adheres to the</p>
+    <p><a href="https://github.com/papers-we-love/papers-we-love/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a></p>
+    <p>set forth by all PWL charters.</p>
   join_mode: open
 Papers-We-Love-Columbus:
   created: 1398307563000
@@ -4591,7 +5155,7 @@ Papers-We-Love-Montreal:
   who: Members
   country: CA
   city: Montréal
-  members: 97
+  members: 98
   timezone: Canada/Eastern
   id: 16679672
   utc_offset: -18000000
@@ -4748,7 +5312,7 @@ Papers-We-Love-DC:
   who: Readers
   country: US
   city: Washington
-  members: 170
+  members: 171
   timezone: US/Eastern
   id: 15670772
   utc_offset: -18000000
@@ -4846,14 +5410,14 @@ Papers-We-Love-DC:
     updated: 1416599064000
     photos:
     - photo_link: http://photos1.meetupstatic.com/photos/event/7/1/e/6/600_431729158.jpeg
-      member: {name: Raymond de Lacaze, member_id: 5661705}
+      member: {member_id: 5661705, name: Raymond de Lacaze}
       created: 1416530007000
       photo_id: 431729158
       highres_link: http://photos1.meetupstatic.com/photos/event/7/1/e/6/highres_431729158.jpeg
       thumb_link: http://photos1.meetupstatic.com/photos/event/7/1/e/6/thumb_431729158.jpeg
       updated: 1416530010000
       caption: 'David Nolen '
-      photo_album: {group_id: 15670772, event_id: '212419432', photo_album_id: 25751369}
+      photo_album: {photo_album_id: 25751369, event_id: '212419432', group_id: 15670772}
     waitlist_count: 15
     rsvp_limit: 55
     rating: {count: 2, average: 5}
@@ -4866,7 +5430,7 @@ Papers-We-Love-DC:
   - headcount: 0
     created: 1422501309000
     how_to_find_us: Someone will be waiting for you to let you in! Or tweet at @mrb_bk
-    yes_rsvp_count: 32
+    yes_rsvp_count: 34
     group: {id: 15670772, created: 1405211857000, group_lat: 38.900001525878906, name: Papers We Love DC,
       group_lon: -77.04000091552734, join_mode: open, urlname: Papers-We-Love-DC,
       who: Readers}
