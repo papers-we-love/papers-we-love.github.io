@@ -9,7 +9,7 @@ end
 
 # Strip BS from titles
 def clean_title(title)
-  title.gsub(/[\#=>\d]|Papers We Love|PWL/, '').sub(/[-{1}]/, '')
+  title.gsub(/[\#=>\d]|Papers We Love|PWL/, '').sub(/[-{1}]/, '').strip
 end
 
 # Build up address and map strings for meta div
@@ -80,11 +80,16 @@ def process_fields(event)
   h[:url] = event['event_url']
   h[:event_title] = clean_title(event['name'])
 
+  h[:group] = event['group']
+
+  h[:city] = ''
+
   if event['venue'].nil?
     address = ''
     glink = ''
   else
     address, glink = build_address(event['venue'])
+    h[:city] = event['venue']['city']
   end
 
   h[:address] = address
