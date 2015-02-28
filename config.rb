@@ -1,3 +1,5 @@
+require 'lib/event-handler.rb'
+
 ###
 # Blog settings
 ###
@@ -107,7 +109,7 @@ activate :automatic_image_sizes
 #   end
 # end
 
-set :markdown, parse_block_html: true
+#set :markdown, :parse_block_html => true
 
 set :css_dir, 'stylesheets'
 

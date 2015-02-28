@@ -18,3 +18,6 @@ gem "nokogiri"
 gem 'sass'
 gem 'bourbon'
 gem 'neat'
+
+# Sanitizers
+gem 'sanitize', '~> 3.1.1'

@@ -1,0 +1,24 @@
+---
+title: <%= @title %>
+date: <%= @date %>
+author: <%= @author %>
+category: news
+tags: meetup, chapters
+label: Meetups
+description: Papers We Love Meetup Schedule for <%= @month %>
+ogp:
+  og:
+    description: Papers We Love Meetup Schedule for <%= @month %>
+  fb:
+    description: Papers We Love Meetup Schedule for <%= @month %>
+---
+
+We have another great line-up of meet-ups scheduled for <%= @month %> across a number of our chapters:
+<% @events.each do |event| %><% e = process_fields(event) %>
+**<%= e[:city] %> <%= DateTime.parse(e[:time]).strftime('%-m/%-d') %>**: [<%= e[:event_title] %>](<%= e[:url] %>)
+<% end %> READMORE
+
+---
+
+<img class="left no-shadow" alt="SPONSOR NAME" style="width: 120px" src="/images/SPONSOR_IMG.png" />
+The **CHAPTER** would like to give special thanks to [SPONSOR](SPONSOR_LINK) for sponsoring the ITEMS for the MONTH meetup.

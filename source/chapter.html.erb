@@ -1,2 +1,28 @@
 <% @chapter = chapter %>
-<%= partial "partials/chapters/#{chapter['name']}" %>
+<% events = check_events(data.meetup.chapters[@chapter['meetup_url']]) %>
+<article class="chapter">
+  <section class="chapter-description">
+    <%= partial "partials/chapters/#{chapter['name']}" %>
+  </section>
+  <% unless events.empty? %>
+    <h2 class="chapter-meetups-header">Chapter Meetups</h2>
+    <% events.each do |event| %>
+      <% e = process_fields(event) %>
+      <section class="chapter-meetup">
+        <h1><a href="<%= e[:url] %>"><%= e[:event_title] %></a></h1>
+        <div class="event-meta">
+          <span class="event-date">
+            <%= e[:glink] %>
+            <strong>Date/Time:</strong>
+            <%= e[:time] %>
+            <strong>Location:</strong>
+            <%= e[:address] %>
+          </span>
+        </div>
+        <div class="event-description">
+          <%= e[:photo] %><%= e[:desc] %>
+        </div>
+      </section>
+    <% end %>
+  <% end %>
+</article>

@@ -1,114 +1,150 @@
-.chapter {
+article.chapter {
   @include outer-container;
   @include clearfix;
   padding: 1em;
-  @include media($desktop) {
-    padding: 0;
-    .primary {
-      @include span-columns(3);
-    }
-    .secondary {
-      @include span-columns(1);
-    }
-  }
 }
 
-.primary {
-  padding: 2em 0 0 0;
+h1 {
+  font-size: 2em;
+  color: $gray-1;
+}
+
+section.chapter-index {
   h1 {
-    font-size: 2em;
-    margin: 0 0 1em 0;
-    padding: 0;
+    text-align: center;
   }
 
-  h2 {
-    font-size: 1.4em;
-    margin: 2em 0 0 0;
-    padding: 0 0 .5em 0;
-    border-bottom: #ccc 2px solid;
-    color: #666;
-    font-weight: normal;
-  }
-
-  h3 {
-    margin: 2em 0 .5em 0;
-    padding: 2em 0 0 0;
-    border-top: #ddd 1px solid;
-    font-size: 1.4em;
-  }
-
-  h3:first-of-type {
-    margin-top: 0;
-    border-top: #fff 0px solid;
-  }
-
-  @extend %text;
-
-  span.meta {
-    font-family: $sans;
-    color: #666;
-  }
-}
-
-.primary > p > img {
-  border: #fff 3px solid;
-  box-shadow: #666 0 0 2px 0;
-  margin: 0 1em 1em 0;
-  float: none;
-  width: 100%;
-  @include media($desktop) {
-    float: left;
-    width: 40%;
-  }
-}
-
-
-.secondary {
-  padding: 2.6em 0 0 0;
-  h2 {
-    font-size: 1.4em;
-    margin: 0 0 1em 0;
-    padding: 0 0 .4em 0;
-    border-bottom: #ccc 1px solid;
-    color: #333;
-  }
-  @extend %text;
   p {
-    @include media($desktop) {
-      font-size: 1em;
-    }
-  }
-  p.sponsor {
-    font-family: $sans;
+    font-size: 1.4em;
     text-align: center;
-    color: #999;
-    margin-bottom: 2em;
-    img {
-      display: block;
-      float: none;
-      width: 100%;
-      margin: 0 0 1em 0;
-      box-shadow: none;
-    }
-  }
-}
-
-article.chapter {
-  section.chapters {
-    text-align: center;
-    h1 {
-      font-size: 2em;
-    }
+    color: $gray-1;
   }
 }
 
 ul.chapter-index-list {
+  @include span-columns(4);
   text-align: center;
+  margin: 0 0 2em 0;
+  padding: 0 0 1em 0;
+  border-bottom: #ddd 1px solid;
+
   li {
-    margin: .7em;
     display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+
     a {
-      font-size: 1.2em;
+      color: #666;
+      font-weight: bold;
+      font-style: italic;
+      text-decoration: none;
+      font-size: 1.4em;
+      &:hover {
+        color: $blue-link;
+      }
+    }
+  }
+}
+
+h2.chapter-meetups-header {
+  color: $gray-1;
+  font-size: 1.6em;
+  margin: 1.4em 0;
+  padding-bottom: .5em;
+  border-bottom: $gray-4 3px solid;
+  text-align: center;
+  @include media($desktop) {
+    text-align: left;
+  }
+}
+
+section.chapter-description {
+  h2 {
+    font-size: 1.4em;
+    color: $gray-1;
+  }
+  @extend %text;
+  p {
+    font-size: 1.2em;
+    img {
+      display: block;
+      width: 100%;
+      margin: 1em 0;
+    }
+    @include media($desktop) {
+      img {
+        margin: 1em;
+        margin-top: 0;
+        margin-left: 0;
+        float: left;
+        width: 50%;
+      }
+    }
+  }
+  p.sponsor {
+    display: inline-block;
+    margin-top: 0;
+    img {
+      width: auto;
+      float: none;
+    }
+    font-family: $sans;
+    color: $gray-2;
+  }
+}
+
+div.sponsor-platinum {
+  text-align: center;
+  margin: 2em 0;
+  padding: 2em 0;
+  border-top: $gray-4 3px solid;
+  border-bottom: $gray-4 3px solid;
+
+  a.sponsor-platinum {
+    display: block;
+    margin: 0 auto;
+  }
+
+  img {
+    border: #fff 4px solid;
+    box-shadow: #999 0 0 3px 0;
+    display: block;
+    text-align: center;
+    width: 80%;
+    margin: 1em auto;
+    float: none;
+  }
+
+  span.sponsor-platinum-text {
+    display: block;
+    font-family: $sans;
+    font-size: 1em;
+    color: $gray-2;
+
+    a {
+      color: $blue-link;
+      text-decoration: none;
+    }
+  }
+}
+
+section.chapter-meetup {
+  display: block;
+  clear: both;
+  margin-bottom: 2.4em;
+  padding-bottom: 1em;
+  border-bottom: $gray-5 3px solid;
+  content: " "; /* 1 */
+  display: table; /* 2 */
+  h1 {
+    font-size: 1.4em;
+    color: $gray-2;
+    text-align: center;
+    @include media($desktop) {
+      text-align: left;
+    }
+    a {
       text-decoration: none;
       color: $blue-link;
       &:hover {
@@ -119,50 +155,83 @@ ul.chapter-index-list {
   }
 }
 
-div.sponsor-platinum {
+div.event-meta {
   text-align: center;
   @include media($desktop) {
-    @include outer-container;
     text-align: left;
   }
-  border-radius: .7em;
-  background-color: #eee;
+  margin: .5em 0;
+  padding: .8em 0;
+  border-top: $gray-5 1px solid;
+  border-bottom: $gray-5 1px solid;
+  font-family: $sans;
+  font-size: 1em;
+  line-height: 160%;
+  color: $gray-2;
+
+  strong {
+    color: $gray-1;
+  }
+
+  a.event-map {
+    margin: 1em 0;
+    display: block;
+    width: 100%;
+    padding: .5em;
+    background: $gray-3;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    &:after {
+      content: ' to Meetup';
+    }
+    @include media($desktop) {
+      width: auto;
+      margin: 0 .5em;
+      display: inline;
+      padding: .2em .5em;
+      &:after {
+        content: '';
+      }
+    }
+    &:hover {
+      background: $blue-link;
+    }
+  }
 }
 
-div.sponsor-platinum-img {
-  a {
-    display: inline;
+div.event-description {
+  @extend %text;
+
+  a.event-photo-link {
+    display: block;
+    margin: 1em 0;
+    width: 100%;
+    @include media($desktop) {
+      margin: 0 1.4em 1em 0;
+      display: inline-block;
+      width: 50%;
+      float: left;
+    }
   }
-  text-align: center;
-  img.sponsor-platinum {
-    width: 80%;
-    margin: 1em 0 0 0;
-  }
-  @include media($desktop) {
-    @include span-columns(2);
-    img.sponsor-platinum {
+
+  img.event-photo {
+    border: #fff 4px solid;
+    box-shadow: #999 0 0 3px 0;
+    width: 100%;
+    @include media($desktop) {
       display: block;
-      margin: 0 0 0 1em;
-      width: 100%;
-      vertical-align: middle;
     }
   }
-}
 
-div.sponsor-platinum-text {
-  p {
-    margin: 0 2em 1em 2em;
-    padding: 0 0 1em 0;
-    font-family: $sans;
-    font-size: 1em;
-  }
-  @include media($desktop) {
-    @include span-columns(2);
-    p {
-      padding: 2em 1em 0 0;
-      margin: 0;
-      font-size: 1em;
+  a.event-read-more {
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    display: block;
+    @include media($desktop) {
+      display: inline;
+      text-align: left;
     }
   }
-  vertical-align: middle;
 }
