@@ -54,9 +54,28 @@ Appends the following YAML to `chapter.yml`:
   :url: "/chapters/washington-dc"
 ```
 
-_Note_: this will throw an error if the chapter already exists, bust open your editor to make changes to existing chapters.
+_Note_: We auto-generate your monthly meetup information from the Meetup.com API - so you don't need to add it to the generated chapter file.
 
-#### Creating a monthly meetup schedule post
+#### Auto-generate a monthly meetup schedule post
+
+We like to create news posts each month listing the upcoming PWL meet ups and can auto-generate one from Meetup.com data gathered by Calligraphus:
+
+```shell
+$ bundle exec middleman upcoming
+```
+
+Will generate a file named something like `2015-03-01-march-meetups.html.markdown` in the `/source` directory. All chapters that have upcoming events within the next month should be listed.
+
+**Note:** We purposefully filter out any events that are missing `venue` information.
+
+Options for upcoming are:
+
+Option | Alias | Description
+---------|---------|-----------------
+month | -m | The month to scope the listing to, ex: 3 for March
+data | -d | The YAML data file to read from (see Calligraphus)
+
+#### Manually create a monthly meetup schedule post
 
 We like to create news posts each month listing the upcoming PWL meet ups. A started template for this post can be created with a CLI command:
 
