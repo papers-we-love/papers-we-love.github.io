@@ -6,19 +6,15 @@ We'll be using [papers-we-love's curated repository](https://github.com/papers-w
 
 Papers We Love has a **[Code of Conduct](https://github.com/papers-we-love/papers-we-love/blob/master/CODE_OF_CONDUCT.md)**. Please contact one of the Meetup's organizers if anyone is not following it. Be good to each other and to the PWL community!
 
-<h2>Chapter details</h2>
-<p>
-<strong>Sign-up:</strong>
-Please RSVP for meetings via <a href="http://www.meetup.com/Papers-We-Love-LA">Meetup.com</a>
-</p>
+## Chapter details
 
-<p>
-<strong>Twitter:</strong>
-<a href="https://twitter.com/paperswelove_la">@paperswelove_la</a>
-</p>
+**Sign-up:** Please RSVP for meetings via <a href="http://www.meetup.com/Papers-We-Love-LA">Meetup.com</a>
 
-<p>
-<strong>Organizers:</strong>
+**Twitter:** <a href="https://twitter.com/paperswelove_la">@paperswelove_la</a>
+
+
+## Sponsors
+<p class="sponsor">
+  Thanks to <a href="http://yahoo.com">Yahoo!</a> for hosting this first edition!
+<img src="http://assets.fontsinuse.com/static/use-media-items/15/14246/full-2048x768/52c4c6bc/Yahoo_Logo.png"  class="sponsor" />
 </p>
-<h2>Sponsors</h2>
-<p class="sponsor">Thanks to [Yahoo](http://www.yahoo.com/) for hosting this first edition!</p>
