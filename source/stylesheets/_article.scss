@@ -36,6 +36,7 @@ iframe.video {
   min-height: 315px;
   border: #fff 4px solid;
   box-shadow: #999 0 0 3px 0;
+  margin: 1em 0;
 }
 
 @include media($desktop) {
