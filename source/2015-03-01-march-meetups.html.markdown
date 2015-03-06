@@ -29,6 +29,8 @@ We have another great line-up of meet-ups scheduled for March across a number of
 
 **Vienna 3/23**: [Why Functional Programming Matters](http://www.meetup.com/Papers-We-Love-Vienna/events/220729137/)
 
+**Montreal 3/25**: [Pablo Duboue on Structural Zeros versus Sampling Zeros](http://www.meetup.com/Papers-We-Love-Montreal/events/220974427/)
+
 **San Francisco 3/26**: [Armon Dadgar on Bloom Filters and HyperLogLog](http://www.meetup.com/papers-we-love-too/events/212147942/)
  READMORE
 
