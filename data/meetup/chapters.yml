@@ -1,9 +1,18 @@
 Papers-We-Love-Toronto:
+  topics:
+  - {urlkey: softwaredev, name: Software Development, id: 3833}
+  - {urlkey: newtech, name: New Technology, id: 9696}
+  - {urlkey: computer, name: Computers, id: 15225}
+  - {urlkey: programming, name: Programming, id: 17627}
+  - {urlkey: programming-languages, name: Programming Languages, id: 17628}
+  - {urlkey: computer-science, name: Computer Science, id: 21751}
+  - {urlkey: science-technology-engineering-math, name: Science Technology Engineering Math,
+    id: 68682}
   created: 1408717699000
   who: Readers
   country: CA
   city: Toronto
-  members: 156
+  members: 157
   timezone: Canada/Eastern
   id: 16543502
   utc_offset: -18000000
@@ -164,12 +173,13 @@ Papers-We-Love-Toronto:
     visibility: public
     name: '#5 Colin Lupton on Quantum Lambda Calculus'
     maybe_rsvp_count: 0
-    status: upcoming
+    status: past
     venue: {address_1: 80 Spadina Ave. 4th Floor, country: ca, city: Toronto, repinned: false,
       id: 23087232, name: Shopify Toronto, lon: -79.395576, lat: 43.646049, state: 'ON'}
     time: 1425511800000
-    updated: 1424900776000
+    updated: 1425530534000
     waitlist_count: 0
+    rating: {count: 1, average: 5}
     description: <p><a href="https://twitter.com/thephoeron">Colin Lupton</a> will be presenting the paper <a href="http://www.mathstat.dal.ca/~selinger/papers/qlambdabook.pdf">Quantum Lambda Calculus</a> by Peter Selinger.</p> <p>***</p> <p>We will discuss the design of a typed lambda calculus for quantum computation. After a brief discussion of the role of higher-order functions in quantum information theory, we define the quantum lambda calculus and its operational semantics. Safety invariants, such as the no-cloning property, are enforced by a static type system that is based on intuitionistic linear logic. We will also describe a type inference algorithm, and a categorical semantics.</p> <p><br/><b>Doors open at 6:30 pm, presentation will begin at 7:00 pm.</b> There will be food and refreshments provided by Shopify.</p> <p><br/>***</p> <p><a href="https://twitter.com/thephoeron">Colin</a> is the CTO and Lead Dev of Catapult Labs (<a href="http://catapult-app.com/"><a href="http://catapult-app.com" class="linkified">http://catapult-app.com</a></a>) and lead author of Learn Lisp The Hard Way (<a href="http://learnlispthehardway.org/"><a href="http://learnlispthehardway.org/" class="linkified">http://learnlispthehardway.org/</a></a>). He has a particular penchant for Common Lisp, Quantum Computing, and M-Theory.</p>
     event_url: http://www.meetup.com/Papers-We-Love-Toronto/events/220756628/
   link: http://www.meetup.com/Papers-We-Love-Toronto/
@@ -186,6 +196,18 @@ Papers-We-Love-Toronto:
     <p>Papers We Love has a&nbsp;<a href="https://github.com/papers-we-love/papers-we-love/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>. Please contact one of the Meetup's organizers if anyone is not following it. Be good to each other and to the PWL community! <br> </p>
   join_mode: open
 Papers-We-Love-in-saint-louis:
+  topics:
+  - {urlkey: ai, name: Artificial Intelligence, id: 456}
+  - {urlkey: statistical-computing, name: Statistical Computing, id: 15280}
+  - {urlkey: programming, name: Programming, id: 17627}
+  - {urlkey: programming-languages, name: Programming Languages, id: 17628}
+  - {urlkey: computer-science, name: Computer Science, id: 21751}
+  - {urlkey: high-scalability-computing, name: High Scalability Computing, id: 24410}
+  - {urlkey: machine-learning, name: Machine Learning, id: 29971}
+  - {urlkey: high-performance-computing, name: High Performance Computing, id: 77687}
+  - {urlkey: numerical-analysis, name: Numerical Analysis, id: 98587}
+  - {urlkey: computational-science-and-engineering, name: Computational Science and Engineering,
+    id: 132160}
   created: 1394176816000
   who: readers
   country: US
@@ -321,11 +343,21 @@ Papers-We-Love-in-saint-louis:
 Papers-We-Love-Boston:
   events: []
 papers-we-love-london:
+  topics:
+  - {urlkey: computer-science, name: Computer Science, id: 21751}
+  - {urlkey: academics, name: Academics, id: 32773}
+  - {urlkey: computer-programming, name: Computer programming, id: 48471}
+  - {urlkey: academic-papers, name: Academic Papers, id: 93172}
+  - {urlkey: popular-science, name: Popular Science, id: 121332}
+  - {urlkey: computational-science-and-engineering, name: Computational Science and Engineering,
+    id: 132160}
+  - {urlkey: scientific-computing, name: Scientific Computing, id: 135136}
+  - {urlkey: academic-writing, name: Academic Writing, id: 172068}
   created: 1393622100000
   who: readers
   country: GB
   city: London
-  members: 273
+  members: 274
   timezone: Europe/London
   id: 13111022
   utc_offset: 0
@@ -463,7 +495,7 @@ papers-we-love-london:
     time: 1426705200000
     duration: 7200000
     updated: 1425234061000
-    waitlist_count: 28
+    waitlist_count: 29
     rsvp_limit: 40
     description: <p>In ‘the real world’, nothing is simple and failure is unavoidable. “How Complex Systems Fail” was discovered by Adam when he followed a reference in a database book. It expanded his mind on the similarities between hospitals, nuclear weapons, and databases, and now he’d like to share these with you.</p> <p><br/>The paper is available at <a href="http://webyrd.net/scheme-2013/papers/HemannMuKanren2013.pdf">&lt;/a&gt;&lt;a href="http://web.mit.edu/2.75/resources/random/How%20Complex%20Systems%20Fail.pdf"&gt;<a href="http://web.mit.edu/2.75/resources/random/How%20Complex%20Systems%20Fail.pdf" class="linkified">http://web.mit.edu/2.75/resources/random/How%20Complex%20Systems%20Fail.pdf</a></a> . Its subtitle, "Being a Short Treatise on the Nature of Failure;<br/>How Failure is Evaluated; How Failure is Attributed to Proximate<br/>Cause; and the Resulting New Understanding of Patient Safety", serves as a brief abstract.</p> <p><br/>About Adam:</p> <p>Having started programming at the age of 8, Adam has nearly got the hang of running a website. Please don't invent anything that makes this harder for him.</p>
     event_url: http://www.meetup.com/Papers-We-Love-London/events/220691457/
@@ -482,6 +514,10 @@ papers-we-love-london:
     <p><span style="font-size : 16px">Please read and follow the <a href="https://github.com/papers-we-love/papers-we-love/blob/a2c25daeb0ab70ef7723d13dcfab3c420910ec8d/CODE_OF_CONDUCT.md">Code Of Conduct</a>, please let one of the organisers know if anything makes you uncomfortable.</span></p>
   join_mode: open
 Papers-We-Love-Chicago:
+  topics:
+  - {urlkey: newtech, name: New Technology, id: 9696}
+  - {urlkey: programming, name: Programming, id: 17627}
+  - {urlkey: computer-science, name: Computer Science, id: 21751}
   created: 1404980919000
   who: Readers
   country: US
@@ -587,11 +623,17 @@ Papers-We-Love-Chicago:
     <p>Please read and follow the <a href="https://github.com/papers-we-love/papers-we-love/blob/master/CODE_OF_CONDUCT.md">Code Of Conduct</a>, please let one of the organizers know if anything makes you uncomfortable.</p>
   join_mode: open
 papers-we-love-too:
+  topics:
+  - {urlkey: computer-science, name: Computer Science, id: 21751}
+  - {urlkey: academic-papers, name: Academic Papers, id: 93172}
+  - {urlkey: computational-science-and-engineering, name: Computational Science and Engineering,
+    id: 132160}
+  - {urlkey: scientific-computing, name: Scientific Computing, id: 135136}
   created: 1393203829000
   who: readers
   country: US
   city: San Francisco
-  members: 734
+  members: 736
   timezone: US/Pacific
   id: 13035792
   utc_offset: -28800000
@@ -1021,7 +1063,7 @@ papers-we-love-too:
     event_url: http://www.meetup.com/papers-we-love-too/events/212147812/
   - headcount: 0
     created: 1412748725000
-    yes_rsvp_count: 160
+    yes_rsvp_count: 161
     group: {join_mode: open, created: 1393203829000, name: Papers we love too, group_lon: -122.4000015258789,
       id: 13035792, urlname: papers-we-love-too, group_lat: 37.77000045776367, who: readers}
     id: '212147942'
@@ -1129,6 +1171,21 @@ papers-we-love-too:
     waitlist_count: 0
     event_url: http://www.meetup.com/papers-we-love-too/events/220795969/
   - headcount: 0
+    created: 1425014463000
+    yes_rsvp_count: 1
+    group: {join_mode: open, created: 1393203829000, name: Papers we love too, group_lon: -122.4000015258789,
+      id: 13035792, urlname: papers-we-love-too, group_lat: 37.77000045776367, who: readers}
+    id: '220795976'
+    utc_offset: -25200000
+    visibility: public
+    name: PWL#18 => Bob Poekert on TBD
+    maybe_rsvp_count: 0
+    status: upcoming
+    time: 1440120600000
+    updated: 1425623001000
+    waitlist_count: 0
+    event_url: http://www.meetup.com/papers-we-love-too/events/220795976/
+  - headcount: 0
     created: 1425013986000
     yes_rsvp_count: 1
     group: {join_mode: open, created: 1393203829000, name: Papers we love too, group_lon: -122.4000015258789,
@@ -1136,11 +1193,11 @@ papers-we-love-too:
     id: '220795855'
     utc_offset: -25200000
     visibility: public
-    name: Jason Brown on Epidemic Algorithms for Replicated Database Maintenance
+    name: PWL#19 => Jason Brown on Epidemic Algorithms for Replicated Database Maintenance
     maybe_rsvp_count: 0
     status: upcoming
     time: 1442539800000
-    updated: 1425014127000
+    updated: 1425622944000
     waitlist_count: 0
     description: |-
       <p><b>PWL Mini</b></p> <p>TBD</p> <p>
@@ -1151,6 +1208,22 @@ papers-we-love-too:
 
       <i><br/></i></p>
     event_url: http://www.meetup.com/papers-we-love-too/events/220795855/
+  - headcount: 0
+    created: 1425622864000
+    yes_rsvp_count: 1
+    group: {join_mode: open, created: 1393203829000, name: Papers we love too, group_lon: -122.4000015258789,
+      id: 13035792, urlname: papers-we-love-too, group_lat: 37.77000045776367, who: readers}
+    id: '220964296'
+    utc_offset: -25200000
+    visibility: public
+    name: PWL#20 => Aysylu Greenberg on TBD
+    maybe_rsvp_count: 0
+    status: upcoming
+    time: 1445563800000
+    updated: 1425622864000
+    waitlist_count: 0
+    description: <p>More details soon!</p>
+    event_url: http://www.meetup.com/papers-we-love-too/events/220964296/
   link: http://www.meetup.com/papers-we-love-too/
   lat: 37.77000045776367
   state: CA
@@ -1166,11 +1239,23 @@ papers-we-love-too:
     </p>
   join_mode: open
 Papers-we-love-Bangalore:
+  topics:
+  - {urlkey: lisp, name: Lisp & Scheme, id: 2400}
+  - {urlkey: edtech, name: Education & Technology, id: 7203}
+  - {urlkey: programming, name: Programming, id: 17627}
+  - {urlkey: programming-languages, name: Programming Languages, id: 17628}
+  - {urlkey: scala, name: Scala, id: 17936}
+  - {urlkey: computer-science, name: Computer Science, id: 21751}
+  - {urlkey: haskell, name: Haskell, id: 22791}
+  - {urlkey: functional-programming, name: Functional Programming, id: 22792}
+  - {urlkey: clojure, name: Clojure, id: 29661}
+  - {urlkey: computing, name: Computing, id: 50927}
+  - {urlkey: compilers, name: Compilers, id: 59684}
   created: 1405395667000
   who: readers
   country: IN
   city: Bangalore
-  members: 410
+  members: 418
   timezone: Asia/Calcutta
   id: 15721132
   utc_offset: 19800000
@@ -1422,7 +1507,7 @@ Papers-we-love-Bangalore:
       lat: 0, repinned: false}
     time: 1426325400000
     updated: 1425477142000
-    waitlist_count: 3
+    waitlist_count: 8
     rsvp_limit: 25
     description: <p>I will be talking about Hyperloglog, a cardinality (i.e. number of distinct elements) <i>estimation</i> algorithm. In general, counting the number of elements in a set gets harder as the number of sets increase. For e.g., you might want to count number of users from a country.. i.e. number of sets is just 200+ and you can use a map of country to count. But, if you want to count the number of unique visitors to a popular website, then the number of sets become really large.</p> <p>Probabilistic counting methods give a way to estimate the cardinality of sets without keeping track of every single item. Hyperloglog is probably the best known of those methods. </p> <p>Paper: <a href="http://algo.inria.fr/flajolet/Publications/FlFuGaMe07.pdf"><a href="http://algo.inria.fr/flajolet/Publications/FlFuGaMe07.pdf" class="linkified">http://algo.inria.fr/flajolet/Publications/FlFuGaMe07.pdf</a></a></p>
     event_url: http://www.meetup.com/Papers-we-love-Bangalore/events/220883207/
@@ -1439,11 +1524,19 @@ Papers-we-love-Bangalore:
     </p>
   join_mode: open
 Papers-We-Love-Hamburg:
+  topics:
+  - {urlkey: science, name: Science, id: 85}
+  - {urlkey: programming, name: Programming, id: 17627}
+  - {urlkey: computer-science, name: Computer Science, id: 21751}
+  - {urlkey: data-science, name: Data Science, id: 102811}
+  - {urlkey: computational-science-and-engineering, name: Computational Science and Engineering,
+    id: 132160}
+  - {urlkey: scientific-computing, name: Scientific Computing, id: 135136}
   created: 1412851386000
   who: readers
   country: DE
   city: Hamburg
-  members: 76
+  members: 78
   timezone: Europe/Berlin
   id: 17505362
   utc_offset: 3600000
@@ -1509,7 +1602,7 @@ Papers-We-Love-Hamburg:
     event_url: http://www.meetup.com/Papers-We-Love-Hamburg/events/217295142/
   - headcount: 0
     created: 1425375949000
-    yes_rsvp_count: 7
+    yes_rsvp_count: 8
     group: {join_mode: open, created: 1412851386000, name: Papers We Love Hamburg,
       group_lon: 10, id: 17505362, urlname: Papers-We-Love-Hamburg, group_lat: 53.54999923706055,
       who: readers}
@@ -1541,11 +1634,27 @@ Papers-We-Love-Hamburg:
     <p>Papers We Love has a <a href="https://github.com/papers-we-love/papers-we-love/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>. Please contact one of the Meetup's organizers if anyone is not following it. Be good to each other and to the PWL community!</p>
   join_mode: open
 Papers-We-Love-Seattle:
+  topics:
+  - {urlkey: opensource, name: Open Source, id: 563}
+  - {urlkey: edtech, name: Education & Technology, id: 7203}
+  - {urlkey: newtech, name: New Technology, id: 9696}
+  - {urlkey: research, name: Research & Development Engineer, id: 10028}
+  - {urlkey: technology, name: Technology, id: 10579}
+  - {urlkey: intellectual-discussion, name: Intellectual Discussion, id: 15083}
+  - {urlkey: programming, name: Programming, id: 17627}
+  - {urlkey: learning, name: Learning, id: 18296}
+  - {urlkey: engineering, name: Engineering, id: 21750}
+  - {urlkey: computer-science, name: Computer Science, id: 21751}
+  - {urlkey: technology-professionals, name: Technology Professionals, id: 22203}
+  - {urlkey: researchers, name: Researchers, id: 32774}
+  - {urlkey: science-and-technolgy, name: Science and Technolgy, id: 65452}
+  - {urlkey: intellectual-curiosity, name: Intellectual Curiosity, id: 79032}
+  - {urlkey: new-science-discoveries, name: New Science Discoveries, id: 230401}
   created: 1408937100000
   who: Members
   country: US
   city: Seattle
-  members: 239
+  members: 242
   timezone: US/Pacific
   id: 16583562
   utc_offset: -28800000
@@ -1704,7 +1813,7 @@ Papers-We-Love-Seattle:
     event_url: http://www.meetup.com/Papers-We-Love-Seattle/events/219963131/
   - headcount: 0
     created: 1424129393000
-    yes_rsvp_count: 12
+    yes_rsvp_count: 24
     group: {join_mode: open, created: 1408937100000, name: Papers We Love @ Seattle,
       group_lon: -122.33000183105469, id: 16583562, urlname: Papers-We-Love-Seattle,
       group_lat: 47.61000061035156, who: Members}
@@ -1714,10 +1823,33 @@ Papers-We-Love-Seattle:
     name: 'PWL#5: Dynamo: Amazon’s Highly Available Key-value Store'
     maybe_rsvp_count: 0
     status: upcoming
+    venue: {address_1: 1315 E Pine St, country: us, city: Seattle, repinned: false,
+      id: 23564134, name: The Project Room, lon: -122.315086, lat: 47.615219, state: WA}
     time: 1426037400000
-    updated: 1425270250000
+    duration: 10800000
+    updated: 1425685704000
     waitlist_count: 0
-    description: <p><b>We will be covering the paper that launched many other NoSQL databases over the years. Apache Cassandra, Voldemort, Riak to name a few.</b></p> <p><b><br/></b></p> <p><b><br/></b></p> <p><b>ABSTRACT Reliability at massive scale is one of the biggest challenges we face at Amazon.com, one of the largest e-commerce operations in the world; even the slightest outage has significant financial consequences and impacts customer trust. The Amazon.com platform, which provides services for many web sites worldwide, is implemented on top of an infrastructure of tens of thousands of servers and network components located in many datacenters around the world. At this scale, small and large components fail continuously and the way persistent state is managed in the face of these failures drives the reliability and scalability of the software systems. This paper presents the design and implementation of Dynamo, a highly available key-value storage system that some of Amazon’s core services use to provide an “always-on” experience. To achieve this level of availability, Dynamo sacrifices consistency under certain failure scenarios. It makes extensive use of object versioning and application-assisted conflict resolution in a manner that provides a novel interface for developers to use. <br/></b></p> <p><b><br/></b></p> <p><b><a href="http://www.cs.ucsb.edu/~agrawal/fall2009/dynamo.pdf"><a href="http://www.cs.ucsb.edu/~agrawal/fall2009/dynamo.pdf" class="linkified">http://www.cs.ucsb.edu/~agrawal/fall2009/dynamo.pdf</a></a><br/></b></p>
+    rsvp_limit: 40
+    description: '<p><i>We will be covering the paper that launched many other NoSQL
+      databases over the years. Apache Cassandra, Voldemort, Riak to name a few.</i></p>
+      <p><b>ABSTRACT </b>Reliability at massive scale is one of the biggest challenges
+      we face at Amazon.com, one of the largest e-commerce operations in the world;
+      even the slightest outage has significant financial consequences and impacts
+      customer trust. The Amazon.com platform, which provides services for many web
+      sites worldwide, is implemented on top of an infrastructure of tens of thousands
+      of servers and network components located in many datacenters around the world.
+      At this scale, small and large components fail continuously and the way persistent
+      state is managed in the face of these failures drives the reliability and scalability
+      of the software systems. This paper presents the design and implementation of
+      Dynamo, a highly available key-value storage system that some of Amazon’s core
+      services use to provide an “always-on” experience. To achieve this level of
+      availability, Dynamo sacrifices consistency under certain failure scenarios.
+      It makes extensive use of object versioning and application-assisted conflict
+      resolution in a manner that provides a novel interface for developers to use.
+       </p> <p><br/><b><br/></b></p> <p><b><a href="http://www.cs.ucsb.edu/~agrawal/fall2009/dynamo.pdf"><a
+      href="http://www.cs.ucsb.edu/~agrawal/fall2009/dynamo.pdf" class="linkified">http://www.cs.ucsb.edu/~agrawal/fall2009/dynamo.pdf</a></a><br/></b></p>
+      <p><b><br/></b></p> <p><b>NOTE: We are still looking for a venue for this event.
+      If you can accommodate the group on tuesday please let me know. Thanks!</b></p>'
     event_url: http://www.meetup.com/Papers-We-Love-Seattle/events/220567705/
   link: http://www.meetup.com/Papers-We-Love-Seattle/
   lat: 47.61000061035156
@@ -1735,6 +1867,22 @@ Papers-We-Love-Seattle:
     Papers We Love has a [url=https://github.com/papers-we-love/papers-we-love/blob/master/CODE_OF_CONDUCT.md]Code of Conduct[/url]. Please contact one of the Meetup's organizers if anyone is not following it. Be good to each other and to the PWL community!</p>
   join_mode: open
 Papers-We-Love-Reykjavik:
+  topics:
+  - {urlkey: ai, name: Artificial Intelligence, id: 456}
+  - {urlkey: softwaredev, name: Software Development, id: 3833}
+  - {urlkey: cloud-computing, name: Cloud Computing, id: 15167}
+  - {urlkey: computer, name: Computers, id: 15225}
+  - {urlkey: programming, name: Programming, id: 17627}
+  - {urlkey: programming-languages, name: Programming Languages, id: 17628}
+  - {urlkey: computer-science, name: Computer Science, id: 21751}
+  - {urlkey: functional-programming, name: Functional Programming, id: 22792}
+  - {urlkey: high-scalability-computing, name: High Scalability Computing, id: 24410}
+  - {urlkey: academia, name: Academia, id: 28269}
+  - {urlkey: machine-learning, name: Machine Learning, id: 29971}
+  - {urlkey: systems, name: Systems, id: 53017}
+  - {urlkey: distributed-systems, name: Distributed Systems, id: 113032}
+  - {urlkey: distributed-computing, name: distributed computing, id: 586642}
+  - {urlkey: networks, name: Networks, id: 1039162}
   created: 1412290750000
   who: Members
   country: IS
@@ -1817,6 +1965,18 @@ Papers-We-Love-Reykjavik:
     </p>
   join_mode: open
 Papers-We-Love-Vienna:
+  topics:
+  - {urlkey: softwaredev, name: Software Development, id: 3833}
+  - {urlkey: high-scalability-computing, name: High Scalability Computing, id: 24410}
+  - {urlkey: high-performance-computing, name: High Performance Computing, id: 77687}
+  - {urlkey: academic-papers, name: Academic Papers, id: 93172}
+  - {urlkey: concurrent-programming, name: Concurrent Programming, id: 107751}
+  - {urlkey: distributed-systems, name: Distributed Systems, id: 113032}
+  - {urlkey: computational-science-and-engineering, name: Computational Science and Engineering,
+    id: 132160}
+  - {urlkey: scientific-computing, name: Scientific Computing, id: 135136}
+  - {urlkey: academic-writing, name: Academic Writing, id: 172068}
+  - {urlkey: data-computing, name: Data Computing, id: 979002}
   created: 1414886469000
   who: Readers
   country: AT
@@ -1949,11 +2109,19 @@ Papers-We-Love-Vienna:
     <p>We follow the "official" <a href="https://github.com/papers-we-love/papers-we-love/blob/master/CODE_OF_CONDUCT.md">code of conduct</a>.</p>
   join_mode: open
 papers-we-love-amsterdam:
+  topics:
+  - {urlkey: programming, name: Programming, id: 17627}
+  - {urlkey: computer-science, name: Computer Science, id: 21751}
+  - {urlkey: high-performance-computing, name: High Performance Computing, id: 77687}
+  - {urlkey: distributed-systems, name: Distributed Systems, id: 113032}
+  - {urlkey: computational-science-and-engineering, name: Computational Science and Engineering,
+    id: 132160}
+  - {urlkey: scientific-computing, name: Scientific Computing, id: 135136}
   created: 1413010800000
   who: Readers
   country: NL
   city: Amsterdam
-  members: 119
+  members: 122
   timezone: Europe/Amsterdam
   id: 17545302
   utc_offset: 3600000
@@ -1967,6 +2135,7 @@ papers-we-love-amsterdam:
   events:
   - headcount: 0
     created: 1419878228000
+    photo_album_id: 25956962
     yes_rsvp_count: 40
     group: {join_mode: open, created: 1413010800000, name: Papers We Love Amsterdam,
       group_lon: 4.889999866485596, id: 17545302, urlname: papers-we-love-amsterdam,
@@ -1980,17 +2149,26 @@ papers-we-love-amsterdam:
     venue: {country: nl, city: Amsterdam, address_1: Wibautstraat 224, name: Marktplaats/eBay Office Amsterdam,
       lon: 4.917542, id: 6175152, lat: 52.348843, repinned: false}
     time: 1425492000000
-    updated: 1425504876000
+    updated: 1425663392000
+    photos:
+    - photo_album: {photo_album_id: 25956962, event_id: '219479079', group_id: 17545302}
+      highres_link: http://photos1.meetupstatic.com/photos/event/7/6/9/4/highres_434910356.jpeg
+      photo_id: 434910356
+      created: 1425545786000
+      member: {member_id: 96373872, name: Dmitry Ivanov}
+      photo_link: http://photos1.meetupstatic.com/photos/event/7/6/9/4/600_434910356.jpeg
+      updated: 1425545787000
+      thumb_link: http://photos1.meetupstatic.com/photos/event/7/6/9/4/thumb_434910356.jpeg
     waitlist_count: 7
     rsvp_limit: 40
-    rating: {count: 1, average: 4}
+    rating: {count: 3, average: 4.670000076293945}
     description: <p>We're kicking things off in style. Daan van Berkel (<a href="https://twitter.com/daan_van_berkel">@daan_van_berkel</a>) presents <a href="http://www.lamport.org">Leslie Lamport</a>'s seminal paper <a href="http://research.microsoft.com/en-us/um/people/lamport/pubs/time-clocks.pdf">"Time, Clocks, and the Ordering of Events in a Distributed System"</a>.</p>
     event_url: http://www.meetup.com/papers-we-love-amsterdam/events/219479079/
   link: http://www.meetup.com/papers-we-love-amsterdam/
   lat: 52.369998931884766
   category: {name: tech, id: 34, shortname: tech}
   urlname: papers-we-love-amsterdam
-  rating: 0
+  rating: 4.67
   description: |-
     <p>Amsterdam chapter of <a href="http://www.meetup.com/papers-we-love" target="_blank" class="linkified">http://www.meetup.com/papers-we-love</a> </p>
     <p><span>What was the last paper within the realm of computing you read and loved? What did it inspire you to build or tinker with? Come share the ideas in an awesome academic/research paper with fellow engineers, programmers, and paper-readers. Lead a session and show off code that you wrote that implements these ideas or just give us the lowdown about the paper. Otherwise, just come, listen, and discuss in a low ego, friendly environment.</span></p>
@@ -1999,6 +2177,12 @@ papers-we-love-amsterdam:
     </span></p>
   join_mode: open
 Papers-We-Love-Boulder:
+  topics:
+  - {urlkey: computer-science, name: Computer Science, id: 21751}
+  - {urlkey: high-performance-computing, name: High Performance Computing, id: 77687}
+  - {urlkey: academic-papers, name: Academic Papers, id: 93172}
+  - {urlkey: computational-science-and-engineering, name: Computational Science and Engineering,
+    id: 132160}
   created: 1394778033000
   who: readers
   country: US
@@ -2127,6 +2311,15 @@ Papers-We-Love-Boulder:
     <p>PWL CO strictly adheres to the <a href="https://github.com/papers-we-love/papers-we-love/blob/a2c25daeb0ab70ef7723d13dcfab3c420910ec8d/CODE_OF_CONDUCT.md">Code of Conduct</a> set forth by all PWL charters.</p>
   join_mode: open
 Papers-We-Love-Berlin:
+  topics:
+  - {urlkey: softwaredev, name: Software Development, id: 3833}
+  - {urlkey: newtech, name: New Technology, id: 9696}
+  - {urlkey: intellectual-discussion, name: Intellectual Discussion, id: 15083}
+  - {urlkey: cloud-computing, name: Cloud Computing, id: 15167}
+  - {urlkey: programming, name: Programming, id: 17627}
+  - {urlkey: computer-science, name: Computer Science, id: 21751}
+  - {urlkey: computing, name: Computing, id: 50927}
+  - {urlkey: academic-papers, name: Academic Papers, id: 93172}
   created: 1400776904000
   who: Members
   country: DE
@@ -2175,11 +2368,18 @@ Papers-We-Love-Berlin:
     <p>Please read and follow the <a href="https://github.com/papers-we-love/papers-we-love/blob/a2c25daeb0ab70ef7723d13dcfab3c420910ec8d/CODE_OF_CONDUCT.md">Code Of Conduct</a>, please let one of the organisers know if anything makes you uncomfortable.</p>
   join_mode: open
 papers-we-love:
+  topics:
+  - {urlkey: programming, name: Programming, id: 17627}
+  - {urlkey: high-performance-computing, name: High Performance Computing, id: 77687}
+  - {urlkey: data-science, name: Data Science, id: 102811}
+  - {urlkey: computational-science-and-engineering, name: Computational Science and Engineering,
+    id: 132160}
+  - {urlkey: scientific-computing, name: Scientific Computing, id: 135136}
   created: 1386615357000
   who: readers
   country: US
   city: New York
-  members: 777
+  members: 780
   timezone: US/Eastern
   id: 11398322
   utc_offset: -18000000
@@ -4177,13 +4377,13 @@ papers-we-love:
   - headcount: 0
     created: 1425421010000
     how_to_find_us: Tumblr's office is located between 5th Avenue and Park Avenue South on 21st Street. We're on the 10th Floor.
-    yes_rsvp_count: 124
+    yes_rsvp_count: 142
     group: {join_mode: open, created: 1386615357000, name: papers we love, group_lon: -73.97000122070312,
       id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: readers}
     id: '220902753'
     utc_offset: -14400000
     visibility: public
-    name: '#14 - John Myles White on Fundamental Concepts in Programming Languages'
+    name: John Myles White on Fundamental Concepts in Programming Languages
     maybe_rsvp_count: 0
     status: upcoming
     announced: true
@@ -4191,9 +4391,9 @@ papers-we-love:
       repinned: false, id: 23556419, name: 'Tumblr, Inc', lon: -73.988937, lat: 40.739643,
       state: NY}
     time: 1426546800000
-    updated: 1425486289000
+    updated: 1425560855000
     waitlist_count: 0
-    description: <p>We're enthusiastic to have <a href="http://www.johnmyleswhite.com/">John Myles White</a>, <a href="http://www.oreilly.com/pub/au/4730">author</a> and <a href="http://www.johnmyleswhite.com/notebook/category/julia/">Julia programmer</a>, presenting <a href="http://www.cs.cmu.edu/~crary/819-f09/Strachey67.pdf">Fundamental Concepts in Programming Languages</a> by <a href="http://en.wikipedia.org/wiki/Christopher_Strachey">Christopher Strachey</a>.  </p> <p><br/><b>Intro</b></p> <p><br/>Strachey's lectures on "Fundamental Concepts in Programming Languages" provided an extremely broad survey of core issues in programming language design that provided much of the terminology we use today, including definitions of the kinds of polymorphism and the kinds of expressions we see in programming languages. Published as a paper many years later, Strachey's lectures provide an especially readable overview of programming languages concepts.</p> <p><b>Bio</b></p> <p>John Myles White (<a href="https://twitter.com/johnmyleswhite">@johnmyleswhite</a>) is a Julia hacker who loves thinking about the ways in which the design of technical programming languages influences the way in which we think about statistics and machine learning. He's written <a href="http://www.oreilly.com/pub/au/4730">two books about machine learning for O'Reilly</a> and works at Facebook.</p> <p>-----------------------------------------------------------------------</p> <p><img src="http://photos2.meetupstatic.com/photos/event/a/5/4/a/600_433302314.jpeg" /></p> <p><i><b><a href="https://www.twosigma.com/">TwoSigma</a> </b>- Platinum Sponsor of the New York chapter</i></p> <p>-----------------------------------------------------------------------</p> <p><b>Details</b></p> <p>Doors open at 7 pm; the presentation will begin at 7:30 pm; and, yes, there will be refreshments of all kinds and pizza. </p> <p><br/>After John presents the paper, we will open up the floor to discussion and questions.  </p> <p><br/>We hope that you'll read the paper before the meetup, but don't stress if you can't.  If you have any questions, thoughts, or related information, please visit our *<a href="https://github.com/papers-we-love/papers-we-love/issues/286">github-thread</a>* on the matter.</p> <p>Additionally, if you have any papers you want to add to the repository above (papers that you love!), please send us a <a href="https://github.com/papers-we-love/papers-we-love/pulls">pull request</a>. Also, if you have any ideas/questions about this meetup or the Papers-We-Love org, just open up an issue.</p> <p><i>March's meetup is sponsored by</i></p> <p><br/><img src="http://photos3.meetupstatic.com/photos/event/9/5/9/8/600_431498296.jpeg" /></p> <p><img src="http://photos3.meetupstatic.com/photos/event/9/7/9/8/600_433118808.jpeg" /></p>
+    description: <p>We're enthusiastic to have <a href="http://www.johnmyleswhite.com/">John Myles White</a>, <a href="http://www.oreilly.com/pub/au/4730">author</a> and <a href="http://www.johnmyleswhite.com/notebook/category/julia/">Julia programmer</a>, presenting<b> <a href="http://www.cs.cmu.edu/~crary/819-f09/Strachey67.pdf">Fundamental Concepts in Programming Languages</a></b> by <a href="http://en.wikipedia.org/wiki/Christopher_Strachey">Christopher Strachey</a>.  </p> <p><br/><b>Intro</b></p> <p><br/>Strachey's lectures on "Fundamental Concepts in Programming Languages" provided an extremely broad survey of core issues in programming language design that provided much of the terminology we use today, including definitions of the kinds of polymorphism and the kinds of expressions we see in programming languages. Published as a paper many years later, Strachey's lectures provide an especially readable overview of programming languages concepts.</p> <p><b>Bio</b></p> <p>John Myles White (<a href="https://twitter.com/johnmyleswhite">@johnmyleswhite</a>) is a Julia hacker who loves thinking about the ways in which the design of technical programming languages influences the way in which we think about statistics and machine learning. He's written <a href="http://www.oreilly.com/pub/au/4730">two books about machine learning for O'Reilly</a> and works at Facebook.</p> <p>-----------------------------------------------------------------------</p> <p><img src="http://photos2.meetupstatic.com/photos/event/a/5/4/a/600_433302314.jpeg" /></p> <p><i><b><a href="https://www.twosigma.com/">TwoSigma</a> </b>- Platinum Sponsor of the New York chapter</i></p> <p>-----------------------------------------------------------------------</p> <p><b>Details</b></p> <p>Doors open at 7 pm; the presentation will begin at 7:30 pm; and, yes, there will be refreshments of all kinds and pizza. </p> <p><br/>After John presents the paper, we will open up the floor to discussion and questions.  </p> <p><br/>We hope that you'll read the paper before the meetup, but don't stress if you can't.  If you have any questions, thoughts, or related information, please visit our *<a href="https://github.com/papers-we-love/papers-we-love/issues/286">github-thread</a>* on the matter.</p> <p>Additionally, if you have any papers you want to add to the repository above (papers that you love!), please send us a <a href="https://github.com/papers-we-love/papers-we-love/pulls">pull request</a>. Also, if you have any ideas/questions about this meetup or the Papers-We-Love org, just open up an issue.</p> <p><i>March's meetup is sponsored by</i></p> <p><br/><img src="http://photos3.meetupstatic.com/photos/event/9/5/9/8/600_431498296.jpeg" /></p> <p><img src="http://photos3.meetupstatic.com/photos/event/9/7/9/8/600_433118808.jpeg" /></p>
     event_url: http://www.meetup.com/papers-we-love/events/220902753/
   link: http://www.meetup.com/papers-we-love/
   lat: 40.75
@@ -4211,6 +4411,20 @@ papers-we-love:
     <p>Papers We Love has a <b><a href="https://github.com/papers-we-love/papers-we-love/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a></b>. Please contact one of the Meetup's organizers if anyone is not following it. Be good to each other and to the PWL community!</p>
   join_mode: open
 Papers-We-Love-Dallas:
+  topics:
+  - {urlkey: math, name: Math, id: 522}
+  - {urlkey: intellectual-discussion, name: Intellectual Discussion, id: 15083}
+  - {urlkey: information-technology, name: Information Technology, id: 15568}
+  - {urlkey: computer-science, name: Computer Science, id: 21751}
+  - {urlkey: academia, name: Academia, id: 28269}
+  - {urlkey: machine-learning, name: Machine Learning, id: 29971}
+  - {urlkey: mathematics, name: Mathematics, id: 33876}
+  - {urlkey: applied-math, name: Applied Math, id: 41759}
+  - {urlkey: computing, name: Computing, id: 50927}
+  - {urlkey: cryptography, name: Cryptography, id: 84681}
+  - {urlkey: academic-papers, name: Academic Papers, id: 93172}
+  - {urlkey: computational-science-and-engineering, name: Computational Science and Engineering,
+    id: 132160}
   created: 1406562955000
   who: Paper Lovers
   country: US
@@ -4350,6 +4564,17 @@ Papers-We-Love-Dallas:
     <p>We encourage participation from all members of our community. We work hard to make this a safe and friendly environment. Please honor our <a href="https://github.com/papers-we-love/papers-we-love/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>. Thank you.</p>
   join_mode: open
 Papers-We-Love-LA:
+  topics:
+  - {urlkey: softwaredev, name: Software Development, id: 3833}
+  - {urlkey: edtech, name: Education & Technology, id: 7203}
+  - {urlkey: intellectual-discussion, name: Intellectual Discussion, id: 15083}
+  - {urlkey: cloud-computing, name: Cloud Computing, id: 15167}
+  - {urlkey: critical-thinking, name: Critical Thinking, id: 15544}
+  - {urlkey: programming, name: Programming, id: 17627}
+  - {urlkey: programming-languages, name: Programming Languages, id: 17628}
+  - {urlkey: big-data, name: Big Data, id: 18062}
+  - {urlkey: computer-science, name: Computer Science, id: 21751}
+  - {urlkey: distributed-systems, name: Distributed Systems, id: 113032}
   created: 1422286658000
   who: readers
   country: US
@@ -4402,11 +4627,26 @@ Papers-We-Love-LA:
     <p>If you need to reach out to us or have ideas for papers, just ask us via our <a href="https://twitter.com/paperswelove_la">twitter account</a>. Papers We Love has a <a href="https://github.com/papers-we-love/papers-we-love/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>. Please contact one of the Meetup's organizers if anyone is not following it. Be good to each other and to the PWL community!</p>
   join_mode: open
 Doo-Things:
+  topics:
+  - {urlkey: opensource, name: Open Source, id: 563}
+  - {urlkey: softwaredev, name: Software Development, id: 3833}
+  - {urlkey: newtech, name: New Technology, id: 9696}
+  - {urlkey: diy, name: DIY (Do It Yourself), id: 10438}
+  - {urlkey: hacking, name: Hacking, id: 21123}
+  - {urlkey: agile-project-management, name: Agile Project Management, id: 21549}
+  - {urlkey: software, name: Software, id: 26889}
+  - {urlkey: lean-startup, name: Lean Startup, id: 38660}
+  - {urlkey: open-innovation, name: Open innovation, id: 51127}
+  - {urlkey: open-data, name: Open Data, id: 60043}
+  - {urlkey: makerspaces, name: Makerspaces, id: 101438}
+  - {urlkey: open-hardware, name: open hardware, id: 143971}
+  - {urlkey: open-source-hardware, name: Open Source Hardware, id: 403852}
+  - {urlkey: hackspaces, name: hackspaces, id: 1022362}
   created: 1389952095000
   who: Dooers
   country: IN
   city: Pune
-  members: 523
+  members: 525
   timezone: Asia/Calcutta
   id: 12214242
   utc_offset: 19800000
@@ -4745,11 +4985,20 @@ Doo-Things:
     Computers, Arts, History, Education, Open Hardware, Software, Robotics.
   join_mode: open
 Papers-We-Love-Munich:
+  topics:
+  - {urlkey: science, name: Science, id: 85}
+  - {urlkey: opensource, name: Open Source, id: 563}
+  - {urlkey: edtech, name: Education & Technology, id: 7203}
+  - {urlkey: intellectual-discussion, name: Intellectual Discussion, id: 15083}
+  - {urlkey: critical-thinking, name: Critical Thinking, id: 15544}
+  - {urlkey: programming-languages, name: Programming Languages, id: 17628}
+  - {urlkey: learning, name: Learning, id: 18296}
+  - {urlkey: computer-science, name: Computer Science, id: 21751}
   created: 1413287136000
   who: Paper Readers
   country: DE
   city: München
-  members: 157
+  members: 160
   timezone: Europe/Berlin
   id: 17614202
   utc_offset: 3600000
@@ -4927,11 +5176,25 @@ Papers-We-Love-Munich:
 singapore:
   events: []
 Papers-We-Love-Madrid:
+  topics:
+  - {urlkey: softwaredev, name: Software Development, id: 3833}
+  - {urlkey: edtech, name: Education & Technology, id: 7203}
+  - {urlkey: newtech, name: New Technology, id: 9696}
+  - {urlkey: intellectual-discussion, name: Intellectual Discussion, id: 15083}
+  - {urlkey: software-engineering, name: Software Engineering, id: 16325}
+  - {urlkey: programming, name: Programming, id: 17627}
+  - {urlkey: engineering, name: Engineering, id: 21750}
+  - {urlkey: computer-science, name: Computer Science, id: 21751}
+  - {urlkey: technology-professionals, name: Technology Professionals, id: 22203}
+  - {urlkey: academics, name: Academics, id: 32773}
+  - {urlkey: intellectual-curiosity, name: Intellectual Curiosity, id: 79032}
+  - {urlkey: academic-papers, name: Academic Papers, id: 93172}
+  - {urlkey: it-professionals, name: IT Professionals, id: 164111}
   created: 1421099390000
   who: Readers
   country: ES
   city: Madrid
-  members: 106
+  members: 108
   timezone: Europe/Madrid
   id: 18327969
   utc_offset: 3600000
@@ -5098,11 +5361,17 @@ Papers-We-Love-Madrid:
     <p>set forth by all PWL charters.</p>
   join_mode: open
 Papers-We-Love-Columbus:
+  topics:
+  - {urlkey: softwaredev, name: Software Development, id: 3833}
+  - {urlkey: programming-languages, name: Programming Languages, id: 17628}
+  - {urlkey: computer-science, name: Computer Science, id: 21751}
+  - {urlkey: functional-programming, name: Functional Programming, id: 22792}
+  - {urlkey: mathematics, name: Mathematics, id: 33876}
   created: 1398307563000
   who: Readers
   country: US
   city: Columbus
-  members: 36
+  members: 37
   timezone: US/Eastern
   id: 14075072
   utc_offset: -18000000
@@ -5222,11 +5491,20 @@ Papers-We-Love-Columbus:
     </p>
   join_mode: open
 Papers-We-Love-Montreal:
+  topics:
+  - {urlkey: softwaredev, name: Software Development, id: 3833}
+  - {urlkey: programming, name: Programming, id: 17627}
+  - {urlkey: programming-languages, name: Programming Languages, id: 17628}
+  - {urlkey: computer-science, name: Computer Science, id: 21751}
+  - {urlkey: functional-programming, name: Functional Programming, id: 22792}
+  - {urlkey: compilers, name: Compilers, id: 59684}
+  - {urlkey: algorithms, name: Algorithms, id: 111155}
+  - {urlkey: data-structures, name: Data Structures, id: 193031}
   created: 1409349394000
   who: Members
   country: CA
   city: Montréal
-  members: 101
+  members: 103
   timezone: Canada/Eastern
   id: 16679672
   utc_offset: -18000000
@@ -5359,6 +5637,33 @@ Papers-We-Love-Montreal:
 
       Radialpoint have kindly offered to host the meetup this time.</p>
     event_url: http://www.meetup.com/Papers-We-Love-Montreal/events/220181743/
+  - headcount: 0
+    created: 1425672144000
+    yes_rsvp_count: 4
+    group: {join_mode: open, created: 1409349394000, name: 'Papers We Love, Montreal',
+      group_lon: -73.62000274658203, id: 16679672, urlname: Papers-We-Love-Montreal,
+      group_lat: 45.529998779296875, who: Members}
+    id: '220974427'
+    utc_offset: -14400000
+    visibility: public
+    name: Structural Zeros versus Sampling Zeros by Mohri and Roark
+    maybe_rsvp_count: 0
+    status: upcoming
+    venue: {address_1: '2050 Bleury, Suite 300', country: ca, city: Montréal, repinned: false,
+      id: 18359262, name: Radialpoint, lon: -73.569962, lat: 45.50753, state: QC}
+    time: 1427322600000
+    updated: 1425672144000
+    waitlist_count: 0
+    description: |-
+      <p>Pablo Duboue will present "<a href="http://www.cs.nyu.edu/~mohri/pub/zero.pdf">Structural Zeros versus Sampling Zeros</a>" by Mohri and Roark; this looks like a fascinating paper with applicability to improving all kinds of probabilistic models.  He will also be talking about the specific application of this idea to probabilistic context-free grammar (PCFG) parsing as discussed in another Mohri and Roark paper, "<a href="http://www.cs.nyu.edu/~mohri/pub/spcfg.pdf">Probabilistic Context-Free Grammar Induction Based on Structural Zeros</a>".  Anyone interested in machine learning, natural language processing, parsing in general, even automated test generation and model checking, or all kinds of other topics should definitely attend!</p> <p>
+
+
+
+      I apologize for the delay in announcing this meetup.  I was in Toronto checking out their PWL chapter to hopefully borrow some ideas (and speakers!) and lost track of time.</p> <p>
+
+
+      Note that since Radialpoint have kindly offered to host again, and their building closes early, we're going to try to start this meetup at 6:30, by which I mean you should come sometime around 6:00 to enjoy a libation and conversation before the talk starts at 6:30.  (Times subject to change, of course; be sure to check the meetup page on the day of the event.)</p>
+    event_url: http://www.meetup.com/Papers-We-Love-Montreal/events/220974427/
   link: http://www.meetup.com/Papers-We-Love-Montreal/
   lat: 45.529998779296875
   state: QC
@@ -5379,11 +5684,20 @@ Papers-We-Love-Montreal:
     </blockquote>
   join_mode: open
 Papers-We-Love-DC:
+  topics:
+  - {urlkey: softwaredev, name: Software Development, id: 3833}
+  - {urlkey: edtech, name: Education & Technology, id: 7203}
+  - {urlkey: programming, name: Programming, id: 17627}
+  - {urlkey: computer-science, name: Computer Science, id: 21751}
+  - {urlkey: web-programmers, name: Web Programmers, id: 39049}
+  - {urlkey: engineers, name: Engineers, id: 79637}
+  - {urlkey: programmers, name: Programmers, id: 124314}
+  - {urlkey: software-engineers, name: Software Engineers, id: 472792}
   created: 1405211857000
   who: Readers
   country: US
   city: Washington
-  members: 173
+  members: 171
   timezone: US/Eastern
   id: 15670772
   utc_offset: -18000000
@@ -5496,55 +5810,6 @@ Papers-We-Love-DC:
       the Scope of Side Effects" <a href="http://vpri.org/pdf/rn2008001_worlds.pdf"
       class="linkified">http://vpri.org/pdf/rn2008001_worlds.pdf</a></p>'
     event_url: http://www.meetup.com/Papers-We-Love-DC/events/212419432/
-  - headcount: 0
-    created: 1422501309000
-    how_to_find_us: Someone will be waiting for you to let you in! Or tweet at @mrb_bk
-    yes_rsvp_count: 34
-    group: {join_mode: open, created: 1405211857000, name: Papers We Love DC, group_lon: -77.04000091552734,
-      id: 15670772, urlname: Papers-We-Love-DC, group_lat: 38.900001525878906, who: Readers}
-    id: '220155410'
-    utc_offset: -18000000
-    visibility: public
-    name: '#3 => John Feminella on "Coresets and their applications"'
-    maybe_rsvp_count: 0
-    status: upcoming
-    venue: {address_1: ' 718 7th Street NW', country: us, city: Washington, repinned: false,
-      id: 21996302, name: WeWork DC - Chinatown, lon: 0, lat: 0, state: DC}
-    time: 1425600000000
-    updated: 1422501620000
-    waitlist_count: 0
-    description: '<p><b>Description of the paper:</b></p> <p>We''ll be looking at
-      the Ph.D. thesis of the head of the MIT Robotics and Big Data Lab, Dan Feldman.
-      It''s entitled "Coresets and their applications" (2010). (That''s "coresets"
-      as in the mathematical reduction technique, not "corsets" as in the article
-      of clothing.) You can find it here: </p> <p><a href="http://www.cs.tau.ac.il/thesis/thesis/feldman"><a
-      href="http://www.cs.tau.ac.il/thesis/thesis/feldman" class="linkified">http://www.cs.tau.ac.il/thesis/thesis/feldman</a></a></p>
-      <p>Coresets are a way of turning large datasets into much smaller, more manageable
-      sets in a way that preserves the interesting features ofthe larger set. Approximation
-      isn''t a new technique; we compress datasets all the time to preserve interesting
-      features (JPEGs for pictures, MP4 for audio, etc.). The choice of the way in
-      which you construct the coreset determines which interesting features are (or
-      are not) preserved, and within what error bounds.</p> <p><br/>The surprising
-      result is that you can, very frequently, throw away large parts of your dataset
-      still get good approximations to the optimal answer. This is valuable for cases
-      where you want to ask an expensive question on a large dataset (e.g. Hamiltonian
-      tours /Traveling Salesperson problem, convex hull, etc.) when you''re willing
-      to trade off some fidelity in the answer for response speed.</p> <p><br/><b>Brief
-      outline:</b></p> <p>* How we improve solutions to problems with computer science:
-      faster algorithms (hard!), faster computers (hard!)<b><br/></b></p> <p>* How
-      we improve solutions with coresets: approximate the dataset (much easier!)</p>
-      <p>* Prerequisites for constructing a coreset</p> <p>* What kinds of problems
-      do and don''t work well, and why</p> <p>* A few examples of constructing a coreset</p>
-      <p>* Diving into the math of why it works</p> <p>* Tips for constructing an
-      arbitrary coreset (it''s hard to do)</p> <p>* Maybe a demo or two, time permitting</p>
-      <p><b>A Note:</b></p> <p><b>§1 and 2 (14 pages out of the 80, a lot of which
-      is pictures) are really the only parts to read. The rest is more detailed math
-      and proofs of different corner cases, and a generalization to N dimensions.<br/></b></p>
-      <p><br/><b>About the presenter:</b></p> <p><br/><i>On a dare, John once drank
-      a 32-ounce chocolate milkshake in under 10 seconds. Life has more or less been
-      downhill from there.</i></p> <p><br/><b>Find him at: @jxxf / <a href="http://jxf.me"><a
-      href="http://jxf.me" class="linkified">http://jxf.me</a></a></b></p>'
-    event_url: http://www.meetup.com/Papers-We-Love-DC/events/220155410/
   link: http://www.meetup.com/Papers-We-Love-DC/
   lat: 38.900001525878906
   state: DC

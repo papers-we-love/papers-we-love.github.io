@@ -2,6 +2,10 @@
 
 ## IMPORTANT: Contributing to the site
 
+We pull in most of the chapter data from the Meetup.com API. Make sure the title of your meetup reflects the speakers name and the title of the paper. For example: "John Myles White on Fundamental Concepts in Programming Languages" or "Lindsey Kuper on Ribbon Proofs for Separation Logic". Please don't add artifacts like "PWL #13 =>" to the title, as we have to strip these out with ad-hoc regexes.
+
+**If you don't see your meetup on a monthly listing, let us know!**
+
 If you're a chapter leader or volunteer and need to make edits to your chapter's page or add a post, please fork the repo and make Pull Requests against the **middleman** branch.
 
 ## How to work with the site
