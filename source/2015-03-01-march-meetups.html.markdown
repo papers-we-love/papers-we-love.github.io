@@ -40,4 +40,4 @@ We have another great line-up of meet-ups scheduled for March across a number of
 
 ---
 
-The **New York Chapter** would like to give special thanks to our Platinum sponsor [TwoSigma](https://www.twosigma.com). We would like to give additional thanks to [The Ladders](http://dev.theladders.com), and [tumblr](http://engineering.tumblr.com) for providing food/refreshments and facilities for the February meetup.
+The **New York Chapter** would like to give special thanks to our Platinum sponsor [TwoSigma](https://www.twosigma.com). We would like to give additional thanks to [The Ladders](http://dev.theladders.com), and [tumblr](http://engineering.tumblr.com) for providing food/refreshments and facilities for the March meetup.
