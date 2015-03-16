@@ -15,7 +15,7 @@ ogp:
 
 We have another great line-up of meet-ups scheduled for March across a number of our chapters:
 
-**Addison 3/2**: [Complex Systems Theory - Stephen Wolfram, presented by Nik Clarkson](http://www.meetup.com/Papers-We-Love-Dallas/events/220708429/)
+**Addison 3/2**: [Complex Systems Theory  Stephen Wolfram, presented by Nik Clarkson](http://www.meetup.com/Papers-We-Love-Dallas/events/220708429/)
 
 **Amsterdam 3/4**: [Time, Clocks, and the Ordering of Events in a Distributed System](http://www.meetup.com/papers-we-love-amsterdam/events/219479079/)
 
@@ -40,4 +40,4 @@ We have another great line-up of meet-ups scheduled for March across a number of
 
 ---
 
-The **New York Chapter** would like to give special thanks to our Platinum sponsor [TwoSigma](https://www.twosigma.com). We would like to give additional thanks to [The Ladders](http://dev.theladders.com), [tumblr](http://engineering.tumblr.com) and [LispNYC](http://lispnyc.org/) for providing food/refreshments and facilities for the February meetup.
+The **New York Chapter** would like to give special thanks to our Platinum sponsor [TwoSigma](https://www.twosigma.com). We would like to give additional thanks to [The Ladders](http://dev.theladders.com), and [tumblr](http://engineering.tumblr.com) for providing food/refreshments and facilities for the February meetup.
