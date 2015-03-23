@@ -15,14 +15,15 @@ ogp:
 
 We have another great line-up of meet-ups scheduled for April across a number of our chapters:
 
+**New York 4/1**: [Neha Narula on The Scalable Commutativity Rule](http://www.meetup.com/papers-we-love/events/221194444/)
+
 **Hamburg 4/16**: [The Essence of the Iterator pattern](http://www.meetup.com/Papers-We-Love-Hamburg/events/220890204/)
 
-**Saint Louis 4/20**: [Paper is TBA](http://www.meetup.com/Papers-We-Love-in-saint-louis/events/220109658/)
+**Seattle 4/16**: [Brandon Bloom on Programming with Algebraic Effects and Handlers](http://www.meetup.com/Papers-We-Love-Seattle/events/221174354/)
 
 **San Francisco 4/30**: [Jordan West on Logical Time](http://www.meetup.com/papers-we-love-too/events/212148242/)
  READMORE
 
 ---
 
-<img class="left no-shadow" alt="SPONSOR NAME" style="width: 120px" src="/images/SPONSOR_IMG.png" />
-The **CHAPTER** would like to give special thanks to [SPONSOR](SPONSOR_LINK) for sponsoring the ITEMS for the MONTH meetup.
+The **New York Chapter** would like to give special thanks to our Platinum sponsor [TwoSigma](https://www.twosigma.com). We would like to give additional thanks to [Dropbox](http://dropbox.com), and [tumblr](http://engineering.tumblr.com) for providing food/refreshments and facilities for the April meetup.

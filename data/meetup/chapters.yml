@@ -12,7 +12,7 @@ Papers-We-Love-Toronto:
   who: Readers
   country: CA
   city: Toronto
-  members: 159
+  members: 165
   timezone: Canada/Eastern
   id: 16543502
   utc_offset: -14400000
@@ -212,7 +212,7 @@ Papers-We-Love-in-saint-louis:
   who: readers
   country: US
   city: Saint Louis
-  members: 38
+  members: 43
   timezone: US/Central
   id: 13206522
   utc_offset: -18000000
@@ -272,7 +272,7 @@ Papers-We-Love-in-saint-louis:
     event_url: http://www.meetup.com/Papers-We-Love-in-saint-louis/events/220109629/
   - headcount: 0
     created: 1422341502000
-    yes_rsvp_count: 11
+    yes_rsvp_count: 15
     group: {join_mode: open, created: 1394176816000, name: Papers We Love (Saint Louis Chapter),
       group_lon: -90.45999908447266, id: 13206522, urlname: Papers-We-Love-in-saint-louis,
       group_lat: 38.70000076293945, who: readers}
@@ -281,13 +281,14 @@ Papers-We-Love-in-saint-louis:
     visibility: public
     name: Out of the Tar Pit (Mosley, Marks)
     maybe_rsvp_count: 0
-    status: upcoming
+    status: past
     venue: {address_1: '230 S. Bemiston Ave, Suite 420', country: us, city: Saint Louis,
       repinned: false, id: 23470450, name: Observable Networks, lon: -90.336945, lat: 38.646488,
       state: MO}
     time: 1426548600000
-    updated: 1424929360000
+    updated: 1426560616000
     waitlist_count: 0
+    rating: {count: 0, average: 0}
     description: <p>Adam Bowen will be speaking on <a href="https://github.com/papers-we-love/papers-we-love/blob/master/design/out-of-the-tar-pit.pdf">Out of the Tar Pit</a>. </p> <p>This paper build on Brooks' work of defining accidental and essential difficulty. It then goes on to identify common causes of complexity and covers ways to eliminate some of them.</p> <p>This paper has gotten a lot of attention lately &amp; I know there were several people interested in it from the signup survey.</p> <p>Like last time, doors will open at 6:30 with food and the meeting will start at 7.</p> <p>Food will be sponsored by Lisa Rokusek of Agent HR.</p>
     event_url: http://www.meetup.com/Papers-We-Love-in-saint-louis/events/220109644/
   - headcount: 0
@@ -329,6 +330,26 @@ Papers-We-Love-in-saint-louis:
     updated: 1424152916000
     waitlist_count: 0
     event_url: http://www.meetup.com/Papers-We-Love-in-saint-louis/events/220570557/
+  - headcount: 0
+    created: 1426561414000
+    yes_rsvp_count: 2
+    group: {join_mode: open, created: 1394176816000, name: Papers We Love (Saint Louis Chapter),
+      group_lon: -90.45999908447266, id: 13206522, urlname: Papers-We-Love-in-saint-louis,
+      group_lat: 38.70000076293945, who: readers}
+    id: '221203537'
+    utc_offset: -18000000
+    visibility: public
+    name: Paper TBA
+    maybe_rsvp_count: 0
+    status: upcoming
+    venue: {address_1: '230 S. Bemiston Ave, Suite 420', country: us, city: Saint Louis,
+      repinned: false, id: 23470450, name: Observable Networks, lon: -90.336945, lat: 38.646488,
+      state: MO}
+    time: 1434411000000
+    updated: 1426561474000
+    waitlist_count: 0
+    description: <p>Christopher Carpenter will speak on a paper that will be announced.</p>
+    event_url: http://www.meetup.com/Papers-We-Love-in-saint-louis/events/221203537/
   link: http://www.meetup.com/Papers-We-Love-in-saint-louis/
   lat: 38.70000076293945
   state: MO
@@ -357,7 +378,7 @@ papers-we-love-london:
   who: readers
   country: GB
   city: London
-  members: 283
+  members: 298
   timezone: Europe/London
   id: 13111022
   utc_offset: 0
@@ -479,7 +500,7 @@ papers-we-love-london:
     event_url: http://www.meetup.com/Papers-We-Love-London/events/220542230/
   - headcount: 0
     created: 1424639054000
-    yes_rsvp_count: 40
+    yes_rsvp_count: 42
     group: {join_mode: open, created: 1393622100000, name: Papers We Love - London,
       group_lon: -0.10000000149011612, id: 13111022, urlname: Papers-We-Love-London,
       group_lat: 51.5099983215332, who: readers}
@@ -488,15 +509,16 @@ papers-we-love-london:
     visibility: public
     name: Adam Johnson on How Complex Systems Fail
     maybe_rsvp_count: 0
-    status: upcoming
+    status: past
     venue: {address_2: SE1 9EU, address_1: 'Notcutt House, 36 Southwark Bridge Road',
       country: gb, city: London, repinned: false, id: 17300632, name: uSwitch, lon: -0.095859,
       lat: 51.50612}
     time: 1426705200000
     duration: 7200000
-    updated: 1425234061000
-    waitlist_count: 44
-    rsvp_limit: 40
+    updated: 1426713903000
+    waitlist_count: 0
+    rsvp_limit: 60
+    rating: {count: 0, average: 0}
     description: <p>In ‘the real world’, nothing is simple and failure is unavoidable. “How Complex Systems Fail” was discovered by Adam when he followed a reference in a database book. It expanded his mind on the similarities between hospitals, nuclear weapons, and databases, and now he’d like to share these with you.</p> <p><br/>The paper is available at <a href="http://webyrd.net/scheme-2013/papers/HemannMuKanren2013.pdf">&lt;/a&gt;&lt;a href="http://web.mit.edu/2.75/resources/random/How%20Complex%20Systems%20Fail.pdf"&gt;<a href="http://web.mit.edu/2.75/resources/random/How%20Complex%20Systems%20Fail.pdf" class="linkified">http://web.mit.edu/2.75/resources/random/How%20Complex%20Systems%20Fail.pdf</a></a> . Its subtitle, "Being a Short Treatise on the Nature of Failure;<br/>How Failure is Evaluated; How Failure is Attributed to Proximate<br/>Cause; and the Resulting New Understanding of Patient Safety", serves as a brief abstract.</p> <p><br/>About Adam:</p> <p>Having started programming at the age of 8, Adam has nearly got the hang of running a website. Please don't invent anything that makes this harder for him.</p>
     event_url: http://www.meetup.com/Papers-We-Love-London/events/220691457/
   link: http://www.meetup.com/Papers-We-Love-London/
@@ -522,7 +544,7 @@ Papers-We-Love-Chicago:
   who: Readers
   country: US
   city: Chicago
-  members: 140
+  members: 141
   timezone: US/Central
   id: 15617092
   utc_offset: -18000000
@@ -633,7 +655,7 @@ papers-we-love-too:
   who: readers
   country: US
   city: San Francisco
-  members: 750
+  members: 759
   timezone: US/Pacific
   id: 13035792
   utc_offset: -25200000
@@ -1063,7 +1085,7 @@ papers-we-love-too:
     event_url: http://www.meetup.com/papers-we-love-too/events/212147812/
   - headcount: 0
     created: 1412748725000
-    yes_rsvp_count: 167
+    yes_rsvp_count: 168
     group: {join_mode: open, created: 1393203829000, name: Papers we love too, group_lon: -122.4000015258789,
       id: 13035792, urlname: papers-we-love-too, group_lat: 37.77000045776367, who: readers}
     id: '212147942'
@@ -1086,7 +1108,7 @@ papers-we-love-too:
     event_url: http://www.meetup.com/papers-we-love-too/events/212147942/
   - headcount: 0
     created: 1412748932000
-    yes_rsvp_count: 49
+    yes_rsvp_count: 56
     group: {join_mode: open, created: 1393203829000, name: Papers we love too, group_lon: -122.4000015258789,
       id: 13035792, urlname: papers-we-love-too, group_lat: 37.77000045776367, who: readers}
     id: '212148242'
@@ -1115,7 +1137,7 @@ papers-we-love-too:
     event_url: http://www.meetup.com/papers-we-love-too/events/212148242/
   - headcount: 0
     created: 1412823869000
-    yes_rsvp_count: 24
+    yes_rsvp_count: 27
     group: {join_mode: open, created: 1393203829000, name: Papers we love too, group_lon: -122.4000015258789,
       id: 13035792, urlname: papers-we-love-too, group_lat: 37.77000045776367, who: readers}
     id: '212348392'
@@ -1255,7 +1277,7 @@ Papers-we-love-Bangalore:
   who: readers
   country: IN
   city: Bangalore
-  members: 441
+  members: 452
   timezone: Asia/Calcutta
   id: 15721132
   utc_offset: 19800000
@@ -1537,7 +1559,7 @@ Papers-We-Love-Hamburg:
   who: readers
   country: DE
   city: Hamburg
-  members: 82
+  members: 90
   timezone: Europe/Berlin
   id: 17505362
   utc_offset: 3600000
@@ -1603,7 +1625,7 @@ Papers-We-Love-Hamburg:
     event_url: http://www.meetup.com/Papers-We-Love-Hamburg/events/217295142/
   - headcount: 0
     created: 1425375949000
-    yes_rsvp_count: 10
+    yes_rsvp_count: 14
     group: {join_mode: open, created: 1412851386000, name: Papers We Love Hamburg,
       group_lon: 10, id: 17505362, urlname: Papers-We-Love-Hamburg, group_lat: 53.54999923706055,
       who: readers}
@@ -1655,7 +1677,7 @@ Papers-We-Love-Seattle:
   who: Members
   country: US
   city: Seattle
-  members: 253
+  members: 255
   timezone: US/Pacific
   id: 16583562
   utc_offset: -25200000
@@ -1855,7 +1877,7 @@ Papers-We-Love-Seattle:
     event_url: http://www.meetup.com/Papers-We-Love-Seattle/events/220567705/
   - headcount: 0
     created: 1426459103000
-    yes_rsvp_count: 14
+    yes_rsvp_count: 23
     group: {join_mode: open, created: 1408937100000, name: Papers We Love @ Seattle,
       group_lon: -122.33000183105469, id: 16583562, urlname: Papers-We-Love-Seattle,
       group_lat: 47.61000061035156, who: Members}
@@ -1865,9 +1887,12 @@ Papers-We-Love-Seattle:
     name: 'PWL#6: Brandon Bloom on Programming with Algebraic Effects and Handlers'
     maybe_rsvp_count: 0
     status: upcoming
+    venue: {address_1: '1301 5th Avenue #1600', country: us, city: Seattle, repinned: false,
+      id: 9757242, name: Whitepages, lon: -122.334396, lat: 47.609005, state: WA,
+      zip: '98101'}
     time: 1429234200000
     duration: 5400000
-    updated: 1426459103000
+    updated: 1426808683000
     waitlist_count: 0
     description: <p>we're excited to have <a href="https://twitter.com/BrandonBloom">Brandon Bloom</a> presenting the paper <a href="https://github.com/papers-we-love/papers-we-love/blob/master/plt/programming-with-algebraic-effects-and-handlers.pdf?raw=true">Programming with Algebraic Effects and Handlers</a> by Andrej Bauer and Matija Pretnar.</p> <p><b>Intro</b></p> <p>Some great papers embody insights, others package up those insights into digestible bites. "Programing with Algebraic Effects and Handlers" is the later sort of great paper. After two decades of fundamental research in to the nature of computation, a lot of mysterious ideas in computer science such as continuations and exception handling finally made sense to a number of mathematically inclined geniuses. Bauer and Pretnar's Eff programming language cuts right through the heart of the theory in a way that makes sense to anybody who has ever written a functional program. This paper uses the Eff language to explore a number of simple computational effects that were traditionally viewed as quite varied and complex.</p> <p><b>Brandon's Bio</b></p> <p>Brandon Bloom walks a fine line between laser focused pragmatism and broad academic interests. Most recently in his varied career, Brandon worked on Code.org's Hour Of Code campaign. In the past, he's founded and sold a startup, as well as worked on Microsoft Xbox and Google Translate. Now, he's indulging his inner scientist and exploring technology for his next venture. Find him on the web at &lt;<a href="http://www.brandonbloom.name/"><a href="http://www.brandonbloom.name/" class="linkified">http://www.brandonbloom.name/</a></a>&gt;.</p>
     event_url: http://www.meetup.com/Papers-We-Love-Seattle/events/221174354/
@@ -2001,7 +2026,7 @@ Papers-We-Love-Vienna:
   who: Readers
   country: AT
   city: Vienna
-  members: 58
+  members: 61
   timezone: Europe/Vienna
   id: 18007722
   utc_offset: 3600000
@@ -2096,7 +2121,7 @@ Papers-We-Love-Vienna:
     event_url: http://www.meetup.com/Papers-We-Love-Vienna/events/220194070/
   - headcount: 0
     created: 1424790092000
-    yes_rsvp_count: 10
+    yes_rsvp_count: 11
     group: {join_mode: open, created: 1414886469000, name: Papers We Love Vienna,
       group_lon: 16.3700008392334, id: 18007722, urlname: Papers-We-Love-Vienna, group_lat: 48.220001220703125,
       who: Readers}
@@ -2141,7 +2166,7 @@ papers-we-love-amsterdam:
   who: Readers
   country: NL
   city: Amsterdam
-  members: 127
+  members: 129
   timezone: Europe/Amsterdam
   id: 17545302
   utc_offset: 3600000
@@ -2207,7 +2232,7 @@ Papers-We-Love-Boulder:
   who: readers
   country: US
   city: Boulder
-  members: 77
+  members: 82
   timezone: US/Mountain
   id: 13336382
   utc_offset: -21600000
@@ -2320,7 +2345,7 @@ Papers-We-Love-Boulder:
     event_url: http://www.meetup.com/Papers-We-Love-Boulder/events/178847172/
   - headcount: 0
     created: 1426228732000
-    yes_rsvp_count: 5
+    yes_rsvp_count: 11
     group: {join_mode: open, created: 1394778033000, name: papers we love CO, group_lon: -105.20999908447266,
       id: 13336382, urlname: Papers-We-Love-Boulder, group_lat: 40.04999923706055,
       who: readers}
@@ -2417,7 +2442,7 @@ papers-we-love:
   who: readers
   country: US
   city: New York
-  members: 801
+  members: 818
   timezone: US/Eastern
   id: 11398322
   utc_offset: -14400000
@@ -4414,8 +4439,9 @@ papers-we-love:
     event_url: http://www.meetup.com/papers-we-love/events/220081725/
   - headcount: 0
     created: 1425421010000
+    photo_album_id: 25984556
     how_to_find_us: Tumblr's office is located between 5th Avenue and Park Avenue South on 21st Street. We're on the 10th Floor.
-    yes_rsvp_count: 177
+    yes_rsvp_count: 164
     group: {join_mode: open, created: 1386615357000, name: papers we love, group_lon: -73.97000122070312,
       id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: readers}
     id: '220902753'
@@ -4423,23 +4449,235 @@ papers-we-love:
     visibility: public
     name: John Myles White on Fundamental Concepts in Programming Languages
     maybe_rsvp_count: 0
-    status: upcoming
+    status: past
     announced: true
     venue: {address_1: '35 East 21st St, FL 10, 10010', country: us, city: New York,
       repinned: false, id: 23556419, name: 'Tumblr, Inc', lon: -73.988937, lat: 40.739643,
       state: NY}
     time: 1426546800000
-    updated: 1426118932000
-    waitlist_count: 13
+    updated: 1426676949000
+    photos:
+    - photo_album: {photo_album_id: 25984556, event_id: '220902753', group_id: 11398322}
+      highres_link: http://photos4.meetupstatic.com/photos/event/a/7/b/0/highres_435342928.jpeg
+      photo_id: 435342928
+      created: 1426606974000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos4.meetupstatic.com/photos/event/a/7/b/0/600_435342928.jpeg
+      updated: 1426606976000
+      thumb_link: http://photos2.meetupstatic.com/photos/event/a/7/b/0/thumb_435342928.jpeg
+    - photo_album: {photo_album_id: 25984556, event_id: '220902753', group_id: 11398322}
+      highres_link: http://photos2.meetupstatic.com/photos/event/a/7/b/1/highres_435342929.jpeg
+      photo_id: 435342929
+      created: 1426606974000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos2.meetupstatic.com/photos/event/a/7/b/1/600_435342929.jpeg
+      updated: 1426606975000
+      thumb_link: http://photos2.meetupstatic.com/photos/event/a/7/b/1/thumb_435342929.jpeg
+    - photo_album: {photo_album_id: 25984556, event_id: '220902753', group_id: 11398322}
+      highres_link: http://photos4.meetupstatic.com/photos/event/a/7/a/f/highres_435342927.jpeg
+      photo_id: 435342927
+      created: 1426606973000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos2.meetupstatic.com/photos/event/a/7/a/f/600_435342927.jpeg
+      updated: 1426606974000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/a/7/a/f/thumb_435342927.jpeg
+    - photo_album: {photo_album_id: 25984556, event_id: '220902753', group_id: 11398322}
+      highres_link: http://photos2.meetupstatic.com/photos/event/a/7/a/e/highres_435342926.jpeg
+      photo_id: 435342926
+      created: 1426606972000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos4.meetupstatic.com/photos/event/a/7/a/e/600_435342926.jpeg
+      updated: 1426606974000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/a/7/a/e/thumb_435342926.jpeg
+    - photo_album: {photo_album_id: 25984556, event_id: '220902753', group_id: 11398322}
+      highres_link: http://photos4.meetupstatic.com/photos/event/a/7/a/d/highres_435342925.jpeg
+      photo_id: 435342925
+      created: 1426606971000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos2.meetupstatic.com/photos/event/a/7/a/d/600_435342925.jpeg
+      updated: 1426606973000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/a/7/a/d/thumb_435342925.jpeg
+    - photo_album: {photo_album_id: 25984556, event_id: '220902753', group_id: 11398322}
+      highres_link: http://photos4.meetupstatic.com/photos/event/a/7/a/b/highres_435342923.jpeg
+      photo_id: 435342923
+      created: 1426606970000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos4.meetupstatic.com/photos/event/a/7/a/b/600_435342923.jpeg
+      updated: 1426606971000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/a/7/a/b/thumb_435342923.jpeg
+    - photo_album: {photo_album_id: 25984556, event_id: '220902753', group_id: 11398322}
+      highres_link: http://photos2.meetupstatic.com/photos/event/a/7/a/c/highres_435342924.jpeg
+      photo_id: 435342924
+      created: 1426606970000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos4.meetupstatic.com/photos/event/a/7/a/c/600_435342924.jpeg
+      updated: 1426606973000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/a/7/a/c/thumb_435342924.jpeg
+    - photo_album: {photo_album_id: 25984556, event_id: '220902753', group_id: 11398322}
+      highres_link: http://photos1.meetupstatic.com/photos/event/a/7/a/9/highres_435342921.jpeg
+      photo_id: 435342921
+      created: 1426606969000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos1.meetupstatic.com/photos/event/a/7/a/9/600_435342921.jpeg
+      updated: 1426606970000
+      thumb_link: http://photos1.meetupstatic.com/photos/event/a/7/a/9/thumb_435342921.jpeg
+    - photo_album: {photo_album_id: 25984556, event_id: '220902753', group_id: 11398322}
+      highres_link: http://photos4.meetupstatic.com/photos/event/a/7/a/6/highres_435342918.jpeg
+      photo_id: 435342918
+      created: 1426606968000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos2.meetupstatic.com/photos/event/a/7/a/6/600_435342918.jpeg
+      updated: 1426606970000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/a/7/a/6/thumb_435342918.jpeg
+    - photo_album: {photo_album_id: 25984556, event_id: '220902753', group_id: 11398322}
+      highres_link: http://photos3.meetupstatic.com/photos/event/a/7/a/8/highres_435342920.jpeg
+      photo_id: 435342920
+      created: 1426606968000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos3.meetupstatic.com/photos/event/a/7/a/8/600_435342920.jpeg
+      updated: 1426606969000
+      thumb_link: http://photos3.meetupstatic.com/photos/event/a/7/a/8/thumb_435342920.jpeg
+    - photo_album: {photo_album_id: 25984556, event_id: '220902753', group_id: 11398322}
+      highres_link: http://photos2.meetupstatic.com/photos/event/a/7/a/5/highres_435342917.jpeg
+      photo_id: 435342917
+      created: 1426606967000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos4.meetupstatic.com/photos/event/a/7/a/5/600_435342917.jpeg
+      updated: 1426606968000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/a/7/a/5/thumb_435342917.jpeg
+    - photo_album: {photo_album_id: 25984556, event_id: '220902753', group_id: 11398322}
+      highres_link: http://photos4.meetupstatic.com/photos/event/a/7/a/4/highres_435342916.jpeg
+      photo_id: 435342916
+      created: 1426606966000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos2.meetupstatic.com/photos/event/a/7/a/4/600_435342916.jpeg
+      updated: 1426606967000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/a/7/a/4/thumb_435342916.jpeg
+    - photo_album: {photo_album_id: 25984556, event_id: '220902753', group_id: 11398322}
+      highres_link: http://photos2.meetupstatic.com/photos/event/a/7/a/3/highres_435342915.jpeg
+      photo_id: 435342915
+      created: 1426606965000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos4.meetupstatic.com/photos/event/a/7/a/3/600_435342915.jpeg
+      updated: 1426606966000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/a/7/a/3/thumb_435342915.jpeg
+    - photo_album: {photo_album_id: 25984556, event_id: '220902753', group_id: 11398322}
+      highres_link: http://photos2.meetupstatic.com/photos/event/a/7/a/1/highres_435342913.jpeg
+      photo_id: 435342913
+      created: 1426606964000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos2.meetupstatic.com/photos/event/a/7/a/1/600_435342913.jpeg
+      updated: 1426606965000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/a/7/a/1/thumb_435342913.jpeg
+    - photo_album: {photo_album_id: 25984556, event_id: '220902753', group_id: 11398322}
+      highres_link: http://photos1.meetupstatic.com/photos/event/a/7/9/e/highres_435342910.jpeg
+      photo_id: 435342910
+      created: 1426606963000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos1.meetupstatic.com/photos/event/a/7/9/e/600_435342910.jpeg
+      updated: 1426606964000
+      thumb_link: http://photos1.meetupstatic.com/photos/event/a/7/9/e/thumb_435342910.jpeg
+    - photo_album: {photo_album_id: 25984556, event_id: '220902753', group_id: 11398322}
+      highres_link: http://photos3.meetupstatic.com/photos/event/a/7/9/f/highres_435342911.jpeg
+      photo_id: 435342911
+      created: 1426606963000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos3.meetupstatic.com/photos/event/a/7/9/f/600_435342911.jpeg
+      updated: 1426606965000
+      thumb_link: http://photos3.meetupstatic.com/photos/event/a/7/9/f/thumb_435342911.jpeg
+    - photo_album: {photo_album_id: 25984556, event_id: '220902753', group_id: 11398322}
+      highres_link: http://photos4.meetupstatic.com/photos/event/a/7/9/d/highres_435342909.jpeg
+      photo_id: 435342909
+      created: 1426606962000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos2.meetupstatic.com/photos/event/a/7/9/d/600_435342909.jpeg
+      updated: 1426606963000
+      thumb_link: http://photos2.meetupstatic.com/photos/event/a/7/9/d/thumb_435342909.jpeg
+    - photo_link: http://photos2.meetupstatic.com/photos/event/a/7/9/c/600_435342908.jpeg
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      created: 1426606961000
+      photo_id: 435342908
+      highres_link: http://photos2.meetupstatic.com/photos/event/a/7/9/c/highres_435342908.jpeg
+      thumb_link: http://photos2.meetupstatic.com/photos/event/a/7/9/c/thumb_435342908.jpeg
+      updated: 1426607609000
+      caption: _SPEAKER_
+      photo_album: {photo_album_id: 25984556, event_id: '220902753', group_id: 11398322}
+    - photo_album: {photo_album_id: 25984556, event_id: '220902753', group_id: 11398322}
+      highres_link: http://photos4.meetupstatic.com/photos/event/a/7/9/b/highres_435342907.jpeg
+      photo_id: 435342907
+      created: 1426606960000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos4.meetupstatic.com/photos/event/a/7/9/b/600_435342907.jpeg
+      updated: 1426606962000
+      thumb_link: http://photos2.meetupstatic.com/photos/event/a/7/9/b/thumb_435342907.jpeg
+    - photo_album: {photo_album_id: 25984556, event_id: '220902753', group_id: 11398322}
+      highres_link: http://photos3.meetupstatic.com/photos/event/a/7/9/9/highres_435342905.jpeg
+      photo_id: 435342905
+      created: 1426606959000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos3.meetupstatic.com/photos/event/a/7/9/9/600_435342905.jpeg
+      updated: 1426606960000
+      thumb_link: http://photos3.meetupstatic.com/photos/event/a/7/9/9/thumb_435342905.jpeg
+    waitlist_count: 0
     rsvp_limit: 175
+    rating: {count: 7, average: 4.710000038146973}
     description: <p>We're enthusiastic to have <a href="http://www.johnmyleswhite.com/">John Myles White</a>, <a href="http://www.oreilly.com/pub/au/4730">author</a> and <a href="http://www.johnmyleswhite.com/notebook/category/julia/">Julia programmer</a>, presenting<b> <a href="http://www.cs.cmu.edu/~crary/819-f09/Strachey67.pdf">Fundamental Concepts in Programming Languages</a></b> by <a href="http://en.wikipedia.org/wiki/Christopher_Strachey">Christopher Strachey</a>.  </p> <p><br/><b>Intro</b></p> <p><br/>Strachey's lectures on "Fundamental Concepts in Programming Languages" provided an extremely broad survey of core issues in programming language design that provided much of the terminology we use today, including definitions of the kinds of polymorphism and the kinds of expressions we see in programming languages. Published as a paper many years later, Strachey's lectures provide an especially readable overview of programming languages concepts.</p> <p><b>Bio</b></p> <p>John Myles White (<a href="https://twitter.com/johnmyleswhite">@johnmyleswhite</a>) is a Julia hacker who loves thinking about the ways in which the design of technical programming languages influences the way in which we think about statistics and machine learning. He's written <a href="http://www.oreilly.com/pub/au/4730">two books about machine learning for O'Reilly</a> and works at Facebook.</p> <p>-----------------------------------------------------------------------</p> <p><img src="http://photos2.meetupstatic.com/photos/event/a/5/4/a/600_433302314.jpeg" /></p> <p><i><b><a href="https://www.twosigma.com/">TwoSigma</a> </b>- Platinum Sponsor of the New York chapter</i></p> <p>-----------------------------------------------------------------------</p> <p><b>Details</b></p> <p>Doors open at 7 pm; the presentation will begin at 7:30 pm; and, yes, there will be refreshments of all kinds and pizza. </p> <p><br/>After John presents the paper, we will open up the floor to discussion and questions.  </p> <p><br/>We hope that you'll read the paper before the meetup, but don't stress if you can't.  If you have any questions, thoughts, or related information, please visit our *<a href="https://github.com/papers-we-love/papers-we-love/issues/286">github-thread</a>* on the matter.</p> <p>Additionally, if you have any papers you want to add to the repository above (papers that you love!), please send us a <a href="https://github.com/papers-we-love/papers-we-love/pulls">pull request</a>. Also, if you have any ideas/questions about this meetup or the Papers-We-Love org, just open up an issue.</p> <p><i>March's meetup is sponsored by</i></p> <p><br/><img src="http://photos3.meetupstatic.com/photos/event/9/5/9/8/600_431498296.jpeg" /></p> <p><img src="http://photos3.meetupstatic.com/photos/event/9/7/9/8/600_433118808.jpeg" /></p>
     event_url: http://www.meetup.com/papers-we-love/events/220902753/
+  - headcount: 0
+    created: 1426536115000
+    how_to_find_us: Tumblr's office is located between 5th Avenue and Park Avenue South on 21st Street. We're on the 10th Floor.
+    yes_rsvp_count: 28
+    group: {join_mode: open, created: 1386615357000, name: papers we love, group_lon: -73.97000122070312,
+      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: readers}
+    id: '221194444'
+    utc_offset: -14400000
+    visibility: public
+    name: Neha Narula on The Scalable Commutativity Rule
+    maybe_rsvp_count: 0
+    status: upcoming
+    announced: false
+    venue: {address_1: '35 East 21st St, FL 10, 10010', country: us, city: New York,
+      repinned: false, id: 23556419, name: 'Tumblr, Inc', lon: -73.988937, lat: 40.739643,
+      state: NY}
+    time: 1427929200000
+    updated: 1426873161000
+    waitlist_count: 0
+    rsvp_limit: 175
+    description: '<p>We''re so excited to have Neha Narula, a PhD student in <a href="http://pdos.csail.mit.edu/">PDOS</a>,
+      the Parallel and Distributed Operating Systems group at MIT, and an amazing
+      <a href="https://www.youtube.com/watch?v=Mbg1COjhsJU">speaker</a> and <a href="http://pdos.csail.mit.edu/~neha/">researcher</a>,
+      presenting on <a href="http://web.mit.edu/amdragon/www/pubs/commutativity-sosp13.pdf">The
+      Scalable Commutativity Rule: Designing Scalable Software for Multicore Processors</a>
+      by Clements, Kaashoek, Zeldovich, Morris, and Kohler.</p> <p><br/><b>Intro</b></p>
+      <p><br/>TBD</p> <p><b>Bio</b></p> <p>Neha Narula (<a href="https://twitter.com/neha">@neha</a>)
+      is a PhD candidate at MIT building fast, scalable distributed systems. In a
+      previous life she was a Senior Software Engineer at Google, where she designed
+      the first version of <i>Blobstore</i>, a system for storing and serving petabytes
+      of immutable data, and worked on <a href="http://code.google.com/p/nativeclient"><i>Native
+      Client</i></a>, a system for running native code securely through the browser.</p>
+      <p><br/>-----------------------------------------------------------------------</p>
+      <p><img src="http://photos2.meetupstatic.com/photos/event/a/5/4/a/600_433302314.jpeg"
+      /></p> <p><i><b><a href="https://www.twosigma.com/">TwoSigma</a> </b>- Platinum
+      Sponsor of the New York chapter</i></p> <p>-----------------------------------------------------------------------</p>
+      <p><b>Details</b></p> <p>Doors open at 7 pm; the presentation will begin at
+      7:30 pm; and, yes, there will be refreshments of all kinds and pizza. </p> <p><br/>After
+      Neha presents the paper, we will open up the floor to discussion and questions.
+       </p> <p><br/>We hope that you''ll read the paper before the meetup, but don''t
+      stress if you can''t.  If you have any questions, thoughts, or related information,
+      please visit our *<a href="https://github.com/papers-we-love/papers-we-love/issues/291">github-thread</a>*
+      on the matter.</p> <p>Additionally, if you have any papers you want to add to
+      the repository above (papers that you love!), please send us a <a href="https://github.com/papers-we-love/papers-we-love/pulls">pull
+      request</a>. Also, if you have any ideas/questions about this meetup or the
+      Papers-We-Love org, just open up an issue.</p> <p><i>April''s meetup is sponsored
+      by</i> </p> <p><img src="http://photos3.meetupstatic.com/photos/event/9/7/9/8/600_433118808.jpeg"
+      /></p>'
+    event_url: http://www.meetup.com/papers-we-love/events/221194444/
   link: http://www.meetup.com/papers-we-love/
   lat: 40.75
   state: NY
   category: {name: tech, id: 34, shortname: tech}
   urlname: papers-we-love
-  rating: 4.9
+  rating: 4.88
   description: |-
     <p>What was the last paper within the realm of computing you read and loved? What did it inspire you to build or tinker with? Come share the ideas in an awesome academic/research paper with fellow engineers, programmers, and paper-readers. Lead a session and show off code that you wrote that implements these ideas or just give us the lowdown about the paper (because of HARD MATH!). Otherwise, just come, listen, and discuss.</p>
     <p>We're curating a <a href="https://github.com/papers-we-love/papers-we-love">repository</a> for papers and places-to-find papers. You can contribute by adding PR's for papers, code, and/or links to other repositories.</p>
@@ -4468,7 +4706,7 @@ Papers-We-Love-Dallas:
   who: Paper Lovers
   country: US
   city: Addison
-  members: 35
+  members: 36
   timezone: US/Central
   id: 16029482
   utc_offset: -18000000
@@ -4618,7 +4856,7 @@ Papers-We-Love-LA:
   who: readers
   country: US
   city: Santa Monica
-  members: 42
+  members: 46
   timezone: US/Pacific
   id: 18381002
   utc_offset: -25200000
@@ -4654,6 +4892,29 @@ Papers-We-Love-LA:
 
       --</p> <p>Do semaphores and mutexes, distributed locks and clocks confound you? Does concurrency as an afterthought frustrate and bewilder you? In this paper, Fournet and Gonthier present the join calculus, a modeling language for clean, asynchronous distributed computing. This language builds upon well established techniques of pattern matching, static typing, and local variable declaration to lay the foundation for synchronizing data across multiple machines, code mobility, and failure detection.</p> <p>--</p> <p>Sam L'ecuyer (<a href="https://twitter.com/cateches">@cateches</a>) is a front-end engineer at Yahoo.  You can find a lot of the code he writes at <a href="https://screen.yahoo.com">screen.yahoo.com</a>. He enjoys static typing, text editors from the 1970s, and making his own cocktail bitters.</p>
     event_url: http://www.meetup.com/Papers-We-Love-LA/events/220325190/
+  - headcount: 0
+    created: 1426517350000
+    how_to_find_us: We'll be in the side with the shuffleboard, I'll be wearing a Yahoo shirt
+    yes_rsvp_count: 2
+    group: {join_mode: open, created: 1422286658000, name: 'Papers We Love, LA', group_lon: -118.47000122070312,
+      id: 18381002, urlname: Papers-We-Love-LA, group_lat: 34.029998779296875, who: readers}
+    id: '221186662'
+    utc_offset: -25200000
+    visibility: public
+    name: Drinks We Love @ Daily Pint
+    maybe_rsvp_count: 0
+    status: upcoming
+    venue: {country: US, city: Santa Monica, address_1: 2310 Pico Blvd, name: Daily Pint,
+      lon: -118.466156, id: 19984252, lat: 34.021122, repinned: false}
+    time: 1427331600000
+    updated: 1426517350000
+    waitlist_count: 0
+    description: |-
+      <p>Hey Everyone,</p> <p>I couldn't find a speaker available this month &amp; then we lost our room booking.  But let's not let that get us down.  I've got a couple speakers on the docket for April &amp; May.</p> <p>Let's meet at the Daily Pint, enjoy drinks we love, and geek out about computer science.</p> <p>
+
+
+      See you there!</p> <p>Ps. It's buy-your-own-drinks in case that was ambiguous.</p>
+    event_url: http://www.meetup.com/Papers-We-Love-LA/events/221186662/
   link: http://www.meetup.com/Papers-We-Love-LA/
   lat: 34.029998779296875
   state: CA
@@ -4685,7 +4946,7 @@ Doo-Things:
   who: Dooers
   country: IN
   city: Pune
-  members: 544
+  members: 559
   timezone: Asia/Calcutta
   id: 12214242
   utc_offset: 19800000
@@ -5037,7 +5298,7 @@ Papers-We-Love-Munich:
   who: Paper Readers
   country: DE
   city: München
-  members: 165
+  members: 170
   timezone: Europe/Berlin
   id: 17614202
   utc_offset: 3600000
@@ -5233,7 +5494,7 @@ Papers-We-Love-Madrid:
   who: Readers
   country: ES
   city: Madrid
-  members: 113
+  members: 116
   timezone: Europe/Madrid
   id: 18327969
   utc_offset: 3600000
@@ -5543,7 +5804,7 @@ Papers-We-Love-Montreal:
   who: Members
   country: CA
   city: Montréal
-  members: 110
+  members: 111
   timezone: Canada/Eastern
   id: 16679672
   utc_offset: -14400000
@@ -5678,7 +5939,7 @@ Papers-We-Love-Montreal:
     event_url: http://www.meetup.com/Papers-We-Love-Montreal/events/220181743/
   - headcount: 0
     created: 1425672144000
-    yes_rsvp_count: 5
+    yes_rsvp_count: 6
     group: {join_mode: open, created: 1409349394000, name: 'Papers We Love, Montreal',
       group_lon: -73.62000274658203, id: 16679672, urlname: Papers-We-Love-Montreal,
       group_lat: 45.529998779296875, who: Members}
