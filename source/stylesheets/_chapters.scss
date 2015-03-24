@@ -83,11 +83,16 @@ section.chapter-description {
     }
   }
   p.sponsor {
+    padding: 0;
     display: inline-block;
     margin-top: 0;
+    margin-right: 1em;
+    text-align: center;
+    font-size: 1em;
     img {
       width: auto;
       float: none;
+      margin: 0;
     }
     font-family: $sans;
     color: $gray-2;
