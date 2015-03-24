@@ -4,7 +4,7 @@ date: 2015-03-05
 tags: meetup, video, sanfrancisco
 label: Video
 category: video
-author: Darrem
+author: Darren
 description: "Caitie McCaffrey stops by and talks about the Orleans: Distributed Virtual Actors for Programmability and Scalability paper by Bernstein, Bykov, Geller, Kliot, and Thelin."
 ogp:
   og:
