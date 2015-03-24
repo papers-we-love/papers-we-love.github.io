@@ -205,3 +205,40 @@ footer.nav-footer {
     }
   }
 }
+
+nav.pagination-controls {
+  margin: 1em 0;
+  padding: .5em 1.5em;
+  @include display(flex);
+  @include flex-direction(row);
+  @include justify-content(center);
+  background: #eee;
+  border-radius: 1em;
+  a {
+    text-decoration: none;
+    color: $blue-link;
+    &:hover {
+      color: $blue-link;
+      text-decoration: underline;
+    }
+  }
+}
+
+p.pagination-count {
+  @include flex(1);
+  color: #666;
+  em {
+    font-style: normal;
+    color: #000;
+  }
+}
+
+p.pagination-prev {
+  @include flex(2);
+  text-align: right;
+}
+
+p.pagination-next {
+  @include flex(2);
+  text-align: right;
+}
