@@ -12,7 +12,7 @@ Papers-We-Love-Toronto:
   who: Readers
   country: CA
   city: Toronto
-  members: 167
+  members: 176
   timezone: Canada/Eastern
   id: 16543502
   utc_offset: -14400000
@@ -184,7 +184,7 @@ Papers-We-Love-Toronto:
     event_url: http://www.meetup.com/Papers-We-Love-Toronto/events/220756628/
   - headcount: 0
     created: 1426684773000
-    yes_rsvp_count: 23
+    yes_rsvp_count: 37
     group: {join_mode: open, created: 1408717699000, name: Papers We Love - Toronto,
       group_lon: -79.37999725341797, id: 16543502, urlname: Papers-We-Love-Toronto,
       group_lat: 43.650001525878906, who: Readers}
@@ -332,7 +332,7 @@ Papers-We-Love-in-saint-louis:
     event_url: http://www.meetup.com/Papers-We-Love-in-saint-louis/events/220109658/
   - headcount: 0
     created: 1424138434000
-    yes_rsvp_count: 4
+    yes_rsvp_count: 5
     group: {join_mode: open, created: 1394176816000, name: Papers We Love (Saint Louis Chapter),
       group_lon: -90.45999908447266, id: 13206522, urlname: Papers-We-Love-in-saint-louis,
       group_lat: 38.70000076293945, who: readers}
@@ -395,10 +395,10 @@ papers-we-love-london:
   who: readers
   country: GB
   city: London
-  members: 301
+  members: 309
   timezone: Europe/London
   id: 13111022
-  utc_offset: 0
+  utc_offset: 3600000
   visibility: public
   group_photo: {highres_link: 'http://photos1.meetupstatic.com/photos/event/6/3/c/6/highres_358165542.jpeg',
     photo_id: 358165542, photo_link: 'http://photos1.meetupstatic.com/photos/event/6/3/c/6/600_358165542.jpeg',
@@ -538,6 +538,39 @@ papers-we-love-london:
     rating: {count: 1, average: 5}
     description: <p>In ‘the real world’, nothing is simple and failure is unavoidable. “How Complex Systems Fail” was discovered by Adam when he followed a reference in a database book. It expanded his mind on the similarities between hospitals, nuclear weapons, and databases, and now he’d like to share these with you.</p> <p><br/>The paper is available at <a href="http://webyrd.net/scheme-2013/papers/HemannMuKanren2013.pdf">&lt;/a&gt;&lt;a href="http://web.mit.edu/2.75/resources/random/How%20Complex%20Systems%20Fail.pdf"&gt;<a href="http://web.mit.edu/2.75/resources/random/How%20Complex%20Systems%20Fail.pdf" class="linkified">http://web.mit.edu/2.75/resources/random/How%20Complex%20Systems%20Fail.pdf</a></a> . Its subtitle, "Being a Short Treatise on the Nature of Failure;<br/>How Failure is Evaluated; How Failure is Attributed to Proximate<br/>Cause; and the Resulting New Understanding of Patient Safety", serves as a brief abstract.</p> <p><br/>About Adam:</p> <p>Having started programming at the age of 8, Adam has nearly got the hang of running a website. Please don't invent anything that makes this harder for him.</p>
     event_url: http://www.meetup.com/Papers-We-Love-London/events/220691457/
+  - headcount: 0
+    created: 1427843835000
+    yes_rsvp_count: 22
+    group: {join_mode: open, created: 1393622100000, name: Papers We Love - London,
+      group_lon: -0.10000000149011612, id: 13111022, urlname: Papers-We-Love-London,
+      group_lat: 51.5099983215332, who: readers}
+    id: '221535320'
+    utc_offset: 3600000
+    visibility: public
+    name: Andy Bennett on "Scalable Atomic Visibility with RAMP Transactions"
+    maybe_rsvp_count: 0
+    status: upcoming
+    venue: {address_2: SE1 9EU, address_1: 'Notcutt House, 36 Southwark Bridge Road',
+      country: gb, city: London, repinned: false, id: 17300632, name: uSwitch, lon: -0.095859,
+      lat: 51.50612}
+    time: 1429120800000
+    updated: 1427843869000
+    waitlist_count: 0
+    rsvp_limit: 60
+    description: '<p>Andy Bennett on "Scalable Atomic Visibility with RAMP Transactions"</p>
+      <p> </p> <p>Bailis et al formalise "Read Atomic" isolation which is a database
+      isolation level sufficient for many applications which make use of large,distributed
+      databases in real world applications. They then show how to design a database
+      system which provides this isolation level whilst allowing read, write and read/write
+      transactions on data across multiple partitions: partitions which do not need
+      to communicate with each other.This method is both performant and fairly portable
+      to existing architectures and allows database authors to implement much stronger
+      guarantees than are currently available from systems in use at companies such
+      as Facebook, LinkedIn, Yahoo or Amazon.</p> <p> </p> <p>In this talk we will
+      explore the contributions of this paper and how they can be used solve some
+      of the anomolies encountered in today''s multi-node, distributed, database systems
+      and accompanying applications.</p> <p> </p>'
+    event_url: http://www.meetup.com/Papers-We-Love-London/events/221535320/
   link: http://www.meetup.com/Papers-We-Love-London/
   lat: 51.5099983215332
   state: '17'
@@ -561,7 +594,7 @@ Papers-We-Love-Chicago:
   who: Readers
   country: US
   city: Chicago
-  members: 142
+  members: 145
   timezone: US/Central
   id: 15617092
   utc_offset: -18000000
@@ -672,7 +705,7 @@ papers-we-love-too:
   who: readers
   country: US
   city: San Francisco
-  members: 763
+  members: 791
   timezone: US/Pacific
   id: 13035792
   utc_offset: -25200000
@@ -1102,7 +1135,7 @@ papers-we-love-too:
     event_url: http://www.meetup.com/papers-we-love-too/events/212147812/
   - headcount: 0
     created: 1412748725000
-    yes_rsvp_count: 163
+    yes_rsvp_count: 136
     group: {join_mode: open, created: 1393203829000, name: Papers we love too, group_lon: -122.4000015258789,
       id: 13035792, urlname: papers-we-love-too, group_lat: 37.77000045776367, who: readers}
     id: '212147942'
@@ -1110,13 +1143,14 @@ papers-we-love-too:
     visibility: public
     name: PWL#13=> Armon Dadgar on Bloom Filters and HyperLogLog
     maybe_rsvp_count: 0
-    status: upcoming
+    status: past
     venue: {address_1: 1355 Market St, country: us, city: San Francisco, repinned: false,
       id: 10884002, name: Yammer HQ, lon: -122.416924, lat: 37.776806, state: CA,
       zip: '94103'}
     time: 1427419800000
-    updated: 1426280852000
+    updated: 1427738459000
     waitlist_count: 0
+    rating: {count: 3, average: 5}
     description: |-
       <p><b>PWL Mini</b></p> <p><br/><a href="https://twitter.com/adereth">Matt Adereth</a> on "<a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.30.5736">The Mode Tree: A Tool for Visualization of Nonparametric Density Features</a>"(<a href="http://adereth.github.io/oneoff/Mode%20Trees.pdf" class="linkified">http://adereth.github.io/oneoff/Mode%20Trees.pdf</a>).  From Matt: "<i>We often look at summaries of univariate data using basic descriptive statistics like mean and standard deviation and visualizations like histograms and box plots.  The Mode Tree is a powerful alternative visualization that reveals important details about our distributions that none of the standard approaches can show.</i></p> <p><i>I particularly like this paper because it was really the by-product of some interesting algorithmic work in Computational Statistics.  A lot of the techniques in this area are pretty math heavy and inaccessible, so I appreciated that they dedicated a paper to making a visualization that helps explain the inner workings.  As a bonus, the visualization stands on its own as a useful tool."</i></p> <p><b>Matt's Bio</b></p> <p>Matt Adereth builds tools and infrastructure for quantitative analysis at Two Sigma.  He previously worked at Microsoft on Visio, focusing on ways to connect data to shapes.</p> <p><br/><b>Main Talk </b></p> <p><br/><a href="https://twitter.com/armon">Armon Dadgar</a> from HashiCorp takes us on a deep dive of Bloom filters and HyperLogLog.</p> <p>Bloom filter papers:</p> <p>* <a href="http://www.cs.upc.edu/~diaz/p422-bloom.pdf"><a href="http://www.cs.upc.edu/~diaz/p422-bloom.pdf" class="linkified">http://www.cs.upc.edu/~diaz/p422-bloom.pdf</a></a></p> <p>* <a href="http://gsd.di.uminho.pt/members/cbm/ps/dbloom.pdf"><a href="http://gsd.di.uminho.pt/members/cbm/ps/dbloom.pdf" class="linkified">http://gsd.di.uminho.pt/members/cbm/ps/dbloom.pdf</a></a></p> <p>* <a href="http://www.eecs.harvard.edu/%7Ekirsch/pubs/bbbf/esa06.pdf"><a href="http://www.eecs.harvard.edu/%7Ekirsch/pubs/bbbf/esa06.pdf" class="linkified">http://www.eecs.harvard.edu/%7Ekirsch/pubs/bbbf/esa06.pdf</a></a></p> <p>Armon will mostly touch on the first  paper which is the introduction of the technique. The other two are optimizations that he'll discuss briefly but there's no need to dwell on them.</p> <p>HyperLogLog papers:</p> <p>* <a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.142.9475"><a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.142.9475" class="linkified">http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.142.9475</a></a></p> <p>* <a href="http://research.google.com/pubs/pub40671.html"><a href="http://research.google.com/pubs/pub40671.html" class="linkified">http://research.google.com/pubs/pub40671.html</a></a></p> <p>Again, the first one introduces them, and the second one is some optimizations from Google. He won’t spend much time on the second one either.</p> <p>All of these papers are implemented as part of:</p> <p><a href="https://github.com/armon/bloomd"><a href="https://github.com/armon/bloomd" class="linkified">https://github.com/armon/bloomd</a></a></p> <p><a href="https://github.com/armon/hlld"><a href="https://github.com/armon/hlld" class="linkified">https://github.com/armon/hlld</a></a></p> <p>These links may give some context to the work and show the real-world applicability.</p> <p>From Armon on why he loves these papers: <i>"Bloom Filters and HyperLogLog are incredible for their simplicity and the seemingly impossible behavior they have. Both of them are part of the family of “sketching” data structures, which allow for a controllable error that results in a tremendous savings of memory compared to the equivalent exact implementations.</i></p> <p><i>More than just being elegant, these two data structures enable some very cool real-world use cases. In the online advertising company I previously worked for, we used them to track thousands of metrics across billions of data points comfortably in memory on a single machine. "</i></p> <p><i><br/></i></p> <p><b>Armon's Bio</b></p> <p>Armon has a passion for distributed systems and their application to real world problems. He is currently the CTO of HashiCorp, where he brings distributed systems into the world of DevOps tooling. He has worked on Terraform, Consul, and Serf at HashiCorp, and maintains the Statsite and Bloomd OSS projects as well.</p> <p>
 
@@ -1125,7 +1159,7 @@ papers-we-love-too:
     event_url: http://www.meetup.com/papers-we-love-too/events/212147942/
   - headcount: 0
     created: 1412748932000
-    yes_rsvp_count: 56
+    yes_rsvp_count: 151
     group: {join_mode: open, created: 1393203829000, name: Papers we love too, group_lon: -122.4000015258789,
       id: 13035792, urlname: papers-we-love-too, group_lat: 37.77000045776367, who: readers}
     id: '212148242'
@@ -1138,7 +1172,7 @@ papers-we-love-too:
       id: 10884002, name: Yammer HQ, lon: -122.416924, lat: 37.776806, state: CA,
       zip: '94103'}
     time: 1430443800000
-    updated: 1425082713000
+    updated: 1427395847000
     waitlist_count: 0
     description: |-
       <p><b>Mini</b></p> <p><a href="http://twitter.com/dijkstracula">Nathan Taylor</a> on "Your computer is already a distributed system. Why isn’t your OS?" (<a href="http://www.barrelfish.org/barrelfish_hotos09.pdf" class="linkified">http://www.barrelfish.org/barrelfish_hotos09.pdf</a>). </p> <p>From Nathan: <i>"This is one in a long line of papers advocating for a loosely-coupled, service-oriented operating system architecture, an argument that extends back to the dawn of systems research.  Alternative OSs like microkernels have long been considered more stable and easier to reason about by the systems community, but the performance overhead that comes with running them means typically our OSs still resemble the ones from the '60s.  The authors have spun the "it will be too slow" argument on its head by extrapolating hardware trends and adopting terminology from the distributed systems community, and end up making a compelling case for their design not only being the _only_ path forward, but the time is now to begin adopting their techniques.  The paper is punchy, argues its point cogently, and served as a springboard for further work by the same group of researchers."</i></p> <p>
@@ -1150,11 +1184,11 @@ papers-we-love-too:
       <b>Main Talk</b></p> <p><br/><a href="http://twitter.com/_jrwest">Jordan West</a> stops by and gives us a survey on Logical Time with three papers that cover from 1978 to present day:</p> <p>1. Time, Clocks, and the Ordering of Events in a Distributed System - Leslie Lamport - 1978 - <a href="http://web.stanford.edu/class/cs240/readings/lamport.pdf"><a href="http://web.stanford.edu/class/cs240/readings/lamport.pdf" class="linkified">http://web.stanford.edu/class/cs240/readings/lamport.pdf</a></a></p> <p>2. Virtual Time and Global States of Distributed Systems - Friedmann Mattern - 1988 - <a href="https://www.vs.inf.ethz.ch/publ/papers/VirtTimeGlobStates.pdf"><a href="https://www.vs.inf.ethz.ch/publ/papers/VirtTimeGlobStates.pdf" class="linkified">https://www.vs.inf.ethz.ch/publ/papers/VirtTimeGlobStates.pdf</a></a></p> <p>3. Dotted Version Vectors: Efficient Causality Tracking for Distributed Key-Value Stores - Prequica et al - 2012 - <a href="http://gsd.di.uminho.pt/members/vff/dotted-version-vectors-2012.pdf"><a href="http://gsd.di.uminho.pt/members/vff/dotted-version-vectors-2012.pdf" class="linkified">http://gsd.di.uminho.pt/members/vff/dotted-version-vectors-2012.pdf</a></a> </p> <p>From Jordan: <i>"If you are looking to narrow down the homework, I suggest only reading paper #2, it covers the issues w/ #1, and #3 is an extension. All the maths and such can be found in #2"</i></p> <p>
 
 
-      <b>Jordan's Bio</b></p> <p>Jordan is a senior engineer at Basho where he spends most of his time working on the core components of Riak. When not working on Riak or reading papers on distributed systems, you can usually find Jordan outside with his dogs and posting pictures of them on twitter (@_jrwest).</p>
+      <b>Jordan's Bio</b></p> <p>Jordan West (@_jrwest) is a distributed systems practitioner and open source contributor with a passion for functional programming. He recently worked on the core distributed systems and key/value storage components of Riak, an open-source distributed datastore, implementing major features such as a new reliable broadcast protocol and replicated metadata store. He now spends time working on other distributed systems include Apache Cassandra. When not working on distributed databases or reading papers you can usually find Jordan outside with playing with his dogs. </p>
     event_url: http://www.meetup.com/papers-we-love-too/events/212148242/
   - headcount: 0
     created: 1412823869000
-    yes_rsvp_count: 27
+    yes_rsvp_count: 35
     group: {join_mode: open, created: 1393203829000, name: Papers we love too, group_lon: -122.4000015258789,
       id: 13035792, urlname: papers-we-love-too, group_lat: 37.77000045776367, who: readers}
     id: '212348392'
@@ -1180,7 +1214,7 @@ papers-we-love-too:
     event_url: http://www.meetup.com/papers-we-love-too/events/212348392/
   - headcount: 0
     created: 1425013772000
-    yes_rsvp_count: 3
+    yes_rsvp_count: 9
     group: {join_mode: open, created: 1393203829000, name: Papers we love too, group_lon: -122.4000015258789,
       id: 13035792, urlname: papers-we-love-too, group_lat: 37.77000045776367, who: readers}
     id: '220795812'
@@ -1196,7 +1230,7 @@ papers-we-love-too:
     event_url: http://www.meetup.com/papers-we-love-too/events/220795812/
   - headcount: 0
     created: 1425014423000
-    yes_rsvp_count: 2
+    yes_rsvp_count: 9
     group: {join_mode: open, created: 1393203829000, name: Papers we love too, group_lon: -122.4000015258789,
       id: 13035792, urlname: papers-we-love-too, group_lat: 37.77000045776367, who: readers}
     id: '220795969'
@@ -1211,7 +1245,7 @@ papers-we-love-too:
     event_url: http://www.meetup.com/papers-we-love-too/events/220795969/
   - headcount: 0
     created: 1425014463000
-    yes_rsvp_count: 2
+    yes_rsvp_count: 6
     group: {join_mode: open, created: 1393203829000, name: Papers we love too, group_lon: -122.4000015258789,
       id: 13035792, urlname: papers-we-love-too, group_lat: 37.77000045776367, who: readers}
     id: '220795976'
@@ -1226,7 +1260,7 @@ papers-we-love-too:
     event_url: http://www.meetup.com/papers-we-love-too/events/220795976/
   - headcount: 0
     created: 1425013986000
-    yes_rsvp_count: 2
+    yes_rsvp_count: 5
     group: {join_mode: open, created: 1393203829000, name: Papers we love too, group_lon: -122.4000015258789,
       id: 13035792, urlname: papers-we-love-too, group_lat: 37.77000045776367, who: readers}
     id: '220795855'
@@ -1249,7 +1283,7 @@ papers-we-love-too:
     event_url: http://www.meetup.com/papers-we-love-too/events/220795855/
   - headcount: 0
     created: 1425622864000
-    yes_rsvp_count: 3
+    yes_rsvp_count: 6
     group: {join_mode: open, created: 1393203829000, name: Papers we love too, group_lon: -122.4000015258789,
       id: 13035792, urlname: papers-we-love-too, group_lat: 37.77000045776367, who: readers}
     id: '220964296'
@@ -1268,7 +1302,7 @@ papers-we-love-too:
   state: CA
   category: {name: tech, id: 34, shortname: tech}
   urlname: papers-we-love-too
-  rating: 4.96
+  rating: 4.97
   description: |-
     <p>San Francisco chapter of <a href="http://www.meetup.com/papers-we-love" target="_blank" class="linkified">http://www.meetup.com/papers-we-love</a> </p>
     <p>What was the last paper within the realm of computing you read? What did it inspire you to build or tinker with? Come share the ideas in an awesome academic/research publication with fellow engineers, programmers, and paper-readers. Lead a session and show off code that you wrote that implements these ideas or just give us the lowdown about the paper. Otherwise, just come, listen, learn, and discuss.</p>
@@ -1294,7 +1328,7 @@ Papers-we-love-Bangalore:
   who: readers
   country: IN
   city: Bangalore
-  members: 458
+  members: 471
   timezone: Asia/Calcutta
   id: 15721132
   utc_offset: 19800000
@@ -1576,10 +1610,10 @@ Papers-We-Love-Hamburg:
   who: readers
   country: DE
   city: Hamburg
-  members: 90
+  members: 97
   timezone: Europe/Berlin
   id: 17505362
-  utc_offset: 3600000
+  utc_offset: 7200000
   visibility: public
   group_photo: {highres_link: 'http://photos3.meetupstatic.com/photos/event/8/9/a/a/highres_419075242.jpeg',
     photo_id: 419075242, photo_link: 'http://photos3.meetupstatic.com/photos/event/8/9/a/a/600_419075242.jpeg',
@@ -1642,7 +1676,7 @@ Papers-We-Love-Hamburg:
     event_url: http://www.meetup.com/Papers-We-Love-Hamburg/events/217295142/
   - headcount: 0
     created: 1425375949000
-    yes_rsvp_count: 14
+    yes_rsvp_count: 17
     group: {join_mode: open, created: 1412851386000, name: Papers We Love Hamburg,
       group_lon: 10, id: 17505362, urlname: Papers-We-Love-Hamburg, group_lat: 53.54999923706055,
       who: readers}
@@ -1694,7 +1728,7 @@ Papers-We-Love-Seattle:
   who: Members
   country: US
   city: Seattle
-  members: 257
+  members: 269
   timezone: US/Pacific
   id: 16583562
   utc_offset: -25200000
@@ -1895,7 +1929,7 @@ Papers-We-Love-Seattle:
   - headcount: 0
     created: 1426459103000
     how_to_find_us: Use the 4th Ave entrance, up to 3rd floor and take elevator to 16 floor.
-    yes_rsvp_count: 23
+    yes_rsvp_count: 29
     group: {join_mode: open, created: 1408937100000, name: Papers We Love @ Seattle,
       group_lon: -122.33000183105469, id: 16583562, urlname: Papers-We-Love-Seattle,
       group_lat: 47.61000061035156, who: Members}
@@ -2045,10 +2079,10 @@ Papers-We-Love-Vienna:
   who: Readers
   country: AT
   city: Vienna
-  members: 62
+  members: 67
   timezone: Europe/Vienna
   id: 18007722
-  utc_offset: 3600000
+  utc_offset: 7200000
   visibility: public
   group_photo: {highres_link: 'http://photos3.meetupstatic.com/photos/event/4/5/c/d/highres_431477869.jpeg',
     photo_id: 431477869, photo_link: 'http://photos3.meetupstatic.com/photos/event/4/5/c/d/600_431477869.jpeg',
@@ -2154,42 +2188,38 @@ Papers-We-Love-Vienna:
         1150', country: at, city: Vienna, repinned: false, id: 15700102, name: StockWerk,
       lon: 16.335951, lat: 48.192005}
     time: 1427133600000
-    updated: 1427151795000
+    updated: 1427181325000
     waitlist_count: 0
     rsvp_limit: 12
-    rating: {count: 1, average: 5}
+    rating: {count: 2, average: 5}
     description: <p><b>**Please read: <a href="http://www.cs.kent.ac.uk/people/staff/dat/miranda/whyfp90.pdf">Why Functional Programming Matters</a>**</b></p> <p>Hi again,</p> <p>sticking to our schedule, we'll discuss a paper a bit more on the theoretical side this time — John Hughes' "Why Functional Programming Matters" from 1990.</p> <p>Thanks to <a href="https://twitter.com/pkerpedjiev">Peter</a> for his pick and for leading the discussion!</p> <p>See you on the 23rd,<br/>Philipp</p>
     event_url: http://www.meetup.com/Papers-We-Love-Vienna/events/220729137/
   - headcount: 0
     created: 1427155409000
-    yes_rsvp_count: 1
+    yes_rsvp_count: 7
     group: {join_mode: open, created: 1414886469000, name: Papers We Love Vienna,
       group_lon: 16.3700008392334, id: 18007722, urlname: Papers-We-Love-Vienna, group_lat: 48.220001220703125,
       who: Readers}
     id: '221356300'
     utc_offset: 7200000
     visibility: public
-    name: What do you want to discuss?
+    name: Google Spanner
     maybe_rsvp_count: 0
     status: upcoming
     venue: {address_2: U6 Gumpendorfer Strasse, address_1: 'Pater-Schwartz-Gasse 11A,
         1150', country: at, city: Vienna, repinned: false, id: 15700102, name: StockWerk,
       lon: 16.335951, lat: 48.192005}
     time: 1429549200000
-    updated: 1427155409000
+    updated: 1427756035000
     waitlist_count: 0
     rsvp_limit: 12
-    description: '<p>As discussed today: Please propose a paper for the "practical
-      / hands-on" month in the comments below. And you''ll have the honor of leading
-      the discussion ;-).</p> <p><br/>Dominik proposed <a href="http://research.google.com/archive/spanner.html">Google''s
-      Spanner paper</a>, but we''re happy to have more options, so we can have another
-      vote and decide by popularity.</p>'
+    description: <p><b>**Please read <a href="http://research.google.com/archive/spanner.html">Google's Spanner paper</a>!**</b></p> <p><a href="https://twitter.com/the_dom">Dominik</a> will lead the discussion — thanks!</p> <p>See you all on the 20th :)</p>
     event_url: http://www.meetup.com/Papers-We-Love-Vienna/events/221356300/
   link: http://www.meetup.com/Papers-We-Love-Vienna/
   lat: 48.220001220703125
   category: {name: tech, id: 34, shortname: tech}
   urlname: Papers-We-Love-Vienna
-  rating: 4.83
+  rating: 4.88
   description: |-
     <p>In the spirit of the "Papers We Love" groups around the globe we want to start our own version in Vienna:<br>
 
@@ -2211,10 +2241,10 @@ papers-we-love-amsterdam:
   who: Readers
   country: NL
   city: Amsterdam
-  members: 128
+  members: 136
   timezone: Europe/Amsterdam
   id: 17545302
-  utc_offset: 3600000
+  utc_offset: 7200000
   visibility: public
   group_photo: {highres_link: 'http://photos2.meetupstatic.com/photos/event/8/f/c/2/highres_419496802.jpeg',
     photo_id: 419496802, photo_link: 'http://photos4.meetupstatic.com/photos/event/8/f/c/2/600_419496802.jpeg',
@@ -2390,7 +2420,7 @@ Papers-We-Love-Boulder:
     event_url: http://www.meetup.com/Papers-We-Love-Boulder/events/178847172/
   - headcount: 0
     created: 1426228732000
-    yes_rsvp_count: 11
+    yes_rsvp_count: 12
     group: {join_mode: open, created: 1394778033000, name: papers we love CO, group_lon: -105.20999908447266,
       id: 13336382, urlname: Papers-We-Love-Boulder, group_lat: 40.04999923706055,
       who: readers}
@@ -2432,10 +2462,10 @@ Papers-We-Love-Berlin:
   who: Members
   country: DE
   city: Berlin
-  members: 173
+  members: 175
   timezone: Europe/Berlin
   id: 14613232
-  utc_offset: 3600000
+  utc_offset: 7200000
   visibility: public
   group_photo: {highres_link: 'http://photos1.meetupstatic.com/photos/event/b/2/9/a/highres_366405722.jpeg',
     photo_id: 366405722, photo_link: 'http://photos1.meetupstatic.com/photos/event/b/2/9/a/600_366405722.jpeg',
@@ -2484,10 +2514,10 @@ papers-we-love:
     id: 132160}
   - {urlkey: scientific-computing, name: Scientific Computing, id: 135136}
   created: 1386615357000
-  who: readers
+  who: Readers
   country: US
   city: New York
-  members: 830
+  members: 865
   timezone: US/Eastern
   id: 11398322
   utc_offset: -14400000
@@ -2495,7 +2525,7 @@ papers-we-love:
   group_photo: {highres_link: 'http://photos2.meetupstatic.com/photos/event/c/f/f/a/highres_328913242.jpeg',
     photo_id: 328913242, photo_link: 'http://photos4.meetupstatic.com/photos/event/c/f/f/a/600_328913242.jpeg',
     thumb_link: 'http://photos2.meetupstatic.com/photos/event/c/f/f/a/thumb_328913242.jpeg'}
-  name: papers we love
+  name: Papers We Love
   organizer: {member_id: 10711708, name: Clint Newsom}
   lon: -73.97000122070312
   events:
@@ -2504,8 +2534,8 @@ papers-we-love:
     photo_album_id: 20344442
     how_to_find_us: 11th Floor at 902 Broadway, New York, NY
     yes_rsvp_count: 55
-    group: {join_mode: open, created: 1386615357000, name: papers we love, group_lon: -73.97000122070312,
-      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: readers}
+    group: {join_mode: open, created: 1386615357000, name: Papers We Love, group_lon: -73.97000122070312,
+      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: Readers}
     id: '163406212'
     utc_offset: -18000000
     visibility: public
@@ -2649,8 +2679,8 @@ papers-we-love:
     photo_album_id: 20717782
     how_to_find_us: 11th Floor at 902 Broadway, New York, NY
     yes_rsvp_count: 61
-    group: {join_mode: open, created: 1386615357000, name: papers we love, group_lon: -73.97000122070312,
-      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: readers}
+    group: {join_mode: open, created: 1386615357000, name: Papers We Love, group_lon: -73.97000122070312,
+      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: Readers}
     id: '168722902'
     utc_offset: -14400000
     visibility: public
@@ -2752,8 +2782,8 @@ papers-we-love:
     created: 1396378095000
     photo_album_id: 21580952
     yes_rsvp_count: 79
-    group: {join_mode: open, created: 1386615357000, name: papers we love, group_lon: -73.97000122070312,
-      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: readers}
+    group: {join_mode: open, created: 1386615357000, name: Papers We Love, group_lon: -73.97000122070312,
+      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: Readers}
     id: '174731732'
     utc_offset: -14400000
     visibility: public
@@ -2875,8 +2905,8 @@ papers-we-love:
     created: 1396929861000
     photo_album_id: 21925562
     yes_rsvp_count: 84
-    group: {join_mode: open, created: 1386615357000, name: papers we love, group_lon: -73.97000122070312,
-      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: readers}
+    group: {join_mode: open, created: 1386615357000, name: Papers We Love, group_lon: -73.97000122070312,
+      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: Readers}
     id: '175964662'
     utc_offset: -14400000
     visibility: public
@@ -3022,8 +3052,8 @@ papers-we-love:
     created: 1397913022000
     photo_album_id: 22669782
     yes_rsvp_count: 105
-    group: {join_mode: open, created: 1386615357000, name: papers we love, group_lon: -73.97000122070312,
-      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: readers}
+    group: {join_mode: open, created: 1386615357000, name: Papers We Love, group_lon: -73.97000122070312,
+      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: Readers}
     id: '178049922'
     utc_offset: -14400000
     visibility: public
@@ -3117,8 +3147,8 @@ papers-we-love:
     created: 1399972455000
     photo_album_id: 25935618
     yes_rsvp_count: 97
-    group: {join_mode: open, created: 1386615357000, name: papers we love, group_lon: -73.97000122070312,
-      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: readers}
+    group: {join_mode: open, created: 1386615357000, name: Papers We Love, group_lon: -73.97000122070312,
+      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: Readers}
     id: '182798272'
     utc_offset: -14400000
     visibility: public
@@ -3192,8 +3222,8 @@ papers-we-love:
     created: 1400816059000
     photo_album_id: 24215472
     yes_rsvp_count: 92
-    group: {join_mode: open, created: 1386615357000, name: papers we love, group_lon: -73.97000122070312,
-      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: readers}
+    group: {join_mode: open, created: 1386615357000, name: Papers We Love, group_lon: -73.97000122070312,
+      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: Readers}
     id: '184704082'
     utc_offset: -14400000
     visibility: public
@@ -3332,8 +3362,8 @@ papers-we-love:
     created: 1410197935000
     photo_album_id: 24718462
     yes_rsvp_count: 97
-    group: {join_mode: open, created: 1386615357000, name: papers we love, group_lon: -73.97000122070312,
-      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: readers}
+    group: {join_mode: open, created: 1386615357000, name: Papers We Love, group_lon: -73.97000122070312,
+      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: Readers}
     id: '205977012'
     utc_offset: -14400000
     visibility: public
@@ -3451,8 +3481,8 @@ papers-we-love:
     created: 1409340562000
     photo_album_id: 25363522
     yes_rsvp_count: 127
-    group: {join_mode: open, created: 1386615357000, name: papers we love, group_lon: -73.97000122070312,
-      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: readers}
+    group: {join_mode: open, created: 1386615357000, name: Papers We Love, group_lon: -73.97000122070312,
+      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: Readers}
     id: '203968372'
     utc_offset: -14400000
     visibility: public
@@ -3577,8 +3607,8 @@ papers-we-love:
     created: 1413745195000
     photo_album_id: 25759650
     yes_rsvp_count: 125
-    group: {join_mode: open, created: 1386615357000, name: papers we love, group_lon: -73.97000122070312,
-      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: readers}
+    group: {join_mode: open, created: 1386615357000, name: Papers We Love, group_lon: -73.97000122070312,
+      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: Readers}
     id: '214400572'
     utc_offset: -18000000
     visibility: public
@@ -3737,8 +3767,8 @@ papers-we-love:
     photo_album_id: 25801635
     how_to_find_us: 'Between Barclay & Vesey Streets, Zip Code: 10007'
     yes_rsvp_count: 95
-    group: {join_mode: open, created: 1386615357000, name: papers we love, group_lon: -73.97000122070312,
-      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: readers}
+    group: {join_mode: open, created: 1386615357000, name: Papers We Love, group_lon: -73.97000122070312,
+      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: Readers}
     id: '214029542'
     utc_offset: -18000000
     visibility: public
@@ -3957,8 +3987,8 @@ papers-we-love:
     photo_album_id: 25896953
     how_to_find_us: Tumblr's office is located between 5th Avenue and Park Avenue South on 21st Street. We're on the 10th Floor.
     yes_rsvp_count: 119
-    group: {join_mode: open, created: 1386615357000, name: papers we love, group_lon: -73.97000122070312,
-      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: readers}
+    group: {join_mode: open, created: 1386615357000, name: Papers We Love, group_lon: -73.97000122070312,
+      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: Readers}
     id: '220021234'
     utc_offset: -18000000
     visibility: public
@@ -4322,8 +4352,8 @@ papers-we-love:
     photo_album_id: 25938694
     how_to_find_us: Tumblr's office is located between 5th Avenue and Park Avenue South on 21st Street. We're on the 10th Floor.
     yes_rsvp_count: 139
-    group: {join_mode: open, created: 1386615357000, name: papers we love, group_lon: -73.97000122070312,
-      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: readers}
+    group: {join_mode: open, created: 1386615357000, name: Papers We Love, group_lon: -73.97000122070312,
+      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: Readers}
     id: '220081725'
     utc_offset: -18000000
     visibility: public
@@ -4487,8 +4517,8 @@ papers-we-love:
     photo_album_id: 25984556
     how_to_find_us: Tumblr's office is located between 5th Avenue and Park Avenue South on 21st Street. We're on the 10th Floor.
     yes_rsvp_count: 164
-    group: {join_mode: open, created: 1386615357000, name: papers we love, group_lon: -73.97000122070312,
-      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: readers}
+    group: {join_mode: open, created: 1386615357000, name: Papers We Love, group_lon: -73.97000122070312,
+      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: Readers}
     id: '220902753'
     utc_offset: -14400000
     visibility: public
@@ -4671,9 +4701,9 @@ papers-we-love:
   - headcount: 0
     created: 1426536115000
     how_to_find_us: Tumblr's office is located between 5th Avenue and Park Avenue South on 21st Street. We're on the 10th Floor.
-    yes_rsvp_count: 108
-    group: {join_mode: open, created: 1386615357000, name: papers we love, group_lon: -73.97000122070312,
-      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: readers}
+    yes_rsvp_count: 180
+    group: {join_mode: open, created: 1386615357000, name: Papers We Love, group_lon: -73.97000122070312,
+      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: Readers}
     id: '221194444'
     utc_offset: -14400000
     visibility: public
@@ -4685,8 +4715,8 @@ papers-we-love:
       repinned: false, id: 23556419, name: 'Tumblr, Inc', lon: -73.988937, lat: 40.739643,
       state: NY}
     time: 1427929200000
-    updated: 1426951110000
-    waitlist_count: 0
+    updated: 1427659019000
+    waitlist_count: 1
     rsvp_limit: 175
     description: '<p>We''re so excited to have Neha Narula, a PhD student in <a href="http://pdos.csail.mit.edu/">PDOS</a>,
       the Parallel and Distributed Operating Systems group at MIT, and an amazing
@@ -4694,13 +4724,26 @@ papers-we-love:
       presenting on <a href="http://web.mit.edu/amdragon/www/pubs/commutativity-sosp13.pdf">The
       Scalable Commutativity Rule: Designing Scalable Software for Multicore Processors</a>
       by Clements, Kaashoek, Zeldovich, Morris, and Kohler.</p> <p><br/><b>Intro</b></p>
-      <p><br/>TBD</p> <p><b>Bio</b></p> <p>Neha Narula (<a href="https://twitter.com/neha">@neha</a>)
-      is a PhD candidate at MIT building fast, scalable distributed systems. In a
-      previous life she was a Senior Software Engineer at Google, where she designed
-      the first version of <i>Blobstore</i>, a system for storing and serving petabytes
-      of immutable data, and worked on <a href="http://code.google.com/p/nativeclient"><i>Native
-      Client</i></a>, a system for running native code securely through the browser.</p>
-      <p><br/>-----------------------------------------------------------------------</p>
+      <p><br/>Moore''s law is over, or at least, we won''t be making programs go faster
+      by running on faster processors, but instead by parallelizing our code to use
+      more of them.  Reasoning about concurrent code is difficult; but it''s also
+      very hard to understand whether your design has latent scalability bottlenecks
+      until you can actually run it on many cores.  And what if the problem is in
+      your <i>interface, </i>instead of just the implementation?</p> <p>This paper
+      presents a simple, elegant rule:  whenever interface operations commute, they
+      can be implemented in a way that scales.  </p> <p><br/>The authors apply this
+      idea to Linux, and create a new operating system by using the rule, sv6.  Their
+      paper also comes with software, <a href="http://pdos.csail.mit.edu/commuter/">COMMUTER</a>,
+      which can help developers evaluate their interfaces to find opportunities for
+      scaling.</p> <p>This is a very powerful idea, and probably has applications
+      in other areas like distributed systems. In this talk I''ll present the paper,
+      and speculate a bit about where else this research could be useful.</p> <p><b>Bio</b></p>
+      <p>Neha Narula (<a href="https://twitter.com/neha">@neha</a>) is a PhD candidate
+      at MIT building fast, scalable distributed systems. In a previous life she was
+      a Senior Software Engineer at Google, where she designed the first version of
+      <i>Blobstore</i>, a system for storing and serving petabytes of immutable data,
+      and worked on <a href="http://code.google.com/p/nativeclient"><i>Native Client</i></a>,
+      a system for running native code securely through the browser.</p> <p><br/>-----------------------------------------------------------------------</p>
       <p><img src="http://photos2.meetupstatic.com/photos/event/a/5/4/a/600_433302314.jpeg"
       /></p> <p><i><b><a href="https://www.twosigma.com/">TwoSigma</a> </b>- Platinum
       Sponsor of the New York chapter</i></p> <p>-----------------------------------------------------------------------</p>
@@ -4715,6 +4758,7 @@ papers-we-love:
       request</a>. Also, if you have any ideas/questions about this meetup or the
       Papers-We-Love org, just open up an issue.</p> <p><i>April''s meetup is sponsored
       by</i> </p> <p><img src="http://photos3.meetupstatic.com/photos/event/9/7/9/8/600_433118808.jpeg"
+      /></p> <p><img src="http://photos3.meetupstatic.com/photos/event/9/5/9/8/600_431498296.jpeg"
       /></p> <p><img src="http://photos4.meetupstatic.com/photos/event/4/5/3/3/600_435437715.jpeg"
       /></p>'
     event_url: http://www.meetup.com/papers-we-love/events/221194444/
@@ -4726,10 +4770,8 @@ papers-we-love:
   rating: 4.88
   description: |-
     <p>What was the last paper within the realm of computing you read and loved? What did it inspire you to build or tinker with? Come share the ideas in an awesome academic/research paper with fellow engineers, programmers, and paper-readers. Lead a session and show off code that you wrote that implements these ideas or just give us the lowdown about the paper (because of HARD MATH!). Otherwise, just come, listen, and discuss.</p>
-    <p>We're curating a <a href="https://github.com/papers-we-love/papers-we-love">repository</a> for papers and places-to-find papers. You can contribute by adding PR's for papers, code, and/or links to other repositories.</p>
-    <p><span>We're posting <a href="https://www.youtube.com/user/PapersWeLove">videos</a> of all our presentations, from all our chapters. </span><br>
-
-    </p>
+    <p>We're curating a <a href="https://github.com/papers-we-love/papers-we-love">repository</a> for papers and places-to-find papers.&nbsp;You can contribute by adding PR's for papers, code, and/or links to other repositories.</p>
+    <p><span>We're posting <a href="https://www.youtube.com/user/PapersWeLove">videos</a> of all our presentations, from all our chapters.&nbsp;</span> <br> </p>
     <p>If you need to reach out to us or have ideas for papers, just ask us via our <a href="https://twitter.com/papers_we_love">twitter account</a>.</p>
     <p>Papers We Love has a <b><a href="https://github.com/papers-we-love/papers-we-love/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a></b>. Please contact one of the Meetup's organizers if anyone is not following it. Be good to each other and to the PWL community!</p>
   join_mode: open
@@ -4876,6 +4918,38 @@ Papers-We-Love-Dallas:
     rating: {count: 0, average: 0}
     description: <p><a href="http://www.stephenwolfram.com/publications/academic/complex-systems-theory.pdf">&lt;/a&gt;</p> <p>&lt;a href="http://www.stephenwolfram.com/publications/academic/complex-systems-theory.pdf"&gt;<a href="http://www.stephenwolfram.com/publications/academic/complex-systems-theory.pdf" class="linkified">http://www.stephenwolfram.com/publications/academic/complex-systems-theory.pdf</a></a></p> <p>Cellular Automata apply simple rules to simulate complex systems. Stephen Wolfram has invented "A New Kind of Science" to study these machines, and determine how we can use them to understand the natural world.</p> <p><br/>Nik Clarkson will guide us through one of Wolfram's early papers on the subject. He takes a fresh approach to the problem, in which he first tries to achieve the same results as nature, and then tries to walk back to an understanding of the governing laws.</p>
     event_url: http://www.meetup.com/Papers-We-Love-Dallas/events/220708429/
+  - headcount: 0
+    created: 1427561144000
+    yes_rsvp_count: 4
+    group: {join_mode: open, created: 1406562955000, name: 'Papers We Love, Dallas',
+      group_lon: -96.83000183105469, id: 16029482, urlname: Papers-We-Love-Dallas,
+      group_lat: 32.959999084472656, who: Paper Lovers}
+    id: '221461827'
+    utc_offset: -18000000
+    visibility: public
+    name: Scalable Causal Consistency, and Boosting of Learning Algorithms
+    maybe_rsvp_count: 0
+    status: upcoming
+    venue: {address_2: Suite 100, address_1: 16633 Dallas Parkway, country: us, city: Addison,
+      repinned: false, id: 1041264, name: Improving Enterprises, lon: -96.827011,
+      phone: 214.613.4444, lat: 32.976856, state: TX, zip: '75001'}
+    time: 1428364800000
+    duration: 7200000
+    updated: 1427561144000
+    waitlist_count: 0
+    rsvp_limit: 20
+    description: '<p>Don’t Settle for Eventual: Scalable Causal Consistency for Wide-Area
+      Storage with COPS </p> <p><a href="https://www.cs.cmu.edu/~dga/papers/cops-sosp2011.pdf"><a
+      href="https://www.cs.cmu.edu/~dga/papers/cops-sosp2011.pdf" class="linkified">https://www.cs.cmu.edu/~dga/papers/cops-sosp2011.pdf</a></a></p>
+      <p><br/>Michael Perry will present a discussion on causal consistency in a distributed
+      system. With this concept, a distributed system achieve:</p> <p>• Low latency</p>
+      <p>• High availability</p> <p>• Partition Tolerance</p> <p>• Scalability</p>
+      <p>Most systems that do so sacrifice consistency (liniearizability of events)
+      for eventual consistency. But this paper seeks a lesser compromise, which can
+      easily detect and resolve conflicts.</p> <p>As an added bonus, before the primary
+      discussion, Dal will present a lightning talk on boosting of machine learning
+      algorithms.</p>'
+    event_url: http://www.meetup.com/Papers-We-Love-Dallas/events/221461827/
   link: http://www.meetup.com/Papers-We-Love-Dallas/
   lat: 32.959999084472656
   state: TX
@@ -4902,7 +4976,7 @@ Papers-We-Love-LA:
   who: readers
   country: US
   city: Santa Monica
-  members: 47
+  members: 50
   timezone: US/Pacific
   id: 18381002
   utc_offset: -25200000
@@ -4941,7 +5015,7 @@ Papers-We-Love-LA:
   - headcount: 0
     created: 1426517350000
     how_to_find_us: We'll be in the side with the shuffleboard, I'll be wearing a Yahoo shirt
-    yes_rsvp_count: 2
+    yes_rsvp_count: 5
     group: {join_mode: open, created: 1422286658000, name: 'Papers We Love, LA', group_lon: -118.47000122070312,
       id: 18381002, urlname: Papers-We-Love-LA, group_lat: 34.029998779296875, who: readers}
     id: '221186662'
@@ -4949,12 +5023,13 @@ Papers-We-Love-LA:
     visibility: public
     name: Drinks We Love @ Daily Pint
     maybe_rsvp_count: 0
-    status: upcoming
+    status: past
     venue: {country: US, city: Santa Monica, address_1: 2310 Pico Blvd, name: Daily Pint,
       lon: -118.466156, id: 19984252, lat: 34.021122, repinned: false}
     time: 1427331600000
-    updated: 1426517350000
+    updated: 1427343706000
     waitlist_count: 0
+    rating: {count: 0, average: 0}
     description: |-
       <p>Hey Everyone,</p> <p>I couldn't find a speaker available this month &amp; then we lost our room booking.  But let's not let that get us down.  I've got a couple speakers on the docket for April &amp; May.</p> <p>Let's meet at the Daily Pint, enjoy drinks we love, and geek out about computer science.</p> <p>
 
@@ -4992,7 +5067,7 @@ Doo-Things:
   who: Dooers
   country: IN
   city: Pune
-  members: 561
+  members: 592
   timezone: Asia/Calcutta
   id: 12214242
   utc_offset: 19800000
@@ -5344,10 +5419,10 @@ Papers-We-Love-Munich:
   who: Paper Readers
   country: DE
   city: München
-  members: 173
+  members: 179
   timezone: Europe/Berlin
   id: 17614202
-  utc_offset: 3600000
+  utc_offset: 7200000
   visibility: public
   name: Papers We Love - Munich
   organizer: {member_id: 43533372, name: Alex P}
@@ -5512,6 +5587,33 @@ Papers-We-Love-Munich:
 
       [5] <a href="http://dimacs.rutgers.edu/~graham/pubs/papers/cm-full.pdf"><a href="http://dimacs.rutgers.edu/~graham/pubs/papers/cm-full.pdf" class="linkified">http://dimacs.rutgers.edu/~graham/pubs/papers/cm-full.pdf</a></a></p> <p>[6] <a href="http://www.cs.ubc.ca/~murphyk/Bayes/rabiner.pdf"><a href="http://www.cs.ubc.ca/~murphyk/Bayes/rabiner.pdf" class="linkified">http://www.cs.ubc.ca/~murphyk/Bayes/rabiner.pdf</a></a></p> <p>[7] <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2766791/"><a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2766791/" class="linkified">http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2766791/</a></a></p> <p>[8] <a href="http://cit.mak.ac.ug/staff/pnabende/papers/cisse08_pnabende.pdf"><a href="http://cit.mak.ac.ug/staff/pnabende/papers/cisse08_pnabende.pdf" class="linkified">http://cit.mak.ac.ug/staff/pnabende/papers/cisse08_pnabende.pdf</a></a></p>
     event_url: http://www.meetup.com/Papers-We-Love-Munich/events/219418349/
+  - headcount: 0
+    created: 1427719323000
+    yes_rsvp_count: 24
+    group: {join_mode: open, created: 1413287136000, name: Papers We Love - Munich,
+      group_lon: 11.579999923706055, id: 17614202, urlname: Papers-We-Love-Munich,
+      group_lat: 48.13999938964844, who: Paper Readers}
+    id: '221497485'
+    utc_offset: 7200000
+    visibility: public
+    name: Neural networks and machine learning
+    maybe_rsvp_count: 0
+    status: upcoming
+    time: 1429808400000
+    updated: 1427719323000
+    waitlist_count: 0
+    description: '<p>The next meetup will be about neural networks and machine learning.
+      Neural networks have had a successful revival under the label "deep learning"
+      in recent years. We''ll try to get an overview on recent developments in this
+      meetup. As for now, we have a presentation of a classical paper which highlights
+      how the analysis of the visual cortex leads to new learning algorithms ("sparse
+      coding" [1]). It would be great if we could find other presentations on Deep
+      Learning, Computer Vision, NLP, Recurrent Neural Networks and Large Scale Machine
+      Learning. For a comprehensive reading list see [2].</p> <p>Papers:</p> <p>*
+      Sparse Coding with an Overcomplete Basis Set: A Strategy Employed by V1? [1]</p>
+      <p>[1] <a href="http://redwood.berkeley.edu/bruno/papers/VR.pdf" class="linkified">http://redwood.berkeley.edu/bruno/papers/VR.pdf</a><br/>[2]
+      <a href="http://deeplearning.net/reading-list/" class="linkified">http://deeplearning.net/reading-list/</a></p>'
+    event_url: http://www.meetup.com/Papers-We-Love-Munich/events/221497485/
   link: http://www.meetup.com/Papers-We-Love-Munich/
   lat: 48.13999938964844
   category: {name: tech, id: 34, shortname: tech}
@@ -5540,10 +5642,10 @@ Papers-We-Love-Madrid:
   who: Readers
   country: ES
   city: Madrid
-  members: 116
+  members: 121
   timezone: Europe/Madrid
   id: 18327969
-  utc_offset: 3600000
+  utc_offset: 7200000
   visibility: public
   group_photo: {highres_link: 'http://photos4.meetupstatic.com/photos/event/9/7/4/1/highres_433298721.jpeg',
     photo_id: 433298721, photo_link: 'http://photos2.meetupstatic.com/photos/event/9/7/4/1/600_433298721.jpeg',
@@ -5717,7 +5819,7 @@ Papers-We-Love-Columbus:
   who: Readers
   country: US
   city: Columbus
-  members: 37
+  members: 38
   timezone: US/Eastern
   id: 14075072
   utc_offset: -14400000
@@ -5850,7 +5952,7 @@ Papers-We-Love-Montreal:
   who: Members
   country: CA
   city: Montréal
-  members: 112
+  members: 117
   timezone: Canada/Eastern
   id: 16679672
   utc_offset: -14400000
@@ -5985,7 +6087,7 @@ Papers-We-Love-Montreal:
     event_url: http://www.meetup.com/Papers-We-Love-Montreal/events/220181743/
   - headcount: 0
     created: 1425672144000
-    yes_rsvp_count: 9
+    yes_rsvp_count: 13
     group: {join_mode: open, created: 1409349394000, name: 'Papers We Love, Montreal',
       group_lon: -73.62000274658203, id: 16679672, urlname: Papers-We-Love-Montreal,
       group_lat: 45.529998779296875, who: Members}
@@ -5994,12 +6096,13 @@ Papers-We-Love-Montreal:
     visibility: public
     name: Structural Zeros versus Sampling Zeros by Mohri and Roark
     maybe_rsvp_count: 0
-    status: upcoming
+    status: past
     venue: {address_1: '2050 Bleury, Suite 300', country: ca, city: Montréal, repinned: false,
       id: 18359262, name: Radialpoint, lon: -73.569962, lat: 45.50753, state: QC}
     time: 1427322600000
-    updated: 1425672144000
+    updated: 1427375101000
     waitlist_count: 0
+    rating: {count: 2, average: 5}
     description: |-
       <p>Pablo Duboue will present "<a href="http://www.cs.nyu.edu/~mohri/pub/zero.pdf">Structural Zeros versus Sampling Zeros</a>" by Mohri and Roark; this looks like a fascinating paper with applicability to improving all kinds of probabilistic models.  He will also be talking about the specific application of this idea to probabilistic context-free grammar (PCFG) parsing as discussed in another Mohri and Roark paper, "<a href="http://www.cs.nyu.edu/~mohri/pub/spcfg.pdf">Probabilistic Context-Free Grammar Induction Based on Structural Zeros</a>".  Anyone interested in machine learning, natural language processing, parsing in general, even automated test generation and model checking, or all kinds of other topics should definitely attend!</p> <p>
 
@@ -6015,7 +6118,7 @@ Papers-We-Love-Montreal:
   state: QC
   category: {name: tech, id: 34, shortname: tech}
   urlname: Papers-We-Love-Montreal
-  rating: 4.6
+  rating: 4.67
   description: |-
     <p>This is the Montreal chapter of <a href="http://www.meetup.com/papers-we-love">http://www.paperswelove.org/.</a></p>
     <blockquote>
@@ -6043,7 +6146,7 @@ Papers-We-Love-DC:
   who: Readers
   country: US
   city: Washington
-  members: 172
+  members: 173
   timezone: US/Eastern
   id: 15670772
   utc_offset: -14400000
