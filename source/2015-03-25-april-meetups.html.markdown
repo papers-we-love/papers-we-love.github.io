@@ -29,6 +29,8 @@ We have another great line-up of meet-ups scheduled for April across a number of
 
 **Vienna 4/20**: [Google Spanner](http://www.meetup.com/Papers-We-Love-Vienna/events/221356300/)
 
+**Montreal 4/22**: [Peter Zion on ImageNet Classification with Deep Convolutional Neural Networks](http://www.meetup.com/Papers-We-Love-Montreal/events/221545922/)
+
 **San Francisco 4/30**: [Jordan West on Logical Time](http://www.meetup.com/papers-we-love-too/events/212148242/)
 READMORE
 
