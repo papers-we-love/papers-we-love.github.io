@@ -25,12 +25,16 @@ We have another great line-up of meet-ups scheduled for April across a number of
 
 **Hamburg 4/16**: [The Essence of the Iterator pattern](http://www.meetup.com/Papers-We-Love-Hamburg/events/220890204/)
 
-**Seattle 4/16**: [Brandon Bloom on Programming with Algebraic Effects and Handlers](http://www.meetup.com/Papers-We-Love-Seattle/events/221174354/)
+**Seattle 4/16**: [: Brandon Bloom on Programming with Algebraic Effects and Handlers](http://www.meetup.com/Papers-We-Love-Seattle/events/221174354/)
 
 **Vienna 4/20**: [Google Spanner](http://www.meetup.com/Papers-We-Love-Vienna/events/221356300/)
 
+**Montréal 4/22**: [A Deep Learning Double Bill](http://www.meetup.com/Papers-We-Love-Montreal/events/221545922/)
+
+**München 4/23**: [Neural networks and machine learning](http://www.meetup.com/Papers-We-Love-Munich/events/221497485/)
+
 **San Francisco 4/30**: [Jordan West on Logical Time](http://www.meetup.com/papers-we-love-too/events/212148242/)
-READMORE
+ READMORE
 
 ---
 
