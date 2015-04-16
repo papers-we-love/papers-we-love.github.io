@@ -11,7 +11,22 @@
     font-size: 1.6em;
   }
 
+  h3 {
+    margin: .8em 0;
+    font-size: 1.2em;
+  }
+
   @extend %text;
+
+  ul {
+    margin-left: 0;
+    padding-left: 2em;
+    li {
+      margin-left: 0;
+      padding: .3em 0;
+      list-style-type: circle;
+    }
+  }
 
   a {
     text-decoration: none;

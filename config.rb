@@ -77,6 +77,15 @@ end
 # Load Chapters YAML
 @chapters = YAML.load_file('source/chapters.yml')
 
+chapter_data = YAML.load_file('data/meetup/chapters.yml')
+cities = chapter_data.collect do |key, chapter|
+  unless chapter['city'].nil?
+    [chapter['city'], chapter['events'].length]
+  end
+end
+sorted_cities = cities.reject { |x| x.nil? }.sort { |l, r| r[1] <=> l[1] }
+print sorted_cities
+
 # Chapter pages
 @chapters.each do |chapter|
   proxy "/chapter/#{chapter['name']}.html", "/chapter.html", :locals => { :chapter => chapter }, :ignore => true

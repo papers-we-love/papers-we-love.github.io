@@ -19,14 +19,12 @@ READMORE
 
 ## New York - April 1, 2015
 
-**Neha Narula** on The Scalable Commutativity Rule
-
 * **Meetup:** [http://www.meetup.com/papers-we-love/events/221194444/](http://www.meetup.com/papers-we-love/events/221194444/)
 * **Paper:** [http://bit.ly/1IzyXA7](http://bit.ly/1IzyXA7)
 * **Slides:** [http://bit.ly/1GBP4y3](http://bit.ly/1GBP4y3)
 * **Audio:** [http://bit.ly/1D5Rdkw](http://bit.ly/1D5Rdkw)
 
-**Description**
+### Description
 
 Moore's law is over, or at least, we won't be making programs go faster by running on faster processors, but instead by parallelizing our code to use more of them.  Reasoning about concurrent code is difficult; but it's also very hard to understand whether your design has latent scalability bottlenecks until you can actually run it on many cores.  And what if the problem is in your interface, instead of just the implementation?
 
@@ -36,7 +34,7 @@ The authors apply this idea to Linux, and create a new operating system by using
 
 This is a very powerful idea, and probably has applications in other areas like distributed systems. In this talk I'll present the paper, and speculate a bit about where else this research could be useful.
 
-**Bio**
+### Bio
 
 Neha Narula (@neha) is a PhD candidate at MIT building fast, scalable distributed systems. In a previous life she was a Senior Software Engineer at Google, where she designed the first version of Blobstore, a system for storing and serving petabytes of immutable data, and worked on Native Client, a system for running native code securely through the browser.
 
