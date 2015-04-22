@@ -12,7 +12,7 @@ Papers-We-Love-Toronto:
   who: Readers
   country: CA
   city: Toronto
-  members: 179
+  members: 186
   timezone: Canada/Eastern
   id: 16543502
   utc_offset: -14400000
@@ -202,6 +202,47 @@ Papers-We-Love-Toronto:
     rating: {count: 2, average: 5}
     description: <p><a href="http://twitter.com/mveytsman">Max Veytsman</a> will be presenting the paper <a href="http://www.cs.cmu.edu/~tom7/mario/mario.pdf">The First Level of Super Mario Bros. is Easy with Lexicographic Orderings and Time Travel ... after that it gets a little tricky</a> by Dr. Tom Murphy VII Ph.D.</p> <p>***</p> <p>In this totally serious paper, Tom Murphy VII describes a novel and surprising(ly effective) AI for playing NES games using maximaly tight valid lexicographic orderings of the RAM of NES as a game is being played.</p> <p>We'll go over implementation details of the learnfun and playfun algorithms and discuss the philosophical implications of artificial intelligence that blindly descends the gradient of arbitrary objective functions and whether our entire society will collapse under the weight of our industry's instrumentalism. Finally, we'll watch Tom7's AI battle Goombas, collect Triforce pieces, and punch Mike Tyson in the face. </p> <p><b>Doors open at 6:30 pm, presentation will begin at 7:00 pm.</b> There will be food and refreshments provided by Shopify. </p> <p><br/>***</p> <p><a href="http://twitter.com/mveytsman">Max Veytsman</a> is a recovering penetration tester. He helped author <a href="https://gemcanary.com">gemcanary</a>, co-founded <a href="http://www.rubysec.com/">rubysec</a>, and is now spending his days at <a href="http://state.io">State Machinery</a> working on further automating himself out of a job. Sometimes he even <a href="http://blog.ontoillogical.com">blogs!</a></p>
     event_url: http://www.meetup.com/Papers-We-Love-Toronto/events/221232820/
+  - headcount: 0
+    created: 1429310703000
+    yes_rsvp_count: 11
+    group: {join_mode: open, created: 1408717699000, name: Papers We Love - Toronto,
+      group_lon: -79.37999725341797, id: 16543502, urlname: Papers-We-Love-Toronto,
+      group_lat: 43.650001525878906, who: Readers}
+    id: '221921448'
+    utc_offset: -14400000
+    visibility: public
+    name: '#7 Paul Osman on CRDTs - Commutative Replicated Data Types'
+    maybe_rsvp_count: 0
+    status: upcoming
+    venue: {address_1: 80 Spadina Ave. 4th Floor, country: ca, city: Toronto, repinned: false,
+      id: 23087232, name: Shopify Toronto, lon: -79.395576, lat: 43.646049, state: 'ON'}
+    time: 1430951400000
+    updated: 1429677823000
+    waitlist_count: 0
+    description: '<p><a href="https://twitter.com/paulosman">&lt;/a&gt;&lt;a href="https://twitter.com/paulosman"&gt;Paul</a>
+      will be presenting <a href="http://pagesperso-systeme.lip6.fr/Marc.Shapiro/papers/RR-6956.pdf">CRDTs:
+      Consistency without concurrency control</a> by Mihai Letia, Nuno Preguica and
+      Marc Shapiro. He’ll walk through the paper and demonstrate some practical use
+      cases for CRDTs. </p> <p>***</p> <p>In this paper, Marc Shapiro et al describe
+      CRDTs. A CRDT is a data type whose operations commute when they are concurrent.
+      Replicas of a CRDT eventually converge without any complex concurrency control.
+      As an existence proof, the authors exhibit a non-trivial CRDT: a shared edit
+      buffer called Treedoc. They outline the design, implementation and performance
+      of Treedoc. They discuss how the CRDT concept can be generalised, and its limitations.</p>
+      <p>Paper Link: <a href="http://pagesperso-systeme.lip6.fr/Marc.Shapiro/papers/RR-6956.pdf"><a
+      href="http://pagesperso-systeme.lip6.fr/Marc.Shapiro/papers/RR-6956.pdf" class="linkified">http://pagesperso-systeme.lip6.fr/Marc.Shapiro/papers/RR-6956.pdf</a></a></p>
+      <p><br/><b>Doors open at 6:30 pm, presentation will begin at 7:00 pm.</b> There
+      will be food and refreshments provided by Shopify. </p> <p><br/>***</p> <p><a
+      href="http://twitter.com/mveytsman">&lt;/a&gt;Paul Osman (&lt;a href="https://twitter.com/paulosman"&gt;<a
+      href="https://twitter.com/paulosman" class="linkified">https://twitter.com/paulosman</a></a>)
+      is the Platform Engineering Manager at PagerDuty (<a href="https://pagerduty.com/"><a
+      href="https://pagerduty.com" class="linkified">https://pagerduty.com</a></a>).
+      Even though he’s paid to manage people, he still enjoys writing software and
+      thinking about hard technical problems. He has a particular interest in distributed
+      systems and building scalable infrastructure. When he’s not doing stuff with
+      computers, he’s usually cycling, traveling, buying too many records or watching
+      football (NFL, not CFL. Come on now). &lt;a href="http://blog.ontoillogical.com"&gt;&lt;/a&gt;</p>'
+    event_url: http://www.meetup.com/Papers-We-Love-Toronto/events/221921448/
   link: http://www.meetup.com/Papers-We-Love-Toronto/
   lat: 43.650001525878906
   state: 'ON'
@@ -232,7 +273,7 @@ Papers-We-Love-in-saint-louis:
   who: readers
   country: US
   city: Saint Louis
-  members: 43
+  members: 44
   timezone: US/Central
   id: 13206522
   utc_offset: -18000000
@@ -312,26 +353,6 @@ Papers-We-Love-in-saint-louis:
     description: <p>Adam Bowen will be speaking on <a href="https://github.com/papers-we-love/papers-we-love/blob/master/design/out-of-the-tar-pit.pdf">Out of the Tar Pit</a>. </p> <p>This paper build on Brooks' work of defining accidental and essential difficulty. It then goes on to identify common causes of complexity and covers ways to eliminate some of them.</p> <p>This paper has gotten a lot of attention lately &amp; I know there were several people interested in it from the signup survey.</p> <p>Like last time, doors will open at 6:30 with food and the meeting will start at 7.</p> <p>Food will be sponsored by Lisa Rokusek of Agent HR.</p>
     event_url: http://www.meetup.com/Papers-We-Love-in-saint-louis/events/220109644/
   - headcount: 0
-    created: 1422341602000
-    yes_rsvp_count: 2
-    group: {join_mode: open, created: 1394176816000, name: Papers We Love (Saint Louis Chapter),
-      group_lon: -90.45999908447266, id: 13206522, urlname: Papers-We-Love-in-saint-louis,
-      group_lat: 38.70000076293945, who: readers}
-    id: '220109658'
-    utc_offset: -18000000
-    visibility: public
-    name: Paper is TBA
-    maybe_rsvp_count: 0
-    status: upcoming
-    venue: {address_1: '230 S. Bemiston Ave, Suite 420', country: us, city: Saint Louis,
-      repinned: false, id: 23470450, name: Observable Networks, lon: -90.336945, lat: 38.646488,
-      state: MO}
-    time: 1429572600000
-    updated: 1422341624000
-    waitlist_count: 0
-    description: <p>Jacob Johnson will speak on a paper that will be announced.</p>
-    event_url: http://www.meetup.com/Papers-We-Love-in-saint-louis/events/220109658/
-  - headcount: 0
     created: 1424138434000
     yes_rsvp_count: 5
     group: {join_mode: open, created: 1394176816000, name: Papers We Love (Saint Louis Chapter),
@@ -347,8 +368,9 @@ Papers-We-Love-in-saint-louis:
       repinned: false, id: 23470450, name: Observable Networks, lon: -90.336945, lat: 38.646488,
       state: MO}
     time: 1431993600000
-    updated: 1424152916000
+    updated: 1429589269000
     waitlist_count: 0
+    description: <p>Excerpt from Kevin:</p> <p>Yes the title sounds all biologyish-chemistryish but it's really a theoretical biology paper, which mostly means building fairly simple mathematical models of physical processes (with some numerical simulations). Parts of it are mathematically challenging but those parts can be glossed over without missing much.</p> <p>If you look at the paper and it's too scary, don't worry. I'll do my best to explain what I love about this paper, but maybe you can read this 2-page review? If it doesn't hook you then you have no soul: <a href="https://people.maths.ox.ac.uk/maini/PKM%20publications/172.pdf"><a href="https://people.maths.ox.ac.uk/maini/PKM%20publications/172.pdf" class="linkified">https://people.maths.ox.ac.uk/maini/PKM%20publications/172.pdf</a></a></p>
     event_url: http://www.meetup.com/Papers-We-Love-in-saint-louis/events/220570557/
   - headcount: 0
     created: 1426561414000
@@ -370,6 +392,47 @@ Papers-We-Love-in-saint-louis:
     waitlist_count: 0
     description: <p>Christopher Carpenter will speak on a paper that will be announced.</p>
     event_url: http://www.meetup.com/Papers-We-Love-in-saint-louis/events/221203537/
+  - headcount: 0
+    created: 1429563141000
+    yes_rsvp_count: 2
+    group: {join_mode: open, created: 1394176816000, name: Papers We Love (Saint Louis Chapter),
+      group_lon: -90.45999908447266, id: 13206522, urlname: Papers-We-Love-in-saint-louis,
+      group_lat: 38.70000076293945, who: readers}
+    id: '221979805'
+    utc_offset: -18000000
+    visibility: public
+    name: Wavelets for Computer Graphics
+    maybe_rsvp_count: 0
+    status: upcoming
+    venue: {address_1: '230 S. Bemiston Ave, Suite 420', country: us, city: Saint Louis,
+      repinned: false, id: 23470450, name: Observable Networks, lon: -90.336945, lat: 38.646488,
+      state: MO}
+    time: 1437435000000
+    updated: 1429563240000
+    waitlist_count: 0
+    description: <p>Jacob will be explaining wavelets and how the concept behind them can be applied to computer graphics.</p> <p>One of the papers he will focus on during this discussion is Wavelets for Computer Graphics, a Primer - Part 1.</p>
+    event_url: http://www.meetup.com/Papers-We-Love-in-saint-louis/events/221979805/
+  - headcount: 0
+    created: 1429589137000
+    yes_rsvp_count: 2
+    group: {join_mode: open, created: 1394176816000, name: Papers We Love (Saint Louis Chapter),
+      group_lon: -90.45999908447266, id: 13206522, urlname: Papers-We-Love-in-saint-louis,
+      group_lat: 38.70000076293945, who: readers}
+    id: '221988737'
+    utc_offset: -18000000
+    visibility: public
+    name: Continuum Robot Arms Inspired by Cephalopods (Walker, et al)
+    maybe_rsvp_count: 0
+    status: upcoming
+    venue: {address_1: '230 S. Bemiston Ave, Suite 420', country: us, city: Saint Louis,
+      repinned: false, id: 23470450, name: Observable Networks, lon: -90.336945, lat: 38.646488,
+      state: MO}
+    time: 1439854200000
+    updated: 1429672347000
+    waitlist_count: 0
+    description: '<p>Kai Yang will be talking about continuum robotic arms, as discussed
+      in this paper: <a href="http://www.ces.clemson.edu/~iwalker/spie05.pdf" class="linkified">http://www.ces.clemson.edu/~iwalker/spie05.pdf</a></p>'
+    event_url: http://www.meetup.com/Papers-We-Love-in-saint-louis/events/221988737/
   link: http://www.meetup.com/Papers-We-Love-in-saint-louis/
   lat: 38.70000076293945
   state: MO
@@ -396,7 +459,7 @@ papers-we-love-london:
   who: readers
   country: GB
   city: London
-  members: 313
+  members: 325
   timezone: Europe/London
   id: 13111022
   utc_offset: 3600000
@@ -541,7 +604,7 @@ papers-we-love-london:
     event_url: http://www.meetup.com/Papers-We-Love-London/events/220691457/
   - headcount: 0
     created: 1427843835000
-    yes_rsvp_count: 35
+    yes_rsvp_count: 39
     group: {join_mode: open, created: 1393622100000, name: Papers We Love - London,
       group_lon: -0.10000000149011612, id: 13111022, urlname: Papers-We-Love-London,
       group_lat: 51.5099983215332, who: readers}
@@ -550,14 +613,15 @@ papers-we-love-london:
     visibility: public
     name: Andy Bennett on "Scalable Atomic Visibility with RAMP Transactions"
     maybe_rsvp_count: 0
-    status: upcoming
+    status: past
     venue: {address_2: SE1 9EU, address_1: 'Notcutt House, 36 Southwark Bridge Road',
       country: gb, city: London, repinned: false, id: 17300632, name: uSwitch, lon: -0.095859,
       lat: 51.50612}
     time: 1429120800000
-    updated: 1427843869000
+    updated: 1429133015000
     waitlist_count: 0
     rsvp_limit: 60
+    rating: {count: 0, average: 0}
     description: '<p>Andy Bennett on "Scalable Atomic Visibility with RAMP Transactions"</p>
       <p> </p> <p>Bailis et al formalise "Read Atomic" isolation which is a database
       isolation level sufficient for many applications which make use of large,distributed
@@ -595,7 +659,7 @@ Papers-We-Love-Chicago:
   who: Readers
   country: US
   city: Chicago
-  members: 145
+  members: 146
   timezone: US/Central
   id: 15617092
   utc_offset: -18000000
@@ -706,7 +770,7 @@ papers-we-love-too:
   who: readers
   country: US
   city: San Francisco
-  members: 792
+  members: 808
   timezone: US/Pacific
   id: 13035792
   utc_offset: -25200000
@@ -1160,7 +1224,7 @@ papers-we-love-too:
     event_url: http://www.meetup.com/papers-we-love-too/events/212147942/
   - headcount: 0
     created: 1412748932000
-    yes_rsvp_count: 159
+    yes_rsvp_count: 170
     group: {join_mode: open, created: 1393203829000, name: Papers we love too, group_lon: -122.4000015258789,
       id: 13035792, urlname: papers-we-love-too, group_lat: 37.77000045776367, who: readers}
     id: '212148242'
@@ -1173,8 +1237,9 @@ papers-we-love-too:
       id: 10884002, name: Yammer HQ, lon: -122.416924, lat: 37.776806, state: CA,
       zip: '94103'}
     time: 1430443800000
-    updated: 1427395847000
-    waitlist_count: 0
+    updated: 1429032926000
+    waitlist_count: 2
+    rsvp_limit: 170
     description: |-
       <p><b>Mini</b></p> <p><a href="http://twitter.com/dijkstracula">Nathan Taylor</a> on "Your computer is already a distributed system. Why isn’t your OS?" (<a href="http://www.barrelfish.org/barrelfish_hotos09.pdf" class="linkified">http://www.barrelfish.org/barrelfish_hotos09.pdf</a>). </p> <p>From Nathan: <i>"This is one in a long line of papers advocating for a loosely-coupled, service-oriented operating system architecture, an argument that extends back to the dawn of systems research.  Alternative OSs like microkernels have long been considered more stable and easier to reason about by the systems community, but the performance overhead that comes with running them means typically our OSs still resemble the ones from the '60s.  The authors have spun the "it will be too slow" argument on its head by extrapolating hardware trends and adopting terminology from the distributed systems community, and end up making a compelling case for their design not only being the _only_ path forward, but the time is now to begin adopting their techniques.  The paper is punchy, argues its point cogently, and served as a springboard for further work by the same group of researchers."</i></p> <p>
 
@@ -1189,7 +1254,7 @@ papers-we-love-too:
     event_url: http://www.meetup.com/papers-we-love-too/events/212148242/
   - headcount: 0
     created: 1412823869000
-    yes_rsvp_count: 36
+    yes_rsvp_count: 98
     group: {join_mode: open, created: 1393203829000, name: Papers we love too, group_lon: -122.4000015258789,
       id: 13035792, urlname: papers-we-love-too, group_lat: 37.77000045776367, who: readers}
     id: '212348392'
@@ -1198,24 +1263,24 @@ papers-we-love-too:
     name: PWL#15 => Lindsey Kuper on Ribbon Proofs for Separation Logic
     maybe_rsvp_count: 0
     status: upcoming
-    venue: {address_1: '651 Brannan Street, Suite. 110', country: us, city: San Francisco,
-      repinned: false, id: 20989402, name: Fastly, lon: -122.399628, lat: 37.775227,
-      state: CA}
-    time: 1432260000000
-    updated: 1425189165000
+    venue: {address_1: 1355 Market St, country: us, city: San Francisco, repinned: false,
+      id: 10884002, name: Yammer HQ, lon: -122.416924, lat: 37.776806, state: CA,
+      zip: '94103'}
+    time: 1432258200000
+    updated: 1429033308000
     waitlist_count: 0
     description: |-
       <p><b>PWL Mini </b></p> <p><a href="http://twitter.com/clarkbreyman">Clark Breyman</a> on "The Magical Number Seven, Plus or Minus Two: Some Limits on Our Capacity for Processing Information" (<a href="http://psychclassics.yorku.ca/Miller/)"><a href="http://psychclassics.yorku.ca/Miller/" class="linkified">http://psychclassics.yorku.ca/Miller/</a>)</a> </p> <p>From Clark:<i>"Through a CS practitioner's lens. It's pretty simple and powerful - I've used it repeatedly as a guiding principle when doing anything from UI to systems design. "</i></p> <p><br/><b>Clark's Bio</b></p> <p>Clark Breyman is an principal engineer with Yammer's infrastructure team where he applies a combination of code, OCD, and war stories to make life easier for our product engineers. When not fighting entropy, he enjoys San Francisco, Lindy Hop, yoga and natural language processing. </p> <p>
 
 
-      <b>Main Talk</b></p> <p><a href="https://twitter.com/lindsey">Lindsey Kuper</a> on "Ribbon Proofs for Separation Logic" by John Wickerson, Mike Dodds, and Matthew Parkinson (<a href="http://www.doc.ic.ac.uk/~jpw48/ribbons_esop13.pdf"><a href="http://www.doc.ic.ac.uk/~jpw48/ribbons_esop13.pdf" class="linkified">http://www.doc.ic.ac.uk/~jpw48/ribbons_esop13.pdf</a></a>)</p> <p>
+      <b>Main Talk</b></p> <p><a href="http://composition.al/">Lindsey Kuper</a> on "Ribbon Proofs for Separation Logic" by John Wickerson, Mike Dodds, and Matthew Parkinson (<a href="http://www.doc.ic.ac.uk/~jpw48/papers/ribbons_esop13.pdf"><a href="http://www.doc.ic.ac.uk/~jpw48/papers/ribbons_esop13.pdf" class="linkified">http://www.doc.ic.ac.uk/~jpw48/papers/ribbons_esop13.pdf</a></a>)</p> <p>
 
 
-      <b>Lindsey's Bio </b></p> <p>Lindsey Kuper is a programming languages researcher, recidivist Hacker School resident, and co-founder and organizer of !!Con. She recently defended her Ph.D. in computer science at Indiana University and now lives in California with her husband and their two cats.</p>
+      <b>Lindsey's Bio </b></p> <p><a href="http://composition.al/">Lindsey Kuper</a> is a programming languages researcher, recidivist Hacker School resident, and co-founder and organizer of !!Con. She recently defended her Ph.D. in computer science at Indiana University and now lives in California with her husband and their two cats.</p>
     event_url: http://www.meetup.com/papers-we-love-too/events/212348392/
   - headcount: 0
     created: 1425013772000
-    yes_rsvp_count: 9
+    yes_rsvp_count: 11
     group: {join_mode: open, created: 1393203829000, name: Papers we love too, group_lon: -122.4000015258789,
       id: 13035792, urlname: papers-we-love-too, group_lat: 37.77000045776367, who: readers}
     id: '220795812'
@@ -1231,7 +1296,7 @@ papers-we-love-too:
     event_url: http://www.meetup.com/papers-we-love-too/events/220795812/
   - headcount: 0
     created: 1425014423000
-    yes_rsvp_count: 9
+    yes_rsvp_count: 10
     group: {join_mode: open, created: 1393203829000, name: Papers we love too, group_lon: -122.4000015258789,
       id: 13035792, urlname: papers-we-love-too, group_lat: 37.77000045776367, who: readers}
     id: '220795969'
@@ -1246,7 +1311,7 @@ papers-we-love-too:
     event_url: http://www.meetup.com/papers-we-love-too/events/220795969/
   - headcount: 0
     created: 1425014463000
-    yes_rsvp_count: 6
+    yes_rsvp_count: 7
     group: {join_mode: open, created: 1393203829000, name: Papers we love too, group_lon: -122.4000015258789,
       id: 13035792, urlname: papers-we-love-too, group_lat: 37.77000045776367, who: readers}
     id: '220795976'
@@ -1329,7 +1394,7 @@ Papers-we-love-Bangalore:
   who: readers
   country: IN
   city: Bangalore
-  members: 484
+  members: 509
   timezone: Asia/Calcutta
   id: 15721132
   utc_offset: 19800000
@@ -1611,7 +1676,7 @@ Papers-We-Love-Hamburg:
   who: readers
   country: DE
   city: Hamburg
-  members: 103
+  members: 110
   timezone: Europe/Berlin
   id: 17505362
   utc_offset: 7200000
@@ -1677,7 +1742,7 @@ Papers-We-Love-Hamburg:
     event_url: http://www.meetup.com/Papers-We-Love-Hamburg/events/217295142/
   - headcount: 0
     created: 1425375949000
-    yes_rsvp_count: 18
+    yes_rsvp_count: 15
     group: {join_mode: open, created: 1412851386000, name: Papers We Love Hamburg,
       group_lon: 10, id: 17505362, urlname: Papers-We-Love-Hamburg, group_lat: 53.54999923706055,
       who: readers}
@@ -1686,13 +1751,14 @@ Papers-We-Love-Hamburg:
     visibility: public
     name: The Essence of the Iterator pattern
     maybe_rsvp_count: 0
-    status: upcoming
+    status: past
     venue: {country: de, city: Hamburg, address_1: 'Schulterblatt 36, 2.Stock', name: inoio GmbH,
       lon: 9.963171, id: 23216352, lat: 53.560867, repinned: false}
     time: 1429203600000
-    updated: 1425375949000
+    updated: 1429433284000
     waitlist_count: 0
-    rsvp_limit: 20
+    rsvp_limit: 25
+    rating: {count: 1, average: 5}
     description: <p><b>The Essence of the Iterator pattern </b>treats iterating over collections as two problems, which exhibit traversal of collections (and modifying the content) and accumulating values based on the contents.  Jeremy Gibbons and Bruno C.d.S. Oliveira show how <b>Applicative Functors</b> and related type classes can be used in functional programming to solve these problems.</p> <p>Paper: <a href="http://www.cs.ox.ac.uk/jeremy.gibbons/publications/iterator.pdf"><a href="http://www.cs.ox.ac.uk/jeremy.gibbons/publications/iterator.pdf" class="linkified">http://www.cs.ox.ac.uk/jeremy.gibbons/publications/iterator.pdf</a></a></p> <p>The paper is widely quoted amongst the functional programming community and illustrates nicely how recent acadamic research (Applicative Functors, McBride, 2008) finds its way into language design and application of functional programming languages such as Scala or Haskell.</p>
     event_url: http://www.meetup.com/Papers-We-Love-Hamburg/events/220890204/
   link: http://www.meetup.com/Papers-We-Love-Hamburg/
@@ -1729,7 +1795,7 @@ Papers-We-Love-Seattle:
   who: Members
   country: US
   city: Seattle
-  members: 273
+  members: 300
   timezone: US/Pacific
   id: 16583562
   utc_offset: -25200000
@@ -1930,7 +1996,7 @@ Papers-We-Love-Seattle:
   - headcount: 0
     created: 1426459103000
     how_to_find_us: Use the 4th Ave entrance, up to 3rd floor and take elevator to 16 floor.
-    yes_rsvp_count: 31
+    yes_rsvp_count: 51
     group: {join_mode: open, created: 1408937100000, name: Papers We Love @ Seattle,
       group_lon: -122.33000183105469, id: 16583562, urlname: Papers-We-Love-Seattle,
       group_lat: 47.61000061035156, who: Members}
@@ -1939,15 +2005,16 @@ Papers-We-Love-Seattle:
     visibility: public
     name: 'PWL#6: Brandon Bloom on Programming with Algebraic Effects and Handlers'
     maybe_rsvp_count: 0
-    status: upcoming
+    status: past
     venue: {address_1: '1301 5th Avenue #1600', country: us, city: Seattle, repinned: false,
       id: 9757242, name: Whitepages, lon: -122.334396, lat: 47.609005, state: WA,
       zip: '98101'}
     time: 1429234200000
     duration: 5400000
-    updated: 1427146189000
+    updated: 1429241324000
     waitlist_count: 0
     rsvp_limit: 150
+    rating: {count: 0, average: 0}
     description: <p>we're excited to have <a href="https://twitter.com/BrandonBloom">Brandon Bloom</a> presenting the paper <a href="https://github.com/papers-we-love/papers-we-love/blob/master/plt/programming-with-algebraic-effects-and-handlers.pdf?raw=true">Programming with Algebraic Effects and Handlers</a> by Andrej Bauer and Matija Pretnar.</p> <p><b>Intro</b></p> <p>Some great papers embody insights, others package up those insights into digestible bites. "Programing with Algebraic Effects and Handlers" is the later sort of great paper. After two decades of fundamental research in to the nature of computation, a lot of mysterious ideas in computer science such as continuations and exception handling finally made sense to a number of mathematically inclined geniuses. Bauer and Pretnar's Eff programming language cuts right through the heart of the theory in a way that makes sense to anybody who has ever written a functional program. This paper uses the Eff language to explore a number of simple computational effects that were traditionally viewed as quite varied and complex.</p> <p><b>Brandon's Bio</b></p> <p>Brandon Bloom walks a fine line between laser focused pragmatism and broad academic interests. Most recently in his varied career, Brandon worked on Code.org's Hour Of Code campaign. In the past, he's founded and sold a startup, as well as worked on Microsoft Xbox and Google Translate. Now, he's indulging his inner scientist and exploring technology for his next venture. Find him on the web at &lt;<a href="http://www.brandonbloom.name/"><a href="http://www.brandonbloom.name/" class="linkified">http://www.brandonbloom.name/</a></a>&gt;.</p>
     event_url: http://www.meetup.com/Papers-We-Love-Seattle/events/221174354/
   link: http://www.meetup.com/Papers-We-Love-Seattle/
@@ -1986,7 +2053,7 @@ Papers-We-Love-Reykjavik:
   who: Members
   country: IS
   city: Reykjavík
-  members: 33
+  members: 35
   timezone: Atlantic/Reykjavik
   id: 17364992
   utc_offset: 0
@@ -2080,7 +2147,7 @@ Papers-We-Love-Vienna:
   who: Readers
   country: AT
   city: Vienna
-  members: 70
+  members: 73
   timezone: Europe/Vienna
   id: 18007722
   utc_offset: 7200000
@@ -2195,7 +2262,7 @@ Papers-We-Love-Vienna:
     rating: {count: 2, average: 5}
     description: <p><b>**Please read: <a href="http://www.cs.kent.ac.uk/people/staff/dat/miranda/whyfp90.pdf">Why Functional Programming Matters</a>**</b></p> <p>Hi again,</p> <p>sticking to our schedule, we'll discuss a paper a bit more on the theoretical side this time — John Hughes' "Why Functional Programming Matters" from 1990.</p> <p>Thanks to <a href="https://twitter.com/pkerpedjiev">Peter</a> for his pick and for leading the discussion!</p> <p>See you on the 23rd,<br/>Philipp</p>
     event_url: http://www.meetup.com/Papers-We-Love-Vienna/events/220729137/
-  - headcount: 0
+  - headcount: 5
     created: 1427155409000
     yes_rsvp_count: 9
     group: {join_mode: open, created: 1414886469000, name: Papers We Love Vienna,
@@ -2206,16 +2273,38 @@ Papers-We-Love-Vienna:
     visibility: public
     name: Google Spanner
     maybe_rsvp_count: 0
-    status: upcoming
+    status: past
     venue: {address_2: U6 Gumpendorfer Strasse, address_1: 'Pater-Schwartz-Gasse 11A,
         1150', country: at, city: Vienna, repinned: false, id: 15700102, name: StockWerk,
       lon: 16.335951, lat: 48.192005}
     time: 1429549200000
-    updated: 1427756035000
+    updated: 1429569400000
     waitlist_count: 0
     rsvp_limit: 12
+    rating: {count: 1, average: 5}
     description: <p><b>**Please read <a href="http://research.google.com/archive/spanner.html">Google's Spanner paper</a>!**</b></p> <p><a href="https://twitter.com/the_dom">Dominik</a> will lead the discussion — thanks!</p> <p>See you all on the 20th :)</p>
     event_url: http://www.meetup.com/Papers-We-Love-Vienna/events/221356300/
+  - headcount: 0
+    created: 1429577272000
+    yes_rsvp_count: 2
+    group: {join_mode: open, created: 1414886469000, name: Papers We Love Vienna,
+      group_lon: 16.3700008392334, id: 18007722, urlname: Papers-We-Love-Vienna, group_lat: 48.220001220703125,
+      who: Readers}
+    id: '221984745'
+    utc_offset: 7200000
+    visibility: public
+    name: Papers We Love June
+    maybe_rsvp_count: 0
+    status: upcoming
+    venue: {address_2: U6 Gumpendorfer Strasse, address_1: 'Pater-Schwartz-Gasse 11A,
+        1150', country: at, city: Vienna, repinned: false, id: 15700102, name: StockWerk,
+      lon: 16.335951, lat: 48.192005}
+    time: 1433178000000
+    updated: 1429577355000
+    waitlist_count: 0
+    rsvp_limit: 12
+    description: <p>The next meetup will only be in June, since I'm away doing some conferences.</p> <p>But this gives you more time to <b>add your paper suggestions</b> — so we don't turn this into a database / Google meetup group ;-). So please add a specific paper you'd like us to discuss the next time and of course you'll have the honor of leading the discussion!</p>
+    event_url: http://www.meetup.com/Papers-We-Love-Vienna/events/221984745/
   link: http://www.meetup.com/Papers-We-Love-Vienna/
   lat: 48.220001220703125
   category: {name: tech, id: 34, shortname: tech}
@@ -2242,7 +2331,7 @@ papers-we-love-amsterdam:
   who: Readers
   country: NL
   city: Amsterdam
-  members: 137
+  members: 138
   timezone: Europe/Amsterdam
   id: 17545302
   utc_offset: 7200000
@@ -2308,7 +2397,7 @@ Papers-We-Love-Boulder:
   who: readers
   country: US
   city: Boulder
-  members: 81
+  members: 84
   timezone: US/Mountain
   id: 13336382
   utc_offset: -21600000
@@ -2421,7 +2510,7 @@ Papers-We-Love-Boulder:
     event_url: http://www.meetup.com/Papers-We-Love-Boulder/events/178847172/
   - headcount: 0
     created: 1426228732000
-    yes_rsvp_count: 12
+    yes_rsvp_count: 13
     group: {join_mode: open, created: 1394778033000, name: papers we love CO, group_lon: -105.20999908447266,
       id: 13336382, urlname: Papers-We-Love-Boulder, group_lat: 40.04999923706055,
       who: readers}
@@ -2463,7 +2552,7 @@ Papers-We-Love-Berlin:
   who: Members
   country: DE
   city: Berlin
-  members: 177
+  members: 190
   timezone: Europe/Berlin
   id: 14613232
   utc_offset: 7200000
@@ -2495,6 +2584,26 @@ Papers-We-Love-Berlin:
     rating: {count: 0, average: 0}
     description: <p>For the very first Papers We Love Berlin Meetup, we will have Erik Michaels-Ober from SoundCloud presenting the paper Soft Typing by Robert Cartwright and Mike Fagan.</p> <p>This is particularly interesting for Rubyists, because Ruby 3.0 might ship with such a type system.</p> <p>Abstract:</p> <p>This paper presents a soft type systems that retains the expressiveness of dynamic typing, but offers the early error detection and improved optimization capabilities of static typing. The key idea underlying soft typing is that a type checker need not reject programs containing "ill-typed" phrases. Instead, the type checker can insert explicit run-time checks, transforming "ill-typed" programs into type-correct ones.</p> <p>PDF: <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.24.9333&amp;rep=rep1&amp;type=pdf"><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.24.9333&amp;rep=rep1&amp;type=pdf" class="linkified">http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.24.9333&amp;rep=rep1&amp;type=pdf</a></a></p> <p>Thanks to ResearchGate for hosting this first edition!</p>
     event_url: http://www.meetup.com/Papers-We-Love-Berlin/events/218874529/
+  - headcount: 0
+    created: 1429625472000
+    yes_rsvp_count: 42
+    group: {join_mode: open, created: 1400776904000, name: Papers We Love - Berlin,
+      group_lon: 13.380000114440918, id: 14613232, urlname: Papers-We-Love-Berlin,
+      group_lat: 52.52000045776367, who: Members}
+    id: '221994661'
+    utc_offset: 7200000
+    visibility: public
+    name: '#2 => Programming concepts pioneered by McCarthy''s 1960 paper on Lisp'
+    maybe_rsvp_count: 0
+    status: upcoming
+    venue: {country: de, city: Berlin, address_1: Rheinsberger Str. 76/77 10115, name: SoundCloud,
+      lon: 13.394928, id: 20854232, lat: 52.536839, repinned: false}
+    time: 1432225800000
+    updated: 1429645863000
+    waitlist_count: 0
+    rsvp_limit: 60
+    description: <p>At this Papers We Love Berlin Meetup we will have Marijn Haverbeke (<a href="https://twitter.com/marijnjh" class="linkified">https://twitter.com/marijnjh</a>) presenting the original Lisp paper "Recursive Functions of Symbolic Expressions and Their Computation by Machine" by John McCarthy.</p> <p>PDF: <a href="http://www-formal.stanford.edu/jmc/recursive.pdf"><a href="http://www-formal.stanford.edu/jmc/recursive.pdf" class="linkified">http://www-formal.stanford.edu/jmc/recursive.pdf</a></a> </p> <p>Thanks to Soundcloud for hosting this event! </p> <p><br/>Abstract:</p> <p>There are works that, rather than continuing in an existing research tradition, invent a whole new direction. John McCarthy's original paper on Lisp is definitely one such work. It obviously set the stage for the various Lisps and Lisp-inspired languages, but it also pioneered a number of concepts, ranging from garbage collection to the call stack, that are deeply ingrained in today's programming reality. This talk will be mostly about historical perspective (and will not involve Lisp smugness or propaganda).</p> <p><br/>Bio:</p> <p>Marijn Haverbeke spent his early career living in the past and programming Common Lisp. When reality finally caught up with him he gave that up and became a JavaScript programmer instead. Author of CodeMirror and Eloquent JavaScript. Contributor to the Rust compiler.</p>
+    event_url: http://www.meetup.com/Papers-We-Love-Berlin/events/221994661/
   link: http://www.meetup.com/Papers-We-Love-Berlin/
   lat: 52.52000045776367
   category: {name: tech, id: 34, shortname: tech}
@@ -2518,7 +2627,7 @@ papers-we-love:
   who: Readers
   country: US
   city: New York
-  members: 878
+  members: 887
   timezone: US/Eastern
   id: 11398322
   utc_offset: -14400000
@@ -4943,7 +5052,7 @@ Papers-We-Love-Dallas:
   who: Paper Lovers
   country: US
   city: Addison
-  members: 38
+  members: 40
   timezone: US/Central
   id: 16029482
   utc_offset: -18000000
@@ -5069,7 +5178,7 @@ Papers-We-Love-Dallas:
     event_url: http://www.meetup.com/Papers-We-Love-Dallas/events/220708429/
   - headcount: 0
     created: 1427561144000
-    yes_rsvp_count: 4
+    yes_rsvp_count: 5
     group: {join_mode: open, created: 1406562955000, name: 'Papers We Love, Dallas',
       group_lon: -96.83000183105469, id: 16029482, urlname: Papers-We-Love-Dallas,
       group_lat: 32.959999084472656, who: Paper Lovers}
@@ -5078,15 +5187,16 @@ Papers-We-Love-Dallas:
     visibility: public
     name: Scalable Causal Consistency, and Boosting of Learning Algorithms
     maybe_rsvp_count: 0
-    status: upcoming
+    status: past
     venue: {address_2: Suite 100, address_1: 16633 Dallas Parkway, country: us, city: Addison,
       repinned: false, id: 1041264, name: Improving Enterprises, lon: -96.827011,
       phone: 214.613.4444, lat: 32.976856, state: TX, zip: '75001'}
     time: 1428364800000
     duration: 7200000
-    updated: 1427561144000
+    updated: 1428372749000
     waitlist_count: 0
     rsvp_limit: 20
+    rating: {count: 0, average: 0}
     description: '<p>Don’t Settle for Eventual: Scalable Causal Consistency for Wide-Area
       Storage with COPS </p> <p><a href="https://www.cs.cmu.edu/~dga/papers/cops-sosp2011.pdf"><a
       href="https://www.cs.cmu.edu/~dga/papers/cops-sosp2011.pdf" class="linkified">https://www.cs.cmu.edu/~dga/papers/cops-sosp2011.pdf</a></a></p>
@@ -5125,7 +5235,7 @@ Papers-We-Love-LA:
   who: readers
   country: US
   city: Santa Monica
-  members: 50
+  members: 55
   timezone: US/Pacific
   id: 18381002
   utc_offset: -25200000
@@ -5185,6 +5295,27 @@ Papers-We-Love-LA:
 
       See you there!</p> <p>Ps. It's buy-your-own-drinks in case that was ambiguous.</p>
     event_url: http://www.meetup.com/Papers-We-Love-LA/events/221186662/
+  - headcount: 0
+    created: 1429590900000
+    how_to_find_us: Yahoo is on the first floor, by the elevators, there will be signs
+    yes_rsvp_count: 6
+    group: {join_mode: open, created: 1422286658000, name: 'Papers We Love, LA', group_lon: -118.47000122070312,
+      id: 18381002, urlname: Papers-We-Love-LA, group_lat: 34.029998779296875, who: readers}
+    id: '221989188'
+    utc_offset: -25200000
+    visibility: public
+    name: Ryan Nichols on An Axiomatic Basis for Computer Programming
+    maybe_rsvp_count: 0
+    status: upcoming
+    venue: {address_2: 'Building D, 1st Floor', address_1: 2400 Broadway, country: us,
+      city: Santa Monica, repinned: false, id: 1252286, name: Yahoo Center, lon: -118.474846,
+      lat: 34.030254, state: CA, zip: '90404'}
+    time: 1430359200000
+    duration: 10800000
+    updated: 1429634359000
+    waitlist_count: 0
+    description: <p>Ryan Nichols will present <a href="https://github.com/papers-we-love/papers-we-love/blob/master/comp_sci_fundamentals_and_history/axiomatic-basis-computer-programming.pdf?raw=true">An Axiomatic Basis for Computer Programming</a> by C.A.R Hoare.</p> <p>A brilliant paper written in 1969, which introduced some of the most influential components of programming which we all rely on today. We'll be discussing automatic verification of program properties, Hoare logic, and more.</p> <p>Ryan Nichols (<a href="https://twitter.com/rynodivino">@rynodivino</a>) is a front-end engineer at Yahoo. He enjoys &lt;cool hobby&gt; and &lt;funny interest&gt; (and making terrible jokes)!</p>
+    event_url: http://www.meetup.com/Papers-We-Love-LA/events/221989188/
   link: http://www.meetup.com/Papers-We-Love-LA/
   lat: 34.029998779296875
   state: CA
@@ -5195,6 +5326,7 @@ Papers-We-Love-LA:
     <p>What was the last paper within the realm of computing you read and loved? What did it inspire you to build or tinker with? Come share the ideas in an awesome academic/research paper with fellow engineers, programmers, and paper-readers. Lead a session and show off code that you wrote that implements these ideas or just give us the lowdown about the paper (because of HARD MATH!). Otherwise, just come, listen, and discuss.</p>
     <p>We're curating a repository for papers and places-to-find papers. You can contribute by adding PR's for papers, code, and/or links to other repositories.</p>
     <p>If you need to reach out to us or have ideas for papers, just ask us via our <a href="https://twitter.com/paperswelove_la">twitter account</a>. Papers We Love has a <a href="https://github.com/papers-we-love/papers-we-love/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>. Please contact one of the Meetup's organizers if anyone is not following it. Be good to each other and to the PWL community!</p>
+    <p>Want to present? &nbsp;Email us at paperswelove.la@gmail.com. &nbsp;Not sure where to start? Check out <a href="http://cateches.is/papers-wishlist">Sam's wishlist</a>.</p>
   join_mode: open
 Doo-Things:
   topics:
@@ -5216,7 +5348,7 @@ Doo-Things:
   who: Dooers
   country: IN
   city: Pune
-  members: 606
+  members: 650
   timezone: Asia/Calcutta
   id: 12214242
   utc_offset: 19800000
@@ -5568,7 +5700,7 @@ Papers-We-Love-Munich:
   who: Paper Readers
   country: DE
   city: München
-  members: 185
+  members: 251
   timezone: Europe/Berlin
   id: 17614202
   utc_offset: 7200000
@@ -5738,7 +5870,7 @@ Papers-We-Love-Munich:
     event_url: http://www.meetup.com/Papers-We-Love-Munich/events/219418349/
   - headcount: 0
     created: 1427719323000
-    yes_rsvp_count: 31
+    yes_rsvp_count: 75
     group: {join_mode: open, created: 1413287136000, name: Papers We Love - Munich,
       group_lon: 11.579999923706055, id: 17614202, urlname: Papers-We-Love-Munich,
       group_lat: 48.13999938964844, who: Paper Readers}
@@ -5751,7 +5883,7 @@ Papers-We-Love-Munich:
     venue: {country: de, city: 80636 München, address_1: Nymphenburger Str. 86, name: STYLIGHT GmbH,
       lon: 11.546935, id: 23115812, lat: 48.150471, repinned: false}
     time: 1429808400000
-    updated: 1428004776000
+    updated: 1429525014000
     waitlist_count: 0
     description: '<p>The next meetup will be about neural networks and machine learning.
       Neural networks have had a successful revival under the label "deep learning"
@@ -5760,11 +5892,31 @@ Papers-We-Love-Munich:
       how the analysis of the visual cortex leads to new learning algorithms ("sparse
       coding" [1]). It would be great if we could find other presentations on Deep
       Learning, Computer Vision, NLP, Recurrent Neural Networks and Large Scale Machine
-      Learning. For a comprehensive reading list see [2].</p> <p>Papers:</p> <p>*
-      Sparse Coding with an Overcomplete Basis Set: A Strategy Employed by V1? [1]</p>
-      <p>[1] <a href="http://redwood.berkeley.edu/bruno/papers/VR.pdf" class="linkified">http://redwood.berkeley.edu/bruno/papers/VR.pdf</a><br/>[2]
+      Learning. For a comprehensive reading list see [2].</p> <p>Presentation:</p>
+      <p>* Sparse Coding with an Overcomplete Basis Set: A Strategy Employed by V1?
+      (Johannes Drever) [1]</p> <p>* Introduction to RBMs. (Markus Liedl)</p> <p>* Introduction
+      to Deep Learning theory: what have changed in the last years and why it has
+      so much attention right now (Sergii Khomenko)</p> <p>[1] <a href="http://redwood.berkeley.edu/bruno/papers/VR.pdf"
+      class="linkified">http://redwood.berkeley.edu/bruno/papers/VR.pdf</a><br/>[2]
       <a href="http://deeplearning.net/reading-list/" class="linkified">http://deeplearning.net/reading-list/</a></p>'
     event_url: http://www.meetup.com/Papers-We-Love-Munich/events/221497485/
+  - headcount: 0
+    created: 1429432837000
+    yes_rsvp_count: 5
+    group: {join_mode: open, created: 1413287136000, name: Papers We Love - Munich,
+      group_lon: 11.579999923706055, id: 17614202, urlname: Papers-We-Love-Munich,
+      group_lat: 48.13999938964844, who: Paper Readers}
+    id: '221945528'
+    utc_offset: 7200000
+    visibility: public
+    name: Primer on Bayesian Statistics
+    maybe_rsvp_count: 0
+    status: upcoming
+    time: 1432746000000
+    updated: 1429432837000
+    waitlist_count: 0
+    description: <p>We'll bootstrap everyone who wants to know more about basic Probability Theory (types of random variables, how to calculate sum/product of probabilities), and will move to Bayes Theorem and it's application in Machine Learning.</p> <p>Currently I'm prepping a meetup solely from University textbooks, so no concrete papers in mind.</p> <p>If you have a word or two to say about application of Bayesian statistics in Machine Learning, we'll be glad to hear you!</p>
+    event_url: http://www.meetup.com/Papers-We-Love-Munich/events/221945528/
   link: http://www.meetup.com/Papers-We-Love-Munich/
   lat: 48.13999938964844
   category: {name: tech, id: 34, shortname: tech}
@@ -5793,7 +5945,7 @@ Papers-We-Love-Madrid:
   who: Readers
   country: ES
   city: Madrid
-  members: 123
+  members: 135
   timezone: Europe/Madrid
   id: 18327969
   utc_offset: 7200000
@@ -5970,7 +6122,7 @@ Papers-We-Love-Columbus:
   who: Readers
   country: US
   city: Columbus
-  members: 38
+  members: 39
   timezone: US/Eastern
   id: 14075072
   utc_offset: -14400000
@@ -6103,7 +6255,7 @@ Papers-We-Love-Montreal:
   who: Members
   country: CA
   city: Montréal
-  members: 131
+  members: 149
   timezone: Canada/Eastern
   id: 16679672
   utc_offset: -14400000
@@ -6266,7 +6418,7 @@ Papers-We-Love-Montreal:
     event_url: http://www.meetup.com/Papers-We-Love-Montreal/events/220974427/
   - headcount: 0
     created: 1427888984000
-    yes_rsvp_count: 23
+    yes_rsvp_count: 39
     group: {join_mode: open, created: 1409349394000, name: 'Papers We Love, Montreal',
       group_lon: -73.62000274658203, id: 16679672, urlname: Papers-We-Love-Montreal,
       group_lat: 45.529998779296875, who: Members}
@@ -6280,7 +6432,7 @@ Papers-We-Love-Montreal:
       id: 18359262, name: Radialpoint, lon: -73.569962, lat: 45.50753, state: QC}
     time: 1429740000000
     duration: 10800000
-    updated: 1427978610000
+    updated: 1428438414000
     waitlist_count: 0
     description: |-
       <p>Peter Zion will present two great papers on deep learning; first, Yann LeCun’s seminal 1998 paper, "<a href="http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf">Gradiant-Based Learning Applied to Document Recognition</a>", which will give some background and context for Krizhevsky, Sutskever, and Hinton's 2012 paper, "<a href="http://www.cs.toronto.edu/~fritz/absps/imagenet.pdf">ImageNet Classification with Deep Convolutional Neural Networks</a>", in which (to quote Peter), "they [...] create a GPU-based DNN that is better at image recognition than any human".</p> <p>
@@ -6289,7 +6441,13 @@ Papers-We-Love-Montreal:
       Given the length of the first paper, I recommend reading Krizhevsky's paper in detail, and skimming LeCun's paper as needed for background.</p> <p>
 
 
-      Everyone interested in machine learning, image processing and recognition, or GPU computing should come!</p>
+      Everyone interested in machine learning, image processing and recognition, or GPU computing should come!</p> <p>
+
+
+      This event is part of <a href="http://mtldata.com/bdw">Big Data Week</a>.  Be sure to check out the rest of the schedule!</p> <p>
+
+
+      Finally, a huge thanks to the folks at Radialpoint for hosting us again.</p>
     event_url: http://www.meetup.com/Papers-We-Love-Montreal/events/221545922/
   link: http://www.meetup.com/Papers-We-Love-Montreal/
   lat: 45.529998779296875
@@ -6324,7 +6482,7 @@ Papers-We-Love-DC:
   who: Readers
   country: US
   city: Washington
-  members: 173
+  members: 174
   timezone: US/Eastern
   id: 15670772
   utc_offset: -14400000
@@ -6437,6 +6595,55 @@ Papers-We-Love-DC:
       the Scope of Side Effects" <a href="http://vpri.org/pdf/rn2008001_worlds.pdf"
       class="linkified">http://vpri.org/pdf/rn2008001_worlds.pdf</a></p>'
     event_url: http://www.meetup.com/Papers-We-Love-DC/events/212419432/
+  - headcount: 0
+    created: 1428934048000
+    how_to_find_us: We'll be upstairs! Buzz WeWork or tweet at @mrb_bk
+    yes_rsvp_count: 14
+    group: {join_mode: open, created: 1405211857000, name: Papers We Love DC, group_lon: -77.04000091552734,
+      id: 15670772, urlname: Papers-We-Love-DC, group_lat: 38.900001525878906, who: Readers}
+    id: '221811112'
+    utc_offset: -14400000
+    visibility: public
+    name: '#3 => John Feminella on "Coresets and their applications"'
+    maybe_rsvp_count: 0
+    status: upcoming
+    venue: {address_1: ' 718 7th Street NW', country: us, city: Washington, repinned: false,
+      id: 21996302, name: WeWork DC - Chinatown, lon: 0, lat: 0, state: DC}
+    time: 1430434800000
+    updated: 1428934069000
+    waitlist_count: 0
+    description: '<p><b>Description of the paper:</b></p> <p>We''ll be looking at
+      the Ph.D. thesis of the head of the MIT Robotics and Big Data Lab, Dan Feldman.
+      It''s entitled "Coresets and their applications" (2010). (That''s "coresets"
+      as in the mathematical reduction technique, not "corsets" as in the article
+      of clothing.) You can find it here: </p> <p><a href="http://www.cs.tau.ac.il/thesis/thesis/feldman"><a
+      href="http://www.cs.tau.ac.il/thesis/thesis/feldman" class="linkified">http://www.cs.tau.ac.il/thesis/thesis/feldman</a></a></p>
+      <p>Coresets are a way of turning large datasets into much smaller, more manageable
+      sets in a way that preserves the interesting features ofthe larger set. Approximation
+      isn''t a new technique; we compress datasets all the time to preserve interesting
+      features (JPEGs for pictures, MP4 for audio, etc.). The choice of the way in
+      which you construct the coreset determines which interesting features are (or
+      are not) preserved, and within what error bounds.</p> <p><br/>The surprising
+      result is that you can, very frequently, throw away large parts of your dataset
+      still get good approximations to the optimal answer. This is valuable for cases
+      where you want to ask an expensive question on a large dataset (e.g. Hamiltonian
+      tours /Traveling Salesperson problem, convex hull, etc.) when you''re willing
+      to trade off some fidelity in the answer for response speed.</p> <p><br/><b>Brief
+      outline:</b></p> <p>* How we improve solutions to problems with computer science:
+      faster algorithms (hard!), faster computers (hard!)<b><br/></b></p> <p>* How
+      we improve solutions with coresets: approximate the dataset (much easier!)</p>
+      <p>* Prerequisites for constructing a coreset</p> <p>* What kinds of problems
+      do and don''t work well, and why</p> <p>* A few examples of constructing a coreset</p>
+      <p>* Diving into the math of why it works</p> <p>* Tips for constructing an
+      arbitrary coreset (it''s hard to do)</p> <p>* Maybe a demo or two, time permitting</p>
+      <p><b>A Note:</b></p> <p><b>§1 and 2 (14 pages out of the 80, a lot of which
+      is pictures) are really the only parts to read. The rest is more detailed math
+      and proofs of different corner cases, and a generalization to N dimensions.<br/></b></p>
+      <p><br/><b>About the presenter:</b></p> <p><br/><i>On a dare, John once drank
+      a 32-ounce chocolate milkshake in under 10 seconds. Life has more or less been
+      downhill from there.</i></p> <p><br/><b>Find him at: @jxxf / <a href="http://jxf.me"><a
+      href="http://jxf.me" class="linkified">http://jxf.me</a></a></b></p>'
+    event_url: http://www.meetup.com/Papers-We-Love-DC/events/221811112/
   link: http://www.meetup.com/Papers-We-Love-DC/
   lat: 38.900001525878906
   state: DC

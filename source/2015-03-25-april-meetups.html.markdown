@@ -33,6 +33,10 @@ We have another great line-up of meet-ups scheduled for April across a number of
 
 **München 4/23**: [Neural networks and machine learning](http://www.meetup.com/Papers-We-Love-Munich/events/221497485/)
 
+**Santa Monica 4/29**: [Ryan Nichols on An Axiomatic Basis for Computer Programming](http://www.meetup.com/Papers-We-Love-LA/events/221989188/)
+
+**Washington 4/30**: [John Feminella on "Coresets and their applications"](http://www.meetup.com/Papers-We-Love-DC/events/221811112/)
+
 **San Francisco 4/30**: [Jordan West on Logical Time](http://www.meetup.com/papers-we-love-too/events/212148242/)
  READMORE
 
