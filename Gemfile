@@ -21,3 +21,6 @@ gem 'neat'
 
 # Sanitizers
 gem 'sanitize', '~> 3.1.1'
+
+# Debuggin
+gem 'pry'
