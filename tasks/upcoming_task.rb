@@ -37,8 +37,7 @@ class Gen < Thor
                 desc: 'YAML dump of Meetup.com chapter information'
 
   def upcoming
-    month = options[:month].to_i || Time.now.month + 1
-    next_month = date_next_month(month)
+    next_month = date_next_month(make_month(options))
     make_template_vars(next_month)
     filename = options[:data] || DEFAULT_DATA_FILE
     @events = gather_events(filename, next_month)
@@ -47,6 +46,14 @@ class Gen < Thor
   end
 
   protected
+
+  def make_month(options)
+    if options[:month].to_i > 0
+      return options[:month].to_i
+    else
+      return Time.now.month + 1
+    end
+  end
 
   # Setup vars needed by erb template
   def make_template_vars(month)
