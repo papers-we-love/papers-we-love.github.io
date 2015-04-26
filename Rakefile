@@ -3,7 +3,6 @@
 ###
 
 MM = 'bundle exec middleman'
-KEYCHAIN = File.realpath("#{ENV['HOME']}/.keychain")
 
 desc 'Build PWL.org'
 task :build do
@@ -18,7 +17,6 @@ end
 
 desc 'Deploy PWL.org'
 task :deploy do
-  system('. ~/.keychain/`/bin/hostname`-sh') if File.directory?(KEYCHAIN)
   status = system("#{MM} deploy")
   puts status ? 'Deploy OK' : 'Deploy FAIL!'
 end
@@ -37,7 +35,6 @@ end
 
 desc 'Pull down the latest changes in the repo'
 task :pull do
-  system('. ~/.keychain/`/bin/hostname`-sh') if File.directory?(KEYCHAIN)
   status = system('git pull');
   puts status ? 'Git pull OK' : 'Git pull FAIL!'
 end
