@@ -4,13 +4,13 @@ What was the last paper within the realm of computing you read? What did it insp
 
 We'll be using [papers-we-love's curated repository](https://github.com/papers-we-love/papers-we-love). Please contribute by adding PR's for papers, code, and/or links to other repositories.
 
-PWL SF strictly adheres to the [Code of Conduct](https://github.com/papers-we-love/papers-we-love/blob/master/CODE_OF_CONDUCT.md) set forth by all PWL charters.
+PWL SG strictly adheres to the [Code of Conduct](https://github.com/papers-we-love/papers-we-love/blob/master/CODE_OF_CONDUCT.md) set forth by all PWL charters.
 
 <h2>Chapter details</h2>
-<p>
+
 <strong>Location:</strong>
 [HackerspaceSG](https://www.google.com.sg/maps?q=344B+King+George+Avenue,+Singapore,+208576) - 344B King George’s Avenue, Singapore 208576
-</p>
+
 <p>
 <strong>Sign-up:</strong>
 Please join the <a href="https://www.facebook.com/groups/paperswelovesg/">Facebook Group for notification of events</a>
