@@ -2,7 +2,7 @@
 
 ## IMPORTANT: Contributing to the site
 
-We pull in most of the chapter data from the Meetup.com API. Make sure the title of your meetup reflects the speakers name and the title of the paper. For example: "John Myles White on Fundamental Concepts in Programming Languages" or "Lindsey Kuper on Ribbon Proofs for Separation Logic". Please don't add artifacts like "PWL #13 =>" to the title, as we have to strip these out with ad-hoc regexes.
+We pull in most of the chapter data from the Meetup.com API with an automated process. Make sure the title of your meetup reflects the speakers name and the title of the paper. For example: "John Myles White on Fundamental Concepts in Programming Languages" or "Lindsey Kuper on Ribbon Proofs for Separation Logic". Please don't add artifacts like "PWL #13 =>" to the title, as we have to strip these out with ad-hoc regexes.
 
 **If you don't see your meetup on a monthly listing, let us know!**
 
@@ -29,7 +29,7 @@ We've added some CLI commands to Middleman to speed up generic tasks, such as ad
 Chapters are managed in `source/chapter.yml`, which is used to dynamically generate links on the site. This command will also create a generic template page for the chapter in `/source/partials/chapters`. Chapters can be quickly added with a CLI command:
 
 ```bash
-$ middleman chapter NAME
+$ bundle exec middleman chapter NAME
 ```
 
 `NAME` should be the lowercase name of the chapter
