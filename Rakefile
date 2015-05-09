@@ -2,6 +2,8 @@
 # Papers We Love Rake
 ###
 
+require 'date'
+
 MM = 'bundle exec middleman'
 
 desc 'Build PWL.org'
@@ -29,7 +31,7 @@ end
 
 desc 'Create/Update Upcoming meetups post'
 task :upcoming do
-  status = system("#{MM} upcoming")
+  status = system("#{MM} upcoming -m #{Date.today.month}")
   puts status ? 'Upcoming meetups OK' : 'Upcoming meetups FAIL!'
 end
 
