@@ -32,9 +32,13 @@ def build_address(venue)
   [address, glink]
 end
 
-# Humanize the dates
-def event_date(time)
-  Time.at(time / 1000).to_datetime.strftime('%F %I:%M%P')
+# Parse event date with utc offset
+def event_date(event)
+  Time.at((event['time'] + event['utc_offset'] ) / 1000).utc.to_datetime
+end
+
+def format_date(datetime)
+  datetime.strftime('%F %I:%M%P')
 end
 
 # We truncate the descriptions at 1000 chars, clean up the HTML
@@ -109,6 +113,7 @@ def process_fields(event)
     photo = "<a class=\"event-photo-link\" href=\"#{h[:url]}\">#{img}</a>"
   end
   h[:photo] = photo
-  h[:time] = event_date(event["time"])
+  h[:time] = event_date(event)
+  h[:formatted_time] = format_date(h[:time])
   h
 end
