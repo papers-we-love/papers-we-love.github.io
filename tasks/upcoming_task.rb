@@ -94,5 +94,4 @@ class Gen < Thor
     filepath = File.join('source', "#{@date}-#{@slug}.html.markdown")
     File.write(filepath, @output)
   end
-
 end
