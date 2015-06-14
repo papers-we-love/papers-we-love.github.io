@@ -15,7 +15,7 @@ ogp:
 
 We have another great line-up of meet-ups scheduled for <%= @month %> across a number of our chapters:
 <% @events.each do |event| %><% e = process_fields(event) %>
-**<%= e[:city] %> <%= e[:formatted_time] %>**: [<%= e[:event_title] %>](<%= e[:url] %>)
+**<%= e[:city] %> <%= DateTime.parse(e[:formatted_time]).strftime('%-m/%-d') %>**: [<%= e[:event_title] %>](<%= e[:url] %>)
 <% end %> READMORE
 
 ---
