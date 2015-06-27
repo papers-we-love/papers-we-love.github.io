@@ -23,6 +23,8 @@ READMORE
 
 * **Meetup:** [http://www.meetup.com/Papers-We-Love-LA/events/223161204/](http://www.meetup.com/Papers-We-Love-LA/events/223161204/)
 * **Paper:** [http://web.cs.wpi.edu/~cs4536/c12/milner-damas_principal_types.pdf](http://web.cs.wpi.edu/~cs4536/c12/milner-damas_principal_types.pdf)
+* **Slides:** [https://docs.google.com/presentation/d/1NGil0cL2R35NLwFUtHFgR7Ydgsc--HYdLxp6mp2vGog/edit#slide=id.p](https://docs.google.com/presentation/d/1NGil0cL2R35NLwFUtHFgR7Ydgsc--HYdLxp6mp2vGog/edit#slide=id.p)
+* **Code:** [https://gist.github.com/paf31/a49a54d7ea5ede43422f](https://gist.github.com/paf31/a49a54d7ea5ede43422f)
 
 **Description**
 
