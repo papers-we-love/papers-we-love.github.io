@@ -17,7 +17,7 @@ ogp:
 
 READMORE
 
-## San Francisco - May 21, 2015
+## New York - May 21, 2015
 
 **Jason Ganetsky** on Making a Fast Curry: Push/Enter vs. Eval/Apply for Higher-order Languages
 
