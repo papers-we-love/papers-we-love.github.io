@@ -13,7 +13,7 @@ ogp:
     description: "Jason Ganetsky on Making a Fast Curry: Push/Enter vs. Eval/Apply for Higher-order Languages"
 ---
 
-<iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/PDkhwIXjQHw" frameborder="0" allowfullscreen></iframe>
+<iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/LW3HZwBDpiU" frameborder="0" allowfullscreen></iframe>
 
 READMORE
 
