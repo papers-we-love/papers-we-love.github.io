@@ -3,16 +3,16 @@ Papers-We-Love-Toronto:
   - {urlkey: softwaredev, name: Software Development, id: 3833}
   - {urlkey: newtech, name: New Technology, id: 9696}
   - {urlkey: computer, name: Computers, id: 15225}
-  - {urlkey: programming, name: Programming, id: 17627}
   - {urlkey: programming-languages, name: Programming Languages, id: 17628}
   - {urlkey: computer-science, name: Computer Science, id: 21751}
+  - {urlkey: computer-programming, name: Computer programming, id: 48471}
   - {urlkey: science-technology-engineering-math, name: Science Technology Engineering Math,
     id: 68682}
   created: 1408717699000
   who: Readers
   country: CA
   city: Toronto
-  members: 188
+  members: 251
   timezone: Canada/Eastern
   id: 16543502
   utc_offset: -14400000
@@ -204,7 +204,7 @@ Papers-We-Love-Toronto:
     event_url: http://www.meetup.com/Papers-We-Love-Toronto/events/221232820/
   - headcount: 0
     created: 1429310703000
-    yes_rsvp_count: 20
+    yes_rsvp_count: 29
     group: {join_mode: open, created: 1408717699000, name: Papers We Love - Toronto,
       group_lon: -79.37999725341797, id: 16543502, urlname: Papers-We-Love-Toronto,
       group_lat: 43.650001525878906, who: Readers}
@@ -213,14 +213,18 @@ Papers-We-Love-Toronto:
     visibility: public
     name: '#7 Paul Osman on CRDTs - Commutative Replicated Data Types'
     maybe_rsvp_count: 0
-    status: upcoming
+    status: past
     venue: {address_1: 80 Spadina Ave. 4th Floor, country: ca, city: Toronto, repinned: false,
       id: 23087232, name: Shopify Toronto, lon: -79.395576, lat: 43.646049, state: 'ON'}
     time: 1430951400000
-    updated: 1429677823000
+    updated: 1433169398000
     waitlist_count: 0
-    description: '<p><a href="https://twitter.com/paulosman">&lt;/a&gt;&lt;a href="https://twitter.com/paulosman"&gt;Paul</a>
-      will be presenting <a href="http://pagesperso-systeme.lip6.fr/Marc.Shapiro/papers/RR-6956.pdf">CRDTs:
+    rating: {count: 2, average: 5}
+    description: '<p><b>Important:</b> unfortunately the elevator at the Shopify office
+      is out of service for repairs, and we are on the fourth floor. If you need any
+      assistance getting up the stairs, please call or message the phone number that
+      I''ll leave on signage in the front lobby!</p> <p>***</p> <p><a href="https://twitter.com/paulosman">&lt;/a&gt;&lt;a
+      href="https://twitter.com/paulosman"&gt;Paul</a> will be presenting <a href="http://pagesperso-systeme.lip6.fr/Marc.Shapiro/papers/RR-6956.pdf">CRDTs:
       Consistency without concurrency control</a> by Mihai Letia, Nuno Preguica and
       Marc Shapiro. He’ll walk through the paper and demonstrate some practical use
       cases for CRDTs. </p> <p>***</p> <p>In this paper, Marc Shapiro et al describe
@@ -243,6 +247,79 @@ Papers-We-Love-Toronto:
       computers, he’s usually cycling, traveling, buying too many records or watching
       football (NFL, not CFL. Come on now). &lt;a href="http://blog.ontoillogical.com"&gt;&lt;/a&gt;</p>'
     event_url: http://www.meetup.com/Papers-We-Love-Toronto/events/221921448/
+  - headcount: 0
+    created: 1431728918000
+    yes_rsvp_count: 45
+    group: {join_mode: open, created: 1408717699000, name: Papers We Love - Toronto,
+      group_lon: -79.37999725341797, id: 16543502, urlname: Papers-We-Love-Toronto,
+      group_lat: 43.650001525878906, who: Readers}
+    id: '222561882'
+    utc_offset: -14400000
+    visibility: public
+    name: '#8 Donny Nadolny on Raft'
+    maybe_rsvp_count: 0
+    status: past
+    venue: {address_1: 80 Spadina Ave. 4th Floor, country: ca, city: Toronto, repinned: false,
+      id: 23087232, name: Shopify Toronto, lon: -79.395576, lat: 43.646049, state: 'ON'}
+    time: 1433370600000
+    updated: 1433384199000
+    waitlist_count: 0
+    rating: {count: 1, average: 5}
+    description: '<p><b>Important: </b>please arrive <b>before 7pm</b>, which is when
+      the front door locks! If you arrive after 7pm, use the keypad beside the outside
+      door and <b>buzz 8882</b> to be let in.</p> <p><b>Also important:</b> unfortunately
+      the elevator at the Shopify office is <b>still</b> out of service for repairs,
+      and we are on the <b>fourth floor</b>. If you need any assistance getting up
+      the stairs, please call or message the phone number that I''ll leave on signage
+      in the front lobby!</p> <p>***</p> <p>Donny will be presenting <a href="https://ramcloud.stanford.edu/raft.pdf">In
+      Search of an Understandable Consensus Algorithm</a> by Diego Ongaro and John
+      Ousterhout.</p> <p><br/>***</p> <p>This paper introduces the Raft consensus
+      algorithm, which is an attempt to make a consensus algorithm that is easy to
+      understand and easy to implement.</p> <p>We''ll discuss what consensus is, why
+      it''s useful, and what it''s used for. You''ll also learn the main components
+      of Raft: leader election, data replication, and the rules for recovering from
+      failure / ensuring safety.</p> <p>Paper Link: <a href="https://ramcloud.stanford.edu/raft.pdf"><a
+      href="https://ramcloud.stanford.edu/raft.pdf" class="linkified">https://ramcloud.stanford.edu/raft.pdf</a></a></p>
+      <p><br/><b>Doors open at 6:30 pm, presentation will begin at 7:00 pm.</b> There
+      will be food and refreshments provided by Shopify. </p> <p><br/>***</p> <p><a
+      href="http://twitter.com/mveytsman">&lt;/a&gt;Donny Nadolny is a Scala developer
+      at PagerDuty, working on continually improving the reliability of their distributed
+      systems.&lt;a href="http://blog.ontoillogical.com"&gt;</a></p>'
+    event_url: http://www.meetup.com/Papers-We-Love-Toronto/events/222561882/
+  - headcount: 0
+    created: 1435425236000
+    yes_rsvp_count: 43
+    group: {join_mode: open, created: 1408717699000, name: Papers We Love - Toronto,
+      group_lon: -79.37999725341797, id: 16543502, urlname: Papers-We-Love-Toronto,
+      group_lat: 43.650001525878906, who: Readers}
+    id: '223538679'
+    utc_offset: -14400000
+    visibility: public
+    name: '#9 Julie Haché on Zero-Overhead Metaprogramming'
+    maybe_rsvp_count: 0
+    status: upcoming
+    venue: {address_1: 80 Spadina Ave. 4th Floor, country: ca, city: Toronto, repinned: false,
+      id: 23087232, name: Shopify Toronto, lon: -79.395576, lat: 43.646049, state: 'ON'}
+    time: 1436394600000
+    updated: 1435511109000
+    waitlist_count: 0
+    description: '<p><b>Note: </b>This session of Papers We Love is <i>not</i> on
+      the first Wednesday of July as that is Canada Day. So we''ll be seeing you for
+      the second!</p> <p><b>Important: </b>please arrive <b>before 7pm</b>, which
+      is when the front door locks! If you arrive after 7pm, use the keypad beside
+      the outside door and <b>buzz 8882</b> to be let in.</p> <p>***</p> <p>Julie
+      will be presenting <a href="http://stefan-marr.de/downloads/pldi15-marr-et-al-zero-overhead-metaprogramming.pdf">Zero-Overhead
+      Metaprogramming: Reflection and Metaobject Protocols Fast and without Compromises</a> by
+      Stefan Marr, Chris Seaton, and Stéphane Ducasse.</p> <p><br/>***</p> <p>[Paper
+      description to be completed.]</p> <p>Paper Link: <a href="http://stefan-marr.de/downloads/pldi15-marr-et-al-zero-overhead-metaprogramming.pdf"><a
+      href="http://stefan-marr.de/downloads/pldi15-marr-et-al-zero-overhead-metaprogramming.pdf"
+      class="linkified">http://stefan-marr.de/downloads/pldi15-marr-et-al-zero-overhead-metaprogramming.pdf</a></a></p>
+      <p><br/><b>Doors open at 6:30 pm, presentation will begin at 7:00 pm.</b> There
+      will be food and refreshments provided by Shopify. </p> <p><br/>***</p> <p><a
+      href="http://twitter.com/mveytsman">&lt;/a&gt;&lt;a href="https://twitter.com/juliehache"&gt;Julie
+      Haché</a> is CTO and Head of Instruction at <a href="https://twitter.com/BitmakerLabs">Bitmaker
+      Labs</a>.&lt;a href="http://blog.ontoillogical.com"&gt;&lt;/a&gt;</p>'
+    event_url: http://www.meetup.com/Papers-We-Love-Toronto/events/223538679/
   link: http://www.meetup.com/Papers-We-Love-Toronto/
   lat: 43.650001525878906
   state: 'ON'
@@ -260,11 +337,11 @@ Papers-We-Love-in-saint-louis:
   topics:
   - {urlkey: ai, name: Artificial Intelligence, id: 456}
   - {urlkey: statistical-computing, name: Statistical Computing, id: 15280}
-  - {urlkey: programming, name: Programming, id: 17627}
   - {urlkey: programming-languages, name: Programming Languages, id: 17628}
   - {urlkey: computer-science, name: Computer Science, id: 21751}
   - {urlkey: high-scalability-computing, name: High Scalability Computing, id: 24410}
   - {urlkey: machine-learning, name: Machine Learning, id: 29971}
+  - {urlkey: computer-programming, name: Computer programming, id: 48471}
   - {urlkey: high-performance-computing, name: High Performance Computing, id: 77687}
   - {urlkey: numerical-analysis, name: Numerical Analysis, id: 98587}
   - {urlkey: computational-science-and-engineering, name: Computational Science and Engineering,
@@ -273,7 +350,7 @@ Papers-We-Love-in-saint-louis:
   who: readers
   country: US
   city: Saint Louis
-  members: 46
+  members: 50
   timezone: US/Central
   id: 13206522
   utc_offset: -18000000
@@ -354,7 +431,7 @@ Papers-We-Love-in-saint-louis:
     event_url: http://www.meetup.com/Papers-We-Love-in-saint-louis/events/220109644/
   - headcount: 0
     created: 1424138434000
-    yes_rsvp_count: 6
+    yes_rsvp_count: 9
     group: {join_mode: open, created: 1394176816000, name: Papers We Love (Saint Louis Chapter),
       group_lon: -90.45999908447266, id: 13206522, urlname: Papers-We-Love-in-saint-louis,
       group_lat: 38.70000076293945, who: readers}
@@ -363,38 +440,48 @@ Papers-We-Love-in-saint-louis:
     visibility: public
     name: The Chemical Basis of Morphogenesis (Turing)
     maybe_rsvp_count: 0
-    status: upcoming
+    status: past
     venue: {address_1: '230 S. Bemiston Ave, Suite 420', country: us, city: Saint Louis,
       repinned: false, id: 23470450, name: Observable Networks, lon: -90.336945, lat: 38.646488,
       state: MO}
     time: 1431993600000
-    updated: 1429589269000
+    updated: 1432006271000
     waitlist_count: 0
-    description: <p>Excerpt from Kevin:</p> <p>Yes the title sounds all biologyish-chemistryish but it's really a theoretical biology paper, which mostly means building fairly simple mathematical models of physical processes (with some numerical simulations). Parts of it are mathematically challenging but those parts can be glossed over without missing much.</p> <p>If you look at the paper and it's too scary, don't worry. I'll do my best to explain what I love about this paper, but maybe you can read this 2-page review? If it doesn't hook you then you have no soul: <a href="https://people.maths.ox.ac.uk/maini/PKM%20publications/172.pdf"><a href="https://people.maths.ox.ac.uk/maini/PKM%20publications/172.pdf" class="linkified">https://people.maths.ox.ac.uk/maini/PKM%20publications/172.pdf</a></a></p>
+    rating: {count: 0, average: 0}
+    description: |-
+      <p>Excerpt from Kevin:</p> <p>Yes the title sounds all biologyish-chemistryish but it's really a theoretical biology paper, which mostly means building fairly simple mathematical models of physical processes (with some numerical simulations). Parts of it are mathematically challenging but those parts can be glossed over without missing much.</p> <p>If you look at the paper and it's too scary, don't worry. I'll do my best to explain what I love about this paper, but maybe you can read this 2-page review? If it doesn't hook you then you have no soul: <a href="https://people.maths.ox.ac.uk/maini/PKM%20publications/172.pdf"><a href="https://people.maths.ox.ac.uk/maini/PKM%20publications/172.pdf" class="linkified">https://people.maths.ox.ac.uk/maini/PKM%20publications/172.pdf</a></a></p> <p>
+
+
+
+
+
+
+      Food will be provided by <a href="http://www.lisarokusek.com/">Lisa Rokusek</a> with AgentHR Recruiting Group.</p>
     event_url: http://www.meetup.com/Papers-We-Love-in-saint-louis/events/220570557/
   - headcount: 0
     created: 1426561414000
-    yes_rsvp_count: 2
+    yes_rsvp_count: 13
     group: {join_mode: open, created: 1394176816000, name: Papers We Love (Saint Louis Chapter),
       group_lon: -90.45999908447266, id: 13206522, urlname: Papers-We-Love-in-saint-louis,
       group_lat: 38.70000076293945, who: readers}
     id: '221203537'
     utc_offset: -18000000
     visibility: public
-    name: Paper TBA
+    name: Large-scale cluster management at Google with Borg
     maybe_rsvp_count: 0
-    status: upcoming
+    status: past
     venue: {address_1: '230 S. Bemiston Ave, Suite 420', country: us, city: Saint Louis,
       repinned: false, id: 23470450, name: Observable Networks, lon: -90.336945, lat: 38.646488,
       state: MO}
     time: 1434411000000
-    updated: 1426561474000
+    updated: 1434423846000
     waitlist_count: 0
-    description: <p>Christopher Carpenter will speak on a paper that will be announced.</p>
+    rating: {count: 0, average: 0}
+    description: <p>Christopher Carpenter will be covering Large-scale cluster management at Google with Borg authored by Verma, Pedrosa, Korupolu, et al. The paper is available from Google <a href="http://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/43438.pdf">here</a>.</p>
     event_url: http://www.meetup.com/Papers-We-Love-in-saint-louis/events/221203537/
   - headcount: 0
     created: 1429563141000
-    yes_rsvp_count: 2
+    yes_rsvp_count: 5
     group: {join_mode: open, created: 1394176816000, name: Papers We Love (Saint Louis Chapter),
       group_lon: -90.45999908447266, id: 13206522, urlname: Papers-We-Love-in-saint-louis,
       group_lat: 38.70000076293945, who: readers}
@@ -433,6 +520,23 @@ Papers-We-Love-in-saint-louis:
     description: '<p>Kai Yang will be talking about continuum robotic arms, as discussed
       in this paper: <a href="http://www.ces.clemson.edu/~iwalker/spie05.pdf" class="linkified">http://www.ces.clemson.edu/~iwalker/spie05.pdf</a></p>'
     event_url: http://www.meetup.com/Papers-We-Love-in-saint-louis/events/221988737/
+  - headcount: 0
+    created: 1431999442000
+    yes_rsvp_count: 2
+    group: {join_mode: open, created: 1394176816000, name: Papers We Love (Saint Louis Chapter),
+      group_lon: -90.45999908447266, id: 13206522, urlname: Papers-We-Love-in-saint-louis,
+      group_lat: 38.70000076293945, who: readers}
+    id: '222627742'
+    utc_offset: -18000000
+    visibility: public
+    name: Paper TBD
+    maybe_rsvp_count: 0
+    status: upcoming
+    time: 1442880000000
+    duration: 10800000
+    updated: 1435982984000
+    waitlist_count: 0
+    event_url: http://www.meetup.com/Papers-We-Love-in-saint-louis/events/222627742/
   link: http://www.meetup.com/Papers-We-Love-in-saint-louis/
   lat: 38.70000076293945
   state: MO
@@ -459,7 +563,7 @@ papers-we-love-london:
   who: readers
   country: GB
   city: London
-  members: 332
+  members: 381
   timezone: Europe/London
   id: 13111022
   utc_offset: 3600000
@@ -638,7 +742,7 @@ papers-we-love-london:
     event_url: http://www.meetup.com/Papers-We-Love-London/events/221535320/
   - headcount: 0
     created: 1429987590000
-    yes_rsvp_count: 39
+    yes_rsvp_count: 44
     group: {join_mode: open, created: 1393622100000, name: Papers We Love - London,
       group_lon: -0.10000000149011612, id: 13111022, urlname: Papers-We-Love-London,
       group_lat: 51.5099983215332, who: readers}
@@ -647,16 +751,40 @@ papers-we-love-london:
     visibility: public
     name: Oliver Charles on "Kleisli Arrows of Outrageous Fortune"
     maybe_rsvp_count: 0
-    status: upcoming
+    status: past
     venue: {address_2: SE1 9EU, address_1: 'Notcutt House, 36 Southwark Bridge Road',
       country: gb, city: London, repinned: false, id: 17300632, name: uSwitch, lon: -0.095859,
       lat: 51.50612}
     time: 1432144800000
-    updated: 1429987633000
+    updated: 1432157090000
     waitlist_count: 0
-    rsvp_limit: 50
+    rsvp_limit: 54
+    rating: {count: 0, average: 0}
     description: <p>Oliver Charles presents <a href="https://personal.cis.strath.ac.uk/conor.mcbride/Kleisli.pdf">Conor McBride's "Kleisli Arrows of Outrageous Fortune"</a>. </p> <p><br/>For a long time, it wasn't clear how to get purely functional programs to actually "do" anything. Finally, a breakthrough came by sharing ideas from category theory to bring monads into functional programming, as a way to model and manage side effects. However, little has been done to ensure that entire interaction sequences <i>make sense</i>. For example, many functional programming languages will allow you to open a file handle, close it, and then try and read from it - clearly a nonsensical sequence of operations! In "Kleisli Arrows of Outrageous Fortune", Conor McBride shows us how we can borrow more ideas from the literature, introducing a new formulation of <i>indexed monads</i> - a structure with close connections to slice categories. Given these new tools, he demonstrates that these monads can correspond to enforcing logical properties - following in the tradition of propositions-as-types, we now have the ability to begin to encode Hoare logic pre- and post-conditions on our programs.</p> <p><br/>About Oliver:</p> <p>Ollie has always had an interest in functional programming and correctness from a very early age - puzzled by how easy it seemed to make things go wrong, even by accident! Currently, he's the lead Haskell developer at the London startup Fynder, and spends the rest of his free time either working on open-source Haskell libraries, or exploring the latest functional programming research. One day, he hope's write software he can truly believe in, but there's a long way to go...</p>
     event_url: http://www.meetup.com/Papers-We-Love-London/events/222094026/
+  - headcount: 0
+    created: 1435674879000
+    yes_rsvp_count: 50
+    group: {join_mode: open, created: 1393622100000, name: Papers We Love - London,
+      group_lon: -0.10000000149011612, id: 13111022, urlname: Papers-We-Love-London,
+      group_lat: 51.5099983215332, who: readers}
+    id: '223602194'
+    utc_offset: 3600000
+    visibility: public
+    name: Martin Kleppmann on “Sequential Consistency versus Linearizability,”
+    maybe_rsvp_count: 0
+    status: upcoming
+    venue: {address_2: EC1V 7LQ, address_1: 338-346 Goswell Road, country: gb, city: London,
+      repinned: false, id: 21634102, name: GoCardless, lon: -0.103844, lat: 51.53071}
+    time: 1436378400000
+    updated: 1436180434000
+    waitlist_count: 6
+    rsvp_limit: 50
+    description: |-
+      <p>Hagit Attiya and Jennifer L Welch: “Sequential Consistency versus Linearizability,” ACM Transactions on Computer Systems (TOCS), volume 12, number 2, pages 91–122, May 1994.</p> <p><br/><a href="http://courses.csail.mit.edu/6.852/01/papers/p91-attiya.pdf"><a href="http://courses.csail.mit.edu/6.852/01/papers/p91-attiya.pdf" class="linkified">http://courses.csail.mit.edu/6.852/01/papers/p91-attiya.pdf</a></a><br/><a href="http://dx.doi.org/10.1145/176575.176576"><a href="http://dx.doi.org/10.1145/176575.176576" class="linkified">http://dx.doi.org/10.1145/176575.176576</a></a></p> <p>An often-cited constraint on distributed database design is the CAP theorem, an impossibility result in distributed systems. It states that in a linearizable database, if the network is interrupted, some nodes cannot respond to requests. Although being able to tolerate network faults is important, the performance and response times of a database are often even more important, and CAP says nothing about those. It's also a pretty boring theorem.</p> <p>Attiya and Welch's paper, which we'll discuss in this session, is vastly more interesting. It also proves an impossibility result, but it's about response times: on a network where the uncertainty of packet delay is u, there is no algorithm that implements linearizability with read requests faster than u/4 and write requests faster than u/2. On a network where packet delay is highly variable (like many computer networks), a linearizable database is therefore inevitably going to be slow.</p> <p>The paper then goes on to compare linearizability to sequential consistency (a weaker consistency guarantee), and shows that sequential consistency can be significantly faster.</p> <p>This is a theoretical paper, but its applications to practical systems are very real. Its proofs are elegant and not too difficult to follow. It was almost a decade ahead of the CAP theorem. And moreover, it has no male co-authors. What's not to love about it?</p> <p>
+
+      The presenter:</p> <p>Martin Kleppmann is author of the O'Reilly book Designing Data-Intensive Applications (<a href="http://dataintensive.net/"><a href="http://dataintensive.net" class="linkified">http://dataintensive.net</a></a>), which analyses the data infrastructure and architecture used by internet companies. He previously co-founded a startup, Rapportive, that was acquired by LinkedIn in 2012. His technical blog is at <a href="http://martin.kleppmann.com/"><a href="http://martin.kleppmann.com" class="linkified">http://martin.kleppmann.com</a></a> and he's <a href="https://twitter.com/martinkl">@martinkl</a> on Twitter.</p>
+    event_url: http://www.meetup.com/Papers-We-Love-London/events/223602194/
   link: http://www.meetup.com/Papers-We-Love-London/
   lat: 51.5099983215332
   state: '17'
@@ -674,13 +802,13 @@ papers-we-love-london:
 Papers-We-Love-Chicago:
   topics:
   - {urlkey: newtech, name: New Technology, id: 9696}
-  - {urlkey: programming, name: Programming, id: 17627}
   - {urlkey: computer-science, name: Computer Science, id: 21751}
+  - {urlkey: computer-programming, name: Computer programming, id: 48471}
   created: 1404980919000
   who: Readers
   country: US
   city: Chicago
-  members: 149
+  members: 166
   timezone: US/Central
   id: 15617092
   utc_offset: -18000000
@@ -771,7 +899,7 @@ Papers-We-Love-Chicago:
     event_url: http://www.meetup.com/Papers-We-Love-Chicago/events/216833232/
   - headcount: 0
     created: 1429724494000
-    yes_rsvp_count: 21
+    yes_rsvp_count: 27
     group: {join_mode: open, created: 1404980919000, name: Papers We Love Chicago,
       group_lon: -87.66999816894531, id: 15617092, urlname: Papers-We-Love-Chicago,
       group_lat: 41.970001220703125, who: Readers}
@@ -780,14 +908,67 @@ Papers-We-Love-Chicago:
     visibility: public
     name: An Empirical Study of the Naive Bayes Classifier
     maybe_rsvp_count: 0
+    status: past
+    venue: {address_1: '351 W. Hubbard, Suite 700', country: us, city: Chicago, repinned: false,
+      id: 17723242, name: Dev Bootcamp, lon: -87.637566, lat: 41.88969, state: IL}
+    time: 1431471600000
+    updated: 1431485033000
+    waitlist_count: 0
+    rating: {count: 0, average: 0}
+    description: <p><b>The Paper: <br/></b>Naive Bayes classifiers are based upon Bayes theorem, a probability and stats theory that relates current probability to prior probability. A central assumption of the Naive Bayes classifier is the assumption that each predictor, or piece of evidence observed, is independent of other predictors. Given this simplicity (the 'naive' assumption) Naive Bayes classifiers have been shown to outperform other more sophisticated classifiers. We'll review what types of data attributes Rish argues can impact the performance of Naive Bayes as well as review an implementation in Python I wrote.</p> <p><a href="http://www.cc.gatech.edu/~isbell/reading/papers/Rish.pdf"><a href="http://www.cc.gatech.edu/~isbell/reading/papers/Rish.pdf" class="linkified">http://www.cc.gatech.edu/~isbell/reading/papers/Rish.pdf</a></a></p> <p><br/><b>The Speaker:</b><br/>Given that Lorena was a policy analyst what is the likelihood that yes she would want to learn about modeling data? (The overwhelming likelihood says yes - she does.) During the day Lorena works as a software engineer at Sprout Social and by night, she likes to read papers like this one (as well as play Mortal Kombat and/or watch way too much Star Trek). Oh, and if you're a data enthusiast too, tell Lorena you want to try out a Kaggle challenge with her. She is really into the idea of predicting altruism through free pizza (<a href="https://www.kaggle.com/c/random-acts-of-pizza"><a href="https://www.kaggle.com/c/random-acts-of-pizza" class="linkified">https://www.kaggle.com/c/random-acts-of-pizza</a></a>).</p>
+    event_url: http://www.meetup.com/Papers-We-Love-Chicago/events/222024292/
+  - headcount: 0
+    created: 1432045130000
+    how_to_find_us: 7th floor, to the left when you exit the elevator
+    yes_rsvp_count: 18
+    group: {join_mode: open, created: 1404980919000, name: Papers We Love Chicago,
+      group_lon: -87.66999816894531, id: 15617092, urlname: Papers-We-Love-Chicago,
+      group_lat: 41.970001220703125, who: Readers}
+    id: '222636732'
+    utc_offset: -18000000
+    visibility: public
+    name: Hokusai — Sketching Streams in Real Time
+    maybe_rsvp_count: 0
+    status: past
+    venue: {address_1: '351 W. Hubbard, Suite 700', country: us, city: Chicago, repinned: false,
+      id: 17723242, name: Dev Bootcamp, lon: -87.637566, lat: 41.88969, state: IL}
+    time: 1434409200000
+    updated: 1434425138000
+    waitlist_count: 0
+    rating: {count: 1, average: 5}
+    description: |-
+      <p><b>The Paper:<br/></b>A description of 北斎 Hokusai, a real time system which is able to capture frequency information for streams of arbitrary sequences of symbols. The algorithm uses the CountMin sketch as its basis and exploits the fact that sketching is linear. It provides real time statistics of arbitrary events, e.g. streams of queries as a function of time. We use a factorizing approximation to provide point estimates at arbitrary (time, item) combinations. Queries can be answered in constant time.</p> <p><a href="http://www.auai.org/uai2012/papers/231.pdf"><a href="http://www.auai.org/uai2012/papers/231.pdf" class="linkified">http://www.auai.org/uai2012/papers/231.pdf</a></a></p> <p>
+
+
+
+      <b>The Speaker:<br/></b>Hailing from Brooklyn, Shaker is a crazy-looking dude who engineers crazy things at Belly (previously, The Onion). He’s sometimes on The Twitter, so Twitter at him at <a href="http://www.twitter.com/@shakerdev">www.twitter.com/@shakerdev</a></p> <p>
+
+      <b>Schedule:</b><br/><b>6:00-6:30</b> Food and Socializing<br/><b>6:30-7:30</b> Presentation and Discussion</p>
+    event_url: http://www.meetup.com/Papers-We-Love-Chicago/events/222636732/
+  - headcount: 0
+    created: 1433876740000
+    yes_rsvp_count: 14
+    group: {join_mode: open, created: 1404980919000, name: Papers We Love Chicago,
+      group_lon: -87.66999816894531, id: 15617092, urlname: Papers-We-Love-Chicago,
+      group_lat: 41.970001220703125, who: Readers}
+    id: '223132841'
+    utc_offset: -18000000
+    visibility: public
+    name: 'SWIM: Scalable Group Membership Protocol'
+    maybe_rsvp_count: 0
     status: upcoming
     venue: {address_1: '351 W. Hubbard, Suite 700', country: us, city: Chicago, repinned: false,
       id: 17723242, name: Dev Bootcamp, lon: -87.637566, lat: 41.88969, state: IL}
-    time: 1431385200000
-    updated: 1429724494000
+    time: 1437606000000
+    updated: 1434127302000
     waitlist_count: 0
-    description: <p>An abstract and bio will be posted soon!</p> <p><b>The Paper:</b><br/><a href="http://www.cc.gatech.edu/~isbell/reading/papers/Rish.pdf"><a href="http://www.cc.gatech.edu/~isbell/reading/papers/Rish.pdf" class="linkified">http://www.cc.gatech.edu/~isbell/reading/papers/Rish.pdf</a></a></p>
-    event_url: http://www.meetup.com/Papers-We-Love-Chicago/events/222024292/
+    description: |-
+      <p><b>Schedule: <br/>6:00-6:30</b> Food and Socializing <br/><b>6:30-7:30 </b>Presentation and Discussion</p> <p><b>The Paper</b><br/>The problem of group membership in a networked distributed system can be expressed as the ability to reliably and repeatedly provide the answer a simple question: "who is alive?". </p> <p>Group membership represents a key part of many useful applications, including P2P systems, network overlays, service discovery, and HA clustering. The SWIM protocol addresses severe limitations in the scalability of existing heartbeat-based broadcast membership algorithms by introducing a new approach using weakly-consistent, gossip based information sharing. </p> <p>We'll start by working to understand the general problem space of group membership. Then we'll walk through the details of heartbeat-based membership algorithms and discuss their limitations when it comes to scalability. Once we have a grounding in the domain, we'll talk about the details of the SWIM protocol along with the benefits it provides and the tradeoffs of its strategy. </p> <p>We'll conclude with some discussion of a real-world implementation of SWIM in the Serf project and the role it plays in the Consul service discovery tool.</p> <p><br/><a href="https://www.cs.cornell.edu/~asdas/research/dsn02-swim.pdf"><a href="https://www.cs.cornell.edu/~asdas/research/dsn02-swim.pdf" class="linkified">https://www.cs.cornell.edu/~asdas/research/dsn02-swim.pdf</a></a></p> <p>
+
+
+
+      <b>The Speaker</b><br/>Paul is a Chicago-based software engineer who has consistently found himself drawn to production systems. This affinity has led him to roles ranging from Head of Production Infrastructure at Braintree (online payments software) to Infrastructure Team Lead at Instructure (high-scale AWS-based education software). At HashiCorp, he is now focused on building the infrastructure automation tools he has been dreaming of for his whole career.</p>
+    event_url: http://www.meetup.com/Papers-We-Love-Chicago/events/223132841/
   link: http://www.meetup.com/Papers-We-Love-Chicago/
   lat: 41.970001220703125
   state: IL
@@ -810,7 +991,7 @@ papers-we-love-too:
   who: readers
   country: US
   city: San Francisco
-  members: 819
+  members: 981
   timezone: US/Pacific
   id: 13035792
   utc_offset: -25200000
@@ -1264,7 +1445,7 @@ papers-we-love-too:
     event_url: http://www.meetup.com/papers-we-love-too/events/212147942/
   - headcount: 0
     created: 1412748932000
-    yes_rsvp_count: 170
+    yes_rsvp_count: 154
     group: {join_mode: open, created: 1393203829000, name: Papers we love too, group_lon: -122.4000015258789,
       id: 13035792, urlname: papers-we-love-too, group_lat: 37.77000045776367, who: readers}
     id: '212148242'
@@ -1272,14 +1453,15 @@ papers-we-love-too:
     visibility: public
     name: PWL#14 => Jordan West on Logical Time
     maybe_rsvp_count: 0
-    status: upcoming
+    status: past
     venue: {address_1: 1355 Market St, country: us, city: San Francisco, repinned: false,
       id: 10884002, name: Yammer HQ, lon: -122.416924, lat: 37.776806, state: CA,
       zip: '94103'}
     time: 1430443800000
-    updated: 1429032926000
+    updated: 1430507762000
     waitlist_count: 6
     rsvp_limit: 170
+    rating: {count: 3, average: 4.670000076293945}
     description: |-
       <p><b>Mini</b></p> <p><a href="http://twitter.com/dijkstracula">Nathan Taylor</a> on "Your computer is already a distributed system. Why isn’t your OS?" (<a href="http://www.barrelfish.org/barrelfish_hotos09.pdf" class="linkified">http://www.barrelfish.org/barrelfish_hotos09.pdf</a>). </p> <p>From Nathan: <i>"This is one in a long line of papers advocating for a loosely-coupled, service-oriented operating system architecture, an argument that extends back to the dawn of systems research.  Alternative OSs like microkernels have long been considered more stable and easier to reason about by the systems community, but the performance overhead that comes with running them means typically our OSs still resemble the ones from the '60s.  The authors have spun the "it will be too slow" argument on its head by extrapolating hardware trends and adopting terminology from the distributed systems community, and end up making a compelling case for their design not only being the _only_ path forward, but the time is now to begin adopting their techniques.  The paper is punchy, argues its point cogently, and served as a springboard for further work by the same group of researchers."</i></p> <p>
 
@@ -1287,86 +1469,112 @@ papers-we-love-too:
       <b>Nathan's Bio</b></p> <p>Nathan is currently working on low-latency content distribution at <a href="http://www.fastly.com">Fastly</a> and has previously hacked on improving the performance of language runtimes and OS hypervisors. His first exposure to OS research came as a graduate student at the University of British Columbia.</p> <p>
 
 
-      <b>Main Talk</b></p> <p><br/><a href="http://twitter.com/_jrwest">Jordan West</a> stops by and gives us a survey on Logical Time with three papers that cover from 1978 to present day:</p> <p>1. Time, Clocks, and the Ordering of Events in a Distributed System - Leslie Lamport - 1978 - <a href="http://web.stanford.edu/class/cs240/readings/lamport.pdf"><a href="http://web.stanford.edu/class/cs240/readings/lamport.pdf" class="linkified">http://web.stanford.edu/class/cs240/readings/lamport.pdf</a></a></p> <p>2. Virtual Time and Global States of Distributed Systems - Friedmann Mattern - 1988 - <a href="https://www.vs.inf.ethz.ch/publ/papers/VirtTimeGlobStates.pdf"><a href="https://www.vs.inf.ethz.ch/publ/papers/VirtTimeGlobStates.pdf" class="linkified">https://www.vs.inf.ethz.ch/publ/papers/VirtTimeGlobStates.pdf</a></a></p> <p>3. Dotted Version Vectors: Efficient Causality Tracking for Distributed Key-Value Stores - Prequica et al - 2012 - <a href="http://gsd.di.uminho.pt/members/vff/dotted-version-vectors-2012.pdf"><a href="http://gsd.di.uminho.pt/members/vff/dotted-version-vectors-2012.pdf" class="linkified">http://gsd.di.uminho.pt/members/vff/dotted-version-vectors-2012.pdf</a></a> </p> <p>From Jordan: <i>"If you are looking to narrow down the homework, I suggest only reading paper #2, it covers the issues w/ #1, and #3 is an extension. All the maths and such can be found in #2"</i></p> <p>
+      <b>Main Talk</b></p> <p><br/><a href="http://twitter.com/_jrwest">Jordan West</a> stops by and gives us a survey on Logical Time with three papers that cover from 1978 to present day:</p> <p>1. Time, Clocks, and the Ordering of Events in a Distributed System - Leslie Lamport - 1978 - <a href="http://web.stanford.edu/class/cs240/readings/lamport.pdf"><a href="http://research.microsoft.com/en-us/um/people/lamport/pubs/time-clocks.pdf" class="linkified">http://research.microsoft.com/en-us/um/people/lamport/pubs/time-clocks.pdf</a></a></p> <p>2. Virtual Time and Global States of Distributed Systems - Friedmann Mattern - 1988 - <a href="https://www.vs.inf.ethz.ch/publ/papers/VirtTimeGlobStates.pdf"><a href="https://www.vs.inf.ethz.ch/publ/papers/VirtTimeGlobStates.pdf" class="linkified">https://www.vs.inf.ethz.ch/publ/papers/VirtTimeGlobStates.pdf</a></a></p> <p>3. Dotted Version Vectors: Efficient Causality Tracking for Distributed Key-Value Stores - Prequica et al - 2012 <a href="http://haslab.uminho.pt/psa/files/dvv-arxiv.pdf"><a href="http://haslab.uminho.pt/psa/files/dvv-arxiv.pdf" class="linkified">http://haslab.uminho.pt/psa/files/dvv-arxiv.pdf</a></a></p> <p>From Jordan: <i>"If you are looking to narrow down the homework, I suggest only reading paper #2, it covers the issues w/ #1, and #3 is an extension. All the maths and such can be found in #2"</i></p> <p>
 
 
       <b>Jordan's Bio</b></p> <p>Jordan West (@_jrwest) is a distributed systems practitioner and open source contributor with a passion for functional programming. He recently worked on the core distributed systems and key/value storage components of Riak, an open-source distributed datastore, implementing major features such as a new reliable broadcast protocol and replicated metadata store. He now spends time working on other distributed systems include Apache Cassandra. When not working on distributed databases or reading papers you can usually find Jordan outside with playing with his dogs. </p>
     event_url: http://www.meetup.com/papers-we-love-too/events/212148242/
   - headcount: 0
     created: 1412823869000
-    yes_rsvp_count: 103
+    yes_rsvp_count: 182
     group: {join_mode: open, created: 1393203829000, name: Papers we love too, group_lon: -122.4000015258789,
       id: 13035792, urlname: papers-we-love-too, group_lat: 37.77000045776367, who: readers}
     id: '212348392'
     utc_offset: -25200000
     visibility: public
-    name: PWL#15 => Lindsey Kuper on Ribbon Proofs for Separation Logic
+    name: PWL#15 => Devon O'Dell - Nonblocking Algorithms & Scalable Multicore Programming
     maybe_rsvp_count: 0
-    status: upcoming
-    venue: {address_1: 1355 Market St, country: us, city: San Francisco, repinned: false,
-      id: 10884002, name: Yammer HQ, lon: -122.416924, lat: 37.776806, state: CA,
-      zip: '94103'}
+    status: past
+    venue: {address_1: 88 Colin P Kelly Jr Street, country: us, city: San Francisco,
+      repinned: false, id: 16345442, name: GitHub HQ 3.0, lon: -122.391251, lat: 37.782269,
+      state: CA, zip: '94107'}
     time: 1432258200000
-    updated: 1429033308000
+    updated: 1432351997000
     waitlist_count: 0
+    rsvp_limit: 188
+    rating: {count: 3, average: 5}
     description: |-
       <p><b>PWL Mini </b></p> <p><a href="http://twitter.com/clarkbreyman">Clark Breyman</a> on "The Magical Number Seven, Plus or Minus Two: Some Limits on Our Capacity for Processing Information" (<a href="http://psychclassics.yorku.ca/Miller/)"><a href="http://psychclassics.yorku.ca/Miller/" class="linkified">http://psychclassics.yorku.ca/Miller/</a>)</a> </p> <p>From Clark:<i>"Through a CS practitioner's lens. It's pretty simple and powerful - I've used it repeatedly as a guiding principle when doing anything from UI to systems design. "</i></p> <p><br/><b>Clark's Bio</b></p> <p>Clark Breyman is an principal engineer with Yammer's infrastructure team where he applies a combination of code, OCD, and war stories to make life easier for our product engineers. When not fighting entropy, he enjoys San Francisco, Lindy Hop, yoga and natural language processing. </p> <p>
 
 
-      <b>Main Talk</b></p> <p><a href="http://composition.al/">Lindsey Kuper</a> on "Ribbon Proofs for Separation Logic" by John Wickerson, Mike Dodds, and Matthew Parkinson (<a href="http://www.doc.ic.ac.uk/~jpw48/papers/ribbons_esop13.pdf"><a href="http://www.doc.ic.ac.uk/~jpw48/papers/ribbons_esop13.pdf" class="linkified">http://www.doc.ic.ac.uk/~jpw48/papers/ribbons_esop13.pdf</a></a>)</p> <p>
+      <b>Main Talk</b></p> <p><a href="https://twitter.com/dhobsd">Devon O'Dell</a> on "Nonblocking Algorithms and Scalable Multicore Programming, Exploring some alternatives to lock-based synchronization" by Samy Al Bahra  (<a href="https://queue.acm.org/detail.cfm?id=2492433"><a href="https://queue.acm.org/detail.cfm?id=2492433" class="linkified">https://queue.acm.org/detail.cfm?id=2492433</a></a>)</p> <p>Devon tells us: <i>"Apart from being a fantastic primer on designing portable concurrent data structures, this well-sourced paper provides a number of captivating ideas on thinking about, modeling, and solving concurrency and contention problems."</i></p> <p>
 
 
-      <b>Lindsey's Bio </b></p> <p><a href="http://composition.al/">Lindsey Kuper</a> is a programming languages researcher, recidivist Hacker School resident, and co-founder and organizer of !!Con. She recently defended her Ph.D. in computer science at Indiana University and now lives in California with her husband and their two cats.</p>
+      <b>Devon's Bio </b></p> <p>Devon H. O'Dell is a recovering competitive Guitar Hero and Rock Band addict, but still occasionally enjoys rhythm games and jamming on his ESP Ltd H7-2015. Today, he is a software engineer at Fastly, where he contributes primarily to the performance and debugging of low-level systems. Prior to Fastly, Devon was Lead Software Architect at Message Systems, and contributed heavily to the Momentum high-performance messaging platform. His experience over the last 15 years ranges from web applications to embedded systems firmware (and most areas in-between). His primary technical interests are developing and debugging high-performance, concurrent network systems software and related tools.</p>
     event_url: http://www.meetup.com/papers-we-love-too/events/212348392/
   - headcount: 0
     created: 1425013772000
-    yes_rsvp_count: 11
+    yes_rsvp_count: 176
     group: {join_mode: open, created: 1393203829000, name: Papers we love too, group_lon: -122.4000015258789,
       id: 13035792, urlname: papers-we-love-too, group_lat: 37.77000045776367, who: readers}
     id: '220795812'
     utc_offset: -25200000
     visibility: public
-    name: PWL#16=>Sargun Dhillon on TBD
+    name: PWL#16=>Sargun Dhillon on Facebook Haystack
     maybe_rsvp_count: 0
-    status: upcoming
-    time: 1435282200000
-    updated: 1425014378000
-    waitlist_count: 0
-    description: <p>More information soon!</p>
+    status: past
+    venue: {address_1: 88 Colin P Kelly Jr Street, country: us, city: San Francisco,
+      repinned: false, id: 16345442, name: GitHub HQ 3.0, lon: -122.391251, lat: 37.782269,
+      state: CA, zip: '94107'}
+    time: 1435714200000
+    updated: 1435726430000
+    waitlist_count: 7
+    rsvp_limit: 180
+    rating: {count: 0, average: 0}
+    description: |-
+      <p><b>Mini</b></p> <p>Kyle Isom on "Out of the Tarpit" by Ben Moseley and Peter Marks (<a href="http://shaffner.us/cs/papers/tarpit.pdf" class="linkified">http://shaffner.us/cs/papers/tarpit.pdf</a>)</p> <p>About the paper: Software inevitably grows complex as it grows in scope. Out of the Tar Pit puts forward some useful, actionable ideas for how we can manage complexity in our programs by looking at how we can reduce state in our systems.</p> <p>Kyle is a systems engineer in the Bay area</p> <p><br/><b>Main Talk</b></p> <p><a href="https://twitter.com/sargun">Sargun</a> will present the "Facebook Haystack" by Doug Beaver, Sanjeev Kumar, Harry C. Li, Jason Sobel, and Peter Vajgel (<a href="http://static.usenix.org/legacy/events/osdi10/tech/full_papers/Beaver.pdf"><a href="http://static.usenix.org/legacy/events/osdi10/tech/full_papers/Beaver.pdf" class="linkified">http://static.usenix.org/legacy/events/osdi10/tech/full_papers/Beaver.pdf</a></a>).</p> <p>Sargun tells us: "It presents a simple storage architecture, and distributed file system that takes relatively simple components and builds a massively scalable storage system out of them, for a real-world problem. In addition to this, some material from the follow-up paper may be included (<a href="http://www.cs.cornell.edu/~qhuang/papers/sosp_fbanalysis.pdf"><a href="http://www.cs.cornell.edu/~qhuang/papers/sosp_fbanalysis.pdf" class="linkified">http://www.cs.cornell.edu/~qhuang/papers/sosp_fbanalysis.pdf</a></a>)"</p> <p>
+
+
+      Sargun's Bio:</p> <p><a href="https://twitter.com/sargun">Sargun Dhillon</a> (@sargun) is interested in schemes for efficient, flexible computer networks to enable the next generation of applications. He comes from an operations background, and spends much of his time thinking about how we can make distributed systems, networking, and databases friendlier to run.</p> <p>
+
+
+
+      <b>Meeting mechanics</b></p> <p>Doors open at 6:30 pm; the presentation will begin at 7:00 pm; and, yes, there will be food. </p> <p>After the paper is presented, we will open up the floor for discussion and questions.  </p> <p>Normally we end up all meetings socializing at a bar. </p>
     event_url: http://www.meetup.com/papers-we-love-too/events/220795812/
   - headcount: 0
     created: 1425014423000
-    yes_rsvp_count: 10
+    yes_rsvp_count: 82
     group: {join_mode: open, created: 1393203829000, name: Papers we love too, group_lon: -122.4000015258789,
       id: 13035792, urlname: papers-we-love-too, group_lat: 37.77000045776367, who: readers}
     id: '220795969'
     utc_offset: -25200000
     visibility: public
-    name: PWL#17=> Ben Sigelman on TBD
+    name: 'PWL#17=> Ben Sigelman on Spanner: Google’s Globally-Distributed Database'
     maybe_rsvp_count: 0
     status: upcoming
     time: 1437701400000
-    updated: 1425014423000
+    updated: 1435816104000
     waitlist_count: 0
+    rsvp_limit: 180
+    description: |-
+      <p><b>Mini</b></p> <p><a href="http://nerd.kelseyinnis.com/">Kelsey Gilmore-Innis</a> on "Information Escrows by Ian Ayres &amp; Cait Unkovich" (<a href="http://repository.law.umich.edu/cgi/viewcontent.cgi?article=1091&amp;context=mlr"><a href="http://repository.law.umich.edu/cgi/viewcontent.cgi?article=1091&amp;context=mlr" class="linkified">http://repository.law.umich.edu/cgi/viewcontent.cgi?article=1091&amp;context=mlr</a></a>)</p> <p><a href="https://twitter.com/_K_E_L_S_E_Y">Kelsey</a> is the Director of Technology at Sexual Health Innovations, where they are currently building Callisto (<a href="http://www.projectcallisto.org/">www.projectcallisto.org</a>) based on Ayers &amp; Unkovich's paper. She'll be talking about the joys and pitfalls of going from academic paper to production code which should ring familiar whether your source is Microsoft Research or the Michigan Law Review.</p> <p><br/><b>Main Talk</b></p> <p><a href="http://bensigelman.org/">Ben Sigelman </a>will present Spanner: Google’s Globally-Distributed Database ( <a href="http://static.googleusercontent.com/media/research.google.com/en/us/archive/spanner-osdi2012.pdf"><a href="http://static.googleusercontent.com/media/research.google.com/en/us/archive/spanner-osdi2012.pdf" class="linkified">http://static.googleusercontent.com/media/research.google.com/en/us/archive/spanner-osdi2012.pdf</a></a>)</p> <p>Ben tells us:<i>Spanner is Google's scalable, globally-distributed database. In my view, it's one of the best papers to come out of Google, on par with the well-known MapReduce and Bigtable work. I will describe the Spanner design and architecture, and I will also do my best to provide context and color from my time at Google and contact with the Spanner team, hopefully without violating any NDAs! Though Spanner is ultimately a database, the greatest contributions of the paper are arguably more generally applicable, and I will try to focus on those aspects of the technology.</i></p> <p><b><br/></b></p> <p><b>Ben's Bio</b></p> <p><a href="https://twitter.com/el_bhs">Ben</a> is a cofounder at Resonance Labs, a pre-launch company working to transform the way that developers build, understand, and interact with distributed systems. Prior to starting that company, Ben spent nine years at Google, which he left as a senior staff engineer. During his tenure there, he led the design for several large (~1M-process) distributed systems. The most significant of these were Dapper, which is an always-on distributed tracing system, and Monarch, which is a high-availability timeseries collection, storage, and query system; both are important pieces of Google’s production infrastructure today.</p> <p>
+
+
+      <b>Meeting mechanics</b></p> <p>Doors open at 6:30 pm; the presentation will begin at 7:00 pm; and, yes, there will be food. </p> <p>After the paper is presented, we will open up the floor for discussion and questions.  </p> <p>Normally we end up all meetings socializing at a bar. </p>
     event_url: http://www.meetup.com/papers-we-love-too/events/220795969/
   - headcount: 0
     created: 1425014463000
-    yes_rsvp_count: 7
+    yes_rsvp_count: 22
     group: {join_mode: open, created: 1393203829000, name: Papers we love too, group_lon: -122.4000015258789,
       id: 13035792, urlname: papers-we-love-too, group_lat: 37.77000045776367, who: readers}
     id: '220795976'
     utc_offset: -25200000
     visibility: public
-    name: PWL#18 => Bob Poekert on TBD
+    name: PWL#18 => Bob Poekert on COOLCAT
     maybe_rsvp_count: 0
     status: upcoming
     time: 1440120600000
-    updated: 1425623001000
+    updated: 1435813077000
     waitlist_count: 0
+    description: |-
+      <p><b>Mini</b></p> <p><a href="http://web.stanford.edu/~dbroock/Stanford/David_Broockman.html">David Brockman </a>on TBD</p> <p>
+
+
+      <b>David's Bio:</b> <a href="http://web.stanford.edu/~dbroock/Stanford/David_Broockman.html">David Broockman</a> is an Assistant Professor of Political Economy at the Stanford Graduate School of Business. His research uses randomized controlled experiments to help understand public opinion, voter behavior, and political representation. His work on these topics has appeared in the American Journal of Political Science, Political Analysis, and other academic journals, and been discussed in the New York Times, Washington Post, and many other media outlets. David has also helped design hundreds of experiments for the field, the web, email, mobile, and mail in the academic, political, and private sectors, including with the Analyst Institute, CREDO, and Google.</p> <p><br/><b>Main Talk</b></p> <p><a href="https://twitter.com/bobpoekert">Bob Poekert</a> will present COOLCAT (<a href="http://wing.comp.nus.edu.sg/downloads/keyphraseCorpus/58/58.pdf"><a href="http://wing.comp.nus.edu.sg/downloads/keyphraseCorpus/58/58.pdf" class="linkified">http://wing.comp.nus.edu.sg/downloads/keyphraseCorpus/58/58.pdf</a></a>) by Daniel Barbara, Julia Couto, and Yi Li.</p> <p>From Bob <i>"The paper presents an entity resolution algorithm based on minimizing entropy within clusters. Entity resolution (aka identity resolution aka categorical clustering) is a problem that comes up a lot in practice but which most people try to solve just by heuristics because they don't know that it's something that there's research on. This approach is pretty general (it applies to anything that you can represent as discrete field-value pairs), and the math isn't too overwhelming. Also I like the name."</i></p> <p><br/><b>Bob's Bio:</b></p> <p><a href="https://twitter.com/sargun">&lt;/a&gt;</p> <p>Bob (&lt;a href="http://twitter.com/bobpoekert"&gt;@bobpoekert</a>) works at the intersection of data mining and databases at Factual, and got hooked on CS papers after reading the Kademlia paper in high school while trying to figure out how Kazaa worked. Bob also does weird stuff with image processing (@a_quilt_bot probably being the most popular example).</p> <p><b><br/></b></p> <p><b>Meeting mechanics</b></p> <p>Doors open at 6:30 pm; the presentation will begin at 7:00 pm; and, yes, there will be food. </p> <p>After the paper is presented, we will open up the floor for discussion and questions.  </p> <p>Normally we end up all meetings socializing at a bar. </p>
     event_url: http://www.meetup.com/papers-we-love-too/events/220795976/
   - headcount: 0
     created: 1425013986000
-    yes_rsvp_count: 6
+    yes_rsvp_count: 28
     group: {join_mode: open, created: 1393203829000, name: Papers we love too, group_lon: -122.4000015258789,
       id: 13035792, urlname: papers-we-love-too, group_lat: 37.77000045776367, who: readers}
     id: '220795855'
@@ -1389,7 +1597,7 @@ papers-we-love-too:
     event_url: http://www.meetup.com/papers-we-love-too/events/220795855/
   - headcount: 0
     created: 1425622864000
-    yes_rsvp_count: 6
+    yes_rsvp_count: 12
     group: {join_mode: open, created: 1393203829000, name: Papers we love too, group_lon: -122.4000015258789,
       id: 13035792, urlname: papers-we-love-too, group_lat: 37.77000045776367, who: readers}
     id: '220964296'
@@ -1408,7 +1616,7 @@ papers-we-love-too:
   state: CA
   category: {name: tech, id: 34, shortname: tech}
   urlname: papers-we-love-too
-  rating: 4.97
+  rating: 4.95
   description: |-
     <p>San Francisco chapter of <a href="http://www.meetup.com/papers-we-love" target="_blank" class="linkified">http://www.meetup.com/papers-we-love</a> </p>
     <p>What was the last paper within the realm of computing you read? What did it inspire you to build or tinker with? Come share the ideas in an awesome academic/research publication with fellow engineers, programmers, and paper-readers. Lead a session and show off code that you wrote that implements these ideas or just give us the lowdown about the paper. Otherwise, just come, listen, learn, and discuss.</p>
@@ -1421,20 +1629,20 @@ Papers-we-love-Bangalore:
   topics:
   - {urlkey: lisp, name: Lisp & Scheme, id: 2400}
   - {urlkey: edtech, name: Education & Technology, id: 7203}
-  - {urlkey: programming, name: Programming, id: 17627}
   - {urlkey: programming-languages, name: Programming Languages, id: 17628}
   - {urlkey: scala, name: Scala, id: 17936}
   - {urlkey: computer-science, name: Computer Science, id: 21751}
   - {urlkey: haskell, name: Haskell, id: 22791}
   - {urlkey: functional-programming, name: Functional Programming, id: 22792}
   - {urlkey: clojure, name: Clojure, id: 29661}
+  - {urlkey: computer-programming, name: Computer programming, id: 48471}
   - {urlkey: computing, name: Computing, id: 50927}
   - {urlkey: compilers, name: Compilers, id: 59684}
   created: 1405395667000
   who: readers
   country: IN
   city: Bangalore
-  members: 512
+  members: 604
   timezone: Asia/Calcutta
   id: 15721132
   utc_offset: 19800000
@@ -1706,8 +1914,8 @@ Papers-we-love-Bangalore:
 Papers-We-Love-Hamburg:
   topics:
   - {urlkey: science, name: Science, id: 85}
-  - {urlkey: programming, name: Programming, id: 17627}
   - {urlkey: computer-science, name: Computer Science, id: 21751}
+  - {urlkey: computer-programming, name: Computer programming, id: 48471}
   - {urlkey: data-science, name: Data Science, id: 102811}
   - {urlkey: computational-science-and-engineering, name: Computational Science and Engineering,
     id: 132160}
@@ -1716,7 +1924,7 @@ Papers-We-Love-Hamburg:
   who: readers
   country: DE
   city: Hamburg
-  members: 111
+  members: 136
   timezone: Europe/Berlin
   id: 17505362
   utc_offset: 7200000
@@ -1822,12 +2030,12 @@ Papers-We-Love-Seattle:
   - {urlkey: research, name: Research & Development Engineer, id: 10028}
   - {urlkey: technology, name: Technology, id: 10579}
   - {urlkey: intellectual-discussion, name: Intellectual Discussion, id: 15083}
-  - {urlkey: programming, name: Programming, id: 17627}
   - {urlkey: learning, name: Learning, id: 18296}
   - {urlkey: engineering, name: Engineering, id: 21750}
   - {urlkey: computer-science, name: Computer Science, id: 21751}
   - {urlkey: technology-professionals, name: Technology Professionals, id: 22203}
   - {urlkey: researchers, name: Researchers, id: 32774}
+  - {urlkey: computer-programming, name: Computer programming, id: 48471}
   - {urlkey: science-and-technolgy, name: Science and Technolgy, id: 65452}
   - {urlkey: intellectual-curiosity, name: Intellectual Curiosity, id: 79032}
   - {urlkey: new-science-discoveries, name: New Science Discoveries, id: 230401}
@@ -1835,7 +2043,7 @@ Papers-We-Love-Seattle:
   who: Members
   country: US
   city: Seattle
-  members: 305
+  members: 365
   timezone: US/Pacific
   id: 16583562
   utc_offset: -25200000
@@ -2060,7 +2268,7 @@ Papers-We-Love-Seattle:
   - headcount: 0
     created: 1429862644000
     how_to_find_us: Use the 4th Ave entrance, up to 3rd floor and take elevator to 16 floor.
-    yes_rsvp_count: 18
+    yes_rsvp_count: 31
     group: {join_mode: open, created: 1408937100000, name: Papers We Love @ Seattle,
       group_lon: -122.33000183105469, id: 16583562, urlname: Papers-We-Love-Seattle,
       group_lat: 47.61000061035156, who: Members}
@@ -2069,23 +2277,115 @@ Papers-We-Love-Seattle:
     visibility: public
     name: 'PWL#7: The LCA Problem Revisited'
     maybe_rsvp_count: 0
-    status: upcoming
+    status: past
     venue: {address_1: '1301 5th Avenue #1600', country: us, city: Seattle, repinned: false,
       id: 9757242, name: Whitepages, lon: -122.334396, lat: 47.609005, state: WA,
       zip: '98101'}
     time: 1431653400000
     duration: 5400000
-    updated: 1429862886000
+    updated: 1431662756000
     waitlist_count: 0
     rsvp_limit: 150
+    rating: {count: 1, average: 5}
     description: <p><i>This time Ankur Chauhan will present the paper: <b>The LCA Problem Revisited</b> </i>by Michael A. Bender and Martin Farach-Colton. The lowest common ancestor problem was first stated in 1973 and it took 11 years before an optimal solution was discovered, and another 16 before an understandable and implementable solution with the same bounds was presented. This deceptively simple problem comes together in the end and uses techniques that are powerful in plenty of other places. </p> <p><br/>Link to the paper: <a href="http://www.ics.uci.edu/~eppstein/261/BenFar-LCA-00.pdf"><a href="http://www.ics.uci.edu/~eppstein/261/BenFar-LCA-00.pdf" class="linkified">http://www.ics.uci.edu/~eppstein/261/BenFar-LCA-00.pdf</a></a></p>
     event_url: http://www.meetup.com/Papers-We-Love-Seattle/events/222065399/
+  - headcount: 0
+    created: 1433039703000
+    how_to_find_us: Use the 4th Ave entrance, up to 3rd floor and take elevator to 16 floor.
+    yes_rsvp_count: 37
+    group: {join_mode: open, created: 1408937100000, name: Papers We Love @ Seattle,
+      group_lon: -122.33000183105469, id: 16583562, urlname: Papers-We-Love-Seattle,
+      group_lat: 47.61000061035156, who: Members}
+    id: '222902098'
+    utc_offset: -25200000
+    visibility: public
+    name: 'PWL#8: Chain Replication for Supporting High Throughput and Availability'
+    maybe_rsvp_count: 0
+    status: past
+    venue: {address_1: '1301 5th Avenue #1600', country: us, city: Seattle, repinned: false,
+      id: 9757242, name: Whitepages, lon: -122.334396, lat: 47.609005, state: WA,
+      zip: '98101'}
+    time: 1434072600000
+    duration: 5400000
+    updated: 1434080044000
+    waitlist_count: 0
+    rsvp_limit: 150
+    rating: {count: 0, average: 0}
+    description: '<p>David Murray will present chain replication: a high-throughput
+      alternative to quorum-based replication protocols like PAXOS and RAFT.</p> <p><i><b>Abstract</b></i></p>
+      <p>Chain replication is a new approach to coordinating clusters of fail-stop
+      storage servers. The approach is intended for supporting large-scale storage
+      services that exhibit high throughput and availability without sacrificing strong
+      consistency guarantees. Besides outlining the chain replication protocols themselves,
+      simulation experiments explore the performance characteristics of a prototype
+      implementation. Throughput, availability, and several objectplacement strategies
+      (including schemes based on distributed hash table routing) are discussed.</p>
+      <p><br/>Link to the paper: <a href="http://www.cs.cornell.edu/home/rvr/papers/osdi04.pdf"
+      class="linkified">http://www.cs.cornell.edu/home/rvr/papers/osdi04.pdf</a></p>'
+    event_url: http://www.meetup.com/Papers-We-Love-Seattle/events/222902098/
+  - headcount: 0
+    created: 1434223037000
+    yes_rsvp_count: 22
+    group: {join_mode: open, created: 1408937100000, name: Papers We Love @ Seattle,
+      group_lon: -122.33000183105469, id: 16583562, urlname: Papers-We-Love-Seattle,
+      group_lat: 47.61000061035156, who: Members}
+    id: '223224228'
+    utc_offset: -25200000
+    visibility: public
+    name: 'PWL#9: Dedalus: Datalog in Time and Space'
+    maybe_rsvp_count: 0
+    status: upcoming
+    venue: {address_1: '1301 5th Avenue #1600', country: us, city: Seattle, repinned: false,
+      id: 9757242, name: Whitepages, lon: -122.334396, lat: 47.609005, state: WA,
+      zip: '98101'}
+    time: 1436491800000
+    duration: 10800000
+    updated: 1435999282000
+    waitlist_count: 0
+    description: '<p>Derek Elkins will present on "Dedalus: Datalog in Time and Space"
+      touching also on some follow-on work.</p> <p><b>Abstract. </b></p> <p>Recent
+      research has explored using Datalog-based languages to express a distributed
+      system as a set of logical invariants. Two properties of distributed systems
+      proved difficult to model in Datalog. First, the state of any such system evolves
+      with its execution. Second, deductions in these systems may be arbitrarily delayed,
+      dropped, or reordered by the unreliable network links they must traverse. Previous
+      efforts addressed the former by extending Datalog to include updates, key constraints,
+      persistence and events, and the latter by assuming ordered and reliable delivery
+      while ignoring delay. These details have a semantics outside Datalog, which
+      increases the complexity of the language and its interpretation, and forces
+      programmers to think operationally. We argue that the missing component from
+      these previous languages is a notion of time.</p> <p>In this paper we present
+      Dedalus, a foundation language for programming and reasoning about distributed
+      systems. Dedalus reduces to a subset of Datalog with negation, aggregate functions,
+      successor and choice, and adds an explicit notion of logical time to the language.
+      We show that Dedalus provides a declarative foundation for the two signature
+      features of distributed systems: mutable state, and asynchronous processing
+      and communication. Given these two features, we address two important properties
+      of programs in a domain-specific manner: a notion of safety appropriate to non-terminating
+      computations, and stratified monotonic reasoning with negation over time. We
+      also provide conservative syntactic checks for our temporal notions of safety
+      and stratification. Our experience implementing full-featured systems in variants
+      of Datalog suggests that Dedalus is well-suited to the specification of rich
+      distributed services and protocols, and provides both cleaner semantics and
+      richer tests of correctness.</p> <p>Tech Report version: <a href="http://www.eecs.berkeley.edu/Pubs/TechRpts/2009/EECS-2009-173.html"><a
+      href="http://www.eecs.berkeley.edu/Pubs/TechRpts/2009/EECS-2009-173.html" class="linkified">http://www.eecs.berkeley.edu/Pubs/TechRpts/2009/EECS-2009-173.html</a></a><br/>Published
+      version: <a href="http://db.cs.berkeley.edu/papers/datalog2011-dedalus.pdf"><a
+      href="http://db.cs.berkeley.edu/papers/datalog2011-dedalus.pdf" class="linkified">http://db.cs.berkeley.edu/papers/datalog2011-dedalus.pdf</a></a></p>
+      <p>Earlier work:</p> <p>Overlog - <a href="http://db.cs.berkeley.edu/netdb-09/"><a
+      href="http://db.cs.berkeley.edu/netdb-09/" class="linkified">http://db.cs.berkeley.edu/netdb-09/</a></a></p>
+      <p>Related work:<br/>Bloom - <a href="http://www.bloom-lang.net/"><a href="http://www.bloom-lang.net/"
+      class="linkified">http://www.bloom-lang.net/</a></a></p> <p>The CALM and CRON
+      Conjectures (which have since been proven): <a href="http://www.bloom-lang.net/calm/"><a
+      href="http://www.bloom-lang.net/calm/" class="linkified">http://www.bloom-lang.net/calm/</a></a>
+      (I recommend the keynote talk and paper, "The Declarative Imperative" which
+      introduced the CALM and CRON conjectures.)</p>'
+    event_url: http://www.meetup.com/Papers-We-Love-Seattle/events/223224228/
   link: http://www.meetup.com/Papers-We-Love-Seattle/
   lat: 47.61000061035156
   state: WA
   category: {name: tech, id: 34, shortname: tech}
   urlname: Papers-We-Love-Seattle
-  rating: 4.58
+  rating: 4.65
   description: |-
     <p>What was the last paper within the realm of computing you read and loved? What did it inspire you to build or tinker with? Come share the ideas in an awesome academic/research paper with fellow engineers, programmers, and paper-readers. Lead a session and show off code that you wrote that implements these ideas or just give us the lowdown about the paper (because of HARD MATH!). Otherwise, just come, listen, and discuss.<br>
 
@@ -2101,13 +2401,13 @@ Papers-We-Love-Reykjavik:
   - {urlkey: softwaredev, name: Software Development, id: 3833}
   - {urlkey: cloud-computing, name: Cloud Computing, id: 15167}
   - {urlkey: computer, name: Computers, id: 15225}
-  - {urlkey: programming, name: Programming, id: 17627}
   - {urlkey: programming-languages, name: Programming Languages, id: 17628}
   - {urlkey: computer-science, name: Computer Science, id: 21751}
   - {urlkey: functional-programming, name: Functional Programming, id: 22792}
   - {urlkey: high-scalability-computing, name: High Scalability Computing, id: 24410}
   - {urlkey: academia, name: Academia, id: 28269}
   - {urlkey: machine-learning, name: Machine Learning, id: 29971}
+  - {urlkey: computer-programming, name: Computer programming, id: 48471}
   - {urlkey: systems, name: Systems, id: 53017}
   - {urlkey: distributed-systems, name: Distributed Systems, id: 113032}
   - {urlkey: distributed-computing, name: distributed computing, id: 586642}
@@ -2116,7 +2416,7 @@ Papers-We-Love-Reykjavik:
   who: Members
   country: IS
   city: Reykjavík
-  members: 35
+  members: 43
   timezone: Atlantic/Reykjavik
   id: 17364992
   utc_offset: 0
@@ -2178,6 +2478,49 @@ Papers-We-Love-Reykjavik:
       request</a>. Also, if you have any ideas/questions about this meetup or the
       Papers-We-Love org, just open up an issue.</p>'
     event_url: http://www.meetup.com/Papers-We-Love-Reykjavik/events/211846292/
+  - headcount: 0
+    created: 1432515631000
+    yes_rsvp_count: 3
+    group: {join_mode: open, created: 1412290750000, name: 'Papers We Love, Reykjavík',
+      group_lon: -21.920000076293945, id: 17364992, urlname: Papers-We-Love-Reykjavik,
+      group_lat: 64.13999938964844, who: Members}
+    id: '222757147'
+    utc_offset: 0
+    visibility: public
+    name: '#1 => TAO: Facebook''s Distributed Data Store for the Social Graph'
+    maybe_rsvp_count: 0
+    status: past
+    time: 1432836000000
+    updated: 1432847842000
+    waitlist_count: 0
+    rating: {count: 0, average: 0}
+    description: '<p>This time it will be very informal, we will meet up at the coffee
+      house <a href="https://www.facebook.com/stofan.cafe">Stofan Café</a> as they
+      have comfortable couches, beers and good coffee.</p> <p>Instead of having a
+      speaker giving a talk on the paper we will simply try to explain it to each
+      other and have some fun discussions that almost always go way off topic :)<br/>Reading
+      the paper is highly recommended but don''t stress it.</p> <p><br/>--<br/>The
+      paper we will discuss is "TAO: Facebook''s Distributed Data Store for the Social
+      Graph".</p> <p>"A single Facebook page may aggregate and filter hundreds of
+      items from the social graph. We present each user with content tailored to them,
+      and we filter every item with privacy checks that take into account the current
+      viewer. This extreme customization makes it infeasible to perform most aggregation
+      and filtering when content is created; instead we resolve data dependencies
+      and check privacy each time the content is viewed. As much as possible we pull
+      the social graph, rather than pushing it. This implementation strategy places
+      extreme read demands on the graph data store; it must be efficient, highly available,
+      and scale to high query rates."<br/>- Nathan Bronson</p> <p>Abstract:</p> <p><br/>We
+      introduce a simple data model and API tailored for serving the social graph,
+      and TAO, an implementation of this model. TAO is a geographically distributed
+      data store that provides efficient and timely access to the so- cial graph for
+      Facebook’s demanding workload using a fixed set of queries. It is deployed at
+      Facebook, replac- ing memcache for many data types that fit its model. The system
+      runs on thousands of machines, is widely dis- tributed, and provides access
+      to many petabytes of data. TAO can process a billion reads and millions of writes
+      each second. </p> <p><br/>Paper link: <a href="https://facebook.com/download/273893712748848/atc13-bronson.pdf"><a
+      href="https://facebook.com/download/273893712748848/atc13-bronson.pdf" class="linkified">https://facebook.com/download/273893712748848/atc13-bronson.pdf</a></a>&lt;a
+      href="http://www.meetup.com/Papers-We-Love-Reykjavik/events/222757147/"&gt;&lt;/a&gt;</p>'
+    event_url: http://www.meetup.com/Papers-We-Love-Reykjavik/events/222757147/
   link: http://www.meetup.com/Papers-We-Love-Reykjavik/
   lat: 64.13999938964844
   category: {name: tech, id: 34, shortname: tech}
@@ -2210,7 +2553,7 @@ Papers-We-Love-Vienna:
   who: Readers
   country: AT
   city: Vienna
-  members: 75
+  members: 102
   timezone: Europe/Vienna
   id: 18007722
   utc_offset: 7200000
@@ -2347,32 +2690,80 @@ Papers-We-Love-Vienna:
     rating: {count: 1, average: 5}
     description: <p><b>**Please read <a href="http://research.google.com/archive/spanner.html">Google's Spanner paper</a>!**</b></p> <p><a href="https://twitter.com/the_dom">Dominik</a> will lead the discussion — thanks!</p> <p>See you all on the 20th :)</p>
     event_url: http://www.meetup.com/Papers-We-Love-Vienna/events/221356300/
-  - headcount: 0
+  - headcount: 7
     created: 1429577272000
-    yes_rsvp_count: 3
+    photo_album_id: 26164552
+    yes_rsvp_count: 9
     group: {join_mode: open, created: 1414886469000, name: Papers We Love Vienna,
       group_lon: 16.3700008392334, id: 18007722, urlname: Papers-We-Love-Vienna, group_lat: 48.220001220703125,
       who: Readers}
     id: '221984745'
     utc_offset: 7200000
     visibility: public
-    name: Papers We Love June
+    name: Random Forests
     maybe_rsvp_count: 0
-    status: upcoming
+    status: past
     venue: {address_2: U6 Gumpendorfer Strasse, address_1: 'Pater-Schwartz-Gasse 11A,
         1150', country: at, city: Vienna, repinned: false, id: 15700102, name: StockWerk,
       lon: 16.335951, lat: 48.192005}
     time: 1433178000000
-    updated: 1429577355000
+    updated: 1433202232000
+    photos:
+    - photo_link: http://photos3.meetupstatic.com/photos/event/d/2/f/5/600_438174005.jpeg
+      member: {member_id: 30944122, name: Philipp Krenn}
+      created: 1433182366000
+      photo_id: 438174005
+      highres_link: http://photos3.meetupstatic.com/photos/event/d/2/f/5/highres_438174005.jpeg
+      thumb_link: http://photos3.meetupstatic.com/photos/event/d/2/f/5/thumb_438174005.jpeg
+      updated: 1433182368000
+      caption: paper chaos and confusion ;-)
+      photo_album: {photo_album_id: 26164552, event_id: '221984745', group_id: 18007722}
     waitlist_count: 0
     rsvp_limit: 12
-    description: <p>The next meetup will only be in June, since I'm away doing some conferences.</p> <p>But this gives you more time to <b>add your paper suggestions</b> — so we don't turn this into a database / Google meetup group ;-). So please add a specific paper you'd like us to discuss the next time and of course you'll have the honor of leading the discussion!</p>
+    rating: {count: 2, average: 5}
+    description: |-
+      <p><b>**Please read <a href="http://oz.berkeley.edu/~breiman/randomforest2001.pdf">RANDOM FORESTS</a>**</b></p> <p>
+
+
+      Hi all,</p> <p>this time Martin will introduce us to the world of data science with the paper <a href="http://oz.berkeley.edu/~breiman/randomforest2001.pdf">RANDOM FORESTS</a>. As always, please read the paper in advance, so we can have a fruitful discussion. And don't be discouraged by the number of pages, it seems to be typed pretty loosely — let's see how the mathematical formulas come along ;-)</p> <p>See you in June,<br/>Philipp</p>
     event_url: http://www.meetup.com/Papers-We-Love-Vienna/events/221984745/
+  - headcount: 5
+    created: 1433202370000
+    photo_album_id: 26230978
+    yes_rsvp_count: 6
+    group: {join_mode: open, created: 1414886469000, name: Papers We Love Vienna,
+      group_lon: 16.3700008392334, id: 18007722, urlname: Papers-We-Love-Vienna, group_lat: 48.220001220703125,
+      who: Readers}
+    id: '222947760'
+    utc_offset: 7200000
+    visibility: public
+    name: Neural Turing Machines
+    maybe_rsvp_count: 0
+    status: past
+    venue: {address_2: U6 Gumpendorfer Strasse, address_1: 'Pater-Schwartz-Gasse 11A,
+        1150', country: at, city: Vienna, repinned: false, id: 15700102, name: StockWerk,
+      lon: 16.335951, lat: 48.192005}
+    time: 1435597200000
+    updated: 1435623028000
+    photos:
+    - photo_album: {photo_album_id: 26230978, event_id: '222947760', group_id: 18007722}
+      highres_link: http://photos3.meetupstatic.com/photos/event/7/6/9/0/highres_439230352.jpeg
+      photo_id: 439230352
+      created: 1435602559000
+      member: {member_id: 30944122, name: Philipp Krenn}
+      photo_link: http://photos3.meetupstatic.com/photos/event/7/6/9/0/600_439230352.jpeg
+      updated: 1435602561000
+      thumb_link: http://photos3.meetupstatic.com/photos/event/7/6/9/0/thumb_439230352.jpeg
+    waitlist_count: 0
+    rsvp_limit: 12
+    rating: {count: 2, average: 5}
+    description: <p><b>**Please read <a href="http://arxiv.org/abs/1410.5401">Neural Turing Machines</a> (<a href="http://arxiv.org/pdf/1410.5401v2">PDF</a>)**</b></p> <p>This time we'll talk about neural networks and turing machines. pivo will lead the discussion — thanks a lot!</p>
+    event_url: http://www.meetup.com/Papers-We-Love-Vienna/events/222947760/
   link: http://www.meetup.com/Papers-We-Love-Vienna/
   lat: 48.220001220703125
   category: {name: tech, id: 34, shortname: tech}
   urlname: Papers-We-Love-Vienna
-  rating: 4.88
+  rating: 4.93
   description: |-
     <p>In the spirit of the "Papers We Love" groups around the globe we want to start our own version in Vienna:<br>
 
@@ -2383,8 +2774,8 @@ Papers-We-Love-Vienna:
   join_mode: open
 papers-we-love-amsterdam:
   topics:
-  - {urlkey: programming, name: Programming, id: 17627}
   - {urlkey: computer-science, name: Computer Science, id: 21751}
+  - {urlkey: computer-programming, name: Computer programming, id: 48471}
   - {urlkey: high-performance-computing, name: High Performance Computing, id: 77687}
   - {urlkey: distributed-systems, name: Distributed Systems, id: 113032}
   - {urlkey: computational-science-and-engineering, name: Computational Science and Engineering,
@@ -2394,7 +2785,7 @@ papers-we-love-amsterdam:
   who: Readers
   country: NL
   city: Amsterdam
-  members: 139
+  members: 169
   timezone: Europe/Amsterdam
   id: 17545302
   utc_offset: 7200000
@@ -2437,17 +2828,178 @@ papers-we-love-amsterdam:
     rating: {count: 3, average: 4.670000076293945}
     description: <p>We're kicking things off in style. Daan van Berkel (<a href="https://twitter.com/daan_van_berkel">@daan_van_berkel</a>) presents <a href="http://www.lamport.org">Leslie Lamport</a>'s seminal paper <a href="http://research.microsoft.com/en-us/um/people/lamport/pubs/time-clocks.pdf">"Time, Clocks, and the Ordering of Events in a Distributed System"</a>.</p>
     event_url: http://www.meetup.com/papers-we-love-amsterdam/events/219479079/
+  - headcount: 0
+    created: 1430335103000
+    yes_rsvp_count: 33
+    group: {join_mode: open, created: 1413010800000, name: Papers We Love Amsterdam,
+      group_lon: 4.889999866485596, id: 17545302, urlname: papers-we-love-amsterdam,
+      group_lat: 52.369998931884766, who: Readers}
+    id: '222188556'
+    utc_offset: 7200000
+    visibility: public
+    name: 'Spanner: Google''s Globally-Distributed Database'
+    maybe_rsvp_count: 0
+    status: past
+    venue: {country: nl, city: Amsterdam, address_1: 'TomTom  De Ruyterkade 154  1011
+        AC Amsterdam, The Netherlands', name: Tom Tom, lon: 4.90941, id: 19199592,
+      lat: 52.37722, repinned: false}
+    time: 1431450000000
+    updated: 1431502710000
+    waitlist_count: 0
+    rsvp_limit: 55
+    rating: {count: 4, average: 4.75}
+    description: <p>Please join us for our second meetup. Marco Slot will be presenting. You can find the paper (and more) here: <a href="http://research.google.com/archive/spanner.html"><a href="http://research.google.com/archive/spanner.html" class="linkified">http://research.google.com/archive/spanner.html</a></a>.</p>
+    event_url: http://www.meetup.com/papers-we-love-amsterdam/events/222188556/
   link: http://www.meetup.com/papers-we-love-amsterdam/
   lat: 52.369998931884766
   category: {name: tech, id: 34, shortname: tech}
   urlname: papers-we-love-amsterdam
-  rating: 4.67
+  rating: 4.71
   description: |-
     <p>Amsterdam chapter of <a href="http://www.meetup.com/papers-we-love" target="_blank" class="linkified">http://www.meetup.com/papers-we-love</a> </p>
     <p><span>What was the last paper within the realm of computing you read and loved? What did it inspire you to build or tinker with? Come share the ideas in an awesome academic/research paper with fellow engineers, programmers, and paper-readers. Lead a session and show off code that you wrote that implements these ideas or just give us the lowdown about the paper. Otherwise, just come, listen, and discuss in a low ego, friendly environment.</span></p>
     <p><span>Papers We Love has a <a href="https://github.com/papers-we-love/papers-we-love/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a>. Please contact one of the Meetup's organizers if anyone is not following it. Be good to each other and to the PWL community!<br>
 
     </span></p>
+  join_mode: open
+Papers-We-Love-Winnipeg:
+  topics:
+  - {urlkey: opensource, name: Open Source, id: 563}
+  - {urlkey: softwaredev, name: Software Development, id: 3833}
+  - {urlkey: electronics, name: Electronics, id: 7848}
+  - {urlkey: newtech, name: New Technology, id: 9696}
+  - {urlkey: web, name: Web Technology, id: 10209}
+  - {urlkey: programming-languages, name: Programming Languages, id: 17628}
+  - {urlkey: hacking, name: Hacking, id: 21123}
+  - {urlkey: computer-science, name: Computer Science, id: 21751}
+  - {urlkey: functional-programming, name: Functional Programming, id: 22792}
+  - {urlkey: information-security, name: Information Security, id: 32743}
+  - {urlkey: computer-programming, name: Computer programming, id: 48471}
+  - {urlkey: science-technology-engineering-math, name: Science Technology Engineering Math,
+    id: 68682}
+  created: 1422244351000
+  who: Paper Lovers
+  country: CA
+  city: Winnipeg
+  members: 53
+  timezone: Canada/Central
+  id: 18379429
+  utc_offset: -18000000
+  visibility: public
+  name: Papers We Love — Winnipeg
+  organizer: {member_id: 13797332, name: Mak Kolybabi}
+  lon: -97
+  events:
+  - headcount: 0
+    created: 1422380468000
+    how_to_find_us: The door should be unlocked, ring the buzzer if it isn't.
+    yes_rsvp_count: 10
+    group: {join_mode: open, created: 1422244351000, name: Papers We Love — Winnipeg,
+      group_lon: -97, id: 18379429, urlname: Papers-We-Love-Winnipeg, group_lat: 49.90999984741211,
+      who: Paper Lovers}
+    id: '220117454'
+    utc_offset: -18000000
+    visibility: public
+    name: 'PaintBoard: Prototyping Interactive Character Behaviours by Painting Storyboards'
+    maybe_rsvp_count: 0
+    status: past
+    venue: {address_2: 2nd Floor, address_1: 374 Donald Street, country: ca, city: Winnipeg,
+      repinned: false, id: 23597466, name: SkullSpace, lon: -97.14443, phone: +1 204-480-4092,
+      lat: 49.89603, state: MB, zip: R3B 2J2}
+    time: 1427414400000
+    duration: 3600000
+    updated: 1427420643000
+    waitlist_count: 0
+    rating: {count: 0, average: 0}
+    description: |-
+      <p><a href="http://djrea.ca/">Daniel J. Rea</a> will be presenting his <a href="http://djrea.ca/#PaintBoard">Master's thesis</a>, which he successfully defended in January 2015.</p> <p>
+
+      <img src="http://photos1.meetupstatic.com/photos/event/8/e/8/4/600_433776484.jpeg" /></p> <p>
+
+
+
+
+
+
+
+
+
+      <i>The creation of interactive worlds, such as those in video games, often include a set of computer controlled characters that must intelligently act and react in response to dynamic input from the user. These interactive behaviours usually require authors to programmatically define each behaviour, reaction, and interaction the character should take in response to user input across a range of scenarios, a process that can take significant time. While this method can successfully create robust characters, the large development overhead is not conducive to the exploration, prototyping, and testing of new character ideas.</i></p> <p><i>We designed and developed PaintBoard, a system that enables users to rapidly prototype interactive character movement by digitally painting a storyboard. PaintBoard promotes prototyping by facilitating quick, visual authoring, and by enabling immediate testing by allowing the user to interact in real-time with a behaviour generated from a painted storyboard. To generate the interactive behaviour, we developed a novel algorithm that analyzes a painted storyboard and uses machine-learning to generalize the painted examples to new situations. Our algorithm uses this generalized behaviour to control the computer character during real-time interaction with the user character.</i></p> <p><i>To help ground our design decisions in how real designers approach the problem of creating interactive behaviours, we conducted two preliminary exploratory studies with industry professionals and programmers. We further conducted a proof-of-concept workshop with our prototype to investigate how real developers may use PaintBoard; this illustrated the initial success of our painting-storyboards authoring metaphor. Finally, we performed an initial evaluation of the behaviour generation algorithm which informed us of directions for future work to improve PaintBoard’s performance.</i></p> <p><i>Contributions of this work include the design and evaluation of both a new interaction metaphor— digitally painting storyboards for interactive behaviour authoring—and a novel behaviour generation algorithm (for generating real-time interactive behaviours from storyboards). Our results demonstrate that the PaintBoard approach can be useful to developers as an exploratory prototyping tool due to its fast and understandable painting metaphor, and that PaintBoard itself can quickly (in real-time) generate an interactive behaviour.</i></p> <p>
+
+
+
+
+
+      Doors will open by 6:30pm, and the venue will be open until 8:30pm. The presentation will occur between 7pm and 8pm.<i><br/></i></p>
+    event_url: http://www.meetup.com/Papers-We-Love-Winnipeg/events/220117454/
+  - headcount: 0
+    created: 1428095650000
+    yes_rsvp_count: 9
+    group: {join_mode: open, created: 1422244351000, name: Papers We Love — Winnipeg,
+      group_lon: -97, id: 18379429, urlname: Papers-We-Love-Winnipeg, group_lat: 49.90999984741211,
+      who: Paper Lovers}
+    id: '221603856'
+    utc_offset: -18000000
+    visibility: public
+    name: '[RESCHEDULED] Object Recognition from Local  Scale-Invariant Features'
+    maybe_rsvp_count: 0
+    status: past
+    venue: {address_2: 2nd Floor, address_1: 374 Donald Street, country: ca, city: Winnipeg,
+      repinned: false, id: 23597466, name: SkullSpace, lon: -97.14443, phone: +1 204-480-4092,
+      lat: 49.89603, state: MB, zip: R3B 2J2}
+    time: 1430438400000
+    duration: 3600000
+    updated: 1430451216000
+    waitlist_count: 0
+    rating: {count: 1, average: 5}
+    description: <p><b>[Rescheduled]</b></p> <p><br/>This meetup has been rescheduled from April 23 to April 30 due to an urgent matter that came up with the speaker.</p> <p><br/><b>Abstract</b>:<br/>An object recognition system has been developed that uses a new class of local image features. The features are invariant to image scaling, translation, and rotation, and partially invariant to illumination changes and affine or 3D projection. These features share similar properties with neurons in inferior temporal cortex that are used for object recognition in primate vision. Features are efficiently detected through a staged filtering approach that identifies stable points in scale space. Image keys are created that allow for local geometric deformations by representing blurred image gradients in multiple orientation planes and at multiple scales. The keys are used as input to a nearest-neighbour indexing method that identifies candidate object matches. Final verification of each match is achieved by finding a low-residual least-squares solution for the unknown model parameters. Experimental results show that robust object recognition can be achieved in cluttered partially-occluded images with a computation time of under 2 seconds.</p> <p><b>Presenter Bio</b>:<br/>Stephen Kiazyk completed his bachelor's in Computer Science at the University of Manitoba, followed by a master's degree at the University of Waterloo with a specialization in Computational Geometry. He has since left behind his life as a globetrotting academic to return to Winnipeg, where he writes visual effects and simulation software for the film industry. When he's not at the computer, he spends his free time practicing Yoga and collecting old video games.</p>
+    event_url: http://www.meetup.com/Papers-We-Love-Winnipeg/events/221603856/
+  - headcount: 0
+    created: 1430423025000
+    yes_rsvp_count: 6
+    group: {join_mode: open, created: 1422244351000, name: Papers We Love — Winnipeg,
+      group_lon: -97, id: 18379429, urlname: Papers-We-Love-Winnipeg, group_lat: 49.90999984741211,
+      who: Paper Lovers}
+    id: '222214950'
+    utc_offset: -18000000
+    visibility: public
+    name: The Bargaining Problem
+    maybe_rsvp_count: 0
+    status: past
+    venue: {address_2: 2nd Floor, address_1: 374 Donald Street, country: ca, city: Winnipeg,
+      repinned: false, id: 23597466, name: SkullSpace, lon: -97.14443, phone: +1 204-480-4092,
+      lat: 49.89603, state: MB, zip: R3B 2J2}
+    time: 1432252800000
+    duration: 3600000
+    updated: 1432259425000
+    waitlist_count: 0
+    rating: {count: 0, average: 0}
+    description: '<p><b>Title: </b>The Bargaining Problem</p> <p><b>Field: </b>Economics,
+      Game Theory</p> <p><br/><b>Author: </b>John F. Nash, Jr.</p> <p><b>Published:
+      </b>April 1950</p> <p><br/><b>Abstract:</b><br/>A new treatment is presented
+      of a classical economic problem, one which occurs in many forms, as bargaining,
+      bilateral monopoly, etc. It may also be regarded as a nonzero-sum two-person
+      game. In this treatment a few general assumptions are made concerning the behaviour
+      of a single individual and of a group of two individuals in certain economic
+      environments. From these, the solution (in the sense of this paper) of the classical
+      problem may be obtained. In the terms of game theory, values are found for the
+      game.</p> <p><b>Presenter Bio:</b><br/>Daniel Simeone is a doctoral candidate
+      in history, specializing in 19th-century Quebec bankruptcy. In another life,
+      he studied discrete mathematics, graph theory, and algorithms. He likes reading,
+      biking, and cooking. He also enjoys programming, but does so in a manner that
+      makes professional programmers cringe.</p>'
+    event_url: http://www.meetup.com/Papers-We-Love-Winnipeg/events/222214950/
+  link: http://www.meetup.com/Papers-We-Love-Winnipeg/
+  lat: 49.90999984741211
+  state: MB
+  category: {name: tech, id: 34, shortname: tech}
+  urlname: Papers-We-Love-Winnipeg
+  rating: 0
+  description: |-
+    <p>What was the last paper within the realm of computing you read and loved? What did it inspire you to build or tinker with? Come share the ideas in an awesome academic/research paper with fellow programmers, engineers, and paper-readers. Lead a session and show off code that you wrote that implements these ideas or just give us the lowdown about the paper, since many require specialized knowledge. Otherwise, just come, listen, and discuss. This the Winnipeg chapter of the original <a href="http://www.meetup.com/papers-we-love/">Papers We Love group in NYC</a>.</p>
+    <p>We're curating a <a href="https://github.com/papers-we-love/papers-we-love">repository</a> for papers and places-to-find papers. You can contribute by adding pull requests for papers, code, or links to other repositories.</p>
+    <p>If you need to reach out to us or have ideas for papers, just ask us via our <a href="https://twitter.com/pwlwpg">Twitter account</a>.</p>
+    <p>Papers We Love has a <a href="https://github.com/papers-we-love/papers-we-love/blob/master/CODE_OF_CONDUCT.md">code of conduct</a>. Please contact one of the Meetup's organizers if there's a problem. Be good to each other and to the PWL community!</p>
   join_mode: open
 Papers-We-Love-Boulder:
   topics:
@@ -2460,7 +3012,7 @@ Papers-We-Love-Boulder:
   who: readers
   country: US
   city: Boulder
-  members: 85
+  members: 105
   timezone: US/Mountain
   id: 13336382
   utc_offset: -21600000
@@ -2573,28 +3125,30 @@ Papers-We-Love-Boulder:
     event_url: http://www.meetup.com/Papers-We-Love-Boulder/events/178847172/
   - headcount: 0
     created: 1426228732000
-    yes_rsvp_count: 13
+    yes_rsvp_count: 16
     group: {join_mode: open, created: 1394778033000, name: papers we love CO, group_lon: -105.20999908447266,
       id: 13336382, urlname: Papers-We-Love-Boulder, group_lat: 40.04999923706055,
       who: readers}
     id: '221122139'
     utc_offset: -21600000
     visibility: public
-    name: 'PWL CO #5: TBD'
+    name: 'PWL CO #5: Satisfiability Modulo Theories: Introduction and Applications'
     maybe_rsvp_count: 0
-    status: upcoming
+    status: past
     time: 1432429200000
-    duration: 10800000
-    updated: 1426229169000
+    duration: 5400000
+    updated: 1432498124000
     waitlist_count: 0
-    rsvp_limit: 20
+    rsvp_limit: 25
+    rating: {count: 1, average: 5}
+    description: <p>Abstract:</p> <p>a ∧ ¬(b ∨ a). Is there some assignment to a and b that makes the expression true? This is the well known problem of Boolean satisfiability (SAT). This problem can be extended to predicates over non-Boolean values. For example, is the following satisfiable? (c &lt; d) ∧ (d ≤ c + 1). This extended problem is known as Satisfiability Modulo Theories (SMT). In this talk, I will present an <a href="http://cis.upenn.edu/~alur/CIS673/smt11.pdf">introduction to SMT</a> and its many applications, from scheduling to static program analysis to dependency resolution. I will end with concrete examples, demonstrating how to use an SMT solver from Haskell to prove assertions about a program.</p> <p>Bio:</p> <p><a href="https://twitter.com/beala">Alex</a> is software developer interested in using modern techniques to write more reliable programs, and is particularly optimistic about the intersection of industry and academia. Other times, he'd rather be outside. He's currently a software engineer at Twitter.</p>
     event_url: http://www.meetup.com/Papers-We-Love-Boulder/events/221122139/
   link: http://www.meetup.com/Papers-We-Love-Boulder/
   lat: 40.04999923706055
   state: CO
   category: {name: tech, id: 34, shortname: tech}
   urlname: Papers-We-Love-Boulder
-  rating: 4.89
+  rating: 4.92
   description: |-
     <p>The papers we love CO Meetup is the Colorado charter of <a href="http://www.meetup.com/Papers-We-Love">papers we love</a>.  We hope to organize engineers, researchers, programmers, students or anyone within the Colorado area who's read an interesting research paper and would like to share their newfound knowledge with others.</p>
     <p>For those interested in finding/contributing papers of interest, please visit the <a href="https://github.com/papers-we-love/papers-we-love">GitHub repository</a>.</p>
@@ -2607,15 +3161,15 @@ Papers-We-Love-Berlin:
   - {urlkey: newtech, name: New Technology, id: 9696}
   - {urlkey: intellectual-discussion, name: Intellectual Discussion, id: 15083}
   - {urlkey: cloud-computing, name: Cloud Computing, id: 15167}
-  - {urlkey: programming, name: Programming, id: 17627}
   - {urlkey: computer-science, name: Computer Science, id: 21751}
+  - {urlkey: computer-programming, name: Computer programming, id: 48471}
   - {urlkey: computing, name: Computing, id: 50927}
   - {urlkey: academic-papers, name: Academic Papers, id: 93172}
   created: 1400776904000
   who: Members
   country: DE
   city: Berlin
-  members: 201
+  members: 271
   timezone: Europe/Berlin
   id: 14613232
   utc_offset: 7200000
@@ -2649,7 +3203,7 @@ Papers-We-Love-Berlin:
     event_url: http://www.meetup.com/Papers-We-Love-Berlin/events/218874529/
   - headcount: 0
     created: 1429625472000
-    yes_rsvp_count: 60
+    yes_rsvp_count: 86
     group: {join_mode: open, created: 1400776904000, name: Papers We Love - Berlin,
       group_lon: 13.380000114440918, id: 14613232, urlname: Papers-We-Love-Berlin,
       group_lat: 52.52000045776367, who: Members}
@@ -2658,20 +3212,20 @@ Papers-We-Love-Berlin:
     visibility: public
     name: '#2 => Programming concepts pioneered by McCarthy''s 1960 paper on Lisp'
     maybe_rsvp_count: 0
-    status: upcoming
+    status: past
     venue: {country: de, city: Berlin, address_1: Rheinsberger Str. 76/77 10115, name: SoundCloud,
       lon: 13.394928, id: 20854232, lat: 52.536839, repinned: false}
     time: 1432225800000
-    updated: 1429645863000
+    updated: 1433362503000
     waitlist_count: 0
-    rsvp_limit: 60
+    rating: {count: 4, average: 4.75}
     description: <p>At this Papers We Love Berlin Meetup we will have Marijn Haverbeke (<a href="https://twitter.com/marijnjh" class="linkified">https://twitter.com/marijnjh</a>) presenting the original Lisp paper "Recursive Functions of Symbolic Expressions and Their Computation by Machine" by John McCarthy.</p> <p>PDF: <a href="http://www-formal.stanford.edu/jmc/recursive.pdf"><a href="http://www-formal.stanford.edu/jmc/recursive.pdf" class="linkified">http://www-formal.stanford.edu/jmc/recursive.pdf</a></a> </p> <p>Thanks to Soundcloud for hosting this event! </p> <p><br/>Abstract:</p> <p>There are works that, rather than continuing in an existing research tradition, invent a whole new direction. John McCarthy's original paper on Lisp is definitely one such work. It obviously set the stage for the various Lisps and Lisp-inspired languages, but it also pioneered a number of concepts, ranging from garbage collection to the call stack, that are deeply ingrained in today's programming reality. This talk will be mostly about historical perspective (and will not involve Lisp smugness or propaganda).</p> <p><br/>Bio:</p> <p>Marijn Haverbeke spent his early career living in the past and programming Common Lisp. When reality finally caught up with him he gave that up and became a JavaScript programmer instead. Author of CodeMirror and Eloquent JavaScript. Contributor to the Rust compiler.</p>
     event_url: http://www.meetup.com/Papers-We-Love-Berlin/events/221994661/
   link: http://www.meetup.com/Papers-We-Love-Berlin/
   lat: 52.52000045776367
   category: {name: tech, id: 34, shortname: tech}
   urlname: Papers-We-Love-Berlin
-  rating: 0
+  rating: 4.67
   description: |-
     <p>Berlin chapter of <a href="http://www.meetup.com/papers-we-love">http://www.meetup.com/papers-we-love</a> </p>
     <p>What was the last paper within the realm of computing you read and loved? What did it inspire you to build or tinker with? Come share the ideas in an awesome academic/research paper with fellow engineers, programmers, and paper-readers. Lead a session and show off code that you wrote that implements these ideas or just give us the lowdown about the paper. Otherwise, just come, listen, and discuss in a low ego, friendly environment. </p>
@@ -2680,7 +3234,7 @@ Papers-We-Love-Berlin:
   join_mode: open
 papers-we-love:
   topics:
-  - {urlkey: programming, name: Programming, id: 17627}
+  - {urlkey: computer-programming, name: Computer programming, id: 48471}
   - {urlkey: high-performance-computing, name: High Performance Computing, id: 77687}
   - {urlkey: data-science, name: Data Science, id: 102811}
   - {urlkey: computational-science-and-engineering, name: Computational Science and Engineering,
@@ -2690,7 +3244,7 @@ papers-we-love:
   who: Readers
   country: US
   city: New York
-  members: 893
+  members: 970
   timezone: US/Eastern
   id: 11398322
   utc_offset: -14400000
@@ -4282,7 +4836,7 @@ papers-we-love:
       highres_link: http://photos3.meetupstatic.com/photos/event/c/5/3/b/highres_434030491.jpeg
       photo_id: 434030491
       created: 1423183737000
-      member: {member_id: 5661705, name: Raymond de Lacaze}
+      member: {member_id: 5661705, name: Pierre de Lacaze}
       photo_link: http://photos3.meetupstatic.com/photos/event/c/5/3/b/600_434030491.jpeg
       updated: 1423228389000
       thumb_link: http://photos3.meetupstatic.com/photos/event/c/5/3/b/thumb_434030491.jpeg
@@ -4290,7 +4844,7 @@ papers-we-love:
       highres_link: http://photos3.meetupstatic.com/photos/event/c/5/3/7/highres_434030487.jpeg
       photo_id: 434030487
       created: 1423183725000
-      member: {member_id: 5661705, name: Raymond de Lacaze}
+      member: {member_id: 5661705, name: Pierre de Lacaze}
       photo_link: http://photos3.meetupstatic.com/photos/event/c/5/3/7/600_434030487.jpeg
       updated: 1423228361000
       thumb_link: http://photos3.meetupstatic.com/photos/event/c/5/3/7/thumb_434030487.jpeg
@@ -5083,12 +5637,338 @@ papers-we-love:
       /></p> <p><img src="http://photos4.meetupstatic.com/photos/event/4/5/3/3/600_435437715.jpeg"
       /></p>'
     event_url: http://www.meetup.com/papers-we-love/events/221194444/
+  - headcount: 0
+    created: 1430975285000
+    photo_album_id: 26156426
+    how_to_find_us: Tumblr's office is located between 5th Avenue and Park Avenue South on 21st Street. We're on the Ground Floor.
+    yes_rsvp_count: 163
+    group: {join_mode: open, created: 1386615357000, name: Papers We Love, group_lon: -73.97000122070312,
+      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: Readers}
+    id: '222366060'
+    utc_offset: -14400000
+    visibility: public
+    name: Samy Al Bahra on Making Lockless Synchronization Fast
+    maybe_rsvp_count: 0
+    status: past
+    announced: true
+    venue: {address_1: '35 East 21st St, FL 1 (Ground Floor), 10010', country: us,
+      city: New York, repinned: true, id: 23818621, name: 'Tumblr, Inc', lon: -73.98842,
+      lat: 40.739616, state: NY}
+    time: 1432681200000
+    updated: 1432945007000
+    photos:
+    - photo_album: {photo_album_id: 26156426, event_id: '222366060', group_id: 11398322}
+      highres_link: http://photos3.meetupstatic.com/photos/event/6/6/c/5/highres_438026309.jpeg
+      photo_id: 438026309
+      created: 1432945251000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos3.meetupstatic.com/photos/event/6/6/c/5/600_438026309.jpeg
+      updated: 1432945252000
+      thumb_link: http://photos3.meetupstatic.com/photos/event/6/6/c/5/thumb_438026309.jpeg
+    - photo_album: {photo_album_id: 26156426, event_id: '222366060', group_id: 11398322}
+      highres_link: http://photos1.meetupstatic.com/photos/event/6/6/c/4/highres_438026308.jpeg
+      photo_id: 438026308
+      created: 1432945247000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos1.meetupstatic.com/photos/event/6/6/c/4/600_438026308.jpeg
+      updated: 1432945248000
+      thumb_link: http://photos1.meetupstatic.com/photos/event/6/6/c/4/thumb_438026308.jpeg
+    - photo_album: {photo_album_id: 26156426, event_id: '222366060', group_id: 11398322}
+      highres_link: http://photos1.meetupstatic.com/photos/event/6/6/c/2/highres_438026306.jpeg
+      photo_id: 438026306
+      created: 1432945241000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos1.meetupstatic.com/photos/event/6/6/c/2/600_438026306.jpeg
+      updated: 1432945242000
+      thumb_link: http://photos1.meetupstatic.com/photos/event/6/6/c/2/thumb_438026306.jpeg
+    - photo_album: {photo_album_id: 26156426, event_id: '222366060', group_id: 11398322}
+      highres_link: http://photos3.meetupstatic.com/photos/event/6/6/c/1/highres_438026305.jpeg
+      photo_id: 438026305
+      created: 1432945236000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos3.meetupstatic.com/photos/event/6/6/c/1/600_438026305.jpeg
+      updated: 1432945237000
+      thumb_link: http://photos3.meetupstatic.com/photos/event/6/6/c/1/thumb_438026305.jpeg
+    - photo_album: {photo_album_id: 26156426, event_id: '222366060', group_id: 11398322}
+      highres_link: http://photos1.meetupstatic.com/photos/event/6/6/b/f/highres_438026303.jpeg
+      photo_id: 438026303
+      created: 1432945229000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos1.meetupstatic.com/photos/event/6/6/b/f/600_438026303.jpeg
+      updated: 1432945229000
+      thumb_link: http://photos1.meetupstatic.com/photos/event/6/6/b/f/thumb_438026303.jpeg
+    - photo_album: {photo_album_id: 26156426, event_id: '222366060', group_id: 11398322}
+      highres_link: http://photos1.meetupstatic.com/photos/event/6/6/b/d/highres_438026301.jpeg
+      photo_id: 438026301
+      created: 1432945224000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos1.meetupstatic.com/photos/event/6/6/b/d/600_438026301.jpeg
+      updated: 1432945225000
+      thumb_link: http://photos1.meetupstatic.com/photos/event/6/6/b/d/thumb_438026301.jpeg
+    - photo_album: {photo_album_id: 26156426, event_id: '222366060', group_id: 11398322}
+      highres_link: http://photos3.meetupstatic.com/photos/event/6/6/b/c/highres_438026300.jpeg
+      photo_id: 438026300
+      created: 1432945219000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos3.meetupstatic.com/photos/event/6/6/b/c/600_438026300.jpeg
+      updated: 1432945220000
+      thumb_link: http://photos3.meetupstatic.com/photos/event/6/6/b/c/thumb_438026300.jpeg
+    - photo_album: {photo_album_id: 26156426, event_id: '222366060', group_id: 11398322}
+      highres_link: http://photos3.meetupstatic.com/photos/event/6/6/b/a/highres_438026298.jpeg
+      photo_id: 438026298
+      created: 1432945214000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos3.meetupstatic.com/photos/event/6/6/b/a/600_438026298.jpeg
+      updated: 1432945215000
+      thumb_link: http://photos3.meetupstatic.com/photos/event/6/6/b/a/thumb_438026298.jpeg
+    - photo_album: {photo_album_id: 26156426, event_id: '222366060', group_id: 11398322}
+      highres_link: http://photos2.meetupstatic.com/photos/event/6/6/b/9/highres_438026297.jpeg
+      photo_id: 438026297
+      created: 1432945210000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos4.meetupstatic.com/photos/event/6/6/b/9/600_438026297.jpeg
+      updated: 1432945211000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/6/6/b/9/thumb_438026297.jpeg
+    - photo_album: {photo_album_id: 26156426, event_id: '222366060', group_id: 11398322}
+      highres_link: http://photos4.meetupstatic.com/photos/event/6/6/b/8/highres_438026296.jpeg
+      photo_id: 438026296
+      created: 1432945204000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos2.meetupstatic.com/photos/event/6/6/b/8/600_438026296.jpeg
+      updated: 1432945205000
+      thumb_link: http://photos2.meetupstatic.com/photos/event/6/6/b/8/thumb_438026296.jpeg
+    - photo_album: {photo_album_id: 26156426, event_id: '222366060', group_id: 11398322}
+      highres_link: http://photos2.meetupstatic.com/photos/event/6/6/b/7/highres_438026295.jpeg
+      photo_id: 438026295
+      created: 1432945197000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos4.meetupstatic.com/photos/event/6/6/b/7/600_438026295.jpeg
+      updated: 1432945199000
+      thumb_link: http://photos2.meetupstatic.com/photos/event/6/6/b/7/thumb_438026295.jpeg
+    - photo_album: {photo_album_id: 26156426, event_id: '222366060', group_id: 11398322}
+      highres_link: http://photos4.meetupstatic.com/photos/event/6/6/b/6/highres_438026294.jpeg
+      photo_id: 438026294
+      created: 1432945193000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos2.meetupstatic.com/photos/event/6/6/b/6/600_438026294.jpeg
+      updated: 1432945194000
+      thumb_link: http://photos2.meetupstatic.com/photos/event/6/6/b/6/thumb_438026294.jpeg
+    - photo_album: {photo_album_id: 26156426, event_id: '222366060', group_id: 11398322}
+      highres_link: http://photos2.meetupstatic.com/photos/event/6/6/b/3/highres_438026291.jpeg
+      photo_id: 438026291
+      created: 1432945189000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos2.meetupstatic.com/photos/event/6/6/b/3/600_438026291.jpeg
+      updated: 1432945190000
+      thumb_link: http://photos2.meetupstatic.com/photos/event/6/6/b/3/thumb_438026291.jpeg
+    - photo_link: http://photos4.meetupstatic.com/photos/event/6/6/b/2/600_438026290.jpeg
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      created: 1432945184000
+      photo_id: 438026290
+      highres_link: http://photos4.meetupstatic.com/photos/event/6/6/b/2/highres_438026290.jpeg
+      thumb_link: http://photos2.meetupstatic.com/photos/event/6/6/b/2/thumb_438026290.jpeg
+      updated: 1432945440000
+      caption: _SPEAKER_
+      photo_album: {photo_album_id: 26156426, event_id: '222366060', group_id: 11398322}
+    - photo_album: {photo_album_id: 26156426, event_id: '222366060', group_id: 11398322}
+      highres_link: http://photos1.meetupstatic.com/photos/event/6/6/b/1/highres_438026289.jpeg
+      photo_id: 438026289
+      created: 1432945179000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos1.meetupstatic.com/photos/event/6/6/b/1/600_438026289.jpeg
+      updated: 1432945180000
+      thumb_link: http://photos1.meetupstatic.com/photos/event/6/6/b/1/thumb_438026289.jpeg
+    - photo_album: {photo_album_id: 26156426, event_id: '222366060', group_id: 11398322}
+      highres_link: http://photos3.meetupstatic.com/photos/event/6/6/b/0/highres_438026288.jpeg
+      photo_id: 438026288
+      created: 1432945171000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos3.meetupstatic.com/photos/event/6/6/b/0/600_438026288.jpeg
+      updated: 1432945173000
+      thumb_link: http://photos3.meetupstatic.com/photos/event/6/6/b/0/thumb_438026288.jpeg
+    waitlist_count: 0
+    rsvp_limit: 175
+    rating: {count: 1, average: 5}
+    description: '<p>We''re thrilled to have Samy Al Bahra, co-founder of <a href="http://backtrace.io/">Backtrace</a>
+      and founder of <a href="http://concurrencykit.org/">Concurrency Kit</a>, presenting
+      on <a href="http://www.rdrop.com/users/paulmck/RCU/hart_ipdps06.pdf">Making
+      Lockless Synchronization Fast: Performance Implications of Memory Reclamation</a> by
+      Hart, McKenney, and Brown.</p> <p><br/><b>Intro</b></p> <p><br/>Multicore systems
+      are ubiquitous but modern concurrent programming techniques still do not see
+      wide-spread adoption. Most concurrent software (developed in low-level languages)
+      still relies on error-prone and unscalable memory management techniques for
+      correctness despite the introduction of superior methods over 30 years ago.
+      Safe memory reclamation allows for performant and robust memory management that
+      is also suitable for advanced concurrent programming techniques such as non-blocking
+      synchronization. If properly used, safe memory reclamation techniques allow
+      improved performance and simplicity without the complexity of full-blown garbage
+      collection.</p> <p>This paper provides a terrific overview of common safe memory
+      reclamation mechanisms and then explores their performance implications. In
+      this talk, I will do the same but with stronger emphasis on the introductory
+      aspects of safe memory reclamation and contrast with a refreshed performance
+      analysis.</p> <p><br/><b>Bio</b></p> <p>Samy Al Bahra (<a href="https://twitter.com/0xf390">@0xf390</a>)
+      is the co-founder of <a href="http://backtrace.io">Backtrace</a>, where he is
+      helping build a modern debugging platform for today''s complex applications.
+      Prior to Backtrace, Samy was a principal engineer at AppNexus, where he played
+      a lead role in the architecture and development of many mission-critical components
+      of the ecosystem. His work at AppNexus was instrumental in scaling the system
+      to 18 billion impressions with orders of magnitude in efficiency improvements.
+      Prior to AppNexus, Samy was behind major performance improvements to the core
+      technology at Message Systems. At the George Washington University High Performance
+      Computing Laboratory, Samy worked on the UPC programming language, heterogeneous
+      computing and multicore synchronization. Samy is also the founder of the <a
+      href="http://concurrencykit.org/">Concurrency Kit project</a>, which several
+      leading technology companies rely on for scalability and performance. Samy serves
+      on the ACM Practitioners Board.</p> <p><br/>------------------------------------------------------------------------</p>
+      <p><img src="http://photos2.meetupstatic.com/photos/event/a/5/4/a/600_433302314.jpeg"
+      /></p> <p><i><b><a href="https://www.twosigma.com/">TwoSigma</a> </b>- Platinum
+      Sponsor of the New York chapter</i></p> <p>------------------------------------------------------------------------</p>
+      <p><b>Details</b></p> <p>Doors open at 7 pm; the presentation will begin at
+      7:30 pm; and, yes, there will be refreshments of all kinds and pizza. </p> <p><br/>After
+      Samy presents the paper, we will open up the floor to discussion and questions.
+       </p> <p><br/>We hope that you''ll read the paper before the meetup, but don''t
+      stress if you can''t.  If you have any questions, thoughts, or related information,
+      please visit our *<a href="https://github.com/papers-we-love/papers-we-love/issues/301">github-thread</a>*
+      on the matter.</p> <p>Additionally, if you have any papers you want to add to
+      the repository above (papers that you love!), please send us a <a href="https://github.com/papers-we-love/papers-we-love/pulls">pull
+      request</a>. Also, if you have any ideas/questions about this meetup or the
+      Papers-We-Love org, just open up an issue.</p> <p><i>May''s meetup is sponsored
+      by</i> </p> <p><img src="http://photos3.meetupstatic.com/photos/event/9/5/9/8/600_431498296.jpeg"
+      /></p> <p><img src="http://photos3.meetupstatic.com/photos/event/9/7/9/8/600_433118808.jpeg"
+      /></p>'
+    event_url: http://www.meetup.com/papers-we-love/events/222366060/
+  - headcount: 0
+    created: 1433618458000
+    photo_album_id: 26232932
+    how_to_find_us: Tumblr's office is located between 5th Avenue and Park Avenue South on 21st Street. We're on the 10th Floor.
+    yes_rsvp_count: 127
+    group: {join_mode: open, created: 1386615357000, name: Papers We Love, group_lon: -73.97000122070312,
+      id: 11398322, urlname: papers-we-love, group_lat: 40.75, who: Readers}
+    id: '223064862'
+    utc_offset: -14400000
+    visibility: public
+    name: Jason Ganetsky on Making a Fast Curry
+    maybe_rsvp_count: 0
+    status: past
+    announced: true
+    venue: {address_1: '35 East 21st St, FL 10, 10010', country: us, city: New York,
+      repinned: false, id: 23556419, name: 'Tumblr, Inc', lon: -73.988937, lat: 40.739643,
+      state: NY}
+    time: 1435100400000
+    updated: 1435276934000
+    photos:
+    - photo_album: {photo_album_id: 26232932, event_id: '223064862', group_id: 11398322}
+      highres_link: http://photos1.meetupstatic.com/photos/event/1/3/9/2/highres_439265010.jpeg
+      photo_id: 439265010
+      created: 1435685022000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos1.meetupstatic.com/photos/event/1/3/9/2/600_439265010.jpeg
+      updated: 1435685023000
+      thumb_link: http://photos1.meetupstatic.com/photos/event/1/3/9/2/thumb_439265010.jpeg
+    - photo_album: {photo_album_id: 26232932, event_id: '223064862', group_id: 11398322}
+      highres_link: http://photos4.meetupstatic.com/photos/event/1/3/9/0/highres_439265008.jpeg
+      photo_id: 439265008
+      created: 1435685021000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos2.meetupstatic.com/photos/event/1/3/9/0/600_439265008.jpeg
+      updated: 1435685023000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/1/3/9/0/thumb_439265008.jpeg
+    - photo_link: http://photos4.meetupstatic.com/photos/event/1/3/9/1/600_439265009.jpeg
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      created: 1435685021000
+      photo_id: 439265009
+      highres_link: http://photos2.meetupstatic.com/photos/event/1/3/9/1/highres_439265009.jpeg
+      thumb_link: http://photos2.meetupstatic.com/photos/event/1/3/9/1/thumb_439265009.jpeg
+      updated: 1435685086000
+      caption: _SPEAKER_
+      photo_album: {photo_album_id: 26232932, event_id: '223064862', group_id: 11398322}
+    - photo_album: {photo_album_id: 26232932, event_id: '223064862', group_id: 11398322}
+      highres_link: http://photos4.meetupstatic.com/photos/event/1/3/8/f/highres_439265007.jpeg
+      photo_id: 439265007
+      created: 1435685020000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos4.meetupstatic.com/photos/event/1/3/8/f/600_439265007.jpeg
+      updated: 1435685021000
+      thumb_link: http://photos2.meetupstatic.com/photos/event/1/3/8/f/thumb_439265007.jpeg
+    - photo_album: {photo_album_id: 26232932, event_id: '223064862', group_id: 11398322}
+      highres_link: http://photos2.meetupstatic.com/photos/event/1/3/8/e/highres_439265006.jpeg
+      photo_id: 439265006
+      created: 1435685019000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos2.meetupstatic.com/photos/event/1/3/8/e/600_439265006.jpeg
+      updated: 1435685020000
+      thumb_link: http://photos2.meetupstatic.com/photos/event/1/3/8/e/thumb_439265006.jpeg
+    - photo_album: {photo_album_id: 26232932, event_id: '223064862', group_id: 11398322}
+      highres_link: http://photos4.meetupstatic.com/photos/event/1/3/8/d/highres_439265005.jpeg
+      photo_id: 439265005
+      created: 1435685017000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos4.meetupstatic.com/photos/event/1/3/8/d/600_439265005.jpeg
+      updated: 1435685018000
+      thumb_link: http://photos2.meetupstatic.com/photos/event/1/3/8/d/thumb_439265005.jpeg
+    - photo_album: {photo_album_id: 26232932, event_id: '223064862', group_id: 11398322}
+      highres_link: http://photos4.meetupstatic.com/photos/event/1/3/8/b/highres_439265003.jpeg
+      photo_id: 439265003
+      created: 1435685015000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos4.meetupstatic.com/photos/event/1/3/8/b/600_439265003.jpeg
+      updated: 1435685016000
+      thumb_link: http://photos2.meetupstatic.com/photos/event/1/3/8/b/thumb_439265003.jpeg
+    - photo_album: {photo_album_id: 26232932, event_id: '223064862', group_id: 11398322}
+      highres_link: http://photos3.meetupstatic.com/photos/event/1/3/8/8/highres_439265000.jpeg
+      photo_id: 439265000
+      created: 1435685013000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos3.meetupstatic.com/photos/event/1/3/8/8/600_439265000.jpeg
+      updated: 1435685014000
+      thumb_link: http://photos3.meetupstatic.com/photos/event/1/3/8/8/thumb_439265000.jpeg
+    - photo_album: {photo_album_id: 26232932, event_id: '223064862', group_id: 11398322}
+      highres_link: http://photos4.meetupstatic.com/photos/event/1/3/8/4/highres_439264996.jpeg
+      photo_id: 439264996
+      created: 1435685012000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos4.meetupstatic.com/photos/event/1/3/8/4/600_439264996.jpeg
+      updated: 1435685013000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/1/3/8/4/thumb_439264996.jpeg
+    - photo_album: {photo_album_id: 26232932, event_id: '223064862', group_id: 11398322}
+      highres_link: http://photos2.meetupstatic.com/photos/event/1/3/8/5/highres_439264997.jpeg
+      photo_id: 439264997
+      created: 1435685012000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos2.meetupstatic.com/photos/event/1/3/8/5/600_439264997.jpeg
+      updated: 1435685014000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/1/3/8/5/thumb_439264997.jpeg
+    - photo_album: {photo_album_id: 26232932, event_id: '223064862', group_id: 11398322}
+      highres_link: http://photos2.meetupstatic.com/photos/event/1/3/8/3/highres_439264995.jpeg
+      photo_id: 439264995
+      created: 1435685011000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos2.meetupstatic.com/photos/event/1/3/8/3/600_439264995.jpeg
+      updated: 1435685012000
+      thumb_link: http://photos2.meetupstatic.com/photos/event/1/3/8/3/thumb_439264995.jpeg
+    - photo_album: {photo_album_id: 26232932, event_id: '223064862', group_id: 11398322}
+      highres_link: http://photos2.meetupstatic.com/photos/event/1/3/8/1/highres_439264993.jpeg
+      photo_id: 439264993
+      created: 1435685010000
+      member: {member_id: 11622183, name: Zeeshan Lakhani}
+      photo_link: http://photos2.meetupstatic.com/photos/event/1/3/8/1/600_439264993.jpeg
+      updated: 1435685011000
+      thumb_link: http://photos2.meetupstatic.com/photos/event/1/3/8/1/thumb_439264993.jpeg
+    waitlist_count: 0
+    rsvp_limit: 180
+    rating: {count: 1, average: 5}
+    description: |-
+      <p>We're happy to have Jason Ganetsky, tech lead of storage for Google Cloud Pub/Sub, presenting on <a href="http://community.haskell.org/~simonmar/papers/evalapplyjfp06.pdf">Making a Fast Curry: Push/Enter vs. Eval/Apply for Higher-order Languages</a> by Simon Marlow and Simon Peyton Jones.</p> <p><br/><b>Intro</b> </p> <p>Higher-order languages that encourage currying are typically implemented using one of two basic evaluation models: push/enter or eval/apply. Implementors use their intuition and qualitative judgements to choose one model or the other. Our goal in this paper is to provide, for the first time, a more substantial basis for this choice, based on our qualitative and quantitative experience of implementing both models in a state-of-the-art compiler for Haskell.</p> <p><br/>Our conclusion is simple, and contradicts our initial intuition: compiled implementations should use eval/apply.</p> <p><br/><b>Bio</b></p> <p><a href="https://about.me/jasonganetsky">Jason Ganetsky</a> (<a href="https://twitter.com/ganetsky">@ganetsky</a>) is a software engineer at Google. He is tech lead of storage for <a href="https://cloud.google.com/pubsub/docs">Google Cloud Pub/Sub</a>. Prior to working at Google, Jason worked at various startups in NYC, and was briefly enrolled in a Computer Science PhD program at Carnegie Mellon. It was that brief stint that sparked the beginning of Jason's lifelong love of functional programming and type systems.</p> <p><br/>------------------------------------------------------------------------</p> <p><img src="http://photos2.meetupstatic.com/photos/event/a/5/4/a/600_433302314.jpeg" /></p> <p>
+
+
+      <i><a href="https://www.twosigma.com/">TwoSigma</a> - Platinum Sponsor of the New York chapter</i></p> <p>------------------------------------------------------------------------</p> <p><b>Details</b></p> <p>Doors open at 7 pm; the presentation will begin at 7:30 pm; and, yes, there will be refreshments of all kinds and pizza. </p> <p>After Jason presents the paper, we will open up the floor to discussion and questions.  </p> <p>We hope that you'll read the paper before the meetup, but don't stress if you can't.  If you have any questions, thoughts, or related information, please visit our *<a href="https://github.com/papers-we-love/papers-we-love/issues/309">github-thread</a>* on the matter.</p> <p>Additionally, if you have any papers you want to add to the repository above (papers that you love!), please send us a <a href="https://github.com/papers-we-love/papers-we-love/pulls">pull request</a>. Also, if you have any ideas/questions about this meetup or the Papers-We-Love org, just open up an issue.</p> <p><i>June's meetup is sponsored by</i> </p> <p><img src="http://photos3.meetupstatic.com/photos/event/9/5/9/8/600_431498296.jpeg" /></p> <p><img src="http://photos3.meetupstatic.com/photos/event/9/7/9/8/600_433118808.jpeg" /></p>
+    event_url: http://www.meetup.com/papers-we-love/events/223064862/
   link: http://www.meetup.com/papers-we-love/
   lat: 40.75
   state: NY
   category: {name: tech, id: 34, shortname: tech}
   urlname: papers-we-love
-  rating: 4.87
+  rating: 4.89
   description: |-
     <p>What was the last paper within the realm of computing you read and loved? What did it inspire you to build or tinker with? Come share the ideas in an awesome academic/research paper with fellow engineers, programmers, and paper-readers. Lead a session and show off code that you wrote that implements these ideas or just give us the lowdown about the paper (because of HARD MATH!). Otherwise, just come, listen, and discuss.</p>
     <p>We're curating a <a href="https://github.com/papers-we-love/papers-we-love">repository</a> for papers and places-to-find papers.&nbsp;You can contribute by adding PR's for papers, code, and/or links to other repositories.</p>
@@ -5115,7 +5995,7 @@ Papers-We-Love-Dallas:
   who: Paper Lovers
   country: US
   city: Addison
-  members: 41
+  members: 52
   timezone: US/Central
   id: 16029482
   utc_offset: -18000000
@@ -5272,6 +6152,69 @@ Papers-We-Love-Dallas:
       discussion, Dal will present a lightning talk on boosting of machine learning
       algorithms.</p>'
     event_url: http://www.meetup.com/Papers-We-Love-Dallas/events/221461827/
+  - headcount: 0
+    created: 1431092170000
+    yes_rsvp_count: 4
+    group: {join_mode: open, created: 1406562955000, name: 'Papers We Love, Dallas',
+      group_lon: -96.83000183105469, id: 16029482, urlname: Papers-We-Love-Dallas,
+      group_lat: 32.959999084472656, who: Paper Lovers}
+    id: '222394809'
+    utc_offset: -18000000
+    visibility: public
+    name: 'Scrum Metrics for Hyperproductive Teams: How They Fly like Fighter Aircraft'
+    maybe_rsvp_count: 0
+    status: past
+    venue: {address_1: 15540 Spectrum Drive, country: us, city: Addison, repinned: false,
+      id: 17955682, name: 'ThoughtWorks, Inc', lon: -96.823921, lat: 32.961079, state: TX}
+    time: 1431561600000
+    duration: 3600000
+    updated: 1431567706000
+    waitlist_count: 0
+    rating: {count: 0, average: 0}
+    description: <p>Dal Jeanis will present Scott Downey and Jeff Sutherland's paper on Scrum Metrics. This is a practice based not on anecdotal evidence, but on hard numbers. We can actually compute the performance of a team, and use those metrics to improve efficacy.</p> <p><a href="http://jeffsutherland.com/ScrumMetricsHICSS2013BWSubmissionFinal.pdf" class="linkified">http://jeffsutherland.com/ScrumMetricsHICSS2013BWSubmissionFinal.pdf</a></p> <p>This month we are changing things up a bit. Please join us at ThoughtWorks and at a later time in the month. Please let us know if the time and venue work better for you.</p>
+    event_url: http://www.meetup.com/Papers-We-Love-Dallas/events/222394809/
+  - headcount: 0
+    created: 1433114486000
+    yes_rsvp_count: 6
+    group: {join_mode: open, created: 1406562955000, name: 'Papers We Love, Dallas',
+      group_lon: -96.83000183105469, id: 16029482, urlname: Papers-We-Love-Dallas,
+      group_lat: 32.959999084472656, who: Paper Lovers}
+    id: '222920570'
+    utc_offset: -18000000
+    visibility: public
+    name: Paxos Made Simple
+    maybe_rsvp_count: 0
+    status: past
+    venue: {address_1: 15540 Spectrum Drive, country: us, city: Addison, repinned: false,
+      id: 17955682, name: 'ThoughtWorks, Inc', lon: -96.823921, lat: 32.961079, state: TX}
+    time: 1433980800000
+    duration: 5400000
+    updated: 1434031205000
+    waitlist_count: 0
+    rsvp_limit: 20
+    rating: {count: 2, average: 4.5}
+    description: <p>Paxos has become a standard by which other consensus systems in distributed computing are compared. Let's all get a basic shared understanding from which we can move forward.</p> <p>We'll study Paxos Made Simple. Written by Leslie Lamport (of Time, Clocks, and the Ordering of Events in a Distributed System), this is an extremely approachable paper.</p> <p>PDF: <a href="https://github.com/papers-we-love/papers-we-love/blob/master/distributed_systems/paxos-made-simple.pdf"><a href="https://github.com/papers-we-love/papers-we-love/blob/master/distributed_systems/paxos-made-simple.pdf" class="linkified">https://github.com/papers-we-love/papers-we-love/blob/master/distributed_systems/paxos-made-simple.pdf</a></a></p> <p>This will be a group activity, so please spend a few minutes with the paper beforehand. We would love your input!</p>
+    event_url: http://www.meetup.com/Papers-We-Love-Dallas/events/222920570/
+  - headcount: 0
+    created: 1435624605000
+    yes_rsvp_count: 2
+    group: {join_mode: open, created: 1406562955000, name: 'Papers We Love, Dallas',
+      group_lon: -96.83000183105469, id: 16029482, urlname: Papers-We-Love-Dallas,
+      group_lat: 32.959999084472656, who: Paper Lovers}
+    id: '223591250'
+    utc_offset: -18000000
+    visibility: public
+    name: RSA Is Broken! (Not Really)
+    maybe_rsvp_count: 0
+    status: upcoming
+    venue: {address_1: 15540 Spectrum Drive, country: us, city: Addison, repinned: false,
+      id: 17955682, name: 'ThoughtWorks, Inc', lon: -96.823921, lat: 32.961079, state: TX}
+    time: 1436400000000
+    updated: 1435624631000
+    waitlist_count: 0
+    rsvp_limit: 20
+    description: <p>Michael will cover a paper that raised the eyebrows of many observers of cryptography theory.</p> <p>"A quasi-polynomial algorithm for discrete logarithm in finite fields of small characteristic"</p> <p><a href="http://arxiv.org/pdf/1306.4244.pdf"><a href="http://arxiv.org/pdf/1306.4244.pdf" class="linkified">http://arxiv.org/pdf/1306.4244.pdf</a></a></p> <p><br/>What a fun title! This paper talks about a way to reduce the complexity of the Discrete Logarithm Problem (DLP) in certain situations. DLP is finding the inverse of the equation that sits at the foundation of both the Diffie Hellman and RSA crypto algorithms. These algorithms are at the heart of Internet security.</p> <p>This paper is really just an excuse to geek out about asymmetric cryptography. We'll go over the Diffie Hellman and RSA algorithms in some detail, and see why a solution to the DLP would be so upsetting.</p> <p>Don't use your browser until you read this paper! (Well, OK. You can use it.)</p>
+    event_url: http://www.meetup.com/Papers-We-Love-Dallas/events/223591250/
   link: http://www.meetup.com/Papers-We-Love-Dallas/
   lat: 32.959999084472656
   state: TX
@@ -5289,16 +6232,16 @@ Papers-We-Love-LA:
   - {urlkey: intellectual-discussion, name: Intellectual Discussion, id: 15083}
   - {urlkey: cloud-computing, name: Cloud Computing, id: 15167}
   - {urlkey: critical-thinking, name: Critical Thinking, id: 15544}
-  - {urlkey: programming, name: Programming, id: 17627}
   - {urlkey: programming-languages, name: Programming Languages, id: 17628}
   - {urlkey: big-data, name: Big Data, id: 18062}
   - {urlkey: computer-science, name: Computer Science, id: 21751}
+  - {urlkey: computer-programming, name: Computer programming, id: 48471}
   - {urlkey: distributed-systems, name: Distributed Systems, id: 113032}
   created: 1422286658000
   who: readers
   country: US
   city: Santa Monica
-  members: 58
+  members: 110
   timezone: US/Pacific
   id: 18381002
   utc_offset: -25200000
@@ -5361,7 +6304,7 @@ Papers-We-Love-LA:
   - headcount: 0
     created: 1429590900000
     how_to_find_us: Yahoo is on the first floor, by the elevators, there will be signs
-    yes_rsvp_count: 13
+    yes_rsvp_count: 16
     group: {join_mode: open, created: 1422286658000, name: 'Papers We Love, LA', group_lon: -118.47000122070312,
       id: 18381002, urlname: Papers-We-Love-LA, group_lat: 34.029998779296875, who: readers}
     id: '221989188'
@@ -5369,22 +6312,83 @@ Papers-We-Love-LA:
     visibility: public
     name: Ryan Nichols on An Axiomatic Basis for Computer Programming
     maybe_rsvp_count: 0
-    status: upcoming
+    status: past
     venue: {address_2: 'Building D, 1st Floor', address_1: 2400 Broadway, country: us,
       city: Santa Monica, repinned: false, id: 1252286, name: Yahoo Center, lon: -118.474846,
       lat: 34.030254, state: CA, zip: '90404'}
     time: 1430359200000
     duration: 10800000
-    updated: 1429634359000
+    updated: 1430495106000
     waitlist_count: 0
+    rating: {count: 3, average: 5}
     description: <p>Ryan Nichols will present <a href="https://github.com/papers-we-love/papers-we-love/blob/master/comp_sci_fundamentals_and_history/axiomatic-basis-computer-programming.pdf?raw=true">An Axiomatic Basis for Computer Programming</a> by C.A.R Hoare.</p> <p>A brilliant paper written in 1969, which introduced some of the most influential components of programming which we all rely on today. We'll be discussing automatic verification of program properties, Hoare logic, and more.</p> <p>Ryan Nichols (<a href="https://twitter.com/rynodivino">@rynodivino</a>) is a front-end engineer at Yahoo. He enjoys &lt;cool hobby&gt; and &lt;funny interest&gt; (and making terrible jokes)!</p>
     event_url: http://www.meetup.com/Papers-We-Love-LA/events/221989188/
+  - headcount: 0
+    created: 1430970785000
+    yes_rsvp_count: 14
+    group: {join_mode: open, created: 1422286658000, name: 'Papers We Love, LA', group_lon: -118.47000122070312,
+      id: 18381002, urlname: Papers-We-Love-LA, group_lat: 34.029998779296875, who: readers}
+    id: '222365009'
+    utc_offset: -25200000
+    visibility: public
+    name: Mark Masse on Architectural Styles and the Design of Network-based Software
+    maybe_rsvp_count: 0
+    status: past
+    venue: {address_1: 12333 W Olympic Blvd, country: us, city: Los Angeles, repinned: false,
+      id: 23799195, name: Riot Games *New Campus*, lon: -118.457794, lat: 34.032955,
+      state: CA}
+    time: 1432778400000
+    updated: 1433374204000
+    waitlist_count: 0
+    rating: {count: 3, average: 5}
+    description: <p>At this Papers We Love LA we will have Mark Masse presenting "<a href="http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm">Architectural Styles and the Design of Network-based Software Architectures</a>" by Roy Fielding. This presentation will focus primarily on Chapter 5, which introduces the Representational State Transfer (REST) architectural style for distributed hypermedia systems. REST API design topics will also be covered in the presentation.</p> <p>Dinner will be provided.</p> <p>Thanks to Riot Games for hosting this event!</p> <p>Bio:</p> <p>Mark Masse spent his early career with Disney, architecting and developing the content management system (CMS) that powers ESPN.com, ABC.com and Disney.com. In 2011, Mark architected the API management system used by Walt Disney Theme Parks and Resorts and authored the "REST API Design Rulebook" for O'Reilly. In 2014, Mark joined Riot Games as an Engineering Manager supporting a team that is dedicated to leveling up other internal teams with apps, tools, and automation.</p> <p><a href="https://www.linkedin.com/in/markmasse"><a href="https://www.linkedin.com/in/markmasse" class="linkified">https://www.linkedin.com/in/markmasse</a></a></p>
+    event_url: http://www.meetup.com/Papers-We-Love-LA/events/222365009/
+  - headcount: 0
+    created: 1433972335000
+    yes_rsvp_count: 13
+    group: {join_mode: open, created: 1422286658000, name: 'Papers We Love, LA', group_lon: -118.47000122070312,
+      id: 18381002, urlname: Papers-We-Love-LA, group_lat: 34.029998779296875, who: readers}
+    id: '223161204'
+    utc_offset: -25200000
+    visibility: public
+    name: Phil Freeman on Principal type-schemes for functional programs
+    maybe_rsvp_count: 0
+    status: past
+    venue: {address_1: '225 Arizona #PH/400', country: us, city: Santa Monica, repinned: false,
+      id: 23893474, name: Brainium, lon: 0, lat: 0, state: CA}
+    time: 1435197600000
+    updated: 1435218149000
+    waitlist_count: 0
+    rsvp_limit: 20
+    rating: {count: 1, average: 5}
+    description: <p>This month, Phil Freeman will present"<a href="http://web.cs.wpi.edu/~cs4536/c12/milner-damas_principal_types.pdf">Principal type-schemes for functional programs</a>" by Damas and Milner.  </p> <p><br/>The Damas-Hindley-Milner type system is a classical system for the first-order polymorphic lambda calculus, and the ML family of programming languages. This paper introduces Algorithm W, a simple algorithm for type reconstruction in the DHM type system. I'll walk through the main results of the paper, and compare the DHM type system with other more modern systems.</p> <p><br/>Phil Freeman (<a href="https://twitter.com/paf31">@paf31</a>) is an engineer at DicomGrid.  He is the original developer of the PureScript compiler, author of <a href="http://t.co/go0muLMN1n"> </a><a href="http://leanpub.com/purescript">PureScript by Example</a>, a Haskeller &amp; PLT enthusiast.</p> <p>A huge thank-you to <a href="http://www.brainiumstudios.com/">Brainium</a> for hosting us this month!</p> <p>Please do note that because of space constraints, this month's attendance is capped at 20.</p>
+    event_url: http://www.meetup.com/Papers-We-Love-LA/events/223161204/
+  - headcount: 0
+    created: 1435249916000
+    how_to_find_us: Penthouse, suite 400
+    yes_rsvp_count: 5
+    group: {join_mode: open, created: 1422286658000, name: 'Papers We Love, LA', group_lon: -118.47000122070312,
+      id: 18381002, urlname: Papers-We-Love-LA, group_lat: 34.029998779296875, who: readers}
+    id: '223494462'
+    utc_offset: -25200000
+    visibility: public
+    name: Bill Berry on Hints for Computer System Design
+    maybe_rsvp_count: 0
+    status: upcoming
+    venue: {address_1: '225 Arizona #PH/400', country: us, city: Santa Monica, repinned: false,
+      id: 23893474, name: Brainium, lon: 0, lat: 0, state: CA}
+    time: 1438221600000
+    updated: 1435266996000
+    waitlist_count: 0
+    rsvp_limit: 20
+    description: <p>This month, Bill Berry will present <a href="http://research.microsoft.com/en-us/um/people/blampson/33-Hints/Acrobat.pdf">Hints for Computer System Design</a> by Butler Lampson.</p> <p>--</p> <p>While technologies, methodologies and abstractions have waxed and waned over the years, Butler Lampson’s ‘Hints for Computer Systems Design’ remains relevant to the current challenges faced in software and hardware systems engineering.  Drawing against the backdrop of current development practices, we will discuss how Lampson’s hints can still be used, some thirty years later, to implement functionally accurate, high-performing fault-tolerant software systems.</p> <p>-- </p> <p>In a previous life Bill (<a href="https://twitter.com/williamberryiii">@williamberryiii</a>) crafted scenery for Broadway, a la Pirates of Penzance, but now crafts software for the enterprise, a la Pirates of Silicon Valley.  In his roles as Technical Lead and Application Architect for The Retail Equation, Bill has lead service integrations with Fortune 500 retailers, curated DevOps initiatives and always enjoys building high performance, multi-tenant distributed data APIs.  As a deeply curious engineer, he enjoys pairing complex problems with simple and elegant solutions. Striving for meaningful change, Bill believes that cultural and technical progress is best made through evolution and not revolution.</p> <p><br/>--</p> <p>Thanks again to Brainium for generously hosting and providing food and drinks!</p>
+    event_url: http://www.meetup.com/Papers-We-Love-LA/events/223494462/
   link: http://www.meetup.com/Papers-We-Love-LA/
   lat: 34.029998779296875
   state: CA
   category: {name: tech, id: 34, shortname: tech}
   urlname: Papers-We-Love-LA
-  rating: 0
+  rating: 5
   description: |-
     <p>What was the last paper within the realm of computing you read and loved? What did it inspire you to build or tinker with? Come share the ideas in an awesome academic/research paper with fellow engineers, programmers, and paper-readers. Lead a session and show off code that you wrote that implements these ideas or just give us the lowdown about the paper (because of HARD MATH!). Otherwise, just come, listen, and discuss.</p>
     <p>We're curating a repository for papers and places-to-find papers. You can contribute by adding PR's for papers, code, and/or links to other repositories.</p>
@@ -5399,7 +6403,6 @@ Doo-Things:
   - {urlkey: diy, name: DIY (Do It Yourself), id: 10438}
   - {urlkey: hacking, name: Hacking, id: 21123}
   - {urlkey: agile-project-management, name: Agile Project Management, id: 21549}
-  - {urlkey: software, name: Software, id: 26889}
   - {urlkey: lean-startup, name: Lean Startup, id: 38660}
   - {urlkey: open-innovation, name: Open innovation, id: 51127}
   - {urlkey: open-data, name: Open Data, id: 60043}
@@ -5411,7 +6414,7 @@ Doo-Things:
   who: Dooers
   country: IN
   city: Pune
-  members: 656
+  members: 858
   timezone: Asia/Calcutta
   id: 12214242
   utc_offset: 19800000
@@ -5740,11 +6743,117 @@ Doo-Things:
     rating: {count: 0, average: 0}
     description: <p>Talk by Aditya Godbole(<a href="https://twitter.com/aagdbl">@aagdbl</a>) on Functional Javascript</p>
     event_url: http://www.meetup.com/Doo-Things/events/219827290/
+  - headcount: 0
+    created: 1432479817000
+    photo_album_id: 26157134
+    yes_rsvp_count: 16
+    group: {join_mode: open, created: 1389952095000, name: Doo Things, group_lon: 73.83999633789062,
+      id: 12214242, urlname: Doo-Things, group_lat: 18.530000686645508, who: Dooers}
+    id: '222747439'
+    utc_offset: 19800000
+    visibility: public
+    name: Schools of the 21st Century.
+    maybe_rsvp_count: 0
+    status: past
+    venue: {address_2: 'Landmark: Above Dorabjee''s, on the 4th Floor', address_1: '402A,
+        Town Square, Airport Road, Viman Nagar', country: in, city: Pune, repinned: false,
+      id: 16725252, name: Doo, lon: 73.88111, lat: 18.55311}
+    time: 1432960200000
+    updated: 1433848252000
+    photos:
+    - photo_album: {photo_album_id: 26157134, event_id: '222747439', group_id: 12214242}
+      highres_link: http://photos3.meetupstatic.com/photos/event/b/9/e/3/highres_438047587.jpeg
+      photo_id: 438047587
+      created: 1433010230000
+      member: {member_id: 110767042, name: Rituparna Matkar}
+      photo_link: http://photos3.meetupstatic.com/photos/event/b/9/e/3/600_438047587.jpeg
+      updated: 1433010233000
+      thumb_link: http://photos3.meetupstatic.com/photos/event/b/9/e/3/thumb_438047587.jpeg
+    - photo_album: {photo_album_id: 26157134, event_id: '222747439', group_id: 12214242}
+      highres_link: http://photos3.meetupstatic.com/photos/event/b/9/d/4/highres_438047572.jpeg
+      photo_id: 438047572
+      created: 1433010192000
+      member: {member_id: 110767042, name: Rituparna Matkar}
+      photo_link: http://photos3.meetupstatic.com/photos/event/b/9/d/4/600_438047572.jpeg
+      updated: 1433062814000
+      thumb_link: http://photos3.meetupstatic.com/photos/event/b/9/d/4/thumb_438047572.jpeg
+    - photo_album: {photo_album_id: 26157134, event_id: '222747439', group_id: 12214242}
+      highres_link: http://photos4.meetupstatic.com/photos/event/b/9/b/6/highres_438047542.jpeg
+      photo_id: 438047542
+      created: 1433010151000
+      member: {member_id: 110767042, name: Rituparna Matkar}
+      photo_link: http://photos4.meetupstatic.com/photos/event/b/9/b/6/600_438047542.jpeg
+      updated: 1433062665000
+      thumb_link: http://photos2.meetupstatic.com/photos/event/b/9/b/6/thumb_438047542.jpeg
+    - photo_album: {photo_album_id: 26157134, event_id: '222747439', group_id: 12214242}
+      highres_link: http://photos1.meetupstatic.com/photos/event/b/9/9/e/highres_438047518.jpeg
+      photo_id: 438047518
+      created: 1433010111000
+      member: {member_id: 110767042, name: Rituparna Matkar}
+      photo_link: http://photos1.meetupstatic.com/photos/event/b/9/9/e/600_438047518.jpeg
+      updated: 1433062784000
+      thumb_link: http://photos1.meetupstatic.com/photos/event/b/9/9/e/thumb_438047518.jpeg
+    - photo_album: {photo_album_id: 26157134, event_id: '222747439', group_id: 12214242}
+      highres_link: http://photos3.meetupstatic.com/photos/event/b/9/7/b/highres_438047483.jpeg
+      photo_id: 438047483
+      created: 1433010057000
+      member: {member_id: 110767042, name: Rituparna Matkar}
+      photo_link: http://photos3.meetupstatic.com/photos/event/b/9/7/b/600_438047483.jpeg
+      updated: 1433062766000
+      thumb_link: http://photos3.meetupstatic.com/photos/event/b/9/7/b/thumb_438047483.jpeg
+    - photo_album: {photo_album_id: 26157134, event_id: '222747439', group_id: 12214242}
+      highres_link: http://photos2.meetupstatic.com/photos/event/b/9/5/a/highres_438047450.jpeg
+      photo_id: 438047450
+      created: 1433010011000
+      member: {member_id: 110767042, name: Rituparna Matkar}
+      photo_link: http://photos2.meetupstatic.com/photos/event/b/9/5/a/600_438047450.jpeg
+      updated: 1433062744000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/b/9/5/a/thumb_438047450.jpeg
+    - photo_album: {photo_album_id: 26157134, event_id: '222747439', group_id: 12214242}
+      highres_link: http://photos4.meetupstatic.com/photos/event/b/9/2/d/highres_438047405.jpeg
+      photo_id: 438047405
+      created: 1433009932000
+      member: {member_id: 110767042, name: Rituparna Matkar}
+      photo_link: http://photos4.meetupstatic.com/photos/event/b/9/2/d/600_438047405.jpeg
+      updated: 1433010284000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/b/9/2/d/thumb_438047405.jpeg
+    - photo_album: {photo_album_id: 26157134, event_id: '222747439', group_id: 12214242}
+      highres_link: http://photos4.meetupstatic.com/photos/event/8/8/3/7/highres_438034871.jpeg
+      photo_id: 438034871
+      created: 1432975748000
+      member: {member_id: 110767042, name: Rituparna Matkar}
+      photo_link: http://photos4.meetupstatic.com/photos/event/8/8/3/7/600_438034871.jpeg
+      updated: 1433062710000
+      thumb_link: http://photos4.meetupstatic.com/photos/event/8/8/3/7/thumb_438034871.jpeg
+    - photo_album: {photo_album_id: 26157134, event_id: '222747439', group_id: 12214242}
+      highres_link: http://photos3.meetupstatic.com/photos/event/8/8/2/5/highres_438034853.jpeg
+      photo_id: 438034853
+      created: 1432975678000
+      member: {member_id: 110767042, name: Rituparna Matkar}
+      photo_link: http://photos3.meetupstatic.com/photos/event/8/8/2/5/600_438034853.jpeg
+      updated: 1433062691000
+      thumb_link: http://photos3.meetupstatic.com/photos/event/8/8/2/5/thumb_438034853.jpeg
+    - photo_album: {photo_album_id: 26157134, event_id: '222747439', group_id: 12214242}
+      highres_link: http://photos1.meetupstatic.com/photos/event/8/8/2/4/highres_438034852.jpeg
+      photo_id: 438034852
+      created: 1432975665000
+      member: {member_id: 110767042, name: Rituparna Matkar}
+      photo_link: http://photos1.meetupstatic.com/photos/event/8/8/2/4/600_438034852.jpeg
+      updated: 1432975668000
+      thumb_link: http://photos1.meetupstatic.com/photos/event/8/8/2/4/thumb_438034852.jpeg
+    waitlist_count: 0
+    rating: {count: 2, average: 5}
+    description: |-
+      <p>A group discussion around the topic of how would schools be in 21st century. Facilitated by Atul Veer, who will guide us through his research on the topic.</p> <p>- A good look at current education system and challenges we face.<br/>- Understanding what school is for.<br/>- How should we teach ourselves and our kids in 21st Century?</p> <p>It would be great if you watch following videos before coming to the meetup! </p> <p>1. Sir Ken Robinson's talk on Changing education Paradigms .</p> <p><a href="https://youtu.be/ATCqh-OjSuw?list=PLbRLdW37G3oMquOaC-HeUIt6CWk-FzaGp" class="embedded">https://youtu.be/ATCqh-OjSuw?list=PLbRLdW37G3oMquOaC-HeUIt6CWk-FzaGp</a></p> <p>
+
+
+      2. Sir Ken Robinson's talk on schools</p> <p><a href="https://www.youtube.com/watch?v=iG9CE55wbtY" class="embedded">https://www.youtube.com/watch?v=iG9CE55wbtY</a></p> <p>3. Hindi documentary on Shri Dayalchand Soni - with English subtitles.  He talks about basic education and on why education? </p> <p><a href="https://vimeo.com/18230123" class="embedded">https://vimeo.com/18230123</a></p> <p>4. John Holt's ideas on education and children</p> <p><a href="https://www.youtube.com/watch?v=qKmSfvtdZaM" class="embedded">https://www.youtube.com/watch?v=qKmSfvtdZaM</a></p>
+    event_url: http://www.meetup.com/Doo-Things/events/222747439/
   link: http://www.meetup.com/Doo-Things/
   lat: 18.530000686645508
   category: {name: tech, id: 34, shortname: tech}
   urlname: Doo-Things
-  rating: 4.52
+  rating: 4.58
   description: |-
     Let's get together for doo-ing lots of activities related to
     Computers, Arts, History, Education, Open Hardware, Software, Robotics.
@@ -5763,7 +6872,7 @@ Papers-We-Love-Munich:
   who: Paper Readers
   country: DE
   city: München
-  members: 263
+  members: 307
   timezone: Europe/Berlin
   id: 17614202
   utc_offset: 7200000
@@ -6111,23 +7220,6 @@ Papers-We-Love-Munich:
       class="linkified">http://redwood.berkeley.edu/bruno/papers/VR.pdf</a><br/>[2]
       <a href="http://deeplearning.net/reading-list/" class="linkified">http://deeplearning.net/reading-list/</a></p>'
     event_url: http://www.meetup.com/Papers-We-Love-Munich/events/221497485/
-  - headcount: 0
-    created: 1429432837000
-    yes_rsvp_count: 16
-    group: {join_mode: open, created: 1413287136000, name: Papers We Love - Munich,
-      group_lon: 11.579999923706055, id: 17614202, urlname: Papers-We-Love-Munich,
-      group_lat: 48.13999938964844, who: Paper Readers}
-    id: '221945528'
-    utc_offset: 7200000
-    visibility: public
-    name: Primer on Bayesian Statistics
-    maybe_rsvp_count: 0
-    status: upcoming
-    time: 1432746000000
-    updated: 1429432837000
-    waitlist_count: 0
-    description: <p>We'll bootstrap everyone who wants to know more about basic Probability Theory (types of random variables, how to calculate sum/product of probabilities), and will move to Bayes Theorem and it's application in Machine Learning.</p> <p>Currently I'm prepping a meetup solely from University textbooks, so no concrete papers in mind.</p> <p>If you have a word or two to say about application of Bayesian statistics in Machine Learning, we'll be glad to hear you!</p>
-    event_url: http://www.meetup.com/Papers-We-Love-Munich/events/221945528/
   link: http://www.meetup.com/Papers-We-Love-Munich/
   lat: 48.13999938964844
   category: {name: tech, id: 34, shortname: tech}
@@ -6144,11 +7236,11 @@ Papers-We-Love-Madrid:
   - {urlkey: newtech, name: New Technology, id: 9696}
   - {urlkey: intellectual-discussion, name: Intellectual Discussion, id: 15083}
   - {urlkey: software-engineering, name: Software Engineering, id: 16325}
-  - {urlkey: programming, name: Programming, id: 17627}
   - {urlkey: engineering, name: Engineering, id: 21750}
   - {urlkey: computer-science, name: Computer Science, id: 21751}
   - {urlkey: technology-professionals, name: Technology Professionals, id: 22203}
   - {urlkey: academics, name: Academics, id: 32773}
+  - {urlkey: computer-programming, name: Computer programming, id: 48471}
   - {urlkey: intellectual-curiosity, name: Intellectual Curiosity, id: 79032}
   - {urlkey: academic-papers, name: Academic Papers, id: 93172}
   - {urlkey: it-professionals, name: IT Professionals, id: 164111}
@@ -6156,7 +7248,7 @@ Papers-We-Love-Madrid:
   who: Readers
   country: ES
   city: Madrid
-  members: 137
+  members: 147
   timezone: Europe/Madrid
   id: 18327969
   utc_offset: 7200000
@@ -6333,7 +7425,7 @@ Papers-We-Love-Columbus:
   who: Readers
   country: US
   city: Columbus
-  members: 39
+  members: 42
   timezone: US/Eastern
   id: 14075072
   utc_offset: -14400000
@@ -6455,10 +7547,10 @@ Papers-We-Love-Columbus:
 Papers-We-Love-Montreal:
   topics:
   - {urlkey: softwaredev, name: Software Development, id: 3833}
-  - {urlkey: programming, name: Programming, id: 17627}
   - {urlkey: programming-languages, name: Programming Languages, id: 17628}
   - {urlkey: computer-science, name: Computer Science, id: 21751}
   - {urlkey: functional-programming, name: Functional Programming, id: 22792}
+  - {urlkey: computer-programming, name: Computer programming, id: 48471}
   - {urlkey: compilers, name: Compilers, id: 59684}
   - {urlkey: algorithms, name: Algorithms, id: 111155}
   - {urlkey: data-structures, name: Data Structures, id: 193031}
@@ -6466,7 +7558,7 @@ Papers-We-Love-Montreal:
   who: Members
   country: CA
   city: Montréal
-  members: 154
+  members: 203
   timezone: Canada/Eastern
   id: 16679672
   utc_offset: -14400000
@@ -6663,7 +7755,7 @@ Papers-We-Love-Montreal:
     event_url: http://www.meetup.com/Papers-We-Love-Montreal/events/221545922/
   - headcount: 0
     created: 1429794417000
-    yes_rsvp_count: 1
+    yes_rsvp_count: 14
     group: {join_mode: open, created: 1409349394000, name: 'Papers We Love, Montreal',
       group_lon: -73.62000274658203, id: 16679672, urlname: Papers-We-Love-Montreal,
       group_lat: 45.529998779296875, who: Members}
@@ -6672,26 +7764,73 @@ Papers-We-Love-Montreal:
     visibility: public
     name: Johnson-Lindenstrauss Lemma
     maybe_rsvp_count: 0
-    status: upcoming
+    status: past
     venue: {address_1: '10 Rue Duke ', country: ca, city: Montreal, repinned: false,
       id: 1139987, name: Autodesk Canada, lon: -73.553435, phone: ' (514) 393-1616',
       lat: 45.495281, state: QC, zip: H3C 2L7}
     time: 1432594800000
-    updated: 1429840171000
+    updated: 1432647693000
     waitlist_count: 0
+    rating: {count: 1, average: 5}
     description: |-
-      <p>Rishikesh will present on the <a href="http://en.wikipedia.org/wiki/Johnson%E2%80%93Lindenstrauss_lemma">Johnson-Lindenstrauss Lemma</a> and its applications.  With the advent of the <a href="https://www.cs.princeton.edu/~chazelle/pubs/FJLT-sicomp09.pdf">Fast Johnson-Lindenstrauss Transform</a> this has become a practical tool for dimensionality reduction, approximate nearest neighbors, collision detection, among other things.</p> <p>
+      <p>Rishikesh will present <a href="http://www.cs.cmu.edu/~anupamg/papers/jl.pdf">An Elementary Proof of a Theorem of Johnson and Lindenstrauss</a> by Dasgupta and Gupta, with additional material from Ailon and Chazelle's <a href="https://www.cs.princeton.edu/~chazelle/pubs/FJLT-sicomp09.pdf">The Fast Johnson-Lindenstrauss Transform and Approximate Nearest Neighbors</a>.</p> <p>
 
 
+      The <a href="http://en.wikipedia.org/wiki/Johnson%E2%80%93Lindenstrauss_lemma">Johnson-Lindenstrauss Lemma</a> is pretty awesome, and with the advent of the <a href="https://www.cs.princeton.edu/~chazelle/pubs/FJLT-sicomp09.pdf">Fast Johnson-Lindenstrauss Transform</a> this has become a practical tool for dimensionality reduction, approximate nearest neighbors, collision detection, among other things.  There are applications for everyone who's dealing with the <a href="http://en.wikipedia.org/wiki/Curse_of_dimensionality">curse of dimensionality</a>, from machine learning to realtime videogames.</p> <p>
 
-      I will have more details on the talk and a confirmed location soon.</p>
+      Note that this talk will be hosted at Autodesk and will begin at 7pm.</p>
     event_url: http://www.meetup.com/Papers-We-Love-Montreal/events/222043241/
+  - headcount: 0
+    created: 1432585956000
+    yes_rsvp_count: 36
+    group: {join_mode: open, created: 1409349394000, name: 'Papers We Love, Montreal',
+      group_lon: -73.62000274658203, id: 16679672, urlname: Papers-We-Love-Montreal,
+      group_lat: 45.529998779296875, who: Members}
+    id: '222772596'
+    utc_offset: -14400000
+    visibility: public
+    name: 'Machine Learning: The High-Interest Credit Card of Technical Debt'
+    maybe_rsvp_count: 0
+    status: past
+    venue: {address_1: '10 Rue Duke ', country: ca, city: Montreal, repinned: false,
+      id: 1139987, name: Autodesk Canada, lon: -73.553435, phone: ' (514) 393-1616',
+      lat: 45.495281, state: QC, zip: H3C 2L7}
+    time: 1435273200000
+    updated: 1435329324000
+    waitlist_count: 0
+    rating: {count: 1, average: 5}
+    description: '<p>Julia Evans will present &lt;a&gt;Machine Learning: The High-Interest
+      Credit Card of Technical Debt&lt;/a&gt;.  After a number of talks about the
+      wonders of machine learning, it''s going to be nice to have a paper about the
+      caveats, particularly the maintainability of such systems in production.  I''m
+      sure there will be lively discussion of this one, so bring out your best anecdotes!</p>'
+    event_url: http://www.meetup.com/Papers-We-Love-Montreal/events/222772596/
+  - headcount: 0
+    created: 1435684805000
+    yes_rsvp_count: 7
+    group: {join_mode: open, created: 1409349394000, name: 'Papers We Love, Montreal',
+      group_lon: -73.62000274658203, id: 16679672, urlname: Papers-We-Love-Montreal,
+      group_lat: 45.529998779296875, who: Members}
+    id: '223605623'
+    utc_offset: -14400000
+    visibility: public
+    name: Efficient and General On-Stack Replacement for Aggressive Program Specialization
+    maybe_rsvp_count: 0
+    status: upcoming
+    venue: {address_1: '10 Rue Duke ', country: ca, city: Montreal, repinned: false,
+      id: 1139987, name: Autodesk Canada, lon: -73.553435, phone: ' (514) 393-1616',
+      lat: 45.495281, state: QC, zip: H3C 2L7}
+    time: 1437606000000
+    updated: 1435684838000
+    waitlist_count: 0
+    description: <p>Maxime Chevalier-Boisvert will present Soman and Krintz's paper, "<a href="https://www.cs.ucsb.edu/~ckrintz/papers/osr.pdf">Efficient and General On-Stack Replacement for Aggressive Program Specialization</a>".  Maxime had the following to say about the paper:</p> <p><br/>"On-stack replacement is a technique used in almost every modern JIT. Java JITs, JavaScript JITs, etc. It's still very relevant to JIT compiler design, but it's something you may not learn about in a compiler class. The technique was pioneered in Self, but I thought this paper is best, because the Self paper introducing it also introduces a half-dozen other optimizations, which would just confuse the discussion."</p> <p>I am very excited about having an interesting compiler paper presented at PWLMTL, and I'm sure all you compiler design afficionados will enjoy this one.  For those who don't think they're interested in compilers, consider how insight into JIT optimizations can help you reason about the performance of all that JavaScript, JVM, and .NET code you interact with all the time!</p> <p>If you have had any trouble getting to the meetups in the past, please let me know if there is something I can do to make it easier.  Also, we will try to have food this time as I know that was popular at some of the past meetups.</p>
+    event_url: http://www.meetup.com/Papers-We-Love-Montreal/events/223605623/
   link: http://www.meetup.com/Papers-We-Love-Montreal/
   lat: 45.529998779296875
   state: QC
   category: {name: tech, id: 34, shortname: tech}
   urlname: Papers-We-Love-Montreal
-  rating: 4.71
+  rating: 4.78
   description: |-
     <p>This is the Montreal chapter of <a href="http://www.meetup.com/papers-we-love">http://www.paperswelove.org/.</a></p>
     <blockquote>
@@ -6709,9 +7848,9 @@ Papers-We-Love-DC:
   topics:
   - {urlkey: softwaredev, name: Software Development, id: 3833}
   - {urlkey: edtech, name: Education & Technology, id: 7203}
-  - {urlkey: programming, name: Programming, id: 17627}
   - {urlkey: computer-science, name: Computer Science, id: 21751}
   - {urlkey: web-programmers, name: Web Programmers, id: 39049}
+  - {urlkey: computer-programming, name: Computer programming, id: 48471}
   - {urlkey: engineers, name: Engineers, id: 79637}
   - {urlkey: programmers, name: Programmers, id: 124314}
   - {urlkey: software-engineers, name: Software Engineers, id: 472792}
@@ -6719,7 +7858,7 @@ Papers-We-Love-DC:
   who: Readers
   country: US
   city: Washington
-  members: 177
+  members: 189
   timezone: US/Eastern
   id: 15670772
   utc_offset: -14400000
@@ -6815,7 +7954,7 @@ Papers-We-Love-DC:
     updated: 1416599064000
     photos:
     - photo_link: http://photos1.meetupstatic.com/photos/event/7/1/e/6/600_431729158.jpeg
-      member: {member_id: 5661705, name: Raymond de Lacaze}
+      member: {member_id: 5661705, name: Pierre de Lacaze}
       created: 1416530007000
       photo_id: 431729158
       highres_link: http://photos1.meetupstatic.com/photos/event/7/1/e/6/highres_431729158.jpeg
@@ -6835,7 +7974,7 @@ Papers-We-Love-DC:
   - headcount: 0
     created: 1428934048000
     how_to_find_us: We'll be upstairs! Buzz WeWork or tweet at @mrb_bk
-    yes_rsvp_count: 16
+    yes_rsvp_count: 15
     group: {join_mode: open, created: 1405211857000, name: Papers We Love DC, group_lon: -77.04000091552734,
       id: 15670772, urlname: Papers-We-Love-DC, group_lat: 38.900001525878906, who: Readers}
     id: '221811112'
@@ -6843,12 +7982,13 @@ Papers-We-Love-DC:
     visibility: public
     name: '#3 => John Feminella on "Coresets and their applications"'
     maybe_rsvp_count: 0
-    status: upcoming
+    status: past
     venue: {address_1: ' 718 7th Street NW', country: us, city: Washington, repinned: false,
       id: 21996302, name: WeWork DC - Chinatown, lon: 0, lat: 0, state: DC}
     time: 1430434800000
-    updated: 1428934069000
+    updated: 1430447790000
     waitlist_count: 0
+    rating: {count: 0, average: 0}
     description: '<p><b>Description of the paper:</b></p> <p>We''ll be looking at
       the Ph.D. thesis of the head of the MIT Robotics and Big Data Lab, Dan Feldman.
       It''s entitled "Coresets and their applications" (2010). (That''s "coresets"
