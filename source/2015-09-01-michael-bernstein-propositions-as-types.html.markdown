@@ -38,7 +38,7 @@ Heâ€™ll also be showing off some work from Daniel P. Friedman and Carl Eastlundâ
 
 **Bio**
 
-Michael R. Bernstein [@mrb_bk](https://twiiter.com/@mrb_bk) loves you. He lives in Takoma Park, MD and spends most of his time thinking about pottery, obscure LPs, food, and the intersection of philosophy and Computer Science.
+Michael R. Bernstein [@mrb_bk](https://twiiter.com/mrb_bk) loves you. He lives in Takoma Park, MD and spends most of his time thinking about pottery, obscure LPs, food, and the intersection of philosophy and Computer Science.
 
 **Slides**
 
