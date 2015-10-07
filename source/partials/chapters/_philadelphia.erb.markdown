@@ -10,4 +10,9 @@ Papers We Love has a **[Code of Conduct](https://github.com/papers-we-love/paper
 
 **Sign-up:** Please RSVP for meetings via <a href="http://www.meetup.com/Papers-We-Love-Philadelphia">Meetup.com</a>
 
-**Organizers:** [Justin Campbell](http://www.meetup.com/Papers-We-Love-Philadelphia/members/4642846/)
+**Organizers:**
+[Justin Campbell](http://www.meetup.com/Papers-We-Love-Philadelphia/members/4642846/),
+[Katherine Fellows](http://www.meetup.com/Papers-We-Love-Philadelphia/members/7673860/),
+[Ted Fujimoto](http://www.meetup.com/Papers-We-Love-Philadelphia/members/159464622/),
+[Sarah Gray](http://www.meetup.com/Papers-We-Love-Philadelphia/members/14261889/), and
+[Pam Selle](http://www.meetup.com/Papers-We-Love-Philadelphia/members/7636470/)
