@@ -24,6 +24,7 @@ READMORE
 * **Meetup:** [http://bit.ly/1PaYkPc](http://bit.ly/1PaYkPc)
 * **Paper:** [http://bit.ly/1VOACYe](http://bit.ly/1VOACYe)
 * **Slides:** [http://bit.ly/1WXP0jj](http://bit.ly/1WXP0jj)
+* **Audio:** [http://bit.ly/1jzYwKy](http://bit.ly/1jzYwKy)
 
 **Description**
 
