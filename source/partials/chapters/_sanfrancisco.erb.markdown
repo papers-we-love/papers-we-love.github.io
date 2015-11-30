@@ -8,7 +8,7 @@ PWL SF strictly adheres to the [Code of Conduct](https://github.com/papers-we-lo
 
 <h2>Chapter details</h2>
 
-<strong>Location:</strong> [Fastly](http://maps.google.com/maps?f=q&hl=en&q=651+Brannan+Street%2C+Suite.+110%2C+San+Francisco%2C+CA%2C+us) - 651 Brannan Street, Suite. 110, San Francisco, CA
+<strong>Location:</strong> [Fastly](http://maps.google.com/maps?f=q&hl=en&q=651+Brannan+Street%2C+Suite.+110%2C+San+Francisco%2C+CA%2C+us) -  475 Brannan Street #320, San Francisco, CA
 
 <strong>Sign-up:</strong> Please RSVP for meetings via <a href="http://www.meetup.com/papers-we-love-too/">Meetup.com</a>
 
@@ -21,5 +21,5 @@ PWL SF strictly adheres to the [Code of Conduct](https://github.com/papers-we-lo
 <h2>Sponsors</h2>
 
 <p class="sponsor">
-<a href="http://fastly.com"><img src="https://dl.dropbox.com/s/ql88cvt9n34esim/Screenshot%202014-11-09%2013.46.08.png?dl=0" /></a>
+<a href="http://fastly.com"><img src="https://www.drupal.org/files/project-images/fastly_logo-01%20(1)_0.png" /></a>
 </p>
