@@ -12,7 +12,7 @@ gem "middleman-ogp"
 gem "builder", "~> 3.0"
 
 # XML parsing for great justice
-gem "nokogiri"
+gem "nokogiri", "~> 1.6.7"
 
 # SASS and friends
 gem 'sass'
