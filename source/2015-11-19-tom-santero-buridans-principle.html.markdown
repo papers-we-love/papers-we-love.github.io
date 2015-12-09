@@ -17,7 +17,7 @@ ogp:
 
 READMORE
 
-## New York - October 5, 2015
+## New York - Nomvember 19, 2015
 
 **Tom Santero** on Leslie Lamport's Buridan’s Principle
 
