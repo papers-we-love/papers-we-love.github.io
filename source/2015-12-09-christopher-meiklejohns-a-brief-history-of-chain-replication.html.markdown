@@ -16,7 +16,6 @@ ogp:
 ![Figure from Chain Replication for Supporting High Throughput and Availability](assets/images/chainrepexample1.png)
 ![Figure from Chain replication in theory and in practice](assets/images/chainrepexample2.png)
 
-
 The List:
 
 * [Chain Replication for Supporting High Throughput and Availability](http://www.cs.cornell.edu/home/rvr/papers/osdi04.pdf)
@@ -27,13 +26,13 @@ The List:
 * [ChainReaction: a Causal+ Consistent Datastore based on Chain Replication](http://eurosys2013.tudos.org/wp-content/uploads/2013/paper/Almeida.pdf)
 * [Leveraging sharding in the design of scalable replication protocols](http://www.ymsir.com/papers/sharding-socc.pdf)
 
-READMORE
-
-**Meetup**: [http://bit.ly/1QelqoU](http://bit.ly/1QelqoU)
+**Meetup Spotlight:** [http://bit.ly/1QelqoU](http://bit.ly/1QelqoU)
 
 On December 10, 2015, [Christopher Meikljohn](https://christophermeiklejohn.com/) will be presenting at [Papers We Love - San Francisco](http://www.meetup.com/papers-we-love-too) on the topic (and history) of **Chain Replication**, a data replication technique that "promises a high throughput, linearizable, robust replication technique with minimal overhead to tolerate failures with only f+1 nodes[0]."
 
 Here's a look at some of the papers that will be discussed, starting with the original work:
+
+READMORE
 
 ### [Chain Replication for Supporting High Throughput and Availability](http://www.cs.cornell.edu/home/rvr/papers/osdi04.pdf)
 
