@@ -1,6 +1,6 @@
 ---
 title: "The Papers: Christopher Meiklejohn's A Brief History of Chain Replication"
-date: 2015-12-09
+date: 2015-12-10
 tags: meetup, paperlist, topic, chainreplication, sanfrancisco
 label: Topic
 category: topic
@@ -28,7 +28,7 @@ The List:
 
 **Meetup Spotlight:** [http://bit.ly/1QelqoU](http://bit.ly/1QelqoU)
 
-On December 10, 2015, [Christopher Meikljohn](https://christophermeiklejohn.com/) will be presenting at [Papers We Love - San Francisco](http://www.meetup.com/papers-we-love-too) on the topic (and history) of **Chain Replication**, a data replication technique that "promises a high throughput, linearizable, robust replication technique with minimal overhead to tolerate failures with only f+1 nodes[0]."
+On December 10, 2015, [Christopher Meikljohn](https://christophermeiklejohn.com/) is presenting at [Papers We Love - San Francisco](http://www.meetup.com/papers-we-love-too) on the topic (and history) of **Chain Replication**, a data replication technique that "promises a high throughput, linearizable, robust replication technique with minimal overhead to tolerate failures with only f+1 nodes[0]."
 
 Here's a look at some of the papers that will be discussed, starting with the original work:
 
