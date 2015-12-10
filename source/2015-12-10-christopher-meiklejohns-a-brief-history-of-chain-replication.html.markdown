@@ -21,8 +21,8 @@ READMORE
 
 Here's a look at some of the papers that will be discussed, starting with the original work:
 
-<img src="/assets/images/cmeik_fig1.svg" height="270" alt="Figure from Chain Replication for Supporting High Throughput and Availability" />
-<img src="/assets/images/cmeik_fig2.svg" height="270" alt="Figure from Chain replication in theory and in practice" />
+<img src="/assets/images/cmeik_fig1.svg" alt="Figure from Chain Replication for Supporting High Throughput and Availability" />
+<img src="/assets/images/cmeik_fig2.svg" alt="Figure from Chain replication in theory and in practice" />
 
 **The List:**
 
