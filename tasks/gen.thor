@@ -10,7 +10,10 @@ class Gen < Thor
 
   namespace :gen
 
-  TEMPLATES = { :meetups => 'lib/templates/meetups_template.erb' }
+  TEMPLATES = {
+    meetups: '../lib/templates/meetups_template.erb',
+    video: '../lib/templates/video_template.erb'
+  }
 
   attr_reader :output
 
@@ -35,6 +38,10 @@ class Gen < Thor
                 aliases: '-a',
                 desc: 'The author of the scaffolded post'
 
+  method_option 'youtube',
+                aliases: '-y',
+                desc: 'YouTube video id (just the id)'
+
   def gen(type)
     template = TEMPLATES[type.to_sym]
     fail "No template for #{type}" if template.nil?
@@ -43,7 +50,14 @@ class Gen < Thor
     @title  = options[:title] || 'Meetups this month'
     @slug   = safe_parameterize(@title)
     @author = options[:author] || 'Boatswain Miller'
-    @date   = options[:date] ? Time.parse(options[:date]).to_date.strftime('%Y-%m-%d') : Time.now.to_date.strftime('%Y-%m-%d')
+    @video = options[:youtube] || ''
+    @date   = if options[:date]
+                Time.parse(options[:date]).to_date.strftime('%Y-%m-%d')
+              else
+                Time.now.to_date.strftime('%Y-%m-%d')
+              end
+
+    @human_date = Time.parse(@date).to_date.strftime('%B %e, %Y')
 
     render template
     save
@@ -57,7 +71,7 @@ class Gen < Thor
   end
 
   def save
-    filepath = File.join('source', "#{@date}-#{@slug}.html.markdown")
+    filepath = File.join('..', 'source', "#{@date}-#{safe_parameterize(@author)}-#{@slug}.html.markdown")
     File.write(filepath, @output)
   end
 end
