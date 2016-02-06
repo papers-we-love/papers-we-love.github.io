@@ -17,7 +17,7 @@ description: "Macaroons: Cookies with Contextual Caveats by Sam L’ecuyer on 20
 
 READMORE
 
-## CHAPTER - October 28, 2015
+## Los Angeles - October 28, 2015
 
 **Sam L’ecuyer** on Macaroons: Cookies with Contextual Caveats
 
