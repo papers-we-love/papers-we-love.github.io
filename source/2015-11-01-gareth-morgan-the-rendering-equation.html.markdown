@@ -41,5 +41,4 @@ Tony Arcieri is a @SquareEng CyberSecurity Engineer. He cybertweets about cyberc
 
 ---
 
-<img class="left no-shadow" alt="Fastly" style="width: 180px" src="http://mediaserver.pulse2.com/wp-content/uploads/2014/09/Fastly-Logo.png" /><br />
-The <strong>San Francisco Chapter</strong> would like to give special thanks to [Fastly](https://www.fastly.com) for sponsoring the November meetup.
+<img class="left no-shadow" alt="Fastly" style="width: 140px" src="https://www.drupal.org/files/project-images/fastly_logo-01%20(1)_0.png" /><br />The <strong>San Francisco Chapter</strong> would like to give special thanks to [Fastly](https://www.fastly.com) for sponsoring the November meetup.
