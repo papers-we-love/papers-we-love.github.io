@@ -17,12 +17,13 @@ description: "PushPull++ by Ramsey Nasser on 2016-02-08"
 
 READMORE
 
-## New York - February  8, 2016
+## New York - January 28, 2016
 
 **Ramsey Nasser** on [PushPull++](http://peterwonka.net/Publications/pdfs/2014.SG.Lipp.PushPull.pdf)
 
 * **Meetup:** [http://www.meetup.com/papers-we-love/events/228110427/](http://www.meetup.com/papers-we-love/events/228110427/)
 * **Paper:** [PushPull++](http://peterwonka.net/Publications/pdfs/2014.SG.Lipp.PushPull.pdf)
+* **Audio:** [https://www.mixcloud.com/paperswelove/ramsey-nasser-on-pushpull/](https://www.mixcloud.com/paperswelove/ramsey-nasser-on-pushpull/)
 * **Video demo:** [https://www.youtube.com/watch?v=lOYpaJWNPaU](https://www.youtube.com/watch?v=lOYpaJWNPaU)
 
 **Description**
