@@ -23,6 +23,7 @@ READMORE
 
 * **Meetup:** [http://www.meetup.com/papers-we-love/events/228110427/](http://www.meetup.com/papers-we-love/events/228110427/)
 * **Paper:** [PushPull++](http://peterwonka.net/Publications/pdfs/2014.SG.Lipp.PushPull.pdf)
+* **Slides:** [https://speakerdeck.com/paperswelove/ramsey-nasser-on-pushpull-plus-plus](https://speakerdeck.com/paperswelove/ramsey-nasser-on-pushpull-plus-plus)
 * **Audio:** [https://www.mixcloud.com/paperswelove/ramsey-nasser-on-pushpull/](https://www.mixcloud.com/paperswelove/ramsey-nasser-on-pushpull/)
 * **Video demo:** [https://www.youtube.com/watch?v=lOYpaJWNPaU](https://www.youtube.com/watch?v=lOYpaJWNPaU)
 
