@@ -30,7 +30,3 @@ Papers We Love has a **[Code of Conduct](https://github.com/papers-we-love/paper
 <p class="sponsor">
   <a href="http://engineering.tumblr.com"><img src="/images/tumblr_logotype_white_blue_64.png" class="sponsor" /></a> Venue sponsor
 </p>
-
-<p class="sponsor">
-  <a href="https://dev.theladders.com"><img class="sponsor" src="/images/ladders_logo.jpg" title="TheLadders.com" alt="the-ladders" /></a> Refreshments sponsor
-</p>
