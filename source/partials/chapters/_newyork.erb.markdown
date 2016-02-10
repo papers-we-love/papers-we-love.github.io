@@ -23,10 +23,16 @@ Papers We Love has a **[Code of Conduct](https://github.com/papers-we-love/paper
 
 **Twitter:** <a href="https://twitter.com/paperswelovenyc">@paperswelovenyc</a>
 
+**Contact:** <a href="mailto:contact@paperswelove.org">contact AT paperswelove DOT org</a>
+
 **Organizers:** <a href="mailto:bowmanb@gmail.com">Brian Bowman</a>, <a href="https://github.com/hakutsuru">Sean Broderick</a>, <a href="https://twitter.com/CuevasClemente">Clemente Cuevas</a>, <a href="https://twitter.com/jeremyheiler">Jeremy Heiler</a>, <a href="https://twitter.com/zeeshanlakhani">Zeeshan Lakhani</a>, <a href="https://twitter.com/clint_newsom">Clint Newsom</a> and <a href="https://twitter.com/d_run">Darren Newton</a>
 
 ## Sponsors
 
 <p class="sponsor">
-  <a href="http://engineering.tumblr.com"><img src="/images/tumblr_logotype_white_blue_64.png" class="sponsor" /></a> Venue sponsor
+  <a href="http://engineering.tumblr.com"><img src="/images/tumblr_logotype_white_blue_64.png" class="sponsor" /></a> Venue Sponsor
+</p>
+
+<p class="sponsor">
+  <a href="http://enigma.io/"><img class="sponsor" src="/images/enigma_logo.png" title="Enigma.io" alt="enigma.io" /></a> Silver Sponsor
 </p>
