@@ -1,16 +1,16 @@
 ---
-title: "Matt Aderath on A Scalable Bootstrap for Massive Data"
+title: "Matt Adereth on A Scalable Bootstrap for Massive Data"
 date: 2016-02-18
 author: Joshua
 category: video
 tags: meetup, video
 label: Video
-description: "Matt Aderath on A Scalable Bootstrap for Massive Data | Marios Assiotis on Throttling Utilities in the IBM DB2 Universal DB Server"
+description: "Matt Adereth on A Scalable Bootstrap for Massive Data | Marios Assiotis on Throttling Utilities in the IBM DB2 Universal DB Server"
 ogp:
   og:
-    description: "Matt Aderath on A Scalable Bootstrap for Massive Data | Marios Assiotis on Throttling Utilities in the IBM DB2 Universal DB Server"
+    description: "Matt Adereth on A Scalable Bootstrap for Massive Data | Marios Assiotis on Throttling Utilities in the IBM DB2 Universal DB Server"
   fb:
-    description: "Matt Aderath on A Scalable Bootstrap for Massive Data | Marios Assiotis on Throttling Utilities in the IBM DB2 Universal DB Server"
+    description: "Matt Adereth on A Scalable Bootstrap for Massive Data | Marios Assiotis on Throttling Utilities in the IBM DB2 Universal DB Server"
 ---
 
 <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/Wsly7pIuGsI" frameborder="0" allowfullscreen></iframe>
@@ -21,7 +21,7 @@ READMORE
 
 * **Meetup:** [http://www.meetup.com/papers-we-love-too/events/227849450/](http://www.meetup.com/papers-we-love-too/events/227849450/)
 
-### Matt Aderath on [A Scalable Bootstrap for Massive Data](http://arxiv.org/pdf/1112.5016.pdf)
+### Matt Adereth on [A Scalable Bootstrap for Massive Data](http://arxiv.org/pdf/1112.5016.pdf)
 
 Bootstrapping is a powerful statistical technique for assessing the quality of estimators. It's computationally intensive and it's not immediately obvious how it could be applied efficiently in a distributed environment.
 
