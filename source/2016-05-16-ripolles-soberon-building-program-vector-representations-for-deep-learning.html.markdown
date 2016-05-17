@@ -13,7 +13,7 @@ ogp:
     description: "Ripollés & Soberón on Building Program Vector Representations for Deep Learning"
 ---
 
-<iframe class="video" width="560" height="315" src="https://www.youtube.com/watch?v=Ju2pRFVmgAk" frameborder="0" allowfullscreen></iframe>
+<iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/Ju2pRFVmgAk" frameborder="0" allowfullscreen></iframe>
 
 READMORE
 
