@@ -29,5 +29,5 @@ This paper presents a model for learning “code embeddings”, relying on the s
 
 ---
 
-<img class="left no-shadow" alt="ShuttleCloud" style="width: 200px" src="/images/shuttlecloud.png" />
+<img class="left no-shadow" alt="ShuttleCloud" style="width: 200px" src="/images/shuttcloud.png" />
 The **Madrid Chapter** would like to give special thanks to [ShuttleCloud](https://www.shuttlecloud.com/) for sponsoring the February meetup.
