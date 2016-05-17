@@ -1,6 +1,6 @@
 ---
 title: "Ripollés & Soberón on Building Program Vector Representations for Deep Learning"
-date: 2016-05-17
+date: 2016-05-16
 author: Joshua
 category: video
 tags: meetup, video

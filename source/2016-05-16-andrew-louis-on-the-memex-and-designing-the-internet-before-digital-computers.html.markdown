@@ -1,6 +1,6 @@
 ---
 title: "Andrew Louis on The Memex and designing the Internet before digital computers"
-date: 2016-05-17
+date: 2016-05-16
 author: Joshua
 category: video
 tags: meetup, video
@@ -13,7 +13,7 @@ ogp:
     description: "Andrew Louis on The Memex and designing the Internet before digital computers"
 ---
 
-<iframe class="video" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+<iframe class="video" width="560" height="315" src="https://www.youtube.com/watch?v=x2Z3Ev79FI0" frameborder="0" allowfullscreen></iframe>
 
 READMORE
 
