@@ -1,0 +1,53 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <meta content="width=device-width" name="viewport">
+    <title>PWLConf 2016 | About</title>
+    <meta name="description" content="September 15, 2016 - St. Louis, Missouri" />
+
+    <meta name="fb:description" content="September 15, 2016 in St. Louis, Missouri" />
+    <meta name="fb:image" content="http://paperswelove.org/images/PWLCONF-logo@2x.png">
+    <meta name="fb:image:type" content="image/png">
+    <meta name="fb:image:width" content="770">
+    <meta name="fb:image:height" content="830">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@papers_we_love" />
+    <meta name="twitter:title" content="Papers We Love Conference 2016" />
+    <meta name="twitter:description" content="September 15, 2016 in St. Louis, Missouri" />
+
+    <meta name="og:site_name" content="Papers We Love Conference 2016" />
+    <meta name="og:description" content="September 15, 2016 in St. Louis, Missouri" />
+    <meta name="og:image" content="http://paperswelove.org/images/PWLCONF-logo@2x.png">
+    <meta name="og:image:type" content="image/png">
+    <meta name="og:image:width" content="770">
+    <meta name="og:image:height" content="830">
+    <meta name="og:locale" content="en_us">
+    <meta name="og:url" content="http://paperswelove.org/pwlconf2016/">
+
+    <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+    <%= stylesheet_link_tag "font-awesome.min","pwlconf" %>
+    <%= favicon_tag 'favicon.ico' %>
+    <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+     ga('create', 'UA-53240153-1', 'auto');
+     ga('send', 'pageview');
+    </script>
+  </head>
+  <body id="generic" itemscope itemtype="http://schema.org/WebPage">
+    <div id="main" role="main" itemprop="mainContentOfPage">
+      <%= yield %>
+    </div>
+  </body>
+</html>
+<!--
+     All content and design is Copyright (c) <%= Date.today.year %>
+     Papers We Love LLC, all rights reserved
+ -->

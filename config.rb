@@ -30,6 +30,8 @@ end
 
 page "/feed.xml", layout: false
 
+page '/pwlconf2016/*', layout: 'pwlconf'
+
 ###
 # OpenGraph Settings
 ###
