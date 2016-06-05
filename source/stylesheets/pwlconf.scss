@@ -320,5 +320,37 @@ body {
       margin-bottom: 1em;
     }
   }
+}
 
+
+// ===========
+// Nav Content
+// ===========
+
+.articleNavigation {
+  background: $color-lightblue;
+  padding: 2em;
+  @include media($desktop) {
+    padding: 2em 5em;
+  }
+}
+
+.navRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navLink {
+  text-decoration: none;
+  color: $color-darkblue;
+    &:hover {
+      color: $color-pink;
+      text-decoration: underline;
+    }
+  display: inline-block;
+  padding-top: 30px;
+}
+
+.imgPwlConfNavLogo {
+  height: 80px;
 }
