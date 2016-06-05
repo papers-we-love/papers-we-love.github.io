@@ -6,6 +6,7 @@
 // Mobile first
 $grid-columns: 4;
 $desktop: new-breakpoint(min-width 768px 4);
+$desktop-banner: new-breakpoint(min-width 1137px 4);
 
 @import "neat";
 
