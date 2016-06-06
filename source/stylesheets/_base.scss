@@ -242,3 +242,61 @@ p.pagination-next {
   @include flex(2);
   text-align: right;
 }
+
+// PWLConf Banner
+
+
+$color-darkblue: #003366;
+$color-lightblue: #B4D6E4;
+$color-mediumblue: #7F99B3;
+$color-white: #fff;
+$color-text: #6B6B6B;
+$color-pink: #F605C9;
+
+.pwlConfBanner {
+  @include outer-container;
+  margin-top: 1em;
+  background: $color-lightblue;
+  @include media($desktop-banner) {
+    background-image: url(../images/pwl_conf_banner.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 100%;
+  }
+  padding: 2em;
+}
+
+.bannerRow {
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    color: $color-darkblue;
+    text-decoration: none;
+    &:hover {
+      color: $color-pink;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: .8em;
+    font-family: 'Helvetica Neue', helvetica, arial, sans-serif;
+    @include media($desktop) {
+      font-size: 1.1em;
+    }
+  }
+}
+
+.imgPwlConfLogo {
+  height: 100px;
+}
+
+h2.bannerHeader {
+  font-size: 1.2em;
+  margin: 0;
+  @include media($desktop) {
+    margin-top: 18px;
+    font-size: 1.6em;
+  }
+}
