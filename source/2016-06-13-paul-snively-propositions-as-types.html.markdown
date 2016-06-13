@@ -1,5 +1,5 @@
 ---
-title:Paul Snively on Propositions as Types
+title: Paul Snively on Propositions as Types
 date: 2016-6-13
 tags: meetup, video, losangeles
 label: Video
@@ -34,8 +34,4 @@ Paul Snively is an architect for Verizon OnCue, working in Scala in a purely fun
 
 ---
 
-<img class="left no-shadow" alt="Yahoo" style="width: 200px" src="/images/yahoo_logo.jpg" />
-<a href="https://yahoo.com/"><img src="" alt="Yahoo" title="Yahoo" style="padding: .3em; margin: 0 1em 0 0;"></a> <span style="flex: 1;">Papers We Love Los Angeles would like to thank <a href="https://yahoo.com/">Yahoo</a> for hosting this month's meetup.</span>
-</p>
-
----
+<a href="https://yahoo.com/"><img class="left no-shadow" alt="Yahoo" style="height: 60px" src="/images/yahoo_logo.jpg" /></a> <span style="display: inline-block; margin-top: 20px;">Papers We Love Los Angeles would like to thank <a href="https://yahoo.com/">Yahoo</a> for hosting this month's meetup.</span>
