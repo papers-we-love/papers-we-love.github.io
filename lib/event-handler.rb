@@ -9,7 +9,7 @@ end
 
 # Strip BS from titles
 def clean_title(title)
-  title.gsub(/[\#=>\d]|Papers We Love|PWL/, '').sub(/[-{1}]/, '').strip
+  title.gsub(/[\#=>\d]|Papers We Love|PWL/, '').sub(/[-{1}]/, '').sub(/\(part \d?( of \d?)?\)/i, '').strip
 end
 
 # Build up address and map strings for meta div
