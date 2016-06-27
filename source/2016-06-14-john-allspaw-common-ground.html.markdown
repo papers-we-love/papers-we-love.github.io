@@ -23,7 +23,7 @@ READMORE
 
 * **Meetup:** [http://www.meetup.com/papers-we-love/events/230555338/](http://www.meetup.com/papers-we-love/events/230555338/)
 * **Paper:** [Common Ground and Coordination in Joint Activity](http://jeffreymbradshaw.net/publications/Common_Ground_Single.pdf)
-* **Slides:** [TBD]()
+* **Slides:** [https://speakerdeck.com/paperswelove/john-allspaw-on-common-ground-and-coordination-in-joint-activity](https://speakerdeck.com/paperswelove/john-allspaw-on-common-ground-and-coordination-in-joint-activity)
 * **Audio:** [https://www.mixcloud.com/paperswelove/john-allspaw-on-common-ground-and-coordination-in-joint-activity/](https://www.mixcloud.com/paperswelove/john-allspaw-on-common-ground-and-coordination-in-joint-activity/)
 
 **Description**
