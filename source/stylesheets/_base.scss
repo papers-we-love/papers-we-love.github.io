@@ -329,6 +329,12 @@ h2.bannerHeader {
 
   }
 
+  img.comcast {
+    @include media($desktop) {
+      margin-right: 1.3em;
+    }
+  }
+
   h2.sponsorsHeader {
     flex-grow: 3;
     text-align: center;
