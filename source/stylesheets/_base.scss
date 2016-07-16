@@ -300,3 +300,58 @@ h2.bannerHeader {
     font-size: 1.6em;
   }
 }
+
+.pwlConfSponsors {
+  @include outer-container;
+  margin-top: 1em;
+  text-align: right;
+  border-bottom: #eee 1px solid;
+
+  .row {
+    padding: .5em 1em;
+    text-align: center;
+    @include media($desktop) {
+      padding: 0 1em 1em 0;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  a {
+    display: block;
+    text-align: center;
+    @include media($desktop) {
+      text-align: right;
+    }
+  }
+
+  .imgPwlConfSponsor {
+
+  }
+
+  img.comcast {
+    @include media($desktop) {
+      margin-right: 1.3em;
+    }
+  }
+
+  h2.sponsorsHeader {
+    flex-grow: 3;
+    text-align: center;
+    width: 100%;
+    color: #999;
+    font-size: 1em;
+    font-family: $sans;
+    font-weight: normal;
+
+    @include media($desktop) {
+      font-size: .8em;
+      padding-top: .6em;
+      padding-left: 2.5em;
+      text-align: left;
+
+    }
+
+  }
+
+}
