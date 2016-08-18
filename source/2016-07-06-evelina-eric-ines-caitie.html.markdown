@@ -23,10 +23,10 @@ Papers We Love - QCon NYC Edition w/ **Evelina, Eric, Ines, & Caitie**
 
 * **Meetup:** [http://www.meetup.com/papers-we-love/events/231394908/](http://www.meetup.com/papers-we-love/events/231394908/)
 * **Papers:**
- * [Mastering the Game of Go with Deep Neural Networks and Tree Search](http://bit.ly/1P2dD7H)
- * [Experience with Processes and Monitors in Mesa](http://bit.ly/29tCFFp)
- * [IronFleet: Proving Practical Distributed Systems Correct](http://bit.ly/29tC9XP)
- * [Simple Testing Can Prevent Most Critical Failures...](http://bit.ly/1oNFHjs)
+  * [Mastering the Game of Go with Deep Neural Networks and Tree Search](http://bit.ly/1P2dD7H)
+  * [Experience with Processes and Monitors in Mesa](http://bit.ly/29tCFFp)
+  * [IronFleet: Proving Practical Distributed Systems Correct](http://bit.ly/29tC9XP)
+  * [Simple Testing Can Prevent Most Critical Failures...](http://bit.ly/1oNFHjs)
 * **Audio:** [https://www.mixcloud.com/paperswelove/papers-we-love-qcon-nyc-edition-w-evelina-eric-ines-caitie/](https://www.mixcloud.com/paperswelove/papers-we-love-qcon-nyc-edition-w-evelina-eric-ines-caitie/)
 
 **Abstracts**
