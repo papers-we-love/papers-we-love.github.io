@@ -1,16 +1,16 @@
 ---
-title: "Deniz Altınbüken on Chain Replication (old and new) & Wes Chow (Mini) on Tiered Replication"
+title: "Deniz Altinbüken on Chain Replication (old and new) & Wes Chow (Mini) on Tiered Replication"
 date: 2016-08-19
 author: The Organization
 category: video
 tags: meetup, video
 label: Video
-description: "Deniz Altınbüken on Chain Replication (old and new) & Wes Chow (Mini) on Tiered Replication"
+description: "Deniz Altinbüken on Chain Replication (old and new) & Wes Chow (Mini) on Tiered Replication"
 ogp:
 og:
-description: "Deniz Altınbüken on Chain Replication (old and new) & Wes Chow (Mini) on Tiered Replication"
+description: "Deniz Altinbüken on Chain Replication (old and new) & Wes Chow (Mini) on Tiered Replication"
 fb:
-description: "Deniz Altınbüken on Chain Replication (old and new) & Wes Chow (Mini) on Tiered Replication"
+description: "Deniz Altinbüken on Chain Replication (old and new) & Wes Chow (Mini) on Tiered Replication"
 ---
 
 <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/1hDjkV4iFzs" frameborder="0" allowfullscreen></iframe>
@@ -21,17 +21,17 @@ READMORE
 
 ## New York - July 27, 2016
 
-**Deniz Altınbüken on Chain Replication (old and new) & a PWL-Mini with Wes Chow**
+**Deniz Altinbüken on Chain Replication (old and new) & a PWL-Mini with Wes Chow**
 
 * **Meetup:** [http://www.meetup.com/papers-we-love/events/231862215/](http://www.meetup.com/papers-we-love/events/231862215/)
 * **Papers:**
   * [Chain Replication for Supporting High Throughput and Availability](http://bit.ly/1K3UUJf)
   * [Tiered Replication: A Cost-effective Alternative to Full Cluster Geo-replication](http://bit.ly/2b2f2yV)
 * **Slides:**
-  * [Deniz Altınbüken on Chain Replication (old and new)](http://bit.ly/2bENnsi)
+  * [Deniz Altinbüken on Chain Replication (old and new)](http://bit.ly/2bENnsi)
   * [Wes Chow (Mini) on Tiered Replication](http://bit.ly/2bBbKVj)
 * **Audio:**
-  * [Deniz Altınbüken on Chain Replication (old and new)](http://bit.ly/2bgctwO)
+  * [Deniz Altinbüken on Chain Replication (old and new)](http://bit.ly/2bgctwO)
   * [Wes Chow (Mini) on Tiered Replication](http://bit.ly/2bltdQk)
 * **PWL References:**
   * [Chris Meiklejohn on Chain Replication at PWLSF](http://paperswelove.org/2015/video/nathan-taylor-chris-meiklejohn-os-scalability-chain-replication/)
@@ -51,7 +51,7 @@ READMORE
 
 **Bios**
 
-[*Deniz Altınbüken*](http://www.cs.cornell.edu/~deniz/) ([@denizaltinbuken](https://twitter.com/denizaltinbuken)) is a Ph.D. candidate in Distributed Systems at Cornell University, working with Robbert van Renesse. Her interests are in distributed systems and the theory of distributed computing with a focus on building infrastructure services for large-scale distributed systems. She loves breaking distributed systems down to their basic components, understanding the bits and pieces of what makes them work and explaining these in precise ways with the objective of making complicated systems easier to understand and implement.
+[*Deniz Altinbüken*](http://www.cs.cornell.edu/~deniz/) ([@denizaltinbuken](https://twitter.com/denizaltinbuken)) is a Ph.D. candidate in Distributed Systems at Cornell University, working with Robbert van Renesse. Her interests are in distributed systems and the theory of distributed computing with a focus on building infrastructure services for large-scale distributed systems. She loves breaking distributed systems down to their basic components, understanding the bits and pieces of what makes them work and explaining these in precise ways with the objective of making complicated systems easier to understand and implement.
 
 *Wes Chow* ([@weschow](https://twitter.com/weschow)) has a B.S. in Electrical Engineering & Computer Science from UC Berkeley. He spent eight years building technical infrastructure for high frequency trading shops. One day, he stared into his dark soul and realized he needed to move into the startup light. Thus S7 Labs sprang into being, and he led teams that built Storybox, a Seedcamp NY finalist, and Songza Radio, subsumed by Google Music. He's now at [Chartbeat](https://chartbeat.com/) serving out his term as CTO.
 
