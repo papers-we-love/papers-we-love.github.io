@@ -94,6 +94,19 @@ article.article {
   }
 }
 
+article.article {
+  section {
+    ul {
+      li {
+        margin-bottom: .6em;
+        a {
+          color: $blue-link;
+        }
+      }
+    }
+  }
+}
+
 footer.article-metadata {
   display: block;
   clear: both;
