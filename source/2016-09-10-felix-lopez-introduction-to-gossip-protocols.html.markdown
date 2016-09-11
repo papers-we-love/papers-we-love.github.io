@@ -38,10 +38,10 @@ Although some parts of the presentation refer to these:
 * [Datastax - Internode Communications (Gossip)](http://docs.datastax.com/en/cassandra/3.0/cassandra/architecture/archGossipAbout.html)
 * [Consul - Gossip Protocol](https://www.consul.io/docs/internals/gossip.html)
 * A Gossip-Style Failure Detection Service: Robbert van Renesse, Yaron Minsky, and Mark Hayden*; Dept. of Computer Science, Cornell University; 4118 Upson Hall, Ithaca, NY 14853
-* Gupta, Indranil, Chandra, Tushar D., and Goldszmidt, German S. On scalable and efficient distributed failure detectors. In Proceedings of the Twentieth Annual ACM Symposium on Principles of Distributed Computing, PODC ’01, pp. 170–179,New York, NY, USA, 2001. ACM. ISBN[masked]-9. doi:[masked]/383962.384010. URL http://doi.acm.org/10.1145/383962.384010
+* Gupta, Indranil, Chandra, Tushar D., and Goldszmidt, German S. On scalable and efficient distributed failure detectors. In Proceedings of the Twentieth Annual ACM Symposium on Principles of Distributed Computing, PODC ’01, pp. 170–179,New York, NY, USA, 2001. ACM. ISBN[masked]-9. doi:[masked]/383962.384010. URL [http://doi.acm.org/10.1145/383962.384010](http://doi.acm.org/10.1145/383962.384010)
 * Montresor, A.: Intelligent Gossip. In: Studies on Computational Inteligence, Intelligent Distributed Computing, Systems and Applications, Springer, Heidelberg (2008)
 * On disseminating information reliably without broadcasting. Proceedings of the International Conference on Distributed Computing Systems (1987), pp. 74–81
-* Brenda Baker and Robert Shostak. Gossips and telephones. Discrete Mathematics, 2(3):191–193, June 1972. http://www.inf.u-szeged.hu/~jelasity/ddm/gossip.pdf
+* Brenda Baker and Robert Shostak. Gossips and telephones. Discrete Mathematics, 2(3):191–193, June 1972. [http://www.inf.u-szeged.hu/~jelasity/ddm/gossip.pdf](http://www.inf.u-szeged.hu/~jelasity/ddm/gossip.pdf)
 
 We will talk about the paper "Epidemic Broadcast Trees" by J. Leitão, J. Pereira, and L. Rodrigues.
 
