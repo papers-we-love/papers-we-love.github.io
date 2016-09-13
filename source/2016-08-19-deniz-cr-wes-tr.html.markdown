@@ -63,7 +63,7 @@ READMORE
 
 **Slides**
 
-<iframe class = "video" allowfullscreen="true" allowtransparency="true" frameborder="0" height="596" id="talk_frame_355154" mozallowfullscreen="true" src="//speakerdeck.com/player/5e859104d3ac48ba91fb29279274f64c" style="border:0; padding:0; margin:0; background:transparent;" webkitallowfullscreen="true" width="710"></iframe>
+<iframe class="video" allowfullscreen="true" allowtransparency="true" frameborder="0" height="596" id="talk_frame_355154" mozallowfullscreen="true" src="//speakerdeck.com/player/5e859104d3ac48ba91fb29279274f64c" style="border:0; padding:0; margin:0; background:transparent;" webkitallowfullscreen="true" width="710"></iframe>
 
 <iframe class="video" allowfullscreen="true" allowtransparency="true" frameborder="0" height="611" id="talk_frame_356073" mozallowfullscreen="true" src="//speakerdeck.com/player/43e7bc0338074cfab0f3a729fc13f4d7" style="border:0; padding:0; margin:0; background:transparent;" webkitallowfullscreen="true" width="710"></iframe>
 
