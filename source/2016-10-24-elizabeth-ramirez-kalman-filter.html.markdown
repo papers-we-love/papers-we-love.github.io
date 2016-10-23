@@ -7,10 +7,10 @@ tags: meetup, video
 label: Video
 description: "Elizabeth Ramirez on A New Approach to Linear Filtering and Prediction Problems"
 ogp:
-og:
-description: "Elizabeth Ramirez on A New Approach to Linear Filtering and Prediction Problems"
-fb:
-description: "Elizabeth Ramirez on A New Approach to Linear Filtering and Prediction Problems"
+  og:
+    description: "Elizabeth Ramirez on A New Approach to Linear Filtering and Prediction Problems"
+  fb:
+    description: "Elizabeth Ramirez on A New Approach to Linear Filtering and Prediction Problems"
 ---
 
 <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/DEI2R_LGUi0" frameborder="0" allowfullscreen></iframe>
