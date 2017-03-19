@@ -23,8 +23,8 @@ READMORE
 
 * **Meetup:** [https://www.meetup.com/papers-we-love/events/233588742](https://www.meetup.com/papers-we-love/events/233588742)
 * **Paper:** [A New Approach to Linear Filtering and Prediction Problems](http://unc.live/2dAHitu)
-* **Slides:** ["Elizabeth Ramirez on A New Approach to Linear Filtering and Prediction Problems](http://bit.ly/2dAKs0h)
-* **Audio:** ["Elizabeth Ramirez on A New Approach to Linear Filtering and Prediction Problems](http://bit.ly/2eI1P1q)
+* **Slides:** [Elizabeth Ramirez on A New Approach to Linear Filtering and Prediction Problems](http://bit.ly/2dAKs0h)
+* **Audio:** [Elizabeth Ramirez on A New Approach to Linear Filtering and Prediction Problems](http://bit.ly/2eI1P1q)
 * **PWL References:**
   * [Kalman Filter](https://en.wikipedia.org/wiki/Kalman_filter)
   * [How a Kalman filter works, in pictures (post by Panruo Wu)](http://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/)
