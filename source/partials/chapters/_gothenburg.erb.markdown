@@ -14,6 +14,8 @@ Papers We Love has a **[Code of Conduct](https://github.com/papers-we-love/paper
 
 **Organizers:** <a href="https://twitter.com/NachiVpn">Nachi Vpn</a>
 
-<!--## Sponsors-->
+## Sponsors
 
-<!--<p class="sponsor"></p>-->
+<p class="sponsor">
+<a href="https://www.zimpler.com/"><img src="/images/Zimpler_Logo.jpeg" /></a>
+</p>
