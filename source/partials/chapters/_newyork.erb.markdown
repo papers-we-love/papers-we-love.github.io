@@ -10,13 +10,6 @@ The **New York Chapter** meets monthly at different locations throughout the cit
 
 Papers We Love has a **[Code of Conduct](https://github.com/papers-we-love/papers-we-love/blob/master/CODE_OF_CONDUCT.md)**. Please contact one of the Meetup's organizers if anyone is not following it. Be good to each other and to the PWL community!
 
-<div class="sponsor-platinum">
-    <a href="https://www.twosigma.com/" class="sponsor-platinum"><img src="/images/TwoSigma_RGB.jpg" class="sponsor-platinum" alt="TwoSigma" title="TwoSigma - Platinum Sponsor of Papers We Love NYC" /></a>
-  <span class="sponsor-platinum-text">
-    We'd like to give a special thanks <strong><a href="https://www.twosigma.com/">TwoSigma</a></strong> for supporting the New York Chapter as a Platinum Sponsor.
-  </span>
-</div>
-
 ## Chapter Details
 
 **Sign-up:** Please RSVP for meetings via <a href="http://www.meetup.com/papers-we-love/">Meetup.com</a>
@@ -25,14 +18,13 @@ Papers We Love has a **[Code of Conduct](https://github.com/papers-we-love/paper
 
 **Contact:** <a href="mailto:contact@paperswelove.org">contact AT paperswelove DOT org</a>
 
-**Organizers:** <a href="mailto:bowmanb@gmail.com">Brian Bowman</a>, <a href="https://github.com/hakutsuru">Sean Broderick</a>, <a href="https://twitter.com/CuevasClemente">Clemente Cuevas</a>, <a href="https://twitter.com/jeremyheiler">Jeremy Heiler</a>, <a href="https://twitter.com/zeeshanlakhani">Zeeshan Lakhani</a>, <a href="https://twitter.com/clint_newsom">Clint Newsom</a> and <a href="https://twitter.com/d_run">Darren Newton</a>
+**Organizers:** <a href="https://github.com/hakutsuru">Sean Broderick</a>, <a href="https://twitter.com/jeremyheiler">Jeremy Heiler</a>, <a href="https://twitter.com/zeeshanlakhani">Zeeshan Lakhani</a>, and <a href="https://twitter.com/d_run">Darren Newton</a>
 
 ## Sponsors
 
-<p class="sponsor">
-  <a href="http://engineering.tumblr.com"><img src="/images/tumblr_logotype_white_blue_64.png" class="sponsor" /></a> Venue Sponsor
-</p>
-
-<p class="sponsor">
-  <a href="http://enigma.io/"><img class="sponsor" src="/images/enigma_logo.png" title="Enigma.io" alt="enigma.io" /></a> Silver Sponsor
-</p>
+<div class="sponsor-platinum">
+    <a href="https://www.twosigma.com/" class="sponsor-platinum"><img src="/images/TwoSigma_RGB.jpg" class="sponsor-platinum" alt="TwoSigma" title="TwoSigma - Platinum Sponsor of Papers We Love NYC" /></a>
+  <span class="sponsor-platinum-text">
+    We'd like to give a special thanks <strong><a href="https://www.twosigma.com/">TwoSigma</a></strong> for supporting the New York Chapter as a Platinum Sponsor.
+  </span>
+</div>
