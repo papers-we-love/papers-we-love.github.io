@@ -220,6 +220,23 @@ div.event-description {
     }
   }
 
+  p {
+    img {
+
+    }
+  }
+
+  ul.event-photo-container {
+    @include media($desktop) {
+      display: flex;
+      margin: 1em 0;
+      li {
+        list-style-type: none;
+        margin: 0 .5em;
+      }
+    }
+  }
+
   img.event-photo {
     border: #fff 4px solid;
     box-shadow: #999 0 0 3px 0;

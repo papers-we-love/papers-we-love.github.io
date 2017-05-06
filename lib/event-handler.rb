@@ -2,6 +2,18 @@ require 'sanitize'
 
 # Event parsing functions for Meetup.com API data
 
+# Sort the events hash by time and filter out any events happening in the future
+def process_event_hash(events)
+  unless events.nil?
+    events
+      .values
+      .reject { |i| i.nil? || i.time > (Time.now.to_i * 1000) }
+      .sort_by! { |i| i.time }
+      .reverse
+  end
+end
+
+
 # Rever chronologically sort events (newest on top)
 def sort_events(events)
   events.sort_by { |e| e['time'] }.reverse
@@ -15,18 +27,19 @@ end
 # Build up address and map strings for meta div
 def build_address(venue)
   vname = venue['name']
-  add1 = venue['address_1']
-  add2 = venue['address_2']
+  add1 = venue['address1']
+  add2 = venue['address2']
   city = venue['city']
+  postal_code = venue['postalCode']
   address = [add1, add2].reject { |i| i.nil? }.join ', '
   unless city.nil?
-    address = "#{address}, #{city}"
+    address = "#{address}, #{city} #{postal_code}"
   end
   unless vname.nil?
-    address = "#{vname} - #{address}"
+    address = "#{vname} - #{address} #{postal_code}"
   end
 
-  gmap = "#{add1} #{add2} #{city}".squeeze(' ').gsub(/[\s]/, '+')
+  gmap = "#{add1} #{add2} #{city} #{postal_code}".squeeze(' ').gsub(/[\s]/, '+')
   glink = "<a class=\"event-map\" href=\"https://www.google.com/maps/search/#{gmap}\">Map</a>"
 
   [address, glink]
@@ -34,7 +47,7 @@ end
 
 # Parse event date with utc offset
 def event_date(event)
-  Time.at((event['time'] + event['utc_offset'] ) / 1000).utc.to_datetime
+  Time.at((event['time'] + event['utcOffset'] ) / 1000).utc.to_datetime
 end
 
 def format_date(datetime)
@@ -81,10 +94,8 @@ end
 # Pack all the information into a hash and send back
 def process_fields(event)
   h = Hash.new
-  h[:url] = event['event_url']
-  h[:event_title] = clean_title(event['name'])
-
-  h[:group] = event['group']
+  h[:url] = event['url']
+  h[:event_title] = clean_title(event['title'])
 
   h[:city] = ''
 
@@ -107,12 +118,7 @@ def process_fields(event)
                                   h[:url])
   end
 
-  photo = ''
-  if event['photos']
-    img = event_photo(event['photos'])
-    photo = "<a class=\"event-photo-link\" href=\"#{h[:url]}\">#{img}</a>"
-  end
-  h[:photo] = photo
+  h[:photo] = event['photos']
   h[:time] = event_date(event)
   h[:formatted_time] = format_date(h[:time])
   h

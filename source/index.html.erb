@@ -2,6 +2,18 @@
 pageable: true
 per_page: 5
 ---
+<%
+chapter_weights = data.chapters.keys.map do |chapter|
+c = data.chapters[chapter]
+unless data[chapter].nil?
+  c["weight"] = data[chapter].keys.count
+else
+  c["weight"] = 0
+end
+c["id"] = chapter
+c
+end
+%>
 
 <section class="home-abstract">
   <div class="home-abstract-shim">
@@ -12,8 +24,8 @@ per_page: 5
 <section class="home-chapters">
   <h1>Chapters:</h1>
   <ul class="home-chapters-list">
-    <% @chapters.sort! { |h1, h2| h1['title'] <=> h2['title'] }.each do |chapter| %>
-      <li><%= link_to chapter['title'], chapter['url'] %></li>
+    <% chapter_weights.reject {|i| i.nil? }.sort_by! {|i| i.weight}.reverse().each do |chapter| %>
+      <li><%= link_to chapter['title'], "/chapter/#{chapter['id']}" %></li>
     <% end %>
   </ul>
 </section>
