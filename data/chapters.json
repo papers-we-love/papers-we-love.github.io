@@ -1,4 +1,18 @@
 {
+  "lebanon": {
+    "dataService": {
+      "id": "lebanon",
+      "adapter": "facebook"
+    },
+    "title": "Lebanon"
+  },
+  "newyork": {
+    "dataService": {
+      "id": "papers-we-love",
+      "adapter": "meetup"
+    },
+    "title": "New York"
+  },
   "boston": {
     "dataService": {
       "id": "Papers-We-Love-Boston-Cambridge",
@@ -166,13 +180,6 @@
       "adapter": "meetup"
     },
     "title": "Munich"
-  },
-  "newyork": {
-    "dataService": {
-      "id": "papers-we-love",
-      "adapter": "meetup"
-    },
-    "title": "New York"
   },
   "la": {
     "dataService": {
