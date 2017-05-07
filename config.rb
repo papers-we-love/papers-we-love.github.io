@@ -80,8 +80,8 @@ end
 @chapters = YAML.load_file('source/chapters.yml')
 
 # Chapter pages
-@chapters.each do |chapter|
-  proxy "/chapter/#{chapter['name']}.html", "/chapter.html", :locals => { :chapter => chapter }, :ignore => true
+data.chapters.keys.reject { |i| i.nil? }.each do |chapter|
+  proxy "/chapter/#{chapter}.html", "/chapter.html", :locals => { :chapter => chapter, :events => data[chapter] }, :ignore => true
 end
 
 # Chapter index

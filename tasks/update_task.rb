@@ -34,8 +34,11 @@ class Update < Thor
     if jar
       call_calligraphus(jar)
     else
-      fail 'Could not find the Calligraphus JAR! Check your paths or set ENV'
+      fail 'Could not find the Calligraphus JAR! Check your paths or set ENV \n'
     end
+    sleep(3) # let the APIs cool-down
+    call_cuttlefish()
+    print "=====\n"
   end
 
   protected
@@ -49,14 +52,27 @@ class Update < Thor
   end
 
   def call_calligraphus(jar_path)
+    print "=====\n"
     fin = File.realpath(INPUT_FILE)
     fout = File.realpath(OUTPUT_FILE)
     fjar = File.realpath(jar_path)
     status = system("java -jar #{fjar} -i #{fin} -o #{fout}")
     if status
-      print 'Calligraphus transcription complete!'
+      print "Calligraphus transcription complete!\n"
     else
-      fail "Calligraphus could not transcribe the data! #{$?}"
+      fail "Calligraphus could not transcribe the data! #{$?} \n"
     end
   end
+
+  def call_cuttlefish
+    print "=====\n"
+    cuttlefish_path = ENV['CUTTLEFISH_PATH']
+    status = system("racket #{cuttlefish_path}/main.rkt #{cuttlefish_path}/.cuttlefishrc")
+    if status
+      print "Cuttlefish transcription complete!\n"
+    else
+      fail "Cuttlefish could not transcribe the data #{$?}\n"
+    end
+  end
+
 end
