@@ -36,6 +36,9 @@ class Update < Thor
     else
       fail 'Could not find the Calligraphus JAR! Check your paths or set ENV'
     end
+
+    sleep(3)
+    call_cuttlefish()
   end
 
   protected
@@ -59,4 +62,14 @@ class Update < Thor
       fail "Calligraphus could not transcribe the data! #{$?}"
     end
   end
+
+  def call_cuttlefish
+    status = system("racket /home/darren/cuttlefish/main.rkt")
+    if status
+      print 'Cuttlefish transcription complete!'
+    else
+      fail "Cuttlefish could not transcribe the data #{$?}"
+    end
+  end
+
 end
