@@ -64,7 +64,7 @@ class Update < Thor
   end
 
   def call_cuttlefish
-    status = system("racket /home/darren/cuttlefish/main.rkt")
+    status = system("racket /home/darren/cuttlefish/main.rkt /home/darren/cuttlefish/.cuttlefishrc")
     if status
       print 'Cuttlefish transcription complete!'
     else
