@@ -47,7 +47,9 @@ end
 
 # Parse event date with utc offset
 def event_date(event)
-  Time.at((event['time'] + event['utcOffset'] ) / 1000).utc.to_datetime
+  time = event['time'] || 0
+  offset = event['utcOffset'] || 0
+  Time.at((time + offset) / 1000).utc.to_datetime
 end
 
 def format_date(datetime)
