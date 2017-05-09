@@ -21,11 +21,11 @@
         </div>
         <div class="event-description">
           <%= e[:desc] %>
-          <% unless e[:photo].empty? %>
+          <% unless e[:photo].nil? || e[:photo].empty? %>
             <ul class="event-photo-container">
-            <% e[:photo].each do |photo| %>
-              <li><img src="<%= photo.url %>" class="event-photo" /></li>
-            <% end %>
+              <% e[:photo].each do |photo| %>
+                <li><img src="<%= photo.url %>" class="event-photo" /></li>
+              <% end %>
             </ul>
           <% end %>
         </div>

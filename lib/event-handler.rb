@@ -95,7 +95,7 @@ end
 def process_fields(event)
   h = Hash.new
   h[:url] = event['url']
-  h[:event_title] = clean_title(event['title'])
+  h[:event_title] = event['title']
 
   h[:city] = ''
 
