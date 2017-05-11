@@ -5,7 +5,7 @@ title: Local Chapters
 chapter_weights = data.chapters.keys.map do |chapter|
 c = data.chapters[chapter]
 unless data[chapter].nil?
-  c["weight"] = data[chapter].keys.count
+  c["weight"] = data[chapter].keys.select {|i| /[0-9]/.match(i) }.count
 else
   c["weight"] = 0
 end
