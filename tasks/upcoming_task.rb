@@ -78,7 +78,7 @@ class Gen < Thor
         end
       end
     end
-    chapter_files
+    chapter_files.sort_by! { |e| e['time'] }
   end
 
   def make_month(options)
