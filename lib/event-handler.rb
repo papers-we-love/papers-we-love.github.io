@@ -7,7 +7,7 @@ def isOutOfRange(d)
   o = d || 0
   t = Time.at(o / 1000)
   n = Time.now
-  t.month > n.month || t.year > n.year
+  t.year > n.year || ((t.year == n.year) && (t.month > n.month))
 end
 
 # Sort the events hash by time and filter out any events happening in the future
