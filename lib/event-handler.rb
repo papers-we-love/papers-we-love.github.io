@@ -8,7 +8,7 @@ def process_event_hash(events)
   unless events.nil?
     events
       .values
-      .reject { |i| i.nil? || i.time > (Time.now.to_i * 1000) }
+      .reject { |i| i.nil? || Time.at(i.time / 1000).month > Time.now.month }
       .sort_by! { |i| i.time }
       .reverse
   end
