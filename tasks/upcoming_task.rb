@@ -1,7 +1,9 @@
+# coding: utf-8
 require 'middleman-core/cli'
 require 'date'
 require 'erb'
 require 'yaml'
+require 'json'
 
 require_relative '../lib/event-handler.rb'
 require_relative '../lib/safe-parameterize.rb'
@@ -16,6 +18,10 @@ class Gen < Thor
 
   TEMPLATE = 'lib/templates/upcoming_meetups_template.erb'
   DEFAULT_DATA_FILE = 'data/meetup/chapters.yml'
+
+  CHAPTERS_JSON_FILE = 'data/chapters.json'
+
+  EVENTS = []
 
   attr_reader :output
 
@@ -40,12 +46,40 @@ class Gen < Thor
     next_month = date_next_month(make_month(options))
     make_template_vars(next_month)
     filename = options[:data] || DEFAULT_DATA_FILE
-    @events = gather_events(filename, next_month)
+    @events = gather_chapter_json(CHAPTERS_JSON_FILE, next_month)
     render(TEMPLATE)
     save
   end
 
   protected
+
+  def isThisMonthAndHasVenue(event_date, date, event)
+    event_date.month == date.month && \
+    event_date.year == date.year && \
+    event.key?('venue') && event['venue']['address1']
+  end
+
+  def gather_chapter_json(filename, date)
+    file = File.read(filename)
+    chapter_files = []
+    chapters = JSON.parse(file)
+    chapters.keys.map { |i| 'data/' + i + '.json' }.each do |cfile|
+      chapter = File.read(cfile)
+      JSON.parse(chapter).values.each do |e|
+        ed = Time.at(e['time'] / 1000)
+        if isThisMonthAndHasVenue(ed, date, e)
+          if e['venue']['city'] == "Seoul" || e['venue']['city'] == "서울"
+            if /papers we love/.match(e['title'].downcase)
+              chapter_files = chapter_files.push e
+            end
+          else
+            chapter_files = chapter_files.push e
+          end
+        end
+      end
+    end
+    chapter_files
+  end
 
   def make_month(options)
     if options[:month].to_i > 0

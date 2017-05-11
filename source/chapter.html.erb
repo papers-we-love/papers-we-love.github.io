@@ -8,6 +8,7 @@
     <h2 class="chapter-meetups-header">Chapter Meetups</h2>
     <% event_list.each do |event| %>
       <% e = process_fields(event) %>
+      <% unless e.nil? %>
       <section class="chapter-meetup">
         <h1><a href="<%= e[:url] %>"><%= e[:event_title] %></a></h1>
         <div class="event-meta">
@@ -30,6 +31,7 @@
           <% end %>
         </div>
       </section>
+      <% end %>
     <% end %>
   <% end %>
 </article>

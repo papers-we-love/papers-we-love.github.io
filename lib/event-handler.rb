@@ -1,3 +1,4 @@
+# coding: utf-8
 require 'sanitize'
 
 # Event parsing functions for Meetup.com API data
@@ -123,5 +124,18 @@ def process_fields(event)
   h[:photo] = event['photos']
   h[:time] = event_date(event)
   h[:formatted_time] = format_date(h[:time])
-  h
+
+  result = h
+
+  if h[:city] == "Seoul" || h[:city] == "서울"
+    if /papers we love/.match(h[:event_title].downcase).nil?
+      result = nil
+    end
+  end
+
+  if !h[:city] || h[:city].empty?
+    result = nil
+  end
+
+  result
 end

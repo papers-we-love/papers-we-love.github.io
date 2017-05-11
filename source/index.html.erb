@@ -4,14 +4,18 @@ per_page: 5
 ---
 <%
 chapter_weights = data.chapters.keys.map do |chapter|
-c = data.chapters[chapter]
-unless data[chapter].nil?
-  c["weight"] = data[chapter].keys.count
-else
-  c["weight"] = 0
-end
-c["id"] = chapter
-c
+  c = data.chapters[chapter]
+  unless data[chapter].nil?
+    c["weight"] = data[chapter].keys.count
+  else
+    c["weight"] = 0
+  end
+  c["id"] = chapter
+
+  if chapter == "seoul"
+    c["weight"] = 0
+  end
+  c
 end
 %>
 
