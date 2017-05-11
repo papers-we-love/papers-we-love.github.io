@@ -3,12 +3,19 @@ require 'sanitize'
 
 # Event parsing functions for Meetup.com API data
 
+def isOutOfRange(d)
+  o = d || 0
+  t = Time.at(o / 1000)
+  n = Time.now
+  t.month > n.month || t.year > n.year
+end
+
 # Sort the events hash by time and filter out any events happening in the future
 def process_event_hash(events)
   unless events.nil?
     events
       .values
-      .reject { |i| i.nil? || Time.at(i.time / 1000).month > Time.now.month }
+      .reject { |i| i.nil? || isOutOfRange(i.time)}
       .sort_by! { |i| i.time }
       .reverse
   end
