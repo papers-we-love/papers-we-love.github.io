@@ -30,13 +30,6 @@ class Update < Thor
                 desc: 'Location of Calligraphus JAR file'
 
   def update
-    jar = which_jar(options)
-    if jar
-      call_calligraphus(jar)
-    else
-      fail 'Could not find the Calligraphus JAR! Check your paths or set ENV \n'
-    end
-    sleep(3) # let the APIs cool-down
     call_cuttlefish()
     print "=====\n"
   end
@@ -66,6 +59,7 @@ class Update < Thor
 
   def call_cuttlefish
     print "=====\n"
+    print "Release Cuttlefish!"
     cuttlefish_path = ENV['CUTTLEFISH_PATH']
     status = system("racket #{cuttlefish_path}/main.rkt #{cuttlefish_path}/.cuttlefishrc")
     if status
