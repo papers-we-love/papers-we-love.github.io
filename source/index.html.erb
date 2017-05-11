@@ -3,20 +3,7 @@ pageable: true
 per_page: 5
 ---
 <%
-chapter_weights = data.chapters.keys.map do |chapter|
-c = data.chapters[chapter]
-unless data[chapter].nil?
-  c["weight"] = data[chapter].keys.select {|i| /[0-9]/.match(i) }.count
-else
-  c["weight"] = 0
-end
-c["id"] = chapter
-
-if chapter == "seoul"
-  c["weight"] = 0
-end
-c
-end
+chapter_weights = weight_chapters(data)
 %>
 
 <section class="home-abstract">
@@ -28,8 +15,8 @@ end
 <section class="home-chapters">
   <h1>Chapters:</h1>
   <ul class="home-chapters-list">
-    <% chapter_weights.reject {|i| i.nil? }.sort_by! {|i| i.weight}.reverse().each do |chapter| %>
-      <li><%= link_to chapter['title'], "/chapter/#{chapter['id']}" %></li>
+    <% chapter_weights.reject {|i| i.nil? }.sort_by! {|i| i[:weight]}.reverse().each do |chapter| %>
+      <li><%= link_to chapter[:title], "/chapter/#{chapter[:id]}" %></li>
     <% end %>
   </ul>
 </section>

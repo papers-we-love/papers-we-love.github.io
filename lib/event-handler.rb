@@ -3,7 +3,19 @@ require 'sanitize'
 
 # Event parsing functions for Meetup.com API data
 
-def isOutOfRange(d)
+def weight_chapters(data)
+  chapters = data.chapters
+  chapters.keys.map do |chapter|
+    chapter_json = data[chapter]
+    result = {:id => chapter, :weight => 0, :title => chapters[chapter]['title']}
+    unless chapter_json.nil? || chapter == "seoul"
+      result[:weight] = chapter_json.keys.select { |id| !is_out_of_range(chapter_json[id]['time']) }.count
+    end
+    result
+  end
+end
+
+def is_out_of_range(d)
   o = d || 0
   t = Time.at(o / 1000)
   n = Time.now
@@ -15,7 +27,7 @@ def process_event_hash(events)
   unless events.nil?
     events
       .values
-      .reject { |i| i.nil? || isOutOfRange(i.time)}
+      .reject { |i| i.nil? || is_out_of_range(i.time)}
       .sort_by! { |i| i.time }
       .reverse
   end
