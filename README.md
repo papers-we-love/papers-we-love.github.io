@@ -1,5 +1,9 @@
 # Papers We Love
 
+## :warning: The site is currently undergoing lots of change.
+
+We're migrating to a [better data model](https://github.com/DarrenN/cuttlefish) for meetup information and also working to automate publishing of videos and other bits of information. If you're interested in writing an adapter for your chapter meetups or helping with some of these tasks [join the Papers We Love Slack](http://papersweloveslack.herokuapp.com/) and send `d_run` a message.
+
 ## IMPORTANT: Contributing to the site
 
 We pull in most of the chapter data from the Meetup.com API with an automated process. Make sure the title of your meetup reflects the speakers name and the title of the paper. For example: "John Myles White on Fundamental Concepts in Programming Languages" or "Lindsey Kuper on Ribbon Proofs for Separation Logic". Please don't add artifacts like "PWL #13 =>" to the title, as we have to strip these out with ad-hoc regexes.
@@ -22,105 +26,7 @@ The site is static and generated with [Middleman](http://middlemanapp.com/). Mid
 
 ### Quickstart: CLI commands
 
-We've added some CLI commands to Middleman to speed up generic tasks, such as adding a chapter to the site or creating meetup schedule posts.
-
-#### Adding a chapter
-
-Chapters are managed in `source/chapter.yml`, which is used to dynamically generate links on the site. This command will also create a generic template page for the chapter in `/source/partials/chapters`. Chapters can be quickly added with a CLI command:
-
-```bash
-$ bundle exec middleman chapter NAME
-```
-
-`NAME` should be the lowercase name of the chapter
-
-**Options:**
-
-Option | Alias | Description
----------|---------|-----------------
-title | -t | The title of the chapter _optional_
-description | -d | The description of the chapter (for meta tags) _optional_
-url | -u | The url of the chapter page _optional_
-meetup | -m | the Meetup.com url of the chapter _optional_
-
-**Example:**
-
-```bash
-$ bundle exec middleman chapter washington-dc -t "Washington, DC" -u "/chapters/washington-dc" -m "http://meetup.com/Papers-We-Love-DC"
-```
-
-Appends the following YAML to `chapter.yml`:
-
-```yaml
-- :name: washington-dc
-  :title: Washington, DC
-  :description: The Washington, DC chapter of Papers We Love
-  :url: "/chapters/washington-dc"
-```
-
-_Note_: We auto-generate your monthly meetup information from the Meetup.com API - so you don't need to add it to the generated chapter file.
-
-#### Auto-generate a monthly meetup schedule post
-
-We like to create news posts each month listing the upcoming PWL meet ups and can auto-generate one from Meetup.com data gathered by Calligraphus:
-
-```shell
-$ bundle exec middleman upcoming
-```
-
-Will generate a file named something like `2015-03-01-march-meetups.html.markdown` in the `/source` directory. All chapters that have upcoming events within the next month should be listed.
-
-**Note:** We purposefully filter out any events that are missing `venue` information.
-
-Options for upcoming are:
-
-Option | Alias | Description
----------|---------|-----------------
-month | -m | The month to scope the listing to, ex: 3 for March
-data | -d | The YAML data file to read from (see Calligraphus)
-
-#### Manually create a monthly meetup schedule post
-
-We like to create news posts each month listing the upcoming PWL meet ups. A started template for this post can be created with a CLI command:
-
-```shell
-$ bundle exec middleman gen meetups -t "Super cool meetups" -d 2014-12-01
-```
-
-Will generate a file named `2014-12-01-super-cool-meetups.html.markdown` in the `/source` directory that looks like so:
-
-```html
----
-title: Super cool meetups
-date: 2014-12-01
-author: Boatswain Miller
-category: news
-tags: meetup, chapters
-label: Meetups
-description: Papers We Love Meetup Schedule for 2014-12-01
----
-
-We have another great line-up of meet-ups scheduled for DATE across a number of our chapters:
-
-**CHAPTER MM/DD**: [TITLE](LINK)
-
----
-
-<img class="left no-shadow" alt="SPONSOR NAME" style="width: 120px" src="/images/SPONSOR_IMG.png" />
-The **CHAPTER** would like to give special thanks to [SPONSOR](SPONSOR_LINK) for sponsoring the ITEMS for the MONTH meetup.
-```
-
-You can then edit the text as needed to create a schedule of meetups for the month. The options for `gen` are:
-
-Option | Alias | Description
----------|---------|-----------------
-title | -t | The title of the scaffolded post
-date | -d |The date of the scaffolded post (defaults to today's date if omitted)
-author| -a | The author of the scaffolded post
-
-```bash
-$ bundle exec middleman gen meetups -t "Super cool meetups" -d 2014-12-01 -a "Zeeshan"
-```
+We've added some CLI commands to Middleman to speed up generic tasks, such as adding a chapter to the site or creating meetup schedule posts. Checkout the `Rakefile`.
 
 ### In-depth: Middleman
 
