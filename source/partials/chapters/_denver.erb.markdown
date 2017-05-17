@@ -1,21 +1,18 @@
 
-![Papers We Love Denver](https://secure.meetupstatic.com/photos/event/6/e/2/600_460441762.jpeg)What was the last paper within the realm of computing you read and loved? What did it inspire you to build or tinker with? Come share the ideas in an awesome academic/research paper with fellow engineers, programmers, and paper-readers. Lead a session and show off code that you wrote that implements these ideas or just give us the lowdown about the paper (because of HARD MATH!). Otherwise, just come, listen, and discuss.
+![Papers We Love Denver](https://secure.meetupstatic.com/photos/event/6/e/2/600_460441762.jpeg)Want to learn the latest way to tech super hard? Or are you itching to know where all those awesome computer science ideas from the 60s led to? Come join the international phenomenon that is Papers We Love! We meet every month to share and discuss papers that have been influential in our own lives and learn what has driven others. It's a ton of fun and a great way to meet other paper-minded folks.
 
-As the original Papers We Love chapter, we've been helping New Yorkers scratch their paper reading itch for most of 2014. We welcome everyone from the programming community for an evening of ideas, vibrant discussions and hanging out with your fellow travellers.
-
-The New York Chapter meets monthly at different locations throughout the city. Keep an eye on our Meetup.com page to find out the latest address.
-
-Our meets fill up fast, so please make sure to RSVP only if you plan on attending. You can find our schedule and RSVP here on Meetup.com.
+The Denver Chapter meets every fourth Thursday of the month at [Code Talent](https://www.google.com/maps?sll=39.767693,-104.976789&q=3412+Blake+Street+Denver,+CO,+80205,+United+States&z=12).
 
 Papers We Love has a Code of Conduct. Please contact one of the Meetup's organizers if anyone is not following it. Be good to each other and to the PWL community!
 Chapter Details
 
-Sign-up: Please RSVP for meetings via Meetup.com
+Sign-up: Please RSVP for meetings via [Meetup.com](https://www.meetup.com/Papers-We-Love-Denver)
 
-Twitter: @paperswelovenyc
+Twitter: @papersweloveden
 
-Contact: contact AT paperswelove DOT org
+Contact: harry AT thoughtfulsoftware DOT com
 
-Organizers: Sean Broderick, Jeremy Heiler, Zeeshan Lakhani, and Darren Newton
+Organizers: Harry Brumleve, do *you* want to help? :-)
 Sponsors
-TwoSigma We'd like to give a special thanks TwoSigma for supporting the New York Chapter as a Platinum Sponsor. 
+Code Talent - They give us a great place to present, pizza, and beer!
+HyprLoco - They give us beer, too! 
