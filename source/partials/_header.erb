@@ -1,7 +1,7 @@
 <section class="nav-top">
-    <div class="nav-top-img">
-        <% link_to "/" do %>
-            <%= image_tag 'logo-top.svg', :alt => "Papers We Love", :title => "Papers We Love | A community for computer science papers" %>
+  <div class="nav-top-img">
+    <% link_to "/" do %>
+      <%= image_tag 'logo-top.svg', :alt => "Papers We Love", :title => "Papers We Love | A community for computer science papers" %>
         <% end %>
     </div>
     <nav>
@@ -10,7 +10,19 @@
             <li><%= link_to 'Papers', 'https://github.com/papers-we-love/papers-we-love' %></li>
             <li><%= link_to 'Chapters', '/chapter' %></li>
             <li><%= link_to 'Submission Guidelines', 'https://github.com/papers-we-love/papers-we-love#contributing-guidelines' %></li>
-            <li><%= link_to '@loveapaper', 'https://twitter.com/loveapaper' %></li>	
+            <li><%= link_to '@loveapaper', 'https://twitter.com/loveapaper' %></li>
         </ul>
     </nav>
 </section>
+<section class="pwlconf-banner" onclick="bannerClick()">
+  <%= image_tag 'pwl-type-thick-web.svg', :class => "banner-img", :alt => "Papers We Love Conf", :title => "PWLConf 2017 | St. Louis, MO - September 28th" %>
+  <div>
+    <h3>Join us in St. Louis on September 28th, 2017</h3>
+    <h4>Tickets available June 8th! - Click Here</h4>
+  </div>
+</section>
+<script>
+ function bannerClick(e) {
+   window.location.href="http://pwlconf.org";
+ }
+</script>
