@@ -1,0 +1,68 @@
+$palePrimary: #B4E2EF;
+$lightPrimary: #5AB5E6;
+$primary: #268ACB;
+$darkPrimary: #0A61AE;
+
+$paleSecondary: desaturate(#FBD1D9, 30);
+$lightSecondary: #F48A9F;
+$secondary: #F15965;
+$darkSecondary: #DE3A4E;
+
+$paleTertiary: desaturate(#FEE6D2, 20);
+
+.pwlconf-banner {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: url("/images/paper.svg") no-repeat;
+  background-size: auto 300px;
+  background-position: 120% 80%;
+
+  @media (max-width: 768px) {
+    background: none;
+    flex-direction: column;
+  }
+
+  &:after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: linear-gradient($paleTertiary, $paleSecondary, $palePrimary);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: .8;
+  }
+
+  h3 {
+    color: darken($primary, 20);
+    margin: 0 0 0 1em;
+
+    @media (max-width: 768px) {
+      text-align: center;
+      margin-left: 0px;
+    }
+  }
+
+  h4 {
+    color: $secondary;
+    margin: 0 0 0 1em;
+
+    @media (max-width: 768px) {
+      text-align: center;
+      margin: 0 .5em 1em .5em;
+    }
+  }
+}
+
+.banner-img {
+  width: 15%;
+  margin: 1em 1em 1.2em 1em;
+
+  @media (max-width: 768px) {
+    width: 50%;
+  }
+}
