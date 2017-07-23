@@ -8,7 +8,7 @@ PWL Columbus strictly adheres to the [Code of Conduct](https://github.com/papers
 
 ## Chapter details
 
-<strong>Location:</strong>[Improving Enterprises](https://www.google.com/maps/place/1+Easton+Oval,+Columbus,+OH+43219/@40.0456549,-82.907677,17z/) - 1 Easton Oval, Suite 175, Columbus, Ohio 43213
+<strong>Location:</strong>[Improving Columbus](https://www.google.com/maps/place/1+Easton+Oval,+Columbus,+OH+43219/@40.0456549,-82.907677,17z/) - 1 Easton Oval, Suite 175, Columbus, Ohio 43213
 
 <p>
 <strong>Sign-up:</strong>
@@ -27,5 +27,5 @@ Please RSVP for meetings via <a href="http://www.meetup.com/Papers-We-Love-Colum
 
 <h2>Sponsors</h2>
 <p class="sponsor">
-<a href="http://improvingenterprises.com/"><img src="http://www.improvingenterprises.com/wp-content/uploads/2013/01/Improving-logo-JPEG1.jpg" class="sponsor" /></a>
+<a href="http://improving.com/">Improving Columbus</a>
 </p>
