@@ -1,6 +1,5 @@
 require 'lib/event-handler.rb'
-
-require_relative "./lib/build_cleaner"
+require 'lib/build_cleaner'
 
 ## We have to blow away the /build folder before deploys
 configure :build do
