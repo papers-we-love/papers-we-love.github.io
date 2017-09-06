@@ -79,11 +79,15 @@ end
 # We truncate the descriptions at 1000 chars, clean up the HTML
 # and add a read more link
 def filter_description(text, readmore, url)
-  _text = Sanitize.fragment(text[0...1000] + '&hellip;', Sanitize::Config::RELAXED)
-  if readmore && url
-    _text = "#{_text} <p><a class=\"event-read-more\" href=\"#{url}\">#{readmore}</a></p>"
+  if text
+    _text = Sanitize.fragment(text[0...1000] + '&hellip;', Sanitize::Config::RELAXED)
+    if readmore && url
+      _text = "#{_text} <p><a class=\"event-read-more\" href=\"#{url}\">#{readmore}</a></p>"
+    end
+    _text
+  else
+    "<p><a class=\"event-read-more\" href=\"#{url}\">#{readmore}</a></p>"
   end
-  _text
 end
 
 # Look for a photos with a _SPEAKER_ caption
