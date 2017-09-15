@@ -23,7 +23,7 @@ READMORE
 
 * **Meetup:** [https://www.meetup.com/papers-we-love/events/241525902/](https://www.meetup.com/papers-we-love/events/241525902/)
 * **Paper:** [Off-the-Record Communication, or, Why Not To Use PGP](https://otr.cypherpunks.ca/otr-wpes.pdf)
-* **Slides:** [Wes Chow on Off-the-Record Communication, or, Why Not To Use PGP]()
+* **Slides:** [Wes Chow on Off-the-Record Communication, or, Why Not To Use PGP](https://speakerdeck.com/paperswelove/wes-chow-on-off-the-record-communication-or-why-not-to-use-pgp)
 * **Audio:** [Wes Chow on Off-the-Record Communication, or, Why Not To Use PGP](https://www.mixcloud.com/paperswelove/wes-chow-on-off-the-record-communication-or-why-not-to-use-pgp/)
 
 **Description**
@@ -42,7 +42,7 @@ Wes Chow ([@weschow](https://twitter.com/weschow)) has a B.S. in Electrical Engi
 
 **Slides**
 
-<!-- <iframe class="video" allowfullscreen="true" allowtransparency="true" frameborder="0" height="596" mozallowfullscreen="true" src="//speakerdeck.com/player/0c2767f32c7b4ba5a0aeb6bf9a98abd0" style="border:0; padding:0; margin:0; background:transparent;" webkitallowfullscreen="true" width="710"></iframe> -->
+<iframe class="video" allowfullscreen="true" allowtransparency="true" frameborder="0" height="596" mozallowfullscreen="true" src="//speakerdeck.com/player/c2037b234e5f461dad8ccbd508914232" style="border:0; padding:0; margin:0; background:transparent;" webkitallowfullscreen="true" width="710"></iframe>
 
 ---
 
