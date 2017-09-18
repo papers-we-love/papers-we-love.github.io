@@ -18,7 +18,7 @@ Papers We Love has a **[Code of Conduct](https://github.com/papers-we-love/paper
 
 **Contact:** <a href="mailto:contact@paperswelove.org">contact AT paperswelove DOT org</a>
 
-**Organizers:** <a href="https://github.com/hakutsuru">Sean Broderick</a>, <a href="https://twitter.com/jeremyheiler">Jeremy Heiler</a>, <a href="https://twitter.com/zeeshanlakhani">Zeeshan Lakhani</a>, and <a href="https://twitter.com/d_run">Darren Newton</a>
+**Organizers:** <a href="https://twitter.com/alazyreader">David Ashby</a>, <a href="https://github.com/hakutsuru">Sean Broderick</a>, <a href="https://twitter.com/awgross">Andrew Gross</a>, <a href="https://twitter.com/lydiagu">Lydia Gu</a>, <a href="https://twitter.com/jeremyheiler">Jeremy Heiler</a>, <a href="https://twitter.com/zeeshanlakhani">Zeeshan Lakhani</a>, and <a href="https://twitter.com/d_run">Darren Newton</a>
 
 ## Sponsors
 
