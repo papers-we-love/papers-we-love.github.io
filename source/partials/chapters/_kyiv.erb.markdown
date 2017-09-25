@@ -10,4 +10,4 @@ Papers We Love has a **[Code of Conduct](https://github.com/papers-we-love/paper
 
 [**Facebook page**](https://www.facebook.com/groups/PapersWeLoveKyiv)
 
-**Organizers:** [Maksym Klymyshyn](https://twitter.com/maxmaxmaxmax) and [Roman Liutikov](https://twitter.com/roman01la)
+**Organizers:** [Maksym Klymyshyn](https://twitter.com/maxmaxmaxmax) and [Roman Liutikov](https://twitter.com/roman01la), [Bohdan Liesnikov](https://twitter.com/phittacus)
