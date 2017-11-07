@@ -18,6 +18,7 @@ $paleTertiary: desaturate(#FEE6D2, 20);
   background: url("/images/paper.svg") no-repeat;
   background-size: auto 300px;
   background-position: 120% 80%;
+  display: none;
 
   @media (max-width: 768px) {
     background: none;
