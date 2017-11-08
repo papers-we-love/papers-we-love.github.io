@@ -22,7 +22,7 @@ READMORE
 ****
 
 * **Meetup:** [https://www.meetup.com/papers-we-love/events/242066112/](https://www.meetup.com/papers-we-love/events/242066112/)
-* **Paper:** [SCONE: Secure Linux Containers with Intel SGX](https://users.cs.duke.edu/~parr/jmlr03.pdf)
+* **Paper:** [SCONE: Secure Linux Containers with Intel SGX](https://www.usenix.org/system/files/conference/osdi16/osdi16-arnautov.pdf)
 * **Slides:** [Jessie Frazelle on SCONE: Secure Linux Containers with Intel SGX](https://speakerdeck.com/paperswelove/jessie-frazelle-on-scone-secure-linux-containers-with-intel-sgx#)
 * **Audio:** [Jessie Frazelle on SCONE: Secure Linux Containers with Intel SGX](https://www.mixcloud.com/paperswelove/papers-we-love-10092017-jessie-frazelle-scone-secure-linux-containers/)
 
