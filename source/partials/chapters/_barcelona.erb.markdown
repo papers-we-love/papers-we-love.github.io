@@ -21,14 +21,16 @@ Papers We Love has a **[Code of Conduct](https://github.com/papers-we-love-barce
 **Contact:** <a href="mailto:jomsdev@gmail.com?Subject=PWL%20Barcelona">jomsdev AT gmail DOT com</a>
 
 **Organizers:** <a href="https://twitter.com/jomsdev">Jordi Montes</a>,
-                <a href="https://twitter.com/idanyliuk">Ivan Daniluk</a> and 
+                <a href="https://twitter.com/idanyliuk">Ivan Daniluk</a> and
                 <a href="https://twitter.com/albert_serven">Albert Serven</a>
 
 ## Sponsors and Organizers
 
 <div class="sponsor-platinum">
-    <a href="https://www.upc.acm.org/" class="sponsor-platinum"><img src="/images/upc_acm.jpg" class="sponsor-platinum" title="UPC ACM Student Chapter" /></a>
-  <span class="sponsor-platinum-text">
-    We'd like to give a special thanks <strong><a href="https://www.twosigma.com/">TwoSigma</a></strong> for supporting the New York Chapter as a Platinum Sponsor.
-  </span>
+  <a href="https://www.upc.acm.org/" class="sponsor-platinum reduced">
+    <img src="/images/acm_upc_logo.png" class="sponsor-platinum" title="UPC ACM Student Chapter" />
+  </a>
+  <a href="https://andapps.net/" class="sponsor-platinum reduced">
+    <img src="/images/andapps_logo.png" class="sponsor-platinum" title="Andapps" />
+  </a>
 </div>
