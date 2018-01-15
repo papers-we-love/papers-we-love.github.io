@@ -16,7 +16,7 @@ gem "builder", "~> 3.0"
 
 # SASS and friends
 gem 'sass'
-gem 'bourbon'
+gem 'bourbon', "4.3.4"
 gem 'neat', "~> 1.9.0"
 
 # Sanitizers
