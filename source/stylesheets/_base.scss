@@ -186,6 +186,12 @@ footer.nav-footer {
     color: #999;
     font-weight: normal;
     font-style: italic;
+
+    sup {
+      font-size: .5em;
+      font-style: normal;
+      margin-left: 2px;
+    }
   }
 
   @include media($desktop) {
