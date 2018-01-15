@@ -215,9 +215,9 @@ footer.nav-footer {
 nav.pagination-controls {
   margin: 1em 0;
   padding: .5em 1.5em;
-  @include display(flex);
-  @include flex-direction(row);
-  @include justify-content(center);
+  display: flex;
+  flex-direciton: row;
+  justify-content: row;
   background: #eee;
   border-radius: 1em;
   a {
