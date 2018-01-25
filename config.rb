@@ -126,7 +126,7 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 configure :development do
-  activate :livereload
+  #activate :livereload
 end
 
 # Build-specific configuration
