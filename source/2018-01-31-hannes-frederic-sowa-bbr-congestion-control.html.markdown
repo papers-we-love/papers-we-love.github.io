@@ -1,5 +1,5 @@
 ---
-title: "Hannes Frederic Sowa on "BBR: Congestion-Based Congestion Control""
+title: "Hannes Frederic Sowa on BBR: Congestion-Based Congestion Control"
 date: 2018-01-31
 author: Andrew Gross
 category: video
