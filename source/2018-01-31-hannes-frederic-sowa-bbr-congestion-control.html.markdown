@@ -5,12 +5,12 @@ author: Andrew Gross
 category: video
 tags: meetup, video
 label: Video
-description: "Hannes Frederic Sowa on "BBR: Congestion-Based Congestion Control""
+description: "Hannes Frederic Sowa on BBR: Congestion-Based Congestion Control"
 ogp:
   og:
-    description: "Hannes Frederic Sowa on "BBR: Congestion-Based Congestion Control""
+    description: "Hannes Frederic Sowa on BBR: Congestion-Based Congestion Control"
   fb:
-    description: "Hannes Frederic Sowa on "BBR: Congestion-Based Congestion Control""
+    description: "Hannes Frederic Sowa on BBR: Congestion-Based Congestion Control"
 ---
 
 <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/__aWbKC7EN8" frameborder="0" allowfullscreen></iframe>
