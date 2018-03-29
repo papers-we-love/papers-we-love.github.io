@@ -1,16 +1,16 @@
 ---
 title: "Suz Hinton on Accessible images (AIMS)"
-date: 2018-02-1`5
+date: 2018-02-15
 author: Andrew Gross
 category: video
 tags: meetup, video
 label: Video
 description: "Suz Hinton on Accessible images (AIMS)"
 ogp:
-  og:
-    description: "Suz Hinton on Accessible images (AIMS)"
-  fb:
-    description: "Suz Hinton on Accessible images (AIMS)"
+og:
+description: "Suz Hinton on Accessible images (AIMS)"
+fb:
+description: "Suz Hinton on Accessible images (AIMS)"
 ---
 
 <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/iBo2ITouiG8" frameborder="0" allowfullscreen></iframe>
@@ -46,7 +46,7 @@ Suz Hinton (http://noopkat.com/) (@noopkat (https://twitter.com/noopkat)) works 
 ---
 
 <p style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
-<a href="https://www.twosigma.com/"><img src="/images/TwoSigma_RGB.jpg" alt="TwoSigma" title="TwoSigma - Platinum Sponsor of Papers We Love NYC" style="width: 200px; margin: 0 1em 0 0;"></a> <span style="flex: 1;">The <strong>New York Chapter</strong> would like to thank <a href="https://www.twosigma.com">TwoSigma</a> for helping to make this meetup possible.</span>
+  <a href="https://www.twosigma.com/"><img src="/images/TwoSigma_RGB.jpg" alt="TwoSigma" title="TwoSigma - Platinum Sponsor of Papers We Love NYC" style="width: 200px; margin: 0 1em 0 0;"></a> <span style="flex: 1;">The <strong>New York Chapter</strong> would like to thank <a href="https://www.twosigma.com">TwoSigma</a> for helping to make this meetup possible.</span>
 </p>
 
 ---
