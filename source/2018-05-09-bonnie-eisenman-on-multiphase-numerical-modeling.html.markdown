@@ -1,6 +1,6 @@
 ---
 title: "Bonnie Eisenman on Multiphase Numerical Modeling... for Jigsaw Puzzle Generation"
-date: 2018-03-28
+date: 2018-05-09
 author: Andrew Gross
 category: video
 tags: meetup, video
