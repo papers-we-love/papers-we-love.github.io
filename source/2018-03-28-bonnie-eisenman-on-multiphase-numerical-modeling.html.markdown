@@ -7,10 +7,10 @@ tags: meetup, video
 label: Video
 description: "Bonnie Eisenman on Multiphase Numerical Modeling... for Jigsaw Puzzle Generation"
 ogp:
-og:
-description: "Bonnie Eisenman on Multiphase Numerical Modeling... for Jigsaw Puzzle Generation"
-fb:
-description: "Bonnie Eisenman on Multiphase Numerical Modeling... for Jigsaw Puzzle Generation"
+  og:
+    description: "Bonnie Eisenman on Multiphase Numerical Modeling... for Jigsaw Puzzle Generation"
+  fb:
+    description: "Bonnie Eisenman on Multiphase Numerical Modeling... for Jigsaw Puzzle Generation"
 ---
 
 <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/y6N_edk1s00" frameborder="0" allowfullscreen></iframe>
