@@ -25,7 +25,7 @@ READMORE
 * **Paper:** [Multiphase Numerical Modeling of Dendritic Solidification for Jigsaw Puzzle
 Generation](https://n-e-r-v-o-u-s.com/education/papers/nervousSystem_2012-jigsaw-puzzle-paper.pdf)
 * **Slides:** [Bonnie Eisenman on Multiphase Numerical Modeling](https://bit.ly/2wgQnGG)
-* **Audio:** [Bonnie Eisenman on Multiphase Numerical Modeling](<AUDIO HERE>)
+* **Audio:** [Bonnie Eisenman on Multiphase Numerical Modeling](https://bit.ly/2FUTMdX)
 
 **Description**
 
@@ -39,8 +39,7 @@ It's a mixture of math, physics, and good old-fashioned puzzling.
 Bonnie Eisenman (https://medium.com/@brindelle) is a senior software engineer at Twitter and a member of the hackerspace NYC Resistor (https://www.nycresistor.com/), with previous experience at Codecademy, Fog Creek Software, and Google. She is the author of Learning React Native (https://www.amazon.com/gp/product/1491929006/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1491929006&linkCode=as2&tag=bonnieisen-20&linkId=IWLKP5BIVDREECM3), a book on building native iOS and Android applications with Javascript, published with O’Reilly Media. In her spare time, she enjoys learning languages, tinkering with hardware projects, and knitting. Find her on Twitter as @brindelle (https://twitter.com/brindelle).
 
 **Audio**
-
-<iframe width="100%" height="60" src="<AUDIO SRC HEREEEEE>" frameborder="0" ></iframe>
+<iframe width="100%" height="60" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&feed=%2Fpaperswelove%2Fbonnie-eisenman-on-multiphase-numerical-modeling-for-jigsaw-puzzle-generation%2F" frameborder="0" ></iframe>
 
 **Slides**
 
