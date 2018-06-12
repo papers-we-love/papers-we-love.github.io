@@ -23,8 +23,8 @@ READMORE
 
 * **Meetup:** [https://www.meetup.com/papers-we-love/events/246885115/](https://www.meetup.com/papers-we-love/events/246885115/)
 * **Paper:** [Ethereum: The World Computer](http://blockchainlab.com/pdf/Ethereum_white_paper-a_next_generation_smart_contract_and_decentralized_application_platform-vitalik-buterin.pdf)
-* **Slides:** [Libby Kent on Ethereum: The World Computer]()
-* **Audio:** [Libby Kent on Ethereum: The World Computer]()
+* **Slides:** [Libby Kent on Ethereum: The World Computer](https://speakerdeck.com/paperswelove2/libby-kent-on-ethereum-the-world-computer-pwl-nyc)
+* **Audio:** [Libby Kent on Ethereum: The World Computer](https://www.mixcloud.com/paperswelovee/libby-kent-on-ethereum-the-world-computer-pwl-nyc/)
 
 **Description**
 
@@ -37,11 +37,12 @@ This paper discusses introducing a turing complete language that can be run on t
 [Libby Kent](http://blog.libbykent.com/) / [@viskobatz](https://twitter.com/viskobatz) is a software engineer, former Hacker Schooler (now [Recurse Center](https://www.recurse.com/)) and Papers We Love groupie who leans towards functional programming, and really wants to understand category theory some day. She has worked in an array of industries from game startups to digital publishing and advertising and is currently in financial services, working on distributed systems - distributed ledger technology, blockchain - and cloud technologies. When not coding she enjoys snowboarding, tennis, traveling, friends, good conversations, beer, coffee, dark chocolate and cheese.
 
 **Audio**
-<iframe width="100%" height="60" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&feed=%2Fpaperswelove%2Fbonnie-eisenman-on-multiphase-numerical-modeling-for-jigsaw-puzzle-generation%2F" frameborder="0" ></iframe>
+
+<iframe width="100%" height="120" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fpaperswelovee%2Flibby-kent-on-ethereum-the-world-computer-pwl-nyc%2F" frameborder="0" ></iframe>
 
 **Slides**
 
-<iframe class="video" allowfullscreen="true" allowtransparency="true" frameborder="0" height="596" mozallowfullscreen="true" src="//speakerdeck.com/player/b230b25050bc494c91c1ab76effcde82" style="border:0; padding:0; margin:0; background:transparent;" webkitallowfullscreen="true" width="710"></iframe>
+<script async class="speakerdeck-embed" data-id="d35bbda55cd740d99910b73dcbc9db93" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
 ---
 
