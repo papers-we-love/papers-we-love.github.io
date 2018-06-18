@@ -24,7 +24,7 @@ READMORE
 * **Meetup:** [https://www.meetup.com/papers-we-love/events/245860299/](https://bit.ly/2sPHrDU)
 * **Paper:** [https://norvig.com/unify-bug.pdf](https://bit.ly/2y9jUCS)
 * **Slides:** []()
-* **Audio:** []()
+* **Audio:** [https://www.mixcloud.com/paperswelove/sandy-vanderbleek-on-peter-norvigs-correcting-a-widespread-error-in-unification-algorithms/](https://bit.ly/2lj6gUM)
 
 **Description**
 
@@ -35,7 +35,8 @@ Peter Norvig found an error in the unification algorithm presented in his AI tex
 Sandy Vanderbleek (https://twitter.com/haskellandchill) has been a software engineer in industry and academia for 10 years. He is currently a Data Scientist at Publicis Media (http://www.publicisgroupe.com/en/services/services-publicis-media-en). His research interests are formal methods and computational logic with applications to industry.
 
 **Audio**
-<iframe width="100%" height="60" src="" frameborder="0" ></iframe>
+
+<iframe width="100%" height="60" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&feed=%2Fpaperswelove%2Fsandy-vanderbleek-on-peter-norvigs-correcting-a-widespread-error-in-unification-algorithms%2F" frameborder="0" ></iframe>
 
 **Slides**
 

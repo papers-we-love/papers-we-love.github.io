@@ -24,7 +24,7 @@ READMORE
 * **Meetup:** [https://www.meetup.com/papers-we-love/events/245860299/](https://bit.ly/2sPHrDU)
 * **Paper:** [](https://bit.ly/1QlcaxD)
 * **Slides:** []()
-* **Audio:** []()
+* **Audio:** [https://www.mixcloud.com/paperswelove/ben-lindsay-on-hyperloglog/](https://bit.ly/2t5EwqL)
 
 **Description**
 
@@ -36,7 +36,8 @@ This extended abstract describes and analyses a near-optimal probabilistic algor
 Ben Linsay (http://blinsay.com/) (@blinsay (https://twitter.com/blinsay)) is somehow still a software engineer. He's worked on distributed data processing pipelines in adtech, built and maintained APIs for small startups, and has accidentally been a DBA twice. Ben has written a couple HyperLogLog implementations in his spare time and doesn't really want to show them to anyone.
 
 **Audio**
-<iframe width="100%" height="60" src="" frameborder="0" ></iframe>
+
+<iframe width="100%" height="60" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&feed=%2Fpaperswelove%2Fben-lindsay-on-hyperloglog%2F" frameborder="0" ></iframe>
 
 **Slides**
 
