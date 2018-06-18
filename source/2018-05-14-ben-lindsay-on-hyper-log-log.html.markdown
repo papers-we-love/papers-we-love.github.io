@@ -1,5 +1,5 @@
 ---
-title: "Ben Lindsay on HyperLogLog"
+title: "Ben Linsay on HyperLogLog"
 date: 2018-06-13
 author: Andrew Gross
 category: video
