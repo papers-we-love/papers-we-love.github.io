@@ -23,7 +23,7 @@ READMORE
 
 * **Meetup:** [https://www.meetup.com/papers-we-love/events/245860299/](https://bit.ly/2sPHrDU)
 * **Paper:** [https://norvig.com/unify-bug.pdf](https://bit.ly/2y9jUCS)
-* **Slides:** []()
+* **Slides:** [http://slides.com/sandyvanderbleek/correcting#/](https://bit.ly/2MGIMW6)
 * **Audio:** [https://www.mixcloud.com/paperswelove/sandy-vanderbleek-on-peter-norvigs-correcting-a-widespread-error-in-unification-algorithms/](https://bit.ly/2lj6gUM)
 
 **Description**
@@ -40,7 +40,7 @@ Sandy Vanderbleek (https://twitter.com/haskellandchill) has been a software engi
 
 **Slides**
 
-<iframe class="video" allowfullscreen="true" allowtransparency="true" frameborder="0" height="596" mozallowfullscreen="true" src="//speakerdeck.com/player/" style="border:0; padding:0; margin:0; background:transparent;" webkitallowfullscreen="true" width="710"></iframe>
+<iframe src="//slides.com/sandyvanderbleek/correcting/embed" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ---
 
