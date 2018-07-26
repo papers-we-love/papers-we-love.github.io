@@ -23,13 +23,11 @@ READMORE
 
 * **Meetup:** [https://www.meetup.com/papers-we-love/events/250809091/](https://www.meetup.com/papers-we-love/events/250809091/)
 * **Paper:** [https://spinroot.com/courses/summer/Papers/hoare_1978.pdf](https://spinroot.com/courses/summer/Papers/hoare_1978.pdf)
-* **Slides:**
+* **Slides:**[http://bit.ly/2IBFpfJ](http://bit.ly/2IBFpfJ)
 
 **Bio**
 
 Carmen Andoh ([@carmatrocity](https://twitter.com/carmatrocity)) is a software engineer on the Build Infrastructure team at Travis CI. She was the first scholarship recipient for Gophercon in 2015, where she was first introduced to Go, and hasn't looked back. Ask her about her past lives as a Behavioral Analyst for Autism Spectrum Disorders, Teach for America, and having personally visited over 1000 high schools in the states of NJ, TX, NM, and CO, and all 5 boroughs of NYC.
-
-**Slides**
 
 
 ---

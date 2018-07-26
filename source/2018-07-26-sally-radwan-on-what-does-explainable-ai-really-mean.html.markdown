@@ -1,5 +1,5 @@
 ---
-title: Sally Radwan on What Does Explainable AI Really Mean?
+title: "QCon 2018: Sally Radwan on What Does Explainable AI Really Mean?"
 date: 2018-07-26
 tags: meetup, video
 category: video
