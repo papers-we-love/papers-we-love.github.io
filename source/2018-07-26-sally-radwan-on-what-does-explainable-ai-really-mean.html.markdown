@@ -2,6 +2,7 @@
 title: Sally Radwan on What Does Explainable AI Really Mean?
 date: 2018-07-26
 tags: meetup, video
+category: video
 label: Video
 author: St. Vincent
 description: "Golestan 'Sally' Radwan on What Does Explainable AI Really Mean? A New Conceptualization of Perspectives"
