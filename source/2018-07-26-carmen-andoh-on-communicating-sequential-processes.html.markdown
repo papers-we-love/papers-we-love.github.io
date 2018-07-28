@@ -29,6 +29,9 @@ READMORE
 
 Carmen Andoh ([@carmatrocity](https://twitter.com/carmatrocity)) is a software engineer on the Build Infrastructure team at Travis CI. She was the first scholarship recipient for Gophercon in 2015, where she was first introduced to Go, and hasn't looked back. Ask her about her past lives as a Behavioral Analyst for Autism Spectrum Disorders, Teach for America, and having personally visited over 1000 high schools in the states of NJ, TX, NM, and CO, and all 5 boroughs of NYC.
 
+**Audio**
+
+<iframe width="100%" height="60" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&feed=%2Fpaperswelovee%2Fqcon-2018-carmen-andoh-on-communicating-sequential-processes%2F" frameborder="0" ></iframe>
 
 ---
 

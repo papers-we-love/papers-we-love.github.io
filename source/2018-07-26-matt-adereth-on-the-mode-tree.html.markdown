@@ -29,6 +29,10 @@ READMORE
 
 Matt Adereth is a Managing Director at Two Sigma Investments (https://www.twosigma.com), where he works on tools, infrastructure and methodologies for quantitative financial research. He previously worked at Microsoft on Office, focusing on data connectivity and visualization features. In his spare time, he designs open-source ergonomic keyboards using Clojure.
 
+**Audio**
+
+<iframe width="100%" height="60" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&feed=%2Fpaperswelovee%2Fqcon-2018-matt-adereth-on-the-mode-tree-a-tool-for-visualization-of-nonparametric-density-feature%2F" frameborder="0" ></iframe>
+
 ---
 
 <p style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
