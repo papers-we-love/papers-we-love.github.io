@@ -1,6 +1,6 @@
 ---
 title: "Sandy Vanderbleek on Peter Norvig's Correcting A Widespread Error in Unification Algorithms"
-date: 2018-06-13
+date: 2018-05-14
 author: Andrew Gross
 category: video
 tags: meetup, video
