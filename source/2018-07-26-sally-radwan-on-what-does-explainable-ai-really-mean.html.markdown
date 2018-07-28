@@ -21,9 +21,9 @@ READMORE
 
 ****
 
-* **Meetup:** [https://www.meetup.com/papers-we-love/events/250809091/](https://www.meetup.com/papers-we-love/events/250809091/)
-* **Paper:** [https://arxiv.org/pdf/1710.00794.pdf](https://arxiv.org/pdf/1710.00794.pdf)
-* **Slides:** [https://speakerdeck.com/paperswelove2/what-does-explainable-ai-really-mean-a-new-conceptualization-of-perspectives](https://speakerdeck.com/paperswelove2/what-does-explainable-ai-really-mean-a-new-conceptualization-of-perspectives)
+* **Meetup:** [https://bit.ly/2Op1ORr](https://bit.ly/2Op1ORr)
+* **Paper:** [https://bit.ly/2Om23Nr](https://bit.ly/2Om23Nr)
+* **Slides:** [https://bit.ly/2mMUnHj](https://bit.ly/2mMUnHj)
 
 **Bio**
 

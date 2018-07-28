@@ -21,9 +21,9 @@ READMORE
 
 ****
 
-* **Meetup:** [https://www.meetup.com/papers-we-love/events/250809091/](https://www.meetup.com/papers-we-love/events/250809091/)
+* **Meetup:** [https://bit.ly/2Op1ORr](https://bit.ly/2Op1ORr)
 * **Paper:**[https://bit.ly/2LpSUFB](https://bit.ly/2LpSUFB)
-* **Slides:** [http://adereth.github.io/oneoff/pwl-draft/scratch.html](http://adereth.github.io/oneoff/pwl-draft/scratch.html)
+* **Slides:** [https://bit.ly/2NOXQ3E](https://bit.ly/2NOXQ3E)
 
 **Bio**
 

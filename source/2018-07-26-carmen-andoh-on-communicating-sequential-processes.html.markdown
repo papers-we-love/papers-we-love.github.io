@@ -21,8 +21,8 @@ READMORE
 
 ****
 
-* **Meetup:** [https://www.meetup.com/papers-we-love/events/250809091/](https://www.meetup.com/papers-we-love/events/250809091/)
-* **Paper:** [https://spinroot.com/courses/summer/Papers/hoare_1978.pdf](https://spinroot.com/courses/summer/Papers/hoare_1978.pdf)
+* **Meetup:** [https://bit.ly/2Op1ORr](https://bit.ly/2Op1ORr)
+* **Paper:** [https://bit.ly/2M0xgnq](https://bit.ly/2M0xgnq)
 * **Slides:**[http://bit.ly/2IBFpfJ](http://bit.ly/2IBFpfJ)
 
 **Bio**
