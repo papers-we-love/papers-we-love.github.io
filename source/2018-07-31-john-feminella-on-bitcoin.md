@@ -34,7 +34,7 @@ Ten years later, a lot has happened both about cryptocurrency, and a lot of mone
 
 **Bio**
 
-John Feminella (http://jxf.me/) (@jxxf (https://twitter.com/jxxf)) is an avid technologist, occasional public speaker, and curiosity advocate. He serves as an advisor to Pivotal (https://pivotal.io/), where he works on helping enterprises transform the way they write, operate, and deploy software. He's also the cofounder of a tiny analytics monitoring startup named UpHex (http://uphex.com/).
+John Feminella ([http://jxf.me/](http://jxf.me/)) ([@jxxf](https://twitter.com/jxxf)) is an avid technologist, occasional public speaker, and curiosity advocate. He serves as an advisor to Pivotal ([https://pivotal.io/](https://pivotal.io/)), where he works on helping enterprises transform the way they write, operate, and deploy software. He's also the cofounder of a tiny analytics monitoring startup named UpHex ([http://uphex.com/](http://uphex.com/)).
 
 John lives in Charlottesville, VA and likes meta-jokes, milkshakes, and referring to himself in the third person in speaker bios.
 
