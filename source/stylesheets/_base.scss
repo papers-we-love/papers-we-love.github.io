@@ -335,6 +335,13 @@ h2.bannerHeader {
 
   }
 
+  img.droit {
+    @include media($desktop) {
+      margin-right: 1em;
+      margin-top: .5em;
+    }
+  }
+
   img.comcast {
     @include media($desktop) {
       margin-right: 1.3em;
