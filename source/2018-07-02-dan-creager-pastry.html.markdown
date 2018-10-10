@@ -1,16 +1,16 @@
 ---
-title: "Dan Creager on Pastry"
+title: "Douglas Creager on Pastry"
 date: 2018-07-02
 tags: meetup, video
 category: video
 label: Video
 author: "Boston, The Band"
-description: "Dan Creager on Pastry"
+description: "Douglas Creager on Pastry"
 ogp:
   og:
-    description: "Dan Creager on Pastry"
+    description: "Douglas Creager on Pastry"
   fb:
-    description: "Dan Creager on Pastry"
+    description: "Douglas Creager on Pastry"
 ---
 
 <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/o-mPW4tRrKw" frameborder="0" allowfullscreen></iframe>
