@@ -14,11 +14,9 @@ ogp:
 ---
 
 We have another great line-up of meet-ups scheduled for <%= @month %> across a number of our chapters:
-<% @events.each do |event| %>
+  <% @events.each do |event| %>
   <% e = process_fields(event) %>
-**<%= e[:city] %> <%= DateTime.parse(e[:formatted_time]).strftime('%-m/%-d') %>**: [<%= e[:event_title] %>](<%= e[:url] %>)
-<% end %> READMORE
+  **<%= e[:city] %> <%= DateTime.parse(e[:formatted_time]).strftime('%-m/%-d') %>**: [<%= e[:event_title] %>](<%= e[:url] %>)
+  <% end %> READMORE
 
 ---
-
-The **New York Chapter** would like to give special thanks to our Platinum sponsor [TwoSigma](https://www.twosigma.com). Join us in St. Louis for [PWLConf 2017](http://pwlconf.org/)!
