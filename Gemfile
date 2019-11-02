@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 
 # XML parsing for great justice
-gem "nokogiri", "~> 1.8.1"
+gem "nokogiri", "~> 1.10.4"
 
 gem "middleman", "~> 3.4.1"
 gem "middleman-blog", "~> 3.5.3"
