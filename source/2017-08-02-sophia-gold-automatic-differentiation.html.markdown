@@ -2,9 +2,7 @@
 title: "Lightning Talk: Sophia Gold on An Intellectual History of Automatic Differentiation"
 date: 2017-08-02
 author: Javaris Jamar Javarison-Lamar
-category: video
-tags: meetup, video
-label: Video
+tags: meetup
 description: "Sophia Gold on An Intellectual History of Automatic Differentiation"
 ogp:
   og:
@@ -21,7 +19,6 @@ READMORE
 
 * **Meetup:** [https://www.meetup.com/papers-we-love/events/239562163/](http://bit.ly/2uT9yC2)
 * **Slides:** [Sophia Gold on An Intellectual History of Automatic Differentiation](http://bit.ly/2hi3Lmn)
-* **Audio:** [Sophia Gold on An Intellectual History of Automatic Differentiation](http://bit.ly/2vnKGWd)
 
 **Description**
 
@@ -56,10 +53,6 @@ References
 **Bio**
 
 [Sophia Gold](https://github.com/Sophia-Gold) has lived many lives: after studying to be a studio artist she has worked at a large quantitative asset manager, developed a consultancy designing embedded systems, and performed professionally as a contortionist. These days she spends a lot of time programming in Clojure and Haskell and, despite being impressively undereducated in higher mathematics, primarily focuses on developing new techniques for automatic differentiation and other problems in computer algebra.
-
-**Audio**
-
-<iframe width="100%" height="60" src="https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fpaperswelove%2Flightning-talk-sophia-gold-on-an-intellectual-history-of-automatic-differentiation%2F&hide_cover=1&mini=1" frameborder="0"></iframe>
 
 **Slides**
 
