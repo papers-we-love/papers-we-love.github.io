@@ -13,8 +13,6 @@ ogp:
     description: "Sophia Gold on An Intellectual History of Automatic Differentiation"
 ---
 
-<iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/4KQ8w9PyR8U" frameborder="0" allowfullscreen></iframe>
-
 READMORE
 
 ## New York - May 24, 2017
