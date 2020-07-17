@@ -3,6 +3,8 @@ title: "Lightning Talk: Sophia Gold on An Intellectual History of Automatic Diff
 date: 2017-08-02
 author: Javaris Jamar Javarison-Lamar
 tags: meetup
+category: video
+label: Video
 description: "Sophia Gold on An Intellectual History of Automatic Differentiation"
 ogp:
   og:
