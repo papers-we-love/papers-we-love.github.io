@@ -54,19 +54,27 @@ class Gen < Thor
   protected
 
   def isThisMonthAndHasVenue(event_date, date, event)
-    event_date.month == date.month && \
-    event_date.year == date.year && \
-    event.key?('venue') && event['venue']['address1']
+    event_date.month == date.month && event_date.year == date.year
+    # event.key?('venue') && event['venue']['address1']
   end
 
+  def process_filename(filename)
+    [
+      'data/' + filename + '.json',
+      filename.gsub("-", " ").split(" ").each {|s| s.capitalize! }.join(" ")
+    ]
+  end
+  
   def gather_chapter_json(filename, date)
     file = File.read(filename)
     chapter_files = []
     chapters = JSON.parse(file)
-    chapters.keys.map { |i| 'data/' + i + '.json' }.each do |cfile|
-      chapter = File.read(cfile)
+    chapters.keys.map { |i| process_filename i }.each do |cfile|
+      
+      chapter = File.read(cfile[0])
       JSON.parse(chapter).values.each do |e|
         ed = Time.at(e['time'] / 1000)
+        e['chapter'] = cfile[1]
         if isThisMonthAndHasVenue(ed, date, e)
           if e['venue']['city'] == "Seoul" || e['venue']['city'] == "서울"
             if /papers we love/.match(e['title'].downcase)
@@ -113,7 +121,7 @@ class Gen < Thor
     events = chapters.collect do |k,v|
       v['events'].select do |e|
         ed = Time.at(e['time'] / 1000)
-        ed.month == date.month && ed.year == date.year && e.key?('venue')
+        ed.month == date.month && ed.year == date.year
       end
     end
     sort_events(events.reject(&:empty?).flatten).reverse
