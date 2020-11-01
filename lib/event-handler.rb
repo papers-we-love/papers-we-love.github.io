@@ -52,15 +52,25 @@ def build_address(venue)
   city = venue['city']
   postal_code = venue['postalCode']
   address = [add1, add2].reject { |i| i.nil? }.join ', '
-  unless city.nil?
-    address = "#{address}, #{city} #{postal_code}"
+
+  unless !vname || vname.nil?
+    address = "#{vname}"
   end
-  unless vname.nil?
-    address = "#{vname} - #{address} #{postal_code}"
+  
+  unless !city || city.nil?
+    address = "#{address} - #{city}"
   end
 
-  gmap = "#{add1} #{add2} #{city} #{postal_code}".squeeze(' ').gsub(/[\s]/, '+')
-  glink = "<a class=\"event-map\" href=\"https://www.google.com/maps/search/#{gmap}\">Map</a>"
+  unless !postal_code || postal_code.nil?
+    address = "#{address} #{postal_code}"
+  end 
+
+  glink = ""
+  
+  if add1 && city && postal_code
+    gmap = "#{add1} #{add2} #{city} #{postal_code}".squeeze(' ').gsub(/[\s]/, '+')
+    glink = "<a class=\"event-map\" href=\"https://www.google.com/maps/search/#{gmap}\">Map</a>"
+  end
 
   [address, glink]
 end
@@ -148,16 +158,18 @@ def process_fields(event)
   h[:time] = event_date(event)
   h[:formatted_time] = format_date(h[:time])
 
+  h[:chapter] = event['chapter']
+
+  if h[:chapter] == "Sanfrancisco"
+    h[:chapter] = "San Francisco"
+  end
+
   result = h
 
   if h[:city] == "Seoul" || h[:city] == "서울"
     if /papers we love/.match(h[:event_title].downcase).nil?
       result = nil
     end
-  end
-
-  if !h[:city] || h[:city].empty?
-    result = nil
   end
 
   result
