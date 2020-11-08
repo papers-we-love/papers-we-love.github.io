@@ -25,3 +25,5 @@ We're still working out the format and members of the panel, but we're currently
 We'll [stream live on Twitch](https://www.twitch.tv/paperswelove) on November 18 at 17:45 EST. Aftwerwards we'll post the video to our [YouTube channel](https://www.youtube.com/user/PapersWeLove) once we've done some editing.
 
 **This is a fund raiser** so we're asking everyone who attends to [make a donation to USENIX](https://connect.clickandpledge.com/w/Form/a9f96acc-aa05-4c52-a9b4-e12ab505abdf). Almost every local chapter of Papers We Love has presented a paper from USENIX over the years, so this is our chance to give back.
+
+Keep an eye on this page and our [Twitter feed](https://twitter.com/papers_we_love/) for updates to the schedule and speaker list.
