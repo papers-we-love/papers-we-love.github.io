@@ -16,7 +16,7 @@ ogp:
 
 <a href="https://connect.clickandpledge.com/w/Form/a9f96acc-aa05-4c52-a9b4-e12ab505abdf"><img src="https://www.usenix.org/sites/all/themes/custom/cotija/images/logo.svg" style="padding: 20px; float: left; margin: 0 20px 20px 0" /></a>Like many non-profit organizations (ourselves included) [USENIX](https://www.usenix.org/) has struggled during the COVID-19 pandemic. Conferences made up a large part of their revenue streams, and their cancellation has deprived USENIX of operating funds. As a [major source of research papers](https://www.usenix.org/publications) in Computer Science and Networking we'd like to help anyway we can. **So we're going to try something new to help raise donations for USENIX: a streaming mini-conference.**
 
-We want to do something in the evening, so this will be a small event. We have **[Irene Zhang](https://irenezhang.net/)** and **[Jeff Dean](https://research.google/people/jeff/)** presenting, followed by a panel led by **[Adrien Colyer](https://blog.acolyer.org/)**
+We want to do something in the evening, so this will be a small event. We have **[Irene Zhang](https://irenezhang.net/)** and **[Jeff Dean](https://research.google/people/jeff/)** presenting, followed by a panel led by **[Adrian Colyer](https://blog.acolyer.org/)**
 
 READMORE
 
