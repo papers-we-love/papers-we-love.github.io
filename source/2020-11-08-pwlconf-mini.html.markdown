@@ -20,7 +20,7 @@ ogp:
 
 - **17:45 EST** Panel led by [Adrian Colyer](https://blog.acolyer.org/), with guests [Ada Gavrilovska](https://www.cc.gatech.edu/home/ada/), [Joe Hellerstein](), [Dan R. K. Ports](https://drkp.net/), [Justine Sherry](https://www.justinesherry.com/) and [Hakim Weatherspoon]().
 - **18:35 EST** [Jeff Dean](https://research.google/people/jeff/) - The Rise of Cloud Computing Systems
-- **19:30 EST** [Irene Zhang](https://irenezhang.net/) - Demikernel, a kernel-bypass OS which offers a uniform, portable API across different kernel-bypass devices
+- **19:30 EST** [Irene Zhang](https://irenezhang.net/) - The [Demikernel](https://github.com/demikernel/demikernel) and the Future of Kernel-Bypass Systems
 
 We'll [stream live on Twitch](https://www.twitch.tv/paperswelove), aftwerwards we'll post the video to our [YouTube channel](https://www.youtube.com/user/PapersWeLove) once we've done some editing.
 
@@ -42,7 +42,7 @@ _Bio_: Jeff Dean joined Google in 1999 and is currently a Google Senior Fellow a
 
 Jeff has a Ph.D. in Computer Science from the University of Washington and a B.S. in Computer Science & Economics from the University of Minnesota. He was awarded the 2012 ACM Prize in Computing, and is a member of the U.S. National Academy of Engineering and the American Academy of Arts and Sciences, and a Fellow of the ACM
 
-Links: [Site](https://research.google/people/jeff/)
+Links: [Site](https://research.google/people/jeff/) / [Publications](https://scholar.google.com/citations?user=NMS69lQAAAAJ)
 
 ---
 
@@ -70,24 +70,25 @@ Links: [Site](https://blog.acolyer.org/)
 
 ---
 
-**Ada Gavrilovska**
+**Ada Gavrilovska** - Panelist
 
 _Bio_: Ada Gavrilovska is an associate professor in the School of Computer Science at Georgia Tech. She directs the Kernel research group, focused on performance, scalability and efficiency problems across the systems software stack, including operating, distributed, and high-performance computing systems. Gavrilovska's research is supported by the National Science Foundation, the US Department of Energy, industry support from Cisco, Facebook, HPE, Intel, Intercontinental Exchange, LexisNexis, Samsung, VMware, and others, and the Applications Driving Architectures (ADA) Research Center, a JUMP Center co-sponsored by the Semiconductor Research Corporation and DARPA. She served as the program co-chair of the USENIX Annual Technical Conference in 2020. 
 
-Links: [Site](https://www.cc.gatech.edu/~ada/)
+Links: [Site](https://www.cc.gatech.edu/~ada/) / [Publications](https://dblp.org/pid/76/3229.html)
 
 ---
 
-**Joe Hellerstein**
+**Joe Hellerstein** - Panelist
 
-_Bio_: abcdefh
+_Bio_: Joseph M. Hellerstein is the Jim Gray Professor of Computer Science at the University of California, Berkeley, whose work focuses on data-centric systems and the way they drive computing. He is an [ACM Fellow](http://fellows.acm.org/fellow_citation.cfm?id=4354833&srt=year&year=2009), an [Alfred P. Sloan Research Fellow](http://www.sloan.org/fellowships) and the recipient of three [ACM-SIGMOD "Test of Time"](http://www.sigmod.org/sigmod-awards/sigmod-awards#time) awards for his research. Fortune Magazine has included him in their list of 50 [smartest people in technology](https://archive.fortune.com/galleries/2010/technology/1007/gallery.smartest_people_tech.fortune/27.html), and MIT's Technology Review magazine included his work on their [TR10](http://www.technologyreview.com/news/418545/tr10-cloud-programming/) list of the 10 technologies "most likely to change our world".
 
-Links: [Site]() / [Publications]()
+Hellerstein is the co-founder and Chief Strategy Officer of [Trifacta](http://trifacta.com/), a software vendor providing intelligent interactive solutions to the messy problem of wrangling data. He has served on the technical advisory boards of a number of computing and Internet companies including [Dell EMC](http://www.dellemc.com/), [SurveyMonkey](http://www.surveymonkey.com/), [Captricity](http://www.captricity.com/), and [Datometry](http://www.datometry.com/), and previously served as the Director of [Intel Research, Berkeley](https://en.wikipedia.org/wiki/Intel_Research_Lablets).
 
+Links: [Site](https://dsf.berkeley.edu/jmh/index.html) / [Publications](https://dsf.berkeley.edu/jmh/publications.html)
 
 ---
 
-**Dan R. K. Ports**
+**Dan R. K. Ports** - Panelist
 
 I am a researcher in the Systems Research Group at Microsoft Research.
 
@@ -104,7 +105,7 @@ Links: [Site](https://drkp.net/) / [Publications](https://drkp.net/publications.
 
 ---
 
-**Justine Sherry**
+**Justine Sherry** - Panelist
 
 _Bio_: Justine Sherry is an assistant professor at Carnegie Mellon University. Her interests are in computer networking; her work includes middleboxes, networked systems, measurement, cloud computing, and congestion control. Dr. Sherry received her PhD (2016) and MS (2012) from UC Berkeley, and her BS and BA (2010) from the University of Washington. She is a recipient of the SIGCOMM doctoral dissertation award, the David J. Sakrison prize, paper awards at USENIX NSDI and ACM SIGCOMM, and an NSF Graduate Research Fellowship. Most importantly, she is always on the lookout for a great cappuccino.
 
@@ -112,9 +113,9 @@ Links: [Site](https://www.justinesherry.com/) / [Publications](https://www.justi
 
 ---
 
-**Hakim Weatherspoon**
+**Hakim Weatherspoon** - Panelist
 
-_Bio_: abcdefh
+_Bio_: I received my PhD in 2006 from the [University of California, Berkeley](http://www.cs.berkeley.edu/), in the area of secure and fault-tolerant distributed wide-area storage systems (e.g. [Antiquity](http://antiquity.sourceforge.net/), [OceanStore](http://oceanstore.cs.berkeley.edu/), etc.). I received a B.S. in Computer Engineering from the University of Washington in 1999.
 
-Links: [Site]() / [Publications]()
+Links: [Site](https://www.cs.cornell.edu/~hweather/index.php) / [Publications](https://www.cs.cornell.edu/~hweather/publications.php)
 
