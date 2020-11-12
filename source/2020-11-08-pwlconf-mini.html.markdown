@@ -62,9 +62,7 @@ Links: [Site](https://irenezhang.net/) / [Publications](https://irenezhang.net/p
 
 **Adrian Colyer** - Panel Moderator
 
-_Bio_: I publish [The Morning Paper](https://blog.acolyer.org/): a short summary every weekday of an important, influential, topical or otherwise interesting paper in the field of computer science.
-
-I’m a Venture Partner with Accel in London, where it’s my job to help find and build great technology companies across Europe and Israel.  If you’re working on an interesting technology-related business I’d love to hear from you: you can reach me at acolyer at accel dot com. Prior to joining Accel I spent over twenty years in technical roles, including CTO roles at Pivotal, VMware, and SpringSource.
+_Bio_: Adrian Colyer is the author of the computer science blog *[The Morning Paper](https://blog.acolyer.org/)*, and a venture partner with Accel where he helps find and build great technology companies out of Europe and Israel. Prior to Accel he held technical roles at a number of companies including SpringSource, VMware, and Pivotal.
 
 Links: [Site](https://blog.acolyer.org/)
 
