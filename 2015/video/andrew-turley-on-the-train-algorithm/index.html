@@ -1,0 +1,149 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Andrew Turley on the Train Algorithm - New York City 2/23 | Papers We Love</title>
+        <meta name="description" content="Video: Andrew Turley - Incremental Mature Garbage Collection Using the Train Algorithm, NYC February 23, 2015" />
+        <meta name="fb:description" content="Video: Andrew Turley - Incremental Mature Garbage Collection Using the Train Algorithm">
+        <meta name="fb:image" content="http://paperswelove.org/images/papers-we-love-ogp.png">
+        <meta name="fb:image:type" content="image/png">
+        <meta name="fb:image:width" content="400">
+        <meta name="fb:image:height" content="300">
+        <meta name="og:site_name" content="Papers We Love">
+        <meta name="og:description" content="Video: Andrew Turley - Incremental Mature Garbage Collection Using the Train Algorithm, NYC February 23, 2015">
+        <meta name="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png">
+        <meta name="og:image:type" content="image/png">
+        <meta name="og:image:width" content="400">
+        <meta name="og:image:height" content="300">
+        <meta name="og:locale" content="en_us">
+        <meta name="og:type" content="article">
+        <meta name="og:title" content="Andrew Turley on the Train Algorithm - New York City 2/23">
+        <meta name="og:url" content="http://paperswelove.org/2015/video/andrew-turley-on-the-train-algorithm/">
+        <meta name="article:published_time" content="2015-03-02T00:00:00Z">
+        <meta name="article:tag" content="meetup">
+        <meta name="article:tag" content="video">
+        <meta name="article:tag" content="newyork">
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@papers_we_love" />
+        <meta name="twitter:title" content="Andrew Turley on the Train Algorithm - New York City 2/23 | Papers We Love" />
+        <meta name="twitter:description" content="Video: Andrew Turley - Incremental Mature Garbage Collection Using the Train Algorithm, NYC February 23, 2015" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="http://schema.org/WebPage">
+        <section class="nav-top">
+  <div class="nav-top-img">
+<a href="/">      <img alt="Papers We Love" title="Papers We Love | A community for computer science papers" src="/images/logo-top.svg" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="https://github.com/papers-we-love/papers-we-love">Papers</a></li>
+      <li><a href="/categories/video">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+      <li><a href="https://pwlconf.org">PWLConf</a></li>
+    </ul>
+  </nav>
+</section>
+<!--
+     <section class="pwlconf-banner" role="button" aria-label="Buy tickets for PWLConf 2018" onclick="bannerClick()">
+     <img class="banner-img" alt="Papers We Love Conf" title="PWLConf 2018 | St. Louis, MO - September 28th" src="/images/pwl-type-thick-web.svg" />
+     <div>
+     <h3>Coming again to St. Louis on September 12th, 2019</h3>
+     <h4>Buy tickets here!</h4>
+     </div>
+     </section>
+     <script>
+     function bannerClick(e) {
+     window.location.href="https://pwlconf.org";
+     }
+     </script>
+-->
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+                <article class="hentry article" itemscope itemtype="http://schema.org/Article">
+        <h1 itemprop="headline">Andrew Turley on the Train Algorithm - New York City 2/23</h1>
+        
+        <section itemprop="articleBody">
+        <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/kpW4lCwQWHc" frameborder="0" allowfullscreen=""></iframe>
+
+<p></p>
+
+<p><strong>Andrew Turley</strong> presented <a href="https://github.com/papers-we-love/papers-we-love/blob/master/garbage_collection/incremental_mature_garbage_collection_using_the_train_algorithm.pdf?raw=true"><em>Incremental Mature Garbage Collection Using the Train Algorithm</em></a> by Jacob Seligmann &amp; Steffen Grarup at the February 23, 2015 Papers We Love Meetup held at the Tumblr offices.</p>
+
+<p>The Train Algorithm is an incremental generational garbage collector that was designed to deal with the long and unpredictable pause times caused by other algorithms. It does this by grouping objects together on "cars" in "trains". The algorithm provides a strategy for moving objects from the younger generation into different cars, moving objects from one car to another, and collecting cars and trains. It was first described by Hudson and Moss in the paper "Incremental
+Collection of Mature Objects".</p>
+
+<p><strong>Andrew Turley</strong> (<a href="http://twitter.com/casio_juarez">@casio_juarez</a>) is a lead software engineer on the platform team at <a href="http://dev.theladders.com">TheLadders</a>, where he builds infrastructure by linking Storm topologies together using RabbitMQ. He has also had numerous professional brushes with lower levels of the software stack, including building embedded systems for processing audio at DigiDesign, and helping to improve the performance of iOS at
+Apple.</p>
+
+<hr />
+
+<p style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+<a href="https://www.twosigma.com/"><img src="/images/TwoSigma_RGB.jpg" alt="TwoSigma" title="TwoSigma - Platinum Sponsor of Papers We Love NYC" style="width: 200px; margin: 0 1em 0 0;" /></a> <span style="flex: 1;">The <strong>New York Chapter</strong> would like to thank our platinum sponsor <a href="http://www.twosigma.com">TwoSigma</a> for helping to make this meetup possible.</span>
+</p>
+
+<hr />
+
+<p><strong>Additional resources</strong></p>
+
+<ul>
+  <li>[mcca60] John McCarthy. Recursive functions of symbolic expressions and their computation by machine, Part I. Communications of the ACM, 3(4):184-195, April 1960.</li>
+  <li>[bish77] Peter B. Bishop. Computer Systems with a Very Large Address Space and Garbage Collection. PhD thesis, MIT Laboratory for Computer Science, May 1977. Technical report MIT/LCS/TR-178.</li>
+  <li>[bake78] Henry G. Baker. List processing in real-time on a serial computer. Communications of the ACM, 21(4):280-294, 1978. Also AI Laboratory Working Paper 139, 1977.</li>
+  <li>[lieb83] Henry Lieberman and Carl E. Hewitt. A real-time garbage collector based on the lifetimes of objects. Communications of the ACM, 26(6):419-429, June 1983. Also report TM-184, Laboratory for Computer Science, MIT, Cambridge, MA, July 1980 and AI Lab Memo 569, 1981.</li>
+  <li>[moon84] David A. Moon. Garbage collection in a large LISP system. In Steele [LFP84], 1984, pages 235-245</li>
+  <li>[huds92] Richard L. Hudson and J. Eliot B. Moss. Incremental collection of mature objects. In Bekkers and Cohen [IWMM92], 1992, pages 388-403</li>
+  <li>[seli95] Jacob Seligmann and Steffen Grarup. Incremental mature garbage collection using the train algorithm. In Nierstrasz [ECOOP95], 1995, pages 235-252.</li>
+  <li>[gart05a] Alex Garthwaite. Making the Trains Run On Time. PhD thesis, University of Pennsylvania, 2005.</li>
+</ul>
+
+        </section>
+        <footer class="article-metadata">
+            <em>Tags:</em>
+                <a href="/tags/meetup">meetup</a>
+                <a href="/tags/video">video</a>
+                <a href="/tags/newyork">newyork</a>
+            <em>Category:</em>
+            <a href="/categories/video">video</a>
+            <em>Posted by:</em>
+            Darren
+        </footer>
+    </article>
+
+        </div>
+
+        <footer class="nav-footer" itemscope itemtype="http://schema.org/Organization">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2021 <span itemprop="name">Papers We Love<sup>SM</sup></span>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2021
+Papers We Love, all rights reserved
+-->

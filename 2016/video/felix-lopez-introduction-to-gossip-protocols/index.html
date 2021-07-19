@@ -1,0 +1,154 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Félix López on Epidemic Broadcast Trees | Papers We Love</title>
+        <meta name="description" content="Félix López on Epidemic Broadcast Trees" />
+        <meta name="fb:description" content="Félix López on Epidemic Broadcast Trees">
+        <meta name="fb:image" content="http://paperswelove.org/images/papers-we-love-ogp.png">
+        <meta name="fb:image:type" content="image/png">
+        <meta name="fb:image:width" content="400">
+        <meta name="fb:image:height" content="300">
+        <meta name="og:site_name" content="Papers We Love">
+        <meta name="og:description" content="Félix López on Epidemic Broadcast Trees">
+        <meta name="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png">
+        <meta name="og:image:type" content="image/png">
+        <meta name="og:image:width" content="400">
+        <meta name="og:image:height" content="300">
+        <meta name="og:locale" content="en_us">
+        <meta name="og:type" content="article">
+        <meta name="og:title" content="Félix López on Epidemic Broadcast Trees">
+        <meta name="og:url" content="http://paperswelove.org/2016/video/felix-lopez-introduction-to-gossip-protocols/">
+        <meta name="article:published_time" content="2016-09-10T00:00:00Z">
+        <meta name="article:tag" content="meetup">
+        <meta name="article:tag" content="video">
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@papers_we_love" />
+        <meta name="twitter:title" content="Félix López on Epidemic Broadcast Trees | Papers We Love" />
+        <meta name="twitter:description" content="Félix López on Epidemic Broadcast Trees" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="http://schema.org/WebPage">
+        <section class="nav-top">
+  <div class="nav-top-img">
+<a href="/">      <img alt="Papers We Love" title="Papers We Love | A community for computer science papers" src="/images/logo-top.svg" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="https://github.com/papers-we-love/papers-we-love">Papers</a></li>
+      <li><a href="/categories/video">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+      <li><a href="https://pwlconf.org">PWLConf</a></li>
+    </ul>
+  </nav>
+</section>
+<!--
+     <section class="pwlconf-banner" role="button" aria-label="Buy tickets for PWLConf 2018" onclick="bannerClick()">
+     <img class="banner-img" alt="Papers We Love Conf" title="PWLConf 2018 | St. Louis, MO - September 28th" src="/images/pwl-type-thick-web.svg" />
+     <div>
+     <h3>Coming again to St. Louis on September 12th, 2019</h3>
+     <h4>Buy tickets here!</h4>
+     </div>
+     </section>
+     <script>
+     function bannerClick(e) {
+     window.location.href="https://pwlconf.org";
+     }
+     </script>
+-->
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+                <article class="hentry article" itemscope itemtype="http://schema.org/Article">
+        <h1 itemprop="headline">Félix López on Epidemic Broadcast Trees</h1>
+        
+        <section itemprop="articleBody">
+        <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/lhGZNZLcfo0" frameborder="0" allowfullscreen=""></iframe>
+
+<p></p>
+
+<h2 id="madrid---april-6-2016">Madrid - April 6, 2016</h2>
+
+<ul>
+  <li><strong>Meetup:</strong> <a href="http://www.meetup.com/Papers-We-Love-Madrid/events/229616859/">http://www.meetup.com/Papers-We-Love-Madrid/events/229616859/</a></li>
+</ul>
+
+<h3 id="flix-lpez-on-epidemic-broadcast-trees">Félix López on Epidemic Broadcast Trees</h3>
+
+<p>While I was working on the presentation for Plumtree I realized that the gossip introduction is itself quite long, so I'm going to split the talk in two. In this first one I will introduce Gossip protocols and I will go over these papers:</p>
+
+<ul>
+  <li><a href="http://bitsavers.informatik.uni-stuttgart.de/pdf/xerox/parc/techReports/CSL-89-1_Epidemic_Algorithms_for_Replicated_Database_Maintenance.pdf">A. Demers, D. Greene, C. Hauser, W. Irish, J. Larson, S. Shenker, H. Sturgis, D. Swinehart, and D. Terry. “Epidemic Algorithms for Replicated Database Maintenance.” In Proc. Sixth Symp. on Principles of Distributed Computing, pp. 1–12, Aug. 1987.</a></li>
+  <li><a href="http://dl.acm.org/citation.cfm?id=1317382">Ken Birman. The Promise, and Limitations, of Gossip Protocols. ACM SIGOPS Oper. Syst. Rev., 41(5):8–13, October 2007</a></li>
+  <li><a href="http://www.inf.u-szeged.hu/~jelasity/dr/doktori-mu.pdf">Gossip-based Protocols for Large-scale Distributed Systems. Márk Jelasity, 2013</a></li>
+</ul>
+
+<p>Although some parts of the presentation refer to these:</p>
+
+<ul>
+  <li>J. Leitão, J. Pereira, and L. Rodrigues. Epidemic broadcast trees. In Huai, J. and Baldoni, R. and Yen, I., editor, IEEE International Symposium On Reliable Distributed Systems, pages 301–310. IEEE Computer Society, 2007</li>
+  <li>Ali Saidi and Mojdeh Mohtashemi. Minimum-cost first-push-then-pull gossip algorithm. IEEE Wireless Communications and Networking Conference, WCNC, pages 2554–2559, 2012</li>
+  <li>JELASITY, M., GUERRAOUI, R., KERMARREC, A.-M., AND VAN STEEN, M. 2004. The peer sampling service: Experimental evaluation of unstructured gossip-based implementations. In Middleware 2004, H.-A. Jacobsen, Ed. Lecture Notes in Computer Science, vol. 3231. Springer-Verlag, 79–98.</li>
+  <li><a href="http://status.aws.amazon.com/s3-20080720.html">Amazon S3 Outage</a></li>
+  <li><a href="http://docs.datastax.com/en/cassandra/3.0/cassandra/architecture/archGossipAbout.html">Datastax - Internode Communications (Gossip)</a></li>
+  <li><a href="https://www.consul.io/docs/internals/gossip.html">Consul - Gossip Protocol</a></li>
+  <li>A Gossip-Style Failure Detection Service: Robbert van Renesse, Yaron Minsky, and Mark Hayden*; Dept. of Computer Science, Cornell University; 4118 Upson Hall, Ithaca, NY 14853</li>
+  <li>Gupta, Indranil, Chandra, Tushar D., and Goldszmidt, German S. On scalable and efficient distributed failure detectors. In Proceedings of the Twentieth Annual ACM Symposium on Principles of Distributed Computing, PODC ’01, pp. 170–179,New York, NY, USA, 2001. ACM. ISBN[masked]-9. doi:[masked]/383962.384010. URL <a href="http://doi.acm.org/10.1145/383962.384010">http://doi.acm.org/10.1145/383962.384010</a></li>
+  <li>Montresor, A.: Intelligent Gossip. In: Studies on Computational Inteligence, Intelligent Distributed Computing, Systems and Applications, Springer, Heidelberg (2008)</li>
+  <li>On disseminating information reliably without broadcasting. Proceedings of the International Conference on Distributed Computing Systems (1987), pp. 74–81</li>
+  <li>Brenda Baker and Robert Shostak. Gossips and telephones. Discrete Mathematics, 2(3):191–193, June 1972. <a href="http://www.inf.u-szeged.hu/~jelasity/ddm/gossip.pdf">http://www.inf.u-szeged.hu/~jelasity/ddm/gossip.pdf</a></li>
+</ul>
+
+<p>We will talk about the paper "Epidemic Broadcast Trees" by J. Leitão, J. Pereira, and L. Rodrigues.</p>
+
+<p>This paper proposes an integrated broadcast scheme that combines both Gossip protocols and deterministic tree-based protocols. The paper proposes a new protocol "Plumtree", a derivative of which is now used by Riak for gossiping bucket properties.</p>
+
+        </section>
+        <footer class="article-metadata">
+            <em>Tags:</em>
+                <a href="/tags/meetup">meetup</a>
+                <a href="/tags/video">video</a>
+            <em>Category:</em>
+            <a href="/categories/video">video</a>
+            <em>Posted by:</em>
+            Sean
+        </footer>
+    </article>
+
+        </div>
+
+        <footer class="nav-footer" itemscope itemtype="http://schema.org/Organization">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2021 <span itemprop="name">Papers We Love<sup>SM</sup></span>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2021
+Papers We Love, all rights reserved
+-->
