@@ -43,7 +43,7 @@ Il linguaggio principale è l'italiano, ma anche i talk in inglese sono benvenut
 ### Upcoming Meetings 
 
 - **Follow us** on Twitter [@paperswelovemi](https://twitter.com/paperswelovemi)
-- **Chat with us** on Gitter [![Join the chat at https://gitter.im/papers-we-love/milano](https://badges.gitter.im/papers-we-love/milano.svg)](https://gitter.im/papers-we-love/milano?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+- **Chat with us** on Discord [![Join the chat at Discord](https://img.shields.io/static/v1?label=chat&message=on%20discord&color=7289da)](https://discord.gg/Tu2VynkRWV)
 - **Reserve a seat** at Eventbrite [paperswelovemi.eventbrite.it](http://paperswelovemi.eventbrite.it/)
 
 ### Contact
