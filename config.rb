@@ -15,7 +15,7 @@ Time.zone = "UTC"
 activate :blog do |blog|
   blog.permalink = "{year}/{category}/{title}.html"
 
-  blog.layout = "article
+  blog.layout = "article"
 
   blog.tag_template = "tag.html"
   blog.calendar_template = "calendar.html"
