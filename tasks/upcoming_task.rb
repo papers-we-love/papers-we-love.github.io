@@ -64,28 +64,32 @@ class Gen < Thor
       filename.gsub("-", " ").split(" ").each {|s| s.capitalize! }.join(" ")
     ]
   end
-  
+
   def gather_chapter_json(filename, date)
     file = File.read(filename)
     chapter_files = []
     chapters = JSON.parse(file)
     chapters.keys.map { |i| process_filename i }.each do |cfile|
-      
-      chapter = File.read(cfile[0])
-      JSON.parse(chapter).values.each do |e|
-        ed = Time.at(e['time'] / 1000)
-        e['chapter'] = cfile[1]
-        if isThisMonthAndHasVenue(ed, date, e)
-          if e['venue']['city'] == "Seoul" || e['venue']['city'] == "서울"
-            if /papers we love/.match(e['title'].downcase)
+
+      if File.exists?(cfile[0])
+        chapter = File.read(cfile[0])
+        JSON.parse(chapter).values.each do |e|
+          ed = Time.at(e['time'] / 1000)
+          e['chapter'] = cfile[1]
+          if isThisMonthAndHasVenue(ed, date, e)
+            if e['venue']['city'] == "Seoul" || e['venue']['city'] == "서울"
+              if /papers we love/.match(e['title'].downcase)
+                chapter_files = chapter_files.push e
+              end
+            else
               chapter_files = chapter_files.push e
             end
-          else
-            chapter_files = chapter_files.push e
           end
         end
       end
+      
     end
+
     chapter_files.sort_by! { |e| e['time'] }
   end
 

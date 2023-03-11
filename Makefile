@@ -13,4 +13,17 @@ deps:
 clean:
 	rm -rf build/
 
-.PHONY: all clean deps serve
+all: setup run
+
+docker-setup:
+	docker-compose build
+
+docker-run:
+	docker-compose run --rm --service-ports ruby_dev
+
+docker-cleanup:
+	docker-compose down
+	docker rmi pwlconf_ruby_dev
+
+
+.PHONY: all clean deps serve docker-setup docker-run docker-cleanup
