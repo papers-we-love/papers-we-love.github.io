@@ -12,6 +12,6 @@ We keep a [list of papers that we would like to talk about](https://github.com/p
 
 **Organizers:**
 
-- [Kornilios Kourtis](https://twitter.com/kkourt)
-- [Vasia Kalavri](https://twitter.com/vkalavri)
+- [Dhruv Nevatia](https://notdhruv.gitlab.io)
+- [Abhiroop Sarkar](https://abhiroop.github.io/)
 - [Andrea Lattuada](https://twitter.com/utaal)
