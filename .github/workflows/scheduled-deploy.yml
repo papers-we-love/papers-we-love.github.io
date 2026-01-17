@@ -18,14 +18,21 @@ jobs:
           ref: middleman
           fetch-depth: 0  # Full history for git operations
 
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libxml2-dev libxslt-dev
+
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '2.7'
-          bundler-cache: true  # Caches gems automatically
+
+      - name: Install bundler
+        run: gem install bundler -v 1.17.3
 
       - name: Install dependencies
-        run: bundle install
+        run: bundle install --jobs 4
 
       - name: Build site
         run: bundle exec middleman build
