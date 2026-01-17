@@ -61,6 +61,8 @@ jobs:
               StrictHostKeyChecking no
           EOF
               chmod 600 /root/.ssh/config
+              # Fix git ownership check
+              git config --global --add safe.directory /app
               git config --global user.name "GitHub Actions"
               git config --global user.email "actions@github.com"
               # Ensure git remote is configured
