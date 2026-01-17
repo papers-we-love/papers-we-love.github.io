@@ -1,0 +1,45 @@
+services:
+  web:
+    build: .
+    ports:
+      - "4567:4567"
+    volumes:
+      # Mount source for live editing (exclude vendor to use container gems)
+      - .:/app
+      - bundle_cache:/usr/local/bundle
+    environment:
+      - BUNDLE_PATH=/usr/local/bundle
+    command: bundle exec middleman server --bind-address 0.0.0.0
+
+  # Service for building the static site
+  build:
+    build: .
+    volumes:
+      - .:/app
+      - bundle_cache:/usr/local/bundle
+    environment:
+      - BUNDLE_PATH=/usr/local/bundle
+    command: bundle exec middleman build
+    profiles:
+      - build
+
+  # Service for deploying to GitHub Pages
+  deploy:
+    build: .
+    volumes:
+      - .:/app
+      - bundle_cache:/usr/local/bundle
+      # Mount only the dedicated deploy key
+      - ~/.ssh/pwl_deploy:/root/.ssh/id_ed25519:ro
+    environment:
+      - BUNDLE_PATH=/usr/local/bundle
+      - GIT_AUTHOR_NAME=${GIT_AUTHOR_NAME:-Papers We Love}
+      - GIT_AUTHOR_EMAIL=${GIT_AUTHOR_EMAIL:-contact@paperswelove.org}
+      - GIT_COMMITTER_NAME=${GIT_AUTHOR_NAME:-Papers We Love}
+      - GIT_COMMITTER_EMAIL=${GIT_AUTHOR_EMAIL:-contact@paperswelove.org}
+    command: /app/scripts/docker-deploy.sh
+    profiles:
+      - deploy
+
+volumes:
+  bundle_cache:

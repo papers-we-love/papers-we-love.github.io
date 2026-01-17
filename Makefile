@@ -1,4 +1,4 @@
-all: clean build/
+Leall: clean build/
 
 build/: deps
 	time bundle exec middleman build
@@ -13,17 +13,22 @@ deps:
 clean:
 	rm -rf build/
 
-all: setup run
-
-docker-setup:
+# Docker commands
+docker-build:
 	docker-compose build
 
-docker-run:
-	docker-compose run --rm --service-ports ruby_dev
+docker-serve:
+	docker-compose up web
 
-docker-cleanup:
-	docker-compose down
-	docker rmi pwlconf_ruby_dev
+docker-site-build:
+	docker-compose run --rm build
 
+docker-shell:
+	docker-compose run --rm web /bin/bash
 
-.PHONY: all clean deps serve docker-setup docker-run docker-cleanup
+docker-clean:
+	docker-compose down -v
+	docker rmi pwl-site 2>/dev/null || true
+
+.PHONY: all clean deps serve docker-build docker-serve docker-site-build docker-shell docker-clean
+

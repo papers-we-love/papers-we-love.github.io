@@ -85,12 +85,47 @@ rake upcoming
 rake refresh
 ```
 
-### Docker (alternative)
+### Docker (recommended for consistent environment)
 ```bash
-make docker-setup   # Build container
-make docker-run     # Run dev environment
-make docker-cleanup # Remove container
+# Build the Docker image
+make docker-build
+# or: docker-compose build
+
+# Run development server (http://localhost:4567)
+make docker-serve
+# or: docker-compose up web
+
+# Build static site in container
+make docker-site-build
+# or: docker-compose run --rm build
+
+# Deploy to GitHub Pages (requires deploy key setup)
+make docker-deploy
+# or: docker-compose run --rm deploy
+
+# Open a shell in the container
+make docker-shell
+
+# Clean up Docker resources
+make docker-clean
 ```
+
+### Deploy Key Setup (for Docker deploy)
+The Docker deploy requires a dedicated SSH deploy key:
+
+1. Generate a deploy key (if not already done):
+   ```bash
+   ssh-keygen -t ed25519 -C "papers-we-love-deploy" -f ~/.ssh/pwl_deploy -N ""
+   ```
+
+2. Add the public key to GitHub:
+   - Go to: `github.com/papers-we-love/papers-we-love.github.io/settings/keys`
+   - Click "Add deploy key"
+   - Paste contents of `~/.ssh/pwl_deploy.pub`
+   - Enable "Allow write access"
+   - Save
+
+3. The Docker deploy service mounts `~/.ssh/pwl_deploy` automatically
 
 ## Key Configuration
 
@@ -133,6 +168,7 @@ Data fetching is handled by [Cuttlefish](https://github.com/DarrenN/cuttlefish),
 
 - **Branch workflow:** Edit on `middleman` branch, deploy pushes static files to `main`
 - **Legacy dependencies:** Uses Middleman 3.x (not 4.x), Bundler 1.x locked
-- **Ruby compatibility:** May require older Ruby version due to gem constraints
+- **Ruby compatibility:** Requires Ruby 2.7 or older due to gem constraints; use Docker for consistent environment
+- **Docker:** Uses Ruby 2.7-slim image with Bundler 1.17.3 for compatibility
 - **Build artifacts:** `/build` directory is gitignored and recreated each build
 - **Chapter pages:** Dynamically proxied from `chapter.html.erb` template using data files
