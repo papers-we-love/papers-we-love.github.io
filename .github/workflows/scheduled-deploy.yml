@@ -63,5 +63,8 @@ jobs:
               chmod 600 /root/.ssh/config
               git config --global user.name "GitHub Actions"
               git config --global user.email "actions@github.com"
+              # Ensure git remote is configured
+              git remote remove origin 2>/dev/null || true
+              git remote add origin git@github.com:papers-we-love/papers-we-love.github.io.git
               bundle exec middleman deploy
             '
