@@ -18,29 +18,14 @@ jobs:
           ref: middleman
           fetch-depth: 0  # Full history for git operations
 
-      - name: Install system dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y libxml2-dev libxslt-dev
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '2.7'
-
-      - name: Install bundler
-        run: gem install bundler -v 1.17.3
-
-      - name: Install dependencies
-        run: bundle install --jobs 4
+      - name: Build Docker image
+        run: docker build -t pwl-site .
 
       - name: Build site
-        run: bundle exec middleman build
-
-      - name: Configure Git
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
+        run: docker run --rm -v ${{ github.workspace }}:/app pwl-site bundle exec middleman build
 
       - name: Deploy to main branch
         env:
@@ -52,5 +37,31 @@ jobs:
           chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan github.com >> ~/.ssh/known_hosts
 
-          # Deploy using middleman-deploy
-          bundle exec middleman deploy
+          # Configure git
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+          # Run deploy in Docker
+          docker run --rm \
+            -v ${{ github.workspace }}:/app \
+            -v ~/.ssh/id_ed25519:/tmp/deploy_key:ro \
+            -e GIT_AUTHOR_NAME="GitHub Actions" \
+            -e GIT_AUTHOR_EMAIL="actions@github.com" \
+            -e GIT_COMMITTER_NAME="GitHub Actions" \
+            -e GIT_COMMITTER_EMAIL="actions@github.com" \
+            pwl-site /bin/bash -c '
+              mkdir -p /root/.ssh
+              cp /tmp/deploy_key /root/.ssh/id_ed25519
+              chmod 600 /root/.ssh/id_ed25519
+              cat > /root/.ssh/config << EOF
+          Host github.com
+              HostName github.com
+              User git
+              IdentityFile /root/.ssh/id_ed25519
+              StrictHostKeyChecking no
+          EOF
+              chmod 600 /root/.ssh/config
+              git config --global user.name "GitHub Actions"
+              git config --global user.email "actions@github.com"
+              bundle exec middleman deploy
+            '
