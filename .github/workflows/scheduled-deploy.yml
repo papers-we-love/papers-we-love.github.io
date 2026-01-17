@@ -1,0 +1,49 @@
+name: Scheduled Deploy
+
+on:
+  # Run daily at midnight EST (5:00 UTC)
+  schedule:
+    - cron: '0 5 * * *'
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout middleman branch
+        uses: actions/checkout@v4
+        with:
+          ref: middleman
+          fetch-depth: 0  # Full history for git operations
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.7'
+          bundler-cache: true  # Caches gems automatically
+
+      - name: Install dependencies
+        run: bundle install
+
+      - name: Build site
+        run: bundle exec middleman build
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Deploy to main branch
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+        run: |
+          # Set up SSH for deploy
+          mkdir -p ~/.ssh
+          echo "$DEPLOY_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+          # Deploy using middleman-deploy
+          bundle exec middleman deploy

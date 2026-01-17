@@ -164,6 +164,30 @@ Configured in `data/chapters.json` with adapters:
 ### External Tool: Cuttlefish
 Data fetching is handled by [Cuttlefish](https://github.com/DarrenN/cuttlefish), a Racket application. Set `CUTTLEFISH_PATH` environment variable to use `rake update`.
 
+## Automated Deployments
+
+The site is automatically built and deployed daily via GitHub Actions.
+
+### Schedule
+- **When:** Daily at midnight EST (5:00 UTC)
+- **What:** Pulls latest `middleman` branch, builds, deploys to `main`
+- **Workflow:** `.github/workflows/scheduled-deploy.yml`
+
+### Manual Trigger
+You can also trigger a deploy manually:
+1. Go to: `github.com/papers-we-love/papers-we-love.github.io/actions`
+2. Select "Scheduled Deploy" workflow
+3. Click "Run workflow"
+
+### Setup (one-time)
+Add the deploy key as a GitHub secret:
+1. Copy the private key: `cat ~/.ssh/pwl_deploy`
+2. Go to: `github.com/papers-we-love/papers-we-love.github.io/settings/secrets/actions`
+3. Click "New repository secret"
+4. Name: `DEPLOY_KEY`
+5. Value: Paste the entire private key (including BEGIN/END lines)
+6. Save
+
 ## Important Notes
 
 - **Branch workflow:** Edit on `middleman` branch, deploy pushes static files to `main`
