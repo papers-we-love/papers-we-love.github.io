@@ -14,12 +14,32 @@ If you're a chapter leader or volunteer and need to make edits to your chapter's
 
 ## How to work with the site
 
-The site is static and generated with [Middleman](http://middlemanapp.com/). Middleman is a Ruby app, so you will need at least Ruby 1.9.3 installed, but preferably 2+. All of the dependencies are provided for you in the `Gemfile`.
+The site is static and generated with [Middleman](http://middlemanapp.com/). Middleman is a Ruby app using legacy dependencies, so we recommend using Docker for a consistent development environment.
 
-### Installation instruction:
+### Quick Start with Docker (Recommended)
 
-1. Install [Ruby](https://www.ruby-lang.org/en/)
-2. Install [Bundler](http://bundler.io/) `$ gem install bundler`
+1. Install [Docker](https://www.docker.com/products/docker-desktop/)
+2. Checkout this repo and switch to the **middleman** branch
+3. Build and run:
+   ```bash
+   make docker-build    # Build the Docker image
+   make docker-serve    # Start dev server at http://localhost:4567
+   ```
+
+Other Docker commands:
+```bash
+make docker-site-build  # Build static site
+make docker-deploy      # Deploy to GitHub Pages (requires deploy key)
+make docker-shell       # Open a shell in the container
+make docker-clean       # Clean up Docker resources
+```
+
+### Alternative: Local Ruby Installation
+
+If you prefer to run Ruby locally (requires Ruby 2.7):
+
+1. Install [Ruby](https://www.ruby-lang.org/en/) 2.7
+2. Install [Bundler](http://bundler.io/) `$ gem install bundler -v 1.17.3`
 3. Checkout this repo, switch to the **middleman** branch and `cd papers-we-love.github.io`
 4. Install your dependencies `bundle install`
 5. Fire up the dev server `$ bundle exec middleman server` and hit `http://0.0.0.0:4567/`
@@ -72,3 +92,13 @@ Title, date and author are fairly explanatory. The date will be generated for yo
 Once you've written a post and read it a few times looking for typos and grammar issues, you can publish. Commit the changes to the **middleman** branch and push to the remote. To deploy the changes to the live site simply `$ bundle exec middleman deploy` - if you have commit rights the site will build and the static files will get pushed into **master**.
 
 **If you don't have commit rights, then you need to submit your changes as a Pull Request to the repo for review by the maintainers.**
+
+## Automated Deployments
+
+The site is automatically built and deployed daily via GitHub Actions.
+
+- **Schedule:** Daily at midnight EST (5:00 UTC)
+- **Process:** Pulls latest `middleman` branch, builds with Docker, deploys to `main`
+- **Workflow:** `.github/workflows/scheduled-deploy.yml`
+
+You can also trigger a deploy manually from the [Actions tab](https://github.com/papers-we-love/papers-we-love.github.io/actions) by selecting "Scheduled Deploy" and clicking "Run workflow".
