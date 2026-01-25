@@ -27,9 +27,15 @@ end
         <meta content="width=device-width" name="viewport">
         <title><%= title %> Papers We Love</title>
         <meta name="description" content="<%= description %>" />
-        <% ogp_tags do |name, value| %>
-        <meta name="<%= name %>" content="<%= value %>">
-        <% end %>
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="<%= title %> Papers We Love" />
+        <meta property="og:description" content="<%= description %>" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@papers_we_love" />
         <meta name="twitter:title" content="<%= title %> Papers We Love" />

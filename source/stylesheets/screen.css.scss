@@ -1,14 +1,14 @@
 @charset "utf-8";
 
-@import "bourbon";
-@import "neat-helpers";
+@import "bourbon/bourbon";
+@import "neat/neat-helpers";
 
 // Mobile first
 $grid-columns: 4;
 $desktop: new-breakpoint(min-width 768px 4);
 $desktop-banner: new-breakpoint(min-width 1137px 4);
 
-@import "neat";
+@import "neat/neat";
 
 // Colors
 $blue: #036;
