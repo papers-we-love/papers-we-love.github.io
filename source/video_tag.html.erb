@@ -1,0 +1,21 @@
+---
+title: Video Tag
+---
+<article class="tags">
+  <h1>Videos tagged <em><%= tag_name %></em></h1>
+
+  <ul class="main">
+    <% tag_videos.sort_by { |v| v[:date] }.reverse.each do |video| %>
+      <li>
+        <%= link_to video[:title], "/videos/#{video[:slug]}/" %>
+        <span>Video</span>
+        <span><%= video[:date] %></span>
+      </li>
+    <% end %>
+  </ul>
+
+  <ul class="sidebar">
+    <li><strong>All Videos</strong></li>
+    <li><%= link_to "Browse all videos", "/videos/" %></li>
+  </ul>
+</article>

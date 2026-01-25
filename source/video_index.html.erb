@@ -1,0 +1,22 @@
+---
+title: Videos
+---
+<article class="tags">
+  <h1>Papers We Love <em>Videos</em></h1>
+
+  <ul class="main categories">
+    <li><strong>All Videos (<%= videos.length %>)</strong></li>
+    <% videos.sort_by { |v| v[:date] }.reverse.each do |video| %>
+      <li>
+        <%= link_to video[:title], "/videos/#{video[:slug]}/" %>
+        <span><%= video[:date] %></span>
+      </li>
+    <% end %>
+  </ul>
+
+  <ul class="sidebar">
+    <li><strong>Browse</strong></li>
+    <li><%= link_to "By Category", "/categories/video/" %></li>
+    <li><%= link_to "By Tag", "/tags/video/" %></li>
+  </ul>
+</article>

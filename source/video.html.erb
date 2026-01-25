@@ -1,0 +1,32 @@
+---
+title: Video
+---
+<article class="hentry article video-page" itemscope itemtype="http://schema.org/VideoObject">
+  <h1 itemprop="name"><%= video[:title] %></h1>
+  <div class="entry-meta">
+    <span class="meta-label">
+      <i class="fa fa-video-camera"></i> Video
+    </span>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="uploadDate"><%= video[:date] %></span>
+    </div>
+  </div>
+  <section class="video-embed" itemprop="video">
+    <iframe src="https://www.youtube.com/embed/<%= video[:youtube_id] %>"
+            frameborder="0"
+            allowfullscreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+    </iframe>
+  </section>
+  <section class="video-description" itemprop="description">
+    <%= mark_safe(format_description(video[:description])) %>
+  </section>
+  <footer class="article-metadata">
+    <em>Tags:</em>
+    <% video[:tags].each do |tag| %>
+      <%= link_to tag, "/videos/tags/#{tag}/" %>
+    <% end %>
+    <em>Posted by:</em>
+    Papers We Love
+  </footer>
+</article>
