@@ -11,11 +11,6 @@ gem "middleman-livereload", "~> 3.4"
 # For feed.xml.builder
 gem "builder", "~> 3.0"
 
-# SASS compiler (replaces deprecated Ruby Sass)
-gem "sassc", "~> 2.4"
-
-# Note: Bourbon and Neat removed (both archived/unmaintained)
-
 # HTML parsing
 gem "nokogiri", "~> 1.16"
 

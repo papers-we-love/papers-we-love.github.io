@@ -12,7 +12,7 @@ This is the website for [Papers We Love](http://paperswelove.org/), a community 
 
 - **Static Site Generator:** [Middleman](http://middlemanapp.com/) v4.6.x
 - **Ruby Version:** 3.3 (via Docker)
-- **CSS:** SASS with SassC, using vendored Bourbon/Neat (in `source/stylesheets/`)
+- **CSS:** Vanilla CSS (migrated from SASS/Bourbon/Neat)
 - **Templating:** ERB templates with Markdown content
 - **Blog Plugin:** middleman-blog 4.x
 - **Deployment:** Manual git push to `main` branch (via GitHub Actions or `make docker-deploy`)
@@ -39,7 +39,7 @@ We will store specific plans for features and maintenance in `project-docs`. Thi
 ├── source/                # Website source files
 │   ├── layouts/           # ERB layouts (layout.erb, article.erb)
 │   ├── partials/          # Reusable template partials
-│   ├── stylesheets/       # SASS files (includes bourbon/neat)
+│   ├── stylesheets/       # CSS files (screen.css, font-awesome.min.css)
 │   ├── javascripts/       # JS files
 │   ├── images/            # Static images
 │   ├── chapters.yml       # Chapter list with meetup URLs
@@ -201,5 +201,4 @@ Add the deploy key as a GitHub secret:
 - **Docker:** Uses Ruby 3.3-slim image with Bundler 2.5.x (recommended for development)
 - **Build artifacts:** `/build` directory is gitignored and recreated each build
 - **Chapter pages:** Dynamically proxied from `chapter.html.erb` template using data files
-- **SASS libraries:** Bourbon and Neat are vendored locally in `source/stylesheets/` (not gem dependencies)
 - **Make commands:** Run `make help` to see all available commands

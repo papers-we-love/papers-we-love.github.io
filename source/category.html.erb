@@ -5,11 +5,12 @@ pageable: true
     <h1>Archives for the <em><%= category.capitalize %></em> category</h1>
 
     <% if paginate && num_pages > 1 %>
-        <p>Page <%= page_number %> of <%= num_pages %></p>
-
-        <% if prev_page %>
-            <p><%= link_to 'Previous page', prev_page %></p>
-        <% end %>
+    <nav class="pagination-controls">
+      <p class="pagination-count">Page <em><%= page_number %></em> of <%= num_pages %></p>
+      <% if prev_page %>
+        <p class="pagination-prev"><%= link_to '← Previous page', prev_page %></p>
+      <% end %>
+    </nav>
     <% end %>
 
     <ul class="main categories">
@@ -28,9 +29,9 @@ pageable: true
         <% end %>
     </ul>
 
-    <% if paginate %>
-        <% if next_page %>
-            <p><%= link_to 'Next page', next_page %></p>
-        <% end %>
+    <% if paginate && next_page %>
+    <nav class="pagination-controls">
+      <p class="pagination-next"><%= link_to 'Next page →', next_page %></p>
+    </nav>
     <% end %>
 </article>
