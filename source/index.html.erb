@@ -22,33 +22,69 @@ chapter_weights = weight_chapters(data)
 </section>
 
 <div class="home-container">
-  <% page_articles[0..4].each_with_index do |article, i| %>
-    <% @art = article %>
-    <section class="home-entry article">
-      <h2><%= link_to article.title, article %></h2>
-      <%= case article.data.category
-      when "meetup" then partial 'partials/_presenter'
-      when "news" then partial 'partials/_news'
-      end
-      %>
-      <%= article.summary(500) %>
-      <footer>
-        <% link_to article do %>
-          <i class="fa fa-arrow-right"></i> Read more
+  <% if page_number == 1 %>
+    <%# First page shows combined blog articles and videos %>
+    <% combined_entries(10).each do |entry| %>
+      <section class="home-entry article">
+        <h2><%= link_to entry.title, entry.url %></h2>
+        <% if entry.is_video %>
+          <div class="entry-meta">
+            <span class="meta-label"><i class="fa fa-video-camera"></i> Video</span>
+            <div class="meta-text">
+              <span class="meta-date"><%= entry.date.strftime('%b %e, %Y') %></span>
+            </div>
+          </div>
+          <p><%= mark_safe(auto_link_escaped(truncate(entry.description, length: 300).gsub('&', '&amp;').gsub('<', '&lt;').gsub('>', '&gt;'))) %></p>
+        <% else %>
+          <% @art = entry.article %>
+          <%= case entry.category
+          when "meetup" then partial 'partials/_presenter'
+          when "news" then partial 'partials/_news'
+          end
+          %>
+          <%= entry.article.summary(500) %>
         <% end %>
-      </footer>
-    </section>
-  <% end %>
+        <footer>
+          <% link_to entry.url do %>
+            <i class="fa fa-arrow-right"></i> Read more
+          <% end %>
+        </footer>
+      </section>
+    <% end %>
 
-  <% if paginate && num_pages > 1 %>
-    <nav class="pagination-controls">
-      <p class="pagination-count">Page <em><%= page_number %></em> of <%= num_pages %></p>
-      <% if prev_page %>
-        <p class="pagination-prev"><%= link_to '← Previous page', prev_page %></p>
-      <% end %>
-      <% if next_page %>
-        <p class="pagination-next"><%= link_to 'Next page →', next_page %></p>
-      <% end %>
-    </nav>
+    <p style="text-align: center; margin: 2em 0;">
+      <%= link_to "View all videos →", "/videos/" %>
+    </p>
+  <% else %>
+    <%# Subsequent pages show only blog articles %>
+    <% page_articles.each do |article| %>
+      <% @art = article %>
+      <section class="home-entry article">
+        <h2><%= link_to article.title, article %></h2>
+        <%= case article.data.category
+        when "meetup" then partial 'partials/_presenter'
+        when "news" then partial 'partials/_news'
+        end
+        %>
+        <%= article.summary(500) %>
+        <footer>
+          <% link_to article do %>
+            <i class="fa fa-arrow-right"></i> Read more
+          <% end %>
+        </footer>
+      </section>
+    <% end %>
+
+    <% if paginate && num_pages > 1 %>
+      <nav class="pagination-controls">
+        <p class="pagination-count">Page <em><%= page_number %></em> of <%= num_pages %></p>
+        <% if prev_page %>
+          <p class="pagination-prev"><%= link_to '← Previous page', prev_page %></p>
+        <% end %>
+        <% if next_page %>
+          <p class="pagination-next"><%= link_to 'Next page →', next_page %></p>
+        <% end %>
+      </nav>
+    <% end %>
   <% end %>
 </div>

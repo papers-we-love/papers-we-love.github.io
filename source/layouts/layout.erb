@@ -1,13 +1,24 @@
 <%
 title = ""
 description = "A repository of computer science papers and a community of people who love reading them"
+og_image = "http://paperswelove.org/images/papers-we-love-ogp.png"
+og_image_type = "image/png"
 chapter ||= nil
+video ||= nil
 unless current_page.data.title.nil?
   title = current_page.data.title
 end
 unless chapter.nil?
     title = "#{chapter['title']} Chapter"
     description = chapter['description']
+end
+unless video.nil?
+    title = video[:title]
+    description = video[:title]
+    unless video[:thumbnail_url].nil? || video[:thumbnail_url].empty?
+      og_image = video[:thumbnail_url]
+      og_image_type = "image/jpeg"
+    end
 end
 unless current_article.nil?
     title = current_article.title
@@ -30,16 +41,17 @@ end
         <meta property="og:site_name" content="Papers We Love" />
         <meta property="og:title" content="<%= title %> Papers We Love" />
         <meta property="og:description" content="<%= description %>" />
-        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
-        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image" content="<%= og_image %>" />
+        <meta property="og:image:type" content="<%= og_image_type %>" />
+        <% if video %>
+        <meta property="og:image:width" content="480" />
+        <meta property="og:image:height" content="360" />
+        <% else %>
         <meta property="og:image:width" content="400" />
         <meta property="og:image:height" content="300" />
+        <% end %>
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@papers_we_love" />
-        <meta name="twitter:title" content="<%= title %> Papers We Love" />
-        <meta name="twitter:description" content="<%= description %>" />
         <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
         <%= stylesheet_link_tag "font-awesome.min","screen" %>
         <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
