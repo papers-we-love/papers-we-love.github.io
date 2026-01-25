@@ -36,6 +36,14 @@ activate :blog do |blog|
 end
 
 page "/feed.xml", layout: false
+page "/videos.xml", layout: false
+
+# Sitemap configuration
+set :url_root, 'http://paperswelove.org'
+
+activate :search_engine_sitemap,
+  default_priority: 0.5,
+  default_change_frequency: "monthly"
 
 page '/pwlconf2017/*', layout: 'pwlconf'
 
