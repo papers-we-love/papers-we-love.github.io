@@ -25,7 +25,10 @@ jobs:
         run: docker build -t pwl-site .
 
       - name: Build site
-        run: docker run --rm -v ${{ github.workspace }}:/app pwl-site bash -c "bundle install && bundle exec middleman build"
+        run: |
+          docker run --rm -v ${{ github.workspace }}:/app pwl-site bash -c "bundle install && bundle exec middleman build"
+          # Fix permissions (Docker creates files as root)
+          sudo chown -R $USER:$USER build/
 
       - name: Deploy to main branch
         env:
