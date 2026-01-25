@@ -1,7 +1,7 @@
 xml.instruct!
 xml.feed "xmlns" => "http://www.w3.org/2005/Atom",
          "xmlns:media" => "http://search.yahoo.com/mrss/" do
-  site_url = "http://paperswelove.org/"
+  site_url = "https://paperswelove.org/"
 
   xml.title "Papers We Love - Videos"
   xml.subtitle "Video presentations from Papers We Love meetups around the world."

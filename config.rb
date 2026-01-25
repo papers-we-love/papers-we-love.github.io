@@ -39,7 +39,7 @@ page "/feed.xml", layout: false
 page "/videos.xml", layout: false
 
 # Sitemap configuration
-set :url_root, 'http://paperswelove.org'
+set :url_root, 'https://paperswelove.org'
 
 activate :search_engine_sitemap,
   default_priority: 0.5,
