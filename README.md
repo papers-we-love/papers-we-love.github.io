@@ -14,7 +14,9 @@ If you're a chapter leader or volunteer and need to make edits to your chapter's
 
 ## How to work with the site
 
-The site is static and generated with [Middleman](http://middlemanapp.com/). Middleman is a Ruby app using legacy dependencies, so we recommend using Docker for a consistent development environment.
+The site is static and generated with [Middleman 4](http://middlemanapp.com/). We recommend using Docker for a consistent development environment.
+
+Run `make help` to see all available commands.
 
 ### Quick Start with Docker (Recommended)
 
@@ -28,21 +30,22 @@ The site is static and generated with [Middleman](http://middlemanapp.com/). Mid
 
 Other Docker commands:
 ```bash
-make docker-site-build  # Build static site
-make docker-deploy      # Deploy to GitHub Pages (requires deploy key)
-make docker-shell       # Open a shell in the container
-make docker-clean       # Clean up Docker resources
+make docker-site-build    # Build static site
+make docker-deploy        # Deploy to GitHub Pages (requires deploy key)
+make docker-shell         # Open a shell in the container
+make docker-logs          # Follow container logs
+make docker-clean         # Clean up Docker resources
+make docker-build-no-cache # Rebuild without cache (after Gemfile changes)
 ```
 
 ### Alternative: Local Ruby Installation
 
-If you prefer to run Ruby locally (requires Ruby 2.7):
+If you prefer to run Ruby locally (requires Ruby 3.3):
 
-1. Install [Ruby](https://www.ruby-lang.org/en/) 2.7
-2. Install [Bundler](http://bundler.io/) `$ gem install bundler -v 1.17.3`
-3. Checkout this repo, switch to the **middleman** branch and `cd papers-we-love.github.io`
-4. Install your dependencies `bundle install`
-5. Fire up the dev server `$ bundle exec middleman server` and hit `http://0.0.0.0:4567/`
+1. Install [Ruby](https://www.ruby-lang.org/en/) 3.3
+2. Checkout this repo, switch to the **middleman** branch and `cd papers-we-love.github.io`
+3. Install your dependencies `bundle install`
+4. Fire up the dev server `$ bundle exec middleman server` and hit `http://localhost:4567/`
 
 ### Quickstart: CLI commands
 

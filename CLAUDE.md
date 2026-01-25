@@ -10,12 +10,12 @@ This is the website for [Papers We Love](http://paperswelove.org/), a community 
 
 ## Technology Stack
 
-- **Static Site Generator:** [Middleman](http://middlemanapp.com/) v3.4.1 (legacy Ruby-based SSG)
-- **Ruby Version:** Requires Ruby 2.x (project uses older gems)
-- **CSS:** SASS with [Bourbon](http://bourbon.io/) 4.3.4 and [Neat](http://neat.bourbon.io/) 1.9.0
+- **Static Site Generator:** [Middleman](http://middlemanapp.com/) v4.6.x
+- **Ruby Version:** 3.3 (via Docker)
+- **CSS:** SASS with SassC, using vendored Bourbon/Neat (in `source/stylesheets/`)
 - **Templating:** ERB templates with Markdown content
-- **Blog Plugin:** middleman-blog 3.5.3
-- **Deployment:** middleman-deploy (git-based to `main` branch)
+- **Blog Plugin:** middleman-blog 4.x
+- **Deployment:** Manual git push to `main` branch (via GitHub Actions or `make docker-deploy`)
 
 ## Project Docs
 
@@ -53,6 +53,8 @@ We will store specific plans for features and maintenance in `project-docs`. Thi
 
 ## Development Commands
 
+Run `make help` to see all available commands.
+
 ### Quick Start
 ```bash
 # Install dependencies
@@ -62,7 +64,6 @@ make deps
 # Run development server (http://localhost:4567)
 make serve
 # or: bundle exec middleman server
-# or: rake preview
 ```
 
 ### Build & Deploy
@@ -89,26 +90,28 @@ rake upcoming
 rake refresh
 ```
 
-### Docker (recommended for consistent environment)
+### Docker (recommended)
 ```bash
 # Build the Docker image
 make docker-build
-# or: docker-compose build
 
 # Run development server (http://localhost:4567)
 make docker-serve
-# or: docker-compose up web
 
 # Build static site in container
 make docker-site-build
-# or: docker-compose run --rm build
 
 # Deploy to GitHub Pages (requires deploy key setup)
 make docker-deploy
-# or: docker-compose run --rm deploy
 
 # Open a shell in the container
 make docker-shell
+
+# Follow container logs
+make docker-logs
+
+# Rebuild without cache (after Gemfile changes)
+make docker-build-no-cache
 
 # Clean up Docker resources
 make docker-clean
@@ -195,8 +198,8 @@ Add the deploy key as a GitHub secret:
 ## Important Notes
 
 - **Branch workflow:** Edit on `middleman` branch, deploy pushes static files to `main`
-- **Legacy dependencies:** Uses Middleman 3.x (not 4.x), Bundler 1.x locked
-- **Ruby compatibility:** Requires Ruby 2.7 or older due to gem constraints; use Docker for consistent environment
-- **Docker:** Uses Ruby 2.7-slim image with Bundler 1.17.3 for compatibility
+- **Docker:** Uses Ruby 3.3-slim image with Bundler 2.5.x (recommended for development)
 - **Build artifacts:** `/build` directory is gitignored and recreated each build
 - **Chapter pages:** Dynamically proxied from `chapter.html.erb` template using data files
+- **SASS libraries:** Bourbon and Neat are vendored locally in `source/stylesheets/` (not gem dependencies)
+- **Make commands:** Run `make help` to see all available commands
