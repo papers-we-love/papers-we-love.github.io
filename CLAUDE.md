@@ -17,6 +17,10 @@ This is the website for [Papers We Love](http://paperswelove.org/), a community 
 - **Blog Plugin:** middleman-blog 3.5.3
 - **Deployment:** middleman-deploy (git-based to `main` branch)
 
+## Project Docs
+
+We will store specific plans for features and maintenance in `project-docs`. This is also where we will store a `CHANGELOG.md` going forward with a summary of all of working sessions.
+
 ## Project Structure
 
 ```
