@@ -22,6 +22,11 @@ After we get the plan together keep a progress report in this document (todos) a
 
 ### 2026-01-25
 
+**Changed URLs to HTTPS**
+
+- `config.rb` - Changed `url_root` from `http://` to `https://`
+- `source/videos.xml.builder` - Changed `site_url` from `http://` to `https://`
+
 **Added Video Feed link to footer**
 
 - `source/partials/_footer.erb` - Added "Video Feed" link to footer navigation pointing to `/videos.xml`
