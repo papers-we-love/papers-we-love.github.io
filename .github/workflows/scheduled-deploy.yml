@@ -25,7 +25,7 @@ jobs:
         run: docker build -t pwl-site .
 
       - name: Build site
-        run: docker run --rm -v ${{ github.workspace }}:/app pwl-site bundle exec middleman build
+        run: docker run --rm -v ${{ github.workspace }}:/app pwl-site bash -c "bundle install && bundle exec middleman build"
 
       - name: Deploy to main branch
         env:
@@ -41,32 +41,13 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
 
-          # Run deploy in Docker
-          docker run --rm \
-            -v ${{ github.workspace }}:/app \
-            -v ~/.ssh/id_ed25519:/tmp/deploy_key:ro \
-            -e GIT_AUTHOR_NAME="GitHub Actions" \
-            -e GIT_AUTHOR_EMAIL="actions@github.com" \
-            -e GIT_COMMITTER_NAME="GitHub Actions" \
-            -e GIT_COMMITTER_EMAIL="actions@github.com" \
-            pwl-site /bin/bash -c '
-              mkdir -p /root/.ssh
-              cp /tmp/deploy_key /root/.ssh/id_ed25519
-              chmod 600 /root/.ssh/id_ed25519
-              cat > /root/.ssh/config << EOF
-          Host github.com
-              HostName github.com
-              User git
-              IdentityFile /root/.ssh/id_ed25519
-              StrictHostKeyChecking no
-          EOF
-              chmod 600 /root/.ssh/config
-              # Fix git ownership check
-              git config --global --add safe.directory /app
-              git config --global user.name "GitHub Actions"
-              git config --global user.email "actions@github.com"
-              # Ensure git remote is configured
-              git remote remove origin 2>/dev/null || true
-              git remote add origin git@github.com:papers-we-love/papers-we-love.github.io.git
-              bundle exec middleman deploy
-            '
+          # Deploy build directory to main branch
+          cd build
+          touch .nojekyll
+          git init
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add -A
+          git commit -m "Deploy site $(date -u +%Y-%m-%d\ %H:%M:%S\ UTC)"
+          git remote add origin git@github.com:papers-we-love/papers-we-love.github.io.git
+          git push -f origin HEAD:main
