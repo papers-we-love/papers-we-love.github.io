@@ -1,7 +1,7 @@
 # Dockerfile for Papers We Love website
-# Uses Ruby 2.7 for compatibility with Middleman 3.4.1 and legacy gems
+# Uses Ruby 3.3 for Middleman 4.5.x
 
-FROM ruby:2.7-slim
+FROM ruby:3.3-slim
 
 # Install build dependencies for native gems (nokogiri, etc.)
 RUN apt-get update && apt-get install -y \
@@ -16,11 +16,12 @@ RUN apt-get update && apt-get install -y \
 # Set working directory
 WORKDIR /app
 
-# Install bundler at the version specified in Gemfile.lock
-RUN gem install bundler -v 1.17.3
+# Install modern bundler
+RUN gem install bundler -v 2.5.6
 
 # Copy Gemfile first to leverage Docker cache
-COPY Gemfile Gemfile.lock ./
+# Note: Gemfile.lock may not exist during initial setup
+COPY Gemfile Gemfile.loc* ./
 
 # Install gems
 RUN bundle install --jobs 4

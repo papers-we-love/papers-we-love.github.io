@@ -38,30 +38,16 @@ page "/feed.xml", layout: false
 
 page '/pwlconf2017/*', layout: 'pwlconf'
 
-###
-# OpenGraph Settings
-###
-activate :ogp do |ogp|
-  #
-  # register namespace with default options
-  #
-  ogp.namespaces = {
-    fb: data.ogp.fb,
-    # from data/ogp/fb.yml
-    og: data.ogp.og
-    # from data/ogp/og.yml
-  }
-  ogp.base_url = 'http://paperswelove.org/'
-  ogp.blog = true
-end
+# OpenGraph tags are now handled manually in layouts
 
 ###
-# Build up Category listing data
+# Helpers
 ###
-ready do
-  @category_list = []
-  sitemap.resources.group_by {|p| p.data["category"] }.each do |category, pages|
-    @category_list << { :category => category, :pages => pages }
+helpers do
+  def category_list
+    sitemap.resources.group_by {|p| p.data["category"] }.map do |category, pages|
+      { :category => category, :pages => pages }
+    end
   end
 end
 
@@ -83,19 +69,7 @@ end
 # end
 
 # Load Chapters YAML
-@chapters = YAML.load_file('source/chapters.yml')
-
-# Chapter pages
-data.chapters.keys.reject { |i| i.nil? }.each do |chapter|
-  proxy "/chapter/#{chapter}.html", "/chapter.html", :locals => { :chapter => chapter, :events => data[chapter] }, :ignore => true
-end
-
-# Chapter index
-proxy "/chapter/index.html", "/chapter_index.html", :locals => { :chapters => @chapters }, :ignore => true
-
-# Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
-# proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
-#  which_fake_page: "Rendering a fake page with a local variable" }
+@chapters = YAML.load_file('source/chapters.yml', permitted_classes: [Symbol])
 
 ###
 # Helpers
@@ -104,8 +78,16 @@ proxy "/chapter/index.html", "/chapter_index.html", :locals => { :chapters => @c
 # Directory indexes
 activate :directory_indexes
 
-# Automatic image dimensions on image_tag helper
-activate :automatic_image_sizes
+# Chapter pages (defined after directory_indexes)
+# Use /index.html suffix so directory_indexes creates proper directories
+data.chapters.keys.reject { |i| i.nil? }.each do |chapter|
+  proxy "/chapter/#{chapter}/index.html", "/chapter.html", locals: { chapter: chapter, events: data[chapter] }, ignore: true
+end
+
+# Chapter index
+proxy "/chapter/index.html", "/chapter_index.html", locals: { chapters: @chapters }, ignore: true
+
+# Note: automatic_image_sizes was removed in Middleman 4
 
 # Reload the browser automatically whenever files change
 # activate :livereload
@@ -131,7 +113,7 @@ end
 
 # Build-specific configuration
 configure :build do
-  # For example, change the Compass output style for deployment
+  # Minify CSS for production
   activate :minify_css
 
   # Minify Javascript on build
@@ -147,11 +129,4 @@ configure :build do
   # set :http_prefix, "/Content/images/"
 end
 
-###
-# Git deploy
-###
-activate :deploy do |deploy|
-  deploy.build_before = true # default: false
-  deploy.method       = :git
-  deploy.branch       = "main" # default: gh-pages
-end
+# Deployment is handled via manual git push (see Makefile/GitHub Actions)

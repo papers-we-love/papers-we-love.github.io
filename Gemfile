@@ -1,26 +1,26 @@
-# If you have OpenSSL installed, we recommend updating
-# the following line to use "https"
+# Gemfile for Papers We Love website
+# Updated for Middleman 4.5.x and Ruby 3.3
+
 source 'https://rubygems.org'
 
-# XML parsing for great justice
-gem "nokogiri", "~> 1.10.8"
-
-gem "middleman", "~> 3.4.1"
-gem "middleman-blog", "~> 3.5.3"
-gem "middleman-deploy", "~> 1.0"
-gem "middleman-livereload"
-gem "middleman-ogp"
+# Static site generator
+gem "middleman", "~> 4.5"
+gem "middleman-blog", "~> 4.0"
+gem "middleman-livereload", "~> 3.4"
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"
 
-# SASS and friends
-gem 'sass'
-gem 'bourbon', "4.3.4"
-gem 'neat', "~> 1.9.0"
+# SASS compiler (replaces deprecated Ruby Sass)
+gem "sassc", "~> 2.4"
 
-# Sanitizers
-gem 'sanitize', '~> 3.1.1'
+# Note: Bourbon and Neat removed (both archived/unmaintained)
 
-# Debuggin
+# HTML parsing
+gem "nokogiri", "~> 1.16"
+
+# HTML sanitization
+gem 'sanitize', '~> 6.0'
+
+# Debugging
 gem 'pry'

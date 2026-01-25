@@ -9,7 +9,7 @@ services:
       - bundle_cache:/usr/local/bundle
     environment:
       - BUNDLE_PATH=/usr/local/bundle
-    command: bundle exec middleman server --bind-address 0.0.0.0
+    command: bash -c "bundle install && bundle exec middleman server --bind-address 0.0.0.0"
 
   # Service for building the static site
   build:
@@ -19,7 +19,7 @@ services:
       - bundle_cache:/usr/local/bundle
     environment:
       - BUNDLE_PATH=/usr/local/bundle
-    command: bundle exec middleman build
+    command: bash -c "bundle install && bundle exec middleman build"
     profiles:
       - build
 
