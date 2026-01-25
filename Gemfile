@@ -19,3 +19,6 @@ gem 'sanitize', '~> 6.0'
 
 # Debugging
 gem 'pry'
+
+# Sitemap generation
+gem "middleman-search_engine_sitemap", "~> 1.4"
