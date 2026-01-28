@@ -1,0 +1,126 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>PWL - QCon NYC Edition | John Langford on Making Contextual Decisions with Low Technical Debt | Papers We Love</title>
+        <meta name="description" content="PWL - QCon NYC Edition | John Langford on Making Contextual Decisions with Low Technical Debt" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="PWL - QCon NYC Edition | John Langford on Making Contextual Decisions with Low Technical Debt | Papers We Love" />
+        <meta property="og:description" content="PWL - QCon NYC Edition | John Langford on Making Contextual Decisions with Low Technical Debt" />
+        <meta property="og:image" content="https://i.ytimg.com/vi/2bu3inBrZNg/hqdefault.jpg" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="480" />
+        <meta property="og:image:height" content="360" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="http://schema.org/WebPage">
+        <section class="nav-top">
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="https://github.com/papers-we-love/papers-we-love">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+      <li><a href="https://pwlconf.org">PWLConf</a></li>
+    </ul>
+  </nav>
+</section>
+<!--
+     <section class="pwlconf-banner" role="button" aria-label="Buy tickets for PWLConf 2018" onclick="bannerClick()">
+     <img src="/images/pwl-type-thick-web.svg" class="banner-img" alt="Papers We Love Conf" title="PWLConf 2018 | St. Louis, MO - September 28th" />
+     <div>
+     <h3>Coming again to St. Louis on September 12th, 2019</h3>
+     <h4>Buy tickets here!</h4>
+     </div>
+     </section>
+     <script>
+     function bannerClick(e) {
+     window.location.href="https://pwlconf.org";
+     }
+     </script>
+-->
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article video-page" itemscope itemtype="http://schema.org/VideoObject">
+  <h1 itemprop="name">PWL - QCon NYC Edition | John Langford on Making Contextual Decisions with Low Technical Debt</h1>
+  <div class="entry-meta">
+    <span class="meta-label">
+      <i class="fa fa-video-camera"></i> Video
+    </span>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="uploadDate">2017-08-02</span>
+    </div>
+  </div>
+  <section class="video-embed" itemprop="video">
+    <iframe src="https://www.youtube.com/embed/2bu3inBrZNg"
+            frameborder="0"
+            allowfullscreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+    </iframe>
+  </section>
+  <section class="video-description" itemprop="description">
+    <p>Meetup: <a href="http://bit.ly/2uSFBlB" target="_blank" rel="noopener">http://bit.ly/2uSFBlB</a><br>Paper: <a href="http://bit.ly/2vrurav" target="_blank" rel="noopener">http://bit.ly/2vrurav</a><br>Slides:  <a href="http://bit.ly/2f2Ycrl" target="_blank" rel="noopener">http://bit.ly/2f2Ycrl</a><br>Audio: <a href="http://bit.ly/2hicViG" target="_blank" rel="noopener">http://bit.ly/2hicViG</a></p>
+<p>----------------------------------------------------------------------------------------<br>Sponsored by Two Sigma (@twosigma) and QCon NYC<br>----------------------------------------------------------------------------------------</p>
+<p>Description<br>------------------<br>Applications and systems are constantly faced with decisions that require picking from a set of actions based on contextual information. Reinforcement-based learning algorithms such as contextual bandits can be very effective in these settings, but applying them in practice is fraught with technical debt, and no general system exists that supports them completely. We address this and create the first general system for contextual learning, called the Decision Service. Existing systems often suffer from technical debt that arises from issues like incorrect data collection and weak debuggability, issues we systematically address through our ML methodology and system abstractions. The Decision Service enables all aspects of contextual bandit learning using four system abstractions which connect together in a loop: explore (the decision space), log, learn, and deploy. Notably, our new explore and log abstractions ensure the system produces correct, unbiased data, which our learner uses for online learning and to enable real-time safeguards, all in a fully reproducible manner. </p>
+<p>The Decision Service has a simple user interface and works with a variety of applications: we present two live production deployments for content recommendation that achieved click-through improvements of 25-30%, another with 18% revenue lift in the landing page, and ongoing applications in tech support and machine failure handling. The service makes real-time decisions and learns continuously and scalably, while significantly lowering technical debt. </p>
+<p>Bio<br>-----<br>John Langford is a machine learning research scientist, a field which he says "is shifting from an academic discipline to an industrial tool". He is the author of the weblog hunch.net and the principal developer of Vowpal Wabbit. John works at Microsoft Research New York, of which he was one of the founding members, and was previously affiliated with Yahoo! Research,Toyota Technological Institute, and IBM's Watson Research Center. He studied Physics and Computer Science at the California Institute of Technology, earning a double bachelor's degree in 1997, and received his Ph.D. in Computer Science from Carnegie Mellon University in 2002. He was the program co-chair for the 2012 International Conference on Machine Learning.</p>
+  </section>
+  <footer class="article-metadata">
+    <em>Tags:</em>
+      <a href="/videos/tags/meetup/">meetup</a>
+      <a href="/videos/tags/video/">video</a>
+      <a href="/videos/tags/machine-learning/">machine-learning</a>
+      <a href="/videos/tags/papers-we-love/">papers-we-love</a>
+      <a href="/videos/tags/paperswelove/">paperswelove</a>
+      <a href="/videos/tags/john-langford/">john-langford</a>
+      <a href="/videos/tags/ml/">ml</a>
+      <a href="/videos/tags/reinforcement-based-learning/">reinforcement-based-learning</a>
+      <a href="/videos/tags/decision-service/">decision-service</a>
+    <em>Posted by:</em>
+    Papers We Love
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" itemscope itemtype="http://schema.org/Organization">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 <span itemprop="name">Papers We Love<sup>SM</sup></span>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

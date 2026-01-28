@@ -1,0 +1,130 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>PWLSF - 03/2015 - Armon Dadgar on Bloom Filters and HyperLogLog | Papers We Love</title>
+        <meta name="description" content="PWLSF - 03/2015 - Armon Dadgar on Bloom Filters and HyperLogLog" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="PWLSF - 03/2015 - Armon Dadgar on Bloom Filters and HyperLogLog | Papers We Love" />
+        <meta property="og:description" content="PWLSF - 03/2015 - Armon Dadgar on Bloom Filters and HyperLogLog" />
+        <meta property="og:image" content="https://i.ytimg.com/vi/T3Bt9Tn6P5c/hqdefault.jpg" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="480" />
+        <meta property="og:image:height" content="360" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="http://schema.org/WebPage">
+        <section class="nav-top">
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="https://github.com/papers-we-love/papers-we-love">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+      <li><a href="https://pwlconf.org">PWLConf</a></li>
+    </ul>
+  </nav>
+</section>
+<!--
+     <section class="pwlconf-banner" role="button" aria-label="Buy tickets for PWLConf 2018" onclick="bannerClick()">
+     <img src="/images/pwl-type-thick-web.svg" class="banner-img" alt="Papers We Love Conf" title="PWLConf 2018 | St. Louis, MO - September 28th" />
+     <div>
+     <h3>Coming again to St. Louis on September 12th, 2019</h3>
+     <h4>Buy tickets here!</h4>
+     </div>
+     </section>
+     <script>
+     function bannerClick(e) {
+     window.location.href="https://pwlconf.org";
+     }
+     </script>
+-->
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article video-page" itemscope itemtype="http://schema.org/VideoObject">
+  <h1 itemprop="name">PWLSF - 03/2015 - Armon Dadgar on Bloom Filters and HyperLogLog</h1>
+  <div class="entry-meta">
+    <span class="meta-label">
+      <i class="fa fa-video-camera"></i> Video
+    </span>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="uploadDate">2015-03-31</span>
+    </div>
+  </div>
+  <section class="video-embed" itemprop="video">
+    <iframe src="https://www.youtube.com/embed/T3Bt9Tn6P5c"
+            frameborder="0"
+            allowfullscreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+    </iframe>
+  </section>
+  <section class="video-description" itemprop="description">
+    <p>PWL Mini </p>
+<p>Matt Adereth on "The Mode Tree: A Tool for Visualization of Nonparametric Density Features"(<a href="http://adereth.github.io/oneoff/Mode%20Trees.pdf" target="_blank" rel="noopener">http://adereth.github.io/oneoff/Mode%20Trees.pdf</a>).  From Matt: "We often look at summaries of univariate data using basic descriptive statistics like mean and standard deviation and visualizations like histograms and box plots.  The Mode Tree is a powerful alternative visualization that reveals important details about our distributions that none of the standard approaches can show.</p>
+<p>I particularly like this paper because it was really the by-product of some interesting algorithmic work in Computational Statistics.  A lot of the techniques in this area are pretty math heavy and inaccessible, so I appreciated that they dedicated a paper to making a visualization that helps explain the inner workings.  As a bonus, the visualization stands on its own as a useful tool."</p>
+<p>Slides for Matt's talk are available here: <a href="http://adereth.github.io/oneoff/pwl-draft/scratch.html" target="_blank" rel="noopener">http://adereth.github.io/oneoff/pwl-draft/scratch.html</a></p>
+<p>Matt's Bio<br>Matt Adereth (@adereth) builds tools and infrastructure for quantitative analysis at Two Sigma.  He previously worked at Microsoft on Visio, focusing on ways to connect data to shapes.</p>
+<p>Main Talk  <br>Armon Dadgar from HashiCorp takes us on a deep dive of Bloom filters and HyperLogLog.</p>
+<p>Bloom filter papers:<br>* <a href="http://www.cs.upc.edu/~diaz/p422-bloom.pdf" target="_blank" rel="noopener">http://www.cs.upc.edu/~diaz/p422-bloom.pdf</a><br>* <a href="http://gsd.di.uminho.pt/members/cbm/ps/dbloom.pdf" target="_blank" rel="noopener">http://gsd.di.uminho.pt/members/cbm/ps/dbloom.pdf</a><br>* <a href="http://www.eecs.harvard.edu/%7Ekirsch/pubs/bbbf/esa06.pdf" target="_blank" rel="noopener">http://www.eecs.harvard.edu/%7Ekirsch/pubs/bbbf/esa06.pdf</a></p>
+<p>Armon will mostly touch on the first  paper which is the introduction of the technique. The other two are optimizations that he'll discuss briefly but there's no need to dwell on them.</p>
+<p>HyperLogLog papers:<br>* <a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.142.9475" target="_blank" rel="noopener">http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.142.9475</a><br>* <a href="http://research.google.com/pubs/pub40671.html" target="_blank" rel="noopener">http://research.google.com/pubs/pub40671.html</a></p>
+<p>Again, the first one introduces them, and the second one is some optimizations from Google. He won’t spend much time on the second one either. All of these papers are implemented as part of:<br><a href="https://github.com/armon/bloomd" target="_blank" rel="noopener">https://github.com/armon/bloomd</a><br><a href="https://github.com/armon/hlld" target="_blank" rel="noopener">https://github.com/armon/hlld</a></p>
+<p>These links may give some context to the work and show the real-world applicability.</p>
+<p>From Armon on why he loves these papers: "Bloom Filters and HyperLogLog are incredible for their simplicity and the seemingly impossible behavior they have. Both of them are part of the family of “sketching” data structures, which allow for a controllable error that results in a tremendous savings of memory compared to the equivalent exact implementations.</p>
+<p>More than just being elegant, these two data structures enable some very cool real-world use cases. In the online advertising company I previously worked for, we used them to track thousands of metrics across billions of data points comfortably in memory on a single machine. "</p>
+<p>Armon's Bio<br>Armon (@armon) has a passion for distributed systems and their application to real world problems. He is currently the CTO of HashiCorp, where he brings distributed systems into the world of DevOps tooling. He has worked on Terraform, Consul, and Serf at HashiCorp, and maintains the Statsite and Bloomd OSS projects as well.</p>
+<p>Downloadable slides for Armon's talk are available here <a href="https://speakerdeck.com/paperswelove/pwlsf-number-13-equals-armon-dadgar-on-bloom-filters-and-hyperloglog" target="_blank" rel="noopener">https://speakerdeck.com/paperswelove/pwlsf-number-13-equals-armon-dadgar-on-bloom-filters-and-hyperloglog</a></p>
+  </section>
+  <footer class="article-metadata">
+    <em>Tags:</em>
+      <a href="/videos/tags/meetup/">meetup</a>
+      <a href="/videos/tags/video/">video</a>
+      <a href="/videos/tags/hyperloglog/">hyperloglog</a>
+    <em>Posted by:</em>
+    Papers We Love
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" itemscope itemtype="http://schema.org/Organization">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 <span itemprop="name">Papers We Love<sup>SM</sup></span>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

@@ -1,0 +1,126 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Stephen Tu on "Least Squares Policy Iteration" [PWL NYC] | Papers We Love</title>
+        <meta name="description" content="Stephen Tu on "Least Squares Policy Iteration" [PWL NYC]" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Stephen Tu on "Least Squares Policy Iteration" [PWL NYC] | Papers We Love" />
+        <meta property="og:description" content="Stephen Tu on "Least Squares Policy Iteration" [PWL NYC]" />
+        <meta property="og:image" content="https://i.ytimg.com/vi/WpHPMqzufJY/hqdefault.jpg" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="480" />
+        <meta property="og:image:height" content="360" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="http://schema.org/WebPage">
+        <section class="nav-top">
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="https://github.com/papers-we-love/papers-we-love">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+      <li><a href="https://pwlconf.org">PWLConf</a></li>
+    </ul>
+  </nav>
+</section>
+<!--
+     <section class="pwlconf-banner" role="button" aria-label="Buy tickets for PWLConf 2018" onclick="bannerClick()">
+     <img src="/images/pwl-type-thick-web.svg" class="banner-img" alt="Papers We Love Conf" title="PWLConf 2018 | St. Louis, MO - September 28th" />
+     <div>
+     <h3>Coming again to St. Louis on September 12th, 2019</h3>
+     <h4>Buy tickets here!</h4>
+     </div>
+     </section>
+     <script>
+     function bannerClick(e) {
+     window.location.href="https://pwlconf.org";
+     }
+     </script>
+-->
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article video-page" itemscope itemtype="http://schema.org/VideoObject">
+  <h1 itemprop="name">Stephen Tu on "Least Squares Policy Iteration" [PWL NYC]</h1>
+  <div class="entry-meta">
+    <span class="meta-label">
+      <i class="fa fa-video-camera"></i> Video
+    </span>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="uploadDate">2017-10-05</span>
+    </div>
+  </div>
+  <section class="video-embed" itemprop="video">
+    <iframe src="https://www.youtube.com/embed/WpHPMqzufJY"
+            frameborder="0"
+            allowfullscreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+    </iframe>
+  </section>
+  <section class="video-description" itemprop="description">
+    <p>Meetup: <a href="http://bit.ly/2y3Qc1j" target="_blank" rel="noopener">http://bit.ly/2y3Qc1j</a><br>Paper: <a href="https://users.cs.duke.edu/~parr/jmlr03.pdf" target="_blank" rel="noopener">https://users.cs.duke.edu/~parr/jmlr03.pdf</a><br>Slides: <a href="http://bit.ly/2wkPmsN" target="_blank" rel="noopener">http://bit.ly/2wkPmsN</a><br>Audio: <a href="http://bit.ly/2xyqSQw" target="_blank" rel="noopener">http://bit.ly/2xyqSQw</a></p>
+<p>-----------------------------------------------------------------------------------<br>Sponsored and hosted by Two Sigma (@twosigma)<br>-----------------------------------------------------------------------------------</p>
+<p>Description<br>------------------<br>Policy iteration is a classic dynamic programing algorithm for solving a Markov Decision Process (MDP). In policy iteration, the algorithm alternates between two steps: 1) a policy evaluation step which, given the current policy, computes the state-action value function (commonly known as the Q-function) for the policy, and 2) a policy improvement step, which uses the Q-function to greedily improve the current policy. When the number of states and actions of the MDP is finite and small, policy iteration performs well and comes with nice theoretical guarantees. However, when the state and action spaces are large (possibly continuous), policy iteration becomes intractable, and approximate methods for solving MDPs must be used. </p>
+<p>Least Squares Policy Iteration (LSPI) is one method for approximately solving an MDP. The key idea here is to approximate the Q-function as a linear functional in a lifted, higher dimensional space, analogous to the idea of feature maps in supervised learning. Plugging this approximation into the Bellman equation gives a tractable linear system of equations to solve for the policy evaluation step. Furthermore, the policy improvement step remains the same as before.</p>
+<p>This talk describes LSPI and some of its subtleties. One subtlety arises due to the fact that the Bellman operator is not necessarily invariant on our approximate function class, and hence an extra projection step is typically used to minimize the Bellman residual after projecting back on the function space. Furthermore, in order to build intuition for LSPI, I will also talk about what the LSPI algorithm does in the context of a well studied continuous optimal control problem known as the Linear Quadratic Regulator (LQR).</p>
+<p>Bio<br>-----<br>Stephen Tu is a PhD student in the EECS department at UC Berkeley, studying problems in the intersection of optimization, control theory, and statistics. This summer, he is interning at the Google Brain team in NYC, which has sparked his interest in reinforcement learning.</p>
+  </section>
+  <footer class="article-metadata">
+    <em>Tags:</em>
+      <a href="/videos/tags/meetup/">meetup</a>
+      <a href="/videos/tags/video/">video</a>
+      <a href="/videos/tags/paperswelove/">paperswelove</a>
+      <a href="/videos/tags/papers-we-love/">papers-we-love</a>
+      <a href="/videos/tags/dynamic-programming/">dynamic-programming</a>
+      <a href="/videos/tags/markov-decision-process/">markov-decision-process</a>
+      <a href="/videos/tags/least-squares-policy-iteration/">least-squares-policy-iteration</a>
+      <a href="/videos/tags/reinforcement-learning/">reinforcement-learning</a>
+    <em>Posted by:</em>
+    Papers We Love
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" itemscope itemtype="http://schema.org/Organization">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 <span itemprop="name">Papers We Love<sup>SM</sup></span>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

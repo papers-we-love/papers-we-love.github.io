@@ -1,0 +1,132 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>"A Rehabilitation of Message-passing Concurrency" by Frank Pfenning [PWLConf 2018] | Papers We Love</title>
+        <meta name="description" content=""A Rehabilitation of Message-passing Concurrency" by Frank Pfenning [PWLConf 2018]" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content=""A Rehabilitation of Message-passing Concurrency" by Frank Pfenning [PWLConf 2018] | Papers We Love" />
+        <meta property="og:description" content=""A Rehabilitation of Message-passing Concurrency" by Frank Pfenning [PWLConf 2018]" />
+        <meta property="og:image" content="https://i.ytimg.com/vi/LRn_nPfti-Y/hqdefault.jpg" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="480" />
+        <meta property="og:image:height" content="360" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="http://schema.org/WebPage">
+        <section class="nav-top">
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="https://github.com/papers-we-love/papers-we-love">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+      <li><a href="https://pwlconf.org">PWLConf</a></li>
+    </ul>
+  </nav>
+</section>
+<!--
+     <section class="pwlconf-banner" role="button" aria-label="Buy tickets for PWLConf 2018" onclick="bannerClick()">
+     <img src="/images/pwl-type-thick-web.svg" class="banner-img" alt="Papers We Love Conf" title="PWLConf 2018 | St. Louis, MO - September 28th" />
+     <div>
+     <h3>Coming again to St. Louis on September 12th, 2019</h3>
+     <h4>Buy tickets here!</h4>
+     </div>
+     </section>
+     <script>
+     function bannerClick(e) {
+     window.location.href="https://pwlconf.org";
+     }
+     </script>
+-->
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article video-page" itemscope itemtype="http://schema.org/VideoObject">
+  <h1 itemprop="name">"A Rehabilitation of Message-passing Concurrency" by Frank Pfenning [PWLConf 2018]</h1>
+  <div class="entry-meta">
+    <span class="meta-label">
+      <i class="fa fa-video-camera"></i> Video
+    </span>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="uploadDate">2018-10-20</span>
+    </div>
+  </div>
+  <section class="video-embed" itemprop="video">
+    <iframe src="https://www.youtube.com/embed/LRn_nPfti-Y"
+            frameborder="0"
+            allowfullscreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+    </iframe>
+  </section>
+  <section class="video-description" itemprop="description">
+    <p>PWLConf 2018 Link: <a href="https://pwlconf.org/2018/frank-pfenning/" target="_blank" rel="noopener">https://pwlconf.org/2018/frank-pfenning/</a><br>Slides / Captions: <a href="https://github.com/papers-we-love/pwlconf-info/tree/master/2018/frenk-pfenning" target="_blank" rel="noopener">https://github.com/papers-we-love/pwlconf-info/tree/master/2018/frenk-pfenning</a></p>
+<p>A Rehabilitation of Message-passing Concurrency<br>Frank Pfenning, Head of the Computer Science Dept., Carnegie Mellon University</p>
+<p>Recently, there has been a lot of research on shared-memory concurrency. Nevertheless, programmers are discouraged from using it because of the difficulty of writing clear, correct programs. This is embodied for example in the Go Language slogan “Do not communicate by sharing memory; instead, share memory by communicating.” But do we have the right abstractions for message-passing concurrent programming? I argue that we do not (yet!) because concurrency constructs are usually bolted on to an existing language with an entirely different semantic foundation. I will review some recent progress on designing better abstractions based on strong logical and type-theoretic principles. Multiple themes from functional and object-oriented programming will re-emerge from these foundations in a new form, including (ha!) shared memory.</p>
+<p>References<br>------------------</p>
+<p>- Types for Dyadic Interaction by Kohei Honda<br>- Language Primitives and Type Discipline for Structured Communication-Based Programming by Kohei Honda, Vasco Vasconcelos, and Makoto Kubo<br>- Subtyping for Session Types in the Pi-Calculus by Simon Gay and Malcom Hole<br>- Session Types and Intuitionistic Linear Propositions by Luís Caires and Frank Pfenning<br>- Higher-Order Processes, Functions, and Sessions: a Monadic Integration by Bernardo Toninho, Luís Caires, and Frank Pfenning<br>Manifest Sharing with Session Types by Stephanie Balzer and Frank Pfenning</p>
+<p>Biography<br>----------------</p>
+<p>Frank Pfenning (<a href="http://www.cs.cmu.edu/~fp/index.html" target="_blank" rel="noopener">http://www.cs.cmu.edu/~fp/index.html</a>) studied Mathematics and Computer Science at the Technical University Darmstadt and then left for Carnegie Mellon University on a Fulbright scholarship where he obtained his Ph.D. in Mathematics in 1987 under the supervision of Professor Peter Andrews.</p>
+<p>He subsequently joined the Department of Computer Science at Carnegie Mellon University as research faculty where he became Professor in 2002 and served as Director of Graduate Programs from 2004 to 2008 and Associate Dean for Graduate Education from 2009 to 2010. He was appointed Head of the Computer Science Department in January 2013 and the Joseph F. Traub Professor of Computer Science in October 2015.</p>
+<p>He has spent time as visiting scientist at the Max-Planck-Institute for Computer Science in Saarbrücken, as Alexander-von-Humboldt fellow at the Technical University Darmstadt, and as visiting professor at École Polytechnique and INRIA-Futurs. He has advised 24 completed Ph.D. theses and won the Herbert A. Simon Award for Teaching Excellence in the School of Computer Science in 2002.</p>
+<p>He served as trustee, vice president, and president of CADE, Inc., the governing body of the International Conference on Automated Deduction, and on advisory boards for INRIA, the Max-Planck-Institute for Computer Science, and Seoul National University. He has chaired several conferences and program committees, including CADE and LICS, and has been a member of the editorial boards for Theoretical Computer Science, Journal of Automated Reasoning, and the Journal of Symbolic Computation. He was named Fellow of the ACM in 2015.</p>
+<p>His research interests include programming languages, logic and type theory, logical frameworks, automated deduction, and computer security. In his spare time he enjoys playing squash, running, hiking, cooking, and reading.</p>
+<p>-----------------------------------------------------------------------------------------------------------<br>Platinum Sponsor: Droit (<a href="https://droit.tech/" target="_blank" rel="noopener">https://droit.tech/</a>)<br>Video Sponsor: Datadog (<a href="https://www.datadoghq.com/" target="_blank" rel="noopener">https://www.datadoghq.com/</a>)<br>Captioning Sponsor: Comcast (<a href="https://jobs.comcast.com/" target="_blank" rel="noopener">https://jobs.comcast.com/</a>)<br>-----------------------------------------------------------------------------------------------------------</p>
+  </section>
+  <footer class="article-metadata">
+    <em>Tags:</em>
+      <a href="/videos/tags/meetup/">meetup</a>
+      <a href="/videos/tags/video/">video</a>
+      <a href="/videos/tags/paperswelove/">paperswelove</a>
+      <a href="/videos/tags/pwlconf/">pwlconf</a>
+      <a href="/videos/tags/concurrency/">concurrency</a>
+      <a href="/videos/tags/sessiontypes/">sessiontypes</a>
+      <a href="/videos/tags/sharedmemory/">sharedmemory</a>
+      <a href="/videos/tags/golang/">golang</a>
+    <em>Posted by:</em>
+    Papers We Love
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" itemscope itemtype="http://schema.org/Organization">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 <span itemprop="name">Papers We Love<sup>SM</sup></span>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

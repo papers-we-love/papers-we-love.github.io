@@ -1,0 +1,129 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Delimited Continuations for Everyone by Kenichi Asai | Papers We Love</title>
+        <meta name="description" content="Delimited Continuations for Everyone by Kenichi Asai" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Delimited Continuations for Everyone by Kenichi Asai | Papers We Love" />
+        <meta property="og:description" content="Delimited Continuations for Everyone by Kenichi Asai" />
+        <meta property="og:image" content="https://i.ytimg.com/vi/QNM-njddhIw/hqdefault.jpg" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="480" />
+        <meta property="og:image:height" content="360" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="http://schema.org/WebPage">
+        <section class="nav-top">
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="https://github.com/papers-we-love/papers-we-love">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+      <li><a href="https://pwlconf.org">PWLConf</a></li>
+    </ul>
+  </nav>
+</section>
+<!--
+     <section class="pwlconf-banner" role="button" aria-label="Buy tickets for PWLConf 2018" onclick="bannerClick()">
+     <img src="/images/pwl-type-thick-web.svg" class="banner-img" alt="Papers We Love Conf" title="PWLConf 2018 | St. Louis, MO - September 28th" />
+     <div>
+     <h3>Coming again to St. Louis on September 12th, 2019</h3>
+     <h4>Buy tickets here!</h4>
+     </div>
+     </section>
+     <script>
+     function bannerClick(e) {
+     window.location.href="https://pwlconf.org";
+     }
+     </script>
+-->
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article video-page" itemscope itemtype="http://schema.org/VideoObject">
+  <h1 itemprop="name">Delimited Continuations for Everyone by Kenichi Asai</h1>
+  <div class="entry-meta">
+    <span class="meta-label">
+      <i class="fa fa-video-camera"></i> Video
+    </span>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="uploadDate">2017-10-11</span>
+    </div>
+  </div>
+  <section class="video-embed" itemprop="video">
+    <iframe src="https://www.youtube.com/embed/QNM-njddhIw"
+            frameborder="0"
+            allowfullscreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+    </iframe>
+  </section>
+  <section class="video-description" itemprop="description">
+    <p>Info: <a href="https://pwlconf.org/2017/kenichi-asai/" target="_blank" rel="noopener">https://pwlconf.org/2017/kenichi-asai/</a><br>Slides: <a href="http://bit.ly/2yyHngu" target="_blank" rel="noopener">http://bit.ly/2yyHngu</a><br>Transcription: <a href="http://bit.ly/2yb4vju" target="_blank" rel="noopener">http://bit.ly/2yb4vju</a><br>Kenichi's Site: <a href="http://pllab.is.ocha.ac.jp/~asai/" target="_blank" rel="noopener">http://pllab.is.ocha.ac.jp/~asai/</a></p>
+<p>-----------------------------------------------------------------------------------------------------------<br>Platinum Sponsors: Two Sigma (@twosigma) and Comcast (@comcast)</p>
+<p>Video Sponsors: DataDog  (@datadoghq)</p>
+<p>Captioning provided by Mozilla (@mozilla)<br>-----------------------------------------------------------------------------------------------------------</p>
+<p>Description<br>------------------<br>Have you thought of continuations as something that only program semanticists and compiler implementers are concerned with? In fact, the concept of continuations appears everywhere and is useful for everyone. In this talk, Kenichi will introduce delimited continuations from the programmer's perspective directly without requiring any program transformation or semantic arguments. He will then show how various and seemingly complex programs can be written simply and concisely by manipulating delimited continuations. The goal here is to convince you that delimited continuations are useful in day-to-day programming. Finally, Kenichi will speculate on the Curry-Howard isomorphism of delimited continuations, which could open the door for the introduction of delimited continuations into theorem proving.</p>
+<p>References<br>------------------<br>* Representing Control: A Study of CPS transformation by O. Danvy and A. Filinski (Introduction to delimited continuations)<br>* Abstracting Control by O. Danvy and A. Filinski<br>* Functional Unparsing by O. Danvy<br>* The Theory and Practice of First-Class Prompts by Matthias Felleisen<br>* A Formulae-as-Types Notion of Control by T. Griffin<br>* Cogen in Six Lines by P. Thiemann<br>* Representing Monads by A. Filinski</p>
+<p>Bio<br>-----<br>Kenichi Asai is an associate professor in the Department of Information Science at Ochanomizu University, Japan. His research interest centers around the "essence" (in his own way) of programming languages. He designed a Scheme-based reflective language Black (code), because reflective languages represent the essence of interpreters in the most distilled way. He studied partial evaluation because it is the only general framework for compilation of reflective languages. He was attracted to delimited continuations because they explain various complex behavior of programming languages in a succinct and understandable manner. He is also interested in education of programming languages, because teaching forces us to think about the essence. He is a strong advocator of Design Recipe, which he believes is one of the essence of programming in general, and uses it to teach OCaml in the university. He ported the universe teachpack of Racket to OCaml, because it exhibits the essential model of game programming.</p>
+<p>Recently, he is co-developing an interactive OCaml type debugger as well as an OCaml stepper that uses delimited continuations in a non-trivial way. He believes both the tools are essential for beginning students.</p>
+  </section>
+  <footer class="article-metadata">
+    <em>Tags:</em>
+      <a href="/videos/tags/meetup/">meetup</a>
+      <a href="/videos/tags/video/">video</a>
+      <a href="/videos/tags/delimited-continuations/">delimited-continuations</a>
+      <a href="/videos/tags/papers-we-love/">papers-we-love</a>
+      <a href="/videos/tags/pwlconf/">pwlconf</a>
+      <a href="/videos/tags/programming-language-theory/">programming-language-theory</a>
+      <a href="/videos/tags/computer-science/">computer-science</a>
+      <a href="/videos/tags/cps/">cps</a>
+      <a href="/videos/tags/curry-howard-isommorphism/">curry-howard-isommorphism</a>
+    <em>Posted by:</em>
+    Papers We Love
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" itemscope itemtype="http://schema.org/Organization">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 <span itemprop="name">Papers We Love<sup>SM</sup></span>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

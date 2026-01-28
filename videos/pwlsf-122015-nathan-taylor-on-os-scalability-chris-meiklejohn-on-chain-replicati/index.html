@@ -1,0 +1,135 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>PWLSF - 12/2015 - Nathan Taylor on OS scalability & Chris Meiklejohn on Chain Replication | Papers We Love</title>
+        <meta name="description" content="PWLSF - 12/2015 - Nathan Taylor on OS scalability & Chris Meiklejohn on Chain Replication" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="PWLSF - 12/2015 - Nathan Taylor on OS scalability & Chris Meiklejohn on Chain Replication | Papers We Love" />
+        <meta property="og:description" content="PWLSF - 12/2015 - Nathan Taylor on OS scalability & Chris Meiklejohn on Chain Replication" />
+        <meta property="og:image" content="https://i.ytimg.com/vi/kaig7CL4-KU/hqdefault.jpg" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="480" />
+        <meta property="og:image:height" content="360" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="http://schema.org/WebPage">
+        <section class="nav-top">
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="https://github.com/papers-we-love/papers-we-love">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+      <li><a href="https://pwlconf.org">PWLConf</a></li>
+    </ul>
+  </nav>
+</section>
+<!--
+     <section class="pwlconf-banner" role="button" aria-label="Buy tickets for PWLConf 2018" onclick="bannerClick()">
+     <img src="/images/pwl-type-thick-web.svg" class="banner-img" alt="Papers We Love Conf" title="PWLConf 2018 | St. Louis, MO - September 28th" />
+     <div>
+     <h3>Coming again to St. Louis on September 12th, 2019</h3>
+     <h4>Buy tickets here!</h4>
+     </div>
+     </section>
+     <script>
+     function bannerClick(e) {
+     window.location.href="https://pwlconf.org";
+     }
+     </script>
+-->
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article video-page" itemscope itemtype="http://schema.org/VideoObject">
+  <h1 itemprop="name">PWLSF - 12/2015 - Nathan Taylor on OS scalability & Chris Meiklejohn on Chain Replication</h1>
+  <div class="entry-meta">
+    <span class="meta-label">
+      <i class="fa fa-video-camera"></i> Video
+    </span>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="uploadDate">2015-12-18</span>
+    </div>
+  </div>
+  <section class="video-embed" itemprop="video">
+    <iframe src="https://www.youtube.com/embed/kaig7CL4-KU"
+            frameborder="0"
+            allowfullscreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+    </iframe>
+  </section>
+  <section class="video-description" itemprop="description">
+    <p>****** We are closing the year with a PWL marathon ****** </p>
+<p>Talk #1 - Nathan Taylor on " Corey: An Operating system for Many Cores" (<a href="https://www.usenix.org/legacy/event/osdi08/tech/full_papers/boyd-wickizer/boyd_wickizer.pdf" target="_blank" rel="noopener">https://www.usenix.org/legacy/event/osdi08/tech/full_papers/boyd-wickizer/boyd_wickizer.pdf</a>) and "An analysis of Linux scalability to many cores" (<a href="https://pdos.csail.mit.edu/papers/linux:osdi10.pdf" target="_blank" rel="noopener">https://pdos.csail.mit.edu/papers/linux:osdi10.pdf</a>) </p>
+<p>From Nathan:  </p>
+<p>This is a story that spans two low-level systems papers. While on the surface it's all about how to make operating systems scale, it's also a story about how the same researchers can tackle a problem from different angles, succeed each time, and yet end up with very different conclusions. </p>
+<p>At OSDI '08 Silas Boyd-Swicker et al published Corey: An Operating system for Many Cores, which advocated for a fundamental restructuring of the operating system; they observed that scalability problems often manifest because of data unintentionally shared between CPUs, so their research OS provided improved abstractions for programmers to inform the kernel about what is supposed to be local to a particular core or thread.</p>
+<p>At the subsequent OSDI, though, the same research lab published an analysis of Linux scalability to many cores, where they present the same problem -- kernel scalability-- but instead tackled it by finding individual bottlenecks and implementing tiny point fixes, mostly-hidden from application code.  This inverted approach worked so well that in their abstract they arguably recanted the conclusion from their earlier work: "...there is no scalability reason to give up on traditional OS organizations yet."</p>
+<p>These papers, together, are interesting to me for a bunch of reasons.  The former advocates for better application control of data sharing by exposing new abstraction primitives, whereas the OS remains in the latter paper an opaque layer where we're to be mostly content at not having to look underneath the hood.  Seeing two seemingly opposing philosophies work equally well was a surprising result to me.  It's also interesting how the tacit assumptions we make can cause wildly different systems to be built.  In one, it's treated as axiomatic that a new software architecture is needed, whereas in the other the very first sentence questions the "traditional architectures don't scale" assumption.  And, of course, when so many people build careers out of asserting that There's Only One Way To Solve This Problem, it's refreshing to see the same group of researchers try different approaches in such quick succession.</p>
+<p>Nathan's Bio</p>
+<p>Nathan is currently working on low-latency content distribution at Fastly and has previously hacked on improving the performance of language runtimes and OS hypervisors. His first exposure to OS research came as a graduate student at the University of British Columbia.</p>
+<p>Talk#2 : Christopher Meiklejohn's A Brief History of Chain Replication</p>
+<p>Chain replication promises a high throughput, linearizable, robust replication technique with minimal overhead to tolerate failures with only f+1 nodes. But, what's the reason for so many systems choosing alternative techniques such as quorum-based or state machine replication? In this talk, we talk through a history of chain replication, starting with the original work from 2004 by van Renesse and Schneider. We will look at the various systems built using chain replication: Hibari, FAWN-KV, and CRAQ. We'll explore safer designs of chain replication, such as the elastic replication work in 2013, and finally look a new and unique designs of chain replication, such as Basho's Machi system.  </p>
+<p>The papers discussed in Chris's talk are:</p>
+<p>• Object Storage on CRAQ - <a href="https://www.usenix.org/legacy/event/usenix09/tech/full_papers/terrace/terrace.pdf" target="_blank" rel="noopener">https://www.usenix.org/legacy/event/usenix09/tech/full_papers/terrace/terrace.pdf</a> </p>
+<p>• FAWN: A Fast Array of Wimpy Nodes - <a href="http://www.sigops.org/sosp/sosp09/papers/andersen-sosp09.pdf" target="_blank" rel="noopener">http://www.sigops.org/sosp/sosp09/papers/andersen-sosp09.pdf</a></p>
+<p>• Chain Replication in Theory and in Practice - <a href="http://www.snookles.com/scott/publications/erlang2010-slf.pdf" target="_blank" rel="noopener">http://www.snookles.com/scott/publications/erlang2010-slf.pdf</a> </p>
+<p>• HyperDex: A Distributed, Searchable Key-Value Store - <a href="http://hyperdex.org/papers/hyperdex.pdf" target="_blank" rel="noopener">http://hyperdex.org/papers/hyperdex.pdf</a> </p>
+<p>• ChainReaction: a Causal+ ConsistentDatastore based on Chain Replication - <a href="http://eurosys2013.tudos.org/wp-content/uploads/2013/paper/Almeida.pdf" target="_blank" rel="noopener">http://eurosys2013.tudos.org/wp-content/uploads/2013/paper/Almeida.pdf</a> </p>
+<p>• Leveraging Sharding in the Design ofScalable Replication Protocols - <a href="http://www.ymsir.com/papers/sharding-socc.pdf" target="_blank" rel="noopener">http://www.ymsir.com/papers/sharding-socc.pdf</a> </p>
+<p>Chris's Bio</p>
+<p>Christopher Meiklejohn is a Senior Software Engineer with Machine Zone, Inc. working on distributed systems. Previously, Christopher worked at Basho Technologies, Inc. on the distributed key-value store, Riak. In his spare time, Christopher develops a programming language for distributed computation, called Lasp. Christopher is starting his Ph.D. studies at the Université catholique de Louvain in Belgium in 2016. <a href="http://christophermeiklejohn.com/" target="_blank" rel="noopener">http://christophermeiklejohn.com/</a> </p>
+<p>Meetup link: <a href="http://www.meetup.com/papers-we-love-too/events/224178870/" target="_blank" rel="noopener">http://www.meetup.com/papers-we-love-too/events/224178870/</a></p>
+  </section>
+  <footer class="article-metadata">
+    <em>Tags:</em>
+      <a href="/videos/tags/meetup/">meetup</a>
+      <a href="/videos/tags/video/">video</a>
+    <em>Posted by:</em>
+    Papers We Love
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" itemscope itemtype="http://schema.org/Organization">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 <span itemprop="name">Papers We Love<sup>SM</sup></span>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->
