@@ -1,0 +1,21 @@
+---
+title: Video Tags
+---
+<article class="tags">
+  <h1>Videos by <em>Tag</em></h1>
+
+  <ul class="main categories">
+    <li><strong>All Tags (<%= videos_by_tag.length %>)</strong></li>
+    <% videos_by_tag.sort_by { |tag, _| tag }.each do |tag, tag_videos| %>
+      <li>
+        <%= link_to tag, "/videos/tags/#{tag}/" %>
+        <span><%= tag_videos.length %> <%= tag_videos.length == 1 ? 'video' : 'videos' %></span>
+      </li>
+    <% end %>
+  </ul>
+
+  <ul class="sidebar">
+    <li><strong>All Videos</strong></li>
+    <li><%= link_to "Browse all videos", "/videos/" %></li>
+  </ul>
+</article>

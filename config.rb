@@ -309,8 +309,12 @@ videos_by_tag.each do |tag, tag_videos|
   proxy "/videos/tags/#{tag}/index.html", "/video_tag.html", locals: { tag_name: tag, tag_videos: tag_videos }, ignore: true
 end
 
-# Ignore the video_tag and video_index templates
+# Video tag index page
+proxy "/videos/tags/index.html", "/video_tag_index.html", locals: { videos_by_tag: videos_by_tag }, ignore: true
+
+# Ignore the video templates
 ignore 'video_tag.html'
+ignore 'video_tag_index.html'
 ignore 'video_index.html'
 
 # Note: automatic_image_sizes was removed in Middleman 4
