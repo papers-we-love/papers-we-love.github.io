@@ -230,10 +230,10 @@ def config_parse_tags(tags_string)
 end
 
 def config_parse_date(published_at)
-  return Date.today.strftime('%Y-%m-%d') unless published_at
-  Date.parse(published_at.to_s).strftime('%Y-%m-%d')
+  return Date.today.strftime('%Y-%m-%dT00:00:00Z') unless published_at
+  DateTime.parse(published_at.to_s).strftime('%Y-%m-%dT%H:%M:%SZ')
 rescue
-  Date.today.strftime('%Y-%m-%d')
+  Date.today.strftime('%Y-%m-%dT00:00:00Z')
 end
 
 # Track slugs to handle duplicates and collect all videos for index
@@ -260,6 +260,7 @@ data.videographer.each do |video_entry|
     date: config_parse_date(video_entry[:published_at] || video_entry['published_at']),
     tags: config_parse_tags(video_entry[:tags] || video_entry['tags']),
     thumbnail_url: video_entry[:thumbnail_url] || video_entry['thumbnail_url'],
+    duration: video_entry[:duration] || video_entry['duration'] || '',
     slug: slug
   }
 
