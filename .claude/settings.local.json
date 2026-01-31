@@ -13,7 +13,9 @@
       "Bash(python3:*)",
       "Bash(make docker-site-build:*)",
       "Bash(head:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(make build:*)",
+      "Bash(bundle exec middleman build:*)"
     ]
   }
 }
