@@ -1,0 +1,74 @@
+* Correct Microdata (Schema.org)
+
+** Description
+
+Google Web Tools reported a number of errors with microdata tags on Video objects in the generated HTML. We will correct those. We also need all of our microdata tags to conform to the schemas at https://schema.org/docs/schemas.html
+
+More information:
+- https://developers.google.com/search/docs/appearance/structured-data/video
+- https://schema.org/VideoObject
+
+Example url with the issue: https://paperswelove.org/videos/pwlto17-donny-nadolny-on-rowhammerjs/
+
+*** DONE Issue 1: Videos > Missing field "thumbnailUrl"
+Added =<meta itemprop="thumbnailUrl">= tag to =source/video.html.erb= using the =thumbnail_url= already available in the video data hash.
+
+*** DONE Issue 2: Videos > Either "contentUrl" or "embedUrl" should be specified
+Added =<meta itemprop="embedUrl">= tag with the YouTube embed URL. Also removed the invalid =itemprop="video"= attribute from the video embed section wrapper.
+
+*** DONE Issue 3: Videos > Datetime property "uploadDate" is missing a timezone
+Updated =config_parse_date= in =config.rb= to return full ISO 8601 datetime with timezone (e.g. =2018-10-07T05:30:30Z=) using =DateTime.parse= instead of =Date.parse=. The visible date on the page remains human-readable (=YYYY-MM-DD=) while a hidden =<meta itemprop="uploadDate">= tag carries the ISO 8601 value.
+
+*** DONE Issue 4: Videos > Invalid datetime value for "uploadDate"
+Resolved by the same fix as Issue 3 -- proper ISO 8601 format satisfies both requirements.
+
+*** DONE Issue 5: Videos > Missing field "description"
+Added a fallback: when the video description is empty, a =<meta itemprop="description">= tag is rendered using the video title. When the description is present, it renders in the existing =<section itemprop="description">= block.
+- example: https://paperswelove.org/videos/diff-and-blame-an-intuitive-overview/
+
+** Additional improvements
+- Added =<meta itemprop="duration">= with ISO 8601 duration (e.g. =PT1H2M52S=) from videographer.json data.
+- Added =duration= field to the =video_data= hash in =config.rb=.
+
+** Files changed
+- =config.rb= -- updated =config_parse_date= to return ISO 8601 datetime; added =duration= to =video_data= hash.
+- =source/video.html.erb= -- added meta tags for thumbnailUrl, embedUrl, uploadDate, duration, and description fallback; removed invalid =itemprop="video"=; made description section conditional.
+
+** Phase 2: Article & Site-wide Microdata Fixes
+
+*** DONE Issue 6: Articles > Missing "datePublished" for non-meetup/news categories
+Articles with category "topic" or "video" had no =datePublished= because only the =_presenter.erb= and =_news.erb= partials carried that itemprop. Moved =datePublished= to =article.erb= as a =<meta>= tag with ISO 8601 format so it applies to all article categories.
+
+*** DONE Issue 7: Articles > Missing "author" property
+Added =<span itemprop="author" itemscope itemtype="https://schema.org/Person">= with a nested =<meta itemprop="name">= using the article's author frontmatter.
+
+*** DONE Issue 8: Articles > Missing "image" property
+Added =<meta itemprop="image">= using the OGP site logo (=papers-we-love-ogp.png=) as a fallback image for all articles.
+
+*** DONE Issue 9: Articles > Missing "publisher" property
+Added =<span itemprop="publisher" itemscope itemtype="https://schema.org/Organization">= with nested =name=, =url=, and =logo= properties.
+
+*** DONE Issue 10: Partials > Obsolete "pubdate" attribute and duplicate datePublished
+Removed =pubdate itemprop="datePublished"= from both =_presenter.erb= and =_news.erb= since =article.erb= now handles =datePublished= centrally.
+
+*** DONE Issue 11: Footer > Incomplete Organization microdata
+Added =<meta itemprop="name" content="Papers We Love">=, =<meta itemprop="url">=, and =<link itemprop="logo">= inside the Organization scope. Removed =itemprop="name"= from the visible =<span>= to avoid HTML in the structured data value.
+
+*** DONE Issue 12: Schema.org protocol > http:// to https://
+Updated all =itemtype="http://schema.org/..."= references to =https://schema.org/...= across:
+- =layout.erb= (WebPage)
+- =article.erb= (Article)
+- =_footer.erb= (Organization)
+- =video.html.erb= (VideoObject)
+
+** Phase 2 files changed
+- =source/layouts/article.erb= -- added datePublished, image, author, publisher meta tags; updated schema.org to https.
+- =source/partials/_presenter.erb= -- removed =pubdate itemprop="datePublished"= from date span.
+- =source/partials/_news.erb= -- removed =pubdate itemprop="datePublished"= from date span.
+- =source/partials/_footer.erb= -- added name/url/logo meta tags; removed itemprop from visible span; updated schema.org to https.
+- =source/layouts/layout.erb= -- updated schema.org to https.
+- =source/video.html.erb= -- updated schema.org to https.
+
+** Commits
+- =2f154e4= -- Phase 1: Fix VideoObject microdata errors (branch =darrenn/update-microdata=).
+- Phase 2: Fix Article, Organization, and schema.org protocol issues (branch =darrenn/update-microdata=).
