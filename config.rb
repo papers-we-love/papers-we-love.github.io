@@ -1,6 +1,7 @@
 require 'lib/event-handler.rb'
 require 'lib/build_cleaner'
 require 'ostruct'
+require 'kramdown'
 
 ## We have to blow away the /build folder before deploys
 configure :build do
@@ -37,6 +38,7 @@ end
 
 page "/feed.xml", layout: false
 page "/videos.xml", layout: false
+page "/papers_feed.xml", layout: false
 
 # Sitemap configuration
 set :url_root, 'https://paperswelove.org'
@@ -167,6 +169,10 @@ helpers do
     Date.parse(published_at.to_s).strftime('%Y-%m-%d')
   rescue
     Date.today.strftime('%Y-%m-%d')
+  end
+
+  def deslugify(slug)
+    slug.to_s.tr('-_', '  ')
   end
 end
 
@@ -316,6 +322,57 @@ proxy "/videos/tags/index.html", "/video_tag_index.html", locals: { videos_by_ta
 ignore 'video_tag.html'
 ignore 'video_tag_index.html'
 ignore 'video_index.html'
+
+# Paper pages (generated from data/json/)
+def config_paper_slug(title, uuid)
+  slug = config_slugify(title).slice(0, 50)
+  "#{slug}-#{uuid[0..7]}"
+end
+
+papers_json_dir = File.join(root, 'data', 'json', 'papers')
+categories_json = JSON.parse(File.read(File.join(root, 'data', 'json', 'categories.json')))
+keywords_json = JSON.parse(File.read(File.join(root, 'data', 'json', 'keywords.json')))
+
+all_papers = []
+Dir.glob(File.join(papers_json_dir, '*.json')).each do |paper_file|
+  paper = JSON.parse(File.read(paper_file), symbolize_names: true)
+  next if paper[:title].nil? || paper[:title].to_s.strip.empty?
+  slug = config_paper_slug(paper[:title], paper[:uuid])
+  paper[:slug] = slug
+  paper[:summary_html] = Kramdown::Document.new(paper[:summary].to_s).to_html
+  all_papers << paper
+  proxy "/papers/#{slug}/index.html", "/paper.html",
+    locals: { paper: paper, categories_json: categories_json, keywords_json: keywords_json },
+    ignore: true
+end
+
+# Sort papers by created_on descending
+all_papers.sort_by! { |p| p[:created_on].to_s }.reverse!
+
+# Category index pages
+categories_json.each do |category, papers|
+  proxy "/papers/categories/#{category}/index.html", "/paper_categories.html",
+    locals: { category_name: category, category_papers: papers, all_papers: all_papers },
+    ignore: true
+end
+proxy "/papers/categories/index.html", "/paper_categories_index.html",
+  locals: { categories: categories_json }, ignore: true
+
+# Keyword index pages
+keywords_json.each do |keyword, papers|
+  proxy "/papers/keywords/#{keyword}/index.html", "/paper_keywords.html",
+    locals: { keyword_name: keyword, keyword_papers: papers, all_papers: all_papers },
+    ignore: true
+end
+proxy "/papers/keywords/index.html", "/paper_keywords_index.html",
+  locals: { keywords: keywords_json }, ignore: true
+
+# Ignore paper templates
+ignore 'paper.html'
+ignore 'paper_categories.html'
+ignore 'paper_categories_index.html'
+ignore 'paper_keywords.html'
+ignore 'paper_keywords_index.html'
 
 # Note: automatic_image_sizes was removed in Middleman 4
 

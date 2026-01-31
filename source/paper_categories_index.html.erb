@@ -1,0 +1,21 @@
+---
+title: Paper Categories
+---
+<article class="tags" itemscope itemtype="https://schema.org/CollectionPage">
+  <h1 itemprop="name">Papers by <em>Category</em></h1>
+
+  <ul class="main categories">
+    <li><strong>All Categories (<%= categories.length %>)</strong></li>
+    <% categories.sort_by { |cat, _| cat }.each do |cat, cat_papers| %>
+      <li>
+        <%= link_to deslugify(cat), "/papers/categories/#{cat}/" %>
+        <span><%= cat_papers.length %> <%= cat_papers.length == 1 ? 'paper' : 'papers' %></span>
+      </li>
+    <% end %>
+  </ul>
+
+  <ul class="sidebar">
+    <li><strong>Browse</strong></li>
+    <li><%= link_to "By Keyword", "/papers/keywords/" %></li>
+  </ul>
+</article>

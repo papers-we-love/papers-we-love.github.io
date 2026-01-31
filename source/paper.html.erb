@@ -1,0 +1,74 @@
+---
+title: Paper
+---
+<article class="hentry article paper-page" itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/<%= paper[:slug] %>/">
+  <meta itemprop="dateCreated" content="<%= paper[:created_on] %>">
+  <h1 itemprop="name"><%= paper[:title] %></h1>
+  <% if paper[:authors] && !paper[:authors].empty? %>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <% paper[:authors].each do |author| %>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name"><%= author %></span></li>
+      <% end %>
+    </ul>
+  </section>
+  <% end %>
+  <div class="entry-meta">
+    <% if paper[:raw_url] && !paper[:raw_url].empty? %>
+      <a href="<%= paper[:raw_url] %>" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <% end %>
+    <div class="meta-text">
+      <% if paper[:publication_date] %>
+      <span class="meta-date" itemprop="datePublished">Published: <%= paper[:publication_date] %></span>
+      <% end %>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <% if paper[:abstract] && !paper[:abstract].empty? %>
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p><%= paper[:abstract] %></p>
+  </section>
+  <% end %>
+
+  <% if paper[:summary_html] && !paper[:summary_html].empty? %>
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <%= paper[:summary_html] %>
+  </section>
+  <% end %>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <% if paper[:category_path] && !paper[:category_path].empty? %>
+    <div class="paper-categories">
+      <em>Category:</em>
+      <% cat = paper[:category_path].join('/') %>
+      <%= link_to deslugify(cat), "/papers/categories/#{cat}/" %>
+    </div>
+    <% end %>
+
+    <% if paper[:keywords] && !paper[:keywords].empty? %>
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+      <% paper[:keywords].each do |kw| %>
+        <%= link_to deslugify(kw), "/papers/keywords/#{kw}/" %>
+      <% end %>
+    </div>
+    <% end %>
+
+    <div class="paper-created">
+      <em>Added:</em> <%= paper[:created_on] %>
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>

@@ -1,0 +1,24 @@
+---
+title: Paper Keyword
+---
+<article class="tags" itemscope itemtype="https://schema.org/CollectionPage">
+  <h1 itemprop="name">Papers tagged <em><%= deslugify(keyword_name) %></em></h1>
+
+  <ul class="main">
+    <% keyword_papers.each do |kp| %>
+      <%
+        paper = all_papers.find { |p| p[:uuid] == kp['uuid'] }
+        next unless paper
+      %>
+      <li itemscope itemtype="https://schema.org/ScholarlyArticle">
+        <%= link_to kp['title'], "/papers/#{paper[:slug]}/" %>
+      </li>
+    <% end %>
+  </ul>
+
+  <ul class="sidebar">
+    <li><strong>Browse</strong></li>
+    <li><%= link_to "All Keywords", "/papers/keywords/" %></li>
+    <li><%= link_to "By Category", "/papers/categories/" %></li>
+  </ul>
+</article>

@@ -5,6 +5,7 @@ og_image = "http://paperswelove.org/images/papers-we-love-ogp.png"
 og_image_type = "image/png"
 chapter ||= nil
 video ||= nil
+paper ||= nil
 unless current_page.data.title.nil?
   title = current_page.data.title
 end
@@ -19,6 +20,10 @@ unless video.nil?
       og_image = video[:thumbnail_url]
       og_image_type = "image/jpeg"
     end
+end
+unless paper.nil?
+    title = paper[:title].to_s
+    description = (paper[:abstract] || '')[0..249]
 end
 unless current_article.nil?
     title = current_article.title
@@ -55,6 +60,7 @@ end
         <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
         <%= stylesheet_link_tag "font-awesome.min","screen" %>
         <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
+        <%= feed_tag :atom, "/papers_feed.xml", title: "Papers Atom Feed" %>
         <%= favicon_tag 'favicon.ico' %>
         <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <script>
