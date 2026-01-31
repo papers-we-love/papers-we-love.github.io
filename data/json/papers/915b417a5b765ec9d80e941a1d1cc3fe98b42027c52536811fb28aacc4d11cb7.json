@@ -1,0 +1,38 @@
+{
+  "uuid": "915b417a5b765ec9d80e941a1d1cc3fe98b42027c52536811fb28aacc4d11cb7",
+  "title": "Live Migration of Virtual Machines",
+  "publication_date": "2005, USENIX Symposium on Networked Systems Design and Implementation (NSDI)",
+  "authors": [
+    "Andrew Warfield",
+    "Christian Limpach",
+    "Christopher Clark",
+    "Eric Jul",
+    "Ian Pratt",
+    "Jacob Gorm Hansen",
+    "Keir Fraser",
+    "Steven Hand"
+  ],
+  "keywords": [
+    "cloud-computing",
+    "data-centers",
+    "distributed-systems",
+    "live-migration",
+    "networked-systems",
+    "performance-optimization",
+    "system-administration",
+    "system-virtualization",
+    "virtual-machines",
+    "xen"
+  ],
+  "category_path": [
+    "virtual_machines"
+  ],
+  "abstract": "There is considerable interest in the migration of OS instances across distinct physical hosts. This capability allows a separation of hardware and software considerations, and facilitates fault management, load balancing, and low-level system maintenance. To be of practical use, it is desirable that migration be carried out with minimal service downtime. We demonstrate the feasibility of live migration of virtual machines running a commodity operating system and show that consistent and low service downtime can be achieved given the constraints of a practical system and the performance of a modern network.",
+  "summary": "The paper \"Live Migration of Virtual Machines\" presents a technique to migrate operating system instances across different physical hosts with minimal downtime, ensuring practical utility for tasks like fault management, load balancing, and system maintenance. This groundbreaking work was published in 2005 at the USENIX NSDI Symposium and authored by researchers including Christopher Clark and Keir Fraser. \n\nThe study primarily explores advancements in live VM migration facilitated by the Xen hypervisor. It highlights the system's ability to maintain service continuity while achieving efficiency in network performance, which is critical for cloud computing environments. This work has been foundational in developing cloud infrastructure and virtualization tools that require dynamic resource allocation, thereby influencing technologies in cloud service providers and data centers. Furthermore, it has been cited in various research studies that build upon its techniques to improve virtual machine performance and management.\n\nSome significant citations include work like \"The design and implementation of VM live migration\" ([source](https://research.google.com/pubs/archive/35005.pdf)) by Google, \"Improving the live migration of virtual machines\" in IEEE journals, and several PhD theses exploring virtualization technologies. Despite the technique's age, it remains a crucial reference point for innovations in dynamic resource management in virtualized environments.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/virtual_machines/live-migration-of-virtual-machines.pdf",
+  "source_type": "pdf",
+  "filepath": "virtual_machines/live-migration-of-virtual-machines.pdf",
+  "filename": "live-migration-of-virtual-machines.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:56"
+}

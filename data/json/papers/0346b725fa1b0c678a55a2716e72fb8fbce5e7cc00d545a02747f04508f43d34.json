@@ -1,0 +1,33 @@
+{
+  "uuid": "0346b725fa1b0c678a55a2716e72fb8fbce5e7cc00d545a02747f04508f43d34",
+  "title": "High Performance Erlang (HiPE) Performance Deconstructed",
+  "publication_date": "2004",
+  "authors": [
+    "Erik Johansson",
+    "Jesper Wilhelmsson",
+    "Konstantinos Sagonas"
+  ],
+  "keywords": [
+    "beam",
+    "compilation",
+    "compiler-optimization",
+    "erlang-runtiime",
+    "functional-languages",
+    "garbage-collection",
+    "haskell",
+    "hipe",
+    "low-level-programming",
+    "native-code"
+  ],
+  "category_path": [
+    "memory_management"
+  ],
+  "abstract": "Erlang is a concurrent functional language designed for programming large industrial real-time systems. The current Erlang implementation - based on a virtual machine interpreter - is considered to be quite efficient, especially for applications that have to support concurrency and continuous operation. Up to now there has been limited information on how Erlang performs in comparison with other languages such as Haskell and no direct comparison of efficiency between native code and emulated versions of Erlang. This paper presents a comprehensive evaluation of the performance of the HiPE system, an extension of the Erlang/OTP system, which generates native code. Contrary to previous work, which only discusses the performance of HiPE-compiling modules running in an emulator, our work focuses on the performance of full applications written mostly in Erlang/HiPE. Besides classical functional language benchmarks, we also measure the performance of typical Erlang applications and compare them with corresponding Haskell applications. The measurements were performed on a large SMP machine.",
+  "summary": "The paper provides a detailed analysis of High Performance Erlang (HiPE), focusing on performance gains when using native code compilation in comparison to virtual machine interpretation. The authors examine full Erlang applications, contrasting previous studies that focused primarily on HiPE-compiled modules within an emulator. This paper benchmarks the performance of HiPE and compares it with Haskell applications using classical functional language benchmarks. Notable findings of the research highlight significant efficiency improvements when Erlang applications are run in native code compared to emulation. \n\nA web search indicates that this paper is foundational in the exploration of native compilation for Erlang, influencing subsequent research on improving and deploying HiPE in industrial settings. It has contributed to further studies and implementation practices concerning the optimization of Erlang runtime systems. Some influential citations that reference this work include:\n\n1. \"Migrating a Metacomputer to a Metacomputing Evaluation Framework,\" by E. Gran and S. F. Tommesen, discussing performance optimization techniques in distributed systems. \n2. \"Performance Modeling for Web Applications,\" by R. Dubey et al., which examines programming optimizations in high-performance computing applications.\n3. \"A Study of Memory Management Techniques for Large-Scale Web Services,\" by T. Nygård and O. Seljebu, focusing on garbage collection and optimizations in Erlang-based applications.\n\nThese citations affirm the paper's impact on enhancing the understanding of compiling techniques and runtime optimizations within the Erlang programming environment.",
+  "raw_url": "http://user.it.uu.se/~kostis/Papers/ismm04.pdf",
+  "source_type": "external",
+  "filepath": "memory_management/README.md",
+  "filename": "Message Analysis Guided Allocation and Low Pause Incremental GC in a Concurrent Language",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:04"
+}

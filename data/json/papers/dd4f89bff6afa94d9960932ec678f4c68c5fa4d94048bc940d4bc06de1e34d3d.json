@@ -1,0 +1,32 @@
+{
+  "uuid": "dd4f89bff6afa94d9960932ec678f4c68c5fa4d94048bc940d4bc06de1e34d3d",
+  "title": "Harvest, Yield and Scalable Tolerant Systems",
+  "publication_date": "October 1999",
+  "authors": [
+    "Armando Fox",
+    "Eric A. Brewer"
+  ],
+  "keywords": [
+    "availability",
+    "distributed-systems",
+    "fault-tolerance",
+    "harvest",
+    "latency",
+    "network-systems",
+    "scalable-systems",
+    "system-design",
+    "trade-offs",
+    "yield"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "As the Internet grows larger and more diverse, software developers are moving away from small-scale monolithic systems. Their focus now is on building high-performance, dependable distributed or cluster-based systems, which can serve as robust Internet services.\nHowever, distributed systems are prone to problems such as partial failures, network partitions, network congestion and slow or lossy networks.\n\nWe introduce two new metrics, harvest and yield, that help analyze a system's ability to deliver certain qualities of service. Harvest is a measure of the completeness of the result set, while yield takes into account traditional availability.\n\nWe present architecture and software design principles for high-yield, high-harvest, and scalable tolerant systems. To illustrate our approach, we describe the design and implementation of the Internet services of the Inktomi Corporation Traffic Server, which demonstrates how our design principles can be applied in practice.",
+  "summary": "The paper \"Harvest, Yield and Scalable Tolerant Systems\" by Armando Fox and Eric A. Brewer, published in October 1999, introduces the concepts of \"harvest\" and \"yield\" as new metrics for evaluating the performance and robustness of distributed systems. The authors designed these concepts to quantify the trade-offs between availability and result completeness in network systems.\n\nThe paper has significant influence as it informs the design of distributed systems emphasizing fault tolerance and scalability, with particular reference to Internet services like those used by Inktomi Corporation. However, specific citations of this work in contemporary research or documented industry applications are not prominent in easily accessible academic databases or industry archives. Despite this, the principles discussed resonate with ongoing discussions around designing distributed services with consideration towards scaling and fault tolerance, echoing across many architectural designs in modern cloud computing.\n\nNo concrete academic paper or industry report directly references back to this seminal work within the current accessible databases. Nonetheless, the concepts introduced align well with established principles in distributed system design and continue to influence in a broader, less explicit capacity.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/harvest-yield-and-scalable-tolerant-systems.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/harvest-yield-and-scalable-tolerant-systems.pdf",
+  "filename": "harvest-yield-and-scalable-tolerant-systems.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

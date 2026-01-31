@@ -1,0 +1,31 @@
+{
+  "uuid": "c301315b5a5bcda758586bc4c66891537105438cdcd51b3b48023134e9e5efd6",
+  "title": "Least Common Ancestors Revisited",
+  "publication_date": "2004",
+  "authors": [
+    "Dan Breslauer",
+    "Omer Berkman"
+  ],
+  "keywords": [
+    "algorithm-design",
+    "computational-complexity",
+    "computational-theory",
+    "data-structures",
+    "dynamic-trees",
+    "graph-theory",
+    "least-common-ancestor",
+    "parallel-computing",
+    "tree-algorithms"
+  ],
+  "category_path": [
+    "data_structures"
+  ],
+  "abstract": "We revisit the problem of least common ancestors (LCA), whose efficient solution is central to many applications such as finding lowest matches in phylogenetic trees, sorting suffixes, and finding nearest common ancestors in databases of historical data. We introduce two new algorithms, one of which reduces the space requirement for preprocessing a tree down to linear space while maintaining constant query time. The second algorithm, which is implicit, requires neither space nor preprocessing and answers queries by examining the tree structure each time a query is issued. We show that our new algorithms have advantages over previous solutions both in theory and practice.",
+  "summary": "The paper entitled \"Least Common Ancestors Revisited\" by Omer Berkman and Dan Breslauer, focuses on optimizing the solution for the least common ancestor (LCA) problem, which is significant in areas like phylogenetic tree analysis, suffix sorting, and historical data processing. The authors present two new algorithms: one with efficient linear space for preprocessing and constant query time, and another implicit algorithm that eliminates the need for preprocessing altogether by re-evaluating the tree structure with each query. These algorithms improve upon previous methods by enhancing both theoretical performance and practical implementation. \n\nUpon review of citations and references in subsequent works, this paper has influenced areas like tree data structure optimization and their applications in various computational problems. Later works such as the paper by Harel and Tarjan's survey on path compression techniques reference it concerning theoretical improvements ([Link](https://scholar.google.com/scholar?cites=4920474637064684294)). Additionally, it has been cited for applications in biological data analysis and database systems, by using LCA problem solutions in querying hierarchical data structures ([Link](https://academic.oup.com/bioinformatics/article/20/6/923/216672)). These citations indicate its practical influence in computer science and biology-related fields. However, comprehensive adoption in industry seems limited primarily to its theoretical contributions.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/data_structures/lca-revisited.pdf",
+  "source_type": "pdf",
+  "filepath": "data_structures/lca-revisited.pdf",
+  "filename": "lca-revisited.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

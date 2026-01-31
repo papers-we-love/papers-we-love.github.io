@@ -1,0 +1,32 @@
+{
+  "uuid": "f907a72008131fb27683edc9f66a71c12db0746dea28fa088ee56238d82e3ca1",
+  "title": "TS-ASAP: A Time Series Anomaly Detection Pipeline",
+  "publication_date": "May 2019",
+  "authors": [
+    "Christian Bayne",
+    "Hailiang Yu",
+    "Nian Liu",
+    "Weizhong Yan"
+  ],
+  "keywords": [
+    "anomaly-detection",
+    "data-mining",
+    "machine-learning",
+    "pipeline",
+    "streaming-data",
+    "time-series",
+    "ts-asap",
+    "unsupervised-learning"
+  ],
+  "category_path": [
+    "time_series"
+  ],
+  "abstract": "We present TS-ASAP, a time series anomaly detection pipeline aimed at processing streaming data in unsupervised fashion for online applications. TS-ASAP consists of modules for data ingestion, preprocessing, anomaly detection, and alerting. The system uses novel algorithms for robust anomaly detection that can adapt to changing conditions in the data, and does not require labeled training data. As demonstrated in use cases from different domains, TS-ASAP provides accurate detection of outliers in real time, ensuring scalability and reliability for practical applications.",
+  "summary": "The paper titled \"TS-ASAP: A Time Series Anomaly Detection Pipeline\" introduces a new pipeline for detecting anomalies in time series data in an online, unsupervised manner. It is designed to handle streaming data and includes modules for ingestion, preprocessing, detection, and alerting. The novel aspect lies in its robust algorithms that adapt to changing data without the need for labeled training data. The system's utility is demonstrated through practical use cases across various domains, showcasing its accuracy and scalability.\n\nUpon conducting a web search, there is no direct evidence suggesting that the TS-ASAP pipeline has significantly influenced subsequent research or industry applications. This paper might serve as a foundational reference for others working in the domain of time series analysis and anomaly detection by contributing potential methodologies and pipeline models, although no specific follow-up studies citing this work were found at this time.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/time_series/ts-asap.pdf",
+  "source_type": "pdf",
+  "filepath": "time_series/ts-asap.pdf",
+  "filename": "ts-asap.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:56"
+}

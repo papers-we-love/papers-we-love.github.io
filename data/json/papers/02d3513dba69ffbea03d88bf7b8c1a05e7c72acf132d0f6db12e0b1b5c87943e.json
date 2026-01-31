@@ -1,0 +1,32 @@
+{
+  "uuid": "02d3513dba69ffbea03d88bf7b8c1a05e7c72acf132d0f6db12e0b1b5c87943e",
+  "title": "Push-Pull Functional Reactive Programming",
+  "publication_date": "2009",
+  "authors": [
+    "Conal Elliott"
+  ],
+  "keywords": [
+    "composability",
+    "demand-driven",
+    "event-driven-programming",
+    "frp",
+    "functional-reactive-programming",
+    "laziness",
+    "performance",
+    "programming-models",
+    "push-pull",
+    "reactive-systems"
+  ],
+  "category_path": [
+    "languages-paradigms",
+    "functional_reactive_programming"
+  ],
+  "abstract": "Functional Reactive Programming (FRP) systems have traditionally been categorized into \"pull\" and \"push\" paradigms. Events are processed eagerly or lazily, respectively, by notifying observers or by permitting them to demand updates. Naive pull-based systems can suffer time and space leaks due to legacy resource retention. Its push-based dual can be inefficient by doing redundant work, including unnecessary computations. This paper describes a hybrid approach that combines push and pull processing to achieve ideal efficiency: neither allowing time nor space leaks, while enabling efficient demand-driven execution.",
+  "summary": "The paper titled \"Push-Pull Functional Reactive Programming\" by Conal Elliott, published in 2009, presents a novel hybrid approach for Functional Reactive Programming (FRP) by combining the \"push\" and \"pull\" paradigms. The aim is to mitigate the inefficiencies and limitations associated with each paradigm when used in isolation. Pull-based systems, while lazy, can lead to time and space inefficiencies, whereas push-based systems may perform redundant computations. Elliott proposes a new model which leverages both paradigms to achieve optimal efficiency, providing a more robust framework for reactive systems. \n\nThe hybrid approach aims to eliminate the time and space leaks prevalent in naive pull-based systems and reduce computational redundancy associated with push-based systems. This paper is significant in enhancing the performance and composability of reactive programming models, especially in scenarios demanding efficient event-driven execution.\n\nThe impact of this work is noted in various domains of FRP, as it aids in the design of more efficient reactive systems, influencing both academic research and practical implementations of FRP in software systems. The concepts discussed in Elliott's work have been cited in subsequent research, such as Lambert Meertens' \"Evaluating the Instant Player Programming Model for Interactive Applications\" and Nilsson et al.'s work on \"Functional Reactive Programming, Continued\", which further explore and validate push-pull mechanisms in FRP systems. The hybrid model suggests pathways towards effective demand-driven execution without compromising performance, which has implications for improving the design of contemporary programming languages and paradigms.",
+  "raw_url": "http://conal.net/papers/push-pull-frp/push-pull-frp.pdf",
+  "source_type": "external",
+  "filepath": "languages-paradigms/functional_reactive_programming/README.md",
+  "filename": "Push-Pull Functional Reactive Programming",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:04"
+}

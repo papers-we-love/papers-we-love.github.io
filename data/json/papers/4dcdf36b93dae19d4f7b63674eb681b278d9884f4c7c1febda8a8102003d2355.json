@@ -1,0 +1,31 @@
+{
+  "uuid": "4dcdf36b93dae19d4f7b63674eb681b278d9884f4c7c1febda8a8102003d2355",
+  "title": "Efficient Lock-free B-trees",
+  "publication_date": "2004",
+  "authors": [
+    "J. D. Valois"
+  ],
+  "keywords": [
+    "atomic-operations",
+    "b-trees",
+    "concurrency",
+    "data-structures",
+    "lock-free",
+    "memory-management",
+    "multi-threading",
+    "non-blocking-algorithms",
+    "performance-optimization",
+    "software-engineering"
+  ],
+  "category_path": [
+    "non_blocking_algorithms"
+  ],
+  "abstract": "In this paper, an efficient implementation of a lock-free B-tree is described. The B-tree is a useful and well-known data structure, especially for databases and file systems. A few lock-free B-trees have been implemented, but they require instructions beyond those provided by most architectures, such as the double-word compare-and-swap (CAS) or they are complex and do not perform well. This paper presents a new algorithm that is both simple and efficient, making use of the single-word CAS provided by most architectures, and its performance has been measured to show that it is better than locking-based schemes in most cases.",
+  "summary": "The paper \"Efficient Lock-free B-trees\" by J. D. Valois was published in 2004 and introduced a novel implementation of lock-free B-trees that leveraged the single-word compare-and-swap (CAS) operation, a feature available in most architectures. This was significant because previous implementations either required more complex operations, like the double-word CAS, or did not perform efficiently. Valois's implementation emphasized simplicity and performance, aiming to outperform locking-based schemes, which can introduce delays due to contention for locks.\n\nDespite the potential relevance of this work in concurrent computing, there are no widely recognized subsequent papers or industry applications that directly cite this specific work according to available databases and web searches. However, the topic itself continues to be relevant in fields that require efficient, concurrent data structure manipulation such as database systems, with ongoing research in more advanced non-blocking algorithms that build on the principles of lock-free programming introduced by studies like this one.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/non_blocking_algorithms/efficient-lock-free-b%2Btrees.pdf",
+  "source_type": "pdf",
+  "filepath": "non_blocking_algorithms/efficient-lock-free-b+trees.pdf",
+  "filename": "efficient-lock-free-b+trees.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:56"
+}

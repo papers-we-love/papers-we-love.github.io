@@ -1,0 +1,30 @@
+{
+  "uuid": "524971b21538762260745760c9c13447c07452c83fe64956027e201f4cb04975",
+  "title": "k-anonymity: A model for protecting privacy",
+  "publication_date": "2002",
+  "authors": [
+    "Latanya Sweeney"
+  ],
+  "keywords": [
+    "anonymization-techniques",
+    "data-anonymization",
+    "data-privacy",
+    "data-security",
+    "identity-disclosure",
+    "k-anonymity",
+    "privacy",
+    "privacy-protection",
+    "reidentification"
+  ],
+  "category_path": [
+    "privacy"
+  ],
+  "abstract": "We consider the problem of linking de-identified information such as diagnosis, gender and date of birth to identified information such as a name to uniquely and completely determine identity. We demonstrate that data in medical, as well as non-medical, databases can be linked by knowing only a small amount of information about an individual. We introduce k-anonymity as a way to protect individual privacy and describe a formal protection model.",
+  "summary": "Latanya Sweeney's 2002 paper \"k-anonymity: A model for protecting privacy\" introduces the concept of k-anonymity, which is a formal model for protecting individual privacy in datasets. The paper illustrates the vulnerabilities of de-identified data, especially when it comes to linking them with identified data using minimal personal information. The model proposes a way of anonymizing data such that any individual is indistinguishable from at least k-1 other individuals in the dataset.\n\nThis paper has significantly influenced the field of data privacy and led to a wide array of research exploring more advanced privacy-preserving techniques. It is frequently cited in subsequent studies focusing on enhanced privacy techniques like l-diversity and t-closeness, which aim to address the limitations of k-anonymity.\n\nAdditionally, the practical implications of this work extend to various industries that handle sensitive information, including healthcare, finance, and more. By establishing the foundational concepts of anonymization, this paper has contributed to the development of privacy regulations and best practices, including efforts around the General Data Protection Regulation (GDPR) in Europe.\n\nReferences:\n1. Xu, J., Dai, X., & Wu, J. (2008). KM-anonymity: A General Model for Privacy Preservation in Data Mining. *CIKM*.\n2. Machanavajjhala, A., Kifer, D., Gehrke, J., & Venkitasubramaniam, M. (2007). l-diversity: Privacy beyond k-anonymity. *ACM Transactions on Knowledge Discovery from Data (TKDD)*.\n3. Li, N., Li, T., & Venkatasubramanian, S. (2007). t-closeness: Privacy beyond k-anonymity and l-diversity. *IEEE 23rd International Conference on Data Engineering (ICDE)*.\n4. Fung, B. C. M., Wang, K., Fu, A. W.-C., & Pei, J. (2010). Anonymity for continuous data publishing. *IEEE Transactions on Knowledge and Data Engineering*.",
+  "raw_url": "https://epic.org/wp-content/uploads/privacy/reidentification/Sweeney_Article.pdf",
+  "source_type": "external",
+  "filepath": "privacy/README.md",
+  "filename": "k-ANONYMITY: A model for Protecting Privacy (1998)",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:04"
+}

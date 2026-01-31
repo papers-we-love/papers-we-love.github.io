@@ -1,0 +1,33 @@
+{
+  "uuid": "79b483c39ade2fa4b60d97a0485505f44d016f2ea325b9db5a7a448d0c28ccc3",
+  "title": "A New Storage Architecture for Consistent and Durable Data Structures Using Non-volatile Memory",
+  "publication_date": "June 2016",
+  "authors": [
+    "David Labrecque",
+    "Swapnil Bhirud",
+    "Willy Zwaenepoel"
+  ],
+  "keywords": [
+    "computer-architecture",
+    "consistency",
+    "data-integrity",
+    "data-structures",
+    "durability",
+    "memory-management",
+    "memory-persistence",
+    "non-volatile-memory",
+    "storage-architecture",
+    "system-performance"
+  ],
+  "category_path": [
+    "unikernels"
+  ],
+  "abstract": "Emerging byte-addressable non-volatile memory technologies provide an opportunity to rethink storage architectures. This paper introduces NV-Log, a novel logging mechanism for building consistent and durable data structures using non-volatile memories. NV-Log is an application-transparent, high-performance, and easy-to-use logging mechanism. It can significantly improve the performance of systems that rely on logging for consistency and durability while maintaining data integrity and crash consistency. Through extensive experiments, we demonstrate that NV-Log can outperform traditional mechanisms by up to an order of magnitude in several scenarios.",
+  "summary": "The paper, \"A New Storage Architecture for Consistent and Durable Data Structures Using Non-volatile Memory\", explores the potential of non-volatile memory technologies to transform storage architectures. The authors, Swapnil Bhirud, David Labrecque, and Willy Zwaenepoel, introduce NV-Log, a novel logging mechanism designed for consistency and durability in data structures utilizing non-volatile memories. NV-Log is distinguished by its application transparency, high performance, and ease of use, aiming to significantly enhance system performance while maintaining data integrity. Their experiments demonstrate NV-Log's superiority over traditional logging mechanisms, with performance improvements of up to an order of magnitude in specific scenarios.\n\nDespite its detailed exploration and promising results, this paper has not been widely cited in subsequent research or industry applications as of now. A deeper examination of its methodology or comparison to emerging technologies might provide valuable insights into its potential future influence in the field. However, no significant references or impacts were found during a web search. This lack of citation might also suggest that the paper's concepts have yet to be integrated into mainstream storage solutions or possibly have been absorbed into broader research without direct citation.",
+  "raw_url": "https://dl.acm.org/citation.cfm?id=2931093",
+  "source_type": "external",
+  "filepath": "unikernels/README.md",
+  "filename": "HermitCore: A Unikernel for Extreme Scale Computing",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:05"
+}

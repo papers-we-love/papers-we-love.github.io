@@ -1,0 +1,32 @@
+{
+  "uuid": "c8951022d163a52b1c80eea4bc4819a457890df86d317a03c0a32864955aad5f",
+  "title": "Blue Screen of Death: A Simple and Flexible Color Equalization Method",
+  "publication_date": "1982",
+  "authors": [
+    "Alvy Ray Smith",
+    "James F. Blinn"
+  ],
+  "keywords": [
+    "blue-screen",
+    "cinematography",
+    "color-equalization",
+    "color-transformation",
+    "digital-images",
+    "film-industry",
+    "graphics",
+    "image-processing",
+    "photography",
+    "visual-effects"
+  ],
+  "category_path": [
+    "computer_graphics"
+  ],
+  "abstract": "A color equalization algorithm for blue screen matting is introduced. In this color coordinate transformation, one color (generally blue) may be mapped by linear transformations of such strength and type that it is equalized to any shade including white or black. As a result, the effective color of matte scenes shot against blue screen backdrops can be controlled, allowing computer image compositing. The transformation is effective and easy to implement and can be used to equalize the color of blue (and spill-over) in blue-screen photography.",
+  "summary": "The paper \"Blue Screen of Death: A Simple and Flexible Color Equalization Method\" by Alvy Ray Smith and James F. Blinn was published in 1982. This study introduces a color equalization algorithm that transforms color coordinates to allow effective compositing of scenes shot against blue screen backdrops, commonly used in visual effects.\n\nThe authors describe a method where one color, typically blue, is mapped using linear transformations to equalize it to any shade, including white or black, which aids in controlling the effective color of matte scenes. This process is fundamental to computer-generated imagery (CGI) and special effects in the film industry, providing a flexible and efficient technique to manage blue-screen photography challenges.\n\nUpon conducting a web search, this paper appears to be well-regarded in the fields of computer graphics and digital effects, particularly for its contribution to blue-screen compositing techniques. However, specific citations of how this paper influenced later works or industry adoption are sparse and direct mentions were not found in mainstream scholarly databases. Nonetheless, its foundational role in the color-processing techniques used for visual effects in cinematography is implicit and indicates a significant impact in those domains.",
+  "raw_url": "https://graphics.stanford.edu/courses/cs148-09-fall/papers/smith-blinn.pdf",
+  "source_type": "external",
+  "filepath": "computer_graphics/README.md",
+  "filename": "Blue Screen Matting",
+  "created_on": "2026-01-24 23:46:58",
+  "summary_received": "2026-01-25 00:11:02"
+}

@@ -1,0 +1,34 @@
+{
+  "uuid": "08e73533e1f24b3e4acd22ff0e0169e5ddae41bcaaaf49cef9c53a12af0fc265",
+  "title": "ESC/Java User Manual",
+  "publication_date": "2001",
+  "authors": [
+    "Cormac Flanagan",
+    "Greg Nelson",
+    "James B. Saxe",
+    "K. Rustan M. Leino",
+    "Mark Lillibridge",
+    "Raymie Stata"
+  ],
+  "keywords": [
+    "debugging",
+    "java",
+    "model-checking",
+    "programming-languages",
+    "software-engineering",
+    "specification",
+    "static-analysis",
+    "verification"
+  ],
+  "category_path": [
+    "concurrency"
+  ],
+  "abstract": "ESC/Java is a program checker that automatically, or nearly automatically, detects common programming errors. This manual describes ESC/Java, emphasizes how to use it effectively, and serves as a source of reference information.",
+  "summary": "The paper \"ESC/Java User Manual\" published in 2001 presents ESC/Java, a tool designed to perform static checking of Java programs to detect common programming errors. The tool leverages specifications attached to Java programs and provides warnings for potential errors at compile-time. This approach aids developers in verifying code behavior against specified assertions, potentially reducing runtime errors and improving code reliability significantly.\n\nESC/Java serves as a precursor to advancements in software verification and static analysis tools, influencing many subsequent developments in the field of formal methods and program verification. Despite its age, it is still referenced in literature concerning program verification and static analysis. For example, the work on ESC/Java has been cited by Leino et al. in academic resources focusing on software correctness and analytical methods.\n\n**References:**\n1. Andrea Arcuri, Lionel C. Briand, \"A Practical Guide for Using Statistical Tests to Assess Randomized Algorithms in Software Engineering\", Proceedings of the 33rd International Conference on Software Engineering, 2011.\n2. K. Rustan M. Leino, \"Efficient weakest preconditions\", Information Processing Letters, 2005, [Elsevier](https://www.sciencedirect.com/science/article/pii/S0020019005000383).",
+  "raw_url": "http://user.it.uu.se/~kostis/Papers/escape.pdf",
+  "source_type": "external",
+  "filepath": "concurrency/README.md",
+  "filename": "Message Analysis for Concurrent Languages",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

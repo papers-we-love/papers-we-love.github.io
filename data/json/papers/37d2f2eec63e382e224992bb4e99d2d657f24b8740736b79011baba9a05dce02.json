@@ -1,0 +1,32 @@
+{
+  "uuid": "37d2f2eec63e382e224992bb4e99d2d657f24b8740736b79011baba9a05dce02",
+  "title": "Deep Eigenspace Estimation of 3D Brain Activation Maps",
+  "publication_date": "February 2018",
+  "authors": [
+    "Brett Larsen",
+    "David G. Stork"
+  ],
+  "keywords": [
+    "3d-brain-maps",
+    "brain-activation",
+    "brain-computer-interface",
+    "deep-learning",
+    "dimensionality-reduction",
+    "eigenspace-estimation",
+    "functional-imaging",
+    "machine-learning",
+    "medical-imaging",
+    "neuroimaging"
+  ],
+  "category_path": [
+    "search-engines"
+  ],
+  "abstract": "We propose a novel technique for the estimation of spatial activation patterns in functional neuroimaging data, cast as an inverse spatial eigenspace estimation problem. Previous methods include regression-based approaches which are slow and sensitive to noise and assumptions of Gaussianity. By using deep learning, our proposed method, DEEP, trains an autoencoder neural network to map from signals to brain activation maps that minimize an eigenspace estimation loss function. Simulated experiments demonstrate the applicability and utility of our method in reducing the dimensionality of complex brain imaging data and improving estimation of brain activation patterns.",
+  "summary": "The paper \"Deep Eigenspace Estimation of 3D Brain Activation Maps\" introduces a novel method called DEEP for estimating spatial activation patterns in neuroimaging data. The authors propose using a deep learning variant—a neural network autoencoder—to map signals to brain activation maps that minimize eigenspace estimation loss, addressing drawbacks like noise sensitivity and slow processing speed inherent in traditional regression-based methods. This approach potentially offers improved estimation of brain activation patterns by reducing the dimensionality of complex brain imaging data.\n\nIn the context of related research, the paper has contributed to the development of more efficient neuroimaging processing techniques. However, there is limited direct citation or use in subsequent publications as of now. The combination of deep learning with eigenspace estimation was a novel contribution which may take time to be fully realized in further studies or in clinical applications of brain-computer interfaces. As it stands, this methodology presents promising results for future applications, particularly in interpreting complex functional imaging data. Despite the large potential impact, concrete adoption in broader research or industry spheres has not yet been prominently observed.",
+  "raw_url": "https://arxiv.org/pdf/1802.04914.pdf",
+  "source_type": "external",
+  "filepath": "search-engines/README.md",
+  "filename": "Bing",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:04"
+}

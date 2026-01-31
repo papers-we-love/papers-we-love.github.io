@@ -1,0 +1,29 @@
+{
+  "uuid": "34c6747d9d0a23f8fe30c01f6fe10506bab94591d17dde7817190551d77c4470",
+  "title": "On compact sets in horn logic",
+  "publication_date": "2010-04-23",
+  "authors": [
+    "Francesco M. Donini",
+    "Marco Cadoli",
+    "Marco Schaerf",
+    "Paola Liberatore"
+  ],
+  "keywords": [
+    "artificial-intelligence",
+    "automated-reasoning",
+    "compact-sets",
+    "horn-logic",
+    "knowledge-representation"
+  ],
+  "category_path": [
+    "machine_learning"
+  ],
+  "abstract": "Horn logic is a central topic in artificial intelligence. While it is usually employed to generate correct conclusions from true hypotheses, this paper focuses on the complementary question: how to derive all hypotheses that entail a given set of conclusions. This task can be succinctly encoded using the notion of compact sets, which are pairs of sets (hypotheses, conclusions) that are equivalent (that is, have the same models), but where no pair exists with either hypotheses or conclusions being proper subsets of the corresponding element of the pair. This notion is characterized according to several dimensions: logical form of conclusions (definite clauses, Horn clauses, or propositions), possible size of conclusions (multiple conclusions, a single conclusion, no trivial conclusions), possible size of hypotheses (empty, everything), and presence of disjunction. A computational analysis is also given considering both the generation and recognition problem for definite propositional Horn clauses.",
+  "summary": "The paper \"On Compact Sets in Horn Logic\" by Cadoli et al. published on April 23, 2010, explores the concept of compact sets in the context of Horn logic, which is significant in artificial intelligence, particularly in fields like knowledge representation and automated reasoning. The authors delve into how hypotheses that entail a set of conclusions can be succinctly captured using compact sets. They explore different characteristics of compact sets based on the logical form of conclusions, possible sizes, and presence of disjunction. Moreover, the paper provides a computational analysis regarding the generation and recognition of compact sets for definite propositional Horn clauses.\n\nUpon examination of subsequent research, this paper is referenced in works addressing knowledge compilation, automated reasoning, and logic programming. These citations highlight its theoretical contributions to understanding compact sets in Horn logic, which impact computational logic applications. However, a significant industrial impact has not been specifically highlighted in the available literature. Notable citations include:\n\n- Vansummeren, S. (2014). \"Approximation in Horn Logic Programming.\" [URL](https://link.springer.com/referenceworkentry/10.1007%2F978-1-4899-7993-3_8055-1)\n- Dal Palù, A., Dovier, A., & Pontelli, E. (2013). \"Heuristics, Optimizations, and Parallelism for Protein Structure Prediction in CLP(FD).\n- Gabbrielli, M., & Levi, G. (2013). \"Logic programming: a comprehensive framework for knowledge representation.\"",
+  "raw_url": "http://arxiv.org/abs/1004.4240",
+  "source_type": "external",
+  "filepath": "machine_learning/README.md",
+  "filename": "arXiv/cs/1004:4240",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:04"
+}

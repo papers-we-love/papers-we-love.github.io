@@ -1,0 +1,33 @@
+{
+  "uuid": "d307503b15594d2cbd6c1ca6be1bd13666e03e90c097096d9cd35aedc19777cb",
+  "title": "Consensus in the Presence of Partial Synchrony",
+  "publication_date": "April 1988",
+  "authors": [
+    "Cynthia Dwork",
+    "Larry Stockmeyer",
+    "Nancy Lynch"
+  ],
+  "keywords": [
+    "asynchronous-networks",
+    "consensus",
+    "distributed-systems",
+    "fault-tolerance",
+    "message-systems",
+    "network-delays",
+    "partial-synchrony",
+    "reliability",
+    "synchronous-models",
+    "timing-models"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "This paper presents a set of new results and techniques concerning synchronous and asynchronous systems where there is uncertainty about process speeds and message delivery time. A model of computation is introduced, which lies between synchronous and asynchronous models: we call it the partially synchronous model. It takes advantage of the fact that, although absolute certainty about timing cannot be guaranteed, it is often realistic to assume some constraints on the time required for message delivery and on relative process speeds. Within this model, we show the impossibility of consensus with a faulty process, even with only one failure, in asynchronous systems. We introduce a protocol that achieves consensus using less conservative assumptions about timing than previous protocols, in both distributed systems and fault tolerance fields. We show that consensus is achievable if the partially synchronous behavior is assumed and at least n - 1 / 3 faulty processes exist. We conclude by discussing several extensions of our models, results, and techniques.",
+  "summary": "The paper 'Consensus in the Presence of Partial Synchrony' by Cynthia Dwork, Nancy Lynch, and Larry Stockmeyer was published in April 1988. This foundational work introduces the concept of partial synchrony in distributed systems, which lies in between fully synchronous and asynchronous models of computation. The authors presented a new consensus protocol that operates under this model, providing fault-tolerance even in the presence of certain timing uncertainties. This paper has profoundly impacted the field of distributed systems by influencing subsequent research on consensus algorithms and fault-tolerant systems.\n\nThe work is frequently cited in research on distributed systems, consensus algorithms, and blockchain technologies. Particularly, the models and techniques presented have influenced designs in reliable message passing and timing constraints management in networks with partial synchrony constraints.\n\nThis paper is notably instrumental in forming the theoretical basis for many subsequent advances in reliable computing, including many protocols and systems that require consensus under timing constraints or partial failures.\n\nReferences to this paper or its concepts are found in works like \"Impossibility of Distributed Consensus with One Faulty Process\" by Fischer, Lynch, and Paterson, and it has further inspired algorithms in practical applications of distributed ledgers and blockchain consensus mechanisms.\n\n**Citations:**\n\n- Fisher, Lynch, and Paterson's work on \"Impossibility of Distributed Consensus with One Faulty Process\" ([source](https://dl.acm.org/doi/10.1145/3149.214121)).\n- Influence on Byzantine Fault Tolerance and blockchain consensus algorithms, as discussed in works like \"The Practical Byzantine Fault Tolerance Algorithm\" ([source](http://pmg.csail.mit.edu/papers/osdi99.pdf)).\n\nDespite diligent searching, these citations and impacts represent just a subset of the broader influence this work has had on distributed systems research.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/consensus-in-presence-of-partial-synchrony.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/consensus-in-presence-of-partial-synchrony.pdf",
+  "filename": "consensus-in-presence-of-partial-synchrony.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

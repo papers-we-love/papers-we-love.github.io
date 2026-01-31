@@ -1,0 +1,31 @@
+{
+  "uuid": "2b9fee6a15fade84f35c378e645f3d1c397ebc9954deb345e7e32de88716390a",
+  "title": "Communication Theory of Secrecy Systems",
+  "publication_date": "September 1949",
+  "authors": [
+    "C. E. Shannon"
+  ],
+  "keywords": [
+    "cipher-systems",
+    "communication-theory",
+    "cryptography",
+    "data-protection",
+    "encryption",
+    "information-theory",
+    "mathematical-analysis",
+    "privacy",
+    "secrecy-systems",
+    "security"
+  ],
+  "category_path": [
+    "cryptography"
+  ],
+  "abstract": "The problems of cryptography and secrecy systems furnish an interesting application of communication theory. In this paper, a theory of secrecy systems is developed. The approach is axiomatic, and the results may be interpreted as defining the various limitations of attainable security. It is shown that the problems of designing a secrecy system and of breaking it are closely related to the corresponding problems of communication and of statistical inference. In particular, a comparison is made between a secrecy system and a noisy communication channel. In this case the decipherer plays the role of the observer who tries to infer the transmitted message from the compromised version he receives.",
+  "summary": "Claude Shannon's paper \"Communication Theory of Secrecy Systems\" published in 1949 is considered a foundational work in both cryptography and information theory. It applies the mathematical frameworks of communication theory to the problems presented by cryptographic systems, establishing a relationship between the efficacy of secrecy systems and statistical communication systems.\n\nThis work set the stage for future developments in the design and analysis of secure communication. Shannon's model viewed cryptographic operations as akin to communication over a noisy channel, positioning breaking a cryptographic system as similar to addressing errors in a communication channel. This understanding significantly impacted how cryptographic systems were analyzed and designed thereafter.\n\nShannon's influence extends to the development of modern cryptography concepts such as Shannon's Entropy, which is crucial in measuring information and uncertainty. This paper is frequently cited in subsequent research on both practical and theoretical cryptography developments, such as in the study by Bellare, Mihir, and Phillip Rogaway on \"Modern Cryptography: A Tutorial,\" and is foundationally referenced in books like \"Applied Cryptography\" by Bruce Schneier.\n\nFor example, the paper \"Privacy Amplification by Public Discussion\", by Bennett, Brassard, et al., directly builds upon Shannon's principles. More broadly, Shannon’s theories have found applications in designing both symmetric and asymmetric cryptosystems and have heavily influenced the pedagogy of cryptography and the development of various cryptographic standards.\n\n- [Modern Cryptography: A Tutorial](https://cseweb.ucsd.edu/~mihir/papers/gb.pdf)\n- [Privacy Amplification by Public Discussion](https://link.springer.com/chapter/10.1007%2F0-306-47009-8_1)\n- [Applied Cryptography by Bruce Schneier](https://www.schneier.com/books/applied_cryptography/)",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/cryptography/communication-theory-of-secrecy-systems.pdf",
+  "source_type": "pdf",
+  "filepath": "cryptography/communication-theory-of-secrecy-systems.pdf",
+  "filename": "communication-theory-of-secrecy-systems.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

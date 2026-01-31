@@ -1,0 +1,39 @@
+{
+  "uuid": "bf5a32f736bdc5f9275f571034f105acd5e39908f75d87e48f90289cf90ad7b5",
+  "title": "The Multikernel: A new OS architecture for scalable multicore systems",
+  "publication_date": "October 2009",
+  "authors": [
+    "Adrian Schüpbach",
+    "Ales Tumanov",
+    "Andrew Baumann",
+    "Paul Barham",
+    "Pierre Evely",
+    "Rebecca Isaacs",
+    "Simon Peter",
+    "Tim Harris",
+    "Timothy Roscoe"
+  ],
+  "keywords": [
+    "barrelfish",
+    "distributed-systems",
+    "inter-core-communication",
+    "multicore-processors",
+    "multikernel",
+    "operating-systems",
+    "performance",
+    "scalability",
+    "shared-memory",
+    "system-architecture"
+  ],
+  "category_path": [
+    "unikernels"
+  ],
+  "abstract": "This paper presents the multikernel model for operating system (OS) structure that is designed to make OSes scalable across many cores and software isolated, to enable easier development using message-passing. The key observation is that existing shared-memory approaches inherently lose performance as the number of cores increase over non-shared architectures. The multikernel OS breaks with established shared memory organization to treat the OS as distributed regardless of the hardware. We have implemented a prototype multikernel OS, Barrelfish, to explore the consequences and benefits of our design decisions and to validate our approach through performance experiments.",
+  "summary": "The paper \"The Multikernel: A new OS architecture for scalable multicore systems\" introduces a novel OS architecture called the multikernel, designed to improve scalability on multicore systems by treating the OS as a distributed system. This approach emphasizes message-passing instead of shared memory to manage inter-core communication, which, according to the authors, mitigates the inherent performance penalties of shared-memory architectures as core counts increase.\n\nThe paper has influenced both academic research and practical implementations, with subsequent studies and projects building on its insights. For instance, the Barrelfish OS prototype has been used in research exploring new paradigms in OS design and improving the scalability of operating systems across different hardware architectures. Research papers such as those found in [ACM Digital Library](https://dl.acm.org) and [IEEE Xplore](https://ieeexplore.ieee.org) have cited this work in discussing the evolution and design of multiprocessing systems and operating systems.\n\nDespite being published over a decade ago, the principles outlined in the multikernel architecture continue to inform current OS development, particularly in areas dealing with optimizations for multicore processors and transitioning away from assumptions of uniform memory access performance. As of the time of this review, there are numerous academic references citing the multikernel as seminal work in the field of distributed system design for operating systems.",
+  "raw_url": "http://www.cse.iitd.ac.in/~sbansal/csl862-os/readings/barrelfish.pdf",
+  "source_type": "external",
+  "filepath": "unikernels/README.md",
+  "filename": "The Multikernel: A new OS architecture for scalable multicore systems",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:05"
+}

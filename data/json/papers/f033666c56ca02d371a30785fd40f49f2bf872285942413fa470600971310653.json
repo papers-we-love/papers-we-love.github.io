@@ -1,0 +1,36 @@
+{
+  "uuid": "f033666c56ca02d371a30785fd40f49f2bf872285942413fa470600971310653",
+  "title": "Traits: A Mechanism for Fine-Grained Reuse",
+  "publication_date": "November 2006",
+  "authors": [
+    "Andrew P. Black",
+    "Nathanael Schärli",
+    "Oscar Nierstrasz",
+    "Roel Wuyts",
+    "Romain Robbes",
+    "Stéphane Ducasse"
+  ],
+  "keywords": [
+    "code-reuse",
+    "fine-grained-reuse",
+    "inheritance",
+    "object-oriented-programming",
+    "programming-languages",
+    "smalltalk",
+    "software-composition",
+    "software-engineering",
+    "software-reuse",
+    "traits"
+  ],
+  "category_path": [
+    "design"
+  ],
+  "abstract": "Traits are a simple compositional model for structuring object-oriented programs. A trait is essentially a parameterized set of methods, intended to be used to factor out common behavior of classes. Traits are similar to mixins in that they enable an application to be structured from a set of reusable building blocks, but they are stricter than mixins in that they do not specify state variables. Instead, they parameterize over state variables, thus promoting separation of concerns and simplifying reasoning about program behavior. In this paper we discuss how traits can be used to simplify and unify existing programs, and summarize the impact they have had, both in practical large-scale applications and at a theoretical level.",
+  "summary": "The paper \"Traits: A Mechanism for Fine-Grained Reuse\" presents the concept of traits in the context of object-oriented programming as a model to achieve fine-grained software reuse. Leveraging traits allows developers to break away from the traditional limitations of class-based inheritance by providing a mechanism for composing classes from reusable building blocks known as traits.\n\nThese traits reduce complexity by avoiding conflicts commonly seen with mixins, promoting improved design and simplification of large software systems. The paper illustrates the benefits of traits in the programming language Smalltalk, and it highlights both theoretical and practical implications for software engineering.\n\nThe concept of traits as introduced in this paper has influenced further research in programming languages and design paradigms. For example, traits inspired enhancements in languages like Scala and PHP, which later incorporated or proposed models similar to traits.\n\nA search through citations of this work indicates its influence on multiple future frameworks and applications emphasizing reusable software design patterns. Relevant sources that cite this work include research papers and documentation in programming language design and software engineering:\n\n1. [Traits: Composable Units of Behaviour](https://link.springer.com/chapter/10.1007/978-3-540-77989-1_6)\n2. [Scala’s trait-oriented approach](https://dl.acm.org/doi/10.1145/2635868.2635891)\n3. [PHP Manual: Traits](https://www.php.net/manual/en/language.oop5.traits.php)",
+  "raw_url": "http://scg.unibe.ch/archive/papers/Duca06bTOPLASTraits.pdf",
+  "source_type": "external",
+  "filepath": "design/README.md",
+  "filename": "Traits: A Mechanism for Fine-Grained Reuse",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

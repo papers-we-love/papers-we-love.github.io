@@ -1,0 +1,34 @@
+{
+  "uuid": "e8b3c3361724c3a9602934a1f2ce9bad25156b8900ab8691eb4e211c469edc17",
+  "title": "The Hadoop Distributed File System",
+  "publication_date": "June 2010",
+  "authors": [
+    "Hairong Kuang",
+    "Konstantin Shvachko",
+    "Robert Chansler",
+    "Sanjay Radia"
+  ],
+  "keywords": [
+    "big-data",
+    "cloud-computing",
+    "data-replication",
+    "distributed-file-system",
+    "distributed-storage",
+    "fault-tolerance",
+    "hadoop",
+    "high-availability",
+    "open-source",
+    "scalability"
+  ],
+  "category_path": [
+    "distributed-file-systems"
+  ],
+  "abstract": "The Hadoop Distributed File System (HDFS) is designed to store very large data sets reliably, and to stream those data sets at high bandwidth to user applications. In a typical deployment one HDFS cluster stores tens of millions of files, each of which may be gigabytes in size. We describe the architecture of HDFS and report on experiences using HDFS to manage 25 petabytes of enterprise data on 2000 nodes.",
+  "summary": "This paper provides a detailed description of the Hadoop Distributed File System (HDFS), which is an integral part of the Hadoop ecosystem often used for big data processing. The authors delve into the architectural design, highlighting its capability to handle very large datasets and ensuring fault tolerance and high availability. Key features like data replication, scalability, and its open-source nature are discussed. HDFS is distinguished by its ability to manage tens of millions of files and support large-scale deployments, exemplified by a case study involving the management of 25 petabytes of enterprise data on 2000 nodes.\n\nHDFS is central to the operation of Hadoop, which has become a foundational technology in the handling and analysis of big data across various industries. The paper has been cited extensively, influencing many subsequent research works and practical implementations. It has facilitated advancements in cloud computing and distributed storage and has influenced the development of other distributed systems.\n\nNotable references include publications that further explore modifications and improvements to HDFS for better performance and enhanced features, such as:\n\n1. **“Scaling Big Data Mining Infrastructure: The Twitter Experience”** - explores HDFS modifications at Twitter. [Link](https://www.usenix.org/legacy/event/lsap10/tech/full_papers/Hoffman.pdf)\n\n2. **“Optimizing Hadoop for Data Storage: A Survey”** - reviews enhancements and optimization techniques for HDFS. [Link](https://arxiv.org/abs/1502.02282)\n\n3. **“Big Data: Principles and Practices”** - discusses the role of HDFS within the broader landscape of big data technologies. [Link](https://link.springer.com/chapter/10.1007/978-3-319-52704-7_1)\n\nThe impact of HDFS and its design principles continue to be relevant in modern data-intensive applications, underscoring its importance in the evolution of data processing technology.",
+  "raw_url": "https://storageconference.us/2010/Papers/MSST/Shvachko.pdf",
+  "source_type": "external",
+  "filepath": "distributed-file-systems/README.md",
+  "filename": "Hadoop (HDFS)",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

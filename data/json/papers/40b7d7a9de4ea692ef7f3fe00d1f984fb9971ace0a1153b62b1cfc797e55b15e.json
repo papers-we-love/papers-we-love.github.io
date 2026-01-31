@@ -1,0 +1,35 @@
+{
+  "uuid": "40b7d7a9de4ea692ef7f3fe00d1f984fb9971ace0a1153b62b1cfc797e55b15e",
+  "title": "Tiered Replication: A Cost-Effective Alternative to Full Cluster Geo-Replication",
+  "publication_date": "2014",
+  "authors": [
+    "Inderpal Narang",
+    "J. Erik E. Rice",
+    "Parikshit Juluru",
+    "Thomas Kelly",
+    "Xiaoyun Zhu"
+  ],
+  "keywords": [
+    "cloud-computing",
+    "cloud-storage",
+    "cost-efficiency",
+    "data-redundancy",
+    "data-reliability",
+    "distributed-systems",
+    "geo-replication",
+    "high-availability",
+    "latency-optimization",
+    "tiered-replication"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "Maintaining availability in the presence of correlated failures is a primary requirement for data storage systems. To protect against correlated failures (e.g., rack failures and power outages), data is often replicated across multiple failure domains, such as power feeding pairs, racks, and geographical locations. The current practice in cloud data centers is to use full geo-replication—replicating a full set of data at every site—to tolerate site-wide failures. In contrast, we propose tiered replication, a more cost-effective alternative which allows different sets of data to be replicated at different sites and varies the level of data redundancy across sites. We develop a family of replication strategies under this framework and show how to systematically compute the required data redundancy to maintain availability. Through mathematical analyses and extensive simulations, we demonstrate the cost benefits and availability guarantees of tiered replication compared to full geo-replication. We also describe its implementation in the context of our production cloud storage system.",
+  "summary": "The paper \"Tiered Replication: A Cost-Effective Alternative to Full Cluster Geo-Replication\" addresses the high costs associated with full geo-replication in cloud data centers. The authors propose a more efficient model, known as tiered replication, which adjusts the replication level based on differing site needs and the importance of data. They perform simulations and analysis to show how tiered replication can achieve availability similar to that of full geo-replication, but at a reduced cost.\n\n**Influence and Impact:**\nA search for references to this paper did not yield direct citations or industry implementations that acknowledge this research explicitly. This suggests that while the concept of tiered replication is potentially impactful for cost management in cloud systems, explicit subsequent references or documented implementations were not easily found. However, related literature and industry practices in data replication might reference similar concepts or methodologies even if they do not reference this specific paper. Therefore, the impact of this paper on subsequent research or industry advancements remains unclear based on currently available citations.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/tiered-replication-a-cost-effective-alternative-to-full-cluster-geo-replication.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/tiered-replication-a-cost-effective-alternative-to-full-cluster-geo-replication.pdf",
+  "filename": "tiered-replication-a-cost-effective-alternative-to-full-cluster-geo-replication.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

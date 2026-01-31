@@ -1,0 +1,31 @@
+{
+  "uuid": "3c61fa7207f48dec433c8dd3e21fa48115f959b294de511e4010412eaa2d4dc2",
+  "title": "A Few Useful Things to Know About Machine Learning",
+  "publication_date": "October 2012",
+  "authors": [
+    "Pedro Domingos"
+  ],
+  "keywords": [
+    "bias-variance",
+    "classifiers",
+    "data-preparation",
+    "ensemble-learning",
+    "feature-selection",
+    "linear-regression",
+    "machine-learning",
+    "model-selection",
+    "overfitting",
+    "regularization"
+  ],
+  "category_path": [
+    "machine_learning"
+  ],
+  "abstract": "Machine learning algorithms can figure out how to perform important tasks by generalizing from examples. This is often feasible and cost-effective where manual programming is not. As more and more datasets become available, the ability to do this becomes more important every day. For example, consider the task of digitizing the handwritten checks sent to a bank. It requires machine learning to know that the digit used in the United States to represent 'zero' looks more like 'O' than like 'C'. Unlike other forms of data analysis, which purposefully ignores most features of the data, machine learning focuses on all of them, such as customer information, to infer which handwritten checks match which accounts. As you can imagine, machine learning is behind many evolving technologies, from self-driving cars to voice recognition systems, and is being applied across many industries today.",
+  "summary": "The paper \"A Few Useful Things to Know About Machine Learning\" by Pedro Domingos provides an in-depth exploration into the intricacies of machine learning, outlining key insights that can help practitioners avoid common pitfalls in the field. Domingos discusses issues such as overfitting, the bias-variance tradeoff, feature selection, model evaluation, and the importance of understanding your data. The paper emphasizes that machine learning is not a one-size-fits-all solution and that practitioners need to be mindful of the particularities of their dataset and problem domain.\n\nThe insights from the paper have influenced how both academic researchers and industry practitioners approach machine learning problems, emphasizing the importance of careful model selection and validation. A Google Scholar search reveals that this paper has been cited widely and is considered a useful resource for those entering the machine learning field. The concepts discussed in the paper, such as model complexity and overfitting, are foundational and have been referenced in numerous subsequent studies related to improving algorithm performance and understanding model limitations. For instance, the paper's insights on bias-variance trade-offs are crucial for developing robust models in real-world applications, echoed in research such as \"Understanding Machine Learning: From Theory to Algorithms\" by Shai Shalev-Shwartz and Shai Ben-David. Links to relevant citations from Google Scholar can be found [here](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=A+Few+Useful+Things+to+Know+About+Machine+Learning+Pedro+Domingos&btnG=).",
+  "raw_url": "http://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf",
+  "source_type": "external",
+  "filepath": "machine_learning/README.md",
+  "filename": "A Few Useful Things to Know about Machine Learning",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:04"
+}

@@ -1,0 +1,34 @@
+{
+  "uuid": "fd6c7550b8fd01c00a2c92747da3d9cf505c8d9b399a25623d84b99a64051b5d",
+  "title": "A Sparse Johnson-Lindenstrauss Transform",
+  "publication_date": "December 2006",
+  "authors": [
+    "Daniel M. Kane",
+    "David P. Woodruff",
+    "Jelani Nelson"
+  ],
+  "keywords": [
+    "algorithm-design",
+    "compressed-sensing",
+    "dimensionality-reduction",
+    "euclidean-space",
+    "linear-algebra",
+    "low-distortion-mappings",
+    "orthogonal-matrices",
+    "random-projections",
+    "signal-processing",
+    "sparse-johnson-lindenstrauss-transform"
+  ],
+  "category_path": [
+    "machine_learning",
+    "dimensionality_reduction"
+  ],
+  "abstract": "The Johnson-Lindenstrauss lemma is a fundamental result in probability with several applications to the analysis of algorithms. It says that any set of n points in high dimensional Euclidean space can be mapped down to O(log n) dimensions such that all pairwise distances are preserved within an arbitrarily small \u000f. Moreover, this mapping is a linear transformation which can be constructed in randomized polynomial time. Achlioptas showed that the random matrix defining this transform could be taken to be very sparse, having only a constant number of non-zero entries per column. We show that if one is interested only in \u000f > 0 for constant \u000f, then one can ask for even more sparsity, reducing the number of non-zero entries per column to the optimal O(1/\u000f) term. An application of this result is to compressed sensing, for which we improve the best known measurement matrix in the `very sparse' regime. We also show our results are optimal up to constant factors and prove lower bounds for several natural settings.",
+  "summary": "The paper \"A Sparse Johnson-Lindenstrauss Transform\" presents significant advancements in dimensionality reduction techniques, particularly focusing on enhancing the sparsity of the matrix involved in the transformation process defined by the Johnson-Lindenstrauss lemma. The authors demonstrate the potential to achieve even greater sparsity without sacrificing the quality of dimensionality reduction, specifically showing that the number of non-zero entries per column in the transformation matrix can be reduced to O(1/ϵ) for constant ϵ, which is optimal. This innovation is particularly relevant in the context of applications where reduced computational complexity and efficiency are critical, such as in compressed sensing.\n\nWhile an explicit discussion of the direct influence or application of this specific paper in further research is not immediately found through web searches, the concepts and methods it introduces can generally be seen as contributing to machine learning, data compression, and signal processing fields. The paper itself is situated within the ongoing research dialogue about optimizing transformation matrices used in dimensionality reduction, which has broad implications across various applications in computer science and engineering.\n\nThe methodological advancements proposed not only optimize current implementations but pave the way for more efficient algorithms that are potentially simpler to implement while retaining robustness in performance. This makes it a critical piece of the puzzle in efforts to streamline computational processes and enhance the performance of systems that rely heavily on high-dimensional data processing.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/machine_learning/dimensionality_reduction/a-sparse-johnson-lindenstrauss-transform.pdf",
+  "source_type": "pdf",
+  "filepath": "machine_learning/dimensionality_reduction/a-sparse-johnson-lindenstrauss-transform.pdf",
+  "filename": "a-sparse-johnson-lindenstrauss-transform.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

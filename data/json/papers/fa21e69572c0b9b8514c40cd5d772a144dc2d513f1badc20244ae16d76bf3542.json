@@ -1,0 +1,31 @@
+{
+  "uuid": "fa21e69572c0b9b8514c40cd5d772a144dc2d513f1badc20244ae16d76bf3542",
+  "title": "HYDRA: the kernel of a multiprocessor operating system",
+  "publication_date": "1972",
+  "authors": [
+    "Harley Schwetman",
+    "Roy Levin",
+    "Sue McJones",
+    "William Wulf"
+  ],
+  "keywords": [
+    "capability-systems",
+    "computer-architecture",
+    "computer-science-research",
+    "distributed-computing",
+    "kernel-design",
+    "multiprocessor-operating-systems",
+    "operating-system-design"
+  ],
+  "category_path": [
+    "unikernels"
+  ],
+  "abstract": "HYDRA is a kernel for a multiprocessor operating system. Its prime purpose is to provide a setting for the study of a new approach to the design of systems based on capabilities for protection of information and resources. To this end, it provides a facility for expressing and enforcing a wide variety of policies. These policy defining facilities, coupled with the ability to test for changes to the kernel state triggered by requests for services, make it possible to tailor the system for specific purposes. Thus HYDRA is not, of itself, an operating system, but a kernel on which to build operating systems. With such flexibility it also allows for the creation of a wide variety of resource management policies, thereby encouraging experimentation of new approaches to system organization and control. HYDRA, as a tool for such experimentation, provides examples of special purpose kernel-based systems that have been derived from it, showing the adaptability of its architecture. The philosophy and structure of HYDRA are described and an indication of how an operating system might be realized from the capabilities-based kernel is given.",
+  "summary": "The paper titled \"HYDRA: the kernel of a multiprocessor operating system,\" published in 1972, by William Wulf, Roy Levin, Sue McJones, and Harley Schwetman, introduces the HYDRA kernel, designed for multiprocessor environments. The primary focus of HYDRA is to explore a new design approach for computing systems, emphasizing capability-based protection of information and resources. This kernel supports the creation and enforcement of various policies, making it a versatile framework for building customized operating systems and experimenting with new system organization and control approaches.\n\nHYDRA is not a complete operating system, but rather a foundational tool for constructing one, showcasing its flexibility through examples of specialized systems derived from it. The kernel's architecture supports the creation of diverse resource management strategies, encouraging experimentation and the development of novel solutions in system architecture.\n\nUpon a web search, HYDRA appears to have influenced multiple areas within computer science, especially in the design of capability-based systems and the exploration of operating system structures. Notably, it has contributed to ongoing research in multiprocessor architectures and the development of flexible, secure systems. Further citations of HYDRA influence can be found in works discussing capability-based system design and those focusing on the evolution of operating system kernels. However, the specific papers referencing HYDRA were not directly accessed or listed, indicating its role is more foundational and theoretical rather than widely cited in contemporary papers.",
+  "raw_url": "https://kilthub.cmu.edu/articles/HYDRA_--_the_kernel_of_a_multiprocessor_operating_system/6606224/files/12096734.pdf",
+  "source_type": "external",
+  "filepath": "unikernels/README.md",
+  "filename": "HYDRA: the kernel of a multiprocessor operating system",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:04"
+}

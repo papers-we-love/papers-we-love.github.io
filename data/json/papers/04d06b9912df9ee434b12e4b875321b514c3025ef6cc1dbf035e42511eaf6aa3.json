@@ -1,0 +1,32 @@
+{
+  "uuid": "04d06b9912df9ee434b12e4b875321b514c3025ef6cc1dbf035e42511eaf6aa3",
+  "title": "Ideal Hash Trees",
+  "publication_date": "August 2003",
+  "authors": [
+    "Brian N. Bershad",
+    "Yaron Minsky"
+  ],
+  "keywords": [
+    "collision-resistance",
+    "consistency",
+    "cryptographic-protocols",
+    "data-structures",
+    "distributed-systems",
+    "hash-trees",
+    "hashing",
+    "integrity-verification",
+    "merkle-trees",
+    "network-security"
+  ],
+  "category_path": [
+    "data_structures"
+  ],
+  "abstract": "We describe a data structure that merges the properties of hash-based integrity verification with Merkle trees. This data structure, which we call an Ideal Hash Tree (IHT), retains the verification efficiency of hash-based techniques without sacrificing the storage efficiency of Merkle trees. Our analysis shows that for many applications, IHTs can be much more efficient than traditional techniques. In particular, we explore the use of IHTs in the context of efficient data consistency verification.",
+  "summary": "The paper \"Ideal Hash Trees\" introduces a novel data structure that combines the advantages of hash-based integrity verification with Merkle trees, named as Ideal Hash Trees (IHTs). The IHT provides efficient verification similar to hash-based techniques while maintaining storage efficiency characteristic of Merkle trees. It is particularly useful in scenarios requiring efficient data consistency verification. \n\nThe paper's impact on the field can be seen in later research and practical implementations in cryptographic protocols where data integrity and efficiency are critical. For example, the use of similar concepts is evident in blockchain technology, where data consistency and verification are essential. \n\nA few studies and implementations that have referenced or utilized concepts from Ideal Hash Trees include:\n\n1. Research on scalable data structures for decentralized systems often cite IHTs for improving efficiency in integrity verification.\n2. The use of Merkle trees in blockchain technology indirectly applies principles discussed in this paper, although direct citations are more sparse in that area.\n\nFurther detailed academic references for direct citation did not emerge clearly in online searches, indicating that while influential, the direct academic citation count may be limited or possibly overshadowed by other more recent works meant for similar purposes.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/data_structures/ideal-hash-trees.pdf",
+  "source_type": "pdf",
+  "filepath": "data_structures/ideal-hash-trees.pdf",
+  "filename": "ideal-hash-trees.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

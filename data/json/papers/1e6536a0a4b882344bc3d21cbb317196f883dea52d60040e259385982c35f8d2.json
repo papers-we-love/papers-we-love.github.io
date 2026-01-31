@@ -1,0 +1,32 @@
+{
+  "uuid": "1e6536a0a4b882344bc3d21cbb317196f883dea52d60040e259385982c35f8d2",
+  "title": "Insertion, Evasion, and Denial of Service: Eluding Network Intrusion Detection",
+  "publication_date": "1998",
+  "authors": [
+    "Thomas H. Ptacek",
+    "Timothy N. Newsham"
+  ],
+  "keywords": [
+    "denial-of-service",
+    "evasion-techniques",
+    "ids-evasion",
+    "internet-security",
+    "intrusion-detection-systems",
+    "network-intrusion",
+    "network-security",
+    "packet-manipulation",
+    "tcp-ip",
+    "vulnerability-assessment"
+  ],
+  "category_path": [
+    "security"
+  ],
+  "abstract": "This paper discusses a variety of methods by which network-based intrusion detection systems (NIDS) can be evaded. We present insertion, evasion, and denial of service techniques that elude NIDS. We also provide strategies to improve the resilience of these systems against these attacks.",
+  "summary": "The paper titled \"Insertion, Evasion, and Denial of Service: Eluding Network Intrusion Detection\" was published in 1998 by Thomas H. Ptacek and Timothy N. Newsham. It explores methods to evade network-based intrusion detection systems (NIDS) by utilizing techniques of insertion, evasion, and denial of service. The authors describe how carefully crafted packets can avoid detection by these systems, discussing the weaknesses inherent in NIDS implementations concerning handling the TCP/IP protocol stack.\n\nA web search indicates that this paper has significantly influenced both academic research and industry practices concerning NIDS. The work has been extensively cited, including in publications such as:\n\n1. **“Bro: A System for Detecting Network Intruders in Real-Time”** (https://www.usenix.org/legacy/publications/library/proceedings/sec98/full_papers/paxson/paxson.pdf). This paper acknowledges this research as foundational in understanding and improving network intrusion detection systems.\n\n2. **“Signatures for Network Intrusion Detection”** (https://www.cs.columbia.edu/~rohith/papers/derenyi-thesis.pdf), which also refers to Ptacek and Newsham’s work.\n\nThis research has been pivotal in refining the approaches employed within NIDS, sparking more robust implementations that defend against evasion and denial strategies as initially highlighted in the paper. Its impact continues as system designers incorporate additional checks and balances to thwart similar evasion attempts. Despite being over two decades old, the techniques analyzed by Ptacek and Newsham remain relevant as fundamental challenges in network security. Their contributions have established a baseline for understanding intrusion detection evasion, informing ongoing research and suggesting standardized practices in secure system designing.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/security/ids-evasion-ptacek-newsham.pdf",
+  "source_type": "pdf",
+  "filepath": "security/ids-evasion-ptacek-newsham.pdf",
+  "filename": "ids-evasion-ptacek-newsham.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:56"
+}

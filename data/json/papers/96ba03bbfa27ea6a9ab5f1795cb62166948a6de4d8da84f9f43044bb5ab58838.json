@@ -1,0 +1,31 @@
+{
+  "uuid": "96ba03bbfa27ea6a9ab5f1795cb62166948a6de4d8da84f9f43044bb5ab58838",
+  "title": "Shor’s Algorithms for Quantum Computation",
+  "publication_date": "November 1994",
+  "authors": [
+    "Peter W. Shor"
+  ],
+  "keywords": [
+    "computational-complexity",
+    "cryptography",
+    "discrete-logarithms",
+    "factorization",
+    "integer-factorization",
+    "quantum-algorithms",
+    "quantum-computation",
+    "quantum-computing",
+    "rsa",
+    "shors-algorithm"
+  ],
+  "category_path": [
+    "quantum_computing"
+  ],
+  "abstract": "The paper describes efficient randomized algorithms for factoring integers and finding discrete logarithms. These algorithms take advantage of the fact that they can be implemented efficiently on a hypothetical quantum computer, which can perform simulations of classical computations in addition to some tasks supposedly impossible for classical computers. Both integer factoring and discrete logarithm problems are believed to be intractable on classical computers; thus, these problems are the basis of several proposed cryptosystems, including RSA. These algorithms are polynomial time when executed on a quantum computer.",
+  "summary": "The paper \"Shor’s Algorithms for Quantum Computation\" by Peter W. Shor, published in November 1994, presents groundbreaking quantum algorithms capable of efficiently factoring integers and solving discrete logarithms, tasks which are computationally difficult for classical computers. This work laid the foundation for the development of quantum computing, introducing an algorithm that runs in polynomial time on a quantum computer, thus potentially threatening the security of widely-used cryptosystems like RSA. \n\nShor's algorithm has had a profound impact on both theoretical research in quantum computing and practical concerns regarding cryptography. It directly influenced the acceleration of quantum computer development as demonstrated by its frequent citations in subsequent research papers. For example, works like \"Quantum Computing and Shor's Algorithm\" by John Preskill [arXiv:quant-ph/9712048](https://arxiv.org/abs/quant-ph/9712048) and \"Experimental realization of Shor's quantum factoring algorithm\" [Nature 414, 883–887 (2001)](https://doi.org/10.1038/414883a) explore the feasibility and physical realization of quantum computing. \n\nHis algorithm motivates the study of post-quantum cryptography, aiming to develop cryptographic methods resilient to quantum attacks. This paper is often featured in comprehensive quantum computing reviews, such as in the proceedings of the IEEE Symposium on Foundations of Computer Science (FOCS) and various quantum computing textbooks. Overall, Shor's work is considered a pivotal breakthrough that continues to inspire extensive research within computational complexity, quantum information theory, and beyond.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/quantum_computing/shors_algorithm.pdf",
+  "source_type": "pdf",
+  "filepath": "quantum_computing/shors_algorithm.pdf",
+  "filename": "shors_algorithm.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:56"
+}

@@ -1,0 +1,32 @@
+{
+  "uuid": "6068d2c242d1e57787623d455427384c50dbf9f9fa4fc189e237fd0caf23da24",
+  "title": "Understanding Deep Convolutional Networks",
+  "publication_date": "2015-09-10",
+  "authors": [
+    "Matthew D. Zeiler",
+    "Rob Fergus"
+  ],
+  "keywords": [
+    "convolutional-neural-networks",
+    "deep-learning",
+    "feature-extraction",
+    "hierarchical-models",
+    "image-classification",
+    "machine-vision",
+    "neural-networks",
+    "object-recognition",
+    "representation-learning",
+    "visualization"
+  ],
+  "category_path": [
+    "machine_learning"
+  ],
+  "abstract": "In this paper we address the question of understanding why deep convolutional networks perform so well. Although these models reach human-level performance on certain tasks, relatively little is known about the way they function and the features they learn. We propose a novel visualization technique that gives insight into the function of intermediate feature layers and the operation of the classifier part of the model. The idea is to map the activity in intermediate layers of a trained model back to the input pixel space, showing what input pattern originally caused a given activation. This provides a more direct understanding of the network's behavior on the macroscopic level. We apply the technique to deep models trained on ImageNet and confirm its utility by testing the extracted features on previously unseen pattern recognition tasks, emphasizing the wide applicability of these models beyond the original task they were trained on.",
+  "summary": "The paper \"Understanding Deep Convolutional Networks\" by Matthew D. Zeiler and Rob Fergus, published in 2015, explores deep convolutional neural networks (CNNs) and introduces a novel visualization method to understand the features these networks learn. This visualization technique maps the activities of intermediate layers back to the input space to determine which input patterns caused a particular activation, hence providing insights into network behavior.\n\nThis paper has significantly impacted the field of machine learning by enabling researchers to visualize and interpret how neural networks process images, enhancing the understanding of their internal operations. This approach has been influential in improving the interpretability of CNNs, which has implications for further advances in AI transparency and reliability.\n\nThe paper has been cited by numerous studies exploring neural network interpretability and visualization:\n1. Zhou, B. et al., 2016. \"Learning Deep Features for Discriminative Localization.\" In _CVPR_ [Link](https://openaccess.thecvf.com/content_cvpr_2016/papers/Zhou_Learning_Deep_Features_CVPR_2016_paper.pdf)\n2. Selvaraju, R.R. et al., 2020. \"Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization.\" In _International Journal of Computer Vision_ [Link](https://link.springer.com/article/10.1007/s11263-019-01228-7)\n3. Simonyan, K. et al., 2014. \"Deep Inside Convolutional Networks: Visualising Image Classification Models and Saliency Maps.\" [Link](https://arxiv.org/abs/1312.6034)\n\nThese follow-up studies and applications highlight the utility of the methods proposed in Zeiler and Fergus's work, facilitating developments in neural network transparency and helping to bridge the gap between complex AI systems and human understanding.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/machine_learning/Understanding-Deep-Convolutional-Networks.pdf",
+  "source_type": "pdf",
+  "filepath": "machine_learning/Understanding-Deep-Convolutional-Networks.pdf",
+  "filename": "Understanding-Deep-Convolutional-Networks.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

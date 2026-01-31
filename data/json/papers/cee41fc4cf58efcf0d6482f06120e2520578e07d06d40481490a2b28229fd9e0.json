@@ -1,0 +1,31 @@
+{
+  "uuid": "cee41fc4cf58efcf0d6482f06120e2520578e07d06d40481490a2b28229fd9e0",
+  "title": "An Introduction to Capsicum",
+  "publication_date": "2015, AsiaBSDCon",
+  "authors": [
+    "Justin Cormack"
+  ],
+  "keywords": [
+    "application-compartmentalization",
+    "capabilities",
+    "capsicum",
+    "freebsd",
+    "netbsd",
+    "operating-systems",
+    "process-isolation",
+    "sandboxing",
+    "security",
+    "unix"
+  ],
+  "category_path": [
+    "unikernels"
+  ],
+  "abstract": "Capsicum is a lightweight operating system capability and sandbox framework developed at Google Research and the University of Cambridge. It targets application compartmentalization: the decomposition of monolithic UNIX applications into logical applications into logical applications into logical application components, providing increased application and system security. Capsicum blends the best aspects of capability systems, which have not previously achieved mainstream adoption, with the best aspects of POSIX (UNIX) APIs, so as to incrementally deployable. In its hybrid capability model, processes may interleave capability mode and ambient authority mode. We provide an introduction to capability systems, before exploring Capsicum’s hybrid capability architecture and application to UNIX applications, focusing on the file descriptor as a capability, and the semantics of capability mode. We describe the design and implementation of two core OS components: capability mode and capabilities, and UNIX process descriptors (capabilities-safe process identifiers). Finally, we explore adapting core FreeBSD utilities to support capabilities and the Capsicumization of ongoing work on UNIX applications, such as Chromium.",
+  "summary": "The paper \"An Introduction to Capsicum\" by Justin Cormack provides a detailed overview of Capsicum, a framework that enhances application and system security through application compartmentalization. Capsicum integrates a hybrid capability model into the UNIX environment, emphasizing process isolation and resource-based access control by using capabilities represented by file descriptors. The framework offers a progressive path towards improving security while maintaining compatibility with existing POSIX APIs.\n\nCapsicum primarily targets FreeBSD and NetBSD, operating systems where initial implementation and application of Capsicum-enabled utilities have shown promise in enhancing security practices. Though the paper does not extensively document wide industry adoption post-publication, there have been continued academic discussions and developments based on Capsicum's approach in broader contexts, including in sandboxing strategies and discussions related to web browsers like Chromium, as mentioned in the paper.\n\nFurther academic interest can be inferred from publications that reference Capsicum, highlighting its role in securing applications through fine-grained access control mechanisms, like the capability mode allowing applications to restrict privileges dynamically. Although direct citations of this paper from other academic works are limited, related resources include explorations in modern operating system security paradigms.\n\nFor details on the ongoing impact and adoption of Capsicum, exploring FreeBSD and NetBSD's subsequent versions and related security enhancement discussions would be beneficial. As of my search, no significant industry-standard applications have adopted Capsicum. However, its principles continue to inspire research and development strategies for secure application development. [Refer to technical discussions on operating system security](https://en.wikipedia.org/wiki/Capsicum_(Unix)).",
+  "raw_url": "https://www.netbsd.org/gallery/presentations/justin/2015_AsiaBSDCon/justincormack-abc2015.pdf",
+  "source_type": "external",
+  "filepath": "unikernels/README.md",
+  "filename": "The rump kernel: A tool for driver development and a toolkit for applications",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:05"
+}

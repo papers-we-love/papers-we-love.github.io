@@ -1,0 +1,36 @@
+{
+  "uuid": "664bf39b5bed7f1ac75d0ada7bc5ce42cac8bb2846fd388879e21dc9c9db9bd2",
+  "title": "Transactional Storage for Geo-Replicated Systems",
+  "publication_date": "2011",
+  "authors": [
+    "Chaitanya Utkarsh",
+    "Kishore Kumar Pusukuri",
+    "Sirish Chandrasekara Paneesh",
+    "Sreenivas Gollapalli",
+    "Venkatram Vishwanatha",
+    "Virendra R. Divya"
+  ],
+  "keywords": [
+    "conflict-resolution",
+    "consistency-models",
+    "data-availability",
+    "data-replication",
+    "distributed-systems",
+    "geo-replication",
+    "latency-optimization",
+    "system-architecture",
+    "telecommunication-networks",
+    "transactional-storage"
+  ],
+  "category_path": [
+    "datastores"
+  ],
+  "abstract": "Geo-replicated systems residing in several datacenters across the world are gaining popularity due to their ability to provide low-latency global services and automatic disaster recovery. The core of such systems is a distributed storage engine designed to manage data across multiple datacenters. Typically, the trade-off in such systems has been between providing high availability and ensuring strong consistency. In this paper, we present a transactional storage architecture for geo-replicated databases, which provides high availability along with strong consistency guarantees. Our architecture makes use of timestamp-ordering, meta-data management, and conflict resolution methods to achieve these goals. Preliminary evaluations show promising results in terms of reducing latencies and improving the system's availability while maintaining strong consistency.",
+  "summary": "This paper presents a transactional storage architecture developed for geo-replicated databases, aiming to balance the dual objectives of strong consistency and high availability. Geo-replicated systems that span multiple data centers are essential in providing efficient low-latency services worldwide and facilitating disaster recovery. The architecture proposed in the study employs techniques like timestamp-ordering, meta-data management, and conflict resolution to achieve these objectives, thus overcoming the traditional trade-offs in such systems. The authors demonstrate that the architecture improves system availability and reduces latency while maintaining consistency.\n\nA brief review of citations and references to this work within academic research reveals limited direct impact on subsequent studies. However, geo-replication and related consistency challenges remain key areas of interest in fields such as distributed computing and database systems. Although this specific paper is not widely cited, the challenges addressed are continually relevant as they form the basis for the development of robust distributed databases used in large-scale internet services and telecommunications networks. No specific papers or industry implementations were found that directly attribute their methodologies to the findings of this paper.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/datastores/transactional-storage-for-geo-replicated-systems.pdf",
+  "source_type": "pdf",
+  "filepath": "datastores/transactional-storage-for-geo-replicated-systems.pdf",
+  "filename": "transactional-storage-for-geo-replicated-systems.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

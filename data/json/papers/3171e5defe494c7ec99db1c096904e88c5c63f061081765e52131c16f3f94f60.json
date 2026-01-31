@@ -1,0 +1,32 @@
+{
+  "uuid": "3171e5defe494c7ec99db1c096904e88c5c63f061081765e52131c16f3f94f60",
+  "title": "Why Functional Programming Matters",
+  "publication_date": "1984",
+  "authors": [
+    "John Hughes"
+  ],
+  "keywords": [
+    "code-reuse",
+    "data-abstraction",
+    "functional-programming",
+    "higher-order-functions",
+    "lazy-evaluation",
+    "modularity",
+    "programming-paradigms",
+    "recursive-functions",
+    "side-effects",
+    "software-engineering"
+  ],
+  "category_path": [
+    "languages-paradigms",
+    "functional_programming"
+  ],
+  "abstract": "The main thesis of this paper is that functional programming is important because it makes it easier to use certain techniques to solve problems, techniques which are particularly effective because they allow very general problems to be solved easily and directly. In this paper we will illustrate this thesis by describing two programming techniques which seem to be of great importance, describing how they can be implemented in a functional language, and giving examples of programs which use them.",
+  "summary": "The paper \"Why Functional Programming Matters\" by John Hughes, published in 1984, highlights the significance of functional programming (FP) in enhancing the ease with which software problems can be solved thanks to specific programming techniques that are enhanced by FP. These techniques include lazy evaluation and higher-order functions, which promote modularity, code reusability, and easier reasoning about code due to the absence of side effects. Hughes provides detailed explanations and examples demonstrating how these FP techniques enable concise and expressive solutions to complex problems. \n\nHughes' paper has had a significant influence on the development and adoption of functional programming languages and paradigms in both academic research and industry. It is frequently cited in discussions about the advantages of FP, particularly regarding reduced side effects and enhanced modularity ([source](https://dl.acm.org/doi/10.1145/73526.73547), [source](https://cs.uni.lodz.pl/memory/TUTORIAL_FPL/prog.html)). The paper's arguments on modularity and code reuse have influenced many subsequently developed languages, such as Haskell, and modern practices in software engineering ([source](https://doi.org/10.1017/S0956796800000884), [source](https://homepages.inf.ed.ac.uk/wadler/topics/functional-programming.html#fp-matters)). The emphasis on functional solutions has also influenced industry practices in areas like data processing and real-time systems, where FP's modularity aligns with scalability and maintainability goals.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages-paradigms/functional_programming/why-functional-programming-matters.pdf",
+  "source_type": "pdf",
+  "filepath": "languages-paradigms/functional_programming/why-functional-programming-matters.pdf",
+  "filename": "why-functional-programming-matters.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

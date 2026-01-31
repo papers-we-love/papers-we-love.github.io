@@ -1,0 +1,32 @@
+{
+  "uuid": "8c2e0b72cdfbfcf44a26f5a6c32059d576fbf77ee4d94ec980a1becb71705597",
+  "title": "MapReduce: Simplified Data Processing on Large Clusters",
+  "publication_date": "2004",
+  "authors": [
+    "Jeffrey Dean",
+    "Sanjay Ghemawat"
+  ],
+  "keywords": [
+    "big-data",
+    "data-parallel",
+    "data-processing",
+    "distributed-systems",
+    "fault-tolerance",
+    "large-clusters",
+    "mapreduce",
+    "parallel-computing",
+    "programming-model",
+    "scalability"
+  ],
+  "category_path": [
+    "datastores"
+  ],
+  "abstract": "MapReduce is a programming model and an associated implementation for processing and generating large data sets. Users specify a map function that processes a key/value pair to generate a set of intermediate key/value pairs, and a reduce function that merges all intermediate values associated with the same intermediate key. Many real world tasks are expressible in this model, as shown in the paper. Programs written in this functional style are automatically parallelized and executed on a large cluster of commodity machines. The run-time system takes care of the details of partitioning the input data, scheduling the program's execution across a set of machines, handling machine failures, and managing the required inter-machine communication. This allows programmers without any experience with parallel and distributed systems to easily utilize the resources of a large distributed system. Our implementation of MapReduce runs on a large cluster of commodity machines and is highly scalable: a typical MapReduce computation processes many terabytes of data on thousands of machines. Programmers find the system easy to use: hundreds of MapReduce programs have been implemented and upwards of one thousand MapReduce jobs are executed on Google's clusters every day. The paper describes the programming model and the implementation and reports on several real-world use cases and performance metrics.",
+  "summary": "The paper titled \"MapReduce: Simplified Data Processing on Large Clusters\" by Jeffrey Dean and Sanjay Ghemawat, published in 2004, introduces the MapReduce programming model. This model simplifies data processing across large clusters by abstracting the complexities of parallelization and distribution. The significant contribution of this work is its ability to process terabytes of data efficiently across clusters of commodity hardware, achieving scalability and fault tolerance without requiring in-depth knowledge of parallel systems from programmers. Today, the MapReduce model underlies many modern big data processing frameworks, such as Apache Hadoop and Apache Spark, influencing their design and adoption in both academic and industry settings. \n\nMapReduce has greatly influenced the field of distributed computing, becoming a foundational concept in big data processing. Studies and implementations of distributed systems frequently cite this paper to acknowledge its contributions to simplifying parallel computing.\n\n- Referenced by Apache Hadoop as a foundational model for its framework: https://hadoop.apache.org/\n- Influenced systems like Apache Spark to develop more generalized data processing frameworks beyond MapReduce itself: https://spark.apache.org/\n\nBeyond these specific implementations, the MapReduce framework has become a standard approach taught in computer science curricula dealing with distributed systems and big data. The paper established a practical bridge between theory and application, enabling efficient large-scale data processing.",
+  "raw_url": "http://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/41344.pdf",
+  "source_type": "external",
+  "filepath": "datastores/README.md",
+  "filename": "F1: A Distributed SQL Database That Scales",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

@@ -1,0 +1,30 @@
+{
+  "uuid": "3db9105ba7102ec8f7d8d42a8612e0a3b9d3d3beedb40b913ea09d11dfd174b9",
+  "title": "Twenty Years of Attacks on the RSA Cryptosystem",
+  "publication_date": "2004",
+  "authors": [
+    "Dan Boneh"
+  ],
+  "keywords": [
+    "chosen-ciphertext-attack",
+    "cryptography",
+    "digital-signatures",
+    "encryption-security",
+    "factoring",
+    "modular-arithmetic",
+    "public-key-encryption",
+    "rsa",
+    "security-attacks"
+  ],
+  "category_path": [
+    "cryptography"
+  ],
+  "abstract": "Twenty years ago Rivest, Shamir and Adleman proposed the first public-key cryptosystem in the open literature. Since then, numerous researchers have contributed to understanding the security of this system employed in a wide variety of applications. This article surveys the developments in attacks on the RSA cryptosystem over the past twenty years. The unproven assumption underlying RSA is that the problem of factoring large integers is computationally hard. Yet, researchers have discovered numerous attacks on RSA without actually factoring the modulus. These attacks give insight into the precise assumptions needed to guarantee the security of RSA.",
+  "summary": "This paper provides a comprehensive survey of the evolution of attacks on the RSA cryptosystem over a period of twenty years since its introduction by Rivest, Shamir, and Adleman. The primary focus is on the assumption that the difficulty of factoring large integers underlies RSA's security. Boneh compiles various attack strategies that have emerged, highlighting their implications on RSA's foundational assumptions.\n\nThe paper's influence is notable in several subsequent studies that delve into the nuances of cryptographic security. It serves as a reference point for understanding RSA vulnerabilities and helps in constructing more robust cryptographic protocols. For instance, the work is often cited in research focusing on enhancing RSA's resistance to chosen ciphertext attacks and improving digital signature schemes. A few examples include:\n- [RSA and Public-Key Cryptography on Modern Computer Systems - Stanford](https://crypto.stanford.edu/cs355/19sp/lectures/RSA.pdf)\n- [Public Key Cryptography Applications and Attacks - Berkley](https://inst.eecs.berkeley.edu/~cs161/fa08/lectures/Lecture21.pdf)\n- [Security of RSA and CRUDH: Old Schemes, New Settings](https://doi.org/10.1007/978-3-319-63498-7_8)\n\nDespite being over a decade old, Boneh's survey remains a vital resource for cryptographers aiming to fortify RSA-based systems.",
+  "raw_url": "https://crypto.stanford.edu/~dabo/papers/RSA-survey.pdf",
+  "source_type": "external",
+  "filepath": "cryptography/README.md",
+  "filename": "Twenty Years of Attacks on the RSA Cryptosystem (1999)",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

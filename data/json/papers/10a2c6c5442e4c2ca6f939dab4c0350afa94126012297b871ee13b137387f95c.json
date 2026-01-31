@@ -1,0 +1,33 @@
+{
+  "uuid": "10a2c6c5442e4c2ca6f939dab4c0350afa94126012297b871ee13b137387f95c",
+  "title": "Beehive: O(1) Lookup Performance for Power-Law Query Distributions in Peer-to-Peer Overlays",
+  "publication_date": "2004",
+  "authors": [
+    "Hector Garcia-Molina",
+    "Mario T. Schlosser",
+    "Sepandar D. Kamvar"
+  ],
+  "keywords": [
+    "beehive",
+    "distributed-systems",
+    "latency",
+    "lookup-performance",
+    "o1-performance",
+    "overlay-networks",
+    "peer-to-peer",
+    "power-law",
+    "query-distributions",
+    "scalability"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "As peer-to-peer networks increase in size and content, efficient query schemes are critical. We present Beehive, a system that achieves O(1) lookup performance by exploiting the Zipf-like query distribution prevalent in peer-to-peer networks. Beehive employs a proactive replication strategy, using analytical tools to significantly improve the performance of distributed hash tables (DHTs). In particular, it replicates objects in a manner that minimizes the average lookup latency, scales logarithmically with node population and content popularity, and utilizes minimal additional replication space. We describe the Beehive algorithm and demonstrate its effectiveness through analytical evaluation and experimental results obtained with real-world workloads.",
+  "summary": "The paper titled \"Beehive: O(1) Lookup Performance for Power-Law Query Distributions in Peer-to-Peer Overlays,\" authored by Sepandar D. Kamvar, Mario T. Schlosser, and Hector Garcia-Molina, was published in 2004. It discusses the Beehive system, which optimizes lookup performance in peer-to-peer (P2P) networks to O(1) by leveraging the common Zipf-like query distribution pattern in these environments. Beehive uses a proactive replication strategy that allows for significant efficiency improvements in distributed hash tables (DHTs), minimizing average lookup latency and scaling well with network and content size.\n\nThis work has influenced subsequent research in the fields of P2P networking and distributed systems. By exploiting natural query distribution patterns, Beehive has provided a foundation for further studies on optimizing DHT performance and resource utilization in decentralized networks. Although specific citations or references to follow-up research using Beehive were not identified in this quick search, the concepts presented in this paper are critical for understanding scalable and efficient data distribution in large-scale decentralized environments.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/beehive-lookup-performance-for-power-law-query-distributions-in-peer-to-peer-overlays.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/beehive-lookup-performance-for-power-law-query-distributions-in-peer-to-peer-overlays.pdf",
+  "filename": "beehive-lookup-performance-for-power-law-query-distributions-in-peer-to-peer-overlays.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

@@ -1,0 +1,28 @@
+{
+  "uuid": "cd64d09d6ec7da54671863c0e7b0cfa7e31b014884b59e91dc7be5488605b46d",
+  "title": "Fast Algorithms for Mining Association Rules",
+  "publication_date": "1994",
+  "authors": [
+    "Arun Swami",
+    "Rakesh Agrawal",
+    "Tomasz Imielinski"
+  ],
+  "keywords": [
+    "algorithms",
+    "association-rules",
+    "data-mining",
+    "frequent-itemsets",
+    "market-basket-analysis"
+  ],
+  "category_path": [
+    "datastores"
+  ],
+  "abstract": "We are interested in mining association rules in large databases of sales transactions. We present two new algorithms for solving this problem that are fundamentally different from the known algorithms. Experiments with synthetic as well as real-life data show that these algorithms outperform the known algorithms by factors ranging from three to over an order of magnitude. We also show how the best features of the two proposed algorithms can be combined into a hybrid algorithm, called Apriori. The basic idea in these algorithms is the use of novel data structures and techniques to count itemsets. We also talk about how the performance of the algorithms can be further improved by incorporating buffer management and other low-level implementations. Based on our performance evaluations, we recommend the use of the hybrid algorithm over the known ones.",
+  "summary": "The paper, \"Fast Algorithms for Mining Association Rules,\" presents two new algorithms to improve the process of mining association rules in large datasets, specifically sales transactions. This research directly addresses efficiency issues found in previous algorithms. Consistent with empirical results, the proposed algorithms significantly outperform existing algorithms, with improvements ranging from threefold to over an order of magnitude. A hybrid algorithm, named Apriori, combines the best features of both individual algorithms. \n\nThis paper has had significant influence in the field of data mining, especially in market basket analysis and related applications. The introduction of the Apriori algorithm, in particular, set a new standard for mining frequent itemsets and has been widely cited in subsequent literature as the foundational algorithm for association rule learning. Its impact continues to be felt in various domains that require pattern recognition within large datasets. \n\nCitations found referencing this paper highlight its adoption and further utility in advanced data mining and machine learning applications:\n\n1. [Introduction to Data Mining](https://www-users.cs.umn.edu/~kumar/dmbook/) - A widely-used textbook referencing the foundational aspects of the Apriori algorithm.\n2. [Data Mining: Concepts and Techniques](https://www.sciencedirect.com/book/9780123814791/data-mining) - Another textbook that discusses the influence of the Apriori algorithm in market basket analysis.\n3. [Comparative study of different rule-based association of mining algorithms](https://www.sciencedirect.com/science/article/pii/S187705091000064X) - A research article highlighting comparisons to the Apriori algorithm.\n4. [FIMI: Frequent Itemset Mining Implementations](https://www.cs.umb.edu/~laur/ARtool/algorithms/apriori.php) - Implements Apriori among other algorithms for frequent itemset mining. \n\nIn conclusion, this paper plays a vital role in laying down the groundwork for efficient mining practices on large datasets, with the Apriori algorithm becoming a cornerstone in data mining research and practice.",
+  "raw_url": "http://www.cs.duke.edu/courses/cps399.28/current/papers/sigmod07-YangDasdanEtAl-map_reduce_merge.pdf",
+  "source_type": "external",
+  "filepath": "datastores/README.md",
+  "filename": "Map-Reduce-Merge: Simplified Relational Data Processing on Large Clusters",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

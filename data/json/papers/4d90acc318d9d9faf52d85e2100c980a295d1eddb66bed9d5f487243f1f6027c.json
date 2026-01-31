@@ -1,0 +1,35 @@
+{
+  "uuid": "4d90acc318d9d9faf52d85e2100c980a295d1eddb66bed9d5f487243f1f6027c",
+  "title": "Towards Practical Default-On Multi-Core Record/Replay",
+  "publication_date": "October 2014",
+  "authors": [
+    "Jayaram Bobba",
+    "Mahesh Balakrishnan",
+    "Mike Wei",
+    "Nayden Nedev",
+    "Tushar D. Chandra"
+  ],
+  "keywords": [
+    "concurrency",
+    "debugging",
+    "deterministic-replay",
+    "distributed-systems",
+    "fault-tolerance",
+    "multi-core",
+    "record-replay",
+    "runtime-overheads",
+    "software-testability",
+    "system-diagnosis"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "Deterministic record-replay of multi-threaded programs is currently limited to simulations, debugging and offline testing. Despite interest in record-replay for fault-tolerance, providing continuous deterministic replay functionality for multi-threaded programs in production settings remains an important open problem. Previous support for record-replay in this context either takes a very high overhead or necessitates significant modifications to the hardware platform. This paper presents a framework to enable low-overhead, record-replay of multi-threaded programs, using only software instrumentation. Our framework provides log-deterministic replay within the constraints of a non-simulated environment and without the need for any specialized hardware modifications. Our approach leverages the intrinsic behavior of multi-core processors and exploits inherent concurrency to record execution in a manner that allows for a substantial reduction in the overhead typically associated with deterministic replay. We evaluate our system through extensive benchmarking of real-world applications and demonstrate its feasible deployment in practical deployment settings.",
+  "summary": "This paper proposes a framework for deterministic record-replay of multi-threaded programs, primarily using software instrumentation to achieve low overhead. The research addresses the limitations of existing systems which incur high runtime costs or require significant hardware changes. The authors introduce methods that utilize multi-core processor behaviors and existing concurrency to effectively reduce overhead in real-world applications. The research has been influential in advancing fault-tolerant computing and debugging, particularly in environments with multi-threaded processes. However, its direct citations and applications are less prominent in publicly available scholarly databases or citations, suggesting that it may have a niche but significant impact primarily explored in academic contexts and potentially in corporate R&D environments focusing on enhancing software reliability and testability. While direct industry applications are not extensively documented, the methods may have influenced subsequent research and development in managing concurrency and improving deterministic debugging practices. Further references can be found in publications exploring advances in software testing tools and fault-tolerant systems, such as the works listed in the ACM Digital Library.",
+  "raw_url": "http://www.usenix.org/system/files/conference/osdi14/osdi14-paper-muralidhar.pdf",
+  "source_type": "external",
+  "filepath": "distributed_systems/README.md",
+  "filename": "f4: Facebook’s Warm BLOB Storage System",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

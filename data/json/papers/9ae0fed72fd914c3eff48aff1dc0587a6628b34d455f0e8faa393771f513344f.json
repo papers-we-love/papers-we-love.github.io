@@ -1,0 +1,32 @@
+{
+  "uuid": "9ae0fed72fd914c3eff48aff1dc0587a6628b34d455f0e8faa393771f513344f",
+  "title": "Commodifying Replicated State Machines with OpenReplica",
+  "publication_date": "2009",
+  "authors": [
+    "Flavio Junqueira",
+    "Keith Marzullo"
+  ],
+  "keywords": [
+    "consensus-algorithms",
+    "distributed-computing",
+    "distributed-systems",
+    "fault-tolerance",
+    "high-availability",
+    "openreplica",
+    "replicated-state-machines",
+    "software-commoditization",
+    "system-reliability",
+    "system-replication"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "Running state machine replicas in distributed systems is a well-established method for achieving high availability and fault tolerance. Traditionally, the engineering and operation of replicated state machines has been performed by specialized systems. It is a difficult effort to design, develop, and maintain a distributed implementation using the state machine approach, as it requires implementing consensus and ensuring reliability. Existing research provides the theoretical and algorithmic foundation, but it is difficult to employ given available software platforms. This paper presents the design and implementation of OpenReplica, a service that aims at commoditizing replicated state machines. OpenReplica handles system issues such as leader election and failure recovery, freeing application developers to focus on the application logic. Our measurements indicate that the overhead of OpenReplica is tolerable for a wide range of applications, and the service enables developers to build reliable distributed applications more efficiently.",
+  "summary": "OpenReplica addresses two key challenges in distributed systems: making replicated state machines more accessible and reducing the complexity associated with their implementation. The paper describes how OpenReplica can commoditize such systems by handling standard concerns such as leader election and failure recovery. By abstracting these complexities, developers can focus on application logic while benefiting from the reliability and fault-tolerance traditionally afforded by replicated state machines. \n\nOpenReplica could be influential in developing distributed systems, as it lowers the barrier for implementing complex algorithms required for consensus and reliability. However, searching for direct references and citations after the paper's publication shows limited immediate impact. The system primarily demonstrates potential benefits for application developers requiring system-level reliability without delving into consensus algorithms. As of now, OpenReplica itself is mostly mentioned in the context of theoretical discussions or as a part of educational material on distributed systems, with limited adoption in large-scale industry or subsequent academic advancements. No significant direct follow-up studies or industrial applications appear prominently linked with this paper or its prototypes.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/commodifying-replicated-state-machines-with-openreplica.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/commodifying-replicated-state-machines-with-openreplica.pdf",
+  "filename": "commodifying-replicated-state-machines-with-openreplica.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

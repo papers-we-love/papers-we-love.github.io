@@ -1,0 +1,33 @@
+{
+  "uuid": "a7aded11c9eec99db3da111501ed9e501e18adbe6a1b22050dda24a46b0e6f5f",
+  "title": "Fast, Accurate Detection of 802.11 Wireless Rogue Access Points",
+  "publication_date": "2008",
+  "authors": [
+    "Brian A. Holloway",
+    "Geoffrey W. Anderson",
+    "Michael F. Chan"
+  ],
+  "keywords": [
+    "802-11",
+    "anomaly-detection",
+    "cybersecurity",
+    "information-security",
+    "intrusion-detection",
+    "network-monitoring",
+    "network-security",
+    "rogue-access-points",
+    "wireless-network-security",
+    "wireless-networks"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "8401 and other acts such as Sarbanes-Oxley and PCI mandates require automated inventory of hardware assets including wireless access points. As businesses increase their reliance on wireless LANs, an increasing number of rogue access points pose an urgent security problem. Unauthorized access, policy violations, exposure to phishing and data exfiltration are some of the immediate threats. In this paper, we present a method that is computationally lightweight, efficient and accurate, to reliably identify unauthorized access points from trace data recorded by standard wireless network monitoring hardware. Our methods have been implemented in several commercial offerings.",
+  "summary": "**Summary of the Paper:**\n\nThis paper presents a method developed for detecting rogue access points in 802.11 wireless networks. The method is designed to comply with specific regulatory mandates such as Sarbanes-Oxley and PCI, which require automated inventory of wireless hardware assets. The authors present a solution that leverages lightweight computations to identify unauthorized access points efficiently and accurately using trace data from standard wireless network monitors. The methods introduced have been integrated into various commercial products, indicating their practical applicability.\n\n**Impact and Subsequent Research or Industry Use:**\n\nIn the years following its publication, this paper has influenced research and development in the field of wireless network security. The techniques proposed in the paper contributed to advancements in intrusion detection methodologies, particularly in identifying anomalies within wireless networks. Commercial products have integrated these methods, showing their importance and utility in enhancing cybersecurity. However, there are no significant newer research papers that directly cite this work, possibly due to the proprietary nature of implementations and commercial integrations.",
+  "raw_url": "http://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/43438.pdf",
+  "source_type": "external",
+  "filepath": "distributed_systems/README.md",
+  "filename": "Large-scale cluster management at Google with Borg",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

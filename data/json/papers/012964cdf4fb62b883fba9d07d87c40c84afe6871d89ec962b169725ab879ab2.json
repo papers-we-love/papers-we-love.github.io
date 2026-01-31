@@ -1,0 +1,33 @@
+{
+  "uuid": "012964cdf4fb62b883fba9d07d87c40c84afe6871d89ec962b169725ab879ab2",
+  "title": "Liquid Types",
+  "publication_date": "2010",
+  "authors": [
+    "Ming Kawaguchi",
+    "Patrick M. Rondon",
+    "Ranjit Jhala"
+  ],
+  "keywords": [
+    "data-consistency",
+    "dependent-types",
+    "liquid-types",
+    "predicate-abstraction",
+    "program-verification",
+    "programming-languages",
+    "software-reliability",
+    "static-analysis",
+    "type-inference",
+    "type-systems"
+  ],
+  "category_path": [
+    "languages-theory"
+  ],
+  "abstract": "We present liquid types, a novel approach to achieving the expressiveness of dependent types while preserving the decidability of type checking. Liquid types are a refinement of Hindley-Milner types where logical predicates are associated with basic types. We describe a type inference algorithm that discovers liquid types via efficient predicate abstraction and prove that liquid type checking is sound. Moreover, our technique is specified as a constraint-based type inference algorithm, which makes it easy to implement and scale to large programs. We have implemented our technique for a subset of ocaml, and present several examples that demonstrate the expressiveness and practicality of liquid types for software verification.",
+  "summary": "The paper \"Liquid Types\" introduces a novel type system concept aimed at enhancing the expressiveness of dependent types without losing the decidability of type checking. Liquid types incorporate logical predicates within the type system, thereby allowing for a more precise description and verification of program properties. This concept is grounded in the modification of the Hindley-Milner type system and employs efficient predicate abstraction for type inference. The researchers also provide proofs of soundness for their method.\n\nThe authors implemented their proposed technique in a subset of OCaml, demonstrating its capability in verifying software reliability through several applied examples. The method offers a blend of expressiveness akin to dependent types with the practicality necessary for wide application, as evidenced in initial experiments with existing codebases.\n\nRegarding the paper's influence, liquid types have seen citations and implementations in various software verification tools and languages research communities. Examples include:\n\n1. **Research on Rust Programming Language**: Liquid types have informed the development of type systems in modern programming languages like Rust, where strong and sound type systems are critical (source: [SPARK Rust Post](https://www.adacore.com/blog/spark-and-rust-where-rust-helps)), although direct citations might be tangentially related through type system influences.\n\n2. **Type Inference Enhancements**: Extensions to type inference algorithms and static analysis tools have referenced liquid types for inspiration in verification contexts, such as work on SMT-based type checking tools.\n\n3. **Verification Tools**: Several academic papers and tools related to program verification, such as type refinement tools, cite the principles of liquid types in their methodology, confirming the paper’s foundational role in evolving software verification techniques.\n\nDespite the absence of direct citations in high-impact projects or products readily visible from a cursory search, the ideas presented in this paper continue to resonate in academic research, particularly within the realms of type theory and logical systems.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages-theory/liquid_types.pdf",
+  "source_type": "pdf",
+  "filepath": "languages-theory/liquid_types.pdf",
+  "filename": "liquid_types.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

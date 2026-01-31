@@ -1,0 +1,32 @@
+{
+  "uuid": "f4b92ed7ea425f6f1019f20a4ef40df505327fbc5f1346ed6b7a2e28ab56d072",
+  "title": "Purely Functional Data Structures",
+  "publication_date": "1996",
+  "authors": [
+    "Chris Okasaki"
+  ],
+  "keywords": [
+    "algorithm-design",
+    "amortized-analysis",
+    "binary-search-trees",
+    "data-structures",
+    "functional-programming",
+    "heap",
+    "immutable-data",
+    "lazy-evaluation",
+    "performance-analysis",
+    "persistence"
+  ],
+  "category_path": [
+    "languages-paradigms",
+    "functional_programming"
+  ],
+  "abstract": "This thesis describes techniques for designing efficient data structures that are purely functional (or immutable). Most of these techniques focus on the use of lazy evaluation or carefully capping computations one level at a time in order to achieve effective amortization in a functional setting. A number of new data structures are presented, as well as modifications to known structures. These techniques are illustrated with applications to real-time simulations and in building a purely functional implementation of search trees, priority queues, and ordered sequences.",
+  "summary": "Chris Okasaki's paper, \"Purely Functional Data Structures\" (1996), presents techniques for designing efficient, immutable data structures utilizing the principles of lazy evaluation and amortized analysis. It introduces several innovative structures, such as functional search trees, priority queues, and ordered sequences, focusing on performance improvements achievable in a purely functional context.\n\nThis work has influenced subsequent research in the field of functional programming and data structure design, particularly impacting further developments in Haskell and other functional languages. It remains a cornerstone in demonstrating that purely functional data structures can achieve competitive performance with their imperative counterparts.\n\nKey advancements influenced by this paper include:\n- The development and study of persistent data structures in software such as Clojure and Scala.\n- Influencing the design of libraries that emphasize immutability and efficiency in functional programming languages (e.g., Haskell's containers library and Clojure's data structure innovations).\n- Providing foundational principles for academic work on data structure persistence and the continued exploration of lazy evaluation strategies.\n\nChris Okasaki's work continues to be a vital resource for both academic and practical pursuits in the field of computer science, especially in enhancing the performance of functional programming paradigms.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages-paradigms/functional_programming/purely-functional-data-structures.pdf",
+  "source_type": "pdf",
+  "filepath": "languages-paradigms/functional_programming/purely-functional-data-structures.pdf",
+  "filename": "purely-functional-data-structures.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

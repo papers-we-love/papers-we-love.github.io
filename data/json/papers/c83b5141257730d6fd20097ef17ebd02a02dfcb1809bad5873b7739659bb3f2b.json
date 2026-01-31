@@ -1,0 +1,31 @@
+{
+  "uuid": "c83b5141257730d6fd20097ef17ebd02a02dfcb1809bad5873b7739659bb3f2b",
+  "title": "Paxos Made Simple",
+  "publication_date": "December 2001",
+  "authors": [
+    "Leslie Lamport"
+  ],
+  "keywords": [
+    "agreement-protocols",
+    "computer-science",
+    "consensus-algorithms",
+    "consensus-theory",
+    "distributed-computing",
+    "distributed-systems",
+    "fault-tolerance",
+    "network-protocols",
+    "paxos",
+    "replicated-systems"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "The Paxos algorithm, when presented in plain English, is very simple. It was developed to solve the consensus problem—a group of participants located at different sites must agree on a single value, based on the votes of some subset of participants. This note describes the algorithm in a way that is intended to be simpler and easier to understand than the original description.",
+  "summary": "Paxos Made Simple by Leslie Lamport is a seminal paper published in December 2001 that provides a clearer and more accessible explanation of the Paxos algorithm, which addresses the consensus problem in distributed systems. The paper has significantly influenced how distributed systems are designed, making the Paxos algorithm a standard topic in distributed computing research and education. It has laid the groundwork for many consensus protocols and has been pivotal in evolving fault-tolerant systems.\n\nThe paper explains how a group of participants can agree on a single data value to ensure consistency across distributed systems despite failures. Lamport's simplification helped demystify the originally complex formulation, facilitating broader acceptance and implementation.\n\nThe Paxos algorithm's influence can be seen in modern systems such as Google's Chubby lock service, and it has been referenced in relation to Apache's ZooKeeper, both of which are crucial parts of many cloud services (referencing: [Google Chubby](https://research.google/pubs/pub27897/), [ZooKeeper](https://zookeeper.apache.org/doc/r3.6.3/)). Other studies and protocols, like Amazon's Dynamo and etcd, have built upon the concepts introduced in this paper, showcasing its long-standing impact on the field (referencing: [Amazon Dynamo](https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf), [etcd](https://etcd.io/)).\n\nIn summary, Paxos Made Simple is more than an academic exercise; it has had vast practical implications, serving as an integral building block for the reliable distributed systems that underscore modern technology infrastructure.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/paxos-made-simple.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/paxos-made-simple.pdf",
+  "filename": "paxos-made-simple.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

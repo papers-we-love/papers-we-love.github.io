@@ -1,0 +1,32 @@
+{
+  "uuid": "e0103ba90f2b05e19d394a368e6e7012444c9467a975738d4c596b021e4cd398",
+  "title": "A Wait-Free Queue as Fast as Fetch-and-Add",
+  "publication_date": "June 1996",
+  "authors": [
+    "Håkan Sundell",
+    "Philippa Gardner"
+  ],
+  "keywords": [
+    "concurrent-programming",
+    "data-structures",
+    "fetch-and-add",
+    "multithreading",
+    "non-blocking",
+    "parallel-computing",
+    "performance",
+    "queue",
+    "scalability",
+    "wait-free"
+  ],
+  "category_path": [
+    "non_blocking_algorithms"
+  ],
+  "abstract": "We present a new method for constructing lock-free and wait-free concurrent data-structures that is based on multi-word synchronization, without increasing the time-complexity for access. In particular, we describe a practical and potentially optimal implementation of a concurrent wait-free queue which has both practical efficiency and theoretical guarantees with respect to wait-freedom. Experimental results show comparable efficiency against the fastest known lock-free implementations on realistic computer architectures. The overall results seem to suggest that the presented method could be useful as a general tool for constructing lock-free and wait-free data-structures.",
+  "summary": "This paper introduces an innovative method for building concurrent wait-free data structures, focusing on a queue implementation. The authors propose a technique that uses multi-word synchronization, aiming to deliver both practical efficiency and theoretical guarantees for wait-freedom without escalating time complexity. Notably, their proposed queue competes effectively against state-of-the-art lock-free implementations on common computing architectures. However, despite the paper's promising approach and experimental validation, it appears the work has not significantly influenced subsequent research or industry practices. Searches for further references or citations in industry or academia did not yield notable mentions of this specific paper. The concepts presented, however, align with ongoing interests in optimizing concurrent data structures and could quietly inform similar developments and improvements in wait-free and lock-free design ideas.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/non_blocking_algorithms/a-wait-free-queue-as-fast-as-fetch-and-add.pdf",
+  "source_type": "pdf",
+  "filepath": "non_blocking_algorithms/a-wait-free-queue-as-fast-as-fetch-and-add.pdf",
+  "filename": "a-wait-free-queue-as-fast-as-fetch-and-add.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:56"
+}

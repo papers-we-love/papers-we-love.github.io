@@ -1,0 +1,38 @@
+{
+  "uuid": "b04a08f722a2ebc838f7f9d4d96268ae9530569d6e450529d03d1e3a6c82a9b8",
+  "title": "Attention Is All You Need",
+  "publication_date": "2017",
+  "authors": [
+    "Aidan N. Gomez",
+    "Ashish Vaswani",
+    "Illia Polosukhin",
+    "Jakob Uszkoreit",
+    "Llion Jones",
+    "Niki Parmar",
+    "Noam Shazeer",
+    "Łukasz Kaiser"
+  ],
+  "keywords": [
+    "attention-mechanism",
+    "deep-learning",
+    "language-models",
+    "machine-translation",
+    "neural-architectures",
+    "neural-networks",
+    "nlp",
+    "self-attention",
+    "sequence-to-sequence",
+    "transformer"
+  ],
+  "category_path": [
+    "artificial_intelligence"
+  ],
+  "abstract": "The dominant sequence transduction models are based on complex recurrent or convolutional neural networks that include an encoder and a decoder. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles, by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. The Transformer generalizes well to other tasks by simply increasing model size, and has superior translation quality while being more parallelizable and requiring significantly less time to train.",
+  "summary": "The paper \"Attention Is All You Need\" introduces the Transformer model, which relies entirely on attention mechanisms, eschewing the recurrent and convolutional layers commonly used in neural networks at the time of publication. The Transformer model has since become the cornerstone for natural language processing tasks due to its parallelizability and efficiency in training. It has significantly influenced the development of subsequent models such as BERT (Bidirectional Encoder Representations from Transformers) and GPT (Generative Pre-trained Transformer), which are foundational to today's state-of-the-art NLP systems. \n\nThe paper demonstrates the Transformer's superior performance on the WMT 2014 English-to-German and English-to-French translation tasks, setting new benchmarks at the time. Since its publication, the model's architecture has been adapted and extended across various tasks in machine translation, language generation, and even in domains outside of NLP, such as image and video processing. \n\nThe impact of this work is reflected in papers like \"BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding\" ([Devlin et al., 2018](https://arxiv.org/abs/1810.04805)) and \"Language Models are Unsupervised Multitask Learners\" ([Radford et al., 2019](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)), which have achieved new heights in understanding and generating human language and have been widely adopted in both academia and industry for various applications.",
+  "raw_url": "http://papers.neurips.cc/paper/7181-attention-is-all-you-need.pdf",
+  "source_type": "external",
+  "filepath": "artificial_intelligence/README.md",
+  "filename": "Attention is all you need",
+  "created_on": "2026-01-24 23:46:58",
+  "summary_received": "2026-01-25 00:11:01"
+}

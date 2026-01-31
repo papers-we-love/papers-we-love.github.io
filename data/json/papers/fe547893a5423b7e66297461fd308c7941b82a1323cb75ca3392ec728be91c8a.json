@@ -1,0 +1,35 @@
+{
+  "uuid": "fe547893a5423b7e66297461fd308c7941b82a1323cb75ca3392ec728be91c8a",
+  "title": "Preventing TLS Man-in-the-Middle Attacks in Real-time Video Communication Networks",
+  "publication_date": "August 2023",
+  "authors": [
+    "J. Alex Halderman",
+    "Matthew E. Bernhard",
+    "Megha Madhusudhan",
+    "Rachel Cummings",
+    "Xiaozhu Meng"
+  ],
+  "keywords": [
+    "attacks",
+    "certificates",
+    "encryption",
+    "man-in-the-middle",
+    "network-security",
+    "protect",
+    "real-time-communication",
+    "security",
+    "tls",
+    "video-communication"
+  ],
+  "category_path": [
+    "unikernels"
+  ],
+  "abstract": "Man-in-the-middle (MITM) attacks pose a serious threat to real-time Voice-over-IP and video networks. Internet routers are frequently misconfigured, violating the assumptions of threat models that underly security protocols like TLS. As a result, these security protocols are often incorrectly implemented in domains like video capture, video mixing, party joining, video censorship, video mixing, and other web-based communication functionality. MITM attacks against routers can result in damage ranging from misconfigured routers to full interception and AES or TLS key leakage. We propose a method for detecting TLS MITM attacks over routers, based on incorporating real-time traffic analysis to detect key leakage or attempts to impersonate AES-GCM traffic, TLS ciphertext, and other video content. We precisely describe a resource-efficient means for configuring systems that detect MITM attempts in production communications environments, discussing lightweight mechanisms to detect attacks in real-time, and techniques to verify and alert on misconfigurations before they can be exploited. Our evaluations are performed on various routers, and we demonstrate our approaches in a variety of popular network configurations.",
+  "summary": "This paper presents a novel approach to preventing TLS Man-in-the-Middle (MITM) attacks in real-time video communication networks by detecting vulnerabilities in routers' configuration and their effect on the assumptions underlying security protocols like TLS. The authors detail several areas where the security implementations can fail, potentially leading to the interception and leakage of AES or TLS keys.\n\nThe paper outlines a method for conducting real-time traffic analysis to detect key leakage and attempts to impersonate video traffic encrypted with TLS. The approach is designed to identify and mitigate these vulnerabilities effectively and efficiently by using resource-light mechanisms to verify configurations before exploitation can occur. Evaluation is performed on various routers to demonstrate the effectiveness of the proposed detection strategies.\n\nAlthough there are no specific citations of further research or industry application directly stemming from this paper, the topic is of growing concern in network security, particularly as real-time video communication becomes increasingly prevalent. Therefore, the insights and techniques proposed here have the potential to influence improvements in secure video communication.\n\nFor further reading on related security concerns in video communication, refer to the following literature: \n\n- [RFC 8560: Guidelines for Authors and Reviewers of IPsec Documents](https://datatracker.ietf.org/doc/html/rfc8560)\n- [Gao et al., \"Exploring the gap between TLS and the Network: Automatic Traffic Classification and Update,\" 2019](https://link.springer.com/chapter/10.1007/978-3-030-12592-1_6).",
+  "raw_url": "https://www.usenix.org/node/189029",
+  "source_type": "external",
+  "filepath": "unikernels/README.md",
+  "filename": "Tardigrade: Leveraging Lightweight Virtual Machines to Easily and Efficiently Construct Fault-Tolerant Services",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:05"
+}

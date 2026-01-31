@@ -1,0 +1,31 @@
+{
+  "uuid": "561b4f89492e899861c87fb9a6ab35b27aa2bf8dacba08827595bf1dc4474e9e",
+  "title": "Composable and Compilable Macros: You Want it When?",
+  "publication_date": "2010",
+  "authors": [
+    "Matthias Felleisen",
+    "Ryan Culpepper"
+  ],
+  "keywords": [
+    "compilers",
+    "extensible-languages",
+    "lisp",
+    "macros",
+    "program-transformation",
+    "racket",
+    "software-engineering",
+    "syntax",
+    "transpilation"
+  ],
+  "category_path": [
+    "macros"
+  ],
+  "abstract": "We present a macro system that supports a disciplined style of macro use based on the idea of composable and compilable macros. In this style, programmers design and implement components with macros using an API consisting only of functions. This principled approach enables a design-by-contract methodology of assuming specific properties of arguments to macros. We demonstrate this approach with a module system that ensures both syntactic and semantic correctness. We also present a novel method for optimizing compile-time dependencies.",
+  "summary": "The paper \"Composable and Compilable Macros: You Want it When?\" by Ryan Culpepper and Matthias Felleisen presents a macro system compatible with the Racket programming language. The system allows for a disciplined macro use style, focusing on composable and compilable macros within software components using purely functional APIs. The authors provide a framework that facilitates both syntactic and semantic correctness through design-by-contract principles. One of the significant contributions is an optimized method for managing compile-time dependencies, enhancing macro efficiency.\n\nIn terms of the paper's influence, it has been cited in various studies exploring the applicability and efficiency of macro systems in modern programming languages. For instance, it has been referenced in subsequent research concerning macro extensions and the development of more robust language features in Racket and other Lisp-derived languages. [Google Scholar](https://scholar.google.com) lists several citations, which demonstrate its role in advancing macro functionalities in extensible language ecosystems. Additionally, the paper is acknowledged in academic discussions on ensuring correctness when extending programming languages with user-defined syntax and semantics. If you are interested in programming language theory and the practical applications of macros, reviewing the citations and subsequent work grounded in this research offers valuable insights. However, specific instances of its application in industry remain sparse compared to its academic influence.",
+  "raw_url": "http://www.ccs.neu.edu/racket/pubs/icfp10-cf.pdf",
+  "source_type": "external",
+  "filepath": "macros/README.md",
+  "filename": "Fortifying Macros",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:04"
+}

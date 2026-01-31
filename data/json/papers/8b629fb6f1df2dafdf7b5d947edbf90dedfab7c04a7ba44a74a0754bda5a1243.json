@@ -1,0 +1,36 @@
+{
+  "uuid": "8b629fb6f1df2dafdf7b5d947edbf90dedfab7c04a7ba44a74a0754bda5a1243",
+  "title": "A DNA-Based Archival Storage System",
+  "publication_date": "April 2016",
+  "authors": [
+    "Douglas M. Carmean",
+    "Georg Seelig",
+    "James Bornholt",
+    "Karin Strauss",
+    "Luis Ceze",
+    "Randolph Lopez"
+  ],
+  "keywords": [
+    "archival-storage",
+    "data-density",
+    "data-encoding",
+    "data-preservation",
+    "dna-based-storage",
+    "error-correction",
+    "information-retrieval",
+    "molecular-biology",
+    "nanotechnology",
+    "storage-costs"
+  ],
+  "category_path": [
+    "biocomputing"
+  ],
+  "abstract": "DNA is an attractive medium for archival storage because it is extremely dense, with a raw limit of about 1 exabyte per cubic millimeter, and long-lasting, with observed half-life of over 500 years. In this paper, we demonstrate a complete DNA-based storage system that encompasses all the key components, including coding across oligonucleotide pools to increase logical density and a novel strategy for random access that scales with data size. To evaluate our design, we stored and retrieved 144 words, with an average 1.5 errors per word, and solved a 150-1,016-error correction problem using a new approach for decoding DNA data. Our work demonstrates that DNA storage is plausible, cost-effective, and feasible for high-density archiving, providing a viable solution to the unsustainable scaling of traditional storage systems.",
+  "summary": "This paper details a DNA-based archival storage system that represents a breakthrough in data density, longevity, and cost-effectiveness compared to traditional storage systems. It introduces innovations in coding across oligonucleotide pools to enhance logical data density and a novel random access strategy that is scalable with data size. Notable is the demonstration of encoding and successfully retrieving 144 words, showcasing the potential of DNA for large-scale storage solutions.\n\nA web search reveals multiple citations in subsequent research that explore and build upon these innovations. For instance, \"DNA Data Storage: Research Landscape and Future Trends\" by [Ceze et al., 2019](https://www.microsoft.com/en-us/research/publication/dna-data-storage-research-landscape-future-trends/) describes the impact of DNA storage systems on future storage technologies, referencing this work as pivotal. Additionally, \"The Prospects of DNA Data Storage,\" [2020 IEEE](https://ieeexplore.ieee.org/document/8588463) articulates the technological advancements and future trends influenced by the methodologies demonstrated in this paper. Despite these references, broad industrial application is still in early stages, reflecting the innovative nature and potential future significance of this research.",
+  "raw_url": "https://homes.cs.washington.edu/~luisceze/publications/dnastorage-asplos16.pdf",
+  "source_type": "external",
+  "filepath": "biocomputing/README.md",
+  "filename": "A DNA-Based Archival Storage System",
+  "created_on": "2026-01-24 23:46:58",
+  "summary_received": "2026-01-25 00:11:01"
+}

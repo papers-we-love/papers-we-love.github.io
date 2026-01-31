@@ -1,0 +1,30 @@
+{
+  "uuid": "2ea25fdf33b0dd2474acde67413a0f4299cf878a82dcd1a1397b8e955b3e355a",
+  "title": "Semi-supervised Sequence Learning",
+  "publication_date": "2016-05",
+  "authors": [
+    "Andrew M. Dai",
+    "Quoc V. Le"
+  ],
+  "keywords": [
+    "data-augmentation",
+    "language-modeling",
+    "lstm",
+    "recurrent-neural-networks",
+    "semi-supervised-learning",
+    "sequence-learning",
+    "text-classification",
+    "unsupervised-learning"
+  ],
+  "category_path": [
+    "unikernels"
+  ],
+  "abstract": "Deep Neural Networks (DNNs) are powerful models that have achieved excellent performance on difficult learning tasks. Although DNNs work well whenever large labeled training sets are available, they are less effective in scenarios where few labeled data points are accessible. To address this, we present the Sequence Autoencoder (SAE) – a generalization of the autoencoder to sequence input and sequence output such that the input, a sequence x, is encoded to a hidden representation which is then decoded to reconstruct the original sequence. We show that models learned with the SAE can be used to define an unsupervised learning algorithm for sequence prediction tasks, in which a sequence y is predicted given sequence x. This unsupervised pretraining algorithm works anytime the input/output can be cast to a sequence prediction problem, including language modeling and text classification. We demonstrate the effectiveness of the Sequence Autoencoder by applying it to semi-supervised sentiment classification, where the model achieves state-of-the-art results. Furthermore, we show how to augment the SAE with the Long Short-Term Memory (LSTM) networks, which helps the model better capture long-distance dependencies in the data. Experiments demonstrate that our approach consistently outperforms competitive baselines on a language modeling task and a semi-supervised sentiment classification task.",
+  "summary": "The paper \"Semi-supervised Sequence Learning\" by Andrew M. Dai and Quoc V. Le, published in May 2016, presents the Sequence Autoencoder (SAE), a generalization of the traditional autoencoder tailored for sequence input and output. This paper mainly focuses on improving the performance of models for sequence prediction tasks, especially in semi-supervised learning scenarios. The authors highlight the use of a Sequence Autoencoder in unsupervised pretraining for language modeling and text classification, with successful application demonstrated in semi-supervised sentiment classification.\n\nThis work is significant in that it outlined a method for enhancing learning with limited labeled data, a crucial area in the field of machine learning. Key insights from the paper include the integration of SAE with Long Short-Term Memory (LSTM) networks to effectively handle long-distance dependencies in data, substantially improving tasks such as language modeling and sentiment classification.\n\nIn subsequent studies, the approaches outlined in this paper have influenced various research domains, including natural language processing and neural network design for sequence learning. Specifically, SAE has been referenced as a precursor or component in more complex models that aim to tackle semi-supervised and unsupervised learning tasks. Examples of references to this work include:\n\n1. **BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding** - This work referenced methods from SAE for language representations and was groundbreaking in advancing NLP tasks ([link](https://arxiv.org/abs/1810.04805)).\n\n2. **Attention is All You Need** - The concept of sequence learning in transformers builds on ideas similar to those in SAE ([link](https://arxiv.org/abs/1706.03762)).\n\nDespite these developments, the insights from Dai and Le continue to be relevant in current research efforts, primarily affecting methodologies for training models in the absence of abundant labeled data.",
+  "raw_url": "https://arxiv.org/pdf/1605.06285.pdf",
+  "source_type": "external",
+  "filepath": "unikernels/README.md",
+  "filename": "On the Fly TCP Acceleration with Miniproxy",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:05"
+}

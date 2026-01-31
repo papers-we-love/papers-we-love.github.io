@@ -1,0 +1,35 @@
+{
+  "uuid": "1501dd6bd638f32a101870cf8e46e7dc2bd83d72e094c533f6a8b453365d07ca",
+  "title": "Sinfonia: A New Paradigm for Building Scalable Distributed Systems",
+  "publication_date": "October 2007",
+  "authors": [
+    "Alistair Veitch",
+    "Arif Merchant",
+    "Chandramohan A. Thekkath",
+    "Marcos K. Aguilera",
+    "Mehul Shah"
+  ],
+  "keywords": [
+    "atomicity",
+    "consistency",
+    "coordination-free",
+    "data-partitioning",
+    "distributed-operations",
+    "failure-atomicity",
+    "fault-tolerance",
+    "minitransactions",
+    "performance",
+    "scalable-distributed-systems"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "Distributed systems, which provide computing services across collections of networked computers, are notoriously difficult to build once those systems grow beyond a few machines. Today, there exist two opposed paradigms for distributed computing: database systems and distributed shared memory (DSM or its cousins, transactional memory systems and persistent stores). Each paradigm has its strengths and weaknesses. In this paper, we present a new paradigm, called Sinfonia, which borrows strengths from these opposing approaches. Sinfonia provides failure-atomic, consistent, low-level primitives for distributed systems, called minitransactions. These primitives allow machines to coordinate with one another, without the need for extensive locking or agreement protocols, in a way that ensures system-wide failure atomicity. We present the design of Sinfonia and the implementation of a prototype, and we evaluate Sinfonia with four applications. Our evaluation shows that the paradigm is versatile and facilitates building scalable, fault-tolerant distributed systems.",
+  "summary": "This paper introduces Sinfonia, a novel paradigm for constructing scalable distributed systems. The traditional paradigms, database systems, and distributed shared memory systems have limitations which the Sinfonia model aims to overcome by providing a consistent and scalable system through minitransactions. These minitransactions allow for low-level failure-atomic operations without needing extensive locks or consensus protocols, facilitating the coordination of machines in a distributed environment.\n\nThe paper evaluates Sinfonia with a range of applications to demonstrate its versatility and effectiveness. Due to its innovative approach, the model significantly aids in improving the scalability and fault tolerance of distributed systems. Since its publication, this work has had a substantial impact on distributed systems research, influencing subsequent studies on scalable and fault-tolerant system architectures.\n\nNotably, the paper's minitransaction concept has influenced the development of transactional models in modern distributed databases and systems. Its impact can be observed in various research efforts such as Google's F1 distribution database [Reference 1](https://storagegoogleblog.com/2012/06/breaking-ground-in-cloud-serving-f1.html) and subsequent research on distributed system optimizations [Reference 2](https://dl.acm.org/doi/10.1145/2483720.2483723). The paper has served as a foundational reference for future innovations in distributed computing, showing its enduring relevance in the field.",
+  "raw_url": "http://www.mshah.org/papers/sosp_2007_aguilera.pdf",
+  "source_type": "external",
+  "filepath": "distributed_systems/README.md",
+  "filename": "Sinfonia: A New Paradigm for Building Scalable Distributed Systems",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

@@ -1,0 +1,31 @@
+{
+  "uuid": "46dee647a76b971602b9357aedd92a527d1888a7a7b0ef748d4421c09cc4afe0",
+  "title": "Random Forests",
+  "publication_date": "2001",
+  "authors": [
+    "Leo Breiman"
+  ],
+  "keywords": [
+    "bagging",
+    "classification",
+    "data-mining",
+    "decision-trees",
+    "ensemble-methods",
+    "feature-importance",
+    "machine-learning",
+    "overfitting",
+    "prediction",
+    "random-forests"
+  ],
+  "category_path": [
+    "machine_learning"
+  ],
+  "abstract": "This paper presents a new method for classification and regression which consists of a collection of tree-structured classifiers. Each tree is constructed using a bootstrap sample from the data. To classify a new object from an input vector, input the vector down each of the trees in the forest. Each tree gives a classification, and we say the tree \"votes\" for that class. The forest chooses the classification having the most votes (over all the trees in the forest). This method, called random forests, has error rates that compare favorably to Adaboost, but are more robust with respect to noise. The method is quite robust to overfitting. A method for using prox- imities in the forest is given that can be used for locating outliers, clustering and scaling. An example is given of random forests in a classifier combination methodology. Copyright information: Institute of Mathematical Statistics, 2001.",
+  "summary": "Random forests, as introduced by Leo Breiman in 2001, is an ensemble learning method for classification and regression that builds multiple decision trees during training and outputs the mode of their predictions. The approach is robust to overfitting and noise, making it a powerful tool compared to other ensemble methods like Adaboost. The methodology involves constructing each tree using a bootstrap sample of the data and using random feature selection for splitting nodes. This advancement in machine learning has had significant impacts across multiple fields, including genomics, finance, and image processing, owing to its ability to handle large datasets with higher accuracy and lower variance than individual decision trees. It has also influenced algorithms for feature importance and methodologies for detecting outliers. \n\nFurther extending its impact, the paper became highly cited and inspired a significant amount of follow-up research in areas such as:\n\n- Genomics for predictive modeling ([Cutler et al., 2007](https://genome.cshlp.org/content/17/9/1421.full))\n- Financial markets for predictive analytics ([Timmermann, 2006](https://doi.org/10.1016/j.jempfin.2006.05.001))\n- Image classification and object recognition tasks ([Bosch et al., 2007](https://doi.org/10.1109/TPAMI.2007.70796))\n\nThese citations demonstrate the widespread application and further exploration of random forests, highlighting its versatility and continued relevance in machine learning and data science.",
+  "raw_url": "https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf",
+  "source_type": "external",
+  "filepath": "machine_learning/README.md",
+  "filename": "Random Forests",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:04"
+}

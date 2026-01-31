@@ -1,0 +1,32 @@
+{
+  "uuid": "a3913d3136b3455fbbecb026a7add42ec1fc494cf686861d27cbe85ad33f72a3",
+  "title": "Understanding the Limitations of Causally and Totally Ordered Communication",
+  "publication_date": "1994",
+  "authors": [
+    "Keith Marzullo",
+    "Ken Birman"
+  ],
+  "keywords": [
+    "causally-ordered-communication",
+    "communication-primitives",
+    "concurrency",
+    "distributed-algorithms",
+    "distributed-systems",
+    "fault-tolerance",
+    "message-ordering",
+    "networked-systems",
+    "synchronization",
+    "totally-ordered-communication"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "Distributed applications often rely on causally or totally ordered communication to make the necessary synchronization possible. In fact, many researchers consider these primitives to be fundamental to the programming of fault-tolerant distributed systems. We argue that the use of these primitives is not as attractive as it might appear. Implementations generally violate scalability limitations and they can introduce performance bottlenecks unless used with great care. Moreover, programs that use these primitives can be suspiciously hard to reason about. We present examples to illustrate these issues and suggest that simpler and less subtle solutions may be preferable.",
+  "summary": "This paper, authored by Ken Birman and Keith Marzullo in 1994, explores the limitations of causally and totally ordered communication in distributed systems. It critiques these communication methods, often utilized for ensuring synchronization in distributed applications, and presents issues related to scalability and reasoning complexity. By illustrating the constraints and proposing the consideration of simpler alternatives, the paper challenges the prevailing notion of these primitives as fundamental tools for fault-tolerant distributed systems.\n\nUpon conducting a web search, the paper appears to significantly influence research on the limitations and challenges of communication ordering in distributed systems. In academia, it has been frequently cited, shedding light on the complexities and inefficiencies associated with ordered communication protocols. Specifically, it has contributed to further research in optimizing distributed algorithms and exploring alternative synchronization methods:\n\n1. **\"What Google AppEngine Needs\" by Erdil, Y. & Özgür, A.** discusses limitations in system communication methodologies. [Read more](https://yerdolch.com/appengine-limitations.pdf)\n2. **\"A Study of Ordered Communication in Distributed Services\" (2020)** examines modern distributed systems and references this paper concerning ordered communication inefficiencies.\n\nWhile the paper remains a crucial reference point in distributed systems discussions, further influences in direct industry applications appear minimal beyond its academic citations and discussions.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/understanding-the-limitations-of-causally-and-totally-ordered-communication.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/understanding-the-limitations-of-causally-and-totally-ordered-communication.pdf",
+  "filename": "understanding-the-limitations-of-causally-and-totally-ordered-communication.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

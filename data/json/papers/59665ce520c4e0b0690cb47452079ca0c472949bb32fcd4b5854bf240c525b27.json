@@ -1,0 +1,31 @@
+{
+  "uuid": "59665ce520c4e0b0690cb47452079ca0c472949bb32fcd4b5854bf240c525b27",
+  "title": "Incremental Mature Garbage Collection using the Train Algorithm",
+  "publication_date": "October 1994",
+  "authors": [
+    "R. E. Jones",
+    "R. Lins"
+  ],
+  "keywords": [
+    "compilers",
+    "garbage-collection",
+    "incremental-gc",
+    "java-memory-management",
+    "lisp",
+    "mature-objects",
+    "memory-management",
+    "object-oriented-programming",
+    "train-algorithm"
+  ],
+  "category_path": [
+    "garbage_collection"
+  ],
+  "abstract": "Many garbage collectors, notably those for object-oriented languages, rely on observations about object lifetimes to segregate short- and long-lived objects. Once the mature object space fills, however, garbage collection pauses can still be long, impairing interaction or concurrent computation. We review existing approaches and propose a solution involving a novel partitioning of mature objects into smaller increments that can be collected independently to yield truly incremental collection of mature objects. The train algorithm is discussed, evaluated, and compared with existing methods. It is shown to be effective in reducing pause times considerably while maintaining or improving overall throughput.",
+  "summary": "The paper titled \"Incremental Mature Garbage Collection using the Train Algorithm,\" authored by R. E. Jones and R. Lins and published in October 1994, introduces the train algorithm, a novel approach for incremental garbage collection in mature object spaces. This method is particularly relevant for object-oriented languages where memory management of mature objects can become a performance bottleneck due to long garbage collection pauses.\n\nThe train algorithm partitions mature object space into smaller increments or ‘trains’ that can be collected independently, thus reducing pause times and improving system throughput. This approach contrasts with traditional methods that involve whole-heap collection, which can be inefficient and disruptive.\n\nIn terms of its impact, this paper has influenced subsequent developments in garbage collection algorithms for languages like Java, notably contributing to improvements in JVM garbage collection techniques to minimize pause times and optimize memory management for highly-interactive applications.\n\nFurther references to this work can be found in citations related to memory management optimizations in dynamic languages and systems programming. Some scholarly articles and technical papers also discuss adaptations and refinements of the train algorithm in newer garbage collection strategies. However, detailed references directly citing this work in available online databases are limited, indicating that while the concept has been influential, explicit citations are less common in recent literature.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/garbage_collection/incremental_mature_garbage_collection_using_the_train_algorithm.pdf",
+  "source_type": "pdf",
+  "filepath": "garbage_collection/incremental_mature_garbage_collection_using_the_train_algorithm.pdf",
+  "filename": "incremental_mature_garbage_collection_using_the_train_algorithm.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

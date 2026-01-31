@@ -1,0 +1,34 @@
+{
+  "uuid": "d25b8206cb26edc5a2637a7e49b042ee68c531d614110ef452ea72b1c108ca12",
+  "title": "Fixed-rate Compressed Floating Point Arrays",
+  "publication_date": "January 2004",
+  "authors": [
+    "Edward Upfal",
+    "Franco P. Preparata",
+    "John M. Campbell",
+    "Marc Mansour"
+  ],
+  "keywords": [
+    "array-data",
+    "compression-algorithms",
+    "data-compression",
+    "error-bounds",
+    "fixed-rate-compression",
+    "floating-point-arithmetic",
+    "lossy-compression",
+    "numerical-analysis",
+    "performance-optimization",
+    "scientific-computing"
+  ],
+  "category_path": [
+    "data_compression"
+  ],
+  "abstract": "In this paper we describe a new framework for compressing floating-point scientific data with fixed-rate encoding. Using a combination of floating-point and integer arithmetic we demonstrate that our methodology compresses array data more effectively than traditional techniques, while preserving rigorous error bounds. Extensive computational experiments confirm our theoretical prediction that the new algorithms perform well in several typical scientific scenarios, reducing storage requirements significantly in comparison with existing techniques while ensuring that the strict precision requirements of floating-point scientific computations are met.",
+  "summary": "The paper \"Fixed-rate Compressed Floating Point Arrays\" by John M. Campbell, Marc Mansour, Franco P. Preparata, and Edward Upfal introduces a novel methodology for compressing floating-point scientific data using fixed-rate encoding. The methodology combines both floating-point and integer arithmetic to enhance data compression efficiency while adhering to stringent error bounds.\n\nThe research is focused on improving traditional data compression techniques and demonstrates, through computational experiments, that the proposed algorithms decrease storage needs effectively compared to existing methods. The algorithms are tailored to maintain the precision necessary for scientific computations, making them particularly applicable to fields requiring high numerical precision.\n\nA web search reveals that this paper has not been widely cited in subsequent research. Consequently, it seems that while the paper presented potentially valuable contributions to the field of data compression at the time of its publication, it did not lead to significant further academic research or notable influence in industry applications. Despite this, the concepts may still hold relevance in niche applications requiring precise scientific data storage and retrieval mechanisms. No citations to this paper were found or listed in the search results.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/data_compression/fixed-rate_compressed_floating_point_arrays.pdf",
+  "source_type": "pdf",
+  "filepath": "data_compression/fixed-rate_compressed_floating_point_arrays.pdf",
+  "filename": "fixed-rate_compressed_floating_point_arrays.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

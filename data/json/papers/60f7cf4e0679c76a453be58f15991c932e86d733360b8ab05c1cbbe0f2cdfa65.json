@@ -1,0 +1,31 @@
+{
+  "uuid": "60f7cf4e0679c76a453be58f15991c932e86d733360b8ab05c1cbbe0f2cdfa65",
+  "title": "Time, Clocks, and the Ordering of Events in a Distributed System",
+  "publication_date": "1978",
+  "authors": [
+    "Leslie Lamport"
+  ],
+  "keywords": [
+    "causality",
+    "computer-science",
+    "concurrency",
+    "distributed-systems",
+    "event-ordering",
+    "happens-before",
+    "logical-clocks",
+    "network-systems",
+    "synchronization",
+    "temporal-ordering"
+  ],
+  "category_path": [
+    "concurrency"
+  ],
+  "abstract": "This paper investigates the concept of ordering of events in a distributed system and introduces the notion of a logical clock, which captures the causal relationship between events. The use of logical clocks aids in providing a partial ordering of events, which is critical for the execution of distributed algorithms. The importance of time and clocks in maintaining consistency within distributed systems is discussed, providing theoretical grounding for understanding how distributed processes can have a consistent view of time without relying on synchronized physical clocks.",
+  "summary": "Leslie Lamport's paper \"Time, Clocks, and the Ordering of Events in a Distributed System\" introduced a fundamental concept in the field of distributed systems: logical clocks. The notion addresses the challenge of consistently ordering events across distributed systems without relying on synchronized physical clocks. Lamport proposed logical clocks to provide partial ordering of events, thus facilitating better execution and understanding of distributed algorithms. \n\nThe influence of this paper extends widely in computer science, particularly within distributed systems and concurrent algorithm research. It has influenced many subsequent works, including consensus algorithms such as Paxos. The \"happens-before\" relationship defined in the paper is crucial in the design of distributed protocols and debugging tools.\n\nFor example, in their work \"Implementing Fault-Tolerant Services Using the State Machine Approach: A Tutorial\" (https://dl.acm.org/doi/10.1145/141695.141700), Fred B. Schneider referenced Lamport's logical clocks as foundational for understanding state machine replication concepts in fault-tolerant systems. Similarly, the book \"Distributed Systems: Principles and Paradigms\" by Tanenbaum and van Steen (https://www.distributed-systems.net) highlights the importance of Lamport's work in understanding time and ordering in distributed systems.\n\nThe paper's significant impact is also evident in modern distributed technologies where concepts such as vector clocks and other logical time methods derive from Lamport's original work. Despite being published in 1978, it remains a heavily cited and influential paper.",
+  "raw_url": "https://lamport.azurewebsites.net/pubs/time-clocks.pdf",
+  "source_type": "external",
+  "filepath": "concurrency/README.md",
+  "filename": "Time, Clocks, and the Ordering of Events in a Distributed System",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

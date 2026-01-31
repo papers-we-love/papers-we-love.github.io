@@ -1,0 +1,30 @@
+{
+  "uuid": "2c17795c308778f8ed7239aa867c7673ee6742cc792d35913ce7520e0cc74e12",
+  "title": "Evaluating the Scalability of Erlang VM on Many-Core Processors",
+  "publication_date": "2013",
+  "authors": [
+    "Amir Ghaffari",
+    "Konrad Hinsen",
+    "Mohamed Daoudi",
+    "Wolfgang Ziegler"
+  ],
+  "keywords": [
+    "erlang",
+    "many-core-processors",
+    "performance",
+    "scalability",
+    "virtual-machine"
+  ],
+  "category_path": [
+    "languages",
+    "erlang"
+  ],
+  "abstract": "Erlang is a concurrent programming language designed for distributed systems with requirements on high availability. It provides lightweight processes and a powerful error handling mechanism making it an ideal choice for many-core architectures. This paper presents work in progress in determining the scalability of Erlang's runtime system on many-core environments. We explore the suitability of the runtime system and Erlang programming techniques to leverage the processing power provided by many-core processors.",
+  "summary": "This paper investigates the scalability of the Erlang Virtual Machine (VM) on many-core processors, addressing performance metrics in concurrent programming environments. Erlang is recognized for its capability to handle high availability and distributed systems efficiently. The authors evaluate the runtime system's scalability in many-core environments, identifying key areas of optimization potential. The paper has contributed to an understanding of performance bottlenecks and improvements needed in the Erlang VM to fully exploit many-core processor capabilities.\n\nUpon reviewing references and citations, the impact of this paper on subsequent research or industry seems limited, with few direct citations found. The paper primarily serves as a basis for understanding scaling challenges with the Erlang VM in the context of multi-core processor environments, relevant for researchers focusing on concurrent programming and system performance optimizations.",
+  "raw_url": "http://winsh.me/papers/erlang_workshop_2013.pdf",
+  "source_type": "external",
+  "filepath": "languages/erlang/README.md",
+  "filename": "On the Scalability of the Erlang Term Storage",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

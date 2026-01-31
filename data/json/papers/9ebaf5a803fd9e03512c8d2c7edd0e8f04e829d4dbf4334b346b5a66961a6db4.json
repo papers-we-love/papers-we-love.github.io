@@ -1,0 +1,33 @@
+{
+  "uuid": "9ebaf5a803fd9e03512c8d2c7edd0e8f04e829d4dbf4334b346b5a66961a6db4",
+  "title": "Zab: High-performance broadcast for primary-backup systems",
+  "publication_date": "2011-02-14",
+  "authors": [
+    "Benjamin C. Reed",
+    "Flavio P. Junqueira",
+    "Marco Serafini"
+  ],
+  "keywords": [
+    "broadcast",
+    "consensus",
+    "distributed-systems",
+    "fault-tolerance",
+    "high-performance",
+    "ordering-guarantees",
+    "primary-backup",
+    "replication",
+    "zab",
+    "zookeeper"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "Zab is a primary-backup replication protocol that provides ordered broadcast and includes mechanisms to overcome limitations of existing approaches. In particular, Zab incorporates a new strengthened primary commitment mechanism to prevent leading primary failures from propagating incorrect data. Experiments show that the protocol has stable performance under high load, due to its flow control and pipelining mechanism, while allowing the system to enforce leader election safely to ensure progress.",
+  "summary": "The paper titled \"Zab: High-performance broadcast for primary-backup systems\" presents Zab, a replication protocol specifically designed for use in primary-backup systems. This protocol aims to provide ordered broadcast services while incorporating mechanisms to handle leading primary failures effectively. The significant innovation in this protocol is a new primary commitment mechanism that prevents the propagation of incorrect data following the failure of a leading primary node. Scalability and fault-tolerance of the system are enhanced through its flow control and pipelining mechanisms.\n\nUpon conducting a web search, Zab is crucial in the architecture of Apache ZooKeeper, a well-known coordination service for distributed applications, which uses Zab for leader election and atomic broadcast. The Apache ZooKeeper [ZooKeeper documentation](https://zookeeper.apache.org/doc/r3.4.14/zookeeperInternals.html) explicitly references Zab as its core consensus protocol.\n\nThe paper has been influential in developing distributed systems that require reliable coordination and consistency across nodes. While specific direct citations of this paper are not abundantly mentioned in other research papers, the implementation of Zab in Apache ZooKeeper indicates its practical significance in the domain of distributed systems and consensus algorithms.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/zab-high-performance-broadcast-for-primary-backup-systems.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/zab-high-performance-broadcast-for-primary-backup-systems.pdf",
+  "filename": "zab-high-performance-broadcast-for-primary-backup-systems.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

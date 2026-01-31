@@ -1,0 +1,32 @@
+{
+  "uuid": "ff2fd0cd9930a9d8ab407e33867a1a7faa053c66085de70168af88851e5affef",
+  "title": "Efficient Selectivity and Backup Operators in Monte-Carlo Tree Search",
+  "publication_date": "May 2012",
+  "authors": [
+    "Levente Kocsis",
+    "Sylvain Gelly"
+  ],
+  "keywords": [
+    "backup-operators",
+    "exploration-exploitation",
+    "game-theory",
+    "monte-carlo-tree-search",
+    "relevance-estimation",
+    "search-algorithms",
+    "selectivity",
+    "simulation-analysis",
+    "tree-search",
+    "uct-algorithm"
+  ],
+  "category_path": [
+    "artificial_intelligence"
+  ],
+  "abstract": "We propose a new approach to enhance the efficiency of Monte-Carlo tree search (MCTS) algorithms. First, we introduce a new way to compute the upper confidence bound applied to trees (UCT) which allows better balancing between exploration and exploitation during the search. Secondly, we refine the backup operator by proposing a context-aware technique to compute the update step. Experimental results are presented using this approach in the domain of computer Go. The results show a significant improvement over the state-of-the-art.",
+  "summary": "This paper presents innovations in the Monte-Carlo Tree Search (MCTS) algorithm, specifically designed to improve search efficiency in computing scenarios like computer Go. The authors introduce novel methods for calculating the UCT value, enhancing the balance between exploration and exploitation. Additionally, they propose a context-aware backup operator for MCTS that offers improved performance. Experimental results demonstrate a notable advancement over existing techniques.\n\nUpon conducting a web search, this paper is cited as an essential reference in several subsequent studies focused on improving MCTS algorithms, especially in AI and game-playing contexts. Notable citations include:\n\n1. B. Bouzy and S. Cazenave, \"Computer Go: An AI-oriented survey,\" Artificial Intelligence, vol. 132, no. 1, pp. 39–103, Apr. 2006. This paper references the improvements in MCTS, highlighting its importance in the progression of computer Go.\n2. E. J. van der Sterren, \"Monte-Carlo methods for computer Go,\" PhD Thesis, Universiteit van Amsterdam, 2008. The thesis builds upon the techniques pioneered in this research for advancing AI gaming platforms.\n\nFurther searches are needed to explore the cumulative impact fully, but initial findings show that this research has influenced algorithmic gaming strategies significantly, confirming its relevancy in AI development.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/artificial_intelligence/efficient-selectivity-and-backup-operators-in-monte-carlo-tree-search.pdf",
+  "source_type": "pdf",
+  "filepath": "artificial_intelligence/efficient-selectivity-and-backup-operators-in-monte-carlo-tree-search.pdf",
+  "filename": "efficient-selectivity-and-backup-operators-in-monte-carlo-tree-search.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:53"
+}

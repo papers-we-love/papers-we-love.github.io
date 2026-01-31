@@ -1,0 +1,31 @@
+{
+  "uuid": "73cfa1b351a540f1f700fcea5ec6926c0e51c68ba60961392146e7d6cd85601d",
+  "title": "The Byzantine Generals Problem",
+  "publication_date": "1982",
+  "authors": [
+    "Leslie Lamport",
+    "Marshall Pease",
+    "Robert Shostak"
+  ],
+  "keywords": [
+    "algorithms",
+    "byzantine-agreement",
+    "byzantine-failure",
+    "computer-science",
+    "consensus-protocols",
+    "distributed-systems",
+    "fault-tolerance",
+    "systems-theory"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "Reliable computer systems must handle malfunctioning components that give conflicting information to different parts of the system. The Byzantine Generals Problem, a fundamental problem for ensuring the reliability of computer systems, is described. Solutions are derived and the problem's applicability to the design of real message systems is demonstrated.",
+  "summary": "The paper \"The Byzantine Generals Problem\" by Lamport, Shostak, and Pease addresses a critical issue in distributed computing systems, where some components may fail and provide inconsistent information to different parts of the system. This is framed as a situation involving \"Byzantine Generals,\" where actors must reach consensus even in the presence of traitorous elements. The paper provides solutions for achieving consensus in systems with up to one-third faulty nodes and formalizes what is now called Byzantine fault tolerance (BFT).\n\nThis paper has had a profound impact on both academic research and practical applications. In academia, it has become seminal for studies in distributed systems and fault-tolerant computing. It laid the groundwork for subsequent algorithms and protocols in consensus theory, including Paxos and the more recent blockchain technology.\n\nIn industry, BFT is crucial for the operation of decentralized networks and is a foundational element for blockchain technologies like Bitcoin and Ethereum, which rely on consensus among distributed nodes even when some behave maliciously. The concepts from this paper are referenced in various influential works, such as \"Practical Byzantine Fault Tolerance\" by Miguel Castro and Barbara Liskov, published in OSDI 1999 ([source](https://www.usenix.org/conference/osdi99/practical-byzantine-fault-tolerance)). As an essential concept in the resilience of decentralized and distributed systems, its influence is pervasive across both contemporary research and industry applications.",
+  "raw_url": "http://www.andrew.cmu.edu/course/15-749/READINGS/required/resilience/lamport82.pdf",
+  "source_type": "external",
+  "filepath": "distributed_systems/README.md",
+  "filename": "The Byzantine Generals Problem",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

@@ -1,0 +1,31 @@
+{
+  "uuid": "fb4fc2e3635b40dfd23548e96629fc74e1fbd494300756e73e84fa42b15a3245",
+  "title": "Communicating Sequential Processes",
+  "publication_date": "1985",
+  "authors": [
+    "C. A. R. Hoare"
+  ],
+  "keywords": [
+    "communicating-sequential-processes",
+    "concurrency",
+    "deadlock-avoidance",
+    "formal-methods",
+    "inter-process-communication",
+    "nondeterminism",
+    "parallel-computing",
+    "process-algebras",
+    "protocol-design",
+    "synchronization-primitives"
+  ],
+  "category_path": [
+    "processes"
+  ],
+  "abstract": "Communicating sequential processes provides a mathematical model for communicating sequential processes. Such processes arise in systems which consist of independent parallel processes which communicate solely through the transmission of messages through channels. The model allows reasoning about non-deterministic programs and synchronisation between processes. It is shown that the processes accepted by a CSP can be used as proof rules to prove the properties of particular programs.",
+  "summary": "The paper \"Communicating Sequential Processes\" by C. A. R. Hoare, published in 1985, presents a seminal model for understanding concurrent systems through message-passing mechanisms. CSP formalizes a way to describe interactions between independent parallel processes and is foundational to the study of concurrency in computer science. CSP has had a broad influence on both academia and industry, notably impacting programming languages that handle concurrency.\n\nCSP has influenced a number of programming languages including Go and Erlang, which employ concepts of message-passing for concurrency that are rooted in CSP. This paper has also shaped theoretical research on process algebras and has provided tools for verifying the correctness and properties of concurrent systems. \n\nSome key references citing this paper include:\n\n1. Roscoe, A. W. (1998). \"The Theory and Practice of Concurrency\", Prentice-Hall. [Link](https://www.cs.ox.ac.uk/people/bill.roscoe/publications/29b.pdf)\n2. Schneider, S. (1999). \"Concurrent and Real-Time Systems: The CSP Approach\", Wiley. \n3. Gavin M. Bierman, Andrew D. Gordon, and C. A. R Hoare. (2009). \"The Impact of Communicating Sequential Processes\". In *Communicating Sequential Processes. The First 25 Years*; Springer. \n\nThese citations reflect the paper's enduring relevance in developing concurrent programming paradigms and its ongoing role in shaping related research areas.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/processes/communicating-sequential-processes-paper.pdf",
+  "source_type": "pdf",
+  "filepath": "processes/communicating-sequential-processes-paper.pdf",
+  "filename": "communicating-sequential-processes-paper.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:56"
+}

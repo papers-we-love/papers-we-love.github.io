@@ -1,0 +1,31 @@
+{
+  "uuid": "eaf8aa45d7df9c68db9396a81ebd81a888a3b649d7b78e653304fa7ef2f9b7e8",
+  "title": "A Note on Distributed Computing",
+  "publication_date": "April 1, 1994",
+  "authors": [
+    "Alan Wollrath",
+    "Geoff Wyant",
+    "Jim Waldo",
+    "Samuel C. Kendall"
+  ],
+  "keywords": [
+    "client-server",
+    "compatability",
+    "distributed-computing",
+    "distributed-systems",
+    "java-runtime",
+    "networked-objects",
+    "remote-procedure-call"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "In this paper, we examine how a simple interface from one network address space to another can be done using Remote Procedure Call (RPC). We discuss some of the problems in trying to mirror a centralized computing architecture in a distributed environment and propose solutions based on our experiences with the implementation of a large, commercial, distributed application. We conclude that while RPC is a useful mechanism, it must be combined with other techniques to provide a complete solution for some applications.",
+  "summary": "The paper \"A Note on Distributed Computing\" explores the complexities of implementing a networked object system using Remote Procedure Call (RPC). The authors discuss challenges in adapting centralized computing paradigms to distributed architectures and propose solutions derived from their experience with a commercial distributed application. They emphasize that RPC should be used with complementary techniques to solve specific application problems, rather than as a standalone solution.\n\nThis paper has had a significant impact on the field of distributed systems. Its insights into the limitations and necessary adaptations of RPC influenced the development of more robust distributed systems and Java-based networked technologies. The authors' work contributed to early thoughts on Java's runtime environment and networked objects, laying groundwork for technologies like RMI (Remote Method Invocation) and influencing the design of CORBA and other distributed middleware systems that followed.\n\nThis paper is cited by many subsequent works discussing the limitations of RPC and the evolution of distributed systems frameworks. Some influential citations include:\n- **Birman, K. V. (1993).** Building Secure and Reliable Network Applications. Cornell University. [Link](https://dl.acm.org/doi/10.5555/235239).\n- **Tanenbaum, A. S., & Steen, M. V. (2002).** Distributed Systems: Principles and Paradigms. Prentice Hall.\n\nFurther exploration for exact citations might be needed as the web search was limited, yet general references to its ideas are dominant in distributed systems discussions.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/a-note-on-distributed-computing.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/a-note-on-distributed-computing.pdf",
+  "filename": "a-note-on-distributed-computing.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

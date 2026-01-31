@@ -1,0 +1,34 @@
+{
+  "uuid": "aaa31031ab6df47ad6b52a85e0cab307d451bf6861d3b2a922ee945eda9bd165",
+  "title": "Semi-Supervised Knowledge Transfer for Deep Learning from Private Training Data",
+  "publication_date": "September 2018",
+  "authors": [
+    "Brendan McMahan",
+    "Liang Huang",
+    "Nicolas Papernot",
+    "Sarianne Kirchner",
+    "Steve Chien"
+  ],
+  "keywords": [
+    "deep-learning",
+    "federated-learning",
+    "knowledge-transfer",
+    "machine-learning",
+    "neural-networks",
+    "privacy",
+    "private-training-data",
+    "semi-supervised-learning",
+    "transfer-learning"
+  ],
+  "category_path": [
+    "brain-computer-interface"
+  ],
+  "abstract": "We develop a mechanism by which deep learning models trained on private data can teach student networks that do not have access to the private training data without compromising privacy. This knowledge transfer is achieved by combining privileged private training data with unlabeled public data, achieving a non-interactive form of semi-supervised learning. Private teachers perform inference on the public dataset which is then used to supervise the student. We further present an analysis of how privacy guarantees translate from teacher to student; and a series of empirical evaluations showing the potential of this approach to perform well in practice.",
+  "summary": "The paper presents a novel method for transferring knowledge from deep learning models trained on private data to student models without access to that data, while preserving privacy. This is done through a semi-supervised learning framework that uses public data for the student model's training. Private teacher models make predictions on public datasets, which are then used to train the student models. The paper not only introduces this mechanism but also provides an analytical framework for understanding how privacy can be maintained between teacher and student models, combined with empirical evaluations demonstrating the effectiveness of the approach.\n\nThis work has implications in fields where data privacy is crucial, such as healthcare and finance, where sensitive information cannot be shared directly. By enabling a way to transfer knowledge without compromising privacy, this method supports wider applications of machine learning where data privacy concerns are paramount.\n\nA web search reveals that this paper has been cited and influenced further research in privacy-preserving machine learning, federated learning, and semi-supervised learning frameworks. Recent works, such as \"Privacy-Preserving Machine Learning as a Service\" (https://arxiv.org/abs/1903.02060) and \"Federated Learning: Challenges, Methods, and Future Directions\" (https://arxiv.org/abs/1908.07873), draw upon its methods and analysis to further refine and improve privacy preservation techniques in AI systems. These citations indicate its role in advancing both theoretical understanding and practical applications of privacy mechanisms in machine learning models.",
+  "raw_url": "https://arxiv.org/pdf/1809.08632.pdf",
+  "source_type": "external",
+  "filepath": "brain-computer-interface/README.md",
+  "filename": "BrainNet: A Multi-Person Brain-to-Brain Interface for Direct Collaboration Between Brains",
+  "created_on": "2026-01-24 23:46:58",
+  "summary_received": "2026-01-25 00:11:01"
+}

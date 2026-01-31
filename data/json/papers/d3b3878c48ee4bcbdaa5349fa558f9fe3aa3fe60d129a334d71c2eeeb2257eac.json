@@ -1,0 +1,33 @@
+{
+  "uuid": "d3b3878c48ee4bcbdaa5349fa558f9fe3aa3fe60d129a334d71c2eeeb2257eac",
+  "title": "ACTORS: A Model of Concurrent Computation in Distributed Systems",
+  "publication_date": "1973",
+  "authors": [
+    "Carl Hewitt",
+    "Peter Bishop",
+    "Richard Steiger"
+  ],
+  "keywords": [
+    "actor-model",
+    "computer-science",
+    "concurrency",
+    "concurrent-computation",
+    "distributed-computing",
+    "distributed-systems",
+    "message-passing",
+    "parallel-processing",
+    "programming-languages",
+    "system-architecture"
+  ],
+  "category_path": [
+    "distributed-file-systems"
+  ],
+  "abstract": "The paper proposes a new model of computation to deal with concurrent computation in distributed systems which challenges the traditional von Neumann model. The proposed model is called ACTORS. An actor is a computational agent which has a mail address and can perform the following: send messages to other actors, create new actors, and designate the behavior to be used for the next message it receives. The ACTORS model is intended to be a modular system for aiding the development, testing, and debugging of large-scale distributed systems. The model is particularly applicable to systems that require a high degree of concurrent operations.",
+  "summary": "The ACTORS model, introduced by Carl Hewitt, Peter Bishop, and Richard Steiger in 1973, represents a foundational paradigm in the field of concurrent computation, offering a significant departure from the traditional von Neumann architecture. This model focuses on computation as a series of independent 'actors' that interact via asynchronous message-passing, enabling highly scalable and parallel processing, ideal for distributed systems. Over time, the actor model has profoundly influenced the development of concurrent and distributed computing, being recognized as a precursor to modern concepts in programming languages and frameworks like Erlang, Scala's Akka, and Microsoft’s Orleans, which exploit actor-like models for efficient, scalable applications ([source 1](https://ieeexplore.ieee.org/abstract/document/5758701), [source 2](https://books.google.com/books/about/Actors.html?id=5vVQAAAAMAAJ), [source 3](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/the_actor_model.pdf)). The concepts proposed in this paper continue to be influential in the design and implementation of systems that require robust concurrency and distributed processing capabilities.",
+  "raw_url": "http://worrydream.com/refs/Hewitt-ActorModel.pdf",
+  "source_type": "external",
+  "filepath": "distributed-file-systems/README.md",
+  "filename": "Actor Formalism",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

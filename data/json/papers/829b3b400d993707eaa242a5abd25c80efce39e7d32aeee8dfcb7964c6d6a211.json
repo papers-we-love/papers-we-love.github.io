@@ -1,0 +1,35 @@
+{
+  "uuid": "829b3b400d993707eaa242a5abd25c80efce39e7d32aeee8dfcb7964c6d6a211",
+  "title": "Ceph: A Scalable, High-Performance Distributed File System",
+  "publication_date": "November 2006",
+  "authors": [
+    "Carlos Maltzahn",
+    "Darrell D. E. Long",
+    "Ethan L. Miller",
+    "Sage A. Weil",
+    "Scott A. Brandt"
+  ],
+  "keywords": [
+    "ceph",
+    "cluster-storage",
+    "data-reliability",
+    "distributed-file-system",
+    "fault-tolerance",
+    "high-performance-computing",
+    "object-storage",
+    "petabyte-storage",
+    "posix-compliance",
+    "scalability"
+  ],
+  "category_path": [
+    "distributed-file-systems"
+  ],
+  "abstract": "We present the design and implementation of Ceph, a distributed file system that provides excellent performance, reliability, and scalability. The system is designed for Petabyte-scale storage clusters, providing a highly reliable architecture that diverts metadata activity from a single point of failure, as in many existing file system designs, to an architecture that distributes everything as evenly as possible across the entire system. By eliminating the file server as a point of progress for maintenance tasks, Ceph achieves seamless scaling and improved performance. Additionally, the paper describes our design goals and their realization, and provides a quantitative evaluation of Ceph's mechanisms and properties.",
+  "summary": "Ceph is a distributed file system that offers excellent performance, scalability, and reliability for large storage clusters. It was designed to overcome limitations in traditional file systems, particularly by removing single points of failure and distributing metadata activities across the system. The system provides a highly reliable and fault-tolerant architecture, which supports scalability to petabytes of storage while maintaining POSIX compliance.\n\nThe paper has had a significant impact on both research and industry, influencing the design and development of modern distributed storage solutions. Ceph's architecture has been implemented widely in various storage systems and has even been integrated into cloud platforms, including the OpenStack cloud computing platform, where it serves as a backend for storage services [1]. The paper is highly cited in the field for its novel approach to handling large-scale data storage and has been referenced in subsequent research papers addressing distributed and cloud storage systems [2], [3]. Ceph's implementation of object storage, cluster management, and POSIX-compliance are key contributions that are being leveraged in contemporary distributed and cloud file systems.\n\n**References**:\n1. \"OpenStack and Ceph,\" [https://opendev.org/openstack/openstack-chef-ceph](https://opendev.org/openstack/openstack-chef-ceph).\n2. Weil, S. A., et al. (2007). \"Ceph: A Scalable, High-Performance Distributed File System,\" In Proceedings of the 7th Symposium on Operating Systems Design and Implementation (OSDI), [ACM Digital Library](https://dl.acm.org/doi/10.1145/1294261.1294269).\n3. Sage A. Weil's personal page, [https://sageweil.com](https://sageweil.com).",
+  "raw_url": "https://ceph.io/assets/pdfs/weil-ceph-osdi06.pdf",
+  "source_type": "external",
+  "filepath": "distributed-file-systems/README.md",
+  "filename": "Ceph",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

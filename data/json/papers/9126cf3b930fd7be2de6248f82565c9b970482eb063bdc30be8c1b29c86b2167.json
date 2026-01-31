@@ -1,0 +1,39 @@
+{
+  "uuid": "9126cf3b930fd7be2de6248f82565c9b970482eb063bdc30be8c1b29c86b2167",
+  "title": "Bigtable: A Distributed Storage System for Structured Data",
+  "publication_date": "October 2006, OSDI",
+  "authors": [
+    "Andrew Fikes",
+    "Deborah A. Wallach",
+    "Fay Chang",
+    "Jeffrey Dean",
+    "Mike Burrows",
+    "Robert E. Gruber",
+    "Sanjay Ghemawat",
+    "Tushar Chandra",
+    "Wilson C. Hsieh"
+  ],
+  "keywords": [
+    "bigtable",
+    "cassandra",
+    "data-storage",
+    "distributed-systems",
+    "google",
+    "hbase",
+    "indexing",
+    "performance",
+    "scalability",
+    "structured-data"
+  ],
+  "category_path": [
+    "datastores"
+  ],
+  "abstract": "Bigtable is a distributed storage system for managing structured data that is designed to scale to a very large size: petabytes of data across thousands of commodity servers. Many projects at Google store data in Bigtable, including web indexing, Google Earth, and Google Finance. These applications place very different demands on Bigtable, both in terms of data size and latency requirements. Despite these varied demands, Bigtable has successfully provided a flexible, high-performance solution for all of these Google products. In this paper, we describe the simple data model provided by Bigtable, which gives clients dynamic control over data layout and format, and we describe the design and implementation of Bigtable.",
+  "summary": "The paper \"Bigtable: A Distributed Storage System for Structured Data\" was published by Fay Chang et al. in October 2006 at the OSDI conference. Bigtable was developed by Google to manage structured data and is designed for scalability across thousands of servers, potentially handling petabytes of data. This system has been successfully integrated into several Google products, such as web indexing, Google Earth, and Google Finance, due to its flexible data model and high performance. \n\nBigtable has significantly influenced both academic research and industrial applications. In academia, it has inspired further research into distributed storage systems, data models, and database performance. It is often cited in works discussing NoSQL databases and large-scale data management. The system's principles have been implemented in popular open-source projects like Apache Hadoop's HBase and Apache Cassandra, which have been extensively discussed in various research papers and technical blogs detailing modern data infrastructure (for example, the survey paper on NoSQL databases https://ieeexplore.ieee.org/document/7006512, or the performance comparison study https://link.springer.com/article/10.1007/s10115-013-0691-z). These projects have been instrumental in bringing Bigtable's underlying concepts to organizations beyond Google, including Facebook (which developed Cassandra) and many enterprises leveraging HBase for scalable data storage solutions.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/datastores/bigtable-a-distributed-storage-system-for-structured-data.pdf",
+  "source_type": "pdf",
+  "filepath": "datastores/bigtable-a-distributed-storage-system-for-structured-data.pdf",
+  "filename": "bigtable-a-distributed-storage-system-for-structured-data.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

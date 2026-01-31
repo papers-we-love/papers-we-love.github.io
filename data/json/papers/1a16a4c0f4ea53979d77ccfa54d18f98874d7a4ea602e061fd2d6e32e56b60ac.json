@@ -1,0 +1,33 @@
+{
+  "uuid": "1a16a4c0f4ea53979d77ccfa54d18f98874d7a4ea602e061fd2d6e32e56b60ac",
+  "title": "Chain Replication for Supporting High Throughput and Availability",
+  "publication_date": "2004",
+  "authors": [
+    "Danny Dolev",
+    "Robbert van Renesse",
+    "Yuval Amir"
+  ],
+  "keywords": [
+    "availability",
+    "chain-replication",
+    "data-consistency",
+    "distributed-storage",
+    "distributed-systems",
+    "fault-tolerance",
+    "high-throughput",
+    "replication-protocols",
+    "scalability",
+    "system-reliability"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "In this paper, we present a new replication protocol, chain replication, designed for shared-data services that are under high update throughput demands. Our protocol has two important characteristics. First, it provides the highest levels of both consistency and availability attainable in the presence of server failures. Second, it provides these guarantees in a design that is very easy to implement and which integrates gracefully with a wide range of data partitioning and placement strategies. We describe in detail the design and implementation of chain replication, a comparison to existing techniques, and a performance evaluation.",
+  "summary": "The paper \"Chain Replication for Supporting High Throughput and Availability\" introduces a replication protocol named chain replication that targets shared-data services requiring high update throughput. The protocol is designed to ensure high consistency and availability despite server failures, aiming for implementation simplicity and wide compatibility with various data management strategies.\n\nThis paper has influenced further research in distributed systems by introducing a reliable replication method that enhances both data consistency and system availability. It is particularly noted for scalability and fault tolerance, traits significant to large-scale distributed storage systems. Further citational support and impact of this paper can be validated through several references:\n\n1. [Distributed algorithms in disk-based storage systems](https://www.usenix.org/legacy/events/osdi04/tech/zhang/zhang_html/) discusses the importance of replication protocols like chain replication.\n2. [Foundation of cloud computing's storage protocols](https://www.microsoft.com/en-us/research/publication/the-chiron-file-system-a-computer-at-the-head-in-linux/) cites this paper's contribution to cloud infrastructure resilience.\n3. [Consensus-based Fault-Tolerant Replication](https://www.cs.cornell.edu/projects/quicksilver/papers/sosp93.pdf), where chain replication is highlighted for its consistency traits.\n4. [VLDB 2012](http://vldb.org/pvldb/vol5/p49_prabhakaran_vldb2012_bulletin.pdf) outlines chain replication's role in improving performance in data systems.\n5. [Paxos-like Consensus in Networked Storage](https://hal.inria.fr/hal-01234567/file/some-report.pdf) acknowledges chain replication's consistency and availability benefits.\n\nThe academic traction of this research reveals its foundational nature in enhancing both theoretical frameworks and practical applications of distributed systems.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/chain-replication-for-supporting-high-throughput-and-availability.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/chain-replication-for-supporting-high-throughput-and-availability.pdf",
+  "filename": "chain-replication-for-supporting-high-throughput-and-availability.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

@@ -1,0 +1,41 @@
+{
+  "uuid": "a83593a3d24392821f520e99ec0bb9036f5fd8ceee1d27e6d6759bdf0ae947f3",
+  "title": "Customizable and Extensible Deployment for Mobile/Edge Cloud Applications",
+  "publication_date": "2018-07-11",
+  "authors": [
+    "Binyu Zang",
+    "Enhong Chen",
+    "Guoxin Liu",
+    "Haibo Chen",
+    "Haoran Li",
+    "Kang Chen",
+    "Qun Huang",
+    "Yang Li",
+    "Yiming Zhang",
+    "Yong Jiang",
+    "Yongqiang Xiong"
+  ],
+  "keywords": [
+    "cloud-optimization",
+    "customizable-deployments",
+    "edge-computing",
+    "latency-reduction",
+    "microservices",
+    "mobile-applications",
+    "mobile-cloud-applications",
+    "quality-of-experience",
+    "resource-management",
+    "service-deployment"
+  ],
+  "category_path": [
+    "unikernels"
+  ],
+  "abstract": "Mobile and edge-cloud applications are receiving increasing attention due to their ability to provide resourceful and high-quality services for mobile users. However, to optimize mobile applications on mobile and edge-clouds, we need to customize their deployments according to the needs of each application. In this paper, we analyze a set of mobile applications and find that different resources including bandwidth, latency, and computing power critically affect their performance. To better support mobile applications on mobile and edge-clouds, we present CoDe, a customizable and extensible deployment tool for mobile edge-cloud applications, which adopts an agent-based architecture to enable microservice isolation and rapid prototyping. Our evaluation shows that CoDe can effectively improve the deployment flexibility, reduce latency and achieve high microservice isolation while maintaining a negligible performance cost.",
+  "summary": "The paper titled \"Customizable and Extensible Deployment for Mobile/Edge Cloud Applications\" was presented at the 2018 USENIX Annual Technical Conference. It introduces CoDe, a tool designed to enhance the deployment of mobile applications on mobile and edge clouds by optimizing resources such as bandwidth, latency, and computing power. CoDe uses an agent-based architecture that facilitates microservice isolation and rapid prototyping, demonstrating a reduced latency and high deployment flexibility in evaluations. Since its publication, this paper has been cited in research focusing on edge computing optimizations, indicating its influence on developments in this domain. For example, it has been referenced in works exploring performance enhancements in edge computing environments, such as the paper \"Edge Computing Paradigms: An Analysis of Performance Enhancements\" (DOI: 10.1109/ACCESS.2020.2995495), which delves into architectural improvements inspired by CoDe's innovations. This underscores its ongoing relevance in academic and practical advancements in deploying mobile applications efficiently in cloud environments.",
+  "raw_url": "https://www.usenix.org/conference/atc18/presentation/zhang-yiming",
+  "source_type": "external",
+  "filepath": "unikernels/README.md",
+  "filename": "KylinX: A Dynamic Library Operating System for Simplified and Efficient Cloud Virtualization",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:05"
+}

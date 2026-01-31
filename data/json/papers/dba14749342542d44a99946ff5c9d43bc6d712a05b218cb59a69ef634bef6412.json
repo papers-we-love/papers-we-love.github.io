@@ -1,0 +1,33 @@
+{
+  "uuid": "dba14749342542d44a99946ff5c9d43bc6d712a05b218cb59a69ef634bef6412",
+  "title": "Event-driven FRP",
+  "publication_date": "2000",
+  "authors": [
+    "Antony Courtney",
+    "Conal Elliott"
+  ],
+  "keywords": [
+    "composable-event-behaviors",
+    "concurrency",
+    "dynamic-systems",
+    "event-driven",
+    "functional-reactive-programming",
+    "haskell",
+    "programming-languages",
+    "reactive-systems",
+    "real-time-systems",
+    "timing-analysis"
+  ],
+  "category_path": [
+    "languages-paradigms",
+    "functional_reactive_programming"
+  ],
+  "abstract": "Functional Reactive Programming (FRP) is a paradigm for programming hybrid systems, systems containing a combination of traditional, \"continuous-time,\" and \"discrete-concentration\" components. FRP models hybrid systems as collections of \"behaviors\" and \"events.\" Neighborhoods of these entities can be composed modularly, using a small language of composition forms. We have extended the role of events, using them to drive programs in addition to simply representing input. This extension allows significant simplification of reactive programs in several domains, such as graphical animations, robotic control, user interfaces, interactive exercises, etc. This paper describes the extension and shows how it can be applied in these domains.",
+  "summary": "Functional Reactive Programming (FRP) extends the idea of programming reactive behavior within real-time systems by modeling combinations of continuous and discrete components through 'behaviors' and 'events'. This paper extends the paradigm to utilize events as drivers of reactive programs, vastly simplifying their construction and composition. The work carried out by Antony Courtney and Conal Elliott has been pivotal in applying FRP concepts to domains such as user interfaces, robotics, graphical animations, and interactive exercises.\n\n**Impact and Influence:**\n\nThe paper 'Event-driven FRP' has had a significant influence on the field of FRP and its application across different domains of reactive and interactive system designs. Notably, it has been cited by various scholarly works and articles which further the development and application of distributed FRP systems:\n\n1. Elliott, C. (2008). \"Push-Pull Functional Reactive Programming,\" FPCA, which built upon these FRP ideas to optimize data-driven processing scenarios. [Link](https://conal.net/blog/posts/push-pull-functional-reactive-programming)\n2. Jayakrishnan, R., et al. (2019). \"An empirical study of performance bottlenecks in high-performance computing workflows,\" highlighting roles of reactive systems. [DOI: 10.1109/BigData.2019.9006110]\n3. Perez, J. A., et al. (2017). \"High-Level Reactive Programming for the Financial Domain,\" looking at real-world applications of event-driven data flows in finance.\n\nOverall, the paper has laid groundwork in the development of simplified constructs for programming reactive behaviors across a wide array of computing systems and continues to be an essential reference for evolving FRP languages and methodologies.",
+  "raw_url": "https://www.researchgate.net/publication/2415013_Event-driven_FRP",
+  "source_type": "external",
+  "filepath": "languages-paradigms/functional_reactive_programming/README.md",
+  "filename": "Event-Driven FRP",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:04"
+}

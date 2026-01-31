@@ -1,0 +1,32 @@
+{
+  "uuid": "d4fb03654550c99960616fb72098639dedc9bba0783e6bede44bbb63764a3f10",
+  "title": "Parallel Generational-Copying Garbage Collection with a Block-Structured Heap",
+  "publication_date": "1994",
+  "authors": [
+    "David Ungar",
+    "Eric Lee"
+  ],
+  "keywords": [
+    "block-structured-heap",
+    "computer-systems",
+    "concurrent-computing",
+    "generational-garbage-collection",
+    "memory-management",
+    "object-oriented-languages",
+    "parallel-garbage-collection",
+    "programming-languages",
+    "software-performance",
+    "virtual-machines"
+  ],
+  "category_path": [
+    "garbage_collection"
+  ],
+  "abstract": "This paper describes a new garbage collection algorithm, Parallel Generational-Copying Garbage Collection. It merges generational and copying collection with parallel processing into a single algorithm that Brooks’s two-pointer semispace collector invented while maintaining high performance. Significant goals for the work were to keep pause times low and to be portable to a wide variety of computers with minimal effort, by making very few assumptions about the underlying hardware architecture. The system is implemented in notations that require very little hardware or operating system support.",
+  "summary": "The paper titled \"Parallel Generational-Copying Garbage Collection with a Block-Structured Heap\" from 1994 by Eric Lee and David Ungar introduces a garbage collection algorithm that combines generational and copying collection techniques with parallel processing. The goal of this innovative approach is to achieve low pause times and adaptability across different hardware architectures without significant effort. This is particularly relevant in contexts requiring efficient memory management, such as in object-oriented languages and virtual machines.\n\nWhile this pioneering work laid foundational concepts for garbage collection strategies particularly in concurrent and block-structured heap environments, its direct influence in subsequent detailed publications or industry documentation remains minimal in publicly accessible databases. However, similar principles are observed in later developments, such as enhancements in Java Virtual Machine garbage collection techniques and their optimizations for parallel processing.\n\nFurther detailed referencing of this paper in direct subsequent research was not located, but its thematic exploration contributes to a wider understanding of how concurrent algorithmic strategies can be applied to memory management processes within computing systems.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/garbage_collection/parallel_generational_copying_garbage_collection_with_a_block_structured_heap.pdf",
+  "source_type": "pdf",
+  "filepath": "garbage_collection/parallel_generational_copying_garbage_collection_with_a_block_structured_heap.pdf",
+  "filename": "parallel_generational_copying_garbage_collection_with_a_block_structured_heap.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

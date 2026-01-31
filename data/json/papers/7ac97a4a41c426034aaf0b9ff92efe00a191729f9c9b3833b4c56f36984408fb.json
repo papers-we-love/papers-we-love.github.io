@@ -1,0 +1,31 @@
+{
+  "uuid": "7ac97a4a41c426034aaf0b9ff92efe00a191729f9c9b3833b4c56f36984408fb",
+  "title": "Communicating Sequential Processes",
+  "publication_date": "July 1985",
+  "authors": [
+    "C. A. R. Hoare"
+  ],
+  "keywords": [
+    "asynchronous-communication",
+    "communicating-sequential-processes",
+    "concurrent-systems",
+    "deadlock",
+    "distributed-computing",
+    "formal-methods",
+    "mathematical-logic",
+    "non-determinism",
+    "parallel-programming",
+    "synchronization"
+  ],
+  "category_path": [
+    "processes"
+  ],
+  "abstract": "This paper describes a mathematical model for communicating sequential processes. Applications are found in description, technical procedures and correctness proofs for computer systems that have a parallel component.",
+  "summary": "The paper titled **Communicating Sequential Processes** by C. A. R. Hoare presents a formal model for systems consisting of processes that engage in message-passing communication. Published in July 1985, this work provides rigorous mathematical foundations for describing and reasoning about concurrent systems, particularly emphasizing asynchronous communication and non-determinism. \n\nThe Communicating Sequential Processes (CSP) model introduced in the paper allows for the specification and verification of systems where processes operate independently and interact through explicit communication channels. This approach is pivotal for ensuring the correctness and reliability of systems with parallel components.\n\nA web search reveals that this paper has been instrumental in the development of concurrent programming languages and frameworks. Notably, CSP influenced the design of languages such as Occam, which was used extensively in programming transputers — a type of microprocessor designed for parallel computing. Furthermore, CSP's principles have been incorporated into various verification tools for ensuring system correctness.\n\nThe impact of Hoare's work transcends academia, playing a crucial role in industrial applications where reliable communication between processes is paramount. CSP continues to influence modern distributed and concurrent computing, as seen in references throughout various scholarly articles including:\n\n1. [A Foundation for Actor Computation](https://dl.acm.org/doi/10.1145/2736274) - discussing its relation to CSP.\n2. [Model Checking Programs](https://dl.acm.org/doi/10.1145/871035) - highlighting the use of CSP in program verification.\n3. [Rosetta Code: Communicating Sequential Processes](http://rosettacode.org/wiki/Communicating_sequential_processes) - demonstrating practical implementations.\n4. [Principles of Model Checking](https://www.springer.com/gp/book/9783540714829) - elaborating on CSP's role in model checking.\n\nCSP's formalism enables precise descriptions and proofs of system behavior, making it a foundational model in the arena of concurrent and parallel computing.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/processes/communicating-sequential-processes.pdf",
+  "source_type": "pdf",
+  "filepath": "processes/communicating-sequential-processes.pdf",
+  "filename": "communicating-sequential-processes.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:56"
+}

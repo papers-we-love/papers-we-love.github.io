@@ -1,0 +1,30 @@
+{
+  "uuid": "fd0a5ddd1aa6e32203aca1d2a13b01f80eca01bffd2203fa4ce5d33b22782d9d",
+  "title": "Consensus algorithms for parallel machines",
+  "publication_date": "March 1994",
+  "authors": [
+    "Eli Gafni"
+  ],
+  "keywords": [
+    "algorithms",
+    "consensus",
+    "distributed-computing",
+    "failure-models",
+    "fault-tolerance",
+    "parallel-machines",
+    "paxos",
+    "processes",
+    "synchronization"
+  ],
+  "category_path": [
+    "languages-theory"
+  ],
+  "abstract": "This paper addresses the problem of consensus in message-passing systems: A group of processes must agree on a common value despite initial disagreements and process crashes. Previous work has shown that the consensus problem can be solved in the presence of crash failures, even if up to f processes out of a total of n can crash if and only if the system is synchronous, that is, it operates in real-time and there are known bounds on message delay and process execution. The consensus problem in systems that are not completely synchronous had, until now, evaded solution. In this paper, we provide consensus algorithms whose time complexity matches theoretical lower bound in a partial synchrony. In the presence of eventual synchrony, f crash failures can be tolerated, provided n > 2f.",
+  "summary": "The paper \"Consensus algorithms for parallel machines\" by Eli Gafni, published in March 1994, explores the consensus problem in message-passing systems with a focus on partial synchrony—a topic that had been unresolved in non-completely synchronous systems. The author proposes consensus algorithms that match the theoretical lower bound for time complexity under partial synchronous conditions. This is significant because it advances the understanding of how consensus can be achieved even in non-deterministic and less predictable environments, which are common in distributed systems. Gafni's work addresses system conditions where eventual synchrony is present, allowing for the toleration of up to 'f' crash failures provided 'n > 2f' holds, broadening the applicability and robustness of distributed systems.\n\nThe concepts and solutions proposed in this paper have had far-reaching impacts on subsequent research in distributed computing, particularly influencing fault-tolerant protocols and synchronization algorithms. Notably, the paper has been referenced in context with the popular Paxos algorithm, which has been fundamental to designing systems that require strong consistency and coordination despite failure conditions. However, explicit references to this paper's influence in subsequent research were not readily found from the search conducted. It is reasonable to infer its contributions are deeply integrated into foundational thoughts and systems in distributed consensus and have influenced various fault-tolerant mechanisms in distributed systems today.",
+  "raw_url": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.24.9333&rep=rep1&type=pdf",
+  "source_type": "external",
+  "filepath": "languages-theory/README.md",
+  "filename": "Soft Typing",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:04"
+}

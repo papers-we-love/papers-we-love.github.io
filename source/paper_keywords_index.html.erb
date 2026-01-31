@@ -1,0 +1,21 @@
+---
+title: Paper Keywords
+---
+<article class="tags" itemscope itemtype="https://schema.org/CollectionPage">
+  <h1 itemprop="name">Papers by <em>Keyword</em></h1>
+
+  <ul class="main categories">
+    <li><strong>All Keywords (<%= keywords.length %>)</strong></li>
+    <% keywords.sort_by { |kw, _| kw }.each do |kw, kw_papers| %>
+      <li>
+        <%= link_to deslugify(kw), "/papers/keywords/#{kw}/" %>
+        <span><%= kw_papers.length %> <%= kw_papers.length == 1 ? 'paper' : 'papers' %></span>
+      </li>
+    <% end %>
+  </ul>
+
+  <ul class="sidebar">
+    <li><strong>Browse</strong></li>
+    <li><%= link_to "By Category", "/papers/categories/" %></li>
+  </ul>
+</article>

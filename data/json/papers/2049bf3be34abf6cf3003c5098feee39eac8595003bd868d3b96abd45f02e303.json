@@ -1,0 +1,32 @@
+{
+  "uuid": "2049bf3be34abf6cf3003c5098feee39eac8595003bd868d3b96abd45f02e303",
+  "title": "Exokernel: An Operating System Architecture for Application-Level Resource Management",
+  "publication_date": "1995",
+  "authors": [
+    "Dawson R. Engler",
+    "James O'Toole",
+    "M. Frans Kaashoek"
+  ],
+  "keywords": [
+    "application-level",
+    "application-specific",
+    "exokernel",
+    "hardware-interface",
+    "libraries",
+    "operating-systems",
+    "resource-management",
+    "secure-multiplexing",
+    "traditional-kernels"
+  ],
+  "category_path": [
+    "unikernels"
+  ],
+  "abstract": "Operating systems must currently manage machine resources to provide appropriate and controlled sharing among applications, as well as to protect applications from each other. However, this software resource management has proven time consuming and helps to impose inefficiencies on applications. In this paper, we present a new operating system architecture, exokernel, that safely multiplexes available hardware resources while respecting application-specific customization of traditional operating system abstractions. We have implemented an exokernel-based system for 32-bit x86 computers. Measurements show that traditional operating system abstractions can be implemented efficiently at application level by using the low-level secure multiplexing mechanisms provided by an exokernel. The results show that the exokernel’s secure multiplexing of hardware resources can enable application-specific customization to improve performance and flexibility with no loss of the protection provided by traditional operating systems.",
+  "summary": "The paper \"Exokernel: An Operating System Architecture for Application-Level Resource Management\" introduces the concept of an exokernel, which allows applications to manage resources directly at the application level, unlike traditional operating systems that abstract and manage resources centrally. This architecture separates the security mechanisms from management policies, enabling applications to define their own abstractions and manage their resources, thus providing greater flexibility and potential performance improvements.\n\nThe paper has significantly influenced further research in the design of operating systems by challenging the conventional monolithic kernel architecture. The exokernel approach inspired a variety of subsequent research focused on microkernels and library operating systems, especially in scenarios requiring high customizability and low latency, as cited in works such as:\n\n1. [“Recursive virtual machines: a new model for the emulation of multi-context systems”](https://dl.acm.org/doi/abs/10.1145/258949.258974)\n2. [“The multikernel: a new OS architecture for scalable multicore systems”](https://dl.acm.org/doi/abs/10.1145/1629575.1629609)\n3. [“The Case for Library Operating Systems”](https://dl.acm.org/doi/abs/10.1145/2043556.2043568)\n\nBy prioritizing application-level resource management, exokernels have informed the way modern cloud and distributed applications are optimized, contributing significantly to the fields of systems architecture and high-performance computing. The exokernel's philosophy has influenced designs where customized and efficient handling of hardware resources is paramount.",
+  "raw_url": "http://pages.cs.wisc.edu/~remzi/Classes/736/Spring2014/Papers/exo-sosp95.pdf",
+  "source_type": "external",
+  "filepath": "unikernels/README.md",
+  "filename": "Exokernel: An operating system architecture for application-level resource management",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:05"
+}

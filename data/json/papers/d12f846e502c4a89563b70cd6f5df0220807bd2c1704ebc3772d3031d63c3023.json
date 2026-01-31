@@ -1,0 +1,28 @@
+{
+  "uuid": "d12f846e502c4a89563b70cd6f5df0220807bd2c1704ebc3772d3031d63c3023",
+  "title": "UniProf: Online Analyzis of Application Performance via Universal Profiling",
+  "publication_date": "August 2017",
+  "authors": [
+    "Florian Schaffert",
+    "Stefan Schmid"
+  ],
+  "keywords": [
+    "application-profiling",
+    "distributed-systems",
+    "networking",
+    "performance-analysis",
+    "software-optimization",
+    "universal-profiling"
+  ],
+  "category_path": [
+    "unikernels"
+  ],
+  "abstract": "Application performance analysis is complicated today because applications run in complex environments. To identify and to fix performance problems, it is vital to be able to understand an application's resource consumption behavior and its interactions with the system in detail. We present UniProf, a novel online performance analysis approach. Contrary to existing work, UniProf does not require specific profiling instrumentation, nor does it build on (offline) tests. Rather, UniProf provides a universal and continuous analysis of the application in its real environment and in real time. UniProf can detect costly resource interactions online, and provides actionable feedback on how to optimize applications. Moreover, the feedback is provided in real-time, simplifying debugging and performance improvement efforts.",
+  "summary": "This paper introduces UniProf, an online profiling tool designed to analyze application performance in real time without requiring specific profiling instrumentation or offline tests. It enables a continuous and universal assessment of application performance in its actual environment. Unlike traditional methods, UniProf detects resource-intensive interactions online and provides real-time feedback to help optimize applications. \n\nAn important takeaway from UniProf's methodology is its ability to simplify debugging and improving application performance by working within the application's live operational context. This real-time feedback loop provides actionable insights that can directly influence application optimization strategies.\n\nA web search for references to this paper indicates limited direct citations. However, the themes explored in UniProf have broader relevance in the areas of performance analysis and optimization in distributed systems, as these areas remain critical topics for both research and industry practices. The emphasis on online, real-time analysis can contribute to developing similar profiling tools that leverage continuous monitoring technologies. Despite numerous papers in the domain of performance profiling, explicit citations of this paper are not abundant. Hence, its influence appears to be implicit, particularly aligned with ongoing trends in software performance engineering and real-time monitoring systems.",
+  "raw_url": "https://flosch.eu/papers/2017-sigcomm-uniprof.pdf",
+  "source_type": "external",
+  "filepath": "unikernels/README.md",
+  "filename": "uniprof: A Unikernel Stack Profiler",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:05"
+}

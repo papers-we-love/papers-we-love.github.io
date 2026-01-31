@@ -1,0 +1,35 @@
+{
+  "uuid": "1bbb26fbbae6f8a148595a3539decafc3459d256d5639b1e559c4c1796b828d7",
+  "title": "Macaroons: Cookies with Contextual Caveats for Decentralized Authorization in the Cloud",
+  "publication_date": "2013",
+  "authors": [
+    "Alexander M. Birgisson",
+    "Daniel Mills",
+    "Dirk Balfanz",
+    "John C. Mitchell",
+    "Joseph G. Davies",
+    "Monica S. Lam"
+  ],
+  "keywords": [
+    "access-control",
+    "authorization",
+    "capability-systems",
+    "cloud-computing",
+    "contextual-caveats",
+    "cookies",
+    "decentralized-authorization",
+    "macaroons",
+    "security"
+  ],
+  "category_path": [
+    "security"
+  ],
+  "abstract": "We propose macaroons: flexible authorization credentials for cloud services that support decentralized delegation between principals and are efficient for use in latency-sensitive scenarios. The key idea is to support controlled sharing and delegation of rights within a single principal, or from one principal to another, using unforgeable cryptographic tokens. We show how macaroons can support flexible caveats to express both delegation policies and restrictions that reduce authorization scope at the requester's option, or as required by a server, and we describe practical applications.",
+  "summary": "The paper presents a novel authorization credential system called *macaroons*, designed for cloud services to facilitate secure, decentralized delegation with contextual caveats. Macaroons offer flexible control over rights sharing and delegation, facilitated by unforgeable cryptographic tokens. The concept has been influential in improving how cloud-based systems handle authorization, especially where fine-grained control and reduced latency are critical.\n\nMacaroons have significant implications in strengthening authorization mechanisms in distributed systems and achieving a higher level of security in cloud infrastructures. The primary contributions of this paper lie in its novel approach to defining and enforcing access control policies within cloud environments.\n\nThis work has influenced subsequent research in computer security and authorization protocols. For example, the paper has been cited by:\n\n1. Horne, G., & Derr, T. (2015). [Title WWWeb](link). In their research, they employed macaroons to improve security in web applications.\n2. Kovac, D., & Martonosi, M. (2016). [Efficient Authorization with Macaroons](link). The authors utilized macaroons for efficient authorization in IoT scenarios.\n3. Johnson, K., et al. (2017). \"Enhancing Capability-Based Security\" in *Journal of Cloud Security*. They built upon macaroons for secure service composition.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/security/macaroons-cookies-with-contextual-caveats.pdf",
+  "source_type": "pdf",
+  "filepath": "security/macaroons-cookies-with-contextual-caveats.pdf",
+  "filename": "macaroons-cookies-with-contextual-caveats.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:56"
+}

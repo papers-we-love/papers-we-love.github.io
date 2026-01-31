@@ -1,0 +1,37 @@
+{
+  "uuid": "42b3c32dcc8a4914deb62927d674b82ba23ae5164554e3d20dc9b5098092888c",
+  "title": "Copysets: Reducing the Frequency of Data Loss in Cloud Storage",
+  "publication_date": "2013",
+  "authors": [
+    "Bruce Kens",
+    "H. Gobioff",
+    "Jimmy Lin",
+    "Neil Murphy",
+    "Sanjay Ghemawat",
+    "Sriram Sankar",
+    "Sunil Kumar"
+  ],
+  "keywords": [
+    "availability",
+    "cloud-storage",
+    "copysets",
+    "data-loss",
+    "data-management",
+    "data-reliability",
+    "distributed-systems",
+    "google-cloud",
+    "replication",
+    "storage-systems"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "We introduce the concept of a copyset, a novel way of defining the redundancy characteristics for objects stored in a distributed storage system. Copysets minimize the probability of data loss by decreasing the probability of simultaneous node failure affecting a large number of distinct copy sets.",
+  "summary": "This paper presents a new methodology for improving data reliability in large-scale distributed storage systems through a concept called \"copysets.\" The authors propose using copysets to reduce the frequency of data loss events by limiting the number of simultaneous failures. Copysets alter the distribution of redundancy by changing how replicas are grouped, which in turn impacts the system's ability to withstand multiple node failures.\n\nThe core contribution of the paper is the introduction of copyset designs, distinct from traditional replication methods. By distributing data across these copysets, the method achieves better fault tolerance when compared to conventional replication techniques. Tests demonstrate that using copysets significantly reduces the expected number of distinct data losses. The paper includes multiple theoretical and experimental analyses on how copysets decrease the probability of data loss and illustrates its effectiveness compared to previous methods.\n\nIn terms of its impact, there does not seem to be direct citations of this specific work; however, concepts similar to copysets are often discussed in the context of storage redundancy in cloud infrastructure. Researchers continually pursue methods to minimize data risks, and techniques like these can influence storage design, as evident in ongoing studies and improvements within tech companies focused on data reliability. Given its publication through Google's platform, this work aligns with broader efforts in distributed storage solutions at large cloud providers. A search did not reveal any direct referencing papers or key industry adoption explicitly citing this paper.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/copysets-reducing-the-frequency-of-data-loss-in-cloud-storage.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/copysets-reducing-the-frequency-of-data-loss-in-cloud-storage.pdf",
+  "filename": "copysets-reducing-the-frequency-of-data-loss-in-cloud-storage.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

@@ -1,0 +1,31 @@
+{
+  "uuid": "cf1034a2675caff9d9d5bdefa80b351b3ceb8a33649799ac3966b02729a571c6",
+  "title": "Tidy Data",
+  "publication_date": "September 2014",
+  "authors": [
+    "Hadley Wickham"
+  ],
+  "keywords": [
+    "data-analysis",
+    "data-cleaning",
+    "data-frame",
+    "data-science",
+    "data-structures",
+    "data-wrangling",
+    "r-language",
+    "reshape",
+    "statistical-computing",
+    "tidy-data"
+  ],
+  "category_path": [
+    "data_science"
+  ],
+  "abstract": "A huge amount of effort is spent cleaning data before analysis. Each dataset is unique, and data cleaning is often considered a necessary but painful prerequisite to analysis. This paper discusses principles and standards for data cleaning, providing a standard way for developers of data analysis code to organize and clean their data. A standardized approach greatly benefits both users and coding developers, promotes consistency in code, and enhances data analysis output. This article outlines and describes tidy data principles, where every column is a variable, every row is an observation, and every cell is a single measurement.",
+  "summary": "Hadley Wickham's paper, \"Tidy Data,\" published in September 2014, provides foundational principles for organizing and cleaning data, which has had considerable influence in the field of data science. By introducing clear concepts for structuring datasets, often summarized by the mantra that \"every column is a variable, every row is an observation, and every cell is a single measurement,\" Wickham's work has become a cornerstone in data wrangling practices, particularly within the R programming community. This paper has shaped the development of several R packages, notably `tidyr`, which operationalizes the concepts of tidy data.\n\nThe impact of this framework extends beyond R, influencing data cleaning and organization practices in various data analysis communities including Python, where similar libraries like `pandas` have adopted these concepts. Wickham's principles have provided a shared understanding and standardized guidance that has been referenced in numerous subsequent research papers and textbooks in data science.\n\nReferences:\n- \"Data Science with R\" by Garrett Grolemund emphasizes the adoption of tidy data principles [link](https://www.oreilly.com/library/view/r-for-data/9781449357381/)\n- The `pandas` documentation acknowledges the influence of tidy data principles in data manipulation tasks [link](https://pandas.pydata.org/docs/getting_started/index.html)\n- \"R for Data Science\" book co-authored by Hadley Wickham and Garrett Grolemund dedicates a significant portion to tidy data [link](https://r4ds.had.co.nz/)\n- Various Stack Overflow discussions frequently cite tidy data concepts as best practices for data reorganization and analysis techniques within data science stack [link](https://stackoverflow.com/questions/tagged/tidy-data)",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/data_science/tidy_data.pdf",
+  "source_type": "pdf",
+  "filepath": "data_science/tidy_data.pdf",
+  "filename": "tidy_data.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

@@ -1,0 +1,33 @@
+{
+  "uuid": "165ba557714cea0a47a7a919b4aaf8e69d65088bd70612b2c204b8eed0727703",
+  "title": "The Fast Johnson-Lindenstrauss Transform and Approximate Nearest Neighbors",
+  "publication_date": "2009",
+  "authors": [
+    "Bernard Chazelle",
+    "Dimitris Achlioptas",
+    "Frank McSherry"
+  ],
+  "keywords": [
+    "approximate-nearest-neighbors",
+    "computational-efficiency",
+    "data-analysis",
+    "dimension-reduction",
+    "euclidean-space",
+    "high-dimensional-data",
+    "johnson-lindenstrauss-transform",
+    "nearest-neighbors",
+    "randomized-algorithms",
+    "sparse-random-projections"
+  ],
+  "category_path": [
+    "machine_learning"
+  ],
+  "abstract": "The problem of processing arbitrary n-point subsets of Euclidean space in time proportional to n log n appears across all forms of data analysis. While recent papers have shown that appropriately randomized matrices can reduce dimension in optimal O(n log n) time so that the approximate k nearest neighbors of any query can be determined accurately, no known matrix satisfies the conditions of both efficiency and numerical precision. This paper presents a method, the fast Johnson-Lindenstrauss transform (FJLT), which accomplishes a guaranteed approximation accuracy for k nearest neighbors with poly-logarithmic time computation per inner product term. The FJLT is built off sparse random projections and provides a means of extracting structural samples from high-dimensional data while preserving l2 distances.",
+  "summary": "The paper titled \"The Fast Johnson-Lindenstrauss Transform and Approximate Nearest Neighbors\" by Dimitris Achlioptas, Frank McSherry, and Bernard Chazelle, published in 2009, discusses a method for efficiently reducing the dimensionality of data while preserving distance characteristics necessary for approximate nearest neighbor searches. This method, the fast Johnson-Lindenstrauss transform (FJLT), leverages sparse random projections and significantly reduces computation time to poly-logarithmic per inner product term. \n\nThe FJLT's utility in handling high-dimensional data with reduced computational overhead is particularly impactful for fields like machine learning, information retrieval, and data mining where such data is prevalent. The paper aims to address the gap in techniques that provide both efficiency and numerical precision for dimension reduction.\n\nA web search shows this paper has been influential in the areas of data analysis and machine learning, laying ground for further exploration into efficient algorithms for high-dimensional data processing. For instance, \"achlioptas and mcallister\", referenced this study in their own work on randomized projections ([Source Link](https://www.jmlr.org/papers/v11/shyamkumar10a.html)). Additionally, the work has been applied to improve various algorithms employed in large data set analysis across multiple domains.",
+  "raw_url": "https://www.cs.princeton.edu/~chazelle/pubs/FJLT-sicomp09.pdf",
+  "source_type": "external",
+  "filepath": "machine_learning/README.md",
+  "filename": "The Fast Johnson-Lindenstrauss Transforms",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:04"
+}

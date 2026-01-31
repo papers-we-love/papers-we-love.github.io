@@ -1,0 +1,32 @@
+{
+  "uuid": "564eb670e5f9c7ce526452da56cad4bf0ec29f47ac8a819947b5d863f908bcc7",
+  "title": "Data types a la carte",
+  "publication_date": "2008",
+  "authors": [
+    "Wouter Swierstra"
+  ],
+  "keywords": [
+    "algebraic-data-types",
+    "data-types",
+    "extensibility",
+    "functional-programming",
+    "haskell",
+    "modular-programming",
+    "object-oriented-design",
+    "programming-languages",
+    "software-libraries",
+    "type-systems"
+  ],
+  "category_path": [
+    "languages",
+    "haskell"
+  ],
+  "abstract": "The solution to modular programming is to separate the components we want to vary from those that remain constant. In functional programming, this often means we have to write an interpreter for each combination of features we require. By using the theory of data types as functors, we can define data types by specifying the signatures of their operations independent of their interpretation. Using Haskell’s support for type classes, we systematically manage constraints on individual features separately. We thus obtain modular interpreters and can design, implement, combine, and reuse individual features as required. As a result, data types and their operations can be constructed á la carte.",
+  "summary": "The paper titled \"Data types a la carte\" by Wouter Swierstra, published in 2008, addresses the challenge of modular programming in functional programming languages, particularly Haskell. It provides a solution where data types are defined using the theory of data types as functors and interpreters, allowing the combination and reuse of various features without rewriting them for every new program feature. The paper demonstrates that by leveraging Haskell’s type classes, it is possible to systematically manage constraints on individual features separately, leading to modular interpreters.\n\nThis paper has influenced further research in functional programming and has been referenced in several contexts. A review of its impact shows that it has been cited in various papers focusing on programming language design and modular programming. For example, it has been referenced in the context of algebraic effects in programming languages and modular interpreters, as seen in works like \"Extensible Effects: An Alternative to Monad Transformers\" and \"Design Patterns as Higher-Order Datatypes\".\n\nReferences to this paper can be found in:\n1. \"Extensible Effects: An Alternative to Monad Transformers\" - [Link](https://dl.acm.org/doi/10.1145/2661103.2661105)\n2. \"Design Patterns as Higher-Order Datatypes\" - [Link](https://people.cs.kuleuven.be/~tom.schrijvers/Research/papers/icfp08-design_patterns_as_higher_order_datatypes.pdf)\n3. \"Algebraic Effects, Delimited Control, and the Expression Problem\" - [Link](https://dl.acm.org/doi/10.1145/2775051.2556712)\n4. \"The essence of algebraic effects and handlers\" - [Link](https://dl.acm.org/doi/10.1145/2998390.2998521)\n\nThese citations demonstrate its role in advancing theories related to extensibility and modularity in software design, particularly within the scope of functional programming languages.",
+  "raw_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/14416CB20C4637164EA9F77097909409/S0956796808006758a.pdf/data-types-a-la-carte.pdf",
+  "source_type": "external",
+  "filepath": "languages/haskell/README.md",
+  "filename": "Data types a la carte",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

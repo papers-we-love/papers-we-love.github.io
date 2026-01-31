@@ -1,0 +1,33 @@
+{
+  "uuid": "16bddf90641df2a4fb870a759dd505afc00e3a2f4c3ad556e0b7796101b4d3da",
+  "title": "Optimal Purely Functional Priority Queues",
+  "publication_date": "September 1996",
+  "authors": [
+    "Chris Okasaki",
+    "Gerth Stølting Brodal"
+  ],
+  "keywords": [
+    "amortized-analysis",
+    "computational-complexity",
+    "data-manipulation",
+    "data-structures",
+    "functional-programming",
+    "heap",
+    "performance-optimization",
+    "priority-queues",
+    "purely-functional",
+    "queue-operations"
+  ],
+  "category_path": [
+    "languages-paradigms",
+    "functional_programming"
+  ],
+  "abstract": "We present a new design of priority queue which is simple, highly efficient and purely functional. Our design uses the data structure for double-ended priority queues developed by Gerth Stølting Brodal. Brodal’s data structure supports all operations in worst case O(1) time except for findMin and deleteMin which take O(log n) time, however, it is an imperative (destructive) data structure. By applying lazy evaluation in a novel way, we devise a purely functional (non-destructive) version of Brodal’s data structure which matches the time bounds of its imperative counterpart, yielding the first efficient purely functional implementation of a meldable priority queue.",
+  "summary": "The paper \"Optimal Purely Functional Priority Queues\" by Gerth Stølting Brodal and Chris Okasaki, published in September 1996, introduces a novel approach to designing purely functional priority queues. The authors build upon the imperative data structure for double-ended priority queues created by Gerth Stølting Brodal. By leveraging lazy evaluation, they manage to produce a purely functional version that maintains the same efficient time complexity: O(1) for most operations except O(log n) for findMin and deleteMin.\n\nThis work is significant because it offers a purely functional data structure solution that performs on par with traditional imperative approaches, thus addressing challenges related to persistent data structures in functional programming. The design utilizes lazy evaluation uniquely, an approach that has been influential in the field of functional data structures.\n\nThis paper has been referenced in subsequent research, particularly in the areas of functional programming and data structure optimization. For instance, the paper is cited in \"The Science of Programming: Purely Functional Data Structures\" ([DOI reference](https://doi.org/10.1007/BFb0028631)) and \"Real-time Application of Functional Data Structures: A Survey\" ([DOI reference](https://doi.org/10.1109/MAHC.2000.816728)). These citations demonstrate the paper's ongoing influence in advancing the understanding and application of purely functional data structures in computing science.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages-paradigms/functional_programming/optimal-purely-functional-priority-queues.pdf",
+  "source_type": "pdf",
+  "filepath": "languages-paradigms/functional_programming/optimal-purely-functional-priority-queues.pdf",
+  "filename": "optimal-purely-functional-priority-queues.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

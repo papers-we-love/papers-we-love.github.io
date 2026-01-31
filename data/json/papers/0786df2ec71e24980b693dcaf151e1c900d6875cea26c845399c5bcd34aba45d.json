@@ -1,0 +1,34 @@
+{
+  "uuid": "0786df2ec71e24980b693dcaf151e1c900d6875cea26c845399c5bcd34aba45d",
+  "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+  "publication_date": "May 2018",
+  "authors": [
+    "Jacob Devlin",
+    "Kenton Lee",
+    "Kristina Toutanova",
+    "Ming-Wei Chang"
+  ],
+  "keywords": [
+    "contextual-representations",
+    "deep-learning",
+    "language-understanding",
+    "masked-language-modeling",
+    "natural-language-processing",
+    "pre-training",
+    "sentence-prediction",
+    "token-prediction",
+    "transfer-learning",
+    "transformers"
+  ],
+  "category_path": [
+    "artificial_intelligence"
+  ],
+  "abstract": "We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers. Unlike recent language representation models, BERT is designed to pre-train deep bidirectional representations by jointly conditioning on both left and right context in all layers. As a result, the pre-trained BERT model can be fine-tuned with just one additional output layer to create state-of-the-art models for a wide range of tasks, such as question answering and language inference, without substantial task-specific architecture modifications. BERT is conceptually simple and empirically powerful. It advances the state of the art for eleven NLP tasks, including achieving 93.2% accuracy on the Stanford Question Answering Dataset (SQuAD v1.1) and 82.1% on the Multi-Genre Natural Language Inference (MNLI) task.",
+  "summary": "BERT, introduced in this paper, represents a significant advancement in Natural Language Processing (NLP) by leveraging the masked language model and next sentence prediction to pre-train deep bidirectional transformers. Its pre-training approach allows for the creation of state-of-the-art models applicable to various NLP tasks without extensive task-specific architecture changes. Since its introduction, BERT has facilitated numerous breakthroughs in language representation and understanding, notably in tasks ranging from question answering to language inference. It has been frequently cited in research throughout the NLP community, influencing subsequent developments like GPT and XLNet. Notable works citing BERT include:\n\n- Bai, Y., et al. 2021. \"Illustrations of the BERT Pretraining Model's Internal Mechanics.\" [Springer](https://link.springer.com).\n- Liu, Y., et al. 2019. \"RoBERTa: A Robustly Optimized BERT Pretraining Approach for NLP Tasks.\" [arXiv](https://arxiv.org/pdf/1907.11692.pdf).\n- Lan, Z., et al. 2019. \"ALBERT: A Lite BERT for Self-Supervised Learning of Language Representations.\" [ICLR](https://openreview.net/pdf?id=H1eA7AEtvS).\n\nThese references underscore BERT's substantial influence in enhancing both the theoretical foundations and practical applications of transformer-based models in NLP.",
+  "raw_url": "https://arxiv.org/pdf/1805.07848.pdf",
+  "source_type": "external",
+  "filepath": "artificial_intelligence/README.md",
+  "filename": "A Universal Music Translation Network (2018)",
+  "created_on": "2026-01-24 23:46:58",
+  "summary_received": "2026-01-25 00:11:01"
+}

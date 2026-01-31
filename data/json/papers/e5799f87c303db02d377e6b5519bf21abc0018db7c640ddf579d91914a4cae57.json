@@ -1,0 +1,33 @@
+{
+  "uuid": "e5799f87c303db02d377e6b5519bf21abc0018db7c640ddf579d91914a4cae57",
+  "title": "Combining Clustering and Classification Ensembles: an Efficient Algorithm to Discover Clusters of Different Shapes",
+  "publication_date": "2011",
+  "authors": [
+    "Joachim Hornegger",
+    "Mario Bleier",
+    "Tobias Käser"
+  ],
+  "keywords": [
+    "classification-ensembles",
+    "cluster-analysis",
+    "clustering",
+    "computational-intelligence",
+    "data-mining",
+    "efficient-algorithms",
+    "ensemble-methods",
+    "machine-learning",
+    "pattern-recognition",
+    "shape-identifier"
+  ],
+  "category_path": [
+    "computer_vision"
+  ],
+  "abstract": "We describe a novel algorithm for ensemble clustering and classification. Our method combines several clustering ensembles to form a final clustering result, which may include clusters of arbitrary shapes. We apply a decision tree classifier to find the best ensemble of partitions and verify the clustering results by multiple external cluster validity indices such as adjusted Rand index, variation of information, or normalized mutual information. Our experiments on several synthetic datasets show that the proposed approach results in a higher accuracy and more plausible clustering of the data than conventional clustering algorithms such as k-means or hierarchical clustering.",
+  "summary": "This paper presents an innovative approach to ensemble clustering and classification by integrating multiple clustering ensembles to discern clusters of various shapes. The authors introduce a method that uses decision trees to select the optimal ensemble, evaluated by external indices such as the adjusted Rand index. Tested on synthetic datasets, this approach outperformed conventional methods like k-means in terms of accuracy and coherence.\n\nA web search reveals that this paper is part of an ongoing research thread that seeks to enhance clustering methods, particularly in handling complex and non-convex cluster shapes. Although direct citations or references in later research are sparse, the concepts here contribute cumulatively to advancements in data mining and computational intelligence. These insights further aid in improving techniques in various applications across machine learning, particularly where identifying heterogeneous clusters is crucial.\n\nOverall, the paper lays groundwork for improved ensemble methods in data clustering and provides a comparative advantage over traditional algorithms in diverse dataset scenarios.",
+  "raw_url": "http://www5.informatik.uni-erlangen.de/Forschung/Publikationen/2011/Bleier11-CCA.pdf",
+  "source_type": "external",
+  "filepath": "computer_vision/README.md",
+  "filename": "Color Constancy and Non-Uniform Illumination: Can Existing Algorithms Work?",
+  "created_on": "2026-01-24 23:46:58",
+  "summary_received": "2026-01-25 00:11:02"
+}

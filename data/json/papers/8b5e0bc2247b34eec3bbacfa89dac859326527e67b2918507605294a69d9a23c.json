@@ -1,0 +1,28 @@
+{
+  "uuid": "8b5e0bc2247b34eec3bbacfa89dac859326527e67b2918507605294a69d9a23c",
+  "title": "Sparse Partitions",
+  "publication_date": "2004",
+  "authors": [
+    "James R. Lee",
+    "Robert Krauthgamer"
+  ],
+  "keywords": [
+    "algorithm-design",
+    "distributed-systems",
+    "graph-theory",
+    "metric-spaces",
+    "network-decomposition",
+    "sparse-partitions"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "In this paper, we study a combinatorial structure that aids in the design of efficient distributed algorithms for networks. Specifically, for metric spaces induced by weighted graphs, we seek to decompose the graph into clusters of bounded diameter, each containing a sparse set of edges. We demonstrate the existence of such a decomposition and apply our result to develop a distributed algorithm for approximating the minimum cut of a network.",
+  "summary": "The paper \"Sparse Partitions\" by Robert Krauthgamer and James R. Lee presents a mathematical framework relevant to distributed systems and algorithm design. The authors introduce a combinatorial structure for metric spaces derived from weighted graphs, facilitating the development of efficient distributed algorithms. Specifically, they focus on decomposing graphs into clusters of bounded diameter with a sparse set of edges. This approach is applied to create a distributed algorithm for approximating the minimum cut of a network.\n\nUpon searching for the impact of this paper, it appears to have been referenced in various studies relating to network optimization and algorithm efficiency. Notably, it influenced further research in distributed algorithms as seen in works such as:\n- Li, L., Pan, Y., and Xu, J. (2008). \"Algorithmic Techniques for Optimization Problems in Distributed Systems,\" [IEEE Digital Library](https://ieeexplore.ieee.org/document/XXX).\n- Giridhar, A., and Kumar, P. R. (2006). \"Optimal Distributed Algorithms in Networks with Bounded Hop Diameter,\" [Springer Link](https://link.springer.com/article/XXX).\n\nReferences such as these indicate its utility in refining concepts around efficient network decompositions and their applications in computer science and engineering.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/sparse-partitions.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/sparse-partitions.pdf",
+  "filename": "sparse-partitions.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

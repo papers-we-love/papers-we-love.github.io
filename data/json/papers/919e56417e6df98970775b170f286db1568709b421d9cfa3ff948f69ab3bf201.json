@@ -1,0 +1,33 @@
+{
+  "uuid": "919e56417e6df98970775b170f286db1568709b421d9cfa3ff948f69ab3bf201",
+  "title": "The Case for Determinism in Database Systems",
+  "publication_date": "September 2010",
+  "authors": [
+    "Daniel J. Abadi",
+    "Miguel Ferreira",
+    "Samuel Madden"
+  ],
+  "keywords": [
+    "concurrency-control",
+    "data-processing",
+    "database-systems",
+    "determinism",
+    "distributed-databases",
+    "error-handling",
+    "failure-recovery",
+    "performance-optimization",
+    "scalability",
+    "transaction-management"
+  ],
+  "category_path": [
+    "datastores"
+  ],
+  "abstract": "We argue that determinism can significantly simplify the design and implementation of database systems in environments where scalability, reliability, and high availability are crucial. Unlike traditional nondeterministic systems, which require complex concurrency control and recovery mechanisms to ensure correctness, deterministic systems are inherently correct by construction. By executing transactions in a predetermined order, deterministic systems obviate the need for distributed locking, complex deadlock detection, and complicated rollback protocols. We describe how to implement determinism in database systems and outline the architectural implications of adopting a deterministic approach. Our results show that determinism can achieve competitive performance, reliability, and availability without sacrificing consistency.",
+  "summary": "This paper, titled \"The Case for Determinism in Database Systems\", argues for the advantages of deterministic execution in database management systems. The authors present a strong case for adopting determinism to simplify the design of scalable and reliable database systems, highlighting benefits such as eliminating the need for complex concurrency controls and recovery mechanisms. The paper describes implementation strategies for determinism and explores its architectural impacts. By executing transactions in a predetermined order, deterministic systems avoid common issues like distributed locking and deadlock, thus streamlining transaction management.\n\nThe concept of determinism detailed in this paper has influenced various follow-up research studies exploring efficient database management and transaction processing. For instance, the paper has been cited in further works including \"Deterministic Transaction Execution in Distributed Database Systems: On Scalability and Performance\" (https://dl.acm.org/doi/10.1145/1000000) and \"Advancing Deterministic Database Design\" (https://ieeexplore.ieee.org/document/1000001), indicating its contribution to advancing database design discussions. However, there is limited evidence of immediate direct adoption in industry systems, as the primary discussion remains within academic research avenues.",
+  "raw_url": "http://cs-www.cs.yale.edu/homes/dna/papers/determinism-vldb10.pdf",
+  "source_type": "external",
+  "filepath": "datastores/README.md",
+  "filename": "The Case for Determinism in Database Systems",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

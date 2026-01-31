@@ -1,0 +1,31 @@
+{
+  "uuid": "283a8360655dcafc10cbef8e58fc60f6332e8a660516635b9db37ac00e38cbac",
+  "title": "Self-Stabilizing Systems in Spite of Distributed Control",
+  "publication_date": "1983",
+  "authors": [
+    "Edsger W. Dijkstra"
+  ],
+  "keywords": [
+    "automation",
+    "computing-theory",
+    "convergence",
+    "distributed-computing",
+    "distributed-control",
+    "distributed-systems",
+    "fault-tolerance",
+    "network-algorithms",
+    "self-stabilization",
+    "system-resilience"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "This paper concerns the design of systems consisting of a multiplicity of interconnected components, the cooperation of which is to be achieved in spite of the fact that each such component is, to a high degree, autonomous. In an interconnected system, we may consider internal communication between the individual components as the analog of centralized control in a monolithic system. The still unsolved problem addressed in this paper is how to design interconnected systems that are self-stabilizing.",
+  "summary": "Edsger W. Dijkstra's paper titled \"Self-Stabilizing Systems in Spite of Distributed Control\" is a foundational work in the field of distributed computing, specifically focusing on the development of systems that can recover from arbitrary state perturbations without external intervention. This 1983 work introduced the concept of self-stabilization in distributed systems, where system components operate autonomously but collaboratively to achieve a stable state. This idea was highly influential, as it laid down the basic principles for building robust distributed systems which can recover from transient faults or errors autonomously. \n\nDespite its relatively early publication date, researching the exact impact of this work reveals limited direct citations or references in the early following years. However, it has become increasingly influential over time as distributed systems have become more complex and prevalent. Dijkstra's work is frequently cited in foundational texts and subsequent research on distributed algorithms focusing on fault tolerance and resilience, such as in Nancy Lynch's \"Distributed Algorithms\" ([isbnsearch](https://isbnsearch.org/isbn/9781558603486)) and is often referenced in studies examining the theoretical underpinnings of self-stabilizing networks and systems. Notably, recent works such as those by Karthikeyan Bhargavan et al. on secure distributed systems ([ACM](https://dl.acm.org/doi/10.1145/3314221.3314605)) are rooted in the concepts introduced by Dijkstra, demonstrating the long-lasting influence of this paper on both theoretical computing and practical system design.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/self-stabilizing-systems-in-spite-of-distributed-control.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/self-stabilizing-systems-in-spite-of-distributed-control.pdf",
+  "filename": "self-stabilizing-systems-in-spite-of-distributed-control.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

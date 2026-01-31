@@ -1,0 +1,37 @@
+{
+  "uuid": "9283e9045c82451fa84c8533fde1fb5f8e7e19665287078d008179df95603132",
+  "title": "Epidemic Algorithms for Replicated Database Maintenance",
+  "publication_date": "1987",
+  "authors": [
+    "Alan Demers",
+    "Carl Hauser",
+    "Dan Greene",
+    "Dan S. Swinehart",
+    "Doug Terry",
+    "Howard Sturgis",
+    "John Larson",
+    "Scott Shenker",
+    "Wesley Irish"
+  ],
+  "keywords": [
+    "consistency",
+    "database-maintenance",
+    "distributed-computing",
+    "distributed-systems",
+    "epidemic-algorithms",
+    "fault-tolerance",
+    "gossip-based-protocols",
+    "replicated-database"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "We consider the problem of maintaining consistency among copies of a replicated database in a distributed system. Our solution uses epidemic algorithms, which are fast, simple, and robust. These properties make epidemic algorithms attractive for database maintenance in a distributed system, particularly in one with high communication cost or frequent component failure. Database users at individual network sites may read or update copies of logical data objects. Network sites communicate in pairwise, and updates are propagated by the \"gossip\" mechanism of unreliable rumor spreading. An update progresses through the system in such a way that all sites will eventually agree on the final value of the updated data object even though temporary disagreements may exist as an update progresses. We examine the performance of various epidemic algorithms under update loads and communication protocols that might be encountered in a realistic distributed system. We also describe several variants and related approaches, and compare our work with a variety of other techniques for maintaining pieces of data among distributed copies. Finally, we conclude with some speculation about future uses of epidemic algorithms.",
+  "summary": "The paper \"Epidemic Algorithms for Replicated Database Maintenance\" by Alan Demers et al., published in 1987, presents a pioneering approach using epidemic algorithms to maintain consistency in distributed database systems. The paper introduces the concept of using a \"gossip\" mechanism, inspired by epidemic spreading, to ensure all nodes in the network eventually agree on the final data state despite temporary inconsistencies. The proposed algorithms are characterized by their simplicity, robustness, and efficiency, which make them suitable for environments with high communication costs or frequent failures. These algorithms are particularly advantageous in distributed systems where ensuring data consistency is critical.\n\nEpidemic algorithms have significantly influenced the development of distributed systems and have been incorporated into various systems over time. The ideas presented in the paper are foundational to modern techniques for data consistency in distributed databases and have been extended in subsequent research and industry applications. For instance, the anti-entropy and gossip-based protocols used in systems like Cassandra and Dynamo draw on ideas similar to those discussed in the paper.\n\nDespite the paper's age, it's frequently referenced in discussions about data replication strategies and consistency models in distributed systems. Some examples of works citing this paper include [Cassandra](http://cassandra.apache.org/) and [Amazon's Dynamo](https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf), which employ similar gossip protocols for node synchronization and data consistency. Additionally, systems like [Riak](http://basho.com/riak/) adopt and adapt these concepts for decentralized architectures. The longevity and continued relevance of epidemic algorithms illustrate their robust design and applicability in solving complex distributed computing challenges.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/epidemic-algorithms-for-replicated-database-maintenance.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/epidemic-algorithms-for-replicated-database-maintenance.pdf",
+  "filename": "epidemic-algorithms-for-replicated-database-maintenance.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

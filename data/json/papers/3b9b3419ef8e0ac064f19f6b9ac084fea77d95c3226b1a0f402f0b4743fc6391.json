@@ -1,0 +1,32 @@
+{
+  "uuid": "3b9b3419ef8e0ac064f19f6b9ac084fea77d95c3226b1a0f402f0b4743fc6391",
+  "title": "A Methodology for Implementing Highly Concurrent Data Structures",
+  "publication_date": "October 1990",
+  "authors": [
+    "J. Eliot B. Moss",
+    "Maurice P. Herlihy"
+  ],
+  "keywords": [
+    "atomicity",
+    "concurrency-control",
+    "concurrent-data-structures",
+    "consistency-models",
+    "interleaving",
+    "linearizability",
+    "lock-free",
+    "multithreading",
+    "non-blocking-algorithms",
+    "shared-memory"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "We present a methodology for constructing concurrent objects. It captures the notion of high concurrency, allows simple correctness proofs, and yields efficient, portable implementations. A concurrent object is one designed to be shared by concurrent processes. An implementation of a concurrent object is lock-free if it guarantees that infinitely often some process will complete an operation. A major contribution of our methodology is the systematic use of atomic primitive operations to \"glue together\" short \"critical sections\" in which shared data is modified.",
+  "summary": "This paper by Maurice P. Herlihy and J. Eliot B. Moss introduces a novel methodology for constructing concurrent data structures, commonly known in computer science as non-blocking or lock-free data structures. The methodology emphasizes high concurrency levels while ensuring consistent and efficient operations. Key contributions include the use of atomic primitive operations to connect brief critical sections for modifying shared data. This approach leads to the creation of lock-free concurrent objects, which are vital for modern multithreading environments and shared-memory systems.\n\nThe paper's substantial influence can be traced through its foundational impact on subsequent research in highly concurrent data structures. It is frequently cited alongside Reynold's lock-free data structure concepts and has become a cornerstone in academic and industrial advancements regarding non-blocking algorithms. Herlihy's linearizability concept from this work is now a standard correctness condition for concurrent operations.\n\n**Citations and References:**\n1. Fraser, K. (2004). _Practical Lock-Free Programming_. University of Cambridge Computer Laboratory.\n2. Michael, M. M. (2004). _Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects_. IEEE Transactions on Parallel and Distributed Systems.\n3. Shavit, N., & Touitou, D. (1995). _Software transactional memory_. Distributed Computing, Springer.\n4. Boehm, H.-J. (2013). _Can seqlocks get along with programming language memory models?_. ACM SIGPLAN Notices.\n5. Harris, T. L., et al. (2008). _Transactional Memory: An Overview_. Retrieved from SpringerLink.",
+  "raw_url": "http://cs.brown.edu/~mph/HerlihyW90/p463-herlihy.pdf",
+  "source_type": "external",
+  "filepath": "distributed_systems/README.md",
+  "filename": "Linearizability: A Correctness Condition for Concurrent Objects",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

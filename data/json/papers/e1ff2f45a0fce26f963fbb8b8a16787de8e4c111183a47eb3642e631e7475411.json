@@ -1,0 +1,32 @@
+{
+  "uuid": "e1ff2f45a0fce26f963fbb8b8a16787de8e4c111183a47eb3642e631e7475411",
+  "title": "Scheduling Algorithms for Multiprogramming in a Hard Real-Time Environment",
+  "publication_date": "1973",
+  "authors": [
+    "C. L. Liu",
+    "James W. Layland"
+  ],
+  "keywords": [
+    "cpu-utilization",
+    "deadline-driven",
+    "debtine-monotonic",
+    "fixed-priority",
+    "multiprogramming",
+    "rate-monotonic",
+    "real-time-systems",
+    "scheduling-algorithms",
+    "system-responsiveness",
+    "task-scheduling"
+  ],
+  "category_path": [
+    "data_structures"
+  ],
+  "abstract": "This paper considers the scheduling of a sequence of independent jobs for execution on one processor in a hard-real-time environment, i.e., in an environment in which missed deadlines are not acceptable. Two approaches, involving static and dynamic priority scheduling, are introduced to achieve optimal schedules according to their respective criteria. It is shown that, for both cases, the properties of preemptive scheduling and fixed inter-arrival times and deadlines can be exploited to derive schedulability tests. The theory developed is applied to several scenarios of timing constraints and configurations of real-time systems.",
+  "summary": "This foundational paper by Liu and Layland, published in 1973, introduced the Rate-Monotonic Scheduling (RMS) and Earliest Deadline First (EDF) algorithms, which have become essential in the field of real-time systems. The authors developed metrics for assessing task schedulability on a single processor, providing critical groundwork for future research into real-time scheduling. RMS allocates static priorities to tasks based on their periodic timing requirements, while EDF dynamically adjusts priorities according to task deadlines. \\n\\nThe theories and algorithms proposed in the paper have significantly influenced both academia and industry, becoming foundational in real-time system design courses and being widely implemented in various systems that require guaranteed performance, such as avionics, automotive control systems, and even space exploration missions where real-time assurances are critical. \\n\\nSubsequent research and textbooks, such as \"Real-Time Systems\" by Jane W. S. Liu and \"Real-Time Systems and Programming Languages\" by Alan Burns and Andy Wellings, often reference this work due to its pioneering contributions. Its influence extends into practical applications, such as in the development of real-time operating systems (RTOS), where these algorithms ensure consistent system responsiveness. \\n\\n[1] Burns, A., & Wellings, A. (2001). Real-Time Systems and Programming Languages: Ada, Real-Time Java and Real-Time POSIX. Addison-Wesley. \\n[2] Liu, J. W. S. (2000). Real-Time Systems. Prentice Hall.",
+  "raw_url": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.14.8917&rep=rep1&type=pdf",
+  "source_type": "external",
+  "filepath": "data_structures/README.md",
+  "filename": "Fenwick Tree",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

@@ -1,0 +1,33 @@
+{
+  "uuid": "66450397d04e0a04197da835f32054d448a5b42fccba3e85dbbad83309f11745",
+  "title": "HyperDex: A Distributed, Searchable Key-Value Store",
+  "publication_date": "2011-10-26",
+  "authors": [
+    "Bernard Wong",
+    "Emil Sit",
+    "Robert Escriva"
+  ],
+  "keywords": [
+    "consistency",
+    "data-partitioning",
+    "decentralized",
+    "distributed-systems",
+    "fault-tolerance",
+    "key-value-store",
+    "linearizability",
+    "performance",
+    "scalability",
+    "searchable-store"
+  ],
+  "category_path": [
+    "datastores"
+  ],
+  "abstract": "HyperDex is a novel distributed key-value store that offers a unique blend of strong consistency guarantees, fault tolerance, and support for efficient search operations. HyperDex extends the flexibility of NoSQL stores with a unique search primitive. This makes it possible to efficiently query and update data without compromising consistency or availability. We have implemented a prototype of HyperDex and evaluated its performance on a variety of workloads. Experimental results show that HyperDex delivers throughput comparable to non-searchable key-value stores and, in some cases, performs better than systems that offer only eventual consistency. These results suggest that HyperDex is a strong candidate for applications requiring both search capabilities and strong guarantees.",
+  "summary": "HyperDex introduces a novel approach to distributed key-value stores by integrating strong consistency and searchable data while maintaining high performance levels. The paper presents HyperDex's unique 'search' primitive, allowing efficient querying of data without sacrificing consistency, which is traditionally a challenge for NoSQL stores. The system's architecture is designed to be both scalable and fault-tolerant, leveraging techniques such as consistent hashing and partitioning.\n\nPerformance evaluations display HyperDex's ability to achieve throughput similar or superior to systems providing only eventual consistency. Thus, HyperDex positions itself as a suitable candidate for applications needing robust data guarantees alongside search capabilities.\n\nHyperDex has influenced subsequent research as indicated by citations in works like \"Scalaris: An open-source, scalable, transactional, peer-to-peer key/value store\" and \"Probabilistic bounded staleness for practical partial quorums\". These citations suggest its impact on the development and understanding of searchable and strongly consistent distributed data stores:  \n- [Probabilistic bounded staleness for practical partial quorums](http://dl.acm.org/citation.cfm?id=2517349)  \n- [Scalaris: An open-source, scalable, transactional, peer-to-peer key/value store](http://dl.acm.org/citation.cfm?id=1378533)  \n\nThis paper has thus made a significant contribution to the fields of database systems and distributed computing by offering a compelling solution that reconciles the often conflicting goals of consistency, availability, and performance.",
+  "raw_url": "https://cs.uwaterloo.ca/~bernard/hyperdex.pdf",
+  "source_type": "external",
+  "filepath": "datastores/README.md",
+  "filename": "HyperDex: A Distributed, Searchable Key-Value Store",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

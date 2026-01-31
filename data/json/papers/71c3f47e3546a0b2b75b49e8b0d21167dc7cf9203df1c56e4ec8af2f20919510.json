@@ -1,0 +1,32 @@
+{
+  "uuid": "71c3f47e3546a0b2b75b49e8b0d21167dc7cf9203df1c56e4ec8af2f20919510",
+  "title": "Out of the Tar Pit",
+  "publication_date": "2006",
+  "authors": [
+    "Ben Moseley",
+    "Peter Marks"
+  ],
+  "keywords": [
+    "complexity",
+    "control",
+    "functional-programming",
+    "logic",
+    "logic-programming",
+    "programming-paradigms",
+    "software-architecture",
+    "software-design",
+    "state",
+    "state-management"
+  ],
+  "category_path": [
+    "design"
+  ],
+  "abstract": "Complexity is the single major difficulty in the successful development of large-scale software systems. Existing design principles and art methodologies (in particular as they relate to decomposition) do not adequately address all the major causes of complexity - in particular state, which is a major source of complexity in this context, is not handled adequately. By analyzing the different causes of complexity we aim to find a set of approaches to software design which minimize complexity, especially that caused by state. In developing our approaches we draw heavily on previous work in formal methods and functional programming and our major conclusions are that formal methods and functional programming have a large role to play in the development of these approaches. In fact we encourage the use of functional programming and formal methods, but recognize that these are not by themselves sufficient. We conclude that the main components in a programming system should be split on the basis of dealing with state, control, and logic - and we show that this may be done regardless of the paradigm in which one is working.",
+  "summary": "The paper \"Out of the Tar Pit\" by Ben Moseley and Peter Marks is highly influential in the realm of software architecture due to its discussion on complexity management in the development of large-scale software systems. Despite not being published in a major journal, the concepts from the paper found significant traction in academic and industrial settings, influencing the way many think about handling complexity, particularly state and control in programming. The paper is often referenced in discussions around software architecture, functional programming, and system design principles.\n\nIn terms of specific references, the concepts introduced have been echoed in various platforms and discussions on software design patterns, encouraging separation of state, control, and logic to mitigate complexity. However, due to its mode of distribution and target audience (largely academic and professional development communities), formal citations in prominent research papers are relatively sparse.\n\n1. Hickey, R. \"The Value of Values\" (https://www.infoq.com/presentations/Value-Values-Rich-Hickey/), a presentation where the author discusses related principles introduced in Clojure and functional programming.\n2. \"Domain Modeling Made Functional\" by Scott Wlaschin (https://fsharpforfunandprofit.com/books/), a book that reflects similar ideas in the context of functional programming.\n\nOverall, the paper has provided foundational insights into managing software complexity, especially through leveraging functional programming and has shaped discourse in modern software development practices, albeit more through community-driven adoption rather than traditional academic routes.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/design/out-of-the-tar-pit.pdf",
+  "source_type": "pdf",
+  "filepath": "design/out-of-the-tar-pit.pdf",
+  "filename": "out-of-the-tar-pit.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

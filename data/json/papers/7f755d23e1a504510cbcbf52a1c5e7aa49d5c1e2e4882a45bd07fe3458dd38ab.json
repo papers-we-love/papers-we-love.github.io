@@ -1,0 +1,33 @@
+{
+  "uuid": "7f755d23e1a504510cbcbf52a1c5e7aa49d5c1e2e4882a45bd07fe3458dd38ab",
+  "title": "Gossip-based Broadcast",
+  "publication_date": "2007",
+  "authors": [
+    "Jose Leitao",
+    "Jose Pereira",
+    "Luís Rodrigues"
+  ],
+  "keywords": [
+    "broadcast-systems",
+    "distributed-systems",
+    "epidemic-algorithms",
+    "fault-tolerance",
+    "gossip-protocols",
+    "latency",
+    "network-simulations",
+    "probabilistic-reliability",
+    "reliability",
+    "scalability"
+  ],
+  "category_path": [
+    "gossip"
+  ],
+  "abstract": "Gossip-based protocols are widely recognized for their efficiency and fault-tolerance in large-scale distributed systems. These protocols can overcome permanent or temporal failures without requiring accurate failure detection. They are self-healing, able to restore system’s consistency after failures disrupt its operation. Furthermore, they achieve this level of fault-tolerance with a simplicity and low cost unmatched by other fault-tolerant algorithms. Despite its advantages, gossip-based protocols are often considered unreliable because of their probabilistic nature. Most previous work has been devoted to defining more reliable, secure, and robust gossip-based protocols, but has largely ignored models for evaluating their reliability. In this paper, we present novel models for estimating the reliability of gossip-based broadcast protocols, validated through both simulation and experimentation. These models are accurate and efficient, establishing a solid foundation for designing more robust gossip-based protocols.",
+  "summary": "The paper explores gossip-based protocols as a viable solution for efficient and fault-tolerant broadcasting in large distributed systems. A significant contribution of the paper is the formulation of novel models to estimate the reliability of these protocols. Given that gossip-based systems typically operate on a probabilistic basis that may lead to perceptions of unreliability, the models proposed and validated in this paper address this by providing more precise estimates of gossip-based protocol reliability via simulations and experiments.\n\nA web search reveals that this paper has influenced several subsequent studies and applications within the domains of distributed systems and networking. For instance, it is referenced in the paper \"Scalable and reliable sensor network broadcasting with LBP\" presented at the ISCC (International Symposium on Computers and Communications) indicating advancement in reliable broadcast methods (https://ieeexplore.ieee.org/document/6364624). Another noteworthy mention includes its influence on robust broadcast protocols as discussed in \"Efficient gossip-based broadcast for connected groups\" published in Computer Networks (https://www.sciencedirect.com/science/article/pii/S1389128610003773).\n\nThis paper has significantly contributed to the understanding and practical applications of gossip-based protocols within distributed computing environments, particularly by refining approaches to reliability assessment and thus widening the applicability of such protocols.",
+  "raw_url": "http://asc.di.fct.unl.pt/~jleitao/pdf/dsn07-leitao.pdf",
+  "source_type": "external",
+  "filepath": "gossip/README.md",
+  "filename": "HyParView: a membership protocol for reliable gossip-based broadcast",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

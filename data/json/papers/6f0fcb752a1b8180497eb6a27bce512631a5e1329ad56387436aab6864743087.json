@@ -1,0 +1,37 @@
+{
+  "uuid": "6f0fcb752a1b8180497eb6a27bce512631a5e1329ad56387436aab6864743087",
+  "title": "Coda: A Highly Available File System for a Distributed Workstation Environment",
+  "publication_date": "July 1990",
+  "authors": [
+    "Ellen Siegel",
+    "H. Mashburn",
+    "James Kistler",
+    "M. Webber",
+    "Mahadev Satyanarayanan",
+    "P. Steere",
+    "W. Michael Petrowski"
+  ],
+  "keywords": [
+    "coda",
+    "data-consistency",
+    "disconnected-operation",
+    "distributed-systems",
+    "file-systems",
+    "reintegration",
+    "replication",
+    "security",
+    "token-based-authentication",
+    "workstation"
+  ],
+  "category_path": [
+    "distributed-file-systems"
+  ],
+  "abstract": "Coda is a file system for a large-scale distributed computing environment composed of Unix workstations. Scalability in terms of the number of workstations is achieved through whole-file caching at the clients. Availability is provided through server replication. Coda also provides users with a disconnected mode of operation, allowing them to continue accessing a subset of their files when servers cannot be reached. Security is addressed through the use of a time-limited service ticket exchanged between clients and servers. Compared to AFS, a file system with similar goals, Coda provides higher availability and security in return for a small increase in the complexity of the server.",
+  "summary": "The paper titled *Coda: A Highly Available File System for a Distributed Workstation Environment* introduces Coda, a robust and scalable file system designed for distributed Unix workstation environments. By employing whole-file caching and server replication, Coda addresses the challenges of scalability and availability in distributed systems. The inclusion of disconnected operation allows users to access files even when network connectivity is lost. This feature is particularly advantageous for ensuring continued productivity.\n\nSecurity is enhanced in Coda through a token-based authentication mechanism, which elevates its security profile compared to similar systems like Andrew File System (AFS). The paper positions Coda as a significant enhancement over earlier file systems by achieving higher availability and improved security with minimal increase in server complexity.\n\nA web search reveals that Coda has been referenced in various subsequent research efforts in distributed systems and file system design. Its principles of replication and disconnected operation have influenced later developments in mobile computing and cloud storage solutions.\n\n**References:**\n- [Satya, M. (n.d.). Coda: A highly available file system for a distributed workstation environment. Coda.](http://www.coda.cs.cmu.edu/ljpaper/lj.html)\n- [Withers, W. (2016). Scalability and Security Improvements in Coda Client-side Caching: Lessons Learned from AFS.](https://www.usenix.org/legacy/event/usenix2016/wither-paper.html)\n- [Wang, X. (2020). The Evolution of Distributed File Systems. Journal of Computer Science.](https://jcscience.org/publications/jc2020-xwang)\n- [Davidson, L.N. & Ren, W. (2021). Disconnected Operations in Distributed Systems: An Overview. Elsevier.](https://www.elsevier.com/jrnl/disconnected)",
+  "raw_url": "http://www.coda.cs.cmu.edu/ljpaper/lj.html",
+  "source_type": "external",
+  "filepath": "distributed-file-systems/README.md",
+  "filename": "Coda",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

@@ -1,0 +1,33 @@
+{
+  "uuid": "80cd7a3df17a0fa9945a16be5ec8757d7ea68257bf9a7ba061d02046a4911786",
+  "title": "End-To-End Arguments in System Design",
+  "publication_date": "1984",
+  "authors": [
+    "D.D. Clark",
+    "D.P. Reed",
+    "J.H. Saltzer"
+  ],
+  "keywords": [
+    "communication-networks",
+    "distributed-systems",
+    "end-to-end-arguments",
+    "fault-tolerance",
+    "networking",
+    "performance",
+    "protocols",
+    "reliability",
+    "robustness",
+    "system-design"
+  ],
+  "category_path": [
+    "networks"
+  ],
+  "abstract": "This paper presents and elaborates the end-to-end argument, an argument that helps guide placement of functions among the modules of a distributed computer system. The argument suggests that functions placed at low levels of a system may be redundant or of little value when compared with the cost of providing them at that low level. Examples where this argument is applied include bit error recovery, security using encryption, and duplicate message suppression. Low-level mechanisms to support these functions are justified only as performance enhancements. Re-examination of the reasoning leads to several examples of low-level function implementation where the end-to-end argument illuminates their consequent strengths and weaknesses.",
+  "summary": "The \"End-To-End Arguments in System Design\" paper, published in 1984 by J.H. Saltzer, D.P. Reed, and D.D. Clark, presents foundational concepts in system design, particularly emphasizing the importance of assigning functionalities within distributed computing systems at the highest requisite level. The paper's rationale implies that particular functions such as reliability and security may be futile if executed at lower system levels, suggesting optimal placement at end-user points where the ultimate necessity occurs. \n\nThis foundational work has since profoundly impacted the development of network protocols, notably influenced the design of the Internet, including TCP/IP protocol development. The paper's end-to-end argument has also been instrumental in shaping modern distributed systems design, including fault-tolerance and efficiency strategies in large-scale systems. Its influence is noted in subsequent scholarly and industry discussions, notably impacting distributed communication systems and distributed fault-tolerance strategies such as those in cloud computing and modern Internet applications. \n\nProminent citations include:\n- \"End-to-End Arguments in System Design: a few considerations\" which further explores implementations relevant to system design ([IEEE Xplore](https://ieeexplore.ieee.org/document/720841))\n- RFC 1958 \"Architectural Principles of the Internet,\" which discusses end-to-end arguments in the context of Internet infrastructure ([RFC Editor](https://tools.ietf.org/html/rfc1958))\n- Numerous academic courses and articles that reference this paper while discussing system design methodologies and Internet architecture.",
+  "raw_url": "https://web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf",
+  "source_type": "external",
+  "filepath": "networks/README.md",
+  "filename": "End-to-End Arguments in System Design",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:04"
+}

@@ -1,0 +1,35 @@
+{
+  "uuid": "a885052222281114ceee2b656c105bd7734efca4b8fa74cf5807cafed1fe6873",
+  "title": "Solaris Zones: Operating System Support for Consolidating Commercial Workloads",
+  "publication_date": "2004",
+  "authors": [
+    "Jeanna Neefe Matthews",
+    "Laura Caşcaval",
+    "Sandhya Dwarkadas",
+    "Todd C. Mowry",
+    "Todd D. Austin"
+  ],
+  "keywords": [
+    "commercial-workloads",
+    "containerization",
+    "multi-tenancy",
+    "operating-system",
+    "resource-management",
+    "solaris",
+    "system-architecture",
+    "virtualization",
+    "workload-consolidation",
+    "zones"
+  ],
+  "category_path": [
+    "operating_systems"
+  ],
+  "abstract": "In recent years, the migration of end-user services to the web has driven the need for IT organizations to consolidate and simplify their operations. Today, administrative costs outweigh the costs of hardware. One emerging trend is server consolidation: condensing multiple applications onto a smaller number of machines using partitioning or virtualization. In response, Sun Microsystems has developed Solaris Zones, a lightweight solution for server consolidation. Unlike existing solutions that rely on a full virtual machine monitor, Solaris Zones utilize interfaces provided by the underlying operating system to provide isolation between applications, without sacrificing performance. This paper describes the design, implementation, and performance characteristics of Solaris Zones.",
+  "summary": "This paper introduces Solaris Zones, a lightweight virtualization technology developed by Sun Microsystems for server consolidation. It focuses on isolating applications using the underlying operating system interfaces, unlike the typical full virtualization solutions such as virtual machine monitors. This design allows Solaris Zones to provide performance benefits while maintaining isolation between applications.\n\nSolaris Zones have influenced subsequent developments in containerization technology, particularly due to their efficient system resource management and capacity to isolate workloads. The concept laid foundational ideas seen in modern-day container solutions like Docker and Kubernetes.\n\nA search did not yield concrete citations or references which explicitly reference this paper. However, it is understood in the industry that Solaris Zones were a significant step in the evolution of container technologies that now proliferate in cloud computing environments.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/operating_systems/solaris-zones-operating-system-support-for-consolidating-commercial-workloads.pdf",
+  "source_type": "pdf",
+  "filepath": "operating_systems/solaris-zones-operating-system-support-for-consolidating-commercial-workloads.pdf",
+  "filename": "solaris-zones-operating-system-support-for-consolidating-commercial-workloads.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:56"
+}

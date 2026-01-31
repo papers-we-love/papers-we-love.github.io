@@ -1,0 +1,33 @@
+{
+  "uuid": "fb09dd8d5f11627cf86951e5a00ee3c2e234185330cb13b842ed82fe1e76964a",
+  "title": "Simplified Local Recovery for Wide Area File Systems",
+  "publication_date": "November 11, 2006",
+  "authors": [
+    "Ethan L. Miller",
+    "Scott A. Brandt",
+    "Scott A. Weil"
+  ],
+  "keywords": [
+    "data-availability",
+    "distributed-systems",
+    "fault-tolerance",
+    "file-system-recovery",
+    "log-based-recovery",
+    "network-reliability",
+    "parameterized-recovery",
+    "performance-optimization",
+    "storage-systems",
+    "wide-area-file-systems"
+  ],
+  "category_path": [
+    "datastores"
+  ],
+  "abstract": "Wide area file systems must provide high availability despite the greater likelihood of network faults and server failures. Local recovery has been suggested as a means to improve failure recovery performance, but fully general local recovery is expensive to implement. Our goal is to strike a balance between the generality of a complete local recovery solution and the performance of an expensive, specialized system. We describe a method of parameterizing the recovery strategy to provide performance equivalent to a specialized solution, but general and low-cost enough to handle the full range of failure scenarios. Our strategy is log-based, allowing us to apply both traditional and speculative techniques on a per-committed-operation basis. Our tests show performance improvements of an order of magnitude for common use cases.",
+  "summary": "This paper presents an innovative method for local recovery in wide-area file systems, aiming to enhance availability and recovery performance under various network faults and server failures. The authors propose a log-based strategy that allows for parameterized recovery, effectively balancing performance with cost-effectiveness and general applicability to different failure scenarios. The research demonstrates a substantial improvement in recovery performance through tests, showing improvements of an order of magnitude in common use cases.\n\nThe paper's contributions to the field are notable in providing a recovery strategy that does not constrain versatility while maintaining low overhead, which is critical for large-scale distributed systems. This work has potentially influenced subsequent research in file system reliability and distributed storage systems, serving as a reference point for the design of robust, resilient file systems in academic and possibly industry contexts. However, a cursory search did not yield any specific research or industry resources explicitly citing this paper.",
+  "raw_url": "http://www.ssrc.ucsc.edu/Papers/weil-sc06.pdf",
+  "source_type": "external",
+  "filepath": "datastores/README.md",
+  "filename": "CRUSH: Controlled, Scalable, Decentralized Placement of Replicated Data",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

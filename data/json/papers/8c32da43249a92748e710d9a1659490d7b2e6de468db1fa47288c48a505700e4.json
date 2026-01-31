@@ -1,0 +1,38 @@
+{
+  "uuid": "8c32da43249a92748e710d9a1659490d7b2e6de468db1fa47288c48a505700e4",
+  "title": "Write-Optimized B-Trees",
+  "publication_date": "2012",
+  "authors": [
+    "Bradley C. Kuszmaul",
+    "Dinesh Sumanta",
+    "Eric D. D. Silva",
+    "Martin Farach-Colton",
+    "Michael A. Bender",
+    "Rob Johnson",
+    "Russell Kraner",
+    "William E. Smith"
+  ],
+  "keywords": [
+    "b-trees",
+    "buffers",
+    "concurrency",
+    "data-structures",
+    "database-systems",
+    "file-systems",
+    "multi-core",
+    "performance",
+    "throughput",
+    "write-optimization"
+  ],
+  "category_path": [
+    "data_structures"
+  ],
+  "abstract": "Recent file systems, such as WAFL, ZFS, and Btrfs, use tree-based organizations for their indices, allocation maps, and directories. However, these systems use update-in-place methods that are suboptimal for write performance. We propose a technique called \"write-optimized B-trees\" (WOBTs) that improves write performance by buffering writes more effectively. We present asymptotically better bounds for writes, without degrading the asymptotic read performance. We also present an experimental study that shows significant throughput improvements, particularly for random writes, compared to traditional B-trees and Log-Structured Merge-trees (LSM-trees).",
+  "summary": "The paper \"Write-Optimized B-Trees\" introduces an innovative data structure aimed at enhancing write performance in file systems by proposing a variant of the B-tree known as the Write-Optimized B-tree (WOBT). The study establishes that traditional file systems, even those utilizing advanced index structures such as WAFL, ZFS, and Btrfs, rely on update-in-place methods that do not capitalize on optimal write efficiency. The authors advocate for the use of WOBTs as a stark improvement in this area, achieving superior write asymptotic bounds while maintaining efficient read operations. Through experimental results, the paper demonstrates considerable improvements in throughput, emphasizing performance gains for random writes when compared to standard B-trees and Log-Structured Merge-trees.\n\nFollowing a search for citations and further implications of this work, it appears the paper has not gained significant traction or direct citation in subsequent research, as no prominent references or applications were found in available literature. This implies that while the findings present an interesting approach to file system optimizations, further adoption or extensions in academic or industrial contexts are limited. Consequently, the impact of WOBTs remains largely within the domain of theoretical exploration without widespread practical application as of the latest available information.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/data_structures/b-trees-write-optimization.pdf",
+  "source_type": "pdf",
+  "filepath": "data_structures/b-trees-write-optimization.pdf",
+  "filename": "b-trees-write-optimization.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

@@ -1,0 +1,31 @@
+{
+  "uuid": "a36953169e269d3100e21005eb0c3e071c78b77342eff9b5a87b794da49db220",
+  "title": "A New Approach to Linear Filtering and Prediction Problems",
+  "publication_date": "1960",
+  "authors": [
+    "Rudolf E. Kalman"
+  ],
+  "keywords": [
+    "automatic-control",
+    "bayesian-inference",
+    "control-theory",
+    "estimation-theory",
+    "kalman-filter",
+    "linear-filtering",
+    "prediction",
+    "signal-processing",
+    "state-space-models",
+    "stochastic-processes"
+  ],
+  "category_path": [
+    "data_fusion"
+  ],
+  "abstract": "Problems involving the prediction of the future state of a system, the filtering of noise from signals, or the extraction of information from a signal, constitute a large group of applied mathematical problems in engineering which frequently surface in the field of communication and control. Procedures for dealing with these problems have evolved from techniques used originally in the statistical prediction of time series, the rejection of frequency-selective interference, and the smoothing and filtering of particular kinds of stationary random processes. These procedures, which involve linear systems, will be referred to generally as linear filtering and prediction theory. This paper develops a new approach to the linear filtering problem and related prediction problems, and describes a recursive solution of the discrete-data linear filtering problem. As with the similar but less general problem of interpolation between successive observations, first studied by Kolmogorov, the method of approach is to construct a mathematical model of the process investigated, and then to deduce sets of formulas which will yield optimal estimates of present and future values of the variables of the process. But unlike the classical Wiener filter, the method described here derives from the state approach to linear systems as first proposed by Kalman, Lazare, and others in connection with the optimal control of dynamic systems, and furthermore uses explicitly the concept of the state of a stochastic process.",
+  "summary": "The paper titled \"A New Approach to Linear Filtering and Prediction Problems\" authored by Rudolf E. Kalman and published in 1960 is a seminal work in the field of control theory and signal processing. It introduces what is now known as the Kalman Filter, a mathematical algorithm that provides estimates of the true values of measurements, accounting for accuracy and uncertainty.\n\nThe Kalman Filter has had substantial influence across multiple domains including aerospace, robotics, finance, and beyond. Very importantly, it has been applied widely in the development of navigation systems, such as GPS, where it serves to filter out noise from raw data signals to produce more accurate positioning information.\n\nA few of the notable references to this work include:\n- Brown, Robert Grover, and Patrick Y. C. Hwang. \"Introduction to random signals and applied Kalman filtering.\" This textbook expands on the practical applications of the Kalman Filter in engineering fields.\n- Welch, G., & Bishop, G. (1995). \"An Introduction to the Kalman Filter,\" Technical Report for the Department of Computer Science at the University of North Carolina Chapel Hill: <https://www.cs.unc.edu/~welch/media/pdf/kalman_intro.pdf>\n- Haykin, S. \"Adaptive Filter Theory.\" This book includes discussions on adaptive filters that build upon Kalman's initial contributions.\n- The paper has also influenced algorithmic trading strategies in the financial industry where prediction and noise filtering are crucial for model development.\n\nThe Kalman Filter continues to be relevant in research focused on improving estimation techniques and developing more robust models for dynamic systems. Through its mathematically rigorous framework, it provides a basis for further advancements in areas requiring accurate estimation from noisy data.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/data_fusion/a-new-approach-to-linear-filtering-and-prediction-problems.pdf",
+  "source_type": "pdf",
+  "filepath": "data_fusion/a-new-approach-to-linear-filtering-and-prediction-problems.pdf",
+  "filename": "a-new-approach-to-linear-filtering-and-prediction-problems.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

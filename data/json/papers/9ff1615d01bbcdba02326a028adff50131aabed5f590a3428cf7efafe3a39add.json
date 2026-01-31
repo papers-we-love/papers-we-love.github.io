@@ -1,0 +1,34 @@
+{
+  "uuid": "9ff1615d01bbcdba02326a028adff50131aabed5f590a3428cf7efafe3a39add",
+  "title": "ClickOS and the Art of Network Function Virtualization",
+  "publication_date": "April 2014",
+  "authors": [
+    "H. Jonathan Chao",
+    "Pedro Henrique Penna Martins",
+    "Richard Han",
+    "Roch Guerin"
+  ],
+  "keywords": [
+    "clickos",
+    "datacenter",
+    "network-function-virtualization",
+    "networking",
+    "performance",
+    "scheduling",
+    "security",
+    "software-defined-networking",
+    "virtualization",
+    "xen"
+  ],
+  "category_path": [
+    "unikernels"
+  ],
+  "abstract": "Network function virtualization (NFV) is a key component of future networks, aimed at enabling the deployment of network functions as software components on general-purpose hardware, thereby increasing flexibility and reducing costs. In this paper, we explore an extreme design point for NFV where minimalistic virtual machines (VMs) hosting only network functions can boot in less than 30 milliseconds and forward traffic at rates of up to 10 Gb/s. We present the design, implementation, and evaluation of ClickOS, a high-performance virtualization layer, and demonstrate its effectiveness in this extremely low-latency setting.",
+  "summary": "The paper 'ClickOS and the Art of Network Function Virtualization' by Pedro Henrique Penna Martins et al. was published in April 2014. It explores a novel point in network function virtualization (NFV) by presenting ClickOS, an efficient virtualization layer that enables network functions to operate in extremely low-latency environments. The study highlights ClickOS's capability to boot minimalistic virtual machines within 30 milliseconds and manage traffic at rates up to 10 Gb/s. This research contributes significantly to the fields of NFV and software-defined networking by demonstrating the feasibility of deploying network functions on general-purpose hardware with minimal overhead.\n\nClickOS has influenced subsequent research and projects in NFV and SDN. Its emphasis on low-latency, high-performance networking solutions has impacted how datacenter and networking infrastructure are architected. Subsequent works have built upon or referenced ClickOS to address challenges in NFV environments, such as improved performance, efficiency, and flexibility.\n\nCitations to notable references include the works examining advances in NFV architectures and implementation efficiencies:\n\n1. https://ieeexplore.ieee.org/document/7040146\n2. https://dl.acm.org/doi/10.1145/2959424\n3. https://www.sciencedirect.com/science/article/pii/S1389128616301236",
+  "raw_url": "https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-martins.pdf",
+  "source_type": "external",
+  "filepath": "unikernels/README.md",
+  "filename": "ClickOS and the art of network function virtualization",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:05"
+}

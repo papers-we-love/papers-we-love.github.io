@@ -1,0 +1,34 @@
+{
+  "uuid": "7dff9507804836a9363e580ce54d576bbb4f35a43408b9d53426a4eb2591ee1f",
+  "title": "Stasis: Flexible transactional storage",
+  "publication_date": "2007",
+  "authors": [
+    "Edward lewi",
+    "Ryan Sears",
+    "Steve Heller",
+    "Wilson Hsieh"
+  ],
+  "keywords": [
+    "concurrency-control",
+    "crash-recovery",
+    "data-structures",
+    "database-systems",
+    "logging",
+    "persistence",
+    "recovery-algorithms",
+    "stasis",
+    "system-design",
+    "transactional-storage"
+  ],
+  "category_path": [
+    "datastores"
+  ],
+  "abstract": "This paper describes a flexible transactional storage layer called Stasis. Stasis provides applications with features typically found in databases, such as transaction support, durability, consistency, and isolation, but allows applications to implement their own data models. By exposing a simple, low-level interface, Stasis enables developers to manage persistent data without incurring the overhead of an entire database management system. Stasis is especially useful for applications with complex recovery requirements or that require efficient support for interactions between data model and storage system. We demonstrate the effectiveness of Stasis by providing several examples of its use and showing the ease with which it can be tailored to a variety of applications. Stasis can also serve as a foundation for the development of new storage systems. We describe our implementation of the ARIES recovery algorithm and other innovations in logging, including our integrated approach to memory and storage allocation, and tools for handling log-structured artifacts efficiently. These techniques provide the reliability and availability standard of databases with the flexibility of custom data management solutions outside of legacy databases.",
+  "summary": "The paper \"Stasis: Flexible transactional storage\" introduces a novel transactional storage layer named Stasis that combines features of database systems with flexible data management options. Stasis bolsters the development of applications requiring complex recovery algorithms by implementing a low-level interface, sidestepping the typical overhead of full-fledged database systems. It utilizes techniques such as the ARIES recovery algorithm combined with its own innovations in logging, enhanced storage, and memory allocation capabilities.\n\nWhile no direct industrial or academic references to the Stasis paper were found in initial query results, the principles and solutions it offers in terms of transactional storage systems are foundational and likely influential in constructing flexible, durable storage solutions. This would have implications for designing database backends and applications needing specialized storage capabilities beyond the scope of existing DBMS approaches.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/datastores/stasis-flexible-transactional-storage.pdf",
+  "source_type": "pdf",
+  "filepath": "datastores/stasis-flexible-transactional-storage.pdf",
+  "filename": "stasis-flexible-transactional-storage.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

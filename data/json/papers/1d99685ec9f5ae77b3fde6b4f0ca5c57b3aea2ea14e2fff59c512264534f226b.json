@@ -1,0 +1,32 @@
+{
+  "uuid": "1d99685ec9f5ae77b3fde6b4f0ca5c57b3aea2ea14e2fff59c512264534f226b",
+  "title": "Implementing the Omega Failure Detector in the Crash-Recovery Failure Model",
+  "publication_date": "2004",
+  "authors": [
+    "Damien Martin",
+    "Marcos K. Aguilera",
+    "Sergio Rajsbaum"
+  ],
+  "keywords": [
+    "algorithmic-design",
+    "asynchronous-systems",
+    "consensus",
+    "crash-recovery-failure-model",
+    "distributed-systems",
+    "failure-detection",
+    "fault-tolerance",
+    "omega-failure-detector",
+    "synchronization"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "The Omega failure detector is the least expensive failure detector ever for solving consensus in asynchronous systems where less than half the processes can crash. In this paper, we incorporate it into a crash-recovery model. We show that it is possible to wait for all processes to recover before solving consensus with Omega. As part of the solution, we provide an algorithm that makes use of reliable delivery to all destinations to provide reliable delivery to a majority of alive peers.",
+  "summary": "The paper \"Implementing the Omega Failure Detector in the Crash-Recovery Failure Model\" by Damien Martin, Sergio Rajsbaum, and Marcos K. Aguilera presents an implementation of the Omega failure detector in scenarios that consider the crash-recovery failure model. This approach is significant for distributed systems since it allows consensus in asynchronous systems where fewer than half of the processes can fail and recover. The work shows that the Omega failure detector can be effectively utilized in systems by waiting for all processes to recover, meaning it is possible to attain reliable consensus across systems dealing with temporal process failures. The authors provide an algorithm that relies on reliable message delivery to a majority of live processes, establishing a fault-tolerant approach in the presence of process crashes and recoveries.\n\nIn terms of influence, this paper contributes to the area of distributed systems, particularly in enhancing fault tolerance and synchronization strategies in asynchronous systems. The Omega failure detector concept has been utilized in subsequent research to improve understanding of fault-tolerance mechanisms in distributed systems.\n\nHowever, through a web search, no specific papers directly cite or reference this particular implementation outline within the immediate literature available for this paper. This suggests a specialized application scope at the time of its publication or that it is a foundational work referenced in broader reviews or indirectly via discussions on failure detection mechanisms in distributed systems.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/implementing-the-omega-failure-detector-in-crash-recovery-failure-model.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/implementing-the-omega-failure-detector-in-crash-recovery-failure-model.pdf",
+  "filename": "implementing-the-omega-failure-detector-in-crash-recovery-failure-model.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:54"
+}

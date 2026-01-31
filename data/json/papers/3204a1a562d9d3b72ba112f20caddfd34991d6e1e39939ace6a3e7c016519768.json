@@ -1,0 +1,33 @@
+{
+  "uuid": "3204a1a562d9d3b72ba112f20caddfd34991d6e1e39939ace6a3e7c016519768",
+  "title": "End-To-End Arguments in System Design",
+  "publication_date": "November 1984",
+  "authors": [
+    "D.D. Clark",
+    "D.P. Reed",
+    "J.H. Saltzer"
+  ],
+  "keywords": [
+    "communication-protocols",
+    "data-communication",
+    "distributed-systems",
+    "end-to-end-principle",
+    "fault-tolerance",
+    "network-design",
+    "performance-optimization",
+    "protocol-architecture",
+    "reliability",
+    "system-design"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "This paper explores the rationale for placing functions at low levels of a system, such as within the communication subsystem of a distributed computer system. It suggests a design principle called the \"end-to-end argument,\" which implies that functions can be correctly and completely implemented only with the knowledge and help of the application standing at the endpoints of the communication system. Thus, providing these functions as features of the communication subsystem, while sometimes useful as a performance enhancement, is not always necessary or cost-effective. Several examples, including bit error recovery, security using encryption, and duplicate message suppression, are used to illustrate this concept.",
+  "summary": "The paper titled \"End-To-End Arguments in System Design\" by J.H. Saltzer, D.P. Reed, and D.D. Clark published in November 1984, introduces the end-to-end argument, a design principle pivotal in system design, particularly within distributed systems and network protocols. This principle asserts that specific functions can be effectively and completely implemented only at the endpoints of a communication system, rather than at lower levels. Common examples include error checking and encryption.\\n\\nThe paper has significantly influenced both research and practical applications in computer network design, notably impacting the development of the Internet. The principle has served as a foundational guideline for protocol development, and has been cited in various works and standards related to network architecture.\\n\\nFor instance, the paper \"RFC 1958: Architectural Principles of the Internet\" by B. Carpenter (https://datatracker.ietf.org/doc/html/rfc1958) refers to this design principle as a critical aspect of Internet architecture.\\n\\nMoreover, the principle is often discussed in academic curricula related to computer networking, where its implications on cost-effectiveness and system functionality are analyzed (https://web.stanford.edu/class/cs144/).\\n\\nOverall, the end-to-end argument continues to be a central concept in the fields of computer network design and distributed systems, influencing both academic discourse and practical implementations.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/end-to-end-arguments-in-system-design.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/end-to-end-arguments-in-system-design.pdf",
+  "filename": "end-to-end-arguments-in-system-design.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

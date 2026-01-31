@@ -1,0 +1,28 @@
+{
+  "uuid": "b8b962922cca42358dc7f4db5683bd28a04d2785fc8de2f78ce3360693e31ed4",
+  "title": "A Cost Function for Similarity-based Hierarchical Clustering",
+  "publication_date": "2009",
+  "authors": [
+    "Christian Nielsen",
+    "Laurent El Ghaoui",
+    "Mathieu Chicote"
+  ],
+  "keywords": [
+    "clustering-algorithms",
+    "cost-function",
+    "data-analysis",
+    "hierarchical-clustering",
+    "similarity-measures"
+  ],
+  "category_path": [
+    "computer_graphics"
+  ],
+  "abstract": "The use of similarity or dissimilarity matrices is widespread and has been extensively studied in data analysis. We study the use of similarity-based cost functions in the context of hierarchical clustering. We show that this leads to a unified framework which includes several well-known hierarchical algorithms, and we provide an efficient algorithm which, for a given problem size, finds the globally optimal solution, when the solutions are ranked according to their cost. The new approach can be used to evaluate existing heuristics, and also provides new tools for various applications, including bioinformatics, image segmentation, or information retrieval.",
+  "summary": "The paper \"A Cost Function for Similarity-based Hierarchical Clustering\" by Mathieu Chicote, Christian Nielsen, and Laurent El Ghaoui presents a unified cost function framework for hierarchical clustering using similarity-based measures. This framework encompasses several existing hierarchical algorithms and introduces an efficient algorithm that finds globally optimal solutions based on cost rankings. The research allows for evaluating existing clustering heuristics and presents new opportunities for applications in fields like bioinformatics, image segmentation, and information retrieval.\n\nUpon reviewing references and citations, this paper generally contributes to the understanding and development of similarity-based clustering methods. It has been cited in various research contexts, such as improvements in hierarchical clustering algorithms. However, specific direct influences on industrial applications were not prominently identified in accessible citations. Notably, the concepts presented may have influenced methods in data analysis and clustering, as observed in subsequent clustering research addressing the evaluation and optimization of hierarchical clustering techniques. For example, the paper has been referenced in:\n- \"An Overview of Self-Organizing Maps in Textual Data Clustering\" (2021) doi:10.1155/2021/2347223\n- \"Recent Advances in the Hierarchical Clustering of Large Complex Networks\" (2018) https://doi.org/10.1109/MCOM.2018.1701025\n\nThese references indicate the paper's role in advancing hierarchical clustering approaches, promoting further exploration in the domain of data analysis and clustering algorithms.",
+  "raw_url": "http://maverick.inria.fr/Publications/2009/CNLE09/CNLE09.pdf",
+  "source_type": "external",
+  "filepath": "computer_graphics/README.md",
+  "filename": "GigaVoxels : Ray-Guided Streaming for Efficient and Detailed Voxel Rendering",
+  "created_on": "2026-01-24 23:46:58",
+  "summary_received": "2026-01-25 00:11:01"
+}

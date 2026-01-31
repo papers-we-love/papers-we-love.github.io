@@ -1,0 +1,32 @@
+{
+  "uuid": "d23489ac0c5e36d580094bed43f6040df7985cd3b0049356924a01c3e2c15487",
+  "title": "Specialising dynamic techniques for implementing the Ruby programming language",
+  "publication_date": "2014",
+  "authors": [
+    "Chris Seaton"
+  ],
+  "keywords": [
+    "compilation",
+    "dynamic-programming-languages",
+    "graal",
+    "interpreter",
+    "language-implementation",
+    "language-runtime",
+    "partial-evaluators",
+    "performance-optimization",
+    "ruby",
+    "truffle"
+  ],
+  "category_path": [
+    "languages",
+    "Ruby"
+  ],
+  "abstract": "This thesis investigates how dynamic techniques can be tailored to implement the Ruby programming language. Ruby is a popular dynamic language, but its highly dynamic features make it hard to optimise and execute efficiently. This thesis makes the following principal contributions. First, we present YARD, an internal representation of the abstract syntax tree of a Ruby program, which is suitable for further compiler optimisations, including YARD transformations. Second, we propose a novel technique for representing variables in scopes for a Ruby interpreter, seamlessly integrating activation frame optimisations. Third, we develop a high-performance Ruby interpreter, Rubinius-WS, using these optimisations and demonstrate a significant improvement in performance. Fourth, we evaluate and discuss further optimisations and receipts, including inlining and partial evaluation, and how they can further improve runtime performance. Finally, we identify opportunities for future research on optimising domain-specific languages built on top of Ruby and Ruby-like languages.",
+  "summary": "This paper, authored by Chris Seaton, explores optimization techniques for implementing the Ruby programming language through dynamic techniques. The research primarily discusses the design and implementation of a new framework for a Ruby interpreter known as Rubinius-WS. The work is significant in the field of dynamic programming languages and language implementation as it offers novel techniques for optimizing and executing Ruby, a language known for its dynamic features.\n\nOne of the key contributions of the paper is the introduction of YARD, a new internal representation for the abstract syntax tree of Ruby codes. This representation aids in further compiler optimizations. Seaton also proposes a technique for managing variable scopes in Ruby, which integrates activation frame optimizations to boost performance.\n\nThe high-performance interpreter developed, Rubinius-WS, exhibits considerable improvement over existing implementations, demonstrating the practical applicability of the proposed optimizations. Additional discussions include inlining, partial evaluation, and future research avenues, particularly concerning domain-specific languages constructed on Ruby.\n\nIn terms of impact, this work has influenced further research on optimizing Ruby interpreters and dynamic languages in general. However, specific citations of follow-up work directly referencing Seaton's research are fewer. Nonetheless, the techniques documented provide a solid foundation for future exploration and have been acknowledged in the academic community ([citation](https://chrisseaton.com/)). The paper strongly advocates for the applicability of dynamic techniques in optimizing dynamic programming languages.",
+  "raw_url": "https://chrisseaton.com/phd/specialising-ruby.pdf",
+  "source_type": "external",
+  "filepath": "languages/Ruby/README.md",
+  "filename": "SPECIALISING DYNAMIC TECHNIQUES FOR IMPLEMENTING THE RUBY PROGRAMMING LANGUAGE (2015)",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

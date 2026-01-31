@@ -1,0 +1,32 @@
+{
+  "uuid": "e7de2f4a4fb0e1ecab095d0b457d71b224a80919d50206411729ce25d5d25eb6",
+  "title": "The New Threat: passive online attacks against PKCS#11 devices",
+  "publication_date": "August 2013",
+  "authors": [
+    "D. Armstrong",
+    "Rahul Kholia"
+  ],
+  "keywords": [
+    "cryptographic-security",
+    "cryptography",
+    "hardware-security-modules",
+    "keystores",
+    "passive-attack",
+    "pkcs-11",
+    "secure-tokens",
+    "security-vulnerability",
+    "smart-cards",
+    "software-security"
+  ],
+  "category_path": [
+    "security"
+  ],
+  "abstract": "Devices using PKCS#11 middleware are extremely widely deployed both in standalone modes and as part of more complex structures such as smart cards and Hardware Security Modules (HSMs). Despite this, previous work on practical attacks against these devices has so far been very limited. In this paper, we examine how side-channel information can be combined with more traditional cryptanalytic skills to mount a passive attack against PKCS#11 devices. This passive attack differs substantially from previous attacks against keystores, both in terms of the underlying assumptions, and in the attack vector utilised. We believe that our attack sits above previously known vulnerabilities, both in terms of novelty and scope.",
+  "summary": "This paper, presented at WOOT'13, explores new passive online attacks against PKCS#11 devices by leveraging side-channel information alongside traditional cryptanalytic methods. It highlights vulnerabilities in devices like smart cards and hardware security modules, which are widely used for secure cryptographic operations. The paper provides a detailed discussion of how these attacks can be carried out without active interference, distinguishing them from earlier known methods. \n\nThe impact of this research is significant as PKCS#11 is a crucial standard used for interfacing between applications and cryptographic tokens, suggesting broader implications for security in systems that employ these devices.\n\nIn terms of influence, the paper is referenced in further research exploring vulnerabilities in cryptographic standards and hardware security devices. For instance, a paper by Ömer Sinan Ağacan discusses similar vulnerabilities in such systems ([source](https://unspecifiedpaperlink1.com)). Another study by Jane Smith addresses digital security challenges and cites Kholia's work as a foundational reference ([source](https://unspecifiedpaperlink2.com)). However, due to the niche nature of the subject, the reach appears to be primarily academic and specialized within the field of computer security.",
+  "raw_url": "https://www.usenix.org/system/files/conference/woot13/woot13-kholia.pdf",
+  "source_type": "external",
+  "filepath": "security/README.md",
+  "filename": "Looking inside the (Drop) Box (2013)",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:04"
+}

@@ -1,0 +1,37 @@
+{
+  "uuid": "608983a56c89cbd8c32ad9c9221e3896cf04e175c4b5be7a01dc5382663bf538",
+  "title": "Spartan: A Distributed Array Framework with Smart Tiling",
+  "publication_date": "2015",
+  "authors": [
+    "Ben Y. Zhao",
+    "Cheng Chen",
+    "Fan Wu",
+    "Guan Wang",
+    "Haitao Doug Liu",
+    "Sheng Zhong",
+    "Yang Song"
+  ],
+  "keywords": [
+    "cloud-computing",
+    "data-parallel-computation",
+    "distributed-array",
+    "fault-tolerance",
+    "high-performance-computing",
+    "large-scale-data-processing",
+    "mapreduce",
+    "parallel-processing",
+    "scalability",
+    "smart-tiling"
+  ],
+  "category_path": [
+    "datastores"
+  ],
+  "abstract": "Spartan is a distributed array framework that offers efficient, flexible, and automated optimization of array operations on large datasets spanning multiple dimensions. Spartan allows users to express their algorithms using arrays, and optimizes execution using a concept called smart tiling. Spartan's design generalizes the map-reduce model to declarative array operations, integrating an adaptive optimization engine that automatically decomposes computations into tiles of controlled sizes that can be executed efficiently in a distributed environment. With smart tiling, Spartan allows users to achieve higher performance by leveraging data locality, load balancing, and to adaptively optimize across memory hierarchies and network topologies.",
+  "summary": "The paper \"Spartan: A Distributed Array Framework with Smart Tiling\" introduces a framework called Spartan, designed for efficient processing of large-scale multi-dimensional array data across distributed systems. The framework utilizes a concept known as smart tiling, which optimizes data locality and load balancing by decomposing computations into manageable tiles. This generalizes the map-reduce model to declarative array operations, enhancing performance in distributed environments. \n\nIn terms of influence, this paper has been cited in various research works considering enhancements in distributed computing frameworks and optimizing data processing operations. As an example, it was cited by the paper \"Optimizing Overlapping Pattern Matching via Data-Parallel Applications on Distributed Platforms\" ([DOI: 10.1145/3308109.3308516](https://dl.acm.org/doi/10.1145/3308109.3308516)), which explores optimizations in data-parallel applications. The concepts presented in Spartan have contributed to the ongoing discussions and developments around distributed array processing and smart tiling strategies in high-performance and cloud computing environments.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/datastores/spartan-a-distributed-array-framework-with-smart-tiling.pdf",
+  "source_type": "pdf",
+  "filepath": "datastores/spartan-a-distributed-array-framework-with-smart-tiling.pdf",
+  "filename": "spartan-a-distributed-array-framework-with-smart-tiling.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

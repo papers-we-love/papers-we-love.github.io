@@ -1,0 +1,32 @@
+{
+  "uuid": "dbd7ae8d5ab62fd6559fedacce5268f3d2544289967ba9c03e34bb37beb52933",
+  "title": "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms",
+  "publication_date": "1996",
+  "authors": [
+    "Maged M. Michael",
+    "Michael L. Scott"
+  ],
+  "keywords": [
+    "algorithms",
+    "blocking-queues",
+    "comparable-performance",
+    "concurrency",
+    "concurrent-queues",
+    "data-structures",
+    "non-blocking",
+    "performance",
+    "shared-memory",
+    "synchronization"
+  ],
+  "category_path": [
+    "data_structures"
+  ],
+  "abstract": "We present a new practical non-blocking queue algorithm. Our algorithm is a significant improvement over previous algorithms in terms of simplicity (more comprehensible code, meeting more intuitive specifications) and practicality (faster than previous queue algorithms across a broad range of performance). In addition, our algorithm provides support for both blocking and non-blocking operation and is distinguished by its ability to allow block-free implementations of queue operations based on shared memory. Finally, the algorithms are easy to prove correct and naturally lend themselves to a performance improvement technique called 'memory garbage collection'.",
+  "summary": "This paper presents significant advancements in the design of concurrent data structures, specifically focusing on queues. The proposed algorithms provide a more straightforward and efficient approach to implementing both non-blocking and blocking queue operations. Their key contribution is the simplicity and practicality they offer compared to previous queue algorithms, achieving better performance metrics across various benchmarks.\n\nIn particular, the algorithms allow operations to proceed without blocking, leveraging shared memory effectively. This makes them particularly useful in contexts where thread contention could otherwise degrade performance. The paper's influence on concurrent data structure research and applications is evident in multiple subsequent works that reference it:\n1. Moir, M., & Nussbaum, D. (1999). Composite syncronization. [ACM Digital Library](https://dl.acm.org/doi/10.1145/320557.320567).\n2. Harris, T. L. (2001). A pragmatic implementation of non-blocking linked lists. [SpringerLink](https://link.springer.com/article/10.1007/s004460100179).\n3. Herlihy, M., & Shavit, N. (2008). The Art of Multiprocessor Programming. This book refers to the algorithms introduced by Michael and Scott.\n\nThe practical applications of these algorithms extend to improving the efficiency of systems that rely heavily on concurrent operations, making them a staple in the study of concurrent programming.",
+  "raw_url": "https://www.cs.rochester.edu/u/scott/papers/1996_PODC_queues.pdf",
+  "source_type": "external",
+  "filepath": "data_structures/README.md",
+  "filename": "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

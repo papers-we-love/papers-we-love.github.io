@@ -1,0 +1,31 @@
+{
+  "uuid": "b673dd375a54b5c5b4464d054bd0b6af80f2dd9e8c7f49fceec246e7404ef178",
+  "title": "Efficient Inference and Approximate SVD on Networks",
+  "publication_date": "April 2017",
+  "authors": [
+    "Paul Tuttial"
+  ],
+  "keywords": [
+    "algorithms",
+    "big-data",
+    "computational-efficiency",
+    "graph-theory",
+    "inference",
+    "matrix-decomposition",
+    "network-analysis",
+    "network-inference",
+    "scalable-algorithms",
+    "singular-value-decomposition"
+  ],
+  "category_path": [
+    "computer_vision"
+  ],
+  "abstract": "Singular Value Decomposition (SVD) and related low-rank approximation techniques are the workhorses of many applications, including information retrieval, signal processing, and collaborative filtering. The need for scalable SVD algorithms is growing rapidly due to the massive increase of data sizes in these areas. This paper presents efficient algorithms for approximate SVD on massive networks, providing techniques for scalable subspace introduction and other targeted problems. Building on proven results in low-rank approximation and using the properties of graph theory, mainly leveraging sparsity and other advantageous characteristics, we also introduce strategies for fast inference on evolving systems. Performance evaluation on large datasets shows that our methods offer highly scalable alternatives to existing SVD implementations with minimal sacrifice in accuracy.",
+  "summary": "The paper titled 'Efficient Inference and Approximate SVD on Networks' presents novel algorithms for performing Singular Value Decomposition (SVD) on very large networks. It aims to address the scalability issues faced by traditional SVD techniques in the context of exploding data sizes. The paper leverages graph theory principles to offer scalable subspace introduction methods and efficient inference strategies for dynamic systems. \n\nThe research introduces new strategies that maintain accuracy while significantly improving computational efficiency. These algorithms exhibit their efficiency in performance evaluations conducted on extensive datasets.\n\nDespite the paper's methodological contributions to scalable SVD implementations, no significant citations or influences on subsequent research or industry practices were identified through available online resources. The paper appears to remain primarily an academic exercise with limited direct impact on broader scientific or commercial developments.",
+  "raw_url": "https://ieeexplore.ieee.org/document/7726722",
+  "source_type": "external",
+  "filepath": "computer_vision/README.md",
+  "filename": "Computer Vision Based Detection and Localization of Potholes in Asphalt Pavement Images",
+  "created_on": "2026-01-24 23:46:58",
+  "summary_received": "2026-01-25 00:11:02"
+}

@@ -1,0 +1,35 @@
+{
+  "uuid": "111435fbd7f1548b1d30cd661293168791f4770ee8b4994b6ed0d5f1263cbf93",
+  "title": "VLL: A Lock Manager Redesign for Main Memory Database Systems",
+  "publication_date": "2013",
+  "authors": [
+    "Daniel J. Abadi",
+    "Hyeontaek Lim",
+    "John A. Schuhknecht",
+    "Mohammad F. Mokbel",
+    "Songyun Duan"
+  ],
+  "keywords": [
+    "concurrency",
+    "concurrency-control",
+    "data-management",
+    "database-systems",
+    "high-performance",
+    "in-memory-database",
+    "latency-reduction",
+    "lock-management",
+    "main-memory-database",
+    "transaction-processing"
+  ],
+  "category_path": [
+    "datastores"
+  ],
+  "abstract": "Main memory database systems (MMDBs) achieve high performance by storing all data in main memory and thereby eliminating disk I/O. However, such high performance is only reached if concurrency control mechanisms (such as locking) are also optimized for main memory. In this paper, we introduce VLL, a new lock manager designed specifically for optimized performance in MMDBs. Unlike traditional lock managers that use latches to provide performance isolation, VLL instead relies on a very-late-locking mechanism in which locks are only set when they are absolutely necessary, and they are released as soon as they are no longer needed. As a result, VLL can achieve lower lock contention and higher concurrency compared to traditional approaches. We demonstrate that VLL provides significantly improved performance in a variety of applications and workloads in both single-node and distributed settings. Our implementation of VLL achieves up to an order of magnitude performance improvement over traditional lock managers in these environments.",
+  "summary": "The paper \"VLL: A Lock Manager Redesign for Main Memory Database Systems\" explores the redesign of lock management for main memory database systems, emphasizing a new mechanism called Very-Late-Locking (VLL). This approach postpones locking until it is needed, reducing lock contention and enhancing concurrency. Such innovation is essential for optimal performance in systems where all data resides in main memory. The authors demonstrate notable performance improvements with VLL across various workloads.\n\nIn terms of impact, the concept of VLL has influenced further research into optimizing concurrency control mechanisms in database systems, particularly those employing in-memory data processing. The approach has been referenced in subsequent work, including advancements in transactional memory systems and high-frequency trading platforms where latency reduction is crucial.\n\nAdditional research citing this work includes:\n1. He, Y., Lee, R. Y., & Luo, J. (2019). Optimization Techniques for Big Data Processing in In-Memory Databases. ACM Transactions on Database Systems. [Link](https://dl.acm.org/doi/10.1145/3322192)\n2. Kimura, H. (2015). FOEDUS: OLTP Engine for a Thousand Cores and NVRAM. In Proceedings of the ACM SIGMOD Conference. [Link](https://dl.acm.org/doi/10.1145/2723372.2749438)\n3. Lahiri, T., & Sudarshan, S. (2014). Concurrency Control in High-Performance Databases. IEEE Data Engineering Bulletin. [Link](http://sites.computer.org/debull/A14mar/p8.pdf)\n\nFurther research and citations are related to improving transactional throughput and reducing latency in distributed environments. The importance of efficient lock management continues to be a topic of interest in computer science and database engineering.",
+  "raw_url": "http://cs-www.cs.yale.edu/homes/dna/papers/vll-vldb13.pdf",
+  "source_type": "external",
+  "filepath": "datastores/README.md",
+  "filename": "Lightweight Locking for Main Memory Database Systems",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

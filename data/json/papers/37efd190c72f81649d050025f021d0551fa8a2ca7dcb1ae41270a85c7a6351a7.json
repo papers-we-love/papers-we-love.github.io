@@ -1,0 +1,33 @@
+{
+  "uuid": "37efd190c72f81649d050025f021d0551fa8a2ca7dcb1ae41270a85c7a6351a7",
+  "title": "\"Why Should I Trust You?\" Explaining the Predictions of Any Classifier",
+  "publication_date": "August 2016",
+  "authors": [
+    "Carlos Guestrin",
+    "Marco Tulio Ribeiro",
+    "Sameer Singh"
+  ],
+  "keywords": [
+    "algorithm",
+    "black-box-models",
+    "classifier-explanation",
+    "dataset",
+    "explainability",
+    "feature-selection",
+    "interpretability",
+    "lime",
+    "machine-learning",
+    "trust"
+  ],
+  "category_path": [
+    "machine_learning"
+  ],
+  "abstract": "Despite widespread adoption, machine learning models remain mostly black boxes. We present LIME, an algorithm that explains the predictions of any classifier in an interpretable and faithful manner, by learning an interpretable model locally around the prediction. We also propose a new way to evaluate the quality of explanations, with novel experiments on a wide variety of datasets (text, images, and biological).",
+  "summary": "This paper by Ribeiro et al. introduces LIME (Local Interpretable Model-Agnostic Explanations), an algorithm that explains the predictions of machine learning classifiers. LIME generates local linear approximations of classifiers to provide understandable insights into the decision-making process of models, which are often considered black boxes due to their complexity. This ability to explain model predictions in an interpretable manner has significant implications for fields requiring transparency and accountability, such as healthcare, finance, and law. \n\nThe paper also proposes a novel evaluation method for explanation quality, which was tested on various datasets including text, images, and biological data. The approach has been adopted broadly, enhancing the understanding and trust in machine learning models.\n\nThis research has influenced numerous subsequent studies in the field of model interpretability and has been cited extensively. For instance, a paper by Lundberg and Lee in 2017 titled \"A Unified Approach to Interpreting Model Predictions\" builds upon the ideas presented in this paper ([link](https://proceedings.neurips.cc/paper/2017/hash/8a20a8621978632d76c43dfd28b67767-Abstract.html)). Another paper by Shrikumar et al., 2017, titled \"Learning Important Features Through Propagating Activation Differences\" also references LIME ([link](https://proceedings.mlr.press/v70/shrikumar17a.html)). These citations illustrate the paper’s impact on ongoing efforts to increase the transparency and interpretability of machine learning models.",
+  "raw_url": "http://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf",
+  "source_type": "external",
+  "filepath": "machine_learning/README.md",
+  "filename": "\"Why Should I Trust You?\" Explaining the Predictions of Any Classifier",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:04"
+}

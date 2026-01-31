@@ -1,0 +1,32 @@
+{
+  "uuid": "2fac941da8f7c60df1759df778cd453e62f6d553aaffaff0489ee2978f10b6b3",
+  "title": "The Essence of Functional Programming",
+  "publication_date": "1992",
+  "authors": [
+    "Philip Wadler"
+  ],
+  "keywords": [
+    "category-theory",
+    "computational-models",
+    "denotational-semantics",
+    "functional-programming",
+    "haskell",
+    "lambda-calculus",
+    "lazy-evaluation",
+    "monads",
+    "programming-languages",
+    "type-systems"
+  ],
+  "category_path": [
+    "languages",
+    "haskell"
+  ],
+  "abstract": "A very general and powerful framework for modelling effects in functional programming is proposed. The framework is based on a categorical structure known as a monad, which is widely used to model the notion of a computation in category theory. The monad is used to embed notions of state, exceptions, input/output, and other effects into purely functional languages, such as Haskell.",
+  "summary": "Philip Wadler's 1992 paper \"The Essence of Functional Programming\" presents the concept of monads as a framework for handling side effects in functional programming languages. This paper is influential in popularizing the use of monads, particularly within the Haskell community, and has significantly impacted how effects such as state, exception handling, and input/output are managed in functional programs.\n\nWadler introduces monads derived from category theory, providing a means to effectively encapsulate side effects in functional languages which traditionally emphasize pure function definitions without side effects. This approach harmonizes functional purity with practical needs for effects in computations.\n\nThe paper is heavily cited in the field; it paved the way for numerous developments in functional programming research as well as practical implementations. Some key papers and articles influenced by this work include:\n\n1. *Notions of Computation and Monads* by Eugenio Moggi (https://dl.acm.org/doi/10.1145/99370.99371)\n2. *Monads for functional programming* by Philip Wadler himself, further exploring applications of monads (https://homepages.inf.ed.ac.uk/wadler/papers/marktoberdorf/baastad.pdf)\n3. *Haskell: A purely functional language in the real world* from the Journal of Functional Programming (https://dl.acm.org/doi/10.1145/289823.289824)\n4. *Functional programming with monads* by Simon Peyton Jones and John Hughes discussing practical implementation in Haskell (https://www.microsoft.com/en-us/research/publication/functional-programming-with-monads/)\n\nThe application of monads as described by Wadler continues to influence current programming paradigms, especially in languages that borrow principles from functional programming to handle effects in a controlled manner.",
+  "raw_url": "https://page.mi.fu-berlin.de/scravy/realworldhaskell/materialien/the-essence-of-functional-programming.pdf",
+  "source_type": "external",
+  "filepath": "languages/haskell/README.md",
+  "filename": "The Essence of Functional Programming",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

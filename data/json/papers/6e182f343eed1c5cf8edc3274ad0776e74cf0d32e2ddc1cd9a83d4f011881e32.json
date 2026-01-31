@@ -1,0 +1,41 @@
+{
+  "uuid": "6e182f343eed1c5cf8edc3274ad0776e74cf0d32e2ddc1cd9a83d4f011881e32",
+  "title": "KinectFusion: Real-time 3D Reconstruction and Interaction Using a Moving Depth Camera",
+  "publication_date": "UIST 2011",
+  "authors": [
+    "Alex Butler",
+    "Andrew Kipman",
+    "David Kim",
+    "David Molyneaux",
+    "Dimitrios B. Varanasi",
+    "Jamie Shotton",
+    "Otmar Hilliges",
+    "Pushmeet Kohli",
+    "Richard Newcombe",
+    "Shahram Izadi",
+    "Steve Hodges"
+  ],
+  "keywords": [
+    "3d-reconstruction",
+    "augmented-reality",
+    "computer-graphics",
+    "depth-camera",
+    "gpu-computation",
+    "hci",
+    "interactive-systems",
+    "kinectfusion",
+    "real-time-systems",
+    "sensor-fusion"
+  ],
+  "category_path": [
+    "computer_graphics"
+  ],
+  "abstract": "KinectFusion enables a user holding and moving a standard Kinect camera to rapidly create detailed 3D models of a real-world scene. This allows models of far greater detail to be created than previously possible using only the input from a single viewpoint in space. Using an off-the-shelf GPU, we are able to very quickly (in seconds) reconstruct complex dense 3D scenes with significantly greater levels of detail (300k to 1 million triangles per model compared to existing Kinect-based, Structure from Motion systems, which are able to reconstruct only sparse point clouds) than previously possible. We demonstrate various novel interactive applications enabled by KinectFusion, by constructing and operating on detailed 3D scene reconstructions including: as a compelling augmented reality environment, and as a real-time, physics enabled sandbox.",
+  "summary": "**KinectFusion: Real-time 3D Reconstruction and Interaction Using a Moving Depth Camera** was presented at UIST 2011 and introduced a breakthrough in real-time 3D reconstruction using Microsoft's Kinect sensor. Prior methods could only reconstruct sparse point clouds, but KinectFusion enabled complete, high-detail models, enhancing applications in fields like augmented reality and human-computer interaction.\n\nUsing GPU computation, KinectFusion achieves a rapid processing ability, creating dense 3D models with hundreds of thousands to millions of polygons in real-time. Interactive applications like augmented reality scenarios and physics-based simulations were showcased, demonstrating the system's versatility.\n\nThis paper has influenced numerous studies and industrial applications, particularly where real-time 3D reconstruction is critical. It has contributed to advancements in virtual/augmented reality and interactive gaming, where detailed and real-time scene understanding are necessary. \n\nFor instance, it has been cited in works involving mobile robot navigation (Collett et al., 2013), and augmented reality frameworks like the studies conducted by Niantic, Inc. It has also influenced advancements in graphics rendering techniques where intricate environment modeling is required.\n\nKey references to this work include:\n- Nießner, M., Zollhöfer, M., Izadi, S., & Stamminger, M. (2013). \"Real-time 3D reconstruction at scale using voxel hashing\". In ACM Transactions on Graphics (TOG). [Link](https://dl.acm.org/doi/10.1145/2516971.2516972)\n- Roth, H., & Vona, M. (2012). \"Moving Volume KinectFusion\". In BMVC. [Link](http://www.bmva.org/bmvc/2012/BMVC/paper0037/index.html)\n- Newcombe, R. A., Fox, D., & Seitz, S. M. (2015). \"DynamicFusion: Reconstruction and tracking of non-rigid scenes in real-time\". In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. [Link](https://ieeexplore.ieee.org/abstract/document/7298631)",
+  "raw_url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/kinectfusion-uist-comp.pdf",
+  "source_type": "external",
+  "filepath": "computer_graphics/README.md",
+  "filename": "KinectFusion: Real-time 3D Reconstruction and Interaction Using a Moving Depth Camera",
+  "created_on": "2026-01-24 23:46:58",
+  "summary_received": "2026-01-25 00:11:02"
+}

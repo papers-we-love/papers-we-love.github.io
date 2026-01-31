@@ -1,0 +1,34 @@
+{
+  "uuid": "75bdff0dce7662f870d4c0582b60bd17d74ff9c844969651cf5272649a20b191",
+  "title": "Calibrating Noise to Sensitivity in Private Data Analysis",
+  "publication_date": "2006",
+  "authors": [
+    "Adam Smith",
+    "Cynthia Dwork",
+    "Frank McSherry",
+    "Kobbi Nissim"
+  ],
+  "keywords": [
+    "computational-privacy",
+    "data-analysis",
+    "data-privacy",
+    "database-security",
+    "differential-privacy",
+    "noise-calibration",
+    "privacy-algorithms",
+    "privacy-preserving",
+    "privacy-protection",
+    "sensitivity-analysis"
+  ],
+  "category_path": [
+    "information_theory"
+  ],
+  "abstract": "We describe and analyze a mechanism for approximating queries on databases containing sensitive information about individuals. In our model, a database is a triple (x1,...,xn,q), where x1,...,xn are individual records drawn from a data universe U and q is a summary statistic (the query). The mechanism returns answers whose distribution depends only on q(x1,...,xn) and the parameters of the mechanism, and is otherwise independent of the actual records x1,...,xn. We show how to construct an optimal noise-adding mechanism that satisfies ε-differential privacy by calibrating the noise to the sensitivity of the requested query. We demonstrate its applicability across a wide range of queries, using a general method that constructs the privacy-preserving mechanism by analyzing the sensitivity of the function with respect to its input.",
+  "summary": "This paper introduces a foundational concept in privacy-preserving data analysis called ε-differential privacy. Cynthia Dwork and her co-authors propose a method to ensure privacy by adding noise calibrated to the sensitivity of the function being computed on a database. This approach ensures that the output distribution of a query is almost the same, whether or not any single individual's data is included in the input database. The publication has been highly influential, laying the groundwork for sophisticated privacy-preserving techniques in data analysis and is a cornerstone in the field of differential privacy.\n\nThe paper has been cited extensively and influenced a wide range of applications in computer science, especially in developing algorithms that offer formal privacy guarantees. For instance, Apple's implementation of differential privacy in iOS to gather usage data while preserving user privacy can be tied back to the principles outlined in this research ([Apple and Differential Privacy](https://www.apple.com/privacy/docs/Differential_Privacy_Overview.pdf)). Additionally, platforms like the U.S. Census have explored using differential privacy techniques to protect individual data ([U.S. Census Differential Privacy](https://www.census.gov/newsroom/blogs/research-matters/2017/08/differential_privacy.html)). The academic impact is also notable, with the methodology forming a benchmark standard for subsequent research in privacy-preserving data systems and algorithms.",
+  "raw_url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/dwork.pdf",
+  "source_type": "external",
+  "filepath": "information_theory/README.md",
+  "filename": "Differential Privacy",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

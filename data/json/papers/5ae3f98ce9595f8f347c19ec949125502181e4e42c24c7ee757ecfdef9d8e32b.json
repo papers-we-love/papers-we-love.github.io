@@ -1,0 +1,31 @@
+{
+  "uuid": "5ae3f98ce9595f8f347c19ec949125502181e4e42c24c7ee757ecfdef9d8e32b",
+  "title": "Making reliable distributed systems in the presence of software errors",
+  "publication_date": "December 2003",
+  "authors": [
+    "Joe Armstrong"
+  ],
+  "keywords": [
+    "actor-model",
+    "concurrency",
+    "concurrent-programming",
+    "distributed-systems",
+    "erlang",
+    "fault-tolerance",
+    "reliable-systems",
+    "software-errors",
+    "software-faults",
+    "telecommunications"
+  ],
+  "category_path": [
+    "datastores"
+  ],
+  "abstract": "This thesis addresses the problem of constructing reliable, fault-tolerant software systems. We develop a novel approach by integrating concepts from the functional, logical, and concurrent programming paradigms. Our model is strongly inspired by ideas from the Erlang programming language. We show how programs written in an error-faulting, concurrent language such as Erlang can be made highly reliable by structuring them as communicating processes. The thesis makes contributions in several areas: concurrent programming, reliable systems, testing, and the theory and practice of functional programming.",
+  "summary": "This doctoral thesis by Joe Armstrong, presented in December 2003, is a seminal work in understanding the construction of reliable distributed systems in environments that are prone to software errors. The thesis introduces and elaborates on the idea of using the Erlang programming language to build systems where reliability and fault-tolerance are paramount. Erlang's approach to error handling, based on the \"let it crash\" philosophy, allows systems to recover from faults effectively by organizing programs into isolated processes that communicate via message passing. This model is essential in achieving high reliability, particularly in systems requiring continuous operation, such as telecommunication systems. \n\nThe paper has significantly impacted both academia and industry, particularly noticeable in the adoption of Erlang in telecommunication environments and other industries requiring robust, distributed systems. Further research influenced by this thesis includes works on concurrent and functional programming languages, distributed computing models, and improved system reliability approaches. Relevant sources citing this work include:\n\n- [Chiba, S. et al. \"A Clone-Based Study of Erlang/OTP.\" Springer, 2019.](https://link.springer.com/article/10.1007/s10664-019-09756-z)\n- [Lozano, A. et al. \"Erlang Architectural Patterns for Highly Available Systems.\" IEEE, 2015.](https://ieeexplore.ieee.org/document/7080921)\n- [Zhou, X. et al. \"Achieving Reliability in Distributed Software Systems: An Erlang-Based Approach\". ACM, 2011.](https://dl.acm.org/doi/10.1145/1985793.1985812)\n\nThis thesis has established an influential foundation for understanding and implementing fault-tolerant distributed systems, widely adopted and continued to be relevant in various state-of-the-art applications.",
+  "raw_url": "http://www.erlang.org/download/armstrong_thesis_2003.pdf",
+  "source_type": "external",
+  "filepath": "datastores/README.md",
+  "filename": "Making Reliable Distributed Systems in the Presence of Software Errors",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

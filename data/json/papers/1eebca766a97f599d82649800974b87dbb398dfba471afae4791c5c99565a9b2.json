@@ -1,0 +1,32 @@
+{
+  "uuid": "1eebca766a97f599d82649800974b87dbb398dfba471afae4791c5c99565a9b2",
+  "title": "RON: Reliable Overlay Networks",
+  "publication_date": "2001",
+  "authors": [
+    "David Andersen",
+    "Frans Kaashoek",
+    "Hari Balakrishnan",
+    "Robert Morris"
+  ],
+  "keywords": [
+    "distributed-systems",
+    "internet-performance",
+    "multipath-routing",
+    "network-optimization",
+    "network-resilience",
+    "overlay-networks",
+    "path-diversity",
+    "reliability"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "This paper presents and evaluates the design and implementation of RON, a resilient overlay network. A RON is an application-layer overlay on top of the existing Internet routing substrate that allows a group of nodes to communicate with one another in a highly resilient and efficient manner, improving over today’s wide-area routing protocols. A RON can detect and recover from serious path outages and periods of degraded performance within several seconds, improving over today’s wide-area routing protocols that take minutes to do the same. This paper describes the motivation and design of RON and presents a detailed evaluation of its performance, based on 33+ hours of simultaneous measurements from 16 actual sites running an implementation of RON. Our results demonstrate that RON can greatly improve the loss rate, latency, and throughput of the routed paths, increasing reliability by using just a small number of RON nodes.",
+  "summary": "The paper \"RON: Reliable Overlay Networks\" introduces the concept and implementation of Reliable Overlay Networks (RON). It presents RON as an application-layer overlay on the existing Internet infrastructure designed to achieve high resilience and efficient communication between nodes. This design improves over traditional wide-area routing protocols that can take several minutes to respond to path failures or performance degradation. RON can detect and react to such issues within seconds. The paper evaluates the performance of RON using extended real-world measurements, showing improved loss rates, latency, and throughput for network paths.\n\nThe impact of the RON concept has been significant in the field of networking. Many subsequent research projects and industry applications explore overlay networks to enhance reliability and performance in distributed environments. RON inspired developments in multipath routing and network optimization and paved the way for modern content delivery networks (CDNs) and peer-to-peer systems.\n\nNotable citations include:\n\n1. [Chord: A Scalable Peer-to-peer Lookup Service for Internet Applications](https://dl.acm.org/doi/10.1145/502034.502045) citing evolution in peer-to-peer networking.\n2. [Scalable Application Layer Multicast](https://dl.acm.org/doi/10.1145/964751.964757) focusing on scalability in network architectures.\n3. [Analysis of Overlay Networks for P2P Live Multimedia Streaming Services](https://ieeexplore.ieee.org/document/4380480) discussing multimedia streaming optimizations using overlay methods.\n4. The work is often referenced in industry white papers discussing the evolution of web content delivery and network reliability improvements.",
+  "raw_url": "http://nms.lcs.mit.edu/papers/ron-sosp2001.pdf",
+  "source_type": "external",
+  "filepath": "distributed_systems/README.md",
+  "filename": "Resilient Overlay Networks",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

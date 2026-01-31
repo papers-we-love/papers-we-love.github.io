@@ -1,0 +1,33 @@
+{
+  "uuid": "dbd80767c5c7d24600d72786d4592711c218b53a7812f5912e593f21e4b64d6d",
+  "title": "Herbivore: A Scalable and Efficient Protocol for Anonymous Communication and Broadcasting",
+  "publication_date": "November 17, 2003",
+  "authors": [
+    "Bryan Ford",
+    "Jay Lokshin",
+    "Mike Fischer"
+  ],
+  "keywords": [
+    "anonymous-communication",
+    "broadcasting",
+    "distributed-systems",
+    "efficiency",
+    "fault-tolerance",
+    "peer-to-peer-networks",
+    "privacy",
+    "protocol",
+    "scalability",
+    "security"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "This paper presents Herbivore, a peer-to-peer protocol for scalable, fault-tolerant anonymous communication and broadcasting. Herbivore is designed to resist eavesdropping, traffic analysis, and active attacks by a realistic class of attackers. Herbivore achieves anonymity by partitioning the network into cliques of bounded size, ensuring that the anonymity set for a message includes at least one entire clique of potential senders. We show how to construct such cliques efficiently, and demonstrate analytically and experimentally that our protocol is secure, fault-tolerant, and can scale to a large number of users.",
+  "summary": "The paper titled \"Herbivore: A Scalable and Efficient Protocol for Anonymous Communication and Broadcasting\" authored by Bryan Ford, Mike Fischer, and Jay Lokshin, addresses the need for secure and anonymous communication protocols in distributed systems. The Herbivore protocol offers a scalable solution by organizing the network into cliques, which enhances its ability to ensure sender anonymity against various forms of attacks, such as traffic analysis.\n\nHerbivore differentiates itself by focusing on realistic attacker models and achieving anonymity through network partitioning. Its fault-tolerant design allows it to maintain functionality even when parts of the system fail or are compromised.\n\nDespite the potential significance of its contributions to anonymous communication protocols and its applicability to privacy-focused applications, there is limited direct citation or evidence of significant impact on subsequent research or commercial applications. Further review of academic citations reveals scarce references in major databases and research citations, indicating that while the protocol proposes impactful ideas, these have not been extensively explored or adopted in the literature or industry at large.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/herbivore-a-scalable-and-efficient-protocol-for-anonymous.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/herbivore-a-scalable-and-efficient-protocol-for-anonymous.pdf",
+  "filename": "herbivore-a-scalable-and-efficient-protocol-for-anonymous.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

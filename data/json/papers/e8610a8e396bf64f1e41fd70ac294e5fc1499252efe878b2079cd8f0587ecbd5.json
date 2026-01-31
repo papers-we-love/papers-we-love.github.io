@@ -1,0 +1,31 @@
+{
+  "uuid": "e8610a8e396bf64f1e41fd70ac294e5fc1499252efe878b2079cd8f0587ecbd5",
+  "title": "Solution of a Problem in Concurrent Program Control",
+  "publication_date": "1965",
+  "authors": [
+    "Edsger W. Dijkstra"
+  ],
+  "keywords": [
+    "algorithms",
+    "computer-science-history",
+    "concurrent-programming",
+    "critical-section",
+    "deadlock",
+    "distributed-systems",
+    "formal-verification",
+    "mutual-exclusion",
+    "semaphores",
+    "synchronization"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "The purpose of this note is to present a solution to a problem that arises in connection with the synchronization of sequential processes. The problem is termed the \"mutual exclusion problem\" and deals with the necessary conditions for sharing a single resource among several competing processes. A solution is proposed which is simple and deterministic, without requiring any assumptions concerning relative speeds of processes or the existence of a prime number of processes.",
+  "summary": "Edsger W. Dijkstra's paper \"Solution of a Problem in Concurrent Program Control,\" published in 1965, addresses the critical issue of the mutual exclusion problem in concurrent programming. This problem involves ensuring that concurrent processes do not simultaneously access a shared resource in a way that leads to unexpected behavior or errors. Dijkstra's solution introduces a protocol for mutual exclusion that became foundational in the field of distributed computing and concurrent programming.\n\nThe most significant contribution of this paper is the introduction of semaphores, a synchronization mechanism that allows processes to access shared resources without conflict. Semaphores have since become a standard tool in computer science for process synchronization and resource management.\n\nDijkstra's solution had a profound impact on the development of algorithms for synchronization and is still cited in contemporary research. The paper's impact is evident in the way semaphores have been integrated into modern programming languages and operating systems as a fundamental concept for managing concurrent processes.\n\n**References:**\n1. [Dijkstra, E. W. \"The structure of the 'THE'-multiprogramming system.\" Commun. ACM 11, 5 (May 1968)](https://dl.acm.org/doi/10.1145/363095.363143)\n2. [Silberschatz, A., & Galvin, P. B., \"Operating System Concepts\", which references Dijkstra's work extensively.](https://www.os-book.com/)\n\nThe paper serves as a cornerstone in the study of operating systems and concurrent system design, influencing both academic research and practical implementations.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/solution-of-a-problem-in-concurrent-programming-control.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/solution-of-a-problem-in-concurrent-programming-control.pdf",
+  "filename": "solution-of-a-problem-in-concurrent-programming-control.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

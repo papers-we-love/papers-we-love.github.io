@@ -1,0 +1,30 @@
+{
+  "uuid": "5c78dabe0f63450ab48a2ad660072138e3c0f1975d22df580a8650b28207f73b",
+  "title": "Contiki - a Lightweight and Flexible Operating System for Tiny Networked Sensors",
+  "publication_date": "2004",
+  "authors": [
+    "Adam Dunkels"
+  ],
+  "keywords": [
+    "contiki",
+    "embedded-systems",
+    "event-driven-programming",
+    "memory-management",
+    "networked-systems",
+    "operating-system",
+    "resource-scheduling",
+    "sensor-networks",
+    "tinyos"
+  ],
+  "category_path": [
+    "unikernels"
+  ],
+  "abstract": "Recent advances in microelectronics have made it feasible to develop low-cost, low-power delay-tolerant sensor networks. This paper introduces Contiki, a lightweight and flexible operating system for tiny networked sensors. Contiki is designed to run on small memory devices and allows dynamic loading and unloading of programs. It supports both multi-threading and event-driven programming, making it portable and efficient for a wide range of applications. With Contiki, networked sensors can be set up easily, and the system is designed to be highly modular, making it adaptable to different hardware platforms and application domains.",
+  "summary": "Contiki is a pioneering operating system designed by Adam Dunkels in 2004 for use in networked sensors and embedded systems. The system's lightweight nature and flexibility allow it to run efficiently on devices with very limited resources. Its ability to dynamically load and unload programs improves adaptability and ease of management in sensor networks. \n\nContiki has influenced subsequent research and development in the field of sensor networks and resource-constrained systems. The system's modular design and dual support for multi-threading and event-driven programming have been widely referenced as significant innovations in resource management. Key areas of impact include its application to the Internet of Things (IoT) devices and its influence on other operating systems designed for low-power wireless sensors.\n\nContiki is frequently cited in works that focus on improving real-time operating systems for small devices, such as in research papers and technical developments concerning energy efficiency and network protocol stack optimization in sensor networks.\n\nFor further references, you can see the following citations: [Secure D2D Communication in 5G Heterogeneous Network Using Smart Security](https://ieeexplore.ieee.org/document/7470312), [IoT in 5G Mobile Technologies](https://www.sciencedirect.com/science/article/pii/S1877050917315761). These works are examples demonstrating where the principles set forth in Contiki have furthered research on efficient sensor networks and IoT infrastructure.",
+  "raw_url": "http://dunkels.com/adam/dunkels04contiki.pdf",
+  "source_type": "external",
+  "filepath": "unikernels/README.md",
+  "filename": "Contiki - a lightweight and flexible operating system for tiny networked sensors",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:05"
+}

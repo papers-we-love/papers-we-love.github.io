@@ -1,0 +1,25 @@
+{
+  "uuid": "77f75855f69ad2e33c327e4caa47a0aea9fd59e9db257fe4c31ebcaa21428f8f",
+  "title": "A Unified Theory of Garbage Collection",
+  "publication_date": "November 5, 2019",
+  "authors": [
+    "Ryan Doenges"
+  ],
+  "keywords": [
+    "computer-science-theory",
+    "garbage-collection",
+    "memory-management",
+    "programming-languages"
+  ],
+  "category_path": [
+    "garbage_collection"
+  ],
+  "abstract": "In high-level programming languages, garbage collection (GC) takes a significant role in automatic management and recycling of memory. Although various different algorithms for garbage collection exist, the underlying principles of how these algorithms function are the same. This blog post explores a unified theory of garbage collection, detailing the foundational concepts that underlie most collector implementations, from reference counting to mark and sweep, and beyond. By understanding the commonalities, we can gain insights into the trade-offs and performance characteristics of different garbage collection strategies.",
+  "summary": "The paper \"A Unified Theory of Garbage Collection\" by Ryan Doenges discusses the fundamental principles that underpin various garbage collection algorithms employed in high-level programming languages. It serves as an educational piece by exploring commonalities across different garbage collection techniques, which include reference counting and the mark-and-sweep approach. The paper elucidates the intrinsic properties and performance trade-offs associated with each method. While the paper presents a consolidation of theoretical knowledge useful for practitioners and students alike, it appears to be a blog post rather than a formal academic publication, as it was not published in a peer-reviewed conference or journal. This has resulted in minimal direct citations or extensive academic influence. However, the concepts discussed are foundational in computer science and continue to inform the design and implementation of garbage collection mechanisms in programming languages. Further inquiry into the topic could involve investigation into materials related to the same concepts, as listed by [Garbage Collection (Computer Programming) on Wikipedia](https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)).",
+  "raw_url": "https://www.cs.cornell.edu/courses/cs6120/2019fa/blog/unified-theory-gc/",
+  "source_type": "external",
+  "filepath": "garbage_collection/README.md",
+  "filename": "A Unified Theory of Garbage Collection",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

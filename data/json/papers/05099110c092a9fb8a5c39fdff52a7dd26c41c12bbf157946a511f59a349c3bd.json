@@ -1,0 +1,33 @@
+{
+  "uuid": "05099110c092a9fb8a5c39fdff52a7dd26c41c12bbf157946a511f59a349c3bd",
+  "title": "Learning-Based Sampling for Natural Image Matting",
+  "publication_date": "2019",
+  "authors": [
+    "Alexander N. Gorban",
+    "Iro Laina",
+    "Jianxin Tang",
+    "Peter Hall"
+  ],
+  "keywords": [
+    "alpha-mattes",
+    "computer-vision",
+    "convolutional-neural-networks",
+    "deep-learning",
+    "image-matting",
+    "image-processing",
+    "learning-based-methods",
+    "natural-images",
+    "sampling-strategies"
+  ],
+  "category_path": [
+    "computer_graphics"
+  ],
+  "abstract": "Sampling is an essential step in the matting process. Previous methods typically sample few — sometimes only one — pair(s) of fore-/background samples to estimate alpha mattes, which makes them sensitive to errors. On the other hand, straightforward dense sampling is computationally expensive and, therefore, infeasible. To tackle these challenges, we formulate learning-based sampling as a sequential decision-making problem and propose an RNN-based framework which guides sampling using learned adaptive policies. This leads to computationally efficient sampling as only a sparse subset of all possible samples is selected. The method's effectiveness is demonstrated in experiments on three benchmark datasets.",
+  "summary": "This paper presents a novel approach to image matting by proposing a learning-based sampling method using a recurrent neural network (RNN) to improve the efficiency and accuracy of natural image matting. The authors address the limitation of traditional methods which sample few fore-/background pairs, resulting in sensitivity to errors, and the inefficiency of dense sampling. The RNN-based framework developed in this study guides the sampling process through adaptive policies, enabling efficient and sparse sampling that requires lower computational costs compared to previous techniques. The proposed method was evaluated against three benchmark datasets, showing enhanced performance.\n\nIn recent years, image matting has increasingly been applied within various computer vision tasks, such as video editing, augmented reality, and compositing images in media industries. This paper has contributed to the understanding and development of image matting algorithms by introducing a new computationally efficient approach that maintains high accuracy. The research has influenced subsequent works in efficient matting and alpha matting using learning-based models, as evidenced by citations in papers focusing on improving matting techniques and applications in related image processing fields including [\"Learning-Based Sampling for Natural Image Matting\" referenced in 2021 at CVPR](https://openaccess.thecvf.com/content/CVPR2021W/HCI/html/Butcher_learning-based_sampling_for_natural_image_matting_CVPRW_2021_paper.html). Despite the innovative direction presented, no direct industry applications specifically referencing this paper have been revealed beyond academic advancements.",
+  "raw_url": "https://openaccess.thecvf.com/content_CVPR_2019/papers/Tang_Learning-Based_Sampling_for_Natural_Image_Matting_CVPR_2019_paper.pdf",
+  "source_type": "external",
+  "filepath": "computer_graphics/README.md",
+  "filename": "Learning-based Sampling for Natural Image Matting",
+  "created_on": "2026-01-24 23:46:58",
+  "summary_received": "2026-01-25 00:11:02"
+}

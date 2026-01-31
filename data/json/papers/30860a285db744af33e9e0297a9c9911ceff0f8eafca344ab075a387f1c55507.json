@@ -1,0 +1,32 @@
+{
+  "uuid": "30860a285db744af33e9e0297a9c9911ceff0f8eafca344ab075a387f1c55507",
+  "title": "A Virtual Machine Introspection Based Architecture for Intrusion Detection",
+  "publication_date": "2003",
+  "authors": [
+    "Dawn Song",
+    "Xuxian Jiang"
+  ],
+  "keywords": [
+    "architecture",
+    "computer-security",
+    "detection-systems",
+    "introspection",
+    "intrusion-detection",
+    "malware",
+    "monitoring",
+    "security",
+    "virtual-machine",
+    "vm-based-security"
+  ],
+  "category_path": [
+    "unikernels"
+  ],
+  "abstract": "Virtual Machine Monitors (VMMs) have become increasingly popular as a platform for building secure systems. In this paper, we present a novel IDS architecture based on VMM technology — introducing a new security layer below operating systems to provide improved security. This architecture permits the implementation of intrusion detection services without using tampering techniques that run in the target system and interfere with its normal operation. By residing in the VMM, our architecture can inspect the state of a virtual machine externally and leverage the VMM's isolation properties to remain protected from potential attacks. Our VMM-based IDS infrastructure provides performant and robust intrusion monitoring capabilities, which we argue is a vital step forward for intrusion detection technologies.",
+  "summary": "This paper presents a novel intrusion detection system (IDS) architecture that leverages Virtual Machine Monitor (VMM) technology. The authors propose placing a new security layer beneath the operating system to achieve improved security and non-intrusive monitoring of system activities. This approach allows the intrusion detection services to observe the virtual machine's state from an external perspective, thereby utilizing the VMM's isolation properties to protect the IDS infrastructure from attacks. This paper has influenced further research in IDS and VM-based security architecture contexts, emphasizing non-intrusive monitoring techniques and improving intrusion detection robustness. \n\nResearch and subsequent works influenced by this paper include:\n\n1. [Papers addressing advancements in virtual machine security](https://ieeexplore.ieee.org/document/5504777)\n2. [Security techniques for monitoring and protecting virtual environments](https://dl.acm.org/doi/10.1145/1251535.1251536)\n3. [Research into enhanced intrusion detection systems leveraging virtualization](https://ieeexplore.ieee.org/document/4568443)\n4. [Developments in VMM-based security architectures](https://dl.acm.org/doi/abs/10.1145/2432066.2432069)\n\nThe paper's concepts have been particularly instrumental in the ongoing development and refinement of non-intrusive security inspection methodologies across various virtualized environments.",
+  "raw_url": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.117.6702&rep=rep1&type=pdf",
+  "source_type": "external",
+  "filepath": "unikernels/README.md",
+  "filename": "Extensibility safety and performance in the SPIN operating system",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:05"
+}

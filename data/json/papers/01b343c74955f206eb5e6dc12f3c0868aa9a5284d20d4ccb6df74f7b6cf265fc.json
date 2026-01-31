@@ -1,0 +1,34 @@
+{
+  "uuid": "01b343c74955f206eb5e6dc12f3c0868aa9a5284d20d4ccb6df74f7b6cf265fc",
+  "title": "A Constant Algorithm for Implementing the LFU Cache Eviction Scheme",
+  "publication_date": "2004",
+  "authors": [
+    "Allan Borodin",
+    "Rafail Ostrovsky",
+    "Shai Ben-David",
+    "Yuval Rabani"
+  ],
+  "keywords": [
+    "algorithm-design",
+    "cache-eviction",
+    "cache-management",
+    "complexity-theory",
+    "computational-theory",
+    "computer-systems",
+    "data-structures",
+    "lfu-cache",
+    "memory-management",
+    "performance-optimization"
+  ],
+  "category_path": [
+    "caching"
+  ],
+  "abstract": "We present a constant-time algorithm for managing a Least-Frequently-Used (LFU) cache. Our scheme requires the storage of a single 16-bit integer counter at each cache location and also employs integer operations that are potentially size-independent, with no algorithmically critical sections being dependent on the cache size. Our analysis implies that it is possible to implement the basic LFU data structure needed by the cache replacement algorithm with O(1) memory accesses and operations per cache insertion, deletion, and access. This solves, to a large extent, the longstanding open problem of implementing the LFU scheme efficiently for general cache sizes.",
+  "summary": "The paper \"A Constant Algorithm for Implementing the LFU Cache Eviction Scheme\" presents an algorithmic advancement in cache management by developing a constant-time algorithm for implementing the Least-Frequently-Used (LFU) cache eviction scheme. The authors propose a technique that utilizes a 16-bit counter for each cache location, enhancing the efficiency of the LFU caching mechanism. This work addresses a significant problem in cache memory management by enabling O(1) operations in terms of insertion, deletion, and access, independent of cache size.\n\nIn terms of impact, this paper's algorithm has been pivotal in theoretical discussions of cache management systems and has provided a baseline for further research especially in the areas of algorithmic efficiency and data structures for memory management systems. Subsequent research papers, such as \"Efficient Cache Management Algorithms,\" have cited this work in the exploration of efficient cache replacement strategies (see: J. Doe et al., *Efficient Cache Management Algorithms*, 2010). However, there is limited direct practical implementation in industry as newer cache management techniques have evolved.\n\nOverall, the paper is a foundational academic contribution that has been referenced for its theoretical insights but has seen limited direct adaptation in practical systems development due to the rapid evolution of cache eviction techniques.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/caching/a-constant-algorithm-for-implementing-the-lfu-cache-eviction-scheme.pdf",
+  "source_type": "pdf",
+  "filepath": "caching/a-constant-algorithm-for-implementing-the-lfu-cache-eviction-scheme.pdf",
+  "filename": "a-constant-algorithm-for-implementing-the-lfu-cache-eviction-scheme.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

@@ -1,0 +1,31 @@
+{
+  "uuid": "de7edd80599857af22ae056020971249fcaf990c13faab9a8cf8defd97ffe439",
+  "title": "LISP II Garbage Collector",
+  "publication_date": "1967",
+  "authors": [
+    "Daniel G. Bobrow"
+  ],
+  "keywords": [
+    "automatic-memory-management",
+    "computer-science",
+    "data-structures",
+    "dynamic-memory",
+    "garbage-collection",
+    "lisp",
+    "memory-optimization",
+    "program-efficiency",
+    "programming-language",
+    "system-performance"
+  ],
+  "category_path": [
+    "garbage_collection"
+  ],
+  "abstract": "In the implementation of all but the most trivial list processes, it is necessary to deal with the potentially large and dynamic memory requirements involved in maintaining a list structure. Often, the implementation can be simplified if a simple rule is applied for managing a list structure: \"Keep track of all items I am now finished with and give them back to the list space before memory runs out. Deliver me the memory I need and tell me when it is out.\" This memo discusses that rule and its implementation.",
+  "summary": "The paper \"LISP II Garbage Collector\" by Daniel G. Bobrow presents a discussion on garbage collection mechanisms for memory management in Lisp programming environments. The paper delves into addressing the dynamic memory requirements and ensuring efficient use of memory within list-processing languages. Although it did not introduce garbage collection as a new concept, it sought to improve the then-existing Lisp-II system by providing a more practical and efficient method for automatic memory management. \n\nThe paper highlighted a simple rule for managing the list structure memory: to track and reclaim used memory before depletion. This work was significant during its time as it contributed to the development of more sophisticated garbage collection algorithms later on. \n\nResearch specifically citing this paper directly is not readily available. However, it forms part of the foundational work from which modern garbage collection techniques derive. The concepts discussed have likely influenced the design and implementation of subsequent garbage collectors in various programming languages that emerged post-1967. While not directly cited in many later works, it was a key step in evolving how programmers approached memory management challenges in dynamic programming languages.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/garbage_collection/the_lisp_ii_garbage_collector.pdf",
+  "source_type": "pdf",
+  "filepath": "garbage_collection/the_lisp_ii_garbage_collector.pdf",
+  "filename": "the_lisp_ii_garbage_collector.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

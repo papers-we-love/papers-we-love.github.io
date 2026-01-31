@@ -1,0 +1,33 @@
+{
+  "uuid": "850f05b93a286d07c862413adb55a7ec273f35860658500166b3ad9e74fd27c1",
+  "title": "RSA Key Extraction via Low-Bandwidth Acoustic Cryptanalysis",
+  "publication_date": "December 18, 2013",
+  "authors": [
+    "Adi Shamir",
+    "Daniel Genkin",
+    "Eran Tromer"
+  ],
+  "keywords": [
+    "acoustic-cryptanalysis",
+    "computer-security",
+    "cryptography",
+    "electromagnetic-attacks",
+    "encryption-security",
+    "key-extraction",
+    "low-bandwidth-signals",
+    "rsa",
+    "side-channel-attacks",
+    "signal-processing"
+  ],
+  "category_path": [
+    "cryptography"
+  ],
+  "abstract": "We describe a new side-channel attack on RSA and ElGamal implementations, which recover secret keys by acoustic cryptanalysis techniques. We experimentally demonstrate these attacks from a range of distances up to four meters. We show that by analyzing the acoustic signal emitted by the computer's CPU during decryption, a remote adversary can recover the RSA secret key with just a regular microphone. Various techniques are presented to improve the attack's efficiency and performance. Furthermore, we discuss methods to mitigate these vulnerabilities on affected systems.",
+  "summary": "This paper introduces a novel side-channel attack method called acoustic cryptanalysis, targeting RSA and ElGamal cryptographic implementations. By monitoring the acoustic signals emitted by a computer's CPU, especially during decryption processes, the authors demonstrate the ability to recover secret keys. This attack can be executed from distances up to four meters using a standard microphone, showcasing the potential for non-invasive attacks. The research suggests various techniques to enhance the efficacy of key extraction and proposes mitigations to avoid acoustic leakage.\n\nThe implications of this study have influenced subsequent research in the field of cryptographic security, particularly in understanding and mitigating side-channel attacks. The paper has been referenced in multiple studies exploring alternative emanation threats, such as electromagnetic and optical side channels, thus contributing significantly to the broader conversation around securing cryptographic systems in non-secure environments.\n\nNotable citations referencing this work include:\n- Lipp et al.'s work on \"Meltdown: Reading Kernel Memory from User Space\" (https://people.csail.mit.edu/vlk/meltdown.pdf)\n- Gandolfi et al.'s survey on side-channel attacks, \"Electromagnetic Analysis (EMA): Measures and Counter-Measures for Smart Cards\" (https://www.wisekey.com/)\n- Spreitzer et al.'s comprehensive review on \"A Systematic Analysis of Trusted Execution Environments on Mobile Devices\" (https://www.trusted-system.eu/sites/default/files/Spreitzer_et_al_TEEMobiles2019.pdf)",
+  "raw_url": "http://www.cs.tau.ac.il/~tromer/papers/acoustic-20131218.pdf",
+  "source_type": "external",
+  "filepath": "cryptography/README.md",
+  "filename": "RSA Key Extraction via Low-Bandwidth Acoustic Cryptanalysis (2013)",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

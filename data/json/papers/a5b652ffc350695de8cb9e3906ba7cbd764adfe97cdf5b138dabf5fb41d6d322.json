@@ -1,0 +1,35 @@
+{
+  "uuid": "a5b652ffc350695de8cb9e3906ba7cbd764adfe97cdf5b138dabf5fb41d6d322",
+  "title": "Epidemic Broadcast Trees",
+  "publication_date": "May 2007",
+  "authors": [
+    "A. Demers",
+    "D. Kostoulas",
+    "D. Psaltoulis",
+    "I. Gupta",
+    "K. Birman"
+  ],
+  "keywords": [
+    "broadcast-trees",
+    "data-redundancy",
+    "distributed-systems",
+    "epidemic-algorithms",
+    "fault-tolerance",
+    "network-topology",
+    "overlay-networks",
+    "peer-to-peer",
+    "scalability",
+    "self-healing"
+  ],
+  "category_path": [
+    "data_structures"
+  ],
+  "abstract": "We present a reliable and efficient multicast protocol, called T-Rex, which can tolerate massive failures caused by process crashes or network partitions in large systems. Traditional reliable multicast protocols, which guarantee that all members of a group receive a message, have been designed assuming that failures are rare events. However, outages at server farms (e.g., having thousands of servers), load-conscious batch schedulers, fast client mobility in wireless or ad-hoc settings, mis-configured firewalls, unanticipated cascading failures, catastrophic regional failures, and hostile attacks, can lead to massive network failures and partitions where such protocols may be ineffective. We examine whether epidemic multicast protocols can offer an effective solution to this problem and find, rather surprisingly, that they may not scale to million-node systems due to redundant message duplication. Therefore, we propose Epidemic Broadcast Trees (EBT), a approach communicating by growing logical trees in an epidemic fashion, creating message redundancy without overloading systems. These trees are self-healing and adapt to topology changes effectively without compromising message delivery guarantees.",
+  "summary": "The paper titled \"Epidemic Broadcast Trees\" introduces the T-Rex protocol, which addresses reliable multicast in large systems prone to massive failures and network partitions. Traditional multicast protocols face limitations in such failure-prone environments. The paper explores epidemic multicast protocols and highlights their inefficiencies in large-scale applications due to excessive message duplication.\n\nTo address this, the authors propose Epidemic Broadcast Trees (EBT), where logical trees are constructed using epidemic techniques to ensure reliable message dissemination. EBTs are designed for scalability, self-healing, and to manage network topology changes without burdening the system with redundant messages. This approach is significant in distributed systems, allowing robust communication in dynamic and failure-prone networks.\n\nRegarding the research impact of this paper, there is limited direct citing in subsequent academic work or industry application based on available search results. Therefore, any substantial influence from this paper has either not been extensively documented in readily available sources or exists in more niche or undocumented scenarios.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/data_structures/epidemic-broadcast-trees.pdf",
+  "source_type": "pdf",
+  "filepath": "data_structures/epidemic-broadcast-trees.pdf",
+  "filename": "epidemic-broadcast-trees.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

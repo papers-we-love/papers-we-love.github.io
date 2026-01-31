@@ -1,0 +1,32 @@
+{
+  "uuid": "6a9d379941c8951ee44d55ffcbee0aa504639b61b9202c81337feffe3c092bfc",
+  "title": "New Directions in Cryptography",
+  "publication_date": "November 1976",
+  "authors": [
+    "Martin E. Hellman",
+    "Whitfield Diffie"
+  ],
+  "keywords": [
+    "cryptography",
+    "data-privacy",
+    "data-security",
+    "digital-signatures",
+    "encryption",
+    "information-security",
+    "key-distribution",
+    "key-exchange",
+    "public-key",
+    "secure-communication"
+  ],
+  "category_path": [
+    "cryptography"
+  ],
+  "abstract": "The developments in this paper are the result of a number of intense discussions between the authors and others interested in secure communication over insecure channels. While acknowledging the importance of prior symmetrical encryption methods, the paper reports conclusive new methods for establishing secure communication in public. A method presented allows for two parties who have never met before to agree on a secret shared key over an unsecured channel. This method relies on the computational difficulty of certain mathematical problems which make \"guessing\" the secret key a practically impossible task.",
+  "summary": "The seminal paper 'New Directions in Cryptography' by Whitfield Diffie and Martin E. Hellman, published in November 1976, introduced groundbreaking concepts in cryptography, including public key cryptography and key exchange methods. This work marked the shift from traditional symmetric key cryptography to asymmetric cryptography, a fundamental cornerstone in modern cryptographic practices. In particular, the Diffie-Hellman key exchange protocol proposed in this paper facilitates secure communications over an unsecured channel, laying the groundwork for secure electronic communications as we know today.\n\nThe idea that cryptographic keys could be shared over public channels without compromising secure communication was revolutionary, altering the landscape of digital security and influencing further developments in cryptographic algorithms, such as RSA encryption, which followed shortly after.\n\nThe impact of this paper has been profound, influencing both academic research and practical applications in digital communications, ranging from secure emails to Internet protocols such as HTTPS that safeguard online transactions. This work has been referenced extensively in literature (e.g., [RFC 2631 on Diffie-Hellman Key Agreement Method](https://datatracker.ietf.org/doc/html/rfc2631)) and remains a critical resource in both theoretical and applied cryptography, showcasing its lasting relevance and foundational importance in the field. Despite its age, 'New Directions in Cryptography' continues to be a pivotal reference point for developments in secure digital communications.",
+  "raw_url": "http://www-ee.stanford.edu/~hellman/publications/24.pdf",
+  "source_type": "external",
+  "filepath": "cryptography/README.md",
+  "filename": "New Directions in Cryptography (1976)",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

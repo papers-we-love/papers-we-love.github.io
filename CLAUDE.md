@@ -28,9 +28,13 @@ We will store specific plans for features and maintenance in `project-docs`. Thi
 ├── Gemfile / Gemfile.lock # Ruby dependencies
 ├── Makefile               # Build shortcuts
 ├── Rakefile               # Rake tasks for build/deploy
-├── data/                  # JSON data for chapters (from Meetup.com API)
+├── data/                  # JSON data for chapters, papers (from Meetup.com API, Cuttlefish)
 │   ├── chapters.json      # Chapter configuration with data adapters
 │   ├── ogp/               # OpenGraph metadata (fb.yml, og.yml)
+│   ├── json/              # Paper data
+│   │   ├── categories.json # Category-to-paper index
+│   │   ├── keywords.json   # Keyword-to-paper index
+│   │   └── papers/         # Individual paper JSON files (by UUID)
 │   └── [city].json        # Event data per chapter
 ├── lib/                   # Custom Middleman extensions
 │   ├── build_cleaner.rb   # Clears build dir before deploys
@@ -140,6 +144,8 @@ The Docker deploy requires a dedicated SSH deploy key:
 - Blog with pagination (10 per page)
 - URL structure: `/{year}/{category}/{title}.html`
 - Chapter pages dynamically generated from `data/chapters.json`
+- Video pages dynamically generated from `data/videographer.json`
+- Paper pages dynamically generated from `data/json/papers/*.json` with category and keyword indexes
 - Directory indexes enabled (clean URLs)
 - CSS minification in production
 - Git deployment to `main` branch
@@ -201,4 +207,6 @@ Add the deploy key as a GitHub secret:
 - **Docker:** Uses Ruby 3.3-slim image with Bundler 2.5.x (recommended for development)
 - **Build artifacts:** `/build` directory is gitignored and recreated each build
 - **Chapter pages:** Dynamically proxied from `chapter.html.erb` template using data files
+- **Video pages:** Dynamically proxied from `video.html.erb` with tag indexes
+- **Paper pages:** Dynamically proxied from `paper.html.erb` with category and keyword indexes, plus an Atom feed at `/papers_feed.xml`. Papers with nil/empty titles in the JSON data are skipped. Markdown summaries are rendered via Kramdown.
 - **Make commands:** Run `make help` to see all available commands

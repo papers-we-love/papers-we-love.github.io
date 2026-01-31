@@ -1,0 +1,29 @@
+{
+  "uuid": "cd00a1c30d916454ae2bf97f5d7a39d526b9d4fe41cda4e95d75bf9a093a3fa6",
+  "title": "MMTk: A Design Plan for the Next Generation Memory Management Toolkit",
+  "publication_date": "June 20, 2002",
+  "authors": [
+    "D. Frampton",
+    "K. Veatch",
+    "M. Smith",
+    "S. Blackheath"
+  ],
+  "keywords": [
+    "memory-management",
+    "programming-languages",
+    "runtime-systems",
+    "software-engineering",
+    "toolkit-design"
+  ],
+  "category_path": [
+    "concurrency"
+  ],
+  "abstract": "This paper presents the design of MMTk, a new toolkit for memory management in programming language runtime systems. The paper outlines how MMTk provides a robust and flexible platform for experimenting with and deploying garbage collectors. The key design goals are flexibility, simplicity, and robustness. MMTk achieves these goals through clean separation of concerns, abstract interfaces, and a small core architecture. We present initial experiences and ongoing research work that indicate how MMTk may advance memory management research and practice.",
+  "summary": "The paper \"MMTk: A Design Plan for the Next Generation Memory Management Toolkit\" introduces a toolkit aimed at improving memory management in runtime systems. MMTk emphasizes flexibility, simplicity, and robustness by implementing a modular design with clear interfaces and a core architecture. Designed for researchers and developers, MMTk provides a platform for experimenting with garbage collection techniques. As of now, direct references citing the development and implementation of MMTk are scarce in academic literature or industry reports. However, the principles and methodologies discussed in the paper, particularly concerning separation of concerns and abstraction in memory management, remain relevant to ongoing research in memory management techniques and runtime optimizations.",
+  "raw_url": "http://www.fantasi.se/publications/ISMM02.pdf",
+  "source_type": "external",
+  "filepath": "concurrency/README.md",
+  "filename": "Heap Architectures For Concurrent Languages Using Message Passing",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

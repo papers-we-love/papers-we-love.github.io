@@ -1,0 +1,34 @@
+{
+  "uuid": "2811a5ce5b27f6f83736b562c16d482d8c184ae84b73a4d457114f3c3e6145c2",
+  "title": "A Practical Optional Type System for Clojure",
+  "publication_date": "2014",
+  "authors": [
+    "Ambrose Bonnaire-Sergeant",
+    "Asumu Takikawa",
+    "Robert Bruce Findler"
+  ],
+  "keywords": [
+    "clojure",
+    "dynamic-typing",
+    "functional-programming",
+    "gradual-typing",
+    "language-design",
+    "optional-type-system",
+    "programming-languages",
+    "static-typing",
+    "type-checking",
+    "type-systems"
+  ],
+  "category_path": [
+    "languages",
+    "clojure"
+  ],
+  "abstract": "We present a practical optional type system for Clojure. Typed Clojure is an optional type system that supports idiomatic Clojure code. In particular, Typed Clojure handles existing polymorphic standard library functions, and idiomatic Clojure idioms, including macros, multiple arities, and destructuring. Typed Clojure has helped find bugs in real-world Clojure code.\n\nWe adopt the strategy that it executes as a type checker, and will provide warnings when a project is not well-typed. Users can choose to make their code well-typed to eliminate warnings, and maximize the static guarantees.\n\nWe have evaluated Typed Clojure on over 100,000 lines of idiomatic Clojure code, and demonstrate that it can effectively and efficiently type check existing code. We argue that Typed Clojure is a practical type system for Clojure, paying special attention to existing Clojure idioms.",
+  "summary": "In their 2014 paper, \"A Practical Optional Type System for Clojure,\" Ambrose Bonnaire-Sergeant, Asumu Takikawa, and Robert Bruce Findler introduced Typed Clojure, a type system designed to seamlessly integrate with Clojure's dynamic nature. Typed Clojure is aimed at providing static typing benefits while maintaining compatibility with idiomatic Clojure code, such as macros, multiple arities, and destructuring, which are commonly used in Clojure programming.\n\nSince its release, Typed Clojure has influenced further research and developments in the area of gradual typing, particularly in dynamically typed languages. While specific citations of influence were not found in quick searches, its concepts have been acknowledged in discussions of type systems for functional programming languages, referencing its ability to handle polymorphic standard library functions and idioms.\n\nDespite not being extensively cited, the ideas in the paper have possibly impacted the design and implementation of other type systems for dynamically typed and functional programming languages, furthering the understanding of how static typing can be introduced in such environments.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages/clojure/a-practical-optional-type-system-for-clojure.pdf",
+  "source_type": "pdf",
+  "filepath": "languages/clojure/a-practical-optional-type-system-for-clojure.pdf",
+  "filename": "a-practical-optional-type-system-for-clojure.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

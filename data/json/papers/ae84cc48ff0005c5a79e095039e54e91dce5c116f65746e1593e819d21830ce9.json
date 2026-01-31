@@ -1,0 +1,32 @@
+{
+  "uuid": "ae84cc48ff0005c5a79e095039e54e91dce5c116f65746e1593e819d21830ce9",
+  "title": "MapReduce: Simplified Data Processing on Large Clusters",
+  "publication_date": "December 2004",
+  "authors": [
+    "Jeffrey Dean",
+    "Sanjay Ghemawat"
+  ],
+  "keywords": [
+    "data-processing",
+    "distributed-systems",
+    "fault-tolerance",
+    "functional-programming",
+    "google",
+    "large-clusters",
+    "mapreduce",
+    "parallel-computing",
+    "scalability",
+    "simplified-programming"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "MapReduce is a programming model and an associated implementation for processing and generating large data sets. Users specify a map function that processes a key/value pair to generate a set of intermediate key/value pairs, and a reduce function that merges all intermediate values associated with the same intermediate key. Many real world tasks are expressible in this model, as shown in the paper.",
+  "summary": "MapReduce is a programming model introduced by Jeffrey Dean and Sanjay Ghemawat of Google that enables simplified processing of large data sets on clusters. This model revolutionized how data processing tasks are expressed by using two key functions: map and reduce, inspired by Lisp programming functions. Its abstraction facilitates fault-tolerance and scalable processing over many machines.\n\nThis paper was published in December 2004 and had a significant impact on both academic research and industry practices. The MapReduce model became the basis for Apache Hadoop, an open-source software framework widely adopted for distributed storage and processing of large data sets using commodity hardware. This model has been an integral part of the development of cloud computing services like Google Cloud Platform, Amazon AWS, and Microsoft Azure, which offer services based on similar paradigms. Moreover, it served as a foundation for further research into optimized and more flexible distributed computing frameworks.\n\nSome references where this paper and its concepts have been influential include:\n\n1. **Apache Hadoop** - Widely used open-source software inspired by MapReduce for distributed computing. Reference: [Apache Hadoop](https://hadoop.apache.org/)\n2. **Spark** - Built on concepts evolved from MapReduce to support more complex data computations. Reference: [Apache Spark](https://spark.apache.org/)\n3. **Amazon EMR** - Provides a managed Hadoop framework for processing large amounts of data across dynamically scalable Amazon EC2 instances. Reference: [Amazon EMR](https://aws.amazon.com/emr/)\n4. **Google Cloud Dataflow** - Extends MapReduce programming model for streaming and batch data processing. Reference: [Google Cloud Dataflow](https://cloud.google.com/dataflow)\n5. **Microsoft Azure HDInsight** - A cloud distribution of Hadoop components that use MapReduce. Reference: [Azure HDInsight](https://azure.microsoft.com/en-us/services/hdinsight/)\n\nThis paper has become a cornerstone in distributed systems study, influencing numerous tools and methods in modern computing.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/mapreduce-simplified-data-processing-on-large-clusters.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/mapreduce-simplified-data-processing-on-large-clusters.pdf",
+  "filename": "mapreduce-simplified-data-processing-on-large-clusters.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

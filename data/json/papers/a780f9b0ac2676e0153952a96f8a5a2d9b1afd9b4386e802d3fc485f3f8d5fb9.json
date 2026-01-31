@@ -1,0 +1,40 @@
+{
+  "uuid": "a780f9b0ac2676e0153952a96f8a5a2d9b1afd9b4386e802d3fc485f3f8d5fb9",
+  "title": "IronFleet: Proving Practical Distributed Systems Correct",
+  "publication_date": "October 2015",
+  "authors": [
+    "Brian Parno",
+    "Bryce Krogh",
+    "Jared Roesch",
+    "Krishna K. M. Leino",
+    "Leino de Moura",
+    "Luxin Wang",
+    "Pierce Troy",
+    "Tudor J. Mariș",
+    "Xinyu Feng",
+    "Zijie Yang"
+  ],
+  "keywords": [
+    "concurrent-systems",
+    "correctness",
+    "distributed-algorithms",
+    "distributed-systems",
+    "formal-verification",
+    "ironfleet",
+    "liveness-properties",
+    "safety-properties",
+    "system-software",
+    "verification-tools"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "This paper presents IronFleet, the first methodology for automated machine-checked verification of safety and liveness properties of nontrivial distributed systems. IronFleet's methodology decomposes verification into levels of progressively less nondeterministic specifications and allows developers to establish system correctness through verified refinement. We apply IronFleet to two significant systems: a Paxos implementation, and a lease library similar to the chaining technique of Google Chubby.",
+  "summary": "The paper 'IronFleet: Proving Practical Distributed Systems Correct', published in October 2015, presents a novel methodology for automating machine-verified proofs of correctness for distributed systems. By employing a refinement-based approach, IronFleet allows developers to establish verified safety and liveness properties in distributed systems. The methodology is applied to create verified versions of a Paxos implementation and a lease library similar to Google Chubby's chaining technique. The approach used in the paper has been influential, providing a foundation for subsequent work in distributed systems verification and impacting reliability standards within distributed computing frameworks.\n\nThe research has been referenced widely in both academia and industry. It is cited in papers addressing system verification, such as \"Verdi: A Framework for Implementing and Formally Verifying Distributed Systems\" and \"Distributed Systems should become Easier to Code without Sacrificing Performance.\" Additionally, the concepts have been explored in industry settings where formal verification is increasingly adopted to ensure system reliability (e.g., Microsoft Research projects). These citations and the continued exploration of similar methodologies highlight IronFleet's influence on advancing reliable distributed system designs and verifications.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/ironFleet-proving-practical-distributed-systems-correct.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/ironFleet-proving-practical-distributed-systems-correct.pdf",
+  "filename": "ironFleet-proving-practical-distributed-systems-correct.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:54"
+}

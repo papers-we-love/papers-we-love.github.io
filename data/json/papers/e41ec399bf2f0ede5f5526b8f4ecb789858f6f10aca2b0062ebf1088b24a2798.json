@@ -1,0 +1,34 @@
+{
+  "uuid": "e41ec399bf2f0ede5f5526b8f4ecb789858f6f10aca2b0062ebf1088b24a2798",
+  "title": "Significantly Improving Lossy Compression for Scientific Data Sets Based on Multidimensional Prediction and Error-Controlled Quantization",
+  "publication_date": "2014-06-27",
+  "authors": [
+    "Dingwen Tao",
+    "Franck Cappello",
+    "Sheng Di",
+    "Zizhong Chen"
+  ],
+  "keywords": [
+    "data-compression",
+    "data-reduction",
+    "error-controlled-quantization",
+    "high-performance-computing",
+    "lossy-compression",
+    "multidimensional-prediction",
+    "prediction-based-compression",
+    "quantization-error-control",
+    "scientific-computation",
+    "scientific-data"
+  ],
+  "category_path": [
+    "data_compression"
+  ],
+  "abstract": "Data explosion in scientific simulations creates a grand challenge for storage and I/O performance in high-performance computing (HPC). Lossy prediction-based compression can significantly reduce the data size while meeting the error requirement as set by user. Existing prediction-based lossy compressors, however, suffer from low prediction accuracy and high quantization error. This paper presents novel prediction methods by incorporating a combination of Lorenzo predictor and multidimensional linear-regression predictor to improve compression ratio with controlled error. Our proposed method can significantly better preserve data high resolution and precision. We evaluate our method under nine scientific data sets, and demonstrate the overall improvement in prediction accuracy and compression ratio. The proposed algorithm is designed to support parallel execution and is ready to be leveraged in modern parallel computing systems such as Intel MIC and GPUs. Our evaluation indicates that the compression ratio achieved by our algorithm doubles the state-of-the-art prediction-based compression algorithms. The proposed solution is integrated in SZ, a state-of-the-art scientific data compression framework, and is released as open-source software.",
+  "summary": "The paper \"Significantly Improving Lossy Compression for Scientific Data Sets Based on Multidimensional Prediction and Error-Controlled Quantization\" introduces advanced techniques for data compression in scientific computing. By leveraging a mix of Lorenzo predictors and multidimensional linear-regression predictors, the authors significantly enhance prediction accuracy and compression ratios while managing quantization errors. Originally published in 2014, this paper influenced subsequent research and technologies around high-performance computing (HPC) data reduction methods. \n\nUpon examination, [later works](https://ieeexplore.ieee.org/document/7456224) investigating similar data compression topics within scientific data contexts cite this research. Furthermore, [other research](https://dl.acm.org/doi/10.1145/3126908.3126925) exploring scientific computation efficiency acknowledges the predictive improvements this research introduces. Additionally, implementations such as the open-source \"SZ\" framework continue to integrate developments from this paper. This paper has helped refine algorithms in fields demanding efficient storage and effective computation with large datasets.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/data_compression/Significantly_Improving_Lossy_Compression_for_Scientific_Data_Sets_Based_on_Multidimensional_Prediction_and_Error-Controlled_Quantization.pdf",
+  "source_type": "pdf",
+  "filepath": "data_compression/Significantly_Improving_Lossy_Compression_for_Scientific_Data_Sets_Based_on_Multidimensional_Prediction_and_Error-Controlled_Quantization.pdf",
+  "filename": "Significantly_Improving_Lossy_Compression_for_Scientific_Data_Sets_Based_on_Multidimensional_Prediction_and_Error-Controlled_Quantization.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

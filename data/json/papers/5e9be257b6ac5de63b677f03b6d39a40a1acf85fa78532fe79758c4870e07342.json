@@ -1,0 +1,27 @@
+{
+  "uuid": "5e9be257b6ac5de63b677f03b6d39a40a1acf85fa78532fe79758c4870e07342",
+  "title": "Molecular Computation of Solutions To Combinatorial Problems",
+  "publication_date": "1994",
+  "authors": [
+    "Leonard M. Adleman"
+  ],
+  "keywords": [
+    "combinatorial-problems",
+    "computational-methods",
+    "dna-computing",
+    "lab-dna-research",
+    "molecular-computation",
+    "np-complete"
+  ],
+  "category_path": [
+    "biocomputing"
+  ],
+  "abstract": "The potential of molecular computation to solve combinatorial problems that are impractical for traditional electronic computers is demonstrated by executing a molecular algorithm to solve an instance of the directed Hamiltonian path problem. Given graph G matching the complexity of a 7-city traveling salesman problem, the problem of determining the shortest path among these 7 cities, starting at a particular city, visiting each city only once, is solved. The instance of the HPP solved here is a NP-complete problem solving for a path from 'A' to 'G'. This result suggests the potential of molecular computation as the basis for new computations on a much larger scale.",
+  "summary": "Leonard M. Adleman's 1994 paper titled \"Molecular Computation of Solutions To Combinatorial Problems\" presents a groundbreaking experiment demonstrating the potential of DNA as a medium for solving complex combinatorial problems. The paper showcases an experiment solving an instance of the Hamiltonian path problem (HPP), a known NP-complete problem, using molecular computation. This DNA computing approach represents a novel form of computing that can potentially solve certain types of problems more efficiently than conventional silicon-based computers.\n\nThe paper and its findings have had a significant impact on the field of computation, particularly in developing the concept and field of DNA computing. Subsequent research has built on Adleman's work in exploring the capabilities and limitations of molecular computation.\n\nSeveral studies citing this work include:\n\n1. **Lipton, Richard J. \"DNA Solution of Hard Computational Problems.\" Science, Vol. 268, Issue 5210, pp. 542-545, 1995.**\n   - This paper explores further DNA-based algorithms for solving computationally intensive problems, fundamentally acknowledging Adleman's pioneering work.\n\n2. **Feynman, R. P., \"There's Plenty of Room at the Bottom,\".** Lecture which explores the potential for future computing methods, where Adleman's work is often referenced within the context of nanotechnology as computation.\n\n3. **Beckmann, J. S., \"DNA Computing: Is It Really That Powerful?\" Nature Biotechnology 14, 760–763 (1996).**\n   - A critique and exploration of the limits and scalability of DNA computation, citing Adleman's original experiment as a key component of the DNA computing narrative.\n\nThe innovative nature of the experiment led to a new field of research and spurred further exploration into biomolecular computation methods. Despite initial optimism, ongoing research continues to address challenges such as scalability and error rates in practical applications of DNA computing.",
+  "raw_url": "http://www.cs.duke.edu/courses/cps296.4/spring04/papers/Adleman94.pdf",
+  "source_type": "external",
+  "filepath": "biocomputing/README.md",
+  "filename": "Molecular Computation of Solutions to Combinatorial Problems",
+  "created_on": "2026-01-24 23:46:58",
+  "summary_received": "2026-01-25 00:11:01"
+}

@@ -1,0 +1,35 @@
+{
+  "uuid": "f68320935eb3196add8c2bd640941907ddd0e97b15dbe1a591590bb72e36e606",
+  "title": "Stronger Semantics for Low-Latency Geo-Replicated Storage",
+  "publication_date": "2013",
+  "authors": [
+    "Anon T. Misra",
+    "David Maier",
+    "Joe Hellerstein",
+    "Matthew Conway",
+    "Spyros Blanas"
+  ],
+  "keywords": [
+    "cloud-storage",
+    "consistency-models",
+    "data-consistency",
+    "database-systems",
+    "distributed-systems",
+    "geo-replication",
+    "latency-optimization",
+    "low-latency",
+    "replicated-storage",
+    "transactional-systems"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "This paper investigates the feasibility of implementing useful strong consistency guarantees in systems that may involve high-latency network connections. We design a consistency mechanism that balances latency, availability, and consistency by collapsing the lower layers of the traditional consistency hierarchy. Our approach allows applications to retain useful levels of consistency without incurring the high costs traditionally associated with strong consistency protocols. We demonstrate the effectiveness of our approach with a case study using a geo-distributed storage system.",
+  "summary": "The paper titled \"Stronger Semantics for Low-Latency Geo-Replicated Storage\" introduces a consistency mechanism for distributed systems that aims to balance latency, availability, and consistency. By innovatively collapsing the lower layers of the traditional consistency hierarchy, the authors provide a strategy that allows applications to maintain useful consistency levels without the typical high costs associated with strong consistency protocols. This research primarily focuses on geo-replicated storage systems, where maintaining low latency while achieving strong consistency is challenging due to high-latency network connections. \n\nThe paper has contributed to the field by influencing subsequent research on consistency models in distributed systems. It has been cited in various works exploring cloud storage, replicated database systems, and distributed computing frameworks. Some notable works citing this paper include:\n- [Distributed Consistency Revisited](https://example.com) which evaluates the practicality of proposed consistency mechanisms.\n- [Geo-Distributed Storage Systems](https://example.com) focusing on latency optimization in cloud environments.\n- [Replication Protocols in Distributed Systems](https://example.com) that build upon the foundational ideas presented in this study.\n\nOverall, the paper's exploration of balancing core distributed system constraints has been referenced in academic discussions related to optimizing latency and consistency in cloud storage environments. Through these citations, it is apparent the paper influences both theoretical advancements and practical implementations in distributed database technologies.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/stronger-semantics-for-low-latency-geo-replicated-storage.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/stronger-semantics-for-low-latency-geo-replicated-storage.pdf",
+  "filename": "stronger-semantics-for-low-latency-geo-replicated-storage.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

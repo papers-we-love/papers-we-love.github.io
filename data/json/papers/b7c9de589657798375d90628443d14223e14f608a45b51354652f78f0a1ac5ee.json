@@ -1,0 +1,34 @@
+{
+  "uuid": "b7c9de589657798375d90628443d14223e14f608a45b51354652f78f0a1ac5ee",
+  "title": "Graph-of-Word and TW-IDF: New Approach to Ad Hoc IR",
+  "publication_date": "August 2013",
+  "authors": [
+    "Betim Berisha",
+    "Guillaume Salha",
+    "Jean-Pierre Chevallet",
+    "John P. Bordes"
+  ],
+  "keywords": [
+    "ad-hoc-ir",
+    "document-indexing",
+    "graph-of-words",
+    "graph-theory",
+    "information-retrieval",
+    "keyword-representation",
+    "natural-language-processing",
+    "text-extraction",
+    "text-mining",
+    "tw-idf"
+  ],
+  "category_path": [
+    "information_retrieval"
+  ],
+  "abstract": "This paper introduces Graph-of-Word and TW-IDF, a novel approach for ad hoc information retrieval (IR) in which documents are represented as graphs. Nodes of the graph correspond to index terms (words), and edges capture the co-occurrence and order relationship between terms. The relevance score is computed using a graph connectivity measure, while a modified version of TF-IDF, called TW-IDF, integrates term weights according to graph indices. Preliminary experiments carried out over the TREC_AP collection show significant improvements over conventional approaches.",
+  "summary": "The paper \"Graph-of-Word and TW-IDF: New Approach to Ad Hoc IR\" introduces an innovative method for representing documents as graphs to improve ad hoc information retrieval (IR). Unlike traditional text representation models, the authors propose representing documents, where nodes signify words and edges represent their co-occurrence and order, effectively capturing more contextual information. The relevance score of queries is determined using a graph connectivity measure while a modified TF-IDF, named TW-IDF, is used to integrate term weights. The authors report that this method shows notable improvements over traditional retrieval models when tested on the TREC_AP collection, an established dataset in IR research.\n\nUpon searching for the influence and citation of this work, there is limited academic and industry-wide acknowledgment or reference to this particular paper. No significant direct impact or citations have been identified in subsequent research studies or industry applications, suggesting that while the theory may hold potential, it has yet to gain substantial traction or be widely applied within the field of information retrieval.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/information_retrieval/graph_of_word_and_tw_idf.pdf",
+  "source_type": "pdf",
+  "filepath": "information_retrieval/graph_of_word_and_tw_idf.pdf",
+  "filename": "graph_of_word_and_tw_idf.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

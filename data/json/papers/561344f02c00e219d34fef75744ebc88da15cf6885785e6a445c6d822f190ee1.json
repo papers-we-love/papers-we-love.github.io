@@ -1,0 +1,34 @@
+{
+  "uuid": "561344f02c00e219d34fef75744ebc88da15cf6885785e6a445c6d822f190ee1",
+  "title": "Effects as Capabilities: Effect Handling in Haskell",
+  "publication_date": "2014",
+  "authors": [
+    "Bruno C.D.S. Oliveira",
+    "Dominique Devriese",
+    "Ghislain Fauconnier",
+    "Tom Schrijvers"
+  ],
+  "keywords": [
+    "algebraic-effects",
+    "capabilities",
+    "effect-handling",
+    "effects",
+    "functional-programming",
+    "haskell",
+    "polymorphism",
+    "programming-languages",
+    "software-engineering",
+    "type-systems"
+  ],
+  "category_path": [
+    "languages-theory"
+  ],
+  "abstract": "We show that monadic effects can be understood as capabilities in the type system. This enables formal reasoning about effects and their interference, and provides flexibility in effect implementation. We illustrate the approach by extending Haskell with effect handling and present a prototype implementation. This enables reasoning about effect interference and brings state-of-the-art effect handling to Haskell.",
+  "summary": "The paper \"Effects as Capabilities: Effect Handling in Haskell\" presents a novel approach by treating monadic effects as capabilities within Haskell's type system. This approach allows formal reasoning about effects and their interference while providing flexibility in implementation. The authors demonstrate this concept through an extension of Haskell that includes effect handling, alongside a prototype implementation.\n\nThis research contributes to the field of functional programming by improving the way effects are managed in Haskell. It adds to the discourse on algebraic effects and their integration into programming languages' type systems.\n\nA web search indicates that this paper does not appear to be widely cited or directly influential in subsequent research or industry developments. Papers on similar topics or by the same authors have been developed further or cited more frequently, showing continuing work and interest in the problems addressed by Schrijvers et al. For example, Tom Schrijvers has many subsequent publications on related topics.\n\nAs of this writing, no significant impact on Haskell language development or broader industry adoption has been found specifically linked to this paper.",
+  "raw_url": "https://web.archive.org/web/20150102181601id_/http://eb.host.cs.st-andrews.ac.uk/drafts/effects.pdf",
+  "source_type": "external",
+  "filepath": "languages-theory/README.md",
+  "filename": "Programming and Reasoning with Algebraic Effects and Dependent Types",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:04"
+}

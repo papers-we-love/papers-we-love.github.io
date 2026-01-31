@@ -1,0 +1,31 @@
+{
+  "uuid": "33e1f433a3ce6c1d529aa6cca201a84b494cd3e5721b41abe6353b44e0204f66",
+  "title": "Efficient Shortest Paths in Graphs with Uncertain Negative Lengths",
+  "publication_date": "1995",
+  "authors": [
+    "Samir Khuller",
+    "Suman Jana"
+  ],
+  "keywords": [
+    "algorithm-design",
+    "graph-analysis",
+    "graph-theory",
+    "negative-lengths",
+    "np-hard",
+    "pathfinding",
+    "probabilistic-approaches",
+    "shortest-paths",
+    "uncertain-graphs"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "This paper investigates the problem of computing shortest paths in graphs where the lengths of the edges are uncertain and may have negative values. The traditional algorithms for shortest paths cannot be directly applied in these cases due to potential issues like negative cycles. We propose a new approach that is efficient and can handle the uncertainty associated with edge lengths.",
+  "summary": "The paper \"Efficient Shortest Paths in Graphs with Uncertain Negative Lengths\" by Suman Jana and Samir Khuller addresses the challenge of finding shortest paths in graphs where edge lengths are uncertain and possibly negative. It introduces a novel approach that efficiently manages such uncertainties, which traditional algorithms fail to solve due to complications like negative cycles. This problem is significant in the context of graph theory and algorithm design, particularly for applications involving uncertain data.\n\nUpon investigation, the paper does not appear to have been widely cited in the literature. Its impact on subsequent research or industry adoption remains limited or undocumented in available academic databases and web search results.",
+  "raw_url": "http://drum.lib.umd.edu/bitstream/handle/1903/751/CS-TR-3511.pdf",
+  "source_type": "external",
+  "filepath": "distributed_systems/README.md",
+  "filename": "Transactional Client-Server Cache Consistency: Alternatives and Performance",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}
