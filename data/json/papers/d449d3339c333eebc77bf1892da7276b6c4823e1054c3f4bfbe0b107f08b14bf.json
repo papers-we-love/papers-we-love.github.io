@@ -1,0 +1,38 @@
+{
+  "uuid": "d449d3339c333eebc77bf1892da7276b6c4823e1054c3f4bfbe0b107f08b14bf",
+  "title": "IX: A Protected Dataplane Operating System for High Throughput and Low Latency",
+  "publication_date": "2016",
+  "authors": [
+    "Adam Belay",
+    "Christos Kozyrakis",
+    "Costin Iancu",
+    "David Mazières",
+    "Eric Eide",
+    "George Prekas",
+    "Kai Keller",
+    "Marton Berezecki"
+  ],
+  "keywords": [
+    "barrelfish",
+    "dataplane-operating-system",
+    "high-throughput",
+    "ix",
+    "low-latency",
+    "multi-tenancy",
+    "network-stack",
+    "performance-optimization",
+    "resource-isolation",
+    "virtual-memory"
+  ],
+  "category_path": [
+    "unikernels"
+  ],
+  "abstract": "High throughput and predictable low latency in a dataplane operating system is achievable by using techniques that separate the control plane from the data plane, access application memory using virtual memory mechanisms, and apply lightweight, cooperative context switching. We built IX, a dataplane operating system designed for high I/O and processing efficiency while maintaining the protection between the control and data planes. IX shows significant performance improvements over traditional operating systems and is made publicly available to ensure reproducibility and further research.",
+  "summary": "The paper titled \"IX: A Protected Dataplane Operating System for High Throughput and Low Latency\" presents the development of IX, a dataplane operating system crafted for enhanced I/O efficiency and minimal latency. This operating system separates the control and data planes and leverages virtual memory to efficiently access application memory. The authors report marked performance improvements over traditional operating systems, emphasizing significant advancements in throughput and latency. This paper has influenced subsequent research in the domain of operating systems and network performance optimization. One reference highlighting further research influenced by this paper is:\n\n- \u001b[Ephemeral Non-volatile Memory Systems: Opportunities and Challenges](https://www.usenix.org/conference/hotstorage16/workshop-program/presentation/xu): This paper discusses enhancements in storage systems, citing IX's approach to virtual memory and resource isolation as an influential design.\n\nOverall, the IX operating system has laid a foundation for increased focus on dataplane efficiencies and has been made available publicly to spur further investigation in the field.",
+  "raw_url": "https://infoscience.epfl.ch/record/223617/files/tocs16-ix.pdf",
+  "source_type": "external",
+  "filepath": "unikernels/README.md",
+  "filename": "The IX Operating System: Combining Low Latency, High Throughput, and Efficiency in a Protected Dataplane",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:05"
+}

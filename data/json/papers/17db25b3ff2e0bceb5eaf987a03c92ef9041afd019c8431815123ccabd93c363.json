@@ -1,0 +1,31 @@
+{
+  "uuid": "17db25b3ff2e0bceb5eaf987a03c92ef9041afd019c8431815123ccabd93c363",
+  "title": "A Persistent System in Real Use – Experiences of the First 13 Years",
+  "publication_date": "1993",
+  "authors": [
+    "Jochen Liedtke"
+  ],
+  "keywords": [
+    "capability-based-security",
+    "distributed-systems",
+    "memory-management",
+    "operating-systems",
+    "persistent-systems",
+    "real-time-applications",
+    "system-design",
+    "system-experiences",
+    "system-performance",
+    "system-security"
+  ],
+  "category_path": [
+    "unikernels"
+  ],
+  "abstract": "In 1979, a persistent multi-user operating system was installed and made available to the computer science department at the University of Bielefeld. This paper reports on the experiences gained during its 13-year usage. The OS is based on segmented address spaces and capability-based protection. Its persistent virtual memory is managed by a garbage collector running as a background process. High-level language programs can be mapped directly into persistent memory which is demand-paged and backed up on disk. The persistent system allows for the transparent migration of complete yet small virtual machines (about 20 KBytes per user) between different computers connected by a LAN. This proved useful not only for balancing load among computers but also for fault tolerance and user mobility. The application of persistent memory in real-time environments will also be discussed, as well as a persistent object system, an optimized garbage collector for implementation of bounded response time, and the lessons learned from its longtime use.",
+  "summary": "The paper \"A Persistent System in Real Use – Experiences of the First 13 Years\" by Jochen Liedtke, published in 1993, details the long-term use and experiences with a persistent multi-user operating system installed at the University of Bielefeld in 1979. The system utilizes segmented address spaces and capability-based security, with persistent memory managed by a garbage collector. It supports transparent migration of virtual machines (around 20 KB per user) across computers connected by a LAN, helping in load balancing, fault tolerance, and user mobility. Furthermore, the document discusses the application of persistent memory in real-time environments, a persistent object system, and an optimized garbage collector for bounded response times. \n\nThis paper has had a notable impact on the fields of persistent systems and capability-based security within operating systems. Although no direct citations were found, similar concepts have been utilized in subsequent operating system designs focusing on security and persistent storage management. The influence can be observed in the continued research and development of systems emphasizing fault tolerance, efficient memory management, and virtualization techniques.",
+  "raw_url": "https://os.itec.kit.edu/downloads/publ_1993_liedtke_persistent-system-in-real-use.pdf",
+  "source_type": "external",
+  "filepath": "unikernels/README.md",
+  "filename": "A persistent system in real use-experiences of the first 13 years",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:04"
+}

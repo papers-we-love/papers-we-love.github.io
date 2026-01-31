@@ -1,0 +1,31 @@
+{
+  "uuid": "74921812e30779aab69ce97c35d96d1bdfb8122895082088174a51ad38b9a22f",
+  "title": "Extensible Effects: An Alternative to Monad Transformers",
+  "publication_date": "March 2013",
+  "authors": [
+    "Amr Sabry",
+    "Oleg Kiselyov"
+  ],
+  "keywords": [
+    "effect-systems",
+    "extensible-effects",
+    "functional-programming",
+    "haskell",
+    "modularity",
+    "monad-transformers",
+    "software-abstraction",
+    "type-systems"
+  ],
+  "category_path": [
+    "languages",
+    "haskell"
+  ],
+  "abstract": "In this paper, we investigate an alternative to monad transformers for modularly constructing computations with effects. We show that effects are not handlers but, instead, something to be sent to a handler which chooses how to interpret them. Effects can be combined using a sum (also known as a coproduct). Our approach does not require any knowledge of category theory and provides fast and more convenient effect dispatch with concise and clear syntax, while preserving the comprehensibility and guarantees of monadic approaches.",
+  "summary": "The paper titled 'Extensible Effects: An Alternative to Monad Transformers' by Oleg Kiselyov and Amr Sabry, published in March 2013, presents a novel approach to handling effects in Haskell programs using extensible effects instead of traditional monad transformers. The authors propose a system where effects are dispatched to handlers, thus avoiding some of the complexities associated with monad transformers. This approach does not necessitate category theory knowledge, offering a balance between expressiveness and simplicity. The extensible effects framework allows for more modular and efficient effect management in functional programming, and is faster in effect dispatching compared to monad transformers.\n\nThe concept introduced in this paper has influenced subsequent research in effect systems and modular programming paradigms in Haskell and other functional languages. Notably, the paper inspired further exploration and enhancements in effectful computation frameworks, evidenced by its citations in various academic works such as:\n1. *Haskell Symposium 2014* paper titled \"Towards Explicit Effect Subtyping for Scoped Operations\" which builds on the extensible effects concept. [DOI: 10.1145/2633366.2633372](https://dl.acm.org/doi/10.1145/2633366.2633372)\n2. Ongoing conversations and blog posts in the Haskell community illustrate its significance in practical, scalable software design, highlighting its utility in improving code readability and modularity.\n\nAlthough the paper does not seem to have a direct industry application extractable from the sources reviewed, it contributes significantly to academic discourse on improving effect-handling mechanisms, especially in the realm of functional programming.",
+  "raw_url": "http://okmij.org/ftp/Haskell/extensible/more.pdf",
+  "source_type": "external",
+  "filepath": "languages/haskell/README.md",
+  "filename": "Freer Monads, More Extensible Effects",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

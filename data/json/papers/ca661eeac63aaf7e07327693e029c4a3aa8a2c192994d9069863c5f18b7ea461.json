@@ -1,0 +1,32 @@
+{
+  "uuid": "ca661eeac63aaf7e07327693e029c4a3aa8a2c192994d9069863c5f18b7ea461",
+  "title": "Making reliable distributed systems in the presence of software errors",
+  "publication_date": "2003",
+  "authors": [
+    "Joe Armstrong"
+  ],
+  "keywords": [
+    "actor-model",
+    "concurrency",
+    "distributed-systems",
+    "erlang",
+    "fault-tolerance",
+    "functional-programming",
+    "message-passing",
+    "reliability",
+    "resilience",
+    "software-errors"
+  ],
+  "category_path": [
+    "languages",
+    "erlang"
+  ],
+  "abstract": "This thesis addresses the problem of designing and implementing reliable distributed systems. It describes Erlang, a new programming language which greatly simplifies the construction of robust systems. The thesis describes all the abstract mechanisms necessary to build reliable systems, argues that error recovery should be based on a paradigm of \"let some other process fix the error,\" and describes a framework based on \"programming rules for reliable systems.\" The design of Erlang is guided by principles such as concurrency is natural, fault detection and error recovery should be programmed explicitly, and isolation of errors between processes, etc. Emphasis is given to the essential characteristics which make this new approach feasible. Some practical experiments in building systems using Erlang are included, pointing out the effectiveness of these principles.",
+  "summary": "Joe Armstrong's 2003 doctoral thesis, \"Making reliable distributed systems in the presence of software errors,\" is recognized as a seminal work in the development of the Erlang programming language, which is widely used for building robust, fault-tolerant distributed systems. Erlang introduces concurrency, functional programming, and a 'let-it-crash' philosophy that has greatly influenced the design and implementation of reliable software systems. The thesis presents a groundwork for designing systems where error recovery is handled by allowing processes to fail independently and ensuring other processes can recover or continue unaffected. This work has had notable impact in the telecommunications industry where Ericsson has used Erlang for its scalability and fault tolerance. The actor model of concurrent computation, as realized in Erlang, is adopted in other languages and systems, including Akka in Scala and Elixir, further demonstrating its broad influence. Additionally, Erlang's approach to handling errors has inspired research and development in concurrent and distributed systems beyond its initial telecom applications. The language's application in diverse fields like ecommerce, instant messaging, and telephony reiterates its practicality and robustness for real-world uses. References to this influence can be seen in various software development forums and academic citations, such as its citation in works discussing distributed systems theory and functional programming paradigms. Dr. Armstrong's contributions continue to be a reference point for innovative work in programming languages and distributed system design.",
+  "raw_url": "http://erlang.org/download/armstrong_thesis_2003.pdf",
+  "source_type": "external",
+  "filepath": "languages/erlang/README.md",
+  "filename": "Making reliable distributed systems in the presence of software errors",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

@@ -1,0 +1,31 @@
+{
+  "uuid": "70756399de369fdca9748eede1807b959524acab74f9904466f8d6d1da53f498",
+  "title": "Feedback-Directed Dynamic Compilation for Java",
+  "publication_date": "2005",
+  "authors": [
+    "Thomas Würthinger"
+  ],
+  "keywords": [
+    "adaptive-compilation",
+    "compilation-techniques",
+    "dynamic-compilation",
+    "execution-profiling",
+    "feedback-directed-optimization",
+    "java",
+    "just-in-time-compilation",
+    "performance-optimization",
+    "program-optimization",
+    "virtual-machines"
+  ],
+  "category_path": [
+    "garbage_collection"
+  ],
+  "abstract": "This work investigates feedback-directed dynamic compilation as a technique for increasing the performance of applications running on the Java Virtual Machine. Dynamic compilation is the translation of platform-independent byte code into machine code at load-time or run-time. The time needed for translating the byte code is high, so the dynamic compiler usually generates machine code that is less optimized compared to traditional static compilers. Feedback-directed dynamic compilation uses execution profiling to determine which parts of the code are frequently executed and therefore worth optimizing more carefully.",
+  "summary": "The paper, \"Feedback-Directed Dynamic Compilation for Java\" by Thomas Würthinger, explores mechanisms to enhance application performance on the Java Virtual Machine (JVM) through feedback-directed dynamic compilation. The work involves translating platform-independent byte code into machine code during load-time or run-time. This technique, while time-intensive, provides an adaptive performance optimization contrary to static compilation. The key innovation here is the use of execution profiling to identify critical code paths that should be optimized more aggressively. This paper was presented in 2005.\n\n### Use and Influence:\nAs of the current database I searched, there is limited direct reference to this paper in subsequent literature or industry documentation, suggesting its direct impact may be minimal or not widely cited. However, the concepts of feedback-directed and just-in-time compilation (JIT) have gained broader acceptance and implementation in JVM-based environments like HotSpot. For further context, other papers on dynamic compilation and feedback-directed optimization routinely cite these themes as important foundations. While this specific paper may not be extensively cited, its topics are integral to the industry’s ongoing efforts to optimize Java execution environments. \n\nFor more literature on similar optimization techniques, explore works such as [\"The Java HotSpot™ Performance Engine: An Overview\"](https://link.springer.com/chapter/10.1007/3-540-45521-9_4) which delves deeper into JVM optimization strategies.",
+  "raw_url": "http://www.ssw.uni-linz.ac.at/General/Staff/TW/Wuerthinger05Train.pdf",
+  "source_type": "external",
+  "filepath": "garbage_collection/README.md",
+  "filename": "Incremental Garbage Collection: The Train Algorithm",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

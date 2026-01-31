@@ -1,0 +1,31 @@
+{
+  "uuid": "0747c84a49d32744a2744e2f2951b05fb7a0829ce44afb0b700833eb2bb3ecdd",
+  "title": "The Chubby lock service for loosely-coupled distributed systems",
+  "publication_date": "2006",
+  "authors": [
+    "Mike Burrows"
+  ],
+  "keywords": [
+    "availability",
+    "chubby",
+    "concurrency",
+    "consensus-algorithm",
+    "distributed-locking",
+    "distributed-systems",
+    "google",
+    "lock-service",
+    "loosely-coupled-systems",
+    "reliability"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "Chubby is a lock service for loosely-coupled distributed systems. It is intended to provide coarse-grained locking as well as reliable storage for a small amount of metadata. Chubby's design emphasizes availability and reliability, a subject that posed interesting engineering challenges. Chubby provides a familiar file-like interface, and both its design and its implementation have closely followed those of existing well-known distributed file systems. Its clients use the service to perform tasks such as electing a leader of a group, to partition work, and to store configuration information. In this paper, we describe why we built Chubby, identify the key features of its design, and explain how we resolved several difficult technical issues.",
+  "summary": "The paper \"The Chubby Lock Service for Loosely-Coupled Distributed Systems\" by Mike Burrows details the design and implementation of the Chubby lock service at Google. This service is intended for distributed systems that require reliable locking and storage for metadata. A key highlight of Chubby is its emphasis on availability and reliability, achieved through a familiar file-like interface modeled after existing distributed file systems. Chubby is used for tasks like leader election, work partitioning, and configuration storage. \n\nThe impact of Chubby is significant in the development of distributed systems. It has influenced various systems design patterns, particularly those concerning lock management and distributed consensus. The Chubby service bears similarities to other consensus algorithms like Paxos in terms of maintaining reliability and has propelled advancements in similar services, such as Apache ZooKeeper.\n\nChubby provided practical insights into designing highly available consensus systems, heavily influencing Google's internal infrastructure. It has also been an archetype for other distributed coordination systems, being referenced in numerous subsequent studies and implementations in distributed computing literature.\n\n**References:**\n- Peek at some applications of Chubby or its inspirations in Google's infrastructure: [Google Spanner](https://static.googleusercontent.com/media/research.google.com/en//archive/spanner-osdi2012.pdf)\n- Another influence in open source: [Apache ZooKeeper](https://zookeeper.apache.org/doc/r3.5.7/zookeeperOver.html)",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/the-chubby-lock-service-for-loosely-coupled-distributed-systems.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/the-chubby-lock-service-for-loosely-coupled-distributed-systems.pdf",
+  "filename": "the-chubby-lock-service-for-loosely-coupled-distributed-systems.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

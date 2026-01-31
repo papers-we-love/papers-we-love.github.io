@@ -1,0 +1,30 @@
+{
+  "uuid": "3fe4b8501973a6a045377c8289b225ff5832a6414d59b1433fe0f0c6e602e24f",
+  "title": "Key Reinstallation Attacks: Forcing Nonce Reuse in WPA2",
+  "publication_date": "2017-10-30",
+  "authors": [
+    "Frank Piessens",
+    "Mathy Vanhoef"
+  ],
+  "keywords": [
+    "handshake-protocols",
+    "key-reinstallation-attacks",
+    "krack",
+    "network-security",
+    "nonce-reuse",
+    "security-protocol",
+    "wifi-protected-access",
+    "wireless-security"
+  ],
+  "category_path": [
+    "cryptography"
+  ],
+  "abstract": "We introduce key reinstallation attacks, or Krack for short. The main idea behind these attacks is to exploit features of the 4-way handshake of the WPA2 protocol to reinstall an already-in-use key and thereby reset internal packet numbers and receive replayed frames. An adversary can thus decrypt and/or inject packets without knowing the encryption key. We verified the attack against macOS, OpenBSD, Windows, and other implementations. Our results demonstrate that implementations of WPA2 can be tricked into installing an already-in-use key, thereby resetting internal counters associated to it. We show how a third party can abuse replayed message to fool clients into resetting nonce and packet numbers, being able to decrypt and/or possibly inject packets that are exchanged between the access point and a client. We also present practical mitigations against these attacks.",
+  "summary": "The paper titled \"Key Reinstallation Attacks: Forcing Nonce Reuse in WPA2\" by Mathy Vanhoef and Frank Piessens was presented at the ACM Conference on Computer and Communications Security in 2017. It details a significant vulnerability in the WPA2 security protocol employed by most Wi-Fi networks, known as a Key Reinstallation Attack (KRACK).\n\nThe attack targets the 4-way handshake of WPA2, which is responsible for key management in the protocol. By manipulating handshake messages, the attacker can reinstall the cryptographic key, forcing nonce reuse and allowing packet decryption and injection without knowledge of the network key. This has serious implications for the confidentiality and integrity of communications on affected networks. Practical implementations of the attack have been demonstrated on various systems, illustrating its feasibility.\n\nFollowing its publication, KRACK prompted widespread scrutiny and revisions in Wi-Fi security protocols. Affected vendors released patches, and the IEEE took initiatives to amend the 802.11i standard to address the vulnerability. The attack profoundly influenced Wi-Fi security policies globally, emphasizing the necessity for more robust cryptographic practice in network protocols.\n\nResearch following this paper has expanded on the intricacies of wireless vulnerabilities and has influenced efforts in reinforcing existing communication standards. The critical nature of the findings has been referenced extensively in scholarly research as well as in industry reports dealing with Wi-Fi network security. Citations include:\n\n- [Vanhoef, M., & Piessens, F. (2017). Key Reinstallation Attacks: Forcing Nonce Reuse in WPA2.](https://www.krackattacks.com/)\n- [Cisco Security Center: Key Reinstallation Attacks - Krack](https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20171016-wpa2)\n- [US-CERT: Vulnerability Note VU#228519](https://www.kb.cert.org/vuls/id/228519)",
+  "raw_url": "https://papers.mathyvanhoef.com/ccs2017.pdf",
+  "source_type": "external",
+  "filepath": "cryptography/README.md",
+  "filename": "Key Reinstallation Attacks: Forcing Nonce Reuse in WPA2 (2017)",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

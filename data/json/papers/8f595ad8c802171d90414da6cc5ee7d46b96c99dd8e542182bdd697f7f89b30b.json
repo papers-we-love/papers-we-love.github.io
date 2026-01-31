@@ -1,0 +1,29 @@
+{
+  "uuid": "8f595ad8c802171d90414da6cc5ee7d46b96c99dd8e542182bdd697f7f89b30b",
+  "title": "The Slab Allocator: An Object-Caching Kernel Memory Allocator",
+  "publication_date": "June 6-10, 1994",
+  "authors": [
+    "Jeff Bonwick"
+  ],
+  "keywords": [
+    "kernel-memory",
+    "memory-allocator",
+    "memory-management",
+    "object-caching",
+    "operating-systems",
+    "performance-optimization",
+    "slab-allocator",
+    "unix"
+  ],
+  "category_path": [
+    "memory_management"
+  ],
+  "abstract": "The object-caching kernel memory allocator provides a convenient and efficient way to manage dynamically allocated kernel data objects. In many computer systems, the kernel must perform frequent allocation and freeing of small objects. Conventional allocation strategies employ a pool of fixed-size objects that are divided into \"chunks\" to be allocated individually, as needed. Such a scheme typically causes excessive fragmentation and other performance problems. Using some simple and well-known techniques, we have implemented a caching memory allocator that is simple and efficient and that eliminates barriers to good performance of these allocators: fragmentation and lack of space for working data structures. The design and implementation are open to any machine with at least 4k bytes of memory and any operating system.",
+  "summary": "The paper \"The Slab Allocator: An Object-Caching Kernel Memory Allocator\" by Jeff Bonwick, presented at USENIX Summer 1994 Technical Conference, introduces the slab allocator, a memory management system that significantly optimizes kernel memory allocation by reducing fragmentation and improving performance. The slab allocator system organizes memory into caches of reusable 'slabs,' each consisting of one or more contiguous pages of memory from the kernel's page cache. Slabs are subdivided into fixed-sized blocks for the allocation of kernel objects, which minimizes fragmentation common in conventional allocation methods.\n\nThe impact of this paper is significant in the realm of operating system design, particularly in Unix-like systems such as Solaris, where the slab allocator was first implemented. Its contribution remains a widely adopted mechanism in kernel memory management across various operating systems.\n\nRelated references include:\n1. [Bonwick, J. \"The Slab Allocator: An Object-Caching Kernel Memory Allocator,\" USENIX, 1994.](https://www.usenix.org/legacy/publications/library/proceedings/bos94/bonwick.html)\n2. [Kleen, C. (2004). \"The SLUB Allocator.\" Linux Journal.](https://www.linuxjournal.com/article/9466)\n3. [Love, R. (2005). \"Linux Kernel Development.\" The SLAB Allocator in Linux Kernel.](https://www.pearson.com/us/)\n4. [\"Slab Allocation in Operating Systems,\" GeeksforGeeks.](https://www.geeksforgeeks.org/slab-allocation-in-operating-systems/)\n\nThis system has inspired further research into memory allocation strategies in both academic settings and industry practices, with its algorithms forming the basis for subsequent memory allocator designs and optimizations in various modern operating systems.",
+  "raw_url": "https://www.usenix.org/legacy/publications/library/proceedings/bos94/bonwick.html",
+  "source_type": "external",
+  "filepath": "memory_management/README.md",
+  "filename": "The Slab Allocator: An Object-Caching Kernel Memory Allocator",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:04"
+}

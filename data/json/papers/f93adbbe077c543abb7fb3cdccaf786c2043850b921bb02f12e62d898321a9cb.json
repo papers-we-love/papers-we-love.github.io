@@ -1,0 +1,40 @@
+{
+  "uuid": "f93adbbe077c543abb7fb3cdccaf786c2043850b921bb02f12e62d898321a9cb",
+  "title": "Spectre Attacks: Exploiting Speculative Execution",
+  "publication_date": "January 2018",
+  "authors": [
+    "Daniel Genkin",
+    "Daniel Gruss",
+    "Michael Schwarz",
+    "Mike Hamburg",
+    "Moritz Lipp",
+    "Paul Kocher",
+    "Stefan Mangard",
+    "Thomas Prescher",
+    "Werner Haas",
+    "Yuval Yarom"
+  ],
+  "keywords": [
+    "branch-prediction",
+    "cpu-vulnerabilities",
+    "hardware-security",
+    "intel",
+    "microarchitecture",
+    "performance-optimizations",
+    "security",
+    "side-channel-attacks",
+    "spectre-attack",
+    "speculative-execution"
+  ],
+  "category_path": [
+    "security"
+  ],
+  "abstract": "Modern microprocessors use speculative execution to improve performance by predicting program behavior and executing instructions ahead of time. This performance optimization was considered to be invisible to program execution. In this paper, we show that speculative execution can be exploited to leak information across security boundaries, even without accessing privileged memory, such as when code is executed in a sandbox. We demonstrate attacks on (1) Intel, AMD, and ARM processors, and (2) various other inversions of Spectre-based vulnerabilities. We also discuss how to implement software countermeasures to make code resistant to such attacks.",
+  "summary": "The paper \"Spectre Attacks: Exploiting Speculative Execution\" introduced a significant vulnerability in modern CPUs, known as the \"Spectre\" attack. Published in January 2018, the research by Paul Kocher and colleagues highlighted how speculative execution—a performance optimization feature in CPUs—could be exploited to leak sensitive information by manipulating branch prediction. The paper demonstrated attacks on processors from major manufacturers, including Intel, AMD, and ARM, thus drawing attention across the technology industry and research community.\n\nSince its publication, the paper has influenced a vast amount of research and sparked an overhaul in how modern CPUs are secured. Patches and mitigations have been developed and implemented in software and microcode updates to address these vulnerabilities. Key works that reference or build upon this research include:\n\n1. **\"Meltdown: Reading Kernel Memory from User Space\"**, which explores a related vulnerability and often references Spectre in discussing speculative execution and CPU security measures. [link](https://meltdownattack.com/meltdown.pdf)\n2. **\"A Systematic Evaluation of Transient Execution Attacks and Defenses\"**, which surveys various speculative execution attacks, including Spectre, analyzing defenses and mitigations. [link](https://dl.acm.org/doi/10.1145/3291047.3291066)\n3. **\"Retpoline: A Software Construct for Preventing Branch-Target-Injection\"**, which is a software-based mitigation for Spectre-class vulnerabilities. [link](https://docs.google.com/document/d/1P0cZcAhygbPCBRwoDHm8i8Khbh-SQ-V1mjN3loR1Hgs/edit)\n4. **\"Spectre, Meltdown, and Speculative Execution Side-Channel Attacks\"**, a comprehensive overview of how speculative execution side-channel attacks work and countermeasures. [link](https://link.springer.com/chapter/10.1007/978-3-030-11723-7_4)\n\nOverall, this paper has had a profound effect on the field of computer security, particularly in the study and protection of speculative execution vulnerabilities, prompting ongoing research and changes in hardware design.",
+  "raw_url": "https://spectreattack.com/spectre.pdf",
+  "source_type": "external",
+  "filepath": "security/README.md",
+  "filename": "Spectre Attacks: Exploiting Speculative Execution (2018)",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:04"
+}

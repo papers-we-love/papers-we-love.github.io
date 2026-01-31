@@ -1,0 +1,29 @@
+{
+  "uuid": "fd4400288bc37e99815b6efafc805dd21285900e71e9577961caba13970e86f5",
+  "title": "The Rendering Equation",
+  "publication_date": "1986",
+  "authors": [
+    "James T. Kajiya"
+  ],
+  "keywords": [
+    "computer-graphics",
+    "global-illumination",
+    "light-transfer",
+    "path-tracing",
+    "photorealistic-rendering",
+    "physically-based-rendering",
+    "ray-tracing",
+    "rendering-equation"
+  ],
+  "category_path": [
+    "computer_graphics"
+  ],
+  "abstract": "This paper derives an integral equation which models the equilibrium of light in a general environment. Many existing algorithms for image rendering have attempted to simulate particular solutions to this equation. These include some of the so-called \"radiosity\" methods as well as ray tracing. The formulation in the paper describes both the continuous and discrete forms of the problem. Also described is a Monte Carlo method for solving the associated integral. Some images rendered using this technique are presented.",
+  "summary": "James T. Kajiya's 1986 paper, \"The Rendering Equation,\" was a seminal work in computer graphics, introducing a framework for simulating the global illumination of light within a scene. Kajiya derived an integral equation that models the balance of light, laying the groundwork for subsequent advancements in rendering techniques such as path tracing and ray tracing. The paper also introduced a Monte Carlo method for solving the integral, significantly influencing realistic image synthesis methods.\n\nKajiya's work has been extensively cited in later research, highlighting its significance. For instance, the rendering equation forms the core of many modern photorealistic rendering solutions. Some notable references that cite Kajiya's influential work include:\n\n1. Pharr, M., Jakob, W., & Humphreys, G. (2016). *Physically Based Rendering: From Theory to Implementation* - [link](https://www.pbr-book.org/)\n2. Dutré, P., Bekaert, P., & Bala, K. (2006). *Advanced Global Illumination* - [link](https://www.crcpress.com/Advanced-Global-Illumination/Dutre-Bekaert-Bala/p/book/9781568813073)\n3. Shirley, P., & Morley, R. K. (2003). *Realistic Ray Tracing* - [link](http://www.raytracegroundup.com/)\n\nDue to Kajiya's rendering equation, more accurate models of light transport are possible, which have been integral to both academia and industries focusing on visual effects, animation, and gaming. The paper has been pivotal in advancing the field toward achieving more realistic and visually compelling digital images.",
+  "raw_url": "http://www.cs.rpi.edu/~cutler/classes/advancedgraphics/S08/lectures/kajiya.pdf",
+  "source_type": "external",
+  "filepath": "computer_graphics/README.md",
+  "filename": "The Rendering Equation",
+  "created_on": "2026-01-24 23:46:58",
+  "summary_received": "2026-01-25 00:11:02"
+}

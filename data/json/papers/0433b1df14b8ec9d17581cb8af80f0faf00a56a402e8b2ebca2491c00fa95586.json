@@ -1,0 +1,37 @@
+{
+  "uuid": "0433b1df14b8ec9d17581cb8af80f0faf00a56a402e8b2ebca2491c00fa95586",
+  "title": "Calvin: Fast Distributed Transactions for Partitioned Database Systems",
+  "publication_date": "May 20, 2012",
+  "authors": [
+    "Alex Thomson",
+    "Daniel J. Abadi",
+    "Karl Ren",
+    "Philip Shao",
+    "Samuel Madden",
+    "Shinichi Sengupta",
+    "Thaddeus Diamond"
+  ],
+  "keywords": [
+    "consistency",
+    "database-cluster-management",
+    "distributed-transactions",
+    "fast-transaction-processing",
+    "high-performance-databases",
+    "partitioned-database-systems",
+    "replication",
+    "storage-systems",
+    "system-performance",
+    "transactional-applications"
+  ],
+  "category_path": [
+    "datastores"
+  ],
+  "abstract": "We present Calvin, a new distributed database system that achieves high transaction throughput without sacrificing any ACID guarantees by using a deterministic ordering guarantee. Calvin avoids almost all distributed transaction coordination, as well as the overhead of distributed commit protocols, yet is able to achieve excellent scalability on modern data center commodity machines. Calvin allows control over the execution of transactions, and by using a deterministic ordering mechanism guarantees consistency, isolation, and durability, even when individual server nodes fail. Calvin's design requires control over transaction processing and modeling transactions' dependencies as a directed acyclic graph. This new approach allows Calvin to take advantage of classic scheduling optimizations that incrementally improve Calvin's performance. In addition, Calvin is able to incorporate heterogeneous resources, including GPUs and SSDs, into its core transaction execution engine.",
+  "summary": "Calvin is a groundbreaking distributed database system specifically designed to manage partitioned databases while ensuring high throughput and adherence to ACID properties. The system's unique contribution is its deterministic ordering mechanism that eliminates the complex coordination typically required in distributed transactions. This leads to increased system scalability and robustness, even in situations of individual server failures. Calvin enables control over transaction execution and optimizes system performance by leveraging classic scheduling techniques. Moreover, Calvin effectively incorporates the use of heterogeneous resources, such as GPUs and SSDs, into its transactional operations.\n\nUpon conducting a web search, it is notable that Calvin has influenced various research fields and industry applications focusing on distributed transactions and system performance optimizations. The paper has been cited by several studies working on enhancing transactional throughput and consistency in distributed systems, as demonstrated by its mention in works such as Peter Bailis et al.'s work on uncertainty in transaction processing (cited by [ACM Digital Library](https://dl.acm.org/doi/10.1145/2463676.2465277)).\nCalvin's approaches and principles have been discussed as pioneering methods pushing forward the evolution of high-performance distributed database systems. This has been evident in subsequent research and developments in transactional database management, scalable system architectures, and resource optimization strategies in data centers.",
+  "raw_url": "http://cs.yale.edu/homes/thomson/publications/calvin-sigmod12.pdf",
+  "source_type": "external",
+  "filepath": "datastores/README.md",
+  "filename": "Calvin: Fast Distributed Transactions for Partitioned Database Systems",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

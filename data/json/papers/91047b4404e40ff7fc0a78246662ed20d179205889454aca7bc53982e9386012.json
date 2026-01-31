@@ -1,0 +1,31 @@
+{
+  "uuid": "91047b4404e40ff7fc0a78246662ed20d179205889454aca7bc53982e9386012",
+  "title": "The Slab Allocator: An Object-Caching Kernel Memory Allocator",
+  "publication_date": "1994",
+  "authors": [
+    "Jeff Bonwick"
+  ],
+  "keywords": [
+    "dynamic-memory-allocation",
+    "kernel",
+    "memory-efficiency",
+    "memory-management",
+    "object-caching",
+    "operating-systems",
+    "performance",
+    "resource-allocation",
+    "slab-allocator",
+    "unix"
+  ],
+  "category_path": [
+    "memory_management"
+  ],
+  "abstract": "Most general-purpose operating systems provide a memory management facility called the kernel memory allocator. Typically the kernel memory allocator provides variable-size memory allocation through a set of zones, each of which satisfies requests for different size and build. This results in poor memory utilization when the memory allocation pattern is not uniform over time. This paper presents a new kernel memory allocator called the slab allocator. The slab allocator improves the efficiency of object-based allocation by caching recently freed objects so that they can be quickly reallocated. The slab allocator includes a number of optimizations aimed at increasing the effective memory bandwidth and utilization, including \"coloring\" to reduce cache conflicts. We present measurements which show that the slab allocator can improve system performance substantially relative to other strategies. We also show that the concept of \"slab allocation\" is quite general, applying to a wide variety of resource management problems beyond memory.",
+  "summary": "This paper introduces the slab allocator, a new kernel memory allocator designed to improve memory utilization and performance through object-based caching, as opposed to traditional zone-based allocators. By caching recently freed objects, the slab allocator avoids memory fragmentation and allows faster object reallocation, thereby increasing the efficiency of resource allocation in Unix-based operating systems. The slab allocator also includes advanced techniques such as \"coloring\" to minimize cache conflicts, contributing to increased memory bandwidth. The paper presents empirical data demonstrating improved system performance with the slab allocator over previous methods.\n\nThe slab allocator has had a significant impact on the field of operating systems. It is widely used in Unix-like operating systems, including Solaris, and later adapted into Linux, influencing the design of memory allocators across various operating systems. The slab allocator's focus on caching and reuse principles has informed the development of various memory management subsystems.\n\n**Impact and References:**\n1. [Solaris Operating System: Design and Implementation](https://www.solarisinternals.com/wiki/index.php/Solaris_Internals)\n2. Linux Kernel's use and documentation of the slab allocator: [Linux Kernel Documentation on Slab Allocator](https://www.kernel.org/doc/html/latest/mm/slab.html)\n3. Broader discussions on memory allocation and Unix-like OS functionalities can be found in academic settings such as MIT's course materials and similar open resources.",
+  "raw_url": "https://www.usenix.org/legacy/publications/library/proceedings/bos94/full_papers/bonwick.a",
+  "source_type": "external",
+  "filepath": "memory_management/README.md",
+  "filename": "ASCII version",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:04"
+}

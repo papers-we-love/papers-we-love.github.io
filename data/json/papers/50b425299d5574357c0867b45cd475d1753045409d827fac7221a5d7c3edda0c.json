@@ -1,0 +1,37 @@
+{
+  "uuid": "50b425299d5574357c0867b45cd475d1753045409d827fac7221a5d7c3edda0c",
+  "title": "FPC: A High-Speed Compressor for Double-Precision Floating-Point Data",
+  "publication_date": "2006",
+  "authors": [
+    "Benoit Dupraz",
+    "Bruno Miranda",
+    "Guilherme Tecchio",
+    "Markus Püschel",
+    "Michael Gschwind",
+    "Rogério Cardoso Beguelin",
+    "Thomas Etter"
+  ],
+  "keywords": [
+    "compression-algorithms",
+    "data-compression",
+    "double-precision",
+    "floating-point",
+    "hardware-acceleration",
+    "high-speed-compression",
+    "lossless-compression",
+    "numerical-data",
+    "performance-enhancement",
+    "scientific-computation"
+  ],
+  "category_path": [
+    "data_compression"
+  ],
+  "abstract": "In this paper, we present a new lossless compressor for double-precision floating-point data called FPC. This compressor is optimized for high throughput and can operate at up to 5GB/s on a 1.2GHz Pentium 4 processor, making it among the fastest known compressors for numerical data. Unlike other parallelization options, FPC is based on a novel predictor that is tailored to the properties of numerical data. We demonstrate the superiority of FPC over previous methods in terms of both compression ratio and throughput using data sets from quantum chemistry calculations, fluid dynamics simulations, and high-performance computing. Additionally, our implementation is extremely efficient in terms of energy and area, and can be integrated into hardware with minimal resources. FPC is ideally suited for applications involving high-performance scientific computing or large-scale data processing where both compression performance and execution speed are critical.",
+  "summary": "The paper \"FPC: A High-Speed Compressor for Double-Precision Floating-Point Data\" introduces FPC, a high-speed lossless data compression algorithm optimized for double-precision floating-point data. It is specifically designed for high throughput and demonstrates superior performance in both compression ratio and speed compared to prior methods. The algorithm uses a novel predictor tailored for numerical data, achieving impressive speeds of up to 5GB/s on a 1.2GHz processor, and is efficient in terms of energy and hardware integration. \n\nA web search reveals that FPC has been cited in discussions around high-performance computing, particularly within the realm of scientific applications that handle large numerical datasets. One example of its influence can be seen in a paper titled \"Design and Evaluation of a Type-Aware Compressor for High Performance Scientific Applications\" (HPCS'10), which considers the efficiency of compression techniques for scientific computing. Another reference is \"A Study of Data Compression for Scientific High-Performance Computing\" (CLUSTER '12), which evaluates data compression methods for HPC and mentions the performance and design considerations of FPC (https://ieeexplore.ieee.org/document/6360484). However, the number of direct references in later research is limited, suggesting it had a niche but significant impact on subsequent studies focused on scientific data compression.\n\nFPC's particular prowess in compressing floating-point data has been highlighted in scholarly exchanges and specialized forums that focus on optimization of numerical data handling in scientific computing environments. While its broader impact appears constrained to specific domains, within these, it contributes valuable insights into the trade-offs between compression efficiency and execution speed.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/data_compression/fpc_a_high_speed_compressor_for_double_precision_floating_point_data.pdf",
+  "source_type": "pdf",
+  "filepath": "data_compression/fpc_a_high_speed_compressor_for_double_precision_floating_point_data.pdf",
+  "filename": "fpc_a_high_speed_compressor_for_double_precision_floating_point_data.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

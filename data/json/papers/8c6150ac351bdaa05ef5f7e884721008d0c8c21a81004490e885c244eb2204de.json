@@ -1,0 +1,32 @@
+{
+  "uuid": "8c6150ac351bdaa05ef5f7e884721008d0c8c21a81004490e885c244eb2204de",
+  "title": "A Poor Man's Concurrency Monad",
+  "publication_date": "2001",
+  "authors": [
+    "Adrian Hey"
+  ],
+  "keywords": [
+    "concurrency",
+    "functional-programming",
+    "haskell",
+    "haskell-libraries",
+    "lazy-evaluation",
+    "lightweight-threads",
+    "monads",
+    "non-blocking-io",
+    "programming-model",
+    "software-engineering"
+  ],
+  "category_path": [
+    "languages",
+    "haskell"
+  ],
+  "abstract": "This paper introduces a concurrency monad library for Haskell, which is implemented using existing non-blocking I/O facilities in the Glasgow Haskell Compiler (GHC) runtime system. The library is specifically targeted towards lightweight concurrency and cooperative multitasking. It is an attractive option for Haskell programmers, in contrast to relying on heavy-weight operating system threads, which are much more resource-intensive.",
+  "summary": "The paper titled \"A Poor Man's Concurrency Monad\" introduces a concurrency library for the Haskell programming language. Authored by Adrian Hey in 2001, this work presents a concurrency monad that utilizes non-blocking I/O facilities of the Glasgow Haskell Compiler (GHC) runtime system to enable lightweight concurrency and cooperative multitasking in Haskell programs.\n\nThe core contribution of this paper is the design and implementation of a library that provides a simpler alternative to operating system-level threads. This approach is particularly useful in Haskell, due to its lazy evaluation strategy and functional nature, enhancing the ability to manage concurrent operations without incurring significant resource costs typically associated with traditional threading models.\n\nUpon conducting a quick review of this paper's influence, there is limited evidence of direct citations or widespread industrial adoption. However, it provides foundational concepts that complement ongoing discussions and innovations in the Haskell ecosystem regarding concurrency and functional programming models. Despite the lack of direct citations, this paper is likely to serve as an insightful resource for researchers and practitioners focusing on lightweight concurrency solutions in Haskell.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages/haskell/a-poor-mans-concurrency-monad.pdf",
+  "source_type": "pdf",
+  "filepath": "languages/haskell/a-poor-mans-concurrency-monad.pdf",
+  "filename": "a-poor-mans-concurrency-monad.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

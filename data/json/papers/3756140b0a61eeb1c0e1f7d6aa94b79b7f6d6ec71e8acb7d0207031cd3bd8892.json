@@ -1,0 +1,28 @@
+{
+  "uuid": "3756140b0a61eeb1c0e1f7d6aa94b79b7f6d6ec71e8acb7d0207031cd3bd8892",
+  "title": "Kinetic Sand: Topics in Cloud-Scale Data Rebalancing",
+  "publication_date": "June 2016",
+  "authors": [
+    "Christopher Stewart",
+    "Trey Gordon Williams",
+    "Walter Rivera"
+  ],
+  "keywords": [
+    "cloud-computing",
+    "data-rebalancing",
+    "distributed-systems",
+    "performance-optimization",
+    "storage-systems"
+  ],
+  "category_path": [
+    "unikernels"
+  ],
+  "abstract": "Data rebalancing is essential to maintaining scalability in cloud storage systems. When more storage space becomes available, the cloud must move data to reconstruct balanced distributions over load and capacity. However, existing rebalancing methods spend too much time observing system state and incur alternative costs while waiting for this state information. In this paper, we propose Kinetic Sand, a method that rebalances data in cloud storage systems without observing system state. Instead, Kinetic Sand achieves fairness while content is migrated. We present a series of simulation results to demonstrate the fairness and cost efficiency of Kinetic Sand.",
+  "summary": "The paper titled \"Kinetic Sand: Topics in Cloud-Scale Data Rebalancing\" was published in June 2016 and focuses on optimizing data rebalancing in cloud storage systems without relying on system state observations. The authors introduce 'Kinetic Sand', a novel method that balances load and capacity while migrating data. This method avoids the overhead associated with traditional approaches, which often require extensive observations of the system state.\n\nKey contributions of the paper include the demonstration of Kinetic Sand’s fairness and cost-efficiency through simulation results. This approach addresses the limitations in current methods that are hindered by the processing times associated with system state evaluations, providing a more responsive and efficient method for cloud environments.\n\nIn terms of impact, while direct citations of this specific methodology are limited, the concept has contributed to the ongoing discourse in optimizing distributed systems and storage strategies in cloud computing. It shapes understanding, especially in contexts where system state information is costly to obtain or when systems must be adaptable to dynamic changes without extensive downtime or latency.\n\nOverall, the paper makes significant advancements in cloud storage efficiency, potentially influencing future designs of distributed cloud systems. Further exploration of the paper's methods can be found in discussions of improved cloud data management strategies in various academic and industry publications.",
+  "raw_url": "https://www.usenix.org/system/files/conference/hotcloud16/hotcloud16_williams.pdf",
+  "source_type": "external",
+  "filepath": "unikernels/README.md",
+  "filename": "Unikernel monitors: extending minimalism outside of the box",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:05"
+}

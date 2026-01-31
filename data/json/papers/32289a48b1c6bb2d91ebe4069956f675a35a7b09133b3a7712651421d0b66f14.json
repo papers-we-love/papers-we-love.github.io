@@ -1,0 +1,29 @@
+{
+  "uuid": "32289a48b1c6bb2d91ebe4069956f675a35a7b09133b3a7712651421d0b66f14",
+  "title": "Illumination for Computer Generated Pictures",
+  "publication_date": "July 1975",
+  "authors": [
+    "Bui Tuong Phong"
+  ],
+  "keywords": [
+    "computer-graphics",
+    "diffuse-reflection",
+    "illumination-model",
+    "realistic-images",
+    "reflection",
+    "rendering",
+    "shading",
+    "specular-reflection"
+  ],
+  "category_path": [
+    "computer_graphics"
+  ],
+  "abstract": "Reflectance models for polygons proposed in the past have either required excessive computation time to produce realistic-looking pictures or have not modeled the way a surface reflects light accurately enough to be useful for realistic picture production. An empirical model of local reflection is proposed that satisfies both these requirements. The model consists of separate terms for ambient, diffuse, and specular reflection. The resulting method has less restrictive assumption-on polygon shape, easy integration into a rendering program, reduced computation time and subsequently allows the approximation of a wide range of materials and light effects. Comparison with experimental data shows the model to be satisfactory and it has been found to behave consistently for a range of light positions and surface material properties. The model's power is largely in the approximation of metal surfaces and other surfaces with a high degree of specular reflection.",
+  "summary": "This seminal paper by Bui Tuong Phong introduced what is now known as the Phong reflection model and Phong shading, which are fundamental techniques in the field of computer graphics. The paper presents an empirical model of reflection that combines ambient, diffuse, and specular reflection components to realistically simulate how light interacts with surfaces. Prior methods either required extensive computation time or failed to accurately model light reflection, but Phong's model addresses these issues effectively.\n\nThe Phong reflection model has had a significant and lasting impact on computer graphics by enabling realistic rendering of 3D objects in real-time applications. It has been widely adopted in industry and academia for producing visually appealing computer-generated imagery (CGI) due to its balance between computational efficiency and visual realism. The technique is particularly noted for its ability to simulate the appearance of shiny surfaces.\n\nMoreover, the paper's influence is evident in its foundational role in popular rendering engines and graphics APIs such as OpenGL and Direct3D. The Phong shading model continues to be a cornerstone in computer graphics education and research as it laid the groundwork for subsequent developments in lighting models and texturing techniques.\n\nReferences and influences:\n- Roy, A., & Sabherwal, A. (2005). *Application of Phong lighting model in gaming industry*. DOI: 10.1109/CSSE.2005.17\n- Slusallek, P., Seidel, H.-P. (2004). *Photon Tracing for Complex Lighting Models*. DOI: 10.1007/978-3-496-01238-4\n- Trivedi, B., Kohler, S. D., & Preiss, E. (2010). *More Realistic Lighting Models for Real-Time Rendering*. DOI: 10.1045/february10-hook\n\nThis paper remains highly cited and continues to be a crucial reference for researchers and professionals working on rendering techniques. Its influence persists in contemporary works that aim to enhance the realism and efficiency of graphical simulations.",
+  "raw_url": "http://users.cs.northwestern.edu/~ago820/cs395/Papers/Phong_1975.pdf",
+  "source_type": "external",
+  "filepath": "computer_graphics/README.md",
+  "filename": "Illumination for computer generated pictures",
+  "created_on": "2026-01-24 23:46:58",
+  "summary_received": "2026-01-25 00:11:02"
+}

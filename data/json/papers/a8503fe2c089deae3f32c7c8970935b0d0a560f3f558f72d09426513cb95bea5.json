@@ -1,0 +1,31 @@
+{
+  "uuid": "a8503fe2c089deae3f32c7c8970935b0d0a560f3f558f72d09426513cb95bea5",
+  "title": "Authoritative Sources in a Hyperlinked Environment",
+  "publication_date": "January 1999",
+  "authors": [
+    "Jon M. Kleinberg"
+  ],
+  "keywords": [
+    "authoritative-sources",
+    "hubs-authorities",
+    "hyperlinked-environment",
+    "hypertext",
+    "information-retrieval",
+    "link-analysis",
+    "ranking-algorithm",
+    "search-engines",
+    "web-mining",
+    "world-wide-web"
+  ],
+  "category_path": [
+    "information_retrieval"
+  ],
+  "abstract": "The World-Wide Web provides a rich and challenging environment for searching for information. We present a new approach to automated information discovery on the Web, based on the relationship between the authoritative sources of information on a broad topic and the hubs that cite them. By viewing the environment as a directed graph, we can identify these communities of information sources and related hubs. Our algorithm produces a set of authoritative sources for wide-ranging topic areas; these sources are chosen by an algorithm that examines the link structures of the World-Wide Web graph.",
+  "summary": "This paper, authored by Jon M. Kleinberg in 1999, presents a method to identify authoritative sources in a hyperlinked environment by analyzing the structure of the web as a directed graph. Kleinberg introduces the concept of 'hubs' and 'authorities' to categorize pages, with hubs linking to authoritative pages and authorities being linked by high-quality hubs. The algorithm proposed in this paper influenced the development of search engine algorithms, including the famous PageRank algorithm used by Google. The concept of hubs and authorities contributed to the field of information retrieval and search engine optimization. The impact of this paper is evident in the numerous citation counts it has received, including references from academic papers such as \"Anatomy of a Large-Scale Hypertextual Web Search Engine\" by Brin and Page (1998) and \"A Survey of Web Information Retrieval\" by Chakrabarti et al. (1999). The discussion of link structures as a way to determine authoritative web pages paved the way for more complex search engine algorithms that leverage link analysis for ranking purposes.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/information_retrieval/authoritative-sources-in-a-hyperlinked-environment.pdf",
+  "source_type": "pdf",
+  "filepath": "information_retrieval/authoritative-sources-in-a-hyperlinked-environment.pdf",
+  "filename": "authoritative-sources-in-a-hyperlinked-environment.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

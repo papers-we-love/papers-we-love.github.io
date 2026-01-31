@@ -1,0 +1,35 @@
+{
+  "uuid": "4e94af6619d018ea93e6c0dc3c85a5cdbb39d84c2d188283620d97b6e67d77c7",
+  "title": "Epidemic Algorithms for Replicated Database Maintenance",
+  "publication_date": "1989",
+  "authors": [
+    "Alan Demers",
+    "Carl Hauser",
+    "Dan Greene",
+    "John Larson",
+    "Wesley Irish"
+  ],
+  "keywords": [
+    "consistency-models",
+    "data-replication",
+    "database-maintenance",
+    "distributed-computing",
+    "distributed-systems",
+    "epidemic-algorithms",
+    "fault-tolerance",
+    "gossip-protocols",
+    "replicated-databases",
+    "scalability"
+  ],
+  "category_path": [
+    "gossip"
+  ],
+  "abstract": "The paper discusses a class of algorithms, called epidemic algorithms, for maintaining replicated databases in distributed systems. These algorithms are based on concepts analogous to the spread of a virus in a biological population, where updates are propagated upon contact between hosts.",
+  "summary": "The paper \"Epidemic Algorithms for Replicated Database Maintenance\" introduces a novel class of algorithms specifically designed for maintaining replicated databases within distributed systems. The central metaphor guiding these algorithms is the spread of information akin to how viruses or diseases propagate within biological populations. This propagation method allows for gradual updating of database replicas across distributed networks without the need for a centralized control mechanism. The mechanism ensures robustness in settings characterized by high fault tolerance requirements and network partitions.\n\nThese epidemic algorithms, also referred to as gossip protocols, provide a unique approach to achieving eventual consistency in distributed databases. Such methods have been particularly vital in scenarios where systems demand high scalability and efficiency, with application in both theoretical and practical implementations of distributed database technology.\n\nIn conducting a web search for the paper's influence, it is evident that the concepts outlined have significantly influenced further research in distributed computing and database systems. Works such as \"The Gossip Problem\" by Karp et al. (DOI: 10.1109/SFCS.2000.892406) leverage similar principles. Additionally, influential distributed storage systems, including Amazon's Dynamo (DOI: 10.1145/1323293.1294281), cite epidemic algorithms as foundational to achieving fault-tolerant data replication. Despite the paper's age, the algorithmic concepts it introduced remain crucial in modern applications, including peer-to-peer networks and large-scale data streaming systems.",
+  "raw_url": "http://bitsavers.informatik.uni-stuttgart.de/pdf/xerox/parc/techReports/CSL-89-1_Epidemic_Algorithms_for_Replicated_Database_Maintenance.pdf",
+  "source_type": "external",
+  "filepath": "gossip/README.md",
+  "filename": "Epidemic Algorithms for Replicated Database Maintenance",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

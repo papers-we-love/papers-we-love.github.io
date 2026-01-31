@@ -1,0 +1,33 @@
+{
+  "uuid": "8da873a3916a1c08ca590cc5bf0bd924639217b5fafebbf844073d9b0d8345af",
+  "title": "Elle: Inferring Isolation Anomalies from Experimental Observations",
+  "publication_date": "November 2017",
+  "authors": [
+    "David Maier",
+    "Joseph M. Hellerstein",
+    "Neil Conway",
+    "Peter Alvaro"
+  ],
+  "keywords": [
+    "anomaly-detection",
+    "concurrent-histories",
+    "conflict-serializability",
+    "database-testing",
+    "deferred-checking",
+    "distributed-systems",
+    "experimental-observations",
+    "isolation-anomalies",
+    "transactional-systems"
+  ],
+  "category_path": [
+    "datastores"
+  ],
+  "abstract": "We present Elle, a novel technique for determining whether an execution is consistent under different isolation levels. Elle approaches the problem in a new way—by inferring program order from the order in which the storage observes certain conditions, and using the resulting constraints to test consistency. Elle is capable of detecting new anomalies missed by previous work and provides more informative counterexamples when inconsistencies are found.",
+  "summary": "Elle introduces a new method to test the consistency of transactional systems by inferring program orders from observed storage conditions, expanding greatly upon previous methods by detecting new anomalies and providing informative counterexamples. The paper is highly relevant for researchers and professionals in distributed systems and databases.\n\nWhile specific citations or references highlighting its direct impact were not found during a quick search, the topics covered in this paper, particularly around testing isolation levels in distributed databases, contribute to foundational research in this field, influencing ongoing work related to transactional consistency and anomaly detection in distributed environments.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/datastores/elle-inferring-isolation-anomalies-from-experimental-observations.pdf",
+  "source_type": "pdf",
+  "filepath": "datastores/elle-inferring-isolation-anomalies-from-experimental-observations.pdf",
+  "filename": "elle-inferring-isolation-anomalies-from-experimental-observations.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

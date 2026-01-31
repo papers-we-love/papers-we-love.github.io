@@ -1,0 +1,32 @@
+{
+  "uuid": "5ac4ed7759c3f5d2a1efbb67f55a678f7ee36d4132f6572216b1e2b35846b6fb",
+  "title": "Paxos Made Moderately Complex",
+  "publication_date": "2001",
+  "authors": [
+    "Nancy Lynch",
+    "Robbert van Renesse"
+  ],
+  "keywords": [
+    "consensus-algorithm",
+    "distributed-consensus",
+    "distributed-systems",
+    "fault-tolerance",
+    "leader-election",
+    "network-partition",
+    "paxos",
+    "quorum",
+    "replication",
+    "state-machine-replication"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "This paper presents the Paxos algorithm, one of the simplest and most efficient algorithms for solving consensus in a network of unreliable processors (rocks) in the presence of crash failures. The algorithm is a collection of algorithms. The emphasis here is on simplicity and clarity of description: we hope to make it easier to understand the subtle and complex behavior of the Paxos algorithm.",
+  "summary": "\"Paxos Made Moderately Complex\" by Robbert van Renesse and Nancy Lynch in 2001 elaborates on the Paxos algorithm, which is a foundational distributed consensus algorithm used in ensuring fault-tolerance and consistent data replication across distributed systems. This influential work is frequently cited for contributing significantly to the understanding and application of the Paxos protocol, especially in situations that involve networks with unreliable processors prone to crash failures. Paxos has become widely adopted in industry systems including Google's Chubby lock service and Apache Zookeeper. Citations in later works emphasize its role in forming the basis for enhanced protocols like Multi-Paxos and its utilization in distributed systems research and applications ([Google Chubby](https://research.google.com/archive/chubby.html), [Apache Zookeeper](https://zookeeper.apache.org/)). Despite its complexity, Paxos remains a critical element in teaching and implementing resilient distributed systems.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/paxos-made-moderately-complex.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/paxos-made-moderately-complex.pdf",
+  "filename": "paxos-made-moderately-complex.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

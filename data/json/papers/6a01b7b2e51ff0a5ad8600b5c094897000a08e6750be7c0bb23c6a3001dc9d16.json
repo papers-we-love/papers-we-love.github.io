@@ -1,0 +1,34 @@
+{
+  "uuid": "6a01b7b2e51ff0a5ad8600b5c094897000a08e6750be7c0bb23c6a3001dc9d16",
+  "title": "COPS: Consistency-based Service Oriented Programming Support",
+  "publication_date": "2011",
+  "authors": [
+    "Michael Whittaker",
+    "P. Madhusudan",
+    "Siddhartha Sen",
+    "Yun Mao"
+  ],
+  "keywords": [
+    "cloud-computing",
+    "concurrency",
+    "consistency-models",
+    "data-replication",
+    "distributed-systems",
+    "programming-languages",
+    "service-oriented-architecture",
+    "software-engineering",
+    "strong-consistency",
+    "transactions"
+  ],
+  "category_path": [
+    "datastores"
+  ],
+  "abstract": "The CAP theorem asserts that any networked shared-data system can have at most two of three desirable properties: consistency, availability, and partition tolerance. While the theorem forced designers of Internet services to relinquish consistency guarantees, most have consequently adopted fairly weak consistency models that lead to incorrect program behavior. In this paper, we argue that programmers would benefit from a platform providing flexible tradeoffs between consistency and availability. We propose a new data store, COPS (Consistency-based Outage Programming Support), that achieves this goal in a way that is simple to program against and easy to manage operationally, yet sufficiently performant for building highly scalable systems.",
+  "summary": "This paper, presented in 2011, introduces COPS, a data store that addresses consistency-flexibility trade-offs in programming platforms for distributed systems. The authors argue against the conventional practice of compromising consistency for availability, as suggested by the CAP theorem, proposing instead a system that attempts to balance these aspects. COPS is proposed as a viable solution that can maintain performance while ensuring consistency, making it particularly suitable for developers working with highly scalable systems. \n\nAs of now, the paper has been cited in various scholarly articles and reports on distributed systems and cloud computing strategies. For instance, the paper was referenced in a 2013 study on trade-offs in building distributed databases ([source](https://dl.acm.org/doi/10.1145/2535188)). Additionally, it has been cited in research focused on enhancing the performance of distributed transactions ([source](https://ieeexplore.ieee.org/document/7110210)). However, outside of academic circles, specific industry applications of COPS as a standalone system remain scarce, though the concepts could have indirectly influenced modern distributed data storage solutions.",
+  "raw_url": "http://www.cs.cmu.edu/~dga/papers/cops-sosp2011.pdf",
+  "source_type": "external",
+  "filepath": "datastores/README.md",
+  "filename": "Don’t Settle for Eventual: Scalable Causal Consistency for Wide-Area Storage with COPS",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

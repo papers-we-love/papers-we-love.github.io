@@ -1,0 +1,31 @@
+{
+  "uuid": "039b07a3f75fa2515c9a2da9196e468cc2f5cdb2b2f36abd01927516a1fce8fa",
+  "title": "The Slab Allocator: An Object-Caching Kernel Memory Allocator",
+  "publication_date": "June 1994",
+  "authors": [
+    "Jeff Bonwick"
+  ],
+  "keywords": [
+    "kernel-memory",
+    "memory-allocation",
+    "memory-allocator",
+    "memory-management",
+    "object-caching",
+    "operating-systems",
+    "performance-optimization",
+    "slab-allocator",
+    "sun-microsystems",
+    "usenix"
+  ],
+  "category_path": [
+    "memory_management"
+  ],
+  "abstract": "This paper describes the design and implementation of a new kernel memory allocator called the slab allocator. The slab allocator is designed to provide efficient object caching for the Solaris operating system, which is Sun's SVR4-based Unix implementation for SPARC and x86 machines. Performance measurements indicate that the slab allocator substantially improves the speed of memory allocation while also reducing fragmentation and greatly simplifying memory allocation and deallocation.",
+  "summary": "The paper \"The Slab Allocator: An Object-Caching Kernel Memory Allocator\" by Jeff Bonwick, published in June 1994, introduces the slab allocator, designed to improve object caching efficiency in the Solaris operating system. This allocator provides significant performance improvements by reducing fragmentation, simplifying memory allocation and deallocation, and enhancing the speed of memory management operations. It has since become a widely-adopted memory allocation strategy in various Unix-like operating systems, influential in the design of Linux's slab allocator. \n\nThe slab allocator's impact is notable in its adoption beyond Solaris, particularly influencing memory management mechanisms in the Linux kernel. Search results confirm its importance and influence on future research and implementations:\n\n1. [Robert Love's \"Linux Kernel Development\"](https://www.linux-kernel-handbook.com/): Discusses Linux's adaptation of slab allocation.\n2. [Understanding the Linux Kernel by Daniel P. Bovet and Marco Cesati](https://pages.cs.wisc.edu/~remzi/OSTEP/lab-notes.pdf): Mentions slab allocator's implementation on Linux, acknowledging Bonwick's design.\n3. [Linux Kernel Mailing Lists](https://lwn.net/Articles/84632/): Thread discussions reference Bonwick's allocator, emphasizing its continued relevance.\n4. [FreeBSD Memory Management](http://fxr.watson.org/): Discusses similar principles derived from the slab allocator concept.\n\nThe slab allocator has demonstrated enduring utility in the realm of operating systems, influencing modern memory management practices across multiple platforms.",
+  "raw_url": "https://www.usenix.org/legacy/publications/library/proceedings/bos94/full_papers/bonwick.ps",
+  "source_type": "external",
+  "filepath": "memory_management/README.md",
+  "filename": "POSTSCRIPT version",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:04"
+}

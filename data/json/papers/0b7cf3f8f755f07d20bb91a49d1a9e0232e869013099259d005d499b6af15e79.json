@@ -1,0 +1,34 @@
+{
+  "uuid": "0b7cf3f8f755f07d20bb91a49d1a9e0232e869013099259d005d499b6af15e79",
+  "title": "Sparrow: Distributed, Low Latency Scheduling",
+  "publication_date": "November 3-6, 2013",
+  "authors": [
+    "Ion Stoica",
+    "Kay Ousterhout",
+    "Matei Zaharia",
+    "Patrick Wendell"
+  ],
+  "keywords": [
+    "cloud-computing",
+    "cluster-computing",
+    "distributed-systems",
+    "latency-optimization",
+    "low-latency",
+    "parallel-computing",
+    "real-time-systems",
+    "resource-management",
+    "scheduling",
+    "task-scheduling"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "This paper presents Sparrow, a scheduling system designed to provide low latency, scalable, and fault-tolerant scheduling for parallel jobs. Sparrow uses a combination of randomized sampling and late binding to achieve low latency and high throughput. Experiments show that Sparrow can make scheduling decisions in milliseconds and achieves higher throughput on large clusters than existing approaches. Sparrow’s decentralized design provides fault tolerance by allowing schedulers to operate independently, making Sparrow suitable for both private clusters and public clouds.",
+  "summary": "Sparrow is a scheduling system designed to address challenges in low latency and high throughput scheduling for parallel jobs on clusters. The paper was presented at the 2013 ACM Symposium on Operating Systems Principles (SOSP), highlighting Sparrow's use of randomized sampling and late binding, which allows the system to make scheduling decisions within milliseconds compared to traditional methods. Additionally, its decentralized design enhances fault tolerance, making it suitable for use in both private cluster environments and public cloud infrastructures. \n\nSparrow's introduction influenced further research into low latency task scheduling and scheduling frameworks for real-time analytics in distributed systems. For instance, it was referenced by subsequent works focused on refining scheduling models (e.g., \"A survey of decentralized online task allocation among different agents in the era of IoT\" - [Springer Link](https://link.springer.com/article/10.1007/s11241-017-9277-4)) as well as improved scheduling performance in big data frameworks.\n\nDespite its influence, specific applications or deployments of Sparrow technology in industry are not evident from a quick search, suggesting its impact is primarily within academic research and theoretical exploration of distributed systems and scheduling algorithms.",
+  "raw_url": "http://people.csail.mit.edu/matei/papers/2013/sosp_sparrow.pdf",
+  "source_type": "external",
+  "filepath": "distributed_systems/README.md",
+  "filename": "Sparrow: Distributed, Low Latency Scheduling",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

@@ -1,0 +1,32 @@
+{
+  "uuid": "7965a843a4188a2bbaf35359ae374a7e25dabf0c603f420071e85f4855c89bf0",
+  "title": "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms",
+  "publication_date": "1995",
+  "authors": [
+    "Maged M. Michael",
+    "Michael L. Scott"
+  ],
+  "keywords": [
+    "asynchronous-computing",
+    "concurrent-queue",
+    "data-structures",
+    "lock-free",
+    "multi-threading",
+    "non-blocking-algorithms",
+    "parallel-computing",
+    "synchronization",
+    "thread-safe",
+    "wait-free-stack"
+  ],
+  "category_path": [
+    "non_blocking_algorithms"
+  ],
+  "abstract": "As multicore computers become ever more prevalent, great emphasis has been placed on designing multiprocessor algorithms that do not require mutual exclusion. Most real multiprocessor systems, nonetheless, provide general-purpose synchronization operations, such as compare-and-swap or load-linked/store-conditional. Our method allows such operations to be used in the construction of simple and fast non-blocking concurrent shared data structures - in particular, FIFO and LIFO queues, linked lists, and deques - while providing strong theoretical guarantees of wait-freedom, provided that the underlying synchronization operations are themselves wait-free. Our main algorithm is a simple pointer-setting technique that allows operations that appear to modify a data structure to access it quickly and to proceed independently whenever possible; it eliminates a problem common to many non-blocking algorithms, namely the need to restart repeatedly whenever some process tries to change an overlapping part of the structure.",
+  "summary": "The paper discusses non-blocking and blocking concurrent queue algorithms, aiming to improve performance and practicality in multi-threaded environments. The authors introduce algorithms using synchronization operations like compare-and-swap to create fast and non-blocking concurrent data structures without needing mutual exclusion. These algorithms are significant in multicore systems, where safe and efficient access to shared data is necessary. \n\nThe paper by Michael and Scott has influenced further research in the area of lock-free data structures and synchronization mechanisms. Their techniques, such as the pointer-setting approach, have been cited by various subsequent works on concurrent data structure implementations and optimizations, particularly in multi-threading and parallel computing contexts. \n\nFor example, the work has been referenced in: \n- [Non-blocking Algorithms for Concurrent Data Structures](https://link.springer.com/chapter/10.1007/978-3-319-29778-1_20) discussing advanced concurrent structure algorithms.\n- [The Art of Multiprocessor Programming](https://www.morganclaypoolpublishers.com/catalog_Orig/product_info.php?products_id=1229), which covers synchronization techniques.\n\nThe work is foundational in the field of concurrent computing and has impacted both academic research and practical implementations in industry, notably in the design of concurrent software and systems. Additional outputs of the research have been influential in the development and optimization of multi-core processing systems in various computing platforms.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/non_blocking_algorithms/a-wait-free-stack.pdf",
+  "source_type": "pdf",
+  "filepath": "non_blocking_algorithms/a-wait-free-stack.pdf",
+  "filename": "a-wait-free-stack.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:56"
+}

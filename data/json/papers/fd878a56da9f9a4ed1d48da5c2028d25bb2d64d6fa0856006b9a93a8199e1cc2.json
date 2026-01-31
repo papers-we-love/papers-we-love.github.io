@@ -1,0 +1,31 @@
+{
+  "uuid": "fd878a56da9f9a4ed1d48da5c2028d25bb2d64d6fa0856006b9a93a8199e1cc2",
+  "title": "Buridan's Principle",
+  "publication_date": "February 1984",
+  "authors": [
+    "Leslie Lamport"
+  ],
+  "keywords": [
+    "algorithmic-consensus",
+    "asynchronous-systems",
+    "binary-decision-problems",
+    "bistability",
+    "computer-science-theory",
+    "decision-making",
+    "distributed-systems",
+    "philosophy-of-physics",
+    "synchronization",
+    "theoretical-computing"
+  ],
+  "category_path": [
+    "physics"
+  ],
+  "abstract": "A finite version of an ancient logical puzzle illuminates the limitations of both computers and the mind; the importance of uncertainty; and the need to take chances when making decisions.",
+  "summary": "Buridan's Principle, authored by Leslie Lamport and published in February 1984, delves into the conceptual parallel between an old philosophical quandary and the limitations inherent in computational and decision-making processes. The paper, taking its name from the paradox of Buridan's Ass, explores the challenges posed by symmetrical decision-making scenarios in asynchronous systems where slight external influences are required to break the tie between equally preferable options.\n\nThe work is grounded in theoretical computing and emphasizes the need for randomness or stochastic processes in algorithms to ensure decisions are made in situations where deterministic approaches could lead to indecision or failure. This exploration highlights a fundamental aspect of distributed systems, where it is vital to handle issues of synchronization and consensus without falling into indecisiveness.\n\nIn terms of influence, this paper forms a conceptual basis for understanding decision-making in computer science, particularly in distributed and asynchronous systems. It has not been widely cited in specific industrial applications due to its highly theoretical nature, but it provides foundational insights into issues encountered in designing distributed computing algorithms prone to indeterminate states. Further discussions and analyses in academia, such as in the lectures on distributed systems, often make reference to Lamport’s exploration of bistability in decision-making.\n\nWhile direct citations of the paper in subsequent practical applications are limited, Lamport's broader contributions to the field of distributed computing reinforce the importance of addressing decision-making challenges—an influence seen in the adoption of consensus algorithms like Paxos. [A related article discussing Lamport's contributions can be found here](https://lamport.azurewebsites.net/pubs/distributed-system.pdf), but it does not specifically cite Buridan's Principle. The paper remains a thought-provoking piece in academic discourse, prompting consideration of the philosophical implications of decision-making within the domain of theoretical computer science.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/physics/buridans-principle.pdf",
+  "source_type": "pdf",
+  "filepath": "physics/buridans-principle.pdf",
+  "filename": "buridans-principle.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:56"
+}

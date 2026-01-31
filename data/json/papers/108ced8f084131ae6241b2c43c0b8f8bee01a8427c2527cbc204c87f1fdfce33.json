@@ -1,0 +1,33 @@
+{
+  "uuid": "108ced8f084131ae6241b2c43c0b8f8bee01a8427c2527cbc204c87f1fdfce33",
+  "title": "The Google File System",
+  "publication_date": "2003",
+  "authors": [
+    "Howard Gobioff",
+    "Sanjay Ghemawat",
+    "Shun-Tak Leung"
+  ],
+  "keywords": [
+    "cluster-computing",
+    "data-reliability",
+    "distributed-file-system",
+    "fault-tolerance",
+    "file-system-design",
+    "google",
+    "high-availability",
+    "large-scale-data",
+    "performance",
+    "scalability"
+  ],
+  "category_path": [
+    "datastores"
+  ],
+  "abstract": "We have designed and implemented the Google File System, a scalable distributed file system for large distributed data-intensive applications. It provides fault tolerance while running on inexpensive commodity hardware, and it delivers high aggregate performance to a large number of clients. While sharing many of the same goals as previous distributed file systems, our design has been driven by observations of our application workloads and technological environment, both current and anticipated, that reflect a marked departure from some earlier file system assumptions. This has led us to reexamine traditional choices and explore radically different design points. The file system has successfully met our storage needs. It is widely deployed within Google as the storage platform for the generation and processing of data used by our service as well as research and development efforts that require large data sets.",
+  "summary": "The Google File System (GFS) paper, published in 2003, introduced an innovative approach to distributed file systems, focusing on providing fault tolerance and scalability using commodity hardware. Unlike traditional file system designs, GFS was built to satisfy the large and varied workload demands of applications at Google, leading to a significant departure from conventional file system architectures.\n\nGFS has had a substantial impact on both academia and industry, influencing the design of other large-scale distributed file systems like Hadoop's HDFS, which is commonly used in big data applications. The paper is frequently referenced in research discussing large-scale data management and distributed computing architectures, showcasing its foundational role in the evolution of cloud storage systems.\n\nFor example, the Hadoop Distributed File System (HDFS), a part of the Apache Hadoop project, draws significant inspiration from GFS as confirmed in their documentation (http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html). Other systems such as Facebook's Haystack and Yahoo's PNUTS also draw on concepts introduced by GFS.\n\nThe paper is also referenced in numerous academic publications and is considered a pivotal work in the field of distributed systems and cloud storage solutions, often cited in discussions about data-intensive processing frameworks and the architecture of modern web services.[^1][^2][^3]\n\n[^1]: https://hadoop.apache.org/docs/r1.2.1/hdfs_design.html\n[^2]: https://research.google/pubs/pub51/\n[^3]: https://static.googleusercontent.com/media/research.google.com/en//archive/gfs-sosp2003.pdf",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/datastores/the-google-file-system.pdf",
+  "source_type": "pdf",
+  "filepath": "datastores/the-google-file-system.pdf",
+  "filename": "the-google-file-system.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

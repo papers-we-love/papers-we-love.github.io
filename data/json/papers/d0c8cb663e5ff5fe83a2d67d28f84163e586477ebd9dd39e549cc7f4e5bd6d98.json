@@ -1,0 +1,40 @@
+{
+  "uuid": "d0c8cb663e5ff5fe83a2d67d28f84163e586477ebd9dd39e549cc7f4e5bd6d98",
+  "title": "Megastore: Providing Scalable, Highly Available Storage for Interactive Services",
+  "publication_date": "2011",
+  "authors": [
+    "Alexander Lloyd",
+    "Andrey Khorlin",
+    "Chris Bond",
+    "JJ Furman",
+    "James C. Corbett",
+    "James Larson",
+    "Jason Baker",
+    "Jean-Michel Leon",
+    "Vadim Yushprakh",
+    "Yawei Li"
+  ],
+  "keywords": [
+    "bigtable",
+    "cloud-computing",
+    "consistency",
+    "distributed-databases",
+    "high-availability",
+    "interactive-services",
+    "partitioning",
+    "replication",
+    "scalable-storage",
+    "transactional-storage"
+  ],
+  "category_path": [
+    "datastores"
+  ],
+  "abstract": "Megastore blends the scalability of a NoSQL datastore with the convenience of a traditional RDBMS. It provides fully serializable ACID semantics across wide areas, even when partitions happen. Tables are divided into partitions that are replicated across data centers, thus allowing reads to be served locally but ensuring strong consistency through a synchronization protocol on writes. Our system has been in production at Google on a large scale for years.",
+  "summary": "The paper titled \"Megastore: Providing Scalable, Highly Available Storage for Interactive Services\" discusses the design and implementation of Megastore, a storage solution by Google that combines the scalability of NoSQL with the transactional consistency of relational databases. The authors present how Megastore achieves high availability and geographic data replication while maintaining strong ACID semantics.\n\nThrough a careful mix of partitioning and replication strategies across data centers, Megastore serves the demanding requirements of Google's interactive services. It allows local read access while ensuring global consistency via a synchronization protocol for writes. At the time of publication, Megastore was already operational at Google at a significant scale.\n\nThe paper has influenced subsequent research and industrial developments in scalable and geo-replicated storage systems. It is referenced by several research articles discussing distributed databases and cloud computing systems. \"Megastore\" inspired other cloud-based services like Google Spanner. For example, in the paper titled \"Spanner: Google's Globally-Distributed Database,\" published by the 10th USENIX Symposium on Operating Systems Design and Implementation (OSDI), the authors mention how \"Megastore\" was a precursor to Spanner ([source](https://www.usenix.org/conference/osdi12/spanner-googles-globally-distributed-database)). The impact of Megastore extends to several other cloud-based storage systems exploring similar consistency and scaling challenges.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/datastores/megastore-providing-scalable-highly-available-storage-for-interactive-services.pdf",
+  "source_type": "pdf",
+  "filepath": "datastores/megastore-providing-scalable-highly-available-storage-for-interactive-services.pdf",
+  "filename": "megastore-providing-scalable-highly-available-storage-for-interactive-services.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

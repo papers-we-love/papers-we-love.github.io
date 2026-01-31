@@ -1,0 +1,32 @@
+{
+  "uuid": "c8faca869e5a1cc4e0b9ca2acb9c82bff906336fe04e57083e9b67cd29e5c8cf",
+  "title": "A Survey of Protocols for Scalable Reliable Multicasting",
+  "publication_date": "2001",
+  "authors": [
+    "Raj Jain",
+    "Sonia Fahmy"
+  ],
+  "keywords": [
+    "congestion-control",
+    "distributed-systems",
+    "error-recovery",
+    "multicast-routing",
+    "network-protocols",
+    "network-topologies",
+    "protocol-design",
+    "quality-of-service",
+    "reliable-multicasting",
+    "scalability"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "This paper presents a survey of reliable multicast protocols, aimed at the interested researcher or protocol designer. We focus on four key issues: scalability (the ability to support large numbers of receivers), reliability (ensuring delivery to all receivers with high probability), efficiency (minimizing the consumption of network resources), and robustness (the ability to handle network dynamics). We review the requirements of reliable multicasting, explore the design space, and discuss how well existing protocols satisfy these requirements. We also examine current trends and identify open research challenges.",
+  "summary": "The paper titled \"A Survey of Protocols for Scalable Reliable Multicasting\" authored by Sonia Fahmy and Raj Jain, published in 2001, is a comprehensive survey on reliable multicast protocols. The paper aims to provide researchers and protocol designers with insights into the scalability, reliability, efficiency, and robustness of multicast protocols. The authors thoroughly explore different approaches to design reliable multicast protocols and evaluate how these protocols manage key issues like network dynamics and resource consumption.\n\nThe paper categorizes various multicast protocols and assesses their ability to deliver messages reliably across large networks. Through its analysis, the paper reveals current trends and ongoing challenges in the domain of reliable multicasting, such as the need for efficient congestion control, error recovery, and adaptable network protocols.\n\nDespite its publication over two decades ago, the paper has influenced further research in network protocol design, predominantly in the areas of scalable network technologies and protocols for dynamic and large-scale distributed systems. However, direct citations to this paper are limited in more recent literature, potentially due to subsequent advancements in network technologies that were developed post-publication, focusing more on newer scalable and robust techniques for network communications. While there are no standout direct continuations or applications of this work, its early efforts contributed foundational insights that informed the development of later technologies in multicasting and distributed networking.",
+  "raw_url": "https://www.cs.cornell.edu/fbs/publications/SMSurvey.pdf",
+  "source_type": "external",
+  "filepath": "distributed_systems/README.md",
+  "filename": "Implementing Fault-Tolerant Services Using the State Machine Approach: A Tutorial",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

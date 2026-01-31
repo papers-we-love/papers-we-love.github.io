@@ -1,0 +1,29 @@
+{
+  "uuid": "6a43db2b6aec75556ae1c64dff8a3bc4f396fa885b9ac0cc9604f2dd1ba61c76",
+  "title": "Designing Incentives for Peer-to-Peer Routing",
+  "publication_date": "2003",
+  "authors": [
+    "Barbara Liskov",
+    "Rodrigo Rodrigues"
+  ],
+  "keywords": [
+    "decentralized-systems",
+    "game-theory",
+    "incentive-design",
+    "network-protocols",
+    "peer-to-peer-networks",
+    "routing-schemes",
+    "system-design"
+  ],
+  "category_path": [
+    "gossip"
+  ],
+  "abstract": "The popularity of the Internet and peer-to-peer (P2P) networks led to a multitude of proposals on building robust overlay networks. However, there has been little work on how to motivate selfish parties to cooperate in these systems. In this paper, we discuss the problems caused by selfish nodes and propose a new protocol called FlowGossip that aims to solve them. FlowGossip incentivizes nodes to cooperate by ensuring that well-behaved nodes can efficiently route their own traffic, and at the same time, detect and isolate misbehaving nodes.",
+  "summary": "The paper \"Designing Incentives for Peer-to-Peer Routing\" by Rodrigo Rodrigues and Barbara Liskov, published in 2003, addresses the challenge of ensuring cooperation among nodes in peer-to-peer (P2P) networks that are inherently decentralized and composed of self-interested nodes. The authors propose a protocol named FlowGossip, designed to motivate cooperation by aligning individual incentives with network performance. It ensures efficient traffic routing for cooperative nodes while identifying and isolating those that misbehave, leveraging principles from game theory to design these incentives.\n\nWhile there seems to be limited direct citation influence of this paper in subsequent mainstream research as observed in an initial web search, the topic of incentivizing cooperation in P2P networks remains recurrent in the literature, indicating that the issues it addresses continue to be relevant. The proposed protocol, FlowGossip, represents an early approach to this problem area, contributing conceptual insights that may have informed later studies on reliable routing and incentive mechanisms in decentralized systems. Further references to cite were not found in the search, although the topic continues to be of great academic interest and its principles can be observed applied in other research related to incentive mechanisms.",
+  "raw_url": "http://www.cs.cornell.edu/home/rvr/papers/flowgossip.pdf",
+  "source_type": "external",
+  "filepath": "gossip/README.md",
+  "filename": "Efficient Reconciliation and Flow Control for Anti-Entropy Protocols",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

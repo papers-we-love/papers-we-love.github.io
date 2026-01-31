@@ -1,0 +1,39 @@
+{
+  "uuid": "79a858f33b8dcbfdb608c43bc82df4b00c273ac2b97182531ac36185f6573ad8",
+  "title": "Xen and the Art of Virtualization",
+  "publication_date": "October 2003",
+  "authors": [
+    "Alex Ho",
+    "Andrew Warfield",
+    "Boris Dragovic",
+    "Ian Pratt",
+    "Keir Fraser",
+    "Paul Barham",
+    "Rolf Neugebauer",
+    "Steven Hand",
+    "Tim Harris"
+  ],
+  "keywords": [
+    "hypervisor",
+    "operating-systems",
+    "parallel-computing",
+    "performance",
+    "resource-management",
+    "security",
+    "system-architecture",
+    "virtual-machines",
+    "virtualization",
+    "xen"
+  ],
+  "category_path": [
+    "virtual_machines"
+  ],
+  "abstract": "Abstract: In this paper, we describe the design, implementation and evaluation of Xen, an x86 virtual machine monitor, developed to run up to 100 commodity operating systems on a single PC. Unlike traditional virtual machine monitors, Xen achieves high performance for both I/O and computation intensive workloads by taking an unusual approach to virtualizing CPU, memory, and I/O devices. The paravirtualized approach is highly efficient, allowing applications running within Xen guest operating systems to run with high performance. We present extensive benchmark results demonstrating Xen's performance on a range of standard computing benchmarks.",
+  "summary": "The paper \"Xen and the Art of Virtualization\" presented by Barham et al. in 2003 discusses the development and implementation of the Xen hypervisor, a virtual machine monitor focused on allowing multiple operating systems to run concurrently on a single x86 architecture machine. Xen differentiates itself from traditional virtual machine monitors through its use of paravirtualization, enhancing performance for CPU, memory, and I/O processes. This approach has allowed Xen to achieve significant efficiencies particularly notable in environments with substantial I/O and computing workloads.\n\nXen's architecture and implementation significantly impacted both academic research and industry practices in virtualization. This hypervisor is notably leveraged in cloud computing environments, with Xen technology forming the underpinning of several enterprise cloud systems, such as Amazon EC2. The influence of Xen can be seen in subsequent research on virtualization technologies and has informed the development of other hypervisors and cloud platforms.\n\nThe innovation and practical efficacy demonstrated by Xen underscored the viability of paravirtualization, prompting further refinement in virtual machine strategies. Xen's scalability and performance benchmarks have been frequently referenced in scholarly articles and industry reports about virtualization and cloud infrastructure developments.\n\n**References:**\n- [https://dl.acm.org/doi/10.1145/944220.944235](https://dl.acm.org/doi/10.1145/944220.944235)\n- [https://www.usenix.org/legacy/event/osdi04/tech/full_papers/barham/barham.pdf](https://www.usenix.org/legacy/event/osdi04/tech/full_papers/barham/barham.pdf)",
+  "raw_url": "http://www.cl.cam.ac.uk/research/srg/netos/papers/2003-xensosp.pdf",
+  "source_type": "external",
+  "filepath": "virtual_machines/README.md",
+  "filename": "Xen and the Art of Virtualization",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:05"
+}

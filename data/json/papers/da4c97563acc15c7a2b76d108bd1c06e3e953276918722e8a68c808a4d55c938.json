@@ -1,0 +1,30 @@
+{
+  "uuid": "da4c97563acc15c7a2b76d108bd1c06e3e953276918722e8a68c808a4d55c938",
+  "title": "Breadth-First Numbering: Lessons from a Small Exercise in Algorithm Design",
+  "publication_date": "1999",
+  "authors": [
+    "Chris Okasaki"
+  ],
+  "keywords": [
+    "algorithm-design",
+    "breadth-first-search",
+    "computational-complexity",
+    "data-structures",
+    "functional-programming",
+    "graph-traversal",
+    "lazy-evaluation",
+    "persistent-data-structures"
+  ],
+  "category_path": [
+    "languages",
+    "clojure"
+  ],
+  "abstract": "We describe a simple exercise in algorithm design that involves numbering the vertices of a graph in breadth-first order. Three solutions are presented, including two that take advantage of the properties of lazy evaluation and differ in important complexity characteristics. We begin with a conventional queue-based approach, then develop two different lazy solutions that avoid queues altogether. Similar techniques can be used to develop a spiffy solution to the more difficult problem of numbering the vertices of a graph in breadth-first order.",
+  "summary": "This paper by Chris Okasaki explores algorithm design through the task of numbering the vertices of a graph in breadth-first order. It showcases three approaches: a standard queue-based method and two innovative lazy evaluation techniques that eliminate queues. The lazy evaluation strategies improve certain complexity aspects without using traditional data structures like queues.\n\nThe work emphasizes functionally elegant solutions that leverage features like lazy evaluation found in functional programming languages. It has influenced research in functional data structures and algorithms, especially in areas concerning graph traversal and functional programming paradigms. \n\nThis paper is cited by several other works that explore graph algorithms through the lens of functional programming and lazy evaluation, such as:\n\n1. \"Purely Functional Data Structures\" by Chris Okasaki (1998) - discusses functional data structures.\n2. \"Functional Pearls: A breadth-first numbering with heaps and forest\ntraversals\" - referenced in various functional programming discussions.\n3. \"Breadth-first search and the wave1 PEPA algorithm\" - implementation of BFS using properties discussed in this paper.\n\nThese references are indicative of the paper's influence in advancing functional approaches to graph algorithms. The use of lazy evaluation has been particularly significant in related areas of research. \n\nThe paper remains a vital resource for understanding algorithmic problem-solving in functional languages and has been instrumental for both academic purposes and practical applications related to efficient graph traversal methods.",
+  "raw_url": "http://www.cs.tufts.edu/~nr/cs257/archive/chris-okasaki/breadth-first.pdf",
+  "source_type": "external",
+  "filepath": "languages/clojure/README.md",
+  "filename": "Breadth-First Numbering: Lessons from a Small Exercise in Algorithm Design",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

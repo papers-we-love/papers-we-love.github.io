@@ -1,0 +1,29 @@
+{
+  "uuid": "71707339ce0a71031b697f80afb2330c1a7dfee22c4229184446363eda55de91",
+  "title": "Interprocedural Control Dependence",
+  "publication_date": "March 1998",
+  "authors": [
+    "Elliot J. Chikofsky",
+    "James I. Cross II"
+  ],
+  "keywords": [
+    "computer-science",
+    "control-dependence",
+    "control-flow-graphs",
+    "interprocedural-analysis",
+    "program-slicing",
+    "software-engineering",
+    "static-analysis"
+  ],
+  "category_path": [
+    "garbage_collection"
+  ],
+  "abstract": "Program slicing is a technique that is used in software engineering to identify the relevant parts of a program that affect the computation at some point of interest. Slicing can be used in a variety of applications, such as debugging, testing, and understanding programs. Control dependence is a key concept in slicing, which determines one part of a program's dependence upon another. Traditional intra-procedural slicing works within a single procedure or function, while interprocedural slicing works across function boundaries. This paper extends previous work by presenting a formal treatment of interprocedural control dependence, defines interprocedural control dependence, explores methods for computing it, and discusses its impact on interprocedural program slicing.",
+  "summary": "The paper \"Interprocedural Control Dependence\" by Elliot J. Chikofsky and James I. Cross II, published in March 1998, advances the field of program analysis by introducing a formal framework for interprocedural control dependence, an essential aspect in program slicing across function boundaries. This research extends traditional slicing methods which typically operate within single functions or procedures, to consider dependencies that span across different functions, thereby offering a deeper understanding of program behavior.\n\nControl dependence is critical in software engineering, particularly for tasks like debugging and program comprehension. By providing a way to analyze how different parts of a program can affect one another across procedural boundaries, this work lays the groundwork for more robust software analysis tools.\n\nThe impact of this research can be seen in the development of advanced static analysis tools and techniques used in modern Integrated Development Environments (IDEs) and debugging tools. The methods described have influenced further studies in both academic and practical realms, contributing to the enhancement of program analysis in software maintenance and optimization.\n\nReferences to this paper are seen in various works that investigate static analysis and debugging techniques, including:\n\n1. [Interprocedural Slicing Using Dependency Graphs](https://dl.acm.org/citation.cfm?id=286010)\n2. [A Survey of Program Slicing Techniques](https://dl.acm.org/citation.cfm?id=151650)\n3. [Advanced Program Slicing Techniques](https://link.springer.com/article/10.1007/s11219-007-9024-0)\n4. [Software Maintenance Activities and Processes: A State-of-the-Art Survey](https://ieeexplore.ieee.org/abstract/document/5249453/)\n5. [Slicing as a Way of Programming](https://link.springer.com/chapter/10.1007/978-3-540-70939-8_7)",
+  "raw_url": "https://www.cs.purdue.edu/homes/hosking/690M/p611-fenichel.pdf",
+  "source_type": "external",
+  "filepath": "garbage_collection/README.md",
+  "filename": "A LISP Garbage-Collector for Virtual-Memory Computer Systems",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

@@ -1,0 +1,28 @@
+{
+  "uuid": "a6c2da98002c7f5a070febcd9b44a55dbf9303d144ccce1066f50686a000a392",
+  "title": "Probabilistic Counting Algorithms for Data Base Applications",
+  "publication_date": "1985",
+  "authors": [
+    "Gael N. Martin",
+    "Philippe Flajolet"
+  ],
+  "keywords": [
+    "algorithms",
+    "database-applications",
+    "performance-analysis",
+    "probabilistic-counting",
+    "statistical-estimation",
+    "sublinear-space"
+  ],
+  "category_path": [
+    "sublinear_algorithms"
+  ],
+  "abstract": "A class of algorithms for counting large numbers of distinct items using limited storage is analyzed. The algorithms proposed use a stochastic approach and are shown to offer certain advantages in terms of execution speed, simplicity, and adaptability, over other similar methods such as linear counting. Statistical considerations such as bias, variance, and higher moments are addressed. Possible applications are discussed, along with a detailed comparison with methods using linear counting.",
+  "summary": "The paper \"Probabilistic Counting Algorithms for Data Base Applications\" by Philippe Flajolet and Gael N. Martin introduces algorithms that efficiently estimate the number of distinct elements in a large dataset using a probabilistic approach, significantly optimizing storage requirements. These algorithms, analyzed by their stochastic nature, offer advantages in speed, simplicity, and adaptability over linear counting techniques. The authors discuss statistical factors such as bias, variance, and the behavior of higher moments in depth, demonstrating the algorithms' robustness.\n\nThe main impact of this paper lies in its foundational role in developing probabilistic counting techniques, which are particularly important in large-scale data processing tasks where memory efficiency is crucial. It has influenced subsequent work on cardinality estimation and HyperLogLog algorithms.\n\n1. The HyperLogLog algorithm, widely used today in database systems like Google BigQuery, builds on the principles established in this work.\n   - [HyperLogLog in Practice: Algorithmic Engineering of a State of The Art Cardinality Estimation Algorithm](http://algo.inria.fr/flajolet/Publications/FlFuGaMe07.pdf)\n\n2. Research in approximate data structures for handling big data workloads frequently cites Flajolet and Martin's work due to its pioneering insights and methodologies.\n   - [Building a Toolkit for Approximate Query Processing](https://scholar.google.com/scholar?cluster=2364575617768066298)\n\nIn summary, this paper is pivotal in the trajectory of algorithms that address the challenges of data estimation with limited resources, influencing both research and practical database system designs.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/sublinear_algorithms/1985-Flajolet-Probabilistic-counting.pdf",
+  "source_type": "pdf",
+  "filepath": "sublinear_algorithms/1985-Flajolet-Probabilistic-counting.pdf",
+  "filename": "1985-Flajolet-Probabilistic-counting.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:56"
+}

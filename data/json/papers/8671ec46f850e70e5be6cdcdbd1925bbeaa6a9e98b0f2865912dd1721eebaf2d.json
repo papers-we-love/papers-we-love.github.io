@@ -1,0 +1,36 @@
+{
+  "uuid": "8671ec46f850e70e5be6cdcdbd1925bbeaa6a9e98b0f2865912dd1721eebaf2d",
+  "title": "A High-Bandwidth Network File Server",
+  "publication_date": "March 1998",
+  "authors": [
+    "David E. Culler",
+    "Karin Petersen",
+    "Michael A. Thompson",
+    "Ricardo Bianchini",
+    "Robert P. Martin",
+    "Thomas E. Anderson"
+  ],
+  "keywords": [
+    "data-mining",
+    "high-bandwidth",
+    "logistics",
+    "microbenchmarks",
+    "network-file-system",
+    "network-protocols",
+    "quality-of-service",
+    "storage-server",
+    "system-architecture",
+    "tcp-ip-offload"
+  ],
+  "category_path": [
+    "ethics"
+  ],
+  "abstract": "We have built a prototype high-bandwidth network storage server designed to provide efficient access to large, read-intensive data sets over a local-area network. The server provides a simple data link layer switch mode of operation that offloads much of the work of handling network packets from the host CPU. The result is significantly higher throughput and scalability than existing software-based solutions, and a more primitive, less precise form of data partitioning that effectively utilizes the added network bandwidth available to the host CPU.",
+  "summary": "This paper presents a high-bandwidth network storage server aimed at efficiently accessing large, read-intensive datasets over a local-area network. The authors propose a solution that uses a data link layer switch to offload network packet handling, thereby achieving better scalability and throughput compared to software-based counterparts. The architecture leverages large network bandwidth while offering a simpler, albeit less precise, data partitioning method. The server demonstrated significantly improved performance, reducing CPU load and enhancing data access speed. \n\nThe paper was presented at the 1998 ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS-VIII). Although direct citations or influence of this paper in further works were not widely recognized or documented in available searches, its contributions can be seen in the evolving storage server designs that aim to optimize for high-bandwidth requirements. The emphasis on offloading network tasks predicts later advancements in specialized hardware and network interface cards that perform similar functions. This approach aligns with the evolution of Network File System (NFS) technologies and similar distributed storage solutions as noted in papers focusing on TCP/IP offload engines and quality-of-service in networking protocols. However, specific influence from this paper remains scarce in later academic and industrial publications.",
+  "raw_url": "http://www.ece.cmu.edu/~ganger/712.fall02/papers/p761-thompson.pdf",
+  "source_type": "external",
+  "filepath": "ethics/README.md",
+  "filename": "Reflections on Trusting Trust",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

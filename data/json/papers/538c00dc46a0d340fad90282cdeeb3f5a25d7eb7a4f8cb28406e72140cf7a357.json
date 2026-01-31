@@ -1,0 +1,31 @@
+{
+  "uuid": "538c00dc46a0d340fad90282cdeeb3f5a25d7eb7a4f8cb28406e72140cf7a357",
+  "title": "The Dining Cryptographers Problem: Unconditional Sender and Recipient Untraceability",
+  "publication_date": "1988",
+  "authors": [
+    "David Chaum"
+  ],
+  "keywords": [
+    "anonymous-communication",
+    "computer-networks",
+    "cryptographers-protocol",
+    "cryptography",
+    "dining-cryptographers",
+    "distributed-systems",
+    "identity-protection",
+    "privacy",
+    "secure-communication",
+    "untraceability"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "Three cryptographers are sitting down to dinner. Their waiter informs them that arrangements have been made with the restaurant for the bill to be paid anonymously. One of the cryptographers might be paying for the dinner, or the NSA might have paid. The cryptographers respect each other's right to make an anonymous payment, but want to find out if NSA is paying. A solution can be implemented with only simple equipment, and an arbitrary number of cryptographers, to provide unconditional sender and recipient untraceability with computational assumptions required only against abuses of the act of communication by recipients or third parties.",
+  "summary": "David Chaum's 1988 paper titled \"The Dining Cryptographers Problem: Unconditional Sender and Recipient Untraceability\" presents a protocol ensuring untraceable communication among participants, known as the Dining Cryptographers Problem. The protocol provides unconditional sender and recipient untraceability, absent the requirement of computational assumptions for the act of communication among cryptographers. Using the scenario of a dinner, it offers a mechanism in which cryptographers determine whether one of them or an external entity (like the NSA) paid for the meal without revealing personal identities. This paper influenced further research in the design of anonymous communication systems and cryptographic protocols.\n\nNotable follow-ups include its use in the development of protocols for anonymous networks, like those detailed in \"Anonymous Connections and Onion Routing\" by Goldschlag, Reed, and Syverson (1999, https://www.onion-router.net/Publications.html), which later influenced the foundational development of Tor. Furthermore, zero-knowledge proof applications, such as those explored in \"Zero Knowledge Proofs of Knowledge for Group Homomorphisms\" by Chaum, Crepeau, and Damgard (https://eprint.iacr.org/1992/019), were built on concepts introduced in this work. The paper has been widely acknowledged in the field of cryptography for highlighting methodologies in achieving privacy without relying on conventional computational constraints.\n\nDespite the fact that direct references to the Dining Cryptographers Problem itself are somewhat limited in modern publications, its conceptual underpinnings continue to be important for subsequent advancements in cryptographic protocols and secure communications.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/the-dining-cryptographers-problem.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/the-dining-cryptographers-problem.pdf",
+  "filename": "the-dining-cryptographers-problem.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

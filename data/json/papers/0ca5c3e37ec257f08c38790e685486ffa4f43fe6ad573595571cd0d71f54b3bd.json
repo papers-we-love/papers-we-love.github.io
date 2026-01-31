@@ -1,0 +1,31 @@
+{
+  "uuid": "0ca5c3e37ec257f08c38790e685486ffa4f43fe6ad573595571cd0d71f54b3bd",
+  "title": "Making Lockless Synchronization Fast: Performance Implications of Memory Reclamation",
+  "publication_date": "2004",
+  "authors": [
+    "Andrei Alexandrescu"
+  ],
+  "keywords": [
+    "concurrency",
+    "data-structures",
+    "garbage-collection",
+    "lockless-synchronization",
+    "low-latency",
+    "memory-management",
+    "memory-reclamation",
+    "multithreading",
+    "performance",
+    "synchronization-primitives"
+  ],
+  "category_path": [
+    "memory_management"
+  ],
+  "abstract": "This paper examines the performance implications of memory reclamation for lockless synchronization (LLS) mechanisms. Unlike lock-based synchronization, LLS uses atomic operations, memory barriers, and a protocol that grants exclusive access to a thread. Proper memory reclamation is crucial to the performance of LLS because failing to reclaim memory blocks that are no longer in use effectively turns LLS into garbage collection. The paper demonstrates that existing lockless algorithms obtain poor performance because they lack an over-arching memory management strategy. We compare several memory reclamation schemes, evaluating them on microbenchmarks and a real-world workload (a lockless queue in a C10K test), and reveal that suitable memory reclamation can significantly improve the performance of LLS mechanisms.",
+  "summary": "The paper \"Making Lockless Synchronization Fast: Performance Implications of Memory Reclamation\" by Andrei Alexandrescu explores the impact of efficient memory reclamation on the performance of lockless synchronization mechanisms. The work addresses the inadequacies of existing lockless algorithms in handling memory management, a task crucial for maintaining optimal performance in concurrent systems. The paper compares various memory reclamation schemes through microbenchmarking and real-world workload tests, demonstrating that appropriate strategies can significantly enhance performance.\n\nDespite its technical depth, it appears that the paper has not been widely cited or referenced directly in other academic works or industry applications, as a web search yields minimal direct mentions or citations. The insights regarding memory reclamation in lockless synchronization did, however, align with broader trends in software engineering, particularly in the context of optimizing low-latency and high-concurrency systems. Concepts discussed are still relevant to the design patterns and idioms of modern concurrent programming, although direct citations remain elusive.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/memory_management/making-lockless-synchronization-fast.pdf",
+  "source_type": "pdf",
+  "filepath": "memory_management/making-lockless-synchronization-fast.pdf",
+  "filename": "making-lockless-synchronization-fast.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:56"
+}

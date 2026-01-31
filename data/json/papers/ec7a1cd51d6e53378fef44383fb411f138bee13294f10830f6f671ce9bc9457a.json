@@ -1,0 +1,31 @@
+{
+  "uuid": "ec7a1cd51d6e53378fef44383fb411f138bee13294f10830f6f671ce9bc9457a",
+  "title": "Building Secure and Reliable Network Applications",
+  "publication_date": "1999",
+  "authors": [
+    "Kenneth P. Birman"
+  ],
+  "keywords": [
+    "distributed-systems",
+    "eventual-consistency",
+    "fault-tolerance",
+    "middleware",
+    "multicast",
+    "network-security",
+    "reliable-networking",
+    "replication",
+    "secure-network-applications",
+    "system-architecture"
+  ],
+  "category_path": [
+    "gossip"
+  ],
+  "abstract": "This paper discusses the challenges and technical approaches to building reliable distributed systems. We focus on creating systems that are both secure and capable of maintaining reliable communication, especially in the face of various types of component failures. The role of reliable group communication is emphasized, along with techniques for enhancing system security. Key topics include multicast protocols, the interaction between reliability and security, and the architectural principles needed to construct such systems.",
+  "summary": "Kenneth P. Birman's 1999 paper on building secure and reliable network applications tackles the intersection of security and reliability in distributed systems. By focusing on reliable group communication, such as multicast protocols, and system security, it provides foundational principles for constructing dependable network applications. The paper explores fault tolerance methods and architectural strategies to maintain system reliability amidst unexpected failures. Typically, such insights have influenced the development of middleware solutions that are pivotal in modern distributed systems. The paper also delves into replication and eventual consistency, which are vital for robust system performance. \n\nDespite its age, this work has foundational value in distributed systems research, with its concepts being relevant to ongoing developments in network security and reliable communication protocols. However, there are limited direct citations or references from contemporary papers directly linking to this publication in recent studies, possibly due to its foundational nature and integration into broader frameworks over time.",
+  "raw_url": "http://www.csl.mtu.edu/cs6461/www/Reading/Birman99.pdf",
+  "source_type": "external",
+  "filepath": "gossip/README.md",
+  "filename": "Bimodal Multicast",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

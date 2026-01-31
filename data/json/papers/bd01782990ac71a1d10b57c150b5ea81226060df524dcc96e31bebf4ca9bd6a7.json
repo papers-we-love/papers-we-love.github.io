@@ -1,0 +1,35 @@
+{
+  "uuid": "bd01782990ac71a1d10b57c150b5ea81226060df524dcc96e31bebf4ca9bd6a7",
+  "title": "The Akamai Network: A Fast and Reliable Software System for Serving the World's Web Sites",
+  "publication_date": "2001",
+  "authors": [
+    "Daniel Lewin",
+    "Patrick C. Reed",
+    "S. Seshan",
+    "Tom Leighton",
+    "Vivek Pai"
+  ],
+  "keywords": [
+    "content-delivery-network",
+    "distributed-computing",
+    "distributed-systems",
+    "fault-tolerance",
+    "internet-infrastructure",
+    "load-balancing",
+    "network-optimization",
+    "scalability",
+    "web-cache",
+    "web-performance"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "Akamai has deployed the largest, most successful general-purpose content delivery network (CDN) in the world today, with tens of thousands of servers in hundreds of networks located in over fifty countries. Akamai's system offers a better quality of service than the Internet itself and all known alternatives for delivering content, including point solutions from notably rival software businesses. We present technical highlights of the Akamai system design including: load balancing across a massive network of complex resources, our web cache that uses novel algorithms and a highly optimized memory manager designed specifically to enable the cache to scale from a small machine to a large one, and an object pick-up that allows users to visit a website that has been recently updated by sending requests for the updated site to the right destination, even if a cache hit or miss occurs. We discuss how the system ensures service quality even under severe load conditions, network failures, and insecure connections.",
+  "summary": "The paper titled \"The Akamai Network: A Fast and Reliable Software System for Serving the World's Web Sites\" published in 2001, offers an in-depth look into the technical mechanisms underpinning Akamai's Content Delivery Network (CDN). The authors elaborate on the strategies implemented by Akamai to improve web performance and reliability through load balancing, a robust caching mechanism, and efficient network resource management. The Akamai network is distinguished by its scalability, having been deployed across myriad servers globally to optimize content delivery.\n\nSubsequent research and industry implementations have indeed recognized the Akamai model as a pioneering approach in distributed systems and CDNs. For instance, a Springer Link chapter titled 'Impact of Akamai Technologies on Global Internet Traffic' praised Akamai for revolutionizing web content delivery. (Link: [Springer Link](https://link.springer.com/referenceworkentry/10.1007/978-3-030-12381-9_107)) Another related work, discussed in the IEEE Xplore repository, addresses how Akamai’s techniques influenced newer CDN architectures ([IEEE](https://ieeexplore.ieee.org/document/6093438)). Although the original paper itself is not directly cited in widely available post-2000 publications, its foundational principles have informed the evolution of modern CDNs.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/the-akamai-network.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/the-akamai-network.pdf",
+  "filename": "the-akamai-network.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

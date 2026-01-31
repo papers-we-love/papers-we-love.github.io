@@ -1,0 +1,41 @@
+{
+  "uuid": "f79bc70eeea00b454d4e87ba3a48f0a8fbf582b685006c9bcd0b1bc33d62a334",
+  "title": "Jitsu: Just-in-Time Summoning of Unikernels",
+  "publication_date": "2015",
+  "authors": [
+    "Amir Chaudhry",
+    "Anil Madhavapeddy",
+    "Balraj Singh",
+    "Dave Sheets",
+    "David J. Scott",
+    "Jon Crowcroft",
+    "Jon Ludlam",
+    "Richard Mortier",
+    "Steven Smith",
+    "Thomas Gazagnaire",
+    "Thomas Leonard"
+  ],
+  "keywords": [
+    "cloud-computing",
+    "deployment",
+    "jitsu",
+    "latency",
+    "network-traffic",
+    "orchestration",
+    "system-performance",
+    "unikernels",
+    "virtual-machine",
+    "virtualization"
+  ],
+  "category_path": [
+    "unikernels"
+  ],
+  "abstract": "Unikernels allow us to specialize virtual machines to a far greater extent than traditional hypervisor and container systems. While previous results have shown the benefits of specialization to the memory footprint and boot time of a VM, we show that the effect on both network traffic and latency is even more important. This paper presents a new live cloud orchestration system called Jitsu that uses existing unmodified APIs to reduce network latency by an order of magnitude for short-lived applications and services. We show that, when run in conjunction with our MirageOS unikernel toolchain, Jitsu can uniquely be deployed in environments requiring extreme scale isolation without sacrificing performance.",
+  "summary": "The paper titled \"Jitsu: Just-in-Time Summoning of Unikernels,\" presented at the 2015 USENIX Symposium on Networked Systems Design and Implementation (NSDI), introduces a novel system named Jitsu that significantly enhances the deployment and orchestration of unikernels. Unikernels are specialized virtual machines that offer significant performance benefits over traditional hypervisor and container-based systems, particularly in terms of memory footprint, boot time, network traffic, and latency.\n\nJitsu exploits unikernels' characteristics to orchestrate cloud services while minimizing network latency and resource consumption. The system leverages existing APIs and integrates with the MirageOS unikernel toolchain. One of the core contributions of Jitsu is its ability to initiate VMs on-demand, reducing overhead and resource allocations for short-lived applications that require rapid scalability and isolation.\n\nDespite the technical depth and clear potential advantages in cloud computing infrastructure, particularly for applications requiring fast instantiation and termination, specific references or notable citations of the paper through subsequent research or industry applications are not easily found. However, the concepts described have potential implications for virtualization trends, particularly in environments where rapid scaling and efficiency are necessary.\n\nThe paper's proposals align with ongoing trends in cloud computing flexibility and the move towards more efficient virtualization methods such as those driven by unikernel development. Further adoption and exploration of similar technologies may continue to evolve out of the concepts detailed in this research.\n\nFor further details, please refer to the following link: [Jitsu: Just-in-Time Summoning of Unikernels - USENIX](https://www.usenix.org/system/files/conference/nsdi15/nsdi15-paper-madhavapeddy.pdf).",
+  "raw_url": "https://www.usenix.org/system/files/conference/nsdi15/nsdi15-paper-madhavapeddy.pdf",
+  "source_type": "external",
+  "filepath": "unikernels/README.md",
+  "filename": "Jitsu: Just-in-time summoning of unikernels",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:05"
+}

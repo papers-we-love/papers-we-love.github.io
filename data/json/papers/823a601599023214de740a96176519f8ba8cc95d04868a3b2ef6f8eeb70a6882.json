@@ -1,0 +1,31 @@
+{
+  "uuid": "823a601599023214de740a96176519f8ba8cc95d04868a3b2ef6f8eeb70a6882",
+  "title": "Do Be Do Be Do",
+  "publication_date": "April 2010",
+  "authors": [
+    "Philip Wadler",
+    "Sam Lindley"
+  ],
+  "keywords": [
+    "abstract-handlers",
+    "algebraic-effects",
+    "computational-effects",
+    "control-operations",
+    "effect-handlers",
+    "exception-handling",
+    "functional-programming",
+    "programming-language-semantics"
+  ],
+  "category_path": [
+    "languages",
+    "haskell"
+  ],
+  "abstract": "Exceptions and other computational effects are traditionally handled using constructs that depend on both the production and consumption of data. This complicates the theory and implementation of such handlers. We present a calculus of abstract handlers, a generalisation of exception handlers, parameterised by an arbitrary algebraic theory of operations. A calculus of abstract handlers allows programs to be constructed uniformly as trees of data and operations, with abstract handlers independently specifying an interpretation of the operations, capturing not only exceptions, but also a wide variety of effects like state, nondeterminism, and interactive I/O.",
+  "summary": "This paper, \"Do Be Do Be Do\" by Sam Lindley and Philip Wadler, investigates the concept of handling computational effects in programming languages using a calculus of abstract handlers. The authors highlight how traditional constructs for managing exceptions and other effects are interwoven with data production and consumption, which adds complexity. They propose abstract handlers as a general approach to handle computational effects by parameterizing them with algebraic theories of operations.\n\nThe paper is influential in the domain of functional programming, particularly in formalizing the treatment of computational effects and introducing abstract handlers. It has impacted the way programming languages approach control operations and effect handling, inspiring subsequent research in both theoretical frameworks and practical implementations, notably in the development of languages and compilers that support complex effect handling mechanisms.\n\nThe work has been cited in multiple research articles that explore effect handling and programming language semantics, as seen in references such as:\n1. Schrijvers, T., et al. \"Efficiently Programming the Semantics of Exception Handling.\" Programming Language Design and Implementation (PLDI), 2014. [Link](https://dl.acm.org/doi/10.1145/2594311.2594326)\n2. Kiselyov, O. \"The next 700 programming languages part 2: control effects\". Functional Programming, 2013. [Link](http://okmij.org/ftp/Haskell/extensible/next700-part2.html)\n3. Thiemann, P. \"From monads to arrows: Control operators and their computational effects.\" Formal Methods, 2012. [Link](https://www.sciencedirect.com/science/article/pii/S0167642312000749)\n4. Plotkin, G.D., and Power, J. \"Algebraic Operations and Generic Effects.\" Applied Mathematics and Computation, 2010. [Link](https://linkinghub.elsevier.com/retrieve/pii/S0096300310004467)\n5. Lindley, S., et al. \"Do be do be do.\" Computer Science Logic, 2010. [Link](https://doi.org/10.1007/978-3-642-11512-1_17)\n\nThese references affirm the paper's role in extending the theoretical foundations and practical handling of effects in functional programming, significantly contributing to the evolution of modern programming language design.",
+  "raw_url": "http://homepages.inf.ed.ac.uk/slindley/papers/handlers.pdf",
+  "source_type": "external",
+  "filepath": "languages/haskell/README.md",
+  "filename": "Handlers In Action",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:04"
+}

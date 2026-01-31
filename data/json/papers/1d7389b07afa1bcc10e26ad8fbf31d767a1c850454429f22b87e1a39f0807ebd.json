@@ -1,0 +1,35 @@
+{
+  "uuid": "1d7389b07afa1bcc10e26ad8fbf31d767a1c850454429f22b87e1a39f0807ebd",
+  "title": "Lambda Refactoring in Practice",
+  "publication_date": "2013",
+  "authors": [
+    "Chien-An Chen",
+    "Chung-Hsien Chiang",
+    "Danny Dig",
+    "Ralph E. Johnson"
+  ],
+  "keywords": [
+    "code-elegance",
+    "functional-programming",
+    "improved-readability",
+    "java",
+    "lambda-refactoring",
+    "program-transformation",
+    "refactoring-tools",
+    "software-engineering",
+    "software-maintenance",
+    "software-productivity"
+  ],
+  "category_path": [
+    "languages-paradigms",
+    "functional_programming"
+  ],
+  "abstract": "Refactoring is a technique to restructure code in order to improve its readability, maintainability, and extensibility, while preserving its behavior. This paper reports on our experience with a new refactoring—lambda refactoring—to transform existing Java code to take advantage of lambda expressions. Specifically, this refactoring transforms anonymous classes, inner classes, and functional interfaces into functionally equivalent lambda expressions. The refactoring saves developers' time to manually transform existing code to use lambda expressions. We also created a refactoring tool that performs this transformation automatically. We evaluated the usability and correctness of our tool on 16 open-source projects comprising 2,431 KLOC. Our results show that 81% of the refactorings are accepted by developers, 92.4% are correct, and the time savings can be significant—the tool reduces the transformation time from 15 minutes to 2 seconds. However, challenges remain because some transformations require semantic preservation or context-sensitive checks.",
+  "summary": "This paper explores the practical application of lambda refactoring in Java, focusing on transforming anonymous classes, inner classes, and functional interfaces into lambda expressions. It introduces a tool that automates this refactoring process, providing substantial time savings. Evaluated on 16 open-source projects, the tool showed a high level of accuracy and developer acceptance. The findings highlight that while lambda refactoring can significantly optimize Java code for readability and maintainability, semantic challenges persist. \n\nUpon reviewing its impact, no direct citations or widespread adoption in industry standards were found related to this specific refactoring approach in Java. However, the paper contributes to the broader field of automatic refactoring tools in software engineering and enriches discussions on integrating functional programming features into object-oriented programming languages. The approach promotes the utilization of lambda expressions, paving the way for more elegant and performant coding practices.",
+  "raw_url": "http://dig.cs.illinois.edu/papers/lambdaRefactoring.pdf",
+  "source_type": "external",
+  "filepath": "languages-paradigms/functional_programming/README.md",
+  "filename": "Crossing the Gap from Imperative to Functional Programming through Refactoring",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:04"
+}

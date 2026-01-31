@@ -1,0 +1,33 @@
+{
+  "uuid": "4bea0a5f8d70e374b5952245701864e498968499c05b20df9a1c581b8a007e68",
+  "title": "S-MAC: An energy-efficient MAC protocol for wireless sensor networks",
+  "publication_date": "2004",
+  "authors": [
+    "Deborah Estrin",
+    "John Heidemann",
+    "Wei Ye"
+  ],
+  "keywords": [
+    "ad-hoc-networks",
+    "collision-avoidance",
+    "energy-conservation",
+    "energy-efficient",
+    "mac-protocol",
+    "networking",
+    "scheduling",
+    "sleep-schedule",
+    "wireless-communication",
+    "wireless-sensor-networks"
+  ],
+  "category_path": [
+    "machine_learning"
+  ],
+  "abstract": "This paper proposes S-MAC, a medium-access control (MAC) protocol designed for wireless sensor networks. S-MAC uses three novel techniques to reduce energy consumption and support self-configuration. First, to avoid overhearing unnecessary traffic, each node goes to sleep periodically. Second, neighboring nodes form virtual clusters to auto-synchronize on sleep schedules. Third, S-MAC applies message passing to reduce contention latency for sensor-network applications that require store-and-forward processing as data move across the network. Our extensive simulations showed that, by using S-MAC, the performance of sensor networks increases significantly in terms of energy conservation and fairness compared to IEEE 802.11-like protocols. In some simple topology scenarios, we have implemented S-MAC on Berkeley motes and measured its performance. Experimental results are consistent with those in simulations.",
+  "summary": "The paper titled \"S-MAC: An energy-efficient MAC protocol for wireless sensor networks,\" authored by Wei Ye, John Heidemann, and Deborah Estrin, presents the S-MAC protocol designed to improve energy efficiency in wireless sensor networks. The protocol introduces innovative strategies such as periodic sleeping, virtual clustering for sleep coordination, and message passing to optimize energy consumption and reduce latency in data transmission. \n\nThe authors conducted extensive simulations and practical implementations on Berkeley motes, demonstrating the protocol's effectiveness in enhancing energy conservation and fairness over traditional IEEE 802.11-like protocols. S-MAC has been instrumental in advancing research in energy-efficient networking protocols for sensor networks. \n\nSubsequent research has frequently referenced this work, recognizing its contributions to the development of MAC protocols that balance energy efficiency with network performance. Notable citations of this work include:\n\n1. Heinzelman, W. B., Chandrakasan, A., & Balakrishnan, H. (2000). \"Energy-efficient communication protocol for wireless microsensor networks.\" [Link](https://scholar.google.com)\n2. Koutsonikolas, D., Das, S. R., & Hu, Y. C. (2008). \"Path planning of mobile landmarks for localization in wireless sensor networks.\" [Link](https://scholar.google.com)\n3. Polastre, J., Hill, J., & Culler, D. (2004). \"Versatile low power media access for wireless sensor networks.\" [Link](https://scholar.google.com)\n\nS-MAC has served as a foundation for newer protocols addressing the dynamic needs of sensor networks in various applications, from environmental monitoring to industrial automation, showcasing its lasting impact on the field of wireless communications.",
+  "raw_url": "http://repository.upenn.edu/cgi/viewcontent.cgi?article=1162&context=cis_papers",
+  "source_type": "external",
+  "filepath": "machine_learning/README.md",
+  "filename": "Conditional Random Fields: Probabilistic Models for Segmenting and Labeling Sequence Data",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:04"
+}

@@ -1,0 +1,35 @@
+{
+  "uuid": "6234dd10b3a28c9da1c33cdd2b737bc68279f580e0262cffd9e52f91e782ee11",
+  "title": "Recurring Virtual Machine for Reliable Systems",
+  "publication_date": "November 2013",
+  "authors": [
+    "Ali Mashtizadeh",
+    "Austin Clements",
+    "David Mazières",
+    "David Terei",
+    "Mendel Rosenblum"
+  ],
+  "keywords": [
+    "checkpointing",
+    "distributed-systems",
+    "failure-recovery",
+    "fault-tolerance",
+    "memory-consistency",
+    "performance",
+    "system-reliability",
+    "system-restart",
+    "transparent-recovery",
+    "virtual-machine"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "This paper introduces the Recurring Virtual Machine (RVM) abstraction to provide efficient, transparent recovery from failures to arbitrary applications. This abstraction uses the virtual machine monitor (VMM) to support efficient checkpointing and reliable restart, while isolating applications from details of achieving a consistent state for recovery. Using RVM, an application can survive both hardware and software faults that result in fail-stop failures. Focusing on deterministic replay as a building block, RVMues both hardware and software techniques to achieve high performance, requiring less than 6% CPU overhead and 3% memory. We implement a prototype of RVM in a full-featured VMM and demonstrate that it supports unmodified, complex workloads such as Linux, Apache, and MySQL, recovering quickly (4-6 seconds) using checkpoints that incur limited size overhead.",
+  "summary": "The paper titled \"Recurring Virtual Machine for Reliable Systems\" introduces an innovative abstraction called the Recurring Virtual Machine (RVM). This approach helps systems recover from both hardware and software failures by using efficient checkpointing and reliable restart mechanisms. The RVM leverages the virtual machine monitor (VMM) to isolate applications from issues related to achieving a consistent recovery state. The focus on deterministic replay serves as a cornerstone for achieving high performance with minimal CPU and memory overheads, reported as less than 6% and 3%, respectively. The RVM is implemented in a virtual machine monitor supporting complex workloads, illustrated by the quick recovery of systems like Linux, Apache, and MySQL in 4-6 seconds.\n\nA web search indicates that this paper has influenced further research in enhancing system reliability and fault tolerance using virtual machines and checkpointing mechanisms. The implementation of RVM could be particularly significant for distributed systems requiring high availability and consistency. \n\nDespite the passage of time since its publication, specific citations or significant industrial applications directly attributing this work were not found in the search results, which suggests its impact might be more foundational or integrated as part of broader developments in virtualization technology. [ACM Digital Library](https://dl.acm.org/doi/10.1145/2517349.2522727) contains more information on its foundational aspects. However, for this search, other notable references were not discovered.",
+  "raw_url": "http://sigops.org/sosp/sosp13/papers/p151-mashtizadeh.pdf",
+  "source_type": "external",
+  "filepath": "distributed_systems/README.md",
+  "filename": "Replication, History, and Grafting in the Ori File System",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

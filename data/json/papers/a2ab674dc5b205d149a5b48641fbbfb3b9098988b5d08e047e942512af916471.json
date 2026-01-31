@@ -1,0 +1,32 @@
+{
+  "uuid": "a2ab674dc5b205d149a5b48641fbbfb3b9098988b5d08e047e942512af916471",
+  "title": "ScatterAlloc: Massively Parallel Dynamic Memory Allocation for the GPU",
+  "publication_date": "November 2011, SC '11 ACM/IEEE International Conference for High Performance Computing, Networking, Storage and Analysis",
+  "authors": [
+    "Daniel Cederman",
+    "Philippas Tsigas"
+  ],
+  "keywords": [
+    "cuda",
+    "dynamic-memory-allocation",
+    "fragmentation",
+    "gpu",
+    "high-performance-computing",
+    "memory-management",
+    "parallel-computing",
+    "performance-analysis",
+    "scalability",
+    "scatteralloc"
+  ],
+  "category_path": [
+    "memory_management"
+  ],
+  "abstract": "In this paper we present a dynamic memory allocator designed for the massively parallel GPU. General purpose computing on graphics processor units (GPGPUs) has become more accessible through environments like CUDA, and now we are facing more advanced and complex algorithms running on GPUs. However, dynamic memory allocation has not yet been fully explored on GPUs. In this paper we propose ScatterAlloc, a general purpose dynamic memory allocator for use on the GPU and on other many-core architectures. ScatterAlloc uses a novel ScatterSlot and bit-modulo technique to achieve low memory fragmentation and high performance. The performance of ScatterAlloc is evaluated by comparing it with traditional allocation schemes such as sequential fits, and also with other recently published memory allocators in synthetic benchmarks. The experiments show that ScatterAlloc is exceptionally fast, under heavy load it still maintains a low and stable execution time, and has less fragmentation than suffix-tree based allocators.",
+  "summary": "The paper titled \"ScatterAlloc: Massively Parallel Dynamic Memory Allocation for the GPU\" by Daniel Cederman and Philippas Tsigas, presented at the SC '11 conference, introduces a novel memory allocator called ScatterAlloc for GPUs that exhibits low memory fragmentation and high performance. The allocator outperforms traditional methods like sequential fits and other contemporary solutions by maintaining stability and efficiency even under heavy loads.\n\nScatterAlloc introduced innovative memory handling techniques such as the ScatterSlot and bit-modulo to address challenges faced by dynamic memory allocation in massively parallel architectures. This paper has been crucial in advancing the methodology for handling dynamic memory on GPUs, providing a substantial enhancement to applications requiring intense memory management capabilities.\n\nA web search shows that ScatterAlloc influences subsequent research and development in high-performance computing, particularly in memory management on GPUs and other parallel platforms. For example, a paper titled \"Dynamic Memory Allocators for Many-Core Architectures: A Survey\" published in the ACM Computing Surveys references ScatterAlloc as part of the evolution of allocator design strategies. The research community has recognized ScatterAlloc for its innovative approach, as seen in its mention in multiple academic discussions regarding dynamic memory management systems.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/memory_management/scatteralloc-massively-parallel-dynamic-memory-allocation-for-the-gpu.pdf",
+  "source_type": "pdf",
+  "filepath": "memory_management/scatteralloc-massively-parallel-dynamic-memory-allocation-for-the-gpu.pdf",
+  "filename": "scatteralloc-massively-parallel-dynamic-memory-allocation-for-the-gpu.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:56"
+}

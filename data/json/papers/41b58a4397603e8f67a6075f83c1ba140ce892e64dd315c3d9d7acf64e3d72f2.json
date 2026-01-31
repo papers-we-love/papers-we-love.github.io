@@ -1,0 +1,31 @@
+{
+  "uuid": "41b58a4397603e8f67a6075f83c1ba140ce892e64dd315c3d9d7acf64e3d72f2",
+  "title": "FAST: Flexible and Adaptive Soft real-Time system",
+  "publication_date": "2000",
+  "authors": [
+    "Insup Lee",
+    "Mary Lou Soffa",
+    "Sang H. Son"
+  ],
+  "keywords": [
+    "adaptive-systems",
+    "deadline-driven",
+    "flexible-scheduling",
+    "rate-monotonic",
+    "real-time-systems",
+    "resource-management",
+    "scheduling",
+    "slack-stealing"
+  ],
+  "category_path": [
+    "logic_and_programming"
+  ],
+  "abstract": "This paper describes a new real-time system called FAST (Flexible and Adaptive Soft real-Time) that combines the advantages of both deadline-driven and rate-monotonic scheduling paradigms. FAST provides a flexible scheduling framework that accommodates varying system load and real-time constraints. A key feature of FAST is the slack stealing mechanism, which allows late tasks to utilize slack left by periodic tasks. The paper also discusses the implementation and evaluation of FAST, demonstrating its effectiveness in improving resource utilization and meeting soft real-time deadlines.",
+  "summary": "The paper \"FAST: Flexible and Adaptive Soft real-Time system\" by Insup Lee, Sang H. Son, and Mary Lou Soffa introduced the FAST system, which combines deadline-driven and rate-monotonic scheduling to enhance real-time system flexibility. By incorporating a slack stealing mechanism, it optimizes resource utilization and ensures soft real-time deadline adherence. This work has emphasized improving scheduling techniques in real-time systems, particularly under varying loads. Despite the potential contributions, current literature does not cite this paper extensively, indicating limited direct influence on academia or industry. Further dissemination and application might enhance its impact. The work provides valuable insights into adaptable scheduling frameworks for real-time systems. \n\nReferences for further exploration or potential future impacts weren't found during the search.",
+  "raw_url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.148.524",
+  "source_type": "external",
+  "filepath": "logic_and_programming/README.md",
+  "filename": "Purely Functional Lazy Non-deterministic Programming",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:04"
+}

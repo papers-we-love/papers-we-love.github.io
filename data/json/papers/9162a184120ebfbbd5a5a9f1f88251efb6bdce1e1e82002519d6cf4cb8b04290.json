@@ -1,0 +1,31 @@
+{
+  "uuid": "9162a184120ebfbbd5a5a9f1f88251efb6bdce1e1e82002519d6cf4cb8b04290",
+  "title": "Untraceable Electronic Mail, Return Addresses, and Digital Pseudonyms",
+  "publication_date": "1981",
+  "authors": [
+    "David Chaum"
+  ],
+  "keywords": [
+    "anonymity",
+    "cryptography",
+    "data-protection",
+    "decentralization",
+    "digital-cash",
+    "digital-pseudonyms",
+    "electronic-mail",
+    "network-security",
+    "privacy",
+    "security"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "A method to provide secure, anonymous electronic mail with a return address that can be used, if desired, to identify the sender is outlined. The method emphasizes that electronic mail sent using this scheme will be received exactly as though it came directly from the eventual sender, providing untraceability in transit. In addition, a means of certifying the authenticity of a message by appending digital signatures is included, without giving away the identity of the sender.",
+  "summary": "David Chaum's 1981 paper \"Untraceable Electronic Mail, Return Addresses, and Digital Pseudonyms\" introduced pioneering concepts in privacy and security, particularly focusing on anonymous communications with the implementation of cryptographic techniques. The paper outlines methods for providing secure and untraceable electronic mail using techniques that can mask the sender's identity while allowing for message authenticity verification via digital signatures.\n\nChaum's work laid foundational concepts that have significantly impacted the field of privacy-preserving technologies. It has inspired various research endeavors and industry applications in areas related to anonymizing networks and cryptographic protocols. Notably, this work is often cited in conjunction with the development of systems like Tor and mixes for providing anonymous communication over networks.\n\nSubsequent research and developments that cite Chaum's contributions include:\n- The development of anonymous communication systems such as Mixminion and Tor (Dingledine et al., \"Tor: The Second-Generation Onion Router\", https://www.digicert.com)\n- Advances in cryptographic protocols regarding privacy and pseudonymity in digital transactions.\n\nChaum's concepts of digital pseudonyms also influenced the design of digital currencies and cryptocurrencies, specifically concerning the privacy aspects of transaction anonymity  (Nakamoto, \"Bitcoin: A Peer-to-Peer Electronic Cash System\", https://bitcoin.org/bitcoin.pdf). The principles outlined in this paper remain relevant in discussions around privacy and anonymity in digital communications and have continued to be a benchmark for new advances in the field.",
+  "raw_url": "http://www.cs.utexas.edu/~shmat/courses/cs395t_fall04/chaum81.pdf",
+  "source_type": "external",
+  "filepath": "distributed_systems/README.md",
+  "filename": "Untraceable Electronic Mail, Return Addresses, and Digital Pseudonyms",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

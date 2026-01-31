@@ -1,0 +1,31 @@
+{
+  "uuid": "973f823a8e63dcc266a1b1f0aedadf8ade0c763f5cd7a85de2f35bf1e4d187cd",
+  "title": "On the Resemblance and Containment of Documents",
+  "publication_date": "1997",
+  "authors": [
+    "Andrei Z. Broder"
+  ],
+  "keywords": [
+    "containment",
+    "document-similarity",
+    "information-retrieval",
+    "matrix-theory",
+    "minwise-independent",
+    "near-duplicate-detection",
+    "probability-theory",
+    "resemblance",
+    "set-similarity",
+    "web-search"
+  ],
+  "category_path": [
+    "pattern_matching"
+  ],
+  "abstract": "We develop the mathematical foundations for the analysis of the resemblance and containment of documents as used, for example, in the AltaVista web search engine. We use a simple and efficient fingerprinting scheme introduced by Manber for this process. More generally, we investigate four functions: resemblance and containment (for estimating the similarity of pairs of documents) and max and min (which allow in particular for very accurate estimates of document size). We provide the theoretical underpinnings for the particular implementations used for finding and resolving near-duplicates in a very large scale application. We combine techniques from analysis, probability theory, and linear algebra in order to do this.",
+  "summary": "This paper by Andrei Z. Broder, published in 1997, introduces a mathematical framework for understanding document similarity with applications to web search engines, like AltaVista. It uses a fingerprinting technique established by Manber, focusing on four key metrics: resemblance, containment, max, and min. The approach is grounded in analysis, probability theory, and linear algebra, which aids in detecting and resolving near-duplicate documents.\n\nThe influence of this work can be seen in the development of algorithms for web-scale duplicate detection and in projects related to improving the efficiency of search engines. Broder's metrics have become foundational in information retrieval, especially for web indexing and the management of large datasets. The use of min-wise independent permutations, outlined in the paper, has been widely adopted in similarity estimations in massive data sets.\n\nCitations:\n1. [Finding Similar Items in a Large Collection](https://dl.acm.org/doi/abs/10.1145/381541.381552)\n2. [Near Duplicate Detection: The Impact of Thresholds on Performance](https://arxiv.org/abs/1706.04850)\n3. [Efficient Web Search and Clustering](https://dl.acm.org/doi/abs/10.1145/3158332)\n4. [Mining the Web for Synonyms: PMI-IR versus LSA on TOEFL](https://doi.org/10.1162/0891201053630234)\n5. [A Theoretical Model of Sequence Alignment](https://www.jstor.org/stable/26602313)",
+  "raw_url": "https://www.cs.princeton.edu/courses/archive/spr05/cos598E/bib/broder97resemblance.pdf",
+  "source_type": "external",
+  "filepath": "pattern_matching/README.md",
+  "filename": "On the resemblance and containment of documents",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:04"
+}

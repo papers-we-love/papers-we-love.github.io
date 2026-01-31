@@ -1,0 +1,33 @@
+{
+  "uuid": "426e22577fcb691ea398d0c44faa09b148bc94c8fe327cb56247a8ac0a95ae28",
+  "title": "Byzantine Chain Replication",
+  "publication_date": "April 22, 2015",
+  "authors": [
+    "Barbara Liskov",
+    "Miguel Castro",
+    "Rodrigo Rodrigues"
+  ],
+  "keywords": [
+    "byzantine-fault-tolerance",
+    "chain-replication",
+    "consensus",
+    "data-redundancy",
+    "database-replication",
+    "distributed-systems",
+    "fault-tolerance",
+    "reliability",
+    "replication-protocols",
+    "state-machine-replication"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "This paper presents the Byzantine Chain Replication (BCR) protocol, a new way to provide Byzantine fault tolerance (BFT) for state machine replication in asynchronous settings with optimal resource usage. Unlike previous Byzantine fault-tolerant protocols that incur high costs, BCR achieves strong consistency and availability with only 2f+1 replicas. The protocol combines chain replication with Byzantine fault-tolerant mechanisms to enhance reliability and throughput, making it suitable for critical applications that require fault-tolerant distributed data services. We provide a detailed description of the BCR protocol, including its operation, fault model, and a rigorous theoretical analysis of its safety and liveness properties.",
+  "summary": "The paper \"Byzantine Chain Replication\" introduces a novel protocol designed to enhance Byzantine fault tolerance in state machine replication while minimizing resource costs. This is achieved through a unique combination of chain replication and Byzantine fault-tolerant strategies, optimizing both reliability and throughput.\n\nThe Byzantine Chain Replication (BCR) protocol requires only 2f+1 replicas to maintain strong consistency and availability in the presence of Byzantine faults. The paper provides an in-depth analysis of BCR's operation and fault model, alongside theoretical assurances of its safety and liveness properties.\n\nWhile comprehensive use cases or citations in subsequent research and industry applications were not found in an immediate search, this protocol contributes significantly to the theoretical foundations of distributed systems, particularly in fault tolerance and replication protocols. The impact on future research can potentially enhance the development of more efficient, reliable distributed data services, especially in environments where fault tolerance is crucial.\n\nFurther information about the influence of this paper could be obtained through more detailed citation analysis in specialized databases like Google Scholar or Semantic Scholar.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/byzantine-chain-replication.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/byzantine-chain-replication.pdf",
+  "filename": "byzantine-chain-replication.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

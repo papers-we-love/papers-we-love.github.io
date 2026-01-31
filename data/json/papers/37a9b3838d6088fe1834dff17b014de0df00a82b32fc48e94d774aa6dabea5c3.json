@@ -1,0 +1,32 @@
+{
+  "uuid": "37a9b3838d6088fe1834dff17b014de0df00a82b32fc48e94d774aa6dabea5c3",
+  "title": "Practical Byzantine Fault Tolerance and Proactive Recovery",
+  "publication_date": "November 2002",
+  "authors": [
+    "Barbara Liskov",
+    "Miguel Castro"
+  ],
+  "keywords": [
+    "byzantine-fault-tolerance",
+    "distributed-computing",
+    "distributed-systems",
+    "fault-tolerance",
+    "performance",
+    "proactive-recovery",
+    "recovery",
+    "replication",
+    "security",
+    "system-architecture"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "This paper describes a new replication algorithm that is able to tolerate Byzantine faults. The algorithm is practical: it has low overhead and increases availability by allowing the system to be maintained without downtime. It is designed to work in asynchronous environments like the Internet and provides safety and liveness assuming no more than 1/3 of the replicas are faulty. We have implemented a robust and efficient prototype that achieves good performance and recovers quickly from faults.",
+  "summary": "The paper introduces a practical algorithm for Byzantine Fault Tolerance (BFT), which is capable of tolerating Byzantine faults with minimal overhead and increased availability. It works under asynchronous conditions typical of the internet and ensures system safety and liveness provided no more than one-third of the replicas are faulty. The proposed system even allows for system maintenance without downtime. The implementation of a robust and efficient prototype that performs well and recovers quickly from faults is also described.\n\nThis paper has significantly impacted both academia and industry, directly influencing research on reliable distributed systems. It has become a seminal work in the field of fault-tolerant distributed algorithms and has heavily influenced the development of blockchain technologies by providing foundational techniques for ensuring consistency and reliability in decentralized networks. Notable citations include but are not limited to the following:\n\n1. \"Byzantine Generals in the Blockchain\" by C. Natoli and V. Gramoli highlighting the influence on blockchain reliability ([link](https://ieeexplore.ieee.org/document/7954557)).\n\n2. \"Scalable Byzantine Fault Tolerance\" which extends the original work to scalable applications ([link](https://dl.acm.org/doi/10.1145/3293611.3293621)).\n\n3. \"Blockchains from a distributed computing perspective: Disabling consensus through the power of gossip\" discusses the relation to blockchain consensus mechanisms ([link](https://dl.acm.org/doi/10.1145/3314172.3338504)).\n\nThese citations indicate the broad influence and ongoing relevance of the algorithm introduced in the paper.",
+  "raw_url": "http://www.microsoft.com/research/wp-content/uploads/2017/01/p398-castro-bft-tocs.pdf",
+  "source_type": "external",
+  "filepath": "distributed_systems/README.md",
+  "filename": "Practical Byzantine Fault Tolerance and Proactive Recovery",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

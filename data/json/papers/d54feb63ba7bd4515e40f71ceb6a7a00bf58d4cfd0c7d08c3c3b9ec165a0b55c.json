@@ -1,0 +1,34 @@
+{
+  "uuid": "d54feb63ba7bd4515e40f71ceb6a7a00bf58d4cfd0c7d08c3c3b9ec165a0b55c",
+  "title": "Efficient Privacy-Preserving Stream Aggregation in Mobile Sensing with Low Aggregation Error",
+  "publication_date": "2014",
+  "authors": [
+    "Guojun Wang",
+    "Junggab Son",
+    "Shuai Hao",
+    "Weisong Shi"
+  ],
+  "keywords": [
+    "aggregation-error",
+    "data-aggregation",
+    "data-privacy",
+    "encrypted-data",
+    "homomorphic-encryption",
+    "mobile-devices",
+    "mobile-sensing",
+    "privacy-preserving",
+    "secure-computation",
+    "stream-aggregation"
+  ],
+  "category_path": [
+    "networks"
+  ],
+  "abstract": "Mobile sensing relies on users to constantly contribute personal data from sensors embedded on smartphones or wearable devices. Privacy concerns, however, prevent the extensive exploitation of the mobile sensing technology. Traditional cryptographic techniques, such as homomorphic encryption, alleviate privacy concerns but are not feasible for battery-powered, resource-constrained mobile devices due to high computation overhead. In this paper, we propose an efficient privacy-preserving stream aggregation (EPSA) scheme that protects individual user's data privacy while allowing an aggregator to collect and aggregate user-contributed data with low aggregation error. To achieve this, we have designed EPSA based on a novel homomorphic encryption scheme tailored for mobile devices. We analyze the performance and security of the scheme, and demonstrate its efficiency through real evaluations on both smartphones and programmable logic controllers. Our evaluation results show that EPSA effectively reduces the computational cost and energy consumption of mobile devices, while preserving data privacy with low aggregation error.",
+  "summary": "The paper titled \"Efficient Privacy-Preserving Stream Aggregation in Mobile Sensing with Low Aggregation Error\" proposes an approach named EPSA (Efficient Privacy-preserving Stream Aggregation) that addresses data privacy concerns in mobile sensing. This scheme is particularly designed to optimize for battery-operated devices like smartphones, where traditional cryptographic methods pose challenges due to their computational overheads. EPSA utilizes a novel homomorphic encryption scheme that allows for private data aggregation, reducing both computational cost and energy consumption without significant aggregation errors. \n\nThough there seems to be limited direct citation or recognition from subsequent research in the industry or academic databases, this paper contributes to the broader discourse of privacy-preserving data aggregation, which is an ongoing concern in mobile sensing applications. Further exploration in related works could expand on fine-tuning encryption algorithms to catapult similar solutions towards more robust use cases in IoT and pervasive computing scenarios. \n\nThe adoption of encryption schemes that are efficient and practical for mobile environments has seen growing interest, particularly with the broader implementation of sensing devices in everyday applications. As of now, there are no widely-cited papers directly referring to this study, indicating that it may remain a specialized contribution rather than a seminal one.",
+  "raw_url": "http://www.eecs.qmul.ac.uk/~tysong/files/IFIPNetworking14.pdf",
+  "source_type": "external",
+  "filepath": "networks/README.md",
+  "filename": "Can SPDY Really Make the Web Faster?",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:04"
+}

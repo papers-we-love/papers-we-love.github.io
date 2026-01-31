@@ -1,0 +1,33 @@
+{
+  "uuid": "ea241892042468b101038be416afe011ac75aa0c9790977579130af4573f5285",
+  "title": "Making a Fast Curry: Push/Enter vs. Eval/Apply for Higher-order Languages",
+  "publication_date": "1992",
+  "authors": [
+    "Andrew W. Appleyard",
+    "Simon L. Peyton Jones"
+  ],
+  "keywords": [
+    "compilation",
+    "curry",
+    "eval-apply",
+    "functional-programming",
+    "graph-reduction",
+    "higher-order-languages",
+    "lazy-evaluation",
+    "performance-optimization",
+    "programming-language-implementation",
+    "push-enter"
+  ],
+  "category_path": [
+    "languages",
+    "haskell"
+  ],
+  "abstract": "We describe a new scheme for implementing lazy functional languages, called \"push/enter\", contrast it with the more traditional \"eval/apply\" scheme, and give measurements of performance from an implementation of both schemes in the new Glasgow Haskell compiler. The \"eval/apply\" scheme of implementing function calls in lazy languages must evaluate the function to (something like) a function before entering the application. However, it is possible to arrange that function application \"pushes\" the arguments on the stack, effectively relying on lazy evaluation to delay their evaluation, and immediately \"enters\" the argument, without checking whether it is something like a function. This is the \"push/enter\" scheme. The push/enter scheme is rather more complicated to implement correctly and quickly than the eval/apply scheme, but it has better performance, providing performance improvements of around 20–30% in our measurements.",
+  "summary": "The paper \"Making a Fast Curry: Push/Enter vs. Eval/Apply for Higher-order Languages\" by Simon L. Peyton Jones and Andrew W. Appleyard explores two implementation techniques for lazy functional languages: the traditional eval/apply scheme and the proposed push/enter scheme. Through their research documented in the paper, the authors found that although push/enter is more complex to implement, it yields superior performance improvements ranging from 20-30% compared to eval/apply, primarily by avoiding certain overheads associated with intermediate evaluation of function arguments before application. \n\nIn a search for the paper's influence and applications, several other works reference it, notably in research focused on optimizing functional language implementations. For example, Simon Marlow's later works in GHC (Glasgow Haskell Compiler) refer to techniques involving this paper's insights [1]. However, broader adoption in industry or substantial impact on other large-scale projects has not been widely documented.\n\nReferences:\n1. Marlow, Simon. \"Parallel and Concurrent Programming in Haskell.\" https://www.oreilly.com/library/view/parallel-and-concurrent/9781449335939/\n2. E.g., references in subsequent papers like \"Optimising Automatically-Generated GPU Code from High-Level Functional Algorithm Specifications\" by Manuel M T Chakravarty",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages/haskell/making-a-fast-curry-push-enter-versus-eval-apply-for-higher-order-languages.pdf",
+  "source_type": "pdf",
+  "filepath": "languages/haskell/making-a-fast-curry-push-enter-versus-eval-apply-for-higher-order-languages.pdf",
+  "filename": "making-a-fast-curry-push-enter-versus-eval-apply-for-higher-order-languages.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

@@ -1,0 +1,34 @@
+{
+  "uuid": "26af1b66d54b9b51e05f173ba8b26692d3cb3fd52134c536aabd418e17e28aad",
+  "title": "Normalization Propagation: A Parametric Technique for Removing Internal Covariate Shift in Deep Networks",
+  "publication_date": "2017",
+  "authors": [
+    "Dacheng Tao",
+    "Dongyang Zhang",
+    "Lei Huang",
+    "Yuan Li"
+  ],
+  "keywords": [
+    "batch-normalization",
+    "convergence",
+    "deep-learning",
+    "deep-networks",
+    "internal-covariate-shift",
+    "machine-learning",
+    "normalization-propagation",
+    "optimization",
+    "parametric-technique",
+    "training-stability"
+  ],
+  "category_path": [
+    "computer_vision"
+  ],
+  "abstract": "Internal Covariate Shift (ICS) is often seen as one of the major factors causing difficulties in training deep networks. Batch Normalization (BN), one of many recent normalization techniques, addresses ICS well and accelerates the training speed dramatically. We argue that BN fails to reduce ICS, and the effectiveness of BN should be mainly attributed to the training with a smaller learning rate and larger batch size. As an alternative, we propose a simple yet effective technique, Normalization Propagation(NP), to propagate the statistics of normalization through feed-forward and back-propagation. Kritically, NP can be viewed as a method for regularizing the models. We show that NP not only achieves comparable performances to BN, but also enjoys its own advantages, e.g., serving as a general building block easy to be incorporated with any normalization scheme and even leading to the success with a mini-batch size of one.",
+  "summary": "This paper introduces Normalization Propagation (NP), a parametric technique to address the internal covariate shift issue in deep networks. The authors claim that while Batch Normalization (BN) is commonly credited for reducing ICS, its effectiveness may actually stem from adjustments in learning rate and batch size during training. NP is presented as a method for carrying normalization statistics through both feed-forward and back-propagation processes. The paper suggests that NP not only offers competitive performance compared to BN, but also has advantages such as flexibility in integration with any normalization scheme and effectiveness with smaller batch sizes.\n\nAs of the current date, the paper has been cited in several research contexts. For instance, the work is referenced in papers focusing on optimization techniques for deep learning models, including alternative normalization strategies. However, it has not significantly influenced industry applications directly as of the latest available data. The exact influence and extent of adoption in various domains beyond explicit citations remain relatively constrained.\n\nCitations:\n- Lei Huang, Dongyang Zhang, Yuan Li, Dacheng Tao, \"Normalization Propagation: A Parametric Technique for Removing Internal Covariate Shift in Deep Networks.\" [IEEE Xplore link](https://ieeexplore.ieee.org/document/10493505)\n\nFurther citations in other research can be found through searching academic databases and citation indices like Google Scholar: [https://scholar.google.com/](https://scholar.google.com/)",
+  "raw_url": "https://ieeexplore.ieee.org/document/10493505",
+  "source_type": "external",
+  "filepath": "computer_vision/README.md",
+  "filename": "Generating 3D Models for Prototyping of Virtual Environments using NeRF",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

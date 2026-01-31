@@ -1,0 +1,32 @@
+{
+  "uuid": "a33aa2e2c6568e335bae571e955cd613bf2a01c27ff22ba36200caf2212aa1de",
+  "title": "Adam: A Method for Stochastic Optimization",
+  "publication_date": "2015-03-09",
+  "authors": [
+    "Diederik P. Kingma",
+    "Jimmy Ba"
+  ],
+  "keywords": [
+    "adam",
+    "adaptive-methods",
+    "deep-learning",
+    "exponential-moving-average",
+    "first-order-gradients",
+    "gradient-descent",
+    "machine-learning",
+    "neural-networks",
+    "parameter-updates",
+    "stochastic-optimization"
+  ],
+  "category_path": [
+    "machine_learning"
+  ],
+  "abstract": "We introduce Adam, an algorithm for first-order gradient-based optimization of stochastic objective functions, based on adaptive estimates of lower-order moments. The method is straightforward to implement, is computationally efficient, has little memory requirement, is invariant to diagonal rescaling of the gradients, and is well suited for problems that are large in terms of data and/or parameters. The method is also appropriate for non-stationary objectives and problems with very noisy and/or sparse gradients. The hyper-parameters have intuitive interpretation and typically require little tuning. Some connections to related algorithms, on which Adam was inspired, are discussed. We also analyze the theoretical convergence properties of the algorithm and provide empirical results that demonstrate the method’s state-of-the-art performance.",
+  "summary": "The paper \"Adam: A Method for Stochastic Optimization\" by Diederik P. Kingma and Jimmy Ba introduces a novel optimization algorithm designed for improving the efficiency of stochastic gradient descent in machine learning and neural networks. The algorithm, named Adam, leverages adaptive estimates of lower-order moments to enhance parameter updates, making it well-suited for large-scale problems with noisy or sparse gradients.\n\nAdam presents several benefits including ease of implementation, computational efficiency, and minimal memory usage. It adjusts learning rates based on gradient moments, and hyper-parameters used in Adam require minimal tuning while retaining intuitive interpretation. The researchers provide empirical evidence and theoretical analyses to demonstrate Adam's superior performance over existing stochastic optimization methods.\n\nIn terms of influence, Adam has become one of the most widely used optimization algorithms in machine learning and deep learning. It has been cited extensively across a plethora of research papers and has seen adoption in many industry applications. According to Google Scholar, it has been cited over 95,000 times, highlighting its significant impact on the development of optimization techniques in machine learning. Notable references include:\n- \"Transformers: State-of-the-art Natural Language Processing\" (https://arxiv.org/abs/1910.03771)\n- \"Attention Is All You Need\" (https://arxiv.org/abs/1706.03762)\n- \"Neural Machine Translation by Jointly Learning to Align and Translate\" (https://arxiv.org/abs/1409.0473)",
+  "raw_url": "https://arxiv.org/pdf/1503.02531.pdf",
+  "source_type": "external",
+  "filepath": "machine_learning/README.md",
+  "filename": "Distilling the Knowledge in a Neural Network",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:04"
+}

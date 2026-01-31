@@ -1,0 +1,31 @@
+{
+  "uuid": "7b1745bcaccf107935df0aee827d7ffa5bc34305bbd949a405b62bdeb8081fe5",
+  "title": "Incremental Collection of Mature Objects",
+  "publication_date": "1992",
+  "authors": [
+    "Barry Hayes"
+  ],
+  "keywords": [
+    "collector-algorithms",
+    "computer-science",
+    "garbage-collection",
+    "incremental-collection",
+    "mature-objects",
+    "memory-management",
+    "memory-optimization",
+    "object-oriented",
+    "programming-languages",
+    "runtime-performance"
+  ],
+  "category_path": [
+    "garbage_collection"
+  ],
+  "abstract": "This paper describes a technique for garbage collection of mature garbage objects. We argue that \"mature garbage\" accounts for a large fraction of old-generation objects, especially in very long-running programs. Several existing generational garbage collectors collect only the young objects, leaving mature objects in old-generation space until memory becomes tight. When the old generation fills with mature garbage, programs pay the performance penalty of a “stop-and-collect.” A collector that collects mature garbage can reclaim these objects incrementally, avoiding stop-and-collect. This technique complements existing schemes for incremental collection of young objects (mostly based on write-barriers). It uses tenuring and promotion to identify mature objects, using an efficient algorithm. Further empirical measurements demonstrate that incremental collection of both young and mature objects makes it feasible to perform acceptably smooth garbage collection even in very long-running programs.",
+  "summary": "In the paper \"Incremental Collection of Mature Objects\" by Barry Hayes, published in 1992, a novel technique for incrementally collecting garbage in programming environments is introduced, with a specific focus on mature objects. The paper addresses the inefficiencies present in existing garbage collection schemes that often necessitate comprehensive pauses to reclaim memory occupied by mature garbage. Hayes' technique aims to alleviate the performance costs associated with traditional generational garbage collectors which only incrementally collect young objects and leave mature objects to gather indefinitely.\n\nThe research presents a method that uses tenuring and promotion processes to more efficiently identify and manage mature objects. This approach integrates with older schemes designed predominantly for young objects, enhancing the capability of garbage collectors to operate without inducing significant stops, which would otherwise affect performance.\n\nAlthough the paper was published at a time when program longevity and system performance were critical issues, empirical evidence within the research demonstrates that this incremental method can support long-running programs by preventing slow-downs caused by pausing for garbage collection.\n\nWhile the paper does not appear widely cited in contemporary research, its contributions to better understanding garbage collection mechanics in object-oriented and long-running programming environments remain relevant. Academic interest in improving garbage collection methods, especially in light of runtime performance and memory optimization, persists. As of the latest available data, no major industry standards directly cite or implement the precise method outlined by Hayes, but the foundational principles continue to inform modern garbage collection strategy discussions. Further research tracing citation patterns could provide more detailed insights into the longitudinal influence of this work. \n\nFor further academic exploration, see citations in subsequent works like [Google Scholar References](https://scholar.google.com) and cross-reference with garbage collection advancements in modern programming languages and runtime environments. However, specific influential citations directly tying back to Hayes’ method appear limited in scope as of the review.",
+  "raw_url": "http://pdf.aminer.org/000/465/194/incremental_collection_of_mature_objects.pdf",
+  "source_type": "external",
+  "filepath": "garbage_collection/README.md",
+  "filename": "Incremental Collection of Mature Objects",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

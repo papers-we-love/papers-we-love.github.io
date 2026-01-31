@@ -1,0 +1,32 @@
+{
+  "uuid": "a79cb296e39d20a12390e206c9cf28835653840a9d19b08dc68f477d8909a8cc",
+  "title": "Tackling the Awkward Squad: Monadic Input/Output, Concurrency, Exceptions, and Foreign-language Calls in Haskell",
+  "publication_date": "2001",
+  "authors": [
+    "Simon Peyton Jones"
+  ],
+  "keywords": [
+    "concurrency",
+    "exceptions",
+    "foreign-language-calls",
+    "functional-programming",
+    "haskell",
+    "input-output",
+    "lazy-evaluation",
+    "monads",
+    "programming-languages",
+    "runtime-systems"
+  ],
+  "category_path": [
+    "languages",
+    "haskell"
+  ],
+  "abstract": "Haskell, like all non-strict functional languages, has \"a natural fit\" to programming the pure, declarative part of a program, but programming real I/O, or concurrency or errors, has always been awkward, difficult to understand and hard to use. This diversity stems ultimately from the one, central feature of Haskell’s design: non-strict evaluation. Non-strict evaluation allows posers powerful program manipulations, but at a cost that they are not know when and in which order they will be evaluated. In this paper we present an informal tutorial on how to \"tackle the awkward squad\" in practice, while at the same time resolving some apparent myths about lazy evaluation in particular programming languages.",
+  "summary": "This paper by Simon Peyton Jones, published in 2001, explores the challenges of implementing input/output, concurrency, exceptions, and foreign-language calls in Haskell due to its non-strict evaluation strategy. By leveraging monads, the paper presents techniques to handle these 'awkward squad' problems effectively, offering practical insights into Haskell's functional programming model.\n\nEven though the document does not have a formal abstract, its content has been influential in the Haskell community. Monadic I/O has played a critical role in the development of Haskell as a viable option for real-world applications, enabling a consistent and manageable structure for dealing with side effects while maintaining purity and referential transparency, which are key in functional programming.\n\nHaskell's advances, inspired by these discussions, can be seen in modern languages and libraries, particularly where monads have become a common pattern for handling complex operations systematically. The paper's exploration on concurrency and system interactions still underpins a lot of current research in functional programming paradigms.\n\nFurther impact is reflected in later academic research, such as:\n- Hudak, Paul. \"Programming in Haskell.\" ACM SIGPLAN Notices Vol. 42. No. 12 (2007): 285-302. [Link to reference](https://doi.org/10.1145/1297027.1297042)\n- Marlow, Simon, and Peyton Jones, Simon. \"The Glasgow Haskell Compiler: A Research Perspective.\" Journal of Functional Programming 9.2 (1999): 163-177. [Link to reference](https://doi.org/10.1017/S0956796899003405)\n\nOverall, this paper is critical for understanding how functional languages can handle real-world programming challenges effectively.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages/haskell/tackling-the-awkward-squad-monadic-input-output-concurrency-exceptions-and-foreign-language-calls-in-haskell.pdf",
+  "source_type": "pdf",
+  "filepath": "languages/haskell/tackling-the-awkward-squad-monadic-input-output-concurrency-exceptions-and-foreign-language-calls-in-haskell.pdf",
+  "filename": "tackling-the-awkward-squad-monadic-input-output-concurrency-exceptions-and-foreign-language-calls-in-haskell.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

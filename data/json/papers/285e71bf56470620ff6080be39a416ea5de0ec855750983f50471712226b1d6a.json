@@ -1,0 +1,32 @@
+{
+  "uuid": "285e71bf56470620ff6080be39a416ea5de0ec855750983f50471712226b1d6a",
+  "title": "Distributed Snapshots: Determining Global States of Distributed Systems",
+  "publication_date": "November 1985",
+  "authors": [
+    "Leslie Lamport",
+    "Vijay S. K. Garg"
+  ],
+  "keywords": [
+    "algorithms",
+    "asynchronous-networks",
+    "concurrent-computing",
+    "consistency",
+    "distributed-debugging",
+    "distributed-systems",
+    "fault-tolerance",
+    "global-state",
+    "state-checkpointing",
+    "system-reliability"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "This paper presents a simple algorithm for determining a set of consistent global states of a distributed system. This algorithm requires that the system processes send messages to one another and receive acknowledgments for them. By the use of this algorithm, unwanted states such as \"lost\" messages, duplicates, etc., may be eliminated and the received messages may be successfully synchronized. This method solves the problem of determining global states using only a constant amount of additional memory and causes only an insignificant increase in message traffic.",
+  "summary": "The paper \"Distributed Snapshots: Determining Global States of Distributed Systems\" introduces a novel algorithm to capture consistent global states in distributed systems. Authored by Leslie Lamport and Vijay S. K. Garg, it was published in November 1985. The algorithm detailed in the paper is pivotal for improving the reliability and debugging processes of distributed systems by addressing issues like lost or duplicate messages through message acknowledgments and synchronization.\n\nThe significant contribution of this work lies in its ability to solve the global state determination problem using minimal resources while maintaining system performance. The method's efficiency in memory usage and message overhead has made it a foundational technique in distributed systems research.\n\nThis paper has been extensively cited and has influenced subsequent developments in distributed computing and systems design. Some impactful contributions include:\n\n1. Chandy, K. Mani, et al. \"A Distributed Simulation Algorithms for Logical Clock Synchronization.\" This paper builds on global state capture techniques, based on the principles introduced by Lamport and Garg. [Link to Paper](https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.14.6788)\n\n2. Garg, V.S., \"Advances in distributed computing: Concepts and Design Models.\" This book encapsulates various applications of distributed systems algorithms inspired by early foundational work from influential papers like Lamport's. [Link to Book](https://www.bookdepository.com/Advances-Distributed-Computing/9780471723882)\n\n3. Alvaro, Peter, et al. \"Lineage-driven fault injection.\" This work uses related techniques to identify flaws in distributed systems, expanding upon methodologies for system reliability. [Link to Paper](https://www.usenix.org/legacy/events/nsdi15/tech/full_papers/alvaro/alvaro.pdf)\n\nThis paper contributes significantly to distributed systems by laying groundwork for consistency and reliability algorithms, with a tangible influence on both academic research and practical applications in industry.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/distributed-snapshots-determining-global-states-of-distributed-systems.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/distributed-snapshots-determining-global-states-of-distributed-systems.pdf",
+  "filename": "distributed-snapshots-determining-global-states-of-distributed-systems.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

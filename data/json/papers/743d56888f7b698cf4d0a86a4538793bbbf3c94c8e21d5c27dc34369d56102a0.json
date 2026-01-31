@@ -1,0 +1,34 @@
+{
+  "uuid": "743d56888f7b698cf4d0a86a4538793bbbf3c94c8e21d5c27dc34369d56102a0",
+  "title": "ZooKeeper: Wait-free coordination for internet-scale systems",
+  "publication_date": "November 2009, USENIX Annual Technical Conference",
+  "authors": [
+    "Benjamin Reed",
+    "Flavio P. Junqueira",
+    "Mahadev Konar",
+    "Patrick Hunt"
+  ],
+  "keywords": [
+    "apache",
+    "consensus",
+    "coordination",
+    "distributed-systems",
+    "failure-recovery",
+    "internet-scale",
+    "open-source",
+    "replication",
+    "wait-free",
+    "zookeeper"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "ZooKeeper is a service for coordinating processes of distributed applications. It is designed to be highly reliable: replicated across operational data centers and tolerant of service disruptions that partition data centers from each other or from clients. It is used in production at Yahoo! to coordinate over a billion periodic updates across tens of thousands of clients. ZooKeeper efficiently implements common coordination primitives such as leader election, barriers, and queues. Applications can build their own protocols using ZooKeeper's primitives, which are based on a hierarchical namespace, watches, and ephemeral nodes. We describe ZooKeeper and its APIs, our experience using it at Yahoo!, performance measurements, and lessons learned.",
+  "summary": "ZooKeeper: Wait-free coordination for internet-scale systems focuses on the design and implementation of ZooKeeper, a service for coordinating distributed applications. ZooKeeper offers a reliable and efficient solution for managing coordination through primitives such as leader election and barriers, which are essential for distributed systems to function correctly and reliably. The paper discusses the practical use of ZooKeeper at Yahoo! for coordinating billions of periodic updates, highlighting its robustness and scalability.\n\nIn particular, ZooKeeper's ability to maintain service despite data center partitions and client failures has made it integral to several large-scale distributed systems. The paper's impact is evidenced by its widespread use in various organizations and its contribution to Apache ZooKeeper's development and adoption as an open-source project.\n\nA literature review confirms ZooKeeper's influence, as referenced by various research and industry applications. For example, the paper has been cited in academic works focused on distributed consensus algorithms, such as Raft and Paxos ([[Diego Ongaro et al., \"In Search of an Understandable Consensus Algorithm (Extended Version)\".](https://raft.github.io/raft.pdf)]). Furthermore, the technology has been adopted in several notable open-source projects and platforms, including Hadoop and Kafka.\n\nZooKeeper's introduction of a simple interface for complex coordination tasks has set a standard in the field and inspired further research and technological advancements in distributed coordination services.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/zookeeper-wait-free-coordination-for-internet-scale-systems.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/zookeeper-wait-free-coordination-for-internet-scale-systems.pdf",
+  "filename": "zookeeper-wait-free-coordination-for-internet-scale-systems.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

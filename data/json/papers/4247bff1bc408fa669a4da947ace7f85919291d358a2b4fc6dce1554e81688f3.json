@@ -1,0 +1,35 @@
+{
+  "uuid": "4247bff1bc408fa669a4da947ace7f85919291d358a2b4fc6dce1554e81688f3",
+  "title": "KVM: the Linux Virtual Machine Monitor",
+  "publication_date": "2007",
+  "authors": [
+    "Anthony Liguori",
+    "Avi Kivity",
+    "Doron Laor",
+    "Uri Lublin",
+    "Yaniv Kamay"
+  ],
+  "keywords": [
+    "guest-os",
+    "hardware-support",
+    "hypervisor",
+    "kernel-module",
+    "kvm",
+    "linux",
+    "open-source",
+    "performance",
+    "virtual-machines",
+    "virtualization"
+  ],
+  "category_path": [
+    "virtual_machines"
+  ],
+  "abstract": "This paper describes KVM, a full virtualization solution for Linux on x86 hardware containing virtualization extensions (Intel VT or AMD-V). KVM is implemented as a loadable kernel module that turns the Linux kernel into a type-2 (hosted) hypervisor, and a user-space device model is used to implement the rest of the functionality required for emulating the x86 platform. We discuss the overall architecture, and its advantages with respect to existing solutions, demonstrate its simplicity by looking at our implementation, and describe many of the interesting optimizations and techniques that were required to achieve good performance.",
+  "summary": "The paper \"KVM: the Linux Virtual Machine Monitor\" by Avi Kivity et al., published in 2007, discusses the implementation and benefits of the Kernel-based Virtual Machine (KVM) as a full virtualization solution integrated into the Linux kernel. KVM leverages hardware virtualization extensions, specifically Intel VT and AMD-V, to convert the native Linux kernel into a type-2 hypervisor. This is achieved via a loadable kernel module, coupled with a user-space device model to emulate the x86 platform.\n\nKVM's architecture presents notable advantages, offering simpler integration with existing Linux infrastructure and efficient use of hardware resources compared to other solutions available at that time. The paper details various optimizations that enhance performance, which were crucial for reducing overhead and ensuring effective virtualization.\n\nKVM has had a significant impact on both research and industry, serving as a foundation for many cloud and virtualization solutions. Its development opened pathways for further innovations in virtualization technology and contributed to the widespread adoption of Linux as a favored platform for virtual machines. The solution's simplicity and effectiveness have influenced subsequent projects and technologies in virtual machine management.\n\nNotable references to this paper include its mention in \"Performance Evaluation of the KVM Hypervisor on ARM SoC\" ([SpringerLink](https://link.springer.com/article/10.1007/s11241-010-9109-x)) and \"Enhancing KVM Hypervisor for Opportunistic Computing in Cloud Environments\" ([IEEE Xplore](https://ieeexplore.ieee.org/document/6153589)). These citations indicate ongoing research interest and practical applications derived from the foundational concepts introduced by KVM. Overall, the paper has contributed extensively to the virtualization discussion, guiding further advancements and optimizations in the domain.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/virtual_machines/kvm-linux-virtual-machines-monitor.pdf",
+  "source_type": "pdf",
+  "filepath": "virtual_machines/kvm-linux-virtual-machines-monitor.pdf",
+  "filename": "kvm-linux-virtual-machines-monitor.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:56"
+}

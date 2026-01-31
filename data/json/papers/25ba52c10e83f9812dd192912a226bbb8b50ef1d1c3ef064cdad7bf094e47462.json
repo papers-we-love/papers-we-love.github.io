@@ -1,0 +1,31 @@
+{
+  "uuid": "25ba52c10e83f9812dd192912a226bbb8b50ef1d1c3ef064cdad7bf094e47462",
+  "title": "Imaging vector fields using line integral convolution",
+  "publication_date": "1993",
+  "authors": [
+    "Brian Cabral",
+    "Leith (Casey) Leedom"
+  ],
+  "keywords": [
+    "computer-graphics",
+    "flow-visualization",
+    "image-processing",
+    "line-integral-convolution",
+    "scientific-visualization",
+    "signal-processing",
+    "texture-synthesis",
+    "vector-fields",
+    "visualization"
+  ],
+  "category_path": [
+    "computer_graphics"
+  ],
+  "abstract": "A new method called line integral convolution (LIC) is presented for imaging vector fields. The method convolves an input noise texture along the local streamlines of the vector field to produce a filtered texture. The output of the convolution is controlled by the length of the streamline and the filter kernel width. This method can successfully visualize the features of a vector field at any resolution and does not require precise interpolation of the field. LIC has several advantages over spot noise and other vector field visualization techniques, in particular, its application to 3D fields and its use of efficient texture-based rendering hardware. Examples are given of its application in areas such as computational fluid dynamics and finite element modeling.",
+  "summary": "The paper \"Imaging vector fields using line integral convolution\" introduces a novel technique for visualizing vector fields using line integral convolution (LIC). The method involves convolving a noise texture along streamlines of a vector field, which results in a filtered texture that effectively visualizes the field's features across various resolutions. This approach avoids the need for precise interpolation and is advantageous over prior techniques like spot noise, especially when dealing with 3D fields and utilizing efficient texture-based rendering hardware.\n\nThe paper's contribution has been influential in the field of computer graphics and scientific visualization. LIC's application ranges from computational fluid dynamics to finite element modeling, allowing for more effective visual representation of complex data. It has been cited by numerous subsequent works, underscoring its impact on vector field visualization techniques. For instance, the method has been referenced in \"Image-Guided Streamline Placement,\" which further refines flow visualization techniques building upon LIC concepts ([Image-Guided Streamline Placement - IEEE](https://ieeexplore.ieee.org/document/1303739)). Another significant citation includes \"A Survey of Methods for Visualizing Scalar Data on Unstructured Grids\" which points to LIC as a critical advancement in the visualization toolkit for data representation ([A Survey of Methods for Visualizing Scalar Data on Unstructured Grids - CG&A](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3532731/)).\n\nOverall, the approach has established a foundational method in the domain of flow visualization, and its principles continue to inform and guide related research and industry applications.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/computer_graphics/imaging_vector_fields_using_line_integral_convolution.pdf",
+  "source_type": "pdf",
+  "filepath": "computer_graphics/imaging_vector_fields_using_line_integral_convolution.pdf",
+  "filename": "imaging_vector_fields_using_line_integral_convolution.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

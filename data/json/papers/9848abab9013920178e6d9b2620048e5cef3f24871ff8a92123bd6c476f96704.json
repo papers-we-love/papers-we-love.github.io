@@ -1,0 +1,35 @@
+{
+  "uuid": "9848abab9013920178e6d9b2620048e5cef3f24871ff8a92123bd6c476f96704",
+  "title": "Chord: A Scalable Peer-to-peer Lookup Service for Internet Applications",
+  "publication_date": "August 2001",
+  "authors": [
+    "David Karger",
+    "Hari Balakrishnan",
+    "Ion Stoica",
+    "M. Frans Kaashoek",
+    "Robert Morris"
+  ],
+  "keywords": [
+    "chord",
+    "decentralization",
+    "dht",
+    "distributed-systems",
+    "hashing",
+    "internet-applications",
+    "load-balancing",
+    "p2p-networks",
+    "peer-to-peer",
+    "scalable-lookup"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "This paper presents Chord, a distributed lookup protocol that addresses the challenging problem of efficient resource location in peer-to-peer applications. Chord supports a single operation: given a key, it maps the key onto a node. Each Chord node needs only a small number of routing information about other nodes. A lookup in Chord is resolved about O(log N) messages, where N is the total number of nodes; this allows the system to scale to large numbers of nodes and frequent node arrivals and departures.",
+  "summary": "The Chord protocol, introduced in this paper, fundamentally influenced the development of distributed hash tables (DHTs) by providing a reliable and efficient method for peer-to-peer connection and resource location. This contribution offered a distinct advantage in terms of scalability and system resilience, relevant to large and dynamic networks. The paper has been highly regarded in the academic community, leading to significant advancements in distributed computing and network systems.\n\nChord's application extends to DHTs utilized in various technologies, including distributed storage systems and content delivery networks. The paper's proposal of using consistent hashing to maintain a balanced load across nodes and offering logarithmic lookup complexity influenced further peer-to-peer network research. The introduction of self-organizing properties and fault tolerance principles also played a crucial role in the development of subsequent P2P systems.\n\nThe paper is highly cited in academic literature, with references in influential works such as \"Kademlia: A Peer-to-Peer Information System Based on the XOR Metric\" for its efficient routing mechanism [https://doi.org/10.1016/j.imavis.2006.09.002] and \"CAN: A Scalable Content-Addressable Network\" for its innovative peer-to-peer system design [https://doi.org/10.1109/TIT.2003.813536]. These citations indicate its broad impact on both theoretical research and practical applications within distributed network systems.",
+  "raw_url": "http://pdos.csail.mit.edu/papers/chord:sigcomm01/chord_sigcomm.pdf",
+  "source_type": "external",
+  "filepath": "distributed_systems/README.md",
+  "filename": "Chord: A Scalable Peer-to-peer Lookup Service for Internet Applications",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

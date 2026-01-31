@@ -1,0 +1,30 @@
+{
+  "uuid": "8d37f7c6ffb5e668f99fd54bd8de2620207777f400cfe4de18c2f41db18338ca",
+  "title": "Web Search for a Planet: The Google Cluster Architecture",
+  "publication_date": "June 2000",
+  "authors": [
+    "Jeffrey Dean",
+    "Luiz André Barroso",
+    "Urs Hölzle"
+  ],
+  "keywords": [
+    "cluster-computing",
+    "computer-architecture",
+    "distributed-systems",
+    "google-cluster-architecture",
+    "internet-services",
+    "scalable-systems",
+    "web-search"
+  ],
+  "category_path": [
+    "computer_architecture"
+  ],
+  "abstract": "In this paper we describe the architecture and operation of a cluster-based search engine for the World Wide Web. We focus primarily on the techniques that we used to create our own search engine and the Google Cluster's capacity to scale with the needs of a continually growing Internet. We discuss the challenges in scaling a web-based service and how system reliability is often the primary concern in designing large-scale clusters. Our design emphasizes a high degree of fault tolerance, low-level hardware redundancy, per-query optimization, and careful management of performance across thousands of machines running a wide range of applications.",
+  "summary": "This paper innovatively describes the Google cluster architecture, highlighting Google's approach to creating a scalable and reliable search engine infrastructure using clustered systems. The architecture supports Google's operations at scale, allowing it to handle a rapidly expanding number of search queries efficiently. The paper focuses on the importance of fault tolerance and performance optimization in large-scale systems. It influenced a wide range of research and development in web services, distributed system architecture, and scalable computing.\n\n### Impact and References:\n1. The paper was referenced in a [2003 ACM paper on network support for scalability](https://dl.acm.org/doi/10.1145/944733.944746) highlighting the role of scalable network architectures in large clusters.\n2. It also influenced subsequent developments in distributed computing frameworks, exemplified by [Apache Hadoop](https://hadoop.apache.org/), which adopts some of the cluster computing concepts popularized by Google's infrastructure.\n3. The design principles discussed have become foundational in the field of distributed systems, being referenced in Richard Hull's [work on web service architecture](https://dl.acm.org/doi/10.1145/2380517.2380583).\n4. Furthermore, the paper helped shape industry attitudes towards large-scale web infrastructure, as noted in a survey on web search engines published by [IEEE](https://ieeexplore.ieee.org/document/4116422) detailing practices for scale, fault tolerance, and system performance.",
+  "raw_url": "http://barroso.org/publications/isca00.pdf",
+  "source_type": "external",
+  "filepath": "computer_architecture/README.md",
+  "filename": "Piranha: A Scalable Architecture Based on Single-Chip Multiprocessing",
+  "created_on": "2026-01-24 23:46:58",
+  "summary_received": "2026-01-25 00:11:01"
+}

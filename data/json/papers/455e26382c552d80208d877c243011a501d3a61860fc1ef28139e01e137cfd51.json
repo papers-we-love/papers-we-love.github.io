@@ -1,0 +1,32 @@
+{
+  "uuid": "455e26382c552d80208d877c243011a501d3a61860fc1ef28139e01e137cfd51",
+  "title": "A Protocol for Scalable Anonymous Communication",
+  "publication_date": "October 2004",
+  "authors": [
+    "Matthew K. Reiter",
+    "Michael J. Freedman"
+  ],
+  "keywords": [
+    "anonymity",
+    "anonymous-communication",
+    "communication",
+    "distributed-systems",
+    "networking",
+    "privacy",
+    "protocols",
+    "scalability",
+    "scalable-protocol",
+    "security"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "This paper presents the design, analysis, and implementation of a scalable protocol for anonymous communication. Our protocol, which we refer to as the Dining Cryptographers Protocol, addresses shortcomings in prior anonymous communication systems. Specifically, our protocol achieves rigorous anonymity guarantees with high probability, constant-factor overhead, and O(log n) scaling, where n denotes the number of participants in the communication. Additionally, the protocols address the issues of combining mixes and DC-nets and reducing the total costs of communication, while providing strong anonymity properties.",
+  "summary": "The paper \"A Protocol for Scalable Anonymous Communication\" by Michael J. Freedman and Matthew K. Reiter proposes a novel protocol to facilitate anonymous communication with improved scalability and security. The protocol, known as the Dining Cryptographers Protocol, offers a solution to the deficiencies in previous systems by ensuring stronger anonymity with high probability, constant overhead, and log-based scaling. This advancement is particularly significant for network privacy and security as it addresses challenges in integrating existing systems and minimizing communication costs.\n\nUpon conducting a web search, there appear to be no direct citations or significant influences of this paper on subsequent research or industry-specific applications. It seems the work may have been more theoretical in nature and has not been commonly cited in later works. However, it contributes to the ongoing research dialogue concerning anonymous communication protocols within distributed systems by providing an alternative perspective on achieving scalability alongside anonymity.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/p5-a-protocal-for-scalable-anonymous-communication.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/p5-a-protocal-for-scalable-anonymous-communication.pdf",
+  "filename": "p5-a-protocal-for-scalable-anonymous-communication.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

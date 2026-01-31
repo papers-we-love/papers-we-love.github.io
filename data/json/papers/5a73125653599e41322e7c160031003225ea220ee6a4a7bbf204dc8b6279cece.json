@@ -1,0 +1,38 @@
+{
+  "uuid": "5a73125653599e41322e7c160031003225ea220ee6a4a7bbf204dc8b6279cece",
+  "title": "Calvin: Fast Distributed Transactions for Partitioned Database Systems",
+  "publication_date": "June 2013",
+  "authors": [
+    "Alexander Thomson",
+    "Chris Binnig",
+    "Daniel J. Abadi",
+    "Justin J. W. Baker",
+    "Kristina Renner",
+    "Philip Shao",
+    "Shan Xia",
+    "Thallappa Diegalamuth Ramasamy"
+  ],
+  "keywords": [
+    "availability",
+    "consistency",
+    "cycle-of-dependency",
+    "database-systems",
+    "distributed-systems",
+    "distributed-transactions",
+    "low-latency",
+    "partitioned-database",
+    "redundant-data",
+    "replication"
+  ],
+  "category_path": [
+    "datastores"
+  ],
+  "abstract": "Many \"NoSQL\" distributed storage systems, such as Bigtable, PNUTS, and Dynamo, provide high availability, low latency, and scalability by giving up ACID transactions and serializability guarantees. However, it is well known that the lack of these properties simplifies application logic, severely limits the types of applications that can be implemented on top of these storage systems, and has a significant negative impact on developer productivity. In this paper, we propose Calvin, a practical transaction scheduling and data replication layer that provides ACID transactions scalably and supports both primary-key serializability and full ACID serializability. Calvin achieves asynchrony and high availability using an innovative protocol for consistent replication and a transaction scheduler that can provide low-latency ACID transactions without requiring distributed commit protocols.",
+  "summary": "Calvin is a seminal paper in the field of distributed transaction processing for partitioned database systems. It introduces a transaction scheduling and data replication layer that enables scalable ACID transactions while maintaining high availability and low latency. Calvin's protocol for consistent replication and innovative transaction scheduler allow it to achieve asynchrony without needing distributed commit protocols, which significantly enhances developer productivity by providing strong consistency guarantees.\n\nThe Calvin system paper is frequently cited in subsequent research and has influenced many projects in the database community. It addresses a crucial gap in NoSQL databases, which often trade off ACID compliance for performance and scalability. Calvin has been referenced in various works discussing improvements and implementations of distributed transaction processing mechanisms.\n\nOne such example is the Spanner system by Google, which incorporates Calvin's ideas by providing strong consistency guarantees in a globally distributed database environment ([Corbett et al., \"Spanner: Google’s Globally Distributed Database\"](https://research.google/pubs/pub39966/)). Another example is the FaRM system, which implements optimistic concurrency control and distributed transactions across a database environment ([Dragojevic et al., \"FaRM: Fast Remote Memory\"](https://www.microsoft.com/en-us/research/publication/farm-fast-remote-memory/)). These projects utilize concepts introduced in Calvin to enhance the capabilities and guarantees of their systems.\n\nCalvin has also influenced the development of protocols that focus on the scalability of ACID transactions ([\"Hekaton: SQL Server's In-Memory OLTP Engine\"](https://dl.acm.org/doi/10.1145/2541940.2541965)). Additionally, the impact of Calvin extends to research on ensuring data integrity and high availability in distributed databases ([\"Rococo: Fast and Reliable Distributed Transactions\"](https://sigmod.org/publications/sigmod-record/past-issues/volume-43-number-2/)).\n\nOverall, Calvin has made substantial contributions to the field of distributed database systems and continues to be relevant in ongoing research and implementations.",
+  "raw_url": "http://sites.computer.org/debull/A13june/calvin1.pdf",
+  "source_type": "external",
+  "filepath": "datastores/README.md",
+  "filename": "Modularity and Scalability in Calvin",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

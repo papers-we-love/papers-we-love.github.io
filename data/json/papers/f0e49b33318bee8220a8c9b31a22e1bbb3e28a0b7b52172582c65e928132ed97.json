@@ -1,0 +1,31 @@
+{
+  "uuid": "f0e49b33318bee8220a8c9b31a22e1bbb3e28a0b7b52172582c65e928132ed97",
+  "title": "Swirlds: A New Operating System for the Internet",
+  "publication_date": "2016",
+  "authors": [
+    "Leemon Baird"
+  ],
+  "keywords": [
+    "asynchronous",
+    "blockchain-alternative",
+    "byzantine-agreement",
+    "cryptocurrency",
+    "distributed-consensus",
+    "distributed-database",
+    "gossip-about-gossip",
+    "hashgraph",
+    "secure-systems",
+    "virtual-voting"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "The Internet is filled with distributed databases that share the access rights to store and modify information. Each of these databases requires some form of consensus among its members. For 40 years, computer scientists have discovered faster, more secure, and more robust ways for achieving distributed consensus, culminating in Byzantine agreement. But there remains a need for more robust, secure consensus algorithms that can defend against malicious attacks, protect privacy, and do so while being much faster than is now possible. Hashgraph provides these benefits and more. It enables a distributed database to work efficiently even if its members don’t trust each other. It enables the creation of cryptocurrency without the minor inefficiencies of Bitcoin. This will lead to innovations in fair distribution systems where time ordering is important, or where guarantees of fair access are needed.",
+  "summary": "The paper titled \"Swirlds: A New Operating System for the Internet\" introduces the hashgraph consensus algorithm, proposed by Leemon Baird in 2016. Hashgraph is presented as an alternative to traditional blockchain technology, focusing on resolving issues related to speed, security, and fairness in distributed systems, specifically in environments that involve mistrust between nodes. Unlike blockchain, which depends on linear extensions of blocks, hashgraph employs virtual voting and gossip protocols, such as \"gossip about gossip,\" to reach consensus more efficiently and securely.\n\nOne of the paper's main takeaways is its ability to achieve Byzantine agreement in an asynchronous setting, which is crucial for resolving discrepancies that may arise when network latencies are unpredictable. Potential applications mentioned include fair timestamping in data distribution and enhancing the efficiency of distributed databases. The hashgraph algorithm is suggested to have significant implications for cryptocurrencies by addressing inefficiencies associated with blockchain technology.\n\nUpon examination of the paper’s influence, it has since been instrumental in the development of Hedera Hashgraph, a public distributed ledger that utilizes the hashgraph consensus for applications requiring consensus, such as financial services and supply chain management. This work contributes to the growing research on blockchain alternatives and distributed ledgers by challenging existing paradigms and introducing novel consensus methodologies.\n\nFurther references can be found in [Hedera Hashgraph documentation](https://hedera.com), indicating its adoption and practical application. Despite lacking peer-reviewed citations in mainstream academic venues, hashgraph remains a notable topic within distributed systems discussions, underscored by interest from the cryptocurrency community and distributed systems developers. \n\nOverall, Baird’s paper addresses fundamental issues in distributed consensus and influences both academic research and real-world applications, providing a base for future exploration of secure, scalable, and efficient consensus mechanisms.",
+  "raw_url": "https://swirlds.com/downloads/SWIRLDS-TR-2016-01.pdf",
+  "source_type": "external",
+  "filepath": "distributed_systems/README.md",
+  "filename": "Hashgraph Consensus: Fair, Fast, Byzantine Fault Tolerance",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

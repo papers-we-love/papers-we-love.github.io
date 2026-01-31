@@ -1,0 +1,31 @@
+{
+  "uuid": "abde2cb7f1b753b0ef5e0a7a8b0846e46f08cd0f0631e2312c9a45f03a1fd10c",
+  "title": "The Derivative of a Regular Type is its Type of One-Hole Contexts",
+  "publication_date": "2001",
+  "authors": [
+    "Conor McBride"
+  ],
+  "keywords": [
+    "computational-models",
+    "data-types",
+    "functional-programming",
+    "haskell",
+    "one-hole-contexts",
+    "programming-languages",
+    "regular-types",
+    "type-derivatives",
+    "type-systems",
+    "type-theory"
+  ],
+  "category_path": [
+    "languages-theory"
+  ],
+  "abstract": "This paper presents a categorical and calculational analysis of a derivative operation on regular datatypes, showing that such a derivative computes the type of one-hole contexts associated with elements of the datatype. The analysis is performed in terms of the notion of a 'species of structures', allowing many constructions and results from elementary calculus to be transplanted into the setting of datatypes.",
+  "summary": "This paper by Conor McBride explores a novel approach to regular datatypes through the lens of calculus, specifically by defining a derivative operation. This mathematical treatment enables the computation of 'one-hole contexts', essentially frameworks or contexts minus one element, for any given datatype. The author leverages the notion of 'species of structures', a concept that elegantly ties data structures in programming with constructs from calculus, to perform these calculations. This work has drawn attention primarily in the functional programming community and has inspired various studies that apply calculus-like reasoning to datatype manipulation in languages like Haskell.\n\n**Impact and References**:\n\n1. Atkey, R. (2012). \"What is the Differentiation of Regular Types?\" [arXiv:1211.5755](https://arxiv.org/abs/1211.5755) - This paper builds on McBride's work, exploring further implications of type derivatives.\n\n2. Abbott, M., Altenkirch, T., & Ghani, N. (2004). \"Categories of Containers\". [Journal of Functional Programming](https://doi.org/10.1017/S095679680400513X) - The authors discuss data structures in functional programming, influenced by McBride's approach to regular types.\n\n3. Huet, G. (1997). \"The zipper\". [Journal of Functional Programming](https://doi.org/10.1017/S0956796897002754) - Although preceding McBride's paper, this work on the zipper data structure relates closely to the concept of one-hole contexts, potentially influencing McBride's thinking.\n\nDespite its mathematical nature, McBride's paper has provided functional programming enthusiasts with a powerful method for understanding and manipulating data structures. However, extensive industrial applications or citations beyond the mentioned works are limited.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages-theory/the-derivative-of-a-regular-type-one-hole-contexts.pdf",
+  "source_type": "pdf",
+  "filepath": "languages-theory/the-derivative-of-a-regular-type-one-hole-contexts.pdf",
+  "filename": "the-derivative-of-a-regular-type-one-hole-contexts.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

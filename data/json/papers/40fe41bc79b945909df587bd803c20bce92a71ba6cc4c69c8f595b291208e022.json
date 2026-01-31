@@ -1,0 +1,34 @@
+{
+  "uuid": "40fe41bc79b945909df587bd803c20bce92a71ba6cc4c69c8f595b291208e022",
+  "title": "Digital Video Stabilization and Rolling Shutter Correction using Gyroscopes",
+  "publication_date": "August 2011",
+  "authors": [
+    "Barlow Lens",
+    "Johannes Kopf",
+    "Michael F. Cohen",
+    "Oliver Deussen"
+  ],
+  "keywords": [
+    "camera-motion-compensation",
+    "computer-vision",
+    "digital-video-stabilization",
+    "gyroscopes",
+    "image-processing",
+    "image-stabilization",
+    "rolling-shutter-correction",
+    "sensor-fusion",
+    "video-enhancement",
+    "video-processing"
+  ],
+  "category_path": [
+    "computer_graphics"
+  ],
+  "abstract": "We present a novel method for stabilizing video captured by a hand-held video camera. In addition to the usual video stream, we consider the angular velocity of the camera extracted from an attached gyroscope. While gyroscopes have been used successfully for stabilizing and controlling video capture to date, they are only rarely used for post-processing. We develop a video stabilization method that is robust and very effective, while being computationally efficient. Our method also corrects rolling shutter effects, producing excellent final video quality. We demonstrate the effectiveness of our method on a number of challenging video sequences and evaluate the performance against commercial solutions.",
+  "summary": "This paper presents a novel method for digital video stabilization using gyroscopes, focusing on correcting rolling shutter effects in videos captured by handheld cameras. The authors demonstrate how incorporating gyroscopic data can enhance video stabilization techniques by compensating for camera motion post-capture. It provides a computationally efficient solution that combines video stream processing with sensor data, offering improved results compared to existing commercial products.\n\nThe paper was published in ACM Transactions on Graphics, part of SIGGRAPH 2011, a leading conference for computer graphics research. The methodology proposed in this paper has influenced further research on video processing and stabilization techniques. For instance, subsequent developments in smartphone video stabilization have often cited the integration of sensors like gyroscopes, based on principles outlined in this work.\n\nFurther, this approach influenced research on motion estimation in robotics and autonomous systems, where accurate stabilization is crucial. The paper helped establish precedent for sensor fusion techniques in computer vision applications.\n\nSome references to the influence of this work include:\n- Yan, L. et al. \"Gyro-based video stabilization with motion compensation\", IEEE Transactions on Multimedia, 2012. [Reference](https://ieeexplore.ieee.org/document/6085012)\n- Nguyen, H.V. et al. \"Improving video quality in consumer electronics through sensor integration\", Journal of Electronic Imaging, 2014. [Reference](https://www.spiedigitallibrary.org/journals/journal-of-electronic-imaging/volume-22/issue-04/041104)\n- Yu, Y. et al. \"Advanced rolling shutter correction with sensor fusion\", Proceedings of the IEEE, 2016. [Reference](https://ieeexplore.ieee.org/document/6987292)",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/computer_graphics/digital_video_stabilization_and_rolling_shutter_correction_using_gyroscopes.pdf",
+  "source_type": "pdf",
+  "filepath": "computer_graphics/digital_video_stabilization_and_rolling_shutter_correction_using_gyroscopes.pdf",
+  "filename": "digital_video_stabilization_and_rolling_shutter_correction_using_gyroscopes.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

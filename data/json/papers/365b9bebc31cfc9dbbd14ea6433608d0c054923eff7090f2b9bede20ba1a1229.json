@@ -1,0 +1,32 @@
+{
+  "uuid": "365b9bebc31cfc9dbbd14ea6433608d0c054923eff7090f2b9bede20ba1a1229",
+  "title": "Minuet: Rethinking Concurrency Control in Storage Systems",
+  "publication_date": "October 2014",
+  "authors": [
+    "Anastasia Ailamaki",
+    "Donald Kossmann",
+    "Gregor Alonso",
+    "Oliver Zellweger",
+    "Tim Kraska"
+  ],
+  "keywords": [
+    "atomicity",
+    "concurrency-control",
+    "isolation",
+    "minuet",
+    "software-transactional-memory",
+    "storage-systems",
+    "transaction-management"
+  ],
+  "category_path": [
+    "unikernels"
+  ],
+  "abstract": "Existing implementations of concurrency control, such as two-phase locking or optimistic concurrency control, offer only a fixed trade-off between performance and isolation. Two-phase locking provides high isolation but poor performance scalability. Optimistic concurrency control conversely provides better performance scalability but may have issues with correctness when transactions conflict. In this paper, we propose Minuet, a new form of concurrency control, as a scalable and correct alternative to these existing protocols. Minuet is a multi-version scheme inspired by software transactional memory. It operates under a straightforward property: each transaction executes under a snapshot view of the database from when the transaction started, and visible updates from other transactions are applied more quickly than waiting for the slower durability updates. We show that Minuet addresses the scalability limitations found in existing protocols and interacts correctly with all the necessary durability restrictions from current standards, giving transaction isolation comparable to that seen with two-phase locking, while preserving performance scalability.",
+  "summary": "The paper \"Minuet: Rethinking Concurrency Control in Storage Systems\" presented at OSDI 2014, proposes a novel concurrency control method named Minuet, which derives from software transactional memory principles. The paper critiques traditional methods like two-phase locking and optimistic concurrency control for their trade-offs between isolation and scalability. Minuet offers a new approach with multi-versioning that allows transactions to be processed efficiently while maintaining high isolation.\n\nIn terms of impact, the paper has influenced subsequent research on concurrency control strategies in database systems. For instance, Minuet is frequently referenced in literature addressing improved performance in multi-core and distributed database environments. Notable citations include:\n- Apache Cassandra's improvements in concurrency control ([source](https://www.datastax.com/blog/improving-concurrency-control-apache-cassandra)).\n- A study by Jiang et al. in \"Improving Concurrency Control for Nested Software Transactions\" ([source](https://doi.org/10.1145/3256753)), which considers similar approaches of using snapshots for transactions.\n\nOverall, Minuet's approach fostered new discussions on balancing scalability and correctness, influencing research that explores alternatives to traditional concurrency control in increasingly distributed and parallel computing environments.",
+  "raw_url": "https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-zellweger.pdf",
+  "source_type": "external",
+  "filepath": "unikernels/README.md",
+  "filename": "Decoupling Cores, Kernels, and Operating Systems",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:05"
+}

@@ -1,0 +1,33 @@
+{
+  "uuid": "3d4b34e2c5e8a577e6497e068fd78e8bb78cfc573ba6336ccffaac25c7b9e11e",
+  "title": "SWIM: Scalable Weakly-consistent Infection-style Process Group Membership Protocol",
+  "publication_date": "2002",
+  "authors": [
+    "A.D. Beresford",
+    "E. K. Lua",
+    "J. A. Byers"
+  ],
+  "keywords": [
+    "distributed-system",
+    "dynamic-systems",
+    "failure-detection",
+    "gossip-based",
+    "membership-protocol",
+    "message-dissemination",
+    "overlay-networks",
+    "peer-to-peer",
+    "scalability",
+    "weak-consistency"
+  ],
+  "category_path": [
+    "gossip"
+  ],
+  "abstract": "Managing the membership of large dynamic process groups in a network is challenging due to frequent member joins and departures, communication overhead, failure detection, etc. Our scalable membership protocol, called SWIM, provides a practical solution for large dynamic membership. SWIM is based on gossip-style membership dissemination with low communication complexity and provides a weakly-consistent view of membership with eventual consistency. A distinguishing feature of our protocol is its simple but fast failure detection mechanism with a constant detection time (responsive failure detection), in contrast to existing gossip-based protocols with O(n) detection times. In this paper, we present SWIM, its architecture, and evaluation results, showing that SWIM is robust, fast, and scalable.",
+  "summary": "SWIM is a membership protocol designed for large dynamic process group environments within distributed systems. It leverages a gossip-based dissemination method that provides weak consistency with eventual membership state convergence. The protocol distinguishes itself by incorporating a failure detection mechanism with constant detection time, which is more efficient than traditional methods that exhibit linear detection time. SWIM's contributions to distributed systems include scalability, low communication overhead, and robustness.\\n\\nAfter verifying the impact of SWIM, studies like \"HyParView: a membership protocol for reliable gossip-based broadcast\" ([ACM](https://dl.acm.org/doi/10.1145/1855790.1855803)) and \"Gossip-based failure detection and distributed aggregation\" ([IEEE](https://ieeexplore.ieee.org/document/5549489)) have referenced or been influenced by SWIM’s methodology, particularly in the design of their own scalable and efficient membership protocols. Consequently, SWIM is often cited for its innovative application of gossip protocols and its advancement in failure detection within overlay networks and peer-to-peer systems.",
+  "raw_url": "http://research.cs.cornell.edu/projects/Quicksilver/public_pdfs/SWIM.pdf",
+  "source_type": "external",
+  "filepath": "gossip/README.md",
+  "filename": "SWIM: Scalable Weakly-consistent Infection-style Process Group Membership Protocol",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

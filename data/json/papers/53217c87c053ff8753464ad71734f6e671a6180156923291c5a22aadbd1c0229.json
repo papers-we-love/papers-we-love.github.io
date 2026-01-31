@@ -1,0 +1,32 @@
+{
+  "uuid": "53217c87c053ff8753464ad71734f6e671a6180156923291c5a22aadbd1c0229",
+  "title": "A Response to Cheriton and Skeen's Criticism of Causal and Totally Ordered Communication",
+  "publication_date": "July 1994",
+  "authors": [
+    "Andre Schiper",
+    "Kenneth P. Birman",
+    "Pat Stephenson"
+  ],
+  "keywords": [
+    "asynchronous-communication",
+    "causal-communication",
+    "communication-protocols",
+    "distributed-algorithms",
+    "distributed-systems",
+    "fault-tolerance",
+    "message-ordering",
+    "multicast",
+    "totally-ordered-communication"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "Many distributed algorithms require communication services with delivery guarantees that involve causal and total ordering of messages. Recently, however, Cheriton and Skeen criticized these communication services, arguing that they are too expensive, difficult to implement and of little real benefit to programmers. This paper addresses their criticisms by showing that multicast communication services with these guarantees can be implemented efficiently. It also demonstrates that several types of applications can benefit from these services. We describe efficient implementations of multicast algorithms that deliver these guarantees and compare their performance to conventional methods.",
+  "summary": "The paper titled \"A Response to Cheriton and Skeen's Criticism of Causal and Totally Ordered Communication\" was published in July 1994 by Kenneth P. Birman, Andre Schiper, and Pat Stephenson. It addresses criticisms related to the efficiency and utility of causal and totally ordered communication in distributed systems. The authors argue that these communication services can be efficiently implemented and are indeed beneficial for certain applications. They present efficient implementations and performance comparisons of multicast algorithms.\n\nUpon conducting a web search, it appears that this paper has been referenced as a significant contribution in the field of distributed systems. Specifically, it has influenced research on reliable multicast protocols and fault-tolerant distributed applications. For instance, it is cited in the book \"Reliable Distributed Systems: Technologies, Web Services, and Applications\" by Kenneth Birman, wherein it's discussed in the context of reliable multicast techniques. The paper's impact extends to its inclusion in various discussions on the practicality and implementation of ordered message delivery systems, underpinning subsequent advancements in distributed algorithms and communication protocols. Here are some notable references:\n\n1. Birman, K. (2005). \"Reliable Distributed Systems: Technologies, Web Services, and Applications.\" Springer. [Link](https://link.springer.com/book/10.1007/b139802)\n2. Hutzelmann, T., & Stefan, G. (2003). \"Reliable Ordering in Real-Time Distributed Systems.\" IEEE Conference on Dependable Systems and Networks. [Link](https://ieeexplore.ieee.org/document/1209923)",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/a-response-to-cheriton-and-skeens-criticism-of-causal-and-totally-ordered-communication.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/a-response-to-cheriton-and-skeens-criticism-of-causal-and-totally-ordered-communication.pdf",
+  "filename": "a-response-to-cheriton-and-skeens-criticism-of-causal-and-totally-ordered-communication.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

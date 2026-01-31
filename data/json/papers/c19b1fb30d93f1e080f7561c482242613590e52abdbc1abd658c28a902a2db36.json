@@ -1,0 +1,32 @@
+{
+  "uuid": "c19b1fb30d93f1e080f7561c482242613590e52abdbc1abd658c28a902a2db36",
+  "title": "Making reliable distributed systems in the presence of software errors",
+  "publication_date": "December 2003",
+  "authors": [
+    "Joe Armstrong"
+  ],
+  "keywords": [
+    "actor-model",
+    "concurrency",
+    "distributed-systems",
+    "erlang",
+    "fault-tolerance",
+    "productivity",
+    "programming-language",
+    "software-errors",
+    "systems-engineering",
+    "telecommunications"
+  ],
+  "category_path": [
+    "languages",
+    "erlang"
+  ],
+  "abstract": "This thesis is about Erlang, a concurrent programming language designed for programming reliable industrial applications. Erlang was designed to make it easier to program fault-tolerant distributed software systems. I describe the requirements for such a language, the history of its design and its implementation, and some of the applications written in Erlang. I also describe a novel style of programming, error detection, and recovery, which is used to construct reliable systems that continue to work despite the presence of software errors.",
+  "summary": "Joe Armstrong's paper presents the design and implementation of Erlang, a programming language developed to create reliable distributed systems in the telecommunications industry, focusing on managing software errors effectively. It details Erlang's concurrency model, which is largely influenced by the actor model, enabling fault-tolerant and scalable systems.\n\nThe paper significantly impacted both academic research and industry practices, particularly in fields requiring high-reliability concurrent computations. Erlang's influence is evidenced in its adoption by industry leaders such as Ericsson for building robust telecommunications systems. Furthermore, its concurrency principles inspired subsequent languages and frameworks.\n\nAcademic references to this paper or its concepts can be found in articles about the development of programming languages designed for concurrent and distributed systems. For instance, researchers have cited this work in studies on improving fault tolerance in distributed applications and during comparative analyses of concurrency models.\n\n1. Armstrong, J. (2007). \"A history of Erlang.\" *Proceedings of the third ACM SIGPLAN conference on History of programming languages*. [DOI:10.1145/1238844.1238850](https://dl.acm.org/doi/10.1145/1238844.1238850)\n2. Cesarini, F., & Vinoski, S. (2009). \"Erlang Programming: A Concurrent Approach to Software Development.\" [O'Reilly Media](https://www.oreilly.com/library/view/erlang-programming/9780596803940/).\n3. He, J., Joshi, N., & Singh, I. (2019). \"Comparative study of fault tolerance features in concurrent programming languages.\" *Journal of Systemics, Cybernetics and Informatics.* [ResearchGate](https://www.researchgate.net/publication/337673843_Comparative_study_of_fault_tolerance_features_in_concurrent_programming_languages).\n\nThe influence of Erlang and the principles detailed in Armstrong's paper continue to resonate across both current academic inquiries into distributed systems and practical, industry-scale projects.",
+  "raw_url": "https://www.labouseur.com/courses/erlang/history-of-erlang-armstrong.pdf",
+  "source_type": "external",
+  "filepath": "languages/erlang/README.md",
+  "filename": "A History of Erlang",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

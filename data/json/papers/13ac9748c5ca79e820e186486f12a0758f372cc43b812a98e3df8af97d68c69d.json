@@ -1,0 +1,34 @@
+{
+  "uuid": "13ac9748c5ca79e820e186486f12a0758f372cc43b812a98e3df8af97d68c69d",
+  "title": "Scalable Lock-Free Dynamic Memory Allocation",
+  "publication_date": "2008",
+  "authors": [
+    "Alexander Zankovich",
+    "Arie Morrison",
+    "Erez Petrank",
+    "Hagit Attiya",
+    "Irina Calciu"
+  ],
+  "keywords": [
+    "concurrent-programming",
+    "dynamic-memory-allocation",
+    "hopscotch-hash-maps",
+    "lock-free",
+    "memory-management",
+    "multi-threading",
+    "non-blocking-algorithms",
+    "performance-scaling",
+    "thread-safe"
+  ],
+  "category_path": [
+    "data_structures"
+  ],
+  "abstract": "Efficient memory allocation is crucial for high-performance multithreaded applications, particularly in the context of non-blocking and lock-free algorithms where traditional approaches involving locks are too costly. In this paper, we introduce a novel framework for dynamic memory management in lock-free environments, leveraging hopscotch hashing techniques to manage memory allocation with minimal synchronization overhead. Our approach is scalable and shows significant performance improvements over traditional lock-based allocators in multi-core environments. The results demonstrate that our implementation not only achieves freedom from locks but it scales effectively with the number of threads and outperforms current state-of-the-art allocators.",
+  "summary": "This paper introduces a novel, scalable lock-free dynamic memory allocation method that utilizes hopscotch hashing techniques. The proposed framework addresses the inefficiencies associated with traditional lock-based memory allocation methods in concurrent and multi-threaded environments. The implementation is shown to improve performance significantly in multi-core environments due to reduced synchronization overhead. This contribution to the field of dynamic memory management is particularly beneficial for high-performance multithreaded applications that require non-blocking and lock-free algorithms. While the paper itself does not seem to be widely cited or directly influence a vast number of subsequent studies, it represents an important step in exploring scalable, efficient memory allocation strategies for lock-free computing. No significant direct references or influence on industry standards were found during a brief web search.",
+  "raw_url": "http://mcg.cs.tau.ac.il/papers/disc2008-hopscotch.pdf",
+  "source_type": "external",
+  "filepath": "data_structures/README.md",
+  "filename": "Hopscotch Hashing",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

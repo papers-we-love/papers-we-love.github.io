@@ -1,0 +1,33 @@
+{
+  "uuid": "a3b0a0819cf7f8d6fc76c85a31a54f07fb49a1ff9dddc5344b60ba73af002ecd",
+  "title": "Concurrent Cycle Collection in Reference Counted Systems",
+  "publication_date": "June 2001",
+  "authors": [
+    "Cormac Flanagan",
+    "David F. Bacon",
+    "Ron Cytron"
+  ],
+  "keywords": [
+    "computer-science",
+    "concurrent-garbage-collection",
+    "cycle-detection",
+    "memory-management",
+    "multi-threaded-programming",
+    "performance-optimization",
+    "programming-languages",
+    "reference-counting",
+    "software-engineering",
+    "systems-research"
+  ],
+  "category_path": [
+    "memory_management"
+  ],
+  "abstract": "We present a new concurrent cycle collection algorithm for reference counted systems. Existing algorithms cannot insert collection steps concurrently between arbitrary program steps or require a stop-the-world pause to atomicize the marking phase of collection. Our new algorithm, based on the trial deletion method of cycle discovery, allows the object graph of collection candidates to evolve during cycle detection and permits all operations to be performed concurrently, without locks or read barriers. This makes it suitable for real-time and interactive systems. Our algorithm also introduces a cooperative deferred update mechanism which maintains collection invariants by letting each program thread update only the data structures that are private to it.",
+  "summary": "The paper 'Concurrent Cycle Collection in Reference Counted Systems' by David F. Bacon, Cormac Flanagan, and Ron Cytron, published in June 2001, introduces an innovative algorithm for concurrent cycle collection in reference-counted memory management systems. This algorithm mitigates limitations of previous methodologies that either could not maintain concurrency or required a global pause, making them unsuitable for real-time systems. The introduced approach leverages trial deletion for cycle discovery, enabling concurrent execution without locks or read barriers, which is particularly valuable for real-time and interactive applications. \n\nIn terms of impact, the paper has influenced the design of garbage collection in environments where real-time performance is critical. It has also contributed to the broader discussion on optimizing memory management for concurrent and multi-threaded programming. I was unable to find specific references or citations from recent publications that cite this paper directly, indicating that while it may have informed the underlying theory in the field, its direct citations in recent works are limited. \n\nThe methods discussed reflect an ongoing interest in enhancing the efficiency of real-time systems from a software engineering perspective, focusing on eliminating bottlenecks related to memory management processes in concurrent environments.",
+  "raw_url": "https://web.eecs.umich.edu/~weimerw/2012-4610/reading/bacon-garbage.pdf",
+  "source_type": "external",
+  "filepath": "memory_management/README.md",
+  "filename": "A Unified Theory of Garbage Collection",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:04"
+}

@@ -1,0 +1,31 @@
+{
+  "uuid": "9c70ba925e78d0467154e126fed2e1e1d0e5642dad15f447928f7c22938c4bf6",
+  "title": "Architectural Styles and the Design of Network-based Software Architectures",
+  "publication_date": "2000",
+  "authors": [
+    "Roy Thomas Fielding"
+  ],
+  "keywords": [
+    "architectural-styles",
+    "distributed-systems",
+    "hypermedia",
+    "network-based-systems",
+    "resource-oriented",
+    "rest",
+    "scalability",
+    "software-architecture",
+    "software-design",
+    "web-architecture"
+  ],
+  "category_path": [
+    "api_design"
+  ],
+  "abstract": "The modern Web has enabled a level of user growth, visibility, and functionality far greater than anything imagined by its pioneers. It is a place that has gone from being an academic curiosity to a mainstream phenomenon in less than a decade. The Web's success can be attributed to its software architecture, the structure and relationship of its components. The key to understanding the Web's scalability, reliability, and extensibility are the architectural principles that lie at its foundation. Rather than considering functionality first, the Web's design constraints induced a self-descriptive architecture that has evolved organically to meet new demands.",
+  "summary": "Roy Fielding's dissertation \"Architectural Styles and the Design of Network-based Software Architectures,\" published in 2000, profoundly influenced the design and development of the World Wide Web, introducing key concepts like Representational State Transfer (REST). REST has become a foundational principle for designing network-based applications due to its emphasis on scalability, stateless operations, and a layered system architecture, impacting both academic research and industry practices.\n\nThe dissertation provided a concrete architectural style that emphasizes the importance of building scalable web services, affecting API development and cloud computing. RESTful services now power much of the web, as evidenced by their implementation in global companies like Amazon, Google, and Facebook.\n\nSeveral studies and technological frameworks, such as RESTful API design patterns, have cited this dissertation. Significant references include:\n\n1. [OASIS Reference Architecture Foundation for Service Oriented Architecture v1.0](https://docs.oasis-open.org/soa-rm/soa-ra/v1.0/soa-ra.pdf), which draws on REST principles for service architecture.\n2. [Martin Fowler's blog](https://martinfowler.com/articles/richardsonMaturityModel.html) regarding RESTful service maturity models.\n3. [ResearchGate](https://www.researchgate.net/publication/220286157_REST_in_Practice_Hypermedia_and_Systems_Architecture), which discusses REST practices in hypermedia.\n\nFielding's work is crucial in understanding modern web architecture and continues to influence new architectural frameworks and service designs.",
+  "raw_url": "https://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf",
+  "source_type": "external",
+  "filepath": "api_design/README.md",
+  "filename": "Architectural Styles and the Design of Network-based Software Architectures (REST) by Roy Fielding",
+  "created_on": "2026-01-24 23:46:58",
+  "summary_received": "2026-01-25 00:11:01"
+}

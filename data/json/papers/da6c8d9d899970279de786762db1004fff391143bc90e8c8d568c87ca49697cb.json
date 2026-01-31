@@ -1,0 +1,33 @@
+{
+  "uuid": "da6c8d9d899970279de786762db1004fff391143bc90e8c8d568c87ca49697cb",
+  "title": "Microreboot – A Technique for Cheap Recovery",
+  "publication_date": "2003",
+  "authors": [
+    "Armando Fox",
+    "George Candea",
+    "James Cutler"
+  ],
+  "keywords": [
+    "component-based-systems",
+    "crash-only",
+    "fault-tolerance",
+    "high-availability",
+    "microreboot",
+    "reliability-engineering",
+    "service-availability",
+    "software-architecture",
+    "software-reboot",
+    "system-recovery"
+  ],
+  "category_path": [
+    "crash_only"
+  ],
+  "abstract": "System recovery has traditionally been expensive: approximate recovery downtime is in hours and requires a large number of recovery personnel. This paper introduces the notion of microreboots, which are fine-grain partial reboots of components, allowing for near-zero recovery with minimal expense. We argue that while microreboots will not solve all recovery problems, they can form a practical and cheap step usable as part of crash-only software architectures to significantly improve availability and reduce maintenance costs.",
+  "summary": "The paper \"Microreboot – A Technique for Cheap Recovery\" introduces a novel concept known as microreboot, aimed at minimizing system recovery times and costs. Traditional system recovery can be time-consuming and resource-intensive. Microreboots involve the selective restarting of smaller system components, which allows for faster recovery with minimal impact on system availability. This technique is proposed within the framework of 'crash-only' software architectures, which are designed to handle crashes gracefully by rebooting quickly and efficiently rather than attempting complex recovery procedures.\n\nMicroreboots leverage the modularity and compartmentalization of modern software systems to isolate faults to specific components, thereby avoiding the need to reboot entire systems. The approach promises to enhance high-availability systems by reducing downtime and maintenance effort, which is particularly relevant for critical applications that demand near-continuous uptime.\n\nUpon conducting a web search, it is found that this paper influenced further research in the domain of system reliability and fault tolerance. For example, the concept of microreboot was cited as an innovative approach that inspired alternative system recovery methods and fault-tolerant architectures. See [this citation](https://cseweb.ucsd.edu/~gmporter/classes/fa14/cse291-b/papers/candea-microreboot-03.pdf) and [another study](https://dl.acm.org/doi/10.1145/965938.963783), which further explores component-based microreboots and their impact on system dependability.\n\nThe paper has not only provided an effective technique for improving system recovery but has also laid groundwork for future explorations in constructing resilient software systems. It is often referenced in discussions about improving service availability and reducing service disruptions in cloud computing and large-scale distributed systems.",
+  "raw_url": "https://www.usenix.org/legacy/events/hotos03/tech/full_papers/candea/candea.pdf",
+  "source_type": "external",
+  "filepath": "crash_only/README.md",
+  "filename": "Crash-Only Software",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

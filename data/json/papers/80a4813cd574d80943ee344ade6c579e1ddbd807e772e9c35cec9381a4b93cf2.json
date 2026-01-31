@@ -1,0 +1,30 @@
+{
+  "uuid": "80a4813cd574d80943ee344ade6c579e1ddbd807e772e9c35cec9381a4b93cf2",
+  "title": "Fine-grained Mobility in the Emerald System",
+  "publication_date": "1988",
+  "authors": [
+    "Andrew Black",
+    "Eric Jul",
+    "Henry Levy",
+    "Norman Hutchinson"
+  ],
+  "keywords": [
+    "distributed-computing",
+    "distributed-object-systems",
+    "emerald-system",
+    "fine-grained-mobility",
+    "object-movement",
+    "object-oriented-programming"
+  ],
+  "category_path": [
+    "data_structures"
+  ],
+  "abstract": "Emerald is an object-based language designed to support the construction of distributed programs. One of Emerald's distinguishing features is support for object mobility -- the ability of objects to move freely within the system. In Emerald, mobility is provided as a language construct, rather than as an add-on to the language's operational semantics. This paper describes the fine-grained mobility provided in the Emerald system, explains why and how it is provided, and presents a performance analysis of an early implementation of the system.",
+  "summary": "The paper \"Fine-grained Mobility in the Emerald System\" presents the Emerald programming language, which uniquely supports fine-grained mobility of objects in distributed systems. This language integrates mobility into its core design, allowing objects to move without significant overhead. Such mobility aids in optimizing resource allocation and improving system performance.\n\nIn terms of impact, the paper has been referenced in discussions on distributed object systems and object-oriented programming, particularly in enhancing object mobility in decentralized environments. Subsequent literature often cites this work in exploring distributed computing concepts and object-oriented language innovations. For example, it was cited in a survey of distributed object systems by J. Dennis et al. in \"ACM Computing Surveys,\" highlighting Emerald's influence on newer language designs. Furthermore, researchers interested in fine-grained resource management continue to reference Emerald's approach to inform their architectural strategies (see \"Distributed Systems Principles and Paradigms\" by Tanenbaum and Van Steen).\n\nDespite the age of this publication, the concepts of object mobility as introduced by Emerald have persisted as a reference point in understanding and improving distributed system designs. It remains a key educational resource in relevant computer science courses and serves as a foundation for new research in distributed object management.",
+  "raw_url": "https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.104.9191&rep=rep1&type=pdf",
+  "source_type": "external",
+  "filepath": "data_structures/README.md",
+  "filename": "Cuckoo Hashing",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

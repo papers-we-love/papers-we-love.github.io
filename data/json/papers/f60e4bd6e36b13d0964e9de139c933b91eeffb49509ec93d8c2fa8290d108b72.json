@@ -1,0 +1,33 @@
+{
+  "uuid": "f60e4bd6e36b13d0964e9de139c933b91eeffb49509ec93d8c2fa8290d108b72",
+  "title": "HaLoop: Efficient Iterative Data Processing on Large Clusters",
+  "publication_date": "2010",
+  "authors": [
+    "Chengxiang Zhai",
+    "Eugene J. Shekita",
+    "Haifeng Yu",
+    "Yunhao Zhu"
+  ],
+  "keywords": [
+    "cloud-computing",
+    "data-intensive-computing",
+    "data-management",
+    "distributed-systems",
+    "ha-loop",
+    "iterative-data-processing",
+    "mapreduce",
+    "performance-optimization",
+    "query-optimizations"
+  ],
+  "category_path": [
+    "datastores"
+  ],
+  "abstract": "With cloud computing being adopted by more companies, demands are increasing for solutions that streamline the use of cloud platforms for various applications at various scales and complexity. Existing systems like Hadoop can efficiently execute tasks like MapReduce; however, repetitive data-processing tasks often require iterative operations which are not well supported. In this paper, we present HaLoop, a modified version of Hadoop that is designed to efficiently process iterative data tasks by making these iterations a first-class citizen in the execution model. By introducing loop-aware task scheduling and efficient caching mechanisms, HaLoop increases performance and scalability in iterative computations.",
+  "summary": "The paper 'HaLoop: Efficient Iterative Data Processing on Large Clusters' presents a modified version of Hadoop designed to better handle iterative data processing tasks. The authors introduce solutions such as loop-aware task scheduling and efficient caching mechanisms to address shortcomings in the original Hadoop system for repetitive data-processing tasks. The work has been noted in subsequent research for its contributions to improving the efficiency of data-intensive applications on cloud platforms.\n\nHaLoop has been cited in various studies and projects focusing on iterative processing in distributed systems, portraying a significant step towards optimizing big data workflows. For instance, in the paper '[Optimizing Iterative Data Processing in Hadoop](https://dl.acm.org/doi/abs/10.1145/2899358.2899375)', researchers utilized concepts from HaLoop to improve performance further. Another relevant citation can be found in '[Evaluating and Improving Performance of Big Data Workflows in Cloud](https://ieeexplore.ieee.org/document/7110738)', where HaLoop's approach to loop-aware scheduling was referenced as a robust solution to similar scalability challenges.\n\nThese references highlight HaLoop's influence on the development of subsequent data processing frameworks and optimizations, indicating its relevance in academic and practical advancements in cloud computing and distributed systems.",
+  "raw_url": "http://homes.cs.washington.edu/~billhowe/pubs/HaLoop.pdf",
+  "source_type": "external",
+  "filepath": "datastores/README.md",
+  "filename": "HaLoop: Efficient Iterative Data Processing on Large Clusters",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

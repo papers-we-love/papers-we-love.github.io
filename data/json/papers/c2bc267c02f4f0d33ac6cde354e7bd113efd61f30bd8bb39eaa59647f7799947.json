@@ -1,0 +1,33 @@
+{
+  "uuid": "c2bc267c02f4f0d33ac6cde354e7bd113efd61f30bd8bb39eaa59647f7799947",
+  "title": "Predicate Dispatching: A Unified Theory of Dispatch",
+  "publication_date": "1998",
+  "authors": [
+    "Craig Chambers",
+    "Craig Kaplan",
+    "Michael Ernst"
+  ],
+  "keywords": [
+    "inheritance",
+    "language-design",
+    "methods",
+    "multimethods",
+    "object-oriented",
+    "polymorphism",
+    "predicate-dispatch",
+    "programming",
+    "type-systems",
+    "unification"
+  ],
+  "category_path": [
+    "languages-theory"
+  ],
+  "abstract": "Our work unifies the multiple dispatching capabilities of Cecil and Dylan with the filtering of pattern matching, and provides the semantic framework that several languages, including Java, C++, and Ada, have identified as important to incorporating the benefits of multimethods without their difficulties. Predicate dispatching allows the predicates associated with each method to define that method’s applicability and precedences statically, thereby ensuring that completeness or ambiguity errors are reported at compile time. A uniform mechanism for specifying messages is augmented to permit user-defined relationships, which the system analyzes in order to produce the effective method created by the dispatch. The key to this analysis is a novel decomposition of the predicates into a set of constraints that can be verified independently. Our semantic model supports multiple inheritance of implementation and interfaces and integration with existing static type systems.",
+  "summary": "The paper \"Predicate Dispatching: A Unified Theory of Dispatch\" by Michael Ernst, Craig Kaplan, and Craig Chambers (1998) explores the concept of predicate dispatching as a unification of multimethods and pattern matching in programming languages. This work builds upon the features of other languages like Cecil and Dylan while addressing the potential challenges faced by languages such as Java, C++, and Ada in incorporating such systems.\n\nPredicate dispatching is significant because it facilitates the determination of method applicability and precedence at compile-time, reducing potential runtime errors related to completeness or ambiguity. This concept also supports multiple inheritance of implementations and integration with static type systems, making it relevant for modern object-oriented programming paradigms.\n\nWhile this paper primarily introduces a theoretical framework for predicate dispatch, its impact has mostly been within the academic community. Limited references in further research indicate a niche interest in advanced dispatch techniques, often tied to reflective or meta-level programming. For instance, in the book \"Object-Oriented Programming Languages: Interpretation\" by Iain D. Craig, the concept is discussed in the context of advanced dispatch mechanisms.\n\nAs of the time of writing, predicate dispatch has not been widely adopted in mainstream programming languages, perhaps due to the complexity involved in its implementation and integration with existing language features. The paper remains a crucial theoretical contribution for researchers interested in programming language design and dispatch strategies. Further information can be found by examining works that reference this paper or those that discuss language design, such as:\n\n1. Craig Chambers et al., \"The Cecil Language: Specification and Rationale,\" which explores some advancements in language specifications related to dispatch.\n\nOverall, the paper establishes foundational concepts for future language design discussions but lacks significant direct influence on industry-standard language implementations.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages-theory/predicate-dispatching.pdf",
+  "source_type": "pdf",
+  "filepath": "languages-theory/predicate-dispatching.pdf",
+  "filename": "predicate-dispatching.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

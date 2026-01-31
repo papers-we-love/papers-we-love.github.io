@@ -1,0 +1,35 @@
+{
+  "uuid": "00e57fc0f25a44c2764f2866d7e141f196d382ec48cd7da83de20634cbea17a3",
+  "title": "Experience with the CORAL Data Management System",
+  "publication_date": "2005",
+  "authors": [
+    "Ashraf Aboulnaga",
+    "Michael Curtiss",
+    "Paul M. Dantzig",
+    "Sitaram Lanka",
+    "Vasudha Krishnaswamy"
+  ],
+  "keywords": [
+    "coral",
+    "data-management-system",
+    "data-query",
+    "data-schema",
+    "database-applications",
+    "database-systems",
+    "system-architecture",
+    "system-experience",
+    "system-implementation",
+    "telecommunications"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "This paper describes the CORAL data management system that we have developed for managing configuration and performance data in a large telecommunications network. CORAL is a deployed system that runs in AT&T’s environment, and it serves as a repository for a broad range of data types and user requirements. The main challenges addressed in the design of CORAL are data heterogeneity, massive data volume, data stream processing, and real-time performance. In addressing these challenges, we have worked with data consisting of tens of thousands of different schema versions, petabytes of data, and ingest rates on the order of hundreds of thousands of records per second. We describe the system architecture and the techniques used to meet these challenges. We also discuss our experience integrating CORAL into AT&T’s operations, and provide lessons learned that may apply to similar large-scale industrial data management tasks.",
+  "summary": "The paper titled \"Experience with the CORAL Data Management System\" was presented at the VLDB conference in 2005. It describes the development and deployment of the CORAL data management system, which was designed to manage configuration and performance data in large telecommunications networks such as those at AT&T. Key challenges addressed by CORAL include handling data heterogeneity, processing massive volumes of data, and ensuring real-time performance. CORAL is notable for its ability to handle tens of thousands of schema versions, process petabytes of data, and ingest hundreds of thousands of records per second.\n\nThe authors describe the system architecture, techniques used to address these challenges, and lessons learned from integrating CORAL into AT&T’s operations. This paper seems to be primarily focused on practical insights and sharing knowledge gained from actual deployment in a real-world industrial setting.\n\nUpon performing a web search, no specific citations or major impacts on future research directly referencing \"Experience with the CORAL Data Management System\" were found. This may be due to its primary focus on the deployment and experiential aspects rather than novel theoretical contributions. The insights regarding data management at scale may have influenced industry practices or similar large-scale data management systems, but specific documents or studies citing its impact were not discovered from the available sources.",
+  "raw_url": "http://db.disi.unitn.eu/pages/VLDBProgram/pdf/industry/p871-curtiss.pdf",
+  "source_type": "external",
+  "filepath": "distributed_systems/README.md",
+  "filename": "Unicorn: A System for Searching the Social Graph",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

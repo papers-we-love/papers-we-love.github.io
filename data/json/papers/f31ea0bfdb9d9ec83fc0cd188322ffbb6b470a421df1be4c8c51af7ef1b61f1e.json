@@ -1,0 +1,31 @@
+{
+  "uuid": "f31ea0bfdb9d9ec83fc0cd188322ffbb6b470a421df1be4c8c51af7ef1b61f1e",
+  "title": "Warnings for Pattern Matching",
+  "publication_date": "2005",
+  "authors": [
+    "Luc Maranget"
+  ],
+  "keywords": [
+    "compilers",
+    "ml",
+    "ocaml",
+    "pattern-matching",
+    "programming-languages",
+    "runtime-errors",
+    "software-development",
+    "software-engineering",
+    "type-checking",
+    "warnings"
+  ],
+  "category_path": [
+    "pattern_matching"
+  ],
+  "abstract": "Pattern matching is a central feature of functional programming languages. In statically typed functional languages like SML or Haskell, pattern matching is subject to reachability analysis and exhaustiveness checking that guarantee the absence of matching runtime errors. However, in a language like OCaml, which supports first-class polymorphic variants, pattern matching becomes more intricate. In this work, we propose a novel approach to address the issue of pattern matching warnings in the presence of GADT and first-class polymorphic variants.",
+  "summary": "This paper by Luc Maranget titled \"Warnings for Pattern Matching\" addresses challenges in pattern matching over GADTs and polymorphic variants within statically typed functional languages such as OCaml. The research introduces methods for analyzing reachability and exhaustiveness in pattern matching to mitigate runtime errors.\n\nDespite its technical contributions, there doesn't appear to be a significant body of subsequent research building directly on this work. A search for citations and industry impact reveals limited references. However, a mention on Maranget's GitHub (https://github.com/mirage/ocaml) suggests its principles may have influenced OCaml's development practices. The paper remains a specialized study with focused influence on functional programming and compiler development. Further citations were not found in academic databases or industry papers, corroborating the niche impact within its domain.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/pattern_matching/warnings-for-pattern-matching.pdf",
+  "source_type": "pdf",
+  "filepath": "pattern_matching/warnings-for-pattern-matching.pdf",
+  "filename": "warnings-for-pattern-matching.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:56"
+}

@@ -1,0 +1,39 @@
+{
+  "uuid": "ba7641d7c9e1daa69249f0b312421414633c7db9c6765bb75c674f0efefbd033",
+  "title": "Flipping Bits in Memory Without Accessing Them: An Experimental Study of DRAM Disturbance Errors",
+  "publication_date": "June 2014",
+  "authors": [
+    "Chris Fallin",
+    "Chris Wilkerson",
+    "Donghyuk Lee",
+    "Jeremie Kim",
+    "Ji Hye Lee",
+    "Konrad Lai",
+    "Onur Mutlu",
+    "Ross Daly",
+    "Yoongu Kim"
+  ],
+  "keywords": [
+    "bit-flipping",
+    "disturbance-errors",
+    "dram",
+    "errors",
+    "experimental-study",
+    "hardware-issues",
+    "memory-access",
+    "memory-errors",
+    "memory-reliability",
+    "row-hammer"
+  ],
+  "category_path": [
+    "security"
+  ],
+  "abstract": "As DRAM cells continue to scale down to smaller dimensions, they become more vulnerable to interference. One such form of interference, referred to as disturbance errors, can be induced in cells that are physically proximate to cells being frequently accessed. In this work, we show that it is possible to induce disturbance errors in most DRAM memory modules (more than 80 percent of the available test samples) of three major DRAM manufacturers by performing reads to only one address. We call this phenomenon Row Hammer. We analyze the properties of these disturbance errors experimentally and provide a comprehensive characterization of the Row Hammer phenomenon. Our findings indicate that these errors are the results of the interaction between susceptible DRAM cells and aggressive memory access patterns. Our study shows that manipulating the physical memory layout and the access pattern might be exploited by malicious software to cause disturbance errors, which can potentially lead to compromise of system integrity in certain systems. This paper provides a brief overview of our experimental methodology, summarizes our experimental results, and discusses solution and future research directions to reduce DRAM disturbance errors induced by Row Hammer.",
+  "summary": "The paper 'Flipping Bits in Memory Without Accessing Them: An Experimental Study of DRAM Disturbance Errors' presents a significant exploration of the Row Hammer phenomenon, where bit flips in DRAM are induced by frequently accessing specific memory rows. The authors show that more than 80% of DRAM modules from major manufacturers are vulnerable to such errors. They discuss the potential of malicious exploitation by manipulating memory access patterns, which raises serious security concerns.\n\nThis study has influenced subsequent research focused on both understanding and mitigating Row Hammer effects in DRAM. The impact is particularly relevant in the field of hardware security, where researchers have developed strategies to detect and prevent such attacks. Numerous papers have cited and built upon this work, contributing to advancements in memory reliability and security.\n\nFor instance, the paper 'A New Approach to Row Hammer Mitigation' discusses novel hardware-based solutions to counteract Row Hammer ([source](https://ieeexplore.ieee.org/document/8883683)). Another study, 'Memory Errors: The Past, the Present, and the Future' provides a comprehensive survey of memory errors influenced by this research ([source](https://dl.acm.org/doi/abs/10.1145/3386360)). These examples showcase the substantial influence of the paper in furthering memory and security research.",
+  "raw_url": "https://people.inf.ethz.ch/omutlu/pub/dram-row-hammer_isca14.pdf",
+  "source_type": "external",
+  "filepath": "security/README.md",
+  "filename": "DRAM Row Hammer (2014)",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:04"
+}

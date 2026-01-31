@@ -1,0 +1,29 @@
+{
+  "uuid": "83f28d8efdd156b01ed61f906851303be16a6ca532a9904e18a3b105a5d5fac7",
+  "title": "Continuous shading of curved surfaces",
+  "publication_date": "February 1971",
+  "authors": [
+    "Henri Gouraud"
+  ],
+  "keywords": [
+    "3d-rendering",
+    "computer-graphics",
+    "curved-surfaces",
+    "graphics-algorithms",
+    "light-modeling",
+    "rendering",
+    "shading",
+    "smooth-shading"
+  ],
+  "category_path": [
+    "computer_graphics"
+  ],
+  "abstract": "An improved solution to the problem of realistic image production is presented in this dissertation. The surfaces of a polyhedral object are shaded by means of continuous shading techniques: the reflectivity of the object is derived from a fixed local reflectivity and an assumed light direction. No modeling of shadows or multiple reflections is provided but an attempt is made to visualize images as realistically as possible under this limitation.",
+  "summary": "The paper \"Continuous shading of curved surfaces\" by Henri Gouraud is a seminal work in the field of computer graphics, specifically in shading techniques. It introduces what is now known as 'Gouraud shading', a method for smoothing out the colors across the surface of 3D models to simulate the appearance of a more continuous and realistic color gradient rather than having flat shading per polygon.\n\nGouraud shading calculates vertex colors and then interpolates these colors across the surfaces, which creates a smoother transition of colors and enhances the realism of the rendered object. This technique became fundamental in real-time computer graphics due to its balance between computational efficiency and visual aesthetics.\n\nThe introduction of Gouraud shading has greatly influenced both academic research and the video game industry. It laid the groundwork for more advanced shading and rendering techniques that followed, such as Phong shading and more complex algorithms used in modern computer graphics. \n\nThe impact of this paper can be seen through its frequent citation in subsequent research and its fundamental place in graphics textbooks, such as \"Computer Graphics: Principles and Practice\".\n\nFurther evidence of its influence can be found in references:\n1. Foley, J.D., van Dam, A., Feiner, S.K., Hughes, J.F. \"Computer Graphics: Principles and Practice,\" Addison-Wesley.\n2. Watt, A. \"3D Computer Graphics,\" Addison-Wesley.\n3. Catmull, E.E. \"A Subdivision Algorithm for Computer Display of Curved Surfaces,\" University of Utah, June 1974, which built upon shading methods.",
+  "raw_url": "http://page.mi.fu-berlin.de/block/htw-lehre/wise2015_2016/bel_und_rend/skripte/gouraud1971.pdf",
+  "source_type": "external",
+  "filepath": "computer_graphics/README.md",
+  "filename": "Continuous shading of curved surfaces",
+  "created_on": "2026-01-24 23:46:58",
+  "summary_received": "2026-01-25 00:11:02"
+}

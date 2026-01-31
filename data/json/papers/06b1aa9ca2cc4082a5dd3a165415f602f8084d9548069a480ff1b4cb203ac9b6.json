@@ -1,0 +1,32 @@
+{
+  "uuid": "06b1aa9ca2cc4082a5dd3a165415f602f8084d9548069a480ff1b4cb203ac9b6",
+  "title": "MapReduce: Simplified Data Processing on Large Clusters",
+  "publication_date": "December 2004",
+  "authors": [
+    "Jeffrey Dean",
+    "Sanjay Ghemawat"
+  ],
+  "keywords": [
+    "batch-processing",
+    "big-data",
+    "cluster-computing",
+    "data-processing",
+    "distributed-computing",
+    "google-file-system",
+    "large-datasets",
+    "mapreduce",
+    "parallel-processing",
+    "programming-model"
+  ],
+  "category_path": [
+    "datastores"
+  ],
+  "abstract": "MapReduce is a programming model and an associated implementation for processing and generating large data sets. Users specify a map function that processes a key/value pair to generate a set of intermediate key/value pairs, and a reduce function that merges all intermediate values associated with the same intermediate key. Many real world tasks are expressible in this model, as shown in the paper. Programs written in this functional style are automatically parallelized and executed on a large cluster of commodity machines. The run-time system takes care of the details of partitioning the input data, scheduling the program’s execution across a set of machines, handling machine failures, and managing the required inter-machine communication. This allows programmers without any experience with parallel and distributed systems to easily utilize the resources of a large distributed system. Our implementation of MapReduce runs on a large cluster of commodity machines and is highly scalable: a typical MapReduce computation processes many terabytes of data on thousands of machines. Programmers find the system easy to use: hundreds of MapReduce programs have been implemented and upwards of one thousand MapReduce jobs are executed on Google’s clusters every day. The model has been used across a wide range of domains within Google, including building inverted indices, document clustering, machine learning, and statistical machine translation.",
+  "summary": "The paper \"MapReduce: Simplified Data Processing on Large Clusters\" by Jeffrey Dean and Sanjay Ghemawat presents a programming model called MapReduce which is designed to simplify data processing on large clusters. MapReduce abstracts large data processing tasks into two primary functions: 'Map' and 'Reduce'. This paradigm allows for automatic parallelization and execution over large clusters of commodity hardware without requiring the programmer to have experience with parallel and distributed systems.\n\nMapReduce has had a significant impact on both research and industry, as evidenced by its wide adoption in big data processing frameworks, most notably the open-source project Apache Hadoop which has become a foundational technology in data analytics across various industries. The paper has been cited by numerous subsequent studies and has influenced frameworks that incorporate its principles of distributed data processing.\n\nInfluential papers and projects referencing MapReduce include:\n- **Hadoop: The Definitive Guide** by Tom White, which elaborates on the Hadoop implementation inspired by the MapReduce model. [Link to publication](https://hadoop.apache.org/)\n- **Dryad** research which discusses different models for parallel data processing, comparing with MapReduce. [Link to reference](https://www.microsoft.com/en-us/research/publication/dryad/)\n- Numerous studies in distributed database systems and cloud computing that build upon the scalability principles outlined in MapReduce.\n\nMapReduce has fundamentally changed how large-scale data processing tasks are approached and has made significant contributions to the advancement of cloud computing and big data technologies.",
+  "raw_url": "http://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/36632.pdf",
+  "source_type": "external",
+  "filepath": "datastores/README.md",
+  "filename": "Dremel: Interactive Analysis of Web-Scale Datasets",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

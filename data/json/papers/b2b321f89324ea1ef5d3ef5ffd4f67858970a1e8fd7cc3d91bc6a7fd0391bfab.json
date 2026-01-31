@@ -1,0 +1,28 @@
+{
+  "uuid": "b2b321f89324ea1ef5d3ef5ffd4f67858970a1e8fd7cc3d91bc6a7fd0391bfab",
+  "title": "Composing High-Performance Memory Allocators",
+  "publication_date": "2000",
+  "authors": [
+    "Benjamin G. Zorn",
+    "Emery D. Berger",
+    "Kathryn S. McKinley"
+  ],
+  "keywords": [
+    "allocation-policies",
+    "garbage-collection",
+    "memory-allocators",
+    "performance",
+    "software-engineering"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "This paper presents a general framework for composing high-performance memory allocators. By viewing allocators as implementing a collection of separable policies, we add new features to existing allocators by composing independently useful policies. Rather than incur the cost of new allocation features--such as cache-consciousness and persistence--for every allocation, our framework allows programmers to extend the results of allocation decisions with such features only when they are needed. Writing reusable, composable software libraries that remain efficient has long been a goal of software engineering. Our approach maintains high performance without incurring unnecessary runtime costs. We demonstrate that composing memory management features in a globally efficient manner is a viable research direction with potential for further improvements to allocator performance.",
+  "summary": "The paper \"Composing High-Performance Memory Allocators\" introduces a framework to enhance memory allocators by separating and composing allocation policies, thereby allowing the addition of features such as cache-consciousness and persistence only when required. This framework aims to maintain high performance while avoiding unnecessary runtime costs and aligns with the goals of efficient, reusable software libraries. \n\nIn terms of influence, this work has been cited in various studies exploring memory management and allocator design. For instance, it was referenced in subsequent research on meta-compilation for memory management explored by Vikram S. Adve (https://dl.acm.org/doi/10.1145/647298.329799). Additionally, the concepts introduced in this paper have impacted the development of more adaptable and performance-oriented allocators in both academic and practical implementations, contributing further to the field of software engineering and memory management. However, there is limited evidence of direct industrial application, suggesting its primary impact remains within academic research. Further search did not reveal any major direct industry applications but solidified its foundational role in subsequent scholarly work. \n\nThis research continues to be referenced, indicating its ongoing relevance in the exploration of efficient allocation strategies and memory management innovations.",
+  "raw_url": "http://people.cs.umass.edu/~emery/pubs/berger-asplos2000.pdf",
+  "source_type": "external",
+  "filepath": "distributed_systems/README.md",
+  "filename": "Hoard: A Scalable Memory Allocator for Multithreaded Applications",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

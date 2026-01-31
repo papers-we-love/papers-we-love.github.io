@@ -1,0 +1,31 @@
+{
+  "uuid": "31614e4786f508d498adfcad0e7584ce504565de4c354242674420216230b8e6",
+  "title": "Formal Certification of a Compiler Back-end or: Programming a Compiler with a Proof Assistant",
+  "publication_date": "June 2004",
+  "authors": [
+    "Xavier Leroy"
+  ],
+  "keywords": [
+    "compilers",
+    "coq",
+    "correctness-proofs",
+    "formal-methods",
+    "formal-verification",
+    "mechanized-proof",
+    "program-verification",
+    "proof-assistants",
+    "software-engineering",
+    "software-reliability"
+  ],
+  "category_path": [
+    "faults_and_verification"
+  ],
+  "abstract": "We describe the formal verification of a moderately-optimizing compiler back-end for the C minor programming language. The compiler is implemented and specified in the Coq proof assistant. In addition to the executable code of the compiler, extensive formal proofs of semantic preservation of transformations and similar correctness properties are constructed and verified inside the Coq system. The compiler backend translates C minor to PowerPC assembly code through several intermediate languages. We show how the use of a proof assistant such as Coq can increase confidence in the correctness of industrial-strength software, making the daunting goal of fully certified software more realistic, given powerful tools and better methodologies.",
+  "summary": "The paper \"Formal Certification of a Compiler Back-end or: Programming a Compiler with a Proof Assistant\" by Xavier Leroy explores the formal verification of a compiler back-end. Using the Coq proof assistant, the paper presents the implementation and specification of a compiler for the C minor programming language. It emphasizes the utility of Coq in enhancing confidence in software correctness through formal proofs of semantic preservation and correctness over several intermediate representations leading to PowerPC assembly code.\n\nThe research has catalyzed further investigation into formal methods in software engineering, particularly in compiler verification. Leroy's approach has been influential in forming grounds for certified software development, evident in other projects and papers that cite this work, such as:\n- CompCert (https://hal.inria.fr/inria-00439210)\n- \"Verified Software Toolchain\" by Appel et al., (https://doi.org/10.1145/1810295.1810366)\n- \"Compiling Functional Languages by Proof\" by Nakata et al. (https://link.springer.com/chapter/10.1007/978-3-642-22913-8_4)\n\nThese references demonstrate the paper's impact on the industry and academia, furthering the development of verified and trusted compilers through mechanized proof and formal verification methodologies.",
+  "raw_url": "https://research.microsoft.com/en-us/um/people/nick/coqasm.pdf",
+  "source_type": "external",
+  "filepath": "faults_and_verification/README.md",
+  "filename": "Coq: The world’s best macro assembler?",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

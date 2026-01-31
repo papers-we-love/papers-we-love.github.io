@@ -1,0 +1,33 @@
+{
+  "uuid": "8f54f9c92e2d24c3e2a30f0b2850e87300444b10441e7783a984e32ac45a9695",
+  "title": "PushPull++: Model Geometry and Attributes at Once",
+  "publication_date": "2014",
+  "authors": [
+    "Matthias Lipp",
+    "Michael Wimmer",
+    "Peter Wonka"
+  ],
+  "keywords": [
+    "3d-modeling",
+    "attributes",
+    "computer-graphics",
+    "digital-content-creation",
+    "geometry-processing",
+    "gradient-based-methods",
+    "interactive-systems",
+    "mesh-editing",
+    "optimization",
+    "push-pull"
+  ],
+  "category_path": [
+    "computer_graphics"
+  ],
+  "abstract": "In this paper, we tackle the challenge of specifying geometry and attributes in separate steps by proposing PushPull++. This approach allows the user to directly combine attribute editing with shape deformation using a single set of design constraints expressed as gradients. In addition, we incorporate many types of constraints into an optimization framework that supports handle-based surface editing. The resulting system enables simultaneous geometry and attribute editing in real-time and allows for precise control over the desired edits with a simple and intuitive user interface. We validate our method on a variety of scenes and demonstrate its effectiveness through comparisons and applications. Our rethinking of geometry and attribute editing through the unified push-pull paradigm shows versatility and usability for digital content creation.",
+  "summary": "PushPull++ is a novel approach to model both the geometry and attributes of 3D models simultaneously, through the use of gradients and optimization frameworks. This method integrates constraints into a system allowing handle-based surface editing and supports real-time simultaneous edits, enhancing the flexibility and preciseness of digital content creation. The PushPull++ framework enhances user interaction by combining attribute and shape deformation within an intuitive interface, tested and validated across various contexts.\n\nIn terms of impact, the paper contributes significantly to the field of computer graphics by offering a unified approach to managing geometry and attributes, which streamlines the creation and editing processes for 3D modeling and has potential applications in gaming, animation, and simulation industries. Though precise references to how it directly influenced subsequent work are sparse, the method aligns with ongoing trends in interactive systems and digital content creation, making it a relevant contribution to advancements in efficient modeling techniques.",
+  "raw_url": "http://peterwonka.net/Publications/pdfs/2014.SG.Lipp.PushPull.pdf",
+  "source_type": "external",
+  "filepath": "computer_graphics/README.md",
+  "filename": "PushPull++",
+  "created_on": "2026-01-24 23:46:58",
+  "summary_received": "2026-01-25 00:11:02"
+}

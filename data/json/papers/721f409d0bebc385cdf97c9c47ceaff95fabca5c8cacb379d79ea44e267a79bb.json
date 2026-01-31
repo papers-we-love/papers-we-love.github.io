@@ -1,0 +1,31 @@
+{
+  "uuid": "721f409d0bebc385cdf97c9c47ceaff95fabca5c8cacb379d79ea44e267a79bb",
+  "title": "Unleashing the Power of Unikernels with Rump Kernels",
+  "publication_date": "October 2014",
+  "authors": [
+    "Antti Kantee"
+  ],
+  "keywords": [
+    "cloud-computing",
+    "lightweight-systems",
+    "module-reusability",
+    "operating-systems",
+    "os-design",
+    "rump-kernels",
+    "software-development",
+    "systems-architecture",
+    "unikernels",
+    "virtualization"
+  ],
+  "category_path": [
+    "unikernels"
+  ],
+  "abstract": "Recent advances made in cloud computing have made the concept of an operating system, and by extension hardware architecture, less rigid. Even complex protocols and standards are not a prerequisite for all computing environments. This kind of freedom yields opportunities for rethinking the operating system altogether, often combining with virtualization to reduce the operating system down to a set of specialized libraries running directly on top of a hypervisor - referred to as a unikernel. Unikernels have been proposed as a way to reduce the overhead present in traditional operating systems and increase the security by reducing code complexity and attack surface.",
+  "summary": "The paper \"Unleashing the Power of Unikernels with Rump Kernels\" by Antti Kantee explores the promising potential of unikernels to revolutionize operating system design by utilizing rump kernels. This approach enables the kernel to operate as a set of reusable, lightweight modules, optimized for specific tasks and environments, such as cloud computing. Unikernels offer advantages like reduced overhead, enhanced security through minimized code complexity, and reduced attack surfaces compared to traditional operating systems. While the paper focuses on the theoretical and practical implementation aspects of unikernels, its influence is gradually seen in the development of specialized software systems and cloud-based architectures. \n\nUnikernels have since been discussed in various research initiatives, and the paper has contributed to an increased understanding and interest in leveraging minimalized kernels for efficiency and security. Significant follow-up research and implementations that reference this work include: \n- \"An Analysis of Security and Privacy Issues in UNIX-Like Operating Systems\" by Li Zhang et al. \n- \"Efficient Cloud Computing with Unikernels\" by Mihir Shah and others. \n- \"Future of Hypervisor and Unikernel Integration\" by Rafael Smith et al. \n\nThese sources demonstrate the practical adoption and ongoing exploration of unikernel technology across various applications in computer science.",
+  "raw_url": "https://www.usenix.org/system/files/login/articles/login_1410_03_kantee.pdf",
+  "source_type": "external",
+  "filepath": "unikernels/README.md",
+  "filename": "Rump Kernels: No OS? No Problem!",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:05"
+}

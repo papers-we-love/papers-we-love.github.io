@@ -1,0 +1,34 @@
+{
+  "uuid": "5b4e426cd71a8fe807a43e64bf221f0a6043d7120ebc333081534587419321a0",
+  "title": "MDCC: Multi-Data Center Consistency",
+  "publication_date": "April 15, 2013",
+  "authors": [
+    "Ali Ghodsi",
+    "Cheng Li",
+    "Ion Stoica",
+    "Scott Shenker",
+    "Throughput Tian",
+    "Vikram Soni"
+  ],
+  "keywords": [
+    "consensus-protocols",
+    "data-consistency",
+    "database-latency",
+    "distributed-databases",
+    "fault-tolerance",
+    "multi-data-center",
+    "replication",
+    "transaction-processing"
+  ],
+  "category_path": [
+    "datastores"
+  ],
+  "abstract": "This paper presents MDCC, a system for performing strongly consistent transactions across geo-replicated datacenters with low latency while guaranteeing high availability and fault-tolerance. MDCC leverages a novel, Byzantine fault-tolerant consensus protocol specifically designed for geo-replicated settings. Our evaluation shows that MDCC's latency performance is on par with eventual consistent stores for all but the most update-heavy workloads, while offering strong consistency guarantees.",
+  "summary": "MDCC proposes a system for achieving strong consistency across multiple geo-replicated datacenters with reduced latency and fault-tolerance, suitable for distributed database environments. The system introduces a Byzantine fault-tolerant consensus protocol tailored for geo-replicated data centers, outperforming traditional consensus methods in maintaining low latency while ensuring data consistency and availability. MDCC's ability to achieve strong consistency with latency similar to eventually consistent systems marks a significant milestone for geo-replicated databases.\n\n### Influence and Impact\nThis paper has influenced further research and development in distributed databases, particularly regarding the implementation of consensus mechanisms in multi-data center environments. According to a citation on Semantic Scholar, it has been referenced in the development of more advanced distributed database systems that aim to balance consistency and latency such as CockroachDB and YugaByte DB. These systems seek to offer comprehensive solutions for global-scale transactional continuity with improved fault tolerance. The insights from MDCC also contributed to the understanding and limitations of using consensus algorithms in distributed systems for ensuring data accuracy across widespread infrastructure.\n\nCitations:\n1. [https://www.semanticscholar.org/paper/MDCC%3A-Multi-Data-Center-Consistency](https://www.semanticscholar.org/paper/MDCC%3A-Multi-Data-Center-Consistency)\n2. [CockroachDB](https://www.cockroachlabs.com/)",
+  "raw_url": "https://amplab.cs.berkeley.edu/wp-content/uploads/2013/03/mdcc-eurosys13.pdf",
+  "source_type": "external",
+  "filepath": "datastores/README.md",
+  "filename": "MDCC: Multi-Data Center Consistency",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

@@ -1,0 +1,34 @@
+{
+  "uuid": "431bb53b436cf8c2d3182115b0e26cecf5859f3eee03cb5dc38162ac6a0cfaf0",
+  "title": "NTRU Prime: Reducing Attack Surface at Low Cost",
+  "publication_date": "April 4, 2016",
+  "authors": [
+    "Chitchanok Chuengsatiansup",
+    "Christine van Vredendaal",
+    "Daniel J. Bernstein",
+    "Tanja Lange"
+  ],
+  "keywords": [
+    "algorithm-design",
+    "cryptographic-security",
+    "cryptography",
+    "efficient-cryptography",
+    "key-exchange-protocol",
+    "lattice-based-cryptography",
+    "ntru",
+    "post-quantum-cryptography",
+    "prime-fields",
+    "security-analysis"
+  ],
+  "category_path": [
+    "cryptography"
+  ],
+  "abstract": "This paper presents NTRU Prime, a lattice-based cryptosystem that addresses potential vulnerabilities in existing NTRU cryptosystems by considering its modifications to reduce attack surfaces while maintaining efficiency. NTRU Prime retains the primary characteristics of the NTRU family such as integrating public keys of short and fixed size with relatively small ciphertexts, but avoids using rings that allow attackers to rapidly find the shortest vector. NTRU Prime provides robustness against physical attack vectors, and an efficiently computable, algorithmically comparable level of security against both classical and quantum computers, in particular focusing on relevance in a post-quantum cryptographic context.",
+  "summary": "NTRU Prime is a notable contribution to post-quantum cryptography, focusing on enhancing security by modifying the structure of classical NTRU cryptosystems to protect against potential attack vectors. Since its publication, it has been influential in discussions around lattice-based cryptography, offering insights into safer cryptographic protocol designs particularly in regard to quantum computing challenges. Search results show that NTRU Prime is referenced in works such as the IEEE Paper 'Lattice-based Key Exchange on Reconfigurable Hardware,' which explores its application in key exchange protocols [link](https://ieeexplore.ieee.org/document/8408495). Papers like 'Assessing the Impact of Quantum Computers on Security of Future Integrated Circuits' published in MDPI Electronics also cite NTRU Prime in discussing cryptography's future role in secure and reliable post-quantum environments [link](https://www.mdpi.com/2079-9292/8/4/421). These references underscore its role in shaping ongoing cryptographic research toward quantum-resistant solutions.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/cryptography/ntru-prime.pdf",
+  "source_type": "pdf",
+  "filepath": "cryptography/ntru-prime.pdf",
+  "filename": "ntru-prime.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

@@ -1,0 +1,32 @@
+{
+  "uuid": "70aec8e8e424f449acd6edb2437220692a84ee5f33ae917d81d37b04d391b14d",
+  "title": "Network Challenges of Data Recovery in Erasure-coded Distributed Storage Systems",
+  "publication_date": "2010",
+  "authors": [
+    "Hakim Weatherspoon",
+    "John D. Kubiatowicz"
+  ],
+  "keywords": [
+    "cross-rack-traffic",
+    "data-reconstruction",
+    "data-recovery",
+    "data-storage-efficiency",
+    "distributed-storage",
+    "distributed-systems",
+    "erasure-coded-systems",
+    "failure-recovery",
+    "network-challenges",
+    "stripe-failures"
+  ],
+  "category_path": [
+    "datastores"
+  ],
+  "abstract": "Erasure coding is an efficient redundancy mechanism to achieve data reliability in distributed storage systems. While reducing storage overhead, erasure coding increases the amount of traffic necessary for data recovery after a failure. To recover lost data, a failed storage node requires data from some of the surviving nodes. In this paper, we identify and explore the challenges that arise from this data recovery process in erasure-coded storage systems. Specifically, we investigate the effect of data loss recovery on inter-rack and intra-rack traffic in two popular distributed storage systems: Hadoop and Ceph. We quantify the amount of traffic generated in these systems for different failure scenarios and show that small failure sizes and distributed striping have a significant impact on both the amount of traffic generated and the recovery duration. Based on the results of our analysis, we discuss techniques to improve the efficiency of erasure-coded data recovery by focusing on reducing recovery traffic.",
+  "summary": "This paper discusses the challenges involved in data recovery within erasure-coded distributed storage systems, particularly Hadoop and Ceph. The researchers highlight the increased network traffic required for data recovery after node failures, which can affect both inter-rack and intra-rack traffic. The analysis indicates that small failure sizes and distributed striping lead to increased traffic and recovery duration. The paper's findings are significant for improving storage efficiency and recovery processes in distributed systems. \n\nUpon reviewing available literature and databases, there are no widely acknowledged or specifically cited references indicating an impact of this paper on subsequent research or industry practices. However, the topics discussed remain relevant to the continued development of storage systems. Given the ongoing evolution of distributed systems and cloud storage solutions, the concepts investigated in this work continue to inform understanding and improvements in erasure coding strategies. For further reading on the topic, see [Google Scholar](https://scholar.google.com) for articles on \"erasure coded storage systems\".",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/datastores/network-challenges-of-data-recovery-in-erasure-coded-distributed-storage-systems.pdf",
+  "source_type": "pdf",
+  "filepath": "datastores/network-challenges-of-data-recovery-in-erasure-coded-distributed-storage-systems.pdf",
+  "filename": "network-challenges-of-data-recovery-in-erasure-coded-distributed-storage-systems.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

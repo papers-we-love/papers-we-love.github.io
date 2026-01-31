@@ -1,0 +1,31 @@
+{
+  "uuid": "e9c7930a469884f9be9eb725ee515f683706291364c80ea0e00052c1033a4294",
+  "title": "Viewing Control Structures as Patterns of Passing Messages",
+  "publication_date": "1977",
+  "authors": [
+    "Carl Hewitt"
+  ],
+  "keywords": [
+    "actor-model",
+    "computer-science-theory",
+    "concurrent-computing",
+    "control-concurrency",
+    "control-structures",
+    "distributed-systems",
+    "message-passing",
+    "parallel-computation",
+    "programming-languages",
+    "systems-architecture"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "Recent insights into programs viewed as patterns for passing messages have led to the actor model as a useful way to organize computations. In this model we use the notion of actors, which are active, have mail addresses, can carry on their own computations, create more actors via replication, send messages to other actors, and make such decisions as which computations to carry on in response to received messages. This paper presents some of the basic concepts and examples.",
+  "summary": "The paper \"Viewing Control Structures as Patterns of Passing Messages\" by Carl Hewitt, published in 1977, introduces the actor model as a foundational concept for understanding computations via message-passing. It describes how actors, as independent computational entities, can interact through communication, offering a powerful way to design concurrent systems.\n\nImpact on further research is notably through the influence this model had in the development of concurrent programming languages and systems. For example, the actor model is a conceptual basis for languages like Erlang, which is widely used in systems requiring high concurrency, such as telecommunications. The programming languages Scala and Akka also incorporate the actor model into their frameworks.\n\nWhile extensive web searches reveal that specific academic papers may not directly cite this specific paper, the actor model itself has been extensively cited and used, particularly in studies related to concurrent and parallel programming. The influence of Carl Hewitt's work is reflected in many modern concurrent computing practices and distributed systems architecture.\n\nKey references for further reading include papers on the actor model itself and its applications in modern programming:\n- [Actor model on Wikipedia](https://en.wikipedia.org/wiki/Actor_model)\n- [Erlang's application of the actor model](https://erlang.org/doc/reference_manual/processes.html)\n- [Akka and actor-based concurrency](https://doc.akka.io/docs/akka/current/typed/actors.html)",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/viewing-control-structures-as-patterns-of-passing-messages.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/viewing-control-structures-as-patterns-of-passing-messages.pdf",
+  "filename": "viewing-control-structures-as-patterns-of-passing-messages.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

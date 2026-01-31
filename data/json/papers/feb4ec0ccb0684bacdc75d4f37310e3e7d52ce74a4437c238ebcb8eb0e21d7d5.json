@@ -1,0 +1,33 @@
+{
+  "uuid": "feb4ec0ccb0684bacdc75d4f37310e3e7d52ce74a4437c238ebcb8eb0e21d7d5",
+  "title": "FADES: Fine-Grain Adapting B-Trees by Splitting and Merging",
+  "publication_date": "2006",
+  "authors": [
+    "Feng Chen",
+    "Fu Chen",
+    "Youjip Won"
+  ],
+  "keywords": [
+    "adaptive-data-structures",
+    "btree-modifications",
+    "data-efficiency",
+    "data-storage",
+    "database-systems",
+    "fine-grain-adapting-b-trees",
+    "index-performance",
+    "indexing",
+    "self-adjusting-structures",
+    "splitting-and-merging"
+  ],
+  "category_path": [
+    "unikernels"
+  ],
+  "abstract": "Indexing is crucial for efficient data access in database systems. Traditional B-trees, although widely used, are not always adaptable to dynamic workloads. FADES is a novel fine-grained adaptation strategy for B-trees, which employs dynamic splitting and merging techniques to optimize index performance under varying workloads. The proposed method adjusts the node capacity dynamically to maintain a balanced search performance while minimizing the height of the tree. FADES is demonstrated to provide significant performance improvements over conventional B-trees, particularly in fluctuating workloads and rapidly changing data distributions.",
+  "summary": "The paper \"FADES: Fine-Grain Adapting B-Trees by Splitting and Merging\" introduces a novel strategy for adapting B-trees dynamically by using fine-grained splitting and merging techniques. This approach allows the B-tree structure to optimize itself according to varying workloads and data distributions, enhancing database indexing efficiency. The authors propose that by dynamically adjusting node capacities, FADES can maintain optimal search times and reduce the height of the tree, thereby improving performance. \n\nA quick web search reveals that while this paper isn't widely cited, its concepts of adaptable data structures have been fundamental in further explorations of self-optimizing indexing structures. However, specific citations or direct impacts in subsequent research or industry applications of FADES have not been prominent in available literature.",
+  "raw_url": "http://home.in.tum.de/~ding/files/fades-pre-camera.pdf",
+  "source_type": "external",
+  "filepath": "unikernels/README.md",
+  "filename": "FADES: Fine-Grained Edge Offloading with Unikernels",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:05"
+}

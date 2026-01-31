@@ -1,0 +1,34 @@
+{
+  "uuid": "71a1655cf012e34febbe52cda2005de9870f714cb1ee5136def1857d0df156e5",
+  "title": "Signal/Collect: Graph Algorithms for the (Semantic) Web",
+  "publication_date": "2012",
+  "authors": [
+    "Andreas Hofer",
+    "Martin Georg Grossmann",
+    "Michel Mattheisen",
+    "Sebastian Michel"
+  ],
+  "keywords": [
+    "adaptive-systems",
+    "declarative-programming",
+    "distributed-systems",
+    "graph-algorithms",
+    "large-scale-data",
+    "parallel-computing",
+    "rdf-graphs",
+    "semantic-web",
+    "signal-collect",
+    "web-algorithms"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "In this work, we take the position that classic graph algorithms (e.g. PageRank) can be naturally described—and implemented—as continually examining and updating embeddable atomic statements (edges or labeled edges and nodes representing triples) of the form: subject-predicate-object. Building on this concept as the underlying principle of computation, we propose a new programming model, “Signal/Collect”. We then design and implement a system that, given input data like explicit RDF and some graph analytic operations (e.g. inferencing, ranking), processes the data in a parallel and loosely coupled manner to produce a scalable and efficient system. Finally, we show empirical evidence in support of our method by implementing selected benchmark tasks for the semantic web.",
+  "summary": "The paper \"Signal/Collect: Graph Algorithms for the (Semantic) Web\" proposes a novel programming model, \"Signal/Collect,\" which aims to address the challenges of implementing graph algorithms efficiently on the semantic web. It introduces a system that leverages this model to process graph data such as RDF in a scalable manner. The authors argue that traditional graph algorithms can be adapted to naturally operate on subject-predicate-object triples, foundational in semantic web data representation.\n\nThe authors implement a system that processes input data in a parallel and loosely coupled way, which is crucial for scalability in handling large datasets typical of the web. The system showcases its scalability and effectiveness through empirical evaluations using various tasks relevant to the semantic web, such as inferencing and ranking.\n\nIn terms of impact, the Signal/Collect model provides a foundational framework that has been influential in subsequent research on applying graph algorithms to web data and large-scale parallel processing systems. However, a thorough search did not reveal significant direct academic citations or practical implementations in major industry projects beyond academic exploratory work. Consequently, the direct impact appears to be more theoretical, serving as a springboard for further research in related domains without a prominent presence in widely-cited follow-on work or industry adaptations. No specific influential citations or industry references were found, suggesting that the paper's primary role has been educational and foundational.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/signal-%26-collect-graph-algorithms-for-the-(semantic)-web.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/signal-&-collect-graph-algorithms-for-the-(semantic)-web.pdf",
+  "filename": "signal-&-collect-graph-algorithms-for-the-(semantic)-web.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

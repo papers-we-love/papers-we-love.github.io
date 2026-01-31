@@ -1,0 +1,38 @@
+{
+  "uuid": "2bc1de5ead632beafa73df20bac2e786977dcf1f905125a6a2ae71d07842f982",
+  "title": "Dapper, a Large-Scale Distributed Systems Tracing Infrastructure",
+  "publication_date": "2010",
+  "authors": [
+    "Benjamin H. Sigelman",
+    "Chitra Venkatramani",
+    "Donald Beaver",
+    "Luiz André Barroso",
+    "Mandelin Plakal",
+    "Mike Burrows",
+    "Pat Stephenson",
+    "Stephen Jaspan"
+  ],
+  "keywords": [
+    "cloud-computing",
+    "data-collection",
+    "distributed-systems",
+    "google",
+    "instrumentation",
+    "monitoring",
+    "performance-analysis",
+    "scalability",
+    "system-diagnosis",
+    "tracing"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "Dapper is a large scale distributed systems tracing infrastructure that has been used at Google for over three years. Although Google’s production environment differs in several important respects from common open-source environments, many aspects of our design can easily be applied elsewhere. This paper describes Google’s motivation for creating this distributed tracing infrastructure and provides a detailed description of Dapper’s design and implementation. We also present examples of how analyzing production traces has benefited various teams, illustrating Dapper’s impact on the daily lives of developers at Google.",
+  "summary": "The paper titled \"Dapper, a Large-Scale Distributed Systems Tracing Infrastructure\" published in 2010 by Benjamin H. Sigelman and colleagues describes the development and implementation of Dapper, an infrastructure for distributed tracing at Google. The Dapper system was designed to enable developers to trace and debug distributed systems effectively, thereby enhancing performance analysis and monitoring capabilities.\n\nDapper has significantly influenced the field of distributed systems and has laid foundational work for other tracing tools like OpenTracing and OpenTelemetry, which have been widely adopted in industry. According to scholarly resources, Dapper's design principles have been integral in establishing best practices for tracing in cloud environments. For instance, the paper is extensively cited in works discussing distributed tracing frameworks and their implementation across large-scale systems, some of which can be seen in newer developments of distributed tracing technology such as Jaeger and Zipkin. \n\nDapper's impact is particularly notable in improving system diagnosis, scalability, and performance analysis across complex distributed environments. This work continues to be a crucial reference in academic literature (e.g., https://dl.acm.org/doi/10.5555/2387880.2387904, https://researchgate.net/publication/313347243_Distributed_Tracing_in_Practice), evident by it being cited in papers related to performance monitoring frameworks and system instrumentation research.\n\nThus, the contributions of this paper extend beyond Google's infrastructure, providing key insights and building blocks for modern distributed tracing solutions.",
+  "raw_url": "http://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/41378.pdf",
+  "source_type": "external",
+  "filepath": "distributed_systems/README.md",
+  "filename": "MillWheel: Fault-Tolerant Stream Processing at Internet Scale",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

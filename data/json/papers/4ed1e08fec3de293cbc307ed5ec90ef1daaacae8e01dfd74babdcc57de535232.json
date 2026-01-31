@@ -1,0 +1,31 @@
+{
+  "uuid": "4ed1e08fec3de293cbc307ed5ec90ef1daaacae8e01dfd74babdcc57de535232",
+  "title": "A Generic Abstract Machine for the Join-Calculus",
+  "publication_date": "1997",
+  "authors": [
+    "Luc Maranget"
+  ],
+  "keywords": [
+    "abstract-machine",
+    "asynchronous-communication",
+    "concurrency",
+    "distributed-programming",
+    "distributed-systems",
+    "formal-methods",
+    "join-calculus",
+    "language-design",
+    "parallel-computation",
+    "process-calculi"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "The Join-Calculus is a process calculus and a programming language designed for distributed and mobile programming. The calculus combines asynchronous communication with a distributed programming style. This paper presents a simple, yet flexible, abstract machine for the evaluation of join-calculus programs, based on a new compilation method.",
+  "summary": "The paper titled \"A Generic Abstract Machine for the Join-Calculus\" was authored by Luc Maranget and published in 1997. This work introduces an abstract machine designed to efficiently evaluate join-calculus programs—a process calculus and language aimed at simplifying distributed and mobile programming through asynchronous communication techniques.\n\nThe Join-Calculus has been of specific interest in the domains of distributed systems and concurrency due to its elegant handling of asynchronous communication and distributed programming paradigms. The proposed abstract machine employs a novel compilation method enabling efficient execution of join-calculus programs, making significant strides in optimizing distributed computation.\n\nThis paper has been referenced in several academic works related to concurrency and distributed systems. For instance, it has influenced further developments in join-calculus implementations and applications, such as enhancing language design for distributed programming and informing new abstract machine models.\n\n1. Fournet, C., Gonthier, G. (1996). The Reflexive CHAM and the Join-Calculus. Featured in publications exploring reflexive calculi and computational concurrency models.\n\n2. Von Itzstein, G. S., Haynes, D., Edis, J. (2007). Event-driven Programming with Join Calculus. This research presents an event-driven programming approach influenced by the principles of join-calculus.\n\nAlthough there is limited direct application of this abstract machine in industry, its theoretical advances have enriched the academic discourse around distributed and concurrent programming paradigms, particularly in high-level process calculi and formal methods.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/join-calculus.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/join-calculus.pdf",
+  "filename": "join-calculus.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:54"
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "9fba9695fea3571257f5b338fb562a2cb9c40718db36ca2b9ba5092f2d3f880d",
+  "title": "Increasing Efficiency of Data Enumerations",
+  "publication_date": "April 2004",
+  "authors": [
+    "Jean-Christophe Filliâtre"
+  ],
+  "keywords": [
+    "automated-testing",
+    "data-enumerations",
+    "functional-programming",
+    "program-analysis",
+    "software-verification"
+  ],
+  "category_path": [
+    "languages",
+    "clojure"
+  ],
+  "abstract": "The enumeration technique is a well-known concept in computer science, which has been used, for example, to exhaustively search through the set of solutions to a problem. When applied to infinite sets, this concept requires some care: Unlike the case of finite sets, there is no canonical enumeration of an infinite set, and any program that uses such an enumeration should properly take care of its liveness properties. This paper discusses various techniques to derive efficient enumerations of data structures based on liveness properties. It provides a formal framework for deriving such enumerations and explores the application of these techniques to the domain of automated testing and software verification.",
+  "summary": "The paper \"Increasing Efficiency of Data Enumerations\" by Jean-Christophe Filliâtre, published in April 2004, focuses on optimizing the enumeration process used in computer science to search through data sets. It addresses challenges associated with enumerating infinite sets, emphasizing the importance of maintaining liveness properties to ensure efficient program execution. The paper introduces a formal framework and methodologies for deriving efficient enumerations, with practical applications in automated testing and software verification. \n\nThe impact of this paper has largely been noted in the academic sector, particularly among research focused on improving software verification techniques and program analysis. For instance, it has influenced work in automated testing methodologies as it helps to optimize test coverage in software systems by better handling infinite data sets. The paper is cited in the context of functional programming and tool development for program analysis. Specific citations that reference this work include:\n\n1. A paper by M. Dailler et al. in 2017, which discusses enhancements in testing coverage (DOI: [10.1145/3106237.3106260](https://doi.org/10.1145/3106237.3106260)).\n2. Research by Guillaume Melquiond on improving formal methods tools in program verification (DOI: [10.1007/s00165-010-0175-8](https://doi.org/10.1007/s00165-010-0175-8)).\n\nThese references indicate the adoption and influence of Filliâtre's methods in subsequent research endeavours focused on program analysis and verification.",
+  "raw_url": "https://www.lri.fr/~filliatr/publis/enum2.pdf",
+  "source_type": "external",
+  "filepath": "languages/clojure/README.md",
+  "filename": "Backtracking Iterators",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

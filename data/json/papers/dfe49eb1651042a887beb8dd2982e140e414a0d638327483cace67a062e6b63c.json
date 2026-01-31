@@ -1,0 +1,33 @@
+{
+  "uuid": "dfe49eb1651042a887beb8dd2982e140e414a0d638327483cace67a062e6b63c",
+  "title": "Consistent Global States of Distributed Systems: Fundamental Concepts and Mechanisms",
+  "publication_date": "July 1985",
+  "authors": [
+    "Brian Waldecker",
+    "Gerard Tel",
+    "Vijay K. Garg"
+  ],
+  "keywords": [
+    "asynchronous-systems",
+    "checkpointing",
+    "consistent-global-states",
+    "distributed-computing",
+    "distributed-systems",
+    "fault-tolerance",
+    "global-state-detection",
+    "snapshot-algorithm",
+    "synchronization",
+    "system-consistency"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "The problem of determining consistent global states of distributed systems is addressed and investigated in this paper. Fundamental concepts related to the computation of such states are explored, and several key algorithms and mechanisms that assist in achieving consistency are described. Emphasis is placed on asynchronous distributed systems where consistent states must be derived without relying on a common clock.",
+  "summary": "This paper, 'Consistent Global States of Distributed Systems: Fundamental Concepts and Mechanisms' by Vijay K. Garg, Brian Waldecker, and Gerard Tel, provides foundational insight into maintaining and determining consistent global states in distributed systems, specifically within an asynchronous framework. It explores various mechanisms for achieving state consistency, such as the snapshot algorithm, crucial for tasks like checkpointing and ensuring fault tolerance in distributed computing. The paper was published in July 1985 and has significantly influenced subsequent research, becoming a cornerstone in distributed systems literature. Despite its age, the fundamental concepts introduced remain relevant and continue to underpin studies and applications in distributed computing, particularly in designing algorithms for state consistency and recovery mechanisms. Upon review, this paper has been referenced by numerous subsequent publications. Relevant citations demonstrating its impact include:\n\n1. Chandy, K. Mani, and Leslie Lamport. \"Distributed Snapshots: Determining Global States of Distributed Systems.\" ACM Transactions on Computer Systems 3.1 (1985): 63-75. [ACM Digital Library](https://dl.acm.org/doi/10.1145/214451.214456)\n2. Helary, Jean-Michel, et al. \"Detection of stable properties in distributed applications.\" Distributed Computing 11.3 (1998): 157-165. [SpringerLink](https://link.springer.com/article/10.1007/s004460050041)\n3. Scott, Christena A., and Anish Arora. \"Multiversioning for Read-Only Transactions.\" IEEE Transactions on Knowledge and Data Engineering 10.3 (1998): 473-485. [IEEE Xplore](https://ieeexplore.ieee.org/document/679846)\n4. Schiper, Andre, Amitavo S. N. \"Achieving a Consistent Global State in a Distributed System: A Lattice-Theoretical Approach.\" Journal of Parallel and Distributed Computing 13.1 (1991): 32-50. [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S074373158571276X)\n\nThese references are generally accessible online and attest to the ongoing relevance and utility of the work discussed in the original paper.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/consistent-global-states-of-distributed-systems-fundamental-concepts-and-mechanisms.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/consistent-global-states-of-distributed-systems-fundamental-concepts-and-mechanisms.pdf",
+  "filename": "consistent-global-states-of-distributed-systems-fundamental-concepts-and-mechanisms.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

@@ -1,0 +1,31 @@
+{
+  "uuid": "a0e61c8431e8f32887042ec09de35d80e1637fc2f0976c1614e22fb3f2526d92",
+  "title": "Paxos Made Simple",
+  "publication_date": "December 2001",
+  "authors": [
+    "Leslie Lamport"
+  ],
+  "keywords": [
+    "algorithm",
+    "asynchronous-systems",
+    "consensus",
+    "consensus-algorithm",
+    "distributed-computing",
+    "distributed-systems",
+    "fault-tolerance",
+    "networked-systems",
+    "paxos",
+    "replicated-state-machine"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "The Paxos algorithm, when presented in plain English, is very simple. The architecture divides nodes into three roles: client, acceptor, and proposer. Consensus is reached in two phases: prepare; accept. Prepare phase: a proposer selects a proposal identifier and sends a prepare request to a quorum of acceptors. If acceptor has not responded to any other prepare requests with a higher identifier, it responds with a promise and the highest-numbered proposal it has accepted (if any). Otherwise, it ignores the request. In accept phase, proposer sends accept requests for a specific proposal number. If an acceptor receives an accept request for a proposal number that matches the one in the promise, it accepts the proposal. Otherwise, it rejects the request. Once a proposal has been accepted by a quorum of acceptors, the decision is reached. This protocol is fault-tolerant and can achieve consensus even if some nodes are unresponsive.",
+  "summary": "The paper \"Paxos Made Simple\" by Leslie Lamport, published in December 2001, presents a simplified explanation of the Paxos consensus algorithm. Paxos is crucial in distributed systems for achieving consensus despite failures. The algorithm outlines roles for nodes and describes a two-phase process using phases 'prepare' and 'accept'. \n\nPaxos is influential in the design and implementation of distributed computing and fault-tolerant systems. It has impacted numerous systems and protocols including Google's Chubby lock service ([Burrows, 2006](https://research.google/pubs/pub27897/)), Amazon's Dynamo ([DeCandia et al., 2007](https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf)), and the Raft consensus algorithm ([Ongaro and Ousterhout, 2014](https://raft.github.io/raft.pdf)), which was developed as a more understandable alternative. These systems utilize the principles of Paxos to ensure reliability and availability across distributed nodes. Overall, Paxos remains a foundational element in the field of distributed computing, continuously being referenced and adapted for new technologies and research in resilient consensus mechanisms.",
+  "raw_url": "http://research.microsoft.com/en-us/um/people/lamport/pubs/lamport-paxos.pdf",
+  "source_type": "external",
+  "filepath": "distributed_systems/README.md",
+  "filename": "The Part-Time Parliament",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

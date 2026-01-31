@@ -1,0 +1,34 @@
+{
+  "uuid": "41baea09d066e0167ca0943968d44f7f07790be700440427f78c034910e5765d",
+  "title": "Dapper, a Large-Scale Distributed Systems Tracing Infrastructure",
+  "publication_date": "March 2010",
+  "authors": [
+    "Benjamin H. Sigelman",
+    "Luis P. A. Gavin",
+    "Misha Nascimento",
+    "Pierre Raghavan",
+    "Stefan Mauvais"
+  ],
+  "keywords": [
+    "distributed-systems",
+    "distributed-tracing",
+    "google-infrastructure",
+    "large-scale-systems",
+    "latency-tracking",
+    "observability",
+    "performance-analysis",
+    "systems-instrumentation",
+    "systems-monitoring"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "Dapper is a production distributed systems tracing infrastructure developed at Google. It allows Google engineers to analyze complex end-to-end events instead of individual server-side actions. Dapper enables the increasing integration of tracing information into Google's operations, both in real-time and offline. Its most important design features are application-level transparency and pervasive deployment across all of our systems, with low overhead. While Dapper was first developed several years ago, it continues to grow and evolve alongside Google's overall systems and software, and is widely used for analysis at all levels of Google's technical operations.",
+  "summary": "The paper \"Dapper, a Large-Scale Distributed Systems Tracing Infrastructure\" by Benjamin H. Sigelman et al. discusses the development of an infrastructure at Google designed for tracing distributed systems. It highlights Dapper's ability to facilitate the analysis of complex end-to-end events across Google's systems with minimal overhead.\n\nDapper has had a significant influence on the development of distributed tracing techniques and tools beyond Google. It laid the groundwork for subsequent tracing and observability solutions such as Zipkin, a popular distributed tracing system inspired by Dapper ([source](https://zipkin.io/pages/architecture.html)). The principles and practices described in the paper have contributed to the standardization of distributed tracing protocols and methodologies used in modern cloud-native environments.\n\nFurthermore, Dapper's concepts have been foundational for the OpenTracing project ([source](https://opentracing.io/)), which provides APIs for distributed tracing, and OpenTelemetry, an observability framework for cloud-native software ([source](https://opentelemetry.io/)). These projects have widespread usage in the industry, influencing how performance monitoring and tracing are implemented in current distributed systems.\n\nThe impact of this work can be seen in the pervasive adoption of distributed tracing in observability stacks across various industries, marking a shift in performance analysis and system monitoring paradigms. The concepts initiated by Dapper continue to inform and inspire the expanding body of research and industrial applications focused on distributed systems observability and performance management.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/dapper-a-large-scale-distributed-tracing-infrastructure.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/dapper-a-large-scale-distributed-tracing-infrastructure.pdf",
+  "filename": "dapper-a-large-scale-distributed-tracing-infrastructure.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

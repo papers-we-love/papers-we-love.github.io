@@ -1,0 +1,35 @@
+{
+  "uuid": "73a08b8f2ef127790bae99419ee84560c4a171da4ed9ee2e23ff88658386e6a1",
+  "title": "Consistent Hashing and Random Trees: Distributed Caching Protocols for Relieving Hot Spots on the World Wide Web",
+  "publication_date": "July 1997",
+  "authors": [
+    "Daniel Lewin",
+    "David Karger",
+    "Eric Lehman",
+    "Frank Thomson Leighton",
+    "Matthew Levine",
+    "Rina Panigrahy"
+  ],
+  "keywords": [
+    "consistent-hashing",
+    "distributed-algorithms",
+    "distributed-caching",
+    "hashing-techniques",
+    "hot-spots",
+    "load-balancing",
+    "random-trees",
+    "scalable-web-systems",
+    "world-wide-web"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "The growth of the World Wide Web poses frequently seen challenges in the form of server overloading due to hot spots - a small set of extremely popular items causing server congestion. Distributed caching offers one solution by diverting requests to less-loaded locations. We explore new protocols for distributed caching seeking to minimize variance in network load. These protocols centrally utilize a technique called consistent hashing. Consistent hashing allows distributed caching to handle alterations in cache structure (such as the addition or removal of cache units) without extensively remapping keys to cache locations, achieving theoretically optimal load balance in some situations. Moreover, we introduce a protocol for preventing \"hot spot\" overload using a random tree data structure. These offer theoretical improvement over prior work with practical benefits for web systems.",
+  "summary": "Consistent hashing, introduced in this paper, has become a fundamental technique in distributed systems. It has been widely adopted in distributed caching systems to ensure load balancing and efficient key distribution. The paper has significantly influenced the development of distributed databases, file systems, and peer-to-peer networks by providing robust solutions for handling server overload and dynamic network changes. Subsequent research has built upon these principles to enhance scalability and fault tolerance. For example, techniques described in the paper have been integrated into systems like Amazon DynamoDB and are foundational for content distribution networks (CDNs).\n\nNotable references that cite this work include:\n1. Stoica, I., Morris, R., Karger, D., Kaashoek, M. F., & Balakrishnan, H. (2001). Chord: A scalable peer-to-peer lookup service for internet applications. [Source](https://dl.acm.org/doi/10.1145/964723.383071)\n2. DeCandia, G., Hastorun, D., Jampani, M., Kakulapati, G., Lakshman, A., Pilchin, A., ... & Vardhan, M. (2007). Dynamo: Amazon's highly available key-value store. [Source](https://www.cidrdb.org/cidr2007/papers/cidr07p20.pdf)\n3. Zhao, B. Y., Huang, L., Stribling, J., Rhea, S. C., Joseph, A. D., & Kubiatowicz, J. (2004). Tapestry: A resilient global-scale overlay for service deployment. [Source](https://ieeexplore.ieee.org/abstract/document/1281262)",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/consistent-hashing-and-random-trees.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/consistent-hashing-and-random-trees.pdf",
+  "filename": "consistent-hashing-and-random-trees.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

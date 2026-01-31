@@ -1,0 +1,31 @@
+{
+  "uuid": "a4b88096592be53fca47304c580bde2c935734743d9721df0b3f532e67508a19",
+  "title": "Compiling Pattern Matching to Good Decision Trees",
+  "publication_date": "1992",
+  "authors": [
+    "Luc Maranget"
+  ],
+  "keywords": [
+    "algorithm-design",
+    "compilation",
+    "compiler-optimization",
+    "decision-trees",
+    "functional-programming",
+    "pattern-matching",
+    "performance-optimization",
+    "programming-languages",
+    "sml",
+    "software-engineering"
+  ],
+  "category_path": [
+    "pattern_matching"
+  ],
+  "abstract": "Pattern matching is an important part of many programming languages, including ML and Haskell. Implementations usually compile pattern matching using decision trees and backtracking automata. This paper presents new methods for compiling pattern matching to decision trees, which generate better code than traditional methods. The basic idea is to add more structure to the decision tree and to drive the pattern compilation process by explicit rules, using heuristics to choose the most appropriate one in each situation. Compared to existing methods, our approach is easier to understand and modify, and generates code that is both faster and smaller.",
+  "summary": "The paper \"Compiling Pattern Matching to Good Decision Trees\" by Luc Maranget published in 1992 presents novel techniques for compiling pattern matching by using decision trees to improve code quality over traditional methods. This work influenced the optimization of compilers for functional programming languages, notably affecting the compilation strategies in languages such as ML and Haskell, where efficient pattern matching is crucial. The methods introduced involve enhancing the decision tree structure and applying explicit rule-based heuristics. Although specific citations showing direct influence are sparse online, the approaches discussed are foundational in optimizing pattern matching in compilers, and the paper is frequently referenced in discussions related to compiler optimization techniques. The methodologies proposed continue to be relevant for those studying or working on functional language compilers.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/pattern_matching/compiling-pattern-matching-to-good-decision-trees.pdf",
+  "source_type": "pdf",
+  "filepath": "pattern_matching/compiling-pattern-matching-to-good-decision-trees.pdf",
+  "filename": "compiling-pattern-matching-to-good-decision-trees.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:56"
+}

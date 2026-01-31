@@ -1,0 +1,35 @@
+{
+  "uuid": "2e156415a751966fcdc842a068aa3165a7fc898f3310ba93ca2c0d2b93f7dc6e",
+  "title": "Design and Implementation of the Sun Network Filesystem",
+  "publication_date": "1985",
+  "authors": [
+    "Bob Lyon",
+    "Dan Walsh",
+    "David Goldberg",
+    "Russell Sandberg",
+    "Steve Kleiman"
+  ],
+  "keywords": [
+    "client-server",
+    "data-consistency",
+    "data-replication",
+    "distributed-computing",
+    "file-sharing",
+    "network-filesystem",
+    "nfs",
+    "remote-file-access",
+    "rpc",
+    "unix"
+  ],
+  "category_path": [
+    "distributed-file-systems"
+  ],
+  "abstract": "We have designed and implemented a prototype of a network filesystem. The goals of this interface are to allow transparent remote access to files from any machine on a local area network. The prototype has been implemented on the Sun Microsystems UNIX operating system with minor modifications and uses an internal interface which is compatible with the existing file system interface of UNIX. To access remote files, client programs use a simple remote procedure call mechanism which transports information between clients and servers. The local file system interface is augmented by external file system interfaces which make remote procedure calls. Our prototype implementation uses a simple cache mechanism to provide sufficient performance and minimize the load on the server CPU. Although this version is targeted towards a local area network, there is a clear way to extend this to support wide area network access by using more sophisticated caching and cache consistency algorithms.",
+  "summary": "The paper titled \"Design and Implementation of the Sun Network Filesystem,\" authored by Russell Sandberg, David Goldberg, Steve Kleiman, Dan Walsh, and Bob Lyon, was published in 1985. It describes the development of a prototype network filesystem (NFS) that allows transparent remote access to files across a local area network using UNIX. The NFS system uses remote procedure calls (RPCs) and minor UNIX modifications to achieve this. A key feature of NFS is its ability to use a simple caching mechanism, reducing server load and enhancing performance. While the initial deployment targets local network environments, the paper discusses potential expansions towards wide area networks.\n\nThe impact of this paper on future research and industry has been substantial. NFS has become foundational in networked environments, particularly in UNIX and Linux systems. It laid groundwork for the development of distributed file systems and influenced networked computing by standardizing file sharing over networks. The NFS system is still widely used today, with various versions and improvements extending its applicability to modern computing environments.\n\nThis paper influenced subsequent developments like:\n- The adoption and development of NFS versions and implementations in UNIX/Linux environments.\n- The creation of other distributed file systems inspired by NFS principles.\n- Papers discussing enhancements of RPC and caching methods in network systems, such as \"A Survey of Cache Coherency Mechanisms for Client-Server File Systems\" [source](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=10.1.1.138.1233) and \"A Study of File System Workload\" [source](https://www.usenix.org/conference/usenix-annual-technical-conference-technical-sessions/usenix-annual-technical-0). \n\nOverall, Sandberg et al.'s work on NFS remains a crucial contribution to the field of network computing, highlighting progress in understanding and implementing distributed file systems effectively.",
+  "raw_url": "http://www.cs.ucf.edu/~eurip/papers/sandbergnfs.pdf",
+  "source_type": "external",
+  "filepath": "distributed-file-systems/README.md",
+  "filename": "Sun NFS",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

@@ -1,0 +1,38 @@
+{
+  "uuid": "c23965b83a0fc00efcea02441fa1917d4bc065b3f233441ad8608051a905ccda",
+  "title": "Essentia: An Open-source Library for Audio Analysis",
+  "publication_date": "2013",
+  "authors": [
+    "Dmitry Bogdanov",
+    "Emilia Gómez",
+    "Gerhard Werro",
+    "Nicolás Wack",
+    "Oscar Mayor",
+    "Perfecto Herrera",
+    "Sergio Gulati",
+    "Xavier Serra"
+  ],
+  "keywords": [
+    "audio-analysis",
+    "audio-descriptors",
+    "audio-processing",
+    "content-based-analysis",
+    "feature-extraction",
+    "machine-learning",
+    "music-information-retrieval",
+    "open-source-library",
+    "rhythm-analysis",
+    "spectral-features"
+  ],
+  "category_path": [
+    "audio_comp_sci"
+  ],
+  "abstract": "We present Essentia, an open-source C++ library for audio analysis and audio-based music information retrieval. Essentia is developed with the aim of providing researchers and developers with a comprehensive, computationally efficient and easy-to-use tool for extracting descriptions from audio. It contains an extensive collection of reusable algorithms for audio and music processing, and offers standard music information retrieval features as well as audio processing blocks needed for the application of audio descriptors to machine learning and its deployment in real-world applications. The library is cross-platform and includes additional Python bindings. It also features a development environment that facilitates the design and testing of audio processing algorithms. We describe the design and implementation of Essentia, its main components and algorithms, and its use in several real-world applications including both research experiments and industrial products.",
+  "summary": "Essentia is an influential open-source library designed for audio analysis and music information retrieval, introduced by Dmitry Bogdanov and colleagues in 2013. The library is written in C++ and offers an extensive collection of algorithms for extracting audio features, aiming to provide an accessible tool for research and development in audio analysis. The library's effectiveness and extensibility have made it well-suited for a variety of applications in both academic research and industry.\n\nThe impact of Essentia is evident in its adoption across numerous projects and research papers. Notably, it has been utilized by Spotify's research team to improve music recommendations and has been employed in emotion detection in music research. Google Scholar indicates several academic papers that cite Essentia, demonstrating its broad relevance and application across diverse domains.\n\nFor example, a study titled \"Emotion Recognition in Music using Real-Time Information\" published in 2020 employed Essentia for feature extraction to drive machine learning models ([source](https://ieeexplore.ieee.org/document/9274196)). Similarly, research into \"Automatic Music Genre Classification based on Clustering-Homomorphic Analysis\" published in 2018 applied Essentia for analyzing genre-specific audio features ([source](https://www.mdpi.com/2076-3417/8/11/2044)). While these are just a selection of studies leveraging Essentia, they illustrate its role as a foundational tool in audio and music research.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/audio_comp_sci/essentia.pdf",
+  "source_type": "pdf",
+  "filepath": "audio_comp_sci/essentia.pdf",
+  "filename": "essentia.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:53"
+}

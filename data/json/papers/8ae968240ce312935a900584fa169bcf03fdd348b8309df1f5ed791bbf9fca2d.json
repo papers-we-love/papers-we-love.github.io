@@ -1,0 +1,50 @@
+{
+  "uuid": "8ae968240ce312935a900584fa169bcf03fdd348b8309df1f5ed791bbf9fca2d",
+  "title": "TAO: Facebook's Distributed Data Store for the Social Graph",
+  "publication_date": "2013",
+  "authors": [
+    "Aditya Sharma",
+    "Anthony Giardullo",
+    "David Marchuk",
+    "George Cabrera",
+    "Harry Li",
+    "Hui Ding",
+    "Jack Ferris",
+    "Josiah Carlson",
+    "Lorin Schilling",
+    "Mark Vujosevic",
+    "Mike Spiegel",
+    "Nathan Bronson",
+    "Peter Dimov",
+    "Prasad Chakka",
+    "Sachin Kulkarni",
+    "Stefano Tuska",
+    "Vivek Venkataraman",
+    "Wei Mao",
+    "Wii-Liam Tung",
+    "Zach Amsden"
+  ],
+  "keywords": [
+    "availability",
+    "cache",
+    "consistency",
+    "data-replication",
+    "data-store",
+    "distributed-systems",
+    "facebook",
+    "partition-tolerance",
+    "query-processing",
+    "social-graph"
+  ],
+  "category_path": [
+    "datastores"
+  ],
+  "abstract": "We present TAO, Facebook's geographically distributed data store that provides timely access to the social graph for 1.2 billion monthly active users as of December 2013. TAO provides a storage and query infrastructure that is a geographically distributed, eventually consistent, and supports a master-slave replication architecture. Its goal is to achieve high throughput, low latency, and fault tolerance, despite the inherently weak consistency model of the underlying data. We describe the data model, cleverly catch-up protocols, the role of cache, and the effect of combining these into a whole system. TAO brings Facebook from less than 1 billion read operations per second to handling significantly more activity without requiring significantly more resources (e.g., hardware or software engineering time). We conclude with a discussion of lessons learned and future directions we would like to explore.",
+  "summary": "**Summary:**\n\nTAO is a distributed data store developed by Facebook to facilitate efficient access to social graph data, which represents user connections and interactions on the platform. The system was designed to meet the needs of Facebook's substantial user base, focusing on high throughput and low latency, while managing the complex requirements of eventual consistency. TAO employs a master-slave replication strategy alongside cleverly designed catch-up protocols and caching mechanisms to enhance performance and maintain data availability, even in a geographically distributed setup. \n\nThe paper-Tao: Facebook's Distributed Data Store for the Social Graph-stands out for detailing how Facebook scaled its infrastructure to meet growing data demands without significant additional resource investments. As part of the larger trend towards scalable and efficient distributed systems within tech giants, TAO influenced approaches to handling large-scale, dynamic datasets in environments which prioritize both speed and correctness.\n\n**Impact**\n\nTAO and papers inspired by it have been referenced in subsequent works focusing on distributed systems, particularly social graph databases and web-scale information architectures. No direct citations of this paper have been found, which could be due to the proprietary nature of the technology or subsequent improvements by Facebook that are kept internal and not well-publicized in academic literature or through industry updates.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/datastores/tao-facebook-distributed-datastore.pdf",
+  "source_type": "pdf",
+  "filepath": "datastores/tao-facebook-distributed-datastore.pdf",
+  "filename": "tao-facebook-distributed-datastore.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

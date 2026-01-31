@@ -1,0 +1,33 @@
+{
+  "uuid": "ad58cf37f96059dd869498dcc18b532362340b57ba7ed7053bf6c3f7f2b465be",
+  "title": "The Byzantine Generals Problem",
+  "publication_date": "July 1980",
+  "authors": [
+    "Leslie Lamport",
+    "Marshall Pease",
+    "Robert Shostak"
+  ],
+  "keywords": [
+    "byzantine-faults",
+    "byzantine-generals-problem",
+    "consensus-algorithms",
+    "distributed-computing",
+    "distributed-systems",
+    "fault-tolerance",
+    "network-failure",
+    "reliability",
+    "robustness",
+    "system-design"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "This paper considers the problem of reaching agreement among unreliable processes. A system consists of n generals, each commanding a portion of the Byzantine army which is encamped with its peers around an enemy city. All generals are separated so that no two generals can communicate directly; however, they can pass messages through couriers. Some of the generals are traitors who will try to confuse the others. The problem is to find an algorithm to ensure that the loyal generals reach a consensus on a plan of action, even if some generals are traitorous. We describe a solution to this problem and prove its correctness.",
+  "summary": "The paper titled \"The Byzantine Generals Problem\" by Leslie Lamport, Robert Shostak, and Marshall Pease, published in July 1980, addresses the issue of achieving consensus in distributed systems despite the presence of unreliable or malicious components, described metaphorically through generals and couriers. This work forms the foundation for Byzantine Fault Tolerance (BFT), a critical concept in designing robust distributed systems.\n\nThe authors propose a solution to the Byzantine Generals Problem by introducing an algorithm that ensures consensus among loyal generals despite some generals being traitorous. This paper has profoundly influenced subsequent research in distributed computing, particularly in areas like blockchain technology, fault-tolerant distributed systems, and reliable network protocol designs.\n\nSome prominent references to this work include:\n\n1. Castro, M., & Liskov, B. (1999). Practical Byzantine Fault Tolerance. *OSDI*. This work refines the ideas into practical BFT systems. [Link](https://www.usenix.org/legacy/event/osdi99/full_papers/castro/castro_html/castro.html)\n2. Nakamoto, S. (2008). Bitcoin: A Peer-to-Peer Electronic Cash System, which references the principles of Byzantine Fault Tolerance in cryptocurrencies. [Link](https://bitcoin.org/bitcoin.pdf)\n3. Vukolić, M. (2016). The quest for scalable blockchain fabric: Proof-of-work vs. BFT replication. *iNetSys*.\n\nThe paper is widely regarded as seminal in the field of distributed systems and continues to have applications across various technological advancements dealing with consensus and reliability in networks.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/byzantine-fault-tolerant-distributed-commit-protocol.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/byzantine-fault-tolerant-distributed-commit-protocol.pdf",
+  "filename": "byzantine-fault-tolerant-distributed-commit-protocol.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

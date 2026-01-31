@@ -1,0 +1,35 @@
+{
+  "uuid": "e6d0fef549507aadd6917ff6ad7556b3f0bee806f192a2e60dfddddf6fa0017b",
+  "title": "All You Need is Ears: A Multi-Sensory Embodied Agent",
+  "publication_date": "January 2019",
+  "authors": [
+    "Adrià Colomé",
+    "Carme Torras",
+    "Felix Gimeno",
+    "Marta R. Costa-jussá",
+    "María García Ortiz"
+  ],
+  "keywords": [
+    "artificial-intelligence",
+    "audio-processing",
+    "convolutional-neural-networks",
+    "deep-learning",
+    "embodied-agents",
+    "multi-modal-perception",
+    "multi-sensory-agents",
+    "neurological-modeling",
+    "robotics",
+    "sensor-fusion"
+  ],
+  "category_path": [
+    "machine_learning"
+  ],
+  "abstract": "We propose a multi-sensory neural network that enables an embodied agent to process aliased audio-visual observations in partially observable environments. Working towards this goal, we introduce a semi-supervised approach to enhance linguistic capabilities by combining audio and visual information, and illustrate its ability to disambiguate language conditioned on visual context. We present an exhaustive set of experiments demonstrating how the fusion of audio and visual sensory signals helps to perform challenging tasks like audio-visual speaker diarization and speech recognition. These experiments reveal that our proposed approach exceeds single-modality models in segments with multi-sensory input, this being particularly relevant for real-world applications where observations are often ambiguous and carry inherent uncertainty.",
+  "summary": "The paper introduces a multi-sensory neural network architecture for processing audio-visual inputs in embodied agents operating in partially observable environments. The authors propose a semi-supervised learning strategy that leverages the combination of auditory and visual information to enhance language interpretation capabilities. By conducting numerous experiments, the paper demonstrates that integrating multiple sensory modalities can significantly improve performance in tasks such as speaker diarization and speech recognition, especially under ambiguous conditions. \n\nA web search reveals that there isn't a significant number of highly cited or industry-acknowledged works directly referencing this paper. However, related fields such as embodied AI and multi-modal sensory integration continue to be of considerable interest in both academia and industry. It is plausible that this work contributes to the foundational understanding and the development of similar models, aiding progress in AI handling multi-modal sensory data. Without substantial direct citations or known direct applications, we focus on its potential contributions to the structure and learning of multi-modal models, particularly in uncertain and partially observable real-world scenarios. For more information visit the [arXiv page](https://arxiv.org/abs/1901.04592).",
+  "raw_url": "https://arxiv.org/pdf/1901.04592.pdf",
+  "source_type": "external",
+  "filepath": "machine_learning/README.md",
+  "filename": "Interpretable machine learning: definitions, methods, and applications",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:04"
+}

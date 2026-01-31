@@ -1,0 +1,31 @@
+{
+  "uuid": "5323e3011be3d2abfa38561eca2322d7ecaa2cb537900ee85c6d492462ae6368",
+  "title": "Virtual time and global states of distributed systems",
+  "publication_date": "April 1, 1988",
+  "authors": [
+    "Friedemann Mattern"
+  ],
+  "keywords": [
+    "asynchronous-systems",
+    "causal-relationships",
+    "computer-networks",
+    "concurrent-computing",
+    "distributed-systems",
+    "event-ordering",
+    "global-states",
+    "snapshot-algorithms",
+    "time-coordination",
+    "virtual-time"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "In a physically distributed system consisting of a number of sequential processes that do not share a common time base, algorithms which determine global states and, thus, enable global reasoning and decisions are of paramount importance. In this paper a new scheme for achieving such a global state in a distributed system is proposed and discussed. The problem of determining a global state of an asynchronous system is reduced to the problem of establishing points in space-time. The proposed technique illustrates the advantages of virtual time when implementing such algorithms.",
+  "summary": "Friedemann Mattern's paper 'Virtual time and global states of distributed systems' focuses on establishing a global state in distributed systems by using a novel scheme based on virtual time. This approach addresses the challenge of defining a global state in asynchronous systems by effectively coordinating time and establishing event ordering without a shared clock. Key concepts introduced include virtual time for time coordination, spatial-temporal points to form global states, and handling causal relationships in event ordering. The methodology provides an efficient means to achieve a consistent snapshot of a distributed system.\n\nThis paper is recognized as influential in the study and design of distributed and asynchronous computing systems by providing a foundational approach to global states and virtual time. It is frequently cited in further research and development of distributed algorithms and snapshot algorithms.\n\nReferences to this paper have been found in works such as \"Distributed Snapshots: Determining Global States of Distributed Systems\" by K.M. Chandy and L. Lamport (https://lamport.azurewebsites.net/pubs/chandy.pdf) and \"Time, Clocks, and the Ordering of Events in a Distributed System\" also by L. Lamport (https://lamport.azurewebsites.net/pubs/time-clocks.pdf). These works underscore its importance in advancing the understanding and implementation of global states in distributed computing.",
+  "raw_url": "http://www.cs.utexas.edu/users/lorenzo/corsi/cs380d/papers/paper2-1.pdf",
+  "source_type": "external",
+  "filepath": "distributed_systems/README.md",
+  "filename": "Paxos Made Live - An Engineering Perspective",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

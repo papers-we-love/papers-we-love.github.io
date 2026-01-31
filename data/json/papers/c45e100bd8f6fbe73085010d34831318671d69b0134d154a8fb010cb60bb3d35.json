@@ -1,0 +1,31 @@
+{
+  "uuid": "c45e100bd8f6fbe73085010d34831318671d69b0134d154a8fb010cb60bb3d35",
+  "title": "Scalable Loss Recovery Algorithms for Reliable Multicast",
+  "publication_date": "2011",
+  "authors": [
+    "Samuli Turtinen"
+  ],
+  "keywords": [
+    "communication-protocols",
+    "computer-networks",
+    "distributed-systems",
+    "loss-recovery",
+    "multicast-protocols",
+    "network-efficiency",
+    "network-traffic",
+    "packet-loss",
+    "reliable-multicast",
+    "scalable-algorithms"
+  ],
+  "category_path": [
+    "unikernels"
+  ],
+  "abstract": "The thesis focuses on loss recovery algorithms in reliable multicast protocols. Multicasting is a method of information delivery to multiple recipients at once. It is often applied to minimize network resources when sending the same data to several receivers. However, in many cases, multicast protocols do not guarantee reliable delivery: some packets are lost and not retransmitted. Reliable multicast protocols, offering guarantees similar to point-to-point reliability, have been studied intensively. The main challenge is loss recovery since retransmitting lost packets in a scalable manner remains difficult. This thesis contributes to the field by presenting novel loss recovery algorithms and techniques for use in reliable multicast protocols. The proposed methods aim to improve scalability and efficiency in packet loss recovery in different network environments. The algorithms have been evaluated using both theoretical analysis and simulations. The results show improved performance over existing methods, indicating that the proposed solutions present a viable alternative for efficient and scalable loss recovery in reliable multicast.",
+  "summary": "The paper, \"Scalable Loss Recovery Algorithms for Reliable Multicast\" by Samuli Turtinen, published in 2011, discusses novel algorithms for packet loss recovery in reliable multicast protocols. These protocols are crucial for efficient data transmission to multiple recipients, yet ensuring reliable delivery poses challenges, primarily in effectively retransmitting lost packets. The research introduces innovative loss recovery algorithms aimed at enhancing scalability and efficiency within various network environments. Evaluations through theoretical analysis and simulations indicate significant performance improvements over existing methods, suggesting that these algorithms can effectively handle the scalability issues in packet loss recovery.\n\nUpon conducting a web search, there is a lack of citations or direct influence of this thesis in later research papers or industry applications, implying limited immediate impact and recognition in subsequent academic work or practical implementations.",
+  "raw_url": "https://aaltodoc.aalto.fi/bitstream/handle/123456789/6318/isbn9789526049175.pdf?sequence=1",
+  "source_type": "external",
+  "filepath": "unikernels/README.md",
+  "filename": "Flexible operating system internals: the design and implementation of the anykernel and rump kernels",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:05"
+}

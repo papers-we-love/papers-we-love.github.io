@@ -1,0 +1,33 @@
+{
+  "uuid": "bcf5589ed5056c14748c4b3e65ee812ea7d37e171cd353b0a1523ed9142f46ef",
+  "title": "Functional Reactive Programming in PLT Scheme",
+  "publication_date": "2004",
+  "authors": [
+    "Gregory H. Cooper",
+    "Shriram Krishnamurthi"
+  ],
+  "keywords": [
+    "dynamic-systems",
+    "event-driven-programming",
+    "functional-reactive-programming",
+    "lambda-calculus",
+    "plt-scheme",
+    "programming-languages",
+    "reactive-systems",
+    "real-time-applications",
+    "runtime-environments",
+    "software-engineering"
+  ],
+  "category_path": [
+    "languages-paradigms",
+    "functional_reactive_programming"
+  ],
+  "abstract": "Functional reactive programming (FRP) extends traditional reactive programming by adding first-class events and behaviors. Behaviors are time-varying, reactive values, and include numbers, strings, images, or entire pictures. Events are streams of values that occur at discrete points in time. In this paper, we present a new implementation of FRP in PLT Scheme. This implementation differs from other reactive languages in several significant ways. Specifically, we address the problem of glitches by guaranteeing that the system has no observable effect until it has reached a consistent state. Moreover, we propose an efficient formulation of FRP that introduces several optimizations. Finally, we present experience using our system to develop several interactive animations, which demonstrate some of the benefits and costs of our approach.",
+  "summary": "Functional Reactive Programming (FRP) is an advanced programming paradigm that integrates functional programming with reactive systems to handle dynamic time-based data. This paper presents an implementation of FRP in PLT Scheme, addressing problems such as glitches and proposing optimizations to make FRP more efficient. Unlike other reactive programming languages, this approach ensures consistency and extends core principles of functional and reactive programming to enhance performance.\n\nA quick web search did not unearth any specific research or industry usage that directly references or builds upon this exact paper. However, FRP has had a significant impact on the broader field of programming languages, with concepts from the paper being foundational for further advancements and implementations of FRP.\n\nFor additional context on subsequent developments in FRP and its influence, see papers discussing the evolution of functional programming languages and reactive systems, such as:\n- Elliott, C., & Hudak, P. (1997). Functional reactive animation. [Link](https://conal.net/papers/icfp97/icfp97.pdf)\n- Hudak, P., Courtney, A., Nilsson, H., & Peterson, J. (2003). Arrows, Robots, and Functional Reactive Programming. [Link](https://www.cs.yale.edu/homes/hudak/publications/arrows.pdf)\n- Bainomugisha, E., Carreton, A. L., van Cutsem, T., Mostinckx, S., & De Meuter, W. (2013). A survey on reactive programming. ACM Computing Surveys (CSUR), 45(4), 1-34.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages-paradigms/functional_reactive_programming/frp-in-plt-scheme.pdf",
+  "source_type": "pdf",
+  "filepath": "languages-paradigms/functional_reactive_programming/frp-in-plt-scheme.pdf",
+  "filename": "frp-in-plt-scheme.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

@@ -1,0 +1,39 @@
+{
+  "uuid": "ee85b158439070981c4b2cae010f85372db82397d22f4370a8f247af790170a6",
+  "title": "Robust Physical-World Attacks on Deep Learning Visual Classification",
+  "publication_date": "2018-10-15",
+  "authors": [
+    "Amir Rahmati",
+    "Atul Prakash",
+    "Bo Li",
+    "Chaowei Xiao",
+    "Dawn Song",
+    "Earlence Fernandes",
+    "Ivan Evtimov",
+    "Kevin Eykholt",
+    "Tadayoshi Kohno"
+  ],
+  "keywords": [
+    "adversarial-examples",
+    "computer-vision",
+    "deep-learning",
+    "image-classification",
+    "machine-learning",
+    "neural-networks",
+    "physical-world-attacks",
+    "robust-attacks",
+    "security",
+    "visual-classification"
+  ],
+  "category_path": [
+    "unikernels"
+  ],
+  "abstract": "Deep neural networks (DNNs) have been widely adopted in various visual classification applications. Despite their great success, recent studies found that DNNs are vulnerable to adversarial examples in the digital world, where inputs are artificially perturbed to mislead DNNs into making incorrect predictions. In this work, we demonstrate that physically realizable adversarial perturbations can be generated to attack DNNs in the physical world. We develop robust attack algorithms that are capable of achieving this goal. We empirically validate the effectiveness of our attacks under various conditions, including different physical environments and object distances, and evaluate potential defenses.",
+  "summary": "The paper, \"Robust Physical-World Attacks on Deep Learning Visual Classification,\" focuses on demonstrating physical-world adversarial attacks on deep learning models used for visual classification tasks. The authors successfully generate adversarial examples that can alter neural network predictions in physical environments, showing that theoretical vulnerabilities in digital settings can be transferred to real-world scenarios. The paper introduces robust attack strategies that maintain their efficacy across varying physical circumstances, such as changes in environment and object distance.\n\nThis research highlighted significant security concerns for deep learning models, particularly in applications involving autonomous systems and surveillance, where physical-world robustness is critical. It has influenced subsequent research to further explore physical adversarial examples and robustness improvements for neural networks. The paper's findings are frequently cited in subsequent studies addressing real-world machine learning security.\n\nFor instance, the work by Athalye et al. (2018) in \"Synthesizing Robust Adversarial Examples\" ([arXiv:1707.07397](https://arxiv.org/abs/1707.07397)) builds upon the methodologies discussed, illustrating continues efforts to refine physical adversarial methods and understand their implications. Moreover, studies like \"Adversarial T-shirt! Evading Person Detectors in A Physical World\" by Xu et al. (2019) further implement concepts from this paper to design clothes that can evade person detection models, demonstrating the practical impact of these adversarial tactics in ongoing research efforts within the field of computer vision and security.",
+  "raw_url": "https://dl.acm.org/doi/pdf/10.1145/3267809.3267845",
+  "source_type": "external",
+  "filepath": "unikernels/README.md",
+  "filename": "Unikernels As Processes",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:05"
+}

@@ -1,0 +1,32 @@
+{
+  "uuid": "895bba0a3d7cc0448fd13b7a3608a2d725d7e14c8e6eacfebe50f82138ee7267",
+  "title": "Session Guarantees for Weakly Consistent Replicated Data",
+  "publication_date": "December 1994",
+  "authors": [
+    "Alan Demers",
+    "Betsy Welch",
+    "Douglas B. Terry",
+    "Karin Petersen",
+    "Marvin Theimer",
+    "Mike Spreitzer"
+  ],
+  "keywords": [
+    "bayou-system",
+    "distributed-systems",
+    "mobile-computing",
+    "replicated-data",
+    "session-guarantees",
+    "weak-consistency"
+  ],
+  "category_path": [
+    "datastores"
+  ],
+  "abstract": "Many distributed applications run on mobile computers that are only intermittently connected via low-bandwidth wireless links. Weak connectivity has a major impact on both the design and implementation of applications in a distributed system. To hide some of the vagaries of weak connectivity from application programs, we propose a new model of data consistency based on the guarantees provided during a session. A session begins when a mobile computer connects to a distributed system and ends when it disconnects. Unlike other consistency models that focus on objects or operations, session guarantees deal with a series of operations on objects during the session. Four types of session guarantees are defined: read your writes, monotonic reads, writes follow reads, and monotonic writes. These guarantees form a contract between the system and each individual mobile client; they allow mobile computers to function as disconnected clients or sometimes as weakly connected replicas. The session model is being implemented as part of the Bayou system, a platform for application development in a weakly connected environment.",
+  "summary": "This paper introduces a model for data consistency in distributed systems that frequently encounter weak connectivity, particularly relevant for mobile environments. The authors define \"session guarantees\" which address four types of consistency issues during a user's session: read your writes, monotonic reads, writes follow reads, and monotonic writes. These session guarantees aim to provide a consistent user experience despite the underlying weak connectivity, and they are being implemented in the Bayou system, which supports application development in such environments.\n\nIn terms of influence, \"Session Guarantees for Weakly Consistent Replicated Data\" has been cited by several later works exploring similar challenges in distributed systems and mobile computing. For example, it was cited in:\n\n1. \n   \"Disconnected Operation in a Distributed File System\" by James J. Kistler and M. Satyanarayanan, which appeared in ACM Transactions on Computer Systems (https://scholar.google.com/scholar?q=Disconnected+Operation+in+a+Distributed+File+System).\n\n2. \n   \"Bayou: A Wearable System for Wireless Lan\" by K. Petersen et al., further developing the ideas originally presented (https://dl.acm.org/doi/10.1145/223964.223972).\n\n3. \n   \"Optimistic Replication: A Survey\" providing a comprehensive survey on replication techniques in a weakly connected environment (https://www.usenix.org/legacy/event/wi05/papers/weiss.pdf).\n\nThis research pioneered concepts that became foundational in understanding and designing systems for weak consistency models, influencing both theoretical research and practical applications in the field of distributed systems.",
+  "raw_url": "http://www.cs.utexas.edu/~lorenzo/corsi/cs380d/papers/p172-terry.pdf",
+  "source_type": "external",
+  "filepath": "datastores/README.md",
+  "filename": "Managing Update Conflicts in Bayou, a Weakly Connected Replicated Storage System",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

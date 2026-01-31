@@ -1,0 +1,36 @@
+{
+  "uuid": "467458950c137d07574c88c860b63a7771527b82293975115c709dcec3e953cf",
+  "title": "Barrelfish: A Multikernel OS for Multicore Hardware",
+  "publication_date": "March 2008",
+  "authors": [
+    "Abraham Welc",
+    "Andrew Baumann",
+    "Paul Barham",
+    "Pierre-Evarist Gaudry",
+    "Reto Schüpbach",
+    "Timothy Harris"
+  ],
+  "keywords": [
+    "barrelfish",
+    "computer-architecture",
+    "distributed-systems",
+    "inter-core-communication",
+    "monitoring-systems",
+    "multicore",
+    "multikernel",
+    "operating-systems",
+    "parallel-computing",
+    "scalability"
+  ],
+  "category_path": [
+    "unikernels"
+  ],
+  "abstract": "Recent trends in computer architecture have radically changed the landscape of systems software. Multicore processors, non-uniform memory access architectures, and the growing importance of accelerators mean that OS developers face the challenge of building systems for hardware whose characteristics vary widely. Barrelfish is a new operating system designed from the ground up for scalability through increased use of message passing and more extensive use of distributed data structures in the OS. In this paper, we describe the rationale behind the Barrelfish architecture, and the detailed design of the system and implementation of core OS components, we also show early results evaluating the system.",
+  "summary": "The paper \"Barrelfish: A Multikernel OS for Multicore Hardware\" introduces the concept of a multikernel operating system designed to address challenges posed by multicore processors. The architecture of Barrelfish focuses on scalability and takes advantage of message passing and distributed data structures. The authors present a detailed design and examine core OS components, providing early evaluation results.\n\nBarrelfish has influenced subsequent research in operating systems and computer architecture, particularly in scalability and inter-core communication mechanisms. It has been cited by many studies and papers exploring efficient OS designs for multicore and distributed systems. For example, it is referenced in research examining the scalability of operating systems like \"A Scalable Operating System for Manycore Processors\" (https://ieeexplore.ieee.org/document/5506313) and studies on interconnect networks for scalability as in \"Interconnects for large-scale systems-on-chip\" (https://www.sciencedirect.com/science/article/abs/pii/S016764230900194X).\n\nThe paper has had a notable impact by inspiring further exploration into non-traditional OS structures for modern hardware, reflecting its relevance in ongoing developments in system software. As of the latest available updates, Barrelfish has continued to be a reference point for discussions around the creation of adaptable and scalable operating systems for emerging multicore and heterogeneous architectures.",
+  "raw_url": "http://www.barrelfish.org/publications/barrelfish_mmcs08.pdf",
+  "source_type": "external",
+  "filepath": "unikernels/README.md",
+  "filename": "Embracing diversity in the Barrelfish manycore operating system",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:05"
+}

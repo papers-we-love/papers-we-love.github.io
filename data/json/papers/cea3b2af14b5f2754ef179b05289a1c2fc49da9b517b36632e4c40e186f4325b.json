@@ -1,0 +1,33 @@
+{
+  "uuid": "cea3b2af14b5f2754ef179b05289a1c2fc49da9b517b36632e4c40e186f4325b",
+  "title": "Zab: High-performance broadcasting using a non-blocking voting scheme",
+  "publication_date": "2008",
+  "authors": [
+    "Benjamin C. Reed",
+    "Flavio P. Junqueira",
+    "Marco Serafini"
+  ],
+  "keywords": [
+    "atomic-broadcast",
+    "broadcasting",
+    "consensus",
+    "distributed-systems",
+    "fault-tolerance",
+    "high-performance",
+    "non-blocking-voting",
+    "replicated-services",
+    "system-reliability",
+    "zookeeper"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "In this paper we present ZAB, a protocol for achieving high-throughput strongly consistent replication, while avoiding blocking or inhibiting normal operations after a leader failure. Our protocol addresses the complex problem of choosing between ordering of broadcasts and availability during leader failure and recovery. We describe an implementation of the Zab protocol that forms the backbone of the system synchronization of ZooKeeper, a coordination service for distributed applications.",
+  "summary": "The paper titled \"Zab: High-performance broadcasting using a non-blocking voting scheme\" introduces the Zab protocol, a broadcast protocol that ensures high-throughput and strongly consistent replication without blocking during leader failures. This protocol is fundamental for distributed systems needing reliable broadcast services. The implementation described in the paper is used within ZooKeeper, which is a key coordination service for distributed applications. This has been influential in developing systems that require fail-safe and consistent replication mechanisms. \n\nThe paper addresses key challenges in distributed systems by dealing with the trade-off between message ordering and availability during failures. The Zab protocol has been influential, as evidenced by references in other research works. Notably, it is cited in the \"ZooKeeper: Wait-free coordination for Internet-scale systems\" paper (https://dl.acm.org/doi/10.1145/1863103.1863117), which highlights its impact on ZooKeeper's development, a critical component in Apache Hadoop's ecosystem, and other large-scale distributed systems relying on Apache ZooKeeper for synchronization and configuration maintenance. This demonstrates its significance in the field of distributed systems and its practical applicability to real-world problems involving system reliability and performance.",
+  "raw_url": "http://diyhpl.us/~bryan/papers2/distributed/distributed-systems/zab.totally-ordered-broadcast-protocol.2008.pdf",
+  "source_type": "external",
+  "filepath": "distributed_systems/README.md",
+  "filename": "A simple totally ordered broadcast protocol",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

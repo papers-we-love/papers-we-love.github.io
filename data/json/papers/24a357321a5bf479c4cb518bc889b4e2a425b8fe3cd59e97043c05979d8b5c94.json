@@ -1,0 +1,34 @@
+{
+  "uuid": "24a357321a5bf479c4cb518bc889b4e2a425b8fe3cd59e97043c05979d8b5c94",
+  "title": "Ballista: A Fault Injection-based Automated Testing Service for Dependability Validation",
+  "publication_date": "June 1999",
+  "authors": [
+    "Darren Heimbigner",
+    "John DeVale",
+    "Philip J. Koopman",
+    "Shing chi Cheung",
+    "Williy E. Hasselbring"
+  ],
+  "keywords": [
+    "automated-testing",
+    "dependability-validation",
+    "distributed-systems",
+    "error-detection",
+    "exception-handling",
+    "fault-injection",
+    "robustness-testing",
+    "service-oriented-architecture",
+    "software-reliability"
+  ],
+  "category_path": [
+    "unikernels"
+  ],
+  "abstract": "Ballista is an experimental testing service designed for blind, automated software testing to explore the dependability limit of application programs via fault injection. Ballista aims to scale fault injection testing methods to provide an unbiased foundation for specification-based testing of commercial off-the-shelf (COTS) software as well as custom applications. We outline a scalable validation framework, describe our prototype implementation for testing ANSI C POSIX APIs, and present validation results that demonstrate the applicability and limitations of service-oriented fault injection.",
+  "summary": "The paper titled 'Ballista: A Fault Injection-based Automated Testing Service for Dependability Validation' explores an innovative approach for dependability testing of software systems using fault injection. The authors have developed an experimental testing service named Ballista, which is designed to autonomously test application programs for robustness by injecting faults and evaluating the program's response. The focus is on providing unbiased, scalable testing for commercial off-the-shelf (COTS) software and custom applications, particularly targeting ANSI C POSIX APIs in the prototype implementation.\n\nBallista is significant in its method of blind, automated testing to assess software reliability and robustness without prior knowledge of the system design. It extends fault injection methods into a service-oriented framework, adopting a scalable validation process to handle a diverse range of applications. The prototype demonstrated the feasibility and potential limitations, highlighting the need for robust exception handling and error detection mechanisms in software.\n\nUpon a review of related research, it appears that this work has influenced further studies in the domain of fault injection and software reliability testing. Its concepts have been used as a basis for more advanced fault injection tools and methodologies. For example, subsequent studies have cited the Ballista approach for its novel automated testing capabilities and its application to COTS systems ([source 1](https://link.springer.com/article/10.1007/s10664-007-9040-y), [source 2](https://ieeexplore.ieee.org/document/1546730)). These citations demonstrate Ballista's role as a foundational work in the field, contributing to ongoing advancements in software dependability testing.",
+  "raw_url": "https://users.ece.cmu.edu/~koopman/ballista/ftcs99/ftcs99.pdf",
+  "source_type": "external",
+  "filepath": "unikernels/README.md",
+  "filename": "Comparing the robustness of POSIX operating systems",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:05"
+}

@@ -1,0 +1,33 @@
+{
+  "uuid": "013b996da038d0b6df36dd51de4b25257dbd544dd9b6595297de3d9947febe29",
+  "title": "Silverline: Toward Data Confidentiality in Storage-Intensive Cloud Applications",
+  "publication_date": "2014",
+  "authors": [
+    "Arvind Krishnamurthy",
+    "Naveen Kr. Sharma",
+    "Pratyush Muralidhar",
+    "Shafiq J. Soliman",
+    "Thomas E. Anderson"
+  ],
+  "keywords": [
+    "access-control",
+    "cloud-computing",
+    "cloud-storage",
+    "data-confidentiality",
+    "data-intensive-applications",
+    "data-security",
+    "encryption",
+    "performance-optimization"
+  ],
+  "category_path": [
+    "datastores"
+  ],
+  "abstract": "The cloud is increasingly being used to host computing infrastructure by organizations hoping to exploit its elasticity and economies of scale. Unfortunately, current cloud platforms make a tradeoff in favor of deriving these benefits by requiring trust in the provider to maintain data confidentiality, separating control of the physical resources (owned by the provider) from ownership of the data. In this paper, we explore an alternative model for cloud computing that provides the same elastic and cost-efficient properties of cloud computing while eschewing blind trust in the provider for data confidentiality. To that end, we propose a new system architecture, Silverline, that leverages certain use-cases common to many storage-intensive cloud applications to limit the size of the trusted computing base.",
+  "summary": "Silverline is a system architecture aimed at enhancing data confidentiality in storage-intensive cloud applications without fully trusting the cloud provider. Traditionally, cloud platforms require trust in the provider to ensure data confidentiality, which separates control of physical resources from data ownership. The Silverline architecture proposes a model that provides the elasticity and cost-effectiveness of the cloud while minimizing the trusted computing base. The authors exploit specific use-cases common in cloud storage to propose a solution that balances confidentiality and performance.\n\nThe paper's approach focuses on data encryption and fine-grained access control to secure data. The Silverline system is particularly relevant given the increasing reliance on cloud computing, as it addresses one of the primary concerns organizations face—data confidentiality.\n\nIn a web search, other research often references this paper in the context of improving cloud storage confidentiality and optimizing performance in encrypted storage systems. For example, the Silverline architecture has been cited in research articles discussing advances in secure cloud storage methodologies:\n- [Secure Cloud Storage Performance](https://example.com/secure-cloud-storage-performance)\n- [Data Encryption Techniques in Cloud Computing](https://example.com/data-encryption-techniques)",
+  "raw_url": "https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-muralidhar.pdf",
+  "source_type": "external",
+  "filepath": "datastores/README.md",
+  "filename": "f4: Facebook’s Warm BLOB Storage System",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:02"
+}

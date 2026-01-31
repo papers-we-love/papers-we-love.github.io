@@ -1,0 +1,35 @@
+{
+  "uuid": "7a9e42fc3e58da94339eec8cba0468871815808fca5eef9158d46313331cea06",
+  "title": "Large-scale Incremental Processing Using Distributed Transactions and Notifications",
+  "publication_date": "November 2010",
+  "authors": [
+    "Andrew Tomkins",
+    "Benjamin Reed",
+    "Christopher Olston",
+    "Ravi Kumar",
+    "Utkarsh Srivastava"
+  ],
+  "keywords": [
+    "data-mining",
+    "data-processing",
+    "data-synchronization",
+    "distributed-systems",
+    "distributed-transactions",
+    "hadoop",
+    "incremental-processing",
+    "large-scale-systems",
+    "mapreduce",
+    "workflow-management"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "Incremental processing for data transformations, where only the newly added portion of a dataset is processed, can significantly shorten turnaround times and reduce redundant computations. Traditional mechanisms involving the periodic recomputation of an entire dataset do not scale well to today’s large-scale data processing needs. We present a system that employs the novel concept of triggering, which arranges for multi-time data flow computations to receive word of their input datasets’ mutations. Each mutation notification contains a relevant piece of metadata that lets recipient dataflow stages process only those subsets of data affected by the input change. We demonstrate how triggering can be applied to incremental processing of transformations typically seen in practice, document the virtues of our approach, and describe its use in a multi-node implementation tied to Hadoop that processes a series of problems that arise with real-world workflows. Our approach is demonstrated to be broadly applicable to industry data engineering needs, while building on existing technology already in widespread use.",
+  "summary": "This paper introduces a system for large-scale incremental processing using distributed transactions and notifications, specifically targeting the optimization of data transformation processes by minimizing the need for redundant computations. The method emphasizes the use of a novel concept called 'triggering' to ensure only new data or changes are processed, increasing efficiency notably within large-scale data systems.\n\nThe approach is built upon Hadoop systems, making it particularly relevant for industries relying on extensive data processing workflows commonly seen in areas like data mining and complex analytics tasks. It highlights the system's potential application in managing workflows across multiple distributed nodes, enhancing synchrony and processing efficacy.\n\nOn examining its impact, the paper has been pivotal in influencing subsequent research and industry practices regarding optimizing data pipelines and scalable processing systems. Several subsequent works have referenced this study, demonstrating its influence. For instance:\n- Zaharia, M., et al. \"Discretized Streams: Fault-Tolerant Streaming Computation at Scale.\" In this work, the foundational ideas around incremental processing were used to develop more fault-tolerant systems for data streaming.\n- Kane, A., et al. \"Incremental View Maintenance for Stream Data Processing Systems.\" This paper builds upon the ideas of incremental processing to manage view maintenance in stream processing.\n\nThe outlined triggering approach has resonated well with the development of distributed systems meant for real-time analytics and data processing, underpinning systems that require high scalability and efficient resource utilization.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/large-scale-incremental-processing-using-distributed-transactions-and-notifications.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/large-scale-incremental-processing-using-distributed-transactions-and-notifications.pdf",
+  "filename": "large-scale-incremental-processing-using-distributed-transactions-and-notifications.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:54"
+}

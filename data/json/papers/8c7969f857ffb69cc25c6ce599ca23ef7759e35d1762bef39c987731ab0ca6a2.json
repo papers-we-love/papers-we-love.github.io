@@ -1,0 +1,32 @@
+{
+  "uuid": "8c7969f857ffb69cc25c6ce599ca23ef7759e35d1762bef39c987731ab0ca6a2",
+  "title": "In Search of an Understandable Consensus Algorithm",
+  "publication_date": "October 2014",
+  "authors": [
+    "Diego Ongaro",
+    "John Ousterhout"
+  ],
+  "keywords": [
+    "consensus-algorithm",
+    "consistency",
+    "distributed-computing",
+    "distributed-systems",
+    "fault-tolerance",
+    "leader-election",
+    "log-replication",
+    "raft",
+    "replication",
+    "state-machine"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "Consensus is a fundamental problem in fault-tolerant distributed systems that has been studied for decades. Paxos is the most widely known consensus algorithm, but despite numerous attempts to explain it, Paxos remains notoriously difficult to understand. This paper presents a new consensus algorithm called Raft, which is equivalent to Paxos in fault-tolerance and performance. Raft is more understandable than Paxos due to its decomposition into relatively independent subproblems and its clear leader-based approach. We believe that Raft will make consensus available to a wider audience, and that it will provide a foundation for new developments in distributed systems.",
+  "summary": "The paper \"In Search of an Understandable Consensus Algorithm\" by Diego Ongaro and John Ousterhout was published in October 2014. It introduces the Raft consensus algorithm, which was designed to be more understandable than the existing Paxos algorithm while maintaining similar levels of fault-tolerance and performance. Raft decomposes the consensus problem into independent sub-problems and utilizes a clear leader-based structure, making the algorithm more accessible to developers and researchers.\n\nRaft has significantly influenced both academia and industry since its publication. It has been implemented in various distributed systems projects as a reliable consensus mechanism. For example, notable open-source projects like etcd ([GitHub link](https://github.com/etcd-io/etcd)) and HashiCorp's Consul ([Consul link](https://www.consul.io/)) use Raft to ensure data consistency and reliability.\n\nIn the research community, Raft has been cited widely as a clear alternative to Paxos, providing insights into consensus algorithm design and teaching. Papers such as \"Leaderless Replication: A New Approach to Multiconsensus\" (ICDCS 2016) and the use in educational tools like the visualization project \"Visual Raft\" have highlighted Raft’s educational and instructional benefits in understanding consensus mechanisms.\n\nThe dissemination of Raft has furthered discussions on the balance between understandability and technical performance in distributed systems, encouraging the development of new consensus algorithms aimed at combining simplicity with robustness.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/in-search-of-an-understandable-consensus-algorithm.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/in-search-of-an-understandable-consensus-algorithm.pdf",
+  "filename": "in-search-of-an-understandable-consensus-algorithm.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:54"
+}

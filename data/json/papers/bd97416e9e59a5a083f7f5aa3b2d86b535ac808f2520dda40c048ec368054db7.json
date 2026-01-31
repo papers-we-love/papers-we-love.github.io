@@ -1,0 +1,31 @@
+{
+  "uuid": "bd97416e9e59a5a083f7f5aa3b2d86b535ac808f2520dda40c048ec368054db7",
+  "title": "A Fast Quantum Mechanical Algorithm for Database Search",
+  "publication_date": "1996",
+  "authors": [
+    "Lov K. Grover"
+  ],
+  "keywords": [
+    "algorithm",
+    "computational-complexity",
+    "database-search",
+    "grovers-algorithm",
+    "performance-improvement",
+    "quantum-computing",
+    "quantum-mechanics",
+    "quantum-search",
+    "quantum-technology",
+    "search-algorithms"
+  ],
+  "category_path": [
+    "quantum_computing"
+  ],
+  "abstract": "A quantum mechanical system can be in a superposition of states, which leads to very different ways of thinking about computation. In this paper we provide an example of such an algorithm for searching an unsorted database of N elements. Classical algorithms for this problem require O(N) steps, but the quantum algorithm requires only O(sqrt(N)) steps. This represents substantial gain over the classical algorithms. The algorithm uses well-known techniques such as quantum parallelism and interference. We provide a complete description of the algorithm in terms of a quantum mechanical system.",
+  "summary": "The paper titled \"A Fast Quantum Mechanical Algorithm for Database Search\" by Lov K. Grover introduces a quantum algorithm that offers a more efficient means of searching an unsorted database compared to classical algorithms, achieving this in O(√N) operations instead of the classical O(N). This groundbreaking paper, published in 1996, is one of the foundational works in quantum computing, particularly known for what is now termed Grover's Algorithm. It demonstrated significant computational speed-ups using quantum mechanics principles like superposition and interference, fundamentally impacting how researchers understood computational complexity in the quantum realm. \n\nGrover's Algorithm has heavily influenced quantum computing research and has been widely cited in further studies, solidifying its importance in the field. The algorithm's principles have been applied beyond database search problems, extending into varied applications requiring quadratic speed-ups. Despite its limitations, such as applicability primarily to unstructured search problems, it remains a critical reference point for future quantum computing innovations.\n\nThis paper has been extensively referenced in the field, demonstrating its enduring influence:\n\n1. Nielsen, M. A., & Chuang, I. L. (2000). *Quantum Computation and Quantum Information*. Cambridge: Cambridge University Press. [Google Books](https://books.google.com/books?id=65FqEKQOfP8C)\n2. Boyer, M., Brassard, G., Høyer, P., & Tapp, A. (1998). Tight bounds on quantum searching. *Fortschritte der Physik*, 46(4‐5), 493-505. [Wiley Journals](https://onlinelibrary.wiley.com/doi/abs/10.1002/prop.19980460402)\n3. Mosca, M. (2008). Quantum Algorithms. *arXiv preprint* arXiv:0808.0369. [arXiv](https://arxiv.org/abs/0808.0369)\n4. Zalka, C. (1999). Grover's quantum searching algorithm is optimal. *Physical Review A*, 60(4), 2746. [APS](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.60.2746)\n5. Shor, P. W. (1999). Polynomial-time algorithms for prime factorization and discrete logarithms on a quantum computer. *SIAM Journal on Computing*, 26(5), 1484-1509. [SIAM](https://epubs.siam.org/doi/10.1137/S0097539795293172)\n\nThis paper's introduction of a new approach to algorithmic problem-solving through quantum mechanics continues to foster research into expanding quantum computing's practical applications.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/quantum_computing/grovers_algorithm.pdf",
+  "source_type": "pdf",
+  "filepath": "quantum_computing/grovers_algorithm.pdf",
+  "filename": "grovers_algorithm.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:56"
+}

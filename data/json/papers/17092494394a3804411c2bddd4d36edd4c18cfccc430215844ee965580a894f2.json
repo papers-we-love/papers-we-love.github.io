@@ -1,0 +1,32 @@
+{
+  "uuid": "17092494394a3804411c2bddd4d36edd4c18cfccc430215844ee965580a894f2",
+  "title": "Principal Type-Schemes for Functional Programs",
+  "publication_date": "1982",
+  "authors": [
+    "Luis Damas",
+    "Robin Milner"
+  ],
+  "keywords": [
+    "algorithm-w",
+    "functional-programs",
+    "lambda-calculus",
+    "polymorphism",
+    "principal-type-schemes",
+    "programming-languages",
+    "type-checking",
+    "type-inference",
+    "type-systems",
+    "type-theory"
+  ],
+  "category_path": [
+    "languages-theory"
+  ],
+  "abstract": "The paper investigates the type inference problem for functional languages, leading to the formulation and proof of existence of principal type-schemes for functional programs. This theory, closely related to the Curry type inference and polymorphic type systems, also proposes an efficient type inference algorithm applicable in the context of functional programming.",
+  "summary": "The paper \"Principal Type-Schemes for Functional Programs\" by Luis Damas and Robin Milner, published in 1982, addresses the problem of type inference in functional programming languages by establishing the concept of principal type-schemes. This work builds upon Curry's type inference and the polymorphic type system introduced by Milner, proposing an efficient algorithm known as Algorithm W for type inference. \n\nThe influence of this paper on the development of functional programming and type systems is significant. It served as a foundational work for subsequent research in type inference and polymorphic languages. \n\nNotable references to this paper include:\n- \t\"The Definition of Standard ML (Revised)\" by Robin Milner et al., which builds on the type inference concepts by implementing them in the Standard ML programming language.\n- \t\"A Formal Description of Standard ML\" by Stefan Kahrs et al., which further explores type schemes in Standard ML (found [here](https://eprints.soton.ac.uk/id/eprint/262218)).\n- \t\"Typing Haskell in Haskell\" by Mark P. Jones, which is influenced by the type inference strategies discussed in the paper (found [here](https://web.cecs.pdx.edu/~mpj/thih/thih.pdf)).\n\nFurther exploration and expansions on the theories presented can be observed in various studies and language implementations over the decades, particularly in ML-family languages and Haskell, highlighting the lasting impact of this seminal work.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages-theory/principal-type-schemes-for-functional-programs.pdf",
+  "source_type": "pdf",
+  "filepath": "languages-theory/principal-type-schemes-for-functional-programs.pdf",
+  "filename": "principal-type-schemes-for-functional-programs.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

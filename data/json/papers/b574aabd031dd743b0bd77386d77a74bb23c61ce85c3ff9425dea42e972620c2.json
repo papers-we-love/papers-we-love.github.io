@@ -1,0 +1,39 @@
+{
+  "uuid": "b574aabd031dd743b0bd77386d77a74bb23c61ce85c3ff9425dea42e972620c2",
+  "title": "Unikernels: Library Operating Systems for the Cloud",
+  "publication_date": "March 2013",
+  "authors": [
+    "Anil Madhavapeddy",
+    "Balraj Singh",
+    "Charalampos Rotsos",
+    "David Scott",
+    "Jon Crowcroft",
+    "Richard Mortier",
+    "Steven Hand",
+    "Steven Smith",
+    "Thomas Gazagnaire"
+  ],
+  "keywords": [
+    "cloud-computing",
+    "library-operating-systems",
+    "microservices",
+    "networking",
+    "ocaml",
+    "performance-optimization",
+    "resource-efficiency",
+    "security",
+    "unikernels",
+    "virtualization"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "This paper introduces the notion of a unikernel: a specialized, single-address-space machine image constructed by combining application code with a minimal set of operating system libraries. To exploit this concept, we describe a uniform programming model for building such systems that leads to competitive network services and complex application suites. We demonstrate through working prototypes (based on the Xen hypervisor and the OCaml language) useful for (amongst others) a key-value store, HTTP processing, DNS resolver, OpenFlow controller and a mail transport agent. The result is code size 1–2 orders of magnitude smaller, and with a correspondingly significant reduction in attack surface, to existing deployed solutions.",
+  "summary": "This paper presents the concept of unikernels, which are specialized single-address-space images that bundle application code with minimal operating system components. The research demonstrates the development of unikernels using the OCaml language and the Xen hypervisor, resulting in compact, efficient systems that maintain security by minimizing attack surfaces. Practical implementations included key-value stores, HTTP services, and DNS resolvers among others.\n\nThe paper has significantly influenced the field of cloud computing and systems by proposing a lightweight solution for running applications. Unikernels are particularly relevant in scenarios that demand security and performance, as they reduce the complexity and resource footprint compared to traditional virtual machines. \n\nSubsequent research has explored further optimizations and applications of the unikernel model, impacting areas like serverless computing and microservices architecture by providing performance improvements and security benefits. This paper has been referenced in later studies and initiatives aiming at optimizing cloud infrastructures and services. Notable references to this work can be seen in the following papers and projects:\n\n- Koller, R., & Williams, D. (2017). Will serverless computing become a reality?. *Proceedings of the ACM Symposium on Cloud Computing*, DOI: [10.1145/3127479.3131601](https://dl.acm.org/doi/10.1145/3127479.3131601)\n- Boettiger, C. (2015). An introduction to Docker for reproducible research. *ACM SIGOPS Operating Systems Review*, 49(1), DOI: [10.1145/2723872.2723882](https://doi.org/10.1145/2723872.2723882)",
+  "raw_url": "http://unikernel.org/files/2013-asplos-mirage.pdf",
+  "source_type": "external",
+  "filepath": "distributed_systems/README.md",
+  "filename": "Unikernels: Library Operating Systems for the Cloud",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

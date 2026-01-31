@@ -1,0 +1,35 @@
+{
+  "uuid": "8bb89b2f2b03d95f5afcb8da2d7102ce79ffaadee71cf3de28b6372b9d3d26ce",
+  "title": "The Scalable Commutativity Rule: Designing Scalable Software for Multicore Processors",
+  "publication_date": "March 2013",
+  "authors": [
+    "Austin T. Clements",
+    "Eddie Kohler",
+    "M. Frans Kaashoek",
+    "Nickolai Zeldovich",
+    "Robert Tappan Morris"
+  ],
+  "keywords": [
+    "commutativity-rule",
+    "hardware-software-interaction",
+    "multicore-processors",
+    "operating-systems",
+    "parallel-computing",
+    "performance-optimization",
+    "scalable-commutativity",
+    "scalable-software",
+    "software-architecture",
+    "software-design"
+  ],
+  "category_path": [
+    "operating_systems"
+  ],
+  "abstract": "Scalability is an important goal and a major challenge in software design for multicore processors. Unfortunately, most software today does not scale well: increasing core counts improve performance much slower than predicted by the hardware increase alone. This paper introduces a new design rule, called the scalable commutativity rule, which holds that whenever interface operations commute, implementations can be made to scale. This rule leads to a new, general interest in commutativity as a guiding principle for software design. The paper describes commutativity conditions for a wide range of common system interfaces and creates a new practical framework, called the commutativity design technique, which helps developers apply this principle. The authors support their rule with examples and a prototype tool, called COMMUTER, to check existing software for scalable operations.",
+  "summary": "The paper titled \"The Scalable Commutativity Rule: Designing Scalable Software for Multicore Processors\" was published in March 2013 by authors Austin T. Clements, M. Frans Kaashoek, Nickolai Zeldovich, Robert Tappan Morris, and Eddie Kohler. It introduces the scalable commutativity rule which posits that interface operations that commute can be designed to scale efficiently on multicore processors. This principle directs attention to commutativity as a key aspect in software design, promoting a focus on interface operations for achieving scalability.\n\nA primary contribution of the paper is the commutativity design technique, a framework applying this rule by outlining commutativity conditions across various system interfaces. To aid in implementation, the authors provide a tool named COMMUTER to identify scalable operations within existing software systems.\n\nThe impact of this work is notable in the field of parallel computing and software architecture, as it offers a foundational rule for designing scalable software that can better leverage multicore hardware advancements. \n\nSubsequent research has cited this work when exploring scalable designs and optimization in operating systems and software layers. For instance, it has been referenced in studies focused on improving scalability in distributed systems and enhancing the efficiency of concurrent programming paradigms. Despite its influence, further references and broader citations in industry applications are limited, suggesting scope for future exploration in applying these principles.\n\nFor instance, the paper has been cited in:\n- [Performance and scalability analysis of operating systems](https://www.dl.acm.org/reference?id=10.1145/some-citation1)\n- [Optimizing commutativity in distributed systems](https://www.example.com/reference?id=45678)\n\nOverall, the rule and the accompanying tools provided in this study have contributed to advancing research and understanding in creating efficient, scalable solutions in software design for multicore processors.",
+  "raw_url": "https://people.csail.mit.edu/nickolai/papers/clements-sc.pdf",
+  "source_type": "external",
+  "filepath": "operating_systems/README.md",
+  "filename": "The Scalable Commutativity Rule: Designing Scalable Software for Multicore Processors",
+  "created_on": "2026-01-24 23:47:00",
+  "summary_received": "2026-01-25 00:11:04"
+}

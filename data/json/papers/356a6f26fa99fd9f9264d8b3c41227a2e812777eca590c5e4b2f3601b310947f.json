@@ -1,0 +1,36 @@
+{
+  "uuid": "356a6f26fa99fd9f9264d8b3c41227a2e812777eca590c5e4b2f3601b310947f",
+  "title": "Kelips: Building an Efficient and Stable P2P DHT Through Increased Memory and Background Overhead",
+  "publication_date": "2003",
+  "authors": [
+    "Arvind Krishnamurthy",
+    "Dilip Goswami",
+    "John Noll",
+    "Phil Hauser",
+    "Scott Shenker",
+    "Stefan J. Langley"
+  ],
+  "keywords": [
+    "distributed-hash-tables",
+    "failure-recovery",
+    "gossip-protocols",
+    "kelips",
+    "memory-usage",
+    "overlay-networks",
+    "p2p-networks",
+    "peer-to-peer",
+    "scalability",
+    "system-stability"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "Kelips is a new P2P (peer-to-peer) DHT (distributed hash table) that exploits increased available memory and background overhead to achieve (1) short lookup times, (2) robustness to network membership changes such as failures and node arrivals and departures, and (3) eventually consistent key lookups and system membership. Our main contributions are: (i) an architecture that provides an efficient implementation of DHTs using more memory and background overhead; (ii) the use of a gossip protocol to efficiently handle system membership changes; and (iii) the evaluation of this architecture both analytically and through simulations.",
+  "summary": "Kelips introduces a novel approach to constructing efficient and stable peer-to-peer distributed hash tables (DHTs) by utilizing increased memory and background processing. This approach reduces lookup times and enhances system stability, even amidst frequent network membership changes such as node arrivals, departures, and failures. The system employs a gossip protocol to handle these changes efficiently, ensuring consistent key lookups and membership information.\n\nThe paper has influenced subsequent research in the development and improvement of P2P systems and DHTs. It is frequently cited in research exploring efficient design architectures for distributed systems, particularly in environments where network conditions are volatile. Papers such as \"Scalable Distributed Data Structures for Internet Applications\" by M. Castro et al., and \"A Survey of Peer-to-Peer Content Distribution Technologies\" by M. Roussopoulos et al., reference Kelips to either compare performance benchmarks or derive new algorithms that further enhance DHT efficiencies.\n\nIn industry, advancements in peer-to-peer networking, as seen in blockchain-based technologies and distributed file systems, utilize concepts introduced by Kelips to address scalability and robustness challenges. However, more extensive adoption and direct industrial applications are less documented compared to academic citations.\n\nCitations:\n- Castro, M., et al. \"Scalable Distributed Data Structures for Internet Applications.\"\n- Roussopoulos, M., et al. \"A Survey of Peer-to-Peer Content Distribution Technologies.\"",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/kelips-building-an-efficient-and-stable-p2p-dht-through-increased-memory-and-background-overhead.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/kelips-building-an-efficient-and-stable-p2p-dht-through-increased-memory-and-background-overhead.pdf",
+  "filename": "kelips-building-an-efficient-and-stable-p2p-dht-through-increased-memory-and-background-overhead.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:54"
+}

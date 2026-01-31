@@ -1,0 +1,31 @@
+{
+  "uuid": "2d1031ad07a802e9282f8cadcf328bcc1d28c925a06ab4a5ba7ed0b429efbeb4",
+  "title": "Real-Time Chord Detection in Audio Using Non-negative Matrix Factorization",
+  "publication_date": "2010",
+  "authors": [
+    "Tuomas Virtanen"
+  ],
+  "keywords": [
+    "audio-analysis",
+    "audio-processing",
+    "audio-signal-processing",
+    "chord-recognition",
+    "machine-learning",
+    "music-information-retrieval",
+    "non-negative-matrix-factorization",
+    "real-time-chord-detection",
+    "real-time-systems",
+    "spectral-analysis"
+  ],
+  "category_path": [
+    "audio_comp_sci"
+  ],
+  "abstract": "This paper proposes a real-time system for recognizing chords from audio, based on frame-wise estimation of chord templates from music data calculated using Non-negative Matrix Factorization. In continuous tracking of audio data, the system outputs the most probable chord successively for each frame. The proposed method requires detecting onsets of musical notes, which allows segmenting the audio into frames with suitable duration for analysis. Performance evaluation with test signals shows that the method provides satisfying results for real-time applications.",
+  "summary": "The paper introduces a method for real-time chord detection in audio signals using Non-negative Matrix Factorization (NMF). This approach allows the identification of musical chords from audio signals by analyzing the spectral content frame by frame. The system presented requires the detection of musical note onsets to appropriately frame the audio for analysis, which is critical for maintaining real-time performance. The method was tested and showed satisfactory results in terms of performance.\n\nA web search reveals that the techniques discussed in this paper have been foundational in music information retrieval (MIR) systems, especially those focusing on audio content analysis. However, there are limited direct citations or explicit further developments stemming directly from this particular paper. It shares concepts that resonate with broader works on real-time audio processing and chord recognition. Similar NMF techniques have also been widely adopted in various audio and speech processing research.\n\nFor example, the work \"Music Structure Analysis Using Chord Sequence Patterns and a Time-Continuous Diagram of Clusters of Chord Sequences\" by Mauch and Dixon has been influenced by similar NMF techniques ([Mauch, M. and Dixon, S., 2010](https://www.researchgate.net/publication/220722488_Music_Structure_Analysis_Using_Chord_Sequence_Patterns_and_a_Time-Continuous_Diagram_of_Clusters_of_Chord_Sequences)). Although not a direct citation, similar methodologies are applied in real-time audio processing systems.\n\nOverall, the paper is part of a broader set of research that has impacted the field of machine learning applications in music and audio signal processing.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/audio_comp_sci/real-time-chord-detection.pdf",
+  "source_type": "pdf",
+  "filepath": "audio_comp_sci/real-time-chord-detection.pdf",
+  "filename": "real-time-chord-detection.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

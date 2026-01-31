@@ -1,0 +1,38 @@
+{
+  "uuid": "d1d9c8a0173032ee8f6702ea98fc2dbe785621c9e8970b9a1e06ac60f3354501",
+  "title": "Mesos: A Platform for Fine-Grained Resource Sharing in the Data Center",
+  "publication_date": "2011",
+  "authors": [
+    "Ali Ghodsi",
+    "Andy Konwinski",
+    "Anthony D. Joseph",
+    "Benjamin Hindman",
+    "Ion Stoica",
+    "Matei Zaharia",
+    "Randy Katz",
+    "Scott Shenker"
+  ],
+  "keywords": [
+    "computing-clusters",
+    "data-center",
+    "distributed-systems",
+    "fine-grained-sharing",
+    "mesos",
+    "platform",
+    "resource-management",
+    "resource-scheduling",
+    "scheduler",
+    "shared-resources"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "Data centers today employ a large number of distributed applications, ranging from Hadoop jobs to web services. These applications push for three improvements from cluster management systems. First, they need distributed system frameworks to quickly scale up and down on resources. Second, they desire to efficiently share resources for maximum utilization. Third, they wish to integrate multiple programming paradigms and APIs suitable to specific applications. In this paper, we present Mesos, a platform that allows diverse frameworks to efficiently share resources at a fine granularity, improving cluster utilization. Mesos achieves this through a novel two-level scheduling mechanism. We have implemented a prototype Mesos cluster manager and demonstrated that it achieves sharing across a diverse set of application types reliably and efficiently.",
+  "summary": "The paper titled \"Mesos: A Platform for Fine-Grained Resource Sharing in the Data Center\" was published in 2011 and presents the Mesos platform, which aims to efficiently share data center resources across multiple applications. Mesos utilizes a two-level scheduling mechanism that allows various frameworks to allocate resources in a fine-grained manner, optimizing cluster utilization and providing flexibility for multiple programming paradigms and APIs.\n\nThis paper has significantly influenced both academic research and industrial practices in distributed systems and resource management. Mesos has become a foundational part of the Apache Mesos project, which is widely used in cloud computing and by companies like Twitter, Apple, and Airbnb for managing large clusters of machines. The scalable and flexible resource scheduling approach introduced by Mesos has been cited and expanded upon in numerous subsequent works exploring resource management frameworks and optimizations for distributed computing environments.\n\nProminent citations and influences of this paper include: \n- Apache Mesos at Twitter: From Zero to Production in Less than a Year [linked here](https://www.usenix.org/conference/nsdi14/technical-sessions/presentation/hindman)\n- Mesosphere DC/OS (Distributed Cloud Operating System) development\n- Kubernetes design for multi-framework resource scheduling\n\nOverall, the Mesos framework proposed in this research has laid groundwork principles that continue to impact the design and implementation of resource schedulers in modern distributed system infrastructures.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/mesos-a-platform-for-fine-grained-resource-sharing-in-the-data-center.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/mesos-a-platform-for-fine-grained-resource-sharing-in-the-data-center.pdf",
+  "filename": "mesos-a-platform-for-fine-grained-resource-sharing-in-the-data-center.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

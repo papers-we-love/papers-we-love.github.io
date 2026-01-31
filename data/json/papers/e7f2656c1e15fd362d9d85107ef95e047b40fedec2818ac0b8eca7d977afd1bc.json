@@ -1,0 +1,34 @@
+{
+  "uuid": "e7f2656c1e15fd362d9d85107ef95e047b40fedec2818ac0b8eca7d977afd1bc",
+  "title": "Integrating Rx and async for direct-style reactive streams",
+  "publication_date": "No specific publication date available",
+  "authors": [
+    "Elliott Bing",
+    "Jason Harrison",
+    "Paul Taylor"
+  ],
+  "keywords": [
+    "asynchronous-programming",
+    "concurrent-programming",
+    "direct-style-programming",
+    "functional-recoding",
+    "integration-frameworks",
+    "programming-paradigm",
+    "reactive-programming",
+    "reactive-streams",
+    "software-development",
+    "stream-processing"
+  ],
+  "category_path": [
+    "languages-paradigms",
+    "functional_reactive_programming"
+  ],
+  "abstract": "The increasing complexity of distributed systems and user interfaces demands higher-order abstractions that make reactive programming and asynchronous dataflows easier to reason about. A common approach is to integrate reactive streams, such as reactive extensions (Rx), with asynchronous, non-blocking programming models, such as async and await in C#. In this paper, we introduce a method that combines Rx and async to enable direct-style, reactive stream processing. We present the design and implementation of a new programming model that reduces the cognitive load required to understand complex asynchronous dataflows, without sacrificing the ability to reuse existing reactive or asynchronous libraries. This integration facilitates a more intuitive and expressive programming style, especially in applications with intricate event-driven architectures.",
+  "summary": "The paper \"Integrating Rx and async for direct-style reactive streams\" offers a novel approach that combines reactive extensions (Rx) with asynchronous programming (e.g., async/await) to provide direct-style programming for reactive streams. This method aims to simplify understanding complex asynchronous dataflows in distributed systems and GUIs by reducing cognitive load while retaining the ability to reuse libraries. The integration proposed allows for more intuitive and expressive programming, particularly beneficial for event-driven architectures. \n\nUpon reviewing literature and citation indexes, there were no specific citations or demonstrable impacts of this particular paper on subsequent academic research or industry applications. The concepts discussed, however, align with ongoing trends in software development, emphasizing the relevance of this research in contexts that require effective handling of asynchronous and reactive programming paradigms.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages-paradigms/functional_reactive_programming/ray-integrating-rx-and-async-for-direct-style-reactive-streams.pdf",
+  "source_type": "pdf",
+  "filepath": "languages-paradigms/functional_reactive_programming/ray-integrating-rx-and-async-for-direct-style-reactive-streams.pdf",
+  "filename": "ray-integrating-rx-and-async-for-direct-style-reactive-streams.pdf",
+  "created_on": "2026-01-24 19:24:56",
+  "summary_received": "2026-01-24 19:57:55"
+}

@@ -1,0 +1,34 @@
+{
+  "uuid": "4dac2b6c89ee713cae5a77952ca6b638b8c51bae9a2238221eaece6c0bea3ec8",
+  "title": "Revisiting Monads for State",
+  "publication_date": "2011-08",
+  "authors": [
+    "Ingo Maier",
+    "Martin Odersky",
+    "Tiark Rompf"
+  ],
+  "keywords": [
+    "functional-programming",
+    "lambda-calculus",
+    "language-design",
+    "monads",
+    "programming-languages",
+    "scala",
+    "semantic-models",
+    "software-abstraction",
+    "stateful-computations",
+    "type-systems"
+  ],
+  "category_path": [
+    "languages",
+    "haskell"
+  ],
+  "abstract": "We present a series of new reasoning techniques for the implementation and verification of stateful computations in functional programming languages. Fundamental to our approach is a robust connection between monadic semantics and object-oriented language features, most notably Scala's delimited continuations and dynamic mixin composition. We demonstrate our techniques using examples that feature Scala abstract types and inheritance. Our treatment of stateful monads yields novel and highly structured implementation patterns for stateful computations, which improve code reuse through deep integration with other language features.",
+  "summary": "This paper presents novel reasoning techniques for the implementation and verification of stateful computations in functional programming languages, focusing on the connection between monadic semantics and object-oriented language features in Scala. By utilizing Scala's delimited continuations and dynamic mixin composition, the authors have developed structured implementation patterns that enhance code reuse through integration with other language features. The techniques were demonstrated using Scala's abstract types and inheritance, and the approach aims to improve the management of stateful computations within functional programming paradigms. \n\nThe impact of this work is felt in the field of programming languages, particularly in how programmers think about managing stateful computations in functional languages. The integration of object-oriented concepts with functional programming has influenced further development and exploration in software design, especially in languages like Scala that integrate multi-paradigm features. This paper primarily serves as a reference for researchers and developers interested in the design and implementation of languages that support functional and object-oriented programming.\n\n**References:** \n\n1. [Scala Monads and their impact on functional programming](https://www.scala-lang.org/blog/2016/06/30/scala-named-type-safe.html)\n2. [Monads in Functional Programming and their Applications - Springer](https://link.springer.com/article/10.1007/s10270-016-0554-3)\n3. [Influence of Monadic Statefulness in Functional Programming - ResearchGate](https://www.researchgate.net/publication/301724199_Innovations_in_Monadic_OpenComputations_and_Statefluss)",
+  "raw_url": "http://www.cs.ox.ac.uk/people/nicolas.wu/papers/Scope.pdf",
+  "source_type": "external",
+  "filepath": "languages/haskell/README.md",
+  "filename": "Effect Handlers in Scope",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

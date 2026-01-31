@@ -1,0 +1,31 @@
+{
+  "uuid": "b30310480e7a3d310f0d040552e7c868c32c2f5165f114df82f3287693437765",
+  "title": "An Improved Illumination Model for Shaded Display",
+  "publication_date": "August 1979",
+  "authors": [
+    "Turner Whitted"
+  ],
+  "keywords": [
+    "3d-graphics",
+    "computer-graphics",
+    "display-techniques",
+    "graphics-rendering",
+    "illumination-model",
+    "optical-models",
+    "ray-tracing",
+    "reflection-models",
+    "shading",
+    "visibility"
+  ],
+  "category_path": [
+    "computer_graphics"
+  ],
+  "abstract": "A simple algorithm is presented for computing the distribution of light in synthetic images. Existing algorithms which handle nonanalytic visibility computations are extended to maintain a comprehensive description of light paths through image space. Specular reflection, shadows, and refraction, which have been handled with separate approximation heuristics in the past, are simulated more accurately by the algorithm. The visual effects of a variety of optical phenomena are demonstrated in a set of sample images, and extensions of the algorithm are proposed.",
+  "summary": "Turner Whitted's paper *An Improved Illumination Model for Shaded Display*, presented in August 1979, introduced a groundbreaking advancement in the field of computer graphics through ray tracing. The algorithm presented in this paper extends existing techniques to better simulate the distribution of light in synthetic images by incorporating a comprehensive model for specular reflections, shadows, and refractions. The improved method was able to provide more accurate visual effects by computing light paths as they traverse synthetic scenes. This work established the foundation for modern ray-tracing techniques used in rendering complex lighting effects in computer graphics today. \n\nThe impact of Whitted's model is significant and long-lasting in computer graphics and visual effects industries. It paved the way for realistic rendering techniques, greatly enhancing the quality of visual output possible in digital imaging. This paper has been extensively cited across a wide range of applications in scientific research and graphics technology. Notably, the concepts introduced have contributed to advancements in gaming graphics, film visual effects, and simulations requiring realistic lighting.\n\nFurther references and influences of this work can be found in the following sources:\n- Shirley, P., & Marschner, S. (2009). *Fundamentals of Computer Graphics, Third Edition*. A K Peters, Ltd., discussing ray tracing techniques based on Whitted's model.\n- Pharr, M., Jakob, W., & Humphreys, G. (2016). *Physically Based Rendering: From Theory to Implementation*. Morgan Kaufmann. This book elaborates on the concepts initiated by Whitted and details their practical applications in rendering.\n- Akenine-Möller, T., Haines, E., & Hoffman, N. (2018). *Real-Time Rendering, Fourth Edition*. A K Peters/CRC Press, which references Whitted's contributions to real-time applications in graphics.",
+  "raw_url": "https://www.cs.drexel.edu/~david/Classes/CS586/Papers/p343-whitted.pdf",
+  "source_type": "external",
+  "filepath": "computer_graphics/README.md",
+  "filename": "An Improved Illumination Model for Shaded Display",
+  "created_on": "2026-01-24 23:46:58",
+  "summary_received": "2026-01-25 00:11:01"
+}

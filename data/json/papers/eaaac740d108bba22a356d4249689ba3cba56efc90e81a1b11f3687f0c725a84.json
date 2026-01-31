@@ -1,0 +1,32 @@
+{
+  "uuid": "eaaac740d108bba22a356d4249689ba3cba56efc90e81a1b11f3687f0c725a84",
+  "title": "Optimal Bidding in Online Auctions",
+  "publication_date": "2004",
+  "authors": [
+    "Alberto Paxson",
+    "Dimitris Bertsimas"
+  ],
+  "keywords": [
+    "auction-theory",
+    "bid-optimization",
+    "decision-making",
+    "dynamic-bidding",
+    "economics",
+    "game-theory",
+    "online-auctions",
+    "optimal-bidding",
+    "probability",
+    "strategy"
+  ],
+  "category_path": [
+    "economics"
+  ],
+  "abstract": "We study the problem of a bidder participating in an online auction consisting of several auction sites, where auctions occur over time and bids are placed sequentially. The auctions can have any of several formats, including First-Price-Sealed-Bid, English, and Dutch auctions, each involving multiple items potentially. The bidder is repeatedly participating in auctions for identical items that arrive at different times. The objective is to learn about the nature of the competition, market conditions, bidding strategies, and implement an efficient procurement strategy. We identify optimal bidding policies for bidders who have developed beliefs about the characteristics of the other bidders based on their past bidding experiences and derive a general and computationally tractable algorithm to identify such policies. Computational results are reported, demonstrating the effectiveness of our approach.",
+  "summary": "This paper by Dimitris Bertsimas and Alberto Paxson addresses the problem of bidding in online auctions that occur over multiple auction sites and time periods. They focus on the development of optimal bidding policies for bidders who participate repeatedly in these auctions. The paper explains how bidders can learn from past interactions to understand competition and market dynamics to formulate effective bidding strategies. The authors propose a computational algorithm to derive these optimal bidding policies, providing an important tool for auction participants to maximize their chances of winning desired items while minimizing costs.\n\nWhile the paper does not appear to have been extensively cited in high-profile research journals, it contributes to the field of auction theory and the broader understanding of strategic interactions in online environments. The methodologies proposed have potential implications for strategic decision-making in auctions, which could influence subsequent research on bidding strategies and auction design. However, no specific references to this paper's influence in other research or industry applications could be found.",
+  "raw_url": "http://www.mit.edu/~dbertsim/papers/Revenue%20Management/Optimal%20Bidding%20in%20Online%20Auctions.pdf",
+  "source_type": "external",
+  "filepath": "economics/README.md",
+  "filename": "Optimal Bidding in Online Auctions (2001)",
+  "created_on": "2026-01-24 23:46:59",
+  "summary_received": "2026-01-25 00:11:03"
+}

@@ -1,0 +1,32 @@
+{
+  "uuid": "3ede917046b510c7d0b1cb0ecd78f718aecba8ae362d1e8641db898b42248c8c",
+  "title": "Brewer's Conjecture and the Feasibility of Consistent Available Partition-Tolerant Web Services",
+  "publication_date": "July 2000",
+  "authors": [
+    "Nancy Lynch",
+    "Seth Gilbert"
+  ],
+  "keywords": [
+    "availability",
+    "brewers-conjecture",
+    "cap-theorem",
+    "cloud-computing",
+    "consistency",
+    "distributed-systems",
+    "partition-tolerance",
+    "system-design",
+    "theory",
+    "web-services"
+  ],
+  "category_path": [
+    "distributed_systems"
+  ],
+  "abstract": "The CAP theorem asserts that any networked shared-data system can have at most two of three desirable properties: consistency, availability, and partition-tolerance. Brewer’s conjecture helped define this theorem and motivated database designers, architects and theoreticians to enable large-scale storage systems to achieve the best trade-offs among these properties. In this paper, we recount the circumstances and context in which the conjecture was made and discuss the subtleties of the formal proof and its formal model.",
+  "summary": "The paper titled \"Brewer's Conjecture and the Feasibility of Consistent Available Partition-Tolerant Web Services\" by Seth Gilbert and Nancy Lynch was published in July 2000. It addresses the CAP theorem, which postulates that a distributed data store can simultaneously provide only two of the following three guarantees: consistency, availability, and partition tolerance. The paper builds upon Brewer’s conjecture and provides a formal foundation for analyzing trade-offs in distributed systems. \n\nThe key insights from this paper influenced both academic research and practical applications in distributed systems, particularly in designing and understanding large-scale web services and databases. This foundational work has been acknowledged and referenced frequently. For instance, it led to advancements in NoSQL databases like Amazon Dynamo and Apache Cassandra, which are built around an understanding of the CAP theorem.\n\nInfluential research papers such as \"Dynamo: Amazon’s Highly Available Key-value Store\" (https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf) directly reference this work, helping solidify its role in the industry. The CAP theorem continues to be a crucial concept in the development of cloud-based services and distributed system architecture (https://homes.cs.washington.edu/~arvind/cs510/amazon-dynamo-sosp2007.pdf). Numerous educational resources and textbooks on distributed computing reference this work, making it an integral part of curricula worldwide.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/brewers-conjecture.pdf",
+  "source_type": "pdf",
+  "filepath": "distributed_systems/brewers-conjecture.pdf",
+  "filename": "brewers-conjecture.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}

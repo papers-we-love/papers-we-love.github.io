@@ -1,0 +1,34 @@
+{
+  "uuid": "89df1b7ff379f2647129a645bb96c96955f58e42b92640617a8c94ee89f02ae0",
+  "title": "Warp: Multi-Key Transactions for Key-Value Stores",
+  "publication_date": "2018",
+  "authors": [
+    "Daniel Porto",
+    "Jialin Li",
+    "Rodrigo Rodrigues",
+    "Vijay Chidambaram"
+  ],
+  "keywords": [
+    "consistency",
+    "distributed-systems",
+    "key-value-stores",
+    "multi-key-transactions",
+    "non-blocking",
+    "performance-optimization",
+    "protocol-design",
+    "scalability",
+    "state-machine",
+    "transaction-management"
+  ],
+  "category_path": [
+    "datastores"
+  ],
+  "abstract": "Current production systems that offer transactions over key-value stores rely on a central lock manager, which limits scalability and performance of these systems. We propose Warp, a new approach to provide multi-key transactions for key-value stores. Warp is based on a novel non-blocking distributed protocol that is deadlock-free.\nWe have implemented Warp and evaluated it using well-known benchmarks (YCSB and TPC-C) and production workloads at a global company accelerated through Warp. Our evaluations show that Warp offers near-linear scalability and significantly reduces the performance penalty of transactions in key-value stores, providing up to 6.5× better latency and 11× better throughput compared to state-of-the-art transaction management systems.",
+  "summary": "The paper \"Warp: Multi-Key Transactions for Key-Value Stores\" presents a novel approach to handling transactions in key-value stores by introducing Warp, a non-blocking distributed protocol that ensures deadlock-free multi-key transactions. The authors propose this system to improve on the limitations of traditional transaction models that depend heavily on central lock managers, which usually impair scalability and performance.\n\nWarp distinguishes itself by enabling near-linear scalability and reducing the transactional overhead, demonstrated through both synthetic benchmarks such as YCSB and TPC-C, as well as production workloads from a global company. The results indicate significant improvements, achieving up to 6.5 times better latency and 11 times better throughput than existing transaction management systems.\n\nUpon conducting a web search, it appears that while the research introduces influential concepts, direct citations or applications of Warp in other academic or industrial contexts have not been widely documented. Therefore, further dissemination of this paper's findings might be limited or not yet fully realized in subsequent developments in distributed transaction systems.",
+  "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/datastores/warp-multi-key-transactions-for-key-value-stores.pdf",
+  "source_type": "pdf",
+  "filepath": "datastores/warp-multi-key-transactions-for-key-value-stores.pdf",
+  "filename": "warp-multi-key-transactions-for-key-value-stores.pdf",
+  "created_on": "2026-01-24 19:24:55",
+  "summary_received": "2026-01-24 19:57:54"
+}
