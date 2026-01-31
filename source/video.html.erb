@@ -1,26 +1,37 @@
 ---
 title: Video
 ---
-<article class="hentry article video-page" itemscope itemtype="http://schema.org/VideoObject">
+<article class="hentry article video-page" itemscope itemtype="https://schema.org/VideoObject">
   <h1 itemprop="name"><%= video[:title] %></h1>
+  <meta itemprop="thumbnailUrl" content="<%= video[:thumbnail_url] %>">
+  <meta itemprop="embedUrl" content="https://www.youtube.com/embed/<%= video[:youtube_id] %>">
+  <meta itemprop="uploadDate" content="<%= video[:date] %>">
+  <% if video[:duration] && !video[:duration].empty? %>
+  <meta itemprop="duration" content="<%= video[:duration] %>">
+  <% end %>
+  <% if video[:description].nil? || video[:description].strip.empty? %>
+  <meta itemprop="description" content="<%= video[:title] %>">
+  <% end %>
   <div class="entry-meta">
     <span class="meta-label">
       <i class="fa fa-video-camera"></i> Video
     </span>
     <div class="meta-text">
-      <span class="meta-date" itemprop="uploadDate"><%= video[:date] %></span>
+      <span class="meta-date"><%= Date.parse(video[:date]).strftime('%Y-%m-%d') %></span>
     </div>
   </div>
-  <section class="video-embed" itemprop="video">
+  <section class="video-embed">
     <iframe src="https://www.youtube.com/embed/<%= video[:youtube_id] %>"
             frameborder="0"
             allowfullscreen
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
     </iframe>
   </section>
+  <% unless video[:description].nil? || video[:description].strip.empty? %>
   <section class="video-description" itemprop="description">
     <%= mark_safe(format_description(video[:description])) %>
   </section>
+  <% end %>
   <footer class="article-metadata">
     <em>Tags:</em>
     <% video[:tags].each do |tag| %>
