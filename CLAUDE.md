@@ -15,6 +15,7 @@ This is the website for [Papers We Love](http://paperswelove.org/), a community 
 - **CSS:** Vanilla CSS (migrated from SASS/Bourbon/Neat)
 - **Templating:** ERB templates with Markdown content
 - **Blog Plugin:** middleman-blog 4.x
+- **Search:** [Pagefind](https://pagefind.app/) — static search index built after Middleman build via `npx pagefind --site build`
 - **Deployment:** Manual git push to `main` branch (via GitHub Actions or `make docker-deploy`)
 
 ## Project Docs
@@ -72,9 +73,9 @@ make serve
 
 ### Build & Deploy
 ```bash
-# Build static site to /build directory
+# Build static site to /build directory (includes Pagefind indexing)
 make build
-# or: bundle exec middleman build
+# or: bundle exec middleman build && npx pagefind --site build
 # or: rake build
 
 # Deploy to GitHub Pages (builds first, pushes to main branch)
@@ -96,7 +97,7 @@ rake refresh
 
 ### Docker (recommended)
 ```bash
-# Build the Docker image
+# Build the Docker image (rebuilds all services including build/deploy)
 make docker-build
 
 # Run development server (http://localhost:4567)
@@ -209,4 +210,5 @@ Add the deploy key as a GitHub secret:
 - **Chapter pages:** Dynamically proxied from `chapter.html.erb` template using data files
 - **Video pages:** Dynamically proxied from `video.html.erb` with tag indexes
 - **Paper pages:** Dynamically proxied from `paper.html.erb` with category and keyword indexes, plus an Atom feed at `/papers_feed.xml`. Papers with nil/empty titles in the JSON data are skipped. Markdown summaries are rendered via Kramdown.
+- **Search:** Pagefind indexes the built HTML. The search UI partial (`source/partials/_search.erb`) is included on the homepage, paper category/keyword pages, and video pages. Content pages (papers, videos, blog articles) use `data-pagefind-body` for selective indexing and `data-pagefind-filter` attributes for faceted filtering (type, author, category, keyword, tag). Pagefind assets only exist after build, so search won't work during `middleman server` (the init is wrapped in try/catch).
 - **Make commands:** Run `make help` to see all available commands

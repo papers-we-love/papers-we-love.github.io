@@ -1470,3 +1470,34 @@ a.event-read-more {
   }
 }
 
+/* ==========================================================================
+   Pagefind Search
+   ========================================================================== */
+
+:root {
+  --pagefind-ui-scale: 0.9;
+  --pagefind-ui-primary: var(--color-blue);
+  --pagefind-ui-text: var(--color-gray-1);
+  --pagefind-ui-background: var(--color-white);
+  --pagefind-ui-border: var(--color-gray-4);
+  --pagefind-ui-tag: var(--color-gray-5);
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border-radius: 6px;
+  --pagefind-ui-image-border-radius: 6px;
+  --pagefind-ui-image-box-ratio: 0;
+  --pagefind-ui-font: var(--font-sans);
+}
+
+.pagefind-search-wrapper {
+  max-width: var(--container-max-width);
+  margin: 1em auto;
+  padding: 0 1em;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .pagefind-search-wrapper {
+    padding: 0;
+  }
+}
+

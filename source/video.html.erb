@@ -1,7 +1,8 @@
 ---
 title: Video
 ---
-<article class="hentry article video-page" itemscope itemtype="https://schema.org/VideoObject">
+<article class="hentry article video-page" data-pagefind-body itemscope itemtype="https://schema.org/VideoObject">
+  <span data-pagefind-filter="type" style="display:none;">video</span>
   <h1 itemprop="name"><%= video[:title] %></h1>
   <meta itemprop="thumbnailUrl" content="<%= video[:thumbnail_url] %>">
   <meta itemprop="embedUrl" content="https://www.youtube.com/embed/<%= video[:youtube_id] %>">
@@ -35,7 +36,7 @@ title: Video
   <footer class="article-metadata">
     <em>Tags:</em>
     <% video[:tags].each do |tag| %>
-      <%= link_to tag, "/videos/tags/#{tag}/" %>
+      <span data-pagefind-filter="tag"><%= link_to tag, "/videos/tags/#{tag}/" %></span>
     <% end %>
     <em>Posted by:</em>
     Papers We Love

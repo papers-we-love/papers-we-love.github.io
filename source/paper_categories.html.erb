@@ -4,6 +4,8 @@ title: Paper Category
 <article class="tags" itemscope itemtype="https://schema.org/CollectionPage">
   <h1 itemprop="name">Papers in <em><%= deslugify(category_name) %></em></h1>
 
+  <%= partial 'partials/search' %>
+
   <ul class="main">
     <% category_papers.each do |cp| %>
       <%

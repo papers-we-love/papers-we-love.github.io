@@ -1,16 +1,17 @@
 ---
 title: Paper
 ---
-<article class="hentry article paper-page" itemscope itemtype="https://schema.org/ScholarlyArticle">
+<article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
   <meta itemprop="url" content="/papers/<%= paper[:slug] %>/">
   <meta itemprop="dateCreated" content="<%= paper[:created_on] %>">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
   <h1 itemprop="name"><%= paper[:title] %></h1>
   <% if paper[:authors] && !paper[:authors].empty? %>
   <section class="paper-authors">
     <ul>
       <li><strong>Authors:</strong></li>
       <% paper[:authors].each do |author| %>
-      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name"><%= author %></span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author"><%= author %></span></li>
       <% end %>
     </ul>
   </section>
@@ -49,7 +50,7 @@ title: Paper
     <div class="paper-categories">
       <em>Category:</em>
       <% cat = paper[:category_path].join('/') %>
-      <%= link_to deslugify(cat), "/papers/categories/#{cat}/" %>
+      <span data-pagefind-filter="category"><%= link_to deslugify(cat), "/papers/categories/#{cat}/" %></span>
     </div>
     <% end %>
 
@@ -57,7 +58,7 @@ title: Paper
     <div class="paper-keywords">
       <em>Keywords:</em>
       <% paper[:keywords].each do |kw| %>
-        <%= link_to deslugify(kw), "/papers/keywords/#{kw}/" %>
+        <span data-pagefind-filter="keyword"><%= link_to deslugify(kw), "/papers/keywords/#{kw}/" %></span>
       <% end %>
     </div>
     <% end %>

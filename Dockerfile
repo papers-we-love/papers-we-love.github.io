@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
     libxml2-dev \
     libxslt-dev \
     nodejs \
+    npm \
     openssh-client \
     && rm -rf /var/lib/apt/lists/*
 

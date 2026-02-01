@@ -4,6 +4,8 @@ title: Paper Keywords
 <article class="tags" itemscope itemtype="https://schema.org/CollectionPage">
   <h1 itemprop="name">Papers by <em>Keyword</em></h1>
 
+  <%= partial 'partials/search' %>
+
   <ul class="main categories">
     <li><strong>All Keywords (<%= keywords.length %>)</strong></li>
     <% keywords.sort_by { |kw, _| kw }.each do |kw, kw_papers| %>

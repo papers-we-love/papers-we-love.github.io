@@ -4,6 +4,8 @@ title: Video Tags
 <article class="tags">
   <h1>Videos by <em>Tag</em></h1>
 
+  <%= partial 'partials/search' %>
+
   <ul class="main categories">
     <li><strong>All Tags (<%= videos_by_tag.length %>)</strong></li>
     <% videos_by_tag.sort_by { |tag, _| tag }.each do |tag, tag_videos| %>

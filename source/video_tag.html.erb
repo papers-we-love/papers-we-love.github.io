@@ -4,6 +4,8 @@ title: Video Tag
 <article class="tags">
   <h1>Videos tagged <em><%= tag_name %></em></h1>
 
+  <%= partial 'partials/search' %>
+
   <ul class="main">
     <% tag_videos.sort_by { |v| v[:date] }.reverse.each do |video| %>
       <li>
