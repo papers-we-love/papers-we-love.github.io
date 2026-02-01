@@ -26,7 +26,7 @@ jobs:
 
       - name: Build site
         run: |
-          docker run --rm -v ${{ github.workspace }}:/app pwl-site bash -c "bundle install && bundle exec middleman build"
+          docker run --rm -v ${{ github.workspace }}:/app pwl-site bash -c "bundle install && bundle exec middleman build && npx --yes pagefind --site build"
           # Fix permissions (Docker creates files as root)
           sudo chown -R $USER:$USER build/
 

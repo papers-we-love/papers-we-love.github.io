@@ -1,6 +1,7 @@
 <% wrap_layout :layout do %>
     <% @art = current_page %>
-    <article class="hentry article" itemscope itemtype="https://schema.org/Article">
+    <article class="hentry article" data-pagefind-body itemscope itemtype="https://schema.org/Article">
+        <span data-pagefind-filter="type" style="display:none;">blog</span>
         <h1 itemprop="headline"><%= current_page.title %></h1>
         <meta itemprop="datePublished" content="<%= current_page.date.strftime('%Y-%m-%dT%H:%M:%SZ') %>">
         <meta itemprop="image" content="https://paperswelove.org/images/papers-we-love-ogp.png">

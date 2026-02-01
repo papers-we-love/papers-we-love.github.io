@@ -4,6 +4,8 @@ title: Paper Categories
 <article class="tags" itemscope itemtype="https://schema.org/CollectionPage">
   <h1 itemprop="name">Papers by <em>Category</em></h1>
 
+  <%= partial 'partials/search' %>
+
   <ul class="main categories">
     <li><strong>All Categories (<%= categories.length %>)</strong></li>
     <% categories.sort_by { |cat, _| cat }.each do |cat, cat_papers| %>

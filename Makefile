@@ -8,6 +8,7 @@ all: clean build
 
 build: deps
 	time bundle exec middleman build
+	npx --yes pagefind --site build
 
 serve: deps
 	bundle exec middleman server
@@ -21,10 +22,10 @@ clean:
 
 # Docker commands (recommended)
 docker-build:
-	docker compose build
+	docker compose --profile build --profile deploy build
 
 docker-build-no-cache:
-	docker compose build --no-cache
+	docker compose --profile build --profile deploy build --no-cache
 
 docker-serve:
 	docker compose up web

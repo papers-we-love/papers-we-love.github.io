@@ -6,11 +6,13 @@ per_page: 5
 chapter_weights = weight_chapters(data)
 %>
 
-<section class="home-abstract">
+<section class="home-abstract" data-pagefind-body>
   <div class="home-abstract-shim">
     <h1>Papers We Love is a <a href="https://github.com/papers-we-love/papers-we-love">repository</a> of academic computer science papers and a <a href="https://github.com/papers-we-love/papers-we-love/wiki/Creating-a-PWL-chapter">community</a> who loves reading them.</h1>
   </div>
 </section>
+
+<%= partial 'partials/search' %>
 
 <section class="home-chapters">
   <h1>Chapters:</h1>
@@ -76,7 +78,7 @@ chapter_weights = weight_chapters(data)
     <% end %>
 
     <% if paginate && num_pages > 1 %>
-      <nav class="pagination-controls">
+      <nav class="pagination-controls" data-pagefind-ignore>
         <p class="pagination-count">Page <em><%= page_number %></em> of <%= num_pages %></p>
         <% if prev_page %>
           <p class="pagination-prev"><%= link_to '← Previous page', prev_page %></p>

@@ -15,7 +15,10 @@
       "Bash(head:*)",
       "Bash(find:*)",
       "Bash(make build:*)",
-      "Bash(bundle exec middleman build:*)"
+      "Bash(bundle exec middleman build:*)",
+      "Bash(echo:*)",
+      "Bash(docker run --rm ruby:3.3-slim bash -c \"apt-get update -qq && apt-get install -y -qq npm 2>/dev/null | tail -3 && which npx && npx --version\")",
+      "Bash(kill:*)"
     ]
   }
 }
