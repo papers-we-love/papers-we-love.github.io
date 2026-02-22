@@ -12,7 +12,7 @@ gem "middleman-livereload", "~> 3.4"
 gem "builder", "~> 3.0"
 
 # HTML parsing
-gem "nokogiri", "~> 1.16"
+gem "nokogiri", "~> 1.19"
 
 # HTML sanitization
 gem 'sanitize', '~> 6.0'
