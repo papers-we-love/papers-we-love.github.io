@@ -10,7 +10,7 @@ We strictly adhere to the same [Code of Conduct](https://github.com/papers-we-lo
 
 <strong>Location:</strong> Antithesis - [71 Stevenson St. #1050, San Francisco, CA](https://maps.app.goo.gl/FDfWSQH4yQJiPnAu8)
 
-<strong>Attend:</strong> RSVP for meetings on <a href="http://www.meetup.com/papers-we-love-too/">Meetup.com</a>
+<strong>Attend:</strong> RSVP for meetings on <a href="http://luma.com/pwl">Luma</a>
 
 <strong>Speak:</strong> Tell us what you'd like to present with <a href="https://forms.gle/1bCKuAvofMCrXLd86">this Google form</a>
 
@@ -20,10 +20,4 @@ We strictly adhere to the same [Code of Conduct](https://github.com/papers-we-lo
 <strong>Organizers:</strong>
 <a href="https://akshayshah.org">Akshay Shah</a> and <a href="https://www.linkedin.com/in/aarondgoldman/">Aaron D. Goldman</a>
 
-<h2>Sponsors</h2>
-
-<p class="sponsor">
-<ul>
-<li><a href="http://antithesis.com">Antithesis</a></li>
-</ul>
-</p>
+<strong>Sponsor:</strong> <a href="http://antithesis.com">Antithesis</a>
