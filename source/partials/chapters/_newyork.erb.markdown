@@ -4,15 +4,15 @@
 
 As the original Papers We Love chapter, we've been helping New Yorkers scratch their paper reading itch for most of 2014. We welcome everyone from the programming community for an evening of ideas, vibrant discussions and hanging out with your fellow travellers.
 
-The **New York Chapter** meets monthly at different locations throughout the city. Keep an eye on our [Meetup.com](http://www.meetup.com/papers-we-love/) page to find out the latest address.
+The **New York Chapter** meets monthly at different locations throughout the city. Keep an eye on our [Luma](https://luma.com/pwlnyc) page to find out the latest address.
 
-**Our meets fill up fast**, so please make sure to RSVP only if you plan on attending. You can find our schedule and RSVP [here on Meetup.com](http://www.meetup.com/papers-we-love/).
+**Our meets fill up fast**, so please make sure to RSVP only if you plan on attending. You can find our schedule and RSVP [here on Luma](https://luma.com/pwlnyc).
 
-Papers We Love has a **[Code of Conduct](https://github.com/papers-we-love/papers-we-love/blob/master/CODE_OF_CONDUCT.md)**. Please contact one of the Meetup's organizers if anyone is not following it. Be good to each other and to the PWL community!
+Papers We Love has a **[Code of Conduct](https://github.com/papers-we-love/papers-we-love/blob/master/CODE_OF_CONDUCT.md)**. Please contact one of the chapter's organizers if anyone is not following it. Be good to each other and to the PWL community!
 
 ## Chapter Details
 
-**Sign-up:** Please RSVP for meetings via <a href="http://www.meetup.com/papers-we-love/">Meetup.com</a>
+**Sign-up:** Please RSVP for meetings via <a href="https://luma.com/pwlnyc">Luma</a>
 
 **Twitter:** <a href="https://twitter.com/paperswelovenyc">@paperswelovenyc</a>
 
@@ -28,3 +28,4 @@ Papers We Love has a **[Code of Conduct](https://github.com/papers-we-love/paper
     We'd like to give a special thanks <strong><a href="https://www.twosigma.com/">TwoSigma</a></strong> for supporting the New York Chapter as a Platinum Sponsor.
   </span>
 </div>
+
