@@ -1,34 +1,28 @@
 {
   "uuid": "b7c9de589657798375d90628443d14223e14f608a45b51354652f78f0a1ac5ee",
-  "title": "Graph-of-Word and TW-IDF: New Approach to Ad Hoc IR",
-  "publication_date": "August 2013",
+  "title": "Graph-of-word and TW-IDF: New Approach to Ad Hoc IR",
+  "publication_date": "October 27–November 1, 2013; CIKM’13, San Francisco, California, USA",
   "authors": [
-    "Betim Berisha",
-    "Guillaume Salha",
-    "Jean-Pierre Chevallet",
-    "John P. Bordes"
+    "François Rousseau",
+    "Michalis Vazirgiannis"
   ],
   "keywords": [
-    "ad-hoc-ir",
-    "document-indexing",
-    "graph-of-words",
-    "graph-theory",
-    "information-retrieval",
-    "keyword-representation",
-    "natural-language-processing",
-    "text-extraction",
-    "text-mining",
+    "graph-based-term-weighting",
+    "graph-of-word",
+    "graph-representation-of-document",
+    "ir-theory",
+    "scoring-functions",
     "tw-idf"
   ],
   "category_path": [
     "information_retrieval"
   ],
-  "abstract": "This paper introduces Graph-of-Word and TW-IDF, a novel approach for ad hoc information retrieval (IR) in which documents are represented as graphs. Nodes of the graph correspond to index terms (words), and edges capture the co-occurrence and order relationship between terms. The relevance score is computed using a graph connectivity measure, while a modified version of TF-IDF, called TW-IDF, integrates term weights according to graph indices. Preliminary experiments carried out over the TREC_AP collection show significant improvements over conventional approaches.",
-  "summary": "The paper \"Graph-of-Word and TW-IDF: New Approach to Ad Hoc IR\" introduces an innovative method for representing documents as graphs to improve ad hoc information retrieval (IR). Unlike traditional text representation models, the authors propose representing documents, where nodes signify words and edges represent their co-occurrence and order, effectively capturing more contextual information. The relevance score of queries is determined using a graph connectivity measure while a modified TF-IDF, named TW-IDF, is used to integrate term weights. The authors report that this method shows notable improvements over traditional retrieval models when tested on the TREC_AP collection, an established dataset in IR research.\n\nUpon searching for the influence and citation of this work, there is limited academic and industry-wide acknowledgment or reference to this particular paper. No significant direct impact or citations have been identified in subsequent research studies or industry applications, suggesting that while the theory may hold potential, it has yet to gain substantial traction or be widely applied within the field of information retrieval.",
+  "abstract": "In this paper, we introduce novel document representation (graph-of-word) and retrieval model (TW-IDF) for ad hoc IR. Questioning the term independence assumption behind the traditional bag-of-word model, we propose a different representation of a document that captures the relationships between the terms using an unweighted directed graph of terms. From this graph, we extract at indexing time meaningful term weights (TW) that replace traditional term frequencies (TF) and from which we define a novel scoring function, namely TW-IDF, by analogy with TF-IDF. This approach leads to a retrieval model that consistently and significantly outperforms BM25 and in some cases its extension BM25+ on various standard TREC datasets. In particular, experiments show that counting the number of different contexts in which a term occurs inside a document is more effective and relevant to search than considering an overall concave term frequency in the context of ad hoc IR.",
+  "summary": "## Summary\n\nThe paper proposes **graph-of-word**, an alternative to the bag-of-words representation for ad hoc information retrieval. A document is represented as an unweighted directed graph: vertices are unique terms, and directed edges connect terms that co-occur within a fixed sliding window, with direction encoding term order. The authors use the indegree of a term as its graph-based term weight (TW), replacing traditional term frequency (TF) in the inverted index. The resulting **TW-IDF** scoring function applies pivoted document-length normalization and inverse document frequency.\n\nThe experiments use four TREC collections—Disks 1&2, Disks 4&5, WT10G, and GOV2—and compare TW-IDF with TF-IDF, BM25, Piv+, and BM25+. With the default slope parameter of 0.003, TW-IDF achieves higher MAP than BM25 on all four collections and higher P@10 on all four collections in the reported untuned comparison. The authors interpret the improvement as evidence that counting the number of distinct contexts in which a term occurs is more useful for retrieval than counting its total occurrences with a concave TF normalization. The model does not require explicit concave or lower-bounding normalization, although it still benefits from document-length pivoting.\n\nThe paper identifies several limitations and future directions: normalized weighted graphs, graph representations of document collections, and applications to summarization and phrasal indexing.\n\n### Subsequent influence\n\nLater research explicitly cites the paper as an early graph-based term-weighting and document-representation method. It is referenced in work on general graph-based text representations, including *Bag of Textual Graphs* (2019), and in later discussions of graph-based retrieval and passage reranking. A subsequent dissertation also describes graph-of-word and TW-IDF as methods that capture term relationships and compute graph-based term weights. These references indicate continued use of the paper as background for graph-based text modeling, but the sources located do not establish widespread industrial deployment of TW-IDF itself. ([asistdl.onlinelibrary.wiley.com](https://asistdl.onlinelibrary.wiley.com/doi/10.1002/asi.24167))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/information_retrieval/graph_of_word_and_tw_idf.pdf",
   "source_type": "pdf",
   "filepath": "information_retrieval/graph_of_word_and_tw_idf.pdf",
   "filename": "graph_of_word_and_tw_idf.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

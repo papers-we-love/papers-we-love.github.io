@@ -1,30 +1,33 @@
 {
   "uuid": "edf3ea2e61145c4b17efb170e233983df855fec69a2b4789f810e6b394083c87",
-  "title": "Prolog as a String Theory: Program Transformations and Query Optimization",
-  "publication_date": "2015",
+  "title": "Fusion for Free\nEfficient Algebraic Effect Handlers",
+  "publication_date": "June 29–July 1, 2015; Mathematics of Program Construction (MPC 2015), 12th International Conference; Lecture Notes in Computer Science, volume 9129, pages 302–322.",
   "authors": [
-    "Bart Demoen",
-    "Jan Wielemaker",
+    "Nicolas Wu",
     "Tom Schrijvers"
   ],
   "keywords": [
-    "constraint-solving",
-    "logic-programming",
-    "program-transformations",
-    "prolog",
-    "query-optimization",
-    "string-theory"
+    "algebraic-effect-handlers",
+    "codensity-monad",
+    "fold-build-fusion",
+    "free-monads",
+    "functional-programming",
+    "haskell",
+    "monad-transformers",
+    "parametricity",
+    "shortcut-fusion",
+    "term-monads"
   ],
   "category_path": [
     "languages",
     "haskell"
   ],
-  "abstract": "Prolog is an attractive object language for program transformation and query optimization, because it comprises features like predicates, clauses, unification and a first- order logic inference engine. This paper investigates the strengths and weaknesses of Prolog as a host language for these tasks. We present a novel string solver, taking advantage of the Prolog programming paradigm and constraint solving technology.",
-  "summary": "This paper, written by Tom Schrijvers, Bart Demoen, and Jan Wielemaker, explores using Prolog for program transformations and query optimization by leveraging its predicates, clauses, unification, and inference engine. The authors present a novel string solver that benefits from Prolog's programming paradigm and constraint-solving capabilities. \n\nProlog's inherent features make it suitable for handling logic-based transformations and optimizations. The paper introduces an innovative approach to string solving that integrates well with the existing Prolog infrastructure, suggesting a potential shift in how Prolog can be used in logic programming and artificial intelligence applications.\n\nUpon searching for the influence of this work, no direct citations or applications in industry were located, suggesting that while the concepts are notable within the Prolog community, they may not have extensively influenced further research or widespread adoption in industry. The niche nature of Prolog and its specific use cases could be a reason for this limited exposure outside academic circles.",
+  "abstract": "Algebraic effect handlers are a recently popular approach for modelling side-effects that separates the syntax and semantics of effectful operations. The shape of syntax is captured by functors, and free monads over these functors denote syntax trees. The semantics is captured by algebras, and effect handlers pass these over the syntax trees to interpret them into a semantic domain.\nThis approach is inherently modular: different functors can be composed to make trees with richer structure. Such trees are interpreted by applying several handlers in sequence, each removing the syntactic constructs it recognizes. Unfortunately, the construction and traversal of intermediate trees is painfully inefficient and has hindered the adoption of the handler approach.\nThis paper explains how a sequence of handlers can be fused into one, so that multiple tree traversals can be reduced to a single one and no intermediate trees need to be allocated. At the heart of this optimization is keeping the notion of a free monad abstract, thus enabling a change of representation that opens up the possibility of fusion. We demonstrate how the ensuing code can be inlined at compile time to produce efficient handlers.",
+  "summary": "## Summary\n\nThe paper develops a fusion technique for algebraic effect handlers implemented with free monads. Its central observation is that a handler that constructs an intermediate syntax tree can be treated as a polymorphic builder rather than as a function tied to the concrete inductive representation of `Free`. The authors introduce **term algebras** and **term monads** to express this abstraction and use parametricity to derive a fold/build-style fusion law.\n\nBecause the result of a handler is not necessarily itself a monad, the paper uses the **codensity monad** to turn an arbitrary term algebra into a term monad. This makes the second handler a term-monad morphism, allowing the composition of handlers to be transformed into one traversal. The resulting implementation performs a single fold and avoids allocating intermediate abstract syntax trees. The approach also generalizes to pipelines of multiple handlers and can fuse through the construction of the initial computation.\n\nThe practical Haskell implementation relies on typeclass specialization and inlining in GHC. The evaluation reports that fused implementations substantially reduce the cost of effect handling: in the presented benchmarks, they are approximately 300 times faster than straightforward inductive or Church-encoded free-monad implementations for a state-counting workload, while matching or sometimes outperforming monad-transformer implementations. The paper notes that the technique is particularly suited to lazy languages such as Haskell; efficient application to strict languages remains unresolved.\n\n## Subsequent influence\n\nA concrete later use is the Haskell `fused-effects` library, which explicitly identifies this paper as one of the works underlying its design. The library applies fusion laws to avoid intermediate representations between handlers and reports performance approximately on par with `mtl`; it is presented as suitable for research and industrial contexts and lists projects using it. ([github.com](https://github.com/fused-effects/fused-effects))\n\nThe technique also continued to be cited in subsequent research on practical and compiled effect handlers, including work on capability-passing implementations. ([link.springer.com](https://link.springer.com/chapter/10.1007/978-3-030-83128-8_3))",
   "raw_url": "https://people.cs.kuleuven.be/~tom.schrijvers/Research/papers/mpc2015.pdf",
   "source_type": "external",
   "filepath": "languages/haskell/README.md",
   "filename": "Fusion for Free: Efficient Algebraic Handlers",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

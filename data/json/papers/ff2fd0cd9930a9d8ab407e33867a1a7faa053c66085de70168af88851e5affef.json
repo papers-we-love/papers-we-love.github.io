@@ -1,32 +1,31 @@
 {
   "uuid": "ff2fd0cd9930a9d8ab407e33867a1a7faa053c66085de70168af88851e5affef",
   "title": "Efficient Selectivity and Backup Operators in Monte-Carlo Tree Search",
-  "publication_date": "May 2012",
+  "publication_date": "May 29–31, 2006, 5th International Conference on Computers and Games (CG 2006), Turin, Italy; published in Springer Lecture Notes in Computer Science in 2007.",
   "authors": [
-    "Levente Kocsis",
-    "Sylvain Gelly"
+    "Rémi Coulom"
   ],
   "keywords": [
     "backup-operators",
-    "exploration-exploitation",
-    "game-theory",
+    "best-first-search",
+    "computer-go",
+    "crazy-stone",
+    "monte-carlo-evaluation",
     "monte-carlo-tree-search",
-    "relevance-estimation",
-    "search-algorithms",
+    "search-heuristics",
     "selectivity",
-    "simulation-analysis",
-    "tree-search",
-    "uct-algorithm"
+    "simulation",
+    "tree-search"
   ],
   "category_path": [
     "artificial_intelligence"
   ],
-  "abstract": "We propose a new approach to enhance the efficiency of Monte-Carlo tree search (MCTS) algorithms. First, we introduce a new way to compute the upper confidence bound applied to trees (UCT) which allows better balancing between exploration and exploitation during the search. Secondly, we refine the backup operator by proposing a context-aware technique to compute the update step. Experimental results are presented using this approach in the domain of computer Go. The results show a significant improvement over the state-of-the-art.",
-  "summary": "This paper presents innovations in the Monte-Carlo Tree Search (MCTS) algorithm, specifically designed to improve search efficiency in computing scenarios like computer Go. The authors introduce novel methods for calculating the UCT value, enhancing the balance between exploration and exploitation. Additionally, they propose a context-aware backup operator for MCTS that offers improved performance. Experimental results demonstrate a notable advancement over existing techniques.\n\nUpon conducting a web search, this paper is cited as an essential reference in several subsequent studies focused on improving MCTS algorithms, especially in AI and game-playing contexts. Notable citations include:\n\n1. B. Bouzy and S. Cazenave, \"Computer Go: An AI-oriented survey,\" Artificial Intelligence, vol. 132, no. 1, pp. 39–103, Apr. 2006. This paper references the improvements in MCTS, highlighting its importance in the progression of computer Go.\n2. E. J. van der Sterren, \"Monte-Carlo methods for computer Go,\" PhD Thesis, Universiteit van Amsterdam, 2008. The thesis builds upon the techniques pioneered in this research for advancing AI gaming platforms.\n\nFurther searches are needed to explore the cumulative impact fully, but initial findings show that this research has influenced algorithmic gaming strategies significantly, confirming its relevancy in AI development.",
+  "abstract": "Monte-Carlo evaluation consists in estimating a position by averaging the outcome of several random continuations, and can serve as an evaluation function at the leaves of a min-max tree. This paper presents a new framework to combine tree search with Monte-Carlo evaluation, that does not separate between a min-max phase and a Monte-Carlo phase. Instead of backing-up the min-max value close to the root, and the average value at some depth, a more general backup operator is defined that progressively changes from averaging to min-max as the number of simulations grows. This approach provides a fine-grained control of the tree growth, at the level of individual simulations, and allows efficient selectivity methods. This algorithm was implemented in a 9 × 9 Go-playing program, Crazy Stone, that won the 10th KGS computer-Go tournament.",
+  "summary": "## Summary\n\nThe paper presents an anytime Monte-Carlo tree-search framework in which repeated random game simulations both evaluate positions and incrementally expand a search tree. Rather than separating a conventional min-max search from a Monte-Carlo evaluation phase, the method uses a backup operator that gradually shifts from averaging simulation outcomes toward a max-like estimate as simulation counts increase.\n\nIts selectivity mechanism allocates simulations according to each move’s estimated probability of outperforming the current best move. Unlike irreversible progressive pruning, every move retains a nonzero urgency, which helps preserve moves whose apparent value may improve after deeper search. The method also introduces uncertainty estimates with deliberately inflated variance for rarely explored nodes, encouraging continued exploration of under-sampled alternatives.\n\nThe principal backup method, called “Mix,” combines the mean value with a robust-max estimate based on the move receiving the most simulations. The combination is tuned empirically using self-play positions. Experiments report that the mean backup tends to underestimate node values, the ordinary maximum tends to overestimate them, and the mixed operator provides lower error across the tested simulation budgets. The resulting Crazy Stone program performed strongly on 9×9 Go, winning the 10th KGS computer-Go tournament and defeating Indigo in a 100-game match, although it remained weaker than GNU Go under the reported conditions and showed tactical weaknesses in deep sequences.\n\n## Influence\n\nThe paper became an early foundational reference for Monte-Carlo Tree Search. A widely cited 2012 survey identifies Coulom’s work as combining Monte-Carlo evaluation with tree-based search and credits it with coining the term “Monte Carlo tree search.” ([lamsade.dauphine.fr](https://www.lamsade.dauphine.fr/~cazenave/A%2BSurvey%2Bof%2BMonte%2BCarlo%2BTree%2BSearch%2BMethods.pdf)) The AlphaGo research paper later cited this work directly among the antecedents of its search approach, while demonstrating the broader practical importance of neural-network-guided MCTS in computer Go. ([storage.googleapis.com](https://storage.googleapis.com/deepmind-media/alphago/AlphaGoNaturePaper.pdf))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/artificial_intelligence/efficient-selectivity-and-backup-operators-in-monte-carlo-tree-search.pdf",
   "source_type": "pdf",
   "filepath": "artificial_intelligence/efficient-selectivity-and-backup-operators-in-monte-carlo-tree-search.pdf",
   "filename": "efficient-selectivity-and-backup-operators-in-monte-carlo-tree-search.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:53"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:50"
 }

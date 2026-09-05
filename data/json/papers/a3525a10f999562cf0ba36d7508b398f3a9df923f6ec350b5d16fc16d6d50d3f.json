@@ -1,33 +1,28 @@
 {
   "uuid": "a3525a10f999562cf0ba36d7508b398f3a9df923f6ec350b5d16fc16d6d50d3f",
-  "title": "The Internet Census 2012 Dataset: An Ethical Examination",
-  "publication_date": "June 2015",
+  "title": "An Ethical Examination of the Internet Census 2012 Dataset: A Menlo Report Case Study",
+  "publication_date": "June 2015, IEEE Technology and Society Magazine, volume 34, issue 2, pages 40–46; originally presented at the 2014 IEEE International Symposium on Ethics in Engineering, Science, and Technology (ETHICS) in May 2014.",
   "authors": [
-    "Brett Jordan",
-    "Clayton O'Neill",
-    "Jeremy Martin",
-    "Kevin Butler",
-    "Matt Blaze"
+    "David Dittrich",
+    "Katherine Carpenter",
+    "Manish Karir"
   ],
   "keywords": [
-    "dataset-analysis",
-    "ethical-considerations",
-    "ethical-hacking",
-    "internet-census",
-    "internet-measurement",
-    "network-security",
-    "privacy-issues",
-    "security-research"
+    "botnet",
+    "cyber-security",
+    "ethics",
+    "menlo-report",
+    "scanning"
   ],
   "category_path": [
     "security"
   ],
-  "abstract": "In 2012, an anonymous researcher released a dataset outlining the results of a rogue internet census taken between March and December of 2012. This data was collected using unsecured devices discovered using the same probing mechanisms used by the infamous Carna Botnet, which operated using default telnet passwords and targeted over 420,000 devices (many of which were consumer routers). The author provides an analysis of the situation, beginning with a look at the data itself, and moves on to a discussion of ethical issues involved with both the collection of such data and its potential use.",
-  "summary": "The paper \"The Internet Census 2012 Dataset: An Ethical Examination\" provides a critical analysis of the dataset released from an unauthorized internet census conducted by an anonymous researcher. The research evaluates the ethical implications of collecting and using data obtained from unsecured devices, emphasizing the significance of security research practices and privacy concerns. The work does not appear to extensively influence other research or industry practices, as few if any direct citations or impacts were found during a literature search. This could be attributed to the focus on ethical debates, which may not directly lead to further technical developments, yet it highlights essential discussions surrounding network security and privacy ethics. No significant citations were found related to further research stemming from this paper.",
+  "abstract": "In 2012, an anonymous individual used basic techniques such as default or no passwords on Internet access equipment to get unauthorized access and install a scanning botnet on hundreds of thousands of commodity network devices around the world. Making efforts to minimize potential harm, this individual still took actions that would never be sanctioned by an academic ethics review board (and which violated computer trespass statutes around the globe), to perform an unprecedented internet-wide scan at a scale and speed never seen before. Then, some results and the raw data were published for anyone to access, raising a host of ethical and legal questions. One central question is whether researchers who, but for the illegally obtained data, could not ethically or legally perform the same experiment or produce the same data themselves should use that data. Or might the lack of community condemnation for performing such potentially illegal and unethical experiments create a situation where researchers are effectively encouraging law breaking by those willing to risk getting caught to create data that is otherwise not justifiable to create, simply to allow researchers to get around ethical restrictions? In this paper we examine this event in the context of the guiding principles outlined in the Menlo Report in an attempt to better understand the ethical implications of such actions.",
+  "summary": "The paper applies the Menlo Report’s ethical framework to the Carna botnet and the Internet Census 2012 dataset. It identifies device owners, network operators, the anonymous botnet creator, criminals exploiting the same vulnerabilities, and subsequent researchers as relevant stakeholders. The analysis concludes that the operation violated respect for persons through lack of consent and violated respect for law through unauthorized access, while the operator’s efforts to limit technical damage did not resolve the underlying ethical problems. It also examines whether researchers should reuse data obtained through potentially illegal and unethical conduct, emphasizing the tension between unique research value, reproducibility, public interest, privacy, and the risk of incentivizing future unlawful data collection.\n\nDocumented follow-on work shows both conceptual and technical uptake. Thomas et al.’s 2017 study of research using datasets of illicit origin cites this paper as a case study and places the Internet Census within a broader analysis of ethical safeguards, harms, benefits, and research oversight. ([cl.cam.ac.uk](https://www.cl.cam.ac.uk/~drt24/papers/2017-ethical-issues.pdf)) Separately, Nikolić et al.’s 2014 Hadoop and Pig paper used the Internet Census 2012 dataset as the basis for a distributed large-scale data-analysis platform, demonstrating concrete academic reuse of the dataset discussed in this paper. ([researchgate.net](https://www.researchgate.net/publication/269096685_Hadoop_and_Pig_for_Internet_Census_Data_Analysis)) The sources reviewed document academic follow-on research, but do not establish a specific industry deployment or policy adoption attributable directly to this paper.",
   "raw_url": "https://www.researchgate.net/publication/279069631_The_Internet_Census_2012_Dataset_An_Ethical_Examination",
   "source_type": "external",
   "filepath": "security/README.md",
   "filename": "Internet Census via Insecure Routers (2012)",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:56"
 }

@@ -1,34 +1,38 @@
 {
   "uuid": "41baea09d066e0167ca0943968d44f7f07790be700440427f78c034910e5765d",
   "title": "Dapper, a Large-Scale Distributed Systems Tracing Infrastructure",
-  "publication_date": "March 2010",
+  "publication_date": "April 2010 (Google Technical Report dapper-2010-1)",
   "authors": [
     "Benjamin H. Sigelman",
-    "Luis P. A. Gavin",
-    "Misha Nascimento",
-    "Pierre Raghavan",
-    "Stefan Mauvais"
+    "Chandan Shanbhag",
+    "Donald Beaver",
+    "Luiz André Barroso",
+    "Manoj Plakal",
+    "Mike Burrows",
+    "Pat Stephenson",
+    "Saul Jaspan"
   ],
   "keywords": [
+    "context-propagation",
     "distributed-systems",
     "distributed-tracing",
-    "google-infrastructure",
-    "large-scale-systems",
-    "latency-tracking",
+    "latency-analysis",
     "observability",
-    "performance-analysis",
-    "systems-instrumentation",
-    "systems-monitoring"
+    "performance-monitoring",
+    "rpc",
+    "scalability",
+    "span-model",
+    "trace-sampling"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "Dapper is a production distributed systems tracing infrastructure developed at Google. It allows Google engineers to analyze complex end-to-end events instead of individual server-side actions. Dapper enables the increasing integration of tracing information into Google's operations, both in real-time and offline. Its most important design features are application-level transparency and pervasive deployment across all of our systems, with low overhead. While Dapper was first developed several years ago, it continues to grow and evolve alongside Google's overall systems and software, and is widely used for analysis at all levels of Google's technical operations.",
-  "summary": "The paper \"Dapper, a Large-Scale Distributed Systems Tracing Infrastructure\" by Benjamin H. Sigelman et al. discusses the development of an infrastructure at Google designed for tracing distributed systems. It highlights Dapper's ability to facilitate the analysis of complex end-to-end events across Google's systems with minimal overhead.\n\nDapper has had a significant influence on the development of distributed tracing techniques and tools beyond Google. It laid the groundwork for subsequent tracing and observability solutions such as Zipkin, a popular distributed tracing system inspired by Dapper ([source](https://zipkin.io/pages/architecture.html)). The principles and practices described in the paper have contributed to the standardization of distributed tracing protocols and methodologies used in modern cloud-native environments.\n\nFurthermore, Dapper's concepts have been foundational for the OpenTracing project ([source](https://opentracing.io/)), which provides APIs for distributed tracing, and OpenTelemetry, an observability framework for cloud-native software ([source](https://opentelemetry.io/)). These projects have widespread usage in the industry, influencing how performance monitoring and tracing are implemented in current distributed systems.\n\nThe impact of this work can be seen in the pervasive adoption of distributed tracing in observability stacks across various industries, marking a shift in performance analysis and system monitoring paradigms. The concepts initiated by Dapper continue to inform and inspire the expanding body of research and industrial applications focused on distributed systems observability and performance management.",
+  "abstract": "Modern Internet services are often implemented as complex, large-scale distributed systems. These applications are constructed from collections of software modules that may be developed by different teams, perhaps in different programming languages, and could span many thousands of machines across multiple physical facilities. Tools that aid in understanding system behavior and reasoning about performance issues are invaluable in such an environment.\n\nHere we introduce the design of Dapper, Google’s production distributed systems tracing infrastructure, and describe how our design goals of low overhead, application-level transparency, and ubiquitous deployment on a very large scale system were met. Dapper shares conceptual similarities with other tracing systems, particularly Magpie [3] and X-Trace [12], but certain design choices were made that have been key to its success in our environment, such as the use of sampling and restricting the instrumentation to a rather small number of common libraries.\n\nThe main goal of this paper is to report on our experience building, deploying and using the system for over two years, since Dapper’s foremost measure of success has been its usefulness to developer and operations teams. Dapper began as a self-contained tracing tool but evolved into a monitoring platform which has enabled the creation of many different tools, some of which were not anticipated by its designers. We describe a few of the analysis tools that have been built using Dapper, share statistics about its usage within Google, present some example use cases, and discuss lessons learned so far.",
+  "summary": "## Overview\n\nDapper is Google’s production distributed-tracing infrastructure for following the work performed across services and machines on behalf of an individual request. Its central data model represents a trace as a tree of **spans** connected by parent-child causal relationships. Each span contains timestamps, RPC timing information, identifiers, and optional application annotations. Trace and span identifiers are propagated through common threading, asynchronous control-flow, and RPC libraries, allowing most applications to be traced without application-specific instrumentation.\n\nThe design emphasizes three operational requirements: low runtime overhead, application-level transparency, and scalability. Dapper addresses these requirements through instrumentation in a small set of ubiquitous libraries, probabilistic sampling, asynchronous local logging, and out-of-band collection into Bigtable. Sampling is applied both at runtime and, when necessary, during collection; the latter operates on complete traces by hashing the shared trace identifier. The paper also describes an adaptive-sampling approach intended to increase coverage for low-volume services while limiting overhead for high-volume services.\n\nDapper’s deployment experience showed that distributed tracing could be used not only for interactive latency debugging but also for development, testing, dependency discovery, resource accounting, network-usage analysis, shared-service analysis, and security-policy monitoring. The paper reports that Dapper was deployed across nearly all Google production processes, with most traces requiring no manual propagation support. Its analysis interfaces supported lookup by trace identifier, bulk MapReduce processing, indexed access, execution-pattern aggregation, latency histograms, and interactive trace visualization.\n\nThe reported use cases demonstrate several concrete benefits. Dapper helped identify unnecessary serialization on critical paths, incorrect use of database masters instead of replicas, expensive interactions among services, network degradation associated with long-tail latency, dynamically changing service dependencies, and application-level contributors to shared-storage consumption. The paper also documents limitations: coalesced or batched work can be attributed inaccurately, batch workloads require a different unit of tracing, tracing often identifies the slow component without proving the root cause, and kernel-level events are difficult to associate unobtrusively with user-level trace context.\n\n## Influence on later systems and industry\n\nThe paper became a widely cited reference for production distributed tracing. Later industry discussions describe Dapper’s trace/span model, context propagation, sampling, and large-scale collection architecture as foundational concepts for systems such as Zipkin, Jaeger, and OpenTelemetry. ([research.google](https://research.google/pubs/dapper-a-large-scale-distributed-systems-tracing-infrastructure/)) A survey of microservice tracing specifically identifies Dapper’s use of sampling and restrictive instrumentation as design choices that enabled tracing at very large scale, and notes the subsequent growth of industrial and open-source tracing systems. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC8629732/)) The paper’s influence is therefore both technical and industrial: it provided a production-validated design point that shaped the architecture and terminology of subsequent distributed-observability tools.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/dapper-a-large-scale-distributed-tracing-infrastructure.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/dapper-a-large-scale-distributed-tracing-infrastructure.pdf",
   "filename": "dapper-a-large-scale-distributed-tracing-infrastructure.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:51"
 }

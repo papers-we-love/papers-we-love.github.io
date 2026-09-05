@@ -1,33 +1,27 @@
 {
   "uuid": "23bc48da619ea5398202c9161713a4f74e32eb07216e359ae6f4eb0fb0895665",
-  "title": "A Comprehensive Study of Convergent and Commutative Replicated Data Types",
-  "publication_date": "2011",
+  "title": "A comprehensive study of Convergent and Commutative Replicated Data Types",
+  "publication_date": "January 2011; INRIA Research Report No. 7506; version 1 dated 13 January 2011",
   "authors": [
     "Carlos Baquero",
     "Marc Shapiro",
-    "Matej Zannini",
+    "Marek Zawirski",
     "Nuno Preguiça"
   ],
   "keywords": [
-    "commutativity",
-    "convergence",
-    "crdt",
+    "commutative-operations",
     "data-replication",
-    "data-types",
-    "distributed-computing",
-    "distributed-systems",
-    "eventual-consistency",
-    "replicated-data-types"
+    "optimistic-replication"
   ],
   "category_path": [
     "data_replication"
   ],
-  "abstract": "Eventual consistency is widely believed to be necessary in large-scale distributed systems, in order to ensure high availability, improved responsiveness, and partition tolerance. However, while eventual consistency allows replicas to temporarily diverge, consistency must be restored when updates cease. To this end, we propose and study sufficient conditions that ensure eventual consistency. One important technique is to use a replicated data type (RDT) that ensures strong eventual consistency (SEC). An object satisfies SEC if it guarantees eventual consistency while converging towards the same state in every replica, regardless of update order. This requires that concurrent updates commute. Two classes of SEC replicated data types are identified: State-based convergent replicated data types (CvRDTs) and Operation-based commutative replicated data types (CmRDTs). This work defines these two classes precisely, and explains their properties, advantages, and limitations, with a comprehensive set of algorithms and their proof of correctness. We analyze the trade-offs between time/space complexity and consistency, delivering a set of useful design principles for highly available distributed systems.",
-  "summary": "This paper provides a foundational analysis of Convergent and Commutative Replicated Data Types (CRDTs) and is highly influential in the field of distributed computing. The authors introduce a framework for understanding how different types of replicated data can achieve strong eventual consistency, a concept crucial for developing high-performance distributed systems. The impact of this paper is notably seen in various follow-up studies and practical applications. For instance, it is cited in [The Art of Multiprocessor Programming](https://link.springer.com/book/10.5555/1595535) and [CRDT Development](https://arxiv.org/abs/1806.10230). Additionally, academic works often refer to this paper when discussing consistency models and CRDT optimizations, demonstrating its importance in advancing both theoretical and applied aspects of the field. Consequently, this paper has contributed significantly to advancements in distributed databases and conflict-free replicated data types used by industry leaders like Riak and Microsoft Azure.",
+  "abstract": "Eventual consistency aims to ensure that replicas of some mutable shared object converge without foreground synchronisation. Previous approaches to eventual consistency are ad-hoc and error-prone. We study a principled approach: to base the design of shared data types on some simple formal conditions that are sufficient to guarantee eventual consistency. We call these types Convergent or Commutative Replicated Data Types (CRDTs). This paper formalises asynchronous object replication, either state based or operation based, and provides a sufficient condition appropriate for each case. It describes several useful CRDTs, including container data types supporting both add and remove operations with clean semantics, and more complex types such as graphs, montonic DAGs, and sequences. It discusses some properties needed to implement non-trivial CRDTs.",
+  "summary": "The paper establishes a formal framework for replicated data types that converge without foreground synchronization. It distinguishes two approaches: state-based CRDTs, whose replica states form a monotonic join-semilattice and merge computes a least upper bound, and operation-based CRDTs, whose concurrent operations commute under an appropriate delivery order. The authors formalize eventual convergence, specify replication assumptions, and show that the two approaches can emulate one another.\n\nThe paper develops a portfolio of CRDT designs, including counters, last-writer-wins and multi-value registers, grow-only and add/remove sets, graphs, monotonic DAGs, and sequence structures such as RGA and continuum-based sequences. It emphasizes that convergence alone does not determine application semantics: data types must explicitly define the treatment of concurrent updates. The paper also identifies metadata growth, tombstones, identifier imbalance, and garbage collection as important implementation concerns. Some garbage collection can use weak background synchronization, while global resets and similar operations may require stronger commitment protocols.\n\nThe work helped establish CRDTs as a standard research framework for coordination-free replication. Later research formalized and surveyed CRDT properties, including deterministic convergence after replicas receive the same updates. ([arxiv.org](https://arxiv.org/abs/1805.06358)) Subsequent systems research applied CRDTs to consistency-level selection and to coordination-free programming frameworks; for example, SIEVE used causally consistent CRDTs when strong consistency was unnecessary, while Lasp used CRDTs including G-Counters for large-scale coordination-free applications. ([usenix.org](https://www.usenix.org/conference/atc14/technical-sessions/presentation/li_cheng_2)) The paper’s designs and terminology therefore influenced both theoretical work on replicated data types and practical distributed-storage and programming-system designs.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/data_replication/a-comprehensive-study-of-convergent-and-communative-replicated-data-types.pdf",
   "source_type": "pdf",
   "filepath": "data_replication/a-comprehensive-study-of-convergent-and-communative-replicated-data-types.pdf",
   "filename": "a-comprehensive-study-of-convergent-and-communative-replicated-data-types.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:51"
 }

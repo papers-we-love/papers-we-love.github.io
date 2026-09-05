@@ -1,31 +1,31 @@
 {
   "uuid": "345315078ca07d80ab4589a21e5dfffd1ed8d738d687342b753196a0d4f44966",
   "title": "A Hundred Impossibility Proofs for Distributed Computing",
-  "publication_date": "2009",
+  "publication_date": "August 1989 (Proceedings of the Eighth Annual ACM Symposium on Principles of Distributed Computing, PODC ’89; ACM records the publication date as June 1, 1989)",
   "authors": [
-    "Maxwell Young"
+    "Nancy A. Lynch"
   ],
   "keywords": [
-    "atomic-broadcast",
-    "byzantine-agreement",
-    "consensus",
+    "asynchronous-systems",
     "distributed-computing",
-    "failure-detection",
-    "impossibility-results",
-    "network-partition",
+    "distributed-consensus",
+    "fault-tolerance",
+    "formal-modeling",
+    "impossibility",
+    "lower-bounds",
+    "mutual-exclusion",
     "shared-memory",
-    "snapshot",
-    "time-complexity"
+    "symmetry"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "For several years, impossibility proofs have played a significant role in shaping the theoretical landscape of distributed computing. Such proofs have informed an elite cadre of theoreticians and practitioners and have contributed to our collective understanding of critical properties such as consistency, availability, and fault tolerance. The first survey of impossibility results is now more than twenty-five years old. Since then, the list has grown from a mere handful to a formidable quantity-long enough to be worthy of deeper inspection. This paper represents an exhaustive attempt to gather, collate, and categorize all known impossibility results in the field of distributed computing.",
-  "summary": "This paper, authored by Maxwell Young in 2009, systematically surveys impossibility proofs in the domain of distributed computing. It categorizes and analyzes various impossibility results that have informed the field regarding consistency, availability, and fault tolerance. Notably, it details the challenges in achieving consensus and addresses issues such as network partitioning and failure detection within distributed systems. \n\nUpon a web search, this paper has been referenced in scholarly contexts that explore the theoretical limits of distributed systems. It has provided a foundational understanding that has been cited in subsequent works dealing with related issues in distributed computing and contributed to discussions in academic venues. However, specific instances of industry implementation or broader impact outside of academic citation are not immediately apparent.\n\nSome references to this paper include:\n\n1. Charron-Bost, B., & Schiper, A. (2010). The Heard-Of Model: Unifying all Distributed Algorithms. Journal of the ACM, [Link](https://dl.acm.org/doi/10.1145/1734205.1734207)\n2. Herlihy, M., & Shavit, N. (2011). The Art of Multiprocessor Programming. [Book Reference]\n3. Raynal, M., & Schiper, A. (2010). The 'Heard-Of' Model: Computing in Partitionable Asynchronous Systems. [Link](https://dl.acm.org/doi/10.1145/1815491.1815523)\n\nThe paper remains a critical resource for understanding impossibility results in distributed computing and is a frequently cited work in the theoretical framework of the domain.",
+  "abstract": "This talk is about impossibility results in the area of distributed computing. In this category, I include not just results that say that a particular task cannot be accomplished, but also lower bound results, which say that a task cannot be accomplished within a certain bound on cost.",
+  "summary": "## Overview\n\nNancy Lynch presents a survey of more than one hundred impossibility and lower-bound results in distributed computing. The paper does not establish one new theorem; instead, it organizes existing results, explains their proof techniques, provides historical context, and identifies common principles underlying apparently different impossibility arguments. The surveyed topics include shared-memory resource allocation, distributed consensus, shared registers, computation in rings and other networks, communication protocols, and miscellaneous distributed tasks. ([groups.csail.mit.edu](https://groups.csail.mit.edu/tds/papers/Lynch/podc89.pdf))\n\n## Central insight\n\nThe paper identifies the limitation imposed by **local knowledge** as the fundamental idea behind the surveyed results. A process must behave identically in executions that are indistinguishable from its local perspective. Impossibility proofs exploit this fact by constructing executions or configurations that look the same to selected processes but require incompatible behavior. The paper emphasizes that precise formal models are essential because small changes in timing, failures, communication, fairness, or process capabilities can change the result.\n\n## Main proof techniques\n\n- **Pigeonhole arguments:** Limited shared-memory values force different executions to produce indistinguishable states.\n- **Scenario and indistinguishability arguments:** Carefully constructed executions make processes behave as though they were in different systems or fault scenarios.\n- **Chain arguments:** A sequence of executions changes one relevant feature at a time, forcing a contradiction between neighboring executions.\n- **Bivalence arguments:** A configuration from which both decisions remain possible is shown to persist or to lead to a contradiction with termination.\n- **Symmetry and distance arguments:** Indistinguishable processes or limited communication distance prevent leader election, coordination, or efficient computation.\n- **Communication-structure arguments:** Message diagrams, message stealing, finite-state limitations, and graph constructions establish lower bounds for protocols and networks.\n- **Reductions:** Results for one problem or model are transferred to another through simulations or problem transformations.\n\n## Results surveyed\n\nThe discussion covers lower bounds on shared-memory size for mutual exclusion and resource allocation; process counts, rounds, messages, and timing conditions for consensus; asynchronous consensus impossibility in the presence of failures; limits on commit, synchronization, and register implementation; message complexity in rings, complete graphs, meshes, and general networks; communication-protocol limitations; database availability under network partitions; termination detection; and hardware coordination problems. Particular attention is given to how stronger communication primitives, authentication, randomization, synchrony, or failure assumptions can avoid or weaken an impossibility result.\n\n## Methodological conclusions\n\nLynch argues that impossibility work depends heavily on well-designed problem statements and models. Specifications should be precise, crisp, sufficiently general, and no stronger than necessary. Models must describe admissible executions, liveness assumptions, control of actions, and the interaction between algorithms and their environments. The paper also observes that attempts to prove impossibility can generate useful positive results: failed proofs may expose counterexample algorithms, while successful proofs can indicate which assumptions must be added to make a task solvable.\n\n## Influence\n\nThe paper became an established survey reference for distributed-computing impossibility theory. Fich and Ruppert’s 2003 survey explicitly describes itself as building on Lynch’s survey while extending coverage of models, complexity measures, and proof techniques. ([researchgate.net](https://www.researchgate.net/publication/220567008_Hundreds_of_impossibility_results_for_distributed_computing)) Later research continues to cite it as background for impossibility, consensus, and lower-bound arguments, including work presented at DISC 2023. ([drops.dagstuhl.de](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.DISC.2023.4)) The paper has also been used as recommended or assigned reading in distributed-systems courses, including courses at the University of Chicago, the University of Illinois, and Harvard. ([classes.cs.uchicago.edu](https://www.classes.cs.uchicago.edu/archive/2014/spring/23310-1/CMSC23310_SPR14_Syllabus.pdf))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/a-hundred-impossibility-proofs-for-distributed-computing.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/a-hundred-impossibility-proofs-for-distributed-computing.pdf",
   "filename": "a-hundred-impossibility-proofs-for-distributed-computing.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:51"
 }

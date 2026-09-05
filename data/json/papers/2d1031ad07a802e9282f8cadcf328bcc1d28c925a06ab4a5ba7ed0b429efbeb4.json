@@ -1,31 +1,32 @@
 {
   "uuid": "2d1031ad07a802e9282f8cadcf328bcc1d28c925a06ab4a5ba7ed0b429efbeb4",
-  "title": "Real-Time Chord Detection in Audio Using Non-negative Matrix Factorization",
-  "publication_date": "2010",
+  "title": "REAL-TIME CHORD RECOGNITION FOR LIVE PERFORMANCE",
+  "publication_date": "August 16–21, 2009 — Proceedings of the 2009 International Computer Music Conference (ICMC 2009), Montreal, Canada, pp. 85–88",
   "authors": [
-    "Tuomas Virtanen"
+    "Adam M. Stark",
+    "Mark D. Plumbley"
   ],
   "keywords": [
-    "audio-analysis",
-    "audio-processing",
-    "audio-signal-processing",
-    "chord-recognition",
-    "machine-learning",
+    "chord-detection",
+    "chromagram",
+    "digital-signal-processing",
+    "harmonic-analysis",
+    "live-performance",
+    "max-msp",
     "music-information-retrieval",
-    "non-negative-matrix-factorization",
-    "real-time-chord-detection",
-    "real-time-systems",
-    "spectral-analysis"
+    "pitch-class-profile",
+    "polyphonic-audio",
+    "real-time-chord-recognition"
   ],
   "category_path": [
     "audio_comp_sci"
   ],
-  "abstract": "This paper proposes a real-time system for recognizing chords from audio, based on frame-wise estimation of chord templates from music data calculated using Non-negative Matrix Factorization. In continuous tracking of audio data, the system outputs the most probable chord successively for each frame. The proposed method requires detecting onsets of musical notes, which allows segmenting the audio into frames with suitable duration for analysis. Performance evaluation with test signals shows that the method provides satisfying results for real-time applications.",
-  "summary": "The paper introduces a method for real-time chord detection in audio signals using Non-negative Matrix Factorization (NMF). This approach allows the identification of musical chords from audio signals by analyzing the spectral content frame by frame. The system presented requires the detection of musical note onsets to appropriately frame the audio for analysis, which is critical for maintaining real-time performance. The method was tested and showed satisfactory results in terms of performance.\n\nA web search reveals that the techniques discussed in this paper have been foundational in music information retrieval (MIR) systems, especially those focusing on audio content analysis. However, there are limited direct citations or explicit further developments stemming directly from this particular paper. It shares concepts that resonate with broader works on real-time audio processing and chord recognition. Similar NMF techniques have also been widely adopted in various audio and speech processing research.\n\nFor example, the work \"Music Structure Analysis Using Chord Sequence Patterns and a Time-Continuous Diagram of Clusters of Chord Sequences\" by Mauch and Dixon has been influenced by similar NMF techniques ([Mauch, M. and Dixon, S., 2010](https://www.researchgate.net/publication/220722488_Music_Structure_Analysis_Using_Chord_Sequence_Patterns_and_a_Time-Continuous_Diagram_of_Clusters_of_Chord_Sequences)). Although not a direct citation, similar methodologies are applied in real-time audio processing systems.\n\nOverall, the paper is part of a broader set of research that has impacted the field of machine learning applications in music and audio signal processing.",
+  "abstract": "This paper describes work aimed at creating an efficient, real-time, robust and high performance chord recognition system for use on a single instrument in a live performance context. An improved chroma calculation method is combined with a classification technique based on masking out expected note positions in the chromagram and minimising the residual energy. We demonstrate that our approach can be used to classify a wide range of chords, in real-time, on a frame by frame basis. We present these analysis techniques as externals for Max/MSP.",
+  "summary": "## Summary\n\nThe paper presents a frame-based chord-recognition system designed for real-time analysis of a single polyphonic instrument in live performance. It targets 108 chord labels spanning major, minor, diminished, augmented, suspended, major-seventh, minor-seventh, and dominant-seventh qualities.\n\nThe system first computes a 12-bin chromagram from a windowed short-time Fourier transform. Instead of accumulating all spectral energy within fixed frequency bands, it searches for the maximum spectral peak near the expected locations of the first two harmonics. This reduces noise sensitivity and permits limited inharmonicity. The analysis focuses on two octaves, from C3 to C5, using an 11,025 Hz sampling rate and 8,192-sample frames.\n\nFor classification, each candidate chord is represented by a binary note mask. The method removes the masked note positions and measures the normalized residual energy in the remaining chroma bins; the chord with the smallest residual is selected. Additional heuristics address chromagram ambiguities among augmented and suspended chords and compensate for overtone-related “ghost notes,” particularly fifths caused by third harmonics.\n\nEvaluation used 1,440 randomly selected frames from 180 guitar chords played on two guitars. The system achieved 94.0% root-note accuracy, 93.1% root-plus-quality accuracy, and 92.7% accuracy when additional chord intervals were also required. Performance was strongest for diminished, dominant-seventh, major-seventh, and major/minor chords, and weaker for augmented and suspended chords because some have identical chromagram representations. The proposed classifier exceeded nearest-neighbour classification by 1.2 percentage points and weighted-sum classification by 20.1 percentage points at the most detailed evaluation level.\n\nThe paper’s documented influence is primarily practical and methodological. The authors later released a C++ implementation of the chromagram and chord-detection algorithm, explicitly identifying it as an implementation of this paper’s approach. That implementation has subsequently been reused or ported in community software, including TypeScript/browser and Rust projects for real-time chord detection. ([github.com](https://github.com/adamstark/Chord-Detector-and-Chromagram)) The paper is also cited in later surveys and research on automatic chord recognition, including work covering the field’s development over two decades and later guitar-chord recognition systems. ([c4dm.eecs.qmul.ac.uk](https://c4dm.eecs.qmul.ac.uk/research/publications/))\n\nThe authors identify whole-performance evaluation and the possible use of temporal models such as hidden Markov models as directions for subsequent work. The evidence located supports continued citation and software reuse, but does not establish broad commercial adoption attributable specifically to this paper. ([openresearch.surrey.ac.uk](https://openresearch.surrey.ac.uk/esploro/outputs/conferencePresentation/Real-time-chord-recognition-for-live-performance/99513191602346))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/audio_comp_sci/real-time-chord-detection.pdf",
   "source_type": "pdf",
   "filepath": "audio_comp_sci/real-time-chord-detection.pdf",
   "filename": "real-time-chord-detection.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:50"
 }

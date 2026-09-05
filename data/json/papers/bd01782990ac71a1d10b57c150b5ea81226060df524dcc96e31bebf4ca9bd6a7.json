@@ -1,35 +1,32 @@
 {
   "uuid": "bd01782990ac71a1d10b57c150b5ea81226060df524dcc96e31bebf4ca9bd6a7",
-  "title": "The Akamai Network: A Fast and Reliable Software System for Serving the World's Web Sites",
-  "publication_date": "2001",
+  "title": "The Akamai Network: A Platform for High-Performance Internet Applications",
+  "publication_date": "July 2010 (ACM SIGOPS Operating Systems Review, Volume 44, Issue 3, pages 2–19)",
   "authors": [
-    "Daniel Lewin",
-    "Patrick C. Reed",
-    "S. Seshan",
-    "Tom Leighton",
-    "Vivek Pai"
+    "Erik Nygren",
+    "Jennifer Sun",
+    "Ramesh K. Sitaraman"
   ],
   "keywords": [
-    "content-delivery-network",
-    "distributed-computing",
-    "distributed-systems",
-    "fault-tolerance",
-    "internet-infrastructure",
-    "load-balancing",
-    "network-optimization",
-    "scalability",
-    "web-cache",
-    "web-performance"
+    "akamai",
+    "application-acceleration",
+    "cdn",
+    "content-delivery",
+    "dns",
+    "http",
+    "overlay-networks",
+    "quality-of-service",
+    "streaming-media"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "Akamai has deployed the largest, most successful general-purpose content delivery network (CDN) in the world today, with tens of thousands of servers in hundreds of networks located in over fifty countries. Akamai's system offers a better quality of service than the Internet itself and all known alternatives for delivering content, including point solutions from notably rival software businesses. We present technical highlights of the Akamai system design including: load balancing across a massive network of complex resources, our web cache that uses novel algorithms and a highly optimized memory manager designed specifically to enable the cache to scale from a small machine to a large one, and an object pick-up that allows users to visit a website that has been recently updated by sending requests for the updated site to the right destination, even if a cache hit or miss occurs. We discuss how the system ensures service quality even under severe load conditions, network failures, and insecure connections.",
-  "summary": "The paper titled \"The Akamai Network: A Fast and Reliable Software System for Serving the World's Web Sites\" published in 2001, offers an in-depth look into the technical mechanisms underpinning Akamai's Content Delivery Network (CDN). The authors elaborate on the strategies implemented by Akamai to improve web performance and reliability through load balancing, a robust caching mechanism, and efficient network resource management. The Akamai network is distinguished by its scalability, having been deployed across myriad servers globally to optimize content delivery.\n\nSubsequent research and industry implementations have indeed recognized the Akamai model as a pioneering approach in distributed systems and CDNs. For instance, a Springer Link chapter titled 'Impact of Akamai Technologies on Global Internet Traffic' praised Akamai for revolutionizing web content delivery. (Link: [Springer Link](https://link.springer.com/referenceworkentry/10.1007/978-3-030-12381-9_107)) Another related work, discussed in the IEEE Xplore repository, addresses how Akamai’s techniques influenced newer CDN architectures ([IEEE](https://ieeexplore.ieee.org/document/6093438)). Although the original paper itself is not directly cited in widely available post-2000 publications, its foundational principles have informed the evolution of modern CDNs.",
+  "abstract": "Comprising more than 61,000 servers located across nearly 1,000 networks in 70 countries worldwide, the Akamai platform delivers hundreds of billions of Internet interactions daily, helping thousands of enterprises boost the performance and reliability of their Internet applications. In this paper, we give an overview of the components and capabilities of this large-scale distributed computing platform, and offer some insight into its architecture, design principles, operation, and management.",
+  "summary": "## Paper summary\n\nThe paper presents Akamai as a large-scale distributed computing platform designed to improve the performance, reliability, scalability, and security of Internet applications without requiring changes to the underlying Internet or end-user software. Its central architectural idea is a virtual delivery network implemented as a software layer over widely distributed servers positioned close to users and, where possible, close to access networks.\n\nThe platform combines several major capabilities: edge servers for request processing and caching; a mapping system that selects servers using geographic, topological, performance, load, and health information; transport systems for reliable communication between origins, edge clusters, and intermediate nodes; communications and control infrastructure; large-scale monitoring and data-analysis systems; globally distributed DNS; storage; and a customer management portal. A recurring design assumption is that failures are normal. The system therefore emphasizes redundancy, automatic recovery, fault isolation, decentralized coordination, staged configuration changes, and minimal dependence on human operators.\n\nFor static content and media, the paper describes edge caching, tiered distribution, and a live-streaming overlay. Tiered distribution reduces origin load by routing cache misses through parent clusters, while live streams are replicated through reflector nodes and delivered over alternate paths. Multiple paths, packet-recovery techniques, and prebursting are used to reduce loss and startup delay. These mechanisms support the paper's argument that a highly distributed architecture is better suited than a small number of centralized data centers for large global audiences and high-bitrate video.\n\nFor dynamic applications, Akamai uses its distributed servers as a performance-optimized overlay. Path selection, persistent connections, transport-protocol tuning, intelligent retransmission, compression, and prefetching reduce the effects of latency, packet loss, inefficient BGP routing, and middle-mile congestion. The platform also supports EdgeComputing, allowing selected application components to execute near users while retaining centralized origin services where necessary.\n\n## Influence on research and industry\n\nThe paper helped document and consolidate the architectural principles behind commercial content delivery networks, including edge caching, DNS-based server selection, overlay routing, distributed fault tolerance, and edge execution. Later research on information-centric networking, content placement, cache allocation, fog computing, and edge computing cites the paper as an example of large-scale content-delivery infrastructure. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S1389128616301050))\n\nIts treatment of live-streaming overlays also connects directly to subsequent algorithmic research. A later paper on overlay-network construction states that its algorithms include networks used by Akamai for global live-media delivery and evaluates them using traces derived from Akamai's live-streaming network. ([arxiv.org](https://arxiv.org/abs/1109.4114))\n\nThe paper continues to be used as an established systems reference in computer-networking and distributed-systems courses, and later Akamai technical publications cite it when describing the company's research and delivery-network architecture. ([courses.cs.washington.edu](https://courses.cs.washington.edu/courses/csep561/22sp/))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/the-akamai-network.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/the-akamai-network.pdf",
   "filename": "the-akamai-network.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

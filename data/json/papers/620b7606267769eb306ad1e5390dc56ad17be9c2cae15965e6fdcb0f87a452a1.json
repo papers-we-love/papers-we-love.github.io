@@ -1,33 +1,32 @@
 {
   "uuid": "620b7606267769eb306ad1e5390dc56ad17be9c2cae15965e6fdcb0f87a452a1",
-  "title": "Belt-Driven Haptic Knobs for Automotive Applications",
-  "publication_date": "May 2012. ACM CHI Conference on Human Factors in Computing Systems",
+  "title": "Removing gamification from an enterprise SNS",
+  "publication_date": "19 March 2012, CSCW 2012 (Proceedings of the ACM 2012 Conference on Computer Supported Cooperative Work)",
   "authors": [
-    "Alex Lukowicz",
-    "Luis Espinosa Reyes",
-    "Marcus Möller",
-    "Martin Rentschler",
-    "Matthias Kranz"
+    "David Millen",
+    "Jennifer Thom",
+    "Joan DiMicco"
   ],
   "keywords": [
-    "automotive-applications",
-    "driver-assistance-systems",
-    "feedback-techniques",
-    "haptic-interfaces",
-    "human-computer-interaction",
-    "interaction-design",
-    "tangible-user-interfaces",
-    "ubiquitous-computing"
+    "behavioral-analysis",
+    "enterprise-collaboration",
+    "enterprise-social-networking",
+    "extrinsic-motivation",
+    "gamification",
+    "online-communities",
+    "points-based-incentives",
+    "social-networking-services",
+    "user-participation"
   ],
   "category_path": [
     "gamification"
   ],
-  "abstract": "In this paper, we present a novel concept of belt-driven haptic knobs for automotive applications. They provide a tangible user interface to improve the interaction between driver and vehicle information systems. The knobs can embody various force feedback schemes to simulate distinct physical sensations. Our approach merges concepts from haptic feedback and tangible interaction design with ubiquitous computing strategies to offer an enriched user experience in vehicular environments. We conducted preliminary user studies to evaluate the effectiveness and user perception of the system.",
-  "summary": "This paper introduces a novel concept of belt-driven haptic knobs designed for automotive applications, which aim to enhance the interaction between drivers and vehicle information systems. The solution integrates haptic feedback with tangible interaction strategies to improve usability and provide enriched user experiences. The research demonstrated a promising approach by combining interaction design techniques with ubiquitous computing principles in driver assistance systems.\n\nPreliminary user studies mentioned in the paper suggest an improvement in the user perception and effectiveness of vehicle interface manipulation through these knobs. By simulating various physical sensations, the knobs provide distinct feedback to users while interacting with different functions.\n\nDespite the innovative concept, subsequent research citations seem sparse. A comprehensive search did not show significant direct influence on further academic research or industry applications. However, the paper's ideas could serve as foundational work in the context of haptic interfaces and tangible user interfaces within automotive and other embedded system contexts, given the increasing interest in enhancing human-computer interaction designs. More widespread implementation might depend on the maturity of related technologies and materials in future research efforts.",
+  "abstract": "Gamification, the use of game mechanics in non-gaming applications, has been applied to various systems to encourage desired user behaviors. In this paper, we examine patterns of user activity in an enterprise social network service after the removal of a points-based incentive system. Our results reveal that the removal of the incentive scheme did reduce overall participation via contribution within the SNS. We also describe the strategies by point leaders and observe that users geographically distant from headquarters tended to comment on profiles outside of their home country. Finally, we describe the implications of the removal of extrinsic rewards, such as points and badges, on social software systems, particularly those deployed within an enterprise.",
+  "summary": "The paper analyzes user activity before and after the removal of a points-based gamification system from an enterprise social networking service. The incentive system awarded points for adding photos and lists and for commenting, while also displaying user levels, badges, and leaderboards. Using usage logs from two weeks before and two weeks after removal, the authors report significant decreases in contributions across several content types, including photos, lists, and comments. The study also identifies behavioral differences among highly active users and geographic differences in commenting patterns, with users outside headquarters tending to interact more across national boundaries.\n\nThe paper has subsequently been used as an empirical reference point for research on the consequences of ending gamification. Later work cites it as an early example showing that removing visible rewards can cause measurable changes in participation and activity patterns. Research on GitHub extended this line of inquiry through a quasi-experiment involving the removal of activity-streak counters, while later reviews and enterprise-systems research cite the paper when discussing the risks, limitations, and termination effects of extrinsic gamification. ([research.ibm.com](https://research.ibm.com/publications/removing-gamification-from-an-enterprise-sns)) No specific commercial product adoption directly attributable to this paper was identified in the sources reviewed; its documented influence is primarily scholarly and methodological.",
   "raw_url": "https://dl.acm.org/doi/pdf/10.1145/2145204.2145362",
   "source_type": "external",
   "filepath": "gamification/README.md",
   "filename": "Removing Gamification from an Enterprise SNS",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

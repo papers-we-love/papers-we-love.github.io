@@ -1,32 +1,33 @@
 {
   "uuid": "068bf8dd1af6aac43da31bb5823fd8b6a6659d5968d4cc17a465c68c379ff478",
   "title": "A Universal Modular ACTOR Formalism for Artificial Intelligence",
-  "publication_date": "1985",
+  "publication_date": "1973 (Proceedings of the 3rd International Joint Conference on Artificial Intelligence, IJCAI-73; conference held August 20–23, 1973, at Stanford University, Stanford, California; pages 235–245)",
   "authors": [
-    "Dean Tribble",
-    "Mark S. Miller"
+    "Carl Hewitt",
+    "Peter Bishop",
+    "Richard Steiger"
   ],
   "keywords": [
     "actor-model",
     "artificial-intelligence",
-    "computational-models",
-    "concurrent-systems",
-    "distributed-systems",
-    "modular-systems",
-    "multi-agent-systems",
-    "object-oriented-programming",
+    "concurrent-computation",
+    "control-structures",
+    "extension-worlds",
+    "knowledge-based-programming",
+    "message-passing",
+    "meta-evaluation",
     "parallel-computing",
-    "universal-formalism"
+    "procedural-semantics"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "This document presents a novel approach to artificial intelligence based on a universal modular formalism for computational agents. The formalism combines ideas from object-oriented programming, parallel computing, and artificial intelligence, providing a coherent framework for building intelligent systems. The ACTOR formalism represents a powerful tool for designing and implementing concurrent, distributed applications, offering significant advantages in terms of modularity, simplicity, and scalability.",
-  "summary": "The paper titled \"A Universal Modular ACTOR Formalism for Artificial Intelligence\" by Mark S. Miller and Dean Tribble, published in 1985, introduces a formalism for designing and implementing artificial intelligence systems using the ACTOR model. This model is noted for combining object-oriented principles and concepts from parallel computing to create a robust framework for concurrent and distributed applications.\\n\\nThe ACTOR model's primary contribution lies in its ability to improve modularity, scalability, and simplicity in the creation of intelligent and distributed systems. However, the paper does not appear to have widely influenced subsequent research or industry practices directly. Although the ACTOR model itself has been a significant conceptual influence in computing, references specifically citing this paper in further research could not be readily found during a web search. The influence of the ACTOR model at large can be seen in various domains such as multi-agent systems and concurrent system design, even if this specific paper did not directly contribute measurable impact. As such, this paper remains a noteworthy conceptual contribution to the theoretical foundation of distributed systems.",
+  "abstract": "This paper proposes a modular ACTOR architecture and definitional method for artificial intelligence that is conceptually based on a single kind of object: actors [or, if you will, virtual processors, activation frames, or streams]. The formalism makes no presuppositions about the representation of primitive data structures and control structures. Such structures can be programmed, micro-coded, or hard wired in a uniform modular fashion. In fact it is impossible to determine whether a given object is \"really\" represented as a list, a vector, a hash table, a function, or a process. The architecture will efficiently run the coming generation of PLANNER-like artificial intelligence languages including those requiring a high degree of parallelism. The efficiency is gained without loss of programming generality because it only makes certain actors more efficient; it does not change their behavioral characteristics. The architecture is general with respect to control structure and does not have or need goto, interrupt, or semaphore primitives. The formalism achieves the goals that the disallowed constructs are intended to achieve by other more structured methods.",
+  "summary": "The paper presents actors as a single, uniform abstraction for representing data structures, functions, processes, control mechanisms, logical formulae, databases, and other computational entities. Actors communicate by sending messages, with control flow and data flow treated as inseparable. The formalism includes continuations, partial-order histories of events, behavioral equivalence, extension worlds for hypothetical reasoning and procedure invocation, pattern-directed reception, and actor-based mechanisms for scheduling, monitoring, intentions, resource management, synchronization, and protection. It also proposes procedural semantics for logical operators and describes how substitution, reduction, and meta-evaluation could support deduction, program verification, compilation, automatic actor generation, and knowledge-base construction.\n\nThe paper’s documented influence is primarily conceptual and foundational. Later historical accounts identify it as an early and unusually broad formulation of the actor model, connecting message passing with concurrency, programming-language semantics, modularity, security, and artificial intelligence. ([groups.seas.harvard.edu](https://groups.seas.harvard.edu/courses/cs252/2016fa/12.pdf)) Contemporary industry documentation from AWS cites the paper as an origin of decentralized, message-driven computation and relates its principles—state and behavior isolation, asynchronous interaction, and dynamic task creation—to modern distributed systems and agent design. This supports a connection to later research and industry discourse, but does not by itself establish that the paper directly influenced a particular commercial implementation. ([docs.aws.amazon.com](https://docs.aws.amazon.com/prescriptive-guidance/latest/agentic-ai-foundations/autonomy-to-ai.html))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/a-universal-modular-actor-formalism-for-artificial-intelligence.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/a-universal-modular-actor-formalism-for-artificial-intelligence.pdf",
   "filename": "a-universal-modular-actor-formalism-for-artificial-intelligence.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:51"
 }

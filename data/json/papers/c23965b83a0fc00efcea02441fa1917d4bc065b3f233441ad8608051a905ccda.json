@@ -1,38 +1,40 @@
 {
   "uuid": "c23965b83a0fc00efcea02441fa1917d4bc065b3f233441ad8608051a905ccda",
-  "title": "Essentia: An Open-source Library for Audio Analysis",
-  "publication_date": "2013",
+  "title": "ESSENTIA: AN AUDIO ANALYSIS LIBRARY FOR MUSIC INFORMATION RETRIEVAL",
+  "publication_date": "November 4–8, 2013; 14th International Society for Music Information Retrieval Conference (ISMIR 2013), Curitiba, Brazil",
   "authors": [
     "Dmitry Bogdanov",
     "Emilia Gómez",
-    "Gerhard Werro",
-    "Nicolás Wack",
+    "Gerard Roma",
+    "Jose Zapata",
+    "Justin Salamon",
+    "Nicolas Wack",
     "Oscar Mayor",
     "Perfecto Herrera",
-    "Sergio Gulati",
+    "Sankalp Gulati",
     "Xavier Serra"
   ],
   "keywords": [
     "audio-analysis",
-    "audio-descriptors",
-    "audio-processing",
-    "content-based-analysis",
-    "feature-extraction",
-    "machine-learning",
+    "audio-similarity",
+    "beat-tracking",
+    "digital-signal-processing",
+    "melody-extraction",
+    "music-classification",
+    "music-descriptors",
     "music-information-retrieval",
-    "open-source-library",
-    "rhythm-analysis",
-    "spectral-features"
+    "open-source-software",
+    "python-bindings"
   ],
   "category_path": [
     "audio_comp_sci"
   ],
-  "abstract": "We present Essentia, an open-source C++ library for audio analysis and audio-based music information retrieval. Essentia is developed with the aim of providing researchers and developers with a comprehensive, computationally efficient and easy-to-use tool for extracting descriptions from audio. It contains an extensive collection of reusable algorithms for audio and music processing, and offers standard music information retrieval features as well as audio processing blocks needed for the application of audio descriptors to machine learning and its deployment in real-world applications. The library is cross-platform and includes additional Python bindings. It also features a development environment that facilitates the design and testing of audio processing algorithms. We describe the design and implementation of Essentia, its main components and algorithms, and its use in several real-world applications including both research experiments and industrial products.",
-  "summary": "Essentia is an influential open-source library designed for audio analysis and music information retrieval, introduced by Dmitry Bogdanov and colleagues in 2013. The library is written in C++ and offers an extensive collection of algorithms for extracting audio features, aiming to provide an accessible tool for research and development in audio analysis. The library's effectiveness and extensibility have made it well-suited for a variety of applications in both academic research and industry.\n\nThe impact of Essentia is evident in its adoption across numerous projects and research papers. Notably, it has been utilized by Spotify's research team to improve music recommendations and has been employed in emotion detection in music research. Google Scholar indicates several academic papers that cite Essentia, demonstrating its broad relevance and application across diverse domains.\n\nFor example, a study titled \"Emotion Recognition in Music using Real-Time Information\" published in 2020 employed Essentia for feature extraction to drive machine learning models ([source](https://ieeexplore.ieee.org/document/9274196)). Similarly, research into \"Automatic Music Genre Classification based on Clustering-Homomorphic Analysis\" published in 2018 applied Essentia for analyzing genre-specific audio features ([source](https://www.mdpi.com/2076-3417/8/11/2044)). While these are just a selection of studies leveraging Essentia, they illustrate its role as a foundational tool in audio and music research.",
+  "abstract": "We present Essentia 2.0, an open-source C++ library for audio analysis and audio-based music information retrieval released under the Affero GPL license. It contains an extensive collection of reusable algorithms which implement audio input/output functionality, standard digital signal processing blocks, statistical characterization of data, and a large set of spectral, temporal, tonal and high-level music descriptors. The library is also wrapped in Python and includes a number of predefined executable extractors for the available music descriptors, which facilitates its use for fast prototyping and allows setting up research experiments very rapidly. Furthermore, it includes a Vamp plugin to be used with Sonic Visualiser for visualization purposes. The library is cross-platform and currently supports Linux, Mac OS X, and Windows systems. Essentia is designed with a focus on the robustness of the provided music descriptors and is optimized in terms of the computational cost of the algorithms. The provided functionality, specifically the music descriptors included in-the-box and signal processing algorithms, is easily expandable and allows for both research experiments and development of large-scale industrial applications.",
+  "summary": "### Summary\n\nThe paper introduces Essentia 2.0, a cross-platform, open-source C++ library intended to unify a broad range of reusable audio-analysis and music-information-retrieval algorithms. Its capabilities cover audio input/output, DSP, spectral and temporal descriptors, tonal analysis, rhythm analysis, statistical aggregation, high-level classification, and executable feature extractors. Python bindings support rapid prototyping, while Vamp integration supports visualization in Sonic Visualiser. The architecture represents processing components as composable algorithms and provides both imperative standard processing and scheduler-driven streaming processing, allowing a trade-off between prototyping simplicity, memory use, and processing throughput.\n\nThe paper documents applications in music classification, semantic autotagging, similarity and recommendation, sound indexing, cover detection, beat detection, instrument analysis, and multimodal music-performance research. It also reports industrial or service use in systems associated with Freesound, BMAT, Stromatolite, Yamaha BODiBEAT, and Steinberg LoopMash.\n\nSubsequent evidence indicates that Essentia became a continuing research platform rather than only a one-time software release. The project maintains a catalog of academic studies using Essentia across music analysis, classification, recommendation, segmentation, tonality, rhythm, source separation, speech, bioacoustics, and related areas. ([essentia.upf.edu](https://essentia.upf.edu/research_papers.html)) The library’s official repository continues to describe the same core role and documents support for additional platforms and Python-based installation. ([github.com](https://github.com/MTG/essentia)) Essentia.js extended the library’s algorithms to browser and Node.js environments through WebAssembly, enabling web-based and real-time audio analysis. ([github.com](https://github.com/mtg/essentia.js/)) Concrete research applications include AcousticBrainz, which used Essentia to gather audio-derived music information, and Dunya, which used it for culturally specific music interaction and analysis. ([essentia.upf.edu](https://essentia.upf.edu/research_papers.html))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/audio_comp_sci/essentia.pdf",
   "source_type": "pdf",
   "filepath": "audio_comp_sci/essentia.pdf",
   "filename": "essentia.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:53"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:50"
 }

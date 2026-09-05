@@ -1,31 +1,31 @@
 {
   "uuid": "7b1745bcaccf107935df0aee827d7ffa5bc34305bbd949a405b62bdeb8081fe5",
   "title": "Incremental Collection of Mature Objects",
-  "publication_date": "1992",
+  "publication_date": "September 1992; International Workshop on Memory Management (IWMM 1992), St. Malo, France; Lecture Notes in Computer Science, vol. 637, pp. 388–403",
   "authors": [
-    "Barry Hayes"
+    "J. Eliot B. Moss",
+    "Richard L. Hudson"
   ],
   "keywords": [
-    "collector-algorithms",
-    "computer-science",
+    "clustering",
+    "compaction",
+    "copying-collection",
     "garbage-collection",
+    "garbage-collector-toolkits",
+    "generation-scavenging",
     "incremental-collection",
     "mature-objects",
-    "memory-management",
-    "memory-optimization",
-    "object-oriented",
-    "programming-languages",
-    "runtime-performance"
+    "nondisruptive-collection"
   ],
   "category_path": [
     "garbage_collection"
   ],
-  "abstract": "This paper describes a technique for garbage collection of mature garbage objects. We argue that \"mature garbage\" accounts for a large fraction of old-generation objects, especially in very long-running programs. Several existing generational garbage collectors collect only the young objects, leaving mature objects in old-generation space until memory becomes tight. When the old generation fills with mature garbage, programs pay the performance penalty of a “stop-and-collect.” A collector that collects mature garbage can reclaim these objects incrementally, avoiding stop-and-collect. This technique complements existing schemes for incremental collection of young objects (mostly based on write-barriers). It uses tenuring and promotion to identify mature objects, using an efficient algorithm. Further empirical measurements demonstrate that incremental collection of both young and mature objects makes it feasible to perform acceptably smooth garbage collection even in very long-running programs.",
-  "summary": "In the paper \"Incremental Collection of Mature Objects\" by Barry Hayes, published in 1992, a novel technique for incrementally collecting garbage in programming environments is introduced, with a specific focus on mature objects. The paper addresses the inefficiencies present in existing garbage collection schemes that often necessitate comprehensive pauses to reclaim memory occupied by mature garbage. Hayes' technique aims to alleviate the performance costs associated with traditional generational garbage collectors which only incrementally collect young objects and leave mature objects to gather indefinitely.\n\nThe research presents a method that uses tenuring and promotion processes to more efficiently identify and manage mature objects. This approach integrates with older schemes designed predominantly for young objects, enhancing the capability of garbage collectors to operate without inducing significant stops, which would otherwise affect performance.\n\nAlthough the paper was published at a time when program longevity and system performance were critical issues, empirical evidence within the research demonstrates that this incremental method can support long-running programs by preventing slow-downs caused by pausing for garbage collection.\n\nWhile the paper does not appear widely cited in contemporary research, its contributions to better understanding garbage collection mechanics in object-oriented and long-running programming environments remain relevant. Academic interest in improving garbage collection methods, especially in light of runtime performance and memory optimization, persists. As of the latest available data, no major industry standards directly cite or implement the precise method outlined by Hayes, but the foundational principles continue to inform modern garbage collection strategy discussions. Further research tracing citation patterns could provide more detailed insights into the longitudinal influence of this work. \n\nFor further academic exploration, see citations in subsequent works like [Google Scholar References](https://scholar.google.com) and cross-reference with garbage collection advancements in modern programming languages and runtime environments. However, specific influential citations directly tying back to Hayes’ method appear limited in scope as of the review.",
+  "abstract": "We present a garbage collection algorithm that extends generational scavenging to collect large older generations (mature objects) non-disruptively. The algorithm’s approach is to process bounded-size pieces of mature object space at each collection; the subtleties lie in guaranteeing that it eventually collects any and all garbage. The algorithm does not assume any special hardware or operating system support, e.g., for forwarding pointers or protection traps. The algorithm copies objects, so it naturally supports compaction and reclustering.",
+  "summary": "The paper presents Mature Object Space (MOS), an incremental copying collector for objects that have survived the young generations of a generational garbage collector. Its goal is to avoid the long pauses that occur when a large old generation is collected all at once, while retaining the benefits of copying collection, including compaction and object reclustering.\n\nMOS divides mature space into bounded-size areas, called cars, and groups related cars into trains. The collector processes one car at a time in round-robin order. Remembered sets identify references into the car being processed. Reachable objects are copied into other cars or trains according to their incoming references, while objects that become isolated from all roots are reclaimed. This migration progressively collapses cross-train garbage structures, including cycles that cannot be identified as garbage using only local information. The bounded car size limits the amount of work and movement performed by an individual collection, while the copying process also reduces fragmentation and permits locality-oriented rearrangement.\n\nThe paper argues that the algorithm requires only ordinary hardware and operating-system facilities. Its correctness argument is based on the fact that each pass either reclaims garbage or moves externally referenced objects out of a train, thereby reducing the remaining structure; a garbage structure spanning a train of size *n* is eventually reclaimed or evacuated within an *O(n²)* bound on car collections. The principal trade-offs are possible repeated copying of live objects, policy dependence in choosing destination trains, and additional complications for very large objects or persistent heaps.\n\nThe work directly influenced subsequent research on the Train algorithm. An implementation for the BETA programming language replaced a traditional mark-sweep collector with an incremental Train collector and reported negligible time and storage overheads. ([beta.cs.au.dk](https://beta.cs.au.dk/Papers/Train/train.html)) Later work on distributed mature-object collection described DMOS as being derived from MOS, extending the approach to distributed object systems. ([memorymanagement.org](https://www.memorymanagement.org/bib.html)) The Train algorithm is also cited in later research and patent literature as an example of space-incremental collection, alongside subsequent partial-compaction techniques. ([patents.google.com](https://patents.google.com/patent/US7539837B1/en)) The available sources document substantial conceptual influence on incremental and mature-object garbage collection, but do not establish that the precise MOS algorithm became a standard production collector.",
   "raw_url": "http://pdf.aminer.org/000/465/194/incremental_collection_of_mature_objects.pdf",
   "source_type": "external",
   "filepath": "garbage_collection/README.md",
   "filename": "Incremental Collection of Mature Objects",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

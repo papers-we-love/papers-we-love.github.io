@@ -1,35 +1,35 @@
 {
   "uuid": "b1609b8cc20ada074705b50f5435384d1dabcff2f09a2444eeb4f788d8be4313",
   "title": "High-Quality Single-Shot Capture of Facial Geometry",
-  "publication_date": "2019",
+  "publication_date": "July 25–29, 2010; ACM SIGGRAPH 2010, ACM Transactions on Graphics, vol. 29, no. 3, pp. 40:1–40:9",
   "authors": [
-    "Andreas Geiger",
-    "Christian Theobalt",
-    "Dushyant Mehta",
-    "Otmar Hilliges",
-    "Rudolf Li"
+    "Bernd Bickel",
+    "Bob Sumner",
+    "Markus Gross",
+    "Paul Beardsley",
+    "Thabo Beeler"
   ],
   "keywords": [
-    "3d-reconstruction",
-    "computer-vision",
+    "3d-face-capture",
+    "camera-calibration",
+    "computer-graphics",
     "facial-geometry",
-    "facial-modeling",
-    "geometry-capture",
-    "high-resolution-imaging",
-    "image-processing",
-    "optics",
-    "real-time-processing",
-    "single-shot-capture"
+    "facial-performance-capture",
+    "mesoscopic-geometry",
+    "passive-stereo",
+    "pore-scale-detail",
+    "single-shot-capture",
+    "stereo-reconstruction"
   ],
   "category_path": [
     "computer_vision"
   ],
-  "abstract": "We introduce a novel, high-quality system for capturing the fine-scale detail of facial geometry in a single shot. The key idea of our system is to combine the benefits of active stereo illumination and dense pattern projection with recently introduced concepts for high-resolution geometry capture, while avoiding many common limitations. Possible applications include movie productions, face recognition, and digital character design for interactive environments.",
-  "summary": "The paper \"High-Quality Single-Shot Capture of Facial Geometry\" presents a method for capturing detailed facial geometry using a single image. It combines active stereo illumination with dense pattern projection. The system claims to overcome many limitations in existing methods, making it suitable for applications such as movie production, face recognition, and digital character design. Upon review, there is currently no direct citation or application of this paper in further published research or industry usage that was identifiable. Consequently, its impact remains largely within the scope of theoretical advancements in facial geometry capture.",
+  "abstract": "This paper describes a passive stereo system for capturing the 3D geometry of a face in a single-shot under standard light sources. The system is low-cost and easy to deploy. Results are sub-millimeter accurate and commensurate with those from state-of-the-art systems based on active lighting, and the models meet the quality requirements of a demanding domain like the movie industry. Recovered models are shown for captures from both high-end cameras in a studio setting and from a consumer binocular-stereo camera, demonstrating scalability across a spectrum of camera deployments, and showing the potential for 3D face modeling to move beyond the professional arena and into the emerging consumer market in stereoscopic photography.\n\nOur primary technical contribution is a modification of standard stereo refinement methods to capture pore-scale geometry, using a qualitative approach that produces visually realistic results. The second technical contribution is a calibration method suited to face capture systems. The systemic contribution includes multiple demonstrations of system robustness and quality.\n\nThese include capture in a studio setup, capture off a consumer binocular-stereo camera, scanning of faces of varying gender and ethnicity and age, capture of highly-transient facial expression, and scanning a physical mask to provide ground-truth validation.",
+  "summary": "The paper introduced a passive, single-shot, multi-view stereo system capable of reconstructing facial geometry with sub-millimeter accuracy under standard illumination. Its main technical contributions were a stereo-refinement method for recovering pore-scale or mesoscopic facial detail and a calibration procedure designed for facial-capture systems. The authors demonstrated the approach with both a seven-camera studio configuration and a consumer binocular-stereo camera, including transient expressions and physical-mask validation. ([studios.disneyresearch.com](https://studios.disneyresearch.com/wp-content/uploads/2019/03/High-Quality-Single-Shot-Capture-of-Facial-Geometry.pdf))\n\nThe work directly informed subsequent facial-performance-capture research. The authors’ 2011 anchor-frame method explicitly incorporated the 2010 high-quality stereo reconstruction technique to obtain pore-level geometry for temporally consistent facial meshes. Later Disney Research work continued to use the method as the multiview facial-surface reconstruction component, including facial-hair tracking research. ([cgl.ethz.ch](https://cgl.ethz.ch/publications/papers/paperBee11.php))\n\nIn industry, the research formed part of the technical lineage leading to DisneyResearch|Studios’ Medusa performance-capture system. Disney reported that Medusa was used to capture hundreds of actors for major film productions and received an Academy Technical Achievement Award in 2019; the Academy citation recognized Thabo Beeler, Derek Bradley, Bernd Bickel, and Markus Gross for the system’s conception, design, and engineering. ([thewaltdisneycompany.com](https://thewaltdisneycompany.com/news/innovations-from-disneyresearchstudios-receive-academys-sci-tech-award/))",
   "raw_url": "http://studios.disneyresearch.com/wp-content/uploads/2019/03/High-Quality-Single-Shot-Capture-of-Facial-Geometry/",
   "source_type": "external",
   "filepath": "computer_vision/README.md",
   "filename": "High-Quality Single-Shot Capture of Facial Geometry",
-  "created_on": "2026-01-24 23:46:58",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:54"
 }

@@ -1,32 +1,34 @@
 {
   "uuid": "d4fb03654550c99960616fb72098639dedc9bba0783e6bede44bbb63764a3f10",
   "title": "Parallel Generational-Copying Garbage Collection with a Block-Structured Heap",
-  "publication_date": "1994",
+  "publication_date": "June 7–8, 2008; ISMM ’08, Proceedings of the 7th International Symposium on Memory Management, Tucson, Arizona, USA",
   "authors": [
-    "David Ungar",
-    "Eric Lee"
+    "Roshan P. James",
+    "Simon Marlow",
+    "Simon Peyton Jones",
+    "Tim Harris"
   ],
   "keywords": [
     "block-structured-heap",
-    "computer-systems",
-    "concurrent-computing",
+    "copying-collector",
+    "eager-promotion",
+    "garbage-collection",
     "generational-garbage-collection",
-    "memory-management",
-    "object-oriented-languages",
+    "glasgow-haskell-compiler",
+    "load-balancing",
     "parallel-garbage-collection",
-    "programming-languages",
-    "software-performance",
-    "virtual-machines"
+    "shared-memory-multiprocessors",
+    "work-stealing"
   ],
   "category_path": [
     "garbage_collection"
   ],
-  "abstract": "This paper describes a new garbage collection algorithm, Parallel Generational-Copying Garbage Collection. It merges generational and copying collection with parallel processing into a single algorithm that Brooks’s two-pointer semispace collector invented while maintaining high performance. Significant goals for the work were to keep pause times low and to be portable to a wide variety of computers with minimal effort, by making very few assumptions about the underlying hardware architecture. The system is implemented in notations that require very little hardware or operating system support.",
-  "summary": "The paper titled \"Parallel Generational-Copying Garbage Collection with a Block-Structured Heap\" from 1994 by Eric Lee and David Ungar introduces a garbage collection algorithm that combines generational and copying collection techniques with parallel processing. The goal of this innovative approach is to achieve low pause times and adaptability across different hardware architectures without significant effort. This is particularly relevant in contexts requiring efficient memory management, such as in object-oriented languages and virtual machines.\n\nWhile this pioneering work laid foundational concepts for garbage collection strategies particularly in concurrent and block-structured heap environments, its direct influence in subsequent detailed publications or industry documentation remains minimal in publicly accessible databases. However, similar principles are observed in later developments, such as enhancements in Java Virtual Machine garbage collection techniques and their optimizations for parallel processing.\n\nFurther detailed referencing of this paper in direct subsequent research was not located, but its thematic exploration contributes to a wider understanding of how concurrent algorithmic strategies can be applied to memory management processes within computing systems.",
+  "abstract": "We present a parallel generational-copying garbage collector implemented for the Glasgow Haskell Compiler. We use a block-structured memory allocator, which provides a natural granularity for dividing the work of GC between many threads, leading to a simple yet effective method for parallelising copying GC. The results are encouraging: we demonstrate wall-clock speedups of on average a factor of 2 in GC time on a commodity 4-core machine with no programmer intervention, compared to our best sequential GC.",
+  "summary": "## Summary\n\nThe paper presents a stop-the-world, parallel generational copying garbage collector for the Glasgow Haskell Compiler (GHC). Its central design choice is a heap divided into fixed-size blocks, each with a descriptor recording metadata such as generation, aging step, allocation state, and garbage-collection scan state. This organization allows generations and steps to be resized independently, supports non-contiguous regions, simplifies large-object management, and provides a convenient unit of work for parallel collection.\n\nDuring collection, each garbage-collection thread maintains a scan block and an allocation block. Evacuated objects are copied into private allocation blocks, while blocks containing pending objects are placed in a shared pending-block set. Threads claim source objects with atomic compare-and-swap operations to prevent duplicate evacuation, and global termination is detected by coordinating the set of active collector threads. When work is scarce, partially filled blocks are exported so that otherwise idle threads can participate; the chunk size controls the trade-off between load balance and synchronization overhead.\n\nThe design is extended to multiple generations and aging steps. The paper introduces **eager promotion**, which promotes an object directly to the generation of an immutable object that references it. This is particularly suitable for Haskell thunks because they are updated at most once. In the measurements, eager promotion reduced garbage-collection time by 6.8% geometrically on average, although one benchmark was adversely affected by collection-timing sensitivity.\n\nExperiments on Haskell benchmarks, including GHC itself, show meaningful but sublinear scaling. The implementation reports approximately 20% lower garbage-collection time on dual-core systems and approximately 45% lower time on quad-core systems, with benchmark speedups ranging from 1.5 to 3.2 on a four-processor machine. The principal costs are per-object synchronization, which adds roughly 20–30% overhead in the single-processor parallel configuration, and workload imbalance caused both by the collector’s scheduling decisions and by inherently sequential heap structures. Measured fragmentation remained below 1% of runtime-allocated memory across the benchmarks.\n\n## Subsequent influence and use\n\nThe work formed part of the development trajectory of multicore garbage collection in GHC. GHC’s current documentation describes parallel garbage collection as enabled by multicore execution and provides runtime controls for selecting the generations collected in parallel, demonstrating that parallel GC remains an exposed feature of the GHC runtime. ([ghc.gitlab.haskell.org](https://ghc.gitlab.haskell.org/ghc/doc/users_guide/using-concurrent.html))\n\nA later paper by Marlow and Peyton Jones, *Multicore Garbage Collection with Local Heaps* (ISMM 2011), cites this work and develops local per-processor heaps to reduce global synchronization and improve scaling. ([researchgate.net](https://www.researchgate.net/publication/221032890_Multicore_garbage_collection_with_local_heaps)) The available sources establish direct continuity in GHC runtime research and implementation, but do not provide sufficient evidence to attribute adoption of the specific block-level algorithm or eager-promotion policy to unrelated industrial garbage collectors.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/garbage_collection/parallel_generational_copying_garbage_collection_with_a_block_structured_heap.pdf",
   "source_type": "pdf",
   "filepath": "garbage_collection/parallel_generational_copying_garbage_collection_with_a_block_structured_heap.pdf",
   "filename": "parallel_generational_copying_garbage_collection_with_a_block_structured_heap.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

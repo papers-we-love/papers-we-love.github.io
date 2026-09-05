@@ -1,7 +1,7 @@
 {
   "uuid": "d3b3878c48ee4bcbdaa5349fa558f9fe3aa3fe60d129a334d71c2eeeb2257eac",
-  "title": "ACTORS: A Model of Concurrent Computation in Distributed Systems",
-  "publication_date": "1973",
+  "title": "A Universal Modular ACTOR Formalism for Artificial Intelligence",
+  "publication_date": "August 1973 (Proceedings of the Third International Joint Conference on Artificial Intelligence, Stanford, California, pp. 235–245)",
   "authors": [
     "Carl Hewitt",
     "Peter Bishop",
@@ -9,25 +9,25 @@
   ],
   "keywords": [
     "actor-model",
-    "computer-science",
-    "concurrency",
+    "artificial-intelligence",
     "concurrent-computation",
-    "distributed-computing",
+    "continuations",
     "distributed-systems",
+    "knowledge-based-programming",
     "message-passing",
+    "meta-evaluation",
     "parallel-processing",
-    "programming-languages",
-    "system-architecture"
+    "procedural-semantics"
   ],
   "category_path": [
     "distributed-file-systems"
   ],
-  "abstract": "The paper proposes a new model of computation to deal with concurrent computation in distributed systems which challenges the traditional von Neumann model. The proposed model is called ACTORS. An actor is a computational agent which has a mail address and can perform the following: send messages to other actors, create new actors, and designate the behavior to be used for the next message it receives. The ACTORS model is intended to be a modular system for aiding the development, testing, and debugging of large-scale distributed systems. The model is particularly applicable to systems that require a high degree of concurrent operations.",
-  "summary": "The ACTORS model, introduced by Carl Hewitt, Peter Bishop, and Richard Steiger in 1973, represents a foundational paradigm in the field of concurrent computation, offering a significant departure from the traditional von Neumann architecture. This model focuses on computation as a series of independent 'actors' that interact via asynchronous message-passing, enabling highly scalable and parallel processing, ideal for distributed systems. Over time, the actor model has profoundly influenced the development of concurrent and distributed computing, being recognized as a precursor to modern concepts in programming languages and frameworks like Erlang, Scala's Akka, and Microsoft’s Orleans, which exploit actor-like models for efficient, scalable applications ([source 1](https://ieeexplore.ieee.org/abstract/document/5758701), [source 2](https://books.google.com/books/about/Actors.html?id=5vVQAAAAMAAJ), [source 3](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/the_actor_model.pdf)). The concepts proposed in this paper continue to be influential in the design and implementation of systems that require robust concurrency and distributed processing capabilities.",
+  "abstract": "This paper proposes a modular ACTOR architecture and definitional method for artificial intelligence that is conceptually based on a single kind of object: actors [or, if you will, virtual processors, activation frames, or streams]. The formalism makes no presuppositions about the representation of primitive data structures and control structures. Such structures can be programmed, micro-coded, or hard wired in a uniform modular fashion. In fact it is impossible to determine whether a given object is \"really\" represented as a list, a vector, a hash table, a function, or a process. The architecture will efficiently run the coming generation of PLANNER-like artificial intelligence languages including those requiring a high degree of parallelism. The efficiency is gained without loss of programming generality because it only makes certain actors more efficient; it does not change their behavioral characteristics. The architecture is general with respect to control structure and does not have or need goto, interrupt, or semaphore primitives. The formalism achieves the goals that the disallowed constructs are intended to achieve by other more structured methods.",
+  "summary": "The paper presents actors as a uniform computational abstraction for data structures, functions, processes, control mechanisms, logical formulas, databases, and other entities. Actors communicate by sending messages, can create further actors, and use continuations to represent subsequent computation. The model treats control flow and data flow as inseparable, favors local behavioral definitions over global state descriptions, and proposes schedulers, intentions, monitors, name-binding mechanisms, and resource managers as actor-based facilities. It applies the formalism to procedural semantics, quantificational logic, knowledge bases, extension worlds, pattern- and world-directed invocation, synchronization, protection, and parallel hardware architectures. It also describes substitution, reduction, and meta-evaluation as general mechanisms for evaluation, deduction, verification, compilation, protocol abstraction, and automatic actor generation.\n\nThe paper became a foundational reference for the Actor model of concurrent computation. Later systems literature and industry documentation explicitly identify the 1973 work by Hewitt, Bishop, and Steiger as the source of the model’s message-driven computational abstraction. Akka documentation connects the model to concurrent and distributed programming, while Akka’s industry materials describe its use in scalable and resilient application development. The model’s influence also extended through subsequent work on actor semantics, Erlang-related concurrency, and modern distributed-system frameworks. ([ijcai.org](https://www.ijcai.org/proceedings/1973))",
   "raw_url": "http://worrydream.com/refs/Hewitt-ActorModel.pdf",
   "source_type": "external",
   "filepath": "distributed-file-systems/README.md",
   "filename": "Actor Formalism",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:54"
 }

@@ -1,32 +1,27 @@
 {
   "uuid": "580110dd800f068efdb8f92b49077b52e4abcd3fe6be4189cc23b851e27a99e4",
-  "title": "Nonblocking Concurrent Objects with Condition Synchronization",
-  "publication_date": "1996",
+  "title": "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms",
+  "publication_date": "May 1996, Proceedings of the Fifteenth Annual ACM Symposium on Principles of Distributed Computing (PODC '96), Philadelphia, Pennsylvania, USA; published May 1, 1996",
   "authors": [
     "Maged M. Michael",
     "Michael L. Scott"
   ],
   "keywords": [
-    "concurrent-objects",
-    "concurrent-programming",
-    "condition-synchronization",
-    "data-structure",
+    "compare-and-swap",
+    "concurrent-queue",
     "lock-free",
-    "nonblocking",
-    "performance",
-    "safety",
-    "shared-memory",
-    "thread-synchronization"
+    "multiprogramming",
+    "non-blocking"
   ],
   "category_path": [
     "concurrency"
   ],
-  "abstract": "This paper presents a technique for transforming sequential objects with conditional critical sections into corresponding nonblocking concurrent objects. The technique applies to objects whose conditional critical sections are controlled by an arbitrary boolean expression. Performance results are presented for concurrent queue and stack data structures constructed using a nonblocking compare-and-swap operation. The results indicate that nonblocking data structures outperform their blocking counterparts in systems with low context-switch overhead.",
-  "summary": "This paper, titled \"Nonblocking Concurrent Objects with Condition Synchronization,\" was published in 1996 by authors Maged M. Michael and Michael L. Scott. It introduces a technique that transforms sequential objects with conditional critical sections into nonblocking concurrent objects, essential for enhancing performance in concurrent systems.\n\nConditional critical sections in concurrent programming often lead to bottlenecks due to blocking operations. The authors propose leveraging a nonblocking compare-and-swap operation to construct concurrent queue and stack data structures, demonstrating that such structures can outstrip their blocking counterparts, particularly in environments with low context-switch overhead. This work is pivotal because it offers a solution to avoid the pitfalls of locking mechanisms, potentially leading to better performance and scalability in multi-core systems.\n\nThe impact of the paper can be seen in subsequent research and development within the realm of concurrent programming and the evolution of nonblocking data structures. The proposed methodologies have influenced studies on lock-free programming and have been referenced in later publications exploring advanced synchronization mechanisms and concurrent data structure performance.\n\nA few cited references to the paper include:\n1. \"Practical lock-free and wait-free LL/SC/VL*\" by Timothy L. Harris (https://dl.acm.org/doi/10.1145/351506.351520)\n2. \"A lock-free dynamic array\" by Håkan Sundell in Journal of Parallel and Distributed Computing (https://www.sciencedirect.com/science/article/pii/S0743731504001726)\n3. \"Non-blocking hashtables\" by Nir Shavit and Dan Touitou (https://dl.acm.org/doi/10.1145/787179.787186)\n4. \"Scalable multicore resource management\" by Ionel Gog et al. (https://ieeexplore.ieee.org/document/7539154)\n\nDespite its age, the work remains influential, serving as a critical reference point for ongoing research into efficient concurrent computing paradigms.",
+  "abstract": "Drawing ideas from previous authors, we present a new non-blocking concurrent queue algorithm and a new two-lock queue algorithm in which one enqueue and one dequeue can proceed concurrently. Both algorithms are simple, fast, and practical; we were surprised not to find them in the literature. Experiments on a 12-node SGI Challenge multiprocessor indicate that the new non-blocking queue consistently outperforms the best known alternatives; it is the clear algorithm of choice for machines that provide a universal atomic primitive (e.g. compare and swap or load linked/store conditional). The two-lock concurrent queue outperforms a single lock when several processes are competing simultaneously for access; it appears to be the algorithm of choice for busy queues on machines with non-universal atomic primitives (e.g. test and set). Since much of the motivation for non-blocking algorithms is rooted in their immunity to large, unpredictable delays in process execution,we report experimental results both for systems with dedicated processors and for systems with several processes multiprogrammed on each processor.",
+  "summary": "### Contributions\n\nThe paper presents two FIFO concurrent-queue algorithms. The first is a non-blocking, lock-free linked-list queue using a dummy head node, compare-and-swap operations, modification counters to mitigate the ABA problem, and a non-blocking free list. Its enqueue and dequeue operations are linearizable, and the paper argues that repeated retries imply progress by another concurrent operation. The second algorithm uses separate head and tail locks, allowing an enqueue and a dequeue to proceed concurrently while remaining compatible with simpler atomic primitives such as test-and-set.\n\n### Evaluation\n\nExperiments on a 12-processor SGI Challenge compared the algorithms with single-lock, blocking, and earlier non-blocking queues under dedicated and multiprogrammed workloads. The proposed non-blocking queue consistently performed best when at least three processors were active and remained competitive with fewer processors. The two-lock queue improved on a single lock under high contention on dedicated systems, but was less effective than non-blocking alternatives under multiprogramming.\n\n### Influence\n\nThe algorithm became a foundational design for practical lock-free queues. Oracle’s documentation states that Java’s `ConcurrentLinkedQueue` uses an efficient non-blocking algorithm based on the paper, while the OpenJDK implementation describes itself as a modification of the Michael–Scott algorithm adapted for garbage-collected memory and interior-node deletion. ([docs.oracle.com](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/concurrent/ConcurrentLinkedQueue.html)) Later concurrent-queue research continued to use it as a baseline: a University of Rochester paper describes LCRQ as a major enhancement of the Michael–Scott linked-list queue, replacing individual list elements with fixed-size concurrent ring queues. ([cs.rochester.edu](https://www.cs.rochester.edu/u/scott/papers/2017_Izraelevitz_TOPC_duals.pdf)) The authors’ research group also maintains corrected pseudocode and notes adaptations using hazard pointers, epoch-based reclamation, and interval-based reclamation for environments where the original memory-management assumptions are unsuitable. ([cs.rochester.edu](https://cs.rochester.edu/research/synchronization/pseudocode/queues.html))",
   "raw_url": "http://www.cs.rochester.edu/~scott/papers/1996_PODC_queues.pdf",
   "source_type": "external",
   "filepath": "concurrency/README.md",
   "filename": "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:54"
 }

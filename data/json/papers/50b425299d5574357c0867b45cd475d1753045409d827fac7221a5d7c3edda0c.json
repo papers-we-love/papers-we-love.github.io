@@ -1,37 +1,26 @@
 {
   "uuid": "50b425299d5574357c0867b45cd475d1753045409d827fac7221a5d7c3edda0c",
   "title": "FPC: A High-Speed Compressor for Double-Precision Floating-Point Data",
-  "publication_date": "2006",
+  "publication_date": "February 2009 (IEEE Transactions on Computers, vol. 58, no. 1, pp. 18–31; published online July 30, 2008)",
   "authors": [
-    "Benoit Dupraz",
-    "Bruno Miranda",
-    "Guilherme Tecchio",
-    "Markus Püschel",
-    "Michael Gschwind",
-    "Rogério Cardoso Beguelin",
-    "Thomas Etter"
+    "Martin Burtscher",
+    "Paruj Ratanaworabhan"
   ],
   "keywords": [
-    "compression-algorithms",
     "data-compression",
-    "double-precision",
-    "floating-point",
-    "hardware-acceleration",
-    "high-speed-compression",
-    "lossless-compression",
-    "numerical-data",
-    "performance-enhancement",
-    "scientific-computation"
+    "data-models",
+    "floating-point-compression",
+    "prediction-methods"
   ],
   "category_path": [
     "data_compression"
   ],
-  "abstract": "In this paper, we present a new lossless compressor for double-precision floating-point data called FPC. This compressor is optimized for high throughput and can operate at up to 5GB/s on a 1.2GHz Pentium 4 processor, making it among the fastest known compressors for numerical data. Unlike other parallelization options, FPC is based on a novel predictor that is tailored to the properties of numerical data. We demonstrate the superiority of FPC over previous methods in terms of both compression ratio and throughput using data sets from quantum chemistry calculations, fluid dynamics simulations, and high-performance computing. Additionally, our implementation is extremely efficient in terms of energy and area, and can be integrated into hardware with minimal resources. FPC is ideally suited for applications involving high-performance scientific computing or large-scale data processing where both compression performance and execution speed are critical.",
-  "summary": "The paper \"FPC: A High-Speed Compressor for Double-Precision Floating-Point Data\" introduces FPC, a high-speed lossless data compression algorithm optimized for double-precision floating-point data. It is specifically designed for high throughput and demonstrates superior performance in both compression ratio and speed compared to prior methods. The algorithm uses a novel predictor tailored for numerical data, achieving impressive speeds of up to 5GB/s on a 1.2GHz processor, and is efficient in terms of energy and hardware integration. \n\nA web search reveals that FPC has been cited in discussions around high-performance computing, particularly within the realm of scientific applications that handle large numerical datasets. One example of its influence can be seen in a paper titled \"Design and Evaluation of a Type-Aware Compressor for High Performance Scientific Applications\" (HPCS'10), which considers the efficiency of compression techniques for scientific computing. Another reference is \"A Study of Data Compression for Scientific High-Performance Computing\" (CLUSTER '12), which evaluates data compression methods for HPC and mentions the performance and design considerations of FPC (https://ieeexplore.ieee.org/document/6360484). However, the number of direct references in later research is limited, suggesting it had a niche but significant impact on subsequent studies focused on scientific data compression.\n\nFPC's particular prowess in compressing floating-point data has been highlighted in scholarly exchanges and specialized forums that focus on optimization of numerical data handling in scientific computing environments. While its broader impact appears constrained to specific domains, within these, it contributes valuable insights into the trade-offs between compression efficiency and execution speed.",
+  "abstract": "Many scientific programs exchange large quantities of double-precision data between processing nodes and with mass storage devices. Data compression can reduce the number of bytes that need to be transferred and stored. However, data compression is only likely to be employed in high-end computing environments if it does not impede the throughput. This paper describes and evaluates FPC, a fast lossless compression algorithm for linear streams of 64-bit floating-point data. FPC works well on hard-to-compress scientific data sets and meets the throughput demands of high-performance systems. A comparison with five lossless compression schemes, BZIP2, DFCM, FSD, GZIP, and PLMI, on 4 architectures and 13 data sets shows that FPC compresses and decompresses one to two orders of magnitude faster than the other algorithms at the same geometric-mean compression ratio. Moreover, FPC provides a guaranteed throughput as long as the prediction tables fit into the L1 data cache. For example, on a 1.6-GHz Itanium 2 server, the throughput is 670 Mbytes/s regardless of what data are being compressed.",
+  "summary": "## Contribution and method\n\nThe paper introduces FPC, a lossless, single-pass, linear-time compressor for streams of IEEE 754 double-precision values. FPC combines two complementary context-based predictors—an fcm predictor for recurring value contexts and a dfcm predictor for recurring differences—then selects the prediction producing the longer common prefix with the actual value. The prediction residual is generated with XOR and encoded using a compact leading-zero-byte representation. The implementation operates on 64-bit integers rather than floating-point arithmetic and organizes output into blocks containing predictor codes and residual bytes.\n\n## Findings\n\nThe evaluation covers 13 scientific data sets and four processor architectures, comparing FPC with BZIP2, DFCM, FSD, GZIP, and PLMI. FPC achieves the best geometric-mean compression ratio among the evaluated methods when sufficiently large predictor tables are used, while also providing substantially higher compression and decompression throughput at comparable ratios. Its principal technical distinction is predictable execution: when predictor tables fit in the L1 data cache, the critical loops follow a data-independent instruction path, giving approximately constant processing time per value. Larger tables improve compression on many data sets but increase memory use and eventually reduce throughput because of cache and memory-latency effects.\n\nThe results also show that compression effectiveness is highly data-dependent. FPC performs particularly well on some scientific and message data sets, but no method dominates every data set, and nearly random streams remain difficult to compress. The paper therefore positions FPC as a throughput-oriented compressor for unstructured streams rather than as a universally optimal codec. The authors identify structured multidimensional data, single-precision values, independent block processing, parallelization, and an optional second coding stage as directions for further development.\n\n## Subsequent influence\n\nThe work directly led to pFPC, a parallel implementation that extends FPC to multithreaded compression and decompression, and to gFPC, a self-tuning successor developed by the same authors. ([userweb.cs.txstate.edu](https://userweb.cs.txstate.edu/~mb92/papers/dcc09.pdf)) FPC has also been incorporated into independent software implementations, including a Go implementation that preserves the paper’s predictor-based format and reports gigabyte-per-second class performance on contemporary systems. ([github.com](https://github.com/spenczar/fpc)) Later floating-point compression studies have used FPC as a lossless comparison method or baseline, including evaluations involving ZFP and newer adaptive floating-point compressors. ([vis.cs.ucdavis.edu](https://vis.cs.ucdavis.edu/vis2014papers/TVCG/papers/2674_20tvcg12-lindstrom-2346458.pdf))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/data_compression/fpc_a_high_speed_compressor_for_double_precision_floating_point_data.pdf",
   "source_type": "pdf",
   "filepath": "data_compression/fpc_a_high_speed_compressor_for_double_precision_floating_point_data.pdf",
   "filename": "fpc_a_high_speed_compressor_for_double_precision_floating_point_data.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:50"
 }

@@ -1,31 +1,32 @@
 {
   "uuid": "561b4f89492e899861c87fb9a6ab35b27aa2bf8dacba08827595bf1dc4474e9e",
-  "title": "Composable and Compilable Macros: You Want it When?",
-  "publication_date": "2010",
+  "title": "Fortifying Macros",
+  "publication_date": "September 27–29, 2010 (ICFP’10, Baltimore, Maryland, USA); journal version published online August 15, 2012, in the Journal of Functional Programming, Volume 22, Special Issue 4–5, pp. 439–476. ([cambridge.org](https://www.cambridge.org/core/journals/journal-of-functional-programming/article/fortifying-macros/2AC116FC3DD38075BDF61C464ED35507))",
   "authors": [
     "Matthias Felleisen",
     "Ryan Culpepper"
   ],
   "keywords": [
-    "compilers",
-    "extensible-languages",
-    "lisp",
-    "macros",
-    "program-transformation",
+    "domain-specific-languages",
+    "error-reporting",
+    "hygienic-macros",
+    "language-extensions",
+    "macro-systems",
+    "pattern-matching",
     "racket",
-    "software-engineering",
-    "syntax",
-    "transpilation"
+    "syntax-classes",
+    "syntax-parse",
+    "syntax-patterns"
   ],
   "category_path": [
     "macros"
   ],
-  "abstract": "We present a macro system that supports a disciplined style of macro use based on the idea of composable and compilable macros. In this style, programmers design and implement components with macros using an API consisting only of functions. This principled approach enables a design-by-contract methodology of assuming specific properties of arguments to macros. We demonstrate this approach with a module system that ensures both syntactic and semantic correctness. We also present a novel method for optimizing compile-time dependencies.",
-  "summary": "The paper \"Composable and Compilable Macros: You Want it When?\" by Ryan Culpepper and Matthias Felleisen presents a macro system compatible with the Racket programming language. The system allows for a disciplined macro use style, focusing on composable and compilable macros within software components using purely functional APIs. The authors provide a framework that facilitates both syntactic and semantic correctness through design-by-contract principles. One of the significant contributions is an optimized method for managing compile-time dependencies, enhancing macro efficiency.\n\nIn terms of the paper's influence, it has been cited in various studies exploring the applicability and efficiency of macro systems in modern programming languages. For instance, it has been referenced in subsequent research concerning macro extensions and the development of more robust language features in Racket and other Lisp-derived languages. [Google Scholar](https://scholar.google.com) lists several citations, which demonstrate its role in advancing macro functionalities in extensible language ecosystems. Additionally, the paper is acknowledged in academic discussions on ensuring correctness when extending programming languages with user-defined syntax and semantics. If you are interested in programming language theory and the practical applications of macros, reviewing the citations and subsequent work grounded in this research offers valuable insights. However, specific instances of its application in industry remain sparse compared to its academic influence.",
+  "abstract": "Existing macro systems force programmers to make a choice between clarity of specification and robustness. If they choose clarity, they must forgo validating significant parts of the specification and thus produce low-quality language extensions. If they choose robustness, they must write in a style that mingles the implementation with the specification and therefore obscures the latter.\nThis paper introduces a new language for writing macros.\nWith the new macro system, programmers naturally write robust language extensions using easy-to-understand specifications. The system translates these specifications into validators that detect misuses—including violations of context-sensitive constraints—and automatically synthesize appropriate feedback, eliminating the need for ad hoc validation code.",
+  "summary": "## Summary\n\nThe paper introduces **syntax-parse**, a domain-specific language for specifying and implementing robust Racket macros. It addresses a central limitation of Macro-By-Example systems such as `syntax-rules` and `syntax-case`: declarative patterns can describe basic structure, but complex validation and precise error reporting often require procedural parsing and hand-written checks.\n\nThe proposed system extends syntax patterns with annotated pattern variables, reusable and parameterized syntax classes, side conditions carrying failure explanations, action patterns, head patterns, and ellipsis-head patterns. These features allow macro authors to express context-sensitive constraints—including identifier uniqueness, optional and repeated keyword clauses, mutually exclusive options, and dependencies between syntax components—while keeping the specification close to the intended grammar.\n\nA central technical contribution is its failure-reporting algorithm. Alternative parses are explored with backtracking, and failures are ranked by a tree-based notion of parsing progress. The most informative failure, or combined failures when progress is tied, is reported together with an explicitly supplied description or side-condition message. This enables errors to be reported in terms of the macro’s public syntax rather than the lower-level forms produced by expansion.\n\nThe paper gives a formal semantics based on a single-elimination backtracking monad whose failures contain progress information and error reasons. Its case studies show practical benefits: rewriting the `loop` macro substantially improved validation and error handling without the expected doubling of code size, while rewriting the `parser` macro reduced parsing-related code from an estimated 270 lines to 124 lines while retaining comparable error-reporting quality.\n\n## Subsequent influence\n\nThe paper’s principal contribution became part of Racket’s macro-programming infrastructure. Current Racket documentation describes `syntax/parse` as a framework for syntax patterns, `syntax-parse`, and reusable syntax classes, with automatic error generation based on descriptions and embedded messages. ([docs.racket-lang.org](https://docs.racket-lang.org/syntax/stxparse.html)) Racket also provides an introductory tutorial centered on writing robust macros with `syntax-parse` and syntax classes. ([docs.racket-lang.org](https://docs.racket-lang.org/syntax/stxparse-intro.html))\n\nThe approach has been adopted in teaching materials and reusable example packages, including a package containing illustrative macros written with `syntax/parse`. ([docs.racket-lang.org](https://docs.racket-lang.org/syntax-parse-example/index.html)) Later work on Racket-based domain-specific languages explicitly uses `syntax-parse` annotations to generate descriptive syntax errors, indicating that the paper’s techniques became a practical method for implementing embedded DSLs. ([www2.ccs.neu.edu](https://www2.ccs.neu.edu/racket/pubs/oopsla20-bkf.pdf))",
   "raw_url": "http://www.ccs.neu.edu/racket/pubs/icfp10-cf.pdf",
   "source_type": "external",
   "filepath": "macros/README.md",
   "filename": "Fortifying Macros",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:56"
 }

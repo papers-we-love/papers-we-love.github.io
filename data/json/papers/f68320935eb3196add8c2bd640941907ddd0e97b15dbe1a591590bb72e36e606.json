@@ -1,35 +1,34 @@
 {
   "uuid": "f68320935eb3196add8c2bd640941907ddd0e97b15dbe1a591590bb72e36e606",
   "title": "Stronger Semantics for Low-Latency Geo-Replicated Storage",
-  "publication_date": "2013",
+  "publication_date": "April 2013, Proceedings of the 10th USENIX Symposium on Networked Systems Design and Implementation (NSDI’13), Lombard, Illinois, pages 313–328",
   "authors": [
-    "Anon T. Misra",
-    "David Maier",
-    "Joe Hellerstein",
-    "Matthew Conway",
-    "Spyros Blanas"
+    "David G. Andersen",
+    "Michael J. Freedman",
+    "Michael Kaminsky",
+    "Wyatt Lloyd"
   ],
   "keywords": [
-    "cloud-storage",
-    "consistency-models",
-    "data-consistency",
-    "database-systems",
-    "distributed-systems",
+    "cassandra",
+    "causal-consistency",
+    "column-family",
+    "distributed-storage",
+    "distributed-transactions",
+    "eiger",
     "geo-replication",
-    "latency-optimization",
     "low-latency",
-    "replicated-storage",
-    "transactional-systems"
+    "read-only-transactions",
+    "write-only-transactions"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "This paper investigates the feasibility of implementing useful strong consistency guarantees in systems that may involve high-latency network connections. We design a consistency mechanism that balances latency, availability, and consistency by collapsing the lower layers of the traditional consistency hierarchy. Our approach allows applications to retain useful levels of consistency without incurring the high costs traditionally associated with strong consistency protocols. We demonstrate the effectiveness of our approach with a case study using a geo-distributed storage system.",
-  "summary": "The paper titled \"Stronger Semantics for Low-Latency Geo-Replicated Storage\" introduces a consistency mechanism for distributed systems that aims to balance latency, availability, and consistency. By innovatively collapsing the lower layers of the traditional consistency hierarchy, the authors provide a strategy that allows applications to maintain useful consistency levels without the typical high costs associated with strong consistency protocols. This research primarily focuses on geo-replicated storage systems, where maintaining low latency while achieving strong consistency is challenging due to high-latency network connections. \n\nThe paper has contributed to the field by influencing subsequent research on consistency models in distributed systems. It has been cited in various works exploring cloud storage, replicated database systems, and distributed computing frameworks. Some notable works citing this paper include:\n- [Distributed Consistency Revisited](https://example.com) which evaluates the practicality of proposed consistency mechanisms.\n- [Geo-Distributed Storage Systems](https://example.com) focusing on latency optimization in cloud environments.\n- [Replication Protocols in Distributed Systems](https://example.com) that build upon the foundational ideas presented in this study.\n\nOverall, the paper's exploration of balancing core distributed system constraints has been referenced in academic discussions related to optimizing latency and consistency in cloud storage environments. Through these citations, it is apparent the paper influences both theoretical advancements and practical implementations in distributed database technologies.",
+  "abstract": "We present the first scalable, geo-replicated storage system that guarantees low latency, offers a rich data model, and provides “stronger” semantics. Namely, all client requests are satisfied in the local datacenter in which they arise; the system efficiently supports useful data model abstractions such as column families and counter columns; and clients can access data in a causally-consistent fashion with read-only and write-only transactional support, even for keys spread across many servers.\n\nThe primary contributions of this work are enabling scalable causal consistency for the complex column-family data model, as well as novel, non-blocking algorithms for both read-only and write-only transactions. Our evaluation shows that our system, Eiger, achieves low latency (single-ms), has throughput competitive with eventually-consistent and non-transactional Cassandra (less than 7% overhead for one of Facebook’s real-world workloads), and scales out to large clusters almost linearly (averaging 96% increases up to 128 server clusters).",
+  "summary": "## Summary\n\nThe paper presents **Eiger**, a geo-replicated storage system designed to combine three properties that were difficult to obtain simultaneously: low-latency operations confined to the local datacenter, a Cassandra-like column-family data model with counter columns, and semantics stronger than eventual consistency. Eiger provides causal consistency by attaching compact, operation-based dependency metadata to writes and checking dependencies before applying replicated operations.\n\nIts main algorithmic contributions are two non-blocking transaction mechanisms. Read-only transactions use logical-time validity intervals to construct a consistent snapshot across keys and servers, normally in one round and in at most two local read rounds. Write-only transactions use a variant of two-phase commit with positive cohorts and indirection, allowing atomic updates across multiple keys within the originating datacenter without locks or wide-area coordination. Replicas apply the transaction atomically during asynchronous propagation.\n\nThe evaluation reports single-millisecond local latency, including sub-5-millisecond 99th-percentile latency for the tested multi-key transactional writes. On a workload modeled on Facebook’s TAO, Eiger’s throughput was within 7% of eventually consistent Cassandra, and throughput increased almost linearly from 8 to 128 servers per cluster. The paper also identifies important limits: Eiger does not provide global linearizability or serializability, and permanent datacenter loss can lose acknowledged writes that have not yet been replicated.\n\nSubsequent research cites Eiger as foundational prior work in low-latency causal consistency and geo-distributed transactions. **Cure** compares its stronger causal semantics and failure tolerance with earlier systems including Eiger; **Blotter** cites Eiger among systems addressing low-latency transactions for geo-replicated storage; and **RAMP Transactions** cites Eiger in the development of scalable atomic visibility techniques. These citations indicate that Eiger’s combination of causal consistency, multi-key read snapshots, and low-latency transactional writes became part of the reference design space for later geo-replicated storage research. ([dd.thekkedam.org](https://dd.thekkedam.org/assets/documents/publications/Peer-reviewed/Cure-Strong_semantics_meets_high_availability_and_low_latency_Akkoorath.Deepthi.cure2016.pdf))\n\nThe paper’s publication metadata is corroborated by the authors’ publication record and the USENIX/DBLP records, which identify the work as an NSDI 2013 paper published in April 2013. ([cs.cmu.edu](https://www.cs.cmu.edu/~dga/papers/eiger-nsdi2013-abstract.html))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/stronger-semantics-for-low-latency-geo-replicated-storage.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/stronger-semantics-for-low-latency-geo-replicated-storage.pdf",
   "filename": "stronger-semantics-for-low-latency-geo-replicated-storage.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

@@ -1,28 +1,34 @@
 {
   "uuid": "b2b321f89324ea1ef5d3ef5ffd4f67858970a1e8fd7cc3d91bc6a7fd0391bfab",
-  "title": "Composing High-Performance Memory Allocators",
-  "publication_date": "2000",
+  "title": "Hoard: A Scalable Memory Allocator for Multithreaded Applications",
+  "publication_date": "November 12–15, 2000 (ASPLOS-IX, Ninth International Conference on Architectural Support for Programming Languages and Operating Systems, Cambridge, Massachusetts, USA)",
   "authors": [
-    "Benjamin G. Zorn",
     "Emery D. Berger",
-    "Kathryn S. McKinley"
+    "Kathryn S. McKinley",
+    "Paul R. Wilson",
+    "Robert D. Blumofe"
   ],
   "keywords": [
-    "allocation-policies",
-    "garbage-collection",
-    "memory-allocators",
-    "performance",
-    "software-engineering"
+    "dynamic-memory-allocation",
+    "false-sharing",
+    "heap-management",
+    "memory-allocation",
+    "memory-fragmentation",
+    "multiprocessors",
+    "multithreading",
+    "parallel-computing",
+    "producer-consumer",
+    "scalability"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "This paper presents a general framework for composing high-performance memory allocators. By viewing allocators as implementing a collection of separable policies, we add new features to existing allocators by composing independently useful policies. Rather than incur the cost of new allocation features--such as cache-consciousness and persistence--for every allocation, our framework allows programmers to extend the results of allocation decisions with such features only when they are needed. Writing reusable, composable software libraries that remain efficient has long been a goal of software engineering. Our approach maintains high performance without incurring unnecessary runtime costs. We demonstrate that composing memory management features in a globally efficient manner is a viable research direction with potential for further improvements to allocator performance.",
-  "summary": "The paper \"Composing High-Performance Memory Allocators\" introduces a framework to enhance memory allocators by separating and composing allocation policies, thereby allowing the addition of features such as cache-consciousness and persistence only when required. This framework aims to maintain high performance while avoiding unnecessary runtime costs and aligns with the goals of efficient, reusable software libraries. \n\nIn terms of influence, this work has been cited in various studies exploring memory management and allocator design. For instance, it was referenced in subsequent research on meta-compilation for memory management explored by Vikram S. Adve (https://dl.acm.org/doi/10.1145/647298.329799). Additionally, the concepts introduced in this paper have impacted the development of more adaptable and performance-oriented allocators in both academic and practical implementations, contributing further to the field of software engineering and memory management. However, there is limited evidence of direct industrial application, suggesting its primary impact remains within academic research. Further search did not reveal any major direct industry applications but solidified its foundational role in subsequent scholarly work. \n\nThis research continues to be referenced, indicating its ongoing relevance in the exploration of efficient allocation strategies and memory management innovations.",
+  "abstract": "Parallel, multithreaded C and C++ programs such as web servers, database managers, news servers, and scientific applications are becoming increasingly prevalent. For these applications, the memory allocator is often a bottleneck that severely limits program performance and scalability on multiprocessor systems. Previous allocators suffer from problems that include poor performance and scalability, and heap organizations that introduce false sharing. Worse, many allocators exhibit a dramatic increase in memory consumption when confronted with a producer-consumer pattern of object allocation and freeing. This increase in memory consumption can range from a factor of P (the number of processors) to unbounded memory consumption.\n\nThis paper introduces Hoard, a fast, highly scalable allocator that largely avoids false sharing and is memory efficient. Hoard is the first allocator to simultaneously solve the above problems. Hoard combines one global heap and per-processor heaps with a novel discipline that provably bounds memory consumption and has very low synchronization costs in the common case. Our results on eleven programs demonstrate that Hoard yields low average fragmentation and improves overall program performance over the standard Solaris allocator by up to a factor of 60 on 14 processors, and up to a factor of 18 over the next best allocator we tested.",
+  "summary": "## Summary\n\nThe paper introduces Hoard, a multithreaded memory allocator organized around per-processor heaps, a shared global heap, and fixed-size superblocks. Its central policy transfers sufficiently empty superblocks from private heaps to the global heap, allowing freed memory to be reused across processors while bounding memory blowup. Returning freed blocks to their owning superblocks and restricting concurrent allocation from a superblock also reduces allocator-induced active and passive false sharing.\n\nThe analysis establishes a constant-factor bound on memory blowup, expressed as **O(U + P)**, where *U* is the application’s live memory and *P* is the number of processors. The experiments, conducted on a 14-processor Sun Enterprise 5000, report near-linear scaling on several allocation-intensive workloads, no observed allocator-induced false-sharing objects in the tested multithreaded benchmarks, and generally low fragmentation. The principal weakness identified by the authors is reduced efficiency for workloads using many size classes and highly random object lifetimes, particularly `shbench`.\n\nThe work had continuing influence in both research and practice. Hoard received the 2019 ASPLOS Influential Paper Award, recognizing its lasting contribution to scalable memory allocation research. ([sigops.org](https://www.sigops.org/2019/asplos-influential-paper-2019-winner/)) Subsequent allocator research, including scalloc and snmalloc, treats Hoard as a representative design based on private heaps, size classes, superblocks or spans, and mechanisms for handling remotely freed memory. ([cs.uni-salzburg.at](https://cs.uni-salzburg.at/~anas/papers/OOPSLA15-Scalloc.pdf)) The Hoard project remains publicly maintained and is used as a comparison point in contemporary allocator benchmarks; its maintainers also state that the original design influenced improvements to the Mac OS X memory allocator. ([github.com](https://github.com/emeryberger/Hoard)) The modern implementation has evolved substantially from the version evaluated in this paper. ([github.com](https://github.com/emeryberger/Hoard))",
   "raw_url": "http://people.cs.umass.edu/~emery/pubs/berger-asplos2000.pdf",
   "source_type": "external",
   "filepath": "distributed_systems/README.md",
   "filename": "Hoard: A Scalable Memory Allocator for Multithreaded Applications",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

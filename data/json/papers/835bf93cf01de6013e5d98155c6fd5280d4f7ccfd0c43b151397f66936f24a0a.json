@@ -1,31 +1,31 @@
 {
   "uuid": "835bf93cf01de6013e5d98155c6fd5280d4f7ccfd0c43b151397f66936f24a0a",
-  "title": "Massively Parallel Short-Read Resequencing of a Human Genome",
-  "publication_date": "2008",
+  "title": "GN&C Fault Protection Fundamentals",
+  "publication_date": "February 1–6, 2008; 31st Annual AAS Guidance and Control Conference, Breckenridge, Colorado",
   "authors": [
-    "Emmanouil T. Dermitzakis"
+    "Robert D. Rasmussen"
   ],
   "keywords": [
-    "bioinformatics",
-    "dna-sequencing",
-    "genetic-variation",
-    "genomics",
-    "high-throughput",
-    "human-genome",
-    "next-generation-sequencing",
-    "parallel-computing",
-    "resequencing",
-    "short-read-sequencing"
+    "control-systems",
+    "fault-detection",
+    "fault-management",
+    "fault-protection",
+    "fault-recovery",
+    "fault-tolerance",
+    "guidance-navigation-and-control",
+    "spacecraft-autonomy",
+    "spacecraft-systems",
+    "system-architecture"
   ],
   "category_path": [
     "faults_and_verification"
   ],
-  "abstract": "The introduction of massively parallel DNA sequencing technologies represents a crucial development for the broader dissemination of genome sequencing, primarily driven by cost reduction. Here, we report the first complete genome of an individual (a male of European descent from Utah) by a novel high-throughput sequencing method. We demonstrate that massive parallelization of isolating and processing short stretches of DNA circumvents numerous limitations associated with traditional single-molecule-based sequencing. Importantly, we observed as many as 3.3 million single-nucleotide variations, representing one of the largest datasets for a single genome, providing a comprehensive understanding of sequence variability.",
-  "summary": "This paper presents a significant advancement in the field of genomics by employing massively parallel short-read sequencing technology to sequence a human genome. The researchers sequenced the genome of a male individual of European descent, identifying 3.3 million single-nucleotide variations. This approach marked a shift from traditional sequencing methods by demonstrating the feasibility of using high-throughput parallel sequencing, which circumvents the limitations of single-molecule sequencing technologies.\n\nAlthough the paper itself has not been directly cited frequently in subsequent research, the technology and methodologies it describes have had a profound impact on the field. Parallel sequencing technologies became the foundation for next-generation sequencing (NGS) platforms, which have since become standard in genomic research and clinical diagnostics. The extensive application of NGS has enabled numerous breakthroughs in personalized medicine, population genomics, and evolutionary biology.\n\nThe influence of the techniques described in this paper is evident in the broader adoption of high-throughput sequencing in various biological research and medical fields. However, specific references to this particular paper in subsequent literature are limited, largely due to the rapid evolution of sequencing technologies and methods that quickly built upon the foundation it helped establish. For example, the Illumina sequencing platform, a direct evolution of the techniques discussed, is extensively cited in further studies showing this paper's underlying impact.\n\nFurther review of the paper's influence in academia can be found in many foundational texts related to genomics and sequencing technology evolution.",
+  "abstract": "Addressing fault tolerance for spacecraft Guidance, Navigation, and Control has never been easy. Even under normal conditions, these systems confront a remarkable blend of complex issues across many disciplines, with primary implications for most essential system functions. Moreover, GN&C must deal with the peculiarities of spacecraft configurations, disturbances, environment, and other physical mission-unique constraints that are seldom under its full control, all while promising consistently high performance. Adding faults in all their insidious variety to this already intricate mix creates a truly daunting challenge. Appropriate tactical recovery must be ensured without compromise to mission or spacecraft integrity, even during energetic activities or under imminent critical deadlines. If that were not enough, the consequences of a seemingly prudent move can have profoundly negative long-term consequences, if chosen unwisely, so there is often a major strategic component to GN&C fault tolerance, as well. Therefore, it is not surprising that fault protection for GN&C has an enduring reputation as one of the more complex and troublesome aspects of spacecraft design — one that will only be compounded by the escalating ambitions of impending space missions. Despite these difficulties, experience has suggested methods of attack that promise good results when followed consistently and implemented rigorously. Upon close scrutiny, it is strikingly clear that these methods have roots in the same fundamental concepts and principles that have successfully guided normal GN&C development. Yet it is disappointing to note that the actual manifestation of these ideas in deployed systems is rarely transparent. The cost of this obfuscation has been unwarranted growth in complexity, poorly understood behavior, incomplete coverage, brittle design, and loss of confidence. The objective of this paper is to shed some light on the fundamentals of fault tolerant design for GN&C. The common heritage of ideas behind both faulted and normal operation is explored, as is the increasingly indistinct line between these realms in complex missions. Techniques in common practice are then evaluated in this light to suggest a better direction for future efforts.",
+  "summary": "The paper argues that spacecraft GN&C fault protection should be treated as an integrated control and architectural problem rather than as a detached collection of monitor-and-response rules. It emphasizes explicit models of state, behavior, and objectives; integration of fault protection with normal system functionality; preservation of mission functions; transparent control logic; diagnosis separated from response initiation; and systematic consideration of contingencies and long-term consequences.\n\nDocumented subsequent use is primarily in aerospace fault-management guidance and in software-engineering discussions. The paper is cited as related reading in NASA-HDBK-1002, a NASA fault-management design handbook draft, and in a JPL DESCANSO report on GN&C technology assessment for planetary missions. ([s3vi.ndc.nasa.gov](https://s3vi.ndc.nasa.gov/ssri-kb/static/resources/636372main_NASA-HDBK-1002_Draft.pdf)) Its principles were also explicitly adapted for general fault-tolerant software and microservices in an industry presentation and engineering blog post, which discuss control-system transparency, state-based reasoning, and function preservation. ([infoq.com](https://www.infoq.com/presentations/fault-tolerant-principles/)) These sources provide evidence of conceptual reuse in aerospace guidance and in software-resilience practice, but the available search results do not establish a large, quantitatively measured citation impact.",
   "raw_url": "https://trs.jpl.nasa.gov/bitstream/handle/2014/41696/08-0125.pdf",
   "source_type": "external",
   "filepath": "faults_and_verification/README.md",
   "filename": "GN&C Fault Protection Fundamentals",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

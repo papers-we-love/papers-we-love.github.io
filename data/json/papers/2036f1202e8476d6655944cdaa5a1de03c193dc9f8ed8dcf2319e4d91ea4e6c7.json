@@ -1,34 +1,25 @@
 {
   "uuid": "2036f1202e8476d6655944cdaa5a1de03c193dc9f8ed8dcf2319e4d91ea4e6c7",
-  "title": "PushPull++: A Progressive Image Transmission Technique Using Image Warping and Pixel Replacement",
-  "publication_date": "2008",
+  "title": "PushPull++",
+  "publication_date": "July 2014; ACM Transactions on Graphics, volume 33, issue 4, Article 130; presented at ACM SIGGRAPH 2014 in Vancouver, Canada, August 10–14, 2014. ([asu.elsevierpure.com](https://asu.elsevierpure.com/en/publications/pushpull))",
   "authors": [
-    "Bruno B. N. Maciel",
-    "Heitor S. Lopes",
-    "Leandro A. F. Fernandes",
-    "Walter G. Chagas"
+    "Markus Lipp",
+    "Pascal Müller",
+    "Peter Wonka"
   ],
   "keywords": [
-    "animated-transitions",
-    "bandwidth-optimization",
-    "computer-graphics",
-    "image-compression",
-    "image-transmission",
-    "image-warping",
-    "pixel-replacement",
-    "progressive-transmission",
-    "pushpull-method",
-    "remote-sensing"
+    "local-mesh-editing",
+    "polygonal-modeling"
   ],
   "category_path": [
     "computer_graphics"
   ],
-  "abstract": "This work presents PushPull++, a new technique for progressive image transmission based on the PushPull method. The technique aims at efficient transmission of images over networks, improving image quality at further stages of transmission while minimizing the number of transmitted bits. It employs image warping and pixel replacement to enhance visual coherence and reduce delivery time of a visually acceptable image during initialization phases.",
-  "summary": "The paper \"PushPull++: A Progressive Image Transmission Technique Using Image Warping and Pixel Replacement\" introduces an advanced method known as PushPull++, which enhances the classic PushPull technique. This method focuses on progressive image transmission by utilizing image warping and pixel replacement, aiming to improve the quality of images transmitted over networks while minimizing transmitted data.\n\nThe PushPull++ method shows potential in applications requiring efficient image transmission, such as remote sensing and computer graphics, where bandwidth optimization is critical. By refining image quality at progressive stages and utilizing animated transitions, this research contributes to more efficient remote rendering techniques.\n\nAfter conducting a web search, there appear to be no direct references or citations to this specific paper in subsequent research literature. It indicates that while the technique proposed is innovative, it may not have been widely adopted or cited in other academic or industry works at the time of the search.",
+  "abstract": "PushPull tools are implemented in most commercial 3D modeling suites. Their purpose is to intuitively transform a face, edge, or vertex, and then to adapt the polygonal mesh locally. However, previous approaches have limitations: Some allow adjustments only when adjacent faces are orthogonal; others support slanted surfaces but never create new details. Moreover, self-intersections and edge-collapses during editing are either ignored or work only partially for solid geometry. To overcome these limitations, we introduce the PushPull++ tool for rapid polygonal modeling. In our solution, we contribute novel methods for adaptive face insertion, adjacent face updates, edge collapse handling, and an intuitive user interface that automatically proposes useful drag directions. We show that PushPull++ reduces the complexity of common modeling tasks by up to an order of magnitude when compared with existing tools.",
+  "summary": "## Technical contribution\n\nPushPull++ is a local mesh-editing system for rapid modeling of plane-dominant man-made objects. It generalizes conventional push/pull operations to arbitrary planar polygonal meshes, including meshes with boundaries and non-manifold edges. The method addresses three problems: deciding where new faces are needed, updating neighboring geometry while preserving planarity, and maintaining valid topology when edges or faces collapse.\n\nThe system adaptively inserts faces according to angular thresholds between the target plane and adjacent face planes. If an adjacent plane can support the modification, the existing face is updated; otherwise, a new face is inserted with an orientation derived from the user’s drag direction. A generalized local mesh-update procedure computes new vertices by intersecting planes and can split a high-valence vertex into multiple vertices when required. A stepwise plane-sweep procedure detects impending collapse events and applies the modification through intermediate planes, preventing local self-intersections and enabling cleanup of zero-area faces, zero-length edges, and unused vertices.\n\nThe same framework supports simultaneous modification of multiple faces, which enables edge and vertex dragging. To avoid order-dependent results, simultaneous operations use a shared global direction and evaluate target-plane relationships consistently. The interface proposes useful drag directions based on face normals, world axes, adjacent-face directions, and adjacent edges; it also integrates polyline drawing and polygon splitting.\n\nIn the authors’ expert-user comparison, PushPull++ required fewer interactions than AutoCAD, SketchUp, and Maya for the tested modeling tasks. Its principal advantage was in edits involving slanted surfaces and added details, where competing tools often required manual construction, boolean operations, or low-level vertex manipulation. The implementation reportedly maintained interactive performance of at least 30 updates per second on mainstream hardware and scaled linearly with the number of affected faces.\n\n## Subsequent influence\n\nThe paper is cited as prior work in later research on interactive procedural modeling and creative-design systems. For example, *CityEngine: An Introduction to Rule-Based Modeling* lists PushPull++ among its related modeling references, and *Computational Support for Creative Design* cites it in the context of interactive geometry and architectural modeling. ([ouci.dntb.gov.ua](https://ouci.dntb.gov.ua/en/works/4bYLeKv7/))\n\nThe available search evidence indicates continued scholarly recognition of the method, but does not establish that the exact PushPull++ algorithms were directly incorporated into a major commercial modeling product. Later industry tools provide related push/pull functionality—for example, Rhino documents face-based push/pull operations—but the available documentation does not attribute that functionality to this paper. ([rhino3d.com](https://www.rhino3d.com/features/push-pull/))\n\nThe paper’s own stated limitations remain relevant: its intersection prevention is local rather than global, and its representation is designed for planar rather than curved surfaces.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/computer_graphics/pushpull%2B%2B.pdf",
   "source_type": "pdf",
   "filepath": "computer_graphics/pushpull++.pdf",
   "filename": "pushpull++.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:50"
 }

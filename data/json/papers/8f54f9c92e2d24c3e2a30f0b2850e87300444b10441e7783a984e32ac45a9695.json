@@ -1,33 +1,25 @@
 {
   "uuid": "8f54f9c92e2d24c3e2a30f0b2850e87300444b10441e7783a984e32ac45a9695",
-  "title": "PushPull++: Model Geometry and Attributes at Once",
-  "publication_date": "2014",
+  "title": "PushPull++",
+  "publication_date": "July 22, 2014 (online); July 27, 2014 (print), ACM SIGGRAPH 2014; published in ACM Transactions on Graphics, volume 33, issue 4, article 130",
   "authors": [
-    "Matthias Lipp",
-    "Michael Wimmer",
+    "Markus Lipp",
+    "Pascal Müller",
     "Peter Wonka"
   ],
   "keywords": [
-    "3d-modeling",
-    "attributes",
-    "computer-graphics",
-    "digital-content-creation",
-    "geometry-processing",
-    "gradient-based-methods",
-    "interactive-systems",
-    "mesh-editing",
-    "optimization",
-    "push-pull"
+    "local-mesh-editing",
+    "polygonal-modeling"
   ],
   "category_path": [
     "computer_graphics"
   ],
-  "abstract": "In this paper, we tackle the challenge of specifying geometry and attributes in separate steps by proposing PushPull++. This approach allows the user to directly combine attribute editing with shape deformation using a single set of design constraints expressed as gradients. In addition, we incorporate many types of constraints into an optimization framework that supports handle-based surface editing. The resulting system enables simultaneous geometry and attribute editing in real-time and allows for precise control over the desired edits with a simple and intuitive user interface. We validate our method on a variety of scenes and demonstrate its effectiveness through comparisons and applications. Our rethinking of geometry and attribute editing through the unified push-pull paradigm shows versatility and usability for digital content creation.",
-  "summary": "PushPull++ is a novel approach to model both the geometry and attributes of 3D models simultaneously, through the use of gradients and optimization frameworks. This method integrates constraints into a system allowing handle-based surface editing and supports real-time simultaneous edits, enhancing the flexibility and preciseness of digital content creation. The PushPull++ framework enhances user interaction by combining attribute and shape deformation within an intuitive interface, tested and validated across various contexts.\n\nIn terms of impact, the paper contributes significantly to the field of computer graphics by offering a unified approach to managing geometry and attributes, which streamlines the creation and editing processes for 3D modeling and has potential applications in gaming, animation, and simulation industries. Though precise references to how it directly influenced subsequent work are sparse, the method aligns with ongoing trends in interactive systems and digital content creation, making it a relevant contribution to advancements in efficient modeling techniques.",
+  "abstract": "PushPull tools are implemented in most commercial 3D modeling suites. Their purpose is to intuitively transform a face, edge, or vertex, and then to adapt the polygonal mesh locally. However, previous approaches have limitations: Some allow adjustments only when adjacent faces are orthogonal; others support slanted surfaces but never create new details. Moreover, self-intersections and edge-collapses during editing are either ignored or work only partially for solid geometry. To overcome these limitations, we introduce the PushPull++ tool for rapid polygonal modeling. In our solution, we contribute novel methods for adaptive face insertion, adjacent face updates, edge collapse handling, and an intuitive user interface that automatically proposes useful drag directions. We show that PushPull++ reduces the complexity of common modeling tasks by up to an order of magnitude when compared with existing tools.",
+  "summary": "### Paper summary\n\nPushPull++ presents a local mesh-editing method for rapid modeling of plane-dominant, man-made objects. The method transforms a selected face to a target plane and adaptively decides whether neighboring geometry should be modified or whether new faces should be inserted. It maintains planar polygonal faces by computing new vertex positions from plane intersections and updating the affected one-ring neighborhood, including cases where vertex valence changes.\n\nThe paper also introduces stepwise modification for handling local self-intersections, shrinking edges, and collapsing faces without relying on watertight solids or constructive solid geometry. Multiple faces can be modified simultaneously, provided that inserted faces use a consistent global direction. The associated interface proposes useful drag directions, supports face, edge, and vertex operations, and combines push-pull editing with polyline-based face splitting.\n\nIn an expert-user evaluation covering fifteen modeling operations, the authors report that PushPull++ required fewer interactions than AutoCAD, SketchUp, and Maya on average, particularly for edits involving slanted surfaces and added details. The implementation was reported to support interactive editing at at least 30 updates per second on mainstream hardware. ([peterwonka.net](https://peterwonka.net/Publications/pdfs/2014.SG.Lipp.PushPull.pdf))\n\n### Documented influence\n\nA concrete later use appears in research on semantically enriched high-resolution LoD3 building-model generation. That work describes PushPull++ as suitable for efficient LoD3 modeling and reports using an implementation derived from Esri CityEngine for interactive geometry modification. This provides evidence of application in architectural and urban-modeling workflows, although the available search results do not establish broader adoption or a large body of follow-up methods directly extending the algorithm. ([researchgate.net](https://www.researchgate.net/publication/335986512_SEMANTICALLY_ENRICHED_HIGH_RESOLUTION_LOD_3_BUILDING_MODEL_GENERATION))",
   "raw_url": "http://peterwonka.net/Publications/pdfs/2014.SG.Lipp.PushPull.pdf",
   "source_type": "external",
   "filepath": "computer_graphics/README.md",
   "filename": "PushPull++",
-  "created_on": "2026-01-24 23:46:58",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:54"
 }

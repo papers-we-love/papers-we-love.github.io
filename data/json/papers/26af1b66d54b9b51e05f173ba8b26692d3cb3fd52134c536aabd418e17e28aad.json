@@ -1,34 +1,37 @@
 {
   "uuid": "26af1b66d54b9b51e05f173ba8b26692d3cb3fd52134c536aabd418e17e28aad",
-  "title": "Normalization Propagation: A Parametric Technique for Removing Internal Covariate Shift in Deep Networks",
-  "publication_date": "2017",
+  "title": "Generating 3D Models for Prototyping of Virtual Environments using NeRF",
+  "publication_date": "February 22–23, 2024; 2024 Second International Conference on Emerging Trends in Information Technology and Engineering (ICETITE), Vellore, India",
   "authors": [
-    "Dacheng Tao",
-    "Dongyang Zhang",
-    "Lei Huang",
-    "Yuan Li"
+    "Ajay Gonepuri",
+    "Chinmay Saraf",
+    "Mayuresh Dharwadkar",
+    "Pranav Sonkamble",
+    "Prathamesh Deshpande",
+    "Premanand Ghadekar",
+    "Vedant Dhole"
   ],
   "keywords": [
-    "batch-normalization",
-    "convergence",
-    "deep-learning",
-    "deep-networks",
-    "internal-covariate-shift",
-    "machine-learning",
-    "normalization-propagation",
-    "optimization",
-    "parametric-technique",
-    "training-stability"
+    "3d-modeling",
+    "3d-reconstruction",
+    "clip-similarity",
+    "edge-collapsing",
+    "mesh-generation",
+    "neural-radiance-fields",
+    "point-clouds",
+    "slowfast-cnn",
+    "structure-from-motion",
+    "virtual-environments"
   ],
   "category_path": [
     "computer_vision"
   ],
-  "abstract": "Internal Covariate Shift (ICS) is often seen as one of the major factors causing difficulties in training deep networks. Batch Normalization (BN), one of many recent normalization techniques, addresses ICS well and accelerates the training speed dramatically. We argue that BN fails to reduce ICS, and the effectiveness of BN should be mainly attributed to the training with a smaller learning rate and larger batch size. As an alternative, we propose a simple yet effective technique, Normalization Propagation(NP), to propagate the statistics of normalization through feed-forward and back-propagation. Kritically, NP can be viewed as a method for regularizing the models. We show that NP not only achieves comparable performances to BN, but also enjoys its own advantages, e.g., serving as a general building block easy to be incorporated with any normalization scheme and even leading to the success with a mini-batch size of one.",
-  "summary": "This paper introduces Normalization Propagation (NP), a parametric technique to address the internal covariate shift issue in deep networks. The authors claim that while Batch Normalization (BN) is commonly credited for reducing ICS, its effectiveness may actually stem from adjustments in learning rate and batch size during training. NP is presented as a method for carrying normalization statistics through both feed-forward and back-propagation processes. The paper suggests that NP not only offers competitive performance compared to BN, but also has advantages such as flexibility in integration with any normalization scheme and effectiveness with smaller batch sizes.\n\nAs of the current date, the paper has been cited in several research contexts. For instance, the work is referenced in papers focusing on optimization techniques for deep learning models, including alternative normalization strategies. However, it has not significantly influenced industry applications directly as of the latest available data. The exact influence and extent of adoption in various domains beyond explicit citations remain relatively constrained.\n\nCitations:\n- Lei Huang, Dongyang Zhang, Yuan Li, Dacheng Tao, \"Normalization Propagation: A Parametric Technique for Removing Internal Covariate Shift in Deep Networks.\" [IEEE Xplore link](https://ieeexplore.ieee.org/document/10493505)\n\nFurther citations in other research can be found through searching academic databases and citation indices like Google Scholar: [https://scholar.google.com/](https://scholar.google.com/)",
+  "abstract": "This research focuses on optimizing 3D modeling by leveraging class-specific structures to enhance the speed and accuracy of 3D reconstruction. The proposed model integrates SlowFast CNN for structural feature extraction and Edge Collapsing for outlier rejection and complexity reduction. It generates 3D point clouds, identifies consistent structures, and constructs refined meshes. Key technologies used include Neural Radiance Fields (NeRF), Structure From Motion (SfM), SlowFast CNN, Edge Collapsing, and CLIP for evaluation, achieving a CLIP Similarity Score of 0.542 with an average execution time of 3.27 minutes.",
+  "summary": "### Summary\n\nThe paper proposes a NeRF-based pipeline for generating 3D models intended for virtual-environment prototyping. Its workflow combines Structure-from-Motion for reconstruction support, SlowFast CNN for extracting structural features, Edge Collapsing for removing outliers and reducing mesh complexity, and CLIP similarity for semantic evaluation. The reported evaluation achieved a CLIP similarity score of 0.542 with an average execution time of 3.27 minutes. ([in.linkedin.com](https://in.linkedin.com/in/chinmay-saraf-))\n\nThe available citation evidence indicates limited but concrete subsequent uptake. The work is cited in later research on reconstructing real-world environments for virtual driving and in research on LiDAR-based reproduction of road scenarios for simulation. These citations treat the paper primarily as an example of NeRF-based 3D-environment generation rather than as a central methodological foundation. ([ouci.dntb.gov.ua](https://ouci.dntb.gov.ua/en/works/986OeWq1/))\n\nNo documented industrial deployment or commercial product adoption directly attributable to this paper was identified in the available search results.",
   "raw_url": "https://ieeexplore.ieee.org/document/10493505",
   "source_type": "external",
   "filepath": "computer_vision/README.md",
   "filename": "Generating 3D Models for Prototyping of Virtual Environments using NeRF",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:54"
 }

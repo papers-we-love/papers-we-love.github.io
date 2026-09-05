@@ -1,31 +1,31 @@
 {
   "uuid": "8a213977a1730adbc67a093a1363549d566b5f15555aecd566aa03b2f8d1eee5",
   "title": "Hints for Computer System Design",
-  "publication_date": "1984",
+  "publication_date": "July 1983; originally presented at the 9th ACM Symposium on Operating Systems Principles and published in Operating Systems Review 15(5), October 1983, pages 33–48. A slightly revised version was reprinted in IEEE Software 1(1), January 1984, pages 11–28.",
   "authors": [
     "Butler W. Lampson"
   ],
   "keywords": [
-    "abstraction",
-    "computer-system-design",
+    "atomic-transactions",
+    "caching",
+    "computer-systems",
+    "distributed-systems",
+    "end-to-end-principle",
     "fault-tolerance",
-    "hardware",
-    "hints",
-    "interface",
-    "modularity",
-    "optimization",
+    "interface-design",
+    "operating-systems",
     "performance",
-    "simplicity"
+    "system-design"
   ],
   "category_path": [
     "comp_sci_fundamentals_and_history"
   ],
-  "abstract": "This paper discusses the experience with the design and implementation of a number of computer systems, and distills it into a set of hints for designing computer systems analogously to how kernel ideas are described in an operating systems textbook. Several examples are discussed, including pilot, note cards, and grapevine. The major topics vary from how to get the most performance out of a given amount of hardware, how to deal with failures, how to make the system modular, and how to make it easy to use.",
-  "summary": "Butler Lampson's \"Hints for Computer System Design,\" published in 1984, is a seminal work in the field of computer science providing practical advice derived from extensive experience in designing and implementing computer systems. The paper outlines a collection of insights applicable to system design, addressing critical areas such as performance optimization, fault tolerance, simplicity, abstraction, and modularity. Its emphasis on pragmatic rather than theoretical guidance makes it highly influential, particularly in operating system design and distributed systems.\n\nThe paper discusses design strategies using real-world systems like Pilot, Note Cards, and Grapevine as illustrative examples. These insights have influenced software engineering practices, by promoting principles like minimizing complexity and creating reliable interfaces.\n\nThe impact of Lampson's paper can be seen across multiple domains of computer science. For instance, it has been frequently cited in literature discussing best practices in system architecture and has influenced a number of subsequent research papers and technical designs. A notable example is its impact on the development of operating systems and understanding how intricate system-level decisions can impact overall performance and user satisfaction ([source](https://dl.acm.org/doi/10.1145/1874391.1874401), [source](https://ieeexplore.ieee.org/document/5601727)). Its principles remain relevant, showcasing the enduring nature of its recommendations and its foundational status in the canon of computer science literature.",
+  "abstract": "Studying the design and implementation of a number of computer has led to some general hints for system design. They are described here and illustrated by many examples, ranging from hardware such as the Alto and the Dorado to application programs such as Bravo and Star.",
+  "summary": "The paper distills practical design principles from Butler Lampson’s experience building computer systems at Xerox PARC. Its central claim is that successful system design depends less on finding an ideal architecture than on avoiding disastrous choices and defining clear, stable interfaces. The principal recommendations include keeping interfaces simple and focused, preserving useful performance at higher abstraction levels, leaving policy to clients when appropriate, separating normal-case optimization from worst-case progress, using caching and speculative hints with validation, preferring straightforward implementations when complexity is unjustified, and placing reliability mechanisms such as logging, atomicity, and end-to-end validation at the appropriate system boundary.\n\nThe paper has had demonstrable continuing influence. It received the ACM SIGOPS Hall of Fame award in 2005, and Microsoft Research describes it as a classic account of large-system design whose applicability has expanded over time. ([microsoft.com](https://www.microsoft.com/en-us/research/publication/hints-for-computer-system-design/)) Its principles have also been used as teaching material in systems courses, including MIT’s computer systems engineering curriculum. ([mit.edu](https://www.mit.edu/~Saltzer/publications/recguides/Hints.html)) The ACM record continues to list citations to the work in later systems research, including the 2026 FicusDB paper; citation presence alone does not establish the precise intellectual contribution in each citing work. ([doi.org](https://doi.org/10.1145/800217.806614))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/comp_sci_fundamentals_and_history/hints-for-computer-system-design.pdf",
   "source_type": "pdf",
   "filepath": "comp_sci_fundamentals_and_history/hints-for-computer-system-design.pdf",
   "filename": "hints-for-computer-system-design.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:50"
 }

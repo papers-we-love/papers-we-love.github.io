@@ -1,27 +1,32 @@
 {
   "uuid": "452f7bb5b8aa6f36419321ef5ed57ad83177526fa51a599f062aed46448e3104",
-  "title": "Design and Implementation of a Data Extraction Tool for Refractory Design Documents",
-  "publication_date": "2001",
+  "title": "D-Expressions: Lisp Power, Dylan Style",
+  "publication_date": "1999 (technical report)",
   "authors": [
-    "Gilbert Chu",
-    "John R. Barry"
+    "Jonathan Bachrach",
+    "Keith Playford"
   ],
   "keywords": [
-    "data-extraction",
-    "database-management",
-    "design-documents",
-    "document-processing",
-    "refractory-design"
+    "compile-time-evaluation",
+    "domain-specific-languages",
+    "dylan",
+    "hygienic-macros",
+    "macros",
+    "metaprogramming",
+    "pattern-matching",
+    "skeleton-syntax-trees",
+    "source-code-transformation",
+    "syntax-manipulation"
   ],
   "category_path": [
     "macros"
   ],
-  "abstract": "Data extraction from complex and multifaceted documents, like those used in refractory design, poses significant challenges in document interpretation, structuring, and storage. This paper outlines the architecture and implementation of a data extraction tool designed specifically to handle the intricacies of refractory design documents. The tool automates the conversion of unstructured document content into a format that can be easily integrated into a database management system. It enables users to query design specifications and generate reports without needing to manually parse through extensive documentation.",
-  "summary": "The paper titled \"Design and Implementation of a Data Extraction Tool for Refractory Design Documents\" by John R. Barry and Gilbert Chu, published in 2001, addresses the challenge of extracting data from refractory design documents. The authors describe a tool that automates the conversion of unstructured documents into a structured format suitable for database integration. This solves significant challenges in document interpretation and enhances accessibility for querying and reporting data. \n\nIn terms of impact, despite the niche focus on refractory design, this research contributes to the broader field of document processing and data extraction tools. However, a brief web search does not show significant citations or references to this research in subsequent academic or industrial applications, indicating limited detectable influence outside its immediate application field.",
+  "abstract": "This paper aims to demonstrate that it is possible for a language with a rich, conventional syntax to provide Lisp-style macro power and simplicity. We describe a macro system and syntax manipulation toolkit designed for the Dylan programming language that meets, and in some areas exceeds, this standard. The debt to Lisp is great, however, since although Dylan has a conventional algebraic syntax, the approach taken to describe and represent that syntax is distinctly Lisp-like in philosophy.",
+  "summary": "## Summary\n\nThe paper presents a macro system and syntax-manipulation toolkit for Dylan intended to provide Lisp-like expressive power while retaining conventional algebraic syntax. Its central abstraction is the **skeleton syntax tree (SST)**: a lightweight, shape-oriented representation that lies between an unstructured token stream and a language-specific abstract syntax tree. SSTs allow user-defined constructs to be introduced without modifying the core grammar, while preserving nested structure, source locations, syntactic context, and hygiene information.\n\nDylan’s rewrite-rule macro system uses concrete-syntax patterns with constrained variables and concrete-syntax templates for source-to-source transformation. The paper describes hygienic expansion, referential transparency across namespaces, local rewrite rules, recursive auxiliary rules, identifier concatenation, template calls, and macro-expansion tracing. It also introduces **d-expressions**, a class hierarchy and library for representing, parsing, constructing, reading, and writing SST fragments. These facilities are presented as analogues of Lisp destructuring, quasiquotation, and `read`/`write` operations, adapted to a language with conventional syntax.\n\nThe paper additionally evaluates models for procedural macro execution, including runtime evaluation, compiler plugins, and staged compile-time loading. The authors report that the d-expressions library had been implemented and used in the Dylan compiler, while the plugin model of compile-time evaluation was supported; the more integrated compile-time evaluation model remained proposed rather than fully implemented.\n\n## Influence and subsequent use\n\nThe paper is documented by the Open Dylan project as a 1999 technical report. Its proposed template-call extensions were subsequently incorporated into Open Dylan’s macro-system documentation, which explicitly identifies them as originating in an appendix to this paper. ([github.com](https://github.com/dylan-lang/opendylan/blob/master/documentation/source/documentation/publications.rst?plain=true)) The paper is also cited as prior work in later research on compile-time metaprogramming and language extension, including work on DSL implementation and dynamically typed object-oriented languages. ([tratt.net](https://tratt.net/laurie/research/pubs/html/tratt__compile-time_meta-programming_in_a_dynamically_typed_oo_language/)) Community documentation further reports that the described machinery was used in the Open Dylan compiler and compiler libraries, including facilities for C foreign-function interfaces and other syntax-oriented extensions; this is evidence of implementation impact within the Dylan ecosystem rather than broad industrial adoption. ([lobste.rs](https://lobste.rs/s/2kvibn/d_expressions_lisp_power_dylan_style))",
   "raw_url": "http://people.csail.mit.edu/jrb/Projects/dexprs.pdf",
   "source_type": "external",
   "filepath": "macros/README.md",
   "filename": "D-Expressions: Lisp Power, Dylan Style",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:56"
 }

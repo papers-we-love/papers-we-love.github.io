@@ -1,32 +1,33 @@
 {
   "uuid": "9b36271d095e5b78c9548efa3064ee47297ec9ed0234703d6586b3798186cf0e",
   "title": "Functional Reactive Animation",
-  "publication_date": "2003",
+  "publication_date": "August 1997; ACM SIGPLAN Notices, Volume 32, Issue 8; presented at ICFP 1997",
   "authors": [
-    "Conal Elliott"
+    "Conal Elliott",
+    "Paul Hudak"
   ],
   "keywords": [
-    "animation",
-    "compositionality",
-    "continuous-time-model",
-    "declarative-style",
-    "dynamic-behavior",
-    "functional-programming",
+    "behaviors",
+    "denotational-semantics",
+    "events",
+    "fran",
+    "functional-reactive-animation",
     "functional-reactive-programming",
-    "interactive-graphics",
-    "reactive-streams",
-    "reactive-systems"
+    "haskell",
+    "interactive-systems",
+    "interval-analysis",
+    "multimedia-animation"
   ],
   "category_path": [
     "languages-paradigms",
     "functional_reactive_programming"
   ],
-  "abstract": "Functional Reactive Programming (FRP) extends traditional functional programming with a new kind of value that varies in time, called a behavior or a signal. FRP emphasizes a continuous model of time and has been used successfully in animation, robotics, and other control systems. This paper introduces a simple, elegant form of FRP designed to express interactive multimedia animations.",
-  "summary": "The paper titled \"Functional Reactive Animation\" by Conal Elliott, published in 2003, explores the concept of Functional Reactive Programming (FRP) with a focus on its application to interactive multimedia animations. It introduces the notion of behaviors or signals, which are values that change over time, and frames FRP as an extension of traditional functional programming. This emphasis on a continuous-time model allows for the creation of dynamic animations and control systems in a declarative, compositional manner. \n\nSince its publication, the paper has influenced both academic research and practical applications in areas requiring interactive graphics and real-time system responsiveness. The foundational concepts of FRP have been incorporated into various software frameworks and libraries, facilitating advancements in user interface design and reactive stream processing. The continuous model of time and declarative style proposed by Elliott has been particularly influential in the development of libraries such as ReactiveX for reactive programming. \n\nWhile the specific impact on industry beyond academic circles is less documented, the principles outlined in the paper continue to underpin modern reactive programming paradigms. Some of the notable mentions include usage in Haskell implementations and other functional programming contexts.\n\nFurther references that cite or build upon this work can be found in academic papers and discussions surrounding FRP, particularly those focused on Haskell and interactive systems within computer science literature.",
+  "abstract": "Fran (Functional Reactive Animation) is a collection of data types and functions for composing richly interactive, multimedia animations. The key ideas in Fran are its notions of behaviors and events. Behaviors are time-varying, reactive values, while events are sets of arbitrarily complex conditions, carrying possibly rich information. Most traditional values can be treated as behaviors, and when images are thus treated, they become animations. Although these notions are captured as data types rather than a programming language, we provide them with a denotational semantics, including a proper treatment of real time, to guide reasoning and implementation. A method to effectively and efficiently perform event detection using interval analysis is also described, which relies on the partial information structure on the domain of event times. Fran has been implemented in Hugs, yielding surprisingly good performance for an interpreter-based system. Several examples are given, including the ability to describe physical phenomena involving gravity, springs, velocity, acceleration, etc. using ordinary differential equations.",
+  "summary": "The paper introduces Fran, an embedded Haskell-oriented framework for functional reactive animation. Its central abstraction is the **behavior**, a time-varying value, paired with **events**, which represent discrete occurrences carrying information. The paper gives these abstractions denotational semantics over real time, describes combinators for composing behaviors and events, and presents interval-analysis techniques for detecting events efficiently despite continuous-time behavior. It also demonstrates that multimedia objects, physical simulations, and interactive animations can be expressed declaratively using ordinary functional-programming mechanisms and differential equations.\n\nThe work became a foundational reference for functional reactive programming (FRP). Subsequent research extended its ideas to physical systems and robotics, formal semantics, real-time embedded systems, arrow-based FRP such as Yampa, graphical user interfaces, games, and Scheme-based environments. A later historical account characterizes Fran as an influential domain-specific embedded language that initiated multiple FRP research strands. ([microsoft.com](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/07/history.pdf)) More recent work continues to identify Elliott and Hudak’s paper as the source of the principles underlying FRP and applies those principles to contemporary animation systems. ([icfp23.sigplan.org](https://icfp23.sigplan.org/details/farm-2023/4/The-Beauty-and-Elegance-of-Functional-Reactive-Animation))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages-paradigms/functional_reactive_programming/functional-reactive-animation.pdf",
   "source_type": "pdf",
   "filepath": "languages-paradigms/functional_reactive_programming/functional-reactive-animation.pdf",
   "filename": "functional-reactive-animation.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

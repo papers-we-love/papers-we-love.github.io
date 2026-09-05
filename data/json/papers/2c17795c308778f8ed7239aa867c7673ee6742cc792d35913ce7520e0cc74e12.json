@@ -1,30 +1,27 @@
 {
   "uuid": "2c17795c308778f8ed7239aa867c7673ee6742cc792d35913ce7520e0cc74e12",
-  "title": "Evaluating the Scalability of Erlang VM on Many-Core Processors",
-  "publication_date": "2013",
+  "title": "On the Scalability of the Erlang Term Storage",
+  "publication_date": "September 28, 2013 (Twelfth ACM SIGPLAN Erlang Workshop, Erlang ’13)",
   "authors": [
-    "Amir Ghaffari",
-    "Konrad Hinsen",
-    "Mohamed Daoudi",
-    "Wolfgang Ziegler"
+    "David Klaftenegger",
+    "Kjell Winblad",
+    "Konstantinos Sagonas"
   ],
   "keywords": [
+    "concurrent-data-structures",
     "erlang",
-    "many-core-processors",
-    "performance",
-    "scalability",
-    "virtual-machine"
+    "multi-core"
   ],
   "category_path": [
     "languages",
     "erlang"
   ],
-  "abstract": "Erlang is a concurrent programming language designed for distributed systems with requirements on high availability. It provides lightweight processes and a powerful error handling mechanism making it an ideal choice for many-core architectures. This paper presents work in progress in determining the scalability of Erlang's runtime system on many-core environments. We explore the suitability of the runtime system and Erlang programming techniques to leverage the processing power provided by many-core processors.",
-  "summary": "This paper investigates the scalability of the Erlang Virtual Machine (VM) on many-core processors, addressing performance metrics in concurrent programming environments. Erlang is recognized for its capability to handle high availability and distributed systems efficiently. The authors evaluate the runtime system's scalability in many-core environments, identifying key areas of optimization potential. The paper has contributed to an understanding of performance bottlenecks and improvements needed in the Erlang VM to fully exploit many-core processor capabilities.\n\nUpon reviewing references and citations, the impact of this paper on subsequent research or industry seems limited, with few direct citations found. The paper primarily serves as a basis for understanding scaling challenges with the Erlang VM in the context of multi-core processor environments, relevant for researchers focusing on concurrent programming and system performance optimizations.",
+  "abstract": "The Erlang Term Storage (ETS) is an important component of the Erlang runtime system, especially when parallelism enters the picture, as it provides an area where processes can share data. It is therefore important that ETS’s implementation is efficient, flexible, but also as scalable as possible. In this paper we document and describe the current implementation of ETS in detail, discuss the main data structures that support it, and present the main points of its evolution across Erlang/OTP releases. More importantly, we measure the scalability of its implementations, the effects of its tuning options, identify bottlenecks, and suggest changes and alternative designs that can improve both its performance and its scalability.",
+  "summary": "## Summary\n\nThe paper analyzes the implementation and multicore scalability of Erlang Term Storage (ETS), a shared in-memory key-value facility used by Erlang processes and by systems such as Mnesia. It explains how ETS manages copied Erlang terms, table metadata, ownership, fixation for safe traversal, and synchronization.\n\nThe study compares hash-based `set` tables and AVL-tree-based `ordered_set` tables across Erlang/OTP releases R11B-5, R13B02-1, R14B, and R16B. It shows that hash-based tables benefit substantially from fine-grained locking enabled by `write_concurrency`, while global locking makes `ordered_set` tables scale poorly under mixed lookup/update workloads. Reader groups introduced in R14B reduce contention caused by shared reader counters, but their optimal number depends on workload and hardware.\n\nA major bottleneck is identified in the AVL-tree implementation: a shared statically allocated traversal stack causes cache-line migration between schedulers, harming lookup-only scalability. Replacing it with dynamic stacks substantially improves `ordered_set` performance. The experiments also show that increasing the number of hash-table bucket locks improves scalability until synchronization and memory overhead outweigh the benefit, motivating per-table runtime configurability.\n\nThe paper evaluates alternative designs, including a concurrent skip list, C++’s `std::unordered_set`, lock-free hash tables, split-ordered lists, concurrent B-trees, and more scalable metadata-locking schemes. The concurrent skip list provides better scalability than the AVL tree for mixed workloads but has poor sequential performance, partly because of memory-reclamation overhead. The authors conclude that ETS performance involves trade-offs among feature support, synchronization granularity, memory use, workload characteristics, and hardware topology.\n\n## Influence and subsequent development\n\nThe paper’s benchmark methodology and analysis of ETS synchronization are cited in later work on scalable Erlang runtime synchronization; subsequent research reused `ets_bench` and explicitly refers to this paper when evaluating ETS scalability. ([researchgate.net](https://www.researchgate.net/publication/262172496_On_the_scalability_of_the_Erlang_term_storage)) The paper’s concerns about contention in shared counters and lock granularity also align with later Erlang/OTP engineering work. In 2021, the Erlang/OTP team documented the `decentralized_counters` option, introduced in OTP 22 for `ordered_set` and OTP 23 for other table types, reporting substantially improved scalability for concurrent ETS updates while documenting the trade-off of slower table-size and memory queries. ([erlang.org](https://www.erlang.org/blog/scalable-ets-counters/))",
   "raw_url": "http://winsh.me/papers/erlang_workshop_2013.pdf",
   "source_type": "external",
   "filepath": "languages/erlang/README.md",
   "filename": "On the Scalability of the Erlang Term Storage",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

@@ -1,7 +1,7 @@
 {
   "uuid": "30c6a62cd14151c8a53248656bc97603bb3f100dbc3047fe8f1b1ff7e4400fc2",
-  "title": "Back to the Future: The Story of Squeak, A Practical Smalltalk Written in Itself",
-  "publication_date": "October 1997",
+  "title": "Back to the Future\nThe Story of Squeak, A Practical Smalltalk Written in Itself",
+  "publication_date": "October 1997; Proceedings of the 12th ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications (OOPSLA ’97), Atlanta, Georgia, USA, pp. 318–326",
   "authors": [
     "Alan Kay",
     "Dan Ingalls",
@@ -10,26 +10,26 @@
     "Ted Kaehler"
   ],
   "keywords": [
-    "bytecode",
-    "computing-history",
-    "cross-platform",
-    "object-oriented-programming",
-    "programming-language",
+    "garbage-collection",
+    "incremental-development",
+    "multimedia",
+    "object-memory",
+    "portable-software",
     "self-hosting",
     "smalltalk",
-    "software-development",
+    "smalltalk-to-c-translation",
     "squeak",
     "virtual-machine"
   ],
   "category_path": [
     "comp_sci_fundamentals_and_history"
   ],
-  "abstract": "The Squeak programming system is an open, highly-portable Smalltalk-80 implementation whose virtual machine is written entirely in Smalltalk-80, yet is fast enough to support real-time animation and sound. We describe the design and implementation of a new Smalltalk-80 system and supporting tools that benefit from a detailed analysis of the original Smalltalk-80 implementation while showcasing new innovations aimed at portability and multimedia capabilities.",
-  "summary": "The paper titled 'Back to the Future: The Story of Squeak, A Practical Smalltalk Written in Itself' by Dan Ingalls, Ted Kaehler, John Maloney, Scott Wallace, and Alan Kay, presents a comprehensive overview of the Squeak programming system, emphasizing its self-sufficiency and portability. The virtual machine (VM) of Squeak is written entirely in Smalltalk-80, which allows for consistent development and robust performance, enabling real-time animation and sound that were significant at the time of publication in 1997. Squeak showcased important advancements in software portability and multimedia capabilities.\n\nThe authors focused on refining and expanding the original Smalltalk-80 system, resulting in an open-source platform that appeals to educators, developers, and researchers interested in object-oriented programming. The architecture and language enhancements provided by Squeak have been notably influential in the development of subsequent programming environments and educational tools. Following its release, Squeak became a cornerstone in projects aiming to utilize virtual machines that are self-hosting and capable of executing real-time operations efficiently.\n\nIn terms of influence, Squeak has inspired various projects and tools within the research community, including the development of Scratch, an educational programming language designed for children, which uses Squeak as its underlying technology. Additionally, the system's cross-platform nature has made it a model for later virtual machine designs aimed at achieving broad compatibility and ease of access.\n\nFor further exploration of Squeak's impact, one can look into how it influenced programming languages and systems that prioritize both educational and multimedia functionalities. Specific citations and sources regarding Squeak's influence in subsequent research or industry applications could not be determined from a quick search or the document itself. However, the described contributions highlight its role in advancing the development of virtual machines and educational programming tools broadly.",
+  "abstract": "Squeak is an open, highly-portable Smalltalk implementation whose virtual machine is written entirely in Smalltalk, making it easy to debug, analyze, and change. To achieve practical performance, a translator produces an equivalent C program whose performance is comparable to commercial Smalltalks.\nOther noteworthy aspects of Squeak include: a compact object format that typically requires only a single word of overhead per object; a simple yet efficient incremental garbage collector for 32-bit direct pointers; efficient bulk-mutation of objects; extensions of BitBlt to handle color of any depth and anti-aliased image rotation and scaling; and real-time sound and music synthesis written entirely in Smalltalk.",
+  "summary": "### Summary\n\nThe paper describes the design, implementation, and rapid development of Squeak, an open and portable Smalltalk-80 system whose virtual machine is written in Smalltalk itself. To obtain practical execution speed, a restricted Smalltalk subset is translated into C. This approach enabled the authors to debug and instrument the virtual machine within a Smalltalk environment while producing a compiled implementation suitable for real use.\n\nThe principal technical contributions include a compact variable-length object-header format for 32-bit direct pointers; an incremental generational garbage collector with compaction and short pauses; extensions to BitBlt for multiple color depths, image scaling, rotation, and anti-aliasing; and real-time sound synthesis implemented in Smalltalk and optionally translated into C. The paper also reports a development process in which the system became self-supporting within a few months, followed by incremental optimization and ports to multiple platforms.\n\nThe paper’s documented influence is visible in subsequent Squeak-related research and systems. Later work used Squeak as the platform for Morphic and Etoys visual-programming environments, extending the paper’s goal of making a complete, inspectable computing environment accessible to non-specialists. ([citeseerx.ist.psu.edu](https://citeseerx.ist.psu.edu/document?doi=e96b1cda79a222d3fe4abe13f7f246af510b8b07&repid=rep1&type=pdf)) Squeak also became the technical predecessor of Pharo, which was forked from Squeak in 2008 as a Smalltalk environment aimed at research and professional software development. ([rmod-files.lille.inria.fr](https://rmod-files.lille.inria.fr/Team/Texts/Papers/Fall11a-Tools2011-UndesirableCycles.pdf)) A later historical study by Dan Ingalls treats Squeak and Etoys as successive stages in the evolution of Smalltalk, documenting their continuing role in research on programming environments and personal computing. ([researchgate.net](https://www.researchgate.net/publication/342140029_The_evolution_of_Smalltalk_from_Smalltalk-72_through_Squeak)) The bibliographic record identifies the paper as an OOPSLA ’97 publication in ACM SIGPLAN Notices, volume 32, issue 10, pages 318–326. ([squeak.org](https://squeak.org/research/))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/comp_sci_fundamentals_and_history/story-of-squeak-a-practical-smalltalk-written-in-itself.pdf",
   "source_type": "pdf",
   "filepath": "comp_sci_fundamentals_and_history/story-of-squeak-a-practical-smalltalk-written-in-itself.pdf",
   "filename": "story-of-squeak-a-practical-smalltalk-written-in-itself.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:50"
 }

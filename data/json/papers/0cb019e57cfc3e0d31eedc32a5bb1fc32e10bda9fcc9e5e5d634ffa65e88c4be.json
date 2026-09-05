@@ -1,33 +1,40 @@
 {
   "uuid": "0cb019e57cfc3e0d31eedc32a5bb1fc32e10bda9fcc9e5e5d634ffa65e88c4be",
-  "title": "Advances in Quantum Machine Learning",
-  "publication_date": "2021",
+  "title": "Advances in quantum machine learning",
+  "publication_date": "December 10, 2015 (arXiv:1512.02900v1 submitted December 9, 2015)",
   "authors": [
-    "Alice Johnson",
-    "Jane Smith",
-    "John Doe"
+    "A. B. Price",
+    "E. Allen",
+    "J. C. Adcock",
+    "J. Hinchliff",
+    "M. Day",
+    "M. Johnson",
+    "S. Frick",
+    "S. Morley-Short",
+    "S. Pallister",
+    "S. Stanisic"
   ],
   "keywords": [
-    "computational-complexity",
-    "data-processing",
-    "machine-learning",
-    "machine-learning-optimization",
+    "machine-learning-algorithms",
     "quantum-algorithms",
+    "quantum-annealing",
     "quantum-computing",
-    "quantum-mechanics",
+    "quantum-deep-learning",
+    "quantum-machine-learning",
     "quantum-neural-networks",
-    "quantum-systems",
-    "quantum-theory"
+    "quantum-principal-component-analysis",
+    "quantum-random-access-memory",
+    "quantum-support-vector-machines"
   ],
   "category_path": [
     "quantum_computing"
   ],
-  "abstract": "In this paper, we explore the emerging field of quantum machine learning, which combines quantum computing and machine learning technologies to potentially revolutionize data processing. We review recent advancements, proposed algorithms, and the potential impact on various industries. Quantum machine learning promises to offer computational advantages over classical methods, but there are still significant challenges to overcome, particularly in terms of hardware limitations and algorithm development. We provide an overview of state-of-the-art quantum machine learning models, their underlying principles, and evaluate their performance against classical counterparts. The paper concludes by suggesting future research directions to address current obstacles.",
-  "summary": "This paper discusses recent advancements in the field of quantum machine learning, focusing on the integration of quantum computing with machine learning techniques. Quantum machine learning has the potential to significantly enhance data processing capabilities compared to classical methods. The paper reviews various proposed algorithms and evaluates the performance of quantum machine learning models against classical ones. Despite the promising outlook, challenges remain, particularly concerning hardware limitations and further algorithm development. \n\nAs of my current web search, there were no specific citations or further research directly referencing this particular paper. However, the general topic of quantum machine learning continues to be of significant interest in the fields of both academic research and industry, contributing to ongoing discussions around the potential breakthrough of quantum technologies.",
+  "abstract": "Here we discuss advances in the field of quantum machine learning. The following document offers a hybrid discussion; both reviewing the field as it is currently, and suggesting directions for further research. We include both algorithms and experimental implementations in the discussion. The field's outlook is generally positive, showing significant promise. However, we believe there are appreciable hurdles to overcome before one can claim that it is a primary application of quantum computation.",
+  "summary": "## Overview\n\nThis paper is an early survey and critical assessment of quantum machine learning. It distinguishes three computational settings: entirely classical learning, hybrid protocols in which quantum computation accelerates a subroutine, and protocols whose learning process has no equally effective classical counterpart. The authors review quantum approaches to neural networks, stochastic-quantum-walk associative memory, quantum deep learning, Bayesian and hidden quantum Markov models, HHL-based linear-system methods, quantum principal component analysis, nearest-centroid classification, quantum k-nearest neighbours, minimum-spanning-tree methods, and adiabatic quantum machine learning.\n\nThe paper emphasizes that claimed speedups depend on specific assumptions. In particular, state preparation, measurement and readout, data sparsity, error tolerance, matrix conditioning, and access to quantum random-access memory can determine whether an asymptotic advantage survives a full resource analysis. The authors also assess early experiments, including photonic nearest-centroid classification and an NMR-based support-vector-machine demonstration, and argue that small-scale demonstrations do not by themselves establish a practical quantum advantage.\n\nA further contribution is a proposed quantum perceptron-training approach that encodes learned weights in a quantum state and uses HHL to solve a linear system. The paper presents an exponential improvement in the number of training examples under restrictive assumptions, while acknowledging limitations involving sparsity, state preparation, output interpretation, and the existence of a perfectly consistent linear classifier.\n\n## Influence and subsequent use\n\nThe paper was subsequently cited by the 2017 *Nature* review “Quantum machine learning,” which identifies it as one of the early surveys supporting the field’s development. ([nature.com](https://www.nature.com/articles/nature23474)) It is also listed as a source in later quantum-machine-learning research, including an ECAI 2020 paper on quantum natural-language processing. ([qnlp.github.io](https://qnlp.github.io/papers/ECAI2020.pdf)) These citations document its use as an early overview of QML algorithms, implementations, and practical limitations. The paper’s metadata and abstract are corroborated by the arXiv record. ([arxiv.org](https://arxiv.org/abs/1512.02900))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/quantum_computing/advance_in_quantum_machine_learning.pdf",
   "source_type": "pdf",
   "filepath": "quantum_computing/advance_in_quantum_machine_learning.pdf",
   "filename": "advance_in_quantum_machine_learning.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:56"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:53"
 }

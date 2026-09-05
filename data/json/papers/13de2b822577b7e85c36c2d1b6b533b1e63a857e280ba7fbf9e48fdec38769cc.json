@@ -1,30 +1,31 @@
 {
   "uuid": "13de2b822577b7e85c36c2d1b6b533b1e63a857e280ba7fbf9e48fdec38769cc",
-  "title": "Continuity assessments of historical GISs: Historic thematic accuracy and data completeness",
-  "publication_date": "2021",
+  "title": "REAL-TIME DEPTH MAP ESTIMATION FROM INFRARED STEREO IMAGES OF RGB-D CAMERAS",
+  "publication_date": "17 June 2021; XXIV ISPRS Congress (2021 edition), ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences, Volume V-2-2021, pages 107–112",
   "authors": [
-    "C. Mills",
-    "H. M. F. Kingston",
-    "M. Blades",
-    "T. Ratcliffe"
+    "Hanqi Zhang",
+    "Jiageng Zhong",
+    "Jiangying Qin",
+    "Ming Li",
+    "Qi Guo",
+    "Xuan Liao"
   ],
   "keywords": [
-    "data-completeness",
-    "geographical-analysis",
-    "heritage-conservation",
-    "historical-gis",
-    "map-accuracy",
-    "thematic-accuracy"
+    "depth-map",
+    "disparity",
+    "infrared-image",
+    "rgb-d-camera",
+    "stereo-matching"
   ],
   "category_path": [
     "computer_vision"
   ],
-  "abstract": "The use of Historical GIS (HGIS) continues to prove invaluable to a range of disciplines, most notably within history. This interest brings with it new requirements for HGIS, including the success of modern HGIS-generated outputs (such as maps and statistics) being increasingly dependent on the application accuracy of their predecessors. Many current approaches to map and data quality assessment are focusing on the examination of positional accuracy. In contrast, this paper tests whether existing resources can be used in-place to assess the thematic accuracy and data completeness of historical GISs through a study of renewable energy landscapes. Using case study examples grounded in the heritage landscapes of mid-20th century Wales, this paper demonstrates the application of techniques designed to assess the continuity of landscapes. The results demonstrate the utility of using existing resources in-place and present an approach designed to encourage the preservation of thematic accuracy alongside positional accuracy and data completeness within historical GIS frameworks.",
-  "summary": "This paper discusses the importance of thematic accuracy and data completeness in Historical GISs, in contrast to the more traditionally examined positional accuracy. Through case studies of mid-20th century Welsh heritage landscapes, the study shows how existing resources can assess the continuity of historical landscapes effectively. This approach encourages preserving thematic and positional accuracy and data completeness within HGIS frameworks. \n\nA web search for citations or further research related to this paper did not yield any significant results. As such, no further influence on either academic research or industry applications is noted, possibly due to the specialized nature of the research presented.",
+  "abstract": "RGB-D cameras are novel sensing systems that can rapidly provide accurate depth information for 3D perception, among which the type based on active stereo vision has been widely used. However, there are some problems exiting in use, such as the short measurement range and incomplete depth maps. This paper presents a robust and efficient matching algorithm based on semi-global matching to obtain more complete and accurate depth maps in real time. Considering characteristics of captured infrared speckle images, the Gaussian filter is performed firstly to restrain noise and enhance the relativity. It also adopts the idea of block matching for reliability, and a dynamic threshold selection of the block size is used to adapt to various situation. Moreover, several optimizations are applied to improve precision and reduce error. Through experiments on the Intel Realsense R200, the excellent capability of our proposed method is verified.",
+  "summary": "## Paper summary\n\nThe paper addresses incomplete depth maps and limited measurement range in the Intel RealSense R200, whose commercial stereo-matching pipeline uses local Census-based matching. The authors develop a real-time infrared stereo-matching method based on semi-global matching (SGM).\n\nThe method combines several processing stages:\n\n- Gaussian filtering to reduce noise and increase similarity between the left and right infrared speckle images.\n- Mutual-information-based dynamic selection of the block size used for matching.\n- Birchfield–Tomasi matching costs augmented with horizontal Sobel-gradient information.\n- Semi-global cost aggregation to incorporate information from multiple paths while retaining real-time efficiency.\n- Uniqueness testing, subpixel interpolation, left–right consistency checking, and point-cloud growth to remove or reduce unreliable disparities.\n- Conversion of disparity to depth using the calibrated stereo relationship \\(z=fB/d\\).\n\nExperiments on three indoor scenes compare the RealSense commercial algorithm, standard SGM, and the proposed method. The proposed approach produces visually more complete depth maps, fewer abnormal values, and more complete object boundaries. In the wall-distance experiment, both methods have relative errors below 1% within 2 m; the commercial algorithm's error increases more rapidly at longer distances and it fails to produce valid data at approximately 5 m or beyond, whereas the proposed method obtains usable measurements beyond 7 m. The paper reports that Gaussian filtering increases inter-image correlation by approximately 9% and mutual information by approximately 13%. The quantitative comparison is limited by the absence of a standard ground-truth dataset: error rates for the scene comparison are obtained through manual statistics.\n\n## Evidence of subsequent influence\n\nThe publisher's metrics page records one Crossref citation for this paper: Huaizhou Li et al., “Research on 3D Reconstruction of Binocular Vision Based on Thermal Infrared,” *Sensors* (2023). That later study addresses a related problem involving low-texture infrared stereo imagery and uses preprocessing, semi-global block matching, and 3D reconstruction. The available citation record supports a documented connection to subsequent infrared stereo research, but it does not establish that the later work directly adopted this paper's complete algorithm or that the paper had measurable industry deployment. ([isprs-annals.copernicus.org](https://isprs-annals.copernicus.org/articles/V-2-2021/107/2021/index.html))",
   "raw_url": "https://isprs-annals.copernicus.org/articles/V-2-2021/107/2021/isprs-annals-V-2-2021-107-2021.pdf",
   "source_type": "external",
   "filepath": "computer_vision/README.md",
   "filename": "Realtime depth map estimation from infrared stereo images of RGB-D cameras",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:54"
 }

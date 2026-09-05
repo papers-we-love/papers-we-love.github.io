@@ -1,32 +1,32 @@
 {
   "uuid": "a3913d3136b3455fbbecb026a7add42ec1fc494cf686861d27cbe85ad33f72a3",
   "title": "Understanding the Limitations of Causally and Totally Ordered Communication",
-  "publication_date": "1994",
+  "publication_date": "December 1993; Proceedings of the 14th ACM Symposium on Operating Systems Principles (SOSP), Asheville, North Carolina, pp. 44–57. Also published in ACM SIGOPS Operating Systems Review, 27(5), December 1993.",
   "authors": [
-    "Keith Marzullo",
-    "Ken Birman"
+    "Dale Skeen",
+    "David R. Cheriton"
   ],
   "keywords": [
-    "causally-ordered-communication",
-    "communication-primitives",
-    "concurrency",
-    "distributed-algorithms",
+    "catocs",
+    "causal-ordering",
+    "distributed-state",
     "distributed-systems",
-    "fault-tolerance",
+    "end-to-end-argument",
+    "group-communication",
     "message-ordering",
-    "networked-systems",
-    "synchronization",
-    "totally-ordered-communication"
+    "replicated-data",
+    "scalability",
+    "total-ordering"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "Distributed applications often rely on causally or totally ordered communication to make the necessary synchronization possible. In fact, many researchers consider these primitives to be fundamental to the programming of fault-tolerant distributed systems. We argue that the use of these primitives is not as attractive as it might appear. Implementations generally violate scalability limitations and they can introduce performance bottlenecks unless used with great care. Moreover, programs that use these primitives can be suspiciously hard to reason about. We present examples to illustrate these issues and suggest that simpler and less subtle solutions may be preferable.",
-  "summary": "This paper, authored by Ken Birman and Keith Marzullo in 1994, explores the limitations of causally and totally ordered communication in distributed systems. It critiques these communication methods, often utilized for ensuring synchronization in distributed applications, and presents issues related to scalability and reasoning complexity. By illustrating the constraints and proposing the consideration of simpler alternatives, the paper challenges the prevailing notion of these primitives as fundamental tools for fault-tolerant distributed systems.\n\nUpon conducting a web search, the paper appears to significantly influence research on the limitations and challenges of communication ordering in distributed systems. In academia, it has been frequently cited, shedding light on the complexities and inefficiencies associated with ordered communication protocols. Specifically, it has contributed to further research in optimizing distributed algorithms and exploring alternative synchronization methods:\n\n1. **\"What Google AppEngine Needs\" by Erdil, Y. & Özgür, A.** discusses limitations in system communication methodologies. [Read more](https://yerdolch.com/appengine-limitations.pdf)\n2. **\"A Study of Ordered Communication in Distributed Services\" (2020)** examines modern distributed systems and references this paper concerning ordered communication inefficiencies.\n\nWhile the paper remains a crucial reference point in distributed systems discussions, further influences in direct industry applications appear minimal beyond its academic citations and discussions.",
+  "abstract": "Causally and totally ordered communication support (CATOCS) has been proposed as important to provide as part of the basic building blocks for constructing reliable distributed systems. In this paper, we identify four major limitations to CATOCS, investigate the applicability of CATOCS to several classes of distributed applications in light of these limitations, and the potential impact of these facilities on communication scalability and robustness. From this investigation, we find limited merit and several potential problems in using CATOCS. The fundamental difficulty with the CATOCS is that it attempts to solve state problems at the communication level in violation of the well-known “end-to-end” argument.",
+  "summary": "The paper argues that causally and totally ordered communication support (CATOCS) provides ordering guarantees at the communication level, whereas distributed applications generally require consistency guarantees over application state. It identifies four principal limitations: CATOCS cannot detect semantic causality arising through hidden channels; it cannot serialize groups of operations or support atomic application-level updates; it cannot express many semantic ordering requirements, such as those involving computed data, linearizability, or serializability; and it introduces substantial overhead without a corresponding efficiency advantage over state-level mechanisms. The authors examine news dissemination, trading systems, global predicate evaluation, transactions, replicated data, large-scale naming, and real-time systems, arguing that versions, timestamps, transactions, locks, snapshots, and application-specific state management are generally more appropriate. They further argue that CATOCS buffering and membership-management costs can scale poorly, potentially approaching quadratic growth with group size. The proposed design principle is to solve state problems at the state level, using durable state metadata and object-oriented abstractions rather than embedding broad consistency semantics in the communication substrate.\n\nThe paper also generated a documented contemporaneous debate: Ken Birman published a response defending and clarifying the CATOCS/Isis approach, while Robbert van Renesse published “Why Bother with CATOCS?” in the same Operating Systems Review issue. ([researchgate.net](https://www.researchgate.net/publication/2604224_A_Response_to_Cheriton_and_Skeen%27s_Criticism_of_Causal_and_Totally_Ordered_Communication)) Its arguments have continued to be used as teaching material in distributed-systems courses and reading lists, particularly in discussions of causal ordering, virtual synchrony, replication, and the placement of functionality between communication and state-management layers. ([courses.cs.duke.edu](https://courses.cs.duke.edu/fall07/cps212/topics.html))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/understanding-the-limitations-of-causally-and-totally-ordered-communication.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/understanding-the-limitations-of-causally-and-totally-ordered-communication.pdf",
   "filename": "understanding-the-limitations-of-causally-and-totally-ordered-communication.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

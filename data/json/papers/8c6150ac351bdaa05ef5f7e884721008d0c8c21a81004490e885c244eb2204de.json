@@ -1,32 +1,32 @@
 {
   "uuid": "8c6150ac351bdaa05ef5f7e884721008d0c8c21a81004490e885c244eb2204de",
-  "title": "A Poor Man's Concurrency Monad",
-  "publication_date": "2001",
+  "title": "A Poor Man’s Concurrency Monad",
+  "publication_date": "May 1999 (Journal of Functional Programming, volume 9, issue 3, pp. 313–323; published online May 1, 1999)",
   "authors": [
-    "Adrian Hey"
+    "Koen Claessen"
   ],
   "keywords": [
-    "concurrency",
+    "concurrency-monad",
+    "concurrent-state",
+    "continuations",
+    "cooperative-concurrency",
     "functional-programming",
     "haskell",
-    "haskell-libraries",
-    "lazy-evaluation",
-    "lightweight-threads",
-    "monads",
-    "non-blocking-io",
-    "programming-model",
-    "software-engineering"
+    "infinite-lists",
+    "monad-transformers",
+    "mvars",
+    "round-robin-scheduling"
   ],
   "category_path": [
     "languages",
     "haskell"
   ],
-  "abstract": "This paper introduces a concurrency monad library for Haskell, which is implemented using existing non-blocking I/O facilities in the Glasgow Haskell Compiler (GHC) runtime system. The library is specifically targeted towards lightweight concurrency and cooperative multitasking. It is an attractive option for Haskell programmers, in contrast to relying on heavy-weight operating system threads, which are much more resource-intensive.",
-  "summary": "The paper titled \"A Poor Man's Concurrency Monad\" introduces a concurrency library for the Haskell programming language. Authored by Adrian Hey in 2001, this work presents a concurrency monad that utilizes non-blocking I/O facilities of the Glasgow Haskell Compiler (GHC) runtime system to enable lightweight concurrency and cooperative multitasking in Haskell programs.\n\nThe core contribution of this paper is the design and implementation of a library that provides a simpler alternative to operating system-level threads. This approach is particularly useful in Haskell, due to its lazy evaluation strategy and functional nature, enhancing the ability to manage concurrent operations without incurring significant resource costs typically associated with traditional threading models.\n\nUpon conducting a quick review of this paper's influence, there is limited evidence of direct citations or widespread industrial adoption. However, it provides foundational concepts that complement ongoing discussions and innovations in the Haskell ecosystem regarding concurrency and functional programming models. Despite the lack of direct citations, this paper is likely to serve as an insightful resource for researchers and practitioners focusing on lightweight concurrency solutions in Haskell.",
+  "abstract": "Without adding any primitives to the language, we define a concurrency monad transformer in Haskell. This allows us to add a limited form of concurrency to any existing monad. The atomic actions of the new monad are lifted actions of the underlying monad. Some extra operations, such as fork, to initiate new processes, are provided. We discuss the implementation, and use some examples to illustrate the usefulness of this construction.",
+  "summary": "The paper develops a concurrency monad transformer, written entirely within Haskell and parameterized over an arbitrary underlying monad. Its central idea is to represent computations in continuation-passing style, so that a computation can be suspended by retaining its continuation and resumed later.\n\nThe transformer introduces an `Action` datatype with three cases: an atomic underlying-monad computation, a fork of two processes, and termination. A round-robin interpreter maintains a list of active processes, executes one atomic action at a time, places its continuation at the end of the process list, and expands forks into additional processes. Consequently, lifted operations from the underlying monad become atomic with respect to the simulated scheduler.\n\nThe construction is demonstrated with several examples. A writer monad produces interleaved output from concurrently running processes; changing the granularity of the lifted write operation changes the possible interleavings. The same mechanism can merge an infinite list of infinite lists by assigning each component list to a process. The paper also shows how mutable state can be lifted into the concurrent setting, including an `MVar`-like abstraction whose reads may block until a value becomes available.\n\nThe approach is intentionally limited: it simulates concurrency through cooperative interleaving rather than implementing real preemptive parallelism. An atomic action that does not terminate can prevent the entire computation from progressing, and the simple blocking implementation for shared variables uses inefficient busy-waiting. The paper reports that the technique was also applied to extend the TkGofer graphical system.\n\nThe supplied scan contains a first-page header referring to “January 1993,” but the journal record identifies the published article as a May 1999 paper in the *Journal of Functional Programming*. Cambridge’s bibliographic record reports 50 Crossref citations and lists later work concerning concurrent Haskell debugging, lightweight GHC concurrency primitives, Lwt, and Scala Actors among the citing publications. ([doi.org](https://doi.org/10.1017/S0956796899003342)) The paper has also been used directly as teaching material in a University of Pennsylvania course on Haskell concurrency, where it serves as the basis for constructing a simple concurrent monad. ([seas.upenn.edu](https://www.seas.upenn.edu/~cis5520/23fa/lectures/soln/12-concurrency/Concurrency.html))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages/haskell/a-poor-mans-concurrency-monad.pdf",
   "source_type": "pdf",
   "filepath": "languages/haskell/a-poor-mans-concurrency-monad.pdf",
   "filename": "a-poor-mans-concurrency-monad.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

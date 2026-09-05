@@ -1,32 +1,25 @@
 {
   "uuid": "6a67d6fb597ebe1d7ed212f462755c239670fbef49f158bc4dc38ad4ede3b778",
-  "title": "Optimism in Parallelism",
-  "publication_date": "1981",
+  "title": "Optimistic replication",
+  "publication_date": "March 2005, ACM Computing Surveys, Volume 37, Number 1, pages 42–81",
   "authors": [
-    "B. Liskov",
-    "Herlihy"
+    "Marc Shapiro",
+    "Yasushi Saito"
   ],
   "keywords": [
-    "contention-management",
-    "database-systems",
     "distributed-systems",
-    "lock-based-mechanisms",
-    "optimistic-concurrency-control",
-    "parallel-computing",
-    "performance-evaluation",
-    "resource-contention",
-    "synchronization",
-    "transaction-processing"
+    "internet",
+    "replication"
   ],
   "category_path": [
     "datastores"
   ],
-  "abstract": "This paper will survey the history and current status of the use of optimistic methods in computing. In particular, we consider concurrency control mechanisms for database systems, proposing non-blocking techniques for optimistic concurrency control. We evaluate their performance, reviewing how these techniques can mitigate resource contention when lock-based mechanisms are inefficient or impractical.",
-  "summary": "The paper titled \"Optimism in Parallelism\" by Herlihy and Liskov explores the use of optimistic methods, specifically in the area of concurrency control within database systems. This approach is proposed as a solution to resource contention issues that occur with traditional lock-based mechanisms, especially in environments characterized by high levels of contention or when blocking operations hinder performance.\n\nThe evaluation and discussion in the paper highlight the circumstances under which optimistic methods can outperform classical locking techniques. These findings have influenced the design of non-locking transaction mechanisms in modern distributed databases. This insight is particularly valuable for distributed systems, where resource contention is prevalent. \n\nWhile there is limited information on the direct impact of this paper through citations or industrial implementation, the concepts of optimistic concurrency control discussed in the paper have become foundational in further research. Such concepts are often applied in systems that require high availability and low latency, including distributed database management systems.",
+  "abstract": "Data replication is a key technology in distributed data sharing systems, enabling higher availability and performance. This paper surveys optimistic replication algorithms that allow replica contents to diverge in the short term, in order to support concurrent work practices and to tolerate failures in low-quality communication links.\n\nThe importance of such techniques is increasing as collaboration through wide-area and mobile networks becomes popular.\n\nOptimistic replication techniques are different from traditional “pessimistic” ones. Instead of synchronous replica coordination, an optimistic algorithm propagates changes in the background, discovers conflicts after they happen and reaches agreement on the final contents incrementally.\n\nWe explore the solution space for optimistic replication algorithms. This paper identifies key challenges facing optimistic replication systems — ordering operations, detecting and resolving conflicts, propagating changes efficiently, and bounding replica divergence — and provides a comprehensive survey of techniques developed for addressing these challenges.",
+  "summary": "The paper provides a systematic survey and taxonomy of optimistic replication, organizing the design space around master placement, state versus operation transfer, scheduling, conflict management, propagation, and consistency guarantees. Its treatment of happens-before relations, vector clocks, epidemic propagation, session guarantees, and replica-divergence bounds became a useful conceptual reference for later work on weakly consistent replicated systems.\n\nSubsequent research on replicated data types and CRDTs cites the paper as background when describing optimistic replication, convergence, commutativity, and conflict management. Later CRDT surveys and foundational papers connect these ideas to convergent and commutative replicated data types, extending the paper’s emphasis on semantic operations and eventual convergence. ([repositorio.inesctec.pt](https://repositorio.inesctec.pt/server/api/core/bitstreams/d83841fa-9642-4162-aca9-50a7ae7b18e3/content))\n\nThe paper also remains used as a foundational teaching reference for large-scale distributed systems and replication, including curricula covering logical clocks, consistency models, causal dissemination, and CRDTs. ([mei.di.uminho.pt](https://mei.di.uminho.pt/courses/lsds/))\n\nThe publication metadata is independently listed as March 2005 in *ACM Computing Surveys*, volume 37, issue 1, pages 42–81. ([cir.nii.ac.jp](https://cir.nii.ac.jp/crid/1363670319527160192))",
   "raw_url": "http://pages.cs.wisc.edu/~remzi/Classes/739/Spring2004/Papers/optimistic-survey.pdf",
   "source_type": "external",
   "filepath": "datastores/README.md",
   "filename": "Optimistic replication",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:54"
 }

@@ -1,35 +1,39 @@
 {
   "uuid": "0d685a3c1190fe1f9b364d57fa5682ad08a978f8bcbf2dbfa4a65fed8f1eb9e8",
-  "title": "Prototyping Tools for Smart Object Applications",
-  "publication_date": "2017-02-25",
+  "title": "Unikernels Everywhere: The Case for Elastic CDNs",
+  "publication_date": "April 8–9, 2017; Proceedings of the 13th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments (VEE ’17), Xi’an, China. Published in ACM SIGPLAN Notices, volume 52, issue 7, on July 31, 2017.",
   "authors": [
-    "Alireza Sahami Shirazi",
-    "Bernd Kloeckl",
-    "David Bell",
-    "James Scott",
-    "Otto Gaens"
+    "Anton Ivanov",
+    "Felipe Huici",
+    "Filipe Manco",
+    "Florian Schmidt",
+    "Jose Mendes",
+    "Kenichi Yasukata",
+    "Michio Honda",
+    "Simon Kuenzer",
+    "Yuri Volchkov"
   ],
   "keywords": [
-    "application-development",
-    "interaction-design",
-    "interface-design",
-    "iot",
-    "prototyping-tools",
-    "sensor-integration",
-    "smart-object-applications",
-    "toolkit",
-    "ubiquitous-computing",
-    "usability"
+    "cdn-simulation",
+    "content-delivery-networks",
+    "edge-computing",
+    "elastic-cdns",
+    "minicache",
+    "network-function-virtualization",
+    "unikernels",
+    "video-streaming",
+    "virtualization",
+    "xen"
   ],
   "category_path": [
     "unikernels"
   ],
-  "abstract": "The development of applications for smart objects is a challenging task as it typically requires expertise in a number of areas including electronics, programming, and interaction design. This paper describes a system that aims to simplify the creation of smart object applications by allowing developers to work at higher levels of abstraction, using a graphical programming approach with a custom toolkit. The toolkit provides building blocks to develop applications for a number of different smart object types, and supports sensor integration, user interface creation, and behavior specification. We report on our experiences with the toolkit, showing how it facilitated the creation of a number of example applications by developers without need for additional programming support.",
-  "summary": "This paper focuses on simplifying the development of smart object applications by introducing a system that uses a graphical programming approach and a custom toolkit. It addresses the challenges faced due to the need for interdisciplinary expertise, providing consistency through intuitive interface design and integration of sensors. The toolkit allows developers to create applications without requiring in-depth programming knowledge. The findings from this paper demonstrate the efficacy of the toolkit through various example applications. This research has influenced the fields of ubiquitous computing and Internet of Things (IoT) by providing a practical framework for non-experts to develop smart object applications. While the paper does not have a significant citation index indicating broader impact, the approach has relevance to those furthering prototyping tools and frameworks in IoT development. No major direct follow-up studies or industry adoptions were identified during web searches.",
+  "abstract": "Video streaming dominates the Internet’s overall traffic mix, with reports stating that it will constitute 90% of all consumer traffic by 2019. Most of this video is delivered by Content Delivery Networks (CDNs), and, while they optimize QoE metrics such as buffering ratio and start-up time, no single CDN provides optimal performance. In this paper we make the case for elastic CDNs, the ability to build virtual CDNs on-the-fly on top of shared, third-party infrastructure at a scale. To bring this idea closer to reality we begin by large-scale simulations to quantify the effects that elastic CDNs would have if deployed, and build and evaluate MiniCache, a specialized, minimalistic virtualized content cache that runs on the Xen hypervisor. MiniCache is able to serve content at rates of up to 32 Gb/s and handle up to 600K reqs/sec on a single CPU core, as well as boot in about 90 milliseconds on x86 and around 370 milliseconds on ARM32.",
+  "summary": "## Summary\n\nThe paper proposes **elastic CDNs**: virtual content-delivery networks that can be instantiated dynamically on shared, third-party infrastructure and placed near users according to geography and demand. It introduces **CDNSim**, a flow-level simulator for evaluating large-scale CDN deployments, and **MiniCache**, a specialized content-cache unikernel based on MiniOS and Xen. The system targets wide deployment across x86 and ARM platforms, strong tenant isolation, rapid scale-out and scale-in, high consolidation, and high HTTP performance. The reported prototype boots in approximately 90 milliseconds on x86 and 370 milliseconds on ARM32, achieves up to 32 Gb/s of content throughput and 600K requests per second on one CPU core, and can operate with a minimal memory footprint. The implementation also includes optimizations to Xen, MiniOS, lwIP, and virtualized I/O.\n\nSubsequent work adopted the paper’s central premise of using lightweight unikernel-based virtual machines for dynamic content distribution. A 2018 study proposed an elastic content-distribution platform in which small unikernel VMs host individual or small groups of videos and are created or removed according to detected changes in content popularity. ([swn.uom.gr](https://swn.uom.gr/storage/app/media/publications/conferences/2018/ew2018.pdf)) Related research on virtualized CDN architectures, including MOSTO, explored dynamic CDN services using SDN/NFV techniques and cited this work as part of the emerging direction toward programmable and virtualized content delivery. ([arxiv.org](https://arxiv.org/abs/1709.04437)) Later unikernel systems research, including Unikraft, also lists the paper among prior work motivating specialized, rapidly deployable unikernels for edge and cloud environments. ([research.manchester.ac.uk](https://research.manchester.ac.uk/files/221574616/unikraft_emsoft20.pdf)) The evidence indicates influence primarily on research into elastic content delivery, edge-cloud orchestration, and specialized virtualization rather than documented large-scale commercial deployment of MiniCache itself. ([cordis.europa.eu](https://cordis.europa.eu/project/id/777067/results/es))",
   "raw_url": "https://dl.acm.org/citation.cfm?id=3050757",
   "source_type": "external",
   "filepath": "unikernels/README.md",
   "filename": "Unikernels Everywhere: The Case for Elastic CDNs",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:05"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:57"
 }

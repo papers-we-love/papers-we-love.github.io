@@ -1,31 +1,24 @@
 {
   "uuid": "0b9ebf31f37953c61488d34a0801569697ef36bff612c5cf5cdd0d0027a410cb",
   "title": "Composable and Compilable Macros: You Want it When?",
-  "publication_date": "2004",
+  "publication_date": "October 4–6, 2002; Proceedings of the ACM SIGPLAN International Conference on Functional Programming (ICFP ’02), Pittsburgh, Pennsylvania, USA",
   "authors": [
     "Matthew Flatt"
   ],
   "keywords": [
-    "code-generation",
-    "compilation",
-    "compiler-design",
-    "compilers",
-    "composability",
-    "lisp",
-    "macro-expansion",
-    "macro-systems",
+    "language-tower",
     "macros",
-    "programming-languages"
+    "modules"
   ],
   "category_path": [
     "languages-theory"
   ],
-  "abstract": "This paper proposes the definition of macros implying systematic syntactic and semantic verifications and compilations to enforce a set of well-formedness criteria for the new syntactic structures they introduce. A direct application is on Lisp macros, like LOOP, that could then be correctly assembled instead of being handcrafted, with greater reliance on the control structure and the namespace in which they operate.",
-  "summary": "The paper \"Composable and Compilable Macros: You Want it When?\" by Matthew Flatt investigates the potential for macros to introduce new syntactic structures that can be verified and compiled systematically. The study focuses on Lisp macros to enhance their reliability and correctness, which is crucial for robust coding practices. No direct citations or influences in subsequent research or industry applications were found during a web search. The paper appears to provide foundational concepts around macro systems in programming languages but doesn't appear to have significantly impacted further research in a way that's readily visible online.",
+  "abstract": "Many macro systems, especially for Lisp and Scheme, allow macro transformers to perform general computation. Moreover, the language for implementing compile-time macro transformers is usually the same as the language for implementing run-time functions. As a side effect of this sharing, implementations tend to allow the mingling of compile-time values and run-time values, as well as values from separate compilations. Such mingling breaks programming tools that must parse code without executing it. Macro implementors avoid harmful mingling by obeying certain macro-definition protocols and by inserting phase-distinguishing annotations into the code. However, the annotations are fragile, the protocols are not enforced, and programmers can only reason about the result in terms of the compiler’s implementation. MzScheme—the language for implementing the macro and module system of the PLT Scheme tool suite—addresses the problem through a macro system that separates compilation without sacrificing the expressiveness of macros.",
+  "summary": "### Summary\n\n- The paper argues that expressive macro systems must enforce a strict separation between compile-time and run-time computation, as well as between the compile-time states associated with separate module compilations. Without this separation, program behavior can depend on compilation order, interactive execution, or accidental availability of bindings from the wrong phase.\n- MzScheme addresses the problem through explicit module dependencies and phase-specific imports. `require` supplies run-time bindings, while `require-for-syntax` supplies bindings used to implement macros. Modules may be instantiated separately for different phases and different compilations, preventing compile-time state from leaking across compilation boundaries.\n- The design preserves hygienic lexical scope and supports macro-generating macros. Because the phase of an identifier introduced by a macro may depend on later expansion, identifiers carry phase-specific lexical information. This allows the system to detect out-of-phase references and reject them instead of silently accepting behavior that only works under interleaved compilation and execution.\n- The paper illustrates the approach with cooperating `define-record` and `record-switch` macros. Compile-time record metadata is registered through compile-time code attached to the defining module, while run-time constructors, predicates, and field selectors are generated separately. This makes compile-time validation reliable under separate compilation.\n- A formal model captures module visiting, invocation, phase shifting, lexical binding, macro expansion, and compilation. Its key guarantees are that state changes during compilation do not affect other compilations or final execution, and that compile-time code can be removed from the final executable without changing run-time behavior.\n- The work influenced the design and explanation of the Racket macro system. Racket educational material explicitly cites the paper as an explanation of compile-time versus run-time behavior, and later Racket research on cooperating macros, language-oriented programming, and DSL construction cites it as prior work. These references support a direct conceptual continuation, although the available sources do not establish a separate quantitative measure of industrial adoption. ([greghendershott.com](https://www.greghendershott.com/fear-of-macros/References_and_Acknowledgments.html))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages-theory/composable-and-compilable-macros-you-want-it-when.pdf",
   "source_type": "pdf",
   "filepath": "languages-theory/composable-and-compilable-macros-you-want-it-when.pdf",
   "filename": "composable-and-compilable-macros-you-want-it-when.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

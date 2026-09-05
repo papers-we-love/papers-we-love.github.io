@@ -1,35 +1,33 @@
 {
   "uuid": "111435fbd7f1548b1d30cd661293168791f4770ee8b4994b6ed0d5f1263cbf93",
-  "title": "VLL: A Lock Manager Redesign for Main Memory Database Systems",
-  "publication_date": "2013",
+  "title": "Lightweight Locking for Main Memory Database Systems",
+  "publication_date": "2012; Proceedings of the VLDB Endowment, Volume 6, Number 2, pages 145–156. The paper was presented at the 39th International Conference on Very Large Data Bases, August 26–30, 2013, Riva del Garda, Trento, Italy.",
   "authors": [
+    "Alexander Thomson",
     "Daniel J. Abadi",
-    "Hyeontaek Lim",
-    "John A. Schuhknecht",
-    "Mohammad F. Mokbel",
-    "Songyun Duan"
+    "Kun Ren"
   ],
   "keywords": [
-    "concurrency",
     "concurrency-control",
-    "data-management",
-    "database-systems",
-    "high-performance",
-    "in-memory-database",
-    "latency-reduction",
-    "lock-management",
-    "main-memory-database",
+    "deterministic-databases",
+    "distributed-systems",
+    "lightweight-locking",
+    "lock-manager",
+    "main-memory-databases",
+    "multi-core-systems",
+    "scalable-transactions",
+    "selective-contention-analysis",
     "transaction-processing"
   ],
   "category_path": [
     "datastores"
   ],
-  "abstract": "Main memory database systems (MMDBs) achieve high performance by storing all data in main memory and thereby eliminating disk I/O. However, such high performance is only reached if concurrency control mechanisms (such as locking) are also optimized for main memory. In this paper, we introduce VLL, a new lock manager designed specifically for optimized performance in MMDBs. Unlike traditional lock managers that use latches to provide performance isolation, VLL instead relies on a very-late-locking mechanism in which locks are only set when they are absolutely necessary, and they are released as soon as they are no longer needed. As a result, VLL can achieve lower lock contention and higher concurrency compared to traditional approaches. We demonstrate that VLL provides significantly improved performance in a variety of applications and workloads in both single-node and distributed settings. Our implementation of VLL achieves up to an order of magnitude performance improvement over traditional lock managers in these environments.",
-  "summary": "The paper \"VLL: A Lock Manager Redesign for Main Memory Database Systems\" explores the redesign of lock management for main memory database systems, emphasizing a new mechanism called Very-Late-Locking (VLL). This approach postpones locking until it is needed, reducing lock contention and enhancing concurrency. Such innovation is essential for optimal performance in systems where all data resides in main memory. The authors demonstrate notable performance improvements with VLL across various workloads.\n\nIn terms of impact, the concept of VLL has influenced further research into optimizing concurrency control mechanisms in database systems, particularly those employing in-memory data processing. The approach has been referenced in subsequent work, including advancements in transactional memory systems and high-frequency trading platforms where latency reduction is crucial.\n\nAdditional research citing this work includes:\n1. He, Y., Lee, R. Y., & Luo, J. (2019). Optimization Techniques for Big Data Processing in In-Memory Databases. ACM Transactions on Database Systems. [Link](https://dl.acm.org/doi/10.1145/3322192)\n2. Kimura, H. (2015). FOEDUS: OLTP Engine for a Thousand Cores and NVRAM. In Proceedings of the ACM SIGMOD Conference. [Link](https://dl.acm.org/doi/10.1145/2723372.2749438)\n3. Lahiri, T., & Sudarshan, S. (2014). Concurrency Control in High-Performance Databases. IEEE Data Engineering Bulletin. [Link](http://sites.computer.org/debull/A14mar/p8.pdf)\n\nFurther research and citations are related to improving transactional throughput and reducing latency in distributed environments. The importance of efficient lock management continues to be a topic of interest in computer science and database engineering.",
+  "abstract": "Locking is widely used as a concurrency control mechanism in database systems. As more OLTP databases are stored mostly or entirely in memory, transactional throughput is less and less limited by disk IO, and lock managers increasingly become performance bottlenecks.\n\nIn this paper, we introduce very lightweight locking (VLL), an alternative approach to pessimistic concurrency control for main-memory database systems that avoids almost all overhead associated with traditional lock manager operations. We also propose a protocol called selective contention analysis (SCA), which enables systems implementing VLL to achieve high transactional throughput under high contention workloads. We implement these protocols both in a traditional single-machine multi-core database server setting and in a distributed database where data is partitioned across many commodity machines in a shared-nothing cluster. Our experiments show that VLL dramatically reduces locking overhead and thereby increases transactional throughput in both settings.",
+  "summary": "### Main contribution\nThe paper proposes **very lightweight locking (VLL)** for main-memory database systems. Instead of maintaining a centralized hash table containing per-record lock queues, VLL stores two counters with each record: one for exclusive-lock requests and one for shared-lock requests. Transactions request their complete read and write sets atomically, and a partition-local transaction queue determines execution order and prevents deadlock.\n\nVLL substantially reduces lock-management work by avoiding linked-list operations, lock-table lookups, and much of the associated latching and cache-miss overhead. Its principal limitation is that the compact counters do not preserve enough dependency information to identify every transaction that could safely run. **Selective contention analysis (SCA)** addresses this limitation by reconstructing relevant conflicts only when the system would otherwise be idle or unable to make progress.\n\nThe evaluation reports approximately 2% locking overhead for VLL versus approximately 21% for traditional two-phase locking at low contention. Isolated per-transaction locking costs were reported as 20.13 microseconds for traditional 2PL, 20.16 microseconds for deterministic Calvin locking, 1.8 microseconds for multi-threaded VLL, and 0.71 microseconds for single-threaded VLL. Under workloads permitting deadlocks, VLL with SCA exceeded traditional 2PL by at least 163% in most tested cases and by as much as 18× at extreme contention. In distributed experiments, VLL with SCA achieved similar scalability to Calvin, outperformed Calvin by up to 33% in some low-contention configurations, and substantially outperformed serial H-Store-style execution as multi-partition transactions increased.\n\n### Subsequent influence\nThe work was extended into a 2015 *VLDB Journal* article, which generalized VLL and SCA to range locking through the VLLR design. ([vldb.org](https://www.vldb.org/vldb_journal/index.php?id=1342&option=com_article_manager&view=article)) A later 2021 study on dependence-cognizant locking explicitly builds on VLL and SCA, implements its alternative locking design in Calvin, and evaluates it against VLL/SCA in multicore and shared-nothing database settings. ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/10.1155/2021/6654461)) The available evidence indicates continued academic follow-up and algorithmic extensions; the search did not identify a clearly documented commercial database product adoption of VLL itself.",
   "raw_url": "http://cs-www.cs.yale.edu/homes/dna/papers/vll-vldb13.pdf",
   "source_type": "external",
   "filepath": "datastores/README.md",
   "filename": "Lightweight Locking for Main Memory Database Systems",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:54"
 }

@@ -1,31 +1,31 @@
 {
   "uuid": "0349ac4323f083108c0a122cfc60d92bbca297e4a29a46d6d18e4eca70798414",
   "title": "Database Metatheory: Asking the Big Queries",
-  "publication_date": "2011",
+  "publication_date": "September 1995 (SIGACT News, Volume 26, Number 3, pp. 13–30; based on the author’s invited talk at PODS ’95, May 22–25, 1995)",
   "authors": [
-    "Val Tannen"
+    "Christos H. Papadimitriou"
   ],
   "keywords": [
-    "algebra",
-    "computational-complexity",
     "database-systems",
     "database-theory",
-    "databases",
-    "information-integration",
-    "logic",
-    "metatheory",
-    "query-languages",
-    "semantics"
+    "falsifiability",
+    "negative-results",
+    "paradigms",
+    "query-optimization",
+    "relational-model",
+    "scientific-revolutions",
+    "theoretical-computer-science",
+    "theory-practice"
   ],
   "category_path": [
     "datastores"
   ],
-  "abstract": "This paper addresses the synthesis of recent and older results in at least three areas of database metatheory, asking the big questions and describing the shape of the answers. First, the emphasis on languages with enough ex- pressive power to ask any query is a language-theoretic manifestation of Godel’s incompleteness theorems. Next is the \"one size does not fit all\" design principle in database systems, viewed as extensions to the relational model. Finally, it discusses the information integration problem, focusing on creating a single view of data distributed across different sources.",
-  "summary": "The paper titled \"Database Metatheory: Asking the Big Queries\" by Val Tannen, published in 2011, explores the synthesis of results in several areas of database metatheory. It emphasizes the limitations and expressive power of query languages, drawing parallels to Gödel's incompleteness theorems. Additionally, it highlights the \"one size does not fit all\" principle in database design, advocating for extensions to the relational model. Finally, the paper discusses the problem of information integration, focusing on creating unified views of distributed data sources.\n\nIn terms of influence, there does not appear to be significant direct citation or impact of this particular paper within subsequent literature or industry applications that are easily identifiable through a cursory web search. The key ideas, however, resonate with ongoing discussions and research in database theory and information integration, which continue to be pertinent topics in both academia and the data industry.",
+  "abstract": "Is “database theory” an oxymoron? Or is it a platitude? What is the fitness measure that decides the survival of ideas (and areas) in mathematics, in applied science, and in computer science? Which ideas from database theory during the past twenty-five years have influenced research in other fields of computer science? How many were encapsulated in actual products? Was the relational model the only true paradigm shift in computer science? Is applicability the only and ultimate justification of theoretical research in an applied science? Are applicability pressures really exogenous and unwelcome? Are negative results appropriate goals of theoretical research in an applied science—or are they the only possible such research goals? If scientific theories must be refutable, what are the “hard facts” that provide the possibility of refutation in the case of computer science?",
+  "summary": "### Overview\n\nPapadimitriou’s essay is a metatheoretical examination of database theory and its relationship to computer science practice. It asks how theoretical work should be evaluated in an applied discipline, whether applicability is an adequate criterion for judging theory, and what constitutes empirical or refutable evidence in computer science.\n\nThe paper distinguishes several functions of theory: constructing mathematical models of artifacts, synthesizing algorithms and representational schemes, predicting experimental outcomes, and exploring new conceptual possibilities. It argues that both positive results and negative results can be scientifically valuable. Positive results may lead to systems or design techniques, while negative results identify inherent limitations and prevent effort from being directed toward impossible or inappropriate goals.\n\nUsing Thomas Kuhn’s account of paradigms, the paper describes scientific development as a progression from immature science to normal science, followed by crisis and, potentially, revolution. In database research, the relational model is presented as the clearest example of a paradigm shift. The paper also models applied science as a network connecting theory and practice: a healthy field has substantial connectivity between theoretical questions and practical systems, whereas a crisis can arise when theory and practice become globally decoupled even if local research activity remains productive.\n\nThe historical discussion evaluates database-theoretic contributions including the relational model, normalization and dependencies, query optimization, concurrency control, deductive databases, and related areas. The central conclusion is that database theory should not be judged solely by immediate incorporation into products. Its influence may be direct, through system designs and experiments, or indirect, through models, abstractions, limitations, and research questions that reshape later work.\n\n### Documented influence and later use\n\nThe paper was subsequently used as a reference point in discussions of the relationship between database theory and systems research. A later survey on database theory and XML explicitly characterizes it as a thought-provoking analysis of the field’s condition and theory–practice relationship, while discussing the later emergence of areas that had limited industry influence. ([csd.uoc.gr](https://www.csd.uoc.gr/~hy561/Data/Papers/dbtheory-XML-sigmodrecord98.pdf))\n\nIt has also been preserved in database-systems reading lists and in university teaching materials as a work on the role of theory, falsifiability, paradigms, and the theory–practice relationship. ([redbook.cs.berkeley.edu](https://redbook.cs.berkeley.edu/bib3.html)) A software-industry white paper later applied the paper’s concepts of scientific crisis and theory–practice decoupling to software engineering, citing Papadimitriou’s work as part of that framework. ([nist.gov](https://www.nist.gov/system/files/documents/2017/05/09/163_our_changing_world_of_the_software_industry.pdf))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/datastores/database-metatheory--asking-the-big-queries.pdf",
   "source_type": "pdf",
   "filepath": "datastores/database-metatheory--asking-the-big-queries.pdf",
   "filename": "database-metatheory--asking-the-big-queries.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:51"
 }

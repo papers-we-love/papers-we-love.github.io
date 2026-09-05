@@ -1,33 +1,36 @@
 {
   "uuid": "d54a1c2167d6205b653466a184a46332dae7778852d5a26e3602608bb5e2b6c1",
-  "title": "Towards Understanding the Nature of Architectural Problems",
-  "publication_date": "2004",
+  "title": "Two Years of Experience with a µ-Kernel Based OS",
+  "publication_date": "April 1991, ACM SIGOPS Operating Systems Review, volume 25, issue 2, pages 51–62",
   "authors": [
-    "Carnegie Mellon University Software Engineering Institute",
-    "M. P. Singh",
-    "Robert L. Nord"
+    "Dietmar Heinrichs",
+    "Gyula Szalay",
+    "Jochen Liedtke",
+    "Rudolf Ruland",
+    "Ulrich Bartling",
+    "Uwe Beyer"
   ],
   "keywords": [
-    "architectural-decisions",
-    "architectural-problems",
-    "architectural-styles",
-    "design-patterns",
-    "problem-analysis",
-    "software-architecture",
-    "software-design",
-    "software-engineering",
-    "software-systems",
-    "system-design"
+    "dataspaces",
+    "file-systems",
+    "inter-process-communication",
+    "kernel-design",
+    "l3-operating-system",
+    "microkernels",
+    "operating-systems",
+    "systems-software",
+    "tasks-and-threads",
+    "user-level-device-drivers"
   ],
   "category_path": [
     "unikernels"
   ],
-  "abstract": "This paper reports initial work investigating ways to characterize and understand problems of software architecture. We identify elements of architectural problems, such as requirements and technological constraints, and show how they can be used to define the solution domain. We propose a framework that organizes architectural problems based on notions of clarity and difficulty. We further illustrate the framework with examples, in the hope that it will lead to useful methodologies for architectural problem analysis.",
-  "summary": "This paper, \"Towards Understanding the Nature of Architectural Problems\", was published in 2004 by Robert L. Nord and M. P. Singh. It explores the characterization and understanding of software architectural problems. The authors identify key elements, including requirements and technological constraints, that define the domain of these problems. They propose a framework for organizing architectural problems based on clarity and difficulty, supported by examples.\n\nThe paper does not appear to have gained significant attention in subsequent research or industry applications, likely due to its theoretical nature and the niche focus of software architecture problem characterization. A search for citations related to this paper shows limited direct applications or further research directly referencing this work. However, the concepts may have subtly influenced later frameworks and methodologies in the field of software architecture, reflecting its foundational ideas in addressing architectural issues.",
+  "abstract": "This paper describes the basic components of the L3 operating system and the experiences of the first two years using it. The system results from scientific research, but is addressed to commercial application. It is based on a small kernel handling tasks, threads and dataspaces. User level device drivers and file systems are described as examples of flexible OS services realized outside the kernel.",
+  "summary": "- The paper reports on the design and early operational experience of the L3 operating system. Its central architecture places a small kernel underneath user-level operating-system services, including device drivers and file systems.\n- Later retrospectives identify L3 as the predecessor of the L4 microkernel family and describe its user-mode drivers and real-world deployment as important elements of the lineage that led to L4, commercial L4 variants, and eventually seL4. ([researchgate.net](https://www.researchgate.net/publication/262172784_From_L3_to_seL4_What_have_we_learnt_in_20_years_of_L4_microkernels))\n- The paper is repeatedly cited in subsequent work on user-level device drivers, driver isolation, and microkernel-based operating systems. Its concrete influence was primarily architectural: it provided an early operational demonstration that services could be moved outside the kernel while retaining a usable system, a design direction later explored in L4-based systems and high-assurance kernels. ([usenix.org](https://www.usenix.org/legacy/publications/library/proceedings/osdi04/tech/full_papers/levasseur/levasseur_html/index.html))",
   "raw_url": "https://dl.acm.org/citation.cfm?id=122124",
   "source_type": "external",
   "filepath": "unikernels/README.md",
   "filename": "Two years of experience with a μ-Kernel based OS",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:56"
 }

@@ -1,35 +1,36 @@
 {
   "uuid": "73a08b8f2ef127790bae99419ee84560c4a171da4ed9ee2e23ff88658386e6a1",
   "title": "Consistent Hashing and Random Trees: Distributed Caching Protocols for Relieving Hot Spots on the World Wide Web",
-  "publication_date": "July 1997",
+  "publication_date": "May 4, 1997; published in STOC '97, Proceedings of the Twenty-Ninth Annual ACM Symposium on Theory of Computing, pages 654–663",
   "authors": [
     "Daniel Lewin",
     "David Karger",
     "Eric Lehman",
-    "Frank Thomson Leighton",
     "Matthew Levine",
-    "Rina Panigrahy"
+    "Rina Panigrahy",
+    "Tom Leighton"
   ],
   "keywords": [
     "consistent-hashing",
-    "distributed-algorithms",
     "distributed-caching",
-    "hashing-techniques",
+    "distributed-systems",
+    "fault-tolerance",
+    "hash-functions",
     "hot-spots",
     "load-balancing",
     "random-trees",
-    "scalable-web-systems",
-    "world-wide-web"
+    "replication",
+    "web-caching"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "The growth of the World Wide Web poses frequently seen challenges in the form of server overloading due to hot spots - a small set of extremely popular items causing server congestion. Distributed caching offers one solution by diverting requests to less-loaded locations. We explore new protocols for distributed caching seeking to minimize variance in network load. These protocols centrally utilize a technique called consistent hashing. Consistent hashing allows distributed caching to handle alterations in cache structure (such as the addition or removal of cache units) without extensively remapping keys to cache locations, achieving theoretically optimal load balance in some situations. Moreover, we introduce a protocol for preventing \"hot spot\" overload using a random tree data structure. These offer theoretical improvement over prior work with practical benefits for web systems.",
-  "summary": "Consistent hashing, introduced in this paper, has become a fundamental technique in distributed systems. It has been widely adopted in distributed caching systems to ensure load balancing and efficient key distribution. The paper has significantly influenced the development of distributed databases, file systems, and peer-to-peer networks by providing robust solutions for handling server overload and dynamic network changes. Subsequent research has built upon these principles to enhance scalability and fault tolerance. For example, techniques described in the paper have been integrated into systems like Amazon DynamoDB and are foundational for content distribution networks (CDNs).\n\nNotable references that cite this work include:\n1. Stoica, I., Morris, R., Karger, D., Kaashoek, M. F., & Balakrishnan, H. (2001). Chord: A scalable peer-to-peer lookup service for internet applications. [Source](https://dl.acm.org/doi/10.1145/964723.383071)\n2. DeCandia, G., Hastorun, D., Jampani, M., Kakulapati, G., Lakshman, A., Pilchin, A., ... & Vardhan, M. (2007). Dynamo: Amazon's highly available key-value store. [Source](https://www.cidrdb.org/cidr2007/papers/cidr07p20.pdf)\n3. Zhao, B. Y., Huang, L., Stribling, J., Rhea, S. C., Joseph, A. D., & Kubiatowicz, J. (2004). Tapestry: A resilient global-scale overlay for service deployment. [Source](https://ieeexplore.ieee.org/abstract/document/1281262)",
+  "abstract": "We describe a family of caching protocols for distributed networks that can be used to decrease or eliminate the occurrence of hot spots in the network. Our protocols are particularly designed for use with very large networks such as the Internet, where delays caused by hot spots can be severe, and where it is not feasible for every server to have complete information about the current state of the entire network. The protocols are easy to implement using existing network protocols such as TCP/IP, and require very little overhead. The protocols work with local control, make efficient use of existing resources, and scale gracefully as the network grows.\n\nOur caching protocols are based on a special kind of hashing that we call consistent hashing. Roughly speaking, a consistent hash function is one which changes minimally as the range of the function changes. Through the development of good consistent hash functions, we are able to develop caching protocols which do not require users to have a current or even consistent view of the network. We believe that consistent hash functions may eventually prove to be useful in other applications such as distributed name servers and/or quorum systems.",
+  "summary": "## Summary\n\nThe paper addresses Web “hot spots,” in which many clients simultaneously request data from one server, potentially overwhelming both the server and nearby network infrastructure. It proposes two related mechanisms: **random cache trees** for request coalescing and load distribution, and **consistent hashing** for maintaining useful object-to-cache assignments as caches join, leave, or appear differently to different clients.\n\nRandom cache trees associate each page with a separate balanced tree whose non-root nodes are mapped randomly to caches. Requests travel from randomly selected leaves toward the page’s home server. Caches combine simultaneous requests, forward at most a bounded number of requests from each tree node, and retain a page after it has been requested a configurable number of times. Using a different random tree for each page prevents a single cache from becoming the root or an upper-level node for too many pages. The analysis gives high-probability bounds on cache load and storage, while request latency is proportional to the tree height, approximately logarithmic in the number of caches for a fixed branching factor. The paper also argues that pipelining makes the added delay less significant for large objects.\n\nConsistent hashing is formulated as a mapping that assigns objects to a changing set of buckets. Its central properties are **balance**, **monotonicity**, **spread**, and **load**. Monotonicity ensures that adding buckets moves an object only when necessary and does not move it between existing buckets. Spread limits the number of distinct caches to which an object may be assigned across inconsistent client views, while load limits the number of objects that may be assigned to any one cache. The construction uses multiple random points for each bucket in a shared interval, producing a ring-like assignment with logarithmic spread and load under the paper’s assumptions. The authors also show an equivalent formulation using a random permutation of buckets for each object.\n\nThe two techniques are combined so that clients need to know only a constant fraction of the active caches. The paper further adapts the scheme to hierarchical latency models represented by ultrametrics, discusses cache and server failures, and extends the static batch analysis to requests arriving over time. Important limitations include the assumptions of largely immutable page content, adversaries that cannot observe protocol randomness or adapt to delays, and simplified timing and failure models. Server failures are not solved by the basic protocol; the paper suggests information-dispersal techniques for that case.\n\n## Influence\n\nThe paper became a foundational reference for later distributed storage and peer-to-peer systems. Amazon’s Dynamo paper explicitly cites it as reference [10] and uses consistent hashing for data partitioning, including multiple ring positions per physical node—later commonly called virtual nodes—to improve load distribution and incremental scalability. ([cdn.amazon.science](https://cdn.amazon.science/ac/1d/eb50c4064c538c8ac440ce6a1d91/dynamo-amazons-highly-available-key-value-store.pdf)) Chord also explicitly cites the paper and uses consistent hashing to assign keys to peer-to-peer nodes while limiting key movement when nodes join or leave. ([people.csail.mit.edu](https://people.csail.mit.edu/dln/papers/chord/chord.pdf)) Apache Cassandra’s architecture documentation describes a Dynamo-style consistent-hash ring and virtual nodes for partitioning and scaling storage clusters. ([cassandra.apache.org](https://cassandra.apache.org/doc/latest/cassandra/architecture/dynamo.html)) Subsequent research continues to treat consistent hashing as a standard dynamic allocation method while addressing its load-imbalance limitations; for example, Google’s work on bounded-load consistent hashing provides stronger maximum-load guarantees and reports deployment in Google Cloud Pub/Sub. ([research.google](https://research.google/pubs/consistent-hashing-with-bounded-loads/))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/consistent-hashing-and-random-trees.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/consistent-hashing-and-random-trees.pdf",
   "filename": "consistent-hashing-and-random-trees.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:51"
 }

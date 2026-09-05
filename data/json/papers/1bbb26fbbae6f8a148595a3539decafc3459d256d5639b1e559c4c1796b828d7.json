@@ -1,35 +1,36 @@
 {
   "uuid": "1bbb26fbbae6f8a148595a3539decafc3459d256d5639b1e559c4c1796b828d7",
   "title": "Macaroons: Cookies with Contextual Caveats for Decentralized Authorization in the Cloud",
-  "publication_date": "2013",
+  "publication_date": "February 23–26, 2014 — Network and Distributed System Security Symposium (NDSS ’14), San Diego, California, USA",
   "authors": [
-    "Alexander M. Birgisson",
-    "Daniel Mills",
-    "Dirk Balfanz",
-    "John C. Mitchell",
-    "Joseph G. Davies",
-    "Monica S. Lam"
+    "Ankur Taly",
+    "Arnar Birgisson",
+    "Joe Gibbs Politz",
+    "Mark Lentczner",
+    "Michael Vrable",
+    "Úlfar Erlingsson"
   ],
   "keywords": [
     "access-control",
-    "authorization",
-    "capability-systems",
-    "cloud-computing",
+    "attenuation",
+    "bearer-credentials",
+    "cloud-security",
     "contextual-caveats",
-    "cookies",
     "decentralized-authorization",
+    "delegation",
+    "hmac",
     "macaroons",
-    "security"
+    "third-party-caveats"
   ],
   "category_path": [
     "security"
   ],
-  "abstract": "We propose macaroons: flexible authorization credentials for cloud services that support decentralized delegation between principals and are efficient for use in latency-sensitive scenarios. The key idea is to support controlled sharing and delegation of rights within a single principal, or from one principal to another, using unforgeable cryptographic tokens. We show how macaroons can support flexible caveats to express both delegation policies and restrictions that reduce authorization scope at the requester's option, or as required by a server, and we describe practical applications.",
-  "summary": "The paper presents a novel authorization credential system called *macaroons*, designed for cloud services to facilitate secure, decentralized delegation with contextual caveats. Macaroons offer flexible control over rights sharing and delegation, facilitated by unforgeable cryptographic tokens. The concept has been influential in improving how cloud-based systems handle authorization, especially where fine-grained control and reduced latency are critical.\n\nMacaroons have significant implications in strengthening authorization mechanisms in distributed systems and achieving a higher level of security in cloud infrastructures. The primary contributions of this paper lie in its novel approach to defining and enforcing access control policies within cloud environments.\n\nThis work has influenced subsequent research in computer security and authorization protocols. For example, the paper has been cited by:\n\n1. Horne, G., & Derr, T. (2015). [Title WWWeb](link). In their research, they employed macaroons to improve security in web applications.\n2. Kovac, D., & Martonosi, M. (2016). [Efficient Authorization with Macaroons](link). The authors utilized macaroons for efficient authorization in IoT scenarios.\n3. Johnson, K., et al. (2017). \"Enhancing Capability-Based Security\" in *Journal of Cloud Security*. They built upon macaroons for secure service composition.",
+  "abstract": "Controlled sharing is fundamental to distributed systems; yet, on the Web, and in the Cloud, sharing is still based on rudimentary mechanisms. More flexible, decentralized cryptographic authorization credentials have not been adopted, largely because their mechanisms have not been incrementally deployable, simple enough, or efficient enough to implement across the relevant systems and devices.\n\nThis paper introduces macaroons: flexible authorization credentials for Cloud services that support decentralized delegation between principals. Macaroons are based on a construction that uses nested, chained MACs (e.g., HMACs [43]) in a manner that is highly efficient, easy to deploy, and widely applicable.\n\nAlthough macaroons are bearer credentials, like Web cookies, macaroons embed caveats that attenuate and contextually confine when, where, by who, and for what purpose a target service should authorize requests. This paper describes macaroons and motivates their design, compares them to other credential systems, such as cookies and SPKI/SDSI [14], evaluates and measures a prototype implementation, and discusses practical security and application considerations. In particular, it is considered how macaroons can enable more fine-grained authorization in the Cloud, e.g., by strengthening mechanisms like OAuth2 [17], and a formalization of macaroons is given in authorization logic.",
+  "summary": "### Summary\n\nThe paper introduces macaroons, bearer authorization credentials built from chained HMACs. A macaroon can be delegated by appending caveats that only restrict authority, such as limiting operations, objects, time periods, client context, or requiring approval from third-party services. The paper also describes recursive third-party caveat discharges, request binding to prevent discharge-token reuse, implementation considerations, revocation strategies, privacy properties, and an authorization-logic formalization.\n\nThe central engineering contribution is the combination of bearer-token deployability with decentralized attenuation and contextual authorization. HMAC-based construction makes minting and verification substantially cheaper than comparable public-key operations, while retaining support for short-lived and narrowly scoped credentials. The principal limitation is that HMAC-based macaroons are verifiable only by the target service, unlike credentials based on publicly verifiable signatures.\n\n### Influence and adoption\n\nThe design has been implemented in reusable libraries, including `libmacaroons` and Python implementations, which provide APIs for minting, attenuation, verification, and third-party caveats. ([github.com](https://github.com/rescrv/libmacaroons))\n\nA concrete production use is Lightning Network Daemon (`lnd`), which uses macaroons as the default authentication and authorization mechanism for RPC access, including separate administrative, read-only, and invoice-related credentials. ([github.com](https://github.com/lightningnetwork/lnd/blob/master/docs/macaroons.md))\n\nThe same credential pattern was subsequently incorporated into the L402 protocol, where a macaroon is combined with a Lightning payment preimage to authorize paid HTTP or gRPC API access. ([github.com](https://github.com/lightninglabs/L402/blob/master/protocol-specification.md))\n\nMacaroons have also been considered as one of the authorization mechanisms usable by the WLCG HTTP third-party-copy ecosystem, alongside OAuth, OpenID Connect, and SciTokens. ([arxiv.org](https://arxiv.org/abs/2007.03490))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/security/macaroons-cookies-with-contextual-caveats.pdf",
   "source_type": "pdf",
   "filepath": "security/macaroons-cookies-with-contextual-caveats.pdf",
   "filename": "macaroons-cookies-with-contextual-caveats.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:56"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:53"
 }

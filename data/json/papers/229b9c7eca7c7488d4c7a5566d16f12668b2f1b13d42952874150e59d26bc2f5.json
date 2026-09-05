@@ -1,34 +1,36 @@
 {
   "uuid": "229b9c7eca7c7488d4c7a5566d16f12668b2f1b13d42952874150e59d26bc2f5",
-  "title": "Exploiting Hierarchical Information in Web Content Mining",
-  "publication_date": "1999",
+  "title": "Metaobject protocols: Why we want them and what else they can do",
+  "publication_date": "1993; book chapter in A. Paepcke (ed.), Object-Oriented Programming: The CLOS Perspective, pp. 101–118, MIT Press, Cambridge, MA",
   "authors": [
     "Amin Vahdat",
-    "Denis M. Sullivant",
-    "Vivek Jain"
+    "Daniel G. Bobrow",
+    "Gregor Kiczales",
+    "J. Michael Ashley",
+    "Luis Rodriguez"
   ],
   "keywords": [
-    "document-clustering",
-    "hierarchical-information",
-    "hierarchical-structure",
-    "html-analysis",
-    "meta-information",
-    "miscellaneous-file",
-    "page-categorization",
-    "site-organization",
-    "web-content-mining",
-    "web-metadata"
+    "clos",
+    "compiler-optimization",
+    "computational-reflection",
+    "language-semantics",
+    "metaobject-protocols",
+    "metaprogramming",
+    "open-implementations",
+    "parallelization",
+    "programming-language-design",
+    "scheme"
   ],
   "category_path": [
     "languages-paradigms",
     "object_oriented_programming"
   ],
-  "abstract": "The Web continues to grow at a staggering rate as more information is added and as more users join the web. Information overload has become a problem for users as well as web service providers. A large number of web pages contain useful hierarchical information, which can be used to improve the utility of the additional information. An important aspect of such hierarchical information is presented as a file tree structure where directories contain files and subdirectories. In this paper, we present methods for detecting and using hierarchical information to categorize and better represent the content of web pages.",
-  "summary": "The paper \"Exploiting Hierarchical Information in Web Content Mining\" was published in 1999 by Denis M. Sullivant, Vivek Jain, and Amin Vahdat. It discusses methods to leverage hierarchical information found in web structures to improve web content categorization and represent the content of web pages more effectively. This involves analyzing elements like the file tree structure inherent in many web directories, which aids in the automatic sorting and organization of web data.\n\nThe paper highlights techniques for detecting such hierarchical data and proposes strategies for using this information to address the issue of information overload on the internet.\n\nAfter conducting a web search, there are no significant citations found directly referencing this work in subsequent studies or industrial applications, suggesting it may have had limited direct impact on further research or development in the field. This may be due to the evolving nature of web technologies and content mining methods since its publication.",
+  "abstract": "Originally conceived as a neat idea that could help solve problems in the design and implementation of CLOS, the metaobject protocol framework now appears to have applicability to a wide range of problems that come up in high-level languages. This chapter sketches this wider potential, by drawing an analogy to ordinary language design, by presenting some early design principles, and by presenting an overview of three new metaobject protocols we have designed that, respectively, control the semantics of Scheme, the compilation of Scheme, and the static parallelization of Scheme programs.",
+  "summary": "## Summary\n\nThe paper presents metaobject protocols (MOPs) as a way to create **open language implementations**: language abstractions remain usable at a high level, while programmers can selectively customize implementation strategies and semantic behavior. The motivating examples are sparse versus dense object representations in CLOS and differences in multiple-inheritance rules between CLOS and systems such as Flavors and Loops. The authors argue that MOPs can address both performance trade-offs and semantic incompatibilities without requiring programmers to implement an entire language system from scratch.\n\nThe proposed design uses object-oriented meta-level interfaces, typically generic functions, to expose selected implementation components. The paper emphasizes locality: extensions should target individual language features, be associated conveniently with selected base-level objects or program text, alter only particular implementation strategies, and be incremental rather than requiring replacement of the full implementation. It also explains how caching, compile-time processing, and moving meta-level computation out of critical runtime paths can reduce the overhead introduced by reflective customization.\n\nThree Scheme-oriented systems illustrate the broader applicability of the approach. **Ploy** exposes interpreter and binding behavior, supporting extensions such as monitored variables, dynamic variables, altered evaluation order, normal-order evaluation, and partial closures. **Sartor** separates compiler and runtime protocols, allowing customization of compilation decisions and runtime representations such as activation records and closure environments. **Anibus** applies a compile-time MOP to static parallelization, enabling programmers to define new parallelization marks and strategies.\n\n## Subsequent influence\n\nLater research applied the same general MOP idea beyond CLOS. Chiba’s *A Metaobject Protocol for C++* developed a compile-time MOP for C++, explicitly targeting extensible language features while avoiding runtime overhead; it appeared at OOPSLA 1995. ([static.csg.ci.i.u-tokyo.ac.jp](https://static.csg.ci.i.u-tokyo.ac.jp/papers/95/chiba-oopsla95.pdf)) A 2018 study on open meta-modelling frameworks used MOPs to extend and configure MetaDepth and the Eclipse Modeling Framework, including services not anticipated by those systems’ original designs. ([repositorio.uam.es](https://repositorio.uam.es/handle/10486/692657)) More recently, a 2022 paper proposed MOP mechanisms for Julia, using the language’s compilation and runtime type information to support customizable multiple-inheritance dispatch and method combination with limited or zero runtime overhead. ([drops.dagstuhl.de](https://drops.dagstuhl.de/entities/document/10.4230/OASIcs.SLATE.2022.13)) These examples document continuing research use of the paper’s central principles—selective exposure of language implementation, user-defined semantic or compilation strategies, and performance-conscious reflective extensibility. The sources reviewed provide clear evidence of research influence; they do not by themselves establish specific industrial adoption of this chapter.",
   "raw_url": "http://cseweb.ucsd.edu/~vahdat/papers/mop.pdf",
   "source_type": "external",
   "filepath": "languages-paradigms/object_oriented_programming/README.md",
   "filename": "Metaobject protocols: Why we want them and what else they can do",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:56"
 }

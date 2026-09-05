@@ -1,35 +1,35 @@
 {
   "uuid": "40b7d7a9de4ea692ef7f3fe00d1f984fb9971ace0a1153b62b1cfc797e55b15e",
-  "title": "Tiered Replication: A Cost-Effective Alternative to Full Cluster Geo-Replication",
-  "publication_date": "2014",
+  "title": "Tiered Replication: A Cost-effective Alternative to Full Cluster Geo-replication",
+  "publication_date": "July 8–10, 2015; 2015 USENIX Annual Technical Conference (USENIX ATC ’15), Santa Clara, California, USA",
   "authors": [
-    "Inderpal Narang",
-    "J. Erik E. Rice",
-    "Parikshit Juluru",
-    "Thomas Kelly",
-    "Xiaoyun Zhu"
+    "Asaf Cidon",
+    "Emin Gün Sirer",
+    "Mendel Rosenblum",
+    "Robert Escriva",
+    "Sachin Katti"
   ],
   "keywords": [
-    "cloud-computing",
     "cloud-storage",
-    "cost-efficiency",
-    "data-redundancy",
-    "data-reliability",
-    "distributed-systems",
+    "copysets",
+    "correlated-failures",
+    "data-durability",
+    "data-replication",
+    "distributed-storage",
+    "fault-tolerance",
     "geo-replication",
-    "high-availability",
-    "latency-optimization",
-    "tiered-replication"
+    "hyperdex",
+    "independent-failures"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "Maintaining availability in the presence of correlated failures is a primary requirement for data storage systems. To protect against correlated failures (e.g., rack failures and power outages), data is often replicated across multiple failure domains, such as power feeding pairs, racks, and geographical locations. The current practice in cloud data centers is to use full geo-replication—replicating a full set of data at every site—to tolerate site-wide failures. In contrast, we propose tiered replication, a more cost-effective alternative which allows different sets of data to be replicated at different sites and varies the level of data redundancy across sites. We develop a family of replication strategies under this framework and show how to systematically compute the required data redundancy to maintain availability. Through mathematical analyses and extensive simulations, we demonstrate the cost benefits and availability guarantees of tiered replication compared to full geo-replication. We also describe its implementation in the context of our production cloud storage system.",
-  "summary": "The paper \"Tiered Replication: A Cost-Effective Alternative to Full Cluster Geo-Replication\" addresses the high costs associated with full geo-replication in cloud data centers. The authors propose a more efficient model, known as tiered replication, which adjusts the replication level based on differing site needs and the importance of data. They perform simulations and analysis to show how tiered replication can achieve availability similar to that of full geo-replication, but at a reduced cost.\n\n**Influence and Impact:**\nA search for references to this paper did not yield direct citations or industry implementations that acknowledge this research explicitly. This suggests that while the concept of tiered replication is potentially impactful for cost management in cloud systems, explicit subsequent references or documented implementations were not easily found. However, related literature and industry practices in data replication might reference similar concepts or methodologies even if they do not reference this specific paper. Therefore, the impact of this paper on subsequent research or industry advancements remains unclear based on currently available citations.",
+  "abstract": "Cloud storage systems typically use three-way random replication to guard against data loss within the cluster, and utilize cluster geo-replication to protect against correlated failures. This paper presents a much lower cost alternative to full cluster geo-replication. We demonstrate that in practical settings, using two replicas is sufficient for protecting against independent node failures, while using three random replicas is inadequate for protecting against correlated node failures.\n\nWe present Tiered Replication, a replication scheme that splits the cluster into a primary and backup tier. The first two replicas are stored on the primary tier and are used to recover data in the case of independent node failures, while the third replica is stored on the backup tier and is used to protect against correlated failures. The key insight of our paper is that, since the third replicas are rarely read, we can place the backup tier on separate physical infrastructure or a remote location without affecting performance. This separation significantly increases the resilience of the storage system to correlated failures and presents a low cost alternative to geo-replication of an entire cluster. In addition, the Tiered Replication algorithm optimally minimizes the probability of data loss under correlated failures. Tiered Replication can be executed incrementally for each cluster change, which allows it to supports dynamic environments in which nodes join and leave the cluster, and it facilitates additional data placement constraints required by the storage designer, such as network and rack awareness. We have implemented Tiered Replication on HyperDex, an open-source cloud storage system, and demonstrate that it incurs a small performance overhead. Tiered Replication improves the cluster-wide MTTF by a factor of 20,000 compared to random replication and by a factor of 20 compared to previous non-random replication schemes, without increasing the amount of storage.",
+  "summary": "## Summary\n\nThe paper argues that conventional three-way replication is poorly matched to the different failure modes faced by large storage clusters. Under the paper’s analytical model, two replicas are generally sufficient for independent node failures, whereas three replicas placed randomly provide limited protection against correlated failures. The proposed solution, Tiered Replication, keeps the replicas needed for normal recovery in a primary tier and places an additional durability replica in a physically or geographically separated backup tier. Because the backup replica is rarely read, it can use lower-cost, write-oriented storage and need not impose the performance requirements of the primary tier.\n\nThe placement algorithm constructs copysets that minimize overlap while satisfying tier, scatter-width, topology, rack, power-management, and chain-replication constraints. It operates incrementally as nodes join or leave the cluster. An implementation in HyperDex showed small throughput and latency costs and recovery times comparable to the system’s default replication scheme. Under the authors’ model, the technique improved cluster-wide mean time to failure by approximately 20,000 times over random replication and 20 times over earlier non-random replication schemes, without increasing the number of stored replicas.\n\nA later research extension, Popularity-Aware Multi-Failure Resilient and Cost-Effective Replication (PMCR), explicitly builds on the primary-tier/backup-tier design. It adds data-popularity classes and compression for backup replicas to reduce storage and bandwidth costs while retaining protection against independent and correlated failures. ([mds.marshall.edu](https://mds.marshall.edu/wdcs_faculty/76/))\n\nIndustry-oriented patent literature also describes geographically distributed data stores using tiered replication, replication groups, failure-aware reconfiguration, and separate local and regional replication paths. This provides evidence that the paper’s central architectural idea continued to appear in subsequent designs, although the available search results do not establish deployment of the exact HyperDex implementation in a commercial product. ([patents.justia.com](https://patents.justia.com/patent/12147310))\n\nThe paper was published in the 2015 USENIX Annual Technical Conference, and its bibliographic metadata and author ordering are independently confirmed by USENIX and DBLP. ([usenix.org](https://www.usenix.org/conference/atc15/technical-session/presentation/cidon))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/tiered-replication-a-cost-effective-alternative-to-full-cluster-geo-replication.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/tiered-replication-a-cost-effective-alternative-to-full-cluster-geo-replication.pdf",
   "filename": "tiered-replication-a-cost-effective-alternative-to-full-cluster-geo-replication.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

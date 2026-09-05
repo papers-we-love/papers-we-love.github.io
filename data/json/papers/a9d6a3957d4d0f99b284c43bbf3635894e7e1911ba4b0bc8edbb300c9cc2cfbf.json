@@ -1,34 +1,36 @@
 {
   "uuid": "a9d6a3957d4d0f99b284c43bbf3635894e7e1911ba4b0bc8edbb300c9cc2cfbf",
-  "title": "Why Students Engage in \"Gaming the System\" Behavior in Interactive Learning Environments",
-  "publication_date": "2004",
+  "title": "Why Students Engage in “Gaming the System” Behavior in Interactive Learning Environments",
+  "publication_date": "April 2008; Journal of Interactive Learning Research, 19(2), 185–224",
   "authors": [
-    "Alison M. Azevedo",
-    "Kurt R. Koedinger",
-    "Ma. Mercedes T. Corbett",
-    "Ryan S. J. d. Baker"
+    "Albert Corbett",
+    "Ido Roll",
+    "Jason Walonoski",
+    "Kenneth Koedinger",
+    "Neil Heffernan",
+    "Ryan Baker"
   ],
   "keywords": [
-    "behavioral-studies",
-    "cognitive-tutors",
-    "education-technology",
-    "educational-research",
+    "affective-computing",
+    "educational-data-mining",
     "gaming-the-system",
+    "help-seeking",
     "intelligent-tutoring-systems",
     "interactive-learning-environments",
-    "learning-behaviors",
-    "motivation-in-education",
-    "student-engagement"
+    "learning-analytics",
+    "mathematics-education",
+    "student-engagement",
+    "student-motivation"
   ],
   "category_path": [
     "gamification"
   ],
-  "abstract": "In this research, we study learners who “game the system” in interactive learning environments, and attempt to gain the correct answer through means which systematically bypass the need to engage in the material being taught. We focus specifically on whether these students are simply trying occasionally to use resources such as context-sensitive hints and feedback within the learning environment as a crutch for overcoming a difficult problem or if these learners use these resources to try to game the system, obtaining correct answers without learning. We investigate these hypotheses by re-analyzing the educational data in a new model we call the Integrated Model. This model allows us to hypothesize various types of gaming behavior, distinguishing between learners who complete the problems through effort and those who only aim to complete the problems. Results suggest there are significant differences in how students engage with hints and feedback provided by cognitive tutors, and how these differences correlate with educational outcomes and motivations.",
-  "summary": "This paper investigates the phenomenon of students \"gaming the system\" in interactive learning environments (ILEs) by bypassing the learning process to obtain correct answers with minimal effort. The authors developed the Integrated Model to analyze educational data, differentiating between genuine student effort and attempts to game the system. The study found considerable differences in student engagement with hints and feedback in cognitive tutors and how these differences correlate with learning outcomes and student motivation. \n\nFollowing a search for the impact of this paper, it appears to be influential in educational research related to ILEs and intelligent tutoring systems. It has been referenced in works discussing student engagement, behavior modeling, and the design of educational technologies. Some notable citations include:\n- Koedinger, K. R., & Aleven, V. (2007). In \"Exploring the assistance dilemma in experiments with cognitive tutors\" ([link](https://www.sciencedirect.com/science/article/pii/S0360131507002417)).\n- Aleven, V., et al. (2006). In \"Toward meta-cognitive tutoring: A model of help seeking with a cognitive tutor\" published in the \"International Journal of Artificial Intelligence in Education\" ([link](https://dl.acm.org/doi/10.5555/1599773.1599777)).\n- Arroyo, I., et al. (2007). In \"The impact of student modeling on student performance in an intelligent tutoring system\" ([link](https://www.aaai.org/Papers/Workshops/2007/WS-07-01/WS07-01-027.pdf)).\n\nThese papers extend the research by discussing the dynamics of educational interventions and their impact on student learning processes.",
+  "abstract": "In recent years there has been increasing interest in the phenomena of “gaming the system,” where a learner attempts to succeed in an educational environment by exploiting properties of the system’s help and feedback rather than by attempting to learn the material. Developing environments that respond constructively and effectively to gaming depends upon understanding why students choose to game. In this article, we present three studies, conducted with two different learning environments, which present evidence on which student behaviors, motivations, and emotions are associated with the choice to game the system. We also present a fourth study to determine how teachers’ perspectives on gaming behavior are similar to, and different from, researchers’ perspectives and the data from our studies. We discuss what motivational and attitudinal patterns are associated with gaming behavior across studies, and what the implications are for the design of interactive learning environment.",
+  "summary": "## Findings\n\nThe paper investigates why students engage in “gaming the system”: attempting to complete educational tasks by exploiting help, feedback, or answer-validation mechanisms rather than learning the underlying material. It reports three questionnaire studies involving Cognitive Tutors and ASSISTments, plus a survey of teachers’ beliefs about gaming. Gaming was detected using both machine-learned and knowledge-engineered behavioral models. ([pact.cs.cmu.edu](https://pact.cs.cmu.edu/pubs/Baker%2C%20R.%2C%20Walonoski%2C%20J.A.%2C%20Heffernan%2C%20N.T.%2C%20Roll%2C%20I.%20Corbett%2C%20A.%2C%20Koedinger%2C%20K.R..pdf))\n\nAcross the student studies, the most consistent correlates of gaming were dislike of mathematics, lack of educational self-drive, and frustration—especially frustration caused by difficult problems. There was weaker or mixed evidence for associations with disliking computers, disliking the learning environment, believing mathematical ability is innate, and believing that tutor help is not useful. The studies found no convincing relationship between gaming and performance goals, anxiety, believing mathematics is unimportant, desire for control, passive-aggressiveness, or perceiving the tutor as uncaring. Teachers correctly identified frustration and lack of self-drive as important factors, but, like earlier researchers, incorrectly predicted a strong role for performance goals. ([pact.cs.cmu.edu](https://pact.cs.cmu.edu/pubs/Baker%2C%20R.%2C%20Walonoski%2C%20J.A.%2C%20Heffernan%2C%20N.T.%2C%20Roll%2C%20I.%20Corbett%2C%20A.%2C%20Koedinger%2C%20K.R..pdf))\n\nThe design implications are to reduce avoidable frustration while preserving productive challenge. The authors propose clearer and more concise hints and feedback, shorter problems or lessons, carefully calibrated difficulty, opportunities to skip or select problems, and limited learner choice. The central design claim is that systems should address the affective and contextual causes of gaming rather than merely detecting and suppressing the behavior.\n\n## Influence on later research and practice\n\nLater research explicitly cites this work as part of the seminal foundation for studying gaming the system and uses its definition when investigating the behavior in other digital learning environments. Subsequent studies expanded automated detection beyond Cognitive Tutors and ASSISTments, examined how contextual and task-design variation affects detection, and analyzed gaming in additional systems such as Newton’s Playground and digital learning games. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC10564808/))\n\nThe paper also contributed to a continuing research program on student affect, engagement, detection, and interventions. The authors’ later project documentation describes follow-on work on affective states, gaming detectors, and adaptive responses, while later intervention research has evaluated methods for discouraging gaming and improving learning outcomes. ([cs.cmu.edu](https://www.cs.cmu.edu/~rsbaker/gaming.html))\n\nIn summary, the paper’s concrete influence is primarily methodological and conceptual: it helped establish gaming the system as a measurable form of behavioral disengagement, linked it to motivation and affect, and motivated detector, intervention, and learning-environment design research across multiple platforms. ",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/gamification/why-students-engage-in-gaming-the-system-behavior-in-interactive-learning-environments.pdf",
   "source_type": "pdf",
   "filepath": "gamification/why-students-engage-in-gaming-the-system-behavior-in-interactive-learning-environments.pdf",
   "filename": "why-students-engage-in-gaming-the-system-behavior-in-interactive-learning-environments.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

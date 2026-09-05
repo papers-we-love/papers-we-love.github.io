@@ -1,40 +1,33 @@
 {
   "uuid": "0f5bb45790db0fcbc03236d9542e5cd7e3cf0cddb0cbffbeaf5480217ef8ae75",
-  "title": "EPaxos: Consensus on values, not ballots",
-  "publication_date": "October 2013",
+  "title": "There Is More Consensus in Egalitarian Parliaments",
+  "publication_date": "November 3–6, 2013, SOSP ’13 (29th ACM Symposium on Operating Systems Principles)",
   "authors": [
-    "Daphne Ong",
     "David G. Andersen",
-    "David Mazières",
-    "Dejan Kostic",
-    "Irene Zhang",
-    "Jacob R. Lorch",
-    "James Cowling",
-    "Marcus Burrows",
-    "Michael Kaminsky",
-    "Nicolas Schiper"
+    "Iulian Moraru",
+    "Michael Kaminsky"
   ],
   "keywords": [
-    "consensus",
-    "consistency",
-    "distributed-algorithms",
-    "distributed-systems",
+    "distributed-consensus",
     "epaxos",
     "fault-tolerance",
-    "latency",
-    "multi-leader",
-    "performance",
-    "replication"
+    "geo-replication",
+    "leaderless-replication",
+    "linearizability",
+    "paxos",
+    "quorum-protocols",
+    "state-machine-replication",
+    "wide-area-networks"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "EPaxos is a new consensus protocol designed to simplify the management of consensus between distributed nodes in wide area networks. Previous multi-leader consensus protocols have aimed to improve latency between datacenters, but they often suffer from increased implementation complexity and degraded performance under contention when compared with single-leader protocols like Paxos. EPaxos is a fully decentralized protocol with no designated leaders or ballots, resulting in high performance under typical use and graceful degradation under contention. EPaxos achieves low latency in most georeplicated settings, maintains consistency, and shows particularly strong performance in the face of concurrent conflicts.",
-  "summary": "EPaxos is a consensus protocol that provides an efficient solution for managing consensus across distributed systems, specifically addressing challenges related to multi-leader protocols that face complexities such as increased contention and performance issues. This paper was presented at the ACM Symposium on Operating Systems Principles (SOSP) in October 2013. Unlike traditional approaches, EPaxos operates without designated leaders or ballots, which allows it to achieve high performance and low latency in geographically distributed settings.\n\nThe significance of EPaxos lies in its potential to improve the performance of distributed systems with high concurrency and contention, making it a relevant study for modern applications that rely on distributed consensus such as databases and cloud computing services. The decentralization strategy in EPaxos enables fault tolerance and efficiency, often outperforming alternatives like Paxos under specific network conditions.\n\nUpon a web search, EPaxos has been referenced and applied in multiple contexts, contributing to further research in optimizing consensus protocols for distributed systems. Notably, it is cited in studies about improving the efficiency of databases in distributed environments ([Wang et al., 2017](https://arxiv.org/abs/1703.02770)), and has influenced the design of consensus mechanisms in cloud computing platforms ([Chandra et al., 2016](https://ieeexplore.ieee.org/document/7846608)).\n\nOverall, EPaxos continues to serve as a foundational protocol in the ongoing refinement of distributed consensus algorithms, reflecting its sustained impact on research and practical implementations.",
+  "abstract": "This paper describes the design and implementation of Egalitarian Paxos (EPaxos), a new distributed consensus algorithm based on Paxos. EPaxos achieves three goals: (1) optimal commit latency in the wide-area when tolerating one and two failures, under realistic conditions; (2) uniform load balancing across all replicas (thus achieving high throughput); and (3) graceful performance degradation when replicas are slow or crash.\n\nEgalitarian Paxos is to our knowledge the first protocol to achieve the previously stated goals efficiently—that is, requiring only a simple majority of replicas to be non-faulty, using a number of messages linear in the number of replicas to choose a command, and committing commands after just one communication round (one round trip) in the common case or after at most two rounds in any case. We prove Egalitarian Paxos’s properties theoretically and demonstrate its advantages empirically through an implementation running on Amazon EC2.",
+  "summary": "## Contributions\n\nThe paper introduces Egalitarian Paxos (EPaxos), a leaderless state-machine-replication protocol designed for geo-distributed systems and high-throughput clusters. Unlike Multi-Paxos, EPaxos allows any replica to act as the command leader, distributes request-processing load across replicas, and avoids a leader-election interruption when a minority of replicas fails. Commands are ordered dynamically using dependency information rather than through a globally preassigned sequence of slots.\n\nEPaxos uses a fast path when replicas independently derive identical dependency and sequence-number metadata. In that case, a command can be committed after one communication round with a fast quorum. If concurrent commands interfere and replicas derive different metadata, the protocol uses a second Paxos-style acceptance round. The execution algorithm constructs dependency graphs and orders strongly connected components so that interfering commands execute consistently and client-serialized operations preserve linearizability. The optimized protocol uses a fast-path quorum of \\(F + \\lceil(F+1)/2\\rceil\\) replicas and tolerates up to \\(F\\) crash failures with \\(2F+1\\) replicas.\n\nThe evaluation compares EPaxos with Multi-Paxos, Mencius, and Generalized Paxos using Amazon EC2 experiments. EPaxos provides low wide-area commit latency, higher throughput than leader-bottlenecked Multi-Paxos, better tolerance of slow replicas, and continued commit availability after a minority replica failure. Its principal limitations are the need to identify command interference, increased metadata and execution complexity, and possible execution delays caused by dependency chains, especially under highly conflicting workloads. The paper also discusses persistent logging, recovery, reconfiguration, read leases, dependency-list reduction, and batching. ([cs.cmu.edu](https://www.cs.cmu.edu/~dga/papers/epaxos-sosp2013.pdf))\n\n## Influence\n\nThe work directly motivated later research that re-evaluated EPaxos’s performance under broader conflict workloads. *EPaxos Revisited* reproduced the original result that EPaxos can achieve optimal median WAN commit latency, but reported substantially worse tail latency under some workloads and identified unbounded dependency growth as a source of very high latency or livelock. It proposed bounded dependency growth and synchronized-clock techniques that reduced conflicts by at least 50% and reduced mean latency by up to 7.5% in its experiments. ([usenix.org](https://www.usenix.org/conference/nsdi21/presentation/tollman))\n\nThe original authors also released an EPaxos implementation, and subsequent research reused or forked that code for experimental evaluation. ([github.com](https://github.com/nvb/epaxos)) The search found clear evidence of continued academic use and follow-up evaluation, but no sufficiently authoritative evidence establishing that EPaxos itself became a widely deployed industry consensus protocol.",
   "raw_url": "https://www.cs.cmu.edu/~dga/papers/epaxos-sosp2013.pdf",
   "source_type": "external",
   "filepath": "distributed_systems/README.md",
   "filename": "There Is More Consensus in Egalitarian Parliaments",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

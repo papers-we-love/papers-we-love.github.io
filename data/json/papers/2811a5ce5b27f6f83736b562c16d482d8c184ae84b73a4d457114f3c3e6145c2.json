@@ -1,34 +1,25 @@
 {
   "uuid": "2811a5ce5b27f6f83736b562c16d482d8c184ae84b73a4d457114f3c3e6145c2",
   "title": "A Practical Optional Type System for Clojure",
-  "publication_date": "2014",
+  "publication_date": "2012; Honours dissertation submitted to the School of Computer Science and Software Engineering, The University of Western Australia",
   "authors": [
-    "Ambrose Bonnaire-Sergeant",
-    "Asumu Takikawa",
-    "Robert Bruce Findler"
+    "Ambrose Bonnaire-Sergeant"
   ],
   "keywords": [
     "clojure",
-    "dynamic-typing",
-    "functional-programming",
-    "gradual-typing",
-    "language-design",
-    "optional-type-system",
-    "programming-languages",
-    "static-typing",
-    "type-checking",
-    "type-systems"
+    "optional-type-systems",
+    "programming-languages"
   ],
   "category_path": [
     "languages",
     "clojure"
   ],
-  "abstract": "We present a practical optional type system for Clojure. Typed Clojure is an optional type system that supports idiomatic Clojure code. In particular, Typed Clojure handles existing polymorphic standard library functions, and idiomatic Clojure idioms, including macros, multiple arities, and destructuring. Typed Clojure has helped find bugs in real-world Clojure code.\n\nWe adopt the strategy that it executes as a type checker, and will provide warnings when a project is not well-typed. Users can choose to make their code well-typed to eliminate warnings, and maximize the static guarantees.\n\nWe have evaluated Typed Clojure on over 100,000 lines of idiomatic Clojure code, and demonstrate that it can effectively and efficiently type check existing code. We argue that Typed Clojure is a practical type system for Clojure, paying special attention to existing Clojure idioms.",
-  "summary": "In their 2014 paper, \"A Practical Optional Type System for Clojure,\" Ambrose Bonnaire-Sergeant, Asumu Takikawa, and Robert Bruce Findler introduced Typed Clojure, a type system designed to seamlessly integrate with Clojure's dynamic nature. Typed Clojure is aimed at providing static typing benefits while maintaining compatibility with idiomatic Clojure code, such as macros, multiple arities, and destructuring, which are commonly used in Clojure programming.\n\nSince its release, Typed Clojure has influenced further research and developments in the area of gradual typing, particularly in dynamically typed languages. While specific citations of influence were not found in quick searches, its concepts have been acknowledged in discussions of type systems for functional programming languages, referencing its ability to handle polymorphic standard library functions and idioms.\n\nDespite not being extensively cited, the ideas in the paper have possibly impacted the design and implementation of other type systems for dynamically typed and functional programming languages, furthering the understanding of how static typing can be introduced in such environments.",
+  "abstract": "Dynamic programming languages often abandon the advantages of static type checking in favour of their characteristic convenience and flexibility. Static type checking eliminates many common user errors at compile-time that are otherwise unnoticed, or are caught later in languages without static type checking. A recent trend is to aim to combine the advantages of both kinds of languages by adding optional static type systems to languages without static type checking, while preserving the idioms and style of the language.\n\nThis dissertation describes my work on designing an optional static type system for the Clojure programming language, a dynamically typed dialect of Lisp, based on the lessons learnt from several projects, primarily Typed Racket. This work includes designing and building a type checker for Clojure running on the Java Virtual Machine. Several experiments are conducted using this prototype, particularly involving existing Clojure code that is sufficiently complicated that type checking increases confidence that the code is correct. For example, nearly all of algo.monads, a Clojure Contrib library for monadic programming, is able to be type checked. Most monad, monad transformer, and monadic function definitions can be type checked, usually by adding type annotations in natural places like function definitions.\n\nThere is significant future work to fully type check all Clojure features and idioms. For example, multimethod definitions and functions with particular constraints on the number of variable arguments they accept (particularly functions taking only an even number of variable arguments) are troublesome. Also, there are desirable features from the Typed Racket project that are missing, such as automatic runtime contract generation and a sophisticated blame system, both which are designed to improve error messages when mixing typed and untyped code in similar systems.\n\nOverall, the work described in this dissertation leads to the conclusion that it appears to be both practical and useful to design and implement an optional static type system for the Clojure programming language.",
+  "summary": "### Summary\n\nThe dissertation presents Typed Clojure, an optional static type checker for JVM Clojure intended to preserve common dynamic-language idioms. Its design is primarily adapted from Typed Racket and combines bidirectional checking, local type inference, occurrence typing, union and intersection types, singleton types, polymorphism, heterogeneous map types, variable-arity polymorphism, and specialized support for Java interoperability. The system is implemented as a library that analyzes Clojure abstract syntax trees and checks namespaces using programmer annotations at natural definition boundaries.\n\nThe evaluation demonstrates that the prototype can type-check substantial examples involving Java reflection, sequence-processing idioms, monadic abstractions, monad transformers, and some highly polymorphic code. The results are mixed: most of `algo.monads` can be checked, while the red-black-tree experiment causes the prototype to hang and the conduit port requires substantial simplification. The dissertation identifies multimethods, even-numbered variable-arity functions, records, runtime contracts, blame tracking, and portability to other Clojure dialects as important unresolved problems.\n\nThe work directly led to later research on Typed Clojure. The author’s research record identifies a subsequent peer-reviewed paper, *Practical Optional Types for Clojure*, published at ESOP 2016 with Rowan Davies and Sam Tobin-Hochstadt. ([ambrosebs.com](https://ambrosebs.com/)) A later dissertation, *Typed Clojure in Theory and Practice*, formalized additional features, proved a model type-sound, and evaluated Typed Clojure usage in more than 19,000 lines of real-world code. ([thesis.ambrosebs.com](https://thesis.ambrosebs.com/)) The implementation also continued as the open-source `core.typed` project and was subsequently moved to the `typedclojure` repository for newer Clojure versions. ([github.com](https://github.com/clojure/core.typed)) These sources document clear continuation and implementation impact, but the available quick-search evidence does not establish broad influence on unrelated type-system research or sustained industry adoption beyond the Typed Clojure ecosystem.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages/clojure/a-practical-optional-type-system-for-clojure.pdf",
   "source_type": "pdf",
   "filepath": "languages/clojure/a-practical-optional-type-system-for-clojure.pdf",
   "filename": "a-practical-optional-type-system-for-clojure.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

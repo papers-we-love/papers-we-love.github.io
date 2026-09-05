@@ -1,33 +1,41 @@
 {
   "uuid": "013b996da038d0b6df36dd51de4b25257dbd544dd9b6595297de3d9947febe29",
-  "title": "Silverline: Toward Data Confidentiality in Storage-Intensive Cloud Applications",
-  "publication_date": "2014",
+  "title": "f4: Facebook’s Warm BLOB Storage System",
+  "publication_date": "October 6–8, 2014; 11th USENIX Symposium on Operating Systems Design and Implementation (OSDI ’14), Broomfield, Colorado",
   "authors": [
-    "Arvind Krishnamurthy",
-    "Naveen Kr. Sharma",
-    "Pratyush Muralidhar",
-    "Shafiq J. Soliman",
-    "Thomas E. Anderson"
+    "Cory Hill",
+    "Ernest Lin",
+    "Linpeng Tang",
+    "Sabyasachi Roy",
+    "Sanjeev Kumar",
+    "Satadru Pan",
+    "Shiva Shankar",
+    "Subramanian Muralidhar",
+    "Viswanath Sivakumar",
+    "Weiwen Liu",
+    "Wyatt Lloyd"
   ],
   "keywords": [
-    "access-control",
-    "cloud-computing",
-    "cloud-storage",
-    "data-confidentiality",
-    "data-intensive-applications",
-    "data-security",
-    "encryption",
-    "performance-optimization"
+    "blob-storage",
+    "distributed-storage",
+    "erasure-coding",
+    "facebook",
+    "fault-tolerance",
+    "geo-replication",
+    "haystack",
+    "reed-solomon-coding",
+    "warm-storage",
+    "xor-coding"
   ],
   "category_path": [
     "datastores"
   ],
-  "abstract": "The cloud is increasingly being used to host computing infrastructure by organizations hoping to exploit its elasticity and economies of scale. Unfortunately, current cloud platforms make a tradeoff in favor of deriving these benefits by requiring trust in the provider to maintain data confidentiality, separating control of the physical resources (owned by the provider) from ownership of the data. In this paper, we explore an alternative model for cloud computing that provides the same elastic and cost-efficient properties of cloud computing while eschewing blind trust in the provider for data confidentiality. To that end, we propose a new system architecture, Silverline, that leverages certain use-cases common to many storage-intensive cloud applications to limit the size of the trusted computing base.",
-  "summary": "Silverline is a system architecture aimed at enhancing data confidentiality in storage-intensive cloud applications without fully trusting the cloud provider. Traditionally, cloud platforms require trust in the provider to ensure data confidentiality, which separates control of physical resources from data ownership. The Silverline architecture proposes a model that provides the elasticity and cost-effectiveness of the cloud while minimizing the trusted computing base. The authors exploit specific use-cases common in cloud storage to propose a solution that balances confidentiality and performance.\n\nThe paper's approach focuses on data encryption and fine-grained access control to secure data. The Silverline system is particularly relevant given the increasing reliance on cloud computing, as it addresses one of the primary concerns organizations face—data confidentiality.\n\nIn a web search, other research often references this paper in the context of improving cloud storage confidentiality and optimizing performance in encrypted storage systems. For example, the Silverline architecture has been cited in research articles discussing advances in secure cloud storage methodologies:\n- [Secure Cloud Storage Performance](https://example.com/secure-cloud-storage-performance)\n- [Data Encryption Techniques in Cloud Computing](https://example.com/data-encryption-techniques)",
+  "abstract": "Facebook’s corpus of photos, videos, and other Binary Large OBjects (BLOBs) that need to be reliably stored and quickly accessible is massive and continues to grow. As the footprint of BLOBs increases, storing them in our traditional storage system, Haystack, is becoming increasingly inefficient. To increase our storage efficiency, measured in the effective-replication-factor of BLOBs, we examine the underlying access patterns of BLOBs and identify temperature zones that include hot BLOBs that are accessed frequently and warm BLOBs that are accessed far less often. Our overall BLOB storage system is designed to isolate warm BLOBs and enable us to use a specialized warm BLOB storage system, f4. f4 is a new system that lowers the effective-replication-factor of warm BLOBs while remaining fault tolerant and able to support the lower throughput demands.\n\nf4 currently stores over 65PBs of logical BLOBs and reduces their effective-replication-factor from 3.6 to either 2.8 or 2.1. f4 provides low latency; is resilient to disk, host, rack, and datacenter failures; and provides sufficient throughput for warm BLOBs.",
+  "summary": "The paper presents f4, Facebook’s storage system for “warm” immutable BLOBs whose access rates have declined but which must remain quickly retrievable. It separates warm data from newly created, high-throughput data handled by Haystack, using a router, caching, transformation, and migration architecture to make the storage tiers interchangeable.\n\nf4 stores locked volumes with Reed–Solomon(10,4) erasure coding across racks within a datacenter and geo-replicated XOR coding across datacenters. Deletes are implemented by removing per-BLOB encryption keys, avoiding write-heavy journal maintenance and prompt physical reclamation. The production evaluation reports lower peak workload than Haystack, median local read latency of 17 ms, tolerance of disk, host, rack, and datacenter failures, and a reduction in effective replication from 3.6 to 2.8 or 2.1. At the reported deployment scale, f4 stored more than 65 PB of logical data and saved more than 53 PB of physical storage.\n\nA web search found the paper subsequently cited as a production example in surveys of distributed file-system design and in later work on rack-aware placement and erasure-coded storage recovery. These citations indicate that f4 has served primarily as a reference architecture demonstrating the practical trade-offs between replication, erasure coding, failure-domain placement, and warm-data tiering; the sources located do not establish a specific direct lineage of implementations derived from f4. ([doi.org](https://doi.org/10.1145/3465405))",
   "raw_url": "https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-muralidhar.pdf",
   "source_type": "external",
   "filepath": "datastores/README.md",
   "filename": "f4: Facebook’s Warm BLOB Storage System",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:54"
 }

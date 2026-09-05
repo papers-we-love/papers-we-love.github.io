@@ -1,30 +1,39 @@
 {
   "uuid": "8d37f7c6ffb5e668f99fd54bd8de2620207777f400cfe4de18c2f41db18338ca",
-  "title": "Web Search for a Planet: The Google Cluster Architecture",
-  "publication_date": "June 2000",
+  "title": "Piranha: A Scalable Architecture Based on Single-Chip Multiprocessing",
+  "publication_date": "June 2000; Proceedings of the 27th Annual International Symposium on Computer Architecture (ISCA), Vancouver, Canada",
   "authors": [
-    "Jeffrey Dean",
+    "Andreas Nowatzyk",
+    "Barton Sano",
+    "Ben Verghese",
+    "Kourosh Gharachorloo",
     "Luiz André Barroso",
-    "Urs Hölzle"
+    "Robert McNamara",
+    "Robert Stets",
+    "Scott Smith",
+    "Shaz Qadeer"
   ],
   "keywords": [
-    "cluster-computing",
-    "computer-architecture",
-    "distributed-systems",
-    "google-cluster-architecture",
-    "internet-services",
-    "scalable-systems",
-    "web-search"
+    "cache-coherence",
+    "chip-multiprocessing",
+    "commercial-workloads",
+    "directory-protocol",
+    "multicore-processors",
+    "non-inclusive-cache",
+    "online-transaction-processing",
+    "processor-design",
+    "scalable-interconnect",
+    "shared-memory-multiprocessors"
   ],
   "category_path": [
     "computer_architecture"
   ],
-  "abstract": "In this paper we describe the architecture and operation of a cluster-based search engine for the World Wide Web. We focus primarily on the techniques that we used to create our own search engine and the Google Cluster's capacity to scale with the needs of a continually growing Internet. We discuss the challenges in scaling a web-based service and how system reliability is often the primary concern in designing large-scale clusters. Our design emphasizes a high degree of fault tolerance, low-level hardware redundancy, per-query optimization, and careful management of performance across thousands of machines running a wide range of applications.",
-  "summary": "This paper innovatively describes the Google cluster architecture, highlighting Google's approach to creating a scalable and reliable search engine infrastructure using clustered systems. The architecture supports Google's operations at scale, allowing it to handle a rapidly expanding number of search queries efficiently. The paper focuses on the importance of fault tolerance and performance optimization in large-scale systems. It influenced a wide range of research and development in web services, distributed system architecture, and scalable computing.\n\n### Impact and References:\n1. The paper was referenced in a [2003 ACM paper on network support for scalability](https://dl.acm.org/doi/10.1145/944733.944746) highlighting the role of scalable network architectures in large clusters.\n2. It also influenced subsequent developments in distributed computing frameworks, exemplified by [Apache Hadoop](https://hadoop.apache.org/), which adopts some of the cluster computing concepts popularized by Google's infrastructure.\n3. The design principles discussed have become foundational in the field of distributed systems, being referenced in Richard Hull's [work on web service architecture](https://dl.acm.org/doi/10.1145/2380517.2380583).\n4. Furthermore, the paper helped shape industry attitudes towards large-scale web infrastructure, as noted in a survey on web search engines published by [IEEE](https://ieeexplore.ieee.org/document/4116422) detailing practices for scale, fault tolerance, and system performance.",
+  "abstract": "The microprocessor industry is currently struggling with higher development costs and longer design times that arise from exceedingly complex processors that are pushing the limits of instruction-level parallelism. Meanwhile, such designs are especially ill suited for important commercial applications, such as on-line transaction processing (OLTP), which suffer from large memory stall times and exhibit little instruction-level parallelism. Given that commercial applications constitute by far the most important market for high-performance servers, the above trends emphasize the need to consider alternative processor designs that specifically target such workloads. The abundance of explicit thread-level parallelism in commercial workloads, along with advances in semiconductor integration density, identify chip multiprocessing (CMP) as potentially the most promising approach for designing processors targeted at commercial servers.\n\nThis paper describes the Piranha system, a research prototype being developed at Compaq that aggressively exploits chip multiprocessing by integrating eight simple Alpha processor cores along with a two-level cache hierarchy onto a single chip. Piranha also integrates further on-chip functionality to allow for scalable multiprocessor configurations to be built in a glueless and modular fashion. The use of simple processor cores combined with an industry-standard ASIC design methodology allow us to complete our prototype within a short time-frame, with a team size and investment that are an order of magnitude smaller than that of a commercial microprocessor. Our detailed simulation results show that while each Piranha processor core is substantially slower than an aggressive next-generation processor, the integration of eight cores onto a single chip allows Piranha to outperform next-generation processors by up to 2.9 times (on a per chip basis) on important workloads such as OLTP. This performance advantage can approach a factor of five by using full-custom instead of ASIC logic. In addition to exploiting chip multiprocessing, the Piranha prototype incorporates several other unique design choices including a shared second-level cache with no inclusion, a highly optimized cache coherence protocol, and a novel I/O architecture.",
+  "summary": "Piranha was an early influential proposal for using multiple relatively simple processor cores, rather than a single increasingly complex core, to exploit thread-level parallelism in commercial server workloads. Its design combined eight Alpha cores with shared on-chip caching, integrated memory controllers, directory-based coherence, and scalable interconnect support. The paper’s experimental results established a concrete case for CMP designs optimized for throughput-oriented workloads, reporting up to 2.9× performance over an aggressive single-core design for OLTP and projecting nearly 5× for a full-custom implementation. ([barroso.org](https://barroso.org/publications/isca00.pdf))\n\nSubsequent CMP research cited Piranha as an antecedent for investigating cache-capacity, replication, and communication tradeoffs in multicore cache hierarchies. For example, later work on CMP cache organization explicitly lists Piranha among the prior designs motivating shared-cache and replication techniques. ([iscaconf.hosting.acm.org](https://www.iscaconf.hosting.acm.org/isca2005/papers/06A-03.PDF)) The architecture also influenced later research on programmable coherence and scalable shared-memory systems; subsequent work identifies Piranha as one of the early machines exploring programmable coherence, memory, and interconnect mechanisms. ([researchgate.net](https://www.researchgate.net/publication/220771058_Piranha_A_Scalable_Architecture_Based_on_Single-Chip_Multiprocessing))\n\nIts broader industry significance was later recognized in the ACM-IEEE Eckert-Mauchly Award materials, which describe Piranha as one of the first multicore architectures to propose multiple simpler “wimpy” cores and state that aspects of its design were adopted in subsequent commercial processors. ([awards.acm.org](https://awards.acm.org/xpages/eckert-mauchly/index)) The authors also produced a follow-up industry-oriented publication on exploiting single-chip multiprocessing, indicating that the project continued to inform server-processor design discussions beyond the original ISCA paper. ([barroso.org](https://www.barroso.org/publications.html))",
   "raw_url": "http://barroso.org/publications/isca00.pdf",
   "source_type": "external",
   "filepath": "computer_architecture/README.md",
   "filename": "Piranha: A Scalable Architecture Based on Single-Chip Multiprocessing",
-  "created_on": "2026-01-24 23:46:58",
-  "summary_received": "2026-01-25 00:11:01"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:54"
 }

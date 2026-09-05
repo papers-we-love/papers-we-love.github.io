@@ -1,35 +1,34 @@
 {
   "uuid": "6234dd10b3a28c9da1c33cdd2b737bc68279f580e0262cffd9e52f91e782ee11",
-  "title": "Recurring Virtual Machine for Reliable Systems",
-  "publication_date": "November 2013",
+  "title": "Replication, History, and Grafting in the Ori File System",
+  "publication_date": "November 3–6, 2013; Proceedings of the Twenty-Fourth ACM Symposium on Operating Systems Principles (SOSP ’13), Farmington, Pennsylvania, USA",
   "authors": [
-    "Ali Mashtizadeh",
-    "Austin Clements",
+    "Ali José Mashtizadeh",
+    "Andrea Bittau",
     "David Mazières",
-    "David Terei",
-    "Mendel Rosenblum"
+    "Yifeng Frank Huang"
   ],
   "keywords": [
-    "checkpointing",
-    "distributed-systems",
-    "failure-recovery",
-    "fault-tolerance",
-    "memory-consistency",
-    "performance",
-    "system-reliability",
-    "system-restart",
-    "transparent-recovery",
-    "virtual-machine"
+    "background-fetch",
+    "content-addressable-storage",
+    "data-deduplication",
+    "distributed-fetch",
+    "distributed-file-systems",
+    "file-system-replication",
+    "grafting",
+    "offline-access",
+    "peer-to-peer-storage",
+    "versioning"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "This paper introduces the Recurring Virtual Machine (RVM) abstraction to provide efficient, transparent recovery from failures to arbitrary applications. This abstraction uses the virtual machine monitor (VMM) to support efficient checkpointing and reliable restart, while isolating applications from details of achieving a consistent state for recovery. Using RVM, an application can survive both hardware and software faults that result in fail-stop failures. Focusing on deterministic replay as a building block, RVMues both hardware and software techniques to achieve high performance, requiring less than 6% CPU overhead and 3% memory. We implement a prototype of RVM in a full-featured VMM and demonstrate that it supports unmodified, complex workloads such as Linux, Apache, and MySQL, recovering quickly (4-6 seconds) using checkpoints that incur limited size overhead.",
-  "summary": "The paper titled \"Recurring Virtual Machine for Reliable Systems\" introduces an innovative abstraction called the Recurring Virtual Machine (RVM). This approach helps systems recover from both hardware and software failures by using efficient checkpointing and reliable restart mechanisms. The RVM leverages the virtual machine monitor (VMM) to isolate applications from issues related to achieving a consistent recovery state. The focus on deterministic replay serves as a cornerstone for achieving high performance with minimal CPU and memory overheads, reported as less than 6% and 3%, respectively. The RVM is implemented in a virtual machine monitor supporting complex workloads, illustrated by the quick recovery of systems like Linux, Apache, and MySQL in 4-6 seconds.\n\nA web search indicates that this paper has influenced further research in enhancing system reliability and fault tolerance using virtual machines and checkpointing mechanisms. The implementation of RVM could be particularly significant for distributed systems requiring high availability and consistency. \n\nDespite the passage of time since its publication, specific citations or significant industrial applications directly attributing this work were not found in the search results, which suggests its impact might be more foundational or integrated as part of broader developments in virtualization technology. [ACM Digital Library](https://dl.acm.org/doi/10.1145/2517349.2522727) contains more information on its foundational aspects. However, for this search, other notable references were not discovered.",
+  "abstract": "Ori is a file system that manages user data in a modern setting where users have multiple devices and wish to access files everywhere, synchronize data, recover from disk failure, access old versions, and share data. The key to satisfying these needs is keeping and replicating file system history across devices, which is now practical as storage space has outpaced both wide-area network (WAN) bandwidth and the size of managed data. Replication provides access to files from multiple devices. History provides synchronization and offline access. Replication and history together subsume backup by providing snapshots and avoiding any single point of failure. In fact, Ori is fully peer-to-peer, offering opportunistic synchronization between user devices in close proximity and ensuring that the file system is usable so long as a single replica remains. Cross-file system data sharing with history is provided by a new mechanism called grafting. An evaluation shows that as a local file system, Ori has low overhead compared to a File system in User Space (FUSE) loopback driver; as a network file system, Ori over a WAN outperforms NFS over a LAN.",
+  "summary": "The paper presents Ori, a peer-to-peer file system that combines whole-file-system history, replication, offline operation, content-addressed storage, deduplication, background fetching, and history-preserving cross-file-system sharing through “grafts.” Its evaluation reports near-FUSE-loopback local performance, faster WAN synchronization than rsync in the tested bandwidth-limited setting, and better performance for the tested WAN network-file-system workload than NFS over a LAN.\n\nSubsequent work has cited Ori in several related contexts. The Unico file system cites Ori when presenting device-independent, on-demand synchronization for multi-device storage. ([researchgate.net](https://www.researchgate.net/publication/303819366_Device-Independent_On_Demand_Synchronization_in_the_Unico_File_System)) ZX, a latency-conscious network file system, cites Ori as related prior work on file access over high-latency networks. ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/abs/10.1002/spe.2550)) A later secure cloud-file-system project also cites Ori when discussing user-centric storage designs. ([scitepress.org](https://www.scitepress.org/publishedPapers/2024/123066/pdf/index.html)) In addition, a 2026 file-system patent lists the paper as prior art concerning dynamic change tracking and replication. ([patents.justia.com](https://patents.justia.com/patent/12717755)) Bibliographic indexing also indicates that the paper has received continued scholarly citations since its SOSP 2013 publication. ([rankless.org](https://www.rankless.org/authors/andrea-bittau))",
   "raw_url": "http://sigops.org/sosp/sosp13/papers/p151-mashtizadeh.pdf",
   "source_type": "external",
   "filepath": "distributed_systems/README.md",
   "filename": "Replication, History, and Grafting in the Ori File System",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

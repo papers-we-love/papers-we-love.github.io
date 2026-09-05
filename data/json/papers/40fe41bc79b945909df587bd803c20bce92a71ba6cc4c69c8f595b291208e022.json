@@ -1,34 +1,28 @@
 {
   "uuid": "40fe41bc79b945909df587bd803c20bce92a71ba6cc4c69c8f595b291208e022",
   "title": "Digital Video Stabilization and Rolling Shutter Correction using Gyroscopes",
-  "publication_date": "August 2011",
+  "publication_date": "September 2011 — Stanford University Computer Science Technical Report CSTR 2011-03",
   "authors": [
-    "Barlow Lens",
-    "Johannes Kopf",
-    "Michael F. Cohen",
-    "Oliver Deussen"
+    "Alexandre Karpenko",
+    "David Jacobs",
+    "Jongmin Baek",
+    "Marc Levoy"
   ],
   "keywords": [
-    "camera-motion-compensation",
-    "computer-vision",
-    "digital-video-stabilization",
     "gyroscopes",
-    "image-processing",
-    "image-stabilization",
+    "mobile-devices",
     "rolling-shutter-correction",
-    "sensor-fusion",
-    "video-enhancement",
-    "video-processing"
+    "video-stabilization"
   ],
   "category_path": [
     "computer_graphics"
   ],
-  "abstract": "We present a novel method for stabilizing video captured by a hand-held video camera. In addition to the usual video stream, we consider the angular velocity of the camera extracted from an attached gyroscope. While gyroscopes have been used successfully for stabilizing and controlling video capture to date, they are only rarely used for post-processing. We develop a video stabilization method that is robust and very effective, while being computationally efficient. Our method also corrects rolling shutter effects, producing excellent final video quality. We demonstrate the effectiveness of our method on a number of challenging video sequences and evaluate the performance against commercial solutions.",
-  "summary": "This paper presents a novel method for digital video stabilization using gyroscopes, focusing on correcting rolling shutter effects in videos captured by handheld cameras. The authors demonstrate how incorporating gyroscopic data can enhance video stabilization techniques by compensating for camera motion post-capture. It provides a computationally efficient solution that combines video stream processing with sensor data, offering improved results compared to existing commercial products.\n\nThe paper was published in ACM Transactions on Graphics, part of SIGGRAPH 2011, a leading conference for computer graphics research. The methodology proposed in this paper has influenced further research on video processing and stabilization techniques. For instance, subsequent developments in smartphone video stabilization have often cited the integration of sensors like gyroscopes, based on principles outlined in this work.\n\nFurther, this approach influenced research on motion estimation in robotics and autonomous systems, where accurate stabilization is crucial. The paper helped establish precedent for sensor fusion techniques in computer vision applications.\n\nSome references to the influence of this work include:\n- Yan, L. et al. \"Gyro-based video stabilization with motion compensation\", IEEE Transactions on Multimedia, 2012. [Reference](https://ieeexplore.ieee.org/document/6085012)\n- Nguyen, H.V. et al. \"Improving video quality in consumer electronics through sensor integration\", Journal of Electronic Imaging, 2014. [Reference](https://www.spiedigitallibrary.org/journals/journal-of-electronic-imaging/volume-22/issue-04/041104)\n- Yu, Y. et al. \"Advanced rolling shutter correction with sensor fusion\", Proceedings of the IEEE, 2016. [Reference](https://ieeexplore.ieee.org/document/6987292)",
+  "abstract": "In this paper we present a robust, real-time video stabilization and rolling shutter correction technique based on commodity gyroscopes. First, we develop a unified algorithm for modeling camera motion and rolling shutter warping. We then present a novel framework for automatically calibrating the gyroscope and camera outputs from a single video capture. This calibration allows us to use only gyroscope data to effectively correct rolling shutter warping and to stabilize the video. Using our algorithm, we show results for videos featuring large moving foreground objects, parallax, and low-illumination. We also compare our method with commercial image-based stabilization algorithms. We find that our solution is more robust and computationally inexpensive. Finally, we implement our algorithm directly on a mobile phone. We demonstrate that by using the phone’s inbuilt gyroscope and GPU, we can remove camera shake and rolling shutter artifacts in real-time.",
+  "summary": "The paper presents a real-time method for video stabilization and rolling-shutter correction using commodity MEMS gyroscopes. It models camera motion as rotation, integrates gyroscope measurements to estimate orientation, and accounts for the fact that different image rows are captured at different times. Stabilization and rolling-shutter correction are expressed as a single warp from the observed camera motion to a synthetic camera with smoothed motion and a global shutter.\n\nThe method automatically estimates camera focal length, rolling-shutter duration, gyroscope-to-camera timing delay, gyroscope drift, and axis correspondence from one approximately ten-second calibration recording. Feature matching and RANSAC provide image correspondences for optimizing these parameters, after which the correction can operate using gyroscope data alone. The image warp is implemented as a piecewise-linear mesh, with approximately ten vertical subdivisions typically sufficient for the reported videos.\n\nExperiments on iPhone 4 footage show robustness in scenes with moving foreground objects, parallax, poor illumination, and lens flare. The authors report better behavior than the tested commercial image-based systems, particularly when feature tracking is unreliable or rolling-shutter motion is nonlinear. A GPU implementation produces a corrected and stabilized viewfinder at 30 frames per second on the iPhone 4.\n\nThe principal limitations are the rotation-only motion model, loss of field of view caused by cropping empty regions after warping, and residual motion blur in low-light footage. The paper’s approach became a documented reference point for subsequent inertial video-stabilization and rolling-shutter systems: later patents explicitly describe or incorporate its unified gyro-based warping and calibration concepts, while subsequent academic work cites it as prior work for gyroscope-based stabilization and rolling-shutter correction. ([patents.google.com](https://patents.google.com/patent/US9554045B2/en))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/computer_graphics/digital_video_stabilization_and_rolling_shutter_correction_using_gyroscopes.pdf",
   "source_type": "pdf",
   "filepath": "computer_graphics/digital_video_stabilization_and_rolling_shutter_correction_using_gyroscopes.pdf",
   "filename": "digital_video_stabilization_and_rolling_shutter_correction_using_gyroscopes.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:50"
 }

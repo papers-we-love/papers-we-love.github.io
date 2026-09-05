@@ -1,32 +1,30 @@
 {
   "uuid": "3b9b3419ef8e0ac064f19f6b9ac084fea77d95c3226b1a0f402f0b4743fc6391",
-  "title": "A Methodology for Implementing Highly Concurrent Data Structures",
-  "publication_date": "October 1990",
+  "title": "Linearizability: A Correctness Condition for Concurrent Objects",
+  "publication_date": "July 1990 (ACM Transactions on Programming Languages and Systems, Vol. 12, No. 3, pp. 463–492)",
   "authors": [
-    "J. Eliot B. Moss",
+    "Jeannette M. Wing",
     "Maurice P. Herlihy"
   ],
   "keywords": [
-    "atomicity",
-    "concurrency-control",
-    "concurrent-data-structures",
-    "consistency-models",
-    "interleaving",
+    "concurrency",
+    "correctness",
+    "larch",
     "linearizability",
-    "lock-free",
-    "multithreading",
-    "non-blocking-algorithms",
-    "shared-memory"
+    "multiprocessing",
+    "serializability",
+    "shared-memory",
+    "specification"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "We present a methodology for constructing concurrent objects. It captures the notion of high concurrency, allows simple correctness proofs, and yields efficient, portable implementations. A concurrent object is one designed to be shared by concurrent processes. An implementation of a concurrent object is lock-free if it guarantees that infinitely often some process will complete an operation. A major contribution of our methodology is the systematic use of atomic primitive operations to \"glue together\" short \"critical sections\" in which shared data is modified.",
-  "summary": "This paper by Maurice P. Herlihy and J. Eliot B. Moss introduces a novel methodology for constructing concurrent data structures, commonly known in computer science as non-blocking or lock-free data structures. The methodology emphasizes high concurrency levels while ensuring consistent and efficient operations. Key contributions include the use of atomic primitive operations to connect brief critical sections for modifying shared data. This approach leads to the creation of lock-free concurrent objects, which are vital for modern multithreading environments and shared-memory systems.\n\nThe paper's substantial influence can be traced through its foundational impact on subsequent research in highly concurrent data structures. It is frequently cited alongside Reynold's lock-free data structure concepts and has become a cornerstone in academic and industrial advancements regarding non-blocking algorithms. Herlihy's linearizability concept from this work is now a standard correctness condition for concurrent operations.\n\n**Citations and References:**\n1. Fraser, K. (2004). _Practical Lock-Free Programming_. University of Cambridge Computer Laboratory.\n2. Michael, M. M. (2004). _Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects_. IEEE Transactions on Parallel and Distributed Systems.\n3. Shavit, N., & Touitou, D. (1995). _Software transactional memory_. Distributed Computing, Springer.\n4. Boehm, H.-J. (2013). _Can seqlocks get along with programming language memory models?_. ACM SIGPLAN Notices.\n5. Harris, T. L., et al. (2008). _Transactional Memory: An Overview_. Retrieved from SpringerLink.",
+  "abstract": "A concurrent object is a data object shared by concurrent processes. Linearizability is a correctness condition for concurrent objects that exploits the semantics of abstract data types. It permits a high degree of concurrency, yet it permits programmers to specify and reason about concurrent objects using known techniques from the sequential domain. Linearizability provides the illusion that each operation applied by concurrent processes takes effect instantaneously at some point between its invocation and its response, implying that the meaning of a concurrent object’s operations can be given by pre- and post-conditions. This paper defines linearizability, compares it to other correctness conditions, presents and demonstrates a method for proving the correctness of implementations, and shows how to reason about concurrent objects, given they are linearizable.",
+  "summary": "### Impact\n\n- The paper established linearizability as a formal correctness condition for concurrent objects: concurrent histories must correspond to legal sequential histories while preserving the real-time order of non-overlapping operations. Its emphasis on locality, compositional reasoning, and nonblocking behavior made it a foundation for subsequent work on concurrent data-structure correctness. ([cs.brown.edu](https://cs.brown.edu/~mph/HerlihyW90/p463-herlihy.pdf))\n- Later research extended or operationalized the concept for new execution models and verification techniques. Examples include causal linearizability for weak-memory systems, contextual trace-refinement results connecting object correctness to client behavior, and runtime verification and enforcement of linearizability. ([arxiv.org](https://arxiv.org/abs/1604.06734))\n- The paper’s object-level concurrency model is also reflected in widely used software platforms. Java’s standard concurrency libraries provide concurrent collections, nonblocking FIFO queues, atomic variables, and synchronization primitives intended as reusable building blocks for concurrent applications. The documentation does not establish direct historical causation from this paper, but these facilities represent a concrete industry use of the same broad abstraction of safely composable concurrent objects. ([docs.oracle.com](https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/util/concurrent/package-summary.html))",
   "raw_url": "http://cs.brown.edu/~mph/HerlihyW90/p463-herlihy.pdf",
   "source_type": "external",
   "filepath": "distributed_systems/README.md",
   "filename": "Linearizability: A Correctness Condition for Concurrent Objects",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:54"
 }

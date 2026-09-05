@@ -1,32 +1,32 @@
 {
   "uuid": "ae84cc48ff0005c5a79e095039e54e91dce5c116f65746e1593e819d21830ce9",
   "title": "MapReduce: Simplified Data Processing on Large Clusters",
-  "publication_date": "December 2004",
+  "publication_date": "December 6–8, 2004; 6th Symposium on Operating Systems Design and Implementation (OSDI ’04), San Francisco, California, USA",
   "authors": [
     "Jeffrey Dean",
     "Sanjay Ghemawat"
   ],
   "keywords": [
+    "cluster-computing",
+    "data-locality",
     "data-processing",
     "distributed-systems",
     "fault-tolerance",
     "functional-programming",
-    "google",
-    "large-clusters",
+    "large-scale-computing",
+    "load-balancing",
     "mapreduce",
-    "parallel-computing",
-    "scalability",
-    "simplified-programming"
+    "parallel-computing"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "MapReduce is a programming model and an associated implementation for processing and generating large data sets. Users specify a map function that processes a key/value pair to generate a set of intermediate key/value pairs, and a reduce function that merges all intermediate values associated with the same intermediate key. Many real world tasks are expressible in this model, as shown in the paper.",
-  "summary": "MapReduce is a programming model introduced by Jeffrey Dean and Sanjay Ghemawat of Google that enables simplified processing of large data sets on clusters. This model revolutionized how data processing tasks are expressed by using two key functions: map and reduce, inspired by Lisp programming functions. Its abstraction facilitates fault-tolerance and scalable processing over many machines.\n\nThis paper was published in December 2004 and had a significant impact on both academic research and industry practices. The MapReduce model became the basis for Apache Hadoop, an open-source software framework widely adopted for distributed storage and processing of large data sets using commodity hardware. This model has been an integral part of the development of cloud computing services like Google Cloud Platform, Amazon AWS, and Microsoft Azure, which offer services based on similar paradigms. Moreover, it served as a foundation for further research into optimized and more flexible distributed computing frameworks.\n\nSome references where this paper and its concepts have been influential include:\n\n1. **Apache Hadoop** - Widely used open-source software inspired by MapReduce for distributed computing. Reference: [Apache Hadoop](https://hadoop.apache.org/)\n2. **Spark** - Built on concepts evolved from MapReduce to support more complex data computations. Reference: [Apache Spark](https://spark.apache.org/)\n3. **Amazon EMR** - Provides a managed Hadoop framework for processing large amounts of data across dynamically scalable Amazon EC2 instances. Reference: [Amazon EMR](https://aws.amazon.com/emr/)\n4. **Google Cloud Dataflow** - Extends MapReduce programming model for streaming and batch data processing. Reference: [Google Cloud Dataflow](https://cloud.google.com/dataflow)\n5. **Microsoft Azure HDInsight** - A cloud distribution of Hadoop components that use MapReduce. Reference: [Azure HDInsight](https://azure.microsoft.com/en-us/services/hdinsight/)\n\nThis paper has become a cornerstone in distributed systems study, influencing numerous tools and methods in modern computing.",
+  "abstract": "MapReduce is a programming model and an associated implementation for processing and generating large data sets. Users specify a map function that processes a key/value pair to generate a set of intermediate key/value pairs, and a reduce function that merges all intermediate values associated with the same intermediate key. Many real world tasks are expressible in this model, as shown in the paper.\n\nPrograms written in this functional style are automatically parallelized and executed on a large cluster of commodity machines. The run-time system takes care of the details of partitioning the input data, scheduling the program’s execution across a set of machines, handling machine failures, and managing the required inter-machine communication. This allows programmers without any experience with parallel and distributed systems to easily utilize the resources of a large distributed system.\n\nOur implementation of MapReduce runs on a large cluster of commodity machines and is highly scalable: a typical MapReduce computation processes many terabytes of data on thousands of machines. Programmers find the system easy to use: hundreds of MapReduce programs have been implemented and upwards of one thousand MapReduce jobs are executed on Google’s clusters every day.",
+  "summary": "The paper introduced a restricted map-and-reduce programming model together with a runtime that automated data partitioning, scheduling, fault recovery, communication, data locality, and load balancing across commodity clusters. Its design demonstrated that large-scale data processing could be made accessible through a comparatively simple programming interface while retaining resilience to worker failures and stragglers.\n\nThe model subsequently became the conceptual and practical foundation for Hadoop MapReduce, whose framework provides parallel processing of multi-terabyte datasets on commodity clusters, task re-execution, shuffle and sorting, partitioning, counters, and data-local scheduling. ([hadoop.apache.org](https://hadoop.apache.org/docs/r3.3.6/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html)) MapReduce also influenced later distributed data-processing research: subsequent work formalized its computational power and limitations, developed algorithms specifically for MapReduce, and examined extensions for graph processing and other workloads. ([research.google](https://research.google/pubs/a-model-of-computation-for-mapreduce/)) Systems such as Spark addressed important limitations of disk-oriented MapReduce by offering a distributed in-memory execution model while retaining a functional, map/reduce-style programming approach. ([research.google](https://research.google/pubs/fast-data-processing-with-spark/)) The paper was published as part of OSDI ’04, held December 6–8, 2004, in San Francisco. ([usenix.org](https://www.usenix.org/conference/osdi-04/mapreduce-simplified-data-processing-large-clusters))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/mapreduce-simplified-data-processing-on-large-clusters.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/mapreduce-simplified-data-processing-on-large-clusters.pdf",
   "filename": "mapreduce-simplified-data-processing-on-large-clusters.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:51"
 }

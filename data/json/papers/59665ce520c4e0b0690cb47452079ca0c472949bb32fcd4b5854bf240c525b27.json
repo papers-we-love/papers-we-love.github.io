@@ -1,31 +1,32 @@
 {
   "uuid": "59665ce520c4e0b0690cb47452079ca0c472949bb32fcd4b5854bf240c525b27",
-  "title": "Incremental Mature Garbage Collection using the Train Algorithm",
-  "publication_date": "October 1994",
+  "title": "Incremental Mature Garbage Collection Using the Train Algorithm",
+  "publication_date": "August 1995; published in the Proceedings of ECOOP’95, the Ninth European Conference on Object-Oriented Programming, Lecture Notes in Computer Science, Volume 952, pages 235–252, Springer-Verlag",
   "authors": [
-    "R. E. Jones",
-    "R. Lins"
+    "Jacob Seligmann",
+    "Steffen Grarup"
   ],
   "keywords": [
-    "compilers",
+    "beta-language",
     "garbage-collection",
-    "incremental-gc",
-    "java-memory-management",
-    "lisp",
-    "mature-objects",
+    "generational-garbage-collection",
+    "incremental-garbage-collection",
+    "mature-object-space",
     "memory-management",
-    "object-oriented-programming",
+    "non-disruptive-collection",
+    "object-oriented-languages",
+    "remembered-sets",
     "train-algorithm"
   ],
   "category_path": [
     "garbage_collection"
   ],
-  "abstract": "Many garbage collectors, notably those for object-oriented languages, rely on observations about object lifetimes to segregate short- and long-lived objects. Once the mature object space fills, however, garbage collection pauses can still be long, impairing interaction or concurrent computation. We review existing approaches and propose a solution involving a novel partitioning of mature objects into smaller increments that can be collected independently to yield truly incremental collection of mature objects. The train algorithm is discussed, evaluated, and compared with existing methods. It is shown to be effective in reducing pause times considerably while maintaining or improving overall throughput.",
-  "summary": "The paper titled \"Incremental Mature Garbage Collection using the Train Algorithm,\" authored by R. E. Jones and R. Lins and published in October 1994, introduces the train algorithm, a novel approach for incremental garbage collection in mature object spaces. This method is particularly relevant for object-oriented languages where memory management of mature objects can become a performance bottleneck due to long garbage collection pauses.\n\nThe train algorithm partitions mature object space into smaller increments or ‘trains’ that can be collected independently, thus reducing pause times and improving system throughput. This approach contrasts with traditional methods that involve whole-heap collection, which can be inefficient and disruptive.\n\nIn terms of its impact, this paper has influenced subsequent developments in garbage collection algorithms for languages like Java, notably contributing to improvements in JVM garbage collection techniques to minimize pause times and optimize memory management for highly-interactive applications.\n\nFurther references to this work can be found in citations related to memory management optimizations in dynamic languages and systems programming. Some scholarly articles and technical papers also discuss adaptations and refinements of the train algorithm in newer garbage collection strategies. However, detailed references directly citing this work in available online databases are limited, indicating that while the concept has been influential, explicit citations are less common in recent literature.",
+  "abstract": "We present an implementation of the Train Algorithm, an incremental collection scheme for reclamation of mature garbage in generation-based memory management systems. To the best of our knowledge, this is the first Train Algorithm implementation ever. Using the algorithm, the traditional mark-sweep garbage collector employed by the Mjølner run-time system for the object-oriented BETA programming language was replaced by a non-disruptive one, with only negligible time and storage overheads.",
+  "summary": "## Contributions and approach\n\nThe paper presents the first reported implementation of the Train Algorithm, an incremental garbage collector for the mature or old generation of a generational memory-management system. The implementation replaces the Mjølner BETA runtime system’s traditional mark-sweep collector with a collector designed to avoid long, unpredictable pauses.\n\nThe algorithm partitions mature object space into fixed-size blocks called *cars*. Cars are grouped into ordered collections called *trains*. Each collection step processes the earliest car in the earliest train rather than scanning the entire mature space. Objects referenced from outside the car are evacuated to appropriate later cars or trains, while unreferenced objects are reclaimed. The ordering and clustering properties of trains allow even cyclic garbage structures larger than an individual car to be recognized and eventually collected.\n\nThe implementation relies on remembered sets associated with cars and a train table that maps mature-space addresses to their train and car. The authors also describe a correction to a progress flaw in the original algorithm: after a futile collection, an external reference into a later car is retained as an additional root until a non-futile collection occurs. This prevents a mutator from repeatedly changing references in a way that could otherwise prevent the collector from making progress.\n\nThe collector was integrated into the Mjølner BETA runtime using 64-KB cars. Practical policies were introduced for evacuation, train creation, collection frequency, garbage-ratio estimation, and highly referenced objects. The implementation did not adopt a general popular-object scheme; instead, it isolated BETA’s frequently referenced basic environment object in a specially handled car.\n\nExperiments using the BETA compiler, an interactive hyper-structure editor, and a discrete-event simulation showed that old-generation pauses were reduced to only a few milliseconds. Across the benchmarks, median Train Algorithm pauses were 0.01–0.04 seconds, 90th-percentile pauses were 0.03–0.06 seconds, and maximum pauses were 0.05–0.12 seconds under the normal configuration. The authors reported total execution-time changes of +0.6% for the compiler, +1.0% for the editor, and −8% for the simulation. Old-generation storage overhead was approximately 10–20%, corresponding to roughly 4–8% increases in total application storage requirements. The experiments also found that copying overhead remained below 20% on average in the tested configurations.\n\n## Influence and subsequent use\n\nThe work established a concrete implementation and empirical evaluation of the Train Algorithm, complementing the earlier theoretical proposal by Hudson and Moss. Later garbage-collection literature identifies Seligmann and Grarup’s implementation as an important validation of the approach and discusses the algorithm in analyses of incremental relocation, remembered sets, cyclic garbage, and the “popular object” problem. ([beta.cs.au.dk](https://beta.cs.au.dk/Papers/Train/train.html))\n\nSubsequent research applied train-style ideas to persistent and distributed object systems. For example, research on PMOS developed incremental collection for persistent object stores, while later work investigated distributed garbage collection mechanisms based on the Train Algorithm. ([researchgate.net](https://www.researchgate.net/publication/2240860_Incremental_Garbage_Collection_of_a_Persistent_Object_Store_using_PMOS)) The algorithm has also continued to appear in instructional and systems literature as a representative incremental collector that processes one heap block at a time and uses trains to handle interlinked and cyclic structures. ([oracle.com](https://www.oracle.com/technical-resources/articles/java/garbagecollection-in-java-applications.html))\n\nThe paper was published as a peer-reviewed ECOOP 1995 conference contribution and remains listed in bibliographic and garbage-collection research resources. ([dblp.org](https://dblp.org/db/conf/ecoop/ecoop95))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/garbage_collection/incremental_mature_garbage_collection_using_the_train_algorithm.pdf",
   "source_type": "pdf",
   "filepath": "garbage_collection/incremental_mature_garbage_collection_using_the_train_algorithm.pdf",
   "filename": "incremental_mature_garbage_collection_using_the_train_algorithm.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

@@ -1,32 +1,31 @@
 {
   "uuid": "64e4e494b260faf9d4119715a9f58a420c58c9d1c4ac376e8905b6ec97c5d607",
-  "title": "Graph Isomorphism and Representation Theory",
-  "publication_date": "1997",
+  "title": "GRAPH ISOMORPHISM AND REPRESENTATION THEORY",
+  "publication_date": "Not stated in the paper. The available hosting record is associated with December 14, 2016, but this appears to be a file-upload timestamp rather than a stated publication date. Catalog metadata listing 1997 attributes the work to different authors and is inconsistent with this PDF. ([daniel-litt.squarespace.com](https://daniel-litt.squarespace.com/s/graphs-sl2.pdf))",
   "authors": [
-    "Christian Kassel",
-    "Grzegorz Rostalski"
+    "DANIEL LITT"
   ],
   "keywords": [
     "algebraic-combinatorics",
-    "automorphism-groups",
-    "computational-complexity",
+    "graph-enumeration",
     "graph-isomorphism",
-    "graph-theory",
-    "linear-representations",
-    "mathematical-structures",
-    "permutation-groups",
+    "invariant-subspaces",
+    "lie-algebras",
     "representation-theory",
-    "symmetry"
+    "sl2",
+    "symmetric-groups",
+    "unimodality",
+    "unlabeled-graphs"
   ],
   "category_path": [
     "mathematics"
   ],
-  "abstract": "Abstract. We explore the connections between graph isomorphism and representation theory. Our view is that representation theory constitutes an appropriate language in which to study these connections. We give a characterization of graphs in representation theoretic terms and explain a few applications of these techniques to problems in mathematics and theoretical computer science.",
-  "summary": "The paper \"Graph Isomorphism and Representation Theory\" by Christian Kassel and Grzegorz Rostalski, published in 1997, explores the relationship between graph isomorphism and representation theory. The authors use representation theory as a framework to analyze graph isomorphism, offering a characterization of graphs in representation-theoretic terms. They present applications of these techniques to broader problems in mathematics and theoretical computer science.\n\nA web search revealed limited direct citations or significant impact of this paper on later research or industry innovations. Therefore, it can be inferred that while the paper might have contributed to scholarly discourse, it didn't prominently influence future work within the realms of graph theory or representation theory as per available records. The ideas discussed in the paper might still hold theoretical interest and potential for specific academic explorations, although they haven't been widely referenced in subsequent research or industry applications.",
+  "abstract": "No abstract or summary section is provided in the paper.",
+  "summary": "The paper proves that, for fixed n, the number g_{n,k} of isomorphism classes of unlabeled graphs with n vertices and k edges forms a unimodal sequence as k varies. It first identifies g_{n,k} with the dimension of the S_n-invariant subspace of the vector space spanned by labeled graphs. Operators that add and remove edges are then combined to define an sl_2(C)-representation, with the operator H acting on the k-edge subspace by the scalar 2k - binom(n,2). The dimensions of the corresponding H-eigenspaces are therefore the values g_{n,k}; finite-dimensional sl_2-representation theory implies that these multiplicities are symmetric and unimodal. The same construction also yields unimodality for multiplicities associated with every irreducible representation of S_n. ([daniel-litt.squarespace.com](https://daniel-litt.squarespace.com/s/graphs-sl2.pdf))\n\nA search did not identify a verifiable body of later research or industry work that directly cites this specific Daniel Litt note. The available Papers We Love entry reports limited direct citations, but its bibliographic metadata appears to describe a different work, so it should not be treated as evidence of influence. ([paperswelove.org](https://paperswelove.org/papers/graph-isomorphism-and-representation-theory-64e4e494/))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/mathematics/graph-isomorphism-and-representation-theory.pdf",
   "source_type": "pdf",
   "filepath": "mathematics/graph-isomorphism-and-representation-theory.pdf",
   "filename": "graph-isomorphism-and-representation-theory.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

@@ -1,31 +1,26 @@
 {
   "uuid": "36ea327d7062b97d65dbc87f46ad4bd576df429779a57a4137d56743b46edd18",
   "title": "Dynamic Hash Tables",
-  "publication_date": "2004",
+  "publication_date": "April 1988, Communications of the ACM, Volume 31, Number 4, pages 446–457",
   "authors": [
-    "B. Vöcking",
-    "F. Meyer auf der Heide"
+    "Per-Åke Larson"
   ],
   "keywords": [
-    "algorithm-analysis",
-    "data-structures",
-    "dynamic-hash-tables",
-    "dynamic-updates",
-    "expected-logarithmic-access",
+    "dynamic-hashing",
     "hashing",
-    "load-balancing",
-    "paging",
-    "randomization"
+    "hashing-functions",
+    "linear-hashing",
+    "spiral-storage"
   ],
   "category_path": [
     "data_structures"
   ],
-  "abstract": "The document specifies an abstract is not available. Please refer to the main content for an overview of the topics covered.",
-  "summary": "This paper titled \"Dynamic Hash Tables\" by F. Meyer auf der Heide and B. Vöcking, published in 2004, introduces a comprehensive analysis of dynamic hash tables suitable for environments where data is frequently updated. The authors focus on algorithmic strategies for maintaining efficient hash tables that allow expected logarithmic time for access and updates. The central theme is to achieve load balancing through randomization techniques, which is significant for improving the performance of hash tables under dynamic conditions, especially in paging and memory management applications.\n\nAfter a thorough investigation of available literature and research databases, no specific direct citations or recognizable influence on subsequent published research or industry applications was found. However, the concepts and techniques explored in this paper contribute to the foundational understanding and further studies in the field of dynamic data structures and algorithmic efficiency.",
+  "abstract": "Linear hashing and spiral storage are two dynamic hashing schemes originally designed for external files. This paper shows how to adapt these two methods for hash tables stored in main memory. The necessary data structures and algorithms are described, the expected performance is analyzed mathematically, and actual execution times are obtained and compared with alternative techniques. Linear hashing is found to be both faster and easier to implement than spiral storage. Two alternative techniques are considered: a simple unbalanced binary tree and double hashing with periodic rehashing into a larger table. The retrieval time of linear hashing is similar to double hashing and substantially faster than a binary tree, except for very small trees. The loading times of double hashing (with periodic reorganization), a binary tree, and linear hashing are similar. Overall, linear hashing is a simple and efficient technique for applications where the cardinality of the key set is not known in advance.",
+  "summary": "The paper established a practical main-memory adaptation of linear hashing and spiral storage, combining algorithms, asymptotic analysis, and measurements against binary trees and double hashing. Its principal conclusion—that linear hashing provides gradual, local table expansion without full-table reorganization while retaining competitive retrieval performance—helped position linear hashing as a standard dynamic-hashing technique. Later work extended linear hashing to distributed files, including LH, and to highly available distributed data structures such as LH*RS. ([sigmodrecord.org](https://sigmodrecord.org/1993/06/03/lh-linear-hashing-for-distributed-files/))\n\nThe method remains a reference point in subsequent research on dynamic indexing and storage systems. For example, recent work on tiered indexing explicitly uses linear hashing as one of the dynamic hash schemes underlying its design. ([link.springer.com](https://link.springer.com/article/10.1007/s00778-025-00928-6)) NIST’s Dictionary of Algorithms and Data Structures also uses this paper as a reference when defining dynamic hashing and linear hashing. ([xlinux.nist.gov](https://xlinux.nist.gov/dads/HTML/dynamicHashing.html)) The sources reviewed provide clear evidence of continued research influence, but do not by themselves establish verified deployment of this specific paper’s implementation in a named commercial product.",
   "raw_url": "http://www.csd.uoc.gr/~hy460/pdf/Dynamic%20Hash%20Tables.pdf",
   "source_type": "external",
   "filepath": "data_structures/README.md",
   "filename": "Dynamic Hash Tables",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:54"
 }

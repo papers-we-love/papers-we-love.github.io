@@ -1,32 +1,33 @@
 {
   "uuid": "eaaac740d108bba22a356d4249689ba3cba56efc90e81a1b11f3687f0c725a84",
-  "title": "Optimal Bidding in Online Auctions",
-  "publication_date": "2004",
+  "title": "Optimal Bidding in On-line Auctions",
+  "publication_date": "January 2009, Journal of Revenue and Pricing Management, volume 8, issue 1, pages 21–41; the manuscript is dated December 2001 and revised December 2002.",
   "authors": [
-    "Alberto Paxson",
-    "Dimitris Bertsimas"
+    "Dimitris Bertsimas",
+    "Georgia Perakis",
+    "Jeffrey Hawkins"
   ],
   "keywords": [
+    "approximate-dynamic-programming",
     "auction-theory",
-    "bid-optimization",
-    "decision-making",
-    "dynamic-bidding",
-    "economics",
-    "game-theory",
+    "dynamic-programming",
+    "ebay",
+    "integer-programming",
+    "multi-auction-optimization",
     "online-auctions",
     "optimal-bidding",
-    "probability",
-    "strategy"
+    "sniping",
+    "stochastic-modeling"
   ],
   "category_path": [
     "economics"
   ],
-  "abstract": "We study the problem of a bidder participating in an online auction consisting of several auction sites, where auctions occur over time and bids are placed sequentially. The auctions can have any of several formats, including First-Price-Sealed-Bid, English, and Dutch auctions, each involving multiple items potentially. The bidder is repeatedly participating in auctions for identical items that arrive at different times. The objective is to learn about the nature of the competition, market conditions, bidding strategies, and implement an efficient procurement strategy. We identify optimal bidding policies for bidders who have developed beliefs about the characteristics of the other bidders based on their past bidding experiences and derive a general and computationally tractable algorithm to identify such policies. Computational results are reported, demonstrating the effectiveness of our approach.",
-  "summary": "This paper by Dimitris Bertsimas and Alberto Paxson addresses the problem of bidding in online auctions that occur over multiple auction sites and time periods. They focus on the development of optimal bidding policies for bidders who participate repeatedly in these auctions. The paper explains how bidders can learn from past interactions to understand competition and market dynamics to formulate effective bidding strategies. The authors propose a computational algorithm to derive these optimal bidding policies, providing an important tool for auction participants to maximize their chances of winning desired items while minimizing costs.\n\nWhile the paper does not appear to have been extensively cited in high-profile research journals, it contributes to the field of auction theory and the broader understanding of strategic interactions in online environments. The methodologies proposed have potential implications for strategic decision-making in auctions, which could influence subsequent research on bidding strategies and auction design. However, no specific references to this paper's influence in other research or industry applications could be found.",
+  "abstract": "On-line auctions are arguably one of the most important and distinctly new applications of the Internet. The predominant player in on-line auctions, eBay, has over 42 million users, and it was the host of over $9.3 billion worth of goods sold in the year 2001. Using methods from approximate dynamic programming and integer programming, we design algorithms for optimally bidding for a single item in an on-line auction, and in simultaneous or overlapping multiple on-line auctions. We report computational evidence using data from eBay’s web site from 1772 completed auctions for personal digital assistants and from 4208 completed auctions for stamp collections that shows that (a) the optimal dynamic policy outperforms simple but widely used static heuristic rules for a single auction, and (b) a new approach for the multiple auctions problem that uses the value functions of single auctions found by dynamic programming in an integer programming framework produces high quality solutions fast and reliably.",
+  "summary": "## Summary\n\nThe paper formulates online bidding as a stochastic dynamic-programming problem rather than as a purely game-theoretic bidding problem. For a single auction, the state consists primarily of the current listed price and the bidder’s proxy-bid status. The model represents competing bids probabilistically as functions of the listed price and remaining auction time, and it explicitly models the possibility that bids submitted during the final seconds may fail to register. The bidder seeks to maximize expected surplus subject to a maximum willingness-to-pay.\n\nThe resulting Bellman-equation algorithm produces state-dependent bidding policies. In simulations calibrated with 1,772 Palm Pilot III auctions and 4,208 stamp-collection auctions, the dynamic policy outperformed fixed-time and fixed-budget heuristics in expected utility and generally reduced spending per win. For multiple simultaneous or overlapping auctions, the authors develop approximate dynamic-programming methods and integer-programming approximations. Their principal method, IPA, combines single-auction value functions within an integer program constrained by per-auction and aggregate budgets. Across the reported experiments, IPA achieved performance close to exact dynamic programming when the latter was computationally feasible, while remaining substantially more scalable. The paper also examines competition from additional strategic bidders and extends the framework to auctions ending at different times.\n\nSubsequent research has explicitly used this work as a reference point for automated bidding agents and for optimization-based bidding under uncertainty. A later study on automated dynamic bidding agents describes the paper’s dynamic-programming and integer-programming approach as a basis for bidding in single, simultaneous, and overlapping online auctions. ([opus.lib.uts.edu.au](https://opus.lib.uts.edu.au/bitstream/10453/29227/2/02whole.pdf)) A later robust-optimization study cites the paper as an example of strategic bidding based on approximate dynamic programming and integer programming, while adapting the problem to uncertainty sets and sealed-bid markets. ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S0377221718306325)) The available evidence therefore indicates methodological influence on subsequent computational-auction research; the search did not identify independently documented large-scale commercial deployment of the specific algorithm beyond the authors’ own reported use in eBay auctions. The journal publication is bibliographically listed as a 2009 article in volume 8, issue 1, pages 21–41. ([researchgate.net](https://www.researchgate.net/publication/37595333_Optimal_Bidding_in_Online_Auctions))",
   "raw_url": "http://www.mit.edu/~dbertsim/papers/Revenue%20Management/Optimal%20Bidding%20in%20Online%20Auctions.pdf",
   "source_type": "external",
   "filepath": "economics/README.md",
   "filename": "Optimal Bidding in Online Auctions (2001)",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

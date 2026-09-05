@@ -1,31 +1,31 @@
 {
   "uuid": "ea670e8bf26152a3932201382bcf39291ec61e57322dd280e41dce4ae03823b5",
-  "title": "On the Meanings of the Logical Constants and the Justifications of the Logical Laws",
-  "publication_date": "1983",
+  "title": "ON THE MEANINGS OF THE LOGICAL CONSTANTS AND THE JUSTIFICATIONS OF THE LOGICAL LAWS",
+  "publication_date": "1985 (originally published in Atti degli Incontri di Logica Matematica, Vol. 2); reprinted in 1996 in Nordic Journal of Philosophical Logic, Vol. 1, No. 1, pp. 11–60",
   "authors": [
     "Per Martin-Löf"
   ],
   "keywords": [
-    "constructivism",
-    "intuitionistic-type-theory",
+    "evidence",
+    "intuitionistic-logic",
+    "judgements",
+    "logical-consequence",
     "logical-constants",
-    "logical-laws",
-    "mathematical-logic",
-    "philosophy-of-logic",
-    "predicate-logic",
-    "proof-theory",
-    "propositional-logic",
-    "semantics"
+    "natural-deduction",
+    "proof-theoretic-semantics",
+    "propositions",
+    "type-theory",
+    "verification"
   ],
   "category_path": [
     "logic_and_programming"
   ],
-  "abstract": "This paper is about the semantics of logical constants and the justifications of the laws of logic. It is based on intuitionistic type theory, which allows us to treat concepts like constructivity, evidence, and the meaning of logical constants in precise mathematical terms. The approach is philosophical and foundational, aiming to give a constructive interpretation of the logical laws. Instead of treating logic as a collection of inexplicable laws, this work tries to demonstrate how logical constants can be understood meaningfully by associating them with operations on evidence. The goal is to elucidate how logical laws can be justified in terms of the meanings of logical constants, grounded in a type-theoretical framework.",
-  "summary": "Per Martin-Löf's 1983 paper, \"On the Meanings of the Logical Constants and the Justifications of the Logical Laws,\" offers an in-depth exploration of the semantics of logical constants within the framework of intuitionistic type theory. The paper proposes a constructive interpretation of logical laws, emphasizing their justification through the meanings of logical constants and the role of evidence. This work has been significant in philosophical logic and proof theory, shaping discussions around constructivism and the foundational aspects of mathematics. Intuitionistic type theory has influenced the development of proof assistants and automated reasoning systems. While there are no direct citations of this paper in modern literature found during my search, the concepts articulated by Martin-Löf continue to underpin much of the research in constructive mathematics and type theory. The influence of this paper is also evident in the ongoing discourse in the philosophy of logic, particularly concerning the roles of semantics and constructivism.",
+  "abstract": "No abstract appears in the paper.",
+  "summary": "Martin-Löf develops a constructive, proof-theoretic account of logic centered on the distinction between **propositions** and **judgements**. A proposition is understood through the conditions that count as its verification, while a judgement records an act of knowledge or understanding. A proof is therefore not merely a formal sequence of formulas: it is an act that makes a judgement evident. On this account, truth is identified with verifiability, and evidence is inherently related to a knowing subject.\n\nThe paper gives a systematic semantic explanation of the logical constants. The meaning of implication is explained through hypothetical proof; conjunction requires proofs of both components; disjunction requires a proof of one component together with information about which component was verified; falsehood has no possible verification; universal quantification requires a uniform proof for arbitrary instances; and existential quantification requires a witness together with a proof for the witnessed instance. The introduction rules express how propositions are verified, while the elimination rules are justified by showing how an existing verification can be put into practice. Martin-Löf also distinguishes logical consequence from implication and treats formation rules as genuine rules of inference because judgements such as “A is a proposition” are themselves knowledge claims.\n\nThe paper argues that consistency and normalization should be understood semantically rather than solely through metamathematical manipulation of uninterpreted proof figures: when proof rules are endowed with their intended meaning, the impossibility of verifying falsehood and the reduction of proofs toward introductory form become conceptually visible.\n\nThe work became an important contribution to the development of **proof-theoretic semantics**, an approach that explains the meanings of logical constants in terms of proofs and inferential rules rather than truth conditions. Later surveys identify Martin-Löf, alongside Gentzen, Prawitz, and Dummett, as a central figure in this tradition, and describe his account as influential in subsequent discussions of inferential meaning, harmony, logical consequence, and constructive type theory. ([plato.stanford.edu](https://plato.stanford.edu/archives/win2024/entries/proof-theoretic-semantics/)) The paper is also routinely cited in literature examining the inferential characterization of logical constants and the relationship between proof-theoretic semantics and type theory. ([sciencedirect.com](https://www.sciencedirect.com/topics/mathematics/category-theory))\n\nThe available references document substantial influence on later logical and philosophical research. They do not establish a direct industry adoption attributable specifically to this paper, although related Martin-Löf type-theoretic ideas have contributed to the foundations of computer-assisted proof and functional programming.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/logic_and_programming/on-the-meanings-of-the-logical-constants.pdf",
   "source_type": "pdf",
   "filepath": "logic_and_programming/on-the-meanings-of-the-logical-constants.pdf",
   "filename": "on-the-meanings-of-the-logical-constants.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

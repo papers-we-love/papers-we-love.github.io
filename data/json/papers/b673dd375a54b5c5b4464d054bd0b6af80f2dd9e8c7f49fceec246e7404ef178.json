@@ -1,31 +1,28 @@
 {
   "uuid": "b673dd375a54b5c5b4464d054bd0b6af80f2dd9e8c7f49fceec246e7404ef178",
-  "title": "Efficient Inference and Approximate SVD on Networks",
-  "publication_date": "April 2017",
+  "title": "Computer Vision Based Detection and Localization of Potholes in Asphalt Pavement Images",
+  "publication_date": "May 15–18, 2016, 2016 IEEE Canadian Conference on Electrical and Computer Engineering (CCECE), Vancouver, BC, Canada",
   "authors": [
-    "Paul Tuttial"
+    "Fiza Murtaza",
+    "Hafiz Adnan Habib",
+    "Kanza Azhar",
+    "Muhammad Haroon Yousaf"
   ],
   "keywords": [
-    "algorithms",
-    "big-data",
-    "computational-efficiency",
-    "graph-theory",
-    "inference",
-    "matrix-decomposition",
-    "network-analysis",
-    "network-inference",
-    "scalable-algorithms",
-    "singular-value-decomposition"
+    "computer-vision",
+    "graph-cut-segmentation",
+    "histogram-of-oriented-gradient",
+    "pothole-detection"
   ],
   "category_path": [
     "computer_vision"
   ],
-  "abstract": "Singular Value Decomposition (SVD) and related low-rank approximation techniques are the workhorses of many applications, including information retrieval, signal processing, and collaborative filtering. The need for scalable SVD algorithms is growing rapidly due to the massive increase of data sizes in these areas. This paper presents efficient algorithms for approximate SVD on massive networks, providing techniques for scalable subspace introduction and other targeted problems. Building on proven results in low-rank approximation and using the properties of graph theory, mainly leveraging sparsity and other advantageous characteristics, we also introduce strategies for fast inference on evolving systems. Performance evaluation on large datasets shows that our methods offer highly scalable alternatives to existing SVD implementations with minimal sacrifice in accuracy.",
-  "summary": "The paper titled 'Efficient Inference and Approximate SVD on Networks' presents novel algorithms for performing Singular Value Decomposition (SVD) on very large networks. It aims to address the scalability issues faced by traditional SVD techniques in the context of exploding data sizes. The paper leverages graph theory principles to offer scalable subspace introduction methods and efficient inference strategies for dynamic systems. \n\nThe research introduces new strategies that maintain accuracy while significantly improving computational efficiency. These algorithms exhibit their efficiency in performance evaluations conducted on extensive datasets.\n\nDespite the paper's methodological contributions to scalable SVD implementations, no significant citations or influences on subsequent research or industry practices were identified through available online resources. The paper appears to remain primarily an academic exercise with limited direct impact on broader scientific or commercial developments.",
+  "abstract": "Asphalt pavement distresses have significant importance in roads and highways. This paper addresses the detection and localization of one of the key pavement distresses, the potholes using computer vision. Different kinds of pothole and non-pothole images from asphalt pavement are considered for experimentation. Considering the appearance-shape based nature of the potholes, Histograms of oriented gradients (HOG) features are computed for the input images. Features are trained and classified using Naïve Bayes classifier resulting in labeling of the input as pothole or non-pothole image. To locate the pothole in the detected pothole images, normalized graph cut segmentation scheme is employed. Proposed scheme is tested on a dataset having broad range of pavement images. Experimentation results showed 90 % accuracy for the detection of pothole images and high recall for the localization of pothole in the detected images.",
+  "summary": "### Research contribution\nThe paper presents a hierarchical computer-vision pipeline for asphalt-pavement images. Images are first converted to grayscale and represented using Histograms of Oriented Gradients (HOG), then classified as pothole or non-pothole images with a Naïve Bayes classifier. Images classified as containing potholes are processed with normalized graph-cut segmentation to estimate pothole locations and contours. Evaluation on a 120-image pavement dataset used 50 images for training and 70 for testing. The reported detection results were 90% accuracy, 86.5% precision, and 94.1% recall. Spatial localization was reported as successful for the pothole occurrences, while area-based comparison showed more limited agreement in some images. The average processing time for a pothole image was reported as 0.673 seconds.\n\n### Subsequent influence\nThe most clearly documented influence is a direct research continuation by several of the same authors. Their 2018 study, [“Visual analysis of asphalt pavement for detection and localization of potholes”](https://doi.org/10.1016/j.aei.2018.09.002), cites and extends the 2016 approach by replacing HOG and Naïve Bayes with SIFT-based bag-of-visual-words features and an SVM classifier while retaining graph-cut-based localization. That later study reported 95.7% accuracy for pothole-image identification and 91.4% localization accuracy. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S1474034618301435)) Later review and application-oriented publications continue to cite the 2016 paper as an early, conventional computer-vision method for pothole detection, including a 2024 review of vision-based pothole detection and a 2022 smartphone pavement-management application. These citations indicate continued use as a methodological baseline, but do not establish that the exact HOG–Naïve Bayes–graph-cut implementation was adopted in an operational road-maintenance system. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC11397941/))",
   "raw_url": "https://ieeexplore.ieee.org/document/7726722",
   "source_type": "external",
   "filepath": "computer_vision/README.md",
   "filename": "Computer Vision Based Detection and Localization of Potholes in Asphalt Pavement Images",
-  "created_on": "2026-01-24 23:46:58",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:54"
 }

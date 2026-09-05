@@ -1,30 +1,31 @@
 {
   "uuid": "6d75cf2357ddb4ab95c2a7087e70e28dd4a30aa970c20da578f6a9d1a715fe67",
-  "title": "A Simulation of Register Allocation Using Shortest Paths",
-  "publication_date": "2003",
+  "title": "Breaking Up is Hard to Do: Security and Functionality in a Commodity Hypervisor",
+  "publication_date": "June 2011; Master of Science thesis in Computer Science, The University of British Columbia (Vancouver)",
   "authors": [
-    "Blau-Heller",
-    "Munemori",
-    "Saeedi"
+    "Mihir Sudarshan Nanavati"
   ],
   "keywords": [
-    "compiler-optimization",
-    "computer-architecture",
-    "program-analysis",
-    "register-allocation",
-    "resource-management",
-    "shortest-paths",
-    "simulation"
+    "cloud-computing",
+    "fault-isolation",
+    "hypervisor-security",
+    "least-privilege",
+    "microkernels",
+    "microrebooting",
+    "service-vms",
+    "trusted-computing-base",
+    "virtualization",
+    "xen"
   ],
   "category_path": [
     "unikernels"
   ],
-  "abstract": "In this paper, we present a novel approach to register allocation called SRAS (Shortest paths Register Allocation Simulation). By using a graph theoretical model, we can describe the register allocation problem in terms of finding shortest paths. We show that this method can be applied to existing compilers and yields comparable or improved results over traditional methods in various cases.",
-  "summary": "The paper \"A Simulation of Register Allocation Using Shortest Paths\" introduces a new technique for register allocation, a crucial task in compiler optimization, termed SRAS (Shortest paths Register Allocation Simulation). The authors propose a graph-theoretical model to approach this problem by finding shortest paths, which can be integrated into existing compilers. This technique potentially provides improved results compared to traditional register allocation methods. \n\nWhile the paper dates back to 2003, its impact on subsequent research appears limited. A search for citations and its direct influence on subsequent work yields minimal references. One potential reason could be the specialized nature of the topic, which may not have seen widespread adoption outside academic research on compiler optimization at the time. Hence, further implications or industry adoptions of this specific method were not widely recorded or observed in subsequent publications.",
+  "abstract": "Virtualization platforms have grown with an increasing demand for new technologies, with the modern enterprise-ready virtualization platform being a complex, feature-rich piece of software. Despite the small size of hypervisors, the trusted computing base (TCB) of most enterprise platforms is larger than that of most monolithic commodity operating systems. Several key components of the Xen platform reside in a special, highly-privileged virtual machine or the “Control VM”. We present Xoar, a modified version of the Xen platform that retrofits the modularity and isolation principles championed by microkernels onto a mature virtualization platform. Xoar divides the large, shared control VM of Xen’s TCB into a set of independent, isolated, single purpose components called shards. Shards improve security in several ways: components are restricted to the least privilege necessary for functioning and any sharing between guest VMs is explicitly configurable and auditable in tune with the desired risk exposure policies. Microrebooting components at configurable frequencies reduces the temporal attack surface. Our approach does not require any existing functionality to be sacrificed and allows components to be reused rather than rewritten from scratch. The low performance overhead leads us to believe that Xoar is viable alternative for deployment in enterprise environments.",
+  "summary": "- The thesis presents **Xoar**, a modified Xen architecture that decomposes the monolithic control VM into isolated, single-purpose shards. The design applies microkernel principles—least privilege, reduced sharing, explicit auditing, and independently restartable components—while retaining compatibility with existing Xen functionality and guest VMs. ([mihirnanavati.com](https://www.mihirnanavati.com/papers/thesis-msc.pdf))\n- The evaluation reports that Xoar reduced the trusted code associated with guest-memory access from the Linux control VM to a substantially smaller nanOS-based component, while maintaining near-baseline performance. The reported overhead for a Linux-kernel build was less than 1%, and network throughput decreased by approximately 1–2.5% in the tested configuration. ([mihirnanavati.com](https://www.mihirnanavati.com/papers/thesis-msc.pdf))\n- The work was subsequently published in expanded form with Patrick Colp, Jun Zhu, William Aiello, George Coker, Tim Deegan, Peter Loscocco, and Andrew Warfield at the 23rd ACM Symposium on Operating Systems Principles in October 2011. ([microsoft.com](https://www.microsoft.com/en-us/research/publication/breaking-up-is-hard-to-do-security-and-functionality-in-a-commodity-hypervisor/?lang=ja))\n- Subsequent research cited Xoar as an example of decomposing the management domain into service VMs. For example, the Self-Service Cloud model used a related privilege-separation approach to divide administrative responsibilities among system-wide, per-client, and service domains. Later work on secure VM management also identified Xoar as prior research on management-VM disaggregation. ([pages.cs.wisc.edu](https://pages.cs.wisc.edu/~vg/papers/ccs2012a/ccs2012a_html/index.html))\n- The checked sources provide evidence of continuing research influence, but do not establish that Xoar itself became a broadly deployed commercial hypervisor product.",
   "raw_url": "https://open.library.ubc.ca/media/download/pdf/24/1.0052016/1",
   "source_type": "external",
   "filepath": "unikernels/README.md",
   "filename": "Breaking up is hard to do: security and functionality in a commodity hypervisor",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:05"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:57"
 }

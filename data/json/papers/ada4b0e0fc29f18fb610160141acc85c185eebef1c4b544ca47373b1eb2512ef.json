@@ -1,32 +1,32 @@
 {
   "uuid": "ada4b0e0fc29f18fb610160141acc85c185eebef1c4b544ca47373b1eb2512ef",
   "title": "Composing Fractals",
-  "publication_date": "1997",
+  "publication_date": "November 2004; published online October 27, 2004; Journal of Functional Programming, volume 14, issue 6, pages 715–725",
   "authors": [
     "Mark P. Jones"
   ],
   "keywords": [
-    "algorithms",
-    "artistic-design",
-    "composite-design-pattern",
-    "fractal-composition",
-    "fractal-geometry",
+    "computability",
+    "computer-graphics",
+    "fractals",
+    "function-composition",
     "functional-programming",
-    "graphics",
-    "mathematics",
-    "non-well-founded-sets",
-    "recursive-structures"
+    "haskell",
+    "higher-order-functions",
+    "julia-sets",
+    "lazy-evaluation",
+    "mandelbrot-set"
   ],
   "category_path": [
     "languages",
     "haskell"
   ],
-  "abstract": "Fractals are a beautiful and fascinating area of mathematics, with many deep ideas that can lead to spectacular visual images. In this paper, we describe some of these ideas and show how they can be captured using simple functional programs. In particular, we explore the benefits of using a compositional approach to model complex fractals, with examples ranging from the regularity of the Sierpinski triangle to the apparent wildness of the Mandelbrot set.",
-  "summary": "This paper by Mark P. Jones explores the concept of composing fractals using a functional programming approach. It delves into the mathematics of fractals and showcases how simple functional programs can capture their complexities. The paper emphasizes a compositional methodology for modeling complex fractals, illustrating this with examples like the Sierpinski triangle and the Mandelbrot set.\n\nThe research has influenced academic discussions around the use of functional programming for complex mathematical visualizations and has been cited in several works related to both fractal geometry and functional programming in graphics. However, broader impacts in industry are less pronounced as the topic remains highly specialized within academic circles.\n\nCitations of this work primarily occur in the contexts of educational demonstrations of functional programming and explorations into mathematical visualizations:\n- (No direct references found during the search due to limited scope, generally cited within functional programming educational resources)\n\nThe challenges in assessing the paper's broader impacts underscore the niche field it addresses, focusing mainly on mathematical models and educational purposes rather than direct industrial applications.",
+  "abstract": "This paper describes a simple but flexible family of Haskell programs for drawing pictures of fractals such as Mandelbrot and Julia sets. Its main goal is to showcase the elegance of a compositional approach to program construction, and the benefits of a clean separation between different aspects of program behavior. Aimed at readers with relatively little experience of functional programming, the paper can be used as a tutorial on functional programming, as an overview of the Mandelbrot set, or as a motivating example for studies in computability.",
+  "summary": "The paper presents a compositional Haskell framework for generating and rendering Mandelbrot and Julia fractals. It separates fractal iteration, approximate escape testing, palette selection, grid construction, image sampling, and rendering into independently replaceable functions. The design relies on higher-order functions, polymorphism, lazy evaluation, list processing, and function composition; notably, the examples contain no recursive definitions. The framework supports both character-based output and graphical RGB rendering, while the same rendering pipeline can be reused for different fractal generators and display mechanisms. The paper also uses the Mandelbrot set to motivate approximation and computability: exact membership testing may fail to terminate, so bounded iteration produces a practical visualization-oriented approximation.\n\nThe documented scholarly influence appears limited but identifiable. Cambridge’s citation record lists two citing publications, including Martin and Curtis’s 2013 *Fractal image compression*. That paper describes a Haskell-based functional-programming course assignment on fractal image compression and explicitly cites Jones’s work, indicating continued use of fractal rendering and image generation as educational examples in functional programming. ([cambridge.org](https://www.cambridge.org/core/journals/journal-of-functional-programming/article/functional-pearl-composing-fractals/EBF5B1EBB717AFEC0CA84FE8A07C5C24)) The available evidence does not establish a significant direct industry adoption or a broad technical research lineage stemming from this paper; its clearest continuing impact is as a pedagogical and illustrative example of compositional functional programming. The publication metadata and author information are confirmed by the Journal of Functional Programming record and the author’s publication list. ([cambridge.org](https://www.cambridge.org/core/journals/journal-of-functional-programming/article/functional-pearl-composing-fractals/EBF5B1EBB717AFEC0CA84FE8A07C5C24))",
   "raw_url": "http://web.cecs.pdx.edu/~mpj/pubs/composing-fractals.pdf",
   "source_type": "external",
   "filepath": "languages/haskell/README.md",
   "filename": "Composing Fractals",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

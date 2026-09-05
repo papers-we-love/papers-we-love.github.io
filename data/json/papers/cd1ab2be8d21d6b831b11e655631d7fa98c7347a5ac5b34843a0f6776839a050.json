@@ -1,32 +1,28 @@
 {
   "uuid": "cd1ab2be8d21d6b831b11e655631d7fa98c7347a5ac5b34843a0f6776839a050",
   "title": "Deprecating the Observer Pattern",
-  "publication_date": "2003",
+  "publication_date": "2010 (EPFL technical report EPFL-REPORT-148043)",
   "authors": [
-    "Klaus Ostermann"
+    "Ingo Maier",
+    "Martin Odersky",
+    "Tiark Rompf"
   ],
   "keywords": [
-    "data-binding",
-    "design-architecture",
-    "event-handling",
-    "functional-reactive-programming",
-    "imperative-programming",
-    "object-oriented-programming",
-    "observer-pattern",
-    "publication-date",
-    "reactive-systems",
-    "software-design-patterns"
+    "data-flow-language",
+    "reactive-programming",
+    "scala",
+    "user-interface-programming"
   ],
   "category_path": [
     "languages-paradigms",
     "functional_reactive_programming"
   ],
-  "abstract": "The Observer pattern is a fundamental part of many systems based on OOP. However, it is also well known that the pattern has difficulties dealing with change and abstraction. In particular, the pattern often leads to indirect dependencies between abstractions, event loops, and framework lock-in. In this paper, we present 'reactive functional programming' (RFP) as an alternative to the Observer pattern that avoids these problems. Moreover, RFP offers a comprehensible semantics suitable for formal reasoning.",
-  "summary": "This paper argues for 'reactive functional programming' (RFP) as a superior alternative to the Observer pattern used in object-oriented programming (OOP) systems. Observations of this pattern often lead to increased complexity because they create indirect dependencies between components, event loops, and contribute to framework lock-in problems. In contrast, Reactive Functional Programming allows programming with static data flows in a dynamic context without these issues, offering semantic clarity conducive to formal reasoning.\n\nWhen reviewed through citation searches, it is observed that this paper has not made notable waves in academia and industry in any considerable degree. References to this specific document are scarce, indicating that it might have been of limited influence in subsequent developments in computer science or related fields. It predominantly sits as a conceptual piece proposing alternatives, which appears to have been overshadowed by other advancements in the reactive programming paradigm. As of now, there are no concrete references or citations that reflect an industry-standard adoption or further elaboration on this work.",
+  "abstract": "Programming interactive systems by means of the observer pattern is hard and error-prone yet is still the implementation standard in many production environments. We present an approach to gradually deprecate observers in favor of reactive programming abstractions. Several library layers help programmers to smoothly migrate existing code from callbacks to a more declarative programming model. Our central high-level API layer embeds an extensible higher-order data-flow DSL into our host language. This embedding is enabled by a continuation passing style transformation.",
+  "summary": "## Summary\n\nThe paper argues that conventional observer-based event handling creates excessive coupling and boilerplate, promotes shared mutable state, complicates resource management, weakens separation of concerns, and can produce inconsistent intermediate states, or glitches. It uses mouse-drag handling as a representative example of the difficulty of expressing stateful event sequences with independently installed callbacks.\n\nThe proposed solution is **Scala.React**, a layered reactive-programming framework that provides a gradual migration path from observers to more declarative abstractions. The layers include:\n\n- **First-class event streams**, represented by `Events[A]`, with uniform operations such as observation, merging, mapping, filtering, and collection.\n- **Reactors**, which allow programmers to express event-driven state machines directly using operations such as `next`, `delay`, and looping constructs, thereby reducing inversion of control.\n- **Signals**, which represent time-varying values and automatically track dependencies in expressions such as `Signal { a() + b() }`.\n- **Data-flow reactives**, which combine event processing, state transitions, and signal updates through operations including `emit`, `switchTo`, `next`, and `delay`.\n- **A generalized reactive hierarchy**, intended to support additional abstractions such as futures, incrementally changing documents, lists, and paths.\n\nThe implementation uses discrete propagation cycles. Reactives are synchronized before observers execute, and a push-driven scheduler maintains a topological ordering of dependencies to prevent glitches. Dynamic dependencies are handled by detecting level mismatches and rescheduling pure reactive computations. Side effects are restricted because signal expressions may be reevaluated; reactors remain the intended mechanism for externally visible effects. The data-flow language is implemented using delimited continuations and a selective continuation-passing-style transformation, including special handling for loops and exceptions on the JVM.\n\nThe paper’s principal contribution is architectural: it shows how functional reactive programming, imperative state-machine code, object-oriented interfaces, and low-level observers can coexist in a single statically typed framework. The result is not a claim that observers disappear entirely, but a structured path for replacing ad hoc callbacks with composable, encapsulated, and consistency-preserving reactive abstractions.\n\n## Documented influence\n\nThe paper directly influenced subsequent Scala reactive libraries. The Scala.Rx project explicitly states that its push-based functional-reactive implementation is based on ideas from this work, particularly its reactive variables and dependency-graph propagation model. ([github.com](https://github.com/lihaoyi/scala.rx)) Later Scala reactive systems and documentation, including REScala-related material, continue to list the Scala.React work among the relevant foundations for object-oriented and functional reactive programming. ([rescala-lang.com](https://www.rescala-lang.com/manual.html)) Subsequent research has also cited Scala.React as an academic reactive-language system when discussing models that combine reactive and imperative computation, including the Actor-Reactor Model. ([drops.dagstuhl.de](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ECOOP.2020.19))\n\nThe paper also had concrete practitioner influence: Scala.Rx documentation and other Scala ecosystem discussions identify it as a design source, while independent projects have used the paper as the starting point for implementations in other languages, including an experimental reactive-programming library in C. ([github.com](https://github.com/christophevg/reactive-c)) The available evidence supports influence on research prototypes and Scala libraries; it does not establish widespread direct adoption of Scala.React itself in mainstream industry frameworks.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages-paradigms/functional_reactive_programming/deprecating-the%20observer-pattern.pdf",
   "source_type": "pdf",
   "filepath": "languages-paradigms/functional_reactive_programming/deprecating-the observer-pattern.pdf",
   "filename": "deprecating-the observer-pattern.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

@@ -1,31 +1,31 @@
 {
   "uuid": "823a601599023214de740a96176519f8ba8cc95d04868a3b2ef6f8eeb70a6882",
-  "title": "Do Be Do Be Do",
-  "publication_date": "April 2010",
+  "title": "Handlers in Action",
+  "publication_date": "September 25–27, 2013; ACM SIGPLAN International Conference on Functional Programming (ICFP ’13), Boston, MA, USA",
   "authors": [
-    "Philip Wadler",
+    "Nicolas Oury",
+    "Ohad Kammar",
     "Sam Lindley"
   ],
   "keywords": [
-    "abstract-handlers",
     "algebraic-effects",
-    "computational-effects",
-    "control-operations",
+    "continuations",
     "effect-handlers",
-    "exception-handling",
-    "functional-programming",
-    "programming-language-semantics"
+    "effect-typing",
+    "haskell",
+    "modularity",
+    "monads"
   ],
   "category_path": [
     "languages",
     "haskell"
   ],
-  "abstract": "Exceptions and other computational effects are traditionally handled using constructs that depend on both the production and consumption of data. This complicates the theory and implementation of such handlers. We present a calculus of abstract handlers, a generalisation of exception handlers, parameterised by an arbitrary algebraic theory of operations. A calculus of abstract handlers allows programs to be constructed uniformly as trees of data and operations, with abstract handlers independently specifying an interpretation of the operations, capturing not only exceptions, but also a wide variety of effects like state, nondeterminism, and interactive I/O.",
-  "summary": "This paper, \"Do Be Do Be Do\" by Sam Lindley and Philip Wadler, investigates the concept of handling computational effects in programming languages using a calculus of abstract handlers. The authors highlight how traditional constructs for managing exceptions and other effects are interwoven with data production and consumption, which adds complexity. They propose abstract handlers as a general approach to handle computational effects by parameterizing them with algebraic theories of operations.\n\nThe paper is influential in the domain of functional programming, particularly in formalizing the treatment of computational effects and introducing abstract handlers. It has impacted the way programming languages approach control operations and effect handling, inspiring subsequent research in both theoretical frameworks and practical implementations, notably in the development of languages and compilers that support complex effect handling mechanisms.\n\nThe work has been cited in multiple research articles that explore effect handling and programming language semantics, as seen in references such as:\n1. Schrijvers, T., et al. \"Efficiently Programming the Semantics of Exception Handling.\" Programming Language Design and Implementation (PLDI), 2014. [Link](https://dl.acm.org/doi/10.1145/2594311.2594326)\n2. Kiselyov, O. \"The next 700 programming languages part 2: control effects\". Functional Programming, 2013. [Link](http://okmij.org/ftp/Haskell/extensible/next700-part2.html)\n3. Thiemann, P. \"From monads to arrows: Control operators and their computational effects.\" Formal Methods, 2012. [Link](https://www.sciencedirect.com/science/article/pii/S0167642312000749)\n4. Plotkin, G.D., and Power, J. \"Algebraic Operations and Generic Effects.\" Applied Mathematics and Computation, 2010. [Link](https://linkinghub.elsevier.com/retrieve/pii/S0096300310004467)\n5. Lindley, S., et al. \"Do be do be do.\" Computer Science Logic, 2010. [Link](https://doi.org/10.1007/978-3-642-11512-1_17)\n\nThese references affirm the paper's role in extending the theoretical foundations and practical handling of effects in functional programming, significantly contributing to the evolution of modern programming language design.",
+  "abstract": "Plotkin and Pretnar’s handlers for algebraic effects occupy a sweet spot in the design space of abstractions for effectful computation. By separating effect signatures from their implementation, algebraic effects provide a high degree of modularity, allowing programmers to express effectful programs independently of the concrete interpretation of their effects. A handler is an interpretation of the effects of an algebraic computation. The handler abstraction adapts well to multiple settings: pure or impure, strict or lazy, static types or dynamic types.\n\nThis is a position paper whose main aim is to popularise the handler abstraction. We give a gentle introduction to its use, a collection of illustrative examples, and a straightforward operational semantics. We describe our Haskell implementation of handlers in detail, outline the ideas behind our OCaml, SML, and Racket implementations, and present experimental results comparing handlers with existing code.",
+  "summary": "The paper presents algebraic effects and handlers as an alternative foundation for modular effectful programming. Its central distinction is between abstract effect operations and handlers that provide concrete interpretations, allowing effects to be composed and instantiated independently rather than fixed through monad-transformer-stack structure.\n\nThe authors illustrate the approach with handlers for state, logging, nondeterminism, failure, input processing, pipes, and aspect-oriented behavior. They distinguish closed handlers, which interpret a complete effect signature, from open handlers, which handle selected operations and forward the rest. They also compare deep handlers, which automatically re-handle resumed continuations, with shallow handlers, which require explicit recursive handling.\n\nThe paper introduces λ_eff, a higher-order call-by-push-value calculus with effect operations and handlers. It gives a small-step operational semantics, a type-and-effect system, and proofs of termination and type soundness for well-typed programs. The implementation discussion presents free-monad, codensity-monad, continuation-monad, and delimited-continuation techniques, including a Haskell implementation using type classes and type families and related implementations for OCaml, SML, and Racket.\n\nThe benchmarks show that the continuation-monad implementation is generally substantially faster than the free- and codensity-monad implementations, although it remains slower than specialized baseline code in several tests. In the aspect-oriented programming benchmark, handler-based, mixin-based, and hand-coded implementations have nearly identical performance. ([homepages.inf.ed.ac.uk](https://homepages.inf.ed.ac.uk/slindley/papers/handlers.pdf))\n\nThe paper had documented subsequent influence. The ACM SIGPLAN citation for its 2023 Most Influential ICFP Paper Award credits it with drawing broader attention to handlers, providing an operational semantics and effect system, and motivating subsequent work and implementations. ([sigplan.org](https://sigplan.org/Awards/ICFP/)) Its research impact is also recorded in a 2021 UK Research Excellence Framework case study, which lists the paper among the cited foundations of later effect-handler research. ([results2021.ref.ac.uk](https://results2021.ref.ac.uk/impact/3ce549c5-03cf-4336-8f64-98a95823289c?page=1)) Practically, the implementation ideas remain represented in later effect-handler benchmarking infrastructure, where “Handlers in Action” is included alongside systems such as Eff, Effekt, Koka, and OCaml implementations. ([github.com](https://github.com/effect-handlers/effect-handlers-bench)) Bibliographic records confirm its publication as an ICFP 2013 conference paper in ACM SIGPLAN Notices, volume 48, issue 9, pages 145–158. ([research.ed.ac.uk](https://www.research.ed.ac.uk/en/publications/handlers-in-action/))",
   "raw_url": "http://homepages.inf.ed.ac.uk/slindley/papers/handlers.pdf",
   "source_type": "external",
   "filepath": "languages/haskell/README.md",
   "filename": "Handlers In Action",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

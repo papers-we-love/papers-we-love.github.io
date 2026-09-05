@@ -1,27 +1,31 @@
 {
   "uuid": "5b664ca0dae29373b804e6e9db0c22c75ecffdd36ff01cb446ce46b73828d365",
-  "title": "What is ... a Young tableau?",
-  "publication_date": "February 2007",
+  "title": "WHAT IS . . . a Young Tableau?",
+  "publication_date": "February 2007; Notices of the American Mathematical Society, Volume 54, Number 2, pages 240–241",
   "authors": [
     "Alexander Yong"
   ],
   "keywords": [
-    "algebraic-combinatorics",
     "hook-length-formula",
+    "littlewood-richardson-rule",
     "representation-theory",
+    "schensted-correspondence",
     "schubert-calculus",
-    "symmetry",
-    "young-tableau"
+    "schur-polynomials",
+    "semistandard-young-tableaux",
+    "standard-young-tableaux",
+    "young-diagrams",
+    "young-tableaux"
   ],
   "category_path": [
     "mathematics"
   ],
-  "abstract": "A Young tableau is a combinatorial object useful in representation theory and algebraic geometry, particularly Schubert calculus. It was first used by Alfred Young in 1900 to study symmetric group representations, but it was not until later in the twentieth century that the tableau became ubiquitous in algebraic combinatorics. In this article, we'll explain what a Young tableau is and highlight some remarkable applications.",
-  "summary": "The paper titled \"What is ... a Young tableau?\" by Alexander Yong, published in February 2007 in the Notices of the American Mathematical Society, explores the concept and applications of Young tableaux. This paper provides a survey of their definition, examples, and their significance in mathematical fields such as representation theory and algebraic geometry.\n\nYoung tableaux are grid-based arrangements filled with numbers that strictly increase across each row and column. They are essential in the study of symmetric group representations and have been instrumental in the development of the hook-length formula. This structure is also widely used in algebraic combinatorics and has applications in Schubert calculus, which is a domain in algebraic geometry.\n\nThe comprehensive overview provided in the paper sheds light on the utility of Young tableaux in solving complex mathematical problems and demonstrates their versatility and power in modern combinatorial research. Despite its targeted focus, the paper has not accumulated significant citations in subsequent research, indicating its role primarily as an educational resource rather than a direct influence on further research. The paper itself is noted for helping build foundational understanding rather than sparking direct advancements or innovations in related fields.",
+  "abstract": "Young tableaux are ubiquitous combinatorial objects making important and inspiring appearances in representation theory, geometry, and algebra. They naturally arise in the study of symmetric functions, representation theory of the symmetric and complex general linear groups, and Schubert calculus of Grassmannians. Discovering and interpreting enumerative formulas for Young tableaux (and their generalizations) is a core theme of algebraic combinatorics.",
+  "summary": "The paper is a concise expository introduction to Young tableaux and their central role in algebraic combinatorics. It defines partitions, Young diagrams, fillings, semistandard tableaux, and standard tableaux, then presents the hook-length formula for enumerating standard tableaux and the Schur polynomial as a generating function for semistandard tableaux. It explains connections with irreducible representations of the symmetric group and the general linear group, as well as the interpretation of Schur polynomials as Schubert classes in Grassmannians.\n\nThe article also introduces Littlewood–Richardson coefficients through Schur-function multiplication and gives the Littlewood–Richardson rule, which realizes these coefficients as counts of suitable semistandard skew tableaux. It concludes with the Schensted correspondence between permutations and pairs of standard tableaux, including its relationship to longest increasing subsequences and permutation inversion. The paper is expository rather than a presentation of new primary results; its purpose is to make fundamental definitions, enumerative formulas, and applications accessible in a compact format.\n\nA web search found later mathematical works citing the article as an introductory or reference source, including expository work on tableau dynamics and research literature involving representation theory and mathematical physics. These citations demonstrate continued use as a background reference, but do not by themselves establish that the article introduced a subsequent technical method or directly drove an industrial application. ([cms.math.ca](https://cms.math.ca/wp-content/uploads/2022/02/Wholeissue_48_2.pdf))",
   "raw_url": "https://www.ams.org/notices/200702/whatis-yong.pdf",
   "source_type": "external",
   "filepath": "mathematics/README.md",
   "filename": "What is a Young Tableaux?",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:56"
 }

@@ -1,37 +1,31 @@
 {
   "uuid": "6f0fcb752a1b8180497eb6a27bce512631a5e1329ad56387436aab6864743087",
-  "title": "Coda: A Highly Available File System for a Distributed Workstation Environment",
-  "publication_date": "July 1990",
+  "title": "The Coda Distributed File System",
+  "publication_date": "June 1, 1998; Linux Journal, Issue #50",
   "authors": [
-    "Ellen Siegel",
-    "H. Mashburn",
-    "James Kistler",
-    "M. Webber",
-    "Mahadev Satyanarayanan",
-    "P. Steere",
-    "W. Michael Petrowski"
+    "Peter J. Braam"
   ],
   "keywords": [
+    "access-control",
+    "client-side-caching",
     "coda",
-    "data-consistency",
     "disconnected-operation",
-    "distributed-systems",
-    "file-systems",
-    "reintegration",
+    "distributed-file-system",
+    "failure-resilience",
+    "linux",
+    "mobile-computing",
     "replication",
-    "security",
-    "token-based-authentication",
-    "workstation"
+    "write-back-caching"
   ],
   "category_path": [
     "distributed-file-systems"
   ],
-  "abstract": "Coda is a file system for a large-scale distributed computing environment composed of Unix workstations. Scalability in terms of the number of workstations is achieved through whole-file caching at the clients. Availability is provided through server replication. Coda also provides users with a disconnected mode of operation, allowing them to continue accessing a subset of their files when servers cannot be reached. Security is addressed through the use of a time-limited service ticket exchanged between clients and servers. Compared to AFS, a file system with similar goals, Coda provides higher availability and security in return for a small increase in the complexity of the server.",
-  "summary": "The paper titled *Coda: A Highly Available File System for a Distributed Workstation Environment* introduces Coda, a robust and scalable file system designed for distributed Unix workstation environments. By employing whole-file caching and server replication, Coda addresses the challenges of scalability and availability in distributed systems. The inclusion of disconnected operation allows users to access files even when network connectivity is lost. This feature is particularly advantageous for ensuring continued productivity.\n\nSecurity is enhanced in Coda through a token-based authentication mechanism, which elevates its security profile compared to similar systems like Andrew File System (AFS). The paper positions Coda as a significant enhancement over earlier file systems by achieving higher availability and improved security with minimal increase in server complexity.\n\nA web search reveals that Coda has been referenced in various subsequent research efforts in distributed systems and file system design. Its principles of replication and disconnected operation have influenced later developments in mobile computing and cloud storage solutions.\n\n**References:**\n- [Satya, M. (n.d.). Coda: A highly available file system for a distributed workstation environment. Coda.](http://www.coda.cs.cmu.edu/ljpaper/lj.html)\n- [Withers, W. (2016). Scalability and Security Improvements in Coda Client-side Caching: Lessons Learned from AFS.](https://www.usenix.org/legacy/event/usenix2016/wither-paper.html)\n- [Wang, X. (2020). The Evolution of Distributed File Systems. Journal of Computer Science.](https://jcscience.org/publications/jc2020-xwang)\n- [Davidson, L.N. & Ren, W. (2021). Disconnected Operations in Distributed Systems: An Overview. Elsevier.](https://www.elsevier.com/jrnl/disconnected)",
+  "abstract": "The Coda distributed file system is a state-of-the-art experimental file system developed in the group of M. Satyanarayanan at Carnegie Mellon University (CMU). Numerous people contributed to Coda, which now incorporates many features not found in other systems:",
+  "summary": "The article presents Coda as an experimental distributed file system designed to provide a single global namespace, persistent client-side caching, write-back caching, replicated storage, disconnected operation, reintegration after reconnection, conflict resolution, authentication, and access-control lists. Its design targets both improved availability during server or network failures and practical support for mobile clients. The system uses volumes as administrative units, replicated volume-storage groups for read/write replication, and a client cache manager that mediates access between applications and remote servers. ([linuxjournal.com](https://www.linuxjournal.com/article/2390))\n\nCoda influenced subsequent work in several documented ways. The InterMezzo file system explicitly sought to retain advanced protocol features associated with Coda while simplifying the implementation, and adopted related concepts such as persistent caching, disconnected-operation metadata, write-back caching, and volume-like file sets. ([cs.cmu.edu](https://www.cs.cmu.edu/~coda/docdir/intermezzo99.pdf)) Coda's disconnected-operation mechanisms were also evaluated through extended mobile-environment usage, with results supporting the feasibility of the approach and identifying further requirements. ([usenix.org](https://www.usenix.org/conference/usenix-mobile-location-independent-computing-symposium/experience-disconnected-operation)) A later retrospective reported that elements of Coda's design were incorporated into the IntelliMirror component of Microsoft Windows 2000, providing a documented example of influence on commercial software. ([researchgate.net](https://www.researchgate.net/publication/234819235_The_Evolution_of_Coda)) The Coda kernel interface also remains documented in Linux kernel materials, reflecting its role as an implemented research system and reference design. ([kernel.org](https://www.kernel.org/doc/html/latest/filesystems/coda.html))",
   "raw_url": "http://www.coda.cs.cmu.edu/ljpaper/lj.html",
   "source_type": "external",
   "filepath": "distributed-file-systems/README.md",
   "filename": "Coda",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:54"
 }

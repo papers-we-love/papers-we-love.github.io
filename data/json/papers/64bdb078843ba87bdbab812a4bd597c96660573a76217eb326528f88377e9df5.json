@@ -1,32 +1,31 @@
 {
   "uuid": "64bdb078843ba87bdbab812a4bd597c96660573a76217eb326528f88377e9df5",
-  "title": "CLIVE – A SEAMLESS ENVIRONMENT FOR HETEROGENEOUS SYSTEMS",
-  "publication_date": "1989",
+  "title": "The Clive Operating System",
+  "publication_date": "October 4, 2014 (Lsub Technical Report 14-4)",
   "authors": [
-    "Chris Liedel",
-    "Gerald Popek",
-    "John Bruno",
-    "Richard Guy"
+    "Francisco J. Ballesteros"
   ],
   "keywords": [
-    "clive-system",
-    "data-sharing",
+    "bare-metal-computing",
+    "cloud-computing",
+    "communicating-sequential-processes",
     "distributed-systems",
-    "file-system-integration",
-    "heterogeneous-systems",
-    "network-computing",
-    "seamless-environment",
-    "unified-access"
+    "file-systems",
+    "go-programming-language",
+    "network-services",
+    "operating-systems",
+    "unikernels",
+    "zx-protocol"
   ],
   "category_path": [
     "unikernels"
   ],
-  "abstract": "Distributed computing systems present several new problems to users and systems designers alike. As the complexity and number of different machine types and system-level services grow, specific approaches are required to seamlessly support a wide range of machines and programs. CLIVE represents a set of powerful software abstractions to provide uniform access to the services available in a wide collection of heterogeneous computing environments. These abstractions define a seamless environment that masks the complexities inherent in widely diverse system constructions and methodologies. This paper describes the implementation of the CLIVE system, concentrating on the design and architecture of the abstractions employed, as well as some simple examples of their use. We demonstrate the advantages of uniform approaches to file system integration and distributed program execution.",
-  "summary": "The paper titled \"CLIVE – A SEAMLESS ENVIRONMENT FOR HETEROGENEOUS SYSTEMS\" was published in 1989 and authored by Richard Guy, Chris Liedel, John Bruno, and Gerald Popek. It introduces the CLIVE system, which provides a seamless environment for distributed computing across heterogeneous systems, addressing the challenges posed by different machine types and system-level services. The paper discusses the design and architecture of software abstractions facilitating uniform access to various services in diverse computing environments.\n\nThe CLIVE system contributes to the field by demonstrating the integration of file systems and distributed program execution in a unified manner, simplifying user interaction with complex distributed systems. By providing a consistent interface, CLIVE enhances the usability and interoperability of systems with varying constructions and methodologies. The impact of CLIVE on further research and industry includes influencing the development of unified access methods and data-sharing protocols in distributed computing.\n\nA web verification search reveals limited direct references to the CLIVE system in subsequent research or industry applications, likely due to its publication date and the rapid evolution of the field. However, concepts of seamless environments and heterogeneous system management continue to be relevant. Efforts in modern cloud computing environments and distributed system design echo the intentions set forth by CLIVE, emphasizing unified, accessible systems across diverse devices and services.",
+  "abstract": "Clive is an operating system aimed at providing simple and high performance construction of network and cloud services. Currently it is used hosted on other systems to support further development of the system. In the future it will also run on native blades. Clive introduces new file system technology and novel interfaces for the construction of networked system.",
+  "summary": "The paper appears to have had modest but identifiable influence within research on language-oriented operating systems, network file systems, and unikernels. Subsequent Clive-related work developed the system’s structured I/O framework and the ZX network file system, explicitly building on the Clive architecture. ([lsub.org](https://lsub.org/books-papers/)) The Clive operating system was also cited in later work on unikernel and library-operating-system designs, including GopherOS, RustyHermit, and research discussing the evolution from containers toward unikernels. ([usenix.org](https://www.usenix.org/system/files/osdi18-cutler.pdf)) Contemporary technical coverage presented Clive as a Go-based operating system influenced by Plan 9 and Nix, with the ZX protocol as a central design element. ([osnews.com](https://www.osnews.com/story/27747/clive-new-operating-system-based-on-plan-9-design/)) The available evidence indicates research and conceptual influence rather than substantial documented industrial adoption.",
   "raw_url": "http://github.com/fjballest/docs/blob/master/clivesys.pdf",
   "source_type": "external",
   "filepath": "unikernels/README.md",
   "filename": "The Clive Operating System",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:05"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:56"
 }

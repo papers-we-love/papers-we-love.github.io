@@ -1,27 +1,25 @@
 {
   "uuid": "9fba9695fea3571257f5b338fb562a2cb9c40718db36ca2b9ba5092f2d3f880d",
-  "title": "Increasing Efficiency of Data Enumerations",
-  "publication_date": "April 2004",
+  "title": "Backtracking Iterators",
+  "publication_date": "September 16, 2006; ACM SIGPLAN Workshop on ML (ML 2006), Portland, Oregon",
   "authors": [
     "Jean-Christophe Filliâtre"
   ],
   "keywords": [
-    "automated-testing",
-    "data-enumerations",
-    "functional-programming",
-    "program-analysis",
-    "software-verification"
+    "backtracking",
+    "iteration",
+    "persistent-data-structures"
   ],
   "category_path": [
     "languages",
     "clojure"
   ],
-  "abstract": "The enumeration technique is a well-known concept in computer science, which has been used, for example, to exhaustively search through the set of solutions to a problem. When applied to infinite sets, this concept requires some care: Unlike the case of finite sets, there is no canonical enumeration of an infinite set, and any program that uses such an enumeration should properly take care of its liveness properties. This paper discusses various techniques to derive efficient enumerations of data structures based on liveness properties. It provides a formal framework for deriving such enumerations and explores the application of these techniques to the domain of automated testing and software verification.",
-  "summary": "The paper \"Increasing Efficiency of Data Enumerations\" by Jean-Christophe Filliâtre, published in April 2004, focuses on optimizing the enumeration process used in computer science to search through data sets. It addresses challenges associated with enumerating infinite sets, emphasizing the importance of maintaining liveness properties to ensure efficient program execution. The paper introduces a formal framework and methodologies for deriving efficient enumerations, with practical applications in automated testing and software verification. \n\nThe impact of this paper has largely been noted in the academic sector, particularly among research focused on improving software verification techniques and program analysis. For instance, it has influenced work in automated testing methodologies as it helps to optimize test coverage in software systems by better handling infinite data sets. The paper is cited in the context of functional programming and tool development for program analysis. Specific citations that reference this work include:\n\n1. A paper by M. Dailler et al. in 2017, which discusses enhancements in testing coverage (DOI: [10.1145/3106237.3106260](https://doi.org/10.1145/3106237.3106260)).\n2. Research by Guillaume Melquiond on improving formal methods tools in program verification (DOI: [10.1007/s00165-010-0175-8](https://doi.org/10.1007/s00165-010-0175-8)).\n\nThese references indicate the adoption and influence of Filliâtre's methods in subsequent research endeavours focused on program analysis and verification.",
+  "abstract": "Iterating over the elements of an abstract collection is usually done in ML using a fold-like higher-order function provided by the data structure. This article discusses a different paradigm of iteration based on purely functional, immutable cursors. Contrary to fold-like iterators, the iteration can be cleanly interrupted at any step. Contrary to imperative cursors (such as those found in C++ and Java libraries) it is possible to backtrack the iterator to a previous step. Several ways to iterate over binary trees are examined and close links with Gérard Huet’s Zipper are established. Incidentally, we show the well-known two-lists implementation of functional queues arising from a Zipper-based breadth-first traversal.",
+  "summary": "### Summary\n\nThe paper presents persistent, step-by-step iterators as an alternative to higher-order ML iterators and mutable object-oriented cursors. A persistent iterator returns both the next element and a new iterator state, leaving the previous state unchanged. This supports early termination without exceptions or auxiliary materialization and, more importantly, permits returning to earlier states during backtracking algorithms. The paper illustrates the approach with inorder, preorder, postorder, and breadth-first traversals of binary trees.\n\nFor depth-first traversals, the iterator state is represented by persistent stacks or compact traversal-specific structures. Breadth-first traversal is implemented with persistent queues represented by two lists, retaining amortized constant-time queue operations. The paper also shows that these iterator states can be derived systematically from Huet’s Zipper: a zipper records a focused subtree together with its path and surrounding context, and traversal operations can be expressed through zipper navigation. Continuation-passing-style implementations are discussed as another formulation; the paper observes that they are generally less efficient because closures produce larger iterator states and do not generalize as directly to breadth-first traversal.\n\nThe reported benchmarks show broadly comparable performance between the direct persistent implementations and zipper-derived implementations, while continuation-passing-style versions are consistently slower and use more memory, although still within a constant-factor relationship. The work identifies persistent iterators as useful abstractions for search, enumeration, graph traversal, and other algorithms requiring controlled traversal and backtracking. It also connects persistent iterators, zippers, persistent queues, and continuation-based control, providing a systematic functional-programming perspective rather than presenting a wholly new primitive. ([lri.fr](https://www.lri.fr/~bibli/Rapports-internes/2006/RR1428old.pdf))\n\n### Influence and subsequent use\n\nThe paper’s ideas have been used and discussed in later functional-programming material. A 2016 tutorial explicitly follows the paper’s zipper treatment and translates its OCaml examples into Haskell. ([carlo-hamalainen.net](https://carlo-hamalainen.net/2016/02/23/zippers/)) The paper is also cited in later work on formally verified custom data generators, where iterator-like cursors are adapted for exhaustive generation and verified implementations in Why3. ([scispace.com](https://scispace.com/pdf/tests-and-proofs-for-custom-data-generators-3gqmb57baw.pdf)) A separate OCaml programming article cites the paper as background for a backtracking solution. ([whoek.com](https://whoek.com/b/howto-solve-the-jane-street-puzzle-april-2020.html)) The available evidence indicates influence primarily on functional-programming techniques, cursor-based enumeration, and verified data-generation methods; no specific commercial-industry adoption was identified in the searched sources.",
   "raw_url": "https://www.lri.fr/~filliatr/publis/enum2.pdf",
   "source_type": "external",
   "filepath": "languages/clojure/README.md",
   "filename": "Backtracking Iterators",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

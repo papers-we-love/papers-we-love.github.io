@@ -1,34 +1,30 @@
 {
   "uuid": "60ae9927bf9602b39ad6e72d886506ad4826ed2d93e8af9bb946c31a961fe0bf",
-  "title": "Relaxed Memory Models: An Operational Approach",
-  "publication_date": "January 2009",
+  "title": "The Semantics of x86-CC Multiprocessor Machine Code",
+  "publication_date": "January 21, 2009; Proceedings of the 36th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages (POPL 2009), January 18–24, 2009",
   "authors": [
-    "Frederic Pottier",
+    "Francesco Zappa Nardelli",
     "Jade Alglave",
-    "Luc Maranget",
-    "Paul E. McKenney"
+    "Magnus O. Myreen",
+    "Peter Sewell",
+    "Scott Owens",
+    "Susmit Sarkar",
+    "Thomas Braibant",
+    "Tom Ridge"
   ],
   "keywords": [
-    "concurrency",
-    "execution-model",
-    "formal-methods",
-    "memory-ordering",
-    "operational-semantics",
-    "programming-languages",
     "relaxed-memory-models",
-    "software-correctness",
-    "weak-consistency",
-    "weak-memory-model"
+    "semantics"
   ],
   "category_path": [
     "concurrency"
   ],
-  "abstract": "We give semantics to relaxed memory models using a small, simple operational model. We define several relaxed memory models by parameterizing this model. We illustrate how our method enables us to prove correctness of concurrent algorithms with respect to a weak memory model and to reason about the subtle behaviors that can arise. We show that our model is expressive by relating it to various hardware and programming language models, and coherent in that the programming idioms it supports are those in practice.",
-  "summary": "This paper presents a unified operational approach to understanding relaxed memory models, which are critical for designing and verifying concurrent systems, especially those involving weak memory behaviors often found in modern hardware and programming languages. The authors provide a small operational model that can be used to define various memory models through parameterization. This approach supports proving the correctness of concurrent algorithms and allows reasoning about complex memory behaviors. The paper demonstrates the model's expressiveness by relating it to existing hardware and language models, showing coherence with practical programming idioms.\n\nThe influence of this paper is evident in its citations in works such as 'Weak Memory Models in Practice' by Alglave et al., published in the ACM Queue in 2014 (https://queue.acm.org/detail.cfm?id=2699022) and 'Programming and reasoning with weak memory models' by Owens et al., from SIGPLAN Notices in 2012 (https://dl.acm.org/doi/10.1145/2365426.2365445). These references discuss practical implementations and further formalizations of weak memory models, substantiating the operational approach advocated in the 2009 paper. This operational framework is a significant contribution to the formal methods and concurrency control domains, influencing both academic research and industry practices in reasoning about memory ordering and execution consistency.",
+  "abstract": "Multiprocessors are now dominant, but real multiprocessors do not provide the sequentially consistent memory that is assumed by most work on semantics and verification. Instead, they have subtle relaxed (or weak) memory models, usually described only in ambiguous prose, leading to widespread confusion.\n\nWe develop a rigorous and accurate semantics for x86 multiprocessor programs, from instruction decoding to relaxed memory model, mechanised in HOL. We test the semantics against actual processors and the vendor litmus-test examples, and give an equivalent abstract-machine characterisation of our axiomatic memory model. For programs that are (in some precise sense) data-race free, we prove in HOL that their behaviour is sequentially consistent. We also contrast the x86 model with some aspects of Power and ARM behaviour.\n\nThis provides a solid intuition for low-level programming, and a sound foundation for future work on verification, static analysis, and compilation of low-level concurrent code.",
+  "summary": "## Summary\n\nThe paper develops **x86-CC**, a formal semantics for x86 multiprocessor machine code that combines instruction decoding, instruction-level event semantics, and a relaxed memory model. The model represents executions using per-processor view orders, reads-from relations, per-location write serialization, lock serialization, preserved program order, and a causality relation. This framework captures behaviors that cannot be represented by a single sequentially consistent interleaving, including executions in which processors observe writes to different locations in different orders.\n\nThe instruction semantics covers a substantial core of 32-bit x86 instructions and addressing modes. It is parameterized over sequential and event-based combinators, allowing the same instruction definitions to support both sequential execution and weak-memory reasoning. The decoding function is formalized in HOL directly from vendor opcode documentation.\n\nThe authors validate the model using three forms of testing: an executable checker for enumerating valid executions, litmus tests run on several Intel and AMD multiprocessors, and randomized testing of sequential instruction semantics against an Intel Pentium 4. The paper also proves that, under the paper’s x86-specific notion of data-race freedom, valid executions can be represented by sequentially consistent executions. An equivalent abstract-machine characterization uses per-processor FIFO write queues and per-location write serializations.\n\nThe paper’s later addendum is important: the authors report that x86-CC was too restrictive with respect to at least some observed hardware behaviors and that the underlying vendor specifications were problematic as programming models. This work directly motivated the subsequent **x86-TSO** model, which replaced x86-CC with a simpler model based on write buffers and was intended to better match hardware and programmer expectations. The Cambridge project page now advises focusing on x86-TSO for most purposes because x86-CC is unsound with respect to observed processor behavior. ([citeseerx.ist.psu.edu](https://citeseerx.ist.psu.edu/document?doi=e949f00933afc88cfc8982c2becb5971635085d9&repid=rep1&type=pdf))\n\nThe principal lasting contribution of x86-CC was therefore methodological as well as technical: it demonstrated how vendor memory-ordering prose, machine-code semantics, mechanized proofs, litmus testing, and hardware experiments could be integrated into a rigorous architecture model. Its limitations also exposed the need to validate formal architecture specifications empirically, leading to the more widely used x86-TSO line of work. The paper is subsequently documented as a foundational predecessor to x86-TSO in later formal-memory-model literature. ([citeseerx.ist.psu.edu](https://citeseerx.ist.psu.edu/document?doi=e9b39d468b8431d754c5c0b6ffc4c3867dcf4e33&repid=rep1&type=pdf))",
   "raw_url": "http://www.cl.cam.ac.uk/~pes20/weakmemory/popl09.pdf",
   "source_type": "external",
   "filepath": "concurrency/README.md",
   "filename": "The Semantics of x86-CC Multiprocessor Machine Code",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:54"
 }

@@ -1,31 +1,31 @@
 {
   "uuid": "a36953169e269d3100e21005eb0c3e071c78b77342eff9b5a87b794da49db220",
   "title": "A New Approach to Linear Filtering and Prediction Problems",
-  "publication_date": "1960",
+  "publication_date": "March 1960; Transactions of the ASME–Journal of Basic Engineering, 82 (Series D), pp. 35–45. The paper was presented at the Instruments and Regulators Conference, March 29–April 2, 1959.",
   "authors": [
-    "Rudolf E. Kalman"
+    "R. E. Kalman"
   ],
   "keywords": [
-    "automatic-control",
-    "bayesian-inference",
-    "control-theory",
-    "estimation-theory",
+    "duality-theorem",
+    "feedback-control",
     "kalman-filter",
     "linear-filtering",
+    "optimal-estimation",
+    "orthogonal-projection",
     "prediction",
-    "signal-processing",
+    "riccati-equation",
     "state-space-models",
-    "stochastic-processes"
+    "wiener-problem"
   ],
   "category_path": [
     "data_fusion"
   ],
-  "abstract": "Problems involving the prediction of the future state of a system, the filtering of noise from signals, or the extraction of information from a signal, constitute a large group of applied mathematical problems in engineering which frequently surface in the field of communication and control. Procedures for dealing with these problems have evolved from techniques used originally in the statistical prediction of time series, the rejection of frequency-selective interference, and the smoothing and filtering of particular kinds of stationary random processes. These procedures, which involve linear systems, will be referred to generally as linear filtering and prediction theory. This paper develops a new approach to the linear filtering problem and related prediction problems, and describes a recursive solution of the discrete-data linear filtering problem. As with the similar but less general problem of interpolation between successive observations, first studied by Kolmogorov, the method of approach is to construct a mathematical model of the process investigated, and then to deduce sets of formulas which will yield optimal estimates of present and future values of the variables of the process. But unlike the classical Wiener filter, the method described here derives from the state approach to linear systems as first proposed by Kalman, Lazare, and others in connection with the optimal control of dynamic systems, and furthermore uses explicitly the concept of the state of a stochastic process.",
-  "summary": "The paper titled \"A New Approach to Linear Filtering and Prediction Problems\" authored by Rudolf E. Kalman and published in 1960 is a seminal work in the field of control theory and signal processing. It introduces what is now known as the Kalman Filter, a mathematical algorithm that provides estimates of the true values of measurements, accounting for accuracy and uncertainty.\n\nThe Kalman Filter has had substantial influence across multiple domains including aerospace, robotics, finance, and beyond. Very importantly, it has been applied widely in the development of navigation systems, such as GPS, where it serves to filter out noise from raw data signals to produce more accurate positioning information.\n\nA few of the notable references to this work include:\n- Brown, Robert Grover, and Patrick Y. C. Hwang. \"Introduction to random signals and applied Kalman filtering.\" This textbook expands on the practical applications of the Kalman Filter in engineering fields.\n- Welch, G., & Bishop, G. (1995). \"An Introduction to the Kalman Filter,\" Technical Report for the Department of Computer Science at the University of North Carolina Chapel Hill: <https://www.cs.unc.edu/~welch/media/pdf/kalman_intro.pdf>\n- Haykin, S. \"Adaptive Filter Theory.\" This book includes discussions on adaptive filters that build upon Kalman's initial contributions.\n- The paper has also influenced algorithmic trading strategies in the financial industry where prediction and noise filtering are crucial for model development.\n\nThe Kalman Filter continues to be relevant in research focused on improving estimation techniques and developing more robust models for dynamic systems. Through its mathematically rigorous framework, it provides a basis for further advancements in areas requiring accurate estimation from noisy data.",
+  "abstract": "The classical filtering and prediction problem is re-examined using the Bode-Shannon representation of random processes and the “state transition” method of analysis of dynamic systems. New results are: (1) The formulation and methods of solution of the problem apply without modification to stationary and nonstationary statistics and to growing-memory and infinite-memory filters. (2) A nonlinear difference (or differential) equation is derived for the covariance matrix of the optimal estimation error. From the solution of this equation the coefficients of the difference (or differential) equation of the optimal linear filter are obtained without further calculations. (3) The filtering problem is shown to be the dual of the noise-free regulator problem. The new method developed here is applied to two well-known problems, confirming and extending earlier results. The discussion is largely self-contained and proceeds from first principles; basic concepts of the theory of random processes are reviewed in the Appendix.",
+  "summary": "- The paper reformulates Wiener filtering and prediction in a state-transition framework for linear dynamical systems driven by independent Gaussian disturbances.\n- It identifies the optimal estimate with an orthogonal projection under Gaussian assumptions or linear least-squares loss, and represents the estimator as a recursive feedback system driven by the innovation—the portion of the latest observation not predictable from earlier observations.\n- Its central computational result is a nonlinear recursion for the estimation-error covariance matrix, now recognized as the discrete Riccati recursion. Once the covariance is computed, the filter gain and estimator transition matrix follow directly.\n- The formulation covers stationary and nonstationary models, finite, growing, and infinite memory, and filtering, prediction, and smoothing problems. It also establishes a precise duality between optimal filtering and the noise-free linear-quadratic regulator problem.\n- Subsequent research developed the Kalman and Kalman–Bucy filtering theory, studied the associated Riccati equations and their stability, and extended the framework to smoothing, nonlinear estimation, and other variants. Later literature explicitly treats the paper as foundational for Kalman filtering and Riccati-based filtering/control theory. ([epubs.siam.org](https://epubs.siam.org/doi/10.1137/100799666))\n- The approach also had direct engineering influence. NASA reports that Kalman-filter methods were applied in the early 1960s to Apollo spacecraft navigation and later adapted into extended and square-root forms for practical aerospace computation. NASA subsequently documented applications to spacecraft navigation and air-traffic-management systems. ([ntrs.nasa.gov](https://ntrs.nasa.gov/api/citations/19860003843/downloads/19860003843.pdf))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/data_fusion/a-new-approach-to-linear-filtering-and-prediction-problems.pdf",
   "source_type": "pdf",
   "filepath": "data_fusion/a-new-approach-to-linear-filtering-and-prediction-problems.pdf",
   "filename": "a-new-approach-to-linear-filtering-and-prediction-problems.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:51"
 }

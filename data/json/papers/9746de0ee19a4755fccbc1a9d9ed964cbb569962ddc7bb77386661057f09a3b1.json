@@ -1,40 +1,37 @@
 {
   "uuid": "9746de0ee19a4755fccbc1a9d9ed964cbb569962ddc7bb77386661057f09a3b1",
-  "title": "BioJS: an open source standard for biological visualisation",
-  "publication_date": "2015",
+  "title": "Shifted Hamming distance: a fast and accurate SIMD-friendly filter to accelerate alignment verification in read mapping",
+  "publication_date": "January 10, 2015 (Advance Access publication); May 15, 2015 (issue date), Bioinformatics, Volume 31, Issue 10, pages 1553–1560",
   "authors": [
-    "David C. Gómez",
-    "Francisco J. Corpas",
-    "Gerardo Perez-Riverol",
-    "Henning Hermjakob",
-    "Jan Aerts",
-    "Joachim Barajas-Solano",
-    "Juan M. Rodriguez",
-    "Rafael Jiménez",
-    "Rodrigo Lopez",
-    "Tomás G. Malone"
+    "Can Alkan",
+    "Carl Kingsford",
+    "Gennady Pekhimenko",
+    "Hongyi Xin",
+    "John Emmons",
+    "John Greth",
+    "Onur Mutlu"
   ],
   "keywords": [
+    "alignment-verification",
     "bioinformatics",
-    "biojs",
-    "biological-visualisation",
-    "data-visualization",
-    "interactivity",
-    "internets-of-bioinformatics",
-    "javascript",
-    "modular-design",
-    "open-source",
-    "web-development"
+    "bit-parallelism",
+    "edit-distance",
+    "pre-alignment-filtering",
+    "read-mapping",
+    "sequence-alignment",
+    "shifted-hamming-distance",
+    "short-read-sequencing",
+    "simd"
   ],
   "category_path": [
     "bioinformatics"
   ],
-  "abstract": "BioJS is a community project that provides open source JavaScript-based components to visualise biological data. It addresses the difficulty of delivering intuitive, web-based visualisations for bioinformatics. For users, BioJS offers simple integration and facilitates code reuse. For developers, it supports the creation of interoperable visualisation libraries. The platform achieves cross-browser compatibility and modular design through the extensive use of web standards, consistent API and comprehensive user documentation. Developed collaboratively, BioJS fosters an open innovation platform for bioinformatics to facilitate data-driven discovery and education.",
-  "summary": "BioJS presents an open source framework aimed at enhancing the visualization of biological data using JavaScript-based components. The paper identifies BioJS as a valuable tool that addresses the challenges in creating intuitive and effective web-based visualizations in bioinformatics. Specifically, BioJS provides both users and developers with the means to integrate and develop complex yet accessible visual representation of data with its components.\n\nIn conducting a quick web search, the paper has been cited in a variety of contexts within bioinformatics, data visualization, and open-source development discussions, underlining its contribution as a foundational piece for engagements in these areas. Notable papers that reference this work include:\n\n1. **\"G3viz: A Python package for visualizing geospatial genetic data\"**, which discusses leveraging open-source visualization tools similar to BioJS ([source](https://academic.oup.com/bioinformatics/article/36/23-24/5393/6016869)).\n2. **\"Vue-D3-Tree: An interactive and customizable tree visualization component using D3.js and Vue.js\"**, citing the modular approach outlined by BioJS as inspiration ([source](https://vue-d3-tree.github.io/)).\n3. **\"InterMine: A comprehensive data warehouse to support integrative analysis of the Drosophila transcriptome\"**, utilizing similar visualization strategies as those advanced by BioJS ([source](https://academic.oup.com/nar/article/46/D1/D729/4633919)).\n\nOverall, BioJS has had a marked impact on the bioinformatics community by setting a standard for developing modular, open-source visualization components and promoting broader adoption of web technologies in biological data analysis.",
+  "abstract": "Motivation: Calculating the edit-distance (i.e. minimum number of insertions, deletions and substitutions) between short DNA sequences is the primary task performed by seed-and-extend based mappers, which compare billions of sequences. In practice, only sequence pairs with a small edit-distance provide useful scientific data. However, the majority of sequence pairs analyzed by seed-and-extend based mappers differ by significantly more errors than what is typically allowed. Such error-abundant sequence pairs needlessly waste resources and severely hinder the performance of read mappers. Therefore, it is crucial to develop a fast and accurate filter that can rapidly and efficiently detect error-abundant string pairs and remove them from consideration before more computationally expensive methods are used.\n\nResults: We present a simple and efficient algorithm, Shifted Hamming Distance (SHD), which accelerates the alignment verification procedure in read mapping, by quickly filtering out error-abundant sequence pairs using bit-parallel and SIMD-parallel operations. SHD only filters string pairs that contain more errors than a user-defined threshold, making it fully comprehensive. It also maintains high accuracy with moderate error threshold (up to 5% of the string length) while achieving a 3-fold speedup over the best previous algorithm (Gene Myers’s bit-vector algorithm). SHD is compatible with all mappers that perform sequence alignment for verification.\n\nAvailability and implementation: We provide an implementation of SHD in C with Intel SSE instructions at: https://github.com/CMU-SAFARI/SHD.\n\nContact: hxin@cmu.edu, calkan@cs.bilkent.edu.tr or onur@cmu.edu\n\nSupplementary information: Supplementary data are available at Bioinformatics online.",
+  "summary": "The paper introduced Shifted Hamming Distance (SHD), a SIMD- and bit-parallel pre-alignment filter intended to remove high-error read–reference pairs before expensive edit-distance computation. The authors reported that SHD preserves correct mappings, achieves approximately threefold speedup over the compared bit-vector implementation, and is compatible with seed-and-extend mappers. The implementation was released as open-source software. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC4426831/))\n\nSubsequent research directly evaluated and extended the approach. MAGNET analyzed sources of SHD’s filtering inaccuracy and proposed a new pre-alignment filter designed to improve accuracy across edit-distance thresholds and datasets, reporting one- to two-order-of-magnitude improvements in filtering accuracy. ([arxiv.org](https://arxiv.org/abs/1707.01631)) GateKeeper further developed hardware-based pre-alignment filtering for short-read mapping and compared its performance with SHD, reporting substantially higher acceleration on FPGA hardware. ([arxiv.org](https://arxiv.org/abs/1604.01789)) Later work also explored specialized hardware using shifted Hamming distance, including ShiftCAM for genome analysis. ([researchr.org](https://researchr.org/publication/HeMSTXPLL24/bibtex)) These citations indicate that SHD influenced subsequent algorithmic and hardware research on pre-alignment filtering, while the available evidence does not establish broad standalone industry adoption.",
   "raw_url": "https://doi.org/10.1093/bioinformatics/btu856",
   "source_type": "external",
   "filepath": "bioinformatics/README.md",
   "filename": "Shifted Hamming distance: a fast and accurate SIMD-friendly filter to accelerate alignment verification in read mapping (2015)",
-  "created_on": "2026-01-24 23:46:58",
-  "summary_received": "2026-01-25 00:11:01"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:53"
 }

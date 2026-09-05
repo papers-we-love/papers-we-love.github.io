@@ -1,27 +1,31 @@
 {
   "uuid": "ae25c80e583fa633050e55c6ca7cf28a4f2771679698fa649ec453b02be283bb",
-  "title": "On the Transcendence of π",
-  "publication_date": "1979",
+  "title": "The Transcendence of π",
+  "publication_date": "November 2006",
   "authors": [
-    "Morris Marden"
+    "Steve Mayer"
   ],
   "keywords": [
-    "lindemann-weierstrass-theorem",
-    "mathematics",
+    "algebraic-numbers",
+    "euler-number",
+    "hermite-proof",
+    "irrationality",
+    "lindemann-proof",
     "number-theory",
     "pi",
-    "transcendence",
+    "ruler-and-compass-constructions",
+    "symmetric-polynomials",
     "transcendental-numbers"
   ],
   "category_path": [
     "mathematics"
   ],
-  "abstract": "A simple proof of the transcendence of π is given, using elementary properties of determinants and symmetric polynomials. It is similar to, but somewhat simpler than, the original Lindemann proof. The proof involves consideration of algebraic symmetric polynomials and the implication of a vanishing determinant.",
-  "summary": "The paper \"On the Transcendence of π\" by Morris Marden provides a simplified proof of the transcendence of π, a mathematical constant that is irrational and non-algebraic. The paper uses elementary properties of determinants and symmetric polynomials to offer a proof that is claimed to be simpler than the original Lindemann proof. Although this work revisits and simplifies an existing mathematical proof, it does not seem to have had a significant influence on subsequent research or industry applications, as evidenced by a lack of citations or discussions in more recent publications. The Lindemann-Weierstrass theorem, which the original proof of π's transcendence is part of, remains foundational in mathematics, particularly in transcendental number theory. However, there is no direct evidence found indicating specific influence or further applications resulting from Marden's paper itself.",
+  "abstract": "The proof that π is transcendental is not well-known despite the fact that it isn’t too difficult for a university mathematics student to follow. The purpose of this paper is to make the proof more widely available. A bonus is that the proof also shows that e is transcendental as well.\n\nThe material in these notes are not mine; it is taken from a supplement issued by Ian Stewart as an adjunct to a Rings and Fields course in 1970 at the University of Warwick.",
+  "summary": "The paper is an expository presentation of elementary-analysis proofs that π is irrational, π² is irrational, e is transcendental, and finally π is transcendental. Its central argument follows the Hermite–Lindemann method: construct auxiliary polynomials, derive integer-valued expressions, and show that corresponding integrals tend to zero, producing contradictions. The author explicitly identifies Ian Stewart’s 1970 University of Warwick course supplement as the source of the notes.\n\nThe paper appears to have had primarily educational and expository influence rather than documented industrial impact. A 2025 expository article on elementary proofs of π’s transcendence identifies Mayer’s 2006 note as one of its principal antecedents and develops the same proof strategy further. ([mathscholar.org](https://mathscholar.org/2025/02/simple-proofs-pi-is-transcendental/)) The note is also discussed in later mathematical question-and-answer literature as a source for understanding Lindemann’s proof and its use of symmetric-function arguments. ([math.stackexchange.com](https://math.stackexchange.com/questions/4861927/proof-pi-is-transcendental-without-symmetric-function-theory/4908376)) It is catalogued in mathematical bibliographies as a November 2006 web manuscript by Steve Mayer. ([ftp.math.utah.edu](https://ftp.math.utah.edu/pub/tex/bib/pi.html)) No specific industrial application or product use of this paper itself was identified in the search.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/mathematics/transcendence-of-pi.pdf",
   "source_type": "pdf",
   "filepath": "mathematics/transcendence-of-pi.pdf",
   "filename": "transcendence-of-pi.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

@@ -1,32 +1,27 @@
 {
   "uuid": "dbd7ae8d5ab62fd6559fedacce5268f3d2544289967ba9c03e34bb37beb52933",
   "title": "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms",
-  "publication_date": "1996",
+  "publication_date": "May 1, 1996; published in the Proceedings of the Fifteenth Annual ACM Symposium on Principles of Distributed Computing (PODC ’96), pages 267–275",
   "authors": [
     "Maged M. Michael",
     "Michael L. Scott"
   ],
   "keywords": [
-    "algorithms",
-    "blocking-queues",
-    "comparable-performance",
-    "concurrency",
-    "concurrent-queues",
-    "data-structures",
-    "non-blocking",
-    "performance",
-    "shared-memory",
-    "synchronization"
+    "compare-and-swap",
+    "concurrent-queue",
+    "lock-free",
+    "multiprogramming",
+    "non-blocking"
   ],
   "category_path": [
     "data_structures"
   ],
-  "abstract": "We present a new practical non-blocking queue algorithm. Our algorithm is a significant improvement over previous algorithms in terms of simplicity (more comprehensible code, meeting more intuitive specifications) and practicality (faster than previous queue algorithms across a broad range of performance). In addition, our algorithm provides support for both blocking and non-blocking operation and is distinguished by its ability to allow block-free implementations of queue operations based on shared memory. Finally, the algorithms are easy to prove correct and naturally lend themselves to a performance improvement technique called 'memory garbage collection'.",
-  "summary": "This paper presents significant advancements in the design of concurrent data structures, specifically focusing on queues. The proposed algorithms provide a more straightforward and efficient approach to implementing both non-blocking and blocking queue operations. Their key contribution is the simplicity and practicality they offer compared to previous queue algorithms, achieving better performance metrics across various benchmarks.\n\nIn particular, the algorithms allow operations to proceed without blocking, leveraging shared memory effectively. This makes them particularly useful in contexts where thread contention could otherwise degrade performance. The paper's influence on concurrent data structure research and applications is evident in multiple subsequent works that reference it:\n1. Moir, M., & Nussbaum, D. (1999). Composite syncronization. [ACM Digital Library](https://dl.acm.org/doi/10.1145/320557.320567).\n2. Harris, T. L. (2001). A pragmatic implementation of non-blocking linked lists. [SpringerLink](https://link.springer.com/article/10.1007/s004460100179).\n3. Herlihy, M., & Shavit, N. (2008). The Art of Multiprocessor Programming. This book refers to the algorithms introduced by Michael and Scott.\n\nThe practical applications of these algorithms extend to improving the efficiency of systems that rely heavily on concurrent operations, making them a staple in the study of concurrent programming.",
+  "abstract": "Drawing ideas from previous authors, we present a new non-blocking concurrent queue algorithm and a new two-lock queue algorithm in which one enqueue and one dequeue can proceed concurrently. Both algorithms are simple, fast, and practical; we were surprised not to find them in the literature. Experiments on a 12-node SGI Challenge multiprocessor indicate that the new non-blocking queue consistently outperforms the best known alternatives; it is the clear algorithm of choice for machines that provide a universal atomic primitive (e.g. compare and swap or load linked/store conditional). The two-lock concurrent queue outperforms a single lock when several processes are competing simultaneously for access; it appears to be the algorithm of choice for busy queues on machines with non-universal atomic primitives (e.g. test and set). Since much of the motivation for non-blocking algorithms is rooted in their immunity to large, unpredictable delays in process execution, we report experimental results both for systems with dedicated processors and for systems with several processes multiprogrammed on each processor.",
+  "summary": "## Summary\n\nThe paper introduces two concurrent FIFO queue algorithms. The primary contribution is a linked-list, lock-free queue using compare-and-swap or load-linked/store-conditional primitives, dummy nodes, modification counters, and helping-style advancement of the tail pointer. The algorithm is linearizable and non-blocking: repeated interference causes another enqueue or dequeue to complete rather than allowing a delayed process to block system-wide progress. The paper also presents a simpler two-lock queue in which separate head and tail locks permit an enqueue and a dequeue to proceed concurrently.\n\nThe experiments on a 12-processor SGI Challenge found that the new non-blocking algorithm generally outperformed the alternatives tested, including under multiprogrammed workloads. The two-lock algorithm improved on a single-lock queue under high contention on dedicated processors, but was less suitable when processes could be unpredictably preempted.\n\n## Influence\n\nThe non-blocking algorithm became widely known as the **Michael–Scott queue** and has served as a foundational design for subsequent lock-free queue research. The authors’ research group later published corrected and optimized versions, including adaptations using modern memory-reclamation techniques such as hazard pointers, epoch-based reclamation, and interval-based reclamation. ([cs.rochester.edu](https://www.cs.rochester.edu/research/synchronization/pseudocode/queues.html))\n\nThe design also influenced production libraries. Java’s `ConcurrentLinkedQueue` documentation states that its implementation uses an efficient non-blocking algorithm based on the algorithm described in this paper. ([docs.oracle.com](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentLinkedQueue.html))\n\nSubsequent research addressed the correctness and verification of the algorithm. Doherty, Groves, Luchangco, and Moir formally verified a slightly optimized version using simulation proofs and the PVS theorem prover, establishing its linearizability. ([researchgate.net](https://www.researchgate.net/publication/220703006_Formal_Verification_of_a_Practical_Lock-Free_Queue_Algorithm)) More recent work has continued to model-check both the algorithm and the OpenJDK queue implementation based on it. ([doi.org](https://doi.org/10.3390/software4030015))",
   "raw_url": "https://www.cs.rochester.edu/u/scott/papers/1996_PODC_queues.pdf",
   "source_type": "external",
   "filepath": "data_structures/README.md",
   "filename": "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:54"
 }

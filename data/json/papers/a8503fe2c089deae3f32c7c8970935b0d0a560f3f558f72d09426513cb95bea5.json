@@ -1,31 +1,31 @@
 {
   "uuid": "a8503fe2c089deae3f32c7c8970935b0d0a560f3f558f72d09426513cb95bea5",
   "title": "Authoritative Sources in a Hyperlinked Environment",
-  "publication_date": "January 1999",
+  "publication_date": "1999-09-01; Journal of the ACM, Volume 46, Issue 5, pp. 604–632. Preliminary versions appeared in the ACM–SIAM Symposium on Discrete Algorithms in 1998 and as an IBM Research Report in May 1997. ([bishtref.com](https://bishtref.com/articles/10.1145/324133.324140))",
   "authors": [
     "Jon M. Kleinberg"
   ],
   "keywords": [
-    "authoritative-sources",
-    "hubs-authorities",
-    "hyperlinked-environment",
+    "eigenvectors",
+    "hits-algorithm",
+    "hubs-and-authorities",
     "hypertext",
     "information-retrieval",
     "link-analysis",
-    "ranking-algorithm",
-    "search-engines",
-    "web-mining",
+    "spectral-analysis",
+    "topic-distillation",
+    "web-search",
     "world-wide-web"
   ],
   "category_path": [
     "information_retrieval"
   ],
-  "abstract": "The World-Wide Web provides a rich and challenging environment for searching for information. We present a new approach to automated information discovery on the Web, based on the relationship between the authoritative sources of information on a broad topic and the hubs that cite them. By viewing the environment as a directed graph, we can identify these communities of information sources and related hubs. Our algorithm produces a set of authoritative sources for wide-ranging topic areas; these sources are chosen by an algorithm that examines the link structures of the World-Wide Web graph.",
-  "summary": "This paper, authored by Jon M. Kleinberg in 1999, presents a method to identify authoritative sources in a hyperlinked environment by analyzing the structure of the web as a directed graph. Kleinberg introduces the concept of 'hubs' and 'authorities' to categorize pages, with hubs linking to authoritative pages and authorities being linked by high-quality hubs. The algorithm proposed in this paper influenced the development of search engine algorithms, including the famous PageRank algorithm used by Google. The concept of hubs and authorities contributed to the field of information retrieval and search engine optimization. The impact of this paper is evident in the numerous citation counts it has received, including references from academic papers such as \"Anatomy of a Large-Scale Hypertextual Web Search Engine\" by Brin and Page (1998) and \"A Survey of Web Information Retrieval\" by Chakrabarti et al. (1999). The discussion of link structures as a way to determine authoritative web pages paved the way for more complex search engine algorithms that leverage link analysis for ranking purposes.",
+  "abstract": "The network structure of a hyperlinked environment can be a rich source of information about the content of the environment, provided we have effective means for understanding it. We develop a set of algorithmic tools for extracting information from the link structures of such environments, and report on experiments that demonstrate their effectiveness in a variety of contexts on the World Wide Web. The central issue we address within our framework is the distillation of broad search topics, through the discovery of “authoritative” information sources on such topics. We propose and test an algorithmic formulation of the notion of authority, based on the relationship between a set of relevant authoritative pages and the set of “hub pages” that join them together in the link structure. Our formulation has connections to the eigenvectors of certain matrices associated with the link graph; these connections in turn motivate additional heuristics for link-based analysis.",
+  "summary": "The paper introduced the hubs-and-authorities model now commonly associated with the Hyperlink-Induced Topic Search (HITS) algorithm. It represents Web pages as a directed graph, constructs a query-focused subgraph from text-search results and neighboring pages, and iteratively computes mutually reinforcing authority and hub scores. In matrix terms, the authority and hub vectors correspond to principal eigenvectors of $A^T A$ and $A A^T$, respectively. Non-principal eigenvectors are proposed for identifying multiple topical communities, including separated communities associated with ambiguous or polarized queries.\n\nThe work influenced subsequent research on Web link analysis, including studies of HITS variants, stability, spam resistance, topic drift, and unified comparisons between HITS, PageRank, and related algorithms. Later evaluations examined HITS at Web scale and found that its effectiveness depended on query specificity and was broadly comparable to other link-based features in some settings. ([microsoft.com](https://www.microsoft.com/en-us/research/publication/hits-on-the-web-how-does-it-compare/))\n\nThe paper also had a documented industry connection: Ask Jeeves reported that its Teoma search technology ranked pages using authority within subject-matter communities, a design closely aligned with the paper’s distinction between popularity and topical authority. ([sec.gov](https://www.sec.gov/Archives/edgar/data/1054298/000095013405005083/f06557e10vk.htm))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/information_retrieval/authoritative-sources-in-a-hyperlinked-environment.pdf",
   "source_type": "pdf",
   "filepath": "information_retrieval/authoritative-sources-in-a-hyperlinked-environment.pdf",
   "filename": "authoritative-sources-in-a-hyperlinked-environment.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

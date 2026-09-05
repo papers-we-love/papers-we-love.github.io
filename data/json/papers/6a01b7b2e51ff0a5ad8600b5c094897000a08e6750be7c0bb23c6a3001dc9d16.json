@@ -1,34 +1,30 @@
 {
   "uuid": "6a01b7b2e51ff0a5ad8600b5c094897000a08e6750be7c0bb23c6a3001dc9d16",
-  "title": "COPS: Consistency-based Service Oriented Programming Support",
-  "publication_date": "2011",
+  "title": "Don’t Settle for Eventual: Scalable Causal Consistency for Wide-Area Storage with COPS",
+  "publication_date": "October 23–26, 2011; Proceedings of the 23rd ACM Symposium on Operating Systems Principles (SOSP ’11), Cascais, Portugal",
   "authors": [
-    "Michael Whittaker",
-    "P. Madhusudan",
-    "Siddhartha Sen",
-    "Yun Mao"
+    "David G. Andersen",
+    "Michael J. Freedman",
+    "Michael Kaminsky",
+    "Wyatt Lloyd"
   ],
   "keywords": [
-    "cloud-computing",
-    "concurrency",
-    "consistency-models",
-    "data-replication",
-    "distributed-systems",
-    "programming-languages",
-    "service-oriented-architecture",
-    "software-engineering",
-    "strong-consistency",
-    "transactions"
+    "alps-systems",
+    "causal-consistency",
+    "causal-plus-consistency",
+    "key-value-storage",
+    "read-transactions",
+    "scalable-wide-area-replication"
   ],
   "category_path": [
     "datastores"
   ],
-  "abstract": "The CAP theorem asserts that any networked shared-data system can have at most two of three desirable properties: consistency, availability, and partition tolerance. While the theorem forced designers of Internet services to relinquish consistency guarantees, most have consequently adopted fairly weak consistency models that lead to incorrect program behavior. In this paper, we argue that programmers would benefit from a platform providing flexible tradeoffs between consistency and availability. We propose a new data store, COPS (Consistency-based Outage Programming Support), that achieves this goal in a way that is simple to program against and easy to manage operationally, yet sufficiently performant for building highly scalable systems.",
-  "summary": "This paper, presented in 2011, introduces COPS, a data store that addresses consistency-flexibility trade-offs in programming platforms for distributed systems. The authors argue against the conventional practice of compromising consistency for availability, as suggested by the CAP theorem, proposing instead a system that attempts to balance these aspects. COPS is proposed as a viable solution that can maintain performance while ensuring consistency, making it particularly suitable for developers working with highly scalable systems. \n\nAs of now, the paper has been cited in various scholarly articles and reports on distributed systems and cloud computing strategies. For instance, the paper was referenced in a 2013 study on trade-offs in building distributed databases ([source](https://dl.acm.org/doi/10.1145/2535188)). Additionally, it has been cited in research focused on enhancing the performance of distributed transactions ([source](https://ieeexplore.ieee.org/document/7110210)). However, outside of academic circles, specific industry applications of COPS as a standalone system remain scarce, though the concepts could have indirectly influenced modern distributed data storage solutions.",
+  "abstract": "Geo-replicated, distributed data stores that support complex online applications, such as social networks, must provide an “always-on” experience where operations always complete with low latency. Today’s systems often sacrifice strong consistency to achieve these goals, exposing inconsistencies to their clients and necessitating complex application logic. In this paper, we identify and define a consistency model—causal consistency with convergent conflict handling, or causal+—that is the strongest achieved under these constraints.\n\nWe present the design and implementation of COPS, a key-value store that delivers this consistency model across the wide-area. A key contribution of COPS is its scalability, which can enforce causal dependencies between keys stored across an entire cluster, rather than a single server like previous systems. The central approach in COPS is tracking and explicitly checking whether causal dependencies between keys are satisfied in the local cluster before exposing writes. Further, in COPS-GT, we introduce get transactions in order to obtain a consistent view of multiple keys without locking or blocking. Our evaluation shows that COPS completes operations in less than a millisecond, provides throughput similar to previous systems when using one server per cluster, and scales well as we increase the number of servers in each cluster. It also shows that COPS-GT provides similar latency, throughput, and scaling to COPS for common workloads.",
+  "summary": "## Main contribution\n\nThe paper introduces **causal+ consistency**, combining causal consistency with convergent handling of concurrent conflicting writes. Causal consistency preserves dependencies between operations—for example, ensuring that a reference to an object is not visible before the referenced object—while convergent conflict handling ensures that replicas eventually produce the same result for concurrent updates. The default COPS conflict policy is last-writer-wins, implemented using Lamport-timestamp-based versions.\n\nCOPS is designed for ALPS systems: systems emphasizing availability, low latency, partition tolerance, and high scalability. Each datacenter contains a locally linearizable, partitioned key-value cluster. Client operations complete locally, while writes are replicated asynchronously to other datacenters. A replicated write is not exposed at a remote cluster until its causal dependencies have been satisfied there. This is implemented with dependency metadata, asynchronous `put_after` replication, and `dep_check` operations.\n\nA central systems insight is that causal dependencies can be tracked across independently partitioned servers without imposing a single global serialization point. COPS reduces replication overhead by retaining only “nearest” dependencies: dependencies that transitively cover other dependencies in the causality graph. This allows causal ordering across keys and machines while preserving scale-out behavior.\n\nCOPS-GT extends the system with non-blocking get transactions. A transaction first reads all requested keys in parallel, examines their dependency metadata, and then performs a second parallel round only for keys whose versions are too old to form a causally consistent snapshot. The algorithm therefore completes in at most two rounds of local reads and avoids locks and blocking. COPS-GT uses multiple retained versions and dependency metadata, with garbage collection to bound storage overhead.\n\nThe evaluation reports sub-millisecond median operation latency. In the single-server experiments, COPS achieves approximately 52 Kops/s for reads and 30 Kops/s for single-dependency writes; COPS-GT achieves similar read latency but lower write throughput because of version and dependency management. Across tested configurations, COPS scales nearly linearly as servers are added to a datacenter. COPS-GT incurs greater overhead for write-heavy and highly interdependent workloads, but approaches COPS performance for read-heavy workloads, larger values, lower dependency rates, and higher inter-operation delays.\n\n## Influence on subsequent research and practice\n\nThe paper had a clear influence on subsequent causal-consistency research. The authors’ follow-up system, **Eiger**, explicitly builds on COPS and extends its approach from a basic key-value model to Cassandra’s column-family data model, while adding scalable write-only transactions and broader read-only transaction support. ([cs.cmu.edu](https://www.cs.cmu.edu/~dga/papers/eiger-nsdi2013.pdf)) Later systems and surveys continued to use COPS as a reference design and comparison point for dependency tracking, causal replication, and non-blocking read-only transactions. ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S0167739X17308166))\n\nThe available evidence supports substantial research influence, particularly through Eiger and later causal-consistency protocols. The sources reviewed do not establish that the original COPS implementation itself became a widely deployed commercial product; the documented industry connection is primarily through the follow-up Eiger work implemented with Cassandra-related technology. ([da-data.blogspot.com](https://da-data.blogspot.com/2013/02/caring-about-causality-now-in-cassandra.html))",
   "raw_url": "http://www.cs.cmu.edu/~dga/papers/cops-sosp2011.pdf",
   "source_type": "external",
   "filepath": "datastores/README.md",
   "filename": "Don’t Settle for Eventual: Scalable Causal Consistency for Wide-Area Storage with COPS",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:54"
 }

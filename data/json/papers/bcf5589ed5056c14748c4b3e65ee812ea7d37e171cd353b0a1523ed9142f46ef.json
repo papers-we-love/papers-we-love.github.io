@@ -1,33 +1,33 @@
 {
   "uuid": "bcf5589ed5056c14748c4b3e65ee812ea7d37e171cd353b0a1523ed9142f46ef",
-  "title": "Functional Reactive Programming in PLT Scheme",
-  "publication_date": "2004",
+  "title": "FrTime: Functional Reactive Programming in PLT Scheme",
+  "publication_date": "April 2004 (Brown University Technical Report CS-03-20)",
   "authors": [
-    "Gregory H. Cooper",
+    "Gregory Cooper",
     "Shriram Krishnamurthi"
   ],
   "keywords": [
-    "dynamic-systems",
-    "event-driven-programming",
+    "asynchronous-communication",
+    "dataflow-programming",
+    "distributed-signals",
+    "event-driven-computation",
     "functional-reactive-programming",
-    "lambda-calculus",
-    "plt-scheme",
-    "programming-languages",
+    "incremental-computation",
+    "interactive-programming",
     "reactive-systems",
-    "real-time-applications",
-    "runtime-environments",
-    "software-engineering"
+    "scheme",
+    "time-varying-values"
   ],
   "category_path": [
     "languages-paradigms",
     "functional_reactive_programming"
   ],
-  "abstract": "Functional reactive programming (FRP) extends traditional reactive programming by adding first-class events and behaviors. Behaviors are time-varying, reactive values, and include numbers, strings, images, or entire pictures. Events are streams of values that occur at discrete points in time. In this paper, we present a new implementation of FRP in PLT Scheme. This implementation differs from other reactive languages in several significant ways. Specifically, we address the problem of glitches by guaranteeing that the system has no observable effect until it has reached a consistent state. Moreover, we propose an efficient formulation of FRP that introduces several optimizations. Finally, we present experience using our system to develop several interactive animations, which demonstrate some of the benefits and costs of our approach.",
-  "summary": "Functional Reactive Programming (FRP) is an advanced programming paradigm that integrates functional programming with reactive systems to handle dynamic time-based data. This paper presents an implementation of FRP in PLT Scheme, addressing problems such as glitches and proposing optimizations to make FRP more efficient. Unlike other reactive programming languages, this approach ensures consistency and extends core principles of functional and reactive programming to enhance performance.\n\nA quick web search did not unearth any specific research or industry usage that directly references or builds upon this exact paper. However, FRP has had a significant impact on the broader field of programming languages, with concepts from the paper being foundational for further advancements and implementations of FRP.\n\nFor additional context on subsequent developments in FRP and its influence, see papers discussing the evolution of functional programming languages and reactive systems, such as:\n- Elliott, C., & Hudak, P. (1997). Functional reactive animation. [Link](https://conal.net/papers/icfp97/icfp97.pdf)\n- Hudak, P., Courtney, A., Nilsson, H., & Peterson, J. (2003). Arrows, Robots, and Functional Reactive Programming. [Link](https://www.cs.yale.edu/homes/hudak/publications/arrows.pdf)\n- Bainomugisha, E., Carreton, A. L., van Cutsem, T., Mostinckx, S., & De Meuter, W. (2013). A survey on reactive programming. ACM Computing Surveys (CSUR), 45(4), 1-34.",
+  "abstract": "Functional Reactive Programming (FRP) supports the declarative construction of reactive systems through signals, or time-varying values. In this paper, we present a new language called FrTime, which provides FRP-style signals atop a dialect of Scheme. We introduce the language with a few examples and discuss its implementation. FrTime uses impure features, such as state and asynchronous communication, to model time and to control evaluation. The use of such features yields a scalable, event-driven implementation with several important advantages. Specifically, it eases integration with other systems, supports distribution of signals across a network, and permits various benign impurities. To illustrate the language’s expressive power, we present a concise implementation of a networked, multi-player paddle-ball game in FrTime.",
+  "summary": "## Overview\n\nThe paper presents FrTime, a Scheme-based implementation of Functional Reactive Programming (FRP) integrated into the DrScheme environment. FrTime extends a mostly functional subset of PLT Scheme with **signals**, which represent time-varying values. Signals are divided into **behaviors**, which have values continuously available over time, and **events**, which represent discrete occurrences such as keystrokes, mouse actions, or network messages.\n\n## Core programming model\n\nFrTime automatically lifts primitive function applications over behaviors, allowing programmers to combine constants and time-varying values using ordinary Scheme expressions. Events are processed with combinators such as mapping, filtering, merging, accumulation, and holding the latest occurrence as a behavior. This model lets programmers describe dependencies declaratively rather than manually updating state and coordinating callbacks.\n\nThe paper demonstrates the model with clocks, animations, interactive graphics, mutable parameter cells, and a networked multiplayer paddle-ball game. The game uses behaviors for positions and scores, events for collisions and updates, and remote events for communication between machines.\n\n## Implementation\n\nUnlike earlier FRP implementations based primarily on pure functional techniques and synchronous evaluation, FrTime represents each signal with a mutable data structure containing an update procedure and its most recently computed value. A signal manager maintains the dependency graph and processes asynchronous messages through a queue. Updates propagate from changed signals to dependent signals in a breadth-first, bottom-up order. Timed signals use an alarm queue, while optimizations avoid propagating unchanged values and prevent duplicate scheduling.\n\nThis design introduces brief periods in which related behaviors may be inconsistent. The authors treat this as a deliberate engineering trade-off and identify model checking and limited synchronization mechanisms as possible ways to improve reasoning and robustness.\n\n## Main contributions and implications\n\nThe implementation strategy provides four concrete benefits:\n\n- **Distributed signals:** Events can be transmitted as messages and exposed through local proxies on other machines.\n- **System integration:** Asynchronous message queues allow external GUI libraries and other imperative systems to provide input and consume signal updates without polling.\n- **Resource efficiency:** Event-driven propagation performs work in proportion to the rate of actual changes rather than recomputing the entire signal network at a fixed global sampling rate. The reported experiments show advantages for large systems with heterogeneous update frequencies.\n- **Benign impurity:** Mutation, input/output, imperative drawing, and mutable cells can be used while preserving automatic propagation of dependent signal values. This supports interactive experimentation and querying current behavior values from the development environment.\n\n## Influence and subsequent use\n\nThe work was followed by research that developed FrTime’s design and semantic foundations more fully. The authors’ later paper, *Embedding Dynamic Dataflow in a Call-by-Value Language*, describes FrTime as an embedding of dynamic dataflow in Scheme, presents a formal evaluation model, and discusses incremental program construction and integration with existing code. ([static.cs.brown.edu](https://static.cs.brown.edu/~sk/Publications/Papers/Published/ck-frtime/)) The FrTime language remains documented and packaged in the Racket ecosystem; the current documentation explicitly lists this 2004 paper alongside later papers as a design reference. ([plt.cs.northwestern.edu](https://plt.cs.northwestern.edu/snapshots/current/doc/frtime/index.html))\n\nRelated work also applied FrTime to practical GUI integration by adapting the MrEd object-oriented toolkit and developing a spreadsheet prototype. ([cs.brown.edu](https://cs.brown.edu/people/sk/Publications/Papers/Published/ick-adapt-oo-fwk-frp/)) A later master’s thesis used FrTime as the reactive foundation for real-time computer musical performers, demonstrating application beyond graphics and user interfaces. ([digitalcommons.calpoly.edu](https://digitalcommons.calpoly.edu/theses/410/)) The available evidence therefore indicates sustained influence on subsequent FRP research, Racket tooling, GUI integration, and experimental interactive applications, but does not establish broad industrial adoption.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages-paradigms/functional_reactive_programming/frp-in-plt-scheme.pdf",
   "source_type": "pdf",
   "filepath": "languages-paradigms/functional_reactive_programming/frp-in-plt-scheme.pdf",
   "filename": "frp-in-plt-scheme.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

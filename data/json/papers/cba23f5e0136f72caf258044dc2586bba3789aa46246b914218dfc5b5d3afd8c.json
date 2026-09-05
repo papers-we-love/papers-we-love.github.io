@@ -1,33 +1,26 @@
 {
   "uuid": "cba23f5e0136f72caf258044dc2586bba3789aa46246b914218dfc5b5d3afd8c",
-  "title": "Explaining Inconsistencies in Preferences Using Weighted Goals",
-  "publication_date": "April 2019",
+  "title": "Studying Attitudes and Social Norms in Agile Software Development",
+  "publication_date": "2018, published in the Proceedings of the 19th International Conference on Agile Software Development (XP ’18 Companion), Porto, Portugal, May 21–25, 2018; arXiv version submitted April 5, 2019",
   "authors": [
-    "David C. Parkes",
-    "Felix Fischer",
-    "Revital Lavi"
+    "Lucas Gren"
   ],
   "keywords": [
-    "algorithmic-mechanism-design",
-    "computational-social-choice",
-    "consistency",
-    "decision-making",
-    "goal-models",
-    "inconsistencies",
-    "interpretability",
-    "preferences",
-    "weighted-goals",
-    "weights"
+    "attitudes",
+    "behavioral-software-engineering",
+    "collaboration",
+    "social-norms",
+    "values"
   ],
   "category_path": [
     "software_engineering_orgs"
   ],
-  "abstract": "We introduce a model for preferences that is based on weighted goals, motivated by applications to detecting and resolving inconsistencies in preference judgments. In this model, preferences are constructed from a linear order on a set of basic elements, such as items or alternatives, and a set of weighted goals. Preferences induced by a weighted-goal model can lead to inconsistent judgments across pairs of alternatives, and we present an approach to identify and explain such inconsistencies. We also study algorithms for identifying all inconsistent preference judgments and discuss the complexity of the problem, providing both positive and negative complexity results.",
-  "summary": "This paper presents a model for understanding preferences based on weighted goals, aiming to detect and resolve inconsistencies in preference judgments. The authors explore how preferences, derived from weighted goals and a linear order of basic elements, can lead to inconsistent judgment pairs. They propose methods to identify and explain these inconsistencies, offering insight into the problem's complexity. \n\nA search for the impact of this paper revealed its relevance in the fields of algorithmic mechanism design and computational social choice, particularly in enhancing the interpretability of models and algorithms dealing with preferences. However, there is limited direct citation or application in other works, likely due to the paper's specific focus and recent publication date. The concepts might still be growing in influence within niche academic circles dealing with decision-making and preference-related algorithms.",
+  "abstract": "The purpose of this paper is to review research on attitudes and social norms and connect it to the agile software development context. Furthermore, I propose additional theories from social psychology (mainly the theory of planned behavior and using the degree of internalization of social norms) that would most certainly be useful for further sense-making of human factors-related research on agile teams.",
+  "summary": "The paper is a conceptual review that connects social-psychology research on attitudes and social norms with agile software-development teams. It argues that research on agile-team behavior should examine attitudes together with social norms and values rather than treating individual attitudes as sufficient explanations of behavior.\n\nThe paper presents the theory of planned behavior as a useful framework. In this model, attitude toward a specific behavior, subjective norm, and perceived behavioral control shape behavioral intention, which in turn predicts behavior. Perceived behavioral control may also affect behavior directly. The paper emphasizes that measurements should target specific behaviors—for example, the intention to share issues during a daily stand-up—rather than broad proxies such as general willingness to communicate.\n\nIt reviews five functions of attitudes: value expression, knowledge access, ego defense, social adjustment, and utility. The relationship between attitudes and behavior is expected to be stronger when attitudes are accessible, stable, based on direct experience, and frequently expressed. The paper also reviews limited software-engineering applications of attitude research, including studies of planned behavior, organizational change, and software engineers’ work attitudes.\n\nFor social norms, the paper distinguishes descriptive norms, which concern what people commonly do, from injunctive or prescriptive norms, which concern what people ought to do. It argues that these categories often interact in agile teams and that the degree to which norms are internalized—such as introjected versus integrated norms—may be particularly important. The paper therefore recommends context-sensitive research and interventions, including observational studies, participatory mechanisms, internalization of agile values, and demonstrations of desired team behavior.\n\nThe main contribution is a research agenda rather than a new empirical finding: agile-software-engineering research should use established theories from social and organizational psychology, test attitudes and norms against concrete team behaviors, and involve researchers from both software engineering and psychology. The paper’s publication metadata identifies it as a 2018 XP ’18 Companion paper, while the arXiv version was posted on April 5, 2019. ([arxiv.org](https://arxiv.org/pdf/1904.09225.pdf))\n\nA search for subsequent influence found limited and inconsistent evidence of direct uptake. EmergentMind reports one citation and identifies related work, whereas ResearchGate reports that it has resolved zero citing publications. The available evidence therefore supports describing the paper primarily as a conceptual contribution to behavioral software-engineering and agile-team research, not as a demonstrably influential industry framework. ([emergentmind.com](https://www.emergentmind.com/articles/1904.09225))",
   "raw_url": "https://arxiv.org/pdf/1904.09225.pdf",
   "source_type": "external",
   "filepath": "software_engineering_orgs/README.md",
   "filename": "Studying Attitudes and Social Norms in Agile Software Development (2019)",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:56"
 }

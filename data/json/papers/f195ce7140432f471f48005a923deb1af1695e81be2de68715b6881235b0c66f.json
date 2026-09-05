@@ -1,44 +1,44 @@
 {
   "uuid": "f195ce7140432f471f48005a923deb1af1695e81be2de68715b6881235b0c66f",
   "title": "Top 10 algorithms in data mining",
-  "publication_date": "December 2007",
+  "publication_date": "Published online 4 December 2007; issue date January 2008, Knowledge and Information Systems, volume 14, issue 1, pages 1–37",
   "authors": [
     "Angus Ng",
     "Bing Liu",
     "Dan Steinberg",
-    "David J Hand",
-    "Geoffrey J McLachlan",
+    "David J. Hand",
+    "Geoffrey J. McLachlan",
     "Hiroshi Motoda",
-    "J Ross Quinlan",
+    "J. Ross Quinlan",
     "Joydeep Ghosh",
     "Michael Steinbach",
-    "Philip S Yu",
+    "Philip S. Yu",
     "Qiang Yang",
     "Vipin Kumar",
     "Xindong Wu",
     "Zhi-Hua Zhou"
   ],
   "keywords": [
-    "algorithms",
-    "association-rule-mining",
-    "boosting",
+    "association-analysis",
     "classification",
     "clustering",
     "data-mining",
     "decision-trees",
-    "machine-learning",
-    "neural-networks",
+    "ensemble-learning",
+    "frequent-itemset-mining",
+    "link-mining",
+    "statistical-learning",
     "support-vector-machines"
   ],
   "category_path": [
     "machine_learning"
   ],
-  "abstract": "The IEEE International Conference on Data Mining (ICDM) is the world’s premier research conference in data mining. To promote and disseminate research to a wider audience, we undertook the effort to identify some of the most influential algorithms that have been widely used in the data mining community. We present the Top 10 data mining algorithms identified by the IEEE International Conference on Data Mining (ICDM) in December 2006: C4.5, k-Means, SVM, Apriori, EM, PageRank, AdaBoost, kNN, Naive Bayes, and CART. These top 10 algorithms in data mining have become the most influential data mining algorithms in the research community. With each algorithm, we provide a description of the algorithm, its impact, and review three representative applications.",
-  "summary": "The paper \"Top 10 algorithms in data mining\" published in December 2007 in the Knowledge and Information Systems journal, identifies and describes ten algorithms that were recognized as being amongst the most influential in the field of data mining as of 2006. These algorithms include C4.5, k-Means, Support Vector Machines (SVM), Apriori, Expectation-Maximization (EM), PageRank, AdaBoost, k-Nearest Neighbors (kNN), Naive Bayes, and CART. Each algorithm is detailed with a description of its methodology, and examples of its impact and representative applications.\n\nThis publication has influenced the field significantly by standardizing a core set of algorithms that are now frequently taught in data science curricula and utilized within academia and industry for various data mining tasks. It has been cited by numerous subsequent research articles that seek to leverage these foundational algorithms in new domains or to improve their performance and efficiency in high-dimensional data contexts.\n\nReferences in which this paper has been cited include:\n- \"Frequent Pattern Mining: Current Status and Future Directions\" (Published in Data Mining and Knowledge Discovery, 2014) [Link to source](https://link.springer.com/article/10.1007/s10618-013-0321-2)\n- \"An Extensive Experimental Survey of Regression Methods\" (Published in Neural Networks, 2009) [Link to source](https://www.sciencedirect.com/science/article/abs/pii/S0893608009000619)\n- \"A survey of outlier detection methodologies\" (Published in Data Mining and Knowledge Discovery, 2009) [Link to source](https://link.springer.com/article/10.1007/s10618-008-0093-2)\n\nThe influence of this paper can also be observed through its integration into many educational platforms and its recurring mention in foundational texts within the data mining and machine learning disciplines.",
+  "abstract": "This paper presents the top 10 data mining algorithms identified by the IEEE International Conference on Data Mining (ICDM) in December 2006: C4.5, k-Means, SVM, Apriori, EM, PageRank, AdaBoost, k NN, Naive Bayes, and CART. These top 10 algorithms are among the most influential data mining algorithms in the research community. With each algorithm, we provide a description of the algorithm, discuss the impact of the algorithm, and review current and further research on the algorithm. These 10 algorithms cover classification, clustering, statistical learning, association analysis, and link mining, which are all among the most important topics in data mining research and development.",
+  "summary": "### Influence\n\n- The paper formalized an expert-voted reference list of ten widely used algorithms—C4.5, k-means, SVM, Apriori, EM, PageRank, AdaBoost, kNN, Naive Bayes, and CART—and connected them to the principal data-mining areas of classification, clustering, statistical learning, association analysis, and link mining. ([researchgate.net](https://www.researchgate.net/publication/29467751_Top_10_algorithms_in_data_mining))\n- Subsequent research used the list as a baseline for measuring algorithm prominence. A quantitative meta-study explicitly revisited the 2007 selection using approximately 54,000 research abstracts from 2007–2016, comparing the original algorithm-centered view with broader trends in machine-learning topics. ([researchgate.net](https://www.researchgate.net/publication/315691639_The_Top_10_Topics_in_Machine_Learning_Revisited_A_Quantitative_Meta-Study))\n- A 2018 study applied the list to 5,212 ACL conference papers and 6,341 algorithm-mention sentences to quantify influence within natural-language processing. It found that SVM had the broadest influence by number of papers and mentions, while PageRank had the highest average mention frequency in that corpus. ([researchgate.net](https://www.researchgate.net/publication/323754772_Using_Full-Text_of_Research_Articles_to_Analyze_Academic_Impact_of_Algorithms))\n- The list has also been reproduced in educational data-mining material as a canonical table linking each algorithm to its category and instructional coverage, indicating continued pedagogical use. ([sciencedirect.com](https://www.sciencedirect.com/topics/computer-science/machine-learning-scheme))\n\nOverall, the paper’s principal impact was to provide a concise, widely reused taxonomy of foundational data-mining algorithms that later studies adopted for bibliometric analysis, domain-specific usage analysis, and teaching.",
   "raw_url": "https://www.researchgate.net/publication/29467751_Top_10_algorithms_in_data_mining",
   "source_type": "external",
   "filepath": "machine_learning/README.md",
   "filename": "Top 10 algorithms in data mining",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:56"
 }

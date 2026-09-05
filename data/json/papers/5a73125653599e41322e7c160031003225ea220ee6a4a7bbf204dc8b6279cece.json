@@ -1,38 +1,32 @@
 {
   "uuid": "5a73125653599e41322e7c160031003225ea220ee6a4a7bbf204dc8b6279cece",
-  "title": "Calvin: Fast Distributed Transactions for Partitioned Database Systems",
-  "publication_date": "June 2013",
+  "title": "Modularity and Scalability in Calvin",
+  "publication_date": "June 2013 (IEEE Data Engineering Bulletin, volume 36, number 2, pages 48–55)",
   "authors": [
     "Alexander Thomson",
-    "Chris Binnig",
-    "Daniel J. Abadi",
-    "Justin J. W. Baker",
-    "Kristina Renner",
-    "Philip Shao",
-    "Shan Xia",
-    "Thallappa Diegalamuth Ramasamy"
+    "Daniel J. Abadi"
   ],
   "keywords": [
-    "availability",
-    "consistency",
-    "cycle-of-dependency",
-    "database-systems",
-    "distributed-systems",
+    "acid-transactions",
+    "database-modularity",
+    "deterministic-concurrency-control",
     "distributed-transactions",
-    "low-latency",
-    "partitioned-database",
-    "redundant-data",
-    "replication"
+    "fault-tolerance",
+    "logical-logging",
+    "partitioned-databases",
+    "replication",
+    "scalable-databases",
+    "transaction-scheduling"
   ],
   "category_path": [
     "datastores"
   ],
-  "abstract": "Many \"NoSQL\" distributed storage systems, such as Bigtable, PNUTS, and Dynamo, provide high availability, low latency, and scalability by giving up ACID transactions and serializability guarantees. However, it is well known that the lack of these properties simplifies application logic, severely limits the types of applications that can be implemented on top of these storage systems, and has a significant negative impact on developer productivity. In this paper, we propose Calvin, a practical transaction scheduling and data replication layer that provides ACID transactions scalably and supports both primary-key serializability and full ACID serializability. Calvin achieves asynchrony and high availability using an innovative protocol for consistent replication and a transaction scheduler that can provide low-latency ACID transactions without requiring distributed commit protocols.",
-  "summary": "Calvin is a seminal paper in the field of distributed transaction processing for partitioned database systems. It introduces a transaction scheduling and data replication layer that enables scalable ACID transactions while maintaining high availability and low latency. Calvin's protocol for consistent replication and innovative transaction scheduler allow it to achieve asynchrony without needing distributed commit protocols, which significantly enhances developer productivity by providing strong consistency guarantees.\n\nThe Calvin system paper is frequently cited in subsequent research and has influenced many projects in the database community. It addresses a crucial gap in NoSQL databases, which often trade off ACID compliance for performance and scalability. Calvin has been referenced in various works discussing improvements and implementations of distributed transaction processing mechanisms.\n\nOne such example is the Spanner system by Google, which incorporates Calvin's ideas by providing strong consistency guarantees in a globally distributed database environment ([Corbett et al., \"Spanner: Google’s Globally Distributed Database\"](https://research.google/pubs/pub39966/)). Another example is the FaRM system, which implements optimistic concurrency control and distributed transactions across a database environment ([Dragojevic et al., \"FaRM: Fast Remote Memory\"](https://www.microsoft.com/en-us/research/publication/farm-fast-remote-memory/)). These projects utilize concepts introduced in Calvin to enhance the capabilities and guarantees of their systems.\n\nCalvin has also influenced the development of protocols that focus on the scalability of ACID transactions ([\"Hekaton: SQL Server's In-Memory OLTP Engine\"](https://dl.acm.org/doi/10.1145/2541940.2541965)). Additionally, the impact of Calvin extends to research on ensuring data integrity and high availability in distributed databases ([\"Rococo: Fast and Reliable Distributed Transactions\"](https://sigmod.org/publications/sigmod-record/past-issues/volume-43-number-2/)).\n\nOverall, Calvin has made substantial contributions to the field of distributed database systems and continues to be relevant in ongoing research and implementations.",
+  "abstract": "Calvin is a transaction scheduling and replication management layer for distributed storage systems. By first writing transaction requests to a durable, replicated log, and then using a concurrency control mechanism that emulates a deterministic serial execution of the log’s transaction requests, Calvin supports strongly consistent replication and fully ACID distributed transactions while incurring significantly lower inter-partition transaction coordination costs than traditional distributed database systems. Furthermore, Calvin’s declarative specification of target concurrency-control behavior allows system components to avoid interacting with actual transaction scheduling mechanisms—whereas in traditional DBMSs, the analogous components often have to explicitly observe concurrency control modules’ (highly nondeterministic) procedural behaviors in order to function correctly.",
+  "summary": "- **Core contribution.** The paper presents Calvin as a transaction-scheduling and replication layer that reduces the coordination cost of distributed ACID transactions by ordering transaction requests before execution. Its pipeline consists of logging, scheduling, and execution: requests are durably logged, schedulers establish a deterministic serial order, and storage backends execute transactions concurrently while preserving equivalence to that order. ([cs.yale.edu](https://cs.yale.edu/homes/thomson/publications/calvin-ieee13.pdf))\n- **Modular architecture.** Calvin separates the log, scheduler, and storage backend through explicit interfaces. The log can range from a local file to a sharded, Paxos-replicated implementation; schedulers can use serial execution, deterministic locking, or very lightweight locking; and storage systems expose `ANALYZE` and `RUN` operations. Deterministic execution also permits logical recovery by replaying requests after a checkpoint rather than recording physical storage actions. ([cs.yale.edu](https://cs.yale.edu/homes/thomson/publications/calvin-ieee13.pdf))\n- **Reported capabilities.** The paper describes support for strongly consistent replication, geographically separated replicas, disk-resident data with prefetching, and extensible deployments including CalvinDB, CalvinFS, and configurations modeled after Hyder and H-Store. It reports a Calvin deployment processing approximately 500,000 TPC-C transactions per second across 100 commodity EC2 machines. ([cs.yale.edu](https://cs.yale.edu/homes/thomson/publications/calvin-ieee13.pdf))\n- **Research influence.** The Calvin design became a reference point for later deterministic transaction-processing research. Q-Store explicitly develops a queue-oriented deterministic execution model in response to limitations of earlier systems such as Calvin, while RCC implements Calvin as one of six concurrency-control protocols in a common RDMA-based evaluation framework. ([openproceedings.org](https://openproceedings.org/2020/conf/edbt/paper_39.pdf))\n- **Industry influence.** Fauna publicly identifies its distributed transaction engine as Calvin-inspired or Calvin-based. Its design adopts the central idea of establishing transaction order through a replicated log before applying writes, while combining it with Raft and other implementation changes. ([fauna.com](https://fauna.com/blog/consistency-without-clocks-faunadb-transaction-protocol))\n\nThe documented influence is therefore both methodological—through subsequent deterministic transaction-processing research—and practical, through commercial distributed-database systems that explicitly acknowledge Calvin as an architectural basis. The 2013 article is an architectural and modularity-focused presentation of the Calvin system, whose foundational transaction-processing work also appeared in the authors’ 2012 SIGMOD paper. ([dblp.uni-trier.de](https://dblp.uni-trier.de/rec/conf/sigmod/ThomsonDWRSA12.html))",
   "raw_url": "http://sites.computer.org/debull/A13june/calvin1.pdf",
   "source_type": "external",
   "filepath": "datastores/README.md",
   "filename": "Modularity and Scalability in Calvin",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:54"
 }

@@ -1,32 +1,31 @@
 {
   "uuid": "5ac4ed7759c3f5d2a1efbb67f55a678f7ee36d4132f6572216b1e2b35846b6fb",
   "title": "Paxos Made Moderately Complex",
-  "publication_date": "2001",
+  "publication_date": "March 25, 2011 (date shown on the supplied manuscript PDF); a substantially expanded version by Robbert van Renesse and Deniz Altinbuken was published in ACM Computing Surveys on February 17, 2015.",
   "authors": [
-    "Nancy Lynch",
     "Robbert van Renesse"
   ],
   "keywords": [
-    "consensus-algorithm",
+    "asynchronous-systems",
+    "crash-failures",
     "distributed-consensus",
     "distributed-systems",
+    "failure-detection",
     "fault-tolerance",
-    "leader-election",
-    "network-partition",
+    "multi-paxos",
     "paxos",
-    "quorum",
-    "replication",
+    "replicated-state-machines",
     "state-machine-replication"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "This paper presents the Paxos algorithm, one of the simplest and most efficient algorithms for solving consensus in a network of unreliable processors (rocks) in the presence of crash failures. The algorithm is a collection of algorithms. The emphasis here is on simplicity and clarity of description: we hope to make it easier to understand the subtle and complex behavior of the Paxos algorithm.",
-  "summary": "\"Paxos Made Moderately Complex\" by Robbert van Renesse and Nancy Lynch in 2001 elaborates on the Paxos algorithm, which is a foundational distributed consensus algorithm used in ensuring fault-tolerance and consistent data replication across distributed systems. This influential work is frequently cited for contributing significantly to the understanding and application of the Paxos protocol, especially in situations that involve networks with unreliable processors prone to crash failures. Paxos has become widely adopted in industry systems including Google's Chubby lock service and Apache Zookeeper. Citations in later works emphasize its role in forming the basis for enhanced protocols like Multi-Paxos and its utilization in distributed systems research and applications ([Google Chubby](https://research.google.com/archive/chubby.html), [Apache Zookeeper](https://zookeeper.apache.org/)). Despite its complexity, Paxos remains a critical element in teaching and implementing resilient distributed systems.",
+  "abstract": "For anybody who has ever tried to implement it, Paxos is by no means a simple protocol, even though it is based on relatively simple invariants. This paper provides imperative pseudo-code for the full Paxos (or Multi-Paxos) protocol without shying away from discussing various implementation details. The initial description avoids optimizations that complicate comprehension. Next we discuss liveness, and list various optimizations that make the protocol practical.",
+  "summary": "## Summary\n\nThe paper presents an operational description of Multi-Paxos for replicated state machines in an asynchronous message-passing environment with crash failures. It decomposes the protocol into replicas, leaders, scouts, commanders, and acceptors, and explains their behavior with imperative pseudocode.\n\nReplicas assign client commands to numbered log slots and execute commands only after a decision has been learned for the corresponding slot. The safety argument is organized around invariants: a slot cannot have two different decided commands; replicas execute decided commands in slot order; replicas’ application states therefore remain equivalent; and replica progress does not move backward.\n\nAcceptors provide durable logical memory for consensus. Ballot numbers impose an ordering on competing attempts, while majority intersection prevents a later ballot from selecting a value inconsistent with an earlier chosen value. Leaders use scouts to establish a ballot and recover previously accepted proposals, then use commanders to obtain acceptance for proposals. The central inductive argument is that leaders must preserve previously chosen values when moving to higher ballots; this ensures that no slot receives conflicting decisions.\n\nThe paper distinguishes safety from liveness. Safety can hold despite failures and indefinitely delayed messages, but unrestricted asynchrony permits competing leaders to repeatedly preempt one another. Progress therefore requires additional practical assumptions, such as bounded clock drift and eventual message-delay bounds, together with failure detection or adaptive timeouts that allow one leader to remain effective long enough to complete decisions.\n\nThe initial presentation is intentionally impractical. The paper then discusses reducing acceptor state and phase-one messages, garbage collection, co-locating protocol roles, optimizing read-only commands, using leases, persisting state, and recovering from failures. These techniques connect the abstract protocol to implementable replicated services.\n\n## Influence and Subsequent Use\n\nThe manuscript’s role-oriented pseudocode and invariant-based explanation have been used as teaching and implementation material. The DSLabs distributed-systems laboratory explicitly recommends the paper when teaching Paxos-based state-machine replication, and subsequent student and open-source projects report implementing Multi-Paxos by following its architecture and protocol roles. ([ellismichael.com](https://ellismichael.com/dslabs/))\n\nA later research paper, *Moderately Complex Paxos Made Simple*, directly builds on the protocol variant described here. It develops higher-level executable specifications for Multi-Paxos, reconfiguration, preemption, state reduction, and failure detection, and uses TLA+ to machine-check safety properties. ([arxiv.org](https://arxiv.org/abs/1704.00082))\n\nThe expanded journal version appeared in ACM Computing Surveys in 2015, with Robbert van Renesse and Deniz Altinbuken as authors. It formalized a reconfigurable Multi-Paxos presentation and supplied additional variants and implementation guidance. ([doi.org](https://doi.org/10.1145/2673577))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/paxos-made-moderately-complex.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/paxos-made-moderately-complex.pdf",
   "filename": "paxos-made-moderately-complex.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:51"
 }

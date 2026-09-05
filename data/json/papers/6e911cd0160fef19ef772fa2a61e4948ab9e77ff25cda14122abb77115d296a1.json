@@ -1,30 +1,34 @@
 {
   "uuid": "6e911cd0160fef19ef772fa2a61e4948ab9e77ff25cda14122abb77115d296a1",
-  "title": "On the origin of gravity and the laws of Newton",
-  "publication_date": "July 2014",
+  "title": "Security of OS-level virtualization technologies",
+  "publication_date": "July 16, 2014 (arXiv version 1); conference version published in NordSec 2014, Tromsø, Norway, October 15–17, 2014, pp. 77–93. ([arxiv.org](https://arxiv.org/abs/1407.4245))",
   "authors": [
-    "Erik P. Verlinde"
+    "Elena Reshetova",
+    "Janne Karhunen",
+    "N. Asokan",
+    "Thomas Nyman"
   ],
   "keywords": [
-    "cosmology",
-    "dark-matter",
-    "emergent-phenomena",
-    "entropic-gravity",
-    "gravity",
-    "holography",
-    "newtonian-laws",
-    "quantum-gravity",
-    "thermodynamics"
+    "container-security",
+    "device-isolation",
+    "filesystem-isolation",
+    "ipc-isolation",
+    "linux-namespaces",
+    "network-isolation",
+    "operating-system-security",
+    "os-level-virtualization",
+    "process-isolation",
+    "resource-management"
   ],
   "category_path": [
     "unikernels"
   ],
-  "abstract": "Starting from first principles and basic insights from thermodynamics and holography we derive Newton's laws of motion and gravity by regarding them as emergent phenomena. In particular, the universal nature of gravity is shown to be related to the laws of thermodynamics. We argue that inertia follows from an opposition of the tendency of matter to increase its entropy against the entropy gradients associated with other matter. As in the case of the gravitational force law, also the law of inertia can be derived from general principles such as energy conservation, the equivalence principle and by assuming the entropy formula holds. Our approach thus illuminates the connection between gravity as an entropic force and the thermodynamics of spacetime.",
-  "summary": "The paper entitled \"On the origin of gravity and the laws of Newton\" by Erik P. Verlinde presents a theoretical approach to understanding gravity as an emergent consequence of thermodynamic principles and holographic ideas. The paper suggests that gravity is not a fundamental interaction, but rather emerges from the statistical behavior of microscopic degrees of freedom encoded on holographic screens. The work extends the concept of entropic forces to incorporate phenomena associated with gravity and inertia, building on the theoretical framework used in black hole thermodynamics.\n\nVerlinde's hypothesis implies that gravity results from differences in information density or entropy across spacetime, and thus connects gravity with thermodynamic laws. This perspective complements existing approaches to quantum gravity, such as string theory and loop quantum gravity, by providing a novel way to derive classic Newtonian laws from thermodynamic and holographic principles.\n\nThe paper has been influential in stimulating discussions and further investigations into the nature of gravity as an emergent phenomenon. It has sparked a broad range of research, leading to debates and additional studies examining the implications of entropic gravity for cosmological models, dark matter, and modifications of general relativity. The approach has been referenced in a variety of subsequent papers exploring alternative gravity theories, the role of entropy in cosmic evolution, and the holographic principle.\n\nKey references that cite this work include:\n\n1. Padmanabhan, T. (2015). \"Emergent Gravity Paradigm: Recent Progress.\" DOI: [10.1142/S0218271815300250](https://doi.org/10.1142/S0218271815300250)\n2. Hossenfelder, S. (2010). \"Experimental Search for Quantum Gravity.\" arXiv: [1003.1015](https://arxiv.org/abs/1003.1015)\n3. Cai, Y.F., et al. (2011). \"Entropy force's impact on current cosmological puzzles.\" Phys. Lett. B.\n4. Pérez, A., & Sudarsky, D. (2011). \"Comments on Verlinde's entropic force proposal for emergence of gravity.\" Classical and Quantum Gravity. DOI: [10.1088/0264-9381/28/1/015001](https://doi.org/10.1088/0264-9381/28/1/015001)\n5. Li, M., et al. (2010). \"Cosmology with entropic force.\" arXiv: [1006.1604](https://arxiv.org/abs/1006.1604)",
+  "abstract": "The need for flexible, low-overhead virtualization is evident on many fronts ranging from high-density cloud servers to mobile devices. During the past decade OS-level virtualization has emerged as a new, efficient approach for virtualization, with implementations in multiple different Unix-based systems. Despite its popularity, there has been no systematic study of OS-level virtualization from the point of view of security. In this report, we conduct a comparative study of several OS-level virtualization systems, discuss their security and identify some gaps in current solutions.",
+  "summary": "## Paper summary\n\nThe paper presents a comparative security analysis of OS-level virtualization systems, in which multiple isolated user-space environments share a host operating-system kernel. It develops a generic system model covering host user space, the shared kernel, and application or system containers. The analysis considers both container-to-container isolation and isolation between containers and the host.\n\nThe authors define an attacker who controls one or more containers and may attempt to compromise other containers, cause denial of service, or obtain unauthorized privileges. From this model, they derive six security requirements:\n\n- process separation;\n- filesystem isolation;\n- device isolation;\n- inter-process communication isolation;\n- network isolation; and\n- resource management.\n\nThe study compares FreeBSD Jails, Linux-VServer, Solaris Zones, OpenVZ, Linux Containers, and Cells/Cellrox. It explains two broad implementation strategies: attaching a single container structure to processes, and composing containers from separate namespaces. The latter approach, used prominently in Linux, provides greater flexibility and supports incremental adoption, but introduces additional implementation complexity.\n\nFor Linux, the paper analyzes process, user, mount, IPC, and network namespaces, together with pivot-root-based filesystem confinement, virtual Ethernet, MACVLAN, device-control mechanisms, resource limits, and control groups. It emphasizes that individual mechanisms do not automatically provide complete security. For example, mount namespaces alone do not guarantee filesystem isolation, because containers may inherit host-visible mounts; device drivers are generally not namespace-aware; and privileged users inside containers must be carefully constrained through user namespaces and capabilities.\n\nThe paper identifies several open problems in the Linux container security model as it existed in 2014: container-aware mandatory access control, incomplete isolation of certain IPC mechanisms, safe access to physical devices, namespace-specific random-number generation, secure device hotplugging, and incomplete consolidation of resource controls into control groups. Its central conclusion is that Linux had largely caught up with earlier container systems in core isolation features, but still required additional mechanisms for strong security guarantees.\n\n## Subsequent influence\n\nThe paper became a cited reference in container-security research and practice. Aalto University’s publication record reports 43 Scopus citations for the conference publication. ([research.aalto.fi](https://research.aalto.fi/en/publications/security-of-os-level-virtualization-technologies/)) It is cited by NISTIR 8176, *Security Assurance for Linux Containers*, as a source in its discussion of Linux container security assurance. ([govinfo.gov](https://www.govinfo.gov/content/pkg/GOVPUB-C13-af6f1d2da268173ea5ea702b719bc874/pdf/GOVPUB-C13-af6f1d2da268173ea5ea702b719bc874.pdf)) A later doctoral thesis explicitly identifies the paper’s system and attacker models, security requirements, comparative survey, and analysis of Linux namespace shortcomings as research contributions. ([aaltodoc.aalto.fi](https://aaltodoc.aalto.fi/server/api/core/bitstreams/6af36ff0-dc1c-4a98-93c9-cec54b6df86e/content)) These references indicate that the paper’s principal impact was to provide a structured vocabulary and threat model for evaluating container isolation, rather than to introduce a new container implementation.",
   "raw_url": "https://arxiv.org/pdf/1407.4245v1.pdf",
   "source_type": "external",
   "filepath": "unikernels/README.md",
   "filename": "Security of OS-level virtualization technologies: Technical report",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:05"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:57"
 }

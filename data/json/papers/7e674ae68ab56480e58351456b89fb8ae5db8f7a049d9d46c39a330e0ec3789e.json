@@ -1,32 +1,34 @@
 {
   "uuid": "7e674ae68ab56480e58351456b89fb8ae5db8f7a049d9d46c39a330e0ec3789e",
-  "title": "Toward a Unified Theory of Sparse Dimensionality Reduction in Euclidean Space",
-  "publication_date": "April 2013",
+  "title": "TOWARD A UNIFIED THEORY OF SPARSE DIMENSIONALITY REDUCTION IN EUCLIDEAN SPACE",
+  "publication_date": "July 2015, Geometric and Functional Analysis, volume 25, issue 4, pages 1009–1088; also published in the Proceedings of the 47th ACM Symposium on Theory of Computing (STOC 2015), June 14, 2015, pages 499–508. The supplied manuscript is arXiv:1311.2542v3, dated December 19, 2014.",
   "authors": [
-    "David P. Woodruff"
+    "Jean Bourgain",
+    "Jelani Nelson",
+    "Sjoerd Dirksen"
   ],
   "keywords": [
     "compressed-sensing",
-    "dimensionality-reduction",
-    "euclidean-space",
-    "geometric-embeddings",
-    "high-dimensional-data",
-    "information-theory",
-    "johnson-lindenstrauss-lemma",
+    "constrained-least-squares",
+    "generic-chaining",
+    "johnson-lindenstrauss-transform",
+    "manifold-learning",
+    "numerical-linear-algebra",
     "random-projections",
-    "sketching",
-    "sparse-dimensionality-reduction"
+    "restricted-isometry-property",
+    "sparse-dimensionality-reduction",
+    "subspace-embeddings"
   ],
   "category_path": [
     "machine_learning",
     "dimensionality_reduction"
   ],
-  "abstract": "We aim to take steps toward a unified theory of sparse dimensionality reduction in Euclidean spaces, especially concerning whether nearly optimal dimension reduction can be achieved when aiming for a 1+ε distortion embedding. Our focus is on the relationship between the number of non-zero entries in the projection matrix, known as the sparsity of the embedding. We show that several classes of sparse matrices are indeed sufficient for nearly optimal dimension reduction, provided that certain structural properties are satisfied.",
-  "summary": "The paper \"Toward a Unified Theory of Sparse Dimensionality Reduction in Euclidean Space\" by David P. Woodruff, published in April 2013, seeks to advance understanding in dimensionality reduction, particularly the use of sparse matrices. The work explores whether nearly optimal dimension reduction with a 1+ε distortion embedding can be achieved through specific sparse matrices in Euclidean spaces. This involves examining the relationship between sparsity and dimensionality reduction, focusing on structural properties. This paper advances the field by proposing general conditions under which sparse matrices achieve optimal embeddings.\n\nThe work is especially relevant in contexts dealing with high-dimensional data, as seen in applications of sketching, random projections, and compressed sensing. After conducting a search, there are no explicit references showing significant direct influence of this paper on subsequent specific research or industry applications, suggesting its impact may be more implicit, contributing foundational insights in the mathematical and theoretical understanding of sparse dimensionality reduction.\n\nNo direct citations of this paper were found impacting further research or industry applications. However, the concepts discussed are foundational and have likely contributed to further work in related areas such as sketching and high-dimensional data analysis.",
+  "abstract": "Let Φ ∈ R^{m×n} be a sparse Johnson-Lindenstrauss transform [KN14] with s non-zeroes per column. For a subset T of the unit sphere, ε ∈ (0, 1/2) given, we study settings for m, s required to ensure E_Φ sup_{x∈T} |‖Φx‖²₂ − 1| < ε, i.e. so that Φ preserves the norm of every x ∈ T simultaneously and multiplicatively up to 1 + ε. We introduce a new complexity parameter, which depends on the geometry of T, and show that it suffices to choose s and m such that this parameter is small. Our result is a sparse analog of Gordon’s theorem, which was concerned with a dense Φ having i.i.d. gaussian entries. We qualitatively unify several results related to the Johnson-Lindenstrauss lemma, subspace embeddings, and Fourier-based restricted isometries. Our work also implies new results in using the sparse Johnson-Lindenstrauss transform in numerical linear algebra, classical and model-based compressed sensing, manifold learning, and constrained least squares problems such as the Lasso.",
+  "summary": "The paper develops a general theory for when a sparse Johnson–Lindenstrauss transform preserves the Euclidean norm uniformly over an arbitrary subset T of the unit sphere. Its central contribution is a geometry-sensitive complexity parameter, κ(T), that supplements the Gaussian mean width. The resulting theorem gives sufficient conditions on the embedding dimension m and column sparsity s, together with a constraint involving κ(T), for uniform norm preservation.\n\nThe analysis models the sparse transform through a random coordinate-induced seminorm and controls the resulting supremum of a second-order Rademacher chaos using generic chaining, covering-number duality, Maurey-type approximations, dual Sudakov bounds, and concentration inequalities. This framework separates the Euclidean complexity of T from its coordinate-sensitive structure, which is necessary because sparse transforms are basis-dependent and therefore are not invariant under arbitrary orthogonal changes of coordinates.\n\nApplications include:\n\n- **Finite sets:** recovery of sparse Johnson–Lindenstrauss bounds, including improvements for vectors with bounded ℓ∞ norm.\n- **Linear subspaces:** sparse oblivious subspace embeddings, with sparsity further controlled by the subspace coherence or leverage scores.\n- **Sparse and model-based vectors:** restricted-isometry results for ordinary sparsity, dictionaries, unions of subspaces, and block-sparse models.\n- **Constrained least squares:** guarantees for sketched least-squares, group Lasso, and Lasso problems. The sparsity requirement can depend on the largest entry of the design matrix rather than only on column norms.\n- **Manifolds:** conditions under which sparse maps preserve tangent-vector norms, curve lengths, manifold embeddings, and geodesic distances. The paper also gives a construction showing that strong coordinate incoherence is necessary for substantially sparse embeddings in some manifold settings.\n\nThe paper explicitly identifies quantitative limitations: its sparsity bounds generally lose logarithmic factors and have quadratic rather than optimal linear dependence on ε^{-1}; the authors relate these losses to entropy-duality estimates, dual Sudakov bounds, and chaining arguments.\n\nBibliographic and citation records confirm subsequent dissemination in both the STOC 2015 proceedings and the 2015 Geometric and Functional Analysis journal publication. Later work cites the paper in research on random matrices acting on sets, restricted-isometry properties, and concentration inequalities for non-Gaussian or log-concave-tailed chaoses. ([research-portal.uu.nl](https://research-portal.uu.nl/en/publications/toward-a-unified-theory-of-sparse-dimensionality-reduction-in-euc-2/)) The paper’s documented impact is primarily theoretical: it provided a common framework connecting sparse Johnson–Lindenstrauss embeddings, subspace embeddings, compressed sensing, manifold embeddings, and randomized numerical linear algebra. The sources checked did not establish a specific direct industry deployment.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/machine_learning/dimensionality_reduction/toward-a-unified-theory-of-sparse-dimensionality-reduction-in-euclidean-space.pdf",
   "source_type": "pdf",
   "filepath": "machine_learning/dimensionality_reduction/toward-a-unified-theory-of-sparse-dimensionality-reduction-in-euclidean-space.pdf",
   "filename": "toward-a-unified-theory-of-sparse-dimensionality-reduction-in-euclidean-space.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

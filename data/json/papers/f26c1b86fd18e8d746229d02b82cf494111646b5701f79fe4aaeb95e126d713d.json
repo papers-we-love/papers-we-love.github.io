@@ -1,31 +1,31 @@
 {
   "uuid": "f26c1b86fd18e8d746229d02b82cf494111646b5701f79fe4aaeb95e126d713d",
-  "title": "How to Design a Good API and Why it Matters",
-  "publication_date": "March 2005",
+  "title": "The Little Manual of API Design",
+  "publication_date": "June 19, 2008; Trolltech, a Nokia company",
   "authors": [
-    "Joshua Bloch"
+    "Jasmin Blanchette"
   ],
   "keywords": [
     "api-design",
-    "developer-experience",
-    "interface-design",
-    "java",
+    "api-evolution",
+    "api-usability",
+    "extensibility",
+    "library-design",
     "object-oriented-design",
-    "programming",
+    "qt-framework",
     "software-architecture",
-    "software-engineering",
-    "software-maintenance",
-    "usability"
+    "software-maintainability",
+    "source-compatibility"
   ],
   "category_path": [
     "api_design"
   ],
-  "abstract": "This talk centers on a number of issues that arise in designing good APIs, drawing from the presenter’s experience designing the Java Collections Framework and several other Java platform APIs. It discusses API design principles: traits of good APIs, and shows examples of what to do and what not to do.",
-  "summary": "The paper titled \"How to Design a Good API and Why it Matters\" by Joshua Bloch was presented in March 2005. It discusses the principles of good API design drawing from Bloch’s experience with the Java Collections Framework and several Java platform APIs. The primary focus is on traits that define effective APIs and includes examples illustrating both effective and poor design practices. Key takeaways include the significance of intuitive, easy-to-use APIs that promote user satisfaction and robust software development.\n\nA web search reveals that this presentation has been influential in the field of software engineering, particularly in API and interface design. Bloch's principles have been widely adopted and referenced, as seen in documents such as Effective Java, where API design choices are explored further ([https://www.oreilly.com/library/view/effective-java/9780134686097/](https://www.oreilly.com/library/view/effective-java/9780134686097/)). Bloch's guidelines are frequently cited in discussions and literature related to high-quality software API design and maintenance. The impact is observable in several online forums and articles that focus on coding best practices and API usability, establishing this paper as a foundational document in the API design discourse.",
+  "abstract": "This manual gathers together the key insights into API design that were discovered through many years of software development on the Qt application development framework at Trolltech (now part of Nokia). When designing and implementing a library, you should also keep other factors in mind, such as efficiency and ease of implementation, in addition to pure API considerations. And although the focus is on public APIs, there is no harm in applying the principles described here when writing application code or internal library code.",
+  "summary": "## Overview\n\nThe manual presents API design as the design of abstractions through which other programmers build applications. It argues that API quality should be judged primarily by whether an interface is easy to learn and remember, leads to readable code, is difficult to misuse, can be extended, and is sufficiently complete. Minimality and consistency are treated as means to these goals rather than independent objectives.\n\nThe recommended design process is user- and example-driven. Designers should first understand requirements, write representative use cases, inspect analogous APIs in the same library, define semantics before implementation, obtain peer feedback, and test the proposed interface through multiple examples. The manual emphasizes that implementation details should not dictate the public API, because APIs commonly outlive their implementations. It also recommends planning for both maintainer- and user-driven extensions, reviewing internal interfaces before publication, and deferring questionable functionality until there is stronger evidence that it is needed.\n\nThe design guidelines focus on clear naming, unambiguous terminology, meaningful parameter names, avoidance of unnecessary abbreviations, specific rather than overly general names, and independence from poorly designed underlying APIs. Semantically, the manual advocates useful defaults, predictable behavior, limited hidden side effects, careful treatment of edge cases, and deliberate decisions about virtual methods. Structurally, it favors property-based interfaces when objects have many optional attributes, since properties improve readability, reduce ordering errors, support defaults, and allow later modification. Its final principle is that the best API may be the one that eliminates the need for application code altogether.\n\n## Evidence of influence\n\nThe manual has been used as a reference in subsequent API-usability research, including a study of structural measures for API usability, where it appears alongside work on API evolution and usability evaluation. ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/10.1002/spe.2215)) It has also been cited in later academic and technical design work, including a thesis on declarative visualization APIs and studies of API usability and string-library design. ([pm.inf.ethz.ch](https://www.pm.inf.ethz.ch/content/dam/ethz/special-interest/infk/chair-program-method/pm/documents/Education/Theses/Andrea_Helfenstein_BA_report.pdf))\n\nThere is documented industry uptake as well: Goldman Sachs identified the manual as a resource for redesigning component APIs in its UI Toolkit and reported applying its principles during that transformation. ([developer.gs.com](https://developer.gs.com/blog/posts/engineering-principles-of-the-gs-design-system)) The manual is also included in API-design guidance and educational materials, including the PCL API consideration guide and university software-design curricula. ([pcl.readthedocs.io](https://pcl.readthedocs.io/projects/advanced/en/pcl-1.12.0/pcl2.html)) These sources demonstrate continued citation and practical use, but do not establish that the manual alone caused the reported design changes.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/api_design/api-design.pdf",
   "source_type": "pdf",
   "filepath": "api_design/api-design.pdf",
   "filename": "api-design.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:53"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:50"
 }

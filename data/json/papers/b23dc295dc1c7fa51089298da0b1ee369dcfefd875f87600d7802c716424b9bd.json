@@ -1,39 +1,31 @@
 {
   "uuid": "b23dc295dc1c7fa51089298da0b1ee369dcfefd875f87600d7802c716424b9bd",
   "title": "VL2: A Scalable and Flexible Data Center Network",
-  "publication_date": "August 2009, SIGCOMM",
+  "publication_date": "August 17–21, 2009 (SIGCOMM ’09, Barcelona, Spain)",
   "authors": [
     "Albert Greenberg",
     "Changhoon Kim",
     "David A. Maltz",
     "James R. Hamilton",
     "Navendu Jain",
-    "P. Patel",
     "Parantap Lahiri",
-    "S. Sengupta",
-    "Srikanth Kandula"
+    "Parveen Patel",
+    "Srikanth Kandula",
+    "Sudipta Sengupta"
   ],
   "keywords": [
-    "computer-networks",
-    "data-center-networks",
-    "flexibility",
-    "multi-pathing",
-    "network-management",
-    "network-performance",
-    "network-simulation",
-    "network-topology",
-    "scalability",
-    "virtualization"
+    "commoditization",
+    "data-center-network"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "We present VL2, a practical network architecture that scales to support huge data centers with uniform high capacity between servers, performance isolation between services, and Ethernet layer-2 semantics. VL2 uses Valiant Load Balancing to spread traffic uniformly across network paths in order to deliver predictable performance. We realize VL2 with inexpensive, commodity switches, separating the physical network topology from the assignments of IP addresses to servers. VL2 supports any service placement strategy, uniformly balances network load, and maintains the “plug-and-play” simplicity of Ethernet. We demonstrate how VL2 achieves these properties through a working prototype, driving a workload derived from traffic observed in operational data centers. Extensive experimental results demonstrate a factor of 4 improvement in network utilization over conventional data center network designs.",
-  "summary": "The paper \"VL2: A Scalable and Flexible Data Center Network\" introduces a novel network architecture designed to support large-scale data centers. This architecture facilitates a uniform high capacity network between servers and ensures performance isolation while maintaining Ethernet layer-2 semantics. The VL2 architecture employs Valiant Load Balancing to ensure even traffic distribution across network paths, enhancing performance predictability. By using commodity switches, VL2 separates physical topology from IP address allocation, supporting flexible service placement and maintaining simplicity akin to Ethernet operations.\n\nVL2 has significantly influenced research in data center network design. It has been cited by numerous subsequent studies and contributed to understanding and shaping modern data center architectures. For example, the impact of VL2 is evident in works such as \"A Cloud Network Infrastructure for Enterprise Apps\" which references VL2's approach for efficient network utilization [Google Scholar](https://scholar.google.com/scholar?cites=1320929155014239888). Other mentions include cloud service scalability studies that leverage VL2's principles to enhance network flexibility and data traffic management.\n\nOverall, this research provides a foundational framework for scalable, efficient, and flexible data center networks, influencing both academic research and practical implementations in industry contexts.",
+  "abstract": "To be agile and cost effective, data centers should allow dynamic resource allocation across large server pools. In particular, the data center network should enable any server to be assigned to any service. To meet these goals, we present VL2, a practical network architecture that scales to support huge data centers with uniform high capacity between servers, performance isolation between services, and Ethernet layer-2 semantics. VL2 uses (1) flat addressing to allow service instances to be placed anywhere in the network, (2) Valiant Load Balancing to spread traffic uniformly across network paths, and (3) end-system based address resolution to scale to large server pools, without introducing complexity to the network control plane. VL2’s design is driven by detailed measurements of traffic and fault data from a large operational cloud service provider. VL2’s implementation leverages proven network technologies, already available at low cost in high-speed hardware implementations, to build a scalable and reliable network architecture. As a result, VL2 networks can be deployed today, and we have built a working prototype. We evaluate the merits of the VL2 design using measurement, analysis, and experiments. Our VL2 prototype shuffles 2.7 TB of data among 75 servers in 395 seconds – sustaining a rate that is 94% of the maximum possible.",
+  "summary": "## Summary\n\nVL2 addresses the need for **agility** in large cloud data centers: the ability to assign any server to any service as workloads and failures change. The paper argues that conventional hierarchical data-center networks impede this goal through oversubscription, limited path diversity, VLAN and address-space fragmentation, congestion, and weak utilization of otherwise available servers.\n\nThe proposed architecture combines several mechanisms:\n\n- A **Clos topology** built from commodity switch ASICs to provide extensive path diversity and high aggregate capacity.\n- **Flat addressing** that separates service identity from a server’s physical location, allowing services and virtual machines to move without requiring topology-dependent address changes.\n- **Valiant Load Balancing**, implemented with end-host path selection and ECMP, to distribute flows across available network paths without centralized traffic engineering.\n- An **end-system directory and address-resolution mechanism** that avoids placing large, rapidly changing host state in the network control plane.\n- A host-side layer-2.5 shim that preserves Ethernet layer-2 semantics and permits legacy applications to operate without modification.\n\nThe authors support the design with traffic and fault measurements from a production cloud-service data center. Their prototype demonstrates high throughput and isolation: it transfers 2.7 TB among 75 servers in 395 seconds, achieving 94% of the maximum possible rate, and reports a TCP fairness index of 0.995 in all-to-all shuffle experiments. The evaluation also indicates that random flow spreading provides effective utilization and that network churn has limited impact on TCP goodput.\n\nThe paper became an influential reference point for data-center networking. Microsoft later described VL2’s core principles—Clos-based scaling, randomized load-balanced routing, and separation of endpoint addresses from physical locations—as foundational to modern data-center networks, and VL2 received the ACM SIGCOMM Test of Time Paper Award in 2019. ([microsoft.com](https://www.microsoft.com/en-us/research/event/sigcomm-2019/awards/)) Subsequent data-center virtualization work, including IETF documents concerning NVGRE, Geneve, and network-virtualization overlays, cites VL2 as prior work on scalable layer-2 semantics, encapsulation, and host- or edge-based virtualization. ([datatracker.ietf.org](https://datatracker.ietf.org/doc/draft-sridharan-virtualization-nvgre/02/)) A USENIX profile of coauthor Sudipta Sengupta states that VL2 was deployed in Microsoft’s cloud data centers, providing evidence of industry technology transfer. ([usenix.org](https://www.usenix.org/conference/fast13/speaker-or-organizer/sudipta-sengupta-microsoft-research))",
   "raw_url": "http://research.microsoft.com/pubs/80693/vl2-sigcomm09-final.pdf",
   "source_type": "external",
   "filepath": "distributed_systems/README.md",
   "filename": "VL2: A Scalable and Flexible Data Center Network",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

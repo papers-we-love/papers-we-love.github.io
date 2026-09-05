@@ -1,33 +1,34 @@
 {
   "uuid": "f60e4bd6e36b13d0964e9de139c933b91eeffb49509ec93d8c2fa8290d108b72",
   "title": "HaLoop: Efficient Iterative Data Processing on Large Clusters",
-  "publication_date": "2010",
+  "publication_date": "September 13–17, 2010; 36th International Conference on Very Large Data Bases (VLDB 2010), Singapore. Published in Proceedings of the VLDB Endowment, Vol. 3, No. 1, pp. 285–296.",
   "authors": [
-    "Chengxiang Zhai",
-    "Eugene J. Shekita",
-    "Haifeng Yu",
-    "Yunhao Zhu"
+    "Bill Howe",
+    "Magdalena Balazinska",
+    "Michael D. Ernst",
+    "Yingyi Bu"
   ],
   "keywords": [
-    "cloud-computing",
-    "data-intensive-computing",
-    "data-management",
-    "distributed-systems",
-    "ha-loop",
+    "data-caching",
+    "distributed-computing",
+    "fixpoint-evaluation",
+    "graph-analysis",
+    "hadoop",
     "iterative-data-processing",
+    "large-scale-analytics",
+    "loop-aware-scheduling",
     "mapreduce",
-    "performance-optimization",
-    "query-optimizations"
+    "recursive-queries"
   ],
   "category_path": [
     "datastores"
   ],
-  "abstract": "With cloud computing being adopted by more companies, demands are increasing for solutions that streamline the use of cloud platforms for various applications at various scales and complexity. Existing systems like Hadoop can efficiently execute tasks like MapReduce; however, repetitive data-processing tasks often require iterative operations which are not well supported. In this paper, we present HaLoop, a modified version of Hadoop that is designed to efficiently process iterative data tasks by making these iterations a first-class citizen in the execution model. By introducing loop-aware task scheduling and efficient caching mechanisms, HaLoop increases performance and scalability in iterative computations.",
-  "summary": "The paper 'HaLoop: Efficient Iterative Data Processing on Large Clusters' presents a modified version of Hadoop designed to better handle iterative data processing tasks. The authors introduce solutions such as loop-aware task scheduling and efficient caching mechanisms to address shortcomings in the original Hadoop system for repetitive data-processing tasks. The work has been noted in subsequent research for its contributions to improving the efficiency of data-intensive applications on cloud platforms.\n\nHaLoop has been cited in various studies and projects focusing on iterative processing in distributed systems, portraying a significant step towards optimizing big data workflows. For instance, in the paper '[Optimizing Iterative Data Processing in Hadoop](https://dl.acm.org/doi/abs/10.1145/2899358.2899375)', researchers utilized concepts from HaLoop to improve performance further. Another relevant citation can be found in '[Evaluating and Improving Performance of Big Data Workflows in Cloud](https://ieeexplore.ieee.org/document/7110738)', where HaLoop's approach to loop-aware scheduling was referenced as a robust solution to similar scalability challenges.\n\nThese references highlight HaLoop's influence on the development of subsequent data processing frameworks and optimizations, indicating its relevance in academic and practical advancements in cloud computing and distributed systems.",
+  "abstract": "The growing demand for large-scale data mining and data analysis applications has led both industry and academia to design new types of highly scalable data-intensive computing platforms. MapReduce and Dryad are two popular platforms in which the dataflow takes the form of a directed acyclic graph of operators. These platforms lack built-in support for iterative programs, which arise naturally in many applications including data mining, web ranking, graph analysis, model fitting, and so on. This paper presents HaLoop, a modified version of the Hadoop MapReduce framework that is designed to serve these applications. HaLoop not only extends MapReduce with programming support for iterative applications, it also dramatically improves their efficiency by making the task scheduler loop-aware and by adding various caching mechanisms. We evaluated HaLoop on real queries and real datasets. Compared with Hadoop, on average, HaLoop reduces query runtimes by 1.85, and shuffles only 4% of the data between mappers and reducers.",
+  "summary": "HaLoop extends Hadoop MapReduce with framework-level support for iterative computations. Its principal mechanisms are loop-aware scheduling, reuse and indexing of loop-invariant data, mapper and reducer caches, and distributed fixpoint or convergence checking. Experiments with PageRank, descendant queries, and k-means reported an average runtime reduction of 1.85× and reduced shuffle volume to 4% of Hadoop's volume for the tested workloads.\n\nThe paper influenced subsequent work on iterative data-processing systems and query optimization. A later VLDB Journal article by the same authors explicitly identifies itself as an extended version of this paper and preserves its central focus on inter-iteration caching and loop-aware scheduling. ([vldb.org](https://www.vldb.org/vldb_journal/index.php/component/article_manager/article/1218)) Differential Dataflow later cited HaLoop as an iterative dataflow system that executes chains of MapReduce jobs until a data-dependent stopping condition is met, while pursuing a more general model supporting incremental and nested iteration. ([microsoft.com](https://www.microsoft.com/en-us/research/wp-content/uploads/2013/01/differentialdataflow.pdf)) The OptIQ project cited HaLoop as prior work on iterative MapReduce caching and scheduling, and extended the research direction toward automatic optimization of iterative queries through view materialization and incremental evaluation rather than programmer-specified caching. ([vldb.org](https://www.vldb.org/pvldb/vol7/p241-onizuka.pdf))",
   "raw_url": "http://homes.cs.washington.edu/~billhowe/pubs/HaLoop.pdf",
   "source_type": "external",
   "filepath": "datastores/README.md",
   "filename": "HaLoop: Efficient Iterative Data Processing on Large Clusters",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:54"
 }

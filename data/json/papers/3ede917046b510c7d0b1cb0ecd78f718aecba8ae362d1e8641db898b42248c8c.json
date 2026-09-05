@@ -1,32 +1,32 @@
 {
   "uuid": "3ede917046b510c7d0b1cb0ecd78f718aecba8ae362d1e8641db898b42248c8c",
-  "title": "Brewer's Conjecture and the Feasibility of Consistent Available Partition-Tolerant Web Services",
-  "publication_date": "July 2000",
+  "title": "Brewer’s Conjecture and the Feasibility of Consistent, Available, Partition-Tolerant Web Services",
+  "publication_date": "June 2002 (ACM SIGACT News, volume 33, issue 2, pages 51–59)",
   "authors": [
     "Nancy Lynch",
     "Seth Gilbert"
   ],
   "keywords": [
+    "asynchronous-networks",
+    "atomic-consistency",
     "availability",
-    "brewers-conjecture",
     "cap-theorem",
-    "cloud-computing",
-    "consistency",
     "distributed-systems",
-    "partition-tolerance",
-    "system-design",
-    "theory",
-    "web-services"
+    "eventual-consistency",
+    "linearizability",
+    "network-partitions",
+    "partial-synchrony",
+    "partition-tolerance"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "The CAP theorem asserts that any networked shared-data system can have at most two of three desirable properties: consistency, availability, and partition-tolerance. Brewer’s conjecture helped define this theorem and motivated database designers, architects and theoreticians to enable large-scale storage systems to achieve the best trade-offs among these properties. In this paper, we recount the circumstances and context in which the conjecture was made and discuss the subtleties of the formal proof and its formal model.",
-  "summary": "The paper titled \"Brewer's Conjecture and the Feasibility of Consistent Available Partition-Tolerant Web Services\" by Seth Gilbert and Nancy Lynch was published in July 2000. It addresses the CAP theorem, which postulates that a distributed data store can simultaneously provide only two of the following three guarantees: consistency, availability, and partition tolerance. The paper builds upon Brewer’s conjecture and provides a formal foundation for analyzing trade-offs in distributed systems. \n\nThe key insights from this paper influenced both academic research and practical applications in distributed systems, particularly in designing and understanding large-scale web services and databases. This foundational work has been acknowledged and referenced frequently. For instance, it led to advancements in NoSQL databases like Amazon Dynamo and Apache Cassandra, which are built around an understanding of the CAP theorem.\n\nInfluential research papers such as \"Dynamo: Amazon’s Highly Available Key-value Store\" (https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf) directly reference this work, helping solidify its role in the industry. The CAP theorem continues to be a crucial concept in the development of cloud-based services and distributed system architecture (https://homes.cs.washington.edu/~arvind/cs510/amazon-dynamo-sosp2007.pdf). Numerous educational resources and textbooks on distributed computing reference this work, making it an integral part of curricula worldwide.",
+  "abstract": "When designing distributed web services, there are three properties that are commonly desired: consistency, availability, and partition tolerance. It is impossible to achieve all three. In this note, we prove this conjecture in the asynchronous network model, and then discuss solutions to this dilemma in the partially synchronous model.",
+  "summary": "## Summary\n\nGilbert and Lynch formalize Eric Brewer’s conjecture for replicated read/write data objects. They define **atomic consistency**—equivalent to linearizability for the operations considered—as requiring every operation to appear to occur instantaneously in a single order; **availability** as eventual termination of every request received by a non-failing node; and **partition tolerance** as continued operation despite arbitrary message loss between network components. ([cs.princeton.edu](https://www.cs.princeton.edu/courses/archive/spr22/cos418/papers/cap.pdf))\n\nThe central impossibility proof uses an indistinguishability argument. A write can complete in one partition component while all messages to a second component are lost. A later read in the second component must still terminate because of availability, but cannot learn about the completed write. Returning the old value violates atomic consistency, while waiting indefinitely violates availability. The paper therefore proves that, in an asynchronous network, atomic consistency and availability cannot both be guaranteed when partitions are possible. It also shows that requiring consistency only when messages are eventually delivered does not avoid the result, because an algorithm cannot distinguish a lost message from an arbitrarily delayed one.\n\nThe paper examines the three pairwise combinations of the properties. Atomic consistency with partition tolerance requires weakening liveness during failures; atomic consistency with availability is feasible when partitions are excluded; and availability with partition tolerance requires weaker consistency. In a partially synchronous model with known message and processing-time bounds, timeouts allow systems to distinguish some lost messages from delayed messages. This makes it possible to provide atomic behavior when all messages are delivered while returning stale or otherwise inconsistent data during partitions. The paper introduces **Delayed-t consistency**, which bounds how long stale behavior may persist after a sufficiently long interval of reliable communication.\n\nThe work became the standard formal treatment of Brewer’s CAP conjecture and provided a framework for reasoning about consistency–availability choices in distributed data services. Eric Brewer’s later retrospective notes that researchers and system designers used CAP in discussions of new distributed systems and the NoSQL movement, while also cautioning that the common “two out of three” formulation oversimplifies the theorem’s scope. ([researchgate.net](https://www.researchgate.net/publication/220476881_CAP_Twelve_years_later_How_the_Rules_have_Changed)) Daniel Abadi’s subsequent PACELC formulation built on CAP by distinguishing the consistency–availability trade-off during partitions from a consistency–latency trade-off during normal operation. ([odbms.org](https://www.odbms.org/2012/01/consistency-tradeoffs-in-modern-distributed-database-system-design/)) Google’s discussion of Spanner likewise uses CAP to explain why a system can provide strong consistency and high practical availability while still sacrificing availability during actual partitions. ([research.google.com](https://research.google.com/pubs/pub45855.html?hl=ko))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/brewers-conjecture.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/brewers-conjecture.pdf",
   "filename": "brewers-conjecture.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:51"
 }

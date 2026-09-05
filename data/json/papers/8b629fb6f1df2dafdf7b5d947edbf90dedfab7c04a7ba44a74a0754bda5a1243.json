@@ -1,7 +1,7 @@
 {
   "uuid": "8b629fb6f1df2dafdf7b5d947edbf90dedfab7c04a7ba44a74a0754bda5a1243",
   "title": "A DNA-Based Archival Storage System",
-  "publication_date": "April 2016",
+  "publication_date": "2016 (published March 25, 2016; ASPLOS ’16, April 2–6, 2016, Atlanta, Georgia, USA)",
   "authors": [
     "Douglas M. Carmean",
     "Georg Seelig",
@@ -12,25 +12,23 @@
   ],
   "keywords": [
     "archival-storage",
-    "data-density",
     "data-encoding",
-    "data-preservation",
-    "dna-based-storage",
+    "dna-storage",
     "error-correction",
-    "information-retrieval",
-    "molecular-biology",
-    "nanotechnology",
-    "storage-costs"
+    "key-value-store",
+    "molecular-computing",
+    "random-access",
+    "synthetic-dna"
   ],
   "category_path": [
     "biocomputing"
   ],
-  "abstract": "DNA is an attractive medium for archival storage because it is extremely dense, with a raw limit of about 1 exabyte per cubic millimeter, and long-lasting, with observed half-life of over 500 years. In this paper, we demonstrate a complete DNA-based storage system that encompasses all the key components, including coding across oligonucleotide pools to increase logical density and a novel strategy for random access that scales with data size. To evaluate our design, we stored and retrieved 144 words, with an average 1.5 errors per word, and solved a 150-1,016-error correction problem using a new approach for decoding DNA data. Our work demonstrates that DNA storage is plausible, cost-effective, and feasible for high-density archiving, providing a viable solution to the unsustainable scaling of traditional storage systems.",
-  "summary": "This paper details a DNA-based archival storage system that represents a breakthrough in data density, longevity, and cost-effectiveness compared to traditional storage systems. It introduces innovations in coding across oligonucleotide pools to enhance logical data density and a novel random access strategy that is scalable with data size. Notable is the demonstration of encoding and successfully retrieving 144 words, showcasing the potential of DNA for large-scale storage solutions.\n\nA web search reveals multiple citations in subsequent research that explore and build upon these innovations. For instance, \"DNA Data Storage: Research Landscape and Future Trends\" by [Ceze et al., 2019](https://www.microsoft.com/en-us/research/publication/dna-data-storage-research-landscape-future-trends/) describes the impact of DNA storage systems on future storage technologies, referencing this work as pivotal. Additionally, \"The Prospects of DNA Data Storage,\" [2020 IEEE](https://ieeexplore.ieee.org/document/8588463) articulates the technological advancements and future trends influenced by the methodologies demonstrated in this paper. Despite these references, broad industrial application is still in early stages, reflecting the innovative nature and potential future significance of this research.",
+  "abstract": "Demand for data storage is growing exponentially, but the capacity of existing storage media is not keeping up. Using DNA to archive data is an attractive possibility because it is extremely dense, with a raw limit of 1 exabyte/mm3 (109 GB/mm3), and long-lasting, with observed half-life of over 500 years.\n\nThis paper presents an architecture for a DNA-based archival storage system. It is structured as a key-value store, and leverages common biochemical techniques to provide random access. We also propose a new encoding scheme that offers controllable redundancy, trading off reliability for density. We demonstrate feasibility, random access, and robustness of the proposed encoding with wet lab experiments involving 151 kB of synthesized DNA and a 42 kB random-access subset, and simulation experiments of larger sets calibrated to the wet lab experiments. Finally, we highlight trends in biotechnology that indicate the impending practicality of DNA storage for much larger datasets.",
+  "summary": "## Summary\n\nThe paper proposes a DNA-backed archival storage architecture organized as a key-value store. It embeds addresses and PCR primer targets into short DNA strands, enabling selective amplification and sequencing of requested data rather than sequencing an entire DNA pool. It also introduces an XOR-based redundancy scheme that supports tunable reliability and, according to the paper’s simulations, achieves higher density than the Goldman overlapping-segment encoding while providing comparable reliability.\n\nThe experimental evaluation synthesized 151 kB of data across 45,652 DNA sequences and retrieved selected files totaling 42 kB through PCR-based random access. All four tested files were recovered; one required a manual one-byte correction. Simulations further examined sequencing depth, strand length, redundancy, and molecular decay. The authors identify sequencing errors and truncated synthesis products as important practical limitations, with sequencing error dominating in their measurements.\n\nSubsequent research explicitly built on the paper’s PCR-based random-access approach. Organick et al. demonstrated random access at substantially larger scale, while later work investigated alternatives such as silica-capsule barcoding, microfluidic or microcapsule compartmentalization, and nanopore-compatible retrieval and assembly. These studies indicate that the paper helped establish random access, addressing, and error-tolerant encoding as central design problems for scalable DNA storage systems. ([nature.com](https://www.nature.com/articles/s41565-023-01377-4))\n\nThe work is also cited in later reviews as an early systems-oriented contribution to DNA data storage, alongside subsequent efforts addressing scalability, physical organization, access bias, and cost. ([nature.com](https://www.nature.com/articles/s41576-019-0125-3))",
   "raw_url": "https://homes.cs.washington.edu/~luisceze/publications/dnastorage-asplos16.pdf",
   "source_type": "external",
   "filepath": "biocomputing/README.md",
   "filename": "A DNA-Based Archival Storage System",
-  "created_on": "2026-01-24 23:46:58",
-  "summary_received": "2026-01-25 00:11:01"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:53"
 }

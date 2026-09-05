@@ -1,32 +1,32 @@
 {
   "uuid": "3171e5defe494c7ec99db1c096904e88c5c63f061081765e52131c16f3f94f60",
   "title": "Why Functional Programming Matters",
-  "publication_date": "1984",
+  "publication_date": "1984 (original Chalmers memo); revised versions were published in 1989 in The Computer Journal, 32(2), pp. 98–107, and in 1990 in Research Topics in Functional Programming",
   "authors": [
     "John Hughes"
   ],
   "keywords": [
-    "code-reuse",
-    "data-abstraction",
+    "alpha-beta-pruning",
+    "function-composition",
     "functional-programming",
     "higher-order-functions",
     "lazy-evaluation",
+    "list-processing",
     "modularity",
-    "programming-paradigms",
-    "recursive-functions",
-    "side-effects",
-    "software-engineering"
+    "numerical-algorithms",
+    "program-composition",
+    "referential-transparency"
   ],
   "category_path": [
     "languages-paradigms",
     "functional_programming"
   ],
-  "abstract": "The main thesis of this paper is that functional programming is important because it makes it easier to use certain techniques to solve problems, techniques which are particularly effective because they allow very general problems to be solved easily and directly. In this paper we will illustrate this thesis by describing two programming techniques which seem to be of great importance, describing how they can be implemented in a functional language, and giving examples of programs which use them.",
-  "summary": "The paper \"Why Functional Programming Matters\" by John Hughes, published in 1984, highlights the significance of functional programming (FP) in enhancing the ease with which software problems can be solved thanks to specific programming techniques that are enhanced by FP. These techniques include lazy evaluation and higher-order functions, which promote modularity, code reusability, and easier reasoning about code due to the absence of side effects. Hughes provides detailed explanations and examples demonstrating how these FP techniques enable concise and expressive solutions to complex problems. \n\nHughes' paper has had a significant influence on the development and adoption of functional programming languages and paradigms in both academic research and industry. It is frequently cited in discussions about the advantages of FP, particularly regarding reduced side effects and enhanced modularity ([source](https://dl.acm.org/doi/10.1145/73526.73547), [source](https://cs.uni.lodz.pl/memory/TUTORIAL_FPL/prog.html)). The paper's arguments on modularity and code reuse have influenced many subsequently developed languages, such as Haskell, and modern practices in software engineering ([source](https://doi.org/10.1017/S0956796800000884), [source](https://homepages.inf.ed.ac.uk/wadler/topics/functional-programming.html#fp-matters)). The emphasis on functional solutions has also influenced industry practices in areas like data processing and real-time systems, where FP's modularity aligns with scalability and maintainability goals.",
+  "abstract": "As software becomes more and more complex, it is more and more important to structure it well. Well-structured software is easy to write, easy to debug, and provides a collection of modules that can be re-used to reduce future programming costs. Conventional languages place conceptual limits on the way problems can be modularised. Functional languages push those limits back. In this paper we show that two features of functional languages in particular, higher-order functions and lazy evaluation, can contribute greatly to modularity. As examples, we manipulate lists and trees, program several numerical algorithms, and implement the alpha-beta heuristic (an algorithm from Artificial Intelligence used in game-playing programs). Since modularity is the key to successful programming, functional languages are vitally important to the real world.",
+  "summary": "The paper argues that the primary practical advantage of functional programming is improved modularity, rather than merely the absence of assignment statements or side effects. Hughes presents modularity as the ability to decompose a problem into smaller, reusable components and then combine those components using suitable forms of “glue.”\n\nTwo forms of glue are emphasized. **Higher-order functions** allow general computational patterns to be separated from problem-specific operations. The paper illustrates this with list-processing abstractions such as `reduce`, `map`, function composition, and analogous folds over trees. These abstractions enable operations such as summation, multiplication, list transformation, tree traversal, and matrix processing to be expressed as combinations of reusable components.\n\n**Lazy evaluation** allows complete programs to be composed even when an intermediate result is large or infinite. A producer generates values only as demanded by a consumer, making it possible to separate generation from selection and termination. The paper applies this technique to streams of numerical approximations, demonstrating modular implementations of square-root computation, numerical differentiation, error elimination, and numerical integration.\n\nThe paper’s larger example is an alpha-beta game-tree evaluator. Game-tree generation, static evaluation, pruning, tree transformation, move ordering, and selective branching are expressed as separate functions. Lazy evaluation allows the evaluator to inspect only the portions of a potentially infinite or very large tree required by the final result, preserving modular structure while avoiding construction of the entire tree.\n\nThe central conclusion is that functional languages can improve programming productivity by enabling smaller, more general, and more reusable modules. The paper’s original Chalmers version dates from 1984; the journal version appeared in 1989. ([infosun.fim.uni-passau.de](https://www.infosun.fim.uni-passau.de/cl/lehre/funcprog05/whyfp.html)) A later scholarly review identifies the paper as one of the most cited works in functional programming and connects its central ideas—higher-order functions, lazy evaluation, and modular composition—with the subsequent spread of functional techniques. That review notes the adoption of lambda expressions in mainstream languages including C#, C++, and Java, the continued research interest in lazy evaluation, and the industrial use of functional techniques. These observations establish influence at the level of research and language practice, although they do not demonstrate that the paper alone directly caused each development. ([academic.oup.com](https://academic.oup.com/nsr/article/2/3/349/1427872))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages-paradigms/functional_programming/why-functional-programming-matters.pdf",
   "source_type": "pdf",
   "filepath": "languages-paradigms/functional_programming/why-functional-programming-matters.pdf",
   "filename": "why-functional-programming-matters.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

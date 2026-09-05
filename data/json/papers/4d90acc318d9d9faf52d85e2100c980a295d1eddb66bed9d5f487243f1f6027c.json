@@ -1,35 +1,41 @@
 {
   "uuid": "4d90acc318d9d9faf52d85e2100c980a295d1eddb66bed9d5f487243f1f6027c",
-  "title": "Towards Practical Default-On Multi-Core Record/Replay",
-  "publication_date": "October 2014",
+  "title": "f4: Facebook’s Warm BLOB Storage System",
+  "publication_date": "October 6–8, 2014; 11th USENIX Symposium on Operating Systems Design and Implementation (OSDI ’14), Broomfield, Colorado",
   "authors": [
-    "Jayaram Bobba",
-    "Mahesh Balakrishnan",
-    "Mike Wei",
-    "Nayden Nedev",
-    "Tushar D. Chandra"
+    "Cory Hill",
+    "Ernest Lin",
+    "Linpeng Tang",
+    "Sabyasachi Roy",
+    "Sanjeev Kumar",
+    "Satadru Pan",
+    "Shiva Shankar",
+    "Subramanian Muralidhar",
+    "Viswanath Sivakumar",
+    "Weiwen Liu",
+    "Wyatt Lloyd"
   ],
   "keywords": [
-    "concurrency",
-    "debugging",
-    "deterministic-replay",
-    "distributed-systems",
+    "blob-storage",
+    "distributed-storage",
+    "erasure-coding",
+    "facebook",
     "fault-tolerance",
-    "multi-core",
-    "record-replay",
-    "runtime-overheads",
-    "software-testability",
-    "system-diagnosis"
+    "geo-replication",
+    "reed-solomon-codes",
+    "storage-efficiency",
+    "warm-storage",
+    "xor-coding"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "Deterministic record-replay of multi-threaded programs is currently limited to simulations, debugging and offline testing. Despite interest in record-replay for fault-tolerance, providing continuous deterministic replay functionality for multi-threaded programs in production settings remains an important open problem. Previous support for record-replay in this context either takes a very high overhead or necessitates significant modifications to the hardware platform. This paper presents a framework to enable low-overhead, record-replay of multi-threaded programs, using only software instrumentation. Our framework provides log-deterministic replay within the constraints of a non-simulated environment and without the need for any specialized hardware modifications. Our approach leverages the intrinsic behavior of multi-core processors and exploits inherent concurrency to record execution in a manner that allows for a substantial reduction in the overhead typically associated with deterministic replay. We evaluate our system through extensive benchmarking of real-world applications and demonstrate its feasible deployment in practical deployment settings.",
-  "summary": "This paper proposes a framework for deterministic record-replay of multi-threaded programs, primarily using software instrumentation to achieve low overhead. The research addresses the limitations of existing systems which incur high runtime costs or require significant hardware changes. The authors introduce methods that utilize multi-core processor behaviors and existing concurrency to effectively reduce overhead in real-world applications. The research has been influential in advancing fault-tolerant computing and debugging, particularly in environments with multi-threaded processes. However, its direct citations and applications are less prominent in publicly available scholarly databases or citations, suggesting that it may have a niche but significant impact primarily explored in academic contexts and potentially in corporate R&D environments focusing on enhancing software reliability and testability. While direct industry applications are not extensively documented, the methods may have influenced subsequent research and development in managing concurrency and improving deterministic debugging practices. Further references can be found in publications exploring advances in software testing tools and fault-tolerant systems, such as the works listed in the ACM Digital Library.",
+  "abstract": "Facebook’s corpus of photos, videos, and other Binary Large OBjects (BLOBs) that need to be reliably stored and quickly accessible is massive and continues to grow. As the footprint of BLOBs increases, storing them in our traditional storage system, Haystack, is becoming increasingly inefficient. To increase our storage efficiency, measured in the effective-replication-factor of BLOBs, we examine the underlying access patterns of BLOBs and identify temperature zones that include hot BLOBs that are accessed frequently and warm BLOBs that are accessed far less often. Our overall BLOB storage system is designed to isolate warm BLOBs and enable us to use a specialized warm BLOB storage system, f4. f4 is a new system that lowers the effective-replication-factor of warm BLOBs while remaining fault tolerant and able to support the lower throughput demands.\n\nf4 currently stores over 65PBs of logical BLOBs and reduces their effective-replication-factor from 3.6 to either 2.8 or 2.1. f4 provides low latency; is resilient to disk, host, rack, and datacenter failures; and provides sufficient throughput for warm BLOBs.",
+  "summary": "The paper presents f4, a production warm-storage system for Facebook’s immutable binary objects. It observes that BLOB access rates decline sharply with age, making triple replication inefficient for older content. Facebook therefore separates hot and warm data: Haystack handles newly created, heavily accessed content, while f4 stores older, less frequently accessed volumes.\n\nf4 uses Reed–Solomon (10,4) erasure coding within a datacenter, places stripe blocks across racks, and uses geo-replicated XOR coding to tolerate datacenter failures. It supports online reconstruction of individual requested BLOBs, background block rebuilding, transparent migration through a router tier, and logical deletion by removing per-BLOB encryption keys. In production, the system stored more than 65 PB of logical data, reduced the effective replication factor from 3.6 to 2.8 or 2.1, maintained low read latency, and saved tens of petabytes of storage.\n\nThe paper’s documented influence is primarily in subsequent erasure-coded warm-storage research. A 2025 FAST paper, *Revisiting Network Coding for Warm Blob Storage*, explicitly uses Facebook’s f4 as its motivating production example and targets the same workload characteristics—warm data with many small BLOBs—while proposing NCBlob to improve repair performance and reduce I/O amplification. Its evaluation reports up to 45.0% lower single-block repair time and up to 38.4% lower full-node repair time relative to systematic MSR-code approaches. ([usenix.org](https://www.usenix.org/conference/fast25/presentation/gan)) The paper is also cited in later work on hybrid replication and erasure-coded storage as a concrete example of using erasure coding for warm data. ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/10.1155/2021/9910942))",
   "raw_url": "http://www.usenix.org/system/files/conference/osdi14/osdi14-paper-muralidhar.pdf",
   "source_type": "external",
   "filepath": "distributed_systems/README.md",
   "filename": "f4: Facebook’s Warm BLOB Storage System",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

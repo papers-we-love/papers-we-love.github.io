@@ -1,31 +1,31 @@
 {
   "uuid": "3d981849e59505eff3f14397a177b409f5d978d43d114bdd67c956e74320fc92",
   "title": "Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I",
-  "publication_date": "1960",
+  "publication_date": "April 1960; Communications of the ACM, volume 3, issue 4, pages 184–195",
   "authors": [
     "John McCarthy"
   ],
   "keywords": [
     "artificial-intelligence",
-    "computation",
-    "computational-theory",
-    "formal-languages",
     "functional-programming",
+    "garbage-collection",
+    "higher-order-functions",
+    "interpreters",
+    "lambda-calculus",
     "lisp",
-    "mathematical-logic",
-    "programming-languages",
     "recursive-functions",
-    "symbolic-expressions"
+    "s-expressions",
+    "symbolic-computation"
   ],
   "category_path": [
     "comp_sci_fundamentals_and_history"
   ],
-  "abstract": "This paper is concerned with the problem of computing by machine, a class of functions that can be defined recursively in terms of symbolic expressions. A formalism for describing such functions is introduced for getting inherently non-local symbolic expressions and for working with functions whose elements are recursively defined.",
-  "summary": "John McCarthy's seminal paper, published in 1960, laid the groundwork for the development of LISP, a programming language designed for symbolic computation. It introduced the concept of recursive functions on symbolic expressions, which became foundational in computer science, particularly in the fields of artificial intelligence and functional programming. This work formalized the computation of symbolic expressions through recursion, providing a language construct that supports computation in the abstract and complex problem-solving typical of AI research. LISP's impact is widespread in AI due to its flexibility in handling symbolic data and its support for rapid prototyping of AI algorithms. The concepts from this paper also influenced the design of subsequent programming languages that support functional programming paradigms. Research that cites this paper often focuses on AI's historical progress and the foundational nature of LISP. Influences can be seen in documents such as [\"LISP: An Interactive LISP System,” by Anthony I. Wasserman and James C. Morris, in the Proceedings of the Fall Joint Computer Conference, 1969](https://dl.acm.org/doi/10.1145/1476793.1476825) and in [\"History of LISP,\" by John McCarthy, in the ACM SIGPLAN Notices, Volume 39, Issue 4, April 2004](https://dl.acm.org/doi/10.1145/989393.989416). These references highlight how the principles established in McCarthy's paper guided the evolution of algorithms and programming languages in AI and computer science.",
+  "abstract": "A programming system called LISP (for LISt Processor) has been developed for the IBM 704 computer by the Artificial Intelligence group at M.I.T. The system was designed to facilitate experiments with a proposed system called the Advice Taker, whereby a machine could be instructed to handle declarative as well as imperative sentences and could exhibit “common sense” in carrying out its instructions. The original proposal [1] for the Advice Taker was made in November 1958. The main requirement was a programming system for manipulating expressions representing formalized declarative and imperative sentences so that the Advice Taker system could make deductions. In the course of its development the LISP system went through several stages of simplification and eventually came to be based on a scheme for representing the partial recursive functions of a certain class of symbolic expressions. This representation is independent of the IBM 704 computer, or of any other electronic computer, and it now seems expedient to expound the system by starting with the class of expressions called S-expressions and the functions called S-functions.",
+  "summary": "### Summary\n\nJohn McCarthy presents the mathematical and implementation foundations of LISP. The paper defines symbolic expressions, including atoms and recursively constructed ordered pairs, and introduces a compact list notation for representing them. It defines the elementary operations `atom`, `eq`, `car`, `cdr`, and `cons`, then shows how conditional expressions and recursive definitions can construct more powerful symbolic functions such as substitution, structural equality, list append, association lookup, and symbolic differentiation.\n\nA central contribution is the representation of functions themselves as symbolic expressions. The universal function `apply`, together with `eval`, provides an interpreter capable of evaluating encoded LISP programs, making programs and data representations of the same general kind. The paper also describes functions taking other functions as arguments, IBM 704 list-structure storage, association lists, automatic reclamation of unused storage, compilation of recursive functions, and the relationship between recursive function definitions and conventional flowcharts.\n\n### Influence\n\nThe paper is identified by McCarthy’s Stanford archive as the original paper on Lisp. ([www-formal.stanford.edu](https://www-formal.stanford.edu/jmc/recursive.html)) Its definitions of S-expressions, symbolic list processing, recursive functions, and an evaluator formed the conceptual basis for subsequent LISP implementations. The *LISP 1.5 Programmer’s Manual*, published in 1962, documents a succeeding system using S-expressions as its data representation and interpreting programs represented as S-expressions; it also records applications in symbolic mathematics, mathematical logic, game playing, and artificial intelligence. ([mitpress.mit.edu](https://mitpress.mit.edu/9780262130110/lisp-1-5-programmers-manual/)) The paper’s role in the early development of LISP is likewise treated as a milestone in the historical account of LISP development presented in the 1984 ACM symposium proceedings. ([doi.org](https://doi.org/10.1145/800055.802047)) Bibliographic records identify the article as a peer-reviewed Communications of the ACM publication dated April 1, 1960, with DOI 10.1145/367177.367199. ([explore.openaire.eu](https://explore.openaire.eu/search/publication?pid=10.1145%2F367177.367199))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/comp_sci_fundamentals_and_history/recursive-functions-of-symbolic-expressions-and-their-computation-by-machine-parti.pdf",
   "source_type": "pdf",
   "filepath": "comp_sci_fundamentals_and_history/recursive-functions-of-symbolic-expressions-and-their-computation-by-machine-parti.pdf",
   "filename": "recursive-functions-of-symbolic-expressions-and-their-computation-by-machine-parti.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:50"
 }

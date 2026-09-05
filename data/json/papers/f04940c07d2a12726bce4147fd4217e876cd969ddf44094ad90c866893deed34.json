@@ -1,32 +1,29 @@
 {
   "uuid": "f04940c07d2a12726bce4147fd4217e876cd969ddf44094ad90c866893deed34",
   "title": "Efficient String Matching: An Aid to Bibliographic Search",
-  "publication_date": "June 1975",
+  "publication_date": "June 1975 (Communications of the ACM, Volume 18, Number 6, pp. 333–340)",
   "authors": [
     "Alfred V. Aho",
     "Margaret J. Corasick"
   ],
   "keywords": [
-    "algorithms",
-    "automata-theory",
-    "computer-science",
-    "data-structures",
+    "bibliographic-search",
+    "computational-complexity",
     "finite-state-machines",
-    "pattern-recognition",
-    "search-algorithms",
-    "string-matching",
-    "text-processing",
-    "text-search"
+    "information-retrieval",
+    "keywords-and-phrases",
+    "string-pattern-matching",
+    "text-editing"
   ],
   "category_path": [
     "pattern_matching"
   ],
-  "abstract": "An algorithm is presented for locating all occurrences of any of a finite number of keywords in a string of text. The algorithm constructs a finite state pattern matching machine from the keywords and uses this machine to do the searching. The construction of the pattern matching machine is a variant of the construction of the recognizer for a regular expression. The machine is deterministic and has at most one more state than the total length of all keywords. The time to construct the machine is proportional to the total number of characters in all keywords. Once constructed, the machine can process the text in time that is linear in the number of characters plus the number of keywords matched. The algorithm is particularly applicable to the design of bibliographic search systems, and the techniques developed below can be applied in other areas of text processing and pattern recognition as well.",
-  "summary": "The paper \"Efficient String Matching: An Aid to Bibliographic Search\", authored by Alfred V. Aho and Margaret J. Corasick, presents a groundbreaking algorithm for string matching that constructs a finite state machine to manage pattern recognition across various keywords within a text. Published in June 1975, this work proposes a method that is efficient in terms of both construction time and operational time, suitable for bibliographic searches and other text processing applications.\n\nThe Aho-Corasick algorithm is renowned for its speed and efficiency, influencing a wide range of applications in computer science, particularly in the fields of text processing and search algorithms. Compared to other string searching algorithms like the Knuth-Morris-Pratt (KMP) and Boyer-Moore, Aho-Corasick stands out for its ability to handle multiple patterns simultaneously, which makes it exceedingly valuable in areas requiring fast and efficient pattern matching.\n\nThe influence of this algorithm extends beyond bibliographic search systems into various domains such as network security (for example, intrusion detection systems), bioinformatics for DNA sequencing, and text data mining. Its impact is documented in multiple downstream applications and scholarly articles. Some notable references include:\n- [Yu, S., et al. (2004). \"The Design and Implementation of a High-Performance Network Intrusion Detection System.\" ACM Transactions on Computer Systems, which utilizes the Aho-Corasick algorithm.](https://dl.acm.org/doi/10.1145/1015467.1015470)\n- [Gusfield, D. (1997). \"Algorithms on Strings, Trees, and Sequences: Computer Science and Computational Biology,\" featuring an application of Aho-Corasick for biological sequence analysis.](https://books.google.com/books?id=DOatoTsRZfAC)\n- [Rivest, R.L. (1992). \"The MD5 Message-Digest Algorithm,\" where efficient pattern matching algorithms are crucial for hashing and data integrity verification processes.](https://tools.ietf.org/html/rfc1321)\n\nDespite its actionable generality and utility, the methodological simplicity of the Aho-Corasick algorithm ensures its continued relevance and application viability in modern computational problems.",
+  "abstract": "This paper describes a simple, efficient algorithm to locate all occurrences of any of a finite number of keywords in a string of text. The algorithm consists of constructing a finite state pattern matching machine from the keywords and then using the pattern matching machine to process the text string in a single pass. Construction of the pattern matching machine takes time proportional to the sum of the lengths of the keywords. The number of state transitions made by the pattern matching machine in processing the text string is independent of the number of keywords. The algorithm has been used to improve the speed of a library bibliographic search program by a factor of 5 to 10.",
+  "summary": "### Contribution\nThe paper introduces what is now commonly called the **Aho–Corasick algorithm**, a finite-state method for finding all occurrences of multiple keywords in a text in a single scan. It constructs a trie-like goto graph from the keyword set, adds failure transitions that identify the longest usable suffix after a mismatch, and associates output sets with states so that overlapping and nested matches can be reported.\n\nThe construction requires time proportional to the total length of the keywords. During matching, the algorithm performs exactly one successful goto transition per input character and fewer than twice as many total state transitions when failure transitions are included. The paper also presents a deterministic finite-automaton variant that precomputes failure behavior and therefore performs one transition per input character, at the cost of additional memory. Output generation remains proportional to the number and size of the matches that must actually be reported.\n\nThe motivating application was a Bell Laboratories bibliographic search system. Replacing successive per-keyword matching with the finite-state method reduced measured CPU time from 0.79 to 0.18 hours for a 15-keyword query and from 1.27 to 0.21 hours for a 24-keyword query, consistent with the paper's reported five- to ten-fold improvement.\n\n### Subsequent influence\nThe paper became the foundational reference for exact multi-pattern string matching. Later research has extended the algorithm through multicore and GPU implementations, including failureless variants for large-scale DNA-sequence matching and other high-volume workloads. ([arxiv.org](https://arxiv.org/abs/1403.1305))\n\nThe algorithm also remains part of contemporary production-oriented software. The Rust `aho-corasick` implementation develops the original trie, failure-transition, and automaton ideas into sparse and dense NFA/DFA representations, streaming search, overlapping matches, regex-compatible match semantics, and SIMD-assisted prefilters. ([github.com](https://github.com/BurntSushi/aho-corasick/blob/master/DESIGN.md)) Independent current implementations continue to reproduce the original algorithms and cite the 1975 paper directly, demonstrating its continuing role as a reference design for multi-pattern search libraries. ([github.com](https://github.com/farhiongit/aho-corasick-1975))\n\nThe bibliographic publication details and abstract are independently consistent with catalog metadata for *Communications of the ACM* 18(6), published in June 1975. ([cir.nii.ac.jp](https://cir.nii.ac.jp/crid/1364233268843300096))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/pattern_matching/aho-corasick-string-matching.pdf",
   "source_type": "pdf",
   "filepath": "pattern_matching/aho-corasick-string-matching.pdf",
   "filename": "aho-corasick-string-matching.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:56"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:53"
 }

@@ -1,31 +1,31 @@
 {
   "uuid": "973f823a8e63dcc266a1b1f0aedadf8ade0c763f5cd7a85de2f35bf1e4d187cd",
-  "title": "On the Resemblance and Containment of Documents",
-  "publication_date": "1997",
+  "title": "On the resemblance and containment of documents",
+  "publication_date": "June 11–13, 1997 — Proceedings of the Compression and Complexity of Sequences 1997 (SEQUENCES'97), pp. 21–29",
   "authors": [
     "Andrei Z. Broder"
   ],
   "keywords": [
-    "containment",
+    "document-containment",
     "document-similarity",
-    "information-retrieval",
-    "matrix-theory",
-    "minwise-independent",
+    "document-sketching",
+    "jaccard-similarity",
+    "minhash",
     "near-duplicate-detection",
-    "probability-theory",
-    "resemblance",
-    "set-similarity",
-    "web-search"
+    "rabin-fingerprints",
+    "random-sampling",
+    "w-shingling",
+    "web-crawling"
   ],
   "category_path": [
     "pattern_matching"
   ],
-  "abstract": "We develop the mathematical foundations for the analysis of the resemblance and containment of documents as used, for example, in the AltaVista web search engine. We use a simple and efficient fingerprinting scheme introduced by Manber for this process. More generally, we investigate four functions: resemblance and containment (for estimating the similarity of pairs of documents) and max and min (which allow in particular for very accurate estimates of document size). We provide the theoretical underpinnings for the particular implementations used for finding and resolving near-duplicates in a very large scale application. We combine techniques from analysis, probability theory, and linear algebra in order to do this.",
-  "summary": "This paper by Andrei Z. Broder, published in 1997, introduces a mathematical framework for understanding document similarity with applications to web search engines, like AltaVista. It uses a fingerprinting technique established by Manber, focusing on four key metrics: resemblance, containment, max, and min. The approach is grounded in analysis, probability theory, and linear algebra, which aids in detecting and resolving near-duplicate documents.\n\nThe influence of this work can be seen in the development of algorithms for web-scale duplicate detection and in projects related to improving the efficiency of search engines. Broder's metrics have become foundational in information retrieval, especially for web indexing and the management of large datasets. The use of min-wise independent permutations, outlined in the paper, has been widely adopted in similarity estimations in massive data sets.\n\nCitations:\n1. [Finding Similar Items in a Large Collection](https://dl.acm.org/doi/abs/10.1145/381541.381552)\n2. [Near Duplicate Detection: The Impact of Thresholds on Performance](https://arxiv.org/abs/1706.04850)\n3. [Efficient Web Search and Clustering](https://dl.acm.org/doi/abs/10.1145/3158332)\n4. [Mining the Web for Synonyms: PMI-IR versus LSA on TOEFL](https://doi.org/10.1162/0891201053630234)\n5. [A Theoretical Model of Sequence Alignment](https://www.jstor.org/stable/26602313)",
+  "abstract": "Given two documents A and B we define two mathematical notions: their resemblance r(A, B) and their containment c(A, B) that seem to capture well the informal notions of “roughly the same” and “roughly contained.” The basic idea is to reduce these issues to set intersection problems that can be easily evaluated by a process of random sampling that can be done independently for each document. Furthermore, the resemblance can be evaluated using a fixed size sample for each document. This paper discusses the mathematical properties of these measures and the efficient implementation of the sampling process using Rabin fingerprints.",
+  "summary": "- The paper represents documents as sets of contiguous token subsequences, or *w*-shingles. It defines resemblance as the Jaccard coefficient, \\(|S(A,w)\\cap S(B,w)|/|S(A,w)\\cup S(B,w)|\\), and containment of *A* in *B* as \\(|S(A,w)\\cap S(B,w)|/|S(A,w)|\\).\n- It shows that these quantities can be estimated from independently computed document sketches. A fixed-size minimum sample supports resemblance estimation, while a modulus-based sample supports both resemblance and containment estimation. Rabin fingerprints provide an efficient implementation, including sliding-window computation.\n- The paper reports a large-scale experiment over more than 30 million Web documents, using the method to create clusters of syntactically similar documents. The reported experiment produced 3.6 million clusters containing 12.3 million documents.\n- Its main subsequent influence was the development and formal study of MinHash and min-wise independent permutations. Later work explicitly identifies the paper as introducing set MinHash for estimating Jaccard similarity, while the related 2000 paper formalized min-wise independent permutation families. ([cs.princeton.edu](https://www.cs.princeton.edu/courses/archive/spr05/cos598E/bib/broder97resemblance.pdf))\n- The approach also underlies practical near-duplicate and Web-document clustering systems, including the authors’ subsequent *Syntactic Clustering of the Web*, which applied the method to the Web and described applications such as search-result filtering and duplicate-document detection. ([ambuehler.ethz.ch](https://www.ambuehler.ethz.ch/CDstore/www6/Technical/Paper205/Paper205.html))\n- The same resemblance and containment framework has continued to be used and extended in other fields, including metagenomic analysis, where later research compares classical MinHash with containment-oriented estimators. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S009630031930116X))",
   "raw_url": "https://www.cs.princeton.edu/courses/archive/spr05/cos598E/bib/broder97resemblance.pdf",
   "source_type": "external",
   "filepath": "pattern_matching/README.md",
   "filename": "On the resemblance and containment of documents",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:56"
 }

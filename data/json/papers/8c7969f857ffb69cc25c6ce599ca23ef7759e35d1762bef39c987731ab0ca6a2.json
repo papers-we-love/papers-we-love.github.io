@@ -1,32 +1,32 @@
 {
   "uuid": "8c7969f857ffb69cc25c6ce599ca23ef7759e35d1762bef39c987731ab0ca6a2",
   "title": "In Search of an Understandable Consensus Algorithm",
-  "publication_date": "October 2014",
+  "publication_date": "June 19–20, 2014; published in the Proceedings of the 2014 USENIX Annual Technical Conference (USENIX ATC ’14), Philadelphia, PA. The supplied draft is dated October 7, 2013.",
   "authors": [
     "Diego Ongaro",
     "John Ousterhout"
   ],
   "keywords": [
-    "consensus-algorithm",
-    "consistency",
-    "distributed-computing",
+    "cluster-membership",
+    "consensus-algorithms",
     "distributed-systems",
     "fault-tolerance",
     "leader-election",
-    "log-replication",
+    "log-compaction",
     "raft",
-    "replication",
-    "state-machine"
+    "replicated-logs",
+    "replicated-state-machines",
+    "state-machine-replication"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "Consensus is a fundamental problem in fault-tolerant distributed systems that has been studied for decades. Paxos is the most widely known consensus algorithm, but despite numerous attempts to explain it, Paxos remains notoriously difficult to understand. This paper presents a new consensus algorithm called Raft, which is equivalent to Paxos in fault-tolerance and performance. Raft is more understandable than Paxos due to its decomposition into relatively independent subproblems and its clear leader-based approach. We believe that Raft will make consensus available to a wider audience, and that it will provide a foundation for new developments in distributed systems.",
-  "summary": "The paper \"In Search of an Understandable Consensus Algorithm\" by Diego Ongaro and John Ousterhout was published in October 2014. It introduces the Raft consensus algorithm, which was designed to be more understandable than the existing Paxos algorithm while maintaining similar levels of fault-tolerance and performance. Raft decomposes the consensus problem into independent sub-problems and utilizes a clear leader-based structure, making the algorithm more accessible to developers and researchers.\n\nRaft has significantly influenced both academia and industry since its publication. It has been implemented in various distributed systems projects as a reliable consensus mechanism. For example, notable open-source projects like etcd ([GitHub link](https://github.com/etcd-io/etcd)) and HashiCorp's Consul ([Consul link](https://www.consul.io/)) use Raft to ensure data consistency and reliability.\n\nIn the research community, Raft has been cited widely as a clear alternative to Paxos, providing insights into consensus algorithm design and teaching. Papers such as \"Leaderless Replication: A New Approach to Multiconsensus\" (ICDCS 2016) and the use in educational tools like the visualization project \"Visual Raft\" have highlighted Raft’s educational and instructional benefits in understanding consensus mechanisms.\n\nThe dissemination of Raft has furthered discussions on the balance between understandability and technical performance in distributed systems, encouraging the development of new consensus algorithms aimed at combining simplicity with robustness.",
+  "abstract": "Raft is a consensus algorithm for managing a replicated log. It produces a result equivalent to (multi-)Paxos, and it is as efficient as Paxos, but its structure is different from Paxos; this makes Raft more understandable than Paxos and also provides a better foundation for building practical systems. In order to enhance understandability, Raft separates the key elements of consensus, such as leader election, log replication, and safety, and it enforces a stronger degree of coherency to reduce the number of states that must be considered. Results from a user study demonstrate that Raft is easier for students to learn than Paxos. Raft also includes a new mechanism for changing the cluster membership, which uses overlapping majorities to guarantee safety.",
+  "summary": "## Summary\n\nThe paper introduces Raft, a consensus algorithm for replicated state machines designed primarily to improve understandability without sacrificing safety, availability, or performance. Raft organizes consensus around a strong leader and decomposes the problem into leader election, log replication, and safety. Servers operate as followers, candidates, or leaders, and logical terms help detect stale leadership and coordinate elections.\n\nThe leader accepts client commands, appends them to its log, and replicates them to followers using `AppendEntries` RPCs. Followers use consistency checks based on log indexes and terms; conflicting uncommitted entries are removed so that follower logs converge with the leader’s log. Randomized election timeouts reduce split votes and enable rapid leader replacement after failures.\n\nSafety depends on several invariants: election safety, leader append-only behavior, log matching, leader completeness, and state-machine safety. In particular, candidates must have logs at least as up-to-date as the servers that vote for them, and a leader generally commits entries from earlier terms only after committing an entry from its current term. These rules ensure that once a command has been applied at a given log position, no different command can later be applied at that position.\n\nThe paper also specifies joint consensus for changing cluster membership safely. During a transition, decisions require majorities from both the old and new configurations, preventing the two configurations from independently electing leaders or committing conflicting entries. Snapshotting is used for log compaction, and an `InstallSnapshot` RPC allows lagging followers to recover when the leader has already discarded older log entries. Client serial numbers prevent duplicate execution after retries, while leader confirmation with a majority supports linearizable reads without necessarily appending reads to the log.\n\nThe evaluation reports that, in a study of 43 students, participants scored an average of 4.9 points higher on Raft questions than on Paxos questions. The authors also provide a formal specification and safety arguments, and report performance comparable to Paxos because normal log replication requires a single round of communication with a majority. The paper received the USENIX ATC ’14 Best Paper Award. ([usenix.org](https://www.usenix.org/conference/atc14/technical-sessions/presentation/ongaro))\n\n## Influence on research and industry\n\nRaft became a commonly used consensus protocol and implementation foundation. The official etcd Raft library describes itself as a stable, feature-complete implementation and identifies its use in systems including etcd, Kubernetes, Docker Swarm, Cloud Foundry Diego, CockroachDB, TiDB, Project Calico, Flannel, and Hyperledger. ([github.com](https://github.com/etcd-io/raft))\n\nIndustry systems adopted Raft for replicated control-plane or database state: Consul uses Raft to manage distributed datacenter operations and replicate log entries among server agents, while CockroachDB uses Raft for each replicated range and developed MultiRaft to manage many consensus groups efficiently. ([developer.hashicorp.com](https://developer.hashicorp.com/consul/docs/concept/consensus))\n\nThe paper also influenced subsequent educational and formal-verification work. The Raft project identifies later work on formally verifying Raft and provides the paper, formal specification, and related research as core project materials. ([raft.github.io](https://raft.github.io/))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/in-search-of-an-understandable-consensus-algorithm.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/in-search-of-an-understandable-consensus-algorithm.pdf",
   "filename": "in-search-of-an-understandable-consensus-algorithm.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:51"
 }

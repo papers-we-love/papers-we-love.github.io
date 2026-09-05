@@ -1,7 +1,7 @@
 {
   "uuid": "d1d9c8a0173032ee8f6702ea98fc2dbe785621c9e8970b9a1e06ac60f3354501",
   "title": "Mesos: A Platform for Fine-Grained Resource Sharing in the Data Center",
-  "publication_date": "2011",
+  "publication_date": "March 2011, 8th USENIX Symposium on Networked Systems Design and Implementation (NSDI '11)",
   "authors": [
     "Ali Ghodsi",
     "Andy Konwinski",
@@ -13,26 +13,26 @@
     "Scott Shenker"
   ],
   "keywords": [
-    "computing-clusters",
+    "cluster-computing",
     "data-center",
-    "distributed-systems",
-    "fine-grained-sharing",
-    "mesos",
-    "platform",
-    "resource-management",
-    "resource-scheduling",
-    "scheduler",
-    "shared-resources"
+    "data-locality",
+    "distributed-scheduling",
+    "fault-tolerance",
+    "frameworks",
+    "resource-isolation",
+    "resource-offers",
+    "resource-sharing",
+    "spark"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "Data centers today employ a large number of distributed applications, ranging from Hadoop jobs to web services. These applications push for three improvements from cluster management systems. First, they need distributed system frameworks to quickly scale up and down on resources. Second, they desire to efficiently share resources for maximum utilization. Third, they wish to integrate multiple programming paradigms and APIs suitable to specific applications. In this paper, we present Mesos, a platform that allows diverse frameworks to efficiently share resources at a fine granularity, improving cluster utilization. Mesos achieves this through a novel two-level scheduling mechanism. We have implemented a prototype Mesos cluster manager and demonstrated that it achieves sharing across a diverse set of application types reliably and efficiently.",
-  "summary": "The paper titled \"Mesos: A Platform for Fine-Grained Resource Sharing in the Data Center\" was published in 2011 and presents the Mesos platform, which aims to efficiently share data center resources across multiple applications. Mesos utilizes a two-level scheduling mechanism that allows various frameworks to allocate resources in a fine-grained manner, optimizing cluster utilization and providing flexibility for multiple programming paradigms and APIs.\n\nThis paper has significantly influenced both academic research and industrial practices in distributed systems and resource management. Mesos has become a foundational part of the Apache Mesos project, which is widely used in cloud computing and by companies like Twitter, Apple, and Airbnb for managing large clusters of machines. The scalable and flexible resource scheduling approach introduced by Mesos has been cited and expanded upon in numerous subsequent works exploring resource management frameworks and optimizations for distributed computing environments.\n\nProminent citations and influences of this paper include: \n- Apache Mesos at Twitter: From Zero to Production in Less than a Year [linked here](https://www.usenix.org/conference/nsdi14/technical-sessions/presentation/hindman)\n- Mesosphere DC/OS (Distributed Cloud Operating System) development\n- Kubernetes design for multi-framework resource scheduling\n\nOverall, the Mesos framework proposed in this research has laid groundwork principles that continue to impact the design and implementation of resource schedulers in modern distributed system infrastructures.",
+  "abstract": "We present Mesos, a platform for sharing commodity clusters between multiple diverse cluster computing frameworks, such as Hadoop and MPI. Sharing improves cluster utilization and avoids per-framework data replication. Mesos shares resources in a fine-grained manner, allowing frameworks to achieve data locality by taking turns reading data stored on each machine. To support the sophisticated schedulers of today’s frameworks, Mesos introduces a distributed two-level scheduling mechanism called resource offers. Mesos decides how many resources to offer each framework, while frameworks decide which resources to accept and which computations to run on them. Our results show that Mesos can achieve near-optimal data locality when sharing the cluster among diverse frameworks, can scale to 50,000 (emulated) nodes, and is resilient to failures.",
+  "summary": "## Impact\n\n- The paper established the **resource-offer** model and the separation between a cluster manager and framework-level schedulers. These concepts were carried into Apache Mesos, whose architecture documentation describes resource offers, framework-controlled task placement, pluggable allocation policies, and offer rejection for satisfying framework constraints. ([mesos.apache.org](https://mesos.apache.org/documentation/architecture/))\n- The paper introduced **Spark** as a specialized Mesos framework for iterative workloads. Apache Spark subsequently documented Mesos as a supported cluster manager and described running Spark alongside Hadoop through Mesos, demonstrating the paper’s proposed multi-framework operating model. Mesos support is now deprecated in recent Spark documentation. ([spark.apache.org](https://spark.apache.org/docs/3.5.7/running-on-mesos.html))\n- The Mesos project’s historical materials record adoption in industry, including use at Twitter, and its later “Powered by Mesos” list names organizations such as Twitter, Uber, Yelp, and Verizon Labs. These sources document deployment and ecosystem adoption rather than proving that every deployment was directly caused by the paper. ([svn.apache.org](https://svn.apache.org/repos/asf/incubator/mesos/www/research.html?p=1227271))\n- Subsequent research continued to examine resource allocation and fairness in Mesos environments, including empirical studies of offer behavior and second-level scheduling policies. ([arxiv.org](https://arxiv.org/abs/1905.08388))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/mesos-a-platform-for-fine-grained-resource-sharing-in-the-data-center.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/mesos-a-platform-for-fine-grained-resource-sharing-in-the-data-center.pdf",
   "filename": "mesos-a-platform-for-fine-grained-resource-sharing-in-the-data-center.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:51"
 }

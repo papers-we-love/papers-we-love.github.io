@@ -1,33 +1,26 @@
 {
   "uuid": "ad58cf37f96059dd869498dcc18b532362340b57ba7ed7053bf6c3f7f2b465be",
-  "title": "The Byzantine Generals Problem",
-  "publication_date": "July 1980",
+  "title": "A Byzantine Fault Tolerant Distributed Commit Protocol",
+  "publication_date": "September 25–26, 2007; Proceedings of the Third IEEE International Symposium on Dependable, Autonomic and Secure Computing (DASC 2007), Columbia, Maryland, USA",
   "authors": [
-    "Leslie Lamport",
-    "Marshall Pease",
-    "Robert Shostak"
+    "Wenbing Zhao"
   ],
   "keywords": [
-    "byzantine-faults",
-    "byzantine-generals-problem",
-    "consensus-algorithms",
-    "distributed-computing",
-    "distributed-systems",
+    "byzantine-agreement",
+    "distributed-transaction",
     "fault-tolerance",
-    "network-failure",
-    "reliability",
-    "robustness",
-    "system-design"
+    "two-phase-commit",
+    "web-services"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "This paper considers the problem of reaching agreement among unreliable processes. A system consists of n generals, each commanding a portion of the Byzantine army which is encamped with its peers around an enemy city. All generals are separated so that no two generals can communicate directly; however, they can pass messages through couriers. Some of the generals are traitors who will try to confuse the others. The problem is to find an algorithm to ensure that the loyal generals reach a consensus on a plan of action, even if some generals are traitorous. We describe a solution to this problem and prove its correctness.",
-  "summary": "The paper titled \"The Byzantine Generals Problem\" by Leslie Lamport, Robert Shostak, and Marshall Pease, published in July 1980, addresses the issue of achieving consensus in distributed systems despite the presence of unreliable or malicious components, described metaphorically through generals and couriers. This work forms the foundation for Byzantine Fault Tolerance (BFT), a critical concept in designing robust distributed systems.\n\nThe authors propose a solution to the Byzantine Generals Problem by introducing an algorithm that ensures consensus among loyal generals despite some generals being traitorous. This paper has profoundly influenced subsequent research in distributed computing, particularly in areas like blockchain technology, fault-tolerant distributed systems, and reliable network protocol designs.\n\nSome prominent references to this work include:\n\n1. Castro, M., & Liskov, B. (1999). Practical Byzantine Fault Tolerance. *OSDI*. This work refines the ideas into practical BFT systems. [Link](https://www.usenix.org/legacy/event/osdi99/full_papers/castro/castro_html/castro.html)\n2. Nakamoto, S. (2008). Bitcoin: A Peer-to-Peer Electronic Cash System, which references the principles of Byzantine Fault Tolerance in cryptocurrencies. [Link](https://bitcoin.org/bitcoin.pdf)\n3. Vukolić, M. (2016). The quest for scalable blockchain fabric: Proof-of-work vs. BFT replication. *iNetSys*.\n\nThe paper is widely regarded as seminal in the field of distributed systems and continues to have applications across various technological advancements dealing with consensus and reliability in networks.",
+  "abstract": "In this paper, we present a Byzantine fault tolerant distributed commit protocol for transactions running over untrusted networks. The traditional two-phase commit protocol is enhanced by replicating the coordinator and by running a Byzantine agreement algorithm among the coordinator replicas. Our protocol can tolerate Byzantine faults at the coordinator replicas and a subset of malicious faults at the participants. A decision certificate, which includes a set of registration records and a set of votes from participants, is used to facilitate the coordinator replicas to reach a Byzantine agreement on the outcome of each transaction. The certificate also limits the ways a faulty replica can use towards non-atomic termination of transactions, or semantically incorrect transaction outcomes.",
+  "summary": "The paper proposes BFTDC, a Byzantine fault-tolerant extension of two-phase commit for distributed transactions operating over untrusted networks. Instead of relying on a single coordinator, it replicates the coordinator across `3f + 1` replicas and tolerates up to `f` Byzantine coordinator failures. Coordinator replicas execute an adapted Byzantine agreement protocol for each transaction, while participants accept a commit or abort decision only after receiving at least `f + 1` matching signed decisions, ensuring that at least one decision came from a correct coordinator replica. ([arxiv.org](https://arxiv.org/abs/cs/0612083))\n\nThe central mechanism is a decision certificate containing signed participant-registration records and signed participant votes. The certificate binds the proposed outcome to a particular transaction and allows backup replicas to verify that the primary’s proposal is consistent with the known participant set and votes. The protocol combines this certificate with Byzantine-agreement phases analogous to pre-prepare, prepare, and commit. The authors provide informal arguments for three safety properties: a committed transaction must include all correct participants and their commit votes; correct coordinator replicas must agree on one outcome; and correct participants must terminate atomically.\n\nThe protocol assumes authenticated communication and unforgeable digital signatures. It places stronger restrictions on the initiator and on the behavior that can be tolerated from participants than on coordinator replicas: arbitrary Byzantine coordinator faults are addressed, whereas only selected participant behaviors—such as sending conflicting votes—are covered. Liveness additionally depends on bounded message and processing delays, with increasing timeouts used during view changes. The implementation integrates the protocol with the Kandula WS-AtomicTransaction framework, Apache Axis, and WSS4J. In the reported 20-server testbed, the prototype added approximately 200–400 milliseconds of latency as the number of participants increased from two to ten, while end-to-end latency increased by roughly 20–30% relative to the signed-message 2PC comparison.\n\nThe paper was published in DASC 2007, held in Columbia, Maryland, on September 25–26, 2007. ([dblp.org](https://dblp.org/db/conf/dasc/index.html)) A closely related academic follow-on is Honglei Zhang’s 2007 Cleveland State University thesis, which expands the approach into a broader Byzantine-fault-tolerant coordination framework covering transaction activation, registration, completion, and distributed commit; it retains the decision-certificate idea and incorporates the mechanisms into a WS-AT framework. ([engagedscholarship.csuohio.edu](https://engagedscholarship.csuohio.edu/etdarchive/801/)) Another later research effort, “Azvasa,” investigates Byzantine-fault-tolerant distributed commit with proactive recovery and proposes reducing agreement phases and message overhead. ([scixplorer.org](https://scixplorer.org/abs/2009etet.conf..138M/abstract)) The search found evidence of continued academic development of Byzantine-tolerant transaction coordination, but no reliable evidence of direct production-industry adoption of this specific BFTDC protocol.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/byzantine-fault-tolerant-distributed-commit-protocol.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/byzantine-fault-tolerant-distributed-commit-protocol.pdf",
   "filename": "byzantine-fault-tolerant-distributed-commit-protocol.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:51"
 }

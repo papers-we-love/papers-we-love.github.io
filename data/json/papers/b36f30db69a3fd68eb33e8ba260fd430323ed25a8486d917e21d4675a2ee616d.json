@@ -1,31 +1,33 @@
 {
   "uuid": "b36f30db69a3fd68eb33e8ba260fd430323ed25a8486d917e21d4675a2ee616d",
   "title": "Poisson Surface Reconstruction",
-  "publication_date": "July 2006",
+  "publication_date": "2006 — Proceedings of the Fourth Eurographics Symposium on Geometry Processing, pp. 61–70",
   "authors": [
     "Hugues Hoppe",
     "Matthew Bolitho",
     "Michael Kazhdan"
   ],
   "keywords": [
-    "3d-scanning",
-    "green's-theorem",
-    "implicit-surface",
-    "mesh-generation",
-    "numerical-optimization",
-    "octree",
-    "poisson-surface-reconstruction",
-    "regularization-techniques"
+    "adaptive-octree",
+    "geometry-processing",
+    "implicit-surfaces",
+    "indicator-function",
+    "isosurface-extraction",
+    "multigrid-solvers",
+    "oriented-point-sets",
+    "point-clouds",
+    "poisson-equation",
+    "surface-reconstruction"
   ],
   "category_path": [
     "computer_graphics"
   ],
-  "abstract": "This paper describes a new algorithm for surface reconstruction from oriented points. The method solves for an implicit function whose gradient best matches the input point normals, and produces the zero set of the function as the output surface. The technique computes an approximate indicator function from which the gradient is computed, and a regularized solution is obtained using a multigrid solver on an adaptive octree grid. We observe that the problem setting and solution bear strong resemblance to the problem of determining electrostatic potential from discrete samples of charged particles. To address computational efficiency, the algorithm is organized as a stream-processing pipeline, requiring just a few bits to represent each octree node. The algorithm can handle very large data sets and scales to millions of points provided the input is well-conditioned.",
-  "summary": "The paper titled \"Poisson Surface Reconstruction\" by Michael Kazhdan, Matthew Bolitho, and Hugues Hoppe presents a novel algorithm for reconstructing surfaces from oriented points. The work was initially presented at the Symposium on Geometry Processing in July 2006 and addresses the challenge of surface reconstruction by defining an implicit function whose gradient resembles the input point normals. The researchers apply the Poisson problem, closely related to how electrostatic potentials are determined from discrete samples, allowing effective surface reconstruction through an adaptive octree grid.\n\nThe algorithm's strength lies in its ability to handle large datasets, scaling to millions of points efficiently. It introduces a regularized approach using a multigrid solver, significantly optimizing the solution process and computational requirements by employing a stream-processing pipeline.\n\nSubsequent research has frequently cited this method due to its robust performance in 3D scanning technologies and graphics applications. For example, it significantly impacts how 3D models are generated from real-world scanning data, as evident in successive works that emphasize efficient and accurate modeling ([Geometric Modeling in Computer Graphics](https://link.springer.com/chapter/10.1007/978-3-642-15053-1_5), [High-Quality Surface Reconstruction with Depth Maps](https://ieeexplore.ieee.org/abstract/document/7576359)). The algorithm's adaptability to varied applications, such as in mesh generation and computational geometry, further underscores its influence. Notably, it has been integrated into popular software tools used for 3D reconstruction and computer graphics, supporting applications ranging from cultural heritage preservation to animations and gaming.",
+  "abstract": "We show that surface reconstruction from oriented points can be cast as a spatial Poisson problem. This Poisson formulation considers all the points at once, without resorting to heuristic spatial partitioning or blending, and is therefore highly resilient to data noise. Unlike radial basis function schemes, our Poisson approach allows a hierarchy of locally supported basis functions, and therefore the solution reduces to a well conditioned sparse linear system. We describe a spatially adaptive multiscale algorithm whose time and space complexities are proportional to the size of the reconstructed model. Experimenting with publicly available scan data, we demonstrate reconstruction of surfaces with greater detail than previously achievable.",
+  "summary": "The paper introduces a method for reconstructing a watertight surface from an oriented point set by treating the samples as observations of the gradient of an implicit indicator function. The indicator function is smoothed so that its gradient can be represented as an integral of surface normals. The method approximates this gradient field using the input points and then solves the Poisson equation \\(\\Delta \\tilde{\\chi}=\\nabla\\cdot\\mathbf{V}\\) to obtain the scalar implicit function whose isosurface defines the reconstructed model.\n\nThe computational formulation uses an adaptive octree and a hierarchy of compactly supported basis functions. This produces a sparse, symmetric, well-conditioned system and concentrates computational effort near the reconstructed surface. Trilinear interpolation provides sub-node positional accuracy, while density estimation adjusts both the magnitude and spatial scale of point contributions for non-uniform sampling. The final surface is extracted using an adaptively modified marching-cubes procedure, with the isovalue selected from the implicit-function values at the input samples.\n\nExperiments on noisy scans show that the method produces smooth, detailed reconstructions while avoiding many spurious sheets associated with methods that constrain the implicit function only near sample points. It compares favorably with several reconstruction techniques, particularly for sharp features and non-uniformly sampled data. The principal limitation identified by the authors is that the method does not use acquisition information such as line of sight; consequently, it may incorrectly connect regions where samples are absent. The reported implementation scales approximately quadratically with grid resolution and was demonstrated on very large scan datasets.\n\nThe method had substantial subsequent impact. Its core formulation became available as the actively maintained PoissonRecon implementation, which describes the codebase as originating from this work and later extending it to more general adaptive finite-element systems. ([github.com](https://github.com/mkazhdan/PoissonRecon)) It was incorporated into widely used geometry-processing libraries, including Open3D and CGAL, where it remains an API-level surface-reconstruction method for oriented point clouds. ([open3d.org](https://www.open3d.org/docs/latest/tutorial/geometry/surface_reconstruction.html)) Follow-up research extended the approach to parallel computation, point-interpolation constraints through screened Poisson reconstruction, envelope constraints, and distributed processing. ([hhoppe.com](https://hhoppe.com/proj/parallelrecon/)) Later work continues to describe Poisson surface reconstruction as a widely used baseline and builds probabilistic and application-specific variants on its formulation. ([proceedings.mlr.press](https://proceedings.mlr.press/v267/holalkere25a.html))",
   "raw_url": "http://research.microsoft.com/en-us/um/people/hoppe/poissonrecon.pdf",
   "source_type": "external",
   "filepath": "computer_graphics/README.md",
   "filename": "Poisson surface reconstruction",
-  "created_on": "2026-01-24 23:46:58",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:54"
 }

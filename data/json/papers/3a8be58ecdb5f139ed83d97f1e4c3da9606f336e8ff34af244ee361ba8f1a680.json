@@ -1,34 +1,39 @@
 {
   "uuid": "3a8be58ecdb5f139ed83d97f1e4c3da9606f336e8ff34af244ee361ba8f1a680",
-  "title": "Scientific Correspondence: Traffic and Brains",
-  "publication_date": "March 16, 2004",
+  "title": "Learning to Control a Brain–Machine Interface for Reaching and Grasping by Primates",
+  "publication_date": "October 13, 2003",
   "authors": [
-    "Giuseppe Lippi",
-    "John D. Martin",
-    "Nigel C. W. van Dosselaer",
-    "Qian Xu"
+    "Craig S Henriquez",
+    "David M Santucci",
+    "Dragan F Dimitrov",
+    "Jose M Carmena",
+    "Joseph E O'Doherty",
+    "Miguel A L Nicolelis",
+    "Mikhail A Lebedev",
+    "Parag G Patil",
+    "Roy E Crist"
   ],
   "keywords": [
-    "biological-networks",
-    "biological-traffic",
-    "brains",
-    "complex-systems",
-    "information-flow",
-    "network-dynamics",
-    "network-theory",
-    "neurology",
-    "signal-processing",
-    "traffic"
+    "brain-machine-interface",
+    "cortical-plasticity",
+    "grasping",
+    "macaque-monkeys",
+    "motor-control",
+    "motor-decoding",
+    "neural-ensembles",
+    "neuroprosthetics",
+    "reaching",
+    "robotic-arm"
   ],
   "category_path": [
     "brain-computer-interface"
   ],
-  "abstract": "We advance a speculative hypothesis that the cerebrocortical microcircuit is optimized to minimize wiring cost by being organized in a three-dimensional structure that preserves consistent development even as it undergoes complex network changes. This view draws parallels between information transportation in the brain and car traffic, displaying properties of complex dynamic systems. Our hypothesis exhibits adherence to cost efficiency principles found in various physical and biological networks.",
-  "summary": "The paper titled \"Scientific Correspondence: Traffic and Brains\" explores an intriguing hypothesis regarding the cerebrocortical microcircuit and its optimization for wiring cost efficiency through three-dimensional organization. The authors propose an analogy between information flow in the brain and car traffic networks, positing that both operate within the framework of complex dynamic systems that adhere to cost efficiency principles.\n\nThe paper has influenced subsequent studies in understanding network dynamics and efficiency both in biological systems and in engineered networks. The exploration of the brain's microcircuit as an efficient network has invited comparisons and inspired models in network theory and neurology, further investigated in various contexts such as the following references:\n\n1. T. Thompson, M. E. Smith. \"Cortical network efficiency: Insights from functional connectomics.\" Journal of Neural Networks, 2010. [Link](https://www.journalofneuralnetworks.com/article/123)\n2. S. Kapoor, L. J. Fisher. \"Biological networks: Parallels and principles from nature.\" Systems Biology Review, 2020. [Link](https://www.systemsbiologyreview.org/article/456)\n3. F. Kim, G. Salvatore. \"Comparative analysis of network optimization in biological and engineered systems.\" Network Theory Journal, 2015. [Link](https://www.networktheoryjournal.org/article/789)\n\nAlthough direct references to the paper are limited, its hypothesis regarding efficient network organization has been a conceptual cornerstone in understanding similar dynamics across disciplines.",
+  "abstract": "Reaching and grasping in primates depend on the coordination of neural activity in large frontoparietal ensembles. Here we demonstrate that primates can learn to reach and grasp virtual objects by controlling a robot arm through a closed-loop brain–machine interface (BMIc) that uses multiple mathematical models to extract several motor parameters (i.e., hand position, velocity, gripping force, and the EMGs of multiple arm muscles) from the electrical activity of frontoparietal neuronal ensembles. As single neurons typically contribute to the encoding of several motor parameters, we observed that high BMIc accuracy required recording from large neuronal ensembles. Continuous BMIc operation by monkeys led to significant improvements in both model predictions and behavioral performance. Using visual feedback, monkeys succeeded in producing robot reach-and-grasp movements even when their arms did not move. Learning to operate the BMIc was paralleled by functional reorganization in multiple cortical areas, suggesting that the dynamic properties of the BMIc were incorporated into motor and sensory cortical representations.",
+  "summary": "## Summary\n\n- The study demonstrated that two macaque monkeys could use a closed-loop brain–machine interface to control a robotic arm for cursor movement, gripping-force regulation, and coordinated reach-and-grasp behavior.\n- Neural activity was recorded from multiple frontal and parietal cortical areas and decoded with parallel linear models to estimate hand position, hand velocity, gripping force, and arm-muscle electromyography. Large neuronal ensembles provided more accurate predictions than individual neurons or small samples, and multiunit activity was sufficient for effective control.\n- Performance improved with continued training. After the robot was introduced, performance initially declined because the animals had to adapt to the robot's dynamics, but it subsequently recovered. The monkeys also controlled the system without overt arm movements or corresponding muscle activity.\n- Learning was associated with changes in neural contributions, directional tuning, and correlations among neurons across several cortical areas. The authors interpreted these changes as evidence that the brain incorporated the dynamics of the artificial actuator into motor and sensory representations.\n- **Influence:** Later reviews of intracortical brain–machine interfaces and neural plasticity cite this study as an early demonstration of ensemble-based control of coordinated robotic reaching and grasping, and as evidence that BMI learning involves distributed cortical adaptation. It is also included among the foundational studies discussed in broader reviews of brain–machine interfaces and neuroprosthetic development. ([journals.plos.org](https://journals.plos.org/plosbiology/article?id=10.1371%2Fjournal.pbio.0000042))",
   "raw_url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.0000042",
   "source_type": "external",
   "filepath": "brain-computer-interface/README.md",
   "filename": "Learning to Control a Brain–Machine Interface for Reaching and Grasping by Primates",
-  "created_on": "2026-01-24 23:46:58",
-  "summary_received": "2026-01-25 00:11:01"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:53"
 }

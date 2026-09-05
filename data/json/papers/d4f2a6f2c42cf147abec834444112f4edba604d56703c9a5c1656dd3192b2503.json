@@ -1,35 +1,32 @@
 {
   "uuid": "d4f2a6f2c42cf147abec834444112f4edba604d56703c9a5c1656dd3192b2503",
-  "title": "Using Agent System to Enhance Performance of Internet Connections",
-  "publication_date": "2010",
+  "title": "Characterizing the Scalability of Erlang VM on Many-core Processors",
+  "publication_date": "January 20, 2011; Master of Science Thesis, KTH Information and Communication Technology, Stockholm, Sweden; TRITA-ICT-EX-2011:5",
   "authors": [
-    "Maurice Clerc",
-    "Omid Amini",
-    "Reza Akbari",
-    "Ricardo Soto"
+    "Jianrong Zhang"
   ],
   "keywords": [
-    "agent-system",
-    "bandwidth-efficiency",
-    "computer-networks",
-    "congestion-control",
-    "distributed-computing",
-    "internet-connections",
-    "network-latency",
-    "ns-2-simulator",
-    "performance-optimization",
-    "tcp"
+    "concurrency",
+    "erlang-vm",
+    "lock-contention",
+    "many-core-processors",
+    "memory-management",
+    "message-passing",
+    "scalability",
+    "scheduling",
+    "synchronization",
+    "tilepro64"
   ],
   "category_path": [
     "languages",
     "erlang"
   ],
-  "abstract": "In this paper a framework is proposed for using an agent based approach to enhance the use of bandwidth, reduce latency, congestion, and improve the overall performance of data exchange on the Internet. The model includes adaptive mechanisms for optimizing the Transmission Control Protocol (TCP) based on learning from the environment. Simulation results using the Network Simulator 2 (NS-2) confirm that the proposed approach can lead to considerable improvements in performance compared with the traditional methods.",
-  "summary": "This paper presents an agent-based system aimed at improving the performance of Internet connections by optimizing bandwidth usage, reducing latency and congestion, and enhancing data exchange. The researchers utilized an adaptive mechanism that adjusts the TCP based on environmental learning to achieve these optimizations. The Network Simulator 2 (NS-2) was used to validate the approach, showing significant improvements over traditional methods. \n\nThe paper's influence or impact on subsequent research and development appears to be limited, as no significant citations or references were found in prominent databases such as Google Scholar or in industry-related developments up to the date of review. This may indicate a niche or highly specialized area of interest that has not yet been broadly adopted or cited in subsequent research or industry applications. Nonetheless, the contribution to the field of computer networks, especially in the optimization of TCP, remains valuable for those investigating agent systems and adaptive network management strategies.",
+  "abstract": "As CPU chips integrate more processor cores, computer systems are evolving from multi-core to many-core. How to utilize them fully and efficiently is a great challenge. With message passing and native support of concurrent programming, Erlang is a convenient way of developing applications on these systems. The scalability of applications is dependent on the performance of the underlying Erlang runtime system or virtual machine (VM). This thesis presents a study on the scalability of the Erlang VM on a many-core processor with 64 cores, TILEPro64. The purpose is to study the implementation of parallel Erlang VM, investigate its performance, identify bottlenecks and provide optimization suggestions. To achieve this goal, the VM is tested with some benchmark programs. Then discovered problems are examined more closely with methods such as profiling and tracing. The results show that the current version of Erlang VM achieves good scalability on the processor with most benchmarks used. The maximum speedup is from about 40 to 50 on 60 cores. Synchronization overhead caused by contention is a major bottleneck of the system. The scalability can be improved by reducing lock contention. Another major problem is that the parallel version of the virtual machine using one core is much slower than the sequential version with a benchmark program containing a huge amount of message passing. Further analysis indicates that synchronization latency induced by uncontended locks is one of the main reasons. Low overhead locks, lock-free structures or algorithms are recommended for improving the performance of the Erlang VM. Our evaluation result suggests Erlang is ready to be used to develop applications on many-core systems.",
+  "summary": "- The thesis provides an early systematic evaluation of the Erlang virtual machine on a 64-core TILEPro64 processor. Across the selected benchmarks, it reports speedups of approximately 40–50× on 60 cores, while identifying synchronization overhead, lock contention, and uncontended-lock latency as important limitations. ([kth.diva-portal.org](https://kth.diva-portal.org/smash/get/diva2%3A392243/FULLTEXT01.pdf))\n- Subsequent research cited the thesis as background for work on actor-runtime performance and many-core execution. A later actor-runtime study used it in discussing Erlang-related runtime bottlenecks and NUMA-aware optimizations. ([researchgate.net](https://www.researchgate.net/publication/260134055_Improving_the_Performance_of_Actor_Model_Runtime_Environments_on_Multicore_and_Manycore_Platforms))\n- Later Erlang scalability research extended the same problem area from single-host VM behavior to large multicore, NUMA, and distributed systems. That work reports improvements to Erlang/OTP involving shared data structures, time management, scheduler load balancing, and other VM mechanisms. The relationship is best characterized as continuity of research topic rather than evidence that the thesis directly caused those changes. ([arxiv.org](https://arxiv.org/abs/1704.07234))\n- The thesis is also used as technical background in educational material on BEAM scheduling and is listed by the Erlang Ecosystem Foundation among academic papers relevant to the BEAM community. ([cs.tufts.edu](https://www.cs.tufts.edu/comp/250RTS/handouts/1120scheduling2c.html))\n- No specific commercial product or industrial deployment was found that explicitly attributes an implementation decision to this thesis.",
   "raw_url": "http://www.diva-portal.org/smash/get/diva2:392243/FULLTEXT01.pdfOn",
   "source_type": "external",
   "filepath": "languages/erlang/README.md",
   "filename": "Characterizing the Scalability of Erlang VM on Many-core Processors",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

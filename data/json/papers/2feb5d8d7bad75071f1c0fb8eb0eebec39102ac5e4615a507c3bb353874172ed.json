@@ -1,33 +1,33 @@
 {
   "uuid": "2feb5d8d7bad75071f1c0fb8eb0eebec39102ac5e4615a507c3bb353874172ed",
   "title": "ImageNet Classification with Deep Convolutional Neural Networks",
-  "publication_date": "2012",
+  "publication_date": "2012; Advances in Neural Information Processing Systems 25 (NIPS 2012), presented December 6, 2012",
   "authors": [
     "Alex Krizhevsky",
     "Geoffrey E. Hinton",
     "Ilya Sutskever"
   ],
   "keywords": [
-    "alexnet",
-    "cnn",
     "computer-vision",
-    "deep-convolutional-networks",
+    "convolutional-neural-networks",
+    "data-augmentation",
     "deep-learning",
+    "dropout",
     "gpu-computing",
     "image-classification",
     "imagenet",
-    "large-scale-neural-networks",
+    "relu",
     "supervised-learning"
   ],
   "category_path": [
     "machine_learning"
   ],
-  "abstract": "We trained a large, deep convolutional neural network to classify the 1.2 million high-resolution images in the ImageNet LSVRC-2010 contest into the 1000 different classes. On the test data, we achieved top-1 and top-5 error rates of 37.5% and 17.0% which is considerably better than the previous state-of-the-art. The neural network, which has 60 million parameters and 650,000 neurons, consists of five convolutional layers, some of which are followed by max-pooling layers, and three fully-connected layers with a final 1000-way softmax. To make training faster, we used non-saturating neurons and a very efficient GPU implementation of the convolution operation. To reduce overfitting in the fully-connected layers we employed a recently-developed regularization method called \"dropout\" that proved to be very effective. We also entered a variant of this model in the ILSVRC-2012 competition and achieved a winning top-5 test error rate of 15.3%, compared to 26.2% achieved by the second-best entry.",
-  "summary": "The paper 'ImageNet Classification with Deep Convolutional Neural Networks' by Krizhevsky, Sutskever, and Hinton in 2012 has significantly influenced computer vision and deep learning domains. This work demonstrated the power of convolutional neural networks (CNNs) with the introduction of 'AlexNet', a large-scale, deep neural network that achieved unprecedented success in the ImageNet Large Scale Visual Recognition Challenge (ILSVRC). Its novel use of techniques like dropout for regularization and efficient GPU implementation for training set a new standard in image classification.\n\nThis approach showcased a major improvement in image classification accuracy and highlighted the potential of deep learning models for complex tasks. The paper has been extensively cited and considered foundational in the rapid growth of deep learning, influencing subsequent architectures such as VGG, GoogleNet, and ResNet. Its impact is also evident in the adoption of CNNs in industries for image and video processing applications, driving advancements in diverse areas like autonomous vehicles, medical imaging, and augmented reality.\n\nSignificant references include the VGGNet paper at [arXiv:1409.1556](https://arxiv.org/abs/1409.1556), GoogleNet (Inception) described at [arXiv:1409.4842](https://arxiv.org/abs/1409.4842), and ResNet at [arXiv:1512.03385](https://arxiv.org/abs/1512.03385). These works build upon the principles demonstrated by AlexNet, further enhancing the capabilities and efficiencies of deep neural networks.",
+  "abstract": "We trained a large, deep convolutional neural network to classify the 1.2 million high-resolution images in the ImageNet LSVRC-2010 contest into the 1000 different classes. On the test data, we achieved top-1 and top-5 error rates of 37.5% and 17.0% which is considerably better than the previous state-of-the-art. The neural network, which has 60 million parameters and 650,000 neurons, consists of five convolutional layers, some of which are followed by max-pooling layers, and three fully-connected layers with a final 1000-way softmax. To make training faster, we used non-saturating neurons and a very efficient GPU implementation of the convolution operation. To reduce overfitting in the fully-connected layers we employed a recently-developed regularization method called “dropout” that proved to be very effective. We also entered a variant of this model in the ILSVRC-2012 competition and achieved a winning top-5 test error rate of 15.3%, compared to 26.2% achieved by the second-best entry.",
+  "summary": "## Summary\n\nThe paper presents a large supervised convolutional neural network, later widely known as AlexNet, trained on ImageNet for 1000-class image classification. The model used five convolutional layers followed by three fully connected layers, ReLU activations, max-pooling, local response normalization, dropout, data augmentation, stochastic gradient descent with momentum, and training distributed across two GPUs. It contained approximately 60 million parameters and was trained on roughly 1.2 million images.\n\nThe central empirical result was a top-1 error rate of 37.5% and a top-5 error rate of 17.0% on ILSVRC-2010, substantially improving on previous methods. A related ensemble and pretraining strategy achieved a 15.3% top-5 error rate in ILSVRC-2012, compared with 26.2% for the second-best competition entry. The experiments also showed that ReLU activations substantially accelerated optimization, data augmentation and dropout reduced overfitting, and increasing convolutional depth improved accuracy.\n\nThe paper had a documented influence on subsequent computer-vision research. VGGNet explicitly describes its architecture as an effort to improve the original Krizhevsky et al. configuration, retains design elements such as ReLU activations, 224×224 inputs, three fully connected layers, and ImageNet training, and replaces the large early filters with deeper stacks of 3×3 convolutions. VGGNet models were subsequently used as transferable feature representations for object detection, semantic segmentation, image captioning, and other recognition tasks. ([arxiv.org](https://arxiv.org/abs/1409.1556))\n\nNeurIPS later identified the work as a paper with a major impact on the machine-learning community, noting that its 2012 ImageNet result far surpassed the state of the art at the time. ([blog.neurips.cc](https://blog.neurips.cc/2022/)) The paper therefore contributed concrete architectural and training practices that became standard reference points for later deep visual-recognition systems, while its strongest directly documented influence is in subsequent ImageNet-based CNN research. ([papers.nips.cc](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf))",
   "raw_url": "http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf",
   "source_type": "external",
   "filepath": "machine_learning/README.md",
   "filename": "ImageNet Classification with Deep Convolutional Neural Networks",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:56"
 }

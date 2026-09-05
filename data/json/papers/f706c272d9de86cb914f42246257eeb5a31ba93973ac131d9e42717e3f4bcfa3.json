@@ -1,29 +1,44 @@
 {
   "uuid": "f706c272d9de86cb914f42246257eeb5a31ba93973ac131d9e42717e3f4bcfa3",
-  "title": "Proﬁling Audio-Visual Conferencing Sessions for Quality of Experience",
-  "publication_date": "2017",
+  "title": "Zanzibar: Google’s Consistent, Global Authorization System",
+  "publication_date": "July 10–12, 2019; 2019 USENIX Annual Technical Conference (USENIX ATC ’19), Renton, WA, USA",
   "authors": [
-    "I. Sodagar",
-    "J. Adams",
-    "K. Ramakrishnan",
-    "P. Pancha"
+    "Abhishek Parmar",
+    "Alexander Golynski",
+    "Christina D. Richards",
+    "Jeffrey L. Korn",
+    "Kevin Graney",
+    "Lea Kissner",
+    "Mengzhi Wang",
+    "Mike Burrows",
+    "Nathan Germer",
+    "Nina Kang",
+    "Pratik Dave",
+    "Ramon Caceres",
+    "Ruoming Pang",
+    "Zhifeng Chen"
   ],
   "keywords": [
-    "audio-visual-conferencing",
-    "media-sessions",
-    "profiling",
-    "qoe",
-    "quality-assessment"
+    "access-control",
+    "access-control-lists",
+    "authorization",
+    "distributed-systems",
+    "fine-grained-authorization",
+    "global-consistency",
+    "high-availability",
+    "low-latency-systems",
+    "relationship-based-access-control",
+    "spanner"
   ],
   "category_path": [
     "security"
   ],
-  "abstract": "This paper presents a system for profiling and assessing the quality of experience (QoE) for audio-visual conferencing sessions. The system uses a combination of network and media metrics that capture the performance characteristics of the session. By analyzing audio-visual media quality, packet loss, delay variation, and bandwidth utilization, the system provides a comprehensive assessment of QoE. Experimental results demonstrate the efficacy of the proposed system in identifying sessions with poor QoE and the potential for optimization. The study concludes with suggestions for future improvements and enhancements in assessing QoE in conferencing applications.",
-  "summary": "The paper \"Profiling Audio-Visual Conferencing Sessions for Quality of Experience\" by I. Sodagar et al. presents a system for evaluating the quality of experience (QoE) in audio-visual conferencing sessions. The system integrates various network and media metrics to effectively analyze the session performance in terms of media quality, packet loss, delay, and bandwidth usage. By systematically profiling these sessions, the study provides a framework for identifying sessions with suboptimal performance and suggests potential optimizations. \n\nInitial web searches do not reveal substantial direct references to this paper in subsequent research or industry applications, indicating limited influence or adoption in those domains. The paper contributes its findings to the ongoing discourse on improving audio-visual communication but does not appear to have sparked specific subsequent research as of now. The focus on QoE in media sessions continues to be a relevant topic for further study and development.",
+  "abstract": "Determining whether online users are authorized to access digital objects is central to preserving privacy. This paper presents the design, implementation, and deployment of Zanzibar, a global system for storing and evaluating access control lists. Zanzibar provides a uniform data model and configuration language for expressing a wide range of access control policies from hundreds of client services at Google, including Calendar, Cloud, Drive, Maps, Photos, and YouTube. Its authorization decisions respect causal ordering of user actions and thus provide external consistency amid changes to access control lists and object contents. Zanzibar scales to trillions of access control lists and millions of authorization requests per second to support services used by billions of people. It has maintained 95th-percentile latency of less than 10 milliseconds and availability of greater than 99.999% over 3 years of production use.",
+  "summary": "The paper documents Zanzibar, Google’s unified authorization service for storing permissions and evaluating access-control decisions across many products. Its central abstraction is a set of relation tuples connecting users, groups, and objects. A configuration language expresses derived relationships and policies using operations such as union, intersection, exclusion, and inheritance through object relationships. This enables policies ranging from direct sharing to nested group membership and permissions inherited from parent resources.\n\nA major contribution is the treatment of authorization consistency as a distributed-systems problem. Zanzibar uses externally consistent timestamps backed by Spanner and opaque consistency tokens called “zookies” to ensure that authorization checks observe ACL changes and content updates in causal order. This prevents stale permissions from being applied to newer content and avoids the paper’s “new enemy” problem. The service uses replicated storage, recursive request fan-out, caching, request deduplication, hedging, and performance-isolation mechanisms to meet demanding latency, availability, and scale requirements. The reported deployment handled more than two trillion ACLs and millions of authorization checks per second, with 95th-percentile latency below 10 milliseconds and availability above 99.999% over three years of production operation. ([storage.googleapis.com](https://storage.googleapis.com/gweb-research2023-media/pubtools/5068.pdf))\n\nThe paper has had clear subsequent influence on authorization infrastructure. OpenFGA explicitly identifies Zanzibar as its inspiration and implements the core operations and relationship-oriented modeling approach in an open-source system intended for general application use. ([openfga.dev](https://openfga.dev/project)) SpiceDB likewise describes itself as an open-source, Zanzibar-inspired authorization database and identifies the paper as the original source of its design direction. ([github.com](https://github.com/authzed/spicedb?from_theconsensus=1)) These projects helped transfer Zanzibar’s tuple-based, relationship-oriented authorization model from Google’s proprietary infrastructure into deployable systems for broader industry use. The available evidence supports influence on subsequent authorization-system design and tooling; it does not establish that every feature or implementation detail of those systems matches Google’s production architecture.",
   "raw_url": "https://research.google/pubs/pub48190/",
   "source_type": "external",
   "filepath": "security/README.md",
   "filename": "Zanzibar: Google’s Consistent, Global Authorization System (2019)",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:56"
 }

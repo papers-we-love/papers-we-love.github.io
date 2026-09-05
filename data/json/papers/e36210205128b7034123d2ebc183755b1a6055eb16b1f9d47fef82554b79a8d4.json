@@ -1,31 +1,31 @@
 {
   "uuid": "e36210205128b7034123d2ebc183755b1a6055eb16b1f9d47fef82554b79a8d4",
   "title": "A History of the Virtual Synchrony Replication Model",
-  "publication_date": "November 2012",
+  "publication_date": "2010; published as Chapter 6 in Replication: Theory and Practice, Lecture Notes in Computer Science volume 5959, pp. 91–120. The eBook edition was published on February 1, 2010, and the softcover edition on March 2, 2010.",
   "authors": [
     "Ken Birman"
   ],
   "keywords": [
+    "causal-ordering",
     "consensus",
-    "consistency",
     "distributed-systems",
+    "dynamic-reconfiguration",
     "fault-tolerance",
-    "group-communication",
-    "partition-tolerance",
-    "replication-model",
-    "state-machine",
-    "system-reliability",
+    "group-membership",
+    "process-groups",
+    "reliable-multicast",
+    "replication",
     "virtual-synchrony"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "This paper summarizes the history of a project that began at the outset of the 1980’s to develop a robust computing infrastructure for distributed applications. The virtual synchrony model at the heart of this work would become the basis for many fault-tolerant systems, and over the years it has been widely used in applications ranging from stock exchanges and air traffic control systems to collaborative computing. My aim here is to explore key insights we developed during the effort, and to reflect on the state of the virtual synchrony model today.",
-  "summary": "The paper \"A History of the Virtual Synchrony Replication Model\" provides an overview of the development and impact of the virtual synchrony model, which has been instrumental in the design and implementation of fault-tolerant distributed systems. Introduced by Ken Birman in the 1980s, the model underpins reliable replication and has been widely adopted in critical applications such as stock exchanges and air traffic control systems. The virtual synchrony model offers a framework for achieving consistency and completeness in group communication settings, accommodating the requirements of applications with stringent fault-tolerance needs.\n\nThrough a detailed exploration of the virtual synchrony model, the paper highlights its capability to enhance system reliability and maintain consistency across different components within distributed systems. By enabling a structured approach to replication, it addresses the challenges of partition tolerance, a vital feature for systems requiring uninterrupted service despite network or node failures.\n\nIn terms of influence, the virtual synchrony replication model has been referenced and built upon in various research papers and implementations in the field of distributed computing. For instance, publications such as \"Virtual Synchrony in NS-2\" (published by W. Vogels et al.) cite the foundational concepts of virtual synchrony in modern distributed system simulations, illustrating its lasting relevance. Although this particular paper itself may not have significant individual citations or references in newer works, the core ideas of virtual synchrony continue to be a cornerstone in the field of distributed systems design. If specific examples or citations were less prevalent in searches, the enduring principles established by virtual synchrony are acknowledged within academic and practical domains.",
+  "abstract": "In summary: virtual synchrony is a distributed execution model that guarantees a very strong notion of consistency. Applications can create and join groups (potentially, large numbers of them), associate information with groups (the state transferred during a join), send multicasts to groups (without knowing the current membership), and will see the same events in equivalent orders, permitting group members to update the group state in a consistent, fault-tolerant manner. Moreover, although we’ve described the virtual synchrony model in pictures, it can also be expressed as a set of temporal logic equations. For our purposes in this chapter, we won’t need that sort of formalism, but readers can find temporal logic specifications of the model in [71][23].",
+  "summary": "### Influence\n\n- The chapter is part of *Replication: Theory and Practice*, a 2010 Springer volume that surveys approximately three decades of replication research. Its subject matter was subsequently used as background material for teaching dynamic reconfiguration and view-synchrony concepts in distributed-systems courses. ([link.springer.com](https://link.springer.com/book/10.1007/978-3-642-11294-2))\n- Later research cites the chapter when relating virtual-synchrony-style reconfiguration to consensus protocols. For example, work on Stoppable Paxos explicitly references Birman’s chapter when discussing reconfiguration in which one configuration stops at a globally known state before another configuration begins. ([theory.stanford.edu](https://theory.stanford.edu/~padon/paxos-made-epr-oopsla17.pdf))\n- The chapter’s account of dynamic process groups also appears in subsequent fault-tolerant high-performance-computing research. A 2018 study of resilient MPI applications cites the chapter and identifies its Dynamic Group of Recommended Processes as being inspired by group systems such as Isis, particularly their self-managed membership model. ([inf.ufpr.br](https://www.inf.ufpr.br/elias/papers/2018/RunningResilientMPIApplicationJBCS.pdf))\n- The paper records the broader technical and industrial adoption of virtual synchrony through systems and standards including Totem, Transis, Phoenix, Spread, CORBA fault tolerance, and data-center management systems associated with IBM and Microsoft. These uses are documented in the paper itself and provide concrete evidence of the model’s role in fault-tolerant communication and service replication. ([cs.cornell.edu](https://www.cs.cornell.edu/ken/History.pdf))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/a-history-of-the-virtual-synchrony-replication-model.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/a-history-of-the-virtual-synchrony-replication-model.pdf",
   "filename": "a-history-of-the-virtual-synchrony-replication-model.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:51"
 }

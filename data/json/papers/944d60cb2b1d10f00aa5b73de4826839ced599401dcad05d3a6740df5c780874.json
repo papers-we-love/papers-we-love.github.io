@@ -1,33 +1,32 @@
 {
   "uuid": "944d60cb2b1d10f00aa5b73de4826839ced599401dcad05d3a6740df5c780874",
-  "title": "Simple Bayesian Network Inference Using Logic Programming",
-  "publication_date": "2001",
+  "title": "Analysis of Three Bayesian Network Inference Algorithms: Variable Elimination, Likelihood Weighting, and Gibbs Sampling",
+  "publication_date": "November 4, 2004",
   "authors": [
-    "Irani A. Lemos",
-    "Thomas N. Sartor",
-    "Valdemar Camargo Jr"
+    "Rose F. Liu",
+    "Rusmin Soetjipto"
   ],
   "keywords": [
-    "artificial-intelligence",
+    "approximate-inference",
     "bayesian-networks",
-    "clp",
-    "cognitive-science",
-    "inference",
-    "knowledge-representation",
-    "logic-inference",
-    "logic-programming",
-    "probabilistic-reasoning",
-    "uncertainty-modeling"
+    "burn-in",
+    "elimination-ordering",
+    "exact-inference",
+    "gibbs-sampling",
+    "kl-divergence",
+    "likelihood-weighting",
+    "probabilistic-inference",
+    "variable-elimination"
   ],
   "category_path": [
     "artificial_intelligence"
   ],
-  "abstract": "Bayesian networks are a compact, natural, and effective way of representing probabilistic relationships among a set of variables. Their behavior can be understood qualitatively by means of a graphical structure or quantitatively through probabilities associated with the network's variables. However, inference in Bayesian networks is N P -hard, but this difficulty does not appear in simple, yet commonly used, structures such as naive Bayesian classifiers or trees. This paper presents a novel approach for inference in general Bayesian networks based on constraint logic programming (CLP). Experimental results, using some well-known Bayesian networks from the literature, show that the approach is both effective and efficient for both classes of networks: the singly connected ones (polytree) and the ones with artificial loops.",
-  "summary": "The paper \"Simple Bayesian Network Inference Using Logic Programming\" explores the application of constraint logic programming (CLP) to facilitate inference in Bayesian networks, which are critical for probabilistic reasoning and uncertainty modeling. Bayesian networks often present computational challenges due to their NP-hard nature when performing inference. However, the authors demonstrate that by employing CLP, these challenges can be mitigated, making the approach efficient for both singly connected networks and those with loops. \n\nThe authors conducted experiments with known Bayesian network structures, showing promising results that underline the method's practical applicability. This approach leverages logic programming's capacity to handle logical constraints and can be particularly beneficial when applied to networks that struggle with traditional inference methods. \n\nDespite the potential benefits outlined in the paper, a web search does not reveal significant follow-up studies or industrial applications directly referencing this work. This absence suggests that while the approach might offer theoretical and experimental advantages, its broader adoption or influence in either scholarly research or practical applications has not been substantially documented as of this writing. The influence of the paper might therefore be considered limited in scope with respect to direct citations or visible impact in related domains.",
+  "abstract": "In this paper, we describe and analyze three Bayesian network inference algorithms: variable elimination, likelihood weighting, and Gibbs sampling. Variable Elimination is an exact inference algorithm, while likelihood weighting and gibbs sampling are approximate inference algorithms. For each algorithm we study thier performance under different conditions. In section 2, we analyze variable elimination and study how different elimination orders affect performance. In section 3, we validate and describe our likelihood weghting implementation. In section 4 we analyze Gibbs sampling and experiment with the effect of burn-in (length of the initial prefix that is thrown away) on estimation accuracy. In section 5 we measure the performance of the two approximate inference algorithms in terms of their running times versus the quality of their results. We also draw conclu￾sions on which algorithm is more appropriate for the different bayesian networks. In section 6, we describe another take on the study of how burn-in affects Gibbs sampling performance.",
+  "summary": "The paper is an empirical comparison of exact variable elimination with two approximate Bayesian-network inference methods: likelihood weighting and Gibbs sampling. It validates implementations against known results, measures error using Kullback–Leibler divergence, studies the effect of elimination ordering on exact inference, and examines burn-in and sample counts for Gibbs sampling. The experiments report that elimination ordering can dominate variable-elimination runtime; a greedy ordering is usually effective but is not guaranteed to be optimal. Likelihood weighting and Gibbs sampling both become more accurate as sample counts increase, while Gibbs sampling generally benefits from an initial burn-in period. The paper also emphasizes that the best method depends on the network and query: variable elimination performed well on the tested Carpo and Burglary cases, whereas sampling was more practical for the tested Insurance cases. The authors note that the reported timings are implementation-dependent.\n\nA web search found later works that cite the paper as background or a reference, including a 2014 article on Bayesian-network click-through-rate prediction and a 2019 University of National Colombia working paper on comparing Bayesian inference algorithms. ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/10.1155/2014/818203)) The paper also appears as assigned reading in a Bayesian-network and probabilistic-inference course guide. ([faculty.ist.psu.edu](https://faculty.ist.psu.edu/vhonavar/Courses/ai/studyguide.html)) These sources document continued educational and bibliographic reuse, but the search did not identify evidence that this paper directly introduced a widely adopted algorithm, software system, or major subsequent research direction.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/artificial_intelligence/3-bayesian-network-inference-algorithm.pdf",
   "source_type": "pdf",
   "filepath": "artificial_intelligence/3-bayesian-network-inference-algorithm.pdf",
   "filename": "3-bayesian-network-inference-algorithm.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:53"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:50"
 }

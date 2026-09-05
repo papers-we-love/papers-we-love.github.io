@@ -1,34 +1,30 @@
 {
   "uuid": "556e800cad87c739e562a338db51a574454425a795e390f4ac0a5844086877b7",
-  "title": "Concurrent and Compositional Generation of Test Plans from Use Cases",
-  "publication_date": "2010",
+  "title": "Finding Race Conditions in Erlang with QuickCheck and PULSE",
+  "publication_date": "August 31–September 2, 2009; 14th ACM SIGPLAN International Conference on Functional Programming (ICFP’09), Edinburgh, Scotland, UK. Published August 31, 2009, in the conference proceedings, pp. 149–160.",
   "authors": [
-    "Carmen Gervasi",
-    "Jonas Mellin",
-    "Mattias Nyberg",
-    "Morten A. Elvang-Gøransson"
+    "Hans Svensson",
+    "John Hughes",
+    "Koen Claessen",
+    "Michał Pałka",
+    "Nicholas Smallbone",
+    "Thomas Arts",
+    "Ulf Wiger"
   ],
   "keywords": [
-    "compositional-test-plans",
-    "concurrent-test-generation",
-    "formal-specification",
-    "model-driven-development",
-    "software-testing",
-    "system-engineering",
-    "test-automation",
-    "use-cases",
-    "validation",
-    "verification"
+    "erlang",
+    "quickcheck",
+    "race-conditions"
   ],
   "category_path": [
     "concurrency"
   ],
-  "abstract": "This paper presents a framework for generating test plans concurrently and compositionally from use cases. The framework is based on systematic formalization of use cases and an associated semantic model that enables the derivation of test goals and test scenarios. The approach is exemplified by a series of steps beginning from the informal use case descriptions during the requirements engineering phase, their formalization, and the derivation of executable test plans. The framework supports verification and validation activities by ensuring the completeness and consistency of test plans.",
-  "summary": "This paper introduces a framework for the generation of test plans from use cases, supporting concurrent and compositional testing methodologies. The authors detail a formalized approach that begins with informal use case descriptions, which are then systematically translated into formal specifications allowing for the derivation of specific test goals and scenarios. The framework provided aims to enhance verification and validation efforts by ensuring comprehensive and consistent test plan development.\n\nThe paper does not seem to have been widely cited or directly influential in subsequent literature, which suggests its impact on the field may be limited. While these methodologies may be beneficial in improving testing processes, no significant references indicate widespread adaptation or further development. If there are influences, they have not been prominent in leading databases or publications and remain obscured in this context without additional direct citations found through supplementary searches.",
+  "abstract": "We address the problem of testing and debugging concurrent, distributed Erlang applications. In concurrent programs, race conditions are a common class of bugs and are very hard to find in practice. Traditional unit testing is normally unable to help finding all race conditions, because their occurrence depends so much on timing. Therefore, race conditions are often found during system testing, where due to the vast amount of code under test, it is often hard to diagnose the error resulting from race conditions. We present three tools (QuickCheck, PULSE, and a visualizer) that in combination can be used to test and debug concurrent programs in unit testing with a much better possibility of detecting race conditions. We evaluate our method on an industrial concurrent case study and illustrate how we find and analyze the race conditions.",
+  "summary": "## Summary\n\nThe paper presents an approach for finding and diagnosing race conditions in concurrent Erlang programs by combining three components:\n\n- **Parallel property-based testing with QuickCheck:** The authors extend QuickCheck’s state-machine testing to execute two independent command sequences concurrently. Correctness is defined through an atomicity or linearizability-style criterion: the observed results must be explainable by some sequential ordering of the operations. QuickCheck’s shrinking reduces failing executions to small, minimally parallel counterexamples.\n- **PULSE:** PULSE is a cooperative, user-level Erlang scheduler that instruments selected processes and randomly controls relevant scheduling events, including message delivery, process creation, receiving, linking, and selected external side effects. It produces repeatable executions when given the same random seed and can expose fine-grained interleavings that the standard Erlang scheduler may rarely produce.\n- **Trace visualization:** Execution traces are rendered as process-oriented graphs. The visualizer uses message-flow information and Lamport’s happens-before relation to suppress redundant ordering edges, making potentially problematic side-effect orderings easier to inspect.\n\nThe industrial case study is an optimized Erlang process registry implemented with ETS tables and asynchronous server communication. The method exposed two race conditions. One involved message overtaking and inconsistent cleanup of forward and reverse registry entries. The other arose when multiple clients attempted to register a dead process concurrently after independently auditing the registry. The authors fixed the defects and identified a further design-level race that would require three concurrent branches to expose. They therefore simplified the production API so that a process could register only itself.\n\nThe paper’s main technical contribution is a practical testing workflow that combines randomized parallel test generation, repeatable scheduling, automated shrinking, and graphical trace analysis. The authors deliberately use two concurrent branches because the number of possible interleavings grows combinatorially with additional branches. The approach does not attempt exhaustive exploration and depends on deterministic external inputs and adequate probability of provoking a race in a given test.\n\n### Subsequent influence\n\nThe approach was directly extended in later Erlang research. Hughes and Bolinder applied the same combination of QuickCheck-generated parallel tests, randomized scheduling, and sequential-consistency checking to `dets`, a substantially larger database component of Erlang/OTP. They reported finding five race conditions, including two that could plausibly explain production failures. ([research.chalmers.se](https://research.chalmers.se/en/publication/150540))\n\nThe paper also served as cited prior work for **Concuerror**, a later Erlang tool that moved from randomized schedule probing toward systematic exploration of process interleavings, with instrumentation, replay, and preemption bounding. Concuerror’s published descriptions explicitly position the earlier QuickCheck/PULSE method as part of the foundation for testing concurrent Erlang programs. ([researchgate.net](https://www.researchgate.net/publication/221241273_Finding_race_conditions_in_Erlang_with_QuickCheck_and_PULSE))\n\nBibliographic and publisher records confirm the paper’s authorship, conference venue, publication date, and pages. ([doi.org](https://doi.org/10.1145/1596550.1596574))",
   "raw_url": "http://publications.lib.chalmers.se/records/fulltext/125252/local_125252.pdf",
   "source_type": "external",
   "filepath": "concurrency/README.md",
   "filename": "Finding Race Conditions in Erlang with QuickCheck and PULSE",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:54"
 }

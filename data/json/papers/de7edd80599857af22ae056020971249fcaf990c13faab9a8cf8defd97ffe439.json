@@ -1,31 +1,31 @@
 {
   "uuid": "de7edd80599857af22ae056020971249fcaf990c13faab9a8cf8defd97ffe439",
   "title": "LISP II Garbage Collector",
-  "publication_date": "1967",
+  "publication_date": "Undated in the scanned memo; commonly catalogued as 1960, AI Memo 19. ([softwarepreservation.computerhistory.org](https://softwarepreservation.computerhistory.org/LISP/lisp2_family.html))",
   "authors": [
-    "Daniel G. Bobrow"
+    "Daniel J. Edwards"
   ],
   "keywords": [
-    "automatic-memory-management",
-    "computer-science",
-    "data-structures",
     "dynamic-memory",
+    "free-storage",
     "garbage-collection",
     "lisp",
-    "memory-optimization",
-    "program-efficiency",
-    "programming-language",
-    "system-performance"
+    "mark-compact",
+    "memory-compaction",
+    "memory-management",
+    "programming-languages",
+    "relocating-garbage-collector",
+    "relocation"
   ],
   "category_path": [
     "garbage_collection"
   ],
-  "abstract": "In the implementation of all but the most trivial list processes, it is necessary to deal with the potentially large and dynamic memory requirements involved in maintaining a list structure. Often, the implementation can be simplified if a simple rule is applied for managing a list structure: \"Keep track of all items I am now finished with and give them back to the list space before memory runs out. Deliver me the memory I need and tell me when it is out.\" This memo discusses that rule and its implementation.",
-  "summary": "The paper \"LISP II Garbage Collector\" by Daniel G. Bobrow presents a discussion on garbage collection mechanisms for memory management in Lisp programming environments. The paper delves into addressing the dynamic memory requirements and ensuring efficient use of memory within list-processing languages. Although it did not introduce garbage collection as a new concept, it sought to improve the then-existing Lisp-II system by providing a more practical and efficient method for automatic memory management. \n\nThe paper highlighted a simple rule for managing the list structure memory: to track and reclaim used memory before depletion. This work was significant during its time as it contributed to the development of more sophisticated garbage collection algorithms later on. \n\nResearch specifically citing this paper directly is not readily available. However, it forms part of the foundational work from which modern garbage collection techniques derive. The concepts discussed have likely influenced the design and implementation of subsequent garbage collectors in various programming languages that emerged post-1967. While not directly cited in many later works, it was a key step in evolving how programmers approached memory management challenges in dynamic programming languages.",
+  "abstract": "No abstract or summary section appears in the paper.",
+  "summary": "The memo proposes a relocating garbage collector for LISP II. The existing LISP storage-control mechanism is described as adequate mainly for list structures, whereas LISP II is intended to support arrays, binary programs, and other quantities that may require contiguous blocks of storage. The proposed collector therefore both reclaims unreachable storage and relocates surviving objects to consolidate free space.\n\nThe design operates in four phases. First, marking traces all active LISP structures and records live words in a bit table. Each LISP quantity has a tracing routine that determines how its references should be followed and whether its addresses or decrements are relocatable. This type-specific tracing permits different kinds of LISP quantities to coexist in free storage.\n\nSecond, collection performs a linear sweep of the bit table. It identifies reclaimable words and builds a free-storage list while recording, for each location, the number of collected words below it. This value represents the local relocation distance for objects located above the reclaimed region. Third, relocation scans for relocatable addresses and decrements, determines their corresponding relocation distances, and subtracts those distances from the original values. Finally, moving performs a linear sweep that packs all retained items downward into the available free words, leaving the remaining storage as one contiguous free block.\n\nThe paper is an early description of a mark-and-compact-style collector: reachability marking is combined with address adjustment and compaction rather than merely rebuilding a fragmented free list. Historical garbage-collection bibliographies identify the memo as an early mark-compact design and preserve it as part of the development history of automatic memory management. ([argonavis.com.br](https://www.argonavis.com.br/cursos/java/j190/TutorialGerenciaMemoriaJava.pdf)) However, the search found no strong evidence that this particular two-page memo was directly cited as a primary influence by later garbage-collection algorithms or industrial implementations. Later LISP II documentation continued to specify garbage collection, but that documents continuation within the LISP II project rather than demonstrated influence from this memo. ([softwarepreservation.computerhistory.org](https://softwarepreservation.computerhistory.org/LISP/lisp2_family.html))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/garbage_collection/the_lisp_ii_garbage_collector.pdf",
   "source_type": "pdf",
   "filepath": "garbage_collection/the_lisp_ii_garbage_collector.pdf",
   "filename": "the_lisp_ii_garbage_collector.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

@@ -1,33 +1,33 @@
 {
   "uuid": "c2bc267c02f4f0d33ac6cde354e7bd113efd61f30bd8bb39eaa59647f7799947",
   "title": "Predicate Dispatching: A Unified Theory of Dispatch",
-  "publication_date": "1998",
+  "publication_date": "July 20–24, 1998; ECOOP ’98, the 12th European Conference on Object-Oriented Programming, Brussels, Belgium; pp. 186–211",
   "authors": [
     "Craig Chambers",
     "Craig Kaplan",
     "Michael Ernst"
   ],
   "keywords": [
-    "inheritance",
-    "language-design",
-    "methods",
-    "multimethods",
-    "object-oriented",
-    "polymorphism",
-    "predicate-dispatch",
-    "programming",
-    "type-systems",
-    "unification"
+    "classifiers",
+    "dynamic-semantics",
+    "method-dispatch",
+    "multiple-dispatch",
+    "object-oriented-programming",
+    "pattern-matching",
+    "predicate-classes",
+    "predicate-dispatching",
+    "predicate-logic",
+    "static-semantics"
   ],
   "category_path": [
     "languages-theory"
   ],
-  "abstract": "Our work unifies the multiple dispatching capabilities of Cecil and Dylan with the filtering of pattern matching, and provides the semantic framework that several languages, including Java, C++, and Ada, have identified as important to incorporating the benefits of multimethods without their difficulties. Predicate dispatching allows the predicates associated with each method to define that method’s applicability and precedences statically, thereby ensuring that completeness or ambiguity errors are reported at compile time. A uniform mechanism for specifying messages is augmented to permit user-defined relationships, which the system analyzes in order to produce the effective method created by the dispatch. The key to this analysis is a novel decomposition of the predicates into a set of constraints that can be verified independently. Our semantic model supports multiple inheritance of implementation and interfaces and integration with existing static type systems.",
-  "summary": "The paper \"Predicate Dispatching: A Unified Theory of Dispatch\" by Michael Ernst, Craig Kaplan, and Craig Chambers (1998) explores the concept of predicate dispatching as a unification of multimethods and pattern matching in programming languages. This work builds upon the features of other languages like Cecil and Dylan while addressing the potential challenges faced by languages such as Java, C++, and Ada in incorporating such systems.\n\nPredicate dispatching is significant because it facilitates the determination of method applicability and precedence at compile-time, reducing potential runtime errors related to completeness or ambiguity. This concept also supports multiple inheritance of implementations and integration with static type systems, making it relevant for modern object-oriented programming paradigms.\n\nWhile this paper primarily introduces a theoretical framework for predicate dispatch, its impact has mostly been within the academic community. Limited references in further research indicate a niche interest in advanced dispatch techniques, often tied to reflective or meta-level programming. For instance, in the book \"Object-Oriented Programming Languages: Interpretation\" by Iain D. Craig, the concept is discussed in the context of advanced dispatch mechanisms.\n\nAs of the time of writing, predicate dispatch has not been widely adopted in mainstream programming languages, perhaps due to the complexity involved in its implementation and integration with existing language features. The paper remains a crucial theoretical contribution for researchers interested in programming language design and dispatch strategies. Further information can be found by examining works that reference this paper or those that discuss language design, such as:\n\n1. Craig Chambers et al., \"The Cecil Language: Specification and Rationale,\" which explores some advancements in language specifications related to dispatch.\n\nOverall, the paper establishes foundational concepts for future language design discussions but lacks significant direct influence on industry-standard language implementations.",
+  "abstract": "Predicate dispatching generalizes previous method dispatch mechanisms by permitting arbitrary predicates to control method applicability and by using logical implication between predicates as the overriding relationship. The method selected to handle a message send can depend not just on the classes of the arguments, as in ordinary object-oriented dispatch, but also on the classes of subcomponents, on an argument's state, and on relationships between objects. This simple mechanism subsumes and extends object-oriented single and multiple dispatch, ML-style pattern matching, predicate classes, and classifiers, which can all be regarded as syntactic sugar for predicate dispatching. This paper introduces predicate dispatching, gives motivating examples, and presents its static and dynamic semantics. An implementation of predicate dispatching is available.",
+  "summary": "The paper established predicate dispatching as a unified model in which arbitrary predicates determine method applicability and logical implication determines method overriding. Subsequent research developed the idea in several directions. Millstein, Frost, Ryder, and Warth proposed a more expressive and modular predicate-dispatch design for Java, explicitly addressing practical limitations of earlier predicate-dispatch languages. ([web.cs.ucla.edu](https://web.cs.ucla.edu/~todd/research/pub.php?id=toplas09))\n\nRelated work also explored implementation frameworks for advanced dispatching: ALIA4J treated predicate dispatching as one of the advanced-dispatch mechanisms that language implementations should support. ([research.utwente.nl](https://research.utwente.nl/en/publications/an-overview-of-alia4j-an-execution-model-for-advanced-dispatching/)) The concept influenced predicate-oriented programming beyond language prototypes; an industrial case study used predicate fields, a related mechanism for state-dependent object structure, in a mission-critical control system and reported increased flexibility and reduced development effort in several areas. ([homes.cs.washington.edu](https://homes.cs.washington.edu/~mernst/pubs/predicate-fields-oopsla2005.pdf))\n\nThe authors also released an implementation, Güd/Dubious, demonstrating the semantics described in the paper. ([projectsweb.cs.washington.edu](https://projectsweb.cs.washington.edu/research/projects/cecil/www/Gud/)) These references indicate continued influence on programming-language research and on experiments applying predicate-oriented mechanisms in industrial software, although predicate dispatching itself has not become a mainstream feature of major general-purpose languages.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages-theory/predicate-dispatching.pdf",
   "source_type": "pdf",
   "filepath": "languages-theory/predicate-dispatching.pdf",
   "filename": "predicate-dispatching.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

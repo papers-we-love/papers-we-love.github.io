@@ -1,34 +1,29 @@
 {
   "uuid": "d54feb63ba7bd4515e40f71ceb6a7a00bf58d4cfd0c7d08c3c3b9ec165a0b55c",
-  "title": "Efficient Privacy-Preserving Stream Aggregation in Mobile Sensing with Low Aggregation Error",
-  "publication_date": "2014",
+  "title": "Can SPDY Really Make the Web Faster?",
+  "publication_date": "June 2–4, 2014, IFIP Networking 2014 Conference, Trondheim, Norway",
   "authors": [
-    "Guojun Wang",
-    "Junggab Son",
-    "Shuai Hao",
-    "Weisong Shi"
+    "Gareth Tyson",
+    "Michael Welzl",
+    "Yehia Elkhatib"
   ],
   "keywords": [
-    "aggregation-error",
-    "data-aggregation",
-    "data-privacy",
-    "encrypted-data",
-    "homomorphic-encryption",
-    "mobile-devices",
-    "mobile-sensing",
-    "privacy-preserving",
-    "secure-computation",
-    "stream-aggregation"
+    "http",
+    "http2",
+    "network-measurement",
+    "network-protocols",
+    "spdy",
+    "web-protocols"
   ],
   "category_path": [
     "networks"
   ],
-  "abstract": "Mobile sensing relies on users to constantly contribute personal data from sensors embedded on smartphones or wearable devices. Privacy concerns, however, prevent the extensive exploitation of the mobile sensing technology. Traditional cryptographic techniques, such as homomorphic encryption, alleviate privacy concerns but are not feasible for battery-powered, resource-constrained mobile devices due to high computation overhead. In this paper, we propose an efficient privacy-preserving stream aggregation (EPSA) scheme that protects individual user's data privacy while allowing an aggregator to collect and aggregate user-contributed data with low aggregation error. To achieve this, we have designed EPSA based on a novel homomorphic encryption scheme tailored for mobile devices. We analyze the performance and security of the scheme, and demonstrate its efficiency through real evaluations on both smartphones and programmable logic controllers. Our evaluation results show that EPSA effectively reduces the computational cost and energy consumption of mobile devices, while preserving data privacy with low aggregation error.",
-  "summary": "The paper titled \"Efficient Privacy-Preserving Stream Aggregation in Mobile Sensing with Low Aggregation Error\" proposes an approach named EPSA (Efficient Privacy-preserving Stream Aggregation) that addresses data privacy concerns in mobile sensing. This scheme is particularly designed to optimize for battery-operated devices like smartphones, where traditional cryptographic methods pose challenges due to their computational overheads. EPSA utilizes a novel homomorphic encryption scheme that allows for private data aggregation, reducing both computational cost and energy consumption without significant aggregation errors. \n\nThough there seems to be limited direct citation or recognition from subsequent research in the industry or academic databases, this paper contributes to the broader discourse of privacy-preserving data aggregation, which is an ongoing concern in mobile sensing applications. Further exploration in related works could expand on fine-tuning encryption algorithms to catapult similar solutions towards more robust use cases in IoT and pervasive computing scenarios. \n\nThe adoption of encryption schemes that are efficient and practical for mobile environments has seen growing interest, particularly with the broader implementation of sensing devices in everyday applications. As of now, there are no widely-cited papers directly referring to this study, indicating that it may remain a specialized contribution rather than a seminal one.",
+  "abstract": "HTTP is a successful Internet technology on top of which a lot of the web resides. However, limitations with its current specification have encouraged some to look for the next generation of HTTP. In SPDY, Google has come up with such a proposal that has growing community acceptance, especially after being adopted by the IETF HTTPbis-WG as the basis for HTTP/2.0. SPDY has the potential to greatly improve web experience with little deployment overhead, but we still lack an understanding of its true potential in different environments. This paper offers a comprehensive evaluation of SPDY’s performance using extensive experiments. We identify the impact of network characteristics and website infrastructure on SPDY’s potential page loading benefits, finding that these factors are decisive for an optimal SPDY deployment strategy. Through exploring such key aspects that affect SPDY, and accordingly HTTP/2.0, we feed into the wider debate regarding the impact of future protocols.",
+  "summary": "### Paper summary\n\nThe paper evaluates SPDY, an application-layer protocol designed to improve web page loading through multiplexing, header compression, persistent encrypted connections, server push or hints, and content prioritization. The authors combine measurements of live websites with controlled experiments using an emulated network testbed. Their live crawl found SPDY support on 208 of the Alexa top 10,000 websites in October 2012 and 271 in April 2013. Results varied substantially: SPDY improved page load times for some sites but degraded them for others. In the authors’ measurements, average time-on-wire reductions included 7% for Facebook, 4.7% for YouTube, 9.7% for Youm7, and 10.6% for Twitter, while increases were observed for Blogspot, WordPress, and Google’s search homepage. ([yelkhatib.github.io](https://yelkhatib.github.io/papers/Elkhatib2014spdy.pdf))\n\nThe controlled experiments attribute this variation primarily to network and website-infrastructure characteristics. SPDY generally performs better on high-latency, low-bandwidth paths because multiplexing reduces connection-establishment overhead and avoids some congestion caused by parallel HTTPS connections. Its benefits diminish as bandwidth increases, and packet loss can be especially harmful because SPDY relies on a long-lived multiplexed TCP connection. Website sharding also reduces SPDY’s advantage by distributing resources across multiple connections and domains, thereby limiting multiplexing. The paper reports that the degree of multiplexing required to outperform HTTPS grows approximately with page complexity, although the authors explicitly describe this relationship as non-robust. ([yelkhatib.github.io](https://yelkhatib.github.io/papers/Elkhatib2014spdy.pdf))\n\n### Influence\n\nThe paper became a cited empirical reference in subsequent evaluations of SPDY and HTTP/2. Later comparative studies, including work explicitly asking whether HTTP/2 is faster than HTTP/1.1, cite it alongside other early protocol-performance measurements. ([tma.ifip.org](https://tma.ifip.org/wp-content/uploads/sites/7/2017/06/tma2017_paper75.pdf)) The authors’ central finding—that protocol performance depends strongly on latency, loss, bandwidth, page complexity, and deployment architecture—was therefore carried into the broader research literature on HTTP/2 and next-generation web transport. The available sources establish academic citation and reuse, but do not document a specific industrial deployment directly attributable to this paper. ([research.lancaster-university.uk](https://research.lancaster-university.uk/en/publications/can-spdy-really-make-the-web-faster/))",
   "raw_url": "http://www.eecs.qmul.ac.uk/~tysong/files/IFIPNetworking14.pdf",
   "source_type": "external",
   "filepath": "networks/README.md",
   "filename": "Can SPDY Really Make the Web Faster?",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:56"
 }

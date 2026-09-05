@@ -1,32 +1,29 @@
 {
   "uuid": "cf49f2e61c2debe405106c26202cc5c12b4434d4ad078a3e77385245777e6f6c",
   "title": "A Framework for Automated Generation of Questions Across Formal Domains",
-  "publication_date": "July 2004",
+  "publication_date": "June 17, 2015; 17th International Conference on Artificial Intelligence in Education (AIED 2015), pp. 776–780",
   "authors": [
-    "Ambuj Tewari",
-    "Chirag Shah",
-    "Satinder Singh"
+    "Martin Henz",
+    "Rahul Singhal",
+    "Shubham Goyal"
   ],
   "keywords": [
-    "automated-question-generation",
-    "cognitive-skills",
-    "domain-knowledge",
-    "education-technology",
+    "automated-deduction",
+    "axiomatic-approach",
+    "constraint-handling-rules",
+    "first-order-logic",
     "formal-domains",
-    "instructional-design",
-    "machine-learning",
-    "natural-language-processing",
-    "question-analysis"
+    "pattern-matching"
   ],
   "category_path": [
     "computer_education"
   ],
-  "abstract": "In this paper, we present a framework for the automated generation of questions across formal domains such as mathematics, computer science, and logic. Our framework leverages domain-specific knowledge along with natural language processing techniques to produce questions that test a variety of cognitive skills. We discuss the design and implementation of this framework, as well as its application in instructional settings.",
-  "summary": "The paper \"A Framework for Automated Generation of Questions Across Formal Domains\" presents a novel framework that integrates domain-specific knowledge with natural language processing to generate questions in fields such as mathematics and computer science. The primary aim is to enhance instructional methods by generating questions that challenge various cognitive skills. \n\nA web search indicates that the framework discussed in this paper has not been widely cited or adopted in subsequent research literature or industry applications. No significant references or citations were found that clearly indicate the continued influence or implementation of the framework in other works or technologies.",
+  "abstract": "In this work, questions are tasks posed to secondary students to help them understand a subject, or to help educators assess their level of competency in it. Automated question generation is important today as content providers in education try to scale their efforts. In particular, MOOCs need a continuous supply of new questions in order to offer educational content to thousands of students, and to provide a fair assessment process. This paper innovates in three ways; (1) we describe question generation across domains, and, previous efforts as instances of a general framework; (2) we establish first-order logic as a suitable formal tool to describe question scenarios, questions and answers; and (3) we generalize a published question generation method based on logic programming and theorem proving to work across domains. We apply this approach to three domains in high school education—geometry, algebra and mechanics (physics)—and report initial results.",
+  "summary": "The paper proposes a domain-independent framework for automatically generating educational questions and solutions from formally represented scenarios. Domains are modeled using first-order predicates and axiomatic rules, with Constraint Handling Rules implemented in SWI-Prolog providing forward-chaining deduction and pattern matching. The framework has three principal stages: generating an initial scenario, deriving new facts and candidate answers, and enriching the scenario by instantiating variables required to produce suitable questions. It represents questions as scenario–question-fact pairs and derives solutions by tracing the axioms used to obtain the questioned fact.\n\nThe authors demonstrate the approach in high-school geometry, algebra, and mechanics. Algebra is treated as a special case in which an existing question acts as a predefined scenario; numerical instantiation and equality testing then produce related questions. The reported prototype uses approximately 50 axioms for geometry and 20 for physics, generating questions in under 10 seconds in the tested cases. The main limitation identified by the authors is inadequate handling of degeneracy and validity conditions when modifying or enriching scenarios.\n\nSubsequent evidence of influence is limited but identifiable. The work is listed in later surveys of automatic question generation and is cited as an early rule-based/formal-domain approach. ([ouci.dntb.gov.ua](https://ouci.dntb.gov.ua/works/lmGq2vj7/)) The authors subsequently extended the research direction with a 2016 paper on user-defined difficulty levels and interactive scenario guidance for automated question generation. ([comp.nus.edu.sg](https://www.comp.nus.edu.sg/~henz/publications/pdf/ICTAI_2016.pdf)) The search found no clear evidence that this specific framework was adopted in a commercial educational product or deployed at industry scale.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/computer_education/framework-for-automated-generation-of-questions-across-formal-domains.pdf",
   "source_type": "pdf",
   "filepath": "computer_education/framework-for-automated-generation-of-questions-across-formal-domains.pdf",
   "filename": "framework-for-automated-generation-of-questions-across-formal-domains.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:50"
 }

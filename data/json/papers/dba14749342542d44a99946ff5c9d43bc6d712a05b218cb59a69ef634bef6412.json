@@ -1,33 +1,34 @@
 {
   "uuid": "dba14749342542d44a99946ff5c9d43bc6d712a05b218cb59a69ef634bef6412",
-  "title": "Event-driven FRP",
-  "publication_date": "2000",
+  "title": "Event-Driven FRP",
+  "publication_date": "December 20, 2001; published in Lecture Notes in Computer Science, volume 2257, as part of the Proceedings of PADL 2002 (January 19–20, 2002), pages 155–172.",
   "authors": [
-    "Antony Courtney",
-    "Conal Elliott"
+    "Paul Hudak",
+    "Walid Taha",
+    "Zhanyong Wan"
   ],
   "keywords": [
-    "composable-event-behaviors",
-    "concurrency",
-    "dynamic-systems",
-    "event-driven",
+    "compiler-correctness",
+    "embedded-systems",
+    "event-driven-programming",
+    "formal-semantics",
     "functional-reactive-programming",
-    "haskell",
-    "programming-languages",
+    "imperative-code-generation",
+    "microcontrollers",
     "reactive-systems",
     "real-time-systems",
-    "timing-analysis"
+    "resource-bounded-computation"
   ],
   "category_path": [
     "languages-paradigms",
     "functional_reactive_programming"
   ],
-  "abstract": "Functional Reactive Programming (FRP) is a paradigm for programming hybrid systems, systems containing a combination of traditional, \"continuous-time,\" and \"discrete-concentration\" components. FRP models hybrid systems as collections of \"behaviors\" and \"events.\" Neighborhoods of these entities can be composed modularly, using a small language of composition forms. We have extended the role of events, using them to drive programs in addition to simply representing input. This extension allows significant simplification of reactive programs in several domains, such as graphical animations, robotic control, user interfaces, interactive exercises, etc. This paper describes the extension and shows how it can be applied in these domains.",
-  "summary": "Functional Reactive Programming (FRP) extends the idea of programming reactive behavior within real-time systems by modeling combinations of continuous and discrete components through 'behaviors' and 'events'. This paper extends the paradigm to utilize events as drivers of reactive programs, vastly simplifying their construction and composition. The work carried out by Antony Courtney and Conal Elliott has been pivotal in applying FRP concepts to domains such as user interfaces, robotics, graphical animations, and interactive exercises.\n\n**Impact and Influence:**\n\nThe paper 'Event-driven FRP' has had a significant influence on the field of FRP and its application across different domains of reactive and interactive system designs. Notably, it has been cited by various scholarly works and articles which further the development and application of distributed FRP systems:\n\n1. Elliott, C. (2008). \"Push-Pull Functional Reactive Programming,\" FPCA, which built upon these FRP ideas to optimize data-driven processing scenarios. [Link](https://conal.net/blog/posts/push-pull-functional-reactive-programming)\n2. Jayakrishnan, R., et al. (2019). \"An empirical study of performance bottlenecks in high-performance computing workflows,\" highlighting roles of reactive systems. [DOI: 10.1109/BigData.2019.9006110]\n3. Perez, J. A., et al. (2017). \"High-Level Reactive Programming for the Financial Domain,\" looking at real-world applications of event-driven data flows in finance.\n\nOverall, the paper has laid groundwork in the development of simplified constructs for programming reactive behaviors across a wide array of computing systems and continues to be an essential reference for evolving FRP languages and methodologies.",
+  "abstract": "Functional Reactive Programming (FRP) is a high-level declarative language for programming reactive systems. Previous work on FRP has demonstrated its utility in applications ranging from animation and graphical user interfaces to robotics. FRP has a continuous-time denotational semantics that is elegant and expressive. But FRP provides no guarantees on resource consumption, and so is unsuitable for more demanding applications. Recently we identified a resource bounded sub-language of FRP called Real-Time FRP (RT-FRP).\n\nExperience using RT-FRP in the micro-controller domain has revealed a shortcoming of RT-FRP in the event-driven setting. To deal with this shortcoming, we present a more general language called Event-driven FRP (E-FRP). The new language allows us to express heavily event-oriented computations in a natural manner.\n\nThe focus of this paper is on compilation, which had not been addressed with RT-FRP. We formally define a compilation strategy for E-FRP into imperative code. By giving a formal operational semantics to a small imperative language, we also show that compilation is correct. We are currently building a compiler from RT-FRP which includes a back-end for generating code for the PIC16C66 micro-controller.",
+  "summary": "### Contribution\n\nThe paper introduces Event-Driven Functional Reactive Programming (E-FRP), a resource-bounded subset of Functional Reactive Programming designed for systems driven by multiple external events. It generalizes Real-Time FRP by replacing its single implicit global clock with multiple mutually exclusive event sources. Behaviors change only when events occur, and event processing is divided into computation and state-update phases. These restrictions provide a simpler operational model and support predictable execution for interrupt-driven embedded systems.\n\nThe central technical contribution is a formally specified compilation strategy from E-FRP into a small imperative language. The authors give operational semantics for the target language and establish that the compilation preserves the behavior of the source program. The paper also presents a robot-controller example targeting a PIC16C66 microcontroller. The formally specified generated code is intentionally conservative; the paper notes that practical implementations can apply global optimizations to produce more efficient code. ([researchgate.net](https://www.researchgate.net/publication/2415013_Event-driven_FRP))\n\n### Influence\n\nThe work directly led to subsequent research on **E-FRP with priorities**, which extended the compilation strategy to support prioritized and preemptive event handling while preserving the original high-level semantics and resource guarantees. ([websrv.cecs.uci.edu](https://websrv.cecs.uci.edu/~papers/esweek07/emsoft/p221.pdf))\n\nE-FRP was also incorporated into later analyses of reactive programming as an example of a discrete, event-driven FRP model with explicit update ordering and glitch-avoidance properties. The model was cited in research on asynchronous FRP and Elm, and in surveys that classified reactive systems according to their treatment of time, events, evaluation, and dependency propagation. ([doi.org](https://doi.org/10.1145/2499370.2462161))\n\nMore recently, Reactive Vega used E-FRP semantics as a basis for declarative interactive visualization, retaining event-driven propagation and two-phase updates while combining them with streaming-data and incremental-recomputation techniques. This demonstrates an extension of the paper's event-driven dataflow ideas beyond embedded controllers into interactive web visualization systems. ([citeseerx.ist.psu.edu](https://citeseerx.ist.psu.edu/document?doi=ee42b9c1658b3805ebce537f6e632677587c3baf&repid=rep1&type=pdf))",
   "raw_url": "https://www.researchgate.net/publication/2415013_Event-driven_FRP",
   "source_type": "external",
   "filepath": "languages-paradigms/functional_reactive_programming/README.md",
   "filename": "Event-Driven FRP",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:56"
 }

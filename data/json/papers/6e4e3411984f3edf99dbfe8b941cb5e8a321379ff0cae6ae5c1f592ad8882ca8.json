@@ -1,31 +1,31 @@
 {
   "uuid": "6e4e3411984f3edf99dbfe8b941cb5e8a321379ff0cae6ae5c1f592ad8882ca8",
   "title": "A Mathematical Theory of Communication",
-  "publication_date": "July 1948",
+  "publication_date": "July and October 1948; published in two parts in The Bell System Technical Journal, Vol. 27, pp. 379–423 and 623–656",
   "authors": [
-    "Claude E. Shannon"
+    "C. E. Shannon"
   ],
   "keywords": [
     "channel-capacity",
-    "coding",
-    "communication",
-    "data-transmission",
+    "communication-theory",
+    "continuous-signals",
+    "data-compression",
     "entropy",
+    "error-correction",
     "information-theory",
-    "mathematical-theory",
-    "noise",
-    "probability",
-    "signal-processing"
+    "noisy-channels",
+    "rate-distortion-theory",
+    "source-coding"
   ],
   "category_path": [
     "information_theory"
   ],
-  "abstract": "The present paper deals with the problem of reproducing at one point either exactly or approximately a message selected at another point. Frequently the messages have meaning; that is they refer to or are correlated according to some system with certain physical or conceptual entities. These semantic aspects of communication are irrelevant to the engineering problem. The significant aspect is that the actual message is one selected from a set of possible messages. The system must be designed to operate for each potential selection, not just the one which will actually be chosen since this is unknown at the time of design. If the number of messages in the set is finite then this number or any monotonic function of this number can be regarded as a measure of the information produced when one message is chosen from the set, all choices being equally likely. As we shall see, the logarithmic function is more suitable for various reasons, both of a theoretical and practical nature.",
-  "summary": "Claude E. Shannon's paper, \"A Mathematical Theory of Communication,\" published in 1948, is a seminal work that founded the field of information theory. In this paper, Shannon introduces concepts such as entropy, which quantifies information, and discusses the capacity of communication channels, accounting for noise. The work underpins numerous fields including telecommunications, computer science, and data compression by formalizing the processes involved in transmitting information reliably and efficiently. Shannon's model abstracts communication to its core components, laying the groundwork for the development of modern communication systems and compression algorithms.\n\nThis paper has fundamentally influenced various technical domains, and its concepts remain critical in designing digital communication systems and networks. For instance, it has significantly affected error detection and correction techniques, contributing to the robustness of digital data transmission in contemporary computing and networking industries. Furthermore, information theory principles are crucial in cryptography, data encryption, and compression.\n\nProminent references include:\n\n- Cover, T. M., & Thomas, J. A. (2006). \"Elements of Information Theory.\" Wiley-Interscience. [Link to reference](https://onlinelibrary.wiley.com/doi/book/10.1002/047174882X)\n- MacKay, D. J. C. (2003). \"Information Theory, Inference, and Learning Algorithms.\" Cambridge University Press. [Link to reference](http://www.inference.org.uk/itprnn/book.pdf)\n- Pierce, J. R. (1980). \"An Introduction to Information Theory: Symbols, Signals, & Noise.\" Dover Publications.\n- Gallager, R. G. (1968). \"Information Theory and Reliable Communication.\" Wiley.\n- Shannon, C. E., & Weaver, W. (1963). \"The Mathematical Theory of Communication.\" University of Illinois Press. [Link to reference](https://archive.org/details/mathematicaltheo0000shan)\n\nThese works exhibit the profound and extensive impact of Shannon's \"A Mathematical Theory of Communication\" on both theoretical and practical applications.",
+  "abstract": "No abstract is provided in the paper.",
+  "summary": "## Summary\n\nClaude E. Shannon develops a mathematical framework for communication systems by separating the engineering problem of transmitting and reproducing messages from the semantic meaning of those messages. He models communication as a system consisting of an information source, transmitter, channel, receiver, and destination, with noise represented as a stochastic disturbance of the transmitted signal.\n\nThe paper defines information using a logarithmic measure. For a probability distribution, Shannon derives the entropy function \\(H=-\\sum_i p_i\\log p_i\\), showing that it quantifies uncertainty and satisfies additivity and conditional-entropy relations. For stochastic sources, entropy becomes the average information produced per symbol or per unit time. The paper also introduces ergodic sources and uses asymptotic properties of long sequences to establish that typical messages occupy a substantially smaller effective set than all formally possible messages. This provides the theoretical basis for statistical data compression and source coding.\n\nFor noiseless discrete channels, channel capacity is defined as the asymptotic logarithmic growth rate of the number of permissible signals. Shannon proves that a source with entropy rate \\(H\\) can be encoded for transmission over a channel of capacity \\(C\\) at rates approaching \\(C/H\\) source symbols per second, while rates above this limit are impossible. This establishes the noiseless source-coding limit.\n\nFor noisy channels, the paper introduces equivocation, the uncertainty about the transmitted message after observing the received signal. The information transmission rate is expressed as mutual information, \\(R=H(x)-H_y(x)\\), and channel capacity is defined as the maximum mutual information over all possible input sources. Shannon proves the noisy-channel coding theorem: information can be transmitted with arbitrarily small error probability at any rate below channel capacity, whereas rates above capacity necessarily incur a nonzero error or equivocation.\n\nThe paper extends the framework to continuous signals and defines differential entropy, entropy power, and the rate required to reproduce a continuous source subject to a fidelity criterion. This leads to the general rate–distortion formulation. For a band-limited channel with average signal power \\(P\\), bandwidth \\(W\\), and additive white thermal noise of power \\(N\\), Shannon derives the capacity limit\n\n\\[\nC=W\\log_2\\left(1+\\frac{P}{N}\\right).\n\\]\n\nThe paper therefore establishes the principal theoretical limits for data compression, reliable communication, error correction, and analog or continuous-signal transmission. Its central result is that redundancy can be used either to remove statistical structure for compression or to add structure for error correction, but reliable communication is fundamentally limited by channel capacity.\n\n## Influence\n\nThe paper established information theory as a distinct field and supplied the mathematical foundations for modern digital communication. IEEE historical accounts identify Shannon’s 1948 work as foundational to communication technology and the subsequent development of the IEEE Information Theory Society. ([ieeexplore.ieee.org](https://ieeexplore.ieee.org/document/5337845/)) Its source-coding and channel-capacity results became reference points for later work in data compression, coding theory, wireless communication, and digital networks. The capacity formula for additive white Gaussian noise remains a fundamental benchmark in communications research and engineering. ([ieeexplore.ieee.org](https://ieeexplore.ieee.org/document/9503440/)) IEEE accounts also document applications of Shannon’s ideas across digital systems, including storage, telecommunications, compact discs, and deep-space communications. ([spectrum.ieee.org](https://spectrum.ieee.org/claude-shannon-tinkerer-prankster-and-father-of-information-theory))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/information_theory/a-mathematical-theory-of-communication-1948.pdf",
   "source_type": "pdf",
   "filepath": "information_theory/a-mathematical-theory-of-communication-1948.pdf",
   "filename": "a-mathematical-theory-of-communication-1948.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

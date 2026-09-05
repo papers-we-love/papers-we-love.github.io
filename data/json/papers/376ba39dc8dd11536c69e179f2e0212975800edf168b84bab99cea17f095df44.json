@@ -1,35 +1,31 @@
 {
   "uuid": "376ba39dc8dd11536c69e179f2e0212975800edf168b84bab99cea17f095df44",
-  "title": "Brain–Computer Interfaces: A Review",
-  "publication_date": "March 2006",
+  "title": "Brain–computer interfaces for communication and control",
+  "publication_date": "June 2002; accepted 2 March 2002. Published in Clinical Neurophysiology, volume 113, issue 6, pages 767–791.",
   "authors": [
-    "D. J. McFarland",
-    "G. Dornhege",
-    "J. R. Millán",
-    "K.-R. Müller",
-    "T. Hinterberger"
+    "Dennis J. McFarland",
+    "Gert Pfurtscheller",
+    "Jonathan R. Wolpaw",
+    "Niels Birbaumer",
+    "Theresa M. Vaughan"
   ],
   "keywords": [
-    "adaptive-systems",
-    "biofeedback",
-    "brain-computer-interfaces",
-    "cognitive-neuroscience",
+    "augmentative-communication",
+    "brain-computer-interface",
+    "brain-machine-interface",
     "electroencephalography",
-    "interface-design",
-    "motor-imagery",
-    "neural-signals",
-    "neuroscience",
-    "signal-processing"
+    "neuroprosthesis",
+    "rehabilitation"
   ],
   "category_path": [
     "brain-computer-interface"
   ],
-  "abstract": "This paper reviews the state-of-the-art of brain–computer interfaces (BCI), an area in which research and development are moving fast. BCIs are systems that provide communication opportunities for people with severe motor disabilities or that can be used to augment human-technology interaction. The paper summarizes the major learning paradigms and training strategies for BCIs, as well as the main application areas.",
-  "summary": "The paper \"Brain–Computer Interfaces: A Review\" provides an overview of the then-current state of brain-computer interfaces (BCIs), highlighting advancements in research and its applications for individuals with severe motor disabilities. The authors detail various learning paradigms and training strategies employed in BCI development, as well as outlining key application areas such as augmenting human-technology interaction. According to a Google Scholar search, this paper has been cited by numerous subsequent studies in the BCI field, influencing both academic research and the development of practical BCI applications (e.g., *Wolpaw, J. R., & Wolpaw, E. W. (2012). Brain-computer interfaces: principles and practice*, and *Lebedev, M. A., & Nicolelis, M. A. (2006). Brain–machine interfaces: past, present and future. Trends in Neurosciences*). These references suggest that this review has significantly contributed to standardizing and advancing the understanding of BCI technologies.",
+  "abstract": "For many years people have speculated that electroencephalographic activity or other electrophysiological measures of brain function might provide a new non-muscular channel for sending messages and commands to the external world – a brain–computer interface (BCI). Over the past 15 years, productive BCI research programs have arisen. Encouraged by new understanding of brain function, by the advent of powerful low-cost computer equipment, and by growing recognition of the needs and potentials of people with disabilities, these programs concentrate on developing new augmentative communication and control technology for those with severe neuromuscular disorders, such as amyotrophic lateral sclerosis, brainstem stroke, and spinal cord injury. The immediate goal is to provide these users, who may be completely paralyzed, or ‘locked in’, with basic communication capabilities so that they can express their wishes to caregivers or even operate word processing programs or neuroprostheses. Present-day BCIs determine the intent of the user from a variety of different electrophysiological signals. These signals include slow cortical potentials, P300 potentials, and mu or beta rhythms recorded from the scalp, and cortical neuronal activity recorded by implanted electrodes. They are translated in real-time into commands that operate a computer display or other device. Successful operation requires that the user encode commands in these signals and that the BCI derive the commands from the signals. Thus, the user and the BCI system need to adapt to each other both initially and continually so as to ensure stable performance. Current BCIs have maximum information transfer rates up to 10–25 bits/min. This limited capacity can be valuable for people whose severe disabilities prevent them from using conventional augmentative communication methods. At the same time, many possible applications of BCI technology, such as neuroprosthesis control, may require higher information transfer rates. Future progress will depend on: recognition that BCI research and development is an interdisciplinary problem, involving neurobiology, psychology, engineering, mathematics, and computer science; identification of those signals, whether evoked potentials, spontaneous rhythms, or neuronal firing rates, that users are best able to control independent of activity in conventional motor output pathways; development of training methods for helping users to gain and maintain that control; delineation of the best algorithms for translating these signals into device commands; attention to the identification and elimination of artifacts such as electromyographic and electro-oculographic activity; adoption of precise and objective procedures for evaluating BCI performance; recognition of the need for long-term as well as short-term assessment of BCI performance; identification of appropriate BCI applications and appropriate matching of applications and users; and attention to factors that affect user acceptance of augmentative technology, including ease of use, cosmesis, and provision of those communication and control capacities that are most important to the user. Development of BCI technology will also benefit from greater emphasis on peer-reviewed research publications and avoidance of the hyperbolic and often misleading media attention that tends to generate unrealistic expectations in the public and skepticism in other researchers. With adequate recognition and effective engagement of all these issues, BCI systems could eventually provide an important new communication and control option for those with motor disabilities and might also give those without disabilities a supplementary control channel or a control channel useful in special circumstances. q 2002 Elsevier Science Ireland Ltd. All rights reserved.",
+  "summary": "This review helped consolidate brain–computer interfacing as an interdisciplinary research field by defining BCIs as communication systems whose messages do not pass through the brain’s conventional peripheral-nerve and muscle pathways. It organized early systems around major signal classes—including slow cortical potentials, P300 potentials, sensorimotor rhythms, visual evoked potentials, and cortical neuronal activity—and emphasized that effective operation depends on mutual adaptation between the user and the system. ([cs.cmu.edu](https://www.cs.cmu.edu/~tanja/BCI/BCIreview.pdf))\n\nThe paper also helped establish methodological priorities that became central to later BCI research: artifact rejection, user-specific signal selection, long-term online validation, evaluation of both user and system performance, and information-transfer rate as a common performance metric. Later work describes accuracy and bit rate as commonly reported BCI measures and identifies the paper’s information-transfer formulation as widely used in BCI evaluation. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC4185283/))\n\nA concrete technological continuation was BCI2000. The subsequent BCI2000 system paper explicitly addressed the review’s call for systematic comparison of brain signals, recording methods, processing algorithms, output formats, and operating protocols by providing a general-purpose, modular research platform. BCI2000 was designed for real-time online operation and to support multiple signal types and applications. ([schalklab.org](https://www.schalklab.org/sites/default/files/misc/BCI2000%20-%20A%20General-Purpose%20Brain-Computer%20Interface%20%28BCI%29%20System.pdf))\n\nSubsequent clinical and rehabilitation reviews continued to cite this article as a comprehensive account of the early BCI field and its application to communication and motor rehabilitation. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC3188401/))",
   "raw_url": "http://www.cs.cmu.edu/~tanja/BCI/BCIreview.pdf",
   "source_type": "external",
   "filepath": "brain-computer-interface/README.md",
   "filename": "Brain-computer interfaces for communication and control",
-  "created_on": "2026-01-24 23:46:58",
-  "summary_received": "2026-01-25 00:11:01"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:53"
 }

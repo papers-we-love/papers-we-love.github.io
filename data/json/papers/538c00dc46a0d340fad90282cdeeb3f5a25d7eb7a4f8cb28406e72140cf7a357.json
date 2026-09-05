@@ -1,31 +1,24 @@
 {
   "uuid": "538c00dc46a0d340fad90282cdeeb3f5a25d7eb7a4f8cb28406e72140cf7a357",
   "title": "The Dining Cryptographers Problem: Unconditional Sender and Recipient Untraceability",
-  "publication_date": "1988",
+  "publication_date": "1988; Journal of Cryptology, Volume 1, Issue 1, pages 65–75",
   "authors": [
     "David Chaum"
   ],
   "keywords": [
-    "anonymous-communication",
-    "computer-networks",
-    "cryptographers-protocol",
-    "cryptography",
-    "dining-cryptographers",
-    "distributed-systems",
-    "identity-protection",
-    "privacy",
-    "secure-communication",
+    "pseudonymity",
+    "unconditional-security",
     "untraceability"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "Three cryptographers are sitting down to dinner. Their waiter informs them that arrangements have been made with the restaurant for the bill to be paid anonymously. One of the cryptographers might be paying for the dinner, or the NSA might have paid. The cryptographers respect each other's right to make an anonymous payment, but want to find out if NSA is paying. A solution can be implemented with only simple equipment, and an arbitrary number of cryptographers, to provide unconditional sender and recipient untraceability with computational assumptions required only against abuses of the act of communication by recipients or third parties.",
-  "summary": "David Chaum's 1988 paper titled \"The Dining Cryptographers Problem: Unconditional Sender and Recipient Untraceability\" presents a protocol ensuring untraceable communication among participants, known as the Dining Cryptographers Problem. The protocol provides unconditional sender and recipient untraceability, absent the requirement of computational assumptions for the act of communication among cryptographers. Using the scenario of a dinner, it offers a mechanism in which cryptographers determine whether one of them or an external entity (like the NSA) paid for the meal without revealing personal identities. This paper influenced further research in the design of anonymous communication systems and cryptographic protocols.\n\nNotable follow-ups include its use in the development of protocols for anonymous networks, like those detailed in \"Anonymous Connections and Onion Routing\" by Goldschlag, Reed, and Syverson (1999, https://www.onion-router.net/Publications.html), which later influenced the foundational development of Tor. Furthermore, zero-knowledge proof applications, such as those explored in \"Zero Knowledge Proofs of Knowledge for Group Homomorphisms\" by Chaum, Crepeau, and Damgard (https://eprint.iacr.org/1992/019), were built on concepts introduced in this work. The paper has been widely acknowledged in the field of cryptography for highlighting methodologies in achieving privacy without relying on conventional computational constraints.\n\nDespite the fact that direct references to the Dining Cryptographers Problem itself are somewhat limited in modern publications, its conceptual underpinnings continue to be important for subsequent advancements in cryptographic protocols and secure communications.",
+  "abstract": "Keeping confidential who sends which messages, in a world where any physical transmission can be traced to its origin, seems impossible. The solution presented here is unconditionally or cryptographically secure, depending on whether it is based on one-time-use keys or on public keys, respectively. It can be adapted to address efficiently a wide variety of practical considerations.",
+  "summary": "## Summary\n\nDavid Chaum introduces the dining cryptographers network, or **DC-net**, as a method for achieving anonymous communication even when individual physical transmissions could otherwise be traced. In the basic protocol, participants share random secret bits pairwise. Each participant publicly announces the XOR of the secret bits they hold, while a sender inverts their announcement. Because every shared secret contributes twice to the overall XOR, the aggregate output reveals whether an odd or even number of participants transmitted, but does not reveal which participant transmitted. With one-time-use random keys, the sender-untraceability guarantee is unconditional; with keys established or expanded using public-key techniques, the guarantee is computational.\n\nThe protocol is generalized from the three-person dinner example to arbitrary connected key-sharing graphs. Participants correspond to vertices and shared keys to edges. An observer’s anonymity sets are the connected components that remain after removing edges known to that observer. Chaum proves, using the incidence matrix of the graph over GF(2), that the observed outputs reveal no more information about the participants in an anonymity set than the parity of their inversions. Thus, within an appropriate connected component, individual senders remain indistinguishable from the observer’s perspective.\n\nThe paper analyzes how graph topology affects collusion resistance. Complete graphs provide strong protection against individual observers but require a quadratic number of shared keys. Sparse graphs reduce setup costs but can expose messages when colluders control separating vertices or edges. The paper also discusses hierarchical key-sharing structures, ring and broadcast implementations, message collisions, key establishment, encryption for recipient confidentiality, digital signatures for authentication, and mechanisms for detecting or excluding disruptive participants. Recipient untraceability may require a reliable broadcast mechanism, while sender untraceability follows from the masking properties of the shared keys.\n\nThe paper influenced subsequent anonymous-communication research by establishing DC-nets as a foundational construction for anonymous broadcast and by identifying their principal engineering limitations, especially collisions, bandwidth costs, and denial-of-service through disruption. Later systems extended the construction with accountability and verifiability. **Dissent** uses shuffled-send DC-nets to support anonymous group messaging while making disruptive behavior attributable to a group member. ([people.eecs.berkeley.edu](https://people.eecs.berkeley.edu/~henrycg/pubs/ccs10dissent/)) **Verdict** applies public-key cryptography and zero-knowledge proofs to create proactively verifiable DC-nets that can detect and exclude misbehavior before it disrupts communication. ([people.eecs.berkeley.edu](https://people.eecs.berkeley.edu/~henrycg/pubs/sec13proactively/)) The DC protocol has also been used as a benchmark for formal, machine-assisted proofs of anonymity, and later work has adapted DC-net ideas to applications including secure aggregation. ([cl.cam.ac.uk](https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-785.html))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/the-dining-cryptographers-problem.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/the-dining-cryptographers-problem.pdf",
   "filename": "the-dining-cryptographers-problem.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

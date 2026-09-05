@@ -1,34 +1,38 @@
 {
   "uuid": "189821d27c87eba3ae059c3e7d99fc83999a6c8c3139e219fe1867423d937ddf",
   "title": "Error-Controlled Lossy Compression Optimized for High Compression Ratios of Scientific Datasets",
-  "publication_date": "2014-11-17",
+  "publication_date": "July 2, 2018; Proceedings of the 2018 IEEE International Conference on Big Data (BigData 2018), pp. 438–447",
   "authors": [
     "Dingwen Tao",
-    "Jinzhi Jiang",
-    "Sian Jin",
+    "Franck Cappello",
+    "Hanqi Guo",
+    "Shaomeng Li",
+    "Sheng Di",
+    "Sihuan Li",
+    "Xin Liang",
     "Zizhong Chen"
   ],
   "keywords": [
-    "compression-optimization",
-    "compression-ratio",
-    "data-compression",
-    "data-reduction",
-    "error-controlled",
-    "hpc-applications",
+    "adaptive-compression",
+    "error-bounded-compression",
+    "high-performance-computing",
+    "huffman-coding",
+    "linear-regression",
+    "lorenzo-prediction",
     "lossy-compression",
-    "numerical-simulation",
-    "scientific-data",
+    "parallel-i-o",
+    "rate-distortion",
     "scientific-datasets"
   ],
   "category_path": [
     "data_compression"
   ],
-  "abstract": "This paper presents techniques for lossy data compression of scientific datasets with error control, which can achieve high compression ratios by permitting deterioration of the reconstructed data at the decoder. Our approach is intended to suit scientific datasets and is effective in applications where some loss of quality is acceptable for the sake of greater compression efficiency. A detailed evaluation on standard benchmark datasets from various scientific domains illustrates the effectiveness of this approach. Additionally, a comparative study with state-of-the-art methods demonstrates the competitiveness of our approach in achieving a balance between compression ratio and reconstruction quality.",
-  "summary": "This paper, published in November 2014, introduces techniques for error-controlled lossy compression specifically aimed at scientific datasets, enabling high compression ratios while tolerating some deterioration of data quality. The authors, Dingwen Tao, Sian Jin, Jinzhi Jiang, and Zizhong Chen, evaluate their methods using benchmark datasets from multiple scientific domains. The paper compares its approach with state-of-the-art compression methods, showing competitiveness in balancing compression efficiency and reconstruction accuracy. \n\nA search for the paper's influence reveals that it has been cited in a range of works focusing on high-performance computing (HPC), data-centric research initiatives, and storage optimization in big data frameworks. For instance, the paper was referenced in a study on optimized data storage for HPC applications ([DOI:10.1109/XYZ.2016.12345](https://doi.org/10.1109/XYZ.2016.12345)). Similarly, it influenced research on improving numerical simulation efficiencies in large-scale scientific computing ([DOI:10.1137/XYZ.2017.54321](https://doi.org/10.1137/XYZ.2017.54321)). \n\nWithout evidence of widespread industry adaptation, its academic impact is notable in ongoing HPC data compression and large-scale scientific data processing research.",
+  "abstract": "Today’s scientific simulations require a significant reduction of the data size because of extremely large volumes of data they produce and the limitation of storage bandwidth and space. If the compression is set to reach a high compression ratio, however, the reconstructed data are often distorted too much to tolerate. In this paper, we explore a new compression strategy that can effectively control the data distortion when significantly reducing the data size. The contribution is threefold. (1) We propose an adaptive compression framework to select either our improved Lorenzo prediction method or our optimized linear regression method dynamically in different regions of the dataset. (2) We explore how to select them accurately based on the data features in each block to obtain the best compression quality. (3) We analyze the effectiveness of our solution in details using four real-world scientific datasets with 100+ fields. Evaluation results confirm that our new adaptive solution can significantly improve the rate distortion for the lossy compression with fairly high compression ratios. The compression ratio of our compressor is 1.5X∼8X as high as that of two other leading lossy compressors (SZ and ZFP) with the same PSNR, in the high-compression cases. Parallel experiments with 8,192 cores and 24 TB of data shows that our solution obtains 1.5X dumping performance and 1.72X loading performance compared with the second-best lossy compressor, respectively.",
+  "summary": "The paper presents an error-bounded lossy compressor designed for scientific datasets at high compression ratios, where conventional predictors can produce severe artifacts and poor reconstruction quality. The method divides multidimensional data into independent blocks and adaptively chooses among three predictors: the classic Lorenzo predictor, a mean-integrated Lorenzo predictor, and a linear-regression predictor.\n\nThe mean-integrated Lorenzo predictor replaces clustered values within a dense error-bound interval with the interval’s mean, reducing systematic prediction bias and visual artifacts. The regression predictor fits a linear hyperplane to each block and avoids the error-propagation limitation caused by using previously decompressed values. A lightweight sampling-based cost model selects the predictor expected to produce the smallest prediction error for each block. Quantized prediction residuals are Huffman encoded, while regression coefficients are compressed separately using a controlled lossy representation.\n\nExperiments covered 104 fields from CESM-ATM, Hurricane ISABEL, NYX, and SCALE-LETKF simulations. The proposed method maintained the specified pointwise error bounds and, in the reported high-compression regimes, achieved compression ratios 1.5–8 times higher than SZ and ZFP at comparable PSNR. At 8,192 cores and 24 TB of NYX data, the paper reports improved parallel dumping and loading performance relative to the competing compressors evaluated.\n\nA later study explicitly identifies this work’s adaptive selection of the mean-integrated Lorenzo and linear-regression predictors as an improvement incorporated into SZ 2.0, indicating that the paper’s predictor-selection strategy influenced subsequent development of the SZ compressor family. ([par.nsf.gov](https://par.nsf.gov/servlets/purl/10176065)) The work is also listed in subsequent scientific-compression surveys and research literature as part of the development of prediction-based, error-bounded compression for high-performance computing. ([doi.org](https://doi.org/10.1145%2F3733104))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/data_compression/Error-Controlled_Lossy_Compression_Optimized_for_High_Compression_Ratios_of_Scientific_Datasets.pdf",
   "source_type": "pdf",
   "filepath": "data_compression/Error-Controlled_Lossy_Compression_Optimized_for_High_Compression_Ratios_of_Scientific_Datasets.pdf",
   "filename": "Error-Controlled_Lossy_Compression_Optimized_for_High_Compression_Ratios_of_Scientific_Datasets.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:50"
 }

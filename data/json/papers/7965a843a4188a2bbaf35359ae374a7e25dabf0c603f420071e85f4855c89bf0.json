@@ -1,32 +1,33 @@
 {
   "uuid": "7965a843a4188a2bbaf35359ae374a7e25dabf0c603f420071e85f4855c89bf0",
-  "title": "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms",
-  "publication_date": "1995",
+  "title": "A Wait-Free Stack",
+  "publication_date": "October 1, 2015 (arXiv preprint); published in 2016 in the proceedings of the 12th International Conference on Distributed Computing and Internet Technology (ICDCIT 2016), held January 15–18, 2016",
   "authors": [
-    "Maged M. Michael",
-    "Michael L. Scott"
+    "Pooja Aggarwal",
+    "Seep Goel",
+    "Smruti R. Sarangi"
   ],
   "keywords": [
-    "asynchronous-computing",
-    "concurrent-queue",
-    "data-structures",
+    "compare-and-set",
+    "concurrent-data-structures",
+    "concurrent-stack",
+    "garbage-collection",
+    "helping",
+    "linearizability",
     "lock-free",
-    "multi-threading",
+    "memory-reclamation",
     "non-blocking-algorithms",
-    "parallel-computing",
-    "synchronization",
-    "thread-safe",
-    "wait-free-stack"
+    "wait-free"
   ],
   "category_path": [
     "non_blocking_algorithms"
   ],
-  "abstract": "As multicore computers become ever more prevalent, great emphasis has been placed on designing multiprocessor algorithms that do not require mutual exclusion. Most real multiprocessor systems, nonetheless, provide general-purpose synchronization operations, such as compare-and-swap or load-linked/store-conditional. Our method allows such operations to be used in the construction of simple and fast non-blocking concurrent shared data structures - in particular, FIFO and LIFO queues, linked lists, and deques - while providing strong theoretical guarantees of wait-freedom, provided that the underlying synchronization operations are themselves wait-free. Our main algorithm is a simple pointer-setting technique that allows operations that appear to modify a data structure to access it quickly and to proceed independently whenever possible; it eliminates a problem common to many non-blocking algorithms, namely the need to restart repeatedly whenever some process tries to change an overlapping part of the structure.",
-  "summary": "The paper discusses non-blocking and blocking concurrent queue algorithms, aiming to improve performance and practicality in multi-threaded environments. The authors introduce algorithms using synchronization operations like compare-and-swap to create fast and non-blocking concurrent data structures without needing mutual exclusion. These algorithms are significant in multicore systems, where safe and efficient access to shared data is necessary. \n\nThe paper by Michael and Scott has influenced further research in the area of lock-free data structures and synchronization mechanisms. Their techniques, such as the pointer-setting approach, have been cited by various subsequent works on concurrent data structure implementations and optimizations, particularly in multi-threading and parallel computing contexts. \n\nFor example, the work has been referenced in: \n- [Non-blocking Algorithms for Concurrent Data Structures](https://link.springer.com/chapter/10.1007/978-3-319-29778-1_20) discussing advanced concurrent structure algorithms.\n- [The Art of Multiprocessor Programming](https://www.morganclaypoolpublishers.com/catalog_Orig/product_info.php?products_id=1229), which covers synchronization techniques.\n\nThe work is foundational in the field of concurrent computing and has impacted both academic research and practical implementations in industry, notably in the design of concurrent software and systems. Additional outputs of the research have been influential in the development and optimization of multi-core processing systems in various computing platforms.",
+  "abstract": "In this paper, we describe a novel algorithm to create a concurrent wait-free stack. To the best of our knowledge, this is the first wait-free algorithm for a general purpose stack. In the past, researchers have proposed restricted wait-free implementations of stacks, lock-free implementations, and efficient universal constructions that can support wait-free stacks. The crux of our wait-free implementation is a fast pop operation that does not modify the stack top; instead, it walks down the stack till it finds a node that is unmarked. It marks it but does not delete it. Subsequently, it is lazily deleted by a cleanup operation. This operation keeps the size of the stack in check by not allowing the size of the stack to increase beyond a factor of W as compared to the actual size. All our operations are wait-free and linearizable.",
+  "summary": "The paper presents a linked-list-based concurrent stack intended to provide both **wait-freedom** and **linearizability**. Its principal design choice is to separate logical removal from physical deletion. A `pop` operation reads the top once, traverses predecessor links, and atomically marks the first unmarked node. Marking is the logical linearization event for a successful pop; an empty result is returned when traversal reaches the sentinel. Because pop operations do not modify the top pointer, multiple pops can proceed concurrently and do not directly contend with pushes.\n\nPushes use an announce array, monotonically increasing phase numbers, and helping. Threads help the oldest pending push so that a delayed thread cannot starve. A successful push first attaches its node through an atomic next-pointer update and then advances the top pointer. The top-pointer update is the push linearization point. The protocol ensures that a push request is inserted at most once, even when multiple threads help it.\n\nMarked nodes are physically removed lazily. The cleanup mechanism groups nodes into ranges of size `W`; when sufficient activity has occurred for a range, one cleanup request is selected and helped by participating threads. Cleanup bypasses a contiguous sequence of marked nodes by changing a predecessor link. This bounds the list's physical size by a factor related to `W` and the number of logically live stack elements, preventing pop traversals from growing without limit.\n\nThe claimed worst-case complexities are `O(N)` for ordinary pushes, `O(NWS)` for cleanup-sensitive operations, and `O(NWS)` worst-case for pop, where `N` is the number of threads, `S` is the logical stack size, and `W` is the cleanup parameter. The paper reports an amortized pop cost of `O(NS)` across groups of `W` operations. Thus, the design trades inexpensive common-case operations for infrequent, potentially expensive cleanup; choosing `W` is workload-dependent. The implementation relies on atomic compare-and-set, atomic marking, fetch-and-add-style counters, and automatic or otherwise safe memory reclamation.\n\nThe work was initially released as arXiv:1510.00116 on October 1, 2015, and subsequently appeared as an ICDCIT 2016 Springer chapter, pages 43–55. ([arxiv.org](https://arxiv.org/abs/1510.00116)) A later wait-free array-based stack, FA-Stack, represents the same broader research direction—practical wait-free stacks with bounded operation steps—but the available source does not establish that it directly derives from this paper. ([researchgate.net](https://www.researchgate.net/publication/320886284_FA-Stack_A_Fast_Array-based_Stack_with_Wait-free_Progress_Guarantee)) More recent work on wait-free deques treats a stack as a restricted deque and reports a wait-free stack with polylogarithmic amortized step complexity, demonstrating continued progress on the complexity and scalability challenges addressed by this paper. ([drops.dagstuhl.de](https://drops.dagstuhl.de/storage/00lipics/lipics-vol286-opodis2023/LIPIcs.OPODIS.2023.17/LIPIcs.OPODIS.2023.17.pdf)) The search found no clear evidence of substantial industry adoption or an explicit direct technical lineage from this specific implementation; its documented impact is primarily as an early general-purpose wait-free stack design within concurrent-algorithm research.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/non_blocking_algorithms/a-wait-free-stack.pdf",
   "source_type": "pdf",
   "filepath": "non_blocking_algorithms/a-wait-free-stack.pdf",
   "filename": "a-wait-free-stack.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:56"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

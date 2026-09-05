@@ -1,37 +1,29 @@
 {
   "uuid": "75d7a022315dfd3673b534768288c192bf92b4b13f766567e7b2e76ec041c1e9",
   "title": "Pregel: A System for Large-Scale Graph Processing",
-  "publication_date": "2010",
+  "publication_date": "June 6–11, 2010; SIGMOD ’10, Indianapolis, Indiana, USA",
   "authors": [
-    "Aart J.C Bik",
+    "Aart J. C. Bik",
     "Grzegorz Czajkowski",
     "Grzegorz Malewicz",
-    "Ilia Horn",
+    "Ilan Horn",
     "James C. Dehnert",
     "Matthew H. Austern",
     "Naty Leiser"
   ],
   "keywords": [
-    "bulk-synchronous-parallel",
-    "cluster-computing",
-    "computation-model",
-    "data-parallel-computation",
-    "distributed-systems",
-    "google",
-    "graph-processing",
-    "large-scale-distributed-computing",
-    "parallel-algorithms",
-    "vertex-centric-computation"
+    "distributed-computing",
+    "graph-algorithms"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "Many practical computing problems concern large graphs, such as modeling web pages and links, social networks, and road maps. These have encouraged the development of numerous specialized graph-processing systems. This paper presents a new framework called Pregel for processing large-scale graphs efficiently. Pregel’s programming model, influenced by Valiant’s Bulk Synchronous Parallel model, is suitable for computations that consist of a sequence of iterations. Computation is vertex-centric, where a sequence of steps is applied to each vertex and messages can be sent to other vertices along outgoing edges. We discuss the architecture of Pregel, which is designed to execute on clusters of thousands of commodity computers, and we explain how faulttolerance, message passing, and other features are incorporated into the framework. Experiments on several algorithms demonstrate Pregel’s scalability and performance.",
-  "summary": "Pregel is a system developed by Google for processing large-scale graphs efficiently, inspired by Valiant's Bulk Synchronous Parallel (BSP) model. It introduces a vertex-centric computation model that supports parallel execution on distributed systems. The paper outlines the architecture of Pregel, which is designed to run on clusters of thousands of commodity machines, highlighting its ability to manage fault tolerance and message passing. Pregel's significance lies in its application to real-world problems such as web graphs, social networks, and network routing.\n\nIn terms of impact, Pregel has influenced various subsequent graph processing frameworks and research, including Apache Giraph, an open-source implementation inspired by Pregel's design. Pregel's conceptual framework has also led to research into the optimization of graph processing systems for better scalability and efficiency. Notable works that have cited and built upon Pregel include:\n\n1. \"Apache Giraph: current state and review of graph processing\" [ACM DL](https://dl.acm.org/doi/10.1145/2488222.2488265)\n2. \"GraphX: Unifying Data-Parallel and Graph-Parallel Analytics\" [USENIX](https://www.usenix.org/conference/osdi14/technical-sessions/presentation/chaiken)\n3. \"A Survey of Graph Processing on Clusters\" [IEEE Xplore](https://ieeexplore.ieee.org/document/6826515)\n4. \"PowerGraph: Distributed Graph-Parallel Computation on Natural Graphs\" [OSDI](https://www.usenix.org/conference/osdi12/technical-sessions/presentation/gonzalez)\n5. \"GEMS: A graph engine for multi-threaded systems\" [ACM DL](https://dl.acm.org/doi/10.1145/2556779.2556789)\n\nPregel remains an important foundation for both academic research and practical applications in large-scale graph processing.",
+  "abstract": "Many practical computing problems concern large graphs. Standard examples include the Web graph and various social networks. The scale of these graphs—in some cases billions of vertices, trillions of edges—poses challenges to their efficient processing. In this paper we present a computational model suitable for this task. Programs are expressed as a sequence of iterations, in each of which a vertex can receive messages sent in the previous iteration, send messages to other vertices, and modify its own state and that of its outgoing edges or mutate graph topology. This vertex-centric approach is flexible enough to express a broad set of algorithms. The model has been designed for efficient, scalable and fault-tolerant implementation on clusters of thousands of commodity computers, and its implied synchronicity makes reasoning about programs easier. Distribution-related details are hidden behind an abstract API. The result is a framework for processing large graphs that is expressive and easy to program.",
+  "summary": "## Summary\n\nPregel introduces a distributed, vertex-centric model for large-scale graph processing. Computation proceeds through synchronized **supersteps**: each active vertex reads messages produced during the preceding superstep, updates its local value and outgoing edges, sends messages, and may vote to halt. This design isolates users from most distribution concerns while providing deterministic iteration boundaries and avoiding the data races and deadlocks associated with less structured asynchronous execution.\n\nThe system represents a directed graph whose vertices and edges carry user-defined values. Its C++ API supports message passing, user-defined combiners for reducing communication, aggregators for global statistics and coordination, topology mutations, and pluggable input/output formats. Graphs are partitioned across workers by vertex identifier. Workers execute vertex computations in parallel, exchange messages asynchronously in batches, and use checkpointing to recover from worker failures. The paper also describes confined recovery, which recomputes only failed partitions when the algorithm is deterministic.\n\nThe authors demonstrate the model with PageRank, single-source shortest paths, randomized bipartite matching, and semi-clustering. Experiments on up to 300 multicore commodity machines show approximately tenfold speedup when increasing worker tasks from 50 to 800 for a one-billion-vertex binary tree. Runtime increases approximately linearly with graph size in the reported low-degree experiments; a one-billion-vertex random graph with mean out-degree 127.1 was processed in slightly more than ten minutes. The results are intended to demonstrate practical scalability with relatively little implementation effort rather than optimal performance for every algorithm.\n\n## Influence\n\nPregel established a widely reused vertex-centric, bulk-synchronous approach for distributed graph computation. Apache Giraph explicitly describes itself as an open-source counterpart to Pregel and extended the model with features including master computation, sharded aggregators, and out-of-core processing. ([giraph.apache.org](https://giraph.apache.org/index.html)) GraphX later provided graph-parallel operators expressive enough to implement the Pregel and PowerGraph abstractions, integrating this style of computation with data-parallel processing. ([arxiv.org](https://arxiv.org/abs/1402.2394)) Subsequent systems and studies, including X-Pregel and surveys of distributed graph processing, continued to treat Pregel-like vertex-centric computation as a major design point for large-scale graph analytics. ([research.ibm.com](https://research.ibm.com/publications/towards-highly-scalable-pregel-based-graph-processing-platform-with-x10)) Google also described Pregel as production infrastructure for mining very large graphs, including web-scale data. ([research.google](https://research.google/blog/large-scale-graph-computing-at-google/))",
   "raw_url": "http://kowshik.github.io/JPregel/pregel_paper.pdf",
   "source_type": "external",
   "filepath": "distributed_systems/README.md",
   "filename": "Pregel: A System for Large-Scale Graph Processing",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

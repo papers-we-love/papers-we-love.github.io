@@ -1,32 +1,27 @@
 {
   "uuid": "37a9b3838d6088fe1834dff17b014de0df00a82b32fc48e94d774aa6dabea5c3",
   "title": "Practical Byzantine Fault Tolerance and Proactive Recovery",
-  "publication_date": "November 2002",
+  "publication_date": "November 2002; ACM Transactions on Computer Systems, Vol. 20, No. 4, pp. 398–461",
   "authors": [
     "Barbara Liskov",
     "Miguel Castro"
   ],
   "keywords": [
+    "asynchronous-systems",
     "byzantine-fault-tolerance",
-    "distributed-computing",
-    "distributed-systems",
-    "fault-tolerance",
-    "performance",
     "proactive-recovery",
-    "recovery",
-    "replication",
-    "security",
-    "system-architecture"
+    "state-machine-replication",
+    "state-transfer"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "This paper describes a new replication algorithm that is able to tolerate Byzantine faults. The algorithm is practical: it has low overhead and increases availability by allowing the system to be maintained without downtime. It is designed to work in asynchronous environments like the Internet and provides safety and liveness assuming no more than 1/3 of the replicas are faulty. We have implemented a robust and efficient prototype that achieves good performance and recovers quickly from faults.",
-  "summary": "The paper introduces a practical algorithm for Byzantine Fault Tolerance (BFT), which is capable of tolerating Byzantine faults with minimal overhead and increased availability. It works under asynchronous conditions typical of the internet and ensures system safety and liveness provided no more than one-third of the replicas are faulty. The proposed system even allows for system maintenance without downtime. The implementation of a robust and efficient prototype that performs well and recovers quickly from faults is also described.\n\nThis paper has significantly impacted both academia and industry, directly influencing research on reliable distributed systems. It has become a seminal work in the field of fault-tolerant distributed algorithms and has heavily influenced the development of blockchain technologies by providing foundational techniques for ensuring consistency and reliability in decentralized networks. Notable citations include but are not limited to the following:\n\n1. \"Byzantine Generals in the Blockchain\" by C. Natoli and V. Gramoli highlighting the influence on blockchain reliability ([link](https://ieeexplore.ieee.org/document/7954557)).\n\n2. \"Scalable Byzantine Fault Tolerance\" which extends the original work to scalable applications ([link](https://dl.acm.org/doi/10.1145/3293611.3293621)).\n\n3. \"Blockchains from a distributed computing perspective: Disabling consensus through the power of gossip\" discusses the relation to blockchain consensus mechanisms ([link](https://dl.acm.org/doi/10.1145/3314172.3338504)).\n\nThese citations indicate the broad influence and ongoing relevance of the algorithm introduced in the paper.",
+  "abstract": "Our growing reliance on online services accessible on the Internet demands highly available systems that provide correct service without interruptions. Software bugs, operator mistakes, and malicious attacks are a major cause of service interruptions and they can cause arbitrary behavior, that is, Byzantine faults. This article describes a new replication algorithm, BFT, that can be used to build highly available systems that tolerate Byzantine faults. BFT can be used in practice to implement real services: it performs well, it is safe in asynchronous environments such as the Internet, it incorporates mechanisms to defend against Byzantine-faulty clients, and it recovers replicas proactively. The recovery mechanism allows the algorithm to tolerate any number of faults over the lifetime of the system provided fewer than 1/3 of the replicas become faulty within a small window of vulnerability. BFT has been implemented as a generic program library with a simple interface. We used the library to implement the first Byzantine-fault-tolerant NFS file system, BFS. The BFT library and BFS perform well because the library incorporates several important optimizations, the most important of which is the use of symmetric cryptography to authenticate messages. The performance results show that BFS performs 2% faster to 24% slower than production implementations of the NFS protocol that are not replicated. This supports our claim that the BFT library can be used to build practical systems that tolerate Byzantine faults.",
+  "summary": "## Contribution\n\nThe paper presents BFT, a practical state-machine-replication algorithm that tolerates Byzantine failures when fewer than one-third of the replicas are faulty. Its safety property is linearizability, and safety does not depend on synchrony; liveness requires that message delays eventually become bounded. The protocol uses a primary-backup organization, quorum certificates, and the three phases pre-prepare, prepare, and commit. View changes replace an unresponsive or faulty primary while preserving the ordering of committed requests. Clients accept a result after receiving matching replies from at least \\(f+1\\) replicas.\n\nThe paper also introduces proactive recovery. Replicas periodically recover even when no fault is suspected, refresh authentication keys, verify or repair their state, and rejoin normal operation. This changes the fault model from tolerating fewer than one-third of all replicas over the system lifetime to tolerating an unbounded total number of faults, provided fewer than one-third become faulty within a bounded window of vulnerability. Efficient checkpointing, state transfer, batching, digest replies, tentative execution, and symmetric-key message authentication are used to make the design practical. The authors implemented the BFT library and used it to build BFS, a Byzantine-fault-tolerant NFS service. In the reported experiments, BFS ranged from 2% faster to 24% slower than nonreplicated production NFS implementations. ([microsoft.com](https://www.microsoft.com/research/wp-content/uploads/2017/01/p398-castro-bft-tocs.pdf))\n\n## Influence\n\nThe work became a foundational reference for practical Byzantine fault-tolerant state-machine replication. Later research continued to formalize and refine the protocol; for example, Lamport’s *Byzantizing Paxos by Refinement* explicitly studies the Castro–Liskov algorithm as a refinement of ordinary Paxos and provides formal specifications and a mechanically checked proof. ([microsoft.com](https://www.microsoft.com/en-us/research/publication/byzantizing-paxos-refinement/)) Subsequent systems such as SBFT use PBFT as a performance baseline while addressing scalability, communication complexity, and geo-replication; SBFT reports evaluations with more than 200 active replicas and compares its performance with an optimized PBFT implementation. ([arxiv.org](https://arxiv.org/abs/1804.01626))\n\nThe protocol family also influenced permissioned blockchain infrastructure. Hyperledger Fabric’s documentation states that its SmartBFT-based ordering service is heavily inspired by BFT-SMaRt, which is described as a non-pipelined version of the seminal PBFT protocol. Fabric provides a production-oriented BFT ordering mode that tolerates fewer than one-third malicious or unreachable ordering nodes, demonstrating the continued use of the paper’s core model in industry software. ([hyperledger-fabric.readthedocs.io](https://hyperledger-fabric.readthedocs.io/en/latest/orderer/ordering_service.html))",
   "raw_url": "http://www.microsoft.com/research/wp-content/uploads/2017/01/p398-castro-bft-tocs.pdf",
   "source_type": "external",
   "filepath": "distributed_systems/README.md",
   "filename": "Practical Byzantine Fault Tolerance and Proactive Recovery",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

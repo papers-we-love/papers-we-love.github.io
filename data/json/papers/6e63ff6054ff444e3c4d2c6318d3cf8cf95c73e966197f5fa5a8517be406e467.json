@@ -1,32 +1,30 @@
 {
   "uuid": "6e63ff6054ff444e3c4d2c6318d3cf8cf95c73e966197f5fa5a8517be406e467",
-  "title": "On the Security of Next Generation Data Center Networks",
-  "publication_date": "August 2013",
+  "title": "Enabling Fast, Dynamic Network Processing with ClickOS",
+  "publication_date": "August 16, 2013; HotSDN'13, the second ACM SIGCOMM Workshop on Hot Topics in Software Defined Networking, Hong Kong, China",
   "authors": [
-    "Eric Keller",
-    "Michael Freedman"
+    "Costin Raiciu",
+    "Felipe Huici",
+    "Joao Martins",
+    "Mohamed Ahmed"
   ],
   "keywords": [
-    "advanced-persistent-threats",
-    "cloud-computing",
-    "data-center",
-    "ddos-attacks",
-    "network-architectures",
-    "network-security",
-    "next-generation-networks",
-    "security-policy-management",
-    "software-defined-networking",
-    "vulnerability-assessment"
+    "clickos",
+    "middleboxes",
+    "nfv",
+    "sdn",
+    "virtualization",
+    "xen"
   ],
   "category_path": [
     "unikernels"
   ],
-  "abstract": "The next generation of data center networks, such as those using Software Defined Networking (SDN) and cloud computing technologies, promises to increase efficiency and flexibility while lowering costs. However, they also bring new security challenges such as providing full network isolation, verifying security compliance, and securing centralized controllers from attack. In this work, we outline the new security issues particular to these networks, propose initial solutions and a taxonomy to analyze attacks, all while considering the SDN and cloud deployments currently undergoing experimentation in data centers.",
-  "summary": "This paper, presented in August 2013 at the SIGCOMM Workshop on Hot Topics in Software Defined Networking (HotSDN), explores emerging security challenges in next-generation data center networks, specifically focusing on Software Defined Networking (SDN) and cloud computing. The authors, Eric Keller and Michael Freedman, discuss how these technologies, while promising increased efficiency and reduced costs, open up new vulnerabilities like issues with network isolation, security compliance verification, and safeguarding centralized SDN controllers.\n\nThe paper contributes by proposing a taxonomy to analyze these new security threats and suggesting initial solutions. Searches indicate that this paper has been referenced multiple times in subsequent research concerning security in SDN and cloud contexts, emphasizing its influence in highlighting critical security aspects and frameworks for network vulnerability assessment in advanced network architectures.\n\nNotably, this paper's insights have been applied in research concerning Distributed Denial of Service (DDoS) mitigation strategies in SDN environments and in developing more secure network policy management techniques in cloud data centers. For further reference, you can see its influence on subsequent studies such as \"Security Challenges in SDN-centric Cloud Networks\" by Cohn et al., 2015 (https://link.example1.com) and \"Towards Secure and Efficient Network Virtualization in Cloud Data Centers\" by Smith et al., 2016 (https://link.example2.com).",
+  "abstract": "Middleboxes are both crucial to today’s networks and ubiquitous, but embed knowledge of today’s protocols and applications to the detriment of those of tomorrow, making the network harder to evolve. SDNs seek to make it easier to extend the network with new functionality, but most of the research effort has focused on the network’s control plane, that is, how packets are switched are routed through a SDN. Given the pervasiveness and importance of middleboxes, we believe that a fully programmable network should also be able to dynamically instantiate and quickly move middlebox functionality. In this paper we shift focus towards making the data plane more programmable by introducing ClickOS, a tiny, Xen-based virtual machine that can run a wide range of middleboxes. ClickOS is small (5MB when running), can be instantiated in very small times (roughly 30 milliseconds) and can fill up a 10Gb pipe while concurrently running 128 vms on a low-cost commodity server.",
+  "summary": "### Summary\n\nThe paper introduced ClickOS, a lightweight Xen-based virtual machine that combines MiniOS with the Click modular router to provide isolated, programmable middlebox processing. Its principal contributions were a small runtime footprint, approximately 30-millisecond instantiation, and high-throughput networking achieved through polling, batching, memory-grant reuse, netmap-based I/O, and a VALE software switch. The evaluation demonstrated support for hundreds of virtual machines in a server and aggregate 10-Gb/s-class throughput with up to 128 active instances. ([conferences.sigcomm.org](https://conferences.sigcomm.org/sigcomm/2013/papers/hotsdn/p67.pdf))\n\nEvidence of subsequent research impact includes a substantially expanded follow-on paper, *ClickOS and the Art of Network Function Virtualization*, which further evaluated the platform and implemented middleboxes such as firewalls, carrier-grade NAT, and load balancers. ([usenix.org](https://www.usenix.org/sites/default/files/nsdi14_full_proceedings_120514.pdf)) Later work used ClickOS as an NFV platform for studying management requirements and as a reference dataplane in comparative performance benchmarking against SoftNIC. Those studies identified practical issues involving management operations, small-packet processing, NUMA placement, and the platform’s lack of SMP support. ([dl.ifip.org](https://dl.ifip.org/db/conf/cnsm/cnsm2014sdn/BondanSG14.pdf)) NFV surveys also listed ClickOS among early NFV implementations and research projects. ([arxiv.org](https://arxiv.org/abs/1509.07675))",
   "raw_url": "http://conferences.sigcomm.org/sigcomm/2013/papers/hotsdn/p67.pdf",
   "source_type": "external",
   "filepath": "unikernels/README.md",
   "filename": "Enabling fast, dynamic network processing with clickos",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:05"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:57"
 }

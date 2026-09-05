@@ -1,31 +1,28 @@
 {
   "uuid": "16dd085991b3fd34db6fd90ba1fbfe9601348bb35d8a5ea3f93a27c778516ef6",
   "title": "Broken Promises of Privacy: Responding to the Surprising Failure of Anonymization",
-  "publication_date": "2019",
+  "publication_date": "August 18, 2010 (UCLA Law Review, volume 57, issue 6, pp. 1701–1777)",
   "authors": [
     "Paul Ohm"
   ],
   "keywords": [
     "anonymization",
-    "data-breach",
-    "data-protection",
-    "identity-disclosure",
-    "information-law",
-    "legal-implications",
+    "data-protection-directive",
+    "deidentification",
+    "hipaa",
+    "information-privacy",
     "privacy",
-    "re-identification",
-    "regulation",
-    "technology-and-law"
+    "reidentification"
   ],
   "category_path": [
     "privacy"
   ],
-  "abstract": "This article critiques the failure of reidentification attacks and their implausibility assumptions that drive the anonymization. It aims to explore a regulatory response to reidentification harms as it also urges a shift to protecting data privacy contextually.",
-  "summary": "The paper \"Broken Promises of Privacy: Responding to the Surprising Failure of Anonymization\" by Paul Ohm, published in 2019, examines the limitations of data anonymization techniques in preserving privacy. The author argues that anonymization, once seen as a reliable method to ensure privacy, is increasingly inadequate in the face of evolving re-identification techniques. Ohm suggests a contextual approach to data privacy regulation, moving away from relying solely on anonymization.\n\nThe paper has influenced further discussions and research in the field of data privacy and legal frameworks involving data protection. It has been cited in various academic papers and articles that focus on the shortcomings of anonymization and the need for new privacy laws and methods. Some references indicating the impact of this paper include:\n\n1. Zarsky, T. Z. (2016), \"Incompatible: The Impact of Big Data on Data Protection\" in *Journal of Information Technology and Privacy Law* which discusses the challenges Big Data poses to traditional data protection, citing Ohm's work on the failures of anonymization.\n\n2. Roessler, B. & Mokrosinska, D. (2015), \"Privacy and Social Interaction in the Age of Information\" in *Oxford University Press* includes discussions on privacy expectations in digital platforms, referring to Ohm's contextual privacy approach.\n\n3. Rocher, L., et al. (2019), \"Estimating the success of re-identifications in incomplete datasets using generative models\" published in *Nature Communications*, which analyses the principles underlying re-identification risks and mentions Ohm's insights on these risks.\n\nOverall, the paper questions the effectiveness of traditional anonymization strategies and has been a catalyst in prompting re-evaluations of privacy protection mechanisms in both academic and practical fields.",
+  "abstract": "Computer scientists have recently undermined our faith in the privacyprotecting power of anonymization, the name for techniques that protect the privacy of individuals in large databases by deleting information like names and social security numbers. These scientists have demonstrated that they can often “reidentify” or “deanonymize” individuals hidden in anonymized data with astonishing ease.\n\nBy understanding this research, we realize we have made a mistake, labored beneath a fundamental misunderstanding, which has assured us much less privacy than we have assumed. This mistake pervades nearly every information privacy law, regulation, and debate, yet regulators and legal scholars have paid it scant attention. We must respond to the surprising failure of anonymization, and this Article provides the tools to do so.",
+  "summary": "### Summary\n\nPaul Ohm argues that the prevailing belief that removing names, Social Security numbers, and other explicit identifiers can make datasets effectively anonymous is technically and legally unsound. Drawing on reidentification research, including studies involving demographic records, online search histories, and movie-rating data, the article shows that seemingly innocuous attributes can be linked with external information to identify individuals and reveal sensitive facts. The central claim is that data can often be useful or strongly anonymous, but not both at the same time.\n\nThe article contends that this problem destabilizes privacy laws and regulatory frameworks that rely on personally identifiable information (PII) as a threshold for protection or that create exemptions for “anonymized” data. Ohm recommends moving away from a binary distinction between personal and nonpersonal data, abandoning the assumption that anonymization is a reliable privacy guarantee, and using terminology that describes privacy-protective effort without implying successful anonymity. He proposes assessing reidentification risk contextually, taking account of the data-handling technique, whether disclosure is public or restricted, the amount and sensitivity of the data, the availability of outside information, and the likely incentives and capabilities of adversaries.\n\nThe article rejects several incomplete responses, including relying solely on after-the-fact compensation, waiting for technical solutions to eliminate the problem, or prohibiting reidentification. It instead supports a combination of comprehensive privacy regulation, sector-specific rules, restrictions on data retention and dissemination, controlled access, auditing, aggregation, and privacy-preserving techniques such as differential privacy. The conclusion emphasizes that regulation must balance the risks of information flows against competing interests such as research, innovation, security, and free expression. ([studylib.net](https://studylib.net/doc/18564732/paul-ohm---ucla-law-review))\n\n### Influence\n\nSubsequent scholarship has treated the article as a major legal articulation of the limits of deidentification. Later work on “functional anonymisation” identifies Ohm’s argument as perhaps the most influential anti-anonymization position and develops a contextual alternative that evaluates anonymization within a broader data environment. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0267364918300116)) Princeton researchers also state that the article helped spur legal and policy debate over how to respond to reidentification research, including consideration of differential privacy and contractual or legal controls on data use. ([blog.citp.princeton.edu](https://blog.citp.princeton.edu/2014/07/09/no-silver-bullet-de-identification-still-doesnt-work/)) The paper continues to be cited in discussions of health-data privacy, big-data governance, deidentification, differential privacy, and the legal meaning of personal data. ([georgetownlawtechreview.org](https://georgetownlawtechreview.org/differential-privacy-raising-the-bar/GLTR-11-2016/))",
   "raw_url": "https://www.uclalawreview.org/broken-promises-of-privacy-responding-to-the-surprising-failure-of-anonymization-2/",
   "source_type": "external",
   "filepath": "privacy/README.md",
   "filename": "Broken Promises of Privacy: Responding to the Surprising Failure of Anonymization(2010)",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:56"
 }

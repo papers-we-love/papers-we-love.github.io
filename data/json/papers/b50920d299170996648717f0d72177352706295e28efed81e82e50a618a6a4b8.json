@@ -1,32 +1,30 @@
 {
   "uuid": "b50920d299170996648717f0d72177352706295e28efed81e82e50a618a6a4b8",
-  "title": "Garbage Collection: Algorithms for Automatic Dynamic Memory Management",
-  "publication_date": "May 1993",
+  "title": "On-the-Fly Garbage Collection: An Exercise in Cooperation",
+  "publication_date": "November 1978; Communications of the ACM, Volume 21, Number 11, pages 966–975",
   "authors": [
-    "Rafael Lins",
-    "Richard Jones"
+    "A.J. Martin",
+    "C.S. Scholten",
+    "E.F.M. Steffens",
+    "Edsger W. Dijkstra",
+    "Leslie Lamport"
   ],
   "keywords": [
-    "algorithms",
-    "automatic-memory",
-    "computer-systems",
-    "dynamic-memory",
+    "cooperation-between-sequential-processes-with-minimized-mutual-exclusion",
+    "fine-grained-interleaving",
     "garbage-collection",
-    "memory-management",
-    "programming-languages",
-    "runtime-environments",
-    "software-engineering",
-    "system-optimization"
+    "multiprocessing",
+    "program-correctness-for-multiprogramming-tasks"
   ],
   "category_path": [
     "garbage_collection"
   ],
-  "abstract": "This book is a comprehensive guide to the algorithms used for automatic dynamic memory management, known commonly as \"garbage collection.\" It offers insight into the principles underlying garbage collection, as well as historical perspectives, rigorous descriptions of key algorithms, and modern approaches to memory management and software engineering.",
-  "summary": "The paper \"Garbage Collection: Algorithms for Automatic Dynamic Memory Management\" by Richard Jones and Rafael Lins provides an in-depth exploration of garbage collection algorithms fundamental to computer systems, particularly in programming languages and runtime environments. Notably, this paper is often referenced as a foundational work in understanding garbage collection methodologies. Through a comprehensive explanation of various algorithms and approaches, it has influenced both academic research and practical applications in software engineering, helping guide the development of more efficient memory management systems.\n\nSeveral academic references and discussions have utilized insights from this paper. The work has contributed significantly to the field of computer science, advancing understanding, and inspiring further research and development:\n\n1. Jones, R., & Lins, R. (1996). \"Garbage Collection: Algorithms for Automatic Dynamic Memory Management.\" Wiley.\n2. Wilson, P. R. (1994). \"Uniprocessor Garbage Collection Techniques.\" ACM Computing Surveys (CSUR), 26(3): 187-220. https://dl.acm.org/doi/10.1145/269389.269390\n3. Detlefs, D., Dosser, D., & Zorn, B. G. (1994). \"Memory allocation costs in large C and C++ programs.\" Software: Practice and Experience, 24(6): 527–542. https://onlinelibrary.wiley.com/doi/10.1002/spe.4380240602\n4. Appel, A. W. (1989). \"Simple Generational Garbage Collection and Fast Allocation.\" Software: Practice and Experience. https://onlinelibrary.wiley.com/doi/10.1002/spe.4380190206\n5. Wilson, P. R., Moher, T. G., & LeVan, G. T. (1988). \"Quickly Reclaiming Space from Tainted Objects.\" University of Illinois at Chicago. https://www.cs.utah.edu/plt/snapshots/robin/gc.html\n\nWhile the book is broader in scope and heavily detailed, it continues to serve as an essential resource for understanding and designing garbage collection systems in contemporary software applications.",
+  "abstract": "As an example of cooperation between sequential processes with very little mutual interference despite frequent manipulations of a large shared data space, a technique is developed which allows nearly all of the activity needed for garbage detection and collection to be performed by an additional processor operating concurrently with the processor devoted to the computation proper. Exclusion and synchronization constraints have been kept as weak as could be achieved; the severe complexities engendered by doing so are illustrated.",
+  "summary": "The paper develops and informally justifies a concurrent, fine-grained garbage-collection algorithm for a Lisp-like directed graph. A collector marks reachable nodes while a mutator simultaneously modifies the graph, with synchronization restricted to small atomic operations rather than a global stop-the-world pause. The design uses white, gray, and black node states, a rooted free list, and invariants that ensure two properties: garbage is eventually reclaimed, and the collector changes the graph only when appending confirmed garbage to the free list. The authors first construct a coarse-grained algorithm, expose and discard an incorrect finer-grained attempt, then derive a correct fine-grained version using propagation paths and auxiliary “C-edges” to preserve the required invariants during arbitrary interleavings. The paper emphasizes that concurrent algorithms require rigorous state-based reasoning because plausible designs can contain subtle safety and liveness errors.\n\nThe work is identified by Microsoft Research as the first concurrent garbage-collection algorithm, and it influenced subsequent research on on-the-fly collection, including Mordechai Ben-Ari’s algorithms derived from program proofs and later work on formal verification of concurrent collectors. ([microsoft.com](https://www.microsoft.com/en-us/research/publication/fly-garbage-collection-exercise-cooperation/)) Its conceptual heritage also appears in production software: the Go runtime documentation explicitly cites Dijkstra’s algorithm as part of the intellectual heritage of Go’s concurrent garbage collector. ([tip.golang.org](https://tip.golang.org/src/runtime/mgc.go))",
   "raw_url": "https://lamport.azurewebsites.net/pubs/garbage.pdf",
   "source_type": "external",
   "filepath": "garbage_collection/README.md",
   "filename": "On-the-Fly Garbage Collection: An Exercise in Cooperation",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

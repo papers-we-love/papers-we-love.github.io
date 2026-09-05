@@ -1,33 +1,31 @@
 {
   "uuid": "0b2b89c03a3460bf3e55ac7249e7977efe84e75a36aec34797f3323fb032add9",
-  "title": "The Anatomy of the Grid: Enabling Scalable Virtual Organizations",
-  "publication_date": "2001",
+  "title": "Improving IPC by Kernel Design",
+  "publication_date": "December 1993 (Proceedings of the 14th ACM Symposium on Operating Systems Principles, Asheville, North Carolina, USA, December 5–8, 1993; also published in ACM SIGOPS Operating Systems Review, Volume 27, Issue 5, December 1, 1993)",
   "authors": [
-    "Carl Kesselman",
-    "Ian Foster",
-    "Steven Tuecke"
+    "Jochen Liedtke"
   ],
   "keywords": [
-    "collaboration",
-    "computational-grid",
-    "distributed-computing",
-    "grid-computing",
-    "middleware",
-    "networking",
-    "peer-to-peer",
-    "resource-sharing",
-    "scalability",
-    "virtual-organizations"
+    "inter-process-communication",
+    "ipc",
+    "kernel-design",
+    "l3-kernel",
+    "message-passing",
+    "microkernels",
+    "operating-systems",
+    "performance-optimization",
+    "remote-procedure-calls",
+    "virtual-address-spaces"
   ],
   "category_path": [
     "unikernels"
   ],
-  "abstract": "The sharing that we are concerned with is not primarily file exchange but rather direct access to computers, software, data, and other resources, as is required by a range of collaborative problem-solving and resource-brokering strategies emerging in industry, science, and engineering. We refer to this new paradigm as the \"Grid,\" in analogy to the electric power grid, which provides pervasive access to the resources that are essential to daily life. We address the essence of the Grid concept and the need for a new set of protocols and services that enable the creation of distributed systems that address these concerns. We review the \"Grid problem,\" which is defined as the flexible, secure, coordinated resource sharing among dynamic collections of individuals, institutions, and resources—what we refer to as virtual organizations. We believe that the Grid concept has the potential to fundamentally enhance how we conceptualize, design, and use distributed systems.",
-  "summary": "The paper \"The Anatomy of the Grid: Enabling Scalable Virtual Organizations\" by Ian Foster, Carl Kesselman, and Steven Tuecke is seminal in its introduction of the concept of Grid computing. Published in 2001, it laid foundational principles for Grid computing, emphasizing scalable resource sharing across virtual organizations. The authors equate the Grid paradigm to an electrical grid's shared access to resources, stressing the necessity for new protocols that support distributed computing by facilitating dynamic and secure collaboration.\n\nThis paper significantly influenced the development of distributed and cloud computing technologies. It has been extensively cited in literature related to Grid computing and was instrumental in shaping the discussion around virtual organizations and resource sharing. A Google Scholar search reveals numerous citations, underscoring its impact within academic and industry settings. One notable citation is the work on 'Cloud Computing and Emerging IT Platforms: Vision, Hype, and Reality for Delivering Computing as the 5th Utility,' which references this paper's ideas on extending IT infrastructure [1].\n\nThrough its exploration of the complex coordination required in distributed systems, the paper highlights challenges and solutions inherent in creating scalable systems that are secure and collaborative, influencing subsequent protocol and middleware developments for distributed computing.\n\n**References**\n1. Buyya, R., Yeo, C. S., & Venugopal, S. (2009). [Cloud Computing and Emerging IT Platforms: Vision, Hype, and Reality for Delivering Computing as the 5th Utility](https://link.springer.com/article/10.1007/s10723-009-9101-0). Future Generation Computer Systems, 25(6), 599-616.",
+  "abstract": "Inter-process communication (ipc) has to be fast and effective, otherwise programmers will not use remote procedure calls (RPC), multithreading and multitasking adequately. Thus ipc performance is vital for modern operating systems, especially μ-kernel based ones. Surprisingly, most μ-kernels exhibit poor ipc performance, typically requiring 100 μs for a short message transfer on a modern processor, running with 50 MHz clock rate. In contrast, we achieve 5 μs; a twentyfold improvement. This paper describes the methods and principles used, starting from the architectural design and going down to the coding level. There is no single trick to obtaining this high performance; rather, a synergetic approach in design and implementation on all levels is needed. The methods and their synergy are illustrated by applying them to a concrete example, the L3 μ-kernel (an industrial-quality operating system in daily use at several hundred sites). The main ideas are to guide the complete kernel design by the ipc requirements, and to make heavy use of the concept of virtual address space inside the μ-kernel itself. As the L3 experiment shows, significant performance gains are possible: compared with Mach, they range from a factor of 22 (8-byte messages) to 3 (4-Kbyte messages). Although hardware specific details influence both the design and implementation, these techniques are applicable to the whole class of conventional general purpose von Neumann processors supporting virtual addresses. Furthermore, the effort required is reasonably small, for example the dedicated parts of the μ-kernel can be concentrated in a single medium sized module.",
+  "summary": "The paper demonstrated that microkernel IPC need not impose the performance penalty commonly associated with systems such as Mach. Through coordinated architectural, interface, memory-management, scheduling, and implementation decisions, the L3 microkernel achieved approximately 5 μs for short message transfers and substantially outperformed Mach for the evaluated message sizes. ([cs.nyu.edu](https://cs.nyu.edu/~mwalfish/classes/ut/f10-cs395t/ref/p175-liedtke.pdf))\n\nIts principal research influence was the development of the high-performance L4 microkernel family. The L4 research bibliography identifies this paper, together with later work by Liedtke, as describing design issues for high-performance microkernels. Subsequent L4 and seL4 work retained IPC performance and kernel minimality as central design concerns, while modifying or replacing several mechanisms proposed in the original L3 design. ([os.inf.tu-dresden.de](https://os.inf.tu-dresden.de/L4/bib.html)) The paper also remains part of operating-systems curricula and is described in contemporary course material as introducing a microkernel designed for strong microbenchmark performance. ([read.seas.harvard.edu](https://read.seas.harvard.edu/cs261/2021/))",
   "raw_url": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.55.9939&rep=rep1&type=pdf",
   "source_type": "external",
   "filepath": "unikernels/README.md",
   "filename": "Improving IPC by kernel design",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:05"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:56"
 }

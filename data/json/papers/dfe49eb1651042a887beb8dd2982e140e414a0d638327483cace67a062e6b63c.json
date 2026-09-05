@@ -1,33 +1,32 @@
 {
   "uuid": "dfe49eb1651042a887beb8dd2982e140e414a0d638327483cace67a062e6b63c",
   "title": "Consistent Global States of Distributed Systems: Fundamental Concepts and Mechanisms",
-  "publication_date": "July 1985",
+  "publication_date": "January 1993 — Technical Report UBLCS-93-1, Laboratory for Computer Science, University of Bologna",
   "authors": [
-    "Brian Waldecker",
-    "Gerard Tel",
-    "Vijay K. Garg"
+    "Keith Marzullo",
+    "Öżalp Babaoğlu"
   ],
   "keywords": [
     "asynchronous-systems",
-    "checkpointing",
-    "consistent-global-states",
-    "distributed-computing",
+    "causal-ordering",
+    "consistent-cuts",
+    "deadlock-detection",
+    "distributed-debugging",
+    "distributed-snapshots",
     "distributed-systems",
-    "fault-tolerance",
-    "global-state-detection",
-    "snapshot-algorithm",
-    "synchronization",
-    "system-consistency"
+    "global-state-evaluation",
+    "logical-clocks",
+    "vector-clocks"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "The problem of determining consistent global states of distributed systems is addressed and investigated in this paper. Fundamental concepts related to the computation of such states are explored, and several key algorithms and mechanisms that assist in achieving consistency are described. Emphasis is placed on asynchronous distributed systems where consistent states must be derived without relying on a common clock.",
-  "summary": "This paper, 'Consistent Global States of Distributed Systems: Fundamental Concepts and Mechanisms' by Vijay K. Garg, Brian Waldecker, and Gerard Tel, provides foundational insight into maintaining and determining consistent global states in distributed systems, specifically within an asynchronous framework. It explores various mechanisms for achieving state consistency, such as the snapshot algorithm, crucial for tasks like checkpointing and ensuring fault tolerance in distributed computing. The paper was published in July 1985 and has significantly influenced subsequent research, becoming a cornerstone in distributed systems literature. Despite its age, the fundamental concepts introduced remain relevant and continue to underpin studies and applications in distributed computing, particularly in designing algorithms for state consistency and recovery mechanisms. Upon review, this paper has been referenced by numerous subsequent publications. Relevant citations demonstrating its impact include:\n\n1. Chandy, K. Mani, and Leslie Lamport. \"Distributed Snapshots: Determining Global States of Distributed Systems.\" ACM Transactions on Computer Systems 3.1 (1985): 63-75. [ACM Digital Library](https://dl.acm.org/doi/10.1145/214451.214456)\n2. Helary, Jean-Michel, et al. \"Detection of stable properties in distributed applications.\" Distributed Computing 11.3 (1998): 157-165. [SpringerLink](https://link.springer.com/article/10.1007/s004460050041)\n3. Scott, Christena A., and Anish Arora. \"Multiversioning for Read-Only Transactions.\" IEEE Transactions on Knowledge and Data Engineering 10.3 (1998): 473-485. [IEEE Xplore](https://ieeexplore.ieee.org/document/679846)\n4. Schiper, Andre, Amitavo S. N. \"Achieving a Consistent Global State in a Distributed System: A Lattice-Theoretical Approach.\" Journal of Parallel and Distributed Computing 13.1 (1991): 32-50. [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S074373158571276X)\n\nThese references are generally accessible online and attest to the ongoing relevance and utility of the work discussed in the original paper.",
+  "abstract": "Many important problems in distributed computing admit solutions that contain a phase where some global property needs to be detected. This subproblem can be seen as an instance of the Global Predicate Evaluation (GPE) problem where the objective is to establish the truth of a Boolean expression whose variables may refer to the global system state. Given the uncertainties in asynchronous distributed systems that arise from communication delays and relative speeds of computations, the formulation and solution of GPE reveal most of the subtleties in global reasoning with imperfect information. In this paper, we use GPE as a canonical problem in order to survey concepts and mechanisms that are useful in understanding global states of distributed computations. We illustrate the utility of the developed techniques by examining distributed deadlock detection and distributed debugging as two instances of GPE.",
+  "summary": "## Summary\n\nThe paper develops **Global Predicate Evaluation (GPE)** as a general framework for detecting system-wide conditions in asynchronous distributed computations. It formalizes distributed executions as partially ordered events connected by local execution order and message transmission. A global state is represented by a cut containing a prefix of each process history; a cut is **consistent** when it is closed under causal precedence. This excludes impossible observations such as “ghost deadlocks,” which can arise when independently collected local states are combined without accounting for messages in transit.\n\nThe paper presents two complementary monitoring strategies. Active monitoring constructs a global state through a distributed snapshot protocol, culminating in the Chandy–Lamport snapshot method under FIFO communication. Passive monitoring records relevant events and uses causal delivery to construct a consistent observation, or run. The paper also explains why FIFO delivery alone is insufficient for general causal ordering and develops vector clocks as a compact representation of causal histories. Vector-clock comparisons characterize causal precedence, concurrency, and consistent cuts, and support an implementation of causal delivery.\n\nThe treatment distinguishes **stable predicates**, such as deadlock and termination, from **nonstable predicates**, whose truth may disappear or may depend on which consistent execution is considered. For nonstable predicates, the paper defines computation-level notions of `Possibly(Φ)` and `Definitely(Φ)`. It further addresses hidden communication channels, multiple monitors, causal broadcast, reliability, and applications to deadlock detection and distributed debugging.\n\n## Influence\n\nThe work was subsequently incorporated as Chapter 4, “Consistent Global States of Distributed Systems: Fundamental Concepts and Mechanisms,” in the second edition of *Distributed Systems*, published by Addison-Wesley/ACM Press in 1993, providing a book-length dissemination of its framework. ([unibo.it](https://www.unibo.it/sitoweb/ozalp.babaoglu/download/en/CV-short.pdf)) Its concepts continue to be used in distributed-systems education: Cornell’s CS5414 course assigns the work alongside material on Lamport clocks, snapshots, causal order, vector clocks, and nonstable predicates, while the University of Washington’s CSE 452 course uses it for teaching vector clocks and distributed snapshots. ([cs.cornell.edu](https://www.cs.cornell.edu/courses/cs5414/2018fa/schedule.html)) Later research continues to treat consistent global states and vector-clock causality as foundational abstractions; for example, work on prime clocks formulates consistent global states as downward-closed prefixes of the happened-before relation and builds on vector-clock representations. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0743731519304939)) The evidence located indicates primarily scholarly and educational influence; no specific industrial deployment directly attributing a production system to this technical report was identified.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/consistent-global-states-of-distributed-systems-fundamental-concepts-and-mechanisms.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/consistent-global-states-of-distributed-systems-fundamental-concepts-and-mechanisms.pdf",
   "filename": "consistent-global-states-of-distributed-systems-fundamental-concepts-and-mechanisms.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:51"
 }

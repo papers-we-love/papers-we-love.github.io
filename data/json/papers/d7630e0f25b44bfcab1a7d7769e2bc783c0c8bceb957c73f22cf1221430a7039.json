@@ -1,28 +1,31 @@
 {
   "uuid": "d7630e0f25b44bfcab1a7d7769e2bc783c0c8bceb957c73f22cf1221430a7039",
-  "title": "An Experimental Study of the Effect of Two Personality Variables On Performance in Computer Programming",
-  "publication_date": "1978",
+  "title": "Can Programming Be Liberated from the von Neumann Style? A Functional Style and Its Algebra of Programs",
+  "publication_date": "August 1978, Communications of the ACM, Volume 21, Number 8, pages 613–641",
   "authors": [
-    "E. S. Robson",
-    "G. J. Ch&uacute;z",
-    "N. L. Feather"
+    "John Backus"
   ],
   "keywords": [
-    "academic-achievement",
-    "computer-programming",
-    "performance",
-    "personality-variables",
-    "programmer-aptitude"
+    "algebra-of-programs",
+    "applicative-computing-systems",
+    "applicative-state-transition-systems",
+    "combining-forms",
+    "functional-forms",
+    "functional-programming",
+    "metacomposition",
+    "program-correctness",
+    "program-termination",
+    "program-transformation"
   ],
   "category_path": [
     "languages-theory"
   ],
-  "abstract": "An experimental study is described. Illusory environments considered as useful when exploring requirements with users. Description focuses on the capability of representative programmers to perform through various conditions.",
-  "summary": "This paper investigates the impact of two personality variables, namely locus of control and tolerance for ambiguity, on the performance of individuals in computer programming. The research is based on an experimental study involving academic participants, aiming to identify correlations between the specified personality traits and programming performance. The study's findings suggest that these personality variables can influence programming outcomes significantly, providing insights into how such traits can be accounted for in educational and professional settings to enhance programmer performance. \n\nWhile conducting a web search to determine the influence of this paper on subsequent research or industry practices, no direct citations or significant references were found. Therefore, it appears that this paper did not have a notable impact on future research or industry applications. However, its exploration of personality factors in programming performance remains a niche subject area that could potentially inform future studies in the intersection of psychology and computer science.",
+  "abstract": "Conventional programming languages are growing ever more enormous, but not stronger. Inherent defects at the most basic level cause them to be both fat and weak: their primitive word-at-a-time style of programming inherited from their common ancestor—the von Neumann computer, their close coupling of semantics to state transitions, their division of programming into a world of expressions and a world of statements, their inability to effectively use powerful combining forms for building new programs from existing ones, and their lack of useful mathematical properties for reasoning about programs.\n\nAn alternative functional style of programming is founded on the use of combining forms for creating programs. Functional programs deal with structured data, are often nonrepetitive and nonrecursive, are hierarchically constructed, do not name their arguments, and do not require the complex machinery of procedure declarations to become generally applicable. Combining forms can use high level programs to build still higher level ones in a style not possible in conventional languages.",
+  "summary": "### Main contribution\nJohn Backus criticizes conventional imperative languages as abstractions closely tied to the von Neumann architecture. He argues that variables, assignment, sequential control flow, and the separation between expressions and statements make programs difficult to compose, transform, verify, and reason about mathematically. The paper proposes an alternative functional, or function-level, style in which programs are constructed from functions and combining forms rather than from assignments and explicitly named variables. ([hinkali.com](https://www.hinkali.com/Education/BackusTuringLecture1977.pdf))\n\nThe proposed language, FP, operates on structured data and emphasizes composition, construction, selection, application to all elements, insertion, and related higher-order combining mechanisms. Backus presents an algebra of programs in which programs themselves are objects of algebraic manipulation. Equational laws are intended to support program transformation, correctness reasoning, and analysis of termination and behavior. The paper also describes an applicative model of computation and illustrates how larger programs can be built hierarchically from smaller components. ([hinkali.com](https://www.hinkali.com/Education/BackusTuringLecture1977.pdf))\n\n### Influence\nThe paper helped establish function-level programming and stimulated subsequent work on FP implementations and related program-transformation techniques. Documented follow-on projects include Berkeley FP, parallel implementations of FP, and Backus’s later work on function-level semantics and optimization. ([softwarepreservation.computerhistory.org](https://softwarepreservation.computerhistory.org/FP/)) The paper is also cited in the Haskell 98 language report, indicating its continuing place in the intellectual history of functional-language research, although Haskell follows the lambda-calculus tradition rather than adopting FP’s exact function-level model. ([haskell.org](https://www.haskell.org/definition/haskell98-report.pdf))",
   "raw_url": "https://dl.acm.org/doi/pdf/10.1145/359576.359579",
   "source_type": "external",
   "filepath": "languages-theory/README.md",
   "filename": "Can Programming Be Liberated from the von Neumann Style? A Functional Style and Its Algebra of Programs",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:56"
 }

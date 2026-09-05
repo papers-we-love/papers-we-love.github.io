@@ -1,30 +1,34 @@
 {
   "uuid": "e673d3f84bbafdce16ea1473b31e0618f4bee0894a5bead530d8a47fe565b5f6",
-  "title": "An Argumentation Model of Reasoning",
-  "publication_date": "2004",
+  "title": "The ϕ Accrual Failure Detector",
+  "publication_date": "May 10, 2004 (JAIST Technical Report IS-RR-2004-010); subsequently published in the Proceedings of the 23rd IEEE International Symposium on Reliable Distributed Systems (SRDS 2004), October 2004, pp. 66–78.",
   "authors": [
-    "Kazuko Takahashi",
-    "Toru Ishida"
+    "Naohiro Hayashibara",
+    "Rami Yared",
+    "Takuya Katayama",
+    "Xavier Défago"
   ],
   "keywords": [
-    "argumentation",
-    "collaborative-systems",
-    "knowledge-representation",
-    "logic",
-    "model",
-    "multi-agent-systems",
-    "reasoning",
-    "semantic-web"
+    "accrual-failure-detectors",
+    "adaptive-failure-detectors",
+    "distributed-systems",
+    "failure-detection",
+    "false-positives",
+    "fault-tolerance",
+    "heartbeat-monitoring",
+    "network-reliability",
+    "quality-of-service",
+    "suspicion-level"
   ],
   "category_path": [
     "gossip"
   ],
-  "abstract": "We propose a formal model of argumentation that combines both rule-based reasoning and case-based reasoning. This model formalizes how an agent interacts with multiple agents with different reasoning strategies, and how it resolves conflicts and achieves mutual understanding through argumentation. Argumentation distinguishes itself from conventional reasoning or consensus-based reasoning by openly presenting and justifying conflicting opinions. For this activity, the linguistic level of each reasoning mechanism is introduced and described. As an application of the argumentation model, we demonstrate a co-operation system among agents, which shows how argumentation makes it possible to integrate heterogeneous methods for reasoning by propagating illocutionary acts.",
-  "summary": "The paper \"An Argumentation Model of Reasoning\" by Kazuko Takahashi and Toru Ishida introduces a formal model combining rule-based and case-based reasoning frameworks to enhance argumentation within multi-agent systems. The authors explore how agents resolve conflicts and achieve understanding through well-defined argumentation strategies that contrast with traditional consensus-based reasoning. This method leverages linguistic mechanisms and illocutionary acts to integrate diverse reasoning approaches.\n\nA web search reveals limited specific instances of this paper's direct influence on further research or industry applications. The concepts of the model have potential implications in areas such as the development of collaborative and cooperative systems in artificial intelligence. The framework could support advanced reasoning capabilities, particularly in multi-agent systems requiring semantic interoperability and conflict resolution.\n\nWhile no specific citations or industry applications are found to reference this particular paper directly, the theoretical groundwork it lays has conceivable relevance for future works in semantic web technologies, knowledge representation, and AI-driven collaborative platforms.",
+  "abstract": "Detecting failures is a fundamental issue for fault-tolerance in distributed systems. Recently, many people have come to realize that failure detection ought to be provided as some form of generic service, similar to IP address lookup or time synchronization. However, this has not been successful so far. One of the reasons is the difficulty to satisfy several application requirements simultaneously when using classical failure detectors. We present a novel abstraction, called accrual failure detectors, that emphasizes flexibility and expressiveness and can serve as a basic building block to implementing failure detectors in distributed systems. Instead of providing information of a boolean nature (trust vs. suspect), accrual failure detectors output a suspicion level on a continuous scale. The principal merit of this approach is that it favors a nearly complete decoupling between application requirements and the monitoring of the environment.\n\nIn this paper, we describe an implementation of such an accrual failure detector, that we call the ϕ failure detector. The particularity of the ϕ failure detector is that it dynamically adjusts to current network conditions the scale on which the suspicion level is expressed. We analyzed the behavior of our ϕ failure detector over an intercontinental communication link during several days. Our experimental results show that our ϕ failure detector performs equally well as other known adaptive failure detection mechanisms, with an improved flexibility.",
+  "summary": "## Summary\n\nThe paper introduces **accrual failure detectors**, which replace the conventional binary `trust`/`suspect` output with a continuously increasing suspicion level. This separates environmental monitoring from application-specific interpretation: different applications can apply different thresholds or use the suspicion value directly to trigger graduated responses. The abstraction is specified by properties including asymptotic completeness for faulty processes, eventual monotonicity after failure, bounded suspicion for correct processes, and reset behavior when a correct process continues to produce heartbeats.\n\nThe authors present the **ϕ failure detector** as an implementation of this abstraction. It maintains a sliding window of heartbeat inter-arrival times, estimates their mean and variance using a normal distribution, and computes suspicion as the negative base-10 logarithm of the probability that the next heartbeat will be later than the elapsed time since the most recent heartbeat. Thus, a threshold of 1, 2, or 3 corresponds approximately to 10%, 1%, or 0.1% likelihood, respectively, that a suspicion will be contradicted by a late heartbeat under the model.\n\nThe evaluation used a one-week Japan–Switzerland UDP experiment involving approximately 5.8 million received heartbeat samples. The results showed the expected trade-off: higher thresholds substantially reduced the average mistake rate but increased detection time, particularly beyond thresholds around 10–11 in the tested environment. Larger sampling windows improved accuracy, with diminishing returns at larger sizes. Compared with the Chen and Bertier adaptive failure detectors, the ϕ detector achieved broadly comparable performance while allowing multiple applications to choose independent suspicion thresholds. The authors concluded that this flexibility did not impose a significant performance penalty in their wide-area-network experiment.\n\n## Influence and subsequent use\n\nThe abstraction was later formalized in work by Défago, Urbán, Hayashibara, and Katayama on the definition and specification of accrual failure detectors, published at the 2005 International Conference on Dependable Systems and Networks. ([coord.c.titech.ac.jp](https://www.coord.c.titech.ac.jp/publications/))\n\nThe approach also influenced distributed-systems middleware. Akka documents its cluster failure detector as an implementation of the ϕ accrual failure detector and exposes configuration for heartbeat history, suspicion thresholds, and tolerance for pauses or network irregularities. ([doc.akka.io](https://doc.akka.io/libraries/akka-core/current/typed/failure-detector.html)) Hazelcast likewise provides a configurable Phi Accrual Failure Detector based on the paper, using a sliding window of heartbeat intervals and adaptive mean and variance estimates. ([docs.hazelcast.com](https://docs.hazelcast.com/hazelcast/5.2/clusters/phi-accrual-detector)) These documented integrations show that the paper’s continuous suspicion model became a practical mechanism for failure detection in production-oriented cluster software. The cited sources provide concrete evidence of research formalization and industry-oriented middleware adoption; no stronger claim about overall citation impact is made here.",
   "raw_url": "https://dspace.jaist.ac.jp/dspace/bitstream/10119/4784/1/IS-RR-2004-010.pdf",
   "source_type": "external",
   "filepath": "gossip/README.md",
   "filename": "The ϕ Accrual Failure Detector",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

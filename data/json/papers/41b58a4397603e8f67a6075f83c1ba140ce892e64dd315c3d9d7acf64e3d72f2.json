@@ -1,31 +1,27 @@
 {
   "uuid": "41b58a4397603e8f67a6075f83c1ba140ce892e64dd315c3d9d7acf64e3d72f2",
-  "title": "FAST: Flexible and Adaptive Soft real-Time system",
-  "publication_date": "2000",
+  "title": "Purely Functional Lazy Non-deterministic Programming",
+  "publication_date": "August 31–September 2, 2009 (ICFP 2009, Edinburgh, Scotland, UK)",
   "authors": [
-    "Insup Lee",
-    "Mary Lou Soffa",
-    "Sang H. Son"
+    "Chung-chieh Shan",
+    "Oleg Kiselyov",
+    "Sebastian Fischer"
   ],
   "keywords": [
-    "adaptive-systems",
-    "deadline-driven",
-    "flexible-scheduling",
-    "rate-monotonic",
-    "real-time-systems",
-    "resource-management",
-    "scheduling",
-    "slack-stealing"
+    "call-time-choice",
+    "continuations",
+    "monads",
+    "side-effects"
   ],
   "category_path": [
     "logic_and_programming"
   ],
-  "abstract": "This paper describes a new real-time system called FAST (Flexible and Adaptive Soft real-Time) that combines the advantages of both deadline-driven and rate-monotonic scheduling paradigms. FAST provides a flexible scheduling framework that accommodates varying system load and real-time constraints. A key feature of FAST is the slack stealing mechanism, which allows late tasks to utilize slack left by periodic tasks. The paper also discusses the implementation and evaluation of FAST, demonstrating its effectiveness in improving resource utilization and meeting soft real-time deadlines.",
-  "summary": "The paper \"FAST: Flexible and Adaptive Soft real-Time system\" by Insup Lee, Sang H. Son, and Mary Lou Soffa introduced the FAST system, which combines deadline-driven and rate-monotonic scheduling to enhance real-time system flexibility. By incorporating a slack stealing mechanism, it optimizes resource utilization and ensures soft real-time deadline adherence. This work has emphasized improving scheduling techniques in real-time systems, particularly under varying loads. Despite the potential contributions, current literature does not cite this paper extensively, indicating limited direct influence on academia or industry. Further dissemination and application might enhance its impact. The work provides valuable insights into adaptable scheduling frameworks for real-time systems. \n\nReferences for further exploration or potential future impacts weren't found during the search.",
+  "abstract": "Functional logic programming and probabilistic programming have demonstrated the broad benefits of combining laziness (non-strict evaluation with sharing of the results) with non-determinism. Yet these benefits are seldom enjoyed in functional programming, because the existing features for non-strictness, sharing, and non-determinism in functional languages are tricky to combine. We present a practical way to write purely functional lazy non-deterministic programs that are efficient and perspicuous. We achieve this goal by embedding the programs into existing languages (such as Haskell, SML, and OCaml) with high-quality implementations, by making choices lazily and representing data with non-deterministic components, by working with custom monadic data types and search strategies, and by providing equational laws for the programmer to reason about their code.",
+  "summary": "The paper develops a purely functional implementation of lazy non-determinism with call-time choice. Its central mechanism is an explicit `share` combinator that preserves sharing of non-deterministic computations, including computations nested inside data structures. The authors specify equational laws for reasoning about such programs and implement the mechanism as a monad transformer that can be combined with different `MonadPlus` instances, allowing alternative search strategies such as depth-first, breadth-first, parallel, constrained, or weighted search. The implementation supports Haskell and OCaml-style embeddings and reports competitive performance against Curry implementations, including faster execution for the paper’s permutation-sort benchmark. ([homes.luddy.indiana.edu](https://homes.luddy.indiana.edu/ccshan/rational/lazy-nondet.pdf))\n\nSubsequent research used the approach as a foundation for systematically translating lazy functional-logic programs into pure Haskell with explicit sharing. That work made the generated programs parametric over the evaluation monad, enabling different search strategies while retaining the paper’s sharing model. ([researchgate.net](https://www.researchgate.net/publication/221557789_Transforming_Functional_Logic_Programs_into_Monadic_Functional_Programs)) The approach also continued to be used in later work on monadic implementations of functional-logic languages, where memoization of non-deterministic branches and performance relative to Curry compilers remain central concerns. ([michaelhanus.de](https://www.michaelhanus.de/papers/TPLP26.html))\n\nThe implementation was released as the `explicit-sharing` Haskell package, whose documentation demonstrates its use for lazy functional-logic programming in pure Haskell. ([sebfisch.github.io](https://sebfisch.github.io/explicit-sharing/tutorial.html)) The available evidence therefore indicates influence primarily on functional-logic programming, monadic search, explicit sharing, and embedded probabilistic-programming research; no specific broad industrial deployment is documented in the sources reviewed.",
   "raw_url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.148.524",
   "source_type": "external",
   "filepath": "logic_and_programming/README.md",
   "filename": "Purely Functional Lazy Non-deterministic Programming",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:56"
 }

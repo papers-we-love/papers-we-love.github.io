@@ -1,31 +1,31 @@
 {
   "uuid": "fb4fc2e3635b40dfd23548e96629fc74e1fbd494300756e73e84fa42b15a3245",
   "title": "Communicating Sequential Processes",
-  "publication_date": "1985",
+  "publication_date": "August 1978, Communications of the ACM, Volume 21, Number 8, pages 666–677",
   "authors": [
-    "C. A. R. Hoare"
+    "C.A.R. Hoare"
   ],
   "keywords": [
-    "communicating-sequential-processes",
     "concurrency",
-    "deadlock-avoidance",
-    "formal-methods",
-    "inter-process-communication",
-    "nondeterminism",
-    "parallel-computing",
-    "process-algebras",
-    "protocol-design",
-    "synchronization-primitives"
+    "guarded-commands",
+    "input",
+    "nondeterminacy",
+    "output",
+    "parallel-programming",
+    "program-structures",
+    "programming",
+    "programming-languages",
+    "programming-primitives"
   ],
   "category_path": [
     "processes"
   ],
-  "abstract": "Communicating sequential processes provides a mathematical model for communicating sequential processes. Such processes arise in systems which consist of independent parallel processes which communicate solely through the transmission of messages through channels. The model allows reasoning about non-deterministic programs and synchronisation between processes. It is shown that the processes accepted by a CSP can be used as proof rules to prove the properties of particular programs.",
-  "summary": "The paper \"Communicating Sequential Processes\" by C. A. R. Hoare, published in 1985, presents a seminal model for understanding concurrent systems through message-passing mechanisms. CSP formalizes a way to describe interactions between independent parallel processes and is foundational to the study of concurrency in computer science. CSP has had a broad influence on both academia and industry, notably impacting programming languages that handle concurrency.\n\nCSP has influenced a number of programming languages including Go and Erlang, which employ concepts of message-passing for concurrency that are rooted in CSP. This paper has also shaped theoretical research on process algebras and has provided tools for verifying the correctness and properties of concurrent systems. \n\nSome key references citing this paper include:\n\n1. Roscoe, A. W. (1998). \"The Theory and Practice of Concurrency\", Prentice-Hall. [Link](https://www.cs.ox.ac.uk/people/bill.roscoe/publications/29b.pdf)\n2. Schneider, S. (1999). \"Concurrent and Real-Time Systems: The CSP Approach\", Wiley. \n3. Gavin M. Bierman, Andrew D. Gordon, and C. A. R Hoare. (2009). \"The Impact of Communicating Sequential Processes\". In *Communicating Sequential Processes. The First 25 Years*; Springer. \n\nThese citations reflect the paper's enduring relevance in developing concurrent programming paradigms and its ongoing role in shaping related research areas.",
+  "abstract": "This paper suggests that input and output are basic primitives of programming and that parallel composition of communicating sequential processes is a fundamental program structuring method. When combined with a development of Dijkstra's guarded command, these concepts are surprisingly versatile. Their use is illustrated by sample solutions of a variety of familiar programming exercises.",
+  "summary": "Hoare’s paper established communicating sequential processes (CSP) as a programming model in which independently executing sequential processes interact through explicit, synchronized communication. Its core mechanisms—parallel composition, input/output communication, guarded nondeterministic choice, and structured process arrays—provided a basis for later work on concurrent-programming languages, semantics, verification, and implementation.\n\nThe ideas were subsequently developed into formal semantic and axiomatic theories of CSP, including work defining process behaviors and reasoning about correctness. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/0304397583900816)) CSP also influenced implementation-oriented languages: contemporary accounts of occam describe its process-and-channel model as based on communicating processes derived from Hoare’s work, and surveys explicitly identify occam as a language resulting from the CSP proposal. ([transputer.net](https://www.transputer.net/iset/isbn-013929134-2/tthb.pdf))\n\nThe model also influenced later industrial programming practice through Go’s concurrency design. Official Go materials state that channels were adopted from Hoare’s CSP and identify goroutines, channels, and `select` as Go’s principal concurrency mechanisms. ([go.dev](https://go.dev/talks/2014/research2.slide))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/processes/communicating-sequential-processes-paper.pdf",
   "source_type": "pdf",
   "filepath": "processes/communicating-sequential-processes-paper.pdf",
   "filename": "communicating-sequential-processes-paper.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:56"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:53"
 }

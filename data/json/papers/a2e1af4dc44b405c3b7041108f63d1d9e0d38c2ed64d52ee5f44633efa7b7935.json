@@ -1,31 +1,31 @@
 {
   "uuid": "a2e1af4dc44b405c3b7041108f63d1d9e0d38c2ed64d52ee5f44633efa7b7935",
-  "title": "Life Beyond Distributed Transactions: an Apostate's Opinion",
-  "publication_date": "2007-11",
+  "title": "Life beyond Distributed Transactions: an Apostate’s Opinion",
+  "publication_date": "January 7–10, 2007; 3rd Biennial Conference on Innovative DataSystems Research (CIDR 2007), Asilomar, California, USA",
   "authors": [
     "Pat Helland"
   ],
   "keywords": [
-    "application-development",
-    "business-applications",
-    "data-management",
-    "data-storage",
-    "database-systems",
+    "activities",
+    "at-least-once-messaging",
     "distributed-transactions",
+    "entities",
     "eventual-consistency",
-    "fault-tolerance",
+    "idempotence",
+    "repartitioning",
+    "scalability",
     "service-oriented-architecture",
-    "systems-design"
+    "workflow"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "For many years, the sweet spot for database applications has been network partition prevention through the use of distributed transactions or distributed consensus. Sometimes, however, it is not possible or not practical to use these techniques in a federated or partitioned environment. This paper revisits why and when the alternatives to distributed transactions like eventual consistency and compensation are feasible and outlines how developers can effectively build systems that avoid distributed transactions.",
-  "summary": "Pat Helland's paper \"Life Beyond Distributed Transactions: an Apostate's Opinion\" explores the limitations and impracticalities associated with distributed transactions, particularly in systems that require network partitioning. Instead of relying on distributed transactions or distributed consensus, the paper advocates for the use of methods such as eventual consistency and compensation to build systems that can manage data in federated or partitioned environments. The emphasis is on guiding developers to explore alternative methodologies for effective systems design in scenarios where traditional database transactions are not suitable.\n\nPost-publication, this work has inspired discussions and influenced research in the domain of distributed systems. Notably, the paper brought attention to the implications of network partitioning and eventual consistency in service-oriented architectures (SOAs). It has been referenced in various subsequent papers and discussions concerning the architecture and development of fault-tolerant distributed applications.\n\nFor instance, the paper is cited in Michael Stonebraker's work on distributed data systems, further examining the trade-offs in distributed databases. It also appears in discussions about CAP theorem implications, especially in advocating eventual consistency models in global-scale applications. More recent insights in cloud service architectures often draw upon Helland's perspectives on handling distributed states effectively.\n\nReferences to this paper can also be found in academic and industry presentations which discuss distributed systems at scale, including its adoption in microservices architecture.\n\n1. [Michael Stonebraker et al., \"The end of an architectural era (it's time for a complete rewrite)\", VLDB, 2007](http://web.mit.edu/urban_or_book/www/Michael-Stonebraker-End-of-a.pdf)\n2. [CAP Twelve Years Later: How the “Rules” Have Changed](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)",
+  "abstract": "Many decades of work have been invested in the area of distributed transactions including protocols such as 2PC, Paxos, and various approaches to quorum. These protocols provide the application programmer a façade of global serializability. Personally, I have invested a non-trivial portion of my career as a strong advocate for the implementation and use of platforms providing guarantees of global serializability. My experience over the last decade has led me to liken these platforms to the Maginot Line. In general, application developers simply do not implement large scalable applications assuming distributed transactions. When they attempt to use distributed transactions, the projects founder because the performance costs and fragility make them impractical. Natural selection kicks in… Instead, applications are built using different techniques which do not provide the same transactional guarantees but still meet the needs of their businesses. This paper explores and names some of the practical approaches used in the implementations of large-scale mission-critical applications in a world which rejects distributed transactions. We discuss the management of fine-grained pieces of application data which may be repartitioned over time as the application grows. We also discuss the design patterns used in sending messages between these repartitionable pieces of data. The reason for starting this discussion is to raise awareness of new patterns for two reasons. First, it is my belief that this awareness can ease the challenges of people hand-crafting very large scalable applications. Second, by observing the patterns, hopefully the industry can work towards the creation of platforms that make it easier to build these very large applications.",
+  "summary": "The paper argues that applications intended to scale across very large numbers of machines should avoid relying on global distributed transactions. Instead, data should be divided into uniquely identified **entities**, each confined to one transactional serializability scope. Transactions may update data within an entity, but not across entities; communication between entities occurs through asynchronously enqueued messages.\n\nBecause practical messaging systems commonly provide at-least-once delivery and may reorder messages during repartitioning, applications must make message handling idempotent. The paper introduces **activities** as per-partner state maintained by an entity to remember processed messages, track replies, and represent the evolving state of relationships with other entities.\n\nFor operations spanning entities, the paper recommends application-level workflow rather than atomic commit. Tentative operations, confirmations, cancellations, reservations, and compensating business actions allow systems to manage uncertainty explicitly. It also observes that alternate indices cannot generally be updated atomically with their primary entities at extreme scale, so they may be temporarily inconsistent and must be maintained through asynchronous workflows.\n\nThe paper’s main contribution is conceptual: it names and organizes design patterns already emerging in large-scale systems—entities, entity-addressed messaging, activities, idempotence, and fine-grained workflow. A concrete downstream connection is Google’s Megastore, whose paper cites Helland’s work while describing serializable transactions within fine-grained partitions rather than across the entire distributed database. ([research.google.com](https://research.google.com/pubs/archive/36971.pdf)) Later work on edge computing explicitly presents itself as extending and evaluating Helland’s entity-and-activity model for edge environments. ([explore.openaire.eu](https://explore.openaire.eu/search/publication?pid=10.1145%2F3017116.3022874)) The paper has also continued to appear in research bibliographies and surveys concerning coordination avoidance, distributed transactions, and application-level transaction design. ([chuzhe.me](https://chuzhe.me/assets/pdf/2024%20-%20Ad%20Hoc%20Transactions%20through%20the%20Looking%20Glass-%20An%20Empirical%20Study%20of%20Application-Level%20Transactions%20in%20Web%20Applications.pdf))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/life-beyond-distributed-transactions-an-apostates-opinion.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/life-beyond-distributed-transactions-an-apostates-opinion.pdf",
   "filename": "life-beyond-distributed-transactions-an-apostates-opinion.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:51"
 }

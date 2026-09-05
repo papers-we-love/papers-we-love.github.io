@@ -1,7 +1,7 @@
 {
   "uuid": "d7ac8760f43e80d2abd935eae5c64c4fdadb0765b670f8f0ada4577a694bda74",
   "title": "Procedural Modeling of Buildings",
-  "publication_date": "2006",
+  "publication_date": "2006; ACM SIGGRAPH 2006 Papers (SIGGRAPH ’06), Boston, Massachusetts, July 30–August 3, 2006",
   "authors": [
     "Andreas Ulmer",
     "Luc Van Gool",
@@ -10,22 +10,21 @@
     "Simon Haegler"
   ],
   "keywords": [
-    "3d-modeling",
     "architecture",
-    "city-generation",
-    "computer-graphics",
-    "procedural-modeling",
-    "urban-planning"
+    "chomsky-grammars",
+    "computer-aided-design",
+    "l-systems",
+    "procedural-modeling"
   ],
   "category_path": [
     "computer_graphics"
   ],
-  "abstract": "Modeling architectural content for computer graphics applications, such as computer games, movies, and simulations, is a difficult task. We present a solution to ease this task with an automatic method to create large architectural models. The method, called split grammars, generates buildings similar to Lindenmayer-systems used to model plants. The grammar rules are inspired by the shape of the architecture and the constraints of building construction. This allows an interpretation in a tree structure and its automatic generation. Several examples and comparison studies demonstrate the generality and the wide range of applicability of split grammars.",
-  "summary": "The paper \"Procedural Modeling of Buildings\" presents a method called \"split grammars\" for automatically generating large architectural models, which is particularly useful in applications like computer games, movies, and simulations. The approach draws inspiration from L-systems used in plant modeling, applying similar principles to architecture through a rule-based grammar system. This method facilitates the generation of diverse architectural forms with constraints inspired by real-world architectural shapes and building construction principles. \n\nIn terms of its impact, this paper has been cited by subsequent research in fields of computer graphics and urban modeling. It significantly contributed to the practice of procedural modeling, with references seen in papers focused on generating realistic urban environments and architectural designs programmatically. Notable references include usages in: \n- \"Procedural modeling of cities\" by Yoav I. H. Parish and Pascal Müller [Cited by Google Scholar](https://scholar.google.com/scholar?cites=4564769410745344173&as_sdt=2005&sciodt=0,5&hl=en)\n- \"A Procedural Model for Interactive 3D Urban Visualization\" which builds on the split grammar concept [Cited by Google Scholar](https://scholar.google.com/scholar?cites=8610723790336010124&as_sdt=2005&sciodt=0,5&hl=en)\n\nThe procedural method for modeling buildings has inspired the development of tools and techniques for urban planning and city modeling, facilitating automatic and scalable generation of buildings for various applications.",
+  "abstract": "CGA shape, a novel shape grammar for the procedural modeling of CG architecture, produces building shells with high visual quality and geometric detail. It produces extensive architectural models for computer games and movies, at low cost. Context sensitive shape rules allow the user to specify interactions between the entities of the hierarchical shape descriptions. Selected examples demonstrate solutions to previously unsolved modeling problems, especially to consistent mass modeling with volumetric shapes of arbitrary orientation. CGA shape is shown to efficiently generate massive urban models with unprecedented level of detail, with the virtual rebuilding of the archaeological site of Pompeii as a case in point.",
+  "summary": "The paper introduces **CGA shape**, a sequential, rule-based grammar for generating detailed building models from volumetric mass models. Its main technical contributions are oriented scopes, split, repeat, and component-split operations; stochastic rule selection; and context-sensitive spatial queries based on occlusion and snapping. These mechanisms allow façade and roof details to remain consistent with complex, rotated, and overlapping building masses. The reported demonstrations include procedural models of individual buildings, office buildings, single-family homes, Pompeii, and large suburban environments.\n\nThe work became a foundation for the CGA procedural modeling language used in CityEngine. Current CityEngine documentation continues to describe CGA rules as instructions for automatically generating architectural geometry from building footprints and other initial shapes, while tutorials retain the paper’s mass-modeling concepts such as L- and U-shaped building volumes. ([asu.elsevierpure.com](https://asu.elsevierpure.com/en/publications/procedural-modeling-of-buildings/)) Subsequent research has explicitly treated Müller et al.’s method as a seminal basis for procedural building modeling and has extended CGA-like grammars toward semantically enriched building models, round architectural geometry, and automated ruleset rewriting. ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S0097849310000749))",
   "raw_url": "http://www.peterwonka.net/Publications/pdfs/2006.SG.Mueller.ProceduralModelingOfBuildings.final.pdf",
   "source_type": "external",
   "filepath": "computer_graphics/README.md",
   "filename": "Procedural Modeling of Buildings",
-  "created_on": "2026-01-24 23:46:58",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:54"
 }

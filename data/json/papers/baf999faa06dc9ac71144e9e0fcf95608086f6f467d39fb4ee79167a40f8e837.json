@@ -1,33 +1,32 @@
 {
   "uuid": "baf999faa06dc9ac71144e9e0fcf95608086f6f467d39fb4ee79167a40f8e837",
-  "title": "Active Networks and Active Network Management: A Proactive Management Framework",
-  "publication_date": "April 1999",
+  "title": "The Impact of Operating System Structure on Memory System Performance",
+  "publication_date": "December 1993, Proceedings of the Fourteenth ACM Symposium on Operating Systems Principles (SOSP ’93), Asheville, North Carolina, pages 120–133",
   "authors": [
-    "Ellen Zegura",
-    "Ken Calvert",
-    "Samrat Bhattacharjee"
+    "Brian N. Bershad",
+    "J. Bradley Chen"
   ],
   "keywords": [
-    "active-networks",
-    "active-packaging",
-    "distributed-systems",
-    "network-architecture",
-    "network-control",
-    "network-management",
-    "network-performance",
-    "network-protocols",
-    "proactive-management",
-    "telecommunications"
+    "cache-performance",
+    "mach",
+    "memory-reference-traces",
+    "memory-system-performance",
+    "microkernels",
+    "monolithic-kernels",
+    "operating-system-benchmarks",
+    "operating-system-structure",
+    "ultrix",
+    "virtual-memory"
   ],
   "category_path": [
     "unikernels"
   ],
-  "abstract": "Active networks represent a novel approach to network architecture. They support user-injection of customized programs into network nodes, thereby enabling applications to manage and manipulate their own data or control traffic in the network. We define an \"active network management\" framework to support active networks, based on state management and control mechanisms. By supporting dynamic loadable management applications, active management provides a vehicle that operators can use to automate and control network and service management. We present a case study that highlights some of the issues in building, deploying, and using active management, and argue that it represents an important, viable approach to modern network management issues, particularly in large-scale, distributed networks.",
-  "summary": "The paper \"Active Networks and Active Network Management: A Proactive Management Framework\" proposes a framework for active network management. This framework allows for dynamic management applications that are loadable, enabling network operators to automate and control network and service management more effectively. This can have significant implications for large-scale, distributed networks by allowing enhanced control over network architecture. The proposed solution introduces the concept of active networks, where user-injected programs can manage and manipulate data or control traffic.\n\nA quick web search indicates that this paper is often cited in the context of network architecture and management discussions but doesn't appear to have significantly influenced a specific application or industry standard. However, it has contributed to the academic discourse on how network management can be made more dynamic and responsive. For example, this concept of active networks is referenced in contexts like dynamic network customizations and enhancements in personal communication services:\n- Tennenhouse, David L., et al. \"A survey of active network research.\" IEEE communications Magazine 35.1 (1997): 80-86. [IEEE](https://www.comsoc.org/publications/magazines/ieee-communications-magazine)\n- Wetherall, David. \"Active network vision and reality: lessons from a capsule-based system.\" ACM SIGCOMM Computer Communication Review. ACM, 1999. [ACM Digital Library](https://dl.acm.org/doi/abs/10.1145/316186.316238)\n\nOverall, the paper has primarily had an academic influence, contributing to understanding and further exploration of network management frameworks.",
+  "abstract": "In this paper we evaluate the memory system behavior of two distinctly different implementations of the UNIX operating system: DEC’s Ultrix, a monolithic system, and Mach 3.0 with CMU’s UNIX server, a microkernel-based system. In our evaluation we use combined system and user memory reference traces of thirteen industry-standard workloads. We show that the microkernel-based system executes substantially more non-idle system instructions for an equivalent workload than the monolithic system. Furthermore, the average instruction for programs running on Mach has a higher cost, in terms of memory cycles per instruction, than on Ultrix. In the context of our traces, we explore a number of popular assertions about the memory system behavior of modern operating systems, paying special attention to the effect that Mach’s microkernel architecture has on system performance. Our results indicate that many, but not all of the assertions are true, and that a few, while true, have only negligible impact on real system performance.",
+  "summary": "The paper experimentally compares DEC Ultrix, a monolithic UNIX system, with Mach 3.0 and its user-level UNIX server, a microkernel-based system. The authors collect combined user- and system-level memory-reference traces for thirteen representative workloads and simulate the memory hierarchy of a DECstation 5000/200. The central result is that Mach generally executes more non-idle instructions and incurs a higher memory-cycle cost per instruction than Ultrix, particularly for workloads that rely heavily on operating-system services.\n\nThe study finds that system code has poorer locality than user code, with Mach exhibiting poorer system locality than Ultrix. System self-interference, block memory operations, streaming writes, and virtual-to-physical page-placement strategies can all materially affect performance. By contrast, competition between user and system references is measurable but has little performance impact for the tested workloads. The results also show that operating-system execution is more sensitive to memory-system latency than application execution because system code and data have relatively poor locality.\n\nThe paper influenced subsequent microkernel research by helping shift attention from the direct cost of interprocess communication to broader memory-system effects, including cache footprint, cache capacity misses, and instruction locality. Later analyses of microkernel performance explicitly identify the large working set of Mach as a major bottleneck and use these observations to motivate smaller, more aggressively optimized microkernels such as L4. ([trustworthy.systems](https://trustworthy.systems/publications/theses_public/07/Root%3Abe.pdf)) Subsequent L4 research revisited the comparison experimentally; Härtig and colleagues state that their work repeats related experiments to assess the effect of a second-generation microkernel on application performance, supporting the broader conclusion that the implementation and memory footprint of the underlying microkernel are decisive performance factors. ([os.inf.tu-dresden.de](https://os.inf.tu-dresden.de/pubs/sosp97/)) The paper therefore provided an empirical foundation for later efforts to reduce microkernel working sets, optimize IPC paths, and evaluate operating-system structure using complete workload traces rather than isolated microbenchmarks.",
   "raw_url": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.52.4651&rep=rep1&type=pdf",
   "source_type": "external",
   "filepath": "unikernels/README.md",
   "filename": "The impact of operating system structure on memory system performance",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:05"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:57"
 }

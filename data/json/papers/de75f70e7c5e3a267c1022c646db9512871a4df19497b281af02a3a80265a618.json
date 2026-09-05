@@ -1,29 +1,31 @@
 {
   "uuid": "de75f70e7c5e3a267c1022c646db9512871a4df19497b281af02a3a80265a618",
-  "title": "Ethereum: A Secure Decentralised Generalised Transaction Ledger",
-  "publication_date": "April 13, 2014",
+  "title": "ETHEREUM: A SECURE DECENTRALISED GENERALISED TRANSACTION LEDGER",
+  "publication_date": "April 2014 (original publication); Shanghai version efc5f9a — 2025-02-04",
   "authors": [
     "Gavin Wood"
   ],
   "keywords": [
     "blockchain",
-    "cryptocurrency",
-    "decentralized-ledger",
-    "distributed-systems",
+    "consensus",
+    "cryptography",
+    "distributed-ledger",
     "ethereum",
-    "secure-transactions",
+    "ethereum-virtual-machine",
+    "gas",
+    "merkle-patricia-trie",
     "smart-contracts",
-    "transaction-ledger"
+    "state-transition"
   ],
   "category_path": [
     "digital_currency"
   ],
-  "abstract": "Ethereum is a secure decentralised generalised transaction ledger with a smart-contract capability. Languages have a power equally greater than that of modern general purpose programming languages. Systems such as Namecoin can be imp- lemented with little over a dozen lines of code. Systems such as Bitcoin can be implemented with well under a hundred.",
-  "summary": "The paper titled \"Ethereum: A Secure Decentralised Generalised Transaction Ledger\" was published by Gavin Wood in April 2014. This paper presents the foundational concepts of Ethereum, describing its capabilities as a decentralized platform for applications with broad utility, beyond just a digital currency like Bitcoin.\n\nThe paper introduces Ethereum's ability to implement autonomous scripts known as smart contracts. This has led to Ethereum's wide adoption in various fields such as finance, supply chain management, and governance because of its capability to automate and secure transactions.\n\nEthereum's introduction of smart contracts has significantly influenced the development of decentralized finance (DeFi) platforms, playing a critical role in the burgeoning DeFi ecosystem. It has also impacted the initial coin offering (ICO) model, decentralized applications (DApps), and token creation standards such as ERC-20 and ERC-721.\n\nEthereum's decentralization model and execution environment for cryptocurrencies have shifted several industries towards blockchain technology for greater transparency and efficiency.\n\nThe paper is highly influential and frequently cited in research and industry work focused on blockchain and decentralization. For example, it is referenced in works discussing the expansion of blockchain technology into sectors like healthcare [source](https://doi.org/10.1016/j.future.2018.02.046) and digital identity [source](https://doi.org/10.1016/j.jisa.2018.01.004).\n\nDue to its foundational nature, the \"Ethereum Yellow Paper\" continues to serve as a critical reference point for developers and researchers expanding the scope of blockchain and related technologies.",
+  "abstract": "The blockchain paradigm when coupled with cryptographically-secured transactions has demonstrated its utility through a number of projects, with Bitcoin being one of the most notable ones. Each such project can be seen as a simple application on a decentralised, but singleton, compute resource. We can call this paradigm a transactional singleton machine with shared-state.\n\nEthereum implements this paradigm in a generalised manner. Furthermore it provides a plurality of such resources, each with a distinct state and operating code but able to interact through a message-passing framework with others. We discuss its design, implementation issues, the opportunities it provides and the future hurdles we envisage.",
+  "summary": "The paper formally specifies Ethereum as a decentralised, transaction-based state machine. It defines the world state, accounts, transactions, blocks, receipts, withdrawals, gas accounting, cryptographic signing, Merkle Patricia tries, and the execution semantics of the Ethereum Virtual Machine. It also specifies contract creation, message calls, precompiled contracts, block validation, and the transition from proof of work to proof of stake in the Shanghai-era protocol.\n\nIts principal influence has been specification-driven Ethereum development: the Ethereum Foundation describes the Yellow Paper as the technical and de facto specification for the EVM, supporting multiple client implementations that conform to a shared protocol definition. ([blog.ethereum.org](https://blog.ethereum.org/2016/02/09/cut-and-try-building-a-dream)) Subsequent technical research has treated it as the primary formal source for Ethereum’s data structures, including account, transaction, storage, and Merkle Patricia trie representations. ([arxiv.org](https://arxiv.org/abs/2108.05513)) Bibliometric evidence also indicates substantial continued citation across information systems, computer networks, artificial intelligence, and related fields. ([rankless.org](https://www.rankless.org/hit-papers/w60469491))",
   "raw_url": "https://ethereum.github.io/yellowpaper/paper.pdf",
   "source_type": "external",
   "filepath": "digital_currency/README.md",
   "filename": "Ethereum: a secure decentralized generalized transaction ledger",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:54"
 }

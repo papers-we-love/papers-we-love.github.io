@@ -1,31 +1,31 @@
 {
   "uuid": "f31ea0bfdb9d9ec83fc0cd188322ffbb6b470a421df1be4c8c51af7ef1b61f1e",
-  "title": "Warnings for Pattern Matching",
-  "publication_date": "2005",
+  "title": "Warnings for pattern matching",
+  "publication_date": "Published online 15 February 2007; Journal of Functional Programming, Volume 17, Issue 3, May 2007, pages 387–421",
   "authors": [
     "Luc Maranget"
   ],
   "keywords": [
-    "compilers",
-    "ml",
+    "compiler-warnings",
+    "exhaustiveness-checking",
+    "functional-programming",
+    "haskell",
+    "lazy-evaluation",
     "ocaml",
+    "or-patterns",
     "pattern-matching",
-    "programming-languages",
-    "runtime-errors",
-    "software-development",
-    "software-engineering",
-    "type-checking",
-    "warnings"
+    "pattern-matching-compilation",
+    "usefulness-analysis"
   ],
   "category_path": [
     "pattern_matching"
   ],
-  "abstract": "Pattern matching is a central feature of functional programming languages. In statically typed functional languages like SML or Haskell, pattern matching is subject to reachability analysis and exhaustiveness checking that guarantee the absence of matching runtime errors. However, in a language like OCaml, which supports first-class polymorphic variants, pattern matching becomes more intricate. In this work, we propose a novel approach to address the issue of pattern matching warnings in the presence of GADT and first-class polymorphic variants.",
-  "summary": "This paper by Luc Maranget titled \"Warnings for Pattern Matching\" addresses challenges in pattern matching over GADTs and polymorphic variants within statically typed functional languages such as OCaml. The research introduces methods for analyzing reachability and exhaustiveness in pattern matching to mitigate runtime errors.\n\nDespite its technical contributions, there doesn't appear to be a significant body of subsequent research building directly on this work. A search for citations and industry impact reveals limited references. However, a mention on Maranget's GitHub (https://github.com/mirage/ocaml) suggests its principles may have influenced OCaml's development practices. The paper remains a specialized study with focused influence on functional programming and compiler development. Further citations were not found in academic databases or industry papers, corroborating the niche impact within its domain.",
+  "abstract": "We examine the ML pattern-matching anomalies of useless clauses and non-exhaustive matches. We state the definition of these anomalies, building upon pattern matching semantics, and propose a simple algorithm to detect them. We have integrated the algorithm in the Objective Caml compiler, but we show that the same algorithm is also usable in a non-strict language such as Haskell. Or-patterns are considered for both strict and non-strict languages.",
+  "summary": "## Overview\n\nThe paper gives a semantic and algorithmic treatment of two common pattern-matching anomalies: **non-exhaustive matches**, where some values are not covered, and **useless clauses**, where a clause can never be selected because earlier clauses already cover all of its instances. The central abstraction is **usefulness**: a pattern is useful with respect to a matrix of preceding patterns if there exists a value matched by the pattern but by none of the preceding rows.\n\nThe proposed algorithm, generally referred to as algorithm **U**, recursively analyzes pattern matrices using constructor specialization and default matrices. It determines both exhaustiveness and clause usefulness without constructing a potentially exponential decision tree. The paper proves that the same algorithm is correct under strict ML semantics, a general class of lazy matching semantics, Laville’s incompatibility-based semantics, and Haskell’s left-to-right matching semantics.\n\nThe implementation extends the basic analysis in two important ways. First, algorithm **I** produces a pattern representing a counterexample when a match is non-exhaustive. Second, algorithm **U′** analyzes individual alternatives inside or-patterns, allowing compilers to warn about partially useless patterns rather than merely reporting that an entire clause is useful or useless. The implementation also applies safeguards based on subsumption and incompatibility to reduce the risk of exponential behavior. Measurements reported for the Objective Caml compiler indicate that the analysis adds relatively little compilation overhead on ordinary programs, while the safeguards substantially improve behavior for selected difficult inputs.\n\n## Influence and subsequent use\n\nThe work directly influenced compiler practice. The OCaml community identifies it as the canonical reference for the compiler’s exhaustiveness and usefulness checks. ([discuss.ocaml.org](https://discuss.ocaml.org/t/how-does-the-compiler-check-for-exhaustive-pattern-matching/5013)) Rust’s compiler documentation states that its pattern-analysis implementation is inspired by Maranget’s algorithm and uses the same central notions of usefulness, redundancy, exhaustiveness, and counterexample witnesses, with extensions for Rust-specific patterns. ([doc.rust-lang.org](https://doc.rust-lang.org/beta/nightly-rustc/src/rustc_pattern_analysis/usefulness.rs.html)) A C++ pattern-matching proposal also cites the paper when discussing exhaustiveness and usefulness checking and identifies the algorithm as used by Rust. ([isocpp.org](https://isocpp.org/files/papers/p1371r0.pdf)) Thus, the paper’s principal lasting impact is its use as a foundation for practical exhaustiveness and redundancy diagnostics in modern pattern-matching compilers.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/pattern_matching/warnings-for-pattern-matching.pdf",
   "source_type": "pdf",
   "filepath": "pattern_matching/warnings-for-pattern-matching.pdf",
   "filename": "warnings-for-pattern-matching.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:56"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:53"
 }

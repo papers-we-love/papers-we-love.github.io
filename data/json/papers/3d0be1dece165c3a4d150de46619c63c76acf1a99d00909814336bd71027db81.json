@@ -1,31 +1,28 @@
 {
   "uuid": "3d0be1dece165c3a4d150de46619c63c76acf1a99d00909814336bd71027db81",
   "title": "An Axiomatic Basis for Computer Programming",
-  "publication_date": "1969",
+  "publication_date": "October 1, 1969; Communications of the ACM, Volume 12, Issue 10, pp. 576–580 (with continuation on p. 583)",
   "authors": [
     "C. A. R. Hoare"
   ],
   "keywords": [
-    "assertions",
-    "axiomatic-basis",
-    "computational-logic",
-    "computer-programming",
-    "formal-methods",
-    "logical-reasoning",
-    "program-proof",
-    "program-verification",
-    "semantics",
-    "software-correctness"
+    "axiomatic-method",
+    "formal-language-definition",
+    "machine-independent-programming",
+    "program-documentation",
+    "programming-language-design",
+    "proofs-of-programs",
+    "theory-of-programming"
   ],
   "category_path": [
     "comp_sci_fundamentals_and_history"
   ],
-  "abstract": "The study of the logical foundations of computer programming is in a very early stage of development. The present paper is an attempt to explore the interesting and useful properties of the axiomatic method, first used by Euclid in his geometry, when applied to computer programming. Sets of axioms and rules of inference are given for a simple programming language; and examples of formal proofs of properties of programs are shown. The advantages and disadvantages of the approach are briefly discussed, and several illustrative examples are given.",
-  "summary": "This paper, published in 1969 by C. A. R. Hoare, introduces an axiomatic approach to computer programming based on formal logic principles, akin to Euclidean geometry. Hoare proposes sets of axioms and inference rules for a simple programming language, allowing formal proofs of program properties. This work laid foundational principles for program verification and formal methods in computer science.\n\nThe paper was seminal in that it introduced what is now known as \"Hoare Logic,\" which remains a cornerstone in the fields of formal methods and software verification. The impact of this work is evidenced in its influence on numerous subsequent studies and methodologies related to formal methods and programming semantics. For example, Hoare's axiomatic basis is instrumental in understanding program correctness and has influenced later languages and frameworks that aim to ensure or verify software correctness formally.\n\nHoare's method was also a precursor to modern software verification tools, which are used extensively in critical systems where high reliability is necessary, such as in aerospace and medical software. The emphasis on proving program properties rigorously has further guided the development of various logic-based languages and frameworks that thrive in academic and industry settings.\n\nReferences to this paper can be found in numerous later research articles, such as:\n- A comprehensive overview in [A Survey of Formal Methods for Automated Software Analysis](https://link.springer.com/article/10.1007/s00390-09-0083-5)\n- Application of these principles in practical software systems as discussed in [Formal Methods: State of the Art and Future Directions](https://www.sciencedirect.com/science/article/abs/pii/S0167642306002141)\n- A discussion on software verification in [Software Verification and Validation: An Engineering and Scientific Approach](https://www.springer.com/gp/book/9781441915416)\n\nHoare's axiomatic basis laid the groundwork for the field of formal verification and program correctness, influencing both theoretical advancement and the practical application of these concepts in modern computer systems.",
+  "abstract": "In this paper an attempt is made to explore the logical foundations of computer programming by use of techniques which were first applied in the study of geometry and have later been extended to other branches of mathematics. This involves the elucidation of sets of axioms and rules of inference which can be used in proofs of the properties of computer programs. Examples are given of such axioms and rules, and a formal proof of a simple theorem is displayed. Finally, it is argued that important advantages, both theoretical and practical, may follow from a pursuance of these topics.",
+  "summary": "### Overview\n\nC. A. R. Hoare proposes an axiomatic foundation for reasoning about imperative programs. The paper introduces assertions relating a precondition, a program, and a postcondition, written as `P{Q}R`, and presents an assignment axiom together with rules for logical consequence, sequential composition, and iteration. These rules allow properties of program executions to be derived deductively rather than established only through testing. The paper also gives a worked proof for a successive-subtraction division routine, establishing the quotient–remainder relationship and the remainder bound, assuming successful termination and suitable arithmetic properties. The paper’s publication details are corroborated by the ACM record. ([doi.org](https://doi.org/10.1145/363235.363259))\n\nA second contribution is the treatment of computer arithmetic as part of the semantic foundation of programming. Hoare distinguishes mathematical integer arithmetic from finite machine arithmetic and discusses alternative overflow behaviors, including strict failure, saturation at a maximum value, and modulo arithmetic. This anticipates the need for language specifications to separate universally valid axioms from implementation-dependent choices.\n\nThe paper explicitly identifies important limitations: its proof rules establish conditional, or partial, correctness rather than termination; they assume expressions and conditions have no side effects; and they do not yet cover features such as pointers, recursion, arrays, input/output, parallel execution, and complex parameter mechanisms. Hoare argues that these limitations should be made explicit in specifications and proofs rather than hidden in informal programming practice.\n\n### Influence\n\nThe system introduced in the paper became known as Hoare logic, or Floyd–Hoare logic, and its assertion triples and inference rules became a standard basis for deductive verification of imperative programs. Later accounts describe the precondition–program–postcondition triple, assignment rule, composition rule, and loop-invariant reasoning as core components of program logic. ([doi.org](https://doi.org/10.1145/3802605))\n\nThe approach influenced subsequent work on programming-language semantics and verification, including axiomatic definitions of languages such as Pascal, automated program verification, and later extensions for concurrency, pointers, procedures, relational properties, and memory reasoning. Modern formal-methods texts and research continue to use Hoare-style reasoning as an entry point for verification-condition generation and proof-based software development. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/0304397577900044))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/comp_sci_fundamentals_and_history/axiomatic-basis-computer-programming.pdf",
   "source_type": "pdf",
   "filepath": "comp_sci_fundamentals_and_history/axiomatic-basis-computer-programming.pdf",
   "filename": "axiomatic-basis-computer-programming.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:50"
 }

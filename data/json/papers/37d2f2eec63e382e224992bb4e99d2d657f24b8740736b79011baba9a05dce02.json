@@ -1,32 +1,34 @@
 {
   "uuid": "37d2f2eec63e382e224992bb4e99d2d657f24b8740736b79011baba9a05dce02",
-  "title": "Deep Eigenspace Estimation of 3D Brain Activation Maps",
-  "publication_date": "February 2018",
+  "title": "Web-Scale Responsive Visual Search at Bing",
+  "publication_date": "August 19–23, 2018 — Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD 2018), Applied Data Science Track. The arXiv version was submitted on February 14, 2018 and revised on February 20, 2018. ([arxiv.org](https://arxiv.org/abs/1802.04914))",
   "authors": [
-    "Brett Larsen",
-    "David G. Stork"
+    "Arun Sacheti",
+    "Houdong Hu",
+    "Jiapei Huang",
+    "Li Huang",
+    "Linjun Yang",
+    "Meenaz Merchant",
+    "Pavel Komlev",
+    "Xi (Stephen) Chen",
+    "Yan Wang",
+    "Ye Wu"
   ],
   "keywords": [
-    "3d-brain-maps",
-    "brain-activation",
-    "brain-computer-interface",
+    "content-based-image-retrieval",
     "deep-learning",
-    "dimensionality-reduction",
-    "eigenspace-estimation",
-    "functional-imaging",
-    "machine-learning",
-    "medical-imaging",
-    "neuroimaging"
+    "image-understanding",
+    "object-detection"
   ],
   "category_path": [
     "search-engines"
   ],
-  "abstract": "We propose a novel technique for the estimation of spatial activation patterns in functional neuroimaging data, cast as an inverse spatial eigenspace estimation problem. Previous methods include regression-based approaches which are slow and sensitive to noise and assumptions of Gaussianity. By using deep learning, our proposed method, DEEP, trains an autoencoder neural network to map from signals to brain activation maps that minimize an eigenspace estimation loss function. Simulated experiments demonstrate the applicability and utility of our method in reducing the dimensionality of complex brain imaging data and improving estimation of brain activation patterns.",
-  "summary": "The paper \"Deep Eigenspace Estimation of 3D Brain Activation Maps\" introduces a novel method called DEEP for estimating spatial activation patterns in neuroimaging data. The authors propose using a deep learning variant—a neural network autoencoder—to map signals to brain activation maps that minimize eigenspace estimation loss, addressing drawbacks like noise sensitivity and slow processing speed inherent in traditional regression-based methods. This approach potentially offers improved estimation of brain activation patterns by reducing the dimensionality of complex brain imaging data.\n\nIn the context of related research, the paper has contributed to the development of more efficient neuroimaging processing techniques. However, there is limited direct citation or use in subsequent publications as of now. The combination of deep learning with eigenspace estimation was a novel contribution which may take time to be fully realized in further studies or in clinical applications of brain-computer interfaces. As it stands, this methodology presents promising results for future applications, particularly in interpreting complex functional imaging data. Despite the large potential impact, concrete adoption in broader research or industry spheres has not yet been prominently observed.",
+  "abstract": "In this paper, we introduce a web-scale general visual search system deployed in Microsoft Bing. The system accommodates tens of billions of images in the index, with thousands of features for each image, and can respond in less than 200 ms. In order to overcome the challenges in relevance, latency, and scalability in such large scale of data, we employ a cascaded learning-to-rank framework based on various latest deep learning visual features, and deploy in a distributed heterogeneous computing platform. Quantitative and qualitative experiments show that our system is able to support various applications on Bing website and apps.",
+  "summary": "## Summary\n\nThe paper describes a production visual-search system deployed in Microsoft Bing for searching across a general web-scale image index containing tens of billions of images. Its design addresses three competing requirements: relevance, response latency, and storage scalability.\n\nThe system uses a three-stage retrieval and ranking pipeline. First, Level-0 matching applies a sharded inverted index based on Bag-of-Visual-Words representations to reduce the search space by roughly four orders of magnitude. Level-1 ranking uses a relatively inexpensive deep neural network feature and Product Quantization (PQ) to reduce the candidate set from millions to thousands. Level-2 ranking retrieves richer visual features and applies a LambdaMART model that combines multiple signals, including DNN embeddings, category features, face features, color, object-detection outputs, text-matching signals, and deduplication features.\n\nThe visual representations are produced by several CNN architectures, including AlexNet, ZFSPPNet, GoogleNet, GoogleNetBN, and ResNet-50. The authors train models using Bing-specific data, human relevance judgments, web-scraped data, classification objectives, pairwise ranking loss, and triplet loss. Object detection, using Faster R-CNN and SSD, supports interactive hotspots and helps isolate objects such as fashion and furniture items. The system also detects shopping intent and can return related products with merchant and price information.\n\nTo reduce memory and computation costs, the system applies PCA followed by PQ. For example, a 2048-dimensional ResNet representation is compressed from approximately 8 KB to 25 bytes per image. The visual-word representation uses approximately 64 bytes per image. Features and indexes are distributed across hundreds of machines, with SSD-based storage used for faster random access. CPU inference is optimized through vectorized low-level implementations, multithreading, caching, and a graph-based feature-extraction runtime; GPU deployment is reported to accelerate feature extraction by roughly 10–20 times for applicable models.\n\nOn the reported evaluation set, the proposed multi-feature system achieves NDCG@5 of 74.20, compared with 70.81 for the strongest listed single-feature PQ baseline. PCA and PQ cause modest relevance reductions for the tested ResNet feature, lowering NDCG@5 from 71.84 for the raw feature to 70.81 after quantization. Reported median-style 50% latencies are 174 ms for an image already present in the index and 1083 ms for a user-uploaded image; feature extraction accounts for much of the latter cost, while cascaded ranking is reported at 49 ms.\n\nThe evaluation has important limitations: relevance is measured on a constrained set of candidate images using human pairwise judgments, and the reported NDCG primarily evaluates final reranking rather than the complete billions-scale retrieval process. The paper therefore presents an engineering account of how approximate indexing, cascaded ranking, compressed representations, distributed retrieval, and heterogeneous hardware can jointly make general visual search practical.\n\n## Influence and subsequent use\n\nThe paper became a documented reference point for later commercial visual-search work. Alibaba’s contemporaneous KDD system described a separate large-scale visual-search architecture for e-commerce, addressing similar production concerns such as deep feature learning, object localization, indexing, reranking, and high-throughput serving. ([kdd.org](https://www.kdd.org/kdd2018/accepted-papers/view/visual-search-at-alibaba)) Later Microsoft work on web-scale generic object detection explicitly cited the Bing visual-search system as an example of using object detection to improve visual-search engagement and relevance, extending the object-understanding component toward a broader production detection platform. ([researchgate.net](https://www.researchgate.net/publication/353050799_Web-Scale_Generic_Object_Detection_at_Microsoft_Bing)) The paper is also cited in subsequent visual-search, e-commerce retrieval, and content-based image-retrieval literature as a production-scale example of combining deep representations with cascaded retrieval and compressed indexing. ([doi.org](https://doi.org/10.1145/3404835.3462950))",
   "raw_url": "https://arxiv.org/pdf/1802.04914.pdf",
   "source_type": "external",
   "filepath": "search-engines/README.md",
   "filename": "Bing",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:56"
 }

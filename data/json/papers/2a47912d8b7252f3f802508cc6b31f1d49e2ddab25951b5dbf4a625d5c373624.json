@@ -1,7 +1,7 @@
 {
   "uuid": "2a47912d8b7252f3f802508cc6b31f1d49e2ddab25951b5dbf4a625d5c373624",
   "title": "Meltdown: Reading Kernel Memory from User Space",
-  "publication_date": "January 12, 2018",
+  "publication_date": "15 August 2018 (27th USENIX Security Symposium, USENIX Security 2018); arXiv preprint posted 3 January 2018",
   "authors": [
     "Anders Fogh",
     "Daniel Genkin",
@@ -17,26 +17,26 @@
     "Yuval Yarom"
   ],
   "keywords": [
-    "cache",
-    "cpu",
-    "hardware-vulnerability",
+    "cache-attacks",
+    "flush-reload",
     "kernel-memory",
+    "kpti",
     "meltdown",
+    "memory-isolation",
     "microarchitecture",
-    "security",
-    "side-channel-attack",
-    "speculative-execution",
-    "user-space"
+    "out-of-order-execution",
+    "side-channel-attacks",
+    "transient-execution"
   ],
   "category_path": [
     "security"
   ],
-  "abstract": "Meltdown is a novel attack that allows overcoming memory isolation and reading arbitrary kernel-memory location, including personal data and passwords, using a thirdparty program. Meltdown exploits side effects of out-of-order execution on modern processors to read arbitrary kernelmemory locations. As a consequence, personal data can be stolen from the affected system. Meltdown allows attackers to circumvent the separation between user applications and the operating system, affecting multiple operating systems. Moreover, the attack does not only work on personal computers but can also be exploited in the cloud.",
-  "summary": "The paper titled 'Meltdown: Reading Kernel Memory from User Space' discusses the Meltdown vulnerability, discovered by a team of security researchers, which impacts a broad range of Intel processors. The vulnerability takes advantage of speculative execution, a feature in modern CPUs, allowing a third-party program to read arbitrary kernel memory locations, thus breaching memory isolation protocols. This attack exploits side effects of out-of-order execution to access kernel memory and retrieve sensitive data, including passwords on affected systems.\n\nMeltdown affects multiple operating systems and platforms, including personal computers and cloud environments. The researchers propose software and hardware mitigation strategies to protect systems against this vulnerability. The paper details the technical aspects and methodologies of the attack and its implications for system security.\n\nSince its disclosure, Meltdown has had significant impacts across the tech industry and academic research. The vulnerability led to widespread media coverage and prompted immediate responses from companies like Intel and operating system vendors such as Microsoft, Apple, and the Linux community. In subsequent months and years, this paper has influenced numerous studies on speculative execution, microarchitectural attacks, and hardware security.\n\n1. Lipp, M., et al., Spectre Meltdown Check. [https://github.com/speed47/spectre-meltdown-checker](https://github.com/speed47/spectre-meltdown-checker)\n2. Kocher, P., et al., Spectre Attacks: Exploiting Speculative Execution. [https://spectreattack.com/spectre.pdf](https://spectreattack.com/spectre.pdf)\n3. Vougioukas, I., et al. (2019), Meltdown & Spectre vulnerabilities: Mitigations, Performance effects and a full system comparison. In Proceedings of the 2019 IEEE 10th Annual Ubiquitous Computing, Electronics & Mobile Communication Conference.\n4. Van Bulck, J., et al. (2018), Foreshadow: Extracting the Keys to the Intel SGX Kingdom with Transient Out-of-Order Execution. In Proceedings of the 27th USENIX Security Symposium.\n5. Schwarz, M., et al. (2019), ZombieLoad: Cross-Privilege-Boundary Data Sampling. In Proceedings of the 2019 ACM SIGSAC Conference on Computer and Communications Security.",
+  "abstract": "The security of computer systems fundamentally relies on memory isolation, e.g., kernel address ranges are marked as non-accessible and are protected from user access. In this paper, we present Meltdown. Meltdown exploits side effects of out-of-order execution on modern processors to read arbitrary kernel-memory locations including personal data and passwords. Out-of-order execution is an indispensable performance feature and present in a wide range of modern processors. The attack is independent of the operating system, and it does not rely on any software vulnerabilities. Meltdown breaks all security guarantees provided by address space isolation as well as paravirtualized environments and, thus, every security mechanism building upon this foundation. On affected systems, Meltdown enables an adversary to read memory of other processes or virtual machines in the cloud without any permissions or privileges, affecting millions of customers and virtually every user of a personal computer. We show that the KAISER defense mechanism for KASLR has the important (but inadvertent) side effect of impeding Meltdown. We stress that KAISER must be deployed immediately to prevent large-scale exploitation of this severe information leakage.",
+  "summary": "### Impact\n\nThe paper established that transient, out-of-order execution could violate the practical security boundary between user and kernel memory through a cache-based covert channel. Its most direct industry impact was the adoption of address-space separation mitigations: Linux developed KAISER into Kernel Page-Table Isolation (KPTI/PTI), while Microsoft implemented the related KVA Shadow approach. ([kernel.org](https://kernel.org/doc/html/v5.13/x86/pti.html))\n\nThe work also helped establish transient-execution security as a research area. Subsequent research examined the performance costs of Spectre/Meltdown mitigations, synthesized related attacks such as MeltdownPrime, and investigated Meltdown-like leakage on processors designed to resist the original attack. ([arxiv.org](https://arxiv.org/abs/1802.03802))",
   "raw_url": "https://meltdownattack.com/meltdown.pdf",
   "source_type": "external",
   "filepath": "security/README.md",
   "filename": "Meltdown (2018)",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:56"
 }

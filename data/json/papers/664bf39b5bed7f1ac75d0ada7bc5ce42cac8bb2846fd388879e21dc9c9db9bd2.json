@@ -1,36 +1,30 @@
 {
   "uuid": "664bf39b5bed7f1ac75d0ada7bc5ce42cac8bb2846fd388879e21dc9c9db9bd2",
-  "title": "Transactional Storage for Geo-Replicated Systems",
-  "publication_date": "2011",
+  "title": "Transactional storage for geo-replicated systems",
+  "publication_date": "October 23–26, 2011, ACM Symposium on Operating Systems Principles (SOSP ’11), Cascais, Portugal",
   "authors": [
-    "Chaitanya Utkarsh",
-    "Kishore Kumar Pusukuri",
-    "Sirish Chandrasekara Paneesh",
-    "Sreenivas Gollapalli",
-    "Venkatram Vishwanatha",
-    "Virendra R. Divya"
+    "Jinyang Li",
+    "Marcos K. Aguilera",
+    "Russell Power",
+    "Yair Sovran"
   ],
   "keywords": [
-    "conflict-resolution",
-    "consistency-models",
-    "data-availability",
-    "data-replication",
-    "distributed-systems",
-    "geo-replication",
-    "latency-optimization",
-    "system-architecture",
-    "telecommunication-networks",
-    "transactional-storage"
+    "asynchronous-replication",
+    "distributed-storage",
+    "geo-distributed-systems",
+    "key-value-store",
+    "parallel-snapshot-isolation",
+    "transactions"
   ],
   "category_path": [
     "datastores"
   ],
-  "abstract": "Geo-replicated systems residing in several datacenters across the world are gaining popularity due to their ability to provide low-latency global services and automatic disaster recovery. The core of such systems is a distributed storage engine designed to manage data across multiple datacenters. Typically, the trade-off in such systems has been between providing high availability and ensuring strong consistency. In this paper, we present a transactional storage architecture for geo-replicated databases, which provides high availability along with strong consistency guarantees. Our architecture makes use of timestamp-ordering, meta-data management, and conflict resolution methods to achieve these goals. Preliminary evaluations show promising results in terms of reducing latencies and improving the system's availability while maintaining strong consistency.",
-  "summary": "This paper presents a transactional storage architecture developed for geo-replicated databases, aiming to balance the dual objectives of strong consistency and high availability. Geo-replicated systems that span multiple data centers are essential in providing efficient low-latency services worldwide and facilitating disaster recovery. The architecture proposed in the study employs techniques like timestamp-ordering, meta-data management, and conflict resolution to achieve these objectives, thus overcoming the traditional trade-offs in such systems. The authors demonstrate that the architecture improves system availability and reduces latency while maintaining consistency.\n\nA brief review of citations and references to this work within academic research reveals limited direct impact on subsequent studies. However, geo-replication and related consistency challenges remain key areas of interest in fields such as distributed computing and database systems. Although this specific paper is not widely cited, the challenges addressed are continually relevant as they form the basis for the development of robust distributed databases used in large-scale internet services and telecommunications networks. No specific papers or industry implementations were found that directly attribute their methodologies to the findings of this paper.",
+  "abstract": "We describe the design and implementation of Walter, a key-value store that supports transactions and replicates data across distant sites. A key feature behind Walter is a new property called Parallel Snapshot Isolation (PSI). PSI allows Walter to replicate data asynchronously, while providing strong guarantees within each site. PSI precludes write-write conflicts, so that developers need not worry about conflict-resolution logic. To prevent write-write conflicts and implement PSI, Walter uses two new and simple techniques: preferred sites and counting sets. We use Walter to build a social networking application and port a Twitter-like application.",
+  "summary": "### Summary\n\nWalter is a geo-replicated transactional key-value store designed to combine low-latency local commits with asynchronous replication between distant sites. Its central contribution is **Parallel Snapshot Isolation (PSI)**: transactions read from a consistent snapshot at their local site; committed concurrent transactions cannot have overlapping write sets; and causal dependencies are preserved across sites. Unlike conventional snapshot isolation, PSI permits different sites to observe non-conflicting transactions in different orders, enabling replication without imposing a global commit order.\n\nThe implementation uses multi-version concurrency control, vector timestamps, and per-object histories. **Preferred sites** allow transactions that write objects at their designated sites to commit without cross-site coordination. **Counting sets (csets)** represent set-like or counter-like data through commutative add and remove operations, allowing concurrent updates from different sites without write conflicts. Transactions involving regular objects outside their preferred sites use a slower two-phase commit protocol among the relevant preferred sites.\n\nWalter provides normal and disaster-safe durability, asynchronous propagation, and a distinction between local commitment, disaster-safe durability, and global visibility. Its principal consistency limitation is the possibility of a temporary **long fork**, in which different sites expose different orders of concurrent, non-conflicting updates until replication converges. The prototype supported WaltSocial and a port of ReTwis; experiments on four Amazon EC2 sites reported fast-commit 99.9th-percentile latency of 27 ms, WaltSocial operation latency below 50 ms at the 99.9th percentile, and useful throughput for the evaluated workloads. The design also showed that applications could often avoid slow commits by structuring shared data with csets. ([cs.cornell.edu](https://www.cs.cornell.edu/courses/cs6452/2012sp/papers/psi-sosp11.pdf))\n\n### Subsequent influence\n\nLater research used PSI as a formal point of comparison. *Seeing is Believing* analyzed PSI’s relationship to earlier consistency models, concluding that PSI is equivalent to lazy consistency (PL-2+) under the relevant client-observable semantics and showing how PSI can be enforced without requiring the same per-site ordering constraints as the original formulation. ([arxiv.org](https://arxiv.org/abs/1609.06670)) Automated-analysis research subsequently modeled PSI to detect serializability violations in transactional applications, finding long-fork anomalies in TPC-C under PSI. ([arxiv.org](https://arxiv.org/abs/1806.08416))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/datastores/transactional-storage-for-geo-replicated-systems.pdf",
   "source_type": "pdf",
   "filepath": "datastores/transactional-storage-for-geo-replicated-systems.pdf",
   "filename": "transactional-storage-for-geo-replicated-systems.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:51"
 }

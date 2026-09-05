@@ -1,32 +1,31 @@
 {
   "uuid": "a5046f34b6aef0b13bd68cb670011e1fc0b5b17bf489cfe2f2b8ec95f7031cd1",
-  "title": "Representing Game Dialogue as Expressions in First-Order Logic",
-  "publication_date": "2004",
+  "title": "REPRESENTING GAME DIALOGUE AS EXPRESSIONS IN FIRST-ORDER LOGIC",
+  "publication_date": "May 2013",
   "authors": [
-    "Emily Short",
-    "Graham Nelson"
+    "Kaylen Wheeler"
   ],
   "keywords": [
-    "computational-linguistics",
-    "conversation-system",
+    "autonomous-agents",
+    "believable-characters",
     "dialogue-systems",
+    "emergent-behavior",
     "first-order-logic",
-    "game-design",
+    "game-development",
     "game-dialogue",
-    "intelligent-agents",
     "interactive-fiction",
-    "logical-representation",
-    "narrative-structures"
+    "logic-programming",
+    "natural-language-processing"
   ],
   "category_path": [
     "logic_and_programming"
   ],
-  "abstract": "One of the central themes of interactive fiction is conversation between author and player, game and player. Typically this interaction has been managed through techniques borrowed from parsers, natural language understanding and finite-state machines, or even more typically, through ad hoc methods specific to a particular game. Recently, the development of more intelligent agents has seen the introduction of first-order logic for the planning and representation of in-game behavior. In this paper, we propose a framework for using first-order logic to represent game dialogue. The potential advantages include modularity, ease of alteration, and the powerful expressiveness of formal logic.",
-  "summary": "This paper was published in 2004 by authors Emily Short and Graham Nelson. It explores the use of first-order logic to represent game dialogue within interactive fiction, aiming to improve modularity and expressiveness compared to traditional methods like parsers or finite-state machines. While direct citations or subsequent research specifically referring to this paper are not easily found in the public domain, the principles discussed—such as employing logical frameworks to handle in-game dialogue and interactions—are echoed in more recent works dealing with dialogue systems and AI in game development. This suggests the foundational ideas may have permeated through broader research on dialogue in computational linguistics and AI-driven game design. However, explicit mentions in academic references are lacking.",
+  "abstract": "Despite advancements in graphics, physics, and artificial intelligence, modern video games are still lacking in believable dialogue generation. The more complex and interactive stories in modern games may allow the player to experience different paths in dialogue trees, but such trees are still required to be manually created by authors. Recently, there has been research on methods of creating emergent believable behaviour, but these are lacking true dialogue construction capabilities. Because the mapping of natural language to meaningful computational representations (logical forms) is a difficult problem, an important first step may be to develop a means of representing in-game dialogue as logical expressions. This thesis introduces and describes a system for representing dialogue as first-order logic predicates, demonstrates its equivalence with current dialogue authoring techniques, and shows how this representation is more dynamic and flexible.",
+  "summary": "### Overview\n\nThis master’s thesis proposes representing game dialogue as first-order-logic expressions rather than as arbitrary strings embedded in manually authored dialogue trees. The implementation uses Clojure, `core.logic`, and MiniKanren-style relational programming. The representation is intended to be computationally meaningful, unambiguous, and structurally manipulable.\n\nThe system combines three main mechanisms:\n\n- **Higher-order predicates:** Dialogue utterances are represented as executable predicates, allowing agents to pose nested questions and reason about how other agents would respond. This is demonstrated with a Knights-and-Knaves scenario involving simple theory-of-mind reasoning.\n- **Polymorphic response functions:** Message types are modeled using metadata, type hierarchies, and multimethod dispatch. This allows responses to depend on the conversational function of an utterance, such as greeting, offering, informing, or querying.\n- **Rules and modifiers:** Agents can update internal state through assertions, retractions, and changes to stored facts. Rules connect state changes to message-based triggers, supporting emotion, memory, and social-behavior models.\n\nTwo scenarios evaluate the approach. In “Bobby and Sally,” autonomous agents use dialogue to influence emotional state, with Bobby selecting actions based on predicted effects of Sally’s rules. In “Lovecraft Country,” the system reproduces the behavior of an existing dialogue tree while also allowing dialogue variation based on agent attributes, memories, emotional thresholds, and additional agents. The thesis therefore argues that the proposed representation can subsume the expressive behavior of dialogue trees while enabling more dynamic reuse and recombination of authored data.\n\n### Documented influence\n\nA concrete later research use appears in *Modeling Autobiographical Memory for Believable Agents*, which cites Wheeler’s thesis when discussing robust memory as a support system for believable agent behavior and identifies integration with Wheeler’s dialogue system as a potential direction for more dynamic interactions. ([ojs.aaai.org](https://ojs.aaai.org/index.php/AIIDE/article/download/12686/12534))\n\nThe thesis is also listed in the miniKanren research community’s catalog of work related to the ecosystem, but the sources searched do not establish a broad industry adoption or a large subsequent research lineage directly attributable to it. ([minikanren.org](https://minikanren.org/))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/logic_and_programming/representing-game-dialogue-as-expressions-in-first-order-logic.pdf",
   "source_type": "pdf",
   "filepath": "logic_and_programming/representing-game-dialogue-as-expressions-in-first-order-logic.pdf",
   "filename": "representing-game-dialogue-as-expressions-in-first-order-logic.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

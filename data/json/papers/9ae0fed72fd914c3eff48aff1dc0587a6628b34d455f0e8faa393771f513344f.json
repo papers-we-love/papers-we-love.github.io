@@ -1,32 +1,32 @@
 {
   "uuid": "9ae0fed72fd914c3eff48aff1dc0587a6628b34d455f0e8faa393771f513344f",
   "title": "Commodifying Replicated State Machines with OpenReplica",
-  "publication_date": "2009",
+  "publication_date": "June 5, 2012; Cornell University Computer Science Department Technical Report 1813-29009",
   "authors": [
-    "Flavio Junqueira",
-    "Keith Marzullo"
+    "Deniz Altınbüken",
+    "Emin Gün Sirer"
   ],
   "keywords": [
-    "consensus-algorithms",
-    "distributed-computing",
+    "coordination-services",
+    "distributed-synchronization",
     "distributed-systems",
+    "dynamic-membership",
     "fault-tolerance",
-    "high-availability",
-    "openreplica",
+    "object-replication",
+    "paxos",
+    "rack-aware-placement",
     "replicated-state-machines",
-    "software-commoditization",
-    "system-reliability",
-    "system-replication"
+    "zookeeper"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "Running state machine replicas in distributed systems is a well-established method for achieving high availability and fault tolerance. Traditionally, the engineering and operation of replicated state machines has been performed by specialized systems. It is a difficult effort to design, develop, and maintain a distributed implementation using the state machine approach, as it requires implementing consensus and ensuring reliability. Existing research provides the theoretical and algorithmic foundation, but it is difficult to employ given available software platforms. This paper presents the design and implementation of OpenReplica, a service that aims at commoditizing replicated state machines. OpenReplica handles system issues such as leader election and failure recovery, freeing application developers to focus on the application logic. Our measurements indicate that the overhead of OpenReplica is tolerable for a wide range of applications, and the service enables developers to build reliable distributed applications more efficiently.",
-  "summary": "OpenReplica addresses two key challenges in distributed systems: making replicated state machines more accessible and reducing the complexity associated with their implementation. The paper describes how OpenReplica can commoditize such systems by handling standard concerns such as leader election and failure recovery. By abstracting these complexities, developers can focus on application logic while benefiting from the reliability and fault-tolerance traditionally afforded by replicated state machines. \n\nOpenReplica could be influential in developing distributed systems, as it lowers the barrier for implementing complex algorithms required for consensus and reliability. However, searching for direct references and citations after the paper's publication shows limited immediate impact. The system primarily demonstrates potential benefits for application developers requiring system-level reliability without delving into consensus algorithms. As of now, OpenReplica itself is mostly mentioned in the context of theoretical discussions or as a part of educational material on distributed systems, with limited adoption in large-scale industry or subsequent academic advancements. No significant direct follow-up studies or industrial applications appear prominently linked with this paper or its prototypes.",
+  "abstract": "This paper describes OpenReplica, an open service that provides replication and synchronization support for large-scale distributed systems. OpenReplica is designed to commodify Paxos replicated state machines by providing infrastructure for their construction, deployment and maintenance. OpenReplica is based on a novel Paxos replicated state machine implementation that employs an object-oriented approach in which the system actively creates and maintains live replicas for user-provided objects. Clients access these replicated objects transparently as if they are local objects. OpenReplica supports complex distributed synchronization constructs through a multi-return mechanism that enables the replicated objects to control the execution flow of their clients, in essence providing blocking and non-blocking method invocations that can be used to implement richer synchronization constructs. Further, it supports elasticity requirements of cloud deployments by enabling any number of servers to be replaced dynamically. A rack-aware placement manager places replicas on nodes that are unlikely to fail together. Experiments with the system show that the latencies associated with replication are comparable to ZooKeeper, and that the system scales well.",
+  "summary": "## Summary\n\nOpenReplica presents an object-oriented coordination service for constructing, deploying, and maintaining Paxos-based replicated state machines. Users provide ordinary Python objects, while the system generates client proxies and server-side replication logic so that clients can invoke replicated objects as though they were local. Replicas maintain live object instances and agree on a totally ordered command history rather than repeatedly serializing and restoring complete object state.\n\nThe design supports both ordinary synchronous operations and **rendezvous objects**, whose methods can suspend and later resume client execution. This multi-return mechanism allows distributed locks, semaphores, barriers, and condition variables to be implemented using programming patterns close to their centralized counterparts. The system also supports dynamic changes to replica, acceptor, and name-server membership; DNS-based discovery of current replicas; rack-aware placement to reduce correlated failures; handling of selected nondeterministic operations; optional inconsistent reads; and garbage collection through snapshots.\n\nThe evaluation, conducted on an eleven-server cluster, reported latency comparable to ZooKeeper, lower latency variance in the tested workload, performance largely insensitive to replicated-state size, and scaling to larger replica and acceptor groups. OpenReplica achieved 327 operations per second for consistent operations with five replicas and five acceptors, compared with 1,872 operations per second for ZooKeeper in the same experiment. Leader-failure recovery averaged 2.75 seconds for OpenReplica versus 2 seconds for ZooKeeper. The authors attributed the throughput gap primarily to the prototype's Python implementation and ZooKeeper's batching optimizations.\n\n## Subsequent influence\n\nThe paper was published as a Cornell technical report on June 5, 2012. ([ecommons.cornell.edu](https://ecommons.cornell.edu/items/2120962f-0ebe-4e00-8a2e-d210fb4a9ff4)) A concrete later use is the AR2C2 resilient software-defined-network control-plane work, which implemented active replication using OpenReplica and evaluated controller recovery and migration. ([eurekamag.com](https://eurekamag.com/research/109/367/109367765.php)) Later distributed-systems literature also cites OpenReplica as an example of transparent object replication, Paxos-based implementation, binary-rewritten proxies, and runtime view changes. ([researchgate.net](https://www.researchgate.net/publication/398551786_Composing_State_Machine_Replication)) The OpenReplica project website describes the system as an educational coordination service and states that it is not actively maintained, so the available evidence indicates research and educational reuse rather than sustained mainstream industry adoption. ([openreplica.org](https://openreplica.org/))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/commodifying-replicated-state-machines-with-openreplica.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/commodifying-replicated-state-machines-with-openreplica.pdf",
   "filename": "commodifying-replicated-state-machines-with-openreplica.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:51"
 }

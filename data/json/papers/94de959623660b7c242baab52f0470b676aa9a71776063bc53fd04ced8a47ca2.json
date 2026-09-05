@@ -1,33 +1,33 @@
 {
   "uuid": "94de959623660b7c242baab52f0470b676aa9a71776063bc53fd04ced8a47ca2",
-  "title": "Towards a Cloud Computing Research Agenda",
-  "publication_date": "June 2010",
+  "title": "TOWARDS A CLOUD COMPUTING RESEARCH AGENDA",
+  "publication_date": "June 2009, ACM SIGACT News, Volume 40, Issue 2, pages 68–80",
   "authors": [
-    "Bernd Grobauer",
-    "Elmar Stocker",
-    "Tobias Walloschek"
+    "Gregory Chockler",
+    "Ken Birman",
+    "Robbert van Renesse"
   ],
   "keywords": [
     "cloud-computing",
-    "cloud-storage",
-    "data-center",
+    "convergent-consistency",
+    "data-centers",
     "distributed-systems",
-    "resource-management",
+    "event-notification",
+    "eventual-consistency",
+    "fault-tolerance",
+    "power-management",
     "scalability",
-    "security",
-    "service-level-agreements",
-    "service-models",
     "virtualization"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "Cloud Computing has been a hot topic in the information technology industry for some time. The aim of this paper is to explore challenging research issues related to the adoption of Cloud Computing technology and to propose a research agenda to address these issues. Specifically, we discuss data confidentiality and auditability, the relationship between speed and reliability of implementation on the one hand and richness of the functionality plus performance on the other hand, and resource management issues that arise from the possibility of combining different service types in a hybrid deployment model. As a result of our analysis, we propose a research agenda consisting of a set of concrete actions to address the outlined issues and thus accelerate the adoption of Cloud Computing technology.",
-  "summary": "The paper titled \"Towards a Cloud Computing Research Agenda\" provides an overview of key challenges and proposes a research agenda to advance the adoption of cloud computing technologies. Key issues discussed include data confidentiality, auditability, and resource management, especially when integrating various service types in hybrid deployment models.\n\nDespite its foundational discussion on cloud computing that emerged in the early 2010s, this paper itself does not have direct citations in subsequent literature or documents that indicate a notable influence on further research or industry practices. A search for references and citations of this paper revealed no significant mentions or discussions related to its content and conclusions in subsequent academic or industry works.",
+  "abstract": "The 2008 LADIS workshop on Large Scale Distributed Systems brought together leaders from the commercial cloud computing community with researchers working on a variety of topics in distributed computing. The dialog yielded some surprises: some hot research topics seem to be of limited near-term importance to the cloud builders, while some of their practical challenges seem to pose new questions to us as systems researchers. This brief note summarizes our impressions.",
+  "summary": "The paper reports lessons from the 2008 LADIS workshop, where distributed-systems researchers compared their priorities with the operational requirements of large commercial cloud providers. It argues that cloud computing should be understood not only as an external utility-like service, but also as a highly automated collection of large-scale data-center mechanisms. The authors emphasize that scalability and robustness often depend more on decoupling, asynchronous operation, autonomous recovery, and gradual convergence than on strong synchronization, distributed locking, ACID transactions, or Byzantine consensus on the critical path.\n\nThe proposed research agenda includes power-aware data-center management; formal models, metrics, and verification methods for convergent consistency; stability analysis and scalability testing for large event-notification and management platforms; virtualization-aware distributed-systems design; and architectures based on commodity hardware, autonomous recovery, and resistance to churn, load surges, oscillations, and other destabilizing effects.\n\nSubsequent literature confirms that the paper became a recognized reference in cloud-computing research. A 2016 citation and co-citation analysis of 214 cloud-computing papers included it among the important foundational works used to map major research themes and identify future research directions. ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S0167923616300409)) Its proposed emphasis on energy-aware infrastructure was also cited in later algorithmic work on energy-efficient scheduling, including research on partial machine shutdown. ([people.iiis.tsinghua.edu.cn](https://people.iiis.tsinghua.edu.cn/~jianli/paper/soda10.pdf)) The paper itself was published in ACM SIGACT News in June 2009, volume 40, issue 2, pages 68–80. ([pure.royalholloway.ac.uk](https://pure.royalholloway.ac.uk/en/publications/toward-a-cloud-computing-research-agenda/))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/towards-a-cloud-computing-research-agenda.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/towards-a-cloud-computing-research-agenda.pdf",
   "filename": "towards-a-cloud-computing-research-agenda.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

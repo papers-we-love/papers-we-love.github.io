@@ -1,33 +1,33 @@
 {
   "uuid": "397d4936fdceef082ede1194582c8b64a1c557eaa62dc7291258d294535c1ab6",
-  "title": "Investigating User Behavior in Home Computer Security",
-  "publication_date": "June 2009",
+  "title": "A survey of coordinated attacks and collaborative intrusion detection",
+  "publication_date": "February 2010 (Computers & Security, Volume 29, Issue 1, pages 124–140; DOI published online in 2009)",
   "authors": [
-    "Anna Oleszkiewicz",
-    "Jae Park",
-    "Yang Wang"
+    "Chenfeng Vincent Zhou",
+    "Christopher Leckie",
+    "Shanika Karunasekera"
   ],
   "keywords": [
-    "computer-security-practices",
-    "cybersecurity",
-    "home-computer-security",
-    "internet-security",
-    "password-management",
-    "phishing",
-    "privacy",
-    "security-tools",
-    "user-behavior",
-    "virus-protection"
+    "alert-correlation",
+    "cids-architectures",
+    "collaborative-intrusion-detection",
+    "coordinated-attacks",
+    "cyber-attack-detection",
+    "distributed-denial-of-service",
+    "intrusion-detection-systems",
+    "large-scale-stealthy-scans",
+    "network-security",
+    "worm-outbreaks"
   ],
   "category_path": [
     "security"
   ],
-  "abstract": "This study investigates how private home computer users handle their computer security. The focus lies on user behavior regarding home computer security, including actions they take to protect their systems, reasons behind these actions, and perceptions regarding threats and vulnerabilities. Our study is based on data gathered from a survey distributed to a sample of home users. The results provide an insight into user practices and attitudes towards different aspects of computer security, the perceived importance of these aspects, as well as users' security expertise and need for education. This study further highlights several factors influencing user behavior and its implications for the design of future computer security tools and educational initiatives.",
-  "summary": "The paper \"Investigating User Behavior in Home Computer Security\" examines how individuals manage computer security in their personal environments. The study, published in June 2009 by Anna Oleszkiewicz, Jae Park, and Yang Wang, utilizes survey data to analyze user behaviors, motivations, and perceptions concerning cybersecurity. Key insights include users' security practices, threat awareness, and educational needs. No direct citations or substantial influence on specific follow-up research were found during a web search. However, the study provides foundational insights that may inform the design of security tools and educational strategies in consumer-oriented cybersecurity contexts.",
+  "abstract": "Coordinated attacks, such as large-scale stealthy scans, worm outbreaks and distributed denial-of-service (DDoS) attacks, occur in multiple networks simultaneously. Such attacks are extremely difficult to detect using isolated intrusion detection systems (IDSs) that monitor only a limited portion of the Internet. In this paper, we summarize the current research directions in detecting such attacks using collaborative intrusion detection systems (CIDSs). In particular, we highlight two main challenges in CIDS research: CIDS architectures and alert correlation algorithms. We review the current CIDS approaches in terms of these two challenges. We conclude by highlighting opportunities for an integrated solution to large-scale collaborative intrusion detection.",
+  "summary": "The paper established a structured survey of collaborative intrusion detection around two central design problems: distributed CIDS architectures and alert-correlation algorithms. It framed coordinated attacks—including distributed scans, worm outbreaks, and DDoS attacks—as threats whose evidence is distributed across network and administrative boundaries, motivating cross-network evidence sharing and integrated detection.\n\nSubsequent research continued to use this framing. Later surveys treated the paper as a foundational reference for collaborative and distributed intrusion detection, including a 2015 taxonomy and survey of CIDS requirements, components, attacks, and approaches, as well as a 2016 survey of ensemble-based collaborative and distributed IDSs. ([researchgate.net](https://www.researchgate.net/publication/276205397_Taxonomy_and_Survey_of_Collaborative_Intrusion_Detection)) The paper’s emphasis on correlating multiple attack events also aligns with later systematic work on multi-step attack detection, which catalogued 181 publications and 119 methods and identified modelling, automation, datasets, and reproducibility as continuing challenges. ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S0167404818302141))\n\nThe available citation evidence indicates sustained use in subsequent intrusion-detection surveys and research on alert correlation, anomaly detection, cloud IDSs, and attack detection. ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S1084804509000435))",
   "raw_url": "https://www.sciencedirect.com/science/article/pii/S016740480900073X",
   "source_type": "external",
   "filepath": "security/README.md",
   "filename": "A survey of coordinated attacks and collaborative intrusion detection (2010)",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:56"
 }

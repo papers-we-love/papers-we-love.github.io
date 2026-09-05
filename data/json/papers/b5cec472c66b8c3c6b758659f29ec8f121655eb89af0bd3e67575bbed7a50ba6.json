@@ -1,33 +1,33 @@
 {
   "uuid": "b5cec472c66b8c3c6b758659f29ec8f121655eb89af0bd3e67575bbed7a50ba6",
-  "title": "BREACH - SSL, gone in 30 seconds",
-  "publication_date": "August 9, 2013",
+  "title": "BREACH: REVIVING THE CRIME ATTACK",
+  "publication_date": "July 12, 2013",
   "authors": [
-    "Angelo Prado",
-    "Nabil Schear",
+    "Angelo (Ángel) Prado",
+    "Neal Harris",
     "Yoel Gluck"
   ],
   "keywords": [
     "breach-attack",
-    "compression-attacks",
-    "cybersecurity",
-    "exploit",
+    "compression-side-channel",
+    "crime-attack",
+    "csrf-tokens",
+    "deflate",
+    "gzip",
     "http-compression",
-    "information-leakage",
-    "interest-control-vulnerability",
-    "side-channel-attacks",
-    "ssl-security",
-    "tls"
+    "tls",
+    "traffic-analysis",
+    "web-security"
   ],
   "category_path": [
     "security"
   ],
-  "abstract": "The data compression ratio of HTTP responses is the basis for our attack. Together with the ratio, we maliciously breach plain-text data based on a vulnerability present in the SSL/TLS protocols. This defect affects all versions of the SSL/TLS protocol that use HTTP as the application layer protocol and compress data prior to encryption. Attackers can recover secret authentication cookies or other secret bearer tokens, effectively as a side-channel attack. Our attack on HTTP compression compromises the forward secrecy and breaks an authenticated SSL connection. In addition, we developed a mitigative technique: separating the compression layer from session state within the HTTP response. We believe that more work needs to be done to fully mitigate the dangers outlined in this paper.",
-  "summary": "### Summary\nThe paper titled \"BREACH - SSL, gone in 30 seconds,\" authored by Yoel Gluck, Nabil Schear, and Angelo Prado, presents a significant security vulnerability in the SSL/TLS protocols which they termed as the BREACH attack. It was published on August 9, 2013, and exposes how attackers can exploit HTTP compression to breach secure communications, specifically targeting the recovery of secret information like authentication cookies.\n\nThe significance of the BREACH attack lies in its ability to function as a side-channel attack that targets the compression layer within SSL/TLS protocols. This is especially impactful for HTTPS, which uses HTTP as the application protocol. The attack effectively bypasses certain protections, threatening the confidentiality and integrity of secure web communications by breaking authenticated SSL connections and compromising forward secrecy. \n\nDespite its potential for significant harm, the authors also proposed a mitigative measure to address the vulnerability, suggesting separation of the compression layer from the session state within the HTTP response. However, they acknowledge that further research is necessary to completely address this vulnerability.\n\nIn terms of influence, the BREACH attack spurred further discussions and research into transport layer security, particularly focusing on side-channel vulnerabilities and data compression. It served as a crucial wake-up call for industry players concerning HTTPS security. The impact of the vulnerability is reflected in numerous advisory documents and security improvements implemented by stakeholders including web developers and browser vendors.\n\n### References and Influence\n- The BREACH attack has been discussed in various security circles and advisory platforms, influencing web security practices. CISA (Cybersecurity & Infrastructure Security Agency) mentions BREACH in its advisory: https://us-cert.cisa.gov/ncas/alerts/TA13-196A\n- Studies and improvements in web security tools postulated after the paper cited BREACH as a fundamental security challenge needing attention.\n\nThe paper's findings support increasing awareness within cybersecurity research and have influenced future security mechanisms in HTTPS to prevent similar attacks.",
+  "abstract": "No abstract or summary section appears in the paper.",
+  "summary": "### Paper summary\nThe paper demonstrates that TLS-protected web traffic can remain vulnerable to compression side-channel attacks even when TLS-level compression is disabled. The attack targets HTTP responses compressed with gzip/DEFLATE that contain both attacker-controlled input and secrets such as CSRF tokens. By inducing repeated requests and observing encrypted response lengths, an attacker can use compression behavior as an oracle to recover secrets character by character. The authors report recovering an entire CSRF token from Microsoft Outlook Web Access with approximately 95% reliability, often in under 30 seconds. The paper also describes practical techniques for addressing Huffman-coding noise, block-cipher alignment, false positives, false negatives, and encoding constraints. ([breachattack.com](https://breachattack.com/resources/BREACH%20-%20SSL%2C%20gone%20in%2030%20seconds.pdf))\n\nThe paper evaluates several mitigations, including separating secrets from attacker-controlled data into different compression contexts, disabling HTTP compression, masking secrets, rate-limiting requests, and strengthening CSRF protection. It concludes that separating secrets from user input or disabling compression provides the clearest protection, although both may impose implementation or performance costs. ([breachattack.com](https://breachattack.com/resources/BREACH%20-%20SSL%2C%20gone%20in%2030%20seconds.pdf))\n\n### Influence\nThe paper became a cited reference in HTTP protocol security guidance. RFC 9114 explicitly identifies BREACH as an example of compression attacks and requires implementations on secure channels not to compress confidential and attacker-controlled content together unless separate compression contexts are used; it also discusses padding as a mitigation. ([rfc-editor.org](https://www.rfc-editor.org/rfc/rfc9114.html)) Subsequent research developed more systematic defenses, including Debreach, which uses static analysis, program instrumentation, and compressor changes to prevent sensitive data from influencing compression output while retaining compression for other content. ([arxiv.org](https://arxiv.org/abs/1909.05977)) Other work proposed server-side response-size randomization, such as the HTB mitigation, specifically to reduce the effectiveness of BREACH attacks. ([iit.comillas.edu](https://www.iit.comillas.edu/publicacion/revista/en/1913/HTB%3A_a_very_effective_method_to_protect_web_servers_against_BREACH_attack_to_HTTPS))",
   "raw_url": "http://breachattack.com/resources/BREACH%20-%20SSL,%20gone%20in%2030%20seconds.pdf",
   "source_type": "external",
   "filepath": "security/README.md",
   "filename": "Breach: Reviving The Crime Attack (2013)",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:56"
 }

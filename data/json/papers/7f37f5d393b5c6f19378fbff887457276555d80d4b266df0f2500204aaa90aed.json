@@ -1,32 +1,24 @@
 {
   "uuid": "7f37f5d393b5c6f19378fbff887457276555d80d4b266df0f2500204aaa90aed",
-  "title": "ABC: Using Tags to Strengthen WiFi Security",
-  "publication_date": "October 2008",
+  "title": "Why Silent Updates Boost Security",
+  "publication_date": "May 2009",
   "authors": [
-    "Jean-Pierre Hubaux",
-    "Srdjan Capkun"
+    "Stefan Frei",
+    "Thomas Duebendorfer"
   ],
   "keywords": [
-    "authentication",
-    "channel-binding",
-    "communication-protocols",
-    "device-association",
-    "security-enhancement",
-    "spoofing-attacks",
-    "tags",
-    "user-involvement",
-    "wifi-security",
-    "wireless-networks"
+    "update",
+    "web-browser"
   ],
   "category_path": [
     "security"
   ],
-  "abstract": "The ubiquity of WiFi-enabled devices in daily life poses significant security challenges due to the inherent vulnerabilities of wireless communication. In this paper, we propose a novel approach, termed \"ABC\", that utilizes tags to enhance the security of existing WiFi networks. Our methodology focuses on strengthening the association process between devices and access points through user-involved authentication techniques, which leverage physical context and prevent unauthorized access and spoofing attacks. This approach significantly improves the robustness of network associations without requiring extensive modifications to current communication protocols. Detailed experimental evaluations demonstrate the practicability and efficiency of our solution in real-world scenarios, offering a cost-effective and easily deployable security enhancement for existing WiFi infrastructures.",
-  "summary": "This paper introduces a technique named \"ABC\" that leverages tags to fortify WiFi security, specifically addressing the vulnerabilities at the device association phase. The authors present a user-involved authentication mechanism that capitalizes on physical contexts to enhance security against unauthorized access and spoofing attacks. The proposed solution can be integrated into existing systems with minimal alterations to current communication protocols, making it an accessible and cost-effective option for deploying enhanced security across WiFi networks. The approach has been tested experimentally and shown to improve the robustness of network associations.\n\nThe paper's methodology and results could potentially influence the fields of wireless security and communication protocols, though a comprehensive outreach and citation analysis revealed limited direct impact on subsequent research or industry adoption. There currently appear to be no readily available citations or notable mentions of this work influencing further studies or implementations. The focus remains on the novelty of introducing tagging in the association process, which may yet inspire future developments or security solutions in wireless networks.",
+  "abstract": "Security fixes and feature improvements don’t benefit the end user of software if the update mechanism and strategy is not effective. In this paper we analyze the effectiveness of different Web browsers update mechanisms; from Google Chrome’s silent update mechanism to Opera’s update requiring a full re-installation. We use anonymized logs from Google’s world wide distributed Web servers. An analysis of the logged HTTP user-agent strings that Web browsers report when requesting any Web page is used to measure the daily browser version shares in active use. To the best of our knowledge, this is the first global scale measurement of Web browser update effectiveness comparing four different Web browser update strategies including Google Chrome. Our measurements prove that silent updates and little dependency on the underlying operating system are most effective to get users of Web browsers to surf the Web with the latest browser version. However, there is still room for improvement as we found. Google Chrome’s advantageous silent update mechanism has been open sourced in April 2009. We recommend any software vendor to seriously consider deploying silent updates as this benefits both the vendor and the user, especially for widely used attack-exposed applications like Web browsers and browser plug-ins.",
+  "summary": "### Overview\n\nThe paper evaluates how effectively different browser update mechanisms move active users to the latest minor release. The authors analyze anonymized HTTP user-agent logs from Google’s globally distributed Web servers, deduplicate visits using Google PREF cookies, and compare version adoption during the first 21 days after release. The analysis is restricted primarily to minor-version updates within the same browser major version; Microsoft Internet Explorer is not included in the main comparison because its user-agent string did not expose minor-version information. ([tik-old.ee.ethz.ch](https://tik-old.ee.ethz.ch/file/ef72343372ca8659a9ae8a98873167c0/TIKReport302.pdf))\n\nThe central finding is that update design strongly affects security exposure. Among the browser releases studied through mid-April 2009, Google Chrome’s silent updater achieved approximately 97% adoption after 21 days, Mozilla Firefox reached approximately 85%, Apple Safari approximately 53% for its best-performing release, and Opera approximately 24%. Firefox had the fastest initial uptake during the first five days, but its adoption curve flattened below Chrome’s eventual level. The authors attribute Chrome’s performance to background discovery, download, and installation with minimal user interaction, while Safari’s weaker results were partly associated with operating-system eligibility requirements and Opera’s results with a manual reinstallation process. ([tik-old.ee.ethz.ch](https://tik-old.ee.ethz.ch/file/ef72343372ca8659a9ae8a98873167c0/TIKReport302.pdf))\n\nThe paper identifies several residual causes of incomplete Chrome adoption: updates took effect only after browser restart, users were not initially prompted to restart, some installations used read-only images, insufficient privileges or network filtering could block updates, and modified clients could report stale user-agent strings. It therefore recommends silent updates as a default for widely deployed, attack-exposed software, while suggesting a non-disruptive restart notification for security updates. It also argues that highly exposed applications such as browsers and plug-ins should generally receive security patches as soon as they are available rather than being delayed solely to fit predictable enterprise patch schedules. ([tik-old.ee.ethz.ch](https://tik-old.ee.ethz.ch/file/ef72343372ca8659a9ae8a98873167c0/TIKReport302.pdf))\n\n### Subsequent influence\n\nThe paper’s measurement approach and conclusions were carried forward by the authors in the later publication *Web Browser Security Update Effectiveness*, which extended the browser-update analysis and is listed in subsequent scholarly bibliographies alongside the technical report. Later work on software-update behavior, including studies of smart-device updates, user update messages, operating-system upgrades, and system-administrator practices, cites the report as an early empirical source connecting update ergonomics and automation with security outcomes. ([researchgate.net](https://www.researchgate.net/publication/220816476_Web_Browser_Security_Update_Effectiveness))\n\nThe findings also received contemporaneous industry and operational attention. Ars Technica reported the Chrome–Firefox advantage over Safari and Opera, while CERT-FR referenced the report in guidance discussing update procedures and the Google Omaha updater. The evidence therefore contributed to the early public and research discussion of background or silent updating as a security mechanism, although the sources located here do not establish that the report alone caused any particular product-policy change. ([arstechnica.com](https://arstechnica.com/gadgets/2009/05/firefox-chrome-users-more-up-to-date-than-safari-and-opera/))",
   "raw_url": "http://tik-old.ee.ethz.ch/file/ef72343372ca8659a9ae8a98873167c0/TIKReport302.pdf",
   "source_type": "external",
   "filepath": "security/README.md",
   "filename": "Why Silent Updates Boost Security (2009)",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:56"
 }

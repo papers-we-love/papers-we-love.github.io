@@ -1,29 +1,31 @@
 {
   "uuid": "583a4f68ee1bed5f5205b52833461d576d0d21186358a552dbc2d25770a72665",
-  "title": "EAT Chapter 9",
-  "publication_date": "2009",
+  "title": "Sheaves",
+  "publication_date": "September 2014; Chapter 9 of Elementary Applied Topology, edition 1.0, CreateSpace",
   "authors": [
     "Robert Ghrist"
   ],
   "keywords": [
-    "applied-topology",
-    "computational-topology",
-    "coverage-problems",
-    "homology",
-    "persistence-diagrams",
+    "bezier-curves",
+    "cellular-sheaves",
+    "cosheaves",
+    "euler-integration",
+    "flow-networks",
+    "network-coding",
     "persistent-homology",
-    "sensor-networks",
-    "topology"
+    "sampling-theory",
+    "sheaf-cohomology",
+    "splines"
   ],
   "category_path": [
     "mathematics"
   ],
-  "abstract": "This chapter comprises an introduction to persistent homology, a central parameterization of scale for topological data analysis. The primary application of persistence, the topological analysis of coverage in sensor networks, is detailed. Along the way, the requisite ideas from applied topology are introduced, including homology and various representations of persistence.",
-  "summary": "The chapter titled \"EAT Chapter 9\" by Robert Ghrist provides an introduction to persistent homology, which is crucial in parameterizing scale for topological data analysis. The chapter's central theme is the application of persistent homology to analyze the coverage of sensor networks. Key concepts from applied topology, including homology and representations of persistence, are explored. Although there is no explicit mention of an abstract, this summary serves to outline the focus and content covered in the chapter.\n\nFollowing a brief exploration of literature and citations, it appears that this work is frequently referenced in studies involving persistent homology and sensor networks. For instance, the paper \"Topological Patterns in Skewed Data: Visibility, Cilindro-simplicial Decompositions and Sensor Networks\" cites this chapter as a foundational reference ([cite](https://arxiv.org/abs/1107.0567)). Additionally, \"Persistent Homology: A Survey\" discusses insights and theories presented by Ghrist ([cite](https://epubs.siam.org/doi/abs/10.1137/090029772)). These references indicate the chapter's impact in shaping ongoing research in topological data analysis, especially in applications involving computational topology. If further citations are needed, continue exploring computational topology and persistent homology research where foundational understanding provided by Ghrist's chapter is frequently utilized.",
+  "abstract": "No abstract is provided for this chapter. Its introductory summary states: \"Data has, in most settings, ceased to be a scarce resource; the problem of how to get data has been eclipsed by how to manage its abundance and variety. Topology possesses several tools relevant to the aggregation and fusion of local data. Among the most powerful and flexible of these is the theory of sheaves, a structure for the collation of data parameterized by a space.\"",
+  "summary": "## Overview\n\nChapter 9 introduces sheaves as algebraic structures for organizing local data over a space. It begins with cellular sheaves, defined by assigning algebraic objects—typically abelian groups or vector spaces—to cells and compatible restriction maps to face relations. Global sections are compatible assignments of local data, while stalks describe the data available locally. The chapter emphasizes that restriction maps, rather than stalks alone, encode how local information is combined.\n\nThe chapter develops cellular sheaf cohomology through a cochain complex whose coboundary maps are determined by incidence numbers and restriction maps. Zeroth cohomology is identified with the space of global sections; higher cohomology measures obstructions to extending or consistently assembling local data. Examples include recurrence equations, local cohomology, fiber homology, logic gates, and systems of matrix equations.\n\nApplications include flow sheaves for network flows and network-coding sheaves for information transmission. In this formulation, flow values and cut capacities appear as dimensions of sheaf-cohomology groups, while connecting homomorphisms represent obstructions to attaining equality between flow and cut values. The chapter then extends the cellular viewpoint toward topological sheaves, sampling and reconstruction, Euler integration, cosheaves, Bézier curves and splines, and barcode decompositions.\n\n## Subsequent influence\n\nThe chapter’s cellular-sheaf framework was subsequently developed into spectral sheaf theory. Hansen and Ghrist’s 2019 paper explicitly builds a sheaf Laplacian and extends ideas from spectral graph theory to cellular sheaves, relating spectral data to sheaf cohomology and cell structure. ([doi.org](https://doi.org/10.1007/s41468-019-00038-7)) The chapter has also served as an introductory reference for later expository and educational treatments of cellular sheaves, including work discussing their use in data analysis and network applications. ([jakobhansen.org](https://www.jakobhansen.org/2016/08/15/sheaf-examples/)) Computational adoption is evidenced by the CellularSheaves.jl documentation, which lists Elementary Applied Topology among the mathematical and computational foundations of its sheaf workflows. ([algebraicjulia.github.io](https://algebraicjulia.github.io/CellularSheaves.jl/dev/))",
   "raw_url": "https://www.math.upenn.edu/~ghrist/EAT/EATchapter9.pdf",
   "source_type": "external",
   "filepath": "mathematics/README.md",
   "filename": "Elements of Algebraic Topology: Sheaves",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:56"
 }

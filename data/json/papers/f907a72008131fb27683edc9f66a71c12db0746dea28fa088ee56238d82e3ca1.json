@@ -1,32 +1,32 @@
 {
   "uuid": "f907a72008131fb27683edc9f66a71c12db0746dea28fa088ee56238d82e3ca1",
-  "title": "TS-ASAP: A Time Series Anomaly Detection Pipeline",
-  "publication_date": "May 2019",
+  "title": "ASAP: Automatic Smoothing for Attention Prioritization in Streaming Time Series Visualization",
+  "publication_date": "March 2, 2017 (arXiv preprint); August 2017, Proceedings of the VLDB Endowment, volume 10, issue 11, pages 1358–1369",
   "authors": [
-    "Christian Bayne",
-    "Hailiang Yu",
-    "Nian Liu",
-    "Weizhong Yan"
+    "Kexin Rong",
+    "Peter Bailis"
   ],
   "keywords": [
     "anomaly-detection",
-    "data-mining",
-    "machine-learning",
-    "pipeline",
-    "streaming-data",
-    "time-series",
-    "ts-asap",
-    "unsupervised-learning"
+    "attention-prioritization",
+    "autocorrelation",
+    "automatic-smoothing",
+    "data-visualization",
+    "kurtosis",
+    "moving-average",
+    "pixel-aware-preaggregation",
+    "stream-processing",
+    "time-series-visualization"
   ],
   "category_path": [
     "time_series"
   ],
-  "abstract": "We present TS-ASAP, a time series anomaly detection pipeline aimed at processing streaming data in unsupervised fashion for online applications. TS-ASAP consists of modules for data ingestion, preprocessing, anomaly detection, and alerting. The system uses novel algorithms for robust anomaly detection that can adapt to changing conditions in the data, and does not require labeled training data. As demonstrated in use cases from different domains, TS-ASAP provides accurate detection of outliers in real time, ensuring scalability and reliability for practical applications.",
-  "summary": "The paper titled \"TS-ASAP: A Time Series Anomaly Detection Pipeline\" introduces a new pipeline for detecting anomalies in time series data in an online, unsupervised manner. It is designed to handle streaming data and includes modules for ingestion, preprocessing, detection, and alerting. The novel aspect lies in its robust algorithms that adapt to changing data without the need for labeled training data. The system's utility is demonstrated through practical use cases across various domains, showcasing its accuracy and scalability.\n\nUpon conducting a web search, there is no direct evidence suggesting that the TS-ASAP pipeline has significantly influenced subsequent research or industry applications. This paper might serve as a foundational reference for others working in the domain of time series analysis and anomaly detection by contributing potential methodologies and pipeline models, although no specific follow-up studies citing this work were found at this time.",
+  "abstract": "Time series visualization of streaming telemetry (i.e., charting of key metrics such as server load over time) is increasingly prevalent in recent application deployments. Existing systems simply plot the raw data streams as they arrive, potentially obscuring large-scale deviations due to local variance and noise. We propose an alternative: to better prioritize attention in time series exploration and monitoring visualizations, smooth the time series as much as possible to remove noise while still retaining large-scale structure. We develop a new technique for automatically smoothing streaming time series that adaptively optimizes this trade-off between noise reduction (i.e., variance) and outlier retention (i.e., kurtosis). We introduce metrics to quantitatively assess the quality of the choice of smoothing parameter and provide an efficient streaming analytics operator, ASAP, that optimizes these metrics by combining techniques from stream processing, user interface design, and signal processing via a novel autocorrelation-based pruning strategy and pixel-aware preaggregation. We demonstrate that ASAP is able to improve users’ accuracy in identifying significant deviations in time series by up to 38.4% while reducing response times by up to 44.3%. Moreover, ASAP delivers these results several orders of magnitude faster than alternative optimization strategies.",
+  "summary": "## Summary\n\nThe paper introduces ASAP, a streaming operator that automatically selects the smoothing window for time-series visualizations. Its objective is to remove short-term fluctuations while preserving large-scale deviations that should attract user attention.\n\nASAP uses a simple moving average and chooses the largest feasible smoothing window by optimizing two measures:\n\n- **Roughness:** the standard deviation of first differences, used as an inverse measure of visual smoothness.\n- **Kurtosis preservation:** a constraint requiring the smoothed series to retain at least the original series’ kurtosis, intended to prevent important extreme deviations from being averaged away.\n\nThe optimization problem is therefore to minimize the roughness of the smoothed series subject to a kurtosis-preservation constraint. For efficient execution, ASAP combines three techniques:\n\n1. **Autocorrelation-based pruning:** searches preferentially among window sizes associated with periodic structure and uses autocorrelation-derived roughness estimates to eliminate candidates.\n2. **Pixel-aware preaggregation:** uses the target display resolution to reduce the number of candidate windows and input points, making execution depend more on display resolution than on the original data volume.\n3. **On-demand streaming updates:** reuses prior search results and refreshes visualizations at configurable, human-observable intervals rather than after every incoming point.\n\nIn two user studies involving 270 participants, the authors report that ASAP-based visualizations improved anomaly-identification accuracy and reduced response time relative to raw, piecewise-aggregated, and oversmoothed alternatives. On the evaluated datasets, ASAP matched exhaustive search’s selected window while examining substantially fewer candidates. The combined optimizations produced improvements of several orders of magnitude, with the paper reporting approximately seven orders of magnitude over its baseline in one factor analysis.\n\n## Influence and subsequent use\n\nThe paper’s core criterion has been explicitly reused outside its original visualization setting. A later study on Bayesian spatial-model smoothing cites Rong and Bailis and adapts the roughness and kurtosis-preservation ideas to assess spatial under- and over-smoothing. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC7239453/))\n\nThe Stanford DAWN project subsequently described ASAP as an automatic dashboard-smoothing technique and documented an ASAP.js implementation and demonstration, providing a direct software artifact associated with the work. ([dawn.cs.stanford.edu](https://dawn.cs.stanford.edu/news/automatic-time-series-smoothing-asap)) An open-source Rust implementation also identifies the paper as its algorithmic basis, indicating continued engineering reuse, although the available evidence does not establish broad commercial adoption. ([ithub.global.ssl.fastly.net](https://ithub.global.ssl.fastly.net/altunenes/asap-rs))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/time_series/ts-asap.pdf",
   "source_type": "pdf",
   "filepath": "time_series/ts-asap.pdf",
   "filename": "ts-asap.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:56"
+  "created_on": "2026-09-01 00:47:55",
+  "summary_received": "2026-09-05 21:19:53"
 }

@@ -1,32 +1,32 @@
 {
   "uuid": "ca661eeac63aaf7e07327693e029c4a3aa8a2c192994d9069863c5f18b7ea461",
   "title": "Making reliable distributed systems in the presence of software errors",
-  "publication_date": "2003",
+  "publication_date": "December 2003; final version with corrections updated November 20, 2003",
   "authors": [
     "Joe Armstrong"
   ],
   "keywords": [
-    "actor-model",
-    "concurrency",
+    "concurrency-oriented-programming",
     "distributed-systems",
+    "dynamic-code-upgrade",
     "erlang",
     "fault-tolerance",
-    "functional-programming",
     "message-passing",
+    "otp",
+    "process-isolation",
     "reliability",
-    "resilience",
-    "software-errors"
+    "supervision-trees"
   ],
   "category_path": [
     "languages",
     "erlang"
   ],
-  "abstract": "This thesis addresses the problem of designing and implementing reliable distributed systems. It describes Erlang, a new programming language which greatly simplifies the construction of robust systems. The thesis describes all the abstract mechanisms necessary to build reliable systems, argues that error recovery should be based on a paradigm of \"let some other process fix the error,\" and describes a framework based on \"programming rules for reliable systems.\" The design of Erlang is guided by principles such as concurrency is natural, fault detection and error recovery should be programmed explicitly, and isolation of errors between processes, etc. Emphasis is given to the essential characteristics which make this new approach feasible. Some practical experiments in building systems using Erlang are included, pointing out the effectiveness of these principles.",
-  "summary": "Joe Armstrong's 2003 doctoral thesis, \"Making reliable distributed systems in the presence of software errors,\" is recognized as a seminal work in the development of the Erlang programming language, which is widely used for building robust, fault-tolerant distributed systems. Erlang introduces concurrency, functional programming, and a 'let-it-crash' philosophy that has greatly influenced the design and implementation of reliable software systems. The thesis presents a groundwork for designing systems where error recovery is handled by allowing processes to fail independently and ensuring other processes can recover or continue unaffected. This work has had notable impact in the telecommunications industry where Ericsson has used Erlang for its scalability and fault tolerance. The actor model of concurrent computation, as realized in Erlang, is adopted in other languages and systems, including Akka in Scala and Elixir, further demonstrating its broad influence. Additionally, Erlang's approach to handling errors has inspired research and development in concurrent and distributed systems beyond its initial telecom applications. The language's application in diverse fields like ecommerce, instant messaging, and telephony reiterates its practicality and robustness for real-world uses. References to this influence can be seen in various software development forums and academic citations, such as its citation in works discussing distributed systems theory and functional programming paradigms. Dr. Armstrong's contributions continue to be a reference point for innovative work in programming languages and distributed system design.",
+  "abstract": "The work described in this thesis is the result of a research program started in 1981 to find better ways of programming Telecom applications. These applications are large programs which despite careful testing will probably contain many errors when the program is put into service. We assume that such programs do contain errors, and investigate methods for building reliable systems despite such errors.\n\nThe research has resulted in the development of a new programming language (called Erlang), together with a design methodology, and set of libraries for building robust systems (called OTP). At the time of writing the technology described here is used in a number of major Ericsson, and Nortel products. A number of small companies have also been formed which exploit the technology.\n\nThe central problem addressed by this thesis is the problem of constructing reliable systems from programs which may themselves contain errors. Constructing such systems imposes a number of requirements on any programming language that is to be used for the construction. I discuss these language requirements, and show how they are satisfied by Erlang.\n\nProblems can be solved in a programming language, or in the standard libraries which accompany the language. I argue how certain of the requirements necessary to build a fault-tolerant system are solved in the language, and others are solved in the standard libraries. Together these form a basis for building fault-tolerant software systems.\n\nNo theory is complete without proof that the ideas work in practice. To demonstrate that these ideas work in practice I present a number of case studies of large commercially successful products which use this technology. At the time of writing the largest of these projects is a major Ericsson product, having over a million lines of Erlang code. This product (the AXD301) is thought to be one of the most reliable products ever made by Ericsson.\n\nFinally, I ask if the goal of finding better ways to program Telecom applications was fulfilled—I also point to areas where I think the system could be improved.",
+  "summary": "- The thesis presents Erlang, the OTP libraries, and a programming methodology for constructing reliable systems from components that may contain software errors. Its central architectural principles are lightweight isolated processes, asynchronous message passing, fail-fast behavior, non-local error handling, supervision hierarchies, generic behaviours, and dynamic code replacement.\n- Its industrial evidence includes analyses of Ericsson's AXD301 ATM switch and products developed by Bluetail, Alteon, and Nortel. The thesis reports large Erlang codebases, extensive use of OTP behaviours, runtime recovery from software failures, and support for updating systems without stopping service. It also identifies limitations, including incomplete operational evidence and cases where the ideal one-process-per-concurrent-activity model was impractical.\n- The thesis formalized concepts that remain part of Erlang/OTP's documented design model. Current Erlang documentation continues to define supervision trees around workers and supervisors, with behaviours separating generic process infrastructure from application-specific callback code. ([erlang.org](https://www.erlang.org/docs.html))\n- The work also influenced subsequent distributed-systems research as a cited description of Erlang's reliability and scalability model; for example, later research on scalable reliable distributed systems cites the dissertation when discussing Erlang-based systems and actor-oriented designs. ([kar.kent.ac.uk](https://kar.kent.ac.uk/60077/1/dist-reliabile-scalabilityRevisedSubmission.pdf))\n- The same supervision-oriented design has propagated through other BEAM technologies. Official Elixir documentation describes child specifications that allow components such as agents, tasks, and servers to participate directly in supervision trees, extending the OTP model into a separate language ecosystem. ([elixir-lang.org](https://elixir-lang.org/blog/2017/07/25/elixir-v1-5-0-released/))\n\nOverall, the paper's concrete legacy is the continued use and documentation of Erlang/OTP's process-isolation, behaviour, and supervision-tree architecture in industrial software and later BEAM-based research and systems.",
   "raw_url": "http://erlang.org/download/armstrong_thesis_2003.pdf",
   "source_type": "external",
   "filepath": "languages/erlang/README.md",
   "filename": "Making reliable distributed systems in the presence of software errors",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

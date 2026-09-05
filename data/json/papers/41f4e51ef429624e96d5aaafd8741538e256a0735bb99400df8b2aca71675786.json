@@ -1,33 +1,32 @@
 {
   "uuid": "41f4e51ef429624e96d5aaafd8741538e256a0735bb99400df8b2aca71675786",
-  "title": "Hotos Jeremiad",
-  "publication_date": "2003",
+  "title": "Exterminate All Operating System Abstractions",
+  "publication_date": "May 1995, Proceedings of the 5th Workshop on Hot Topics in Operating Systems (HotOS-V), Orcas Island, Washington, pp. 78–83",
   "authors": [
-    "Donald E. Porter",
-    "Scott L. Donaldson",
-    "Yuanyuan Zhou"
+    "Dawson R. Engler",
+    "M. Frans Kaashoek"
   ],
   "keywords": [
-    "error-detection",
-    "fault-tolerance",
-    "hotos-conference",
+    "application-level-services",
+    "exokernel",
+    "hardware-abstraction",
+    "library-operating-system",
+    "operating-system-extensibility",
+    "operating-system-flexibility",
+    "operating-system-performance",
     "operating-systems",
-    "performance-evaluation",
-    "software-engineering",
-    "software-failures",
-    "system-debugging",
-    "system-design",
-    "system-reliability"
+    "resource-management",
+    "resource-multiplexing"
   ],
   "category_path": [
     "unikernels"
   ],
-  "abstract": "The paper discusses the prevalence of software crashes and the importance of designing systems that are robust against such failures. It presents insights into the challenges of improving system reliability and suggests approaches to reduce the rate of software-induced downtime through better design and engineering practices.",
-  "summary": "This paper was presented at the 2003 Workshop on Hot Topics in Operating Systems (HotOS IX) and examines the critical issue of software reliability in operating systems. The authors argue for the necessity of designing systems that can tolerate and recover from software crashes to reduce downtime. Their analysis identifies common sources of software failures and explores engineering practices that may lead to more reliable systems.\n\nAlthough the paper does not appear to have directly spawned a significant body of follow-up research or citations in major databases like Google Scholar, it raises several crucial points about software reliability that continue to resonate in discussions about operating system design. The call for increased attention to error detection and fault tolerance remains relevant in contemporary operating system development and maintenance.\n\nA search for industry impact reveals that while the paper's specific methodologies may not have been directly adopted, the discussion reflects ongoing industry concerns regarding reliability and provides a framework for thinking about robust system design.",
+  "abstract": "The defining tragedy of the operating systems community has been the definition of an operating system as software that both multiplexes and abstracts physical resources. The view that the OS should abstract the hardware is based on the assumption that it is possible both to define abstractions that are appropriate for all areas and to implement them to perform efficiently in all situations. We believe that the fallacy of this quixotic goal is self-evident, and that the operating system problems of the last two decades (poor performance, poor reliability, poor adaptability, and inflexibility) can be traced back to it. The solution we propose is simple: complete elimination of operating system abstractions by lowering the operating system interface to the hardware level.",
+  "summary": "The paper argues that operating systems should primarily provide secure multiplexing of physical resources rather than impose general-purpose abstractions. It introduces the exokernel architecture, in which a small kernel exposes hardware resources while application-level library operating systems implement policies and higher-level abstractions. The proposed separation of protection from management is intended to improve reliability, adaptability, performance, and flexibility.\n\nIts direct research influence is documented by subsequent MIT work on Xok/ExOS. That work implemented and evaluated the architecture, showing that unmodified UNIX applications could achieve performance comparable to BSD systems while specialized applications—such as the Cheetah web server—could obtain substantially higher performance through application-level resource management. ([pdos.csail.mit.edu](https://pdos.csail.mit.edu/papers/exo-sosp97/exo-sosp97.html))\n\nThe exokernel principles were also carried into related systems research. The Denali isolation kernel explicitly describes itself as embodying the exokernel principles while adapting them to the isolation of many virtual machines. ([static.usenix.org](https://static.usenix.org/event/osdi02/tech/full_papers/whitaker/whitaker_html/node6.html)) Later library-OS and unikernel research, including MirageOS, identifies the 1990s exokernel work as an important precursor: operating-system components are compiled or linked with applications, producing specialized software stacks for virtualized cloud environments. ([api.repository.cam.ac.uk](https://api.repository.cam.ac.uk/server/api/core/bitstreams/9ab6a37f-d5fa-4702-ad54-93561baefdaf/content))\n\nThe available sources document substantial influence on operating-systems research, library operating systems, and unikernel design. They do not establish that the exokernel architecture itself became a mainstream commercial operating-system architecture.",
   "raw_url": "http://studies.ac.upc.es/doctorat/ENGRAP/hotos-jeremiad.pdf",
   "source_type": "external",
   "filepath": "unikernels/README.md",
   "filename": "Exterminate all operating system abstractions",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:41:52"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:56"
 }

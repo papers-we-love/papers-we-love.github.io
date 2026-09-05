@@ -1,34 +1,33 @@
 {
   "uuid": "89df1b7ff379f2647129a645bb96c96955f58e42b92640617a8c94ee89f02ae0",
   "title": "Warp: Multi-Key Transactions for Key-Value Stores",
-  "publication_date": "2018",
+  "publication_date": "May 2013 (technical report; some bibliographies identify a later November 2013 version)",
   "authors": [
-    "Daniel Porto",
-    "Jialin Li",
-    "Rodrigo Rodrigues",
-    "Vijay Chidambaram"
+    "Bernard Wong",
+    "Emin Gün Sirer",
+    "Robert Escriva"
   ],
   "keywords": [
-    "consistency",
-    "distributed-systems",
+    "acid-transactions",
+    "chain-replication",
+    "dependency-management",
+    "distributed-transactions",
+    "fault-tolerance",
     "key-value-stores",
-    "multi-key-transactions",
-    "non-blocking",
-    "performance-optimization",
-    "protocol-design",
-    "scalability",
-    "state-machine",
-    "transaction-management"
+    "nosql",
+    "one-copy-serializability",
+    "optimistic-concurrency-control",
+    "scalability"
   ],
   "category_path": [
     "datastores"
   ],
-  "abstract": "Current production systems that offer transactions over key-value stores rely on a central lock manager, which limits scalability and performance of these systems. We propose Warp, a new approach to provide multi-key transactions for key-value stores. Warp is based on a novel non-blocking distributed protocol that is deadlock-free.\nWe have implemented Warp and evaluated it using well-known benchmarks (YCSB and TPC-C) and production workloads at a global company accelerated through Warp. Our evaluations show that Warp offers near-linear scalability and significantly reduces the performance penalty of transactions in key-value stores, providing up to 6.5× better latency and 11× better throughput compared to state-of-the-art transaction management systems.",
-  "summary": "The paper \"Warp: Multi-Key Transactions for Key-Value Stores\" presents a novel approach to handling transactions in key-value stores by introducing Warp, a non-blocking distributed protocol that ensures deadlock-free multi-key transactions. The authors propose this system to improve on the limitations of traditional transaction models that depend heavily on central lock managers, which usually impair scalability and performance.\n\nWarp distinguishes itself by enabling near-linear scalability and reducing the transactional overhead, demonstrated through both synthetic benchmarks such as YCSB and TPC-C, as well as production workloads from a global company. The results indicate significant improvements, achieving up to 6.5 times better latency and 11 times better throughput than existing transaction management systems.\n\nUpon conducting a web search, it appears that while the research introduces influential concepts, direct citations or applications of Warp in other academic or industrial contexts have not been widely documented. Therefore, further dissemination of this paper's findings might be limited or not yet fully realized in subsequent developments in distributed transaction systems.",
+  "abstract": "Implementing ACID transactions has been a long-standing challenge for NoSQL systems. Because these systems are based on a sharded architecture, transactions necessarily require coordination across multiple servers. Past work in this space has relied either on heavyweight protocols such as Paxos or clock synchronization for this coordination.\n\nThis paper presents a novel protocol for coordinating distributed transactions with ACID semantics on top of a sharded data store. Called linear transactions, this protocol achieves scalability by distributing the coordination task to only those servers that hold relevant data for each transaction. It achieves high performance by serializing only those transactions whose concurrent execution could potentially yield a violation of ACID semantics. Finally, it naturally integrates chain-replication and can thus tolerate faults of both clients and servers.\n\nWe have fully implemented linear transactions in a commercially available data store. Experiments show that the throughput of this system achieves 1-9× more throughput than MongoDB, Cassandra and HyperDex on the Yahoo! Cloud Serving Benchmark, even though none of the latter systems provide transactional guarantees.",
+  "summary": "## Summary\n\nWarp presents **linear transactions**, a protocol for providing one-copy-serializable ACID transactions over a sharded key-value store without placing a consensus protocol on the normal data path. Clients optimistically execute reads and buffer writes locally. At commit time, the client constructs a deterministic chain containing the servers responsible for the transaction’s keys. A forward pass validates the read set and detects conflicts; a reverse pass propagates the commit or abort decision and applies writes.\n\nThe protocol distinguishes disjoint transactions from overlapping transactions. Disjoint transactions proceed without coordination, while overlapping transactions are ordered only when necessary. Warp propagates happens-before and needs-ordering dependencies through the chain and directs compatible transactions in a way that prevents dependency cycles. Replicas can be inserted into the chain to tolerate failures, while a replicated state machine is used primarily for cluster membership, key-range mappings, and reconfiguration rather than for normal transaction ordering. ([code.garrettmills.dev](https://code.garrettmills.dev/Archives/papers-we-love_papers-we-love/raw/commit/49cb6db953b46a68df18f5d799511cc88260aeff/distributed_systems/warp-multi-key-transactions-for-key-value-stores.pdf))\n\nThe implementation supports rich data types, nested transactions, conditional operations, multiple schemas, and client libraries. The evaluation reports throughput above 50,000 transactions per second across the tested YCSB workloads, low transaction latency, approximately linear scaling as servers are added, and an abort rate below 1% for sufficiently large write-key sets. In the credit-card workload, Warp preserved account invariants that were violated by the non-transactional comparison system. ([code.garrettmills.dev](https://code.garrettmills.dev/Archives/papers-we-love_papers-we-love/raw/commit/49cb6db953b46a68df18f5d799511cc88260aeff/distributed_systems/warp-multi-key-transactions-for-key-value-stores.pdf))\n\n## Documented influence\n\nThe protocol was subsequently developed in a revised work, *Warp: Lightweight Multi-Key Transactions for Key-Value Stores*, which retained the central goal of lightweight serializable transactions over sharded storage while presenting a later protocol formulation and evaluation. ([arxiv.org](https://arxiv.org/abs/1509.07815))\n\nThe Warp transaction protocol was also reused or adapted in later systems research. The Warp Transactional Filesystem used Warp-related transactional mechanisms to provide transactions spanning multiple files in a distributed filesystem, and the Tyr blob-storage system explicitly describes using the Warp optimistic transaction protocol for distributed blob transactions. ([usenix.org](https://www.usenix.org/conference/nsdi16/technical-sessions/presentation/escriva)) The original work has additionally been cited in subsequent academic writing and patent literature concerning transactional layers over distributed key-value stores. ([bholt.org](https://bholt.org/gen/thesis.html))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/datastores/warp-multi-key-transactions-for-key-value-stores.pdf",
   "source_type": "pdf",
   "filepath": "datastores/warp-multi-key-transactions-for-key-value-stores.pdf",
   "filename": "warp-multi-key-transactions-for-key-value-stores.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:51"
 }

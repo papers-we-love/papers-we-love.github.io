@@ -1,34 +1,25 @@
 {
   "uuid": "d25b8206cb26edc5a2637a7e49b042ee68c531d614110ef452ea72b1c108ca12",
-  "title": "Fixed-rate Compressed Floating Point Arrays",
-  "publication_date": "January 2004",
+  "title": "Fixed-Rate Compressed Floating-Point Arrays",
+  "publication_date": "December 2014, IEEE Transactions on Visualization and Computer Graphics, volume 20, issue 12, pages 2674–2683",
   "authors": [
-    "Edward Upfal",
-    "Franco P. Preparata",
-    "John M. Campbell",
-    "Marc Mansour"
+    "Peter Lindstrom"
   ],
   "keywords": [
-    "array-data",
-    "compression-algorithms",
     "data-compression",
-    "error-bounds",
-    "fixed-rate-compression",
-    "floating-point-arithmetic",
-    "lossy-compression",
-    "numerical-analysis",
-    "performance-optimization",
-    "scientific-computing"
+    "embedded-coding",
+    "floating-point-arrays",
+    "orthogonal-block-transform"
   ],
   "category_path": [
     "data_compression"
   ],
-  "abstract": "In this paper we describe a new framework for compressing floating-point scientific data with fixed-rate encoding. Using a combination of floating-point and integer arithmetic we demonstrate that our methodology compresses array data more effectively than traditional techniques, while preserving rigorous error bounds. Extensive computational experiments confirm our theoretical prediction that the new algorithms perform well in several typical scientific scenarios, reducing storage requirements significantly in comparison with existing techniques while ensuring that the strict precision requirements of floating-point scientific computations are met.",
-  "summary": "The paper \"Fixed-rate Compressed Floating Point Arrays\" by John M. Campbell, Marc Mansour, Franco P. Preparata, and Edward Upfal introduces a novel methodology for compressing floating-point scientific data using fixed-rate encoding. The methodology combines both floating-point and integer arithmetic to enhance data compression efficiency while adhering to stringent error bounds.\n\nThe research is focused on improving traditional data compression techniques and demonstrates, through computational experiments, that the proposed algorithms decrease storage needs effectively compared to existing methods. The algorithms are tailored to maintain the precision necessary for scientific computations, making them particularly applicable to fields requiring high numerical precision.\n\nA web search reveals that this paper has not been widely cited in subsequent research. Consequently, it seems that while the paper presented potentially valuable contributions to the field of data compression at the time of its publication, it did not lead to significant further academic research or notable influence in industry applications. Despite this, the concepts may still hold relevance in niche applications requiring precise scientific data storage and retrieval mechanisms. No citations to this paper were found or listed in the search results.",
+  "abstract": "Current compression schemes for floating-point data commonly take fixed-precision values and compress them to a variable-length bit stream, complicating memory management and random access. We present a fixed-rate, near-lossless compression scheme that maps small blocks of 4^d values in d dimensions to a fixed, user-specified number of bits per block, thereby allowing read and write random access to compressed floating-point data at block granularity. Our approach is inspired by fixed-rate texture compression methods widely adopted in graphics hardware, but has been tailored to the high dynamic range and precision demands of scientific applications. Our compressor is based on a new, lifted, orthogonal block transform and embedded coding, allowing each per-block bit stream to be truncated at any point if desired, thus facilitating bit rate selection using a single compression scheme. To avoid compression or decompression upon every data access, we employ a software write-back cache of uncompressed blocks. Our compressor has been designed with computational simplicity and speed in mind to allow for the possibility of a hardware implementation, and uses only a small number of fixed-point arithmetic operations per compressed value. We demonstrate the viability and benefits of lossy compression in several applications, including visualization, quantitative data analysis, and numerical simulation.",
+  "summary": "## Contributions\n\nThe paper introduces a fixed-rate, near-lossless representation for multidimensional floating-point arrays. Data are divided into independent 4 × 4 × 4 blocks, with each block assigned an exact, user-selected number of bits. This design enables block-granularity random reads and writes and avoids the memory-management difficulties of variable-length streams.\n\nThe compression pipeline aligns values in a block to a common exponent, converts them to fixed-point form, applies a separable orthogonal transform, orders coefficients by sequency, and encodes them using embedded bit-plane coding. The transform is implemented through lifting steps, emphasizing integer arithmetic, bit shifts, low computational cost, and possible hardware implementation. A write-back cache of decompressed blocks reduces repeated compression and decompression during localized access and update patterns.\n\nExperiments on scientific simulation fields show that the method—later known as ZFP—can provide substantially higher compression than lossless floating-point methods, while retaining useful absolute and relative accuracy. The reported applications include volume rendering, Fourier-spectrum analysis, feature segmentation, streamline visualization, and an evolving Sedov blast-wave simulation. In the presented tests, 4 bits per double often produced visually or analytically acceptable results, while the blast-wave simulation retained close agreement with the uncompressed result at 16 bits per double and remained usable at lower rates.\n\n## Limitations\n\nThe approach is designed primarily for regularly gridded, spatially correlated data. It does not naturally provide a strict maximum-error bound in its fixed-rate form, and noisy or unstructured data may compress less effectively. The paper also identifies thread safety, cache design, block layout, time-varying data, and hardware optimization as areas requiring further work.\n\n## Influence\n\nThe paper directly established the algorithmic foundation for the open-source ZFP library. Current ZFP documentation states that the library is based on this work, while also noting that later versions added functionality such as support for integer data, additional array dimensions, and multiple execution backends. ([github.com](https://github.com/llnl/ZFP))\n\nSubsequent research developed formal error analyses for ZFP and examined its behavior in iterative and time-stepping numerical methods. The later error-analysis work explicitly identifies this paper as the original description of ZFP, and subsequent stability research extends that analysis to repeated compression and decompression during computation. ([arxiv.org](https://arxiv.org/abs/1805.00546))\n\nThe available evidence therefore shows concrete influence on scientific-computing software and follow-on numerical-analysis research. No specific commercial-industry deployment is established by the sources reviewed.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/data_compression/fixed-rate_compressed_floating_point_arrays.pdf",
   "source_type": "pdf",
   "filepath": "data_compression/fixed-rate_compressed_floating_point_arrays.pdf",
   "filename": "fixed-rate_compressed_floating_point_arrays.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:50"
 }

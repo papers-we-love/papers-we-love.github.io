@@ -1,37 +1,38 @@
 {
   "uuid": "97a53c15ac1af1fff76830a8a6ef846e2984441017c86ccb65257b30f6269b75",
   "title": "SIFT: Design and Analysis of a Fault-Tolerant Computer for Aircraft Control",
-  "publication_date": "June 1978",
+  "publication_date": "October 1978; Proceedings of the IEEE, vol. 66, no. 10, pp. 1240–1255",
   "authors": [
-    "Brian Randell",
-    "Daniel Rindfleisch",
-    "Ian Redmill",
-    "John Rushby",
-    "Philip Simms",
-    "Timothy O'Rourke",
-    "Trevor Hopkins"
+    "Charles B. Weinstock",
+    "Jack Goldberg",
+    "John H. Wensley",
+    "Karl N. Levitt",
+    "Leslie Lamport",
+    "Milton W. Green",
+    "P. M. Melliar-Smith",
+    "Robert E. Shostak"
   ],
   "keywords": [
     "aircraft-control",
-    "computer-systems",
-    "distributed-systems",
-    "failure-detection",
+    "distributed-computing",
+    "dynamic-reconfiguration",
+    "fault-isolation",
     "fault-tolerance",
-    "flight-control",
+    "formal-verification",
+    "majority-voting",
     "real-time-systems",
-    "redundancy",
-    "sift",
-    "system-reliability"
+    "redundant-computing",
+    "reliable-synchronization"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "This paper describes the design of a fault-tolerant computer system called SIFT (Software-Implemented Fault Tolerance), which is intended for use in critical, real-time applications such as fly-by-wire aircraft control. SIFT is based on the principle of triple modular redundancy with voting and employs a novel scheme for achieving fault tolerance using software rather than hardware redundancy. The paper presents the system architecture and discusses the analysis and validation techniques used to ensure that the desired reliability requirements are met.",
-  "summary": "The paper 'SIFT: Design and Analysis of a Fault-Tolerant Computer for Aircraft Control' discusses the development of a fault-tolerant computer system known as SIFT. This system is primarily aimed at critical real-time applications like fly-by-wire aircraft control, implementing fault tolerance primarily through software redundancy as opposed to hardware redundancy. The architecture of SIFT innovatively uses triple modular redundancy combined with voting mechanisms to achieve fault tolerance. The paper is noteworthy in the field for pioneering software-based fault tolerance in distributed systems, emphasizing reliability and performance in mission-critical applications.\n\nAn academic search shows that this paper has influenced research on fault tolerance in distributed computing systems. For example, later works such as 'The Architecture of a Fault-Tolerant Aircraft Control System' by B.W. Johnson and 'Dependable Computing and Fault-Tolerance' by L. L. Pullum have referenced this research. It has been cited by researchers exploring robust systems in aviation and other high-reliability applications. Despite its age, the ideas presented in the SIFT paper continue to inform modern studies on redundancy and fail-safe mechanisms in both academic and practical contexts. The paper's implementation strategies remain a crucial reference point for discussions around system reliability, influencing various advancements within the domain of distributed fault-tolerant systems.",
+  "abstract": "Abstract—SIFT (Software Implemented Fault Tolerance) is an ultrareliable computer for critical aircraft control applications that achieves fault tolerance by the replication of tasks among processing units. The main processing units are off-the-shelf minicomputers, with standard microcomputers serving as the interface to the I/O system. Fault isolation is achieved by using a specially designed redundant bus system to interconnect the processing units. Error detection and analysis and system reconfiguration are performed by software. Iterative tasks are redundantly executed, and the results of each iteration are voted upon before being used. Thus, any single failure in a processing unit or bus can be tolerated with triplication of tasks, and subsequent failures can be tolerated after reconfiguration. Independent execution by separate processors means that the processors need only be loosely synchronized, and a novel fault-tolerant synchronization method is described. The SIFT software is highly structured and is formally specified using the SRI-developed SPECIAL language. The correctness of SIFT is to be proved using a hierarchy of formal models. A Markov model is used both to analyze the reliability of the system and to serve as the formal requirement for the SIFT design. Axioms are given to characterize the high-level behavior of the system, from which a correctness statement has been proved. An engineering test version of SIFT is currently being built.",
+  "summary": "- SIFT established an early integrated architecture for safety-critical distributed computing in which commodity processors were replicated, task outputs were majority-voted, faults were diagnosed in software, and failed components were bypassed through dynamic reconfiguration.\n- The SIFT project directly contributed to the formulation of the Byzantine generals problem and its agreement algorithms, which became foundational results in Byzantine fault-tolerant distributed computing. ([microsoft.com](https://www.microsoft.com/en-us/research/publication/sift-design-analysis-fault-tolerant-computer-aircraft-control/))\n- The paper also presented an early formal-verification approach based on state-transition models and refinement mappings: higher-level reliability and allocation models were related to progressively lower-level software and hardware models. This approach influenced later work on rigorous specification and verification of dependable concurrent systems. ([microsoft.com](https://www.microsoft.com/en-us/research/publication/sift-design-analysis-fault-tolerant-computer-aircraft-control/))\n- The SIFT system was subsequently implemented and evaluated in NASA avionics research, while the broader architecture is documented by SRI as an early contribution to distributed fault-tolerant computing. ([sri.com](https://www.sri.com/hoi/software-implemented-fault-tolerance/))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/sift-design-and-analysis-of-a-fault-tolerant-computer-for-aircraft-contro.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/sift-design-and-analysis-of-a-fault-tolerant-computer-for-aircraft-contro.pdf",
   "filename": "sift-design-and-analysis-of-a-fault-tolerant-computer-for-aircraft-contro.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:51"
 }

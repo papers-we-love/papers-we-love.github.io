@@ -1,31 +1,31 @@
 {
   "uuid": "46dee647a76b971602b9357aedd92a527d1888a7a7b0ef748d4421c09cc4afe0",
-  "title": "Random Forests",
-  "publication_date": "2001",
+  "title": "RANDOM FORESTS",
+  "publication_date": "October 2001 (Machine Learning, volume 45, pages 5–32); the manuscript PDF is dated January 2001",
   "authors": [
     "Leo Breiman"
   ],
   "keywords": [
     "bagging",
     "classification",
-    "data-mining",
     "decision-trees",
-    "ensemble-methods",
-    "feature-importance",
-    "machine-learning",
-    "overfitting",
-    "prediction",
-    "random-forests"
+    "ensemble-learning",
+    "feature-randomization",
+    "generalization-error",
+    "out-of-bag-estimation",
+    "random-forests",
+    "regression",
+    "variable-importance"
   ],
   "category_path": [
     "machine_learning"
   ],
-  "abstract": "This paper presents a new method for classification and regression which consists of a collection of tree-structured classifiers. Each tree is constructed using a bootstrap sample from the data. To classify a new object from an input vector, input the vector down each of the trees in the forest. Each tree gives a classification, and we say the tree \"votes\" for that class. The forest chooses the classification having the most votes (over all the trees in the forest). This method, called random forests, has error rates that compare favorably to Adaboost, but are more robust with respect to noise. The method is quite robust to overfitting. A method for using prox- imities in the forest is given that can be used for locating outliers, clustering and scaling. An example is given of random forests in a classifier combination methodology. Copyright information: Institute of Mathematical Statistics, 2001.",
-  "summary": "Random forests, as introduced by Leo Breiman in 2001, is an ensemble learning method for classification and regression that builds multiple decision trees during training and outputs the mode of their predictions. The approach is robust to overfitting and noise, making it a powerful tool compared to other ensemble methods like Adaboost. The methodology involves constructing each tree using a bootstrap sample of the data and using random feature selection for splitting nodes. This advancement in machine learning has had significant impacts across multiple fields, including genomics, finance, and image processing, owing to its ability to handle large datasets with higher accuracy and lower variance than individual decision trees. It has also influenced algorithms for feature importance and methodologies for detecting outliers. \n\nFurther extending its impact, the paper became highly cited and inspired a significant amount of follow-up research in areas such as:\n\n- Genomics for predictive modeling ([Cutler et al., 2007](https://genome.cshlp.org/content/17/9/1421.full))\n- Financial markets for predictive analytics ([Timmermann, 2006](https://doi.org/10.1016/j.jempfin.2006.05.001))\n- Image classification and object recognition tasks ([Bosch et al., 2007](https://doi.org/10.1109/TPAMI.2007.70796))\n\nThese citations demonstrate the widespread application and further exploration of random forests, highlighting its versatility and continued relevance in machine learning and data science.",
+  "abstract": "Random forests are a combination of tree predictors\nsuch that each tree depends on the values of a random\nvector sampled independently and with the same\n distribution for all trees in the forest. The\ngeneralization error for forests converges a.s. to a limit\nas the number of trees in the forest becomes large.\nThe generalization error of a forest of tree classifiers\ndepends on the strength of the individual trees in the\nforest and the correlation between them. Using a\nrandom selection of features to split each node yields\nerror rates that compare favorably to Adaboost\n(Freund and Schapire[1996]), but are more robust with\nrespect to noise. Internal estimates monitor error,\nstrength, and correlation and these are used to show\nthe response to increasing the number of features used\nin the splitting. Internal estimates are also used to\nmeasure variable importance. These ideas are also\napplicable to regression.",
+  "summary": "## Summary\n\nBreiman defines a random forest as an ensemble of tree predictors whose construction is governed by independently and identically distributed random vectors. The paper establishes that, as the number of trees increases, the forest converges almost surely to a limiting predictor and therefore does not overfit merely because additional trees are added. Its central theoretical analysis relates generalization error to two quantities: the strength of the individual trees and their correlation. The resulting bound motivates injecting randomness that lowers inter-tree correlation without substantially reducing predictive strength.\n\nThe empirical method combines bootstrap sampling with random selection of input variables, or with randomly generated linear combinations of inputs. The paper introduces out-of-bag estimates for monitoring ensemble error, tree strength, and correlation without requiring a separate test set. It also presents permutation-based variable-importance estimates. Experiments on classification and regression data indicate competitive accuracy relative to AdaBoost and bagging, improved robustness to label noise, useful performance when many predictors are individually weak, and straightforward parallelization. The paper further develops random forests for regression, where ensemble error is related to the correlation among tree residuals.\n\nThe work directly influenced subsequent research and practice. A 2003 study applied the method to compound classification and quantitative structure–activity relationship modeling, using its prediction aggregation, built-in performance assessment, descriptor importance, and compound-similarity capabilities in cheminformatics. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/14632445/)) Later methodological work extended the random-forest framework to censored survival outcomes and genomic or clinical analysis. ([academic.oup.com](https://academic.oup.com/bioinformatics/article/29/1/99/272794)) Research applications also adopted the method for ecological and fisheries classification and used the associated R implementation. ([academic.oup.com](https://academic.oup.com/icesjms/article/65/6/970/603434)) The journal version is recorded as published in *Machine Learning* 45(1), pages 5–32, in October 2001, while the supplied manuscript is dated January 2001. ([stat.berkeley.edu](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf))",
   "raw_url": "https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf",
   "source_type": "external",
   "filepath": "machine_learning/README.md",
   "filename": "Random Forests",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:56"
 }

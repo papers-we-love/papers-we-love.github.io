@@ -1,31 +1,29 @@
 {
   "uuid": "fd878a56da9f9a4ed1d48da5c2028d25bb2d64d6fa0856006b9a93a8199e1cc2",
-  "title": "Buridan's Principle",
-  "publication_date": "February 1984",
+  "title": "Buridan’s Principle",
+  "publication_date": "Published online 12 April 2012; Foundations of Physics, volume 42, issue 8, August 2012, pages 1056–1066. The manuscript was originally dated 31 October 1984 and revised 24 February 2012.",
   "authors": [
     "Leslie Lamport"
   ],
   "keywords": [
-    "algorithmic-consensus",
-    "asynchronous-systems",
-    "binary-decision-problems",
-    "bistability",
-    "computer-science-theory",
-    "decision-making",
-    "distributed-systems",
-    "philosophy-of-physics",
-    "synchronization",
-    "theoretical-computing"
+    "arbiter-problem",
+    "asynchronous-circuits",
+    "buridans-ass",
+    "continuous-inputs",
+    "decisions",
+    "discrete-decision",
+    "metastability",
+    "quantum-measurement"
   ],
   "category_path": [
     "physics"
   ],
-  "abstract": "A finite version of an ancient logical puzzle illuminates the limitations of both computers and the mind; the importance of uncertainty; and the need to take chances when making decisions.",
-  "summary": "Buridan's Principle, authored by Leslie Lamport and published in February 1984, delves into the conceptual parallel between an old philosophical quandary and the limitations inherent in computational and decision-making processes. The paper, taking its name from the paradox of Buridan's Ass, explores the challenges posed by symmetrical decision-making scenarios in asynchronous systems where slight external influences are required to break the tie between equally preferable options.\n\nThe work is grounded in theoretical computing and emphasizes the need for randomness or stochastic processes in algorithms to ensure decisions are made in situations where deterministic approaches could lead to indecision or failure. This exploration highlights a fundamental aspect of distributed systems, where it is vital to handle issues of synchronization and consensus without falling into indecisiveness.\n\nIn terms of influence, this paper forms a conceptual basis for understanding decision-making in computer science, particularly in distributed and asynchronous systems. It has not been widely cited in specific industrial applications due to its highly theoretical nature, but it provides foundational insights into issues encountered in designing distributed computing algorithms prone to indeterminate states. Further discussions and analyses in academia, such as in the lectures on distributed systems, often make reference to Lamport’s exploration of bistability in decision-making.\n\nWhile direct citations of the paper in subsequent practical applications are limited, Lamport's broader contributions to the field of distributed computing reinforce the importance of addressing decision-making challenges—an influence seen in the adoption of consensus algorithms like Paxos. [A related article discussing Lamport's contributions can be found here](https://lamport.azurewebsites.net/pubs/distributed-system.pdf), but it does not specifically cite Buridan's Principle. The paper remains a thought-provoking piece in academic discourse, prompting consideration of the philosophical implications of decision-making within the domain of theoretical computer science.",
+  "abstract": "Buridan’s principle asserts that a discrete decision based upon input having a continuous range of values cannot be made within a bounded length of time. It appears to be a fundamental law of nature. Engineers aware of it can design devices so they have an infinitesimal probability of not making a decision quickly enough. Ignorance of the principle could have serious consequences.",
+  "summary": "The paper formalizes Buridan’s ass as a general continuity problem: a physical or computational system cannot guarantee a bounded-time transition from a continuous range of possible inputs to one of a discrete set of outputs. Lamport applies this argument to railroad-crossing decisions, collision avoidance, human hesitation, airplane navigation, asynchronous computer interrupts, synchronizers, and quantum-mechanical measurement. In computer engineering, the principle corresponds to the arbiter and metastability problem. The practical response is not to eliminate the theoretical possibility of delay, but to allow additional settling time so that the probability of an excessively long metastable interval becomes negligible.\n\nSubsequent work developed the mathematical treatment of this phenomenon. Lamport and Richard S. Palais’s later paper, “On the Glitch Phenomenon,” explicitly formalized the related synchronizer-glitch problem and connected it to devices deciding between asynchronous events. ([researchgate.net](https://www.researchgate.net/publication/2459493_On_the_Glitch_Phenomenon)) The principle has also been cited in work on theorem proving for digital control logic interacting with continuous dynamics, where it is treated as a constraint relevant to cyber-physical-system analysis. ([researchgate.net](https://www.researchgate.net/publication/284233353_Theorem-Proving_Analysis_of_Digital_Control_Logic_Interacting_with_Continuous_Dynamics)) In philosophy, later research has used Lamport’s principle to analyze indecision, responsibility, and decision-making under equally balanced alternatives. ([cambridge.org](https://www.cambridge.org/core/journals/journal-of-the-american-philosophical-association/article/abs/beliefs-and-intentions-of-buridans-ass/4F29E3495B00E74DD16C142ACD713869))\n\nThe paper’s industry impact is best characterized as conceptual and educational: it explains why asynchronous inputs and metastability cannot be handled with an absolute bounded-time guarantee, while practical circuit design uses synchronization stages and timing margins to make failures extremely unlikely. I found no reliable evidence attributing a specific commercial product or industry standard directly to this paper; the underlying arbiter and synchronizer engineering literature predates its 2012 journal publication. ([en.wikipedia.org](https://en.wikipedia.org/wiki/Arbiter_%28electronics%29))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/physics/buridans-principle.pdf",
   "source_type": "pdf",
   "filepath": "physics/buridans-principle.pdf",
   "filename": "buridans-principle.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:56"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:53"
 }

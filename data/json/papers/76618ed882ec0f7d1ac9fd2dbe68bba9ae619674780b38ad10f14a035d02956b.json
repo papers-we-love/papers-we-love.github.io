@@ -1,31 +1,31 @@
 {
   "uuid": "76618ed882ec0f7d1ac9fd2dbe68bba9ae619674780b38ad10f14a035d02956b",
-  "title": "Computing Machinery and Intelligence",
-  "publication_date": "1950",
+  "title": "COMPUTING MACHINERY AND INTELLIGENCE",
+  "publication_date": "October 1, 1950 (Mind, Volume LIX, Issue 236, pages 433–460)",
   "authors": [
     "A. M. Turing"
   ],
   "keywords": [
     "artificial-intelligence",
-    "cognition",
-    "computational-theory",
-    "computer-science",
+    "computability",
     "consciousness",
-    "intelligent-agents",
+    "digital-computers",
+    "imitation-game",
+    "machine-intelligence",
     "machine-learning",
-    "natural-language-processing",
+    "mathematical-logic",
     "philosophy-of-mind",
-    "turing-test"
+    "universal-machines"
   ],
   "category_path": [
     "artificial_intelligence"
   ],
-  "abstract": "I propose to consider the question, 'Can machines think?' This should begin with definitions of the meaning of the terms 'machine' and 'think.' The expressions 'theological systems' and 'human behaviour' might also be discussed. The new form of the problem can be described in terms of a game which we call the 'imitation game.' This game is played with three people, a man (A), a woman (B), and an interrogator (C) who may be of either sex. The interrogator stays in a room apart from the other two. The object of the game for the interrogator is to determine which of the other two is the man and which is the woman. He knows them by labels X and Y, and at the end of the game he says either 'X is A and Y is B' or 'X is B and Y is A.' The interrogator is allowed to put questions to A and B. It is A's object in the game to cause C to make the wrong identification. The object of the game for the third player (B) is to help the interrogator. We now ask the question, 'What will happen when a machine takes the part of A in this game?' Will the interrogator decide wrongly as often as when the game is played between a man and a woman? These questions replace our original, 'Can machines think?'",
-  "summary": "Alan Turing's 1950 paper, \"Computing Machinery and Intelligence,\" is foundational in the field of artificial intelligence (AI) and cognitive sciences. In this work, Turing introduced the concept of the 'Imitation Game,' which later became known as the Turing Test, a criterion to evaluate a machine's ability to exhibit intelligent behavior equivalent to or indistinguishable from that of a human. His paper delved into the philosophical implications of machine intelligence and proposed criteria for machine thinking, impacting the way researchers and organizations approached AI.\n\nWhile this paper did not initiate immediate technological applications in 1950, it laid the theoretical groundwork for AI research and ethical discussions surrounding machine intelligence and consciousness. Turing's ideas continue to influence AI development and testing, notably in natural language processing and the creation of intelligent agents. His conceptualization of the Turing Test remains a benchmark in AI discourse.\n\nAmong various references to Turing's work, a few significant ones include:\n1. Copeland, B. J. (2004). _The Essential Turing: Seminal Writings in Computing, Logic, Philosophy, Artificial Intelligence, and Artificial Life, plus the Secrets of Enigma_. Clarendon Press.\n2. Russell, S. J., & Norvig, P. (2009). _Artificial Intelligence: A Modern Approach_. Pearson.\n3. Franklin, S. (1995). _Artificial Minds_. MIT Press.\n\nThese citations reflect Turing's ongoing influence in both academic research and practical applications within the AI community.",
+  "abstract": "No abstract or summary section is provided in the paper.",
+  "summary": "### Paper summary\n\nTuring reframes the question “Can machines think?” as an operational question involving the “imitation game,” later known as the Turing test. In the proposed setup, a human interrogator communicates by text with two unseen participants and attempts to distinguish a man from a woman; Turing asks whether a digital computer could replace one participant and produce behavior sufficiently human-like to make reliable identification difficult. ([csee.umbc.edu](https://www.csee.umbc.edu/courses/471/papers/turing.pdf))\n\nThe paper explains digital computers as discrete-state machines composed of storage, an executive unit, and control mechanisms. Turing emphasizes their universality: with sufficient memory, speed, and programming, one digital computer can simulate any other discrete-state machine. This computational universality supports his claim that machine intelligence should be investigated through observable performance rather than through disputed definitions of “thinking.” ([csee.umbc.edu](https://www.csee.umbc.edu/courses/471/papers/turing.pdf))\n\nTuring considers objections based on theology, human superiority, mathematical incompleteness, consciousness, alleged machine disabilities, Lady Lovelace’s claim that machines cannot originate anything, continuity in the nervous system, the informality of human behavior, and extrasensory perception. His replies generally distinguish the limits of particular machines from the limits of machines as a class, and distinguish externally observable behavior from unresolved metaphysical questions about consciousness.\n\nThe final part proposes learning machines. Rather than programming an adult-level intelligence directly, Turing suggests creating a relatively simple “child machine” and educating it through instruction, rewards, punishments, experimentation, and possibly random variation. He identifies this approach with an accelerated analogue of biological evolution and anticipates that machine learning could produce behavior not fully understood by the machine’s teacher. ([csee.umbc.edu](https://www.csee.umbc.edu/courses/471/papers/turing.pdf))\n\n### Influence\n\nThe paper established a durable framework for discussing machine intelligence in terms of linguistic interaction and behavioral evaluation. Its imitation game became a recurring reference point for research on conversational systems and for philosophical debates about whether successful behavior demonstrates understanding or consciousness. Weizenbaum’s 1966 ELIZA paper, for example, describes conversational programs whose demonstrations led observers to regard them as having passed a simple form of the Turing test. ([doi.org](https://doi.org/doi%3A10.1145/365153.365168))\n\nThe paper also became a central target in philosophy of mind. John Searle’s 1980 “Minds, Brains, and Programs” developed the Chinese Room argument to challenge the sufficiency of program execution and Turing-test performance as evidence of understanding. ([cs.uky.edu](https://www.cs.uky.edu/~sgware/reading/papers/searle1980minds.pdf))\n\nHistorical scholarship further identifies Turing’s paper as an important precursor to later AI research programs involving symbolic programming, machine learning, logic, probabilities, and background knowledge. Its influence was therefore both technical and conceptual: it helped define machine intelligence as a research problem while also generating sustained debate about the relationship between computation, intelligence, and consciousness. ([journals.sagepub.com](https://journals.sagepub.com/doi/10.3233/AIC-130579))",
   "raw_url": "http://www.csee.umbc.edu/courses/471/papers/turing.pdf",
   "source_type": "external",
   "filepath": "artificial_intelligence/README.md",
   "filename": "Computing Machinery and Intelligence",
-  "created_on": "2026-01-24 23:46:58",
-  "summary_received": "2026-01-25 00:41:52"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:53"
 }

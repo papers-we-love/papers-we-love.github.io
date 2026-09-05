@@ -1,32 +1,32 @@
 {
   "uuid": "e0103ba90f2b05e19d394a368e6e7012444c9467a975738d4c596b021e4cd398",
-  "title": "A Wait-Free Queue as Fast as Fetch-and-Add",
-  "publication_date": "June 1996",
+  "title": "A Wait-free Queue as Fast as Fetch-and-Add",
+  "publication_date": "March 12–16, 2016; Proceedings of the 21st ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming (PPoPP ’16), Barcelona, Spain",
   "authors": [
-    "Håkan Sundell",
-    "Philippa Gardner"
+    "Chaoran Yang",
+    "John Mellor-Crummey"
   ],
   "keywords": [
     "concurrent-programming",
-    "data-structures",
+    "concurrent-queue",
     "fetch-and-add",
-    "multithreading",
-    "non-blocking",
-    "parallel-computing",
-    "performance",
-    "queue",
-    "scalability",
+    "fifo-queue",
+    "linearizability",
+    "lock-free",
+    "memory-reclamation",
+    "multicore-performance",
+    "non-blocking-algorithms",
     "wait-free"
   ],
   "category_path": [
     "non_blocking_algorithms"
   ],
-  "abstract": "We present a new method for constructing lock-free and wait-free concurrent data-structures that is based on multi-word synchronization, without increasing the time-complexity for access. In particular, we describe a practical and potentially optimal implementation of a concurrent wait-free queue which has both practical efficiency and theoretical guarantees with respect to wait-freedom. Experimental results show comparable efficiency against the fastest known lock-free implementations on realistic computer architectures. The overall results seem to suggest that the presented method could be useful as a general tool for constructing lock-free and wait-free data-structures.",
-  "summary": "This paper introduces an innovative method for building concurrent wait-free data structures, focusing on a queue implementation. The authors propose a technique that uses multi-word synchronization, aiming to deliver both practical efficiency and theoretical guarantees for wait-freedom without escalating time complexity. Notably, their proposed queue competes effectively against state-of-the-art lock-free implementations on common computing architectures. However, despite the paper's promising approach and experimental validation, it appears the work has not significantly influenced subsequent research or industry practices. Searches for further references or citations in industry or academia did not yield notable mentions of this specific paper. The concepts presented, however, align with ongoing interests in optimizing concurrent data structures and could quietly inform similar developments and improvements in wait-free and lock-free design ideas.",
+  "abstract": "Concurrent data structures that have fast and predictable performance are of critical importance for harnessing the power of multi-core processors, which are now ubiquitous. Although wait-free objects, whose operations complete in a bounded number of steps, were devised more than two decades ago, wait-free objects that can deliver scalable high performance are still rare.\n\nIn this paper, we present the first wait-free FIFO queue based on fetch-and-add (FAA). While compare-and-swap (CAS) based non-blocking algorithms may perform poorly due to work wasted by CAS failures, algorithms that coordinate using FAA, which is guaranteed to succeed, can in principle perform better under high contention. Along with FAA, our queue uses a custom epoch-based scheme to reclaim memory; on x86 architectures, it requires no extra memory fences on our algorithm’s typical execution path. An empirical study of our new FAA-based wait-free FIFO queue under high contention on four different architectures with many hardware threads shows that it outperforms prior queue designs that lack a wait-free progress guarantee. Surprisingly, at the highest level of contention, the throughput of our queue is often as high as that of a microbenchmark that only performs FAA. As a result, our fast wait-free queue implementation is useful in practice on most multi-core systems today. We believe that our design can serve as an example of how to construct other fast wait-free objects.",
+  "summary": "## Overview\n\nYang and Mellor-Crummey present a multi-producer, multi-consumer FIFO queue that combines **linearizability**, **wait-free progress**, and high throughput under contention. The central observation is that fetch-and-add (FAA) avoids the repeated CAS failures that limit the scalability of many earlier queues. The paper transforms an FAA-based obstruction-free infinite-array queue into a wait-free queue using a specialized fast-path/slow-path design.\n\n## Algorithmic contributions\n\n- The queue uses monotonically increasing head and tail indices obtained with FAA.\n- An infinite array is implemented as a linked list of fixed-size segments.\n- Most operations use a fast path that directly reserves and claims queue cells.\n- Failed operations publish enqueue or dequeue requests that other threads help complete.\n- Helping is organized through per-thread peer pointers arranged in a ring, ensuring that pending requests are eventually serviced by all relevant contenders.\n- Dijkstra-style synchronization is used between queue operations and helpers to coordinate cell ownership and request publication.\n- A custom epoch-based reclamation scheme uses segment pointers and hazard pointers. On x86, the authors report that the common enqueue and dequeue paths require no additional memory fence for reclamation.\n\n## Correctness and progress\n\nThe paper provides arguments for linearizability by assigning enqueue and dequeue linearization points to updates that advance the logical tail and head boundaries. It establishes wait-freedom by bounding the amount of work required before all competing threads become helpers of a pending operation. The stated worst-case bounds are finite but can be high: slow-path enqueues complete after a bound proportional to the square of the number of threads, while slow-path dequeues may inspect a bound proportional to the fourth power of the number of threads.\n\nThe wait-free claim has an important qualification. On IBM Power7, FAA is emulated with load-linked/store-conditional retry loops; because those retries may be unbounded, the implementation does not preserve strict wait-freedom on that platform, although it remains performant in the reported experiments.\n\n## Evaluation\n\nThe evaluation compares two versions of the queue—WF-10, which attempts the fast path repeatedly, and WF-0, which switches to the slow path after one attempt—with LCRQ, MS-Queue, CC-Queue, and an FAA microbenchmark. Tests use Intel Haswell, Intel Xeon Phi, AMD Magny-Cours, and IBM Power7 systems.\n\nThe reported results show that WF-10 is competitive with LCRQ and, on several systems and workloads, approaches the throughput of the FAA-only upper-bound microbenchmark. On the Xeon Phi, WF-10 substantially outperforms MS-Queue and CC-Queue at high concurrency. In the 50%-enqueue workload, LCRQ performs better at high concurrency on Haswell and Magny-Cours because the proposed queue incurs additional work when determining that the queue is empty. The fast path is dominant in the reported Haswell measurements: more than 99% of enqueues and more than 95% of dequeues complete after a single fast-path attempt.\n\n## Influence and subsequent research\n\nThe paper influenced later wait-free queue research by demonstrating a high-performance FAA-oriented design and by exposing the difficulty of combining fast queue operations with correct, bounded memory reclamation. Ramalhete and Correia subsequently proposed the CRTurn queue, explicitly targeting wait-free memory reclamation. Later work on wCQ cites Yang and Mellor-Crummey’s queue as an important FAA-based predecessor, but argues that its reclamation scheme can block when memory exhaustion or stalled threads are considered, and therefore does not provide strict wait-freedom under that interpretation. wCQ adopts a different design based on bounded ring buffers and presents a fast wait-free queue with bounded memory usage. ([researchgate.net](https://www.researchgate.net/publication/320679382_POSTER_A_Wait-Free_Queue_with_Wait-Free_Memory_Reclamation))\n\nThe paper also remains a reference point in later work on wait-free queues and memory reclamation, including the 2024 literature on lock- and wait-free reclamation and a 2026 study that evaluates a GPU queue adapted from the Yang–Mellor-Crummey design using preallocated segments. ([ssrg.ece.vt.edu](https://www.ssrg.ece.vt.edu/papers/pldi24.pdf))\n\nThe search found clear academic follow-on work and critical discussion of the reclamation design, but no verified evidence of direct industrial adoption of this specific queue implementation. The publication metadata and conference date are corroborated by the PPoPP 2016 program and DBLP. ([ppopp16.sigplan.org](https://ppopp16.sigplan.org/details/PPoPP-2016-papers/27/A-Wait-Free-Queue-as-Fast-as-Fetch-and-Add))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/non_blocking_algorithms/a-wait-free-queue-as-fast-as-fetch-and-add.pdf",
   "source_type": "pdf",
   "filepath": "non_blocking_algorithms/a-wait-free-queue-as-fast-as-fetch-and-add.pdf",
   "filename": "a-wait-free-queue-as-fast-as-fetch-and-add.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:56"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

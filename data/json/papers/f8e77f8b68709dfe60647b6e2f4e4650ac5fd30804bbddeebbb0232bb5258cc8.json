@@ -1,36 +1,35 @@
 {
   "uuid": "f8e77f8b68709dfe60647b6e2f4e4650ac5fd30804bbddeebbb0232bb5258cc8",
   "title": "One VM to Rule Them All",
-  "publication_date": "October 27, 2013",
+  "publication_date": "October 29–31, 2013 (Onward! 2013, Indianapolis, Indiana, USA)",
   "authors": [
-    "Andreas Woergoetter",
-    "Andreas Woess",
+    "Andreas Wöß",
+    "Christian Humer",
     "Christian Wimmer",
-    "Laurence Tratt",
-    "Michael Franz",
-    "Michael Haupt"
+    "Doug Simon",
+    "Gilles Duboscq",
+    "Gregor Richards",
+    "Lukas Stadler",
+    "Mario Wolczko",
+    "Thomas Würthinger"
   ],
   "keywords": [
     "dynamic-languages",
-    "graal",
-    "interoperability",
-    "jvm",
-    "language-execution",
-    "meta-object-protocol",
-    "multi-language-support",
-    "performance-optimization",
-    "programming-languages",
+    "java",
+    "javascript",
+    "language-implementation",
+    "optimization",
     "virtual-machine"
   ],
   "category_path": [
     "virtual_machines"
   ],
-  "abstract": "Virtual machine-based execution of programming languages enables engine implementers to place common functionality into a reusable component. The Java Virtual Machine (JVM) is a popular choice, but was originally designed for statically-typed languages like Java. Many developers have extended the JVM to support dynamically-typed languages like Python and Ruby, but their implementations do not take advantage of the full range of type information available. One result is that interfaces between languages are clumsy and slow compared to pure JVM languages. We propose a new approach to implementing dynamically-typed languages on the JVM, by generating optimized machine code on-the-fly. We evaluate the performance, interoperability, and ease of implementation with existing approaches, and argue that our solutions lead to significant benefit for language implementers and users.",
-  "summary": "The paper \"One VM to Rule Them All\" explores enhancing the Java Virtual Machine (JVM) to better support the execution of dynamically-typed languages like Python and Ruby. Typically, the JVM was designed for statically-typed languages, and modifications to support dynamic languages often led to inefficient interoperability and performance issues. This paper proposes a new approach for implementing dynamically-typed languages, focusing on generating optimized machine code dynamically, which reportedly leads to improved performance and easier language interoperability.\n\nIn attempts to assess its impact, the ideas presented in the paper have been influential in discussions around language execution within virtual machines, particularly regarding multi-language support on the JVM. The concept detailed in this paper, regarding runtime code optimization and performance of dynamically-typed languages on JVM, has influenced subsequent research in virtual machine architecture and language interoperability. The use of the Graal compiler, referenced in the paper, is particularly noted for advancing interpreter technology that aligns with the paper’s objectives. The influence of such research can be evidenced by its mention in related discussions, such as those found in conference proceedings on virtual machines and language execution techniques. For instance, works like \"Graal: A universal compiler framework for JVM-based languages\" illustrates a direct continuation of the ideas posed in the document, suggesting a trajectory of research stemming from these insights [https://www.oracle.com/technical-resources/articles/java/graal-compiler.html]. However, specific citations to industry implementations directly referencing this paper appear limited.",
+  "abstract": "Building high-performance virtual machines is a complex and expensive undertaking; many popular languages still have low-performance implementations. We describe a new approach to virtual machine (VM) construction that amortizes much of the effort in initial construction by allowing new languages to be implemented with modest additional effort. The approach relies on abstract syntax tree (AST) interpretation where a node can rewrite itself to a more specialized or more general node, together with an optimizing compiler that exploits the structure of the interpreter. The compiler uses speculative assumptions and deoptimization in order to produce efficient machine code. Our initial experience suggests that high performance is attainable while preserving a modular and layered architecture, and that new high-performance language implementations can be obtained by writing little more than a stylized interpreter.",
+  "summary": "The paper introduced the Truffle/Graal approach: language implementations provide AST interpreters with self-specializing nodes, while partial evaluation, speculative optimization, and deoptimization are reused across languages. The approach subsequently became the basis for a broad family of Truffle-based implementations, including GraalJS, GraalPy, TruffleRuby, FastR, Sulong, and Espresso, as documented by the GraalVM project. ([graalvm.org](https://www.graalvm.org/jdk21/graalvm-as-a-platform/language-implementation-framework/Languages/))\n\nLater research by members of the same project developed the approach further in “Practical Partial Evaluation for High-performance Dynamic Language Runtimes,” which refined the compilation techniques underlying Truffle language implementations. ([hirschfeld.org](https://www.hirschfeld.org/writings/media/NiephausFelgentreffHirschfeld_2018_GraalSqueakAFastSmalltalkBytecodeInterpreterWrittenInAnAstInterpreterFramework_AcmDL.pdf)) The paper also influenced industry-oriented adoption: an Oracle Developers presentation documents Goldman Sachs’ use of Truffle and Graal to implement its internal language on the JVM. ([youtube.com](https://www.youtube.com/watch?v=MUECwHdr07Q))",
   "raw_url": "http://lafo.ssw.uni-linz.ac.at/papers/2013_Onward_OneVMToRuleThemAll.pdf",
   "source_type": "external",
   "filepath": "virtual_machines/README.md",
   "filename": "One VM to Rule Them All",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:05"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:57"
 }

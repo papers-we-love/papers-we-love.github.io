@@ -1,32 +1,44 @@
 {
   "uuid": "8c2e0b72cdfbfcf44a26f5a6c32059d576fbf77ee4d94ec980a1becb71705597",
-  "title": "MapReduce: Simplified Data Processing on Large Clusters",
-  "publication_date": "2004",
+  "title": "F1: A Distributed SQL Database That Scales",
+  "publication_date": "2013; Proceedings of the VLDB Endowment, Vol. 6, No. 11; presented at the 39th International Conference on Very Large Data Bases (VLDB 2013), August 26–30, 2013",
   "authors": [
-    "Jeffrey Dean",
-    "Sanjay Ghemawat"
+    "Bart Samwel",
+    "Ben Handy",
+    "Chad Whipkey",
+    "David Menestrina",
+    "Eric Rollins",
+    "Himani Apte",
+    "Ian Rae",
+    "Jeff Shute",
+    "John Cieslewicz",
+    "Kyle Littlefield",
+    "Mircea Oancea",
+    "Radek Vingralek",
+    "Stephan Ellner",
+    "Traian Stancescu"
   ],
   "keywords": [
-    "big-data",
-    "data-parallel",
-    "data-processing",
-    "distributed-systems",
-    "fault-tolerance",
-    "large-clusters",
-    "mapreduce",
-    "parallel-computing",
-    "programming-model",
-    "scalability"
+    "acid-transactions",
+    "change-data-capture",
+    "distributed-databases",
+    "distributed-sql",
+    "geo-replication",
+    "query-processing",
+    "relational-databases",
+    "schema-evolution",
+    "spanner",
+    "strong-consistency"
   ],
   "category_path": [
     "datastores"
   ],
-  "abstract": "MapReduce is a programming model and an associated implementation for processing and generating large data sets. Users specify a map function that processes a key/value pair to generate a set of intermediate key/value pairs, and a reduce function that merges all intermediate values associated with the same intermediate key. Many real world tasks are expressible in this model, as shown in the paper. Programs written in this functional style are automatically parallelized and executed on a large cluster of commodity machines. The run-time system takes care of the details of partitioning the input data, scheduling the program's execution across a set of machines, handling machine failures, and managing the required inter-machine communication. This allows programmers without any experience with parallel and distributed systems to easily utilize the resources of a large distributed system. Our implementation of MapReduce runs on a large cluster of commodity machines and is highly scalable: a typical MapReduce computation processes many terabytes of data on thousands of machines. Programmers find the system easy to use: hundreds of MapReduce programs have been implemented and upwards of one thousand MapReduce jobs are executed on Google's clusters every day. The paper describes the programming model and the implementation and reports on several real-world use cases and performance metrics.",
-  "summary": "The paper titled \"MapReduce: Simplified Data Processing on Large Clusters\" by Jeffrey Dean and Sanjay Ghemawat, published in 2004, introduces the MapReduce programming model. This model simplifies data processing across large clusters by abstracting the complexities of parallelization and distribution. The significant contribution of this work is its ability to process terabytes of data efficiently across clusters of commodity hardware, achieving scalability and fault tolerance without requiring in-depth knowledge of parallel systems from programmers. Today, the MapReduce model underlies many modern big data processing frameworks, such as Apache Hadoop and Apache Spark, influencing their design and adoption in both academic and industry settings. \n\nMapReduce has greatly influenced the field of distributed computing, becoming a foundational concept in big data processing. Studies and implementations of distributed systems frequently cite this paper to acknowledge its contributions to simplifying parallel computing.\n\n- Referenced by Apache Hadoop as a foundational model for its framework: https://hadoop.apache.org/\n- Influenced systems like Apache Spark to develop more generalized data processing frameworks beyond MapReduce itself: https://spark.apache.org/\n\nBeyond these specific implementations, the MapReduce framework has become a standard approach taught in computer science curricula dealing with distributed systems and big data. The paper established a practical bridge between theory and application, enabling efficient large-scale data processing.",
+  "abstract": "F1 is a distributed relational database system built at Google to support the AdWords business. F1 is a hybrid database that combines high availability, the scalability of NoSQL systems like Bigtable, and the consistency and usability of traditional SQL databases. F1 is built on Spanner, which provides synchronous cross-datacenter replication and strong consistency. Synchronous replication implies higher commit latency, but we mitigate that latency by using a hierarchical schema model with structured data types and through smart application design. F1 also includes a fully functional distributed SQL query engine and automatic change tracking and publishing.",
+  "summary": "## Overview\n\nF1 is a distributed relational database developed at Google to replace a sharded MySQL deployment supporting AdWords. Its central design objective is to combine NoSQL-style scalability and availability with SQL usability, secondary indexes, ACID transactions, and strong consistency. F1 is implemented above Spanner, which supplies sharding, synchronous replication, fault tolerance, transaction processing, and globally ordered timestamps. The paper reports that F1 was managing AdWords campaign data in production from early 2012, with more than 100 TB of data, workloads reaching hundreds of thousands of requests per second, and availability of approximately five nines. ([static.googleusercontent.com](https://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/41344.pdf))\n\n## System design\n\nThe system separates mostly stateless F1 servers from the replicated Spanner storage layer. F1 servers can be added or removed without moving data, while additional Spanner capacity triggers transparent data redistribution. Distributed query workloads can use a shared pool of worker processes, and large-scale extraction can integrate with MapReduce.\n\nA key design decision is hierarchical data clustering. Child tables use ancestor keys as prefixes of their primary keys, causing related rows to be stored together in the same Spanner directory. This improves locality, permits range reads and streaming merge-style joins, and reduces the number of participants in common transactions. Protocol Buffer-valued columns provide structured data types that more closely match application objects and can replace child tables when repeated data has a bounded size.\n\nF1 maintains transactionally consistent secondary indexes. Local indexes are co-located with root rows and generally have low incremental transaction cost; global indexes are distributed independently and may introduce additional two-phase-commit participants. The paper identifies large transactions involving global indexes as a scalability limitation and therefore recommends using global indexes selectively and keeping such transactions small.\n\nSchema changes are performed asynchronously and without blocking queries or updates. The protocol restricts the cluster to compatible current and next schemas and decomposes changes into phases. For example, an index can first be introduced for maintenance operations, then enabled for writes, backfilled, and finally exposed for reads. This avoids corruption while different servers transition at different times.\n\nF1 supports snapshot, pessimistic, and optimistic transactions. Optimistic transactions perform an unlocked read phase and validate row modification timestamps during a short commit phase, enabling long-running transactions, transparent server failover, and server-side retries. Their principal weaknesses are insertion phantoms and poor throughput under high contention; parent-table locks or batching can address some of these cases. Flexible lock columns allow concurrency to be tuned from row-level to column-level or deliberately reduced across related child rows.\n\nChange History is implemented as a database-level feature. Transactions record before-and-after values in clustered ChangeBatch records, and publish/subscribe notifications allow consumers to process changes incrementally. The same mechanism supports cache repair: a cache can apply changes after a checkpoint instead of reloading an entire object or dataset.\n\n## Query processing and performance\n\nF1 offers both centralized execution for short OLTP queries and distributed execution for larger analytical workloads. Its query engine assumes that data is remote, arbitrarily partitioned, and not usefully co-partitioned. It therefore relies heavily on batching, asynchronous reads, streaming operators, hash repartitioning, distributed hash joins, and distributed aggregation. Lookup joins collect large batches of keys before issuing concurrent remote reads, while cluster joins exploit the physical ordering of hierarchically clustered tables.\n\nThe design accepts higher low-level storage latency in exchange for scale and consistency. The deployment described in the paper reports read latencies of approximately 5–10 ms and commit latencies of approximately 50–150 ms, with multi-group transactions typically adding further latency through two-phase commit. The authors report that careful schema clustering and application-level batching, parallelism, and asynchronous access kept average end-user latency for the principal AdWords application comparable to the former MySQL system, while improving tail behavior. The cost was higher resource consumption: F1 queries could use roughly an order of magnitude more CPU than comparable MySQL queries because of compression, decompression, distributed processing, and network transfer. ([static.googleusercontent.com](https://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/41344.pdf))\n\n## Influence\n\nThe paper helped establish a concrete production example of strongly consistent distributed SQL combining relational interfaces with geo-replication and elastic execution. A documented downstream example is CockroachDB: its SIGMOD 2020 paper explicitly identifies F1 as a source of inspiration for CockroachDB’s distributed execution engine and online schema-change infrastructure, and describes adapting the incremental schema-transition approach used by F1. ([cockroachlabs.com](https://www.cockroachlabs.com/pdf/cockroachdb-the-resilient-geo-distributed-sql-database-sigmod-2020.pdf))",
   "raw_url": "http://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/41344.pdf",
   "source_type": "external",
   "filepath": "datastores/README.md",
   "filename": "F1: A Distributed SQL Database That Scales",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:54"
 }

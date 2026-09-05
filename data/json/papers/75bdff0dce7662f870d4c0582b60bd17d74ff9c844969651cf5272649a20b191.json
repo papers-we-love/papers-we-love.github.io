@@ -1,34 +1,31 @@
 {
   "uuid": "75bdff0dce7662f870d4c0582b60bd17d74ff9c844969651cf5272649a20b191",
-  "title": "Calibrating Noise to Sensitivity in Private Data Analysis",
-  "publication_date": "2006",
+  "title": "Differential Privacy",
+  "publication_date": "July 2006 (33rd International Colloquium on Automata, Languages and Programming, part II (ICALP 2006); Lecture Notes in Computer Science, volume 4052, pages 1–12)",
   "authors": [
-    "Adam Smith",
-    "Cynthia Dwork",
-    "Frank McSherry",
-    "Kobbi Nissim"
+    "Cynthia Dwork"
   ],
   "keywords": [
-    "computational-privacy",
-    "data-analysis",
-    "data-privacy",
-    "database-security",
+    "adaptive-queries",
+    "auxiliary-information",
     "differential-privacy",
-    "noise-calibration",
-    "privacy-algorithms",
-    "privacy-preserving",
-    "privacy-protection",
-    "sensitivity-analysis"
+    "fuzzy-extractors",
+    "privacy-mechanisms",
+    "privacy-preserving-data-analysis",
+    "random-noise",
+    "semantic-security",
+    "sensitivity",
+    "statistical-databases"
   ],
   "category_path": [
     "information_theory"
   ],
-  "abstract": "We describe and analyze a mechanism for approximating queries on databases containing sensitive information about individuals. In our model, a database is a triple (x1,...,xn,q), where x1,...,xn are individual records drawn from a data universe U and q is a summary statistic (the query). The mechanism returns answers whose distribution depends only on q(x1,...,xn) and the parameters of the mechanism, and is otherwise independent of the actual records x1,...,xn. We show how to construct an optimal noise-adding mechanism that satisfies ε-differential privacy by calibrating the noise to the sensitivity of the requested query. We demonstrate its applicability across a wide range of queries, using a general method that constructs the privacy-preserving mechanism by analyzing the sensitivity of the function with respect to its input.",
-  "summary": "This paper introduces a foundational concept in privacy-preserving data analysis called ε-differential privacy. Cynthia Dwork and her co-authors propose a method to ensure privacy by adding noise calibrated to the sensitivity of the function being computed on a database. This approach ensures that the output distribution of a query is almost the same, whether or not any single individual's data is included in the input database. The publication has been highly influential, laying the groundwork for sophisticated privacy-preserving techniques in data analysis and is a cornerstone in the field of differential privacy.\n\nThe paper has been cited extensively and influenced a wide range of applications in computer science, especially in developing algorithms that offer formal privacy guarantees. For instance, Apple's implementation of differential privacy in iOS to gather usage data while preserving user privacy can be tied back to the principles outlined in this research ([Apple and Differential Privacy](https://www.apple.com/privacy/docs/Differential_Privacy_Overview.pdf)). Additionally, platforms like the U.S. Census have explored using differential privacy techniques to protect individual data ([U.S. Census Differential Privacy](https://www.census.gov/newsroom/blogs/research-matters/2017/08/differential_privacy.html)). The academic impact is also notable, with the methodology forming a benchmark standard for subsequent research in privacy-preserving data systems and algorithms.",
+  "abstract": "In 1977 Dalenius articulated a desideratum for statistical databases: nothing about an individual should be learnable from the database that cannot be learned without access to the database. We give a general impossibility result showing that a formalization of Dalenius’ goal along the lines of semantic security cannot be achieved. Contrary to intuition, a variant of the result threatens the privacy even of someone not in the database. This state of affairs suggests a new measure, differential privacy, which, intuitively, captures the increased risk to one’s privacy incurred by participating in a database. The techniques developed in a sequence of papers [8, 13, 3], culminating in those described in [12], can achieve any desired level of privacy under this measure. In many cases, extremely accurate information about the database can be provided while simultaneously ensuring very high levels of privacy.",
+  "summary": "### Summary\n\nThe paper examines how to define privacy for statistical and general-purpose data analysis when an adversary may possess substantial auxiliary information. It first shows that a strong, semantic-security-like requirement—ensuring that database access reveals nothing about an individual that could not otherwise be learned—is impossible to satisfy in useful statistical databases. The impossibility can affect people who are not present in the database, because auxiliary information can combine with aggregate database outputs to reveal sensitive facts.\n\nThe paper therefore introduces **ε-differential privacy**, a relative privacy guarantee based on neighboring data sets that differ in one participant. A randomized mechanism satisfies ε-differential privacy when the probability of every possible output event changes by at most a multiplicative factor of exp(ε) between neighboring data sets. This definition limits the additional risk caused by an individual’s participation while still permitting aggregate information to be released. The guarantee extends to groups, with privacy loss growing approximately linearly in the group size in the exponent.\n\nThe paper also presents a construction for achieving differential privacy by adding independent symmetric exponential noise to query answers. The required noise is calibrated to the query’s global L1-sensitivity, defined as the largest L1 change in the query output caused by adding or removing one data element. The same approach handles vector-valued queries, histograms, complex database functions, and adaptively selected sequences of queries, provided the mechanism is calibrated to the maximum sensitivity among the possible queries. A key observation is that histogram queries can have low overall sensitivity even when they contain many coordinates, allowing substantially less noise than treating each histogram cell as an independent query.\n\nThe impossibility proof uses randomness extractors and fuzzy extractors to show that useful released information can act as a one-time pad for auxiliary information, allowing an adversary with database access to recover a privacy breach that a simulator without such access cannot recover. This establishes why absolute disclosure prevention is unattainable under the paper’s utility assumptions and motivates the relative-risk formulation of differential privacy.\n\n### Influence\n\nThe paper formalized differential privacy as a central framework for privacy-preserving statistical analysis and became a foundational reference for subsequent work, including surveys and research on statistical estimation, privacy semantics, composition, machine learning, and practical mechanisms. The related 2010 survey by Dwork and Smith explicitly reviews the definition and subsequent results in differentially private statistics. ([doi.org](https://doi.org/10.29012/jpc.v1i2.570))\n\nThe framework also influenced deployed privacy systems. Apple describes its products as using local differential privacy to collect aggregate insights while perturbing data on users’ devices. ([apple.com](https://www.apple.com/privacy/docs/Differential_Privacy_Overview.pdf)) The U.S. Census Bureau adopted a differential-privacy-based Disclosure Avoidance System for the 2020 Census, describing it as a formal method for balancing disclosure risk and statistical accuracy. ([census.gov](https://www.census.gov/programs-surveys/decennial-census/decade/2020/planning-management/plan/planning-docs/privacy-methods-2020-census.html)) The paper’s publication and conference metadata are confirmed by Microsoft Research and the author’s publication record. ([microsoft.com](https://www.microsoft.com/en-us/research/publication/differential-privacy/?msockid=02b72d3f2214689b1fec3bbc231c69e2))",
   "raw_url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/dwork.pdf",
   "source_type": "external",
   "filepath": "information_theory/README.md",
   "filename": "Differential Privacy",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

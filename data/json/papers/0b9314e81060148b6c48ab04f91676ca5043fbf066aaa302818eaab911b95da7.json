@@ -1,35 +1,34 @@
 {
   "uuid": "0b9314e81060148b6c48ab04f91676ca5043fbf066aaa302818eaab911b95da7",
-  "title": "Pointwise: Predicting Points and Valuing Decisions in Real Time",
-  "publication_date": "2014",
+  "title": "POINTWISE: Predicting Points and Valuing Decisions in Real Time with NBA Optical Tracking Data",
+  "publication_date": "February 28–March 1, 2014; 8th MIT Sloan Sports Analytics Conference, 2014 Research Paper Competition",
   "authors": [
-    "Alex D'Amour",
+    "Alexander D’Amour",
     "Dan Cervone",
     "Kirk Goldsberry",
     "Luke Bornn"
   ],
   "keywords": [
-    "basketball",
-    "data-driven-insights",
-    "decision-valuation",
-    "game-theory",
-    "nba-stats",
-    "player-performance",
-    "predictive-modeling",
-    "probability",
-    "real-time-decision-making",
-    "spatio-temporal-modeling",
+    "basketball-analytics",
+    "competing-risks",
+    "decision-analysis",
+    "expected-possession-value",
+    "markov-models",
+    "nba",
+    "optical-tracking",
+    "player-evaluation",
+    "spatiotemporal-modeling",
     "sports-analytics"
   ],
   "category_path": [
     "sports_analytics"
   ],
-  "abstract": "In basketball, as in other sports, the outcomes of games are determined by a sequence of player and team decisions that unfold over time. In order to optimally value and critique these decisions, one needs to have a good understanding of the hidden opportunity costs that lie beneath observed outcomes. Via a fine-grained spatiotemporal data source, we develop and validate a novel prediction system that provides a real-time measure of the expected value of an action or a decision. Initially, we demonstrate and validate this system in a basketball-specific setting using player-tracking data from NBA games. Specifically, we describe in-game, player-specific 'pointwise' decision values, and reactions to dynamic defensive conditions. Finally, we present several instances of how our system can be used by coaches, analysts, and broadcasters alike to better analyze and appreciate the game.",
-  "summary": "The paper 'Pointwise: Predicting Points and Valuing Decisions in Real Time' discusses a novel prediction system leveraging spatiotemporal data in basketball to assess the expected value of actions in real-time. This system is particularly applied to NBA games, aiding in identifying and critiquing player and team decisions. The authors highlight how such a system provides coaches, analysts, and broadcasters with deeper insights into the game's dynamics.\n\nThis paper has contributed significantly to the field of sports analytics, particularly in basketball. It has been referenced in subsequent research exploring advanced metrics for player evaluation and decision-making processes in sports. For instance, it has influenced methodologies used by researchers in teams to analyze player efficiency and optimize game strategies. Additionally, companies involved in sports analytics have adopted and adapted these models for enhancing their evaluation systems and real-time game strategies.\n\nCitations:\n1. Bornn, L., Goldsberry, K., Cervone, D., & D’Amour, A. (2018). [The Value of Team Defense in the NBA: A Computational Approach](https://doi.org/10.1287/opre.2017.1628). Operations Research. \n2. Cervone, D., D'Amour, A., Bornn, L., & Goldsberry, K. (2016). [A Multiresolution Stochastic Process Model for Predicting Basketball Possession Outcomes](https://doi.org/10.1080/10618600.2015.1123206). Journal of the American Statistical Association.",
+  "abstract": "Basketball is a game of decisions; at any moment, a player can change the character of a possession by choosing to pass, dribble, or shoot. The current state of basketball analytics, however, provides no way to quantitatively evaluate the vast majority of decisions that players make, as most metrics are driven by events that occur at or near the end of a possession, such as points, turnovers, and assists. We propose a framework for using player-tracking data to assign a point value to each moment of a possession by computing how many points the offense is expected to score by the end of the possession, a quantity we call expected possession value (EPV). EPV allows analysts to evaluate every decision made during a basketball game – whether it is to pass, dribble, or shoot – opening the door for a multitude of new metrics and analyses of basketball that quantify value in terms of points. In this paper, we propose a modeling framework for estimating EPV, present results of EPV computations performed using player-tracking data from the 2012-13 season, and provide several examples of EPV-derived metrics that answer real basketball questions.",
+  "summary": "The paper introduced **expected possession value (EPV)**, a continuous estimate of the points an offense is expected to score from the current spatial configuration of a possession. Its central contribution was to move basketball evaluation beyond terminal events such as shots, assists, and turnovers by valuing intermediate decisions, including movement, passing, and shot selection. The proposed model combined a Markov assumption, competing-risks models for discrete actions, spatial effects, and a coarsened Markov-chain representation of court states. The paper also demonstrated derived metrics such as EPV-added over replacement and shot satisfaction.\n\nThe framework was subsequently developed into a more technical research article, *A Multiresolution Stochastic Process Model for Predicting Basketball Possession Outcomes*, which formalized the multiresolution stochastic-process approach and further developed hierarchical spatiotemporal transition models. ([arxiv.org](https://arxiv.org/abs/1408.0777)) Subsequent research applied related EPV ideas beyond basketball, including a fine-grained model for valuing soccer possessions. ([arxiv.org](https://arxiv.org/abs/2011.09426)) Later basketball work, such as *DeepHoops*, used spatiotemporal tracking data and deep learning to produce continuously updated expected-point predictions for possessions, extending the paper’s emphasis on micro-action evaluation. ([arxiv.org](https://arxiv.org/abs/1902.08081))\n\nThe authors also released a public demonstration repository containing code and data for an NBA EPV model, providing a concrete research and educational artifact based on the framework. ([github.com](https://github.com/dcervone/EPVDemo)) The method received contemporaneous public coverage describing its potential use in evaluating on-court decisions and player performance, but the sources reviewed here do not establish that this specific 2014 implementation was adopted operationally by an NBA team. ([news.harvard.edu](https://news.harvard.edu/gazette/story/2014/03/bringing-order-to-the-court/))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/sports_analytics/2014-ssac-pointwise-predicting-points-and-valuing-decisions-in-real-time.pdf",
   "source_type": "pdf",
   "filepath": "sports_analytics/2014-ssac-pointwise-predicting-points-and-valuing-decisions-in-real-time.pdf",
   "filename": "2014-ssac-pointwise-predicting-points-and-valuing-decisions-in-real-time.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:56"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:53"
 }

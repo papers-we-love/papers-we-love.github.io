@@ -1,31 +1,24 @@
 {
   "uuid": "7b28a80e99c5d38c16048a00bbc808748593cbd5cb1a76964356c7a7dd7074f0",
-  "title": "Interior Mapping: Enhanced Indoor Illusion in Games",
-  "publication_date": "2011-08",
+  "title": "Interior Mapping: A new technique for rendering realistic buildings",
+  "publication_date": "2008; presented at CGI 2008 (Computer Graphics International), Istanbul, Turkey, June 9–11, 2008",
   "authors": [
     "Joost van Dongen"
   ],
   "keywords": [
-    "game-development",
-    "graphics",
-    "indoor-illusion",
-    "interactive-graphics",
-    "interior-mapping",
-    "real-time-rendering",
-    "shader",
-    "texture-mapping",
-    "three-dimensional-mapping",
-    "video-games"
+    "architecture",
+    "gpu-shader",
+    "interior"
   ],
   "category_path": [
     "computer_graphics"
   ],
-  "abstract": "We create more interesting building facades by demonstrating a pixel shader that generates infinite rooms behind building windows. Inspired by an architecture that uses mapped textures to create the illusion of complex indoor spaces, our approach uses generated textures that do more than give an illusion of static rooms.",
-  "summary": "The paper 'Interior Mapping: Enhanced Indoor Illusion in Games' by Joost van Dongen presents a novel method in computer graphics for generating more realistic and interesting building facades in video games by using a pixel shader to create the illusion of infinite indoor spaces behind windows. This technique helps in achieving a perception of complex, non-repetitive indoor environments, enhancing game aesthetics while maintaining computational efficiency, as it relies on texture mapping rather than detailed geometry.\n\nAlthough the paper does not seem to be widely cited in formal academic literature, the concept of interior mapping has influenced game developers, particularly in the context of reducing computational overhead while improving visual richness in game design. The method is appreciated in game development communities and forums as an innovative approach to achieving high-quality visuals under tight performance constraints, as seen, for example, on gamedev.net and similar platforms where game developers exchange ideas (see [Gamedev discussion](https://www.gamedev.net/forums/topic/600735-interior-mapping-technique-question)).\n\nOverall, this interior mapping approach contributes to real-time rendering techniques in the gaming industry, providing a practical solution for visually complex scenes without high resource demands.",
+  "abstract": "Interior Mapping is a new real-time shader technique that renders the interior of a building when looking at it from the outside, without the need to actually model or store this interior. With Interior Mapping, raycasting in the pixel shader is used to calculate the positions of floors and walls behind the windows. Buildings are modelled in the same way as without Interior Mapping and are rendered on the GPU. The number of rooms rendered does not influence the framerate or memory usage. The rooms are lit and textured and can have furniture and animated characters. The interiors require very little additional asset creation and no extra memory. Interior Mapping is especially useful for adding more depth and detail to buildings in games and other applications that are situated in large virtual cities.",
+  "summary": "## Summary\n\nThe paper introduces **Interior Mapping**, a GPU pixel-shader technique for rendering perspectively correct building interiors without storing or modeling the interior as conventional geometry. For each visible pixel, the camera-to-surface ray is transformed into object space and intersected with regularly spaced virtual floors, ceilings, and walls. The closest intersection determines the visible interior surface and its texture coordinates. Exterior textures use an alpha mask to identify windows, while reflections can be blended with the generated interior appearance.\n\nThe method also supports virtual “furniture planes,” which display furniture or animated characters as alpha-tested sprites inside rooms. Three extensions increase visual variation: probabilistic per-room lighting, texture atlases for selecting different room appearances, and bounded displacement of room walls to vary room sizes while retaining constant-time intersection tests.\n\nThe experiments report that Interior Mapping is advantageous for scenes containing many buildings. In the author’s test, an Interior-Mapped apartment building used 10 polygons and one draw call, compared with 158 polygons and five draw calls for a polygonal-interior version. The shader became faster than polygonal interiors at approximately 100 buildings. Z-culling increased one tested configuration from 881 to 1,265 frames per five seconds, a 44% improvement. Interior Mapping was substantially more expensive than rendering buildings with reflective windows only, but its performance was largely independent of the number of rooms: a test increasing room counts from 1,000 to 4,000,000 showed no meaningful performance decrease. The principal limitations are repetitive room content, the cost of the pixel shader, and visible distortion or seams from furniture planes on strongly curved surfaces or around corners.\n\nSubsequent work and industry material show continued use of the technique. A 2015 research paper on procedural window-lighting effects cites Interior Mapping and combines interior maps with procedurally varied window illumination for large-scale city rendering. ([researchgate.net](https://www.researchgate.net/publication/283758410_Procedural_window_lighting_effects_for_real-time_city_rendering)) A 2019 study explicitly evaluates Interior Mapping in Unreal Engine 4 against modeled interiors using frame rate, polygon count, shader complexity, and resource size. ([kci.go.kr](https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002533747)) The technique has also been ported and documented for Unity-based workflows, including a 2011 Unity implementation referenced by later shader tutorials. ([alanzucconi.com](https://www.alanzucconi.com/2018/09/10/shader-showcase-9/)) Forza Horizon 4 technical-art documentation credits van Dongen’s original shader idea while describing extensions for glass, curtains, split rooms, and richer interior lighting. ([harpingtonbear.artstation.com](https://harpingtonbear.artstation.com/projects/581r9O)) Industry commentary has additionally identified interior mapping as a likely technique behind some contemporary game building facades, although such attributions are not always officially confirmed by the developers. ([gamedeveloper.com](https://www.gamedeveloper.com/programming/interior-mapping-rendering-real-rooms-without-geometry))",
   "raw_url": "http://www.proun-game.com/Oogst3D/CODING/InteriorMapping/InteriorMapping.pdf",
   "source_type": "external",
   "filepath": "computer_graphics/README.md",
   "filename": "Interior Mapping: A new technique for rendering realistic buildings",
-  "created_on": "2026-01-24 23:46:58",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:54"
 }

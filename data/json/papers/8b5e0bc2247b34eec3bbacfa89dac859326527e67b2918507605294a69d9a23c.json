@@ -1,28 +1,32 @@
 {
   "uuid": "8b5e0bc2247b34eec3bbacfa89dac859326527e67b2918507605294a69d9a23c",
-  "title": "Sparse Partitions",
-  "publication_date": "2004",
+  "title": "Sparse Partitions (Extended Abstract)",
+  "publication_date": "October 22–24, 1990; 31st Annual IEEE Symposium on Foundations of Computer Science (FOCS 1990), St. Louis, Missouri, USA, pp. 503–513",
   "authors": [
-    "James R. Lee",
-    "Robert Krauthgamer"
+    "Baruch Awerbuch",
+    "David Peleg"
   ],
   "keywords": [
-    "algorithm-design",
-    "distributed-systems",
-    "graph-theory",
-    "metric-spaces",
+    "clustering",
+    "distributed-algorithms",
+    "graph-covers",
+    "graph-partitions",
+    "graph-spanners",
+    "locality-preserving-representations",
+    "mobile-user-tracking",
     "network-decomposition",
+    "network-routing",
     "sparse-partitions"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "In this paper, we study a combinatorial structure that aids in the design of efficient distributed algorithms for networks. Specifically, for metric spaces induced by weighted graphs, we seek to decompose the graph into clusters of bounded diameter, each containing a sparse set of edges. We demonstrate the existence of such a decomposition and apply our result to develop a distributed algorithm for approximating the minimum cut of a network.",
-  "summary": "The paper \"Sparse Partitions\" by Robert Krauthgamer and James R. Lee presents a mathematical framework relevant to distributed systems and algorithm design. The authors introduce a combinatorial structure for metric spaces derived from weighted graphs, facilitating the development of efficient distributed algorithms. Specifically, they focus on decomposing graphs into clusters of bounded diameter with a sparse set of edges. This approach is applied to create a distributed algorithm for approximating the minimum cut of a network.\n\nUpon searching for the impact of this paper, it appears to have been referenced in various studies relating to network optimization and algorithm efficiency. Notably, it influenced further research in distributed algorithms as seen in works such as:\n- Li, L., Pan, Y., and Xu, J. (2008). \"Algorithmic Techniques for Optimization Problems in Distributed Systems,\" [IEEE Digital Library](https://ieeexplore.ieee.org/document/XXX).\n- Giridhar, A., and Kumar, P. R. (2006). \"Optimal Distributed Algorithms in Networks with Bounded Hop Diameter,\" [Springer Link](https://link.springer.com/article/XXX).\n\nReferences such as these indicate its utility in refining concepts around efficient network decompositions and their applications in computer science and engineering.",
+  "abstract": "This abstract presents a collection of clustering and decomposition techniques enabling the construction of sparse and locality preserving representations for arbitrary networks. These new clustering techniques have already found several powerful applications in the area of distributed network algorithms. Two of these applications are described in this abstract, namely, routing with polynomial communication-space tradeoff and online tracking of mobile users.",
+  "summary": "The paper develops clustering and decomposition methods for representing arbitrary weighted networks with connected, locality-preserving clusters. Its central objective is to balance two competing parameters: cluster radius, which controls locality and communication time, and sparsity, which controls the amount of state maintained by individual vertices.\n\nThe main construction repeatedly merges overlapping clusters to obtain coarsenings with controlled radius growth and reduced overlap. For a parameter \\(k\\), the maximum-degree coarsening achieves radius at most \\((2k-1)\\) times the original radius and maximum cover degree at most \\(2k|\\mathcal{S}|^{1/k}\\). Related constructions provide improved bounds for average degree, vertex-degree, and cluster-degree measures. The paper also establishes lower bounds showing that the sparsity–radius tradeoff is close to optimal for some graph families.\n\nThe framework is used to construct regional matchings, sparse spanners, low-diameter separators, and sparse tree covers. Two distributed-systems applications are developed: a hierarchical routing scheme with stretch \\(O(k^2)\\) and per-vertex memory \\(O(n^{1/k}\\log^2 n\\log \\operatorname{Diam}(G))\\), and a directory structure for mobile users with \\(O(\\log^2 n)\\) find- and move-stretch and total memory \\(O(N\\log^2 n+n\\log^3 n)\\).\n\nSubsequent research explicitly identifies Awerbuch and Peleg as the first authors to study sparse covers and describes their constructions as foundational for later sparse-partition work. Later results used their sparse-cover construction as an integral component of universal spanning-tree and universal traveling-salesperson algorithms. ([drops.dagstuhl.de](https://drops.dagstuhl.de/opus/volltexte/2020/12454/pdf/LIPIcs-ICALP-2020-47.pdf)) A subsequent SIAM Journal on Computing paper developed near-linear-time constructions of sparse neighborhood covers and connected them to improvements for network decompositions, approximate shortest paths, and graph spanners, while citing this paper as an antecedent. ([epubs.siam.org](https://epubs.siam.org/doi/10.1137/S0097539794271898)) The search identified substantial influence on subsequent theoretical research, but no specific industrial deployment directly attributable to this paper.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/sparse-partitions.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/sparse-partitions.pdf",
   "filename": "sparse-partitions.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

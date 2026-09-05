@@ -1,30 +1,36 @@
 {
   "uuid": "2ea25fdf33b0dd2474acde67413a0f4299cf878a82dcd1a1397b8e955b3e355a",
-  "title": "Semi-supervised Sequence Learning",
-  "publication_date": "2016-05",
+  "title": "On-the-Fly TCP Acceleration with Miniproxy",
+  "publication_date": "May 20, 2016 (arXiv version 1); extended version of a paper published at ACM HotMiddlebox 2016 in May 2016",
   "authors": [
-    "Andrew M. Dai",
-    "Quoc V. Le"
+    "Felipe Huici",
+    "Giuseppe Siracusano",
+    "Nicola Blefari Melazzi",
+    "Roberto Bifulco",
+    "Simon Kuenzer",
+    "Stefano Salsano"
   ],
   "keywords": [
-    "data-augmentation",
-    "language-modeling",
-    "lstm",
-    "recurrent-neural-networks",
-    "semi-supervised-learning",
-    "sequence-learning",
-    "text-classification",
-    "unsupervised-learning"
+    "cloud-computing",
+    "early-syn-forwarding",
+    "edge-computing",
+    "network-function-virtualization",
+    "on-the-fly-instantiation",
+    "tcp-acceleration",
+    "tcp-proxy",
+    "tcp-slow-start",
+    "unikernel",
+    "virtualized-networking"
   ],
   "category_path": [
     "unikernels"
   ],
-  "abstract": "Deep Neural Networks (DNNs) are powerful models that have achieved excellent performance on difficult learning tasks. Although DNNs work well whenever large labeled training sets are available, they are less effective in scenarios where few labeled data points are accessible. To address this, we present the Sequence Autoencoder (SAE) – a generalization of the autoencoder to sequence input and sequence output such that the input, a sequence x, is encoded to a hidden representation which is then decoded to reconstruct the original sequence. We show that models learned with the SAE can be used to define an unsupervised learning algorithm for sequence prediction tasks, in which a sequence y is predicted given sequence x. This unsupervised pretraining algorithm works anytime the input/output can be cast to a sequence prediction problem, including language modeling and text classification. We demonstrate the effectiveness of the Sequence Autoencoder by applying it to semi-supervised sentiment classification, where the model achieves state-of-the-art results. Furthermore, we show how to augment the SAE with the Long Short-Term Memory (LSTM) networks, which helps the model better capture long-distance dependencies in the data. Experiments demonstrate that our approach consistently outperforms competitive baselines on a language modeling task and a semi-supervised sentiment classification task.",
-  "summary": "The paper \"Semi-supervised Sequence Learning\" by Andrew M. Dai and Quoc V. Le, published in May 2016, presents the Sequence Autoencoder (SAE), a generalization of the traditional autoencoder tailored for sequence input and output. This paper mainly focuses on improving the performance of models for sequence prediction tasks, especially in semi-supervised learning scenarios. The authors highlight the use of a Sequence Autoencoder in unsupervised pretraining for language modeling and text classification, with successful application demonstrated in semi-supervised sentiment classification.\n\nThis work is significant in that it outlined a method for enhancing learning with limited labeled data, a crucial area in the field of machine learning. Key insights from the paper include the integration of SAE with Long Short-Term Memory (LSTM) networks to effectively handle long-distance dependencies in data, substantially improving tasks such as language modeling and sentiment classification.\n\nIn subsequent studies, the approaches outlined in this paper have influenced various research domains, including natural language processing and neural network design for sequence learning. Specifically, SAE has been referenced as a precursor or component in more complex models that aim to tackle semi-supervised and unsupervised learning tasks. Examples of references to this work include:\n\n1. **BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding** - This work referenced methods from SAE for language representations and was groundbreaking in advancing NLP tasks ([link](https://arxiv.org/abs/1810.04805)).\n\n2. **Attention is All You Need** - The concept of sequence learning in transformers builds on ideas similar to those in SAE ([link](https://arxiv.org/abs/1706.03762)).\n\nDespite these developments, the insights from Dai and Le continue to be relevant in current research efforts, primarily affecting methodologies for training models in the absence of abundant labeled data.",
+  "abstract": "TCP proxies are basic building blocks for many advanced middleboxes. In this paper we present Miniproxy, a TCP proxy built on top of a specialized minimalistic cloud operating system. Miniproxy’s connection handling performance is comparable to that of full-fledged GNU/Linux TCP proxy implementations, but its minimalistic footprint enables new use cases. Specifically, Miniproxy requires as little as 6 MB to run and boots in tens of milliseconds, enabling massive consolidation, on-the-fly instantiation and edge cloud computing scenarios. We demonstrate the benefits of Miniproxy by implementing and evaluating a TCP acceleration use case.",
+  "summary": "### Summary and subsequent influence\n\nThe paper presents **Miniproxy**, a Xen-based unikernel TCP proxy implemented using MiniOS and a modified lwIP stack. Its design targets dynamically deployed TCP acceleration: proxies split an end-to-end TCP connection into shorter segments, use Early SYN Forwarding to overlap connection establishment, and allow the TCP slow-start phases of the split connections to proceed in parallel. The implementation is event-driven, approximately 600 lines of code, requires at least 6 MB of RAM, and boots in 12 ms under the reported evaluation conditions. In controlled experiments, Miniproxy achieved approximately 1.534 Gb/s on a single TCP flow, compared with 1.462 Gb/s for Varnish configured in the same test environment but using substantially more memory. With a 100 ms client-server RTT, one, two, and three evenly placed proxies reduced Time To First Byte by 25%, 33.3%, and 37.5%, respectively; measured total-transfer-time reductions for the evaluated flows reached 33%, 44%, and 49%.\n\nThe clearest documented follow-on use is **MOSTO**, a dynamically managed overlay for accelerating dynamic content delivery. The later work explicitly states that it implemented its fast-booting TCP proxies using Miniproxy and extended the approach with proxy-chain selection, reactive instantiation, cloud deployment, and switch-assisted offloading. MOSTO was subsequently developed into a peer-reviewed IEEE Journal on Selected Areas in Communications article. ([arxiv.org](https://arxiv.org/abs/1709.04437))\n\nThe original work was also published in the ACM HotMiddlebox 2016 proceedings, where it appears as a six-author paper on pages 44–49. ([dblp.org](https://dblp.org/db/conf/sigcomm/hotmiddlebox2016))\n\nOverall, the paper’s documented influence is primarily methodological and architectural: it provided a lightweight, rapidly instantiated TCP-proxy building block that was directly incorporated into later research on virtualized content delivery and dynamic edge-network services. The available evidence supports research reuse; it does not establish broad commercial deployment.",
   "raw_url": "https://arxiv.org/pdf/1605.06285.pdf",
   "source_type": "external",
   "filepath": "unikernels/README.md",
   "filename": "On the Fly TCP Acceleration with Miniproxy",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:05"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:57"
 }

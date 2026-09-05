@@ -1,32 +1,32 @@
 {
   "uuid": "98fa2c32a6ea1b1eb63522bf69a7ec2c63b6c863f1279e262ea2a765e4b329a7",
   "title": "2Q: A Low Overhead High Performance Buffer Management Replacement Algorithm",
-  "publication_date": "1994",
+  "publication_date": "September 12–15, 1994, VLDB'94 (20th International Conference on Very Large Data Bases), Santiago de Chile, Chile",
   "authors": [
     "Dennis Shasha",
     "Theodore Johnson"
   ],
   "keywords": [
-    "2q-algorithm",
     "buffer-management",
+    "cache-locality",
+    "cache-replacement",
     "database-systems",
     "fifo",
-    "high-performance",
     "lru",
-    "overhead",
-    "page-replacement",
-    "recently-frequently-used",
-    "replacement-algorithms"
+    "lru-k",
+    "lru-queue",
+    "scan-resistance",
+    "working-set"
   ],
   "category_path": [
     "caching"
   ],
-  "abstract": "Database systems employ sophisticated buffer management algorithms to minimize disk I/O. The Longest Recently Used (LRU) algorithm and its variants are popular because they are simple to program and do not need tuning. However, LRU and its variants do not perform well in important database applications. This paper proposes a very low overhead, highly tunable buffer management algorithm called \"2Q\" which has the simplicity of LRU, but renders superior hit rates for most workloads. 2Q can be tuned to perform well on different workloads by adjusting only one parameter. The algorithm is tested on a wide range of synthetic and trace-driven database workloads.  The performance study shows that 2Q performs better than LRU and two existing LRU variants on the tested benchmarks.",
-  "summary": "The paper titled \"2Q: A Low Overhead High Performance Buffer Management Replacement Algorithm\" by Theodore Johnson and Dennis Shasha, published in 1994, presents the 2Q algorithm as a novel approach to improving buffer management performance in database systems. The 2Q algorithm is designed to offer a simpler alternative to LRU-based algorithms while achieving better hit rates across various workloads due to its tunability via a single parameter. Johnson and Shasha's algorithm leverages a two-level queue structure to separate frequently and recently used pages effectively, optimizing cache utilization.\n\nUpon searching for influence, references such as [A Comparison of Buffer Management Algorithms for Relational Database Systems](https://dl.acm.org/doi/10.1145/224559.195009) mention that 2Q significantly impacted the area of buffer management in database systems. Further, studies like \"The 2Q Buffer Management Replacement Algorithm\" demonstrates how 2Q continues to be a point of comparison in understanding how LRU variants perform under different conditions, highlighting its long-standing influence on buffer management strategies in both academic research and practical database management system implementations.",
+  "abstract": "In a path-breaking paper last year Pat and Betty O'Neil and Gerhard Weikum proposed a self-tuning improvement to the Least Recently Used (LRU) buffer management algorithm[15]. Their improvement is called LRU/k and advocates giving priority to buffer pages based on the kth most recent access. (The standard LRU algorithm is denoted LRU/1 according to this terminology.) If P1's kth most recent access is more recent than P2's, then P1 will be replaced after P2. Intuitively, LRU/k for k > 1 is a good strategy, because it gives low priority to pages that have been scanned or to pages that belong to a big randomly accessed file (e.g., the account file in TPC/A). They found that LRU/2 achieves most of the advantage of their method.\n\nThe one problem of LRU/2 is the processor overhead to implement it. In contrast to LRU, each page access requires log N work to manipulate a priority queue where N is the number of pages in the buffer.\n\nQuestion: is there a low overhead way (constant overhead per access as in LRU) to achieve similar page replacement performance to LRU/2?\nAnswer: Yes.\n\nOur \"Two Queue\" algorithm (hereafter 2Q) has constant time overhead, performs as well as LRU/2, and requires no tuning. These results hold for real (DB2 commercial, Swiss bank) traces as well as simulated ones. Based on these experiments, we estimate that 2Q will provide a few percent improvement over LRU without increasing the overhead by more than a constant additive factor.",
+  "summary": "### Summary\n\nThe paper introduces **2Q**, a buffer-replacement algorithm intended to obtain the performance benefits of LRU/2 without its priority-queue overhead. It separates recently accessed pages from pages that have demonstrated sustained reuse: `A1in` is a FIFO queue for newly referenced pages, `Am` is an LRU queue for pages admitted after evidence of reuse, and `A1out` is a metadata-only history queue for recently evicted pages. The resulting operations use constant-time list manipulation. Experiments with Zipfian workloads, scans, index/data access patterns, and traces from DB2, a windowing application, and an OLTP system report higher hit rates than LRU and performance generally comparable to LRU/2. The authors recommend allocating approximately 25% of the buffer to `A1in` and retaining identifiers for roughly 50% of the buffer size in `A1out`.\n\n### Influence\n\nSubsequent research treated 2Q as a reference cache policy and reused its central ideas. A 2002 USENIX study incorporated 2Q into a fingerprinting tool for identifying operating-system buffer-cache policies and explicitly described its FIFO short-term queue, LRU main queue, and historical metadata queue. ([usenix.org](https://www.usenix.org/legacy/event/usenix02/full_papers/burnett/burnett_html/)) The Multi-Queue algorithm adopted a history buffer similar to 2Q's `A1out` while extending the design to multiple frequency-sensitive LRU queues for second-level caches. ([usenix.org](https://www.usenix.org/legacy/event/usenix01/full_papers/zhou/zhou_html/node9.html)) Later work on energy-efficient buffer caches used 2Q as a baseline and developed variants including chip 2Q, inode 2Q, and hotCold 2Q. ([web.eece.maine.edu](https://web.eece.maine.edu/~zhu/papers/zhu_NAS_2011.pdf)) A separate study proposed 2Q* for mail-service storage workloads, directly extending the algorithm for that application domain. ([tandfonline.com](https://www.tandfonline.com/doi/abs/10.1080/02533839.2012.726023)) Bibliographic records also list later research applying or comparing against 2Q in self-tuning memory management, query evaluation, distributed databases, multimedia databases, and broadcast-disk systems. ([sigmod.org](https://www.sigmod.org/publications/dblp/db/conf/vldb/vldb94-439.html)) These sources establish continued research influence and adaptation; they do not, by themselves, establish broad production deployment of the original algorithm.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/caching/2q-a-low-overhead-high-performance-buffer-management-replacement-algorithm.pdf",
   "source_type": "pdf",
   "filepath": "caching/2q-a-low-overhead-high-performance-buffer-management-replacement-algorithm.pdf",
   "filename": "2q-a-low-overhead-high-performance-buffer-management-replacement-algorithm.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:50"
 }

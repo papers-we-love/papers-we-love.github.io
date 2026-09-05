@@ -1,7 +1,7 @@
 {
   "uuid": "79a858f33b8dcbfdb608c43bc82df4b00c273ac2b97182531ac36185f6573ad8",
   "title": "Xen and the Art of Virtualization",
-  "publication_date": "October 2003",
+  "publication_date": "October 19–22, 2003; SOSP’03, 19th ACM Symposium on Operating Systems Principles, Bolton Landing, New York, USA",
   "authors": [
     "Alex Ho",
     "Andrew Warfield",
@@ -14,26 +14,19 @@
     "Tim Harris"
   ],
   "keywords": [
-    "hypervisor",
-    "operating-systems",
-    "parallel-computing",
-    "performance",
-    "resource-management",
-    "security",
-    "system-architecture",
-    "virtual-machines",
-    "virtualization",
-    "xen"
+    "hypervisors",
+    "paravirtualization",
+    "virtual-machine-monitors"
   ],
   "category_path": [
     "virtual_machines"
   ],
-  "abstract": "Abstract: In this paper, we describe the design, implementation and evaluation of Xen, an x86 virtual machine monitor, developed to run up to 100 commodity operating systems on a single PC. Unlike traditional virtual machine monitors, Xen achieves high performance for both I/O and computation intensive workloads by taking an unusual approach to virtualizing CPU, memory, and I/O devices. The paravirtualized approach is highly efficient, allowing applications running within Xen guest operating systems to run with high performance. We present extensive benchmark results demonstrating Xen's performance on a range of standard computing benchmarks.",
-  "summary": "The paper \"Xen and the Art of Virtualization\" presented by Barham et al. in 2003 discusses the development and implementation of the Xen hypervisor, a virtual machine monitor focused on allowing multiple operating systems to run concurrently on a single x86 architecture machine. Xen differentiates itself from traditional virtual machine monitors through its use of paravirtualization, enhancing performance for CPU, memory, and I/O processes. This approach has allowed Xen to achieve significant efficiencies particularly notable in environments with substantial I/O and computing workloads.\n\nXen's architecture and implementation significantly impacted both academic research and industry practices in virtualization. This hypervisor is notably leveraged in cloud computing environments, with Xen technology forming the underpinning of several enterprise cloud systems, such as Amazon EC2. The influence of Xen can be seen in subsequent research on virtualization technologies and has informed the development of other hypervisors and cloud platforms.\n\nThe innovation and practical efficacy demonstrated by Xen underscored the viability of paravirtualization, prompting further refinement in virtual machine strategies. Xen's scalability and performance benchmarks have been frequently referenced in scholarly articles and industry reports about virtualization and cloud infrastructure developments.\n\n**References:**\n- [https://dl.acm.org/doi/10.1145/944220.944235](https://dl.acm.org/doi/10.1145/944220.944235)\n- [https://www.usenix.org/legacy/event/osdi04/tech/full_papers/barham/barham.pdf](https://www.usenix.org/legacy/event/osdi04/tech/full_papers/barham/barham.pdf)",
+  "abstract": "Numerous systems have been designed which use virtualization to subdivide the ample resources of a modern computer. Some require specialized hardware, or cannot support commodity operating systems. Some target 100% binary compatibility at the expense of performance. Others sacrifice security or functionality for speed. Few offer resource isolation or performance guarantees; most provide only best-effort provisioning, risking denial of service.\nThis paper presents Xen, an x86 virtual machine monitor which allows multiple commodity operating systems to share conventional hardware in a safe and resource managed fashion, but without sacrificing either performance or functionality. This is achieved by providing an idealized virtual machine abstraction to which operating systems such as Linux, BSD and Windows XP, can be ported with minimal effort.\nOur design is targeted at hosting up to 100 virtual machine instances simultaneously on a modern server. The virtualization approach taken by Xen is extremely efficient: we allow operating systems such as Linux and Windows XP to be hosted simultaneously for a negligible performance overhead — at most a few percent compared with the unvirtualized case. We considerably outperform competing commercial and freely available solutions in a range of microbenchmarks and system-wide tests.",
+  "summary": "## Summary\n\nThe paper presents Xen, a type-1 x86 virtual machine monitor designed to multiplex hardware among multiple mutually distrustful guest operating systems while preserving application compatibility, resource isolation, and near-native performance. Its central design choice is **paravirtualization**: guest kernels are modified to use a virtual machine interface that exposes operations difficult to virtualize efficiently on x86, while guest application binaries remain unmodified. The interface includes validated page-table updates, lower-privilege guest execution, hypercalls, asynchronous events, virtual timers, shared-memory I/O rings, virtual network interfaces, and virtual block devices. A privileged management domain, later known as **dom0**, performs domain construction and higher-level control; Xen itself aims to keep policy separate from low-level enforcement. ([cl.cam.ac.uk](https://www.cl.cam.ac.uk/research/srg/netos/papers/2003-xensosp.pdf))\n\nThe evaluation reports that XenoLinux generally performs close to native Linux. It achieved within approximately 1% of native performance on the SPEC WEB99 workload, incurred about 3% overhead for Linux kernel compilation, and substantially outperformed VMware Workstation and User-Mode Linux on several system-level and microbenchmark workloads. Xen also demonstrated resource differentiation among domains, limited degradation under disruptive workloads, and operation across as many as 128 domains with a 7.5% aggregate-throughput reduction under an intentionally demanding scheduling experiment. The authors identify disk scheduling, page-table update costs, and the lack of SMP guest support as limitations of the prototype. ([cl.cam.ac.uk](https://www.cl.cam.ac.uk/research/srg/netos/papers/2003-xensosp.pdf))\n\n## Influence\n\nThe work helped establish paravirtualization and the domain/dom0 management model as important designs for practical server virtualization. Xen was first released publicly in 2003 and has continued as an open hypervisor project; current Xen documentation retains the hypervisor, domains, dom0, resource isolation, and guest-facing interfaces central to the paper. ([handbook.xenproject.org](https://handbook.xenproject.org/users/introduction.html))\n\nThe paper was subsequently used as a basis for empirical follow-up research: *Xen and the Art of Repeated Research* explicitly repeated and extended its performance study, framing open-source virtualization as a mechanism for transferring systems research into production environments. Ian Pratt’s *Xen and the Art of Virtualization Revisited* later documented Xen’s evolution from a research project toward enterprise software and examined subsequent paravirtualization and hardware/software co-design. ([usenix.org](https://www.usenix.org/conference/2004-usenix-annual-technical-conference/xen-and-art-repeated-research))\n\nThe design also influenced industry virtualization infrastructure. AWS documentation describes early EC2 instances as using a privileged Amazon Linux virtual machine functioning as Xen’s dom0, demonstrating adoption of the paper’s control-domain model in commercial cloud infrastructure. Xen-related platforms and tools continue to support cloud and infrastructure use cases. ([docs.aws.amazon.com](https://docs.aws.amazon.com/whitepapers/latest/security-design-of-aws-nitro-system/traditional-virtualization-primer.html))",
   "raw_url": "http://www.cl.cam.ac.uk/research/srg/netos/papers/2003-xensosp.pdf",
   "source_type": "external",
   "filepath": "virtual_machines/README.md",
   "filename": "Xen and the Art of Virtualization",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:05"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:57"
 }

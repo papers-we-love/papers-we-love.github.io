@@ -1,32 +1,31 @@
 {
   "uuid": "6e79568680fc8237f3b5fa4abe44900f78cd21df63cade66c77db86916f8eacb",
-  "title": "Introduction to Tropical Algebraic Geometry",
-  "publication_date": "2004",
+  "title": "Introduction to tropical algebraic geometry",
+  "publication_date": "2012; Contemporary Mathematics, Volume 580. The arXiv version was posted on July 8, 2012.",
   "authors": [
-    "Bernd Sturmfels",
     "Diane Maclagan"
   ],
   "keywords": [
-    "algebraic-geometry",
-    "bernd-sturmfels",
-    "geometry",
-    "maclagan-sturmfels",
-    "math",
-    "polynomials",
+    "grobner-bases",
+    "newton-polytopes",
+    "polyhedral-geometry",
+    "toric-varieties",
     "tropical-algebraic-geometry",
-    "tropical-hyperfields",
-    "tropical-math",
-    "tropical-varieties"
+    "tropical-compactifications",
+    "tropical-semiring",
+    "tropical-varieties",
+    "tropicalization",
+    "valuations"
   ],
   "category_path": [
     "mathematics"
   ],
-  "abstract": "This paper is an invitation to the combinatorial, geometric, and algorithmic aspects of tropical algebraic geometry. It is written for beginning graduate students and researchers who work either in combinatorics or in algebraic geometry. We start out with a self-contained introduction to tropical geometry, including the requisite background from polyhedral geometry, and then proceed to the main research topics in this field. We emphasize that tropical algebraic geometry is an increasingly active subject which is ripe for further development and has many applications to other areas of mathematics.",
-  "summary": "The paper \"Introduction to Tropical Algebraic Geometry\" by Diane Maclagan and Bernd Sturmfels serves as an introductory guide to the field of tropical algebraic geometry, intended for graduate students and researchers with backgrounds in combinatorics or algebraic geometry. It provides a self-contained overview of tropical geometry concepts and connections with polyhedral geometry and discusses key research topics in the domain. \\n\\nThe paper is a foundational document for those new to the subject, offering both theoretical insights and algorithmic approaches. Tropical algebraic geometry is highlighted as an evolving field with emerging applications across various mathematical disciplines. \\n\\nDespite being written in 2004, the paper has continued to influence research by promoting further exploration in tropical mathematics. However, direct citations or significant industrial applications of this specific work are scarce in current academic literature, reflecting the paper's primary role in education and theoretical introduction, rather than industrial innovation.",
+  "abstract": "This is an expository introduction to tropical algebraic geometry based on my lectures at the Workshop on Tropical Geometry and Integrable Systems in Glasgow, July 4–8, 2011, and at the ELGA 2011 school on Algebraic Geometry and Applications in Buenos Aires, August 1–5, 2011.",
+  "summary": "The paper gives an elementary introduction to tropical algebraic geometry, where ordinary addition and multiplication are replaced by the minimum and addition operations of the tropical semiring. Tropical polynomials become piecewise-linear functions, and their solution sets are nondifferentiability loci or balanced polyhedral complexes.\n\nIt defines valuations and tropicalizations of Laurent polynomials and algebraic varieties, explaining how tropical varieties encode valuation data from classical varieties. The Fundamental Theorem identifies a tropical variety with the Euclidean closure of the coordinatewise valuations of points on the original variety. The Structure Theorem shows that tropicalizations of irreducible varieties are pure-dimensional, weighted, balanced, rational polyhedral complexes connected through codimension one.\n\nThe paper also explains how plane tropical curves are constructed from Newton polytopes and regular subdivisions, and how tropical varieties can be computed using initial ideals and Gröbner complexes. It concludes by relating tropical varieties to toric varieties and tropical compactifications, including the moduli spaces of stable marked curves and the tropical moduli space of phylogenetic trees.\n\nThe paper is an expository contribution rather than a new algorithmic or theoretical result, but it helped make the fundamental definitions and theorems of tropical geometry accessible to researchers entering the field. Its themes continued into later developments such as tropical ideals, which provide an algebraic framework for tropical subschemes and extend the treatment of tropicalizations beyond polyhedral sets. ([arxiv.org](https://arxiv.org/abs/1207.1925)) The broader subject has since been consolidated in the authors’ 2015 textbook and applied across algebraic geometry, combinatorics, moduli theory, optimization, phylogenetics, and related areas; no specific industrial deployment directly attributable to this paper was identified. ([old.maa.org](https://old.maa.org/press/maa-reviews/introduction-to-tropical-geometry))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/mathematics/intro-to-tropical-algebraic-geometry.pdf",
   "source_type": "pdf",
   "filepath": "mathematics/intro-to-tropical-algebraic-geometry.pdf",
   "filename": "intro-to-tropical-algebraic-geometry.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

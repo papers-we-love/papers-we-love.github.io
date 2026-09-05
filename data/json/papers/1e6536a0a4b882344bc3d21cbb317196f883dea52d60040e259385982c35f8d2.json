@@ -1,32 +1,32 @@
 {
   "uuid": "1e6536a0a4b882344bc3d21cbb317196f883dea52d60040e259385982c35f8d2",
   "title": "Insertion, Evasion, and Denial of Service: Eluding Network Intrusion Detection",
-  "publication_date": "1998",
+  "publication_date": "January 1998; technical report, Secure Networks, Inc.",
   "authors": [
     "Thomas H. Ptacek",
     "Timothy N. Newsham"
   ],
   "keywords": [
     "denial-of-service",
-    "evasion-techniques",
     "ids-evasion",
-    "internet-security",
-    "intrusion-detection-systems",
-    "network-intrusion",
+    "insertion-attacks",
+    "intrusion-detection",
+    "ip-fragmentation",
     "network-security",
-    "packet-manipulation",
-    "tcp-ip",
-    "vulnerability-assessment"
+    "passive-protocol-analysis",
+    "signature-analysis",
+    "stream-reassembly",
+    "tcp"
   ],
   "category_path": [
     "security"
   ],
-  "abstract": "This paper discusses a variety of methods by which network-based intrusion detection systems (NIDS) can be evaded. We present insertion, evasion, and denial of service techniques that elude NIDS. We also provide strategies to improve the resilience of these systems against these attacks.",
-  "summary": "The paper titled \"Insertion, Evasion, and Denial of Service: Eluding Network Intrusion Detection\" was published in 1998 by Thomas H. Ptacek and Timothy N. Newsham. It explores methods to evade network-based intrusion detection systems (NIDS) by utilizing techniques of insertion, evasion, and denial of service. The authors describe how carefully crafted packets can avoid detection by these systems, discussing the weaknesses inherent in NIDS implementations concerning handling the TCP/IP protocol stack.\n\nA web search indicates that this paper has significantly influenced both academic research and industry practices concerning NIDS. The work has been extensively cited, including in publications such as:\n\n1. **“Bro: A System for Detecting Network Intruders in Real-Time”** (https://www.usenix.org/legacy/publications/library/proceedings/sec98/full_papers/paxson/paxson.pdf). This paper acknowledges this research as foundational in understanding and improving network intrusion detection systems.\n\n2. **“Signatures for Network Intrusion Detection”** (https://www.cs.columbia.edu/~rohith/papers/derenyi-thesis.pdf), which also refers to Ptacek and Newsham’s work.\n\nThis research has been pivotal in refining the approaches employed within NIDS, sparking more robust implementations that defend against evasion and denial strategies as initially highlighted in the paper. Its impact continues as system designers incorporate additional checks and balances to thwart similar evasion attempts. Despite being over two decades old, the techniques analyzed by Ptacek and Newsham remain relevant as fundamental challenges in network security. Their contributions have established a baseline for understanding intrusion detection evasion, informing ongoing research and suggesting standardized practices in secure system designing.",
+  "abstract": "All currently available network intrusion detection (ID) systems rely upon a mechanism of data collection—passive protocol analysis—which is fundamentally flawed. In passive protocol analysis, the intrusion detection system (IDS) unobtrusively watches all traffic on the network, and scrutinizes it for patterns of suspicious activity. We outline in this paper two basic problems with the reliability of passive protocol analysis: (1) there isn't enough information on the wire on which to base conclusions about what is actually happening on networked machines, and (2) the fact that the system is passive makes it inherently “fail-open,” meaning that a compromise in the availability of the IDS doesn't compromise the availability of the network. We define three classes of attacks which exploit these fundamental problems—insertion, evasion, and denial of service attacks—and describe how to apply these three types of attacks to IP and TCP protocol analysis. We present the results of tests of the efficacy of our attacks against four of the most popular network intrusion detection systems on the market. All of the ID systems tested were found to be vulnerable to each of our attacks. This indicates that network ID systems cannot be fully trusted until they are fundamentally redesigned.",
+  "summary": "## Summary\n\nThe paper analyzes the reliability of network intrusion-detection systems that passively capture and interpret traffic. It identifies two fundamental limitations: packet observations may not contain enough information to determine how a destination host will process them, and passive monitors are inherently fail-open because disabling the monitor does not disable the protected network.\n\nIt formalizes three attack classes. **Insertion attacks** cause the IDS to accept data that the destination rejects, so the IDS reconstructs a stream containing attacker-controlled material that the target never processes. **Evasion attacks** exploit the opposite discrepancy: the destination accepts data that the IDS rejects, allowing attack-relevant content to disappear from the IDS’s reconstructed view. **Denial-of-service attacks** exhaust IDS resources or exploit its response mechanisms, reducing availability or causing potentially harmful countermeasures.\n\nThe paper develops these ideas across IP and TCP. It emphasizes packet and stream reassembly, fragmentation, overlapping fragments, sequence-number handling, checksums, TCP flags, connection state, resets, and differences among operating-system implementations. The central technical conclusion is that a network IDS cannot reliably interpret traffic merely by applying a generic protocol model; it must approximate the behavior of the specific destination, network path, and end-system configuration it is monitoring.\n\nThe authors implement a scripted test suite covering baseline traffic, IP fragmentation, TCP reassembly, connection-state behavior, insertion, and evasion. Their tests against four commercial network IDS products found exploitable weaknesses in every system tested; the reported results show broad failures involving fragmentation and TCP-stream interpretation.\n\n## Influence\n\nThe paper became a foundational reference for research and practice on network-traffic normalization and IDS evasion. Subsequent work explicitly summarizes and extends its insertion, evasion, and denial-of-service taxonomy, including research on attack development for IDS evaluation. ([wenke.gtisc.gatech.edu](https://wenke.gtisc.gatech.edu/ids-readings/attack_development_thesis.pdf)) Security literature and practitioner guidance continued to cite the paper when discussing packet reassembly, out-of-order TCP traffic, and discrepancies between IDS and endpoint behavior. ([nmap.org](https://nmap.org/presentations/CanSecWest01/)) The concepts also informed later protocol-analysis systems designed to model endpoint semantics more accurately; related work describes insertion, evasion, and denial-of-service as core threats to passive network monitoring. ([fathom.icsi.berkeley.edu](https://fathom.icsi.berkeley.edu/vern/papers/bro-CN99.html))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/security/ids-evasion-ptacek-newsham.pdf",
   "source_type": "pdf",
   "filepath": "security/ids-evasion-ptacek-newsham.pdf",
   "filename": "ids-evasion-ptacek-newsham.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:56"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:53"
 }

@@ -1,31 +1,33 @@
 {
   "uuid": "0ca5c3e37ec257f08c38790e685486ffa4f43fe6ad573595571cd0d71f54b3bd",
   "title": "Making Lockless Synchronization Fast: Performance Implications of Memory Reclamation",
-  "publication_date": "2004",
+  "publication_date": "April 2006, Proceedings of the 20th IEEE International Parallel and Distributed Processing Symposium (IPDPS 2006), Rhodes, Greece",
   "authors": [
-    "Andrei Alexandrescu"
+    "Angela Demke Brown",
+    "Paul E. McKenney",
+    "Thomas E. Hart"
   ],
   "keywords": [
     "concurrency",
-    "data-structures",
-    "garbage-collection",
+    "epoch-based-reclamation",
+    "hazard-pointers",
+    "lock-free-data-structures",
     "lockless-synchronization",
-    "low-latency",
-    "memory-management",
     "memory-reclamation",
-    "multithreading",
-    "performance",
-    "synchronization-primitives"
+    "non-blocking-algorithms",
+    "parallel-performance",
+    "quiescent-state-based-reclamation",
+    "read-copy-update"
   ],
   "category_path": [
     "memory_management"
   ],
-  "abstract": "This paper examines the performance implications of memory reclamation for lockless synchronization (LLS) mechanisms. Unlike lock-based synchronization, LLS uses atomic operations, memory barriers, and a protocol that grants exclusive access to a thread. Proper memory reclamation is crucial to the performance of LLS because failing to reclaim memory blocks that are no longer in use effectively turns LLS into garbage collection. The paper demonstrates that existing lockless algorithms obtain poor performance because they lack an over-arching memory management strategy. We compare several memory reclamation schemes, evaluating them on microbenchmarks and a real-world workload (a lockless queue in a C10K test), and reveal that suitable memory reclamation can significantly improve the performance of LLS mechanisms.",
-  "summary": "The paper \"Making Lockless Synchronization Fast: Performance Implications of Memory Reclamation\" by Andrei Alexandrescu explores the impact of efficient memory reclamation on the performance of lockless synchronization mechanisms. The work addresses the inadequacies of existing lockless algorithms in handling memory management, a task crucial for maintaining optimal performance in concurrent systems. The paper compares various memory reclamation schemes through microbenchmarking and real-world workload tests, demonstrating that appropriate strategies can significantly enhance performance.\n\nDespite its technical depth, it appears that the paper has not been widely cited or referenced directly in other academic works or industry applications, as a web search yields minimal direct mentions or citations. The insights regarding memory reclamation in lockless synchronization did, however, align with broader trends in software engineering, particularly in the context of optimizing low-latency and high-concurrency systems. Concepts discussed are still relevant to the design patterns and idioms of modern concurrent programming, although direct citations remain elusive.",
+  "abstract": "Achieving high performance for concurrent applications on modern multiprocessors remains challenging. Many programmers avoid locking to improve performance, while others replace locks with non-blocking synchronization to protect against deadlock, priority inversion, and convoying. In both cases, dynamic data structures that avoid locking, require a memory reclamation scheme that reclaims nodes once they are no longer in use.\n\nThe performance of existing memory reclamation schemes has not been thoroughly evaluated. We conduct the first fair and comprehensive comparison of three recent schemes—quiescent-state-based reclamation, epoch-based reclamation, and hazard-pointer-based reclamation—using a flexible microbenchmark. Our results show that there is no globally optimal scheme. When evaluating lockless synchronization, programmers and algorithm designers should thus carefully consider the data structure, the workload, and the execution environment, each of which can dramatically affect memory reclamation performance.",
+  "summary": "### Summary\n\nThe paper studies memory reclamation as a major performance component of lockless and non-blocking data structures. It compares quiescent-state-based reclamation (QSBR), epoch-based reclamation (EBR), hazard-pointer-based reclamation (HPBR), and, in selected experiments, lock-free reference counting. The evaluation uses linked lists and queues on IBM POWER-based symmetric multiprocessors, varying traversal length, workload mix, thread count, preemption, and memory pressure.\n\nThe central result is that no reclamation scheme is universally optimal. QSBR generally has the lowest base cost because it avoids per-operation atomic instructions, but it can delay reclamation indefinitely when a thread is stalled or fails to reach a quiescent state. EBR is easier for application programmers because its bookkeeping is implicit, but its per-operation fencing creates substantial overhead. HPBR provides non-blocking reclamation and a provable bound on unreclaimed memory, making it more robust under preemption and memory pressure; however, its per-node fences and hazard-pointer scans make it increasingly expensive for long traversals and update-heavy workloads. Lock-free reference counting performs worst in the reported experiments because of repeated per-node atomic operations.\n\nThe paper also demonstrates that algorithm comparisons can be misleading unless the algorithms use the same reclamation mechanism. It proposes new epoch-based reclamation (NEBR), which moves epoch bookkeeping to a higher application level so that fencing costs can be amortized across multiple operations. The authors further argue that a non-blocking data structure can reasonably be paired with a blocking reclamation scheme when fault tolerance against memory exhaustion is not required, while retaining benefits such as resistance to deadlock, priority inversion, and signal-handler self-deadlock.\n\n### Influence\n\nThe conference paper was subsequently extended into the peer-reviewed journal article “Performance of memory reclamation for lockless synchronization,” published in the *Journal of Parallel and Distributed Computing* in December 2007, with Jonathan Walpole added as a coauthor. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S074373150700069X)) The work was also identified by the authors as an IPDPS 2006 Best Paper and has been incorporated into later technical discussions of RCU and memory-reclamation performance, including Paul McKenney’s *Is Parallel Programming Hard, And, If So, What Can You Do About It?* bibliography. ([cs.toronto.edu](https://www.cs.toronto.edu/~tomhart/masters_thesis.html)) Later research on lock-free and wait-free reclamation continues to cite the work as an early comparative performance study establishing that reclamation costs depend strongly on workload, traversal size, and execution environment. ([ssrg.ece.vt.edu](https://www.ssrg.ece.vt.edu/papers/ppopp20.pdf))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/memory_management/making-lockless-synchronization-fast.pdf",
   "source_type": "pdf",
   "filepath": "memory_management/making-lockless-synchronization-fast.pdf",
   "filename": "making-lockless-synchronization-fast.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:56"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

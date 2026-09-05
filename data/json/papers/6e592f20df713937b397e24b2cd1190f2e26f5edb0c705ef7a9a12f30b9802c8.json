@@ -1,7 +1,7 @@
 {
   "uuid": "6e592f20df713937b397e24b2cd1190f2e26f5edb0c705ef7a9a12f30b9802c8",
-  "title": "Pastry: Scalable, decentralized object location, and routing for large-scale peer-to-peer systems",
-  "publication_date": "November 2001 (Middleware 2001)",
+  "title": "Pastry: Scalable, decentralized object location and routing for large-scale peer-to-peer systems",
+  "publication_date": "November 2001; Proceedings of the 18th IFIP/ACM International Conference on Distributed Systems Platforms (Middleware 2001), Heidelberg, Germany",
   "authors": [
     "Antony Rowstron",
     "Peter Druschel"
@@ -10,23 +10,23 @@
     "decentralized-systems",
     "distributed-hash-table",
     "fault-tolerance",
-    "large-scale-systems",
+    "network-locality",
     "object-location",
     "overlay-network",
     "peer-to-peer",
-    "routing-protocols",
+    "replication",
     "scalable-routing",
     "self-organization"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "This paper presents Pastry, a scalable, distributed object location and routing substrate for wide-area peer-to-peer applications. Pastry is completely decentralized, scalable, and fault-tolerant and does not require any global coordinate information such as a GPS. Nodes in a Pastry network form a self-organizing overlay network where each node is assigned a unique identifier from a circular namespace. For an N-node Pastry network, the average number of routing hops is log16 N. The number of entries in the routing table per node is also log16 N. Faults can be handled using simple extensions to the basic routing scheme. Pastry is not tied to any particular application, but it can serve as a generic substrate for wide-area distributed applications such as global-scale file systems, databases, web caches, and name services.",
-  "summary": "This paper presents 'Pastry: Scalable, decentralized object location, and routing for large-scale peer-to-peer systems,' a middleware designed for wide-area peer-to-peer applications. Published in November 2001 at Middleware 2001, the paper is authored by Antony Rowstron and Peter Druschel. Pastry is a peer-to-peer routing infrastructure that enables decentralized and scalable object location and routing without relying on global positioning or coordination.\n\nThe impact on further research has been substantial, as Pastry served as a foundational component for various large-scale distributed systems and peer-to-peer networks. It has been extensively cited in the development of distributed hash tables (DHTs) and has influenced subsequent systems like Azureus, FreePastry, and the Bamboo DHT.\n\n- Stoica, I., Morris, R., Karger, D., Kaashoek, M. F., \u0002 Dabek, F., \u0002 \u0002 \"Chord: A Scalable Peer-to-peer Lookup Service for Internet Applications,\" *Proceedings of the 2001 Conference on Applications, Technologies, Architectures, and Protocols for Computer Communications*, https://dl.acm.org/doi/10.1145/383059.383071.\n\n- Dabek, F., \u0002 Cox, R., \u0002 Kaashoek, M. F., \u0002 Morris, R., \"Vivaldi: A Decentralized Network Coordinate System,\" *Proceedings of the 2004 Conference on Applications, Technologies, Architectures, and Protocols for Computer Communications*, https://dl.acm.org/doi/10.1145/1015467.1015480.\n\n- Rowstron, A., \u0002 Druschel, P., \"Storage management and caching in PAST, a large-scale, persistent peer-to-peer storage utility,\" *ACM SIGOPS Operating Systems Review*, https://dl.acm.org/doi/10.1145/844128.844140.\n\nThe research and strategies discussed in the Pastry paper contributed to the advancement of peer-to-peer systems, impacting numerous areas in both academia and industry.",
+  "abstract": "This paper presents the design and evaluation of Pastry, a scalable, distributed object location and routing substrate for wide-area peer-to-peer applications. Pastry performs application-level routing and object location in a potentially very large overlay network of nodes connected via the Internet. It can be used to support a variety of peer-to-peer applications, including global data storage, data sharing, group communication and naming.\nEach node in the Pastry network has a unique identifier (nodeId). When presented with a message and a key, a Pastry node efficiently routes the message to the node with a nodeId that is numerically closest to the key, among all currently live Pastry nodes. Each Pastry node keeps track of its immediate neighbors in the nodeId space, and notifies applications of new node arrivals, node failures and recoveries. Pastry takes into account network locality; it seeks to minimize the distance messages travel, according to a scalar proximity metric like the number of IP routing hops.\nPastry is completely decentralized, scalable, and self-organizing; it automatically adapts to the arrival, departure and failure of nodes. Experimental results obtained with a prototype implementation on an emulated network of up to 100,000 nodes confirm Pastry’s scalability and efficiency, its ability to self-organize and adapt to node failures, and its good network locality properties.",
+  "summary": "- Pastry established a prefix-based, locality-aware overlay substrate for scalable peer-to-peer routing, with expected \\(O(\\log N)\\) routing and compact routing state. It became one of the prominent early structured peer-to-peer and distributed hash table designs. ([microsoft.com](https://www.microsoft.com/en-us/research/publication/pastry-scalable-distributed-object-location-and-routing-for-large-scale-peer-to-peer-systems/))\n- The design was used directly as the routing and location layer for PAST, a persistent peer-to-peer storage utility, and Scribe, a publish/subscribe and multicast infrastructure. These systems demonstrated how Pastry could support storage replication, event dissemination, and other application-level services. ([microsoft.com](https://www.microsoft.com/en-us/research/publication/past-a-persistent-and-anonymous-store/))\n- FreePastry provided an open-source implementation intended for further research and application development, helping make the protocol experimentally reusable beyond the original prototype. ([freepastry.org](https://www.freepastry.org/))\n- Subsequent work such as Bamboo retained Pastry’s routing geometry and algorithm while investigating improved maintenance under churn and changing network conditions. Research also examined Pastry’s proximity-neighbor-selection approach as a general technique for improving locality in DHTs. ([usenix.org](https://www.usenix.org/legacy/event/usenix04/tech/general/rhea/rhea_html/))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/pastry-scalable-decentralized-object-location-and-routing-for-large-scale-peer-to-peer-systems.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/pastry-scalable-decentralized-object-location-and-routing-for-large-scale-peer-to-peer-systems.pdf",
   "filename": "pastry-scalable-decentralized-object-location-and-routing-for-large-scale-peer-to-peer-systems.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:51"
 }

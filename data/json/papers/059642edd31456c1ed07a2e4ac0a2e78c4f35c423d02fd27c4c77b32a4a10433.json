@@ -1,40 +1,33 @@
 {
   "uuid": "059642edd31456c1ed07a2e4ac0a2e78c4f35c423d02fd27c4c77b32a4a10433",
-  "title": "A 50-GHz Silicon-on-Sapphire CMOS Receiver Front-End",
-  "publication_date": "1997",
+  "title": "Using kernel hypervisors to secure applications",
+  "publication_date": "December 1997; Proceedings of the 13th Annual Computer Security Applications Conference (ACSAC '97), San Diego, California, USA, 8–12 December 1997, pp. 175–182",
   "authors": [
-    "A. Balteanu",
-    "C. Plett",
-    "D. S. Paul",
-    "I. E. Opris",
-    "M. S. Jalali",
-    "M. Tazlauanu",
-    "R. Kashyap",
-    "S. I. Voinigescu",
-    "S. J. Kim",
-    "Y. M. Chen"
+    "Raymond Lu",
+    "Richard O'Brien",
+    "Terrence Mitchem"
   ],
   "keywords": [
-    "cmos",
-    "frequency-multipliers",
-    "gigahertz-receivers",
-    "high-frequency-design",
-    "integrated-circuits",
-    "microwave-integrated-circuits",
-    "radio-frequency-design",
-    "receiver-front-end",
-    "silicon-on-sapphire",
-    "wireless-communication"
+    "application-security",
+    "browser-security",
+    "cots-software",
+    "firewall-security",
+    "kernel-hypervisors",
+    "linux-kernel",
+    "loadable-kernel-modules",
+    "replication-services",
+    "security-policy-enforcement",
+    "security-wrappers"
   ],
   "category_path": [
     "unikernels"
   ],
-  "abstract": "This paper presents a new CMOS receiver front-end integrated circuit intended for 50 GHz operation. Fabricated in a 0.15 μm silicon-on-sapphire (SOS) CMOS process, the receiver front-end includes a low-noise amplifier, a mixer, a local oscillator frequency multiplier, and an output buffer. The circuit achieves a 20 dB gain with a 6.5 dB noise figure and a 50 GHz intermediate frequency (IF) bandwidth. The design highlights the potential of the SOS CMOS technology for high-frequency applications and its competitiveness with alternative technologies.",
-  "summary": "This paper describes the development and performance of a 50-GHz CMOS receiver front-end implemented using silicon-on-sapphire (SOS) technology. The paper's main accomplishment is demonstrating the feasibility of using SOS CMOS for high-frequency applications, specifically targeting a 50 GHz frequency band. The authors detail the design of the low-noise amplifier, mixer, frequency multiplier along with the achievements in gain, noise figure, and integration at the mentioned frequency. Published in 1997, this research contributed to advancing CMOS technology for high-frequency applications, showcasing that SOS can be a competitive alternative to other technologies traditionally used in microwave frequency ranges.\n\nThe impact of this research can be observed in the subsequent exploration and adaptation of silicon-on-sapphire technology in radio frequency design, notably in the fields of wireless communications and integrated circuits. The approach demonstrated within this study influenced the development of sophisticated receiver designs that leverage the advantages of SOS in terms of reduced parasitics and improved performance at GHz frequencies.\n\nFurther references and impacts include:\n- Interest in high-frequency integrated circuits utilizing silicon-on-sapphire as highlighted in technical discussions and academic explorations published in journals focusing on microwave integrated circuits and silicon-based technologies. Such expansions have been documented in works like \"Silicon RF Technology Development\" (https://ieeexplore.ieee.org/document/1074641) where SOS technology's relevance in RF design is discussed.\n- Inclusion in studies evaluating and comparing semiconductor technologies for GHz applications, enhancing understanding in the efficient design of wireless communication systems.",
+  "abstract": "The paper describes an approach for selectively controlling COTS components to provide robustness and security. Using the concept of a loadable module, “kernel hypervisors” have been implemented on a Linux kernel. These kernel hypervisors provide unbypassable security wrappers for application specific security requirements and can be used to provide replication services as well. A framework has been developed based on a master kernel hypervisor whose job is to coordinate installation and removal of individual client kernel hypervisors and to provide a means for management of these clients. The framework allows client kernel hypervisors to be stacked so that a variety of application specific policies can be implemented, each by means of its own kernel hypervisor. The hypervisors run in the kernel, but since they are loadable modules, they do not require that the kernel be modified. Kernel hypervisors have a number of potential applications, including protecting user systems from malicious active content downloaded via a Web browser and wrapping servers and firewall services for limiting possible compromises.",
+  "summary": "The paper introduced a Linux loadable-module mechanism for enforcing application-specific security policies through kernel-resident, non-bypassable wrappers. Its documented influence is primarily within subsequent research on software wrappers, sandboxing, and kernel-level security mediation. The work was cited as a precursor to generic software wrappers for hardening commercial off-the-shelf software, and the same research line was later extended in work on Linux kernel loadable wrappers. ([researchgate.net](https://www.researchgate.net/publication/235173911_Kernel_Loadable_Wrappers_for_Information_Assurance)) Later security research continued to cite the kernel-hypervisor approach when discussing kernel-level confinement and protection of applications from malicious or untrusted code. ([scitepress.org](https://www.scitepress.org/PublishedPapers/2005/14167/))",
   "raw_url": "https://ieeexplore.ieee.org/abstract/document/646188",
   "source_type": "external",
   "filepath": "unikernels/README.md",
   "filename": "Using kernel hypervisors to secure applications",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:05"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:57"
 }

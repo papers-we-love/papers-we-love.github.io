@@ -1,33 +1,26 @@
 {
   "uuid": "3204a1a562d9d3b72ba112f20caddfd34991d6e1e39939ace6a3e7c016519768",
-  "title": "End-To-End Arguments in System Design",
-  "publication_date": "November 1984",
+  "title": "END-TO-END ARGUMENTS IN SYSTEM DESIGN",
+  "publication_date": "November 1984; published in ACM Transactions on Computer Systems, Volume 2, Number 4, pages 277–288. An earlier version appeared in the Second International Conference on Distributed Computing Systems, Paris, April 8–10, 1981.",
   "authors": [
     "D.D. Clark",
     "D.P. Reed",
     "J.H. Saltzer"
   ],
   "keywords": [
-    "communication-protocols",
     "data-communication",
-    "distributed-systems",
-    "end-to-end-principle",
-    "fault-tolerance",
-    "network-design",
-    "performance-optimization",
-    "protocol-architecture",
-    "reliability",
-    "system-design"
+    "design-principles",
+    "protocol-design"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "This paper explores the rationale for placing functions at low levels of a system, such as within the communication subsystem of a distributed computer system. It suggests a design principle called the \"end-to-end argument,\" which implies that functions can be correctly and completely implemented only with the knowledge and help of the application standing at the endpoints of the communication system. Thus, providing these functions as features of the communication subsystem, while sometimes useful as a performance enhancement, is not always necessary or cost-effective. Several examples, including bit error recovery, security using encryption, and duplicate message suppression, are used to illustrate this concept.",
-  "summary": "The paper titled \"End-To-End Arguments in System Design\" by J.H. Saltzer, D.P. Reed, and D.D. Clark published in November 1984, introduces the end-to-end argument, a design principle pivotal in system design, particularly within distributed systems and network protocols. This principle asserts that specific functions can be effectively and completely implemented only at the endpoints of a communication system, rather than at lower levels. Common examples include error checking and encryption.\\n\\nThe paper has significantly influenced both research and practical applications in computer network design, notably impacting the development of the Internet. The principle has served as a foundational guideline for protocol development, and has been cited in various works and standards related to network architecture.\\n\\nFor instance, the paper \"RFC 1958: Architectural Principles of the Internet\" by B. Carpenter (https://datatracker.ietf.org/doc/html/rfc1958) refers to this design principle as a critical aspect of Internet architecture.\\n\\nMoreover, the principle is often discussed in academic curricula related to computer networking, where its implications on cost-effectiveness and system functionality are analyzed (https://web.stanford.edu/class/cs144/).\\n\\nOverall, the end-to-end argument continues to be a central concept in the fields of computer network design and distributed systems, influencing both academic discourse and practical implementations.",
+  "abstract": "This paper presents a design principle that helps guide placement of functions among the modules of a distributed computer system. The principle, called the end-to-end argument, suggests that functions placed at low levels of a system may be redundant or of little value when compared with the cost of providing them at that low level. Examples discussed in the paper include bit error recovery, security using encryption, duplicate message suppression, recovery from system crashes, and delivery acknowledgement. Low level mechanisms to support these functions are justified only as performance enhancements.",
+  "summary": "The paper’s central contribution is a function-placement principle: when correctness depends on application-specific knowledge, the complete implementation generally belongs at the communicating endpoints. Lower-level mechanisms may still be justified when they improve performance, but they should not be mistaken for substitutes for end-to-end correctness checks. The paper develops this argument through reliable file transfer, delivery acknowledgements, encryption, duplicate suppression, message ordering, transaction management, and real-time voice communication.\n\nThe principle became an influential reference point in Internet architecture and protocol design. IETF materials explicitly identify Saltzer, Reed, and Clark as establishing the principle that functions requiring application-specific knowledge should be implemented at endpoints rather than in the network substrate. More recent IETF architectural discussions continue to cite and reinterpret the argument, emphasizing that it concerns function placement rather than a prohibition on intermediary mechanisms. ([datatracker.ietf.org](https://datatracker.ietf.org/doc/html/draft-feng-nmrg-ain-architecture-01)) The paper also remains part of systems and networking curricula, where it is used to analyze the division of responsibilities between IP, transport protocols, and applications. ([web.mit.edu](https://web.mit.edu/6.1800/www/readings/07-e2e.shtml)) Bibliographic indexes report substantial subsequent citation in computer networking and related systems research. ([rankless.org](https://www.rankless.org/hit-papers/w15975842))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/end-to-end-arguments-in-system-design.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/end-to-end-arguments-in-system-design.pdf",
   "filename": "end-to-end-arguments-in-system-design.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:51"
 }

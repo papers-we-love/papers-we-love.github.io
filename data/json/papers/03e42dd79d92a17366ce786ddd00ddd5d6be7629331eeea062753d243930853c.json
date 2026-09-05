@@ -1,33 +1,33 @@
 {
   "uuid": "03e42dd79d92a17366ce786ddd00ddd5d6be7629331eeea062753d243930853c",
   "title": "Tor: The Second-Generation Onion Router",
-  "publication_date": "August 2004",
+  "publication_date": "August 2004, 13th USENIX Security Symposium (USENIX Security 04), San Diego, California, pages 303–320. ([usenix.org](https://www.usenix.org/conference/13th-usenix-security-symposium/tor-second-generation-onion-router))",
   "authors": [
     "Nick Mathewson",
     "Paul Syverson",
     "Roger Dingledine"
   ],
   "keywords": [
-    "anonymity",
-    "cryptography",
-    "decentralized-networks",
-    "distributed-systems",
-    "internet",
-    "network-security",
+    "anonymous-communication",
+    "congestion-control",
+    "directory-servers",
+    "hidden-services",
+    "low-latency-anonymity",
     "onion-routing",
-    "privacy",
-    "security-protocols",
-    "tor"
+    "perfect-forward-secrecy",
+    "rendezvous-points",
+    "tor",
+    "traffic-analysis"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "This paper presents Tor, a circuit-based low-latency anonymous communication service. This architecture addresses limitations in the original Onion Routing design by adding perfect forward secrecy, a configurable exit policy, an end-to-end integrity check, and redesigning the directory servers. Tor works in the real-world Internet, requires no special privileges or kernel modifications, requires little synchronization or coordination between nodes, and provides a reasonable tradeoff between anonymity, usability, reliability, and efficiency. We close with a security analysis, performance evaluations, and a list of open problems.",
-  "summary": "The paper \"Tor: The Second-Generation Onion Router\" introduces Tor, a system designed to enable anonymous communication over the Internet. It builds upon the initial Onion Routing design with enhancements like perfect forward secrecy and end-to-end integrity. These innovations aim to improve privacy and security without requiring special privileges or kernel modifications.\n\nSince its publication in August 2004, Tor has had a significant impact on the field of network anonymity and privacy. The system is widely used for anonymous browsing and is a core technology for preserving user privacy online. Academic and industry references demonstrate its influence:\n\n1. Shabazz Ali, et al., \"A survey on emerging online platform security: Privacy classified feature space, deep learning models and intelligent techniques,\" *Journal of Network and Computer Applications*, 2021. [Link](https://www.sciencedirect.com/science/article/pii/S1084804521000440)\n2. Philipp Winter, et al., \"Spoiled Onions: Exposing Malicious Tor Exit Relays,\" *UNSW Computing*, 2014. [Link](https://www.usenix.org/conference/usenixsecurity14/technical-sessions/presentation/winter)\n3. Aaron Johnson, et al., \"Users Get Routed: Traffic Correlation on Tor by Realistic Adversaries,\" *ACM 2013*. [Link](https://dl.acm.org/doi/10.1145/2508859.2516651)\n\nThe wide adoption of Tor for secure, anonymous browsing underscores its importance and validates the speed/efficiency trade-offs as initially presented in the paper. Despite some challenges and vulnerabilities, Tor remains a primary architecture for network privacy and has influenced the development of various privacy-preserving communication protocols.",
+  "abstract": "We present Tor, a circuit-based low-latency anonymous communication service. This second-generation Onion Routing system addresses limitations in the original design by adding perfect forward secrecy, congestion control, directory servers, integrity checking, configurable exit policies, and a practical design for location-hidden services via rendezvous points. Tor works on the real-world Internet, requires no special privileges or kernel modifications, requires little synchronization or coordination between nodes, and provides a reasonable tradeoff between anonymity, usability, and efficiency. We briefly describe our experiences with an international network of more than 30 nodes. We close with a list of open problems in anonymous communication.",
+  "summary": "### Paper summary\n\nThe paper presents Tor as a deployable, low-latency anonymity network for TCP applications. Users establish circuits through multiple onion routers, with each router learning only its neighboring hops. Traffic is transmitted in fixed-size cells and protected by layered symmetric encryption. The design emphasizes practical deployment, usability, portability, and a balance between anonymity and network efficiency.\n\nIts main technical contributions are incremental, telescoping circuit construction with ephemeral Diffie–Hellman keys and perfect forward secrecy; multiplexing multiple TCP streams over shared circuits; fixed-size cells; decentralized congestion control and rate limiting; signed directory information distributed by trusted directory servers; configurable exit policies; end-to-end integrity checks at stream edges; and rendezvous-point protocols for location-hidden services. The paper also separates transport anonymity from application-level protocol cleaning, relying on interfaces such as SOCKS and external tools such as Privoxy for application-specific filtering.\n\nThe security analysis explicitly limits Tor’s guarantees. The system is not designed to defeat a global passive adversary or strong end-to-end timing and volume-correlation attacks. It also omits mixing, padding, and traffic shaping because the authors considered their cost and practical effectiveness unresolved. Other acknowledged risks include malicious or compromised relays, directory-server compromise, denial-of-service attacks, exit abuse, website fingerprinting, and failures caused by node churn.\n\n### Influence\n\nThe paper became the principal design reference for Tor and described the architecture that developed into the Tor network. The Tor Project identifies it as the paper that became Tor’s design, and the work received the USENIX Security Test of Time Award in 2014. ([usenix.org](https://www.usenix.org/legacy/events/sec04/tech/)) Subsequent work has evaluated and extended Tor’s directory system, circuit construction, performance, hidden services, and resistance to traffic analysis; for example, later research evaluated Tor as a mechanism for anonymizing DNS/ONS queries and measured its latency and privacy tradeoffs. ([blog.torproject.org](https://blog.torproject.org/top-changes-tor-2004-design-paper-part-2/))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/tor-the-second-generation-onion-router.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/tor-the-second-generation-onion-router.pdf",
   "filename": "tor-the-second-generation-onion-router.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

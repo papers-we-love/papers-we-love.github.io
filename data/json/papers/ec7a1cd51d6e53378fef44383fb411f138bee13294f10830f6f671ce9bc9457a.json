@@ -1,31 +1,32 @@
 {
   "uuid": "ec7a1cd51d6e53378fef44383fb411f138bee13294f10830f6f671ce9bc9457a",
-  "title": "Building Secure and Reliable Network Applications",
-  "publication_date": "1999",
+  "title": "Bimodal Multicast",
+  "publication_date": "May 1999, ACM Transactions on Computer Systems, Vol. 17, No. 2, pp. 41–88",
   "authors": [
-    "Kenneth P. Birman"
+    "Kenneth P. Birman",
+    "Mark Hayden",
+    "Mihai Budiu",
+    "Oznur Ozkasap",
+    "Yaron Minsky",
+    "Zhen Xiao"
   ],
   "keywords": [
-    "distributed-systems",
-    "eventual-consistency",
-    "fault-tolerance",
-    "middleware",
-    "multicast",
-    "network-security",
-    "reliable-networking",
-    "replication",
-    "secure-network-applications",
-    "system-architecture"
+    "bimodal-multicast",
+    "internet-media-transmission",
+    "isochronous-protocols",
+    "probabilistic-multicast-reliability",
+    "scalable-group-communications",
+    "scalable-reliable-multicast"
   ],
   "category_path": [
     "gossip"
   ],
-  "abstract": "This paper discusses the challenges and technical approaches to building reliable distributed systems. We focus on creating systems that are both secure and capable of maintaining reliable communication, especially in the face of various types of component failures. The role of reliable group communication is emphasized, along with techniques for enhancing system security. Key topics include multicast protocols, the interaction between reliability and security, and the architectural principles needed to construct such systems.",
-  "summary": "Kenneth P. Birman's 1999 paper on building secure and reliable network applications tackles the intersection of security and reliability in distributed systems. By focusing on reliable group communication, such as multicast protocols, and system security, it provides foundational principles for constructing dependable network applications. The paper explores fault tolerance methods and architectural strategies to maintain system reliability amidst unexpected failures. Typically, such insights have influenced the development of middleware solutions that are pivotal in modern distributed systems. The paper also delves into replication and eventual consistency, which are vital for robust system performance. \n\nDespite its age, this work has foundational value in distributed systems research, with its concepts being relevant to ongoing developments in network security and reliable communication protocols. However, there are limited direct citations or references from contemporary papers directly linking to this publication in recent studies, possibly due to its foundational nature and integration into broader frameworks over time.",
+  "abstract": "There are many methods for making a multicast protocol “reliable.” At one end of the spectrum, a reliable multicast protocol might offer atomicity guarantees, such as all-or-nothing delivery, delivery ordering, and perhaps additional properties such as virtually synchronous addressing. At the other are protocols that use local repair to overcome transient packet loss in the network, offering “best effort” reliability. Yet none of this prior work has treated stability of multicast delivery as a basic reliability property, such as might be needed in an internet radio, television, or conferencing application. This article looks at reliability with a new goal: development of a multicast protocol which is reliable in a sense that can be rigorously quantified and includes throughput stability guarantees. We characterize this new protocol as a “bimodal multicast” in reference to its reliability model, which corresponds to a family of bimodal probability distributions. Here, we introduce the protocol, provide a theoretical analysis of its behavior, review experimental results, and discuss some candidate applications. These confirm that bimodal multicast is reliable, scalable, and that the protocol provides remarkably stable delivery throughput.",
+  "summary": "The paper introduces **bimodal multicast**, also called **pbcast**, a probabilistic gossip-based multicast protocol designed to provide predictable reliability and stable throughput under packet loss, process perturbations, and large group sizes. Its central reliability model replaces traditional “all-or-nothing” delivery with an “almost-all-or-almost-none” distribution: intermediate delivery outcomes should be extremely unlikely. The protocol combines unreliable initial multicast, gossip-based dissemination, anti-entropy repair, message aging, and probabilistic analysis to control overhead and prevent throughput collapse.\\n\\nConcrete subsequent research built directly on this work. A 2004 performance study developed simulation models for Bimodal Multicast, evaluated it across multiple network settings, compared it with SRM, and investigated optimizations for latency and reliability. The study reported that the protocol retained scalability and stable throughput under conditions where other reliable multicast mechanisms could become unstable. ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S0166531603001901)) The paper is also cataloged as a significant ACM Transactions on Computer Systems publication with a substantial citation record, and its bibliographic identity is independently confirmed by DBLP and institutional research metadata. ([dblp.uni-trier.de](https://dblp.uni-trier.de/rec/journals/tocs/BirmanHOXBM99.html)) A quick search found research uptake and follow-on evaluation, but did not provide reliable evidence of a specific commercial production deployment attributable to this paper.",
   "raw_url": "http://www.csl.mtu.edu/cs6461/www/Reading/Birman99.pdf",
   "source_type": "external",
   "filepath": "gossip/README.md",
   "filename": "Bimodal Multicast",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

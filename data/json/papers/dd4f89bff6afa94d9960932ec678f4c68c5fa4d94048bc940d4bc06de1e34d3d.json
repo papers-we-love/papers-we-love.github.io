@@ -1,32 +1,32 @@
 {
   "uuid": "dd4f89bff6afa94d9960932ec678f4c68c5fa4d94048bc940d4bc06de1e34d3d",
-  "title": "Harvest, Yield and Scalable Tolerant Systems",
-  "publication_date": "October 1999",
+  "title": "Harvest, Yield, and Scalable Tolerant Systems",
+  "publication_date": "March 1999; Proceedings of the Seventh Workshop on Hot Topics in Operating Systems (HotOS-VII), Rio Rico, Arizona, March 28–30, 1999",
   "authors": [
     "Armando Fox",
     "Eric A. Brewer"
   ],
   "keywords": [
-    "availability",
+    "cap-principle",
     "distributed-systems",
     "fault-tolerance",
+    "graceful-degradation",
     "harvest",
-    "latency",
-    "network-systems",
+    "high-availability",
+    "orthogonal-mechanisms",
+    "partition-resilience",
     "scalable-systems",
-    "system-design",
-    "trade-offs",
     "yield"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "As the Internet grows larger and more diverse, software developers are moving away from small-scale monolithic systems. Their focus now is on building high-performance, dependable distributed or cluster-based systems, which can serve as robust Internet services.\nHowever, distributed systems are prone to problems such as partial failures, network partitions, network congestion and slow or lossy networks.\n\nWe introduce two new metrics, harvest and yield, that help analyze a system's ability to deliver certain qualities of service. Harvest is a measure of the completeness of the result set, while yield takes into account traditional availability.\n\nWe present architecture and software design principles for high-yield, high-harvest, and scalable tolerant systems. To illustrate our approach, we describe the design and implementation of the Internet services of the Inktomi Corporation Traffic Server, which demonstrates how our design principles can be applied in practice.",
-  "summary": "The paper \"Harvest, Yield and Scalable Tolerant Systems\" by Armando Fox and Eric A. Brewer, published in October 1999, introduces the concepts of \"harvest\" and \"yield\" as new metrics for evaluating the performance and robustness of distributed systems. The authors designed these concepts to quantify the trade-offs between availability and result completeness in network systems.\n\nThe paper has significant influence as it informs the design of distributed systems emphasizing fault tolerance and scalability, with particular reference to Internet services like those used by Inktomi Corporation. However, specific citations of this work in contemporary research or documented industry applications are not prominent in easily accessible academic databases or industry archives. Despite this, the principles discussed resonate with ongoing discussions around designing distributed services with consideration towards scaling and fault tolerance, echoing across many architectural designs in modern cloud computing.\n\nNo concrete academic paper or industry report directly references back to this seminal work within the current accessible databases. Nonetheless, the concepts introduced align well with established principles in distributed system design and continue to influence in a broader, less explicit capacity.",
+  "abstract": "The cost of reconciling consistency and state management with high availability is highly magnified by the unprecedented scale and robustness requirements of today’s Internet applications. We propose two strategies for improving overall availability using simple mechanisms that scale over large applications whose output behavior tolerates graceful degradation. We characterize this degradation in terms of harvest and yield, and map it directly onto engineering mechanisms that enhance availability by improving fault isolation, and in some cases also simplify programming. By collecting examples of related techniques in the literature and illustrating the surprising range of applications that can benefit from these approaches, we hope to motivate a broader research program in this area.",
+  "summary": "The paper examines how large-scale Internet services can remain useful during partial failures by relaxing the requirement that every successful response be complete. It distinguishes **yield**, the probability that a request completes, from **harvest**, the fraction of the relevant data included in a response. This vocabulary makes it possible to describe continuous degradation rather than treating behavior as simply available or unavailable.\n\nThe authors present two strategies. First, systems can trade harvest for yield: for example, a search service can return partial results when some nodes fail, using randomized data placement and selective replication to control the practical effect of missing data. Similar tradeoffs apply to transformation proxies, bandwidth-limited responses, approximate aggregation, and certain localized updates. Second, applications can be decomposed into subsystems with different consistency and persistence requirements. Nonessential subsystems can fail independently while the overall service continues with reduced functionality. The paper further advocates **orthogonal mechanisms**—such as timeouts, retries, sandboxing, and soft-state recovery—that provide scalability, fault isolation, and availability without being tightly coupled to application logic.\n\nThe paper frames these techniques as a practical weakening of the traditional consistency–availability–partition-resilience tradeoff and proposes a “Weak CAP Principle”: stronger guarantees in two dimensions generally require weaker guarantees in the third. Its research agenda calls for formal models and programming abstractions for applications that tolerate graceful degradation.\n\nSubsequent work explicitly reused the paper’s terminology and design perspective. Research on adaptive consistency and replicated services cited harvest and yield as a basis for reasoning about the tradeoff between consistency, availability, and latency, while extending it with quantitative consistency controls and adaptation mechanisms. ([assured-cloud-computing.illinois.edu](https://assured-cloud-computing.illinois.edu/files/2014/03/Characterizing-and-Adapting-the-Consistancy-Latency-Tradeoff-in-Distributed-Key-value-Stores.pdf)) Later systems research also used harvest and yield to describe graceful service degradation under overload or infrastructure failures, including adaptive overload control and geographically distributed services that continue operating with reduced result quality. ([usenix.org](https://www.usenix.org/legacy/event/usits03/tech/full_papers/welsh/welsh_html/usits.html)) The concepts also appear in distributed-storage teaching and Apache Cassandra architecture material, indicating continued use as explanatory vocabulary, although the sources located here do not establish that the paper directly determined a specific production-system design. ([subscription.packtpub.com](https://subscription.packtpub.com/book/data/9781789131499/10/ch10lvl1sec65/chapter-2-cassandra-architecture))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/harvest-yield-and-scalable-tolerant-systems.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/harvest-yield-and-scalable-tolerant-systems.pdf",
   "filename": "harvest-yield-and-scalable-tolerant-systems.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:51"
 }

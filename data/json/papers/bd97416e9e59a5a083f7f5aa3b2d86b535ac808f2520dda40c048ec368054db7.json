@@ -1,31 +1,31 @@
 {
   "uuid": "bd97416e9e59a5a083f7f5aa3b2d86b535ac808f2520dda40c048ec368054db7",
-  "title": "A Fast Quantum Mechanical Algorithm for Database Search",
-  "publication_date": "1996",
+  "title": "A fast quantum mechanical algorithm for database search",
+  "publication_date": "May 1996, Proceedings of the 28th Annual ACM Symposium on the Theory of Computing (STOC 1996), pages 212–219; updated version revised November 19, 1996",
   "authors": [
     "Lov K. Grover"
   ],
   "keywords": [
-    "algorithm",
-    "computational-complexity",
+    "amplitude-amplification",
     "database-search",
-    "grovers-algorithm",
-    "performance-improvement",
+    "inversion-about-average",
+    "oracle-computation",
+    "quantum-algorithms",
     "quantum-computing",
-    "quantum-mechanics",
-    "quantum-search",
-    "quantum-technology",
-    "search-algorithms"
+    "quantum-interference",
+    "quantum-query-complexity",
+    "unstructured-search",
+    "walsh-hadamard-transform"
   ],
   "category_path": [
     "quantum_computing"
   ],
-  "abstract": "A quantum mechanical system can be in a superposition of states, which leads to very different ways of thinking about computation. In this paper we provide an example of such an algorithm for searching an unsorted database of N elements. Classical algorithms for this problem require O(N) steps, but the quantum algorithm requires only O(sqrt(N)) steps. This represents substantial gain over the classical algorithms. The algorithm uses well-known techniques such as quantum parallelism and interference. We provide a complete description of the algorithm in terms of a quantum mechanical system.",
-  "summary": "The paper titled \"A Fast Quantum Mechanical Algorithm for Database Search\" by Lov K. Grover introduces a quantum algorithm that offers a more efficient means of searching an unsorted database compared to classical algorithms, achieving this in O(√N) operations instead of the classical O(N). This groundbreaking paper, published in 1996, is one of the foundational works in quantum computing, particularly known for what is now termed Grover's Algorithm. It demonstrated significant computational speed-ups using quantum mechanics principles like superposition and interference, fundamentally impacting how researchers understood computational complexity in the quantum realm. \n\nGrover's Algorithm has heavily influenced quantum computing research and has been widely cited in further studies, solidifying its importance in the field. The algorithm's principles have been applied beyond database search problems, extending into varied applications requiring quadratic speed-ups. Despite its limitations, such as applicability primarily to unstructured search problems, it remains a critical reference point for future quantum computing innovations.\n\nThis paper has been extensively referenced in the field, demonstrating its enduring influence:\n\n1. Nielsen, M. A., & Chuang, I. L. (2000). *Quantum Computation and Quantum Information*. Cambridge: Cambridge University Press. [Google Books](https://books.google.com/books?id=65FqEKQOfP8C)\n2. Boyer, M., Brassard, G., Høyer, P., & Tapp, A. (1998). Tight bounds on quantum searching. *Fortschritte der Physik*, 46(4‐5), 493-505. [Wiley Journals](https://onlinelibrary.wiley.com/doi/abs/10.1002/prop.19980460402)\n3. Mosca, M. (2008). Quantum Algorithms. *arXiv preprint* arXiv:0808.0369. [arXiv](https://arxiv.org/abs/0808.0369)\n4. Zalka, C. (1999). Grover's quantum searching algorithm is optimal. *Physical Review A*, 60(4), 2746. [APS](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.60.2746)\n5. Shor, P. W. (1999). Polynomial-time algorithms for prime factorization and discrete logarithms on a quantum computer. *SIAM Journal on Computing*, 26(5), 1484-1509. [SIAM](https://epubs.siam.org/doi/10.1137/S0097539795293172)\n\nThis paper's introduction of a new approach to algorithmic problem-solving through quantum mechanics continues to foster research into expanding quantum computing's practical applications.",
+  "abstract": "Imagine a phone directory containing N names arranged in completely random order. In order to find someone's phone number with a 50% probability, any classical algorithm (whether deterministic or probabilistic) will need to look at a minimum of N/2 names. Quantum mechanical systems can be in a superposition of states and simultaneously examine multiple names. By properly adjusting the phases of various operations, successful computations reinforce each other while others interfere randomly. As a result, the desired phone number can be obtained in only O(sqrt(N)) steps. The algorithm is within a small constant factor of the fastest possible quantum mechanical algorithm.",
+  "summary": "The paper introduces a quantum algorithm for searching an unstructured database of N items containing one marked item. The algorithm begins by placing all possible database indices into an equal-amplitude superposition. It then repeatedly applies two operations: a phase inversion that marks the desired item and a diffusion transformation, interpreted as an inversion about the average amplitude. These operations cause constructive interference for the marked state and suppress the amplitudes of the unmarked states. After O(sqrt(N)) iterations, measurement returns the desired item with constant, high probability. The paper also establishes that the diffusion operation is unitary, shows how it can be implemented using Walsh–Hadamard and phase-rotation transformations, and discusses a matching Ω(sqrt(N)) quantum lower bound for unstructured search.\n\nThe work became a foundation for quantum amplitude amplification, which generalizes the same principle to accelerate classical randomized procedures with a quadratic query improvement. Subsequent research used Grover-style search as a component in algorithms for collision finding, quantum counting, minimum finding, optimization, pattern matching, and other search-based tasks. ([arxiv.org](https://arxiv.org/abs/quant-ph/0005055))\n\nThe algorithm also influenced post-quantum security analysis. NIST materials identify Grover’s algorithm as the generic quantum speedup relevant to brute-force attacks on symmetric cryptographic keys, while noting that circuit costs, error correction, hardware expense, and limited parallelization reduce its practical advantage. ([csrc.nist.gov](https://csrc.nist.gov/Projects/Post-Quantum-Cryptography/faqs)) The original work was published as a STOC 1996 paper by Lov K. Grover and is also available as the 1996 arXiv preprint quant-ph/9605043. ([doi.org](https://doi.org/10.1145/237814.237866))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/quantum_computing/grovers_algorithm.pdf",
   "source_type": "pdf",
   "filepath": "quantum_computing/grovers_algorithm.pdf",
   "filename": "grovers_algorithm.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:56"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:53"
 }

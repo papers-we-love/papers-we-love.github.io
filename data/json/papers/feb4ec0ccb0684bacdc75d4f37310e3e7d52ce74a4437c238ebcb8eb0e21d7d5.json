@@ -1,33 +1,26 @@
 {
   "uuid": "feb4ec0ccb0684bacdc75d4f37310e3e7d52ce74a4437c238ebcb8eb0e21d7d5",
-  "title": "FADES: Fine-Grain Adapting B-Trees by Splitting and Merging",
-  "publication_date": "2006",
+  "title": "FADES: Fine-Grained Edge Offloading with Unikernels",
+  "publication_date": "August 11, 2017; published in the Proceedings of HotConNet ’17, Los Angeles, California, USA, August 25, 2017",
   "authors": [
-    "Feng Chen",
-    "Fu Chen",
-    "Youjip Won"
+    "Aaron Yi Ding",
+    "Jörg Ott",
+    "Vittorio Cozzolino"
   ],
   "keywords": [
-    "adaptive-data-structures",
-    "btree-modifications",
-    "data-efficiency",
-    "data-storage",
-    "database-systems",
-    "fine-grain-adapting-b-trees",
-    "index-performance",
-    "indexing",
-    "self-adjusting-structures",
-    "splitting-and-merging"
+    "edge-computing",
+    "iot",
+    "virtualization"
   ],
   "category_path": [
     "unikernels"
   ],
-  "abstract": "Indexing is crucial for efficient data access in database systems. Traditional B-trees, although widely used, are not always adaptable to dynamic workloads. FADES is a novel fine-grained adaptation strategy for B-trees, which employs dynamic splitting and merging techniques to optimize index performance under varying workloads. The proposed method adjusts the node capacity dynamically to maintain a balanced search performance while minimizing the height of the tree. FADES is demonstrated to provide significant performance improvements over conventional B-trees, particularly in fluctuating workloads and rapidly changing data distributions.",
-  "summary": "The paper \"FADES: Fine-Grain Adapting B-Trees by Splitting and Merging\" introduces a novel strategy for adapting B-trees dynamically by using fine-grained splitting and merging techniques. This approach allows the B-tree structure to optimize itself according to varying workloads and data distributions, enhancing database indexing efficiency. The authors propose that by dynamically adjusting node capacities, FADES can maintain optimal search times and reduce the height of the tree, thereby improving performance. \n\nA quick web search reveals that while this paper isn't widely cited, its concepts of adaptable data structures have been fundamental in further explorations of self-optimizing indexing structures. However, specific citations or direct impacts in subsequent research or industry applications of FADES have not been prominent in available literature.",
+  "abstract": "FADES is an edge offloading architecture that empowers us to run compact, single purpose tasks at the edge of the network to support a variety of IoT and cloud services. The design principle behind FADES is to efficiently exploit the resources of constrained edge devices through fine-grained computation offloading. FADES takes advantage of MirageOS unikernels to isolate and embed application logic in concise Xen-bootable images. We have implemented FADES and evaluated the system performance under various hardware and network conditions. Our results show that FADES can effectively strike a balance between running complex applications in the cloud and simple operations at the edge. As a solid step to enable fine-grained edge offloading, our experiments also reveal the limitation of existing IoT hardware and virtualization platforms, which shed light on future research to bring unikernel into IoT domain.",
+  "summary": "## Summary\n\nFADES proposes a three-tier cloud–edge–IoT architecture for **fine-grained edge offloading**. Rather than having constrained devices send all processing to the cloud, cloud services dispatch compact, single-purpose tasks to nearby edge devices. The architecture is organized around an Orchestrator, a Data Resource Broker, and Data Manipulation Functions. The Orchestrator manages task lifecycles and validates deployments; the Data Resource Broker discovers and retrieves data from local IoT resources; and the Data Manipulation Functions execute application-specific processing. Communication and isolation are implemented using MirageOS unikernels running as Xen para-virtualized machines.\n\nThe prototype supports pull-based workflows in which external services send task metadata to the edge. The evaluated workloads perform basic aggregation operations over sensor streams, including minimum, maximum, and average calculations. Experiments on an ARM Cubietruck, an Intel NUC, and an Intel PowerEdge server show that architecture, allocated memory, data payload size, network transfer overhead, and data locality materially affect performance. ARM and x86 systems exhibit different usable-heap characteristics, particularly at low memory allocations. The Intel NUC can outperform the more powerful remote server when data is local, while the Cubietruck is substantially affected by inter-unikernel transmission overhead. The results therefore support edge execution when sufficient local resources and data locality are available, but they also expose practical limitations in hardware support, virtualization platforms, networking APIs, deployment automation, and task authentication.\n\nThe paper’s documented influence is primarily within subsequent edge-computing and unikernel research. The authors’ later work, *Consolidate IoT Edge Computing with Lightweight Virtualization*, cites FADES as the basis for a broader comparison of containers and unikernels for IoT edge computing and extends its discussion of scalability, security, and manageability. ([researchgate.net](https://www.researchgate.net/publication/320729008_Consolidate_IoT_Edge_Computing_with_Lightweight_Virtualization)) A later thesis describes ECCO as an extended and augmented version of FADES, generalizing the earlier architecture toward distributed edge–cloud execution pipelines. ([mediatum.ub.tum.de](https://mediatum.ub.tum.de/doc/1661317/document.pdf)) The paper is also cited in subsequent work on unikernel systems, edge virtualization, and serverless computing, including Unikraft-related research and surveys of edge and fog computing. ([web.mit.edu](https://web.mit.edu/ha22286/www/papers/MEng21_2.pdf)) The Technical University of Munich publication record reports 30 Scopus citations; this indicates measurable academic uptake, although the sources located do not establish a specific commercial product directly derived from FADES. ([portal.fis.tum.de](https://portal.fis.tum.de/en/publications/fades-fine-grained-edge-offloading-with-unikernels/))",
   "raw_url": "http://home.in.tum.de/~ding/files/fades-pre-camera.pdf",
   "source_type": "external",
   "filepath": "unikernels/README.md",
   "filename": "FADES: Fine-Grained Edge Offloading with Unikernels",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:05"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:57"
 }

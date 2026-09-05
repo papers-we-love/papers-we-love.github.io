@@ -1,33 +1,32 @@
 {
   "uuid": "2ea2e70650887493dcea6371d8d0d4a5e0048dd0de393c3ded474237c6b08fa8",
   "title": "Oblivious Routing of Highly Variable Traffic in Service Overlays and IP Backbones",
-  "publication_date": "2003",
+  "publication_date": "April 15, 2009 (current journal version; first published July 25, 2008)",
   "authors": [
-    "Anja Feldmann",
-    "Bernhard Ager",
-    "Walter Willinger"
+    "James B. Orlin",
+    "Murali Kodialam",
+    "Sudipta Sengupta",
+    "T. V. Lakshman"
   ],
   "keywords": [
-    "ip-backbones",
-    "load-balancing",
-    "network-optimization",
-    "network-performance",
+    "hose-traffic-model",
+    "ip-mpls",
+    "ip-over-optical",
     "oblivious-routing",
-    "routing-algorithms",
     "service-overlays",
-    "telecommunication-networks",
-    "traffic-engineering",
+    "two-phase-routing",
+    "valiant-load-balancing",
     "variable-traffic"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "In this paper, we consider the problem of efficiently routing highly variable traffic in service overlays and IP backbones. We propose to explore routing strategies that do not require a detailed view of the overall traffic demands, hence the term oblivious routing. In particular, we explore and evaluate oblivious routing strategies for different levels of knowledge of the network topology and for various metrics of interest such as network resource utilization, delay, loss, and congestion. The results indicate that oblivious routing strategies are promising candidates for coping with the inherent traffic variability and unpredictability in today's communication networks.",
-  "summary": "The paper \"Oblivious Routing of Highly Variable Traffic in Service Overlays and IP Backbones\" analyzes oblivious routing strategies as an approach to manage traffic without necessitating detailed knowledge of overall demand dynamics. The authors propose these strategies as solutions to issues of traffic variability and unpredictability in current communication networks, including service overlays and IP backbones. They examine the effectiveness of these routing strategies based on metrics such as network resource utilization, delay, loss, and congestion.\n\nDespite its insightful exploration of routing advancements, there are no evident instances of this paper being directly cited or significantly impacting subsequent research or industry practices as of the current data available. It should be noted that further detailed searches beyond readily available digital sources could potentially uncover utilization or influence in specific or niche developments.",
+  "abstract": "The emergence of new applications on the Internet like voice-over-IP, peer-to-peer, and video-on-demand has created highly dynamic and changing traffic patterns. In order to route such traffic with quality-of-service (QoS) guarantees without requiring detection of traffic changes in real-time or reconfiguring the network in response to it, a routing and bandwidth allocation scheme has been recently proposed that allows preconfiguration of the network such that all traffic patterns permissible within the network’s natural ingress–egress capacity constraints can be handled in a capacity efficient manner. The scheme routes traffic in two phases. In the first phase, incoming traffic is sent from the source to a set of intermediate nodes and then, in the second phase, from the intermediate nodes to the final destination. The traffic in the first phase is distributed to the intermediate nodes in predetermined proportions that depend on the intermediate nodes. In this paper, we develop linear programming formulations and a fast combinatorial algorithm for routing under the scheme so as to maximize throughput (or, minimize maximum link utilization). We compare the throughput performance of the scheme with that of the optimal scheme among the class of all schemes that are allowed to even make the routing dependent on the traffic matrix. For our evaluations, we use actual Internet Service Provider topologies collected for the Rocketfuel project. We also bring out the versatility of the scheme in not only handling widely fluctuating traffic but also accommodating applicability to several widely differing networking scenarios, including i) economical Virtual Private Networks (VPNs); ii) supporting indirection in specialized service overlay models like Internet Indirection Infrastructure (i3); iii) adding QoS guarantees to services that require routing through a network-based middlebox; and iv) reducing IP layer transit traffic and handling extreme traffic variability in IP-over-optical networks without dynamic reconfiguration of the optical layer. The two desirable properties of supporting indirection in specialized service overlay models and static optical layer provisioning in IP-over-optical networks are not present in other approaches for routing variable traffic, such as direct source–destination routing along fixed paths.",
+  "summary": "- The paper develops an oblivious two-phase routing scheme for the hose traffic model. Traffic is first distributed from each source to predetermined intermediate nodes and then forwarded from those nodes to its destinations. Because the provisioned demands depend only on aggregate ingress–egress bounds and fixed split ratios, the routing remains valid as the individual traffic matrix changes.\n- It formulates maximum-throughput routing as linear programs and presents a primal–dual Fully Polynomial-Time Approximation Scheme (FPTAS) for computing traffic split ratios and paths. The paper also describes a graph transformation for incorporating router-to-optical-cross-connect capacity constraints.\n- The scheme is evaluated on six Rocketfuel ISP topologies and three research-network topologies. With unequal, intermediate-node-dependent split ratios, the reported throughput is within 6% of the best traffic-matrix-dependent routing scheme on every evaluated topology. The experiments also show that only a small number of intermediate nodes is often required, while unequal split ratios can substantially outperform equal splitting.\n- The paper identifies applications in VPN provisioning, service overlays with indirection, middlebox routing, and statically provisioned IP-over-optical networks. Its clearest documented research influence is a subsequent line of work on traffic-oblivious hose-model routing, including formulations comparing two-phase routing with direct source–destination routing and dynamic optimal routing. ([ieeexplore.ieee.org](https://ieeexplore.ieee.org/document/5703157/)) Later work on compact oblivious routing also lists this paper as prior research in the broader oblivious-routing literature. ([drops.dagstuhl.de](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ESA.2020.36)) The available sources establish continued research use and citation, but do not by themselves demonstrate broad commercial deployment of the exact scheme.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/oblivious-routing-of-highly-variable-traffic-in-service-overlays-and-ip-backbones.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/oblivious-routing-of-highly-variable-traffic-in-service-overlays-and-ip-backbones.pdf",
   "filename": "oblivious-routing-of-highly-variable-traffic-in-service-overlays-and-ip-backbones.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:51"
 }

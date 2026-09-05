@@ -1,33 +1,34 @@
 {
   "uuid": "e953c8544976fd31b525a443b81bdf227ecfaef6043fc1de4c6768051868344c",
-  "title": "Probabilistic Hierarchical Clustering by Continuous Imitation",
-  "publication_date": "2004",
+  "title": "The Go Programming Language",
+  "publication_date": "November 2, 2009 (presentation date; the document does not state a separate publication venue)",
   "authors": [
-    "Adalbert F. Koller",
-    "E. P. Klement",
-    "Ulrich Bodenhofer"
+    "Ken Thompson",
+    "Rob Pike",
+    "Robert Griesemer"
   ],
   "keywords": [
-    "cluster-analysis",
-    "continuous-imitation",
-    "data-analysis",
-    "fuzzy-clustering",
-    "hierarchical-clustering",
-    "machine-learning",
-    "pattern-recognition",
-    "probabilistic-clustering",
-    "unsupervised-learning"
+    "channels",
+    "compiler",
+    "concurrency",
+    "garbage-collection",
+    "go-programming-language",
+    "goroutines",
+    "open-source",
+    "software-engineering",
+    "static-typing",
+    "systems-programming"
   ],
   "category_path": [
     "languages",
     "Go"
   ],
-  "abstract": "This paper presents an advanced hierarchical clustering algorithm. While most of the traditional approaches generally classify every object deterministically (i.e., definitely) into one particular class, the paradigm proposed here is essentially based on the assignment of membership probabilities to each cluster. This approach tries to overcome the problem of sharply defined boundaries between clusters, which is a frequent issue in real-life applications. The main focus is on an imitation of solid hierarchical clustering algorithms, deforming their deterministic character into a probabilistic one. We apply here the technique of continuous imitation known from fuzzy logic. In practice, membership probabilities act in a way similar to fuzzy membership degrees, thus the algorithm itself is quite related to fuzzy clustering techniques. Nonetheless, it still exhibits properties of solid hierarchical clustering.",
-  "summary": "The paper \"Probabilistic Hierarchical Clustering by Continuous Imitation\" by Ulrich Bodenhofer, Adalbert F. Koller, and E. P. Klement presents a novel method in clustering, switching traditional deterministic cluster boundaries to probabilistic ones. This approach aids in easing the boundary issues observed in traditional hierarchical clustering methods. By using probability assignments akin to fuzzy logic principles, the authors blend characteristics of hierarchical clustering with fuzzy clustering attributes. This method may enhance cluster analysis and pattern recognition by increasing the flexibility and accuracy of clustering algorithms.\n\nIn terms of impact, this paper is referenced in several later works that explore improvements in clustering techniques, particularly those involving fuzzy logic or probabilistic classifications. For instance, the paper \"A Survey on Data Clustering Algorithms\" ([ResearchGate, 2018](https://www.researchgate.net/publication/324651259_A_Survey_on_Data_Clustering_Algorithms)) mentions this work while discussing hierarchical clustering methodologies. Additionally, it has influenced research in fields related to unsupervised learning and fuzzy systems. Further searches did not uncover specific industry applications but reinforced its academic significance, particularly in the development of advanced clustering algorithms.",
+  "abstract": "No abstract appears in the document.",
+  "summary": "### Overview\n\nThe document introduces Go as a new, experimental, concurrent, garbage-collected systems programming language. It motivates the language through difficulties associated with large-scale software development in C++, Java, and similar languages, including slow compilation, excessive syntactic complexity, difficult dependency management, and inadequate support for concurrent and networked systems.\n\nThe design presented combines the execution efficiency and static checking associated with compiled languages with features intended to improve developer productivity. Central mechanisms include a concise C-like syntax, static typing with type inference, garbage collection, packages and explicit imports, interfaces, reflection, lightweight concurrent processes called goroutines, and typed communication channels. The language emphasizes composition over class hierarchies and aims to make programs easy to read, compile, test, document, and deploy.\n\nThe document also presents Go as a complete development environment rather than merely a language. Its compiler, linker, package system, documentation tools, formatting tools, and standard library are treated as integrated parts of the programming model. The intended applications include network servers, distributed systems, and other software that must exploit multicore and networked machines while remaining maintainable at large scale.\n\n### Subsequent influence\n\nGo was released publicly as open source on November 10, 2009, and later became an established language for infrastructure and cloud software. Official retrospectives identify its emphasis on concurrency, software-engineering scale, tooling, and efficient development as central to its continued adoption. ([go.dev](https://go.dev/solutions/google/))\n\nThe language also prompted follow-on research. *Featherweight Go* developed a formal core model for Go-style generics, while later work extended that model through dictionary-passing translation. Other studies have empirically examined unsafe-code usage, hidden risks in Go programs, and automated testing of Go concurrency. ([arxiv.org](https://arxiv.org/abs/2005.11710))\n\nThe original CiteSeerX URL was not directly retrievable because it redirected to an inaccessible archive copy. The document identity, title, authorship, and date were cross-checked against the contemporaneous Go presentation record and official Go project materials. ([golang.google.cn](https://golang.google.cn/talks/2009/go_talk-20091030.pdf))",
   "raw_url": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.138.6297&rep=rep1&type=pdf",
   "source_type": "external",
   "filepath": "languages/Go/README.md",
   "filename": "Go Lang Original Paper",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

@@ -1,0 +1,38 @@
+{
+  "uuid": "10f9519a4068b56b1057364f9a0800602028cdfda36bbe08d9cd0236ab26ee4b",
+  "title": "Attention Is All You Need",
+  "publication_date": "2017 (31st Conference on Neural Information Processing Systems [NIPS 2017], Long Beach, CA, USA); first arXiv submission: June 12, 2017",
+  "authors": [
+    "Aidan N. Gomez",
+    "Ashish Vaswani",
+    "Illia Polosukhin",
+    "Jakob Uszkoreit",
+    "Llion Jones",
+    "Niki Parmar",
+    "Noam Shazeer",
+    "Łukasz Kaiser"
+  ],
+  "keywords": [
+    "deep-learning",
+    "encoder-decoder-architecture",
+    "multi-head-attention",
+    "natural-language-processing",
+    "neural-machine-translation",
+    "parallel-computation",
+    "positional-encoding",
+    "self-attention",
+    "sequence-to-sequence-learning",
+    "transformer"
+  ],
+  "category_path": [
+    "artificial_intelligence"
+  ],
+  "abstract": "The dominant sequence transduction models are based on complex recurrent or convolutional neural networks that include an encoder and a decoder. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles, by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data.",
+  "summary": "The paper introduced the Transformer, an encoder-decoder architecture based entirely on self-attention, multi-head attention, feed-forward layers, residual connections, layer normalization, and positional encoding. It removed recurrence and convolution from the core sequence-transduction architecture, enabling greater training parallelism while providing short computational paths between distant sequence positions. The reported machine-translation experiments established strong results on WMT 2014 English–German and English–French, and the parsing experiments demonstrated transfer beyond translation. ([arxiv.org](https://arxiv.org/abs/1706.03762))\n\nThe architecture became a foundational design for subsequent research. BERT explicitly used a multi-layer bidirectional Transformer encoder based on the original implementation for pretrained language representations and downstream fine-tuning. ([arxiv.org](https://arxiv.org/abs/1810.04805)) The Vision Transformer adapted the Transformer paradigm to image patches and reported competitive image-classification performance without convolutional backbones, extending the approach beyond language. ([arxiv.org](https://arxiv.org/abs/2010.11929)) Transformer components were also incorporated into self-supervised speech recognition in wav2vec 2.0, where a Transformer builds contextual representations from latent speech features. ([arxiv.org](https://arxiv.org/abs/2006.11477)) These applications document the paper’s influence across language, vision, and speech research.",
+  "raw_url": "https://arxiv.org/pdf/1706.03762.pdf",
+  "source_type": "external",
+  "filepath": "artificial_intelligence/README.md",
+  "filename": "Attention is all you need",
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:53"
+}

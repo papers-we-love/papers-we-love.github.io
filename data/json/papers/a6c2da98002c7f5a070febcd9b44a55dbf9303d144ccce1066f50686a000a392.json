@@ -1,28 +1,32 @@
 {
   "uuid": "a6c2da98002c7f5a070febcd9b44a55dbf9303d144ccce1066f50686a000a392",
   "title": "Probabilistic Counting Algorithms for Data Base Applications",
-  "publication_date": "1985",
+  "publication_date": "October 1985 (Journal of Computer and System Sciences, Volume 31, Issue 2, pp. 182–209)",
   "authors": [
-    "Gael N. Martin",
+    "G. Nigel Martin",
     "Philippe Flajolet"
   ],
   "keywords": [
-    "algorithms",
-    "database-applications",
-    "performance-analysis",
+    "approximate-query-processing",
+    "cardinality-estimation",
+    "data-streaming",
+    "database-systems",
+    "distinct-counting",
+    "distributed-computing",
+    "hashing",
     "probabilistic-counting",
-    "statistical-estimation",
+    "stochastic-averaging",
     "sublinear-space"
   ],
   "category_path": [
     "sublinear_algorithms"
   ],
-  "abstract": "A class of algorithms for counting large numbers of distinct items using limited storage is analyzed. The algorithms proposed use a stochastic approach and are shown to offer certain advantages in terms of execution speed, simplicity, and adaptability, over other similar methods such as linear counting. Statistical considerations such as bias, variance, and higher moments are addressed. Possible applications are discussed, along with a detailed comparison with methods using linear counting.",
-  "summary": "The paper \"Probabilistic Counting Algorithms for Data Base Applications\" by Philippe Flajolet and Gael N. Martin introduces algorithms that efficiently estimate the number of distinct elements in a large dataset using a probabilistic approach, significantly optimizing storage requirements. These algorithms, analyzed by their stochastic nature, offer advantages in speed, simplicity, and adaptability over linear counting techniques. The authors discuss statistical factors such as bias, variance, and the behavior of higher moments in depth, demonstrating the algorithms' robustness.\n\nThe main impact of this paper lies in its foundational role in developing probabilistic counting techniques, which are particularly important in large-scale data processing tasks where memory efficiency is crucial. It has influenced subsequent work on cardinality estimation and HyperLogLog algorithms.\n\n1. The HyperLogLog algorithm, widely used today in database systems like Google BigQuery, builds on the principles established in this work.\n   - [HyperLogLog in Practice: Algorithmic Engineering of a State of The Art Cardinality Estimation Algorithm](http://algo.inria.fr/flajolet/Publications/FlFuGaMe07.pdf)\n\n2. Research in approximate data structures for handling big data workloads frequently cites Flajolet and Martin's work due to its pioneering insights and methodologies.\n   - [Building a Toolkit for Approximate Query Processing](https://scholar.google.com/scholar?cluster=2364575617768066298)\n\nIn summary, this paper is pivotal in the trajectory of algorithms that address the challenges of data estimation with limited resources, influencing both research and practical database system designs.",
+  "abstract": "This paper introduces a class of probabilistic counting algorithms with which one can estimate the number of distinct elements in a large collection of data (typically a large file stored on disk) in a single pass using only a small additional storage (typically less than a hundred binary words) and only a few operations per element scanned. The algorithms are based on statistical observations made on bits of hashed values of records. They are by construction totally insensitive to the replicative structure of elements in the file; they can be used in the context of distributed systems without any degradation of performances and prove especially useful in the context of data bases query optimisation.",
+  "summary": "The paper establishes the Flajolet–Martin approach to distinct-cardinality estimation: hashed bit patterns are recorded in compact bitmaps, and the position of the first zero provides an estimate whose logarithm is related to the number of distinct elements. It develops the probability distribution, bias, variance, and asymptotic behavior of the estimator, then introduces probabilistic counting with stochastic averaging (PCSA), which reduces error approximately in proportion to the inverse square root of the number of bitmaps while retaining one-pass, low-storage processing.\n\nThe work became an early foundation for streaming sketches and approximate query processing. Subsequent research developed LogLog and HyperLogLog estimators from the same general principles; HyperLogLog is described as a later cardinality-estimation algorithm based on this line of work. ([datasketches.apache.org](https://datasketches.apache.org/docs/Background/SketchOrigins.html)) HyperLogLog-style estimators have also been used in production-scale data systems, including Google’s PowerDrill and Presto. ([research.google.com](https://research.google.com/pubs/archive/40671.pdf)) The original PCSA method has additionally been implemented as a PostgreSQL extension for approximate distinct-value aggregation. ([pgxn.org](https://pgxn.org/dist/pcsa_estimator/1.3.1/))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/sublinear_algorithms/1985-Flajolet-Probabilistic-counting.pdf",
   "source_type": "pdf",
   "filepath": "sublinear_algorithms/1985-Flajolet-Probabilistic-counting.pdf",
   "filename": "1985-Flajolet-Probabilistic-counting.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:56"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:53"
 }

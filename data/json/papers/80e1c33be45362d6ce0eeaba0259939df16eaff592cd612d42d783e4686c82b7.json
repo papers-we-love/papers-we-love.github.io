@@ -1,33 +1,32 @@
 {
   "uuid": "80e1c33be45362d6ce0eeaba0259939df16eaff592cd612d42d783e4686c82b7",
   "title": "Impossibility of Distributed Consensus with One Faulty Process",
-  "publication_date": "May 1985",
+  "publication_date": "April 1985 (Journal of the Association for Computing Machinery, Vol. 32, No. 2, pp. 374–382); originally presented at the 2nd ACM Symposium on Principles of Database Systems, March 1983",
   "authors": [
     "Michael J. Fischer",
     "Michael S. Paterson",
     "Nancy A. Lynch"
   ],
   "keywords": [
-    "asynchronous-systems",
-    "byzantine-fault",
-    "computer-science-theory",
+    "agreement-problem",
+    "asynchronous-system",
+    "byzantine-generals-problem",
+    "commit-problem",
     "consensus-problem",
-    "distributed-consensus",
-    "distributed-systems",
+    "distributed-computing",
     "fault-tolerance",
-    "faulty-process",
-    "network-reliability",
-    "systems-theory"
+    "impossibility-proof",
+    "reliability"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "The consensus problem involves an asynchronous system of processes, some of which may be unreliable. The problem is to devise an algorithm in which the reliable processes agree on a binary value. This paper shows that every protocol for this problem has the possibility of nontermination, even with only one faulty process. This impossibility result stems from certain scenarios referred to as \"valent\" and \"bivalent\" configurations and applies to a wide class of failure models.",
-  "summary": "The paper titled \"Impossibility of Distributed Consensus with One Faulty Process\" by Michael J. Fischer, Nancy A. Lynch, and Michael S. Paterson is a landmark contribution to the field of distributed systems and computer science theory. It proves that distributed consensus is impossible in an asynchronous network if even a single process is faulty. This groundbreaking result is widely known as the FLP impossibility and has influenced a large body of subsequent research and practical applications in distributed computing.\n\nThe work disrupted the way consensus protocols were understood and paved the way for significant advancements in how distributed systems are designed and analyzed. Researchers have built upon this foundational result to develop Byzantine fault tolerance and consensus algorithms under different network assumptions, such as partial synchrony.\n\nKey papers that reference this work include \"Practical Byzantine Fault Tolerance\" by Miguel Castro and Barbara Liskov (https://pmg.csail.mit.edu/papers/osdi99.pdf), which tackles practical implications of consensus in real-world systems, and \"Viewstamped Replication: A New Primary Copy Method to Support Highly-Available Distributed Systems\" (https://dspace.mit.edu/handle/1721.1/6455), which expands on strategies for fault-tolerant operation in distributed environments. Additionally, Leslie Lamport's research on Paxos (http://research.microsoft.com/en-us/um/people/lamport/pubs/paxos-simple.pdf) provides a mechanism for achieving consensus in asynchronous networks, influenced by the impossibility result.\n\nDespite its initial perception as a limitation, the impossibility result profoundly shaped distributed systems' theory, leading to innovative fault-tolerant algorithms that address its constraints under different assumptions. The FLP impossibility has cemented its place as a critical theoretical baseline in distributed systems literature.",
+  "abstract": "The consensus problem involves an asynchronous system of processes, some of which may be unreliable. The problem is for the reliable processes to agree on a binary value. In this paper, it is shown that every protocol for this problem has the possibility of nontermination, even with only one faulty process. By way of contrast, solutions are known for the synchronous case, the “Byzantine Generals” problem.",
+  "summary": "### Main contribution\nThe paper proves the FLP impossibility result: no deterministic consensus protocol can guarantee termination in a completely asynchronous message-passing system if even one process may fail by stopping, despite reliable message delivery and otherwise strong computational assumptions. The result applies to a weak consensus specification requiring agreement, the possibility of both decision values, and eventual decision by at least one process.\n\nThe proof first establishes the existence of a **bivalent** initial configuration, from which both decision values remain possible. It then shows that, from any bivalent configuration, the scheduler can choose a finite sequence of process events that preserves bivalence while still allowing any selected next event to occur last. By repeatedly extending the execution in this way, the authors construct an admissible infinite run in which every process continues taking steps and messages to nonfaulty processes are eventually delivered, yet no process ever decides. Thus, safety can be maintained, but guaranteed termination cannot.\n\nThe paper also gives a contrasting protocol for the case where a strict majority of processes are initially alive and no process fails during execution. This illustrates that the impossibility depends specifically on the combination of asynchronous timing and an execution-time crash, rather than on consensus agreement alone.\n\n### Influence\nThe result directly motivated subsequent approaches that weaken the model or modify the problem. Ben-Or explicitly used the FLP impossibility result as motivation for a randomized, completely asynchronous consensus protocol that terminates with probability 1 when a majority of processes continue operating. ([homepage.cs.uiowa.edu](https://homepage.cs.uiowa.edu/~ghosh/BenOr.pdf)) Dwork, Lynch, and Stockmeyer developed partially synchronous models and consensus protocols that recover termination guarantees under eventual timing bounds, explicitly addressing the limitation exposed by FLP. ([groups.csail.mit.edu](https://groups.csail.mit.edu/tds/papers/Lynch/Lifetime_Contributions_Book-1.pdf)) Chandra and Toueg introduced unreliable failure detectors as an abstraction for solving consensus in asynchronous systems with crash failures, providing another way to add the information absent from the FLP model. ([cs.princeton.edu](https://www.cs.princeton.edu/courses/archive/fall07/cos518/papers/unreliable.pdf))\n\nThe paper received the 2001 PODC Influential Paper Award. The award citation identifies its influence on partially synchronous systems, failure detectors, randomized algorithms, approximate agreement, k-set consensus, renaming, valency-based lower bounds, and the wait-free hierarchy. ([podc.org](https://www.podc.org/influential/2001-influential-paper/))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/impossibility-of-consensus-with-one-faulty-process.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/impossibility-of-consensus-with-one-faulty-process.pdf",
   "filename": "impossibility-of-consensus-with-one-faulty-process.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:51"
 }

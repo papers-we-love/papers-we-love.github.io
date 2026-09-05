@@ -1,28 +1,31 @@
 {
   "uuid": "005c294d9cd781650c972ee8647218bc7d5c1248faa90404e2b1f6d7e0a75b4a",
-  "title": "Primecoin: Cryptocurrency with Unique Proof-of-Work",
+  "title": "Primecoin: Cryptocurrency with Prime Number Proof-of-Work",
   "publication_date": "July 7, 2013",
   "authors": [
     "Sunny King"
   ],
   "keywords": [
-    "bitcoin-alternative",
-    "blockchain",
+    "bi-twin-chains",
+    "blockchain-security",
     "cryptocurrency",
-    "digital-currency",
-    "peer-to-peer",
+    "cunningham-chains",
+    "difficulty-adjustment",
+    "prime-chains",
     "prime-numbers",
+    "primecoin",
+    "proof-of-useful-work",
     "proof-of-work"
   ],
   "category_path": [
     "digital_currency"
   ],
-  "abstract": "Primecoin: Cryptocurrency with Unique Proof-of-Work is the first cryptocurrency using a scientific computing proof-of-work. Primecoin is designed as a competitor to Bitcoin with innovations in proof-of-work system aiming at generating additional potential value in scientific computing and providing Concurrent Chain mining for higher security and performance than existing cryptocurrencies. Primecoin's proof-of-work not only provides security and mint of a cryptocurrency network but also generates a special form of prime number chains known as Cunningham chains. These work in conjunction to bolster security and generate extra bona fide scientific data, demonstrating Primecoin as a sustainable, scalable and useful cryptocurrency.",
-  "summary": "Primecoin is a cryptocurrency introduced by Sunny King that uses a unique proof-of-work based on computing prime number chains, specifically Cunningham chains. Published on July 7, 2013, this paper describes Primecoin as an alternative to Bitcoin with enhanced security, performance, and potential scientific value. Unlike typical cryptocurrencies that perform non-beneficial computations, Primecoin's mining process contributes to scientific knowledge by generating useful mathematical data.\n\nThe impact of Primecoin on further research and industry appears to be modest. While it presented a novel approach to proof-of-work systems, evidence of its direct influence on significant future developments in blockchain technology is limited. A web search reveals limited academic citations and practical applications related to the Primecoin algorithm. Primecoin did, however, contribute to discussions around crypto-mining efficiency and potential dual-purpose algorithms in cryptocurrency systems. Further references to Primecoin include its mention in discussions about alternative cryptocurrencies in various forums and websites such as [Bitcoin Wiki](https://en.bitcoinwiki.org/wiki/Primecoin) and in broader cryptocurrency community discussions.\n\nDespite its unique approach, Primecoin remains a niche interest within the cryptocurrency space, overshadowed by the broader adoption of other cryptocurrencies that focus either on security enhancements or additional financial features.",
+  "abstract": "A new type of proof-of-work based on searching for prime numbers is introduced in peer-to-peer cryptocurrency designs. Three types of prime chains known as Cunningham chain of first kind, Cunningham chain of second kind and bi-twin chain are qualified as proof-of-work. Prime chain is linked to block hash to preserve the security property of Nakamoto’s Bitcoin, while a continuous difficulty evaluation scheme is designed to allow prime chain to act as adjustable-difficulty proof-of-work in a Bitcoin like cryptocurrency.",
+  "summary": "## Summary\n\nThe paper introduces Primecoin, a cryptocurrency whose proof-of-work is based on discovering Cunningham chains and bi-twin chains of prime numbers rather than repeatedly hashing arbitrary data. It describes how these chains can be verified efficiently using probable-primality tests, while imposing bounds on prime size so that verification remains practical for network nodes.\n\nThe design links each prime-chain origin to the block-header hash, making the proof specific to a block and preventing straightforward reuse. It also proposes a fractional chain-length measure based on the Fermat-test remainder, allowing mining difficulty to be adjusted continuously while retaining a Bitcoin-like chain-selection model. The paper discusses the resulting security limitations, particularly the possibility that the non-linear difficulty model could slightly weaken the usual majority-hash-power assumption.\n\nPrimecoin was subsequently implemented as an operating cryptocurrency and open-source software project. The project describes its protocol as introducing scientific-computing proof-of-work to cryptocurrency technology. ([github.com](https://github.com/primecoin/primecoin)) Later work on proof-of-useful-work treats Primecoin as an early and successful example of replacing conventional hash-based mining with computational work having an external mathematical objective. ([arxiv.org](https://arxiv.org/abs/2209.03865)) Subsequent proof-of-useful-work research, including Coin.AI, cites Primecoin as a precedent while exploring alternative workloads such as distributed deep-learning computation. ([mdpi.com](https://www.mdpi.com/1099-4300/21/8/723)) The available references therefore indicate influence primarily as a demonstrative cryptocurrency implementation and as a conceptual precursor to later proof-of-useful-work research, rather than evidence of broad adoption as a dominant cryptocurrency-mining design.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/digital_currency/primecoin.pdf",
   "source_type": "pdf",
   "filepath": "digital_currency/primecoin.pdf",
   "filename": "primecoin.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:51"
 }

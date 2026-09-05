@@ -1,31 +1,33 @@
 {
   "uuid": "33e1f433a3ce6c1d529aa6cca201a84b494cd3e5721b41abe6353b44e0204f66",
-  "title": "Efficient Shortest Paths in Graphs with Uncertain Negative Lengths",
-  "publication_date": "1995",
+  "title": "Transactional Client-Server Cache Consistency: Alternatives and Performance",
+  "publication_date": "September 1995 (University of Maryland Technical Report CS-TR-3511; also UMIACS TR 95-84)",
   "authors": [
-    "Samir Khuller",
-    "Suman Jana"
+    "Michael J. Carey",
+    "Michael J. Franklin",
+    "Miron Livny"
   ],
   "keywords": [
-    "algorithm-design",
-    "graph-analysis",
-    "graph-theory",
-    "negative-lengths",
-    "np-hard",
-    "pathfinding",
-    "probabilistic-approaches",
-    "shortest-paths",
-    "uncertain-graphs"
+    "cache-coherence",
+    "client-caching",
+    "client-server-databases",
+    "concurrency-control",
+    "data-shipping",
+    "distributed-databases",
+    "one-copy-serializability",
+    "performance-evaluation",
+    "replicated-data",
+    "transactional-cache-consistency"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "This paper investigates the problem of computing shortest paths in graphs where the lengths of the edges are uncertain and may have negative values. The traditional algorithms for shortest paths cannot be directly applied in these cases due to potential issues like negative cycles. We propose a new approach that is efficient and can handle the uncertainty associated with edge lengths.",
-  "summary": "The paper \"Efficient Shortest Paths in Graphs with Uncertain Negative Lengths\" by Suman Jana and Samir Khuller addresses the challenge of finding shortest paths in graphs where edge lengths are uncertain and possibly negative. It introduces a novel approach that efficiently manages such uncertainties, which traditional algorithms fail to solve due to complications like negative cycles. This problem is significant in the context of graph theory and algorithm design, particularly for applications involving uncertain data.\n\nUpon investigation, the paper does not appear to have been widely cited in the literature. Its impact on subsequent research or industry adoption remains limited or undocumented in available academic databases and web search results.",
+  "abstract": "Client-server database systems based on a page server model can exploit client memory resources by caching copies of pages across transaction boundaries. Caching reduces the need to obtain data from servers or other sites on the network. In order to ensure that such caching does not result in the violation of transaction semantics, a cache consistency maintenance algorithm is required. Many such algorithms have been proposed in the literature and, as all provide the same functionality, performance is a primary concern in choosing among them. In this paper we provide a taxonomy that describes the design space for transactional cache consistency maintenance algorithms and show how proposed algorithms relate to one another. We then investigate the performance of six of these algorithms, and use these results to examine the tradeoffs inherent in the design choices identified in the taxonomy. The insight gained in this manner is then used to reflect upon the characteristics of other algorithms that have been proposed. The results show that the interactions among dimensions of the design space can impact performance in many ways, and that classifications of algorithms as simply \"pessimistic\" or \"optimistic\" do not accurately characterize the similarities and differences among the many possible cache consistency algorithms.",
+  "summary": "## Main contribution\n\nThe paper studies cache consistency for page-server client-server database systems that retain database pages in client memory across transaction boundaries. It frames client caching as dynamic replication with “second-class ownership”: the server remains authoritative for durability and availability, while clients hold temporary cached copies. Because cached pages may become stale, the system must preserve one-copy serializability through a cache-consistency protocol.\n\nThe authors introduce a taxonomy organized primarily around **invalid-access prevention**. Detection-based protocols permit stale copies to remain in client caches and validate accesses before commit. Avoidance-based protocols use a read-one/write-all strategy to prevent transactions from accessing stale data in the first place. The taxonomy further distinguishes when validity or write intentions are checked, whether update notifications are propagated or used for invalidation, how long write permissions are retained, and whether conflicting remote consistency actions wait for or preempt local transactions.\n\nThe performance study compares six algorithms from three families: Caching Two-Phase Locking, Callback Locking, and Optimistic Two-Phase Locking. It uses a discrete-event simulation with workloads representing private data, hot/cold locality with sharing, uniform access, and one-way information feeding. The evaluation measures throughput, message traffic, cache hit rates, aborts, and related resource costs.\n\nThe central result is that no cache-consistency policy is uniformly best. Avoidance-based methods generally outperform synchronous detection when locality is high because cached reads avoid server round trips, but their remote callbacks and invalidations become costly as sharing increases. Deferring write-intention declarations reduces communication, but can raise abort rates under contention. Retaining write permissions across transactions helps when locality is high and updates remain local, but hurts when remote reads frequently conflict with retained permissions. Invalidation is generally more robust than propagation: propagation can waste substantial network bandwidth when updated copies are not subsequently used, although it performs well in directional feed workloads where many readers repeatedly consume the same updated data.\n\nThe broader conclusion is that “pessimistic” versus “optimistic” is too coarse a classification. Performance depends on interactions among consistency mechanisms, locality, sequential sharing, contention, cache size, network cost, and workload directionality. The study therefore motivates adaptive policies, particularly policies that dynamically choose permission retention or invalidation versus propagation.\n\n## Subsequent influence\n\nThe work was subsequently published as a peer-reviewed ACM Transactions on Database Systems article in September 1997, with the same authors and title, spanning pages 315–363. ([sigmod.org](https://www.sigmod.org/publications/dblp/db/journals/tods/tods22.html)) The University of Maryland’s DIMSUM publication list places it within a continuing research program on client-server object databases and lists later work on adaptive fine-grained sharing using callback-based techniques. ([cs.umd.edu](https://www.cs.umd.edu/projects/dimsum/papers/)) Later cache-consistency research continued to cite the paper when discussing transactional caching, version-based consistency, mobile data management, and application data caches. ([researchgate.net](https://www.researchgate.net/publication/220241935_Exploiting_Versions_for_Transactional_Cache_Consistency)) The available evidence supports influence as a research reference and design framework; it does not establish widespread direct adoption of one of the evaluated protocols in commercial database products.",
   "raw_url": "http://drum.lib.umd.edu/bitstream/handle/1903/751/CS-TR-3511.pdf",
   "source_type": "external",
   "filepath": "distributed_systems/README.md",
   "filename": "Transactional Client-Server Cache Consistency: Alternatives and Performance",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

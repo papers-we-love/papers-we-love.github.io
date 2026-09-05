@@ -1,7 +1,7 @@
 {
   "uuid": "4473fcd2e4f98587474f9c1dc4909a4b92f0e151f52007b4acd627e627a63bbf",
   "title": "The PageRank Citation Ranking: Bringing Order to the Web",
-  "publication_date": "January 1998",
+  "publication_date": "January 29, 1998; Stanford Digital Library Technologies Project technical report",
   "authors": [
     "Lawrence Page",
     "Rajeev Motwani",
@@ -9,26 +9,26 @@
     "Terry Winograd"
   ],
   "keywords": [
-    "academic-research",
     "citation-analysis",
-    "google",
-    "hyperlink-structure",
+    "eigenvector-centrality",
+    "hyperlink-analysis",
     "information-retrieval",
-    "internet",
     "link-analysis",
     "pagerank",
-    "search-engines",
-    "web-ranking"
+    "personalized-pagerank",
+    "random-surfer-model",
+    "web-ir",
+    "web-search"
   ],
   "category_path": [
     "information_retrieval"
   ],
-  "abstract": "In this paper, we address the problem of ranking web pages. Introduction and growth of the World Wide Web provides a vast amount of information, but also it is becoming problematic to find information associated with particular queries. We introduce a novel approach based on link analysis called PageRank. This method assigns a global importance to web pages based on their link structure. We demonstrate the use of PageRank to improve the search and retrieval of relevant information on the web and its potential to improve search engine results.",
-  "summary": "The paper titled \"The PageRank Citation Ranking: Bringing Order to the Web\" introduces and elaborates on the PageRank algorithm, a system that has revolutionized the way search engines rank web pages. Authored by Lawrence Page, Sergey Brin, Rajeev Motwani, and Terry Winograd, this paper was published in January 1998. \n\nPageRank is an algorithm used by Google Search to rank web pages in its search engine results, making it the foundation technology of Google's search functionality. The core idea is that the importance of a web page can be derived from the number and quality of links to it, essentially treating links as citations. The model takes inspiration from citation analysis in academic research, adapting it to the hyperlink structure of the web.\n\nThe impact of this paper is profound, as the algorithm laid the groundwork for Google's search engine, which continues to dominate the industry. The paper's influence extends beyond Google, inspiring numerous other research studies and technologies in the field of information retrieval and web ranking.\n\nFurther information on the impact and application of PageRank can be found in scholarly articles such as \"Search Engine Optimization with Google PageRank” (e.g., [ResearchGate](https://www.researchgate.net/publication/220095764_Search_Engine_Optimization_with_Google_PageRank)) and \"The Anatomy of a Large-Scale Hypertextual Web Search Engine\" ([Link to Source](http://infolab.stanford.edu/~backrub/google.html)) by the same authors. Additionally, this algorithm is a subject of extensive academic review and citation in works like \"Link Analysis, Ranking and User Profile in Web Retrieval\" ([Link to Source](https://dl.acm.org/doi/10.1145/3372923)) and others available through platforms such as ACM Digital Library and IEEE Xplore.",
+  "abstract": "The importance of a Web page is an inherently subjective matter, which depends on the readers interests, knowledge and attitudes. But there is still much that can be said objectively about the relative importance of Web pages. This paper describes PageRank, a method for rating Web pages objectively and mechanically, effectively measuring the human interest and attention devoted to them.\n\nWe compare PageRank to an idealized random Web surfer. We show how to efficiently compute PageRank for large numbers of pages. And, we show how to apply PageRank to search and to user navigation.",
+  "summary": "The paper introduced PageRank as a global importance measure for Web pages based on the recursive propagation of rank through hyperlinks. It addressed limitations of simple backlink counting by weighting links from highly ranked pages more heavily, and provided a random-surfer interpretation, an iterative computation method, handling for rank sinks and dangling links, and personalized rank distributions.\n\nIts immediate industry influence was the incorporation of PageRank into Google’s early search engine, where link structure was combined with textual and other information-retrieval signals to improve Web search, particularly for underspecified queries. Google later described PageRank as a distinguishing part of its original ranking technology, while also noting that its ranking systems subsequently incorporated many additional signals. ([research.google](https://research.google/pubs/the-anatomy-of-a-large-scale-hypertextual-web-search-engine/))\n\nThe method also became a foundation for research on ranking entities in directed networks beyond the Web. Subsequent studies applied PageRank or adaptations of it to scientific citation networks, including publication ranking, author evaluation, biomedical-literature ranking, and time-sensitive citation relevance. These studies generally preserve the paper’s central idea that links from more important nodes should contribute more than links from less important nodes, while also examining biases and limitations such as publication age, field differences, and citation-network structure. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/26288312/))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/information_retrieval/the-pagerank-citation-ranking-bringing-order-to-the-web.pdf",
   "source_type": "pdf",
   "filepath": "information_retrieval/the-pagerank-citation-ranking-bringing-order-to-the-web.pdf",
   "filename": "the-pagerank-citation-ranking-bringing-order-to-the-web.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

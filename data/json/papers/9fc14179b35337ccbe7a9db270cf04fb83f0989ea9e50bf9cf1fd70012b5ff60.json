@@ -1,7 +1,7 @@
 {
   "uuid": "9fc14179b35337ccbe7a9db270cf04fb83f0989ea9e50bf9cf1fd70012b5ff60",
   "title": "Dynamo: Amazon’s Highly Available Key-value Store",
-  "publication_date": "October 2007",
+  "publication_date": "October 14, 2007 — Proceedings of the 21st ACM Symposium on Operating Systems Principles (SOSP 2007), Stevenson, Washington, USA",
   "authors": [
     "Alex Pilchin",
     "Avinash Lakshman",
@@ -14,26 +14,26 @@
     "Werner Vogels"
   ],
   "keywords": [
-    "amazon",
-    "conflict-resolution",
-    "decentralized",
+    "consistent-hashing",
     "distributed-systems",
     "eventual-consistency",
-    "gossip-protocols",
-    "highly-available",
+    "fault-tolerance",
+    "gossip-protocol",
+    "high-availability",
+    "hinted-handoff",
     "key-value-store",
-    "replication",
-    "scalability"
+    "quorum-replication",
+    "vector-clocks"
   ],
   "category_path": [
     "datastores"
   ],
-  "abstract": "Reliability at massive scale is a critical factor for a successful enterprise-class cloud computing solution. Since its inception, Amazon.com has been a pioneer in the highly scalable, extremely reliable, and low-cost cloud services. Amazon’s Dynamo is a key-value storage system that is used internally to power some of its read and write intensive services that require the highest availability and scalability. This paper presents the design and implementation of Dynamo, a highly available key-value store. Dynamo is used to manage the state of services that have very high reliability requirements and need tight control over the tradeoffs between availability, consistency, cost-effectiveness, and performance. This paper provides insights into the development and operating principles of Dynamo, shares our experience in building and growing such a system, and offers its lessons for service designers and implementers.",
-  "summary": "Dynamo: Amazon's Highly Available Key-value Store, presented at the Symposium on Operating Systems Principles (SOSP) in October 2007, stands out as a cornerstone in the development of distributed database systems. The introduction of concepts such as eventual consistency, partition tolerance, and high availability had significant implications for companies grappling with massive data storage requirements. \n\nDynamo's decentralized design impacted systems like Apache Cassandra and Riak, which are popular in handling large-scale data storage with an emphasis on high availability. The work on eventual consistency pioneered by Dynamo has been widely recognized and adopted in the design principles of NoSQL databases. This paper has over 4,000 citations according to [Google Scholar](https://scholar.google.com) as of the time of this writing.\n\nSome influential papers that cite Dynamo include: \n- \"Cassandra - A Decentralized Structured Storage System\" where Cassandra's design was inspired by Dynamo's principles. ([Link](https://www.usenix.org/legacy/event/osdi10/tech/full_papers/Lakshman.pdf))\n- \"Riak and Erlang: Architecting a Distributed System using \"Errors\"\" which draws architecture parallels with Dynamo's design. ([Link](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.230.8824&rep=rep1&type=pdf))\n- \"The Log-Structured Merge-Tree (LSM-Tree)\" often relates concepts to those used in key-value stores like Dynamo. ([Link](https://www.cs.cornell.edu/courses/cs6464/2013sp/papers/lsmtree.pdf))\n\nDynamo's concepts of handling servers' failures gracefully and its emphasis on an always writable system underpin many cloud services offered today. This influence extends into modern cloud architectures that prefer flexibility in trade-offs between consistency and availability.",
+  "abstract": "Reliability at massive scale is one of the biggest challenges we face at Amazon.com, one of the largest e-commerce operations in the world; even the slightest outage has significant financial consequences and impacts customer trust. The Amazon.com platform, which provides services for many web sites worldwide, is implemented on top of an infrastructure of tens of thousands of servers and network components located in many datacenters around the world. At this scale, small and large components fail continuously and the way persistent state is managed in the face of these failures drives the reliability and scalability of the software systems.\n\nThis paper presents the design and implementation of Dynamo, a highly available key-value storage system that some of Amazon’s core services use to provide an “always-on” experience. To achieve this level of availability, Dynamo sacrifices consistency under certain failure scenarios. It makes extensive use of object versioning and application-assisted conflict resolution in a manner that provides a novel interface for developers to use.",
+  "summary": "## Summary\n\nDynamo presents a highly available, decentralized key-value store designed for Amazon services that require continuous reads and writes, low tail latency, incremental scaling, and replication across data centers. It deliberately favors availability over strong consistency and provides eventual consistency, allowing writes to succeed during temporary failures and network partitions.\n\nThe system combines consistent hashing and virtual nodes for partitioning, replication across a configurable number of nodes, vector clocks for tracking causal relationships between object versions, application-assisted conflict resolution, sloppy quorums, hinted handoff, Merkle-tree-based anti-entropy, read repair, and gossip-based membership management. Applications tune the replication and quorum parameters N, R, and W to balance availability, durability, consistency, latency, and cost. The paper also emphasizes production-oriented concerns such as tail latency at the 99.9th percentile, background-task admission control, load balancing, bootstrapping, and operational scalability.\n\nIn its reported production deployment, Dynamo supported Amazon services including shopping carts, session management, product catalogs, and customer preferences. The paper reports that 99.94% of profiled shopping-cart reads returned exactly one version, while divergent versions were uncommon. It also reports successful responses for 99.9995% of requests across the described deployments and no data-loss event during the stated operational period.\n\n## Influence\n\nThe paper became a foundational reference for eventually consistent and highly available NoSQL storage design. Apache Cassandra explicitly documents its use of Dynamo-style consistent hashing, multi-master replication, tunable consistency, gossip-based membership, failure detection, and incremental scale-out, while adapting the data model and storage engine. ([cassandra.apache.org](https://cassandra.apache.org/doc/latest/cassandra/architecture/dynamo.html)) Amazon later stated that DynamoDB was developed from Dynamo’s principles, combining Dynamo’s scalability and predictable low latency with a managed operational model. ([aws.amazon.com](https://aws.amazon.com/blogs/aws/happy-birthday-dynamodb/)) The paper’s bibliographic record identifies it as a 2007 SOSP publication by the nine listed authors. ([cir.nii.ac.jp](https://cir.nii.ac.jp/crid/1361418520227727744))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/datastores/dynamo-amazons-highly-available-key-value-store.pdf",
   "source_type": "pdf",
   "filepath": "datastores/dynamo-amazons-highly-available-key-value-store.pdf",
   "filename": "dynamo-amazons-highly-available-key-value-store.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:51"
 }

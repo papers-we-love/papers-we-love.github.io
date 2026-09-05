@@ -1,35 +1,27 @@
 {
   "uuid": "0d2b78afcc5d8d3598f14190aee2fd1ff0808e6ea3d93c44b0b3d00a19573449",
   "title": "RADOS: A Scalable, Reliable Storage Service for Petabyte-scale Storage Clusters",
-  "publication_date": "2007",
+  "publication_date": "November 11, 2007; Proceedings of the 2nd International Workshop on Petascale Data Storage, held in conjunction with Supercomputing ’07 (PDSW ’07), Reno, Nevada, pages 35–44",
   "authors": [
+    "Andrew W. Leung",
     "Carlos Maltzahn",
-    "Darrell D. E. Long",
-    "Ethan L. Miller",
     "Sage A. Weil",
     "Scott A. Brandt"
   ],
   "keywords": [
-    "cluster-computing",
-    "data-redundancy",
-    "data-reliability",
-    "distributed-storage",
-    "object-storage",
-    "petabyte-scale",
-    "rados",
-    "reliable-storage",
-    "scalable-storage",
-    "storage-clusters"
+    "clustered-storage",
+    "object-based-storage",
+    "petabyte-scale-storage"
   ],
   "category_path": [
     "datastores"
   ],
-  "abstract": "The demand for online storage is rising dramatically as more data is moved online and made available over the Internet. This trend is increasing the need for scalable storage systems that can reliably store petabytes of data. To meet this need, we present RADOS, a powerful storage service for building reliable object-based storage clusters from thousands of unreliable individual devices. RADOS provides the basis for a new distributed file system we have built called Ceph. It features massive scalability, reliable and easy management, and strong performance.",
-  "summary": "The paper \"RADOS: A Scalable, Reliable Storage Service for Petabyte-scale Storage Clusters\" is a foundational work on scalable storage systems that influenced the development and evolution of distributed object storage technology. RADOS (Reliable, Autonomous, Distributed Object Store) provides the architectural and operational basis for Ceph, an open-source software storage platform that is widely adopted in enterprise environments, particularly in cloud and internet infrastructure. The research underpins the design of storage solutions that require scalability to petabyte levels while maintaining reliability, even with numerous unreliable components. \n\nRADOS has been cited in various works and projects that focus on improving storage methodologies and distributed systems. Some works reference the RADOS system for its object storage capabilities and design, particularly in software-defined storage and cloud infrastructure.\n\nCitations and references:\n1. [Ceph: A Scalable, High-Performance Distributed File System](https://ceph.com/assets/pdfs/weil-ceph-eurosys07.pdf)\n2. [Evaluation of Ceph Distributed File System](https://journals.sagepub.com/doi/pdf/10.1177/16878140211009000)\n3. [A Performance Evaluation of Object Storage Systems](https://dl.acm.org/doi/abs/10.1145/3448016.3452800)\n4. [Architectural Challenges for Storage Systems based on Emerging Non-Volatile Memories](https://arxiv.org/abs/1605.06908)\n5. [Scalable metadata management techniques for extreme scale file systems: A specific case study of Ceph system](https://ieeexplore.ieee.org/document/8264107)\n\nOverall, RADOS has significantly impacted both academia and industry, influencing the design of modern distributed storage systems.",
+  "abstract": "Brick and object-based storage architectures have emerged as a means of improving the scalability of storage clusters. However, existing systems continue to treat storage nodes as passive devices, despite their ability to exhibit significant intelligence and autonomy. We present the design and implementation of RADOS, a reliable object storage service that can scales to many thousands of devices by leveraging the intelligence present in individual storage nodes. RADOS preserves consistent data access and strong safety semantics while allowing nodes to act semi-autonomously to self-manage replication, failure detection, and failure recovery through the use of a small cluster map. Our implementation offers excellent performance, reliability, and scalability while providing clients with the illusion of a single logical object store.",
+  "summary": "## Summary\n\nRADOS is a distributed object-storage service designed for clusters ranging from dozens to many thousands of storage devices. Its central design principle is to make storage nodes active participants in cluster management rather than passive responders to client requests.\n\nThe system maintains a versioned **cluster map** replicated by clients, monitors, and storage nodes. The map records membership, device state, placement-group configuration, and CRUSH placement rules. Objects are first assigned to placement groups and then mapped to ordered sets of OSDs using CRUSH. This two-stage placement scheme avoids a large per-object metadata directory, supports heterogeneous devices and failure domains, and limits data movement when the cluster changes.\n\nRADOS distributes replication, failure detection, peering, migration, and recovery across OSDs. It supports primary-copy, chain, and splay replication while preserving serializable read/write semantics. Map epochs attached to messages prevent stale clients or OSDs from operating incorrectly after topology changes. Heartbeats and coordination among replicas address the consistency risks created by partial failures and delayed failure detection.\n\nFailure recovery is organized independently for each placement group. During peering, OSDs exchange metadata and log information to determine the authoritative state of a placement group. Recovery then proceeds in parallel across many OSDs; the primary coordinates missing-object transfers and attempts to read each object only once during re-replication. A small monitor cluster uses a Paxos-based service to maintain the authoritative cluster map, while incremental map updates are propagated lazily through OSD communication. The paper’s evaluation focuses primarily on map propagation and reports that update-duplication overhead approaches a bounded level as the cluster grows, although monitor-cluster performance was not experimentally evaluated.\n\nThe paper directly established architectural foundations later incorporated into **Ceph**. Current Ceph documentation retains the RADOS concepts of object-to-placement-group mapping, CRUSH-based placement, OSD primaries, peering, and parallel recovery. These mechanisms remain part of Ceph’s documented architecture for petabyte-scale storage clusters. ([ssrc.us](https://ssrc.us/pub/weil-pdsw07.html))\n\nThe paper also helped define a research direction centered on decentralized placement and autonomous storage-node management. Its proposed extensions—including key-value objects, snapshots, load balancing, quality of service, and parity-based redundancy—anticipated functionality and research themes subsequently developed around Ceph and related distributed-storage systems. The paper’s publication metadata is confirmed by the authors’ research-group record and bibliographic listings. ([ssrc.us](https://ssrc.us/pub/weil-pdsw07.html))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/datastores/rados-a-scalable-reliable-storage-service-for-petabyte-scale-storage-clusters.pdf",
   "source_type": "pdf",
   "filepath": "datastores/rados-a-scalable-reliable-storage-service-for-petabyte-scale-storage-clusters.pdf",
   "filename": "rados-a-scalable-reliable-storage-service-for-petabyte-scale-storage-clusters.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:51"
 }

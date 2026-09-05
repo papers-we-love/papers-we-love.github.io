@@ -1,34 +1,31 @@
 {
   "uuid": "43e0a59aafc692e33a739533a2f3a1e97b89708cd89403a3e6f98269cdbfe76c",
-  "title": "Discourse Complements Lexical Semantics for Non-factoid Answer Reranking",
-  "publication_date": "June 2012",
+  "title": "Multiple Narrative Disentanglement: Unraveling Infinite Jest",
+  "publication_date": "June 3–8, 2012, NAACL-HLT 2012, Montréal, Canada",
   "authors": [
-    "Hugo Zaragoza",
-    "Massimiliano Ciaramita",
-    "Mihai Surdeanu",
-    "Ming-Wei Chang"
+    "Byron C. Wallace"
   ],
   "keywords": [
-    "answer-retrieval",
-    "computational-linguistics",
-    "discourse-analysis",
-    "factoid-questions",
-    "information-retrieval",
-    "lexical-semantics",
-    "machine-learning",
-    "natural-language-processing",
-    "non-factoid-answers",
-    "question-answering"
+    "computational-literary-analysis",
+    "infinite-jest",
+    "latent-dirichlet-allocation",
+    "multiple-narrative-disentanglement",
+    "named-entity-recognition",
+    "narrative-focalizer",
+    "narrative-modeling",
+    "narratology",
+    "story-understanding",
+    "unsupervised-learning"
   ],
   "category_path": [
     "machine_learning"
   ],
-  "abstract": "We extend previous representations of questions and answers based on graphical models of concepts and predicates with features that capture discourse relations. The problem is framed as a reranking model over the top n answers produced by a state-of-the-art retrieval model. A maximum entropy model is trained to assign a score to each candidate original rank using lexical, semantic, and discourse features. The solution can be applied to question answering (QA) systems that are based on any retrieval model. Amazingly, our model improves performance not only in terms of absolute answer reranking accuracy, but also in terms of precision and recall at the top answer ranks, showing that discourse relations can significantly complement lexical semantics in QA.",
-  "summary": "The paper \"Discourse Complements Lexical Semantics for Non-factoid Answer Reranking\" by Mihai Surdeanu et al. explores the improvement of non-factoid answer reranking by integrating discourse features with lexical semantics in question-answering systems. Using a reranking model over the top candidate answers produced by retrieval models, the study demonstrates enhanced precision, recall, and accuracy through the inclusion of discourse relations via a maximum entropy model. \n\nIn terms of impact, the paper's methodology of combining discourse analysis with lexical semantics has influenced further exploration in enhancing question-answering systems, serving as a reference for developing methods to improve answer ranking in non-factoid contexts. The integration of discourse features is also discussed in studies like \"Answering Non-factoid Questions through Multi-type Answer Re-ranking\" by Kan and others, which builds upon these concepts to further refine answer retrieval accuracy. (Reference: https://aclanthology.org/2017.bea-1.1/) \n\nDespite being published over a decade ago, the paper lays foundational insights into leveraging discourse analysis for computational linguistics, specifically in improving the performance of question-answering models.",
+  "abstract": "Many works (of both fiction and non-fiction) span multiple, intersecting narratives, each of which constitutes a story in its own right. In this work I introduce the task of multiple narrative disentanglement (MND), in which the aim is to tease these narratives apart by assigning passages from a text to the sub-narratives to which they belong. The motivating example I use is David Foster Wallace’s fictional text Infinite Jest. I selected this book because it contains multiple, interweaving narratives within its sprawling 1,000-plus pages. I propose and evaluate a novel unsupervised approach to MND that is motivated by the theory of narratology. This method achieves strong empirical results, successfully disentangling the threads in Infinite Jest and significantly outperforming baseline strategies in doing so.",
+  "summary": "## Overview\n\nThe paper introduces **multiple narrative disentanglement (MND)**, an unsupervised task that assigns passages in a text to one or more underlying narrative threads. Unlike conversational-thread disentanglement, where an utterance is generally assigned to one discussion, MND allows passages to belong to multiple intersecting narratives and treats narratives as potentially hierarchical.\n\n## Method\n\nThe proposed **narrative modeling** pipeline has three stages:\n\n1. Segment the text into passages.\n2. Extract named entities—primarily characters, organizations, and locations—from each passage.\n3. Apply latent Dirichlet allocation (LDA) to the extracted entities rather than to the full text.\n\nThe central modeling assumption is that a passage is a mixture of latent narratives, while each narrative is characterized by a distribution over entities. The approach assigns a passage to a narrative when its estimated mixture probability exceeds a threshold and the passage contains at least one highly ranked entity associated with that narrative. The number of narratives is supplied by the user because the hierarchical nature of narrative makes a single objectively correct number difficult to define.\n\nThe same entity rankings are also used for focalizer detection: the highest-ranked entity classified as a person is selected as the focalizer of each narrative.\n\n## Corpus and evaluation\n\nThe evaluation uses a manually annotated version of David Foster Wallace’s *Infinite Jest*. The author annotated 49 narrative labels across 183 passages, with three principal threads used for the main experiment: the wheelchair-assassin narrative, the Ennet House Drug Recovery House narrative, and the Enfield Tennis Academy narrative. A fourth, more heavily overlapping Incandenza-family narrative was added for a harder test. Because the corpus was annotated by a single person, inter-annotator agreement was unavailable.\n\nThe system is compared with round-robin assignment, majority-thread assignment, and full-text topic modeling. For the three main narratives, entity-based narrative modeling achieves a macro-averaged F-score of **0.702**, compared with **0.545** for full-text topic modeling. Its micro-averaged F-score is **0.706**, compared with **0.551** for full-text topic modeling. For the more entangled four-thread experiment, narrative modeling achieves a macro-averaged F-score of **0.67**, compared with **0.56** for full-text topic modeling. Focalizer detection identifies the focalizers of the three main narratives with 100% accuracy in the reported experiment.\n\n## Main conclusions and limitations\n\nThe results support the paper’s claim that modeling entities provides a representation more closely aligned with the actors and locations underlying narrative structure than modeling raw lexical content. The work establishes MND as a distinct computational-literary task and demonstrates that probabilistic, soft multi-label assignments are useful for narratives that intersect. Important limitations include the subjective definition and granularity of narrative annotations, the single-annotator corpus, the need to specify the number of threads in advance, dependence on named-entity recognition quality, and evaluation on one unusually complex novel.\n\n## Subsequent research influence\n\nThe paper’s task formulation and entity-based topic-modeling idea were cited in later computational-literary research. For example, *GutenTag: an NLP-driven Tool for Digital Humanities Research in the Project Gutenberg Corpus* cites Wallace as prior work motivating automatic narrative extraction with topic-modeling methods. ([aclanthology.org](https://aclanthology.org/W15-0705/)) A later computational study of literary text also identifies Wallace’s work as part of the developing body of literature-specific computational-linguistics research. ([researchgate.net](https://www.researchgate.net/publication/262369385_Multiple_narrative_disentanglement_unraveling_Infinite_Jest)) The available evidence indicates influence primarily as a methodological reference in computational literary analysis; I found no well-documented industry deployment directly attributable to this paper. The paper’s bibliographic details and publication venue were verified against the ACL Anthology record. ([aclanthology.org](https://aclanthology.org/N12-1001/))",
   "raw_url": "http://aclanthology.org/N12-1001.pdf",
   "source_type": "external",
   "filepath": "machine_learning/README.md",
   "filename": "Multiple Narrative Disentanglement: Unraveling *Inﬁnite Jest*",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:56"
 }

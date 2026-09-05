@@ -1,29 +1,33 @@
 {
   "uuid": "d272e6ab9cf5d27368c493fe112640505bca36ca46072b6a1956ff029ed5ad19",
-  "title": "Characterizing Two User Interfaces for Interaction with Spatial Objects",
-  "publication_date": "October 1988",
+  "title": "A Method for Obtaining Digital Signatures and Public-Key Cryptosystems",
+  "publication_date": "February 1978; Communications of the ACM, Volume 21, Number 2, pp. 120–126",
   "authors": [
-    "Leon J. Osterweil",
-    "Michael C. Wileden",
-    "Nicholas M. Asher",
-    "William N. Shen"
+    "A. Shamir",
+    "L. Adleman",
+    "R.L. Rivest"
   ],
   "keywords": [
-    "computing-interfaces",
-    "interaction-techniques",
-    "spatial-objects",
-    "task-performance",
-    "user-interfaces"
+    "authentication",
+    "digital-signatures",
+    "electronic-funds-transfer",
+    "electronic-mail",
+    "factorization",
+    "message-passing",
+    "prime-number",
+    "privacy",
+    "public-key-cryptosystems",
+    "security"
   ],
   "category_path": [
     "cryptography"
   ],
-  "abstract": "Two user interfaces for Spatial Objects in the Seuss Environments are described and compared. One of these is an operational interface, which attaches interfaces to objects and allows users to execute these interfaces to cause events to affect objects. The other is a viewing interface, which allows users to observe and 'perceive' objects in the environment. Both interfaces are defined, and their structure and functionality are characterized. The use of these interfaces is considered in the context of a particular example, a building block game.",
-  "summary": "This paper presents a study on two different user interfaces for interacting with spatial objects, specifically within the Seuss Environments. The authors introduce and compare an operational interface and a viewing interface. The operational interface allows users to execute events affecting objects, while the viewing interface focuses on observation and perception of spatial data. The functionality and effectiveness of these interfaces were examined through a building block game example. This research adds to the existing body of knowledge on user interfaces by exploring how different types lead to varied user experiences and outcomes.\n\nOn further scrutiny, it appears the paper had limited citations in subsequent research. It doesn't seem to have significantly influenced later studies or industry practices in a substantial way. This analysis was confirmed through web searches where references to this specific paper were rare, except in historical contexts discussing user interfaces' evolution.",
+  "abstract": "An encryption method is presented with the novel property that publicly revealing an encryption key does not thereby reveal the corresponding decryption key. This has two important consequences:\n\n1. Couriers or other secure means are not needed to transmit keys, since a message can be enciphered using an encryption key publicly revealed by the intended recipient. Only he can decipher the message, since only he knows the corresponding decryption key.\n\n2. A message can be “signed” using a privately held decryption key. Anyone can verify this signature using the corresponding publicly revealed encryption key. Signatures cannot be forged, and a signer cannot later deny the validity of his signature. This has obvious applications in “electronic mail” and “electronic funds transfer” systems.\n\nA message is encrypted by representing it as a number M, raising M to a publicly specified power e, and then taking the remainder when the result is divided by the publicly specified product, n, of two large secret prime numbers p and q. Decryption is similar; only a different, secret, power d is used, where e · d ≡ 1 (mod (p − 1) · (q − 1)). The security of the system rests in part on the difficulty of factoring the published divisor, n.",
+  "summary": "The paper introduces the RSA public-key cryptosystem. It defines a trapdoor one-way permutation based on modular exponentiation over a modulus formed by multiplying two secret large primes. The corresponding public and private exponents support encryption and decryption without prior private key exchange, and the same mathematical structure enables publicly verifiable digital signatures. The paper also discusses key distribution, message representation, signed-and-encrypted communication, implementation considerations, and the relationship between system security and integer factorization.\n\nIts subsequent influence is directly visible in cryptographic standards. PKCS #1 specifies RSA cryptographic primitives, encryption schemes, signature schemes, and key representations for practical systems; its current IETF specification is RFC 8017. ([people.csail.mit.edu](https://people.csail.mit.edu/rivest/Rsapaper.pdf)) RSA digital signatures were also incorporated into NIST’s Digital Signature Standard; FIPS 186-5 specifies RSA signature generation and verification while directing implementations to RFC 8017. ([tsapps.nist.gov](https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=935202)) NIST further identifies RSA as a public-key algorithm used for key establishment and digital-signature generation and verification. ([csrc.nist.gov](https://csrc.nist.gov/glossary/term/RSA)) These standards provide concrete evidence that the paper’s core construction became a sustained basis for deployed cryptographic protocols and public-key infrastructure.",
   "raw_url": "https://dl.acm.org/doi/10.1145/359340.359342",
   "source_type": "external",
   "filepath": "cryptography/README.md",
   "filename": "A Method for Obtaining Digital Signatures and Public-Key Cryptosystems (1977)",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:54"
 }

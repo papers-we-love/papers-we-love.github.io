@@ -1,31 +1,34 @@
 {
   "uuid": "5e853fde7c50ea71440cca72154a4f11516d046486150f13873420438d0ac2d4",
-  "title": "METAFUNCTIONS: Prototypes for Calculations in a Groupware Environment",
-  "publication_date": "October 1993",
+  "title": "The Dangers of Replication and a Solution",
+  "publication_date": "May 1996 (Microsoft Research Technical Report MSR-TR-96-17); published in the Proceedings of the 1996 ACM SIGMOD Conference, Montreal, pp. 173–182",
   "authors": [
-    "Anne Grete Gruner"
+    "Dennis Shasha",
+    "Jim Gray",
+    "Pat Helland",
+    "Patrick O'Neil"
   ],
   "keywords": [
-    "collaborative-calculations",
-    "computer-supported-collaboration",
-    "computer-supported-cooperative-work",
-    "distributed-systems",
-    "groupware",
-    "metafunctions",
-    "prototypes",
-    "software-engineering",
-    "technology-enhanced-learning",
-    "user-interfaces"
+    "commutative-transactions",
+    "database-replication",
+    "deadlock-analysis",
+    "distributed-databases",
+    "eager-replication",
+    "lazy-replication",
+    "master-replication",
+    "mobile-computing",
+    "transaction-processing",
+    "transactional-consistency"
   ],
   "category_path": [
     "datastores"
   ],
-  "abstract": "In an educational setting, most groupware tools support either asynchronous or synchronous communication. However, to support project work, both modes of communication are needed. Furthermore, the integration of chat, whiteboard, and application sharing is not sufficient as many project tasks rely on calculations. The Metafunction concept provides a new, simple method to support project work. It allows users to specify prototype functions and calculations that can be used and shared in a groupware setting. The tools developed focus on the need for sharing and modifying calculations crucial for educational project collaboration.",
-  "summary": "This paper introduces the concept of Metafunctions, which serves as a novel method to support educational project work within a groupware environment. The study, authored by Anne Grete Gruner, addresses the need for both asynchronous and synchronous communication modes in groupware tools, emphasizing the importance of integrated functionalities such as chat, whiteboard, and application sharing. However, the innovation lies in supporting calculations necessary for project collaboration. Metafunctions allow users to create and share prototype calculation functions, thus enhancing collaborative capabilities in educational settings.\n\nThe paper was published in October 1993 and has influenced subsequent research in areas such as computer-supported collaborative work (CSCW) and technology-enhanced learning. Although direct references to this specific paper are limited, the foundational concepts of collaborative calculations and prototype functions have been explored in later works focusing on enhancing groupware technologies and collaborative educational tools. This research is relevant in the context of ongoing developments in collaborative software solutions and educational technology platforms.",
+  "abstract": "Update anywhere-anytime-anyway transactional replication has unstable behavior as the workload scales up: a ten-fold increase in nodes and traffic gives a thousand fold increase in deadlocks or reconciliations. Master copy replication (primary copy) schemes reduce this problem. A simple analytic model demonstrates these results. A new two-tier replication algorithm is proposed that allows mobile (disconnected) applications to propose tentative update transactions that are later applied to a master copy. Commutative update transactions avoid the instability of other replication schemes.",
+  "summary": "The paper analyzes eager and lazy replication under transactional consistency and argues that update-anywhere replication becomes unstable as the number of nodes, transaction rates, and transaction sizes increase. Its model predicts particularly rapid growth in deadlocks and reconciliation failures, while showing that master-copy schemes reduce conflicts but do not support disconnected updates. The proposed two-tier design separates continuously connected base nodes from intermittently connected mobile nodes: mobile nodes execute tentative updates locally, while base nodes validate and apply updates to master copies. Commutative transactions and explicit acceptance or rejection preserve consistency without requiring every mobile operation to commit globally. ([ics.uci.edu](https://www.ics.uci.edu/~cs223/papers/replica.pdf))\n\nThe paper was subsequently cited by research on lazy database replication and snapshot isolation. Daudjee and Salem’s work uses stronger session-level isolation criteria to address consistency problems in lazy replicated systems, directly continuing the paper’s examination of replication, concurrency, and reconciliation trade-offs. ([cs.uwaterloo.ca](https://cs.uwaterloo.ca/~kdaudjee/DaudjeeVLDB06.pdf)) The Borealis stream-processing system cites the paper in connection with tentative results, reconciliation, and eventual consistency for fault-tolerant distributed processing. ([cs.brown.edu](https://cs.brown.edu/research/borealis/public/publications/borealis-sigmod05.pdf)) Google’s Megastore paper also cites this work while presenting a production storage architecture based on partitioning and synchronous replication, illustrating an industry approach that limits coordination to smaller data partitions rather than applying global transactional coordination indiscriminately. ([research.google.com](https://research.google.com/pubs/archive/36971.pdf))",
   "raw_url": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.21.2707&rep=rep1&type=pdf",
   "source_type": "external",
   "filepath": "datastores/README.md",
   "filename": "The Dangers of Replication and a Solution",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:54"
 }

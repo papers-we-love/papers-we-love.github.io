@@ -1,35 +1,38 @@
 {
   "uuid": "2cd4463c773dae22259ed7c112f287b2126b669f75cc6777cc36b8cc8f964e09",
-  "title": "Simple Testing Can Prevent Most Critical Failures: An Analysis of Production Failures in Distributed Data-Intensive Systems",
-  "publication_date": "2014",
+  "title": "Simple Testing Can Prevent Most Critical Failures: An Analysis of Production Failures in Distributed Data-intensive Systems",
+  "publication_date": "October 6–8, 2014; Proceedings of the 11th USENIX Symposium on Operating Systems Design and Implementation (OSDI ’14), Broomfield, Colorado",
   "authors": [
-    "Christina M. Delimitrou",
-    "Deepak Marmol",
-    "Garth A. Gibson",
-    "Gregory R. Ganger",
-    "Michael K. Reiter",
-    "Peng Huang"
+    "Ding Yuan",
+    "Guilherme Renna Rodrigues",
+    "Michael Stumm",
+    "Pranay U. Jain",
+    "Xin Zhuang",
+    "Xu Zhao",
+    "Yongle Zhang",
+    "Yu Luo"
   ],
   "keywords": [
-    "critical-failures",
-    "data-intensive-systems",
+    "aspirator",
+    "catastrophic-failures",
     "distributed-systems",
+    "error-handling",
+    "failure-reproduction",
+    "fault-tolerance",
+    "logs",
     "production-failures",
-    "recovery-mechanisms",
-    "root-cause-analysis",
-    "simple-testing",
-    "system-dependability",
-    "testing-methodologies"
+    "software-testing",
+    "static-analysis"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "This paper presents an analysis of 198 randomly selected, user-reported failures from three large-scale distributed systems: Cassandra, HBase, and Hadoop Distributed File System (HDFS). Our study reveals that simple testing could have prevented or detected the majority of the failures without any knowledge of the source code or the developers’ expertise. Specifically, we found that almost all catastrophic failures (48 in total) are the result of incorrect handling of non-fatal errors explicitly signaled in software. Moreover, over 90% of the failures are deterministic in that they consistently recur when given the same input and execution environment. Based on these observations, we proposed simple testing techniques that focus on error-handling code in systems tested and evaluated them using failure data from three distributed systems. Our results show that simple testing can significantly improve the systems’ reliability and enhance their failure detection capabilities.",
-  "summary": "The paper titled \"Simple Testing Can Prevent Most Critical Failures: An Analysis of Production Failures in Distributed Data-Intensive Systems\" by Peng Huang et al. was published in 2014. This work provides insights into the failure patterns of distributed systems such as Cassandra, HBase, and HDFS, emphasizing that straightforward testing methodologies could mitigate many critical failures. The paper presents data indicating that a significant portion of system failures stems from the inadequate handling of non-fatal errors, and most of these failures are deterministic.\n\nThe research highlights the potential for improving system reliability through targeted testing strategies that do not require code access or intricate developer understanding. This has implications for enhancing dependability and failure detection in complex distributed environments.\n\nA web search reveals that this paper is frequently cited in subsequent research focused on improving fault tolerance in distributed systems. It influenced works on designing testing tools and frameworks for better system dependability. Notably, the findings have been referenced in the context of evaluating the reliability and robustness of cloud computing infrastructures.\n\n1. Gan, X., et al. (2019). \"An Empirical Study on Catastrophic System Failures in Cloud Data Centers\". [Link](https://dl.acm.org/doi/10.1145/3372928.3372930)\n2. Foo, J., et al. (2020). \"Understanding System Behaviors and Failures in Cloud and Distributed Systems.\" [Link](https://ieeexplore.ieee.org/document/8935340) \n\nThis influence highlights the importance of the research in contributing to the field of distributed systems reliability and offers practical recommendations for enhancing software testing practices.",
+  "abstract": "Large, production quality distributed systems still fail periodically, and do so sometimes catastrophically, where most or all users experience an outage or data loss. We present the result of a comprehensive study investigating 198 randomly selected, user-reported failures that occurred on Cassandra, HBase, Hadoop Distributed File System (HDFS), Hadoop MapReduce, and Redis, with the goal of understanding how one or multiple faults eventually evolve into a user-visible failure. We found that from a testing point of view, almost all failures require only 3 or fewer nodes to reproduce, which is good news considering that these services typically run on a very large number of nodes. However, multiple inputs are needed to trigger the failures with the order between them being important. Finally, we found the error logs of these systems typically contain sufficient data on both the errors and the input events that triggered the failure, enabling the diagnose and the reproduction of the production failures.\n\nWe found the majority of catastrophic failures could easily have been prevented by performing simple testing on error handling code – the last line of defense – even without an understanding of the software design. We extracted three simple rules from the bugs that have lead to some of the catastrophic failures, and developed a static checker, Aspirator, capable of locating these bugs. Over 30% of the catastrophic failures would have been prevented had Aspirator been used and the identified bugs fixed. Running Aspirator on the code of 9 distributed systems located 143 bugs and bad practices that have been fixed or confirmed by the developers.",
+  "summary": "## Findings\n\nThe paper analyzes 198 randomly selected, user-reported failures from Cassandra, HBase, HDFS, Hadoop MapReduce, and Redis. The authors manually examined issue reports, discussions, logs, source code, and patches, and reproduced 73 failures. The study finds that failures are often triggered by short but order-sensitive sequences of events: 77% require multiple input events, while 90% require no more than three. Nearly all failures can be manifested on three or fewer nodes, 74% are deterministic given the appropriate event sequence, and 77% can be reproduced with a unit test. Logs contain explicit failure messages in 76% of cases and all triggering events in 84%, although the median failure produces 824 log messages, making diagnosis labor-intensive.\n\nThe central result concerns catastrophic failures. Among the 48 catastrophic failures studied, 92% resulted from incorrect handling of non-fatal errors that were explicitly signaled by the software. Thirty-five percent involved simple patterns detectable without detailed system knowledge: ignored errors or handlers that only log, aborts caused by overly broad exception catches, and unfinished handlers marked with “TODO” or “FIXME.” A further 23% were system-specific but would have been exposed by complete statement coverage of the relevant error-handling code. The remaining cases included more complex error-handling logic and latent errors.\n\nThe authors implement Aspirator, a rule-based static checker for Java bytecode. Applied to nine distributed systems, it reported 121 bugs, 379 bad practices, and 115 false positives; 143 reported issues were fixed or confirmed by developers. The proposed engineering strategy combines static checking for simple handler defects, focused code review of error-handling paths, and bottom-up test generation that deliberately constructs executions reaching those paths, rather than relying only on top-down workload generation and fault injection.\n\n## Subsequent influence\n\nThe paper’s accompanying project page makes the analyzed failure reports and Aspirator available and records discussion among HBase developers following the work. ([eecg.utoronto.ca](https://www.eecg.utoronto.ca/failureAnalysis/index.html)) Apache HBase subsequently created an issue to review the paper’s findings and investigate adding related checks to its testing process; the issue also records a later effort to add Aspirator-derived rules to Google Error Prone. ([issues.apache.org](https://issues.apache.org/jira/browse/HBASE-12187)) The empty-catch-block rule was subsequently reported by the authors as included in Error Prone version 2.4.0. ([issues.apache.org](https://issues.apache.org/jira/browse/HBASE-12187)) Later research on diagnosing and fixing distributed bugs cites this paper as prior empirical work on production failures, logs, and failure reproduction. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0950584919302496))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/simple-testing-can-prevent-most-critical-failures.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/simple-testing-can-prevent-most-critical-failures.pdf",
   "filename": "simple-testing-can-prevent-most-critical-failures.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

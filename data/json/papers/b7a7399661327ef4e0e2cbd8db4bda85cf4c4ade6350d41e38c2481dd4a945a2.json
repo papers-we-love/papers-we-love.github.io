@@ -1,33 +1,26 @@
 {
   "uuid": "b7a7399661327ef4e0e2cbd8db4bda85cf4c4ade6350d41e38c2481dd4a945a2",
-  "title": "Teaching Software Engineering for Game Development",
-  "publication_date": "July 2008",
+  "title": "Teaching Garbage Collection without Implementing Compilers or Interpreters",
+  "publication_date": "March 6–9, 2013 (SIGCSE’13, Denver, Colorado, USA)",
   "authors": [
-    "Caitlin Sadowski",
-    "James R. Larus",
-    "Kathi Fisler",
-    "Shriram Krishnamurthi",
-    "Toby Hooper",
-    "William F. Marrero"
+    "Arjun Guha",
+    "Gregory H. Cooper",
+    "Jay McCarthy",
+    "Robert Bruce Findler",
+    "Shriram Krishnamurthi"
   ],
   "keywords": [
-    "computer-science",
-    "curriculum-design",
-    "education",
-    "game-development",
-    "multidisciplinary-teams",
-    "project-based-learning",
-    "software-engineering"
+    "garbage-collection"
   ],
   "category_path": [
     "memory_management"
   ],
-  "abstract": "As game development becomes an accepted academic field, CS departments will face several challenges analogous to those faced in software engineering teaching a decade ago. This paper explores what a course on game development should cover, proposing an experience grounded in software engineering principles. We also discuss our experience in teaching such a course for the first time.",
-  "summary": "The paper titled \"Teaching Software Engineering for Game Development\" by Kathi Fisler and colleagues was published in July 2008. It focuses on the educational challenges posed by integrating game development into computer science curricula. The authors propose a course structure centered around software engineering principles to effectively teach game development. They stress the importance of project-based learning and multidisciplinary teams to simulate real-world scenarios.\n\nThe paper discusses their inaugural attempt at teaching this course, offering valuable insights into curriculum design that balances technical and creative aspects. It addresses the rising academic interest in game development and suggests using it as a vehicle to enhance software engineering education.\n\nUpon web search, citations and discussions about this paper generally appear in contexts of education conferences and academia-focused software engineering discussions, indicating its primary influence in academic circles exploring novel approaches to computer science education. However, no specific industry impact or extensive citations in subsequent research were found beyond its mention in similar educational framework discussions.",
+  "abstract": "Given the widespread use of memory-safe languages, students must understand garbage collection well. Following a constructivist philosophy, an effective approach would be to have them implement garbage collectors. Unfortunately, a full implementation depends on substantial knowledge of compilers and runtime systems, which many courses do not cover or cannot assume.\n\nThis paper presents an instructive approach to teaching gc, where students implement it atop a simplified stack and heap. Our approach eliminates enormous curricular dependencies while preserving the essence of gc algorithms. We take pains to enable testability, comprehensibility, and facilitates debugging. Our approach has been successfully classroom-tested for several years at several institutions.",
+  "summary": "The paper presents a Racket-based framework for teaching garbage collection through implementation, while avoiding the need for students to first build or understand compilers, interpreters, continuation-passing-style transformations, or low-level runtime systems. Students implement collectors over a simplified heap and stack interface, while the framework automatically performs the program transformations needed to expose roots and route allocation through student code.\n\nThe framework supports multiple collector designs, including mark-and-sweep, stop-and-copy, generational, and conservative approaches. Students write mutator programs in ordinary Racket, allowing them to test collectors with substantially more complex workloads than would be practical in a toy language. The infrastructure also provides automated root-set calculation, interchangeable native and student-written collectors, randomized graph-generating tests, source-level co-debugging, and graphical heap visualization.\n\nThe authors report classroom use at several institutions and describe assessment through implementation, testing, and code-inspection activities. A survey of 258 students over four years found changes in students’ attitudes toward manual memory management and garbage collection: fewer students preferred manual management, and fewer believed it was always faster. The assignment was also reported by students as the most educationally valuable and enjoyable part of the course.\n\nThe approach appears to have had continuing influence in computing education and the Racket ecosystem. A contemporaneous Brown PLT account states that the framework was used at several universities and included with Racket, while current Racket documentation provides a GC2 collector language with an interface closely matching the pedagogical allocator model described in the paper. ([blog.brownplt.org](https://blog.brownplt.org/2013/02/19/teaching-gc.html)) A later programming-languages education paper cites this work as part of the prior literature on experimental and adversarial approaches to teaching programming languages, indicating influence beyond garbage-collection instruction itself. ([drops.dagstuhl.de](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SNAPL.2017.13)) The search found evidence of educational and tooling influence, but no verified industry deployment directly attributable to this paper. The paper’s bibliographic details and author ordering are corroborated by the authors’ publication pages and bibliographic records. ([cs.brown.edu](https://cs.brown.edu/~sk/Publications/Papers/Published/cgkmf-teach-gc/paper.pdf))",
   "raw_url": "https://cs.brown.edu/~sk/Publications/Papers/Published/cgkmf-teach-gc/paper.pdf",
   "source_type": "external",
   "filepath": "memory_management/README.md",
   "filename": "Teaching Garbage Collection without Implementing Compilers or Interpreters",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:56"
 }

@@ -1,34 +1,23 @@
 {
   "uuid": "561344f02c00e219d34fef75744ebc88da15cf6885785e6a445c6d822f190ee1",
-  "title": "Effects as Capabilities: Effect Handling in Haskell",
-  "publication_date": "2014",
+  "title": "Programming and Reasoning with Algebraic Effects and Dependent Types",
+  "publication_date": "September 25, 2013; Proceedings of the 18th ACM SIGPLAN International Conference on Functional Programming (ICFP '13), Boston, Massachusetts, September 25–27, 2013, pages 133–144",
   "authors": [
-    "Bruno C.D.S. Oliveira",
-    "Dominique Devriese",
-    "Ghislain Fauconnier",
-    "Tom Schrijvers"
+    "Edwin C. Brady"
   ],
   "keywords": [
     "algebraic-effects",
-    "capabilities",
-    "effect-handling",
-    "effects",
-    "functional-programming",
-    "haskell",
-    "polymorphism",
-    "programming-languages",
-    "software-engineering",
-    "type-systems"
+    "dependent-types"
   ],
   "category_path": [
     "languages-theory"
   ],
-  "abstract": "We show that monadic effects can be understood as capabilities in the type system. This enables formal reasoning about effects and their interference, and provides flexibility in effect implementation. We illustrate the approach by extending Haskell with effect handling and present a prototype implementation. This enables reasoning about effect interference and brings state-of-the-art effect handling to Haskell.",
-  "summary": "The paper \"Effects as Capabilities: Effect Handling in Haskell\" presents a novel approach by treating monadic effects as capabilities within Haskell's type system. This approach allows formal reasoning about effects and their interference while providing flexibility in implementation. The authors demonstrate this concept through an extension of Haskell that includes effect handling, alongside a prototype implementation.\n\nThis research contributes to the field of functional programming by improving the way effects are managed in Haskell. It adds to the discourse on algebraic effects and their integration into programming languages' type systems.\n\nA web search indicates that this paper does not appear to be widely cited or directly influential in subsequent research or industry developments. Papers on similar topics or by the same authors have been developed further or cited more frequently, showing continuing work and interest in the problems addressed by Schrijvers et al. For example, Tom Schrijvers has many subsequent publications on related topics.\n\nAs of this writing, no significant impact on Haskell language development or broader industry adoption has been found specifically linked to this paper.",
+  "abstract": "One often cited benefit of pure functional programming is that pure code is easier to test and reason about, both formally and informally. However, real programs have side-effects including state management, exceptions and interactions with the outside world. Haskell solves this problem using monads to capture details of possibly side-effecting computations — it provides monads for capturing State, I/O, exceptions, non-determinism, libraries for practical purposes such as CGI and parsing, and many others, as well as monad transformers for combining multiple effects.\n\nUnfortunately, useful as monads are, they do not compose very well. Monad transformers can quickly become unwieldy when there are lots of effects to manage, leading to a temptation in larger programs to combine everything into one coarse-grained state and exception monad. In this paper I describe an alternative approach based on handling algebraic effects, implemented in the IDRIS programming language. I show how to describe side effecting computations, how to write programs which compose multiple fine-grained effects, and how, using dependent types, we can use this approach to reason about states in effectful programs.",
+  "summary": "## Summary\n\nThe paper presents **Effects**, an embedded domain-specific language in Idris for programming with algebraic effects and handlers. It addresses limitations of monad-transformer stacks, particularly the dependence on transformer order, explicit lifting, and difficulty reusing computations that require only a subset of available effects. Effects are represented as a typed list of permitted resources, while `EffM` additionally tracks transitions between input and output effect resources.\n\nThe implementation uses dependent types to verify that invoked effects are available, automatically construct proofs of effect-list membership and sublist relationships, and track resource-state changes during execution. Handlers interpret algebraic operations in different computation contexts, allowing the same effectful program to be executed in contexts such as `IO`, `Maybe`, `Either`, or a pure simulation context. The paper demonstrates state, exceptions, console I/O, random-number generation, file protocols, and nondeterminism. File operations illustrate the central resource-tracking idea: the type system can require a file to be opened before reading and ensure that it is closed before a computation returns.\n\nA larger example gives a dependently typed interpreter for a small imperative language. Its indexed syntax guarantees that variables are used with appropriate types, while the state effect tracks the type-indexed variable environment. The paper also identifies limitations: algebraic effects do not express every monadic computation, the initial interpreter has runtime overhead, state is reset across nondeterministic branches, and effect subprograms must preserve effect ordering unless an explicit permutation operation is used. ([web.archive.org](https://web.archive.org/web/20150102181601id_/http%3A//eb.host.cs.st-andrews.ac.uk/drafts/effects.pdf))\n\n## Influence\n\nThe work directly motivated subsequent development by Brady. *Resource-dependent algebraic effects* extends the approach from statically known resource transitions to transitions determined at runtime, applying the technique to file APIs and interactive games. ([research-portal.st-andrews.ac.uk](https://research-portal.st-andrews.ac.uk/en/publications/resource-dependent-algebraic-effects/)) The Idris Effects documentation presents the library as a practical continuation of this work and uses it to teach programming and reasoning about side-effecting programs. ([docs.idris-lang.org](https://docs.idris-lang.org/en/v0.9.19/effects/conclusions.html))\n\nThe resource-dependent-effects approach was also applied to type-safe web programming, including CGI, database, and session resources, with static protocols intended to improve correctness and security. ([researchgate.net](https://www.researchgate.net/publication/287080822_Dependent_Types_for_Safe_and_Secure_Web_Programming)) More broadly, the paper became part of the research lineage discussed in later work and community efforts concerning algebraic effect handlers. A 2018 Dagstuhl report describes subsequent research languages and libraries for OCaml, Haskell, Clojure, Scala, and other mainstream ecosystems, while identifying mainstream adoption and efficient implementation as ongoing goals. ([drops.dagstuhl.de](https://drops.dagstuhl.de/entities/document/10.4230/DagRep.8.4.104)) The available evidence supports concrete influence on Idris libraries, resource-dependent effect research, and the broader effect-handler research program; it does not establish that this specific paper alone led to a particular commercial product adoption.",
   "raw_url": "https://web.archive.org/web/20150102181601id_/http://eb.host.cs.st-andrews.ac.uk/drafts/effects.pdf",
   "source_type": "external",
   "filepath": "languages-theory/README.md",
   "filename": "Programming and Reasoning with Algebraic Effects and Dependent Types",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:56"
 }

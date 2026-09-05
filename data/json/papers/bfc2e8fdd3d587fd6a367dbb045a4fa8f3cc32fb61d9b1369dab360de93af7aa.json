@@ -1,34 +1,35 @@
 {
   "uuid": "bfc2e8fdd3d587fd6a367dbb045a4fa8f3cc32fb61d9b1369dab360de93af7aa",
-  "title": "Microreboots: A Technique for Cheap Recovery",
-  "publication_date": "December 2004",
+  "title": "Microreboot – A Technique for Cheap Recovery",
+  "publication_date": "December 6–8, 2004; 6th Symposium on Operating Systems Design and Implementation (OSDI ’04), San Francisco, California",
   "authors": [
     "Armando Fox",
-    "Eric Kiciman",
     "George Candea",
-    "Shyam Keyani"
+    "Greg Friedman",
+    "Shinichi Kawamoto",
+    "Yuichi Fujiki"
   ],
   "keywords": [
-    "application-performance",
+    "cheap-recovery",
+    "component-isolation",
+    "crash-only-software",
+    "distributed-systems",
+    "failure-management",
     "fault-tolerance",
-    "microreboots",
-    "recoveerability",
-    "reliability",
-    "self-healing-systems",
-    "software-architecture",
-    "software-recovery",
-    "system-recovery",
-    "system-reliability"
+    "high-availability",
+    "microreboot",
+    "software-rejuvenation",
+    "state-segregation"
   ],
   "category_path": [
     "crash_only"
   ],
-  "abstract": "Despite decades of research and development, computer crashes are unavoidable, and their cost is staggering both in human time spent fighting them and in financial losses due to service unavailability. In this paper, we propose a new technique called microrebooting, which allows poorly-designed software to recover from failures by rebooting only fine-grained components of the software instead of the entire system. Borrowed from hardware, this technique is very cheap and can yield improvements in unavailability and crash cost by 1-2 orders of magnitude. Our results, based on a prototype implementation using three different systems, show average reductions in crash frequency by 50% and reductions in failure duration by over 95%. Coupled with automatic failure detection, microreboots promise to make systems more robust, heaven-sent for sysadmins everywhere.",
-  "summary": "The paper titled \"Microreboots: A Technique for Cheap Recovery\" introduces the concept of microrebooting as a novel approach to enhance the reliability and availability of software systems. Rather than rebooting an entire system upon failure, microrebooting targets only specific components of the system, thereby reducing downtime and enhancing recovery time. The research demonstrates through prototype implementation on three different systems, significant reductions in crash frequency by 50% and failure durations by over 95%. This approach borrows ideas from hardware-level techniques to provide a cheap and effective solution to software crashes.\n\nMicrorebooting is particularly beneficial for systems that experience frequent crashes due to component failures, allowing for targeted recovery without necessitating a full system restart. The technique integrates well with automatic failure detection, offering a practical option for system administrators to maintain system robustness and service availability.\n\nThe paper has influenced further studies in self-healing systems and fault-tolerant architectures, becoming a foundational concept in exploring low-cost, efficient system recovery methods. For instance, the concepts are discussed in the context of modern containerized systems where restarting specific containers parallels microrebooting ([source](https://www.ideals.illinois.edu/items/115218)). Additionally, the research has implications for cloud-based services, where maintaining uptime and minimizing recovery windows are critical. However, specific industrial applications or referenced follow-ups directly citing this paper are limited in openly accessible sources. Overall, the work forms a crucial part of literature on system reliability engineering.",
+  "abstract": "A significant fraction of software failures in large-scale Internet systems are cured by rebooting, even when the exact failure causes are unknown. However, rebooting can be expensive, causing nontrivial service disruption or downtime even when clusters and failover are employed. In this work we use separation of process recovery from data recovery to enable microrebooting – a fine-grain technique for surgically recovering faulty application components, without disturbing the rest of the application. We evaluate microrebooting in an Internet auction system running on an application server. Microreboots recover most of the same failures as full reboots, but do so an order of magnitude faster and result in an order of magnitude savings in lost work. This cheap form of recovery engenders a new approach to high availability: microreboots can be employed at the slightest hint of failure, prior to node failover in multi-node clusters, even when mistakes in failure detection are likely; failure and recovery can be masked from end users through transparent call-level retries; and systems can be rejuvenated by parts, without ever being shut down.",
+  "summary": "### Summary\n\nThe paper introduces **microrebooting**, a recovery technique that restarts only a faulty application component rather than an entire process, virtual machine, or node. It relies on fine-grained component isolation, externalized persistent and session state, loosely coupled dependencies, retryable requests, and lease-based resource management. The prototype extends JBoss and converts the RUBiS auction application into a crash-only system. Experiments show that component microreboots recover most tested application-level failures, typically in roughly 0.4–0.8 seconds, compared with approximately 19 seconds for a JVM/JBoss restart. Under the tested workload, microreboots reduced failed requests by 98%, preserved session state held outside the rebooted component, maintained more stable cluster response times, and enabled memory-leak rejuvenation without taking the application fully offline. The approach was less effective for failures involving the JVM, operating system, external unmanaged resources, persistent database corruption, or unsafe shared state.\n\n### Research influence\n\nSubsequent research explicitly cited the paper as the basis for fine-grained recovery work in legacy storage-controller software. Seshadri and colleagues extended the idea from component restart toward dynamic, thread-level state restoration using dependency tracking and recovery protocols. ([usenix.org](https://www.usenix.org/legacy/event/fast09/tech/full_papers/seshadri/seshadri_html/index.html)) Otherworld later applied the microreboot concept at the operating-system-kernel level, preserving running applications while replacing a failed kernel. ([usenix.org](https://www.usenix.org/legacy/event/hotdep08/tech/full_papers/depoutovitch/depoutovitch_html/index.html)) The concept also became part of the broader recovery-oriented and self-healing-systems research literature. ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/full/10.1002/spe.2250)) The quick search found clear evidence of continued research use, but did not establish a specific commercial deployment attributable directly to this paper.",
   "raw_url": "https://www.usenix.org/legacy/event/osdi04/tech/full_papers/candea/candea.pdf",
   "source_type": "external",
   "filepath": "crash_only/README.md",
   "filename": "Microreboot -- A technique for cheap recovery",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:54"
 }

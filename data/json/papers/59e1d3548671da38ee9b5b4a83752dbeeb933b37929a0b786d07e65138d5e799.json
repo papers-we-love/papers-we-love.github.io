@@ -1,37 +1,25 @@
 {
   "uuid": "59e1d3548671da38ee9b5b4a83752dbeeb933b37929a0b786d07e65138d5e799",
-  "title": "Elm: Automatically Deriving and Enforcing Data-Centric Safety Properties in Web Applications",
-  "publication_date": "June 2013",
+  "title": "Asynchronous Functional Reactive Programming for GUIs",
+  "publication_date": "June 16–19, 2013; Proceedings of the 34th ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI ’13), Seattle, Washington, USA",
   "authors": [
-    "Deian Stefan",
-    "Jean-Baptiste Jeannin",
-    "Leonidas Lampropoulos",
-    "Michael Hicks",
-    "Nikhil Swamy",
-    "Ranjit Jhala"
+    "Evan Czaplicki",
+    "Stephen Chong"
   ],
   "keywords": [
-    "analysis-techniques",
-    "automatic-derivation",
-    "data-centric",
-    "declarative-policies",
-    "java-script",
-    "policy-enforcement",
-    "safety-properties",
-    "security",
-    "type-systems",
-    "web-applications"
+    "functional-reactive-programming",
+    "graphical-user-interfaces"
   ],
   "category_path": [
     "languages-paradigms",
     "functional_reactive_programming"
   ],
-  "abstract": "This paper presents Elm, a novel approach to automatically derive data-centric safety policies from programs and enforce them using program rewrites. Central to Elm is a new form of type system we call DTAL, used to express and check rich data-centric properties of web applications. We implement a tool that automatically rewrites JavaScript programs to enforce these policies. We show our approach is both expressive and practical by writing new safety policies for several real-world web applications, including a CMS and a chat web application.",
-  "summary": "The paper titled \"Elm: Automatically Deriving and Enforcing Data-Centric Safety Properties in Web Applications\" was published in June 2013 by authors Jean-Baptiste Jeannin, Ranjit Jhala, Deian Stefan, Leonidas Lampropoulos, Nikhil Swamy, and Michael Hicks. The paper introduces Elm, a system designed to derive data-centric safety policies automatically and enforce them within web applications via program rewrites. The central innovation in Elm is the development of a new type system known as DTAL, which is capable of expressing and verifying complex data-centric properties in web applications. The authors demonstrate the system's practicality and expressiveness by applying it to real-world applications like a Content Management System (CMS) and a chat application.\n\nThe paper has influenced the field of web application security by providing new methods for type-based security policy enforcement. It has also contributed to advancements in type systems for program analysis. According to Google Scholar, this paper has been cited by several other research studies focusing on enhancing security in web applications and improving automatic policy enforcement mechanisms. Notable citations include: [Verdi: A Framework for Implementing and Formally Verifying Distributed Systems](https://projects.csail.mit.edu/verdi/), and [Linear Logical Relations and Equivalences for the Linear Lambda Calculus](https://www.cs.cmu.edu/~fp/papers/scp08.pdf).",
+  "abstract": "Graphical user interfaces (GUIs) mediate many of our interactions with computers. Functional Reactive Programming (FRP) is a promising approach to GUI design, providing high-level, declarative, compositional abstractions to describe user interactions and time-dependent computations. We present Elm, a practical FRP language focused on easy creation of responsive GUIs. Elm has two major features: simple declarative support for Asynchronous FRP; and purely functional graphical layout.\n\nAsynchronous FRP allows the programmer to specify when the global ordering of event processing can be violated, and thus enables efficient concurrent execution of FRP programs; long-running computation can be executed asynchronously and not adversely affect the responsiveness of the user interface.\n\nLayout in Elm is achieved using a purely functional declarative framework that makes it simple to create and combine text, images, and video into rich multimedia displays.\n\nTogether, Elm’s two major features simplify the complicated task of creating responsive and usable GUIs.",
+  "summary": "## Summary\n\nThe paper presents **Elm**, a functional reactive programming language for responsive web-based graphical user interfaces. Its central technical contribution is **Asynchronous FRP**: programmers can explicitly mark signal computations whose event ordering need not remain globally synchronized. This permits pipelined and concurrent execution while preserving event order within the portions of a signal graph where ordering matters. Elm also treats signals as discrete and push-based, propagating `noChange` values to avoid unnecessary recomputation and to preserve the correct behavior of stateful folds.\n\nThe authors formalize these ideas in the Featherweight Elm calculus, including a stratified type system that prohibits signals-of-signals, a two-stage evaluation model, and a translation of signal graphs to Concurrent ML. The full language adds purely functional graphical layout, interactive input and time signals, HTTP and JSON support, and an embedding of discrete Arrowized FRP through its Automaton library. An Elm-to-JavaScript compiler demonstrates that the approach can be used to build deployable browser applications, although the paper reports no direct performance evaluation.\n\n## Influence\n\nThe paper is an early foundational description of Elm’s FRP model and is cited by subsequent research on reactive programming and formally verified GUI frameworks; for example, *A Graphical User Interface Framework for Formal Verification* lists it as related prior work. ([drops.dagstuhl.de](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2021.4)) Elm’s later development moved away from the paper’s signal-oriented interface: the official Elm account states that Elm 0.17 replaced signals with subscriptions and emphasized **The Elm Architecture**. The official Elm guide also documents that this architecture inspired Redux, providing a concrete connection to later JavaScript application-architecture practice. ([elm-lang.org](https://elm-lang.org/news/farewell-to-frp)) The paper’s publication metadata and citation record are confirmed by ACM, which lists the work as published June 16, 2013, in *ACM SIGPLAN Notices* and attributes it to Czaplicki and Chong. ([doi.org](https://doi.org/10.1145/2499370.2462161))",
   "raw_url": "http://people.seas.harvard.edu/~chong/pubs/pldi13-elm.pdf",
   "source_type": "external",
   "filepath": "languages-paradigms/functional_reactive_programming/README.md",
   "filename": "Asynchronous Functional Reactive Programming for GUIs",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:56"
 }

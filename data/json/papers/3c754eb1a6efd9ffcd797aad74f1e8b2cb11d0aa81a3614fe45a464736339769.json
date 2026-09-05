@@ -1,33 +1,28 @@
 {
   "uuid": "3c754eb1a6efd9ffcd797aad74f1e8b2cb11d0aa81a3614fe45a464736339769",
-  "title": "The Same-Origin Policy",
-  "publication_date": "2008",
+  "title": "Protecting Browser State from Web Privacy Attacks",
+  "publication_date": "May 23–26, 2006 (WWW 2006, 15th International Conference on the World Wide Web, Edinburgh, Scotland)",
   "authors": [
-    "Adam Barth",
+    "Andrew Bortz",
     "Collin Jackson",
-    "John C. Mitchell"
+    "Dan Boneh",
+    "John C Mitchell"
   ],
   "keywords": [
-    "browser-security",
-    "client-side-security",
-    "cross-origin-requests",
-    "cross-site-scripting",
-    "internet-security",
-    "javascript-security",
-    "same-origin-policy",
-    "web-application-security",
-    "web-browsers",
-    "web-security"
+    "phishing",
+    "privacy",
+    "web-browser-design",
+    "web-spoofing"
   ],
   "category_path": [
     "privacy"
   ],
-  "abstract": "The same-origin policy is a critical security mechanism that restricts how documents or scripts loaded from different origins can interact. The goal of this paper is to provide a comprehensive understanding of the same-origin policy, how it works in practice, and the various ways in which it is enforced by different browsers, including inconsistencies and loopholes that can be exploited by attackers. We also survey a variety of methods and proposals designed to enhance or circumvent the policy, such as cross-origin resource sharing, postMessage, JSONP, and Flash.",
-  "summary": "This paper provides an in-depth analysis of the Same-Origin Policy (SOP), a fundamental security feature for web browsers that restricts interaction between documents and scripts from different origins. The authors critique the enforcement and inconsistencies in browser implementations, shedding light on vulnerabilities that can be exploited. Among the paper's contributions, it surveys methods like cross-origin resource sharing and postMessage, offering a foundation for further research into improving web security protocols.\n\nUpon researching citations, the paper has significantly influenced studies on related web security topics, particularly regarding browser security and cross-site scripting (XSS) protections. It is cited in works discussing the development of robust client-side security measures and is recognized for its critique of existing SOP implementations. Key citations include:\n\n1. \"Measuring the security effectiveness of secure coding recommendations for Android\"\n   - URL: [Research Gate](https://www.researchgate.net/publication/328456903_Measuring_the_security_effectiveness_of_secure_coding_recommendations_for_Android)\n2. \"Securing Web Communications: An In-depth Discussion on Same-Origin Policy\"\n   - URL: [Google Scholar](https://scholar.google.com/scholar?cluster=2394898944199623680)\n3. \"The Influence of Same-Origin Policy on Modern Web Security Protocols\"\n   - URL: [ACM Digital Library](https://dl.acm.org/doi/10.1145/3372297)",
+  "abstract": "Through a variety of means, including a range of browser cache methods and inspecting the color of a visited hyperlink, client-side browser state can be exploited to track users against their wishes. This tracking is possible because persistent, client-side browser state is not properly partitioned on per-site basis in current browsers. We address this problem by refining the general notion of a “same-origin” policy and implementing two browser extensions that enforce this policy on the browser cache and visited links.\n\nWe also analyze various degrees of cooperation between sites to track users, and show that even if long-term browser state is properly partitioned, it is still possible for sites to use modern web features to bounce users between sites and invisibly engage in cross-domain tracking of their visitors. Cooperative privacy attacks are an unavoidable consequence of all persistent browser state that affects the behavior of the browser, and disabling or frequently expiring this state is the only way to achieve true privacy against colluding parties.",
+  "summary": "The paper generalizes the browser same-origin principle beyond JavaScript and cookies to persistent browser state, stating that only the site that stores information should later be able to read or modify it. It classifies tracking as single-session, multiple-session, cooperative, semi-cooperative, and non-cooperative, and explains why third-party cookie blocking alone cannot prevent all forms of tracking.\n\nIts technical contributions focus on two previously under-protected state mechanisms. First, it describes cache-timing, DNS-cache, cache-metadata, and cached-content attacks, and proposes partitioning cache entries according to the embedding and hosting sites. Second, it analyzes visited-link history attacks, including “chameleon” phishing pages and link-based identifiers, and proposes origin-aware history partitioning. The authors implemented these defenses as Firefox extensions and showed that cooperative sites can still link identities through redirects, popups, hyperlinks, and other navigation mechanisms even when browser state is partitioned.\n\nThe paper’s central design idea has continued into later browser privacy work. A subsequent research dissertation explicitly cites this paper as prior work on same-origin caching and reports that Chrome shipped visited-link partitioning to all users in Chrome 136 in 2025, while proposing the approach to web standards bodies. ([escholarship.org](https://escholarship.org/content/qt5cc77207/qt5cc77207.pdf)) Mozilla’s Firefox State Partitioning applies a related double-keying model to client-side state using both the resource origin and top-level site; Firefox documents this as covering storage as well as network state such as HTTP, image, script, stylesheet, and DNS caches. The feature was enabled by default in Firefox 103. ([developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/Privacy/Guides/State_Partitioning)) W3C privacy guidance likewise defines partitions as user-agent boundaries intended to prevent recognition across contexts and recommends preventing cross-partition recognition unless the user intends it. ([w3.org](https://www.w3.org/TR/privacy-principles/)) These developments represent concrete industry and standards adoption of the paper’s broader principle: persistent browser state should be isolated according to the user’s browsing context rather than shared globally across sites. The paper was published in WWW 2006, pages 737–744. ([doi.org](https://doi.org/10.1145%2F1135777.1135884))",
   "raw_url": "https://crypto.stanford.edu/sameorigin/sameorigin.pdf",
   "source_type": "external",
   "filepath": "privacy/README.md",
   "filename": "Protecting Browser State from Web Privacy Attacks(2006)",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:56"
 }

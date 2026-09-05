@@ -1,7 +1,7 @@
 {
   "uuid": "915b417a5b765ec9d80e941a1d1cc3fe98b42027c52536811fb28aacc4d11cb7",
   "title": "Live Migration of Virtual Machines",
-  "publication_date": "2005, USENIX Symposium on Networked Systems Design and Implementation (NSDI)",
+  "publication_date": "May 2005; 2nd Symposium on Networked Systems Design & Implementation (NSDI '05), Boston, MA",
   "authors": [
     "Andrew Warfield",
     "Christian Limpach",
@@ -13,26 +13,26 @@
     "Steven Hand"
   ],
   "keywords": [
-    "cloud-computing",
     "data-centers",
-    "distributed-systems",
+    "fault-management",
     "live-migration",
-    "networked-systems",
-    "performance-optimization",
-    "system-administration",
-    "system-virtualization",
+    "load-balancing",
+    "network-bandwidth-adaptation",
+    "pre-copy-migration",
     "virtual-machines",
+    "virtualization",
+    "writable-working-set",
     "xen"
   ],
   "category_path": [
     "virtual_machines"
   ],
-  "abstract": "There is considerable interest in the migration of OS instances across distinct physical hosts. This capability allows a separation of hardware and software considerations, and facilitates fault management, load balancing, and low-level system maintenance. To be of practical use, it is desirable that migration be carried out with minimal service downtime. We demonstrate the feasibility of live migration of virtual machines running a commodity operating system and show that consistent and low service downtime can be achieved given the constraints of a practical system and the performance of a modern network.",
-  "summary": "The paper \"Live Migration of Virtual Machines\" presents a technique to migrate operating system instances across different physical hosts with minimal downtime, ensuring practical utility for tasks like fault management, load balancing, and system maintenance. This groundbreaking work was published in 2005 at the USENIX NSDI Symposium and authored by researchers including Christopher Clark and Keir Fraser. \n\nThe study primarily explores advancements in live VM migration facilitated by the Xen hypervisor. It highlights the system's ability to maintain service continuity while achieving efficiency in network performance, which is critical for cloud computing environments. This work has been foundational in developing cloud infrastructure and virtualization tools that require dynamic resource allocation, thereby influencing technologies in cloud service providers and data centers. Furthermore, it has been cited in various research studies that build upon its techniques to improve virtual machine performance and management.\n\nSome significant citations include work like \"The design and implementation of VM live migration\" ([source](https://research.google.com/pubs/archive/35005.pdf)) by Google, \"Improving the live migration of virtual machines\" in IEEE journals, and several PhD theses exploring virtualization technologies. Despite the technique's age, it remains a crucial reference point for innovations in dynamic resource management in virtualized environments.",
+  "abstract": "Migrating operating system instances across distinct physical hosts is a useful tool for administrators of data centers and clusters: It allows a clean separation between hardware and software, and facilitates fault management, load balancing, and low-level system maintenance.\nBy carrying out the majority of migration while OSes continue to run, we achieve impressive performance with minimal service downtimes; we demonstrate the migration of entire OS instances on a commodity cluster, recording service downtimes as low as 60ms. We show that that our performance is sufficient to make live migration a practical tool even for servers running interactive loads.\nIn this paper we consider the design options for migrating OSes running services with liveness constraints, focusing on data center and cluster environments. We introduce and analyze the concept of writable working set, and present the design, implementation and evaluation of high-performance OS migration built on top of the Xen VMM.",
+  "summary": "## Summary\n\nThe paper presents a live migration mechanism for Xen that moves a running operating-system instance between physical hosts while keeping service interruption brief. Its central technique is iterative pre-copy: memory pages are copied while the virtual machine continues executing, modified pages are recopied in later rounds, and the VM is paused only briefly to transfer the remaining state and CPU registers. The authors introduce the writable working set (WWS) as a way to characterize frequently modified pages that limit the effectiveness of pre-copy migration.\n\nThe system combines dirty-page tracking through Xen shadow page tables, adaptive migration bandwidth, transactional failure handling, and network redirection using unsolicited ARP replies. It assumes a well-connected cluster and network-attached storage, while leaving wide-area migration and local-disk migration as future work. In the evaluation, an 800 MB SPECweb99 VM migrated in 71 seconds with 210 ms of downtime, while a 64 MB Quake 3 server experienced 60 ms of downtime. A synthetic workload that dirtied memory faster than the network could transfer it produced 3.5 seconds of downtime, demonstrating a fundamental limitation of pre-copy migration.\n\n## Influence\n\nThe paper helped establish iterative pre-copy migration, dirty-page tracking, workload-dependent writable sets, and bandwidth/downtime trade-offs as standard topics in virtual-machine migration research. Later work explicitly treats pre-copy as the traditional baseline when developing post-copy migration, and subsequent surveys identify pre-copy as a commonly used approach across Xen, VMware, KVM, Hyper-V, and other virtualization platforms. ([cir.nii.ac.jp](https://cir.nii.ac.jp/crid/1363670319032509952))\n\nResearch following this work expanded the problem space to post-copy migration, hybrid pre/post-copy schemes, migration-cost modeling, downtime prediction, and network-contention management. These directions directly address limitations identified by the paper, especially repeated copying of hot pages, unpredictable migration duration, and competition between migration traffic and application traffic. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0167739X16301133))\n\nThe operational goals demonstrated in the paper—moving running VMs for maintenance, load balancing, host evacuation, and resource management—are reflected in current virtualization platforms. Xen documents live migration as a supported mechanism for moving running VMs between physical servers, while Microsoft Hyper-V and Google Compute Engine document live migration for maintenance, balancing, and infrastructure management. These deployments show that live migration became an established industry capability, although the available sources do not by themselves establish that each implementation directly derives from this paper. ([xenbits.xen.org](https://xenbits.xen.org/docs/unstable/features/migration.html))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/virtual_machines/live-migration-of-virtual-machines.pdf",
   "source_type": "pdf",
   "filepath": "virtual_machines/live-migration-of-virtual-machines.pdf",
   "filename": "live-migration-of-virtual-machines.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:56"
+  "created_on": "2026-09-01 00:47:55",
+  "summary_received": "2026-09-05 21:19:53"
 }

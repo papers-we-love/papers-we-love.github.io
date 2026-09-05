@@ -1,32 +1,24 @@
 {
   "uuid": "e1ff2f45a0fce26f963fbb8b8a16787de8e4c111183a47eb3642e631e7475411",
-  "title": "Scheduling Algorithms for Multiprogramming in a Hard Real-Time Environment",
-  "publication_date": "1973",
+  "title": "A New Data Structure for Cumulative Frequency Tables",
+  "publication_date": "March 1994; Software—Practice and Experience, Volume 24, Issue 3, pp. 327–336",
   "authors": [
-    "C. L. Liu",
-    "James W. Layland"
+    "Peter M. Fenwick"
   ],
   "keywords": [
-    "cpu-utilization",
-    "deadline-driven",
-    "debtine-monotonic",
-    "fixed-priority",
-    "multiprogramming",
-    "rate-monotonic",
-    "real-time-systems",
-    "scheduling-algorithms",
-    "system-responsiveness",
-    "task-scheduling"
+    "arithmetic-coding",
+    "binary-indexed-tree",
+    "cumulative-frequencies"
   ],
   "category_path": [
     "data_structures"
   ],
-  "abstract": "This paper considers the scheduling of a sequence of independent jobs for execution on one processor in a hard-real-time environment, i.e., in an environment in which missed deadlines are not acceptable. Two approaches, involving static and dynamic priority scheduling, are introduced to achieve optimal schedules according to their respective criteria. It is shown that, for both cases, the properties of preemptive scheduling and fixed inter-arrival times and deadlines can be exploited to derive schedulability tests. The theory developed is applied to several scenarios of timing constraints and configurations of real-time systems.",
-  "summary": "This foundational paper by Liu and Layland, published in 1973, introduced the Rate-Monotonic Scheduling (RMS) and Earliest Deadline First (EDF) algorithms, which have become essential in the field of real-time systems. The authors developed metrics for assessing task schedulability on a single processor, providing critical groundwork for future research into real-time scheduling. RMS allocates static priorities to tasks based on their periodic timing requirements, while EDF dynamically adjusts priorities according to task deadlines. \\n\\nThe theories and algorithms proposed in the paper have significantly influenced both academia and industry, becoming foundational in real-time system design courses and being widely implemented in various systems that require guaranteed performance, such as avionics, automotive control systems, and even space exploration missions where real-time assurances are critical. \\n\\nSubsequent research and textbooks, such as \"Real-Time Systems\" by Jane W. S. Liu and \"Real-Time Systems and Programming Languages\" by Alan Burns and Andy Wellings, often reference this work due to its pioneering contributions. Its influence extends into practical applications, such as in the development of real-time operating systems (RTOS), where these algorithms ensure consistent system responsiveness. \\n\\n[1] Burns, A., & Wellings, A. (2001). Real-Time Systems and Programming Languages: Ada, Real-Time Java and Real-Time POSIX. Addison-Wesley. \\n[2] Liu, J. W. S. (2000). Real-Time Systems. Prentice Hall.",
+  "abstract": "A new method (the ‘binary indexed tree’) is presented for maintaining the cumulative frequencies which are needed to support dynamic arithmetic data compression. It is based on a decomposition of the cumulative frequencies into portions which parallel the binary representation of the index of the table element (or symbol). The operations to traverse the data structure are based on the binary coding of the index. In comparison with previous methods, the binary indexed tree is faster, using more compact data and simpler code. The access time for all operations is either constant or proportional to the logarithm of the table size. In conjunction with the compact data structure, this makes the new method particularly suitable for large symbol alphabets.",
+  "summary": "The paper introduces the binary indexed tree, now commonly called the Fenwick tree, as a compact array-based structure for maintaining cumulative frequencies in adaptive arithmetic coding. Its representation decomposes prefix totals according to the binary representation of indices, enabling cumulative-frequency queries, point updates, single-frequency recovery, frequency-to-symbol searches, and scaling operations with constant or logarithmic access costs. Experiments on the Calgary Corpus reported fewer array references than the compared move-to-front, splay-tree, and heap-based methods for most tested files, while using substantially less storage. The paper also identified applications to large-alphabet and order-one arithmetic compression.\\n\\nThe structure became a standard technique for dynamic prefix sums and frequency-based ranking. Subsequent research has developed succinct Fenwick-tree representations and compact variants for dynamic ranking and predecessor search, explicitly building on the original data structure. ([static.aminer.org](https://static.aminer.org/pdf/PDF/001/073/976/a_new_data_structure_for_cumulative_frequency_tables.pdf)) It has also been used as a cited implementation primitive in applied work, including computational biology and quantum-computing research. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC4856371/))",
   "raw_url": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.14.8917&rep=rep1&type=pdf",
   "source_type": "external",
   "filepath": "data_structures/README.md",
   "filename": "Fenwick Tree",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:54"
 }

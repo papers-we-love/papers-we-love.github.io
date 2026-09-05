@@ -1,28 +1,34 @@
 {
   "uuid": "b8b962922cca42358dc7f4db5683bd28a04d2785fc8de2f78ce3360693e31ed4",
-  "title": "A Cost Function for Similarity-based Hierarchical Clustering",
-  "publication_date": "2009",
+  "title": "GigaVoxels: Ray-Guided Streaming for Efficient and Detailed Voxel Rendering",
+  "publication_date": "February 27, 2009; Proceedings of the 2009 ACM SIGGRAPH Symposium on Interactive 3D Graphics and Games (I3D '09)",
   "authors": [
-    "Christian Nielsen",
-    "Laurent El Ghaoui",
-    "Mathieu Chicote"
+    "Cyril Crassin",
+    "Elmar Eisemann",
+    "Fabrice Neyret",
+    "Sylvain Lefebvre"
   ],
   "keywords": [
-    "clustering-algorithms",
-    "cost-function",
-    "data-analysis",
-    "hierarchical-clustering",
-    "similarity-measures"
+    "data-streaming",
+    "gpu-computing",
+    "level-of-detail",
+    "mipmapping",
+    "out-of-core-rendering",
+    "procedural-generation",
+    "ray-casting",
+    "sparse-octree",
+    "volume-rendering",
+    "voxel-rendering"
   ],
   "category_path": [
     "computer_graphics"
   ],
-  "abstract": "The use of similarity or dissimilarity matrices is widespread and has been extensively studied in data analysis. We study the use of similarity-based cost functions in the context of hierarchical clustering. We show that this leads to a unified framework which includes several well-known hierarchical algorithms, and we provide an efficient algorithm which, for a given problem size, finds the globally optimal solution, when the solutions are ranked according to their cost. The new approach can be used to evaluate existing heuristics, and also provides new tools for various applications, including bioinformatics, image segmentation, or information retrieval.",
-  "summary": "The paper \"A Cost Function for Similarity-based Hierarchical Clustering\" by Mathieu Chicote, Christian Nielsen, and Laurent El Ghaoui presents a unified cost function framework for hierarchical clustering using similarity-based measures. This framework encompasses several existing hierarchical algorithms and introduces an efficient algorithm that finds globally optimal solutions based on cost rankings. The research allows for evaluating existing clustering heuristics and presents new opportunities for applications in fields like bioinformatics, image segmentation, and information retrieval.\n\nUpon reviewing references and citations, this paper generally contributes to the understanding and development of similarity-based clustering methods. It has been cited in various research contexts, such as improvements in hierarchical clustering algorithms. However, specific direct influences on industrial applications were not prominently identified in accessible citations. Notably, the concepts presented may have influenced methods in data analysis and clustering, as observed in subsequent clustering research addressing the evaluation and optimization of hierarchical clustering techniques. For example, the paper has been referenced in:\n- \"An Overview of Self-Organizing Maps in Textual Data Clustering\" (2021) doi:10.1155/2021/2347223\n- \"Recent Advances in the Hierarchical Clustering of Large Complex Networks\" (2018) https://doi.org/10.1109/MCOM.2018.1701025\n\nThese references indicate the paper's role in advancing hierarchical clustering approaches, promoting further exploration in the domain of data analysis and clustering algorithms.",
+  "abstract": "We propose a new approach to efficiently render large volumetric data sets. The system achieves interactive to real-time rendering performance for several billion voxels.\n\nOur solution is based on an adaptive data representation depending on the current view and occlusion information, coupled to an efficient ray-casting rendering algorithm. One key element of our method is to guide data production and streaming directly based on information extracted during rendering.\n\nOur data structure exploits the fact that in CG scenes, details are often concentrated on the interface between free space and clusters of density and shows that volumetric models might become a valuable alternative as a rendering primitive for real-time applications. In this spirit, we allow a quality/performance trade-off and exploit temporal coherence. We also introduce a mipmapping-like process that allows for an increased display rate and better quality through high quality filtering. To further enrich the data set, we create additional details through a variety of procedural methods.\n\nWe demonstrate our approach in several scenarios, like the exploration of a 3D scan (8192³ resolution), of hypertextured meshes (16384³ virtual resolution), or of a fractal (theoretically infinite resolution). All examples are rendered on current generation hardware at 20-90 fps and respect the limited GPU memory budget.",
+  "summary": "## Overview\n\nThe paper presents an out-of-core GPU framework for rendering volumetric data sets whose size greatly exceeds available GPU memory. Its central representation combines an adaptive N³-tree with fixed-size, mipmapped voxel bricks stored in GPU-resident node and brick pools. Empty or homogeneous regions are represented compactly, while visible regions are refined according to view-dependent level of detail and occlusion.\n\nRendering is performed by GPU ray casting. Rays descend the hierarchy iteratively, analytically integrate constant regions, and ray-march brick data when finer sampling is required. The system uses mipmap-based filtering and distance-dependent sampling to approximate cone integration, reduce aliasing, smooth transitions between levels of detail, and improve performance.\n\nA major contribution is the ray-guided streaming mechanism. During rendering, rays report which nodes and bricks were used or require refinement. These requests are compacted on the GPU using spatial and temporal coherence before being sent to the CPU. An LRU policy then updates the node and brick caches, allowing the renderer to load only data needed by the current image while discarding data that is no longer used. This unifies rendering, visibility determination, level-of-detail selection, and streaming, substantially reducing CPU-side traversal and visibility work.\n\nThe experiments demonstrate interactive performance on the hardware available in 2009: approximately 20–40 Hz for an 8192³ trabecular-bone volume, around 60–90 Hz for a procedurally instantiated Sierpinski volume, and about 20 fps for a computationally complex hypertextured 1024³ volume. The implementation also supports procedural brick generation on the GPU, including Perlin-noise detail and distance-field-based hypertextures. The reported results show that high-quality rendering of massive, detailed volumes can be achieved within a limited GPU-memory budget.\n\n## Influence and subsequent use\n\nThe paper established a concrete GPU-oriented combination of sparse hierarchical voxel storage, ray-guided out-of-core streaming, view-dependent refinement, and prefiltered voxel data. Its ideas were subsequently cited in work on interactive ray tracing with voxel hierarchies and in later sparse-voxel-octree research. ([doi.org](https://doi.org/10.1111/J.1467-8659.2011.02085.X))\n\nThe authors’ later research also extended voxel-based representations toward real-time indirect illumination using voxel cone tracing; that work explicitly discusses compatibility between its voxel structure and out-of-core caching schemes such as the one introduced here. ([research.nvidia.com](https://research.nvidia.com/sites/default/files/publications/GIVoxels-pg2011-authors.pdf)) NVIDIA identifies the GigaVoxels pipeline as one of Cyril Crassin’s notable contributions and describes it as an influence on prefiltered voxel representations for large, detailed real-time scenes. ([research.nvidia.com](https://research.nvidia.com/labs/rtr/author/cyril-crassin/))\n\nAn associated GigaVoxels software library was subsequently developed as a GPU rendering pipeline for complex scenes containing billions of voxels, indicating practical continuation of the paper’s implementation direction. ([github.com](https://github.com/webanck/GigaVoxels))",
   "raw_url": "http://maverick.inria.fr/Publications/2009/CNLE09/CNLE09.pdf",
   "source_type": "external",
   "filepath": "computer_graphics/README.md",
   "filename": "GigaVoxels : Ray-Guided Streaming for Efficient and Detailed Voxel Rendering",
-  "created_on": "2026-01-24 23:46:58",
-  "summary_received": "2026-01-25 00:11:01"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:54"
 }

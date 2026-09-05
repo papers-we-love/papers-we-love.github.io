@@ -1,34 +1,34 @@
 {
   "uuid": "2ca8f1ea9a51f45b67e52b861f6ddeb22be6b790625b1db0650117bd63e43176",
-  "title": "High Performance Multi-Channel MPI Alltoall",
-  "publication_date": "June 28, 2006",
+  "title": "A Case for High Performance Computing with Virtual Machines",
+  "publication_date": "June 28–30, 2006 — ICS’06, Cairns, Queensland, Australia; the IBM publication record lists December 1, 2006",
   "authors": [
-    "Bharat Kumar",
+    "Bulent Abali",
     "Dhabaleswar K. Panda",
     "Jiuxing Liu",
     "Wei Huang"
   ],
   "keywords": [
-    "alltoall",
-    "bandwidth",
-    "cluster-computing",
-    "collective-communication",
-    "high-performance",
-    "latency",
+    "high-performance-computing",
+    "hpc-clusters",
+    "infiniband",
     "mpi",
-    "multi-channel",
-    "network",
-    "optimization"
+    "paravirtualization",
+    "virtual-machines",
+    "virtualization",
+    "vm-image-management",
+    "vmm-bypass-io",
+    "xen"
   ],
   "category_path": [
     "unikernels"
   ],
-  "abstract": "The MPI_Alltoall collective is used in a variety of parallel scientific applications. In this paper, we identify the scalability problem of the MPI_Alltoall and provide a novel Multi-Channel approach to improving the performance characteristics, including latency and bandwidth of this important collective operation.",
-  "summary": "This paper presents a novel approach to improving the performance of the MPI_Alltoall operation, a critical component in parallel computing applications. The authors introduce a Multi-Channel approach designed to enhance both latency and bandwidth during the operation. By identifying scalability issues within existing implementations, the proposed method offers significant advancements in performance, making it particularly relevant for clusters with high network loads. \n\nThe paper has influenced subsequent research in optimizing collective communications in MPI libraries, reflected in citations such as:\n- Subramoni, H., Murali, S., & Panda, D. K. (2010). \"Designing High-Performance and Scalable MPI Collective Operations on InfiniBand,\" available at [ieee.org](https://ieeexplore.ieee.org/document/5604093).\n- Graham, R. L., Shipman, G. M., Bosilca, G., & Saha, R. (2007). \"Network-Based Communication in Processing Elements,\" in the Open MPI project, detailed in [Open MPI publications](https://www.open-mpi.org/papers/sc-2007/). \n\nThese works build upon the methodologies introduced in this paper, mainly concerning enhancing performance in high-speed networks and large-scale cluster settings. More recent developments continue to reference these improvements as foundational in improving performance capabilities for high-performance computing applications. The focus on MPI_Alltoall's performance edge was a notable contribution to the field, emphasizing the balance between network resources and computation efficiency.",
+  "abstract": "Virtual machine (VM) technologies are experiencing a resurgence in both industry and research communities. VMs offer many desirable features such as security, ease of management, OS customization, performance isolation, checkpointing, and migration, which can be very beneficial to the performance and the manageability of high performance computing (HPC) applications. However, very few HPC applications are currently running in a virtualized environment due to the performance overhead of virtualization. Further, using VMs for HPC also introduces additional challenges such as management and distribution of OS images.\n\nIn this paper we present a case for HPC with virtual machines by introducing a framework which addresses the performance and management overhead associated with VM-based computing. Two key ideas in our design are: Virtual Machine Monitor (VMM) bypass I/O and scalable VM image management. VMM-bypass I/O achieves high communication performance for VMs by exploiting the OS-bypass feature of modern high speed interconnects such as InfiniBand. Scalable VM image management significantly reduces the overhead of distributing and managing VMs in large scale clusters. Our current implementation is based on the Xen VM environment and InfiniBand. However, many of our ideas are readily applicable to other VM environments and high speed interconnects.\n\nWe carry out detailed analysis on the performance and management overhead of our VM-based HPC framework. Our evaluation shows that HPC applications can achieve almost the same performance as those running in a native, non-virtualized environment. Therefore, our approach holds promise to bring the benefits of VMs to HPC applications with very little degradation in performance.",
+  "summary": "The paper established an early systems case for using virtual machines in tightly coupled HPC clusters. Its central technical contribution was VMM-bypass I/O, implemented in Xen-IB, which allowed time-critical InfiniBand operations to proceed from guest domains without placing the hypervisor or privileged domain on the critical communication path. The accompanying management design addressed small customized VM images, scalable binomial-tree distribution, and image caching. In the reported eight-node evaluation, MPI latency and bandwidth were nearly native with registration caching enabled; NAS and HPL results were also close to native performance. The prototype reduced guest-VM memory overhead and image-distribution time compared with full operating-system images.\n\nSubsequent work cited the paper as an early demonstration of Xen-based HPC with InfiniBand and used it as a baseline while examining parallel-I/O scalability and migration limitations. Later research also extended the broader idea of accelerating virtualized HPC workloads to other devices, including GPUs, and continued investigating high-performance hypervisor architectures. The Ohio State project associated with the paper further developed VMM-bypass I/O and Xen-based HPC infrastructure. ([usenix.org](https://www.usenix.org/legacy/event/usenix06/tech/full_papers/liu/liu_html/usenix06.html))\n\nThe paper’s influence is therefore primarily visible in follow-on research on low-overhead device virtualization, virtualized HPC communication, parallel I/O, accelerator virtualization, and VM management. The available evidence supports research influence; it does not establish broad commercial industry adoption of this specific Xen-IB implementation.",
   "raw_url": "http://mvapich.cse.ohio-state.edu/static/media/publications/abstract/huangwei-ics06.pdf",
   "source_type": "external",
   "filepath": "unikernels/README.md",
   "filename": "A case for high performance computing with virtual machines",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:05"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:57"
 }

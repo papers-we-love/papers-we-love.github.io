@@ -1,33 +1,37 @@
 {
   "uuid": "38b8253a9e45bacefd4c1d6ace77feca69af472d9221a26f9cfcdc692c1f734e",
-  "title": "Composite Constant Propagation: Application to Android Inter-Procedural Dead Code Elimination",
-  "publication_date": "2013",
+  "title": "Effective Inter-Component Communication Mapping in Android with Epicc: An Essential Step Towards Holistic Security Analysis",
+  "publication_date": "August 14–16, 2013; Proceedings of the 22nd USENIX Security Symposium, Washington, D.C., USA",
   "authors": [
+    "Alexandre Bartel",
     "Damien Octeau",
+    "Eric Bodden",
+    "Jacques Klein",
     "Patrick McDaniel",
-    "Somesh Jha"
+    "Somesh Jha",
+    "Yves Le Traon"
   ],
   "keywords": [
-    "android",
-    "bytecode-analysis",
-    "composite-constant-propagation",
-    "constant-propagation",
-    "control-flow-analysis",
-    "dead-code-elimination",
-    "inter-procedural-analysis",
-    "slicing",
-    "software-security",
+    "android-security",
+    "application-collusion",
+    "component-hijacking",
+    "ide-analysis",
+    "information-flow-analysis",
+    "intent-analysis",
+    "inter-application-communication",
+    "inter-component-communication",
+    "soot",
     "static-analysis"
   ],
   "category_path": [
     "android"
   ],
-  "abstract": "This paper addresses the problem of inter-procedural dead code elimination on Android bytecode. Our proposed techniques take advantage of constant propagation to improve the overall precision and performance of dead code analysis. We introduce a technique called composite constant propagation (CCP), which analyzes Android applications more effectively by combining consideration of constant values with control flow reductions. Our results demonstrate that our approach discovers a significant amount of dead code that is not detected by previous techniques, improvement in code reduction and performance are presented on several Android applications.",
-  "summary": "The paper \"Composite Constant Propagation: Application to Android Inter-Procedural Dead Code Elimination\" by Damien Octeau, Somesh Jha, and Patrick McDaniel focuses on improving inter-procedural dead code elimination in Android bytecode using a technique called composite constant propagation (CCP). Through CCP, the authors aim to enhance code reduction and performance by integrating constant value considerations with control flow reductions. The paper shows that CCP effectively detects more dead code compared to previous methodologies, demonstrating significant improvements in code reduction across various Android applications.\n\nIn the research community, this paper has been cited by works exploring static analysis, Android security, and optimization techniques. For example, it is referenced in the study on reducing false positive rates in security analyses of Android applications. Additionally, it has implications for the development of tools aimed at improving Android application security and efficiency.\n\nReferences:\n1. Enck, W., et al. (2014). \"TaintDroid: An Information-Flow Tracking System for Realtime Privacy Monitoring on Smartphones\". INTR.\n2. Zhang, Mi, et al. (2015). \"ContextDroid: An Expression Based Context-aware Framework for Mobile Applications\". ACM.\n3. Linares-Vásquez, Mario, et al. (2014). \"Static Analysis of Android Apps: A Systematic Literature Review\". Empirical Software Engineering.\n4. Li, Luyi, et al. (2017). \"ICCTA: Inter-component communication trace analysis for Android malware detection\". IEEE.\n5. Arzt, Steven, et al. (2014). \"FlowDroid: Precise Context, Flow, Field, Object-sensitive and Lifecycle-aware Taint Analysis for Android Apps\". ACM.",
+  "abstract": "Many threats present in smartphones are the result of interactions between application components, not just artifacts of single components. However, current techniques for identifying inter-application communication are ad hoc and do not scale to large numbers of applications. In this paper, we reduce the discovery of inter-component communication (ICC) in smartphones to an instance of the Interprocedural Distributive Environment (IDE) problem, and develop a sound static analysis technique targeted to the Android platform. We apply this analysis to 1,200 applications selected from the Play store and characterize the locations and substance of their ICC. Experiments show that full specifications for ICC can be identified for over 93% of ICC locations for the applications studied. Further the analysis scales well; analysis of each application took on average 113 seconds to complete. Epicc, the resulting tool, finds ICC vulnerabilities with far fewer false positives than the next best tool. In this way, we develop a scalable vehicle to extend current security analysis to entire collections of applications as well as the interfaces they export.",
+  "summary": "## Summary\n\nThe paper formalizes Android Intent-based inter-component communication (ICC) analysis as an Interprocedural Distributive Environment problem and introduces Epicc, a static-analysis tool for recovering ICC source and sink specifications. The analysis models explicit, implicit, mixed, and dynamically registered broadcast communication, including component targets, actions, categories, permissions, and extra-data keys. It combines string analysis, points-to and call-graph construction, IDE-based interprocedural data-flow analysis, and database-backed matching of component entry and exit points.\n\nIn experiments on 1,200 Google Play applications, Epicc recovered unambiguous ICC specifications for 91.65% of locations in a random sample and 94.18% in a popular-application sample. The reported average processing time was approximately 38 seconds per application for the random sample and 144 seconds per application for the larger popular-application sample. Compared with ComDroid, Epicc reported 32% fewer potential vulnerabilities, which the authors attribute primarily to more precise call-graph construction and flow-, branch-, and context-sensitive tracking. The main limitations were incomplete handling of URIs and Content Providers, plus potential unsoundness involving reflection, native code, and approximated component lifecycles.\n\n### Influence on subsequent research\n\n- Epicc established a reusable foundation for Android ICC resolution. IccTA later combined Epicc-derived ICC information with FlowDroid-style taint analysis to detect privacy leaks across Android components and applications. ([publica.fraunhofer.de](https://publica.fraunhofer.de/entities/publication/2f57e205-5883-454d-8a88-0be3da7d0270))\n- The authors’ subsequent IC3 work replaced Epicc’s specialized object models with composite constant propagation and the COAL specification language. That work explicitly compares itself with Epicc and reports substantially fewer potential component links, improving precision for downstream analyses. ([docteau.github.io](https://docteau.github.io/pubs/octeau-icse15.pdf))\n- PRIMO extended this line of work to market-scale ICC analysis by ranking likely false-positive links. Its authors describe Epicc and IC3 as the ICC-value computation components underlying later large-scale link analysis. ([patrickmcdaniel.org](https://patrickmcdaniel.org/pubs/popl16.pdf))\n- Later research continued to use Epicc as a reference point while addressing its coverage limitations. RAICC, for example, identifies that established tools including Epicc primarily model documented ICC APIs and proposes techniques for revealing atypical ICC paths. ([github.com](https://github.com/JordanSamhi/RAICC))\n- Subsequent evaluations have treated Epicc, or its successor IC3, as a baseline ICC-resolution technique and have identified remaining completeness and precision challenges for static Android ICC analysis. ([arxiv.org](https://arxiv.org/abs/2111.05649))\n\nThe search found clear influence on subsequent Android program-analysis research, including ICC resolution, privacy-leak detection, large-scale analysis, and atypical-communication modeling. It did not provide reliable evidence of a specific commercial or industry deployment of Epicc itself.",
   "raw_url": "http://docteau.github.io/pubs/octeau-sec13.pdf",
   "source_type": "external",
   "filepath": "android/README.md",
   "filename": "Effective Inter-Component Communication Mapping in Android with Epicc: An Essential Step Towards Holistic Security Analysis",
-  "created_on": "2026-01-24 23:46:58",
-  "summary_received": "2026-01-25 00:11:01"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:53"
 }

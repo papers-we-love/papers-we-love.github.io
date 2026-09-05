@@ -1,30 +1,35 @@
 {
   "uuid": "79db6ac13f61f0b0ca779eb41d9545fb0e25683b86ba74ee07f77001e564e523",
-  "title": "Three-dimensional Analysis of Rotational Particle Image Velocimetry (3D PIV) Data",
-  "publication_date": "2018",
+  "title": "Unikernel-based Approach for Software-Defined Security in Cloud Infrastructures",
+  "publication_date": "April 2018; IEEE/IFIP Network Operations and Management Symposium (NOMS 2018), Taipei, Taiwan, April 23–27, 2018",
   "authors": [
-    "Alexis Pasqual",
-    "Laurent David",
-    "Loïc Fillon",
-    "Nicolas Rivière"
+    "Maxime Compastié",
+    "Mohamed Kassi-Lahlou",
+    "Olivier Festor",
+    "Ruan He",
+    "Rémi Badonnel"
   ],
   "keywords": [
-    "3d-piv",
-    "laminar-flow",
-    "rotational-particle-image-velocimetry",
-    "turbulence-detection",
-    "vector-field-analysis",
-    "velocity-field"
+    "attack-surface-reduction",
+    "cloud-orchestration",
+    "cloud-security",
+    "distributed-cloud",
+    "mirageos",
+    "multi-cloud",
+    "security-mechanisms",
+    "software-defined-security",
+    "unikernels",
+    "virtualization"
   ],
   "category_path": [
     "unikernels"
   ],
-  "abstract": "The paper presents a method for three-dimensional analysis of rotational particle image velocimetry (3D PIV) data. This method is applied to the characterization of a complex fluid flow. The goal is to offer a convenient framework for the identification and analysis of coherent structures within the flow. The method is validated using both synthetic and experimental data. Results are in agreement with the expected behavior of the studied fluid dynamic fields.",
-  "summary": "This paper presents a method for analyzing rotational PIV data to characterize fluid flows. The study focuses on providing a methodological framework for identifying coherent structures in 3D velocity fields. The approach was validated through experimentation with synthetic and real-world data, proving its utility for complex fluids. After conducting a web search, there appear to be no direct citations or references to this paper in subsequent research literature or industry applications. However, the methodology proposed could have a potential impact on improving the analysis of fluid dynamics, especially in scenarios that require a deep understanding of three-dimensional flow characteristics.",
+  "abstract": "In this paper, we propose an approach for software-defined security in cloud infrastructures. More specifically, we show to what extent this programmability can contribute to the protection of cloud services, through the generation of secured unikernel images. These ones are instantiated in the form of lightweight virtual machines, whose attack surface is limited and whose security is driven by a security orchestrator. We introduce a method for generating secured unikernel images in an on-the-fly manner. This one permits to lead to specific and constrained resources, that integrate security mechanisms as soon as the image generation phase. These ones may be built in a reactive or proactive manner, in order to address elasticity requirements. Finally, we detail a prototyping and extensive series of experiments that are used to evaluate the benefits and limits of the proposed approach.",
+  "summary": "The paper presents a software-defined security strategy in which security mechanisms are integrated into specially generated unikernel images. The prototype, based on MirageOS, implements authentication and access control for a web service. Evaluation reported in the authors’ related work found that security integration caused approximately 6.5% lower workload support, about 2 MB of additional memory under a 200-connection workload, approximately 7.87% image-generation overhead, and about 0.2 ms additional HTTP-request delay; secured unikernels nevertheless showed lower delay than the compared regular virtual-machine configuration. ([docnum.univ-lorraine.fr](https://docnum.univ-lorraine.fr/public/DDOC_T_2018_0307_COMPASTIE.pdf))\n\nSubsequent research continued the same research program by extending the approach with TOSCA-based descriptions for unikernel components and multi-level security requirements. ([cv.hal.science](https://cv.hal.science/olivierfestor)) Later publications and surveys cite the paper as an early contribution connecting unikernel-based isolation, attack-surface reduction, and cloud-security orchestration, including work on virtualization isolation, unikernel security, and serverless security. ([openreview.net](https://openreview.net/pdf?id=-0sywUv8ryL)) The search found evidence of continued academic citation and follow-on research, but no verified evidence of direct industrial deployment of the specific prototype described in this paper.",
   "raw_url": "https://hal.inria.fr/hal-01798793/document",
   "source_type": "external",
   "filepath": "unikernels/README.md",
   "filename": "Unikernel-based approach for software-defined security in cloud infrastructures",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:05"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:57"
 }

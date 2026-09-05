@@ -1,32 +1,31 @@
 {
   "uuid": "04d06b9912df9ee434b12e4b875321b514c3025ef6cc1dbf035e42511eaf6aa3",
   "title": "Ideal Hash Trees",
-  "publication_date": "August 2003",
+  "publication_date": "2001 (EPFL technical report; bibliographic records variously identify October or November 2001)",
   "authors": [
-    "Brian N. Bershad",
-    "Yaron Minsky"
+    "Phil Bagwell"
   ],
   "keywords": [
-    "collision-resistance",
-    "consistency",
-    "cryptographic-protocols",
-    "data-structures",
-    "distributed-systems",
-    "hash-trees",
+    "array-mapped-tries",
+    "database",
+    "distributed-storage",
+    "hash-array-mapped-tries",
+    "hash-tables",
     "hashing",
-    "integrity-verification",
-    "merkle-trees",
-    "network-security"
+    "partition-hashing",
+    "routers",
+    "routing",
+    "searching"
   ],
   "category_path": [
     "data_structures"
   ],
-  "abstract": "We describe a data structure that merges the properties of hash-based integrity verification with Merkle trees. This data structure, which we call an Ideal Hash Tree (IHT), retains the verification efficiency of hash-based techniques without sacrificing the storage efficiency of Merkle trees. Our analysis shows that for many applications, IHTs can be much more efficient than traditional techniques. In particular, we explore the use of IHTs in the context of efficient data consistency verification.",
-  "summary": "The paper \"Ideal Hash Trees\" introduces a novel data structure that combines the advantages of hash-based integrity verification with Merkle trees, named as Ideal Hash Trees (IHTs). The IHT provides efficient verification similar to hash-based techniques while maintaining storage efficiency characteristic of Merkle trees. It is particularly useful in scenarios requiring efficient data consistency verification. \n\nThe paper's impact on the field can be seen in later research and practical implementations in cryptographic protocols where data integrity and efficiency are critical. For example, the use of similar concepts is evident in blockchain technology, where data consistency and verification are essential. \n\nA few studies and implementations that have referenced or utilized concepts from Ideal Hash Trees include:\n\n1. Research on scalable data structures for decentralized systems often cite IHTs for improving efficiency in integrity verification.\n2. The use of Merkle trees in blockchain technology indirectly applies principles discussed in this paper, although direct citations are more sparse in that area.\n\nFurther detailed academic references for direct citation did not emerge clearly in online searches, indicating that while influential, the direct academic citation count may be limited or possibly overshadowed by other more recent works meant for similar purposes.",
+  "abstract": "Hash Trees with nearly ideal characteristics are described. These Hash Trees require no initial root hash table yet are faster and use significantly less space than chained or double hash trees. Insert, search and delete times are small and constant, independent of key set size, operations are O(1). Small worst-case times for insert, search and removal operations can be guaranteed and misses cost less than successful searches. Array Mapped Tries(AMT), first described in Fast and Space Efficient Trie Searches, Bagwell [2000], form the underlying data structure. The concept is then applied to external disk or distributed storage to obtain an algorithm that achieves single access searches, close to single access inserts and greater than 80 percent disk block load factors. Comparisons are made with Linear Hashing, Litwin, Neimat, and Schneider [1993] and B-Trees, R.Bayer and E.M.McCreight [1972]. In addition two further applications of AMTs are briefly described, namely, Class/Selector dispatch tables and IP Routing tables. Each of the algorithms has a performance and space usage that is comparable to contemporary implementations but simpler.",
+  "summary": "### Technical contribution\n\nThe paper introduces Hash Array Mapped Tries (HAMTs), combining hashing with Array Mapped Tries. A key is hashed, and successive groups of hash bits select levels of a trie. Each trie node uses a bitmap to identify occupied positions and a compact array containing only the corresponding non-empty entries. This avoids allocating a full array of pointers at every node while preserving direct indexing and good cache locality. With a 32-way branching factor, five hash bits are consumed at each level, and population-count operations locate entries in the compact arrays.\n\nThe proposed in-memory structure supports search, insertion, and deletion. Collisions are resolved by extending the trie with additional levels; if the available hash bits are exhausted, the key is rehashed using the trie level. Lazy resizing of the root table reduces the growth cost, while pooled allocation and incremental defragmentation control memory overhead. The paper reports near-constant measured operation times over key sets ranging from thousands to millions of entries, with space usage dependent on the root-table resize factor. It also describes a fallback using the complete key to guarantee a bound proportional to key length when hash differentiation takes unusually long.\n\nThe paper further proposes Partition Hashing for external and distributed storage. Buckets are divided according to hash-order partition points, and neighboring buckets can share records before a split is required. Simulations report one-access searches, approximately 1.1 accesses per insertion at load factors above 80 percent, and higher load factors when additional insertion accesses are accepted. The same partition-table approach is extended to distributed files, ordered storage, IP routing, and class-selector method dispatch.\n\n### Influence on later research and industry\n\nHAMT became a foundational design for persistent associative maps and sets. Later implementations adapted Bagwell’s mutable structure using path copying and structural sharing; this approach is used in Clojure’s persistent hash maps and in persistent collection implementations associated with Scala. ([en.wikipedia.org](https://en.wikipedia.org/wiki/Persistent_data_structure))\n\nSubsequent research refined the representation for immutable JVM collections. The CHAMP structure, described as a compressed hash-array mapped prefix tree, targets lower memory use and faster iteration and equality operations; Scala’s immutable `HashMap` identifies itself as a CHAMP implementation and cites that work. ([ir.cwi.nl](https://ir.cwi.nl/pub/24029/24029B.pdf))\n\nThe HAMT design has also been incorporated into systems-oriented software. The IPLD HashMap specification uses a HAMT-based layout and combines it with CHAMP mutation and canonicalization rules for content-addressed storage. CPython’s source includes an internal HAMT implementation for immutable dictionary operations. ([ipld.io](https://ipld.io/specs/advanced-data-layouts/hamt/spec/))\n\nThus, the paper’s principal lasting impact is the use of bitmap-compressed hash tries as a practical implementation technique for memory-efficient, persistent, and distributed associative collections.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/data_structures/ideal-hash-trees.pdf",
   "source_type": "pdf",
   "filepath": "data_structures/ideal-hash-trees.pdf",
   "filename": "ideal-hash-trees.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:51"
 }

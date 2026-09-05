@@ -1,7 +1,7 @@
 {
   "uuid": "6f620c685bd7437ea014e2dbaecaa17df941486a585bf77fdc0e2ecbc1462cb4",
   "title": "Freenet: A Distributed Anonymous Information Storage and Retrieval System",
-  "publication_date": "July 2000",
+  "publication_date": "2001 (published in Designing Privacy Enhancing Technologies, Lecture Notes in Computer Science, volume 2009, pages 46–66; based on work presented at the International Workshop on Design Issues in Anonymity and Unobservability, Berkeley, California, USA, July 2000)",
   "authors": [
     "Brandon Wiley",
     "Ian Clarke",
@@ -9,26 +9,26 @@
     "Theodore W. Hong"
   ],
   "keywords": [
+    "adaptive-routing",
     "anonymous-information-storage",
-    "content-distribution",
-    "data-retrieval",
-    "decentralization",
+    "anonymous-publishing",
+    "censorship-resistance",
+    "content-addressing",
+    "decentralized-storage",
+    "distributed-hash-tables",
     "distributed-systems",
-    "freenet",
-    "information-system",
-    "internet-privacy",
-    "peer-to-peer",
-    "privacy"
+    "fault-tolerance",
+    "peer-to-peer-networks"
   ],
   "category_path": [
     "datastores"
   ],
-  "abstract": "Freenet is a distributed information storage and retrieval system designed to address the problem of anonymity and availability of information on the Internet. By supplying a simple and efficient method for communicating/suggesting new ideas and documenting events, Freenet encourages free speech. Freenet is similar to systems such as gnutella with a different focus in anonymity and persistence of data provided by republishing data and data encryption. This document describes the design, implementation, and deployment of Freenet, and discusses problems encountered as well as future directions.",
-  "summary": "The paper \"Freenet: A Distributed Anonymous Information Storage and Retrieval System\" introduces Freenet, which is designed to provide anonymous and efficient information storage and retrieval on the Internet. Freenet aims to support free speech via a decentralized network, using techniques such as data encryption and replication to enhance anonymity and persistence. \n\nThe paper has influenced a variety of research fields and projects, particularly in areas concerning anonymous data sharing and peer-to-peer network systems. For instance, Freenet is often discussed alongside systems like Tor and gnutella, highlighting its role in advancing privacy-preserving technologies. \n\nSeveral studies and papers have cited or built upon Freenet, including:\n- \"A Survey and Comparison of Peer-to-Peer Overlay Network Schemes\" by Marcel Waldvogel, which refers to Freenet's innovative approach to decentralized systems.\n- \"Anonymous communication networks: Protecting privacy on the web\" by Nikita Borisov et al., which cites Freenet in the discussion of anonymity tools.\n- \"Improving Freenet Performance using Sharing\" by Renata Teixeira et al., which explores enhancing Freenet's efficiency through research-based modifications.\n\nFreenet's approach to anonymous content distribution has also informed industry practices surrounding privacy and network architecture. However, due to the inherent challenges and costs associated with maintaining anonymity, its practical adoption beyond academic environments remains limited. \n\nOverall, Freenet represents a foundational exploration in designing systems for anonymous communication and content distribution, impacting both research and applied aspects of network privacy.",
+  "abstract": "We describe Freenet, an adaptive peer-to-peer network application that permits the publication, replication, and retrieval of data while protecting the anonymity of both authors and readers. Freenet operates as a network of identical nodes that collectively pool their storage space to store data files and cooperate to route requests to the most likely physical location of data. No broadcast search or centralized location index is employed. Files are referred to in a location-independent manner, and are dynamically replicated in locations near requestors and deleted from locations where there is no interest. It is infeasible to discover the true origin or destination of a file passing through the network, and difficult for a node operator to determine or be held responsible for the actual physical contents of her own node.",
+  "summary": "## Contributions and technical approach\n\nThe paper presents Freenet as a decentralized, adaptive peer-to-peer system for anonymous publication and retrieval. Nodes collectively provide storage and routing without a central index or broadcast search. Files are identified with cryptographic keys, including keyword-signed keys, signed-subspace keys, and content-hash keys. Requests use local routing decisions, backtracking, hop limits, and caching; successful requests progressively replicate popular data along the request path and improve future routing. Storage is managed as an LRU cache, so files persist according to demand rather than through permanent placement.\n\nThe design combines anonymity for publishers and readers with plausible deniability for node operators. However, the paper explicitly acknowledges limitations: basic Freenet does not hide requested keys from nodes on the path, key names may be vulnerable to dictionary attacks, and stronger anonymity requires optional mix-style pre-routing. The security discussion also identifies malicious modification, storage-flooding, key-substitution, and traffic-analysis attacks.\n\nSimulation results reported by the authors indicate that routing performance improves as the network adapts. In their experiments, median request path length fell to approximately six hops after convergence, scaled approximately logarithmically in networks of up to one million simulated nodes, and remained below 20 hops with random failure of up to 30% of nodes. These results were presented as evidence that adaptive routing and a small-world-like topology could provide scalability and fault tolerance.\n\n## Influence on later research and industry\n\nThe paper directly motivated subsequent research on Freenet routing. A 2004 study analyzed workload effects in Freenet, proposed replacing its basic LRU routing-table policy with a clustering-oriented policy, and reported improved request hit rates while retaining comparable successful-request hop counts. ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S1389128604001550))\n\nIt also led to architectural follow-up work. The 2010 “Dark Freenet” paper described a successor architecture that allowed nodes to restrict connections to trusted peers, strengthening privacy and protecting participants in environments where operating a public node could create risks. ([researchgate.net](https://www.researchgate.net/publication/228552753_Private_Communication_Through_a_Network_of_Trusted_Connections_The_Dark_Freenet))\n\nIn practice, the Freenet project continued implementing and operating the system originally described by the paper; the project characterizes the 2001 work as foundational to its decentralized anonymous-storage platform. ([freenet.org](https://freenet.org/faq/)) The sources checked provide clear evidence of influence on anonymous-storage and peer-to-peer research and of continued project development, but do not establish broad commercial industry adoption.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/datastores/freenet-a-distributed-anonymous-information-and-retrieval-system.pdf",
   "source_type": "pdf",
   "filepath": "datastores/freenet-a-distributed-anonymous-information-and-retrieval-system.pdf",
   "filename": "freenet-a-distributed-anonymous-information-and-retrieval-system.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:51"
 }

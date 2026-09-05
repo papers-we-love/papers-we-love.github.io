@@ -1,30 +1,35 @@
 {
   "uuid": "e5e59008af6daab479f7af0f94426e5ffed7454893f20ad4515ea898bbc9bee8",
   "title": "Organizing Programs Without Classes",
-  "publication_date": "1996",
+  "publication_date": "June 1991 (Lisp and Symbolic Computation, volume 4, issue 3, pp. 223–242)",
   "authors": [
-    "Oleg Kiselyov"
+    "Bay-Wei Chang",
+    "Craig Chambers",
+    "David Ungar",
+    "Urs Hölzle"
   ],
   "keywords": [
-    "class-less-design",
-    "computational-organization",
-    "functional-programming",
-    "modular-design",
-    "object-oriented",
-    "program-organization",
-    "programming-paradigms",
-    "software-engineering"
+    "delegation",
+    "dynamic-inheritance",
+    "encapsulation",
+    "name-spaces",
+    "object-inheritance",
+    "prototype-based-programming",
+    "representation-modification",
+    "representation-sharing",
+    "self-language",
+    "traits"
   ],
   "category_path": [
     "languages-paradigms",
     "functional_programming"
   ],
-  "abstract": "Object-oriented programming (OOP) provides powerful tools for organizing large programs, for concentrating on the essential aspects of the job rather than on arcane implementation details. People simply cannot comprehend large amounts of code unless it is well organized, and the OOP paradigm offers an efficient solution to this problem – in many but not all cases. The paper explores means for organizing programs, which are functionally placed on a different plane than traditional OOP based on classes, yet equally (if not more) powerful and convenient. One such way is through functional programming. Separating interface from implementation is a more general idea not limited to OOP. Our hypothesis is that functional languages offer a better insight into programming methodologies, at the same time affording a good organization of the code. Moreover, the choice of the functional style helps to understand and appreciate why OOP has had the impact it produced.",
-  "summary": "The paper \"Organizing Programs Without Classes\" by Oleg Kiselyov critiques the traditional use of object-oriented programming (OOP) for organizing programs, proposing that functional programming can be a more powerful and convenient tool for certain tasks. The paper states that separating interface from implementation is a broader concept than OOP. Kiselyov suggests that functional languages provide deeper insights into programming methodologies and proposes their utility for well-organized code. \n\nUpon conducting a web search, this specific paper does not appear to have directly influenced widely acknowledged research post its publication. The ideas of this paper, however, correlate with a broader discourse on the merits of functional programming and its methodologies, especially in the early period of functional programming adoption. Other related work echoes similar themes, such as emphasizing function composition and immutable data structures, typical strengths attributed to functional languages. This discourse has eventually contributed to the increasing popularity of functional programming languages such as Haskell, Erlang, and Clojure in both academic and certain industry environments. Despite these thematic overlaps, no specific citations of this paper were identified in currently available academic or industry resources.",
+  "abstract": "All organizational functions carried out by classes can be accomplished in a simple and natural way by object inheritance in classless languages, with no need for special mechanisms. A single model—dividing types into prototypes and traits—supports sharing of behavior and extending or replacing representations. A natural extension, dynamic object inheritance, can model behavioral modes. Object inheritance can also be used to provide structured name spaces for well-known objects. Classless languages can even express “class-based” encapsulation. These stylized uses of object inheritance become instantly recognizable idioms, and extend the repertory of organizing principles to cover a wider range of programs.",
+  "summary": "The paper argues that classes are not necessary for organizing large object-oriented programs. In the SELF model, a concrete data type is represented by a prototypical object containing instance-specific state and a separate traits object containing shared behavior. Refining traits objects provides differential programming analogous to subclassing. Data parents provide explicit representation extension, while omitting data parents allows a subtype to replace or alter its inherited representation without inheriting unwanted state.\n\nThe paper further presents dynamic inheritance as a way to represent behavioral modes whose implementation changes with object state. It describes encapsulation based on the relationship between traits objects and their descendants, thereby approximating type-based privacy without explicit classes. Finally, it uses ordinary objects as structured namespaces and category containers for naming, browsing, and organizing globally accessible objects and methods.\n\nThe paper’s main lasting contribution is the articulation of recognizable prototype-based organizational idioms—especially the separation of prototypes from traits and the use of inheritance for behavior sharing, representation control, dynamic modes, encapsulation, and namespaces. The SELF documentation continues to identify the paper as a foundational work in the language’s literature. ([bibliography.selflanguage.org](https://bibliography.selflanguage.org/organizing-programs.html)) A later research language, V, explicitly cites the paper in its discussion of trait-based systems and develops a trait-based type system for extensible record accessors, providing concrete evidence of conceptual reuse in subsequent programming-language research. ([researchgate.net](https://www.researchgate.net/publication/332366114_V_a_language_with_extensible_record_accessors_and_a_trait-based_type_system)) Research literature on composable traits also lists the paper among the antecedents of later trait systems. ([scg.unibe.ch](https://scg.unibe.ch/archive/papers/Berg07aStatefulTraits.pdf)) The search did not establish a specific commercial product whose design can be attributed directly to this paper.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages-paradigms/functional_programming/organizing-programs-without-classes.pdf",
   "source_type": "pdf",
   "filepath": "languages-paradigms/functional_programming/organizing-programs-without-classes.pdf",
   "filename": "organizing-programs-without-classes.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

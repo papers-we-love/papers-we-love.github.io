@@ -1,11 +1,11 @@
 {
   "uuid": "0d45d3cc3e1d84b2149c55c523c17afef90957ee0933ea9b7d63c86568ed9fd7",
   "title": "WaveNet: A Generative Model for Raw Audio",
-  "publication_date": "September 2016",
+  "publication_date": "September 12, 2016 (arXiv preprint arXiv:1609.03499; revised September 19, 2016)",
   "authors": [
-    "Aaron van den Oord",
-    "Alex Graves",
+    "Alexander Graves",
     "Andrew Senior",
+    "Aäron van den Oord",
     "Heiga Zen",
     "Karen Simonyan",
     "Koray Kavukcuoglu",
@@ -14,26 +14,26 @@
     "Sander Dieleman"
   ],
   "keywords": [
-    "audio-synthesis",
-    "automatic-speech-recognition",
-    "deep-learning",
-    "generative-models",
-    "machine-learning",
-    "neural-networks",
-    "probabilistic-models",
-    "temporal-convolution",
-    "text-to-speech",
+    "autoregressive-models",
+    "causal-convolutions",
+    "deep-generative-models",
+    "dilated-convolutions",
+    "music-generation",
+    "neural-vocoders",
+    "phoneme-recognition",
+    "raw-audio",
+    "speech-synthesis",
     "waveform-generation"
   ],
   "category_path": [
     "audio_comp_sci"
   ],
-  "abstract": "This paper introduces WaveNet, a deep neural network for generating raw audio waveforms. We show that WaveNet models are able to generate speech which mimics any human voice and which can be conditioned on text input to output text-to-speech, and that the same network architecture can be used to synthesize other audio modalities such as music. WaveNets auto-regressive nature allows them to produce excellent high fidelity audio, which is mostly better than other systems in subjective tests of human speech quality, and retains the capability to generate a rich variety of realistic synthetic audio textures, which are not possible with conventional methods.",
-  "summary": "WaveNet, introduced by DeepMind researchers in a 2016 paper, is a groundbreaking architecture for generating raw audio waveforms. Using deep neural networks, WaveNet can produce high-quality audio samples, with the ability to mimic human speech and synthesize various types of audio, including text-to-speech (TTS) and music. This innovative model leverages an auto-regressive approach for probabilistic audio generation. The introduction of temporal convolutions within a neural network facilitated a significant advancement in audio synthesis, outperforming conventional methods like Hidden Markov Models in subjective audio quality tests.\n\nWaveNet's impact spans various fields. It has notably transformed the domain of text-to-speech synthesis, contributing to the development of refined speech synthesis systems by companies like Google and Apple. It served as a direct precursor to Google's Tacotron, a more efficient TTS model. In academia and industry, WaveNet is frequently referenced and its principles are foundational in ongoing research on neural audio synthesis.\n\nKey references include the development of Google's WaveNet-based voice in Google Assistant ([source](https://www.blog.google/products/assistant/pulling-back-curtain-our-new-voice/)), and advancements by researchers improving neural network efficiency through pruning and quantization strategies inspired by WaveNet ([source](https://arxiv.org/pdf/1711.07215)). The model has also been influential in real-time implementations via parallel WaveNets, explored by DeepMind to cope with its high computational demands ([source](https://deepmind.com/blog/article/wavenet-launch)). Overall, WaveNet's introduction has led to substantial improvements in how machines can understand and generate audio data.",
+  "abstract": "This paper introduces WaveNet, a deep neural network for generating raw audio waveforms. The model is fully probabilistic and autoregressive, with the predictive distribution for each audio sample conditioned on all previous ones; nonetheless we show that it can be efficiently trained on data with tens of thousands of samples per second of audio. When applied to text-to-speech, it yields state-of-the-art performance, with human listeners rating it as significantly more natural sounding than the best parametric and concatenative systems for both English and Mandarin. A single WaveNet can capture the characteristics of many different speakers with equal fidelity, and can switch between them by conditioning on the speaker identity. When trained to model music, we find that it generates novel and often highly realistic musical fragments. We also show that it can be employed as a discriminative model, returning promising results for phoneme recognition.",
+  "summary": "WaveNet introduced an autoregressive generative model that operates directly on raw audio waveforms. It uses causal and dilated convolutions to model long-range temporal dependencies while preserving efficient parallel computation during training. The model demonstrated strong results in speech synthesis for English and Mandarin, supported speaker conditioning for multi-voice generation, generated musical audio, and produced promising phoneme-recognition results. ([arxiv.org](https://arxiv.org/abs/1609.03499))\n\nIts subsequent influence is documented in both research and industry. Parallel WaveNet used probability-density distillation to convert the sequential WaveNet generator into a substantially faster feed-forward model and was deployed in Google Assistant for English and Japanese voices. ([research.google](https://research.google/pubs/parallel-wavenet-fast-high-fidelity-speech-synthesis/)) Tacotron 2 incorporated a modified WaveNet as its neural vocoder, conditioning waveform generation on predicted mel spectrograms. ([arxiv.org](https://arxiv.org/abs/1712.05884)) Google later reported that WaveNet and related WaveRNN systems were used in products including Google Assistant, Maps Navigation, Voice Search, and Cloud Text-to-Speech. ([deepmind.google](https://deepmind.google/en/research/wavenet/))",
   "raw_url": "https://www.deepmind.com/blog/wavenet-a-generative-model-for-raw-audio",
   "source_type": "external",
   "filepath": "audio_comp_sci/README.md",
   "filename": "Announcement and interactive examples",
-  "created_on": "2026-01-24 23:46:58",
-  "summary_received": "2026-01-25 00:11:01"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:53"
 }

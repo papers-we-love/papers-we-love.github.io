@@ -1,34 +1,35 @@
 {
   "uuid": "03e7eb520fdaacafd368683db47aa41030aca59d1fec85bf6453dd307030ac78",
   "title": "Okapi at TREC-3",
-  "publication_date": "1994",
+  "publication_date": "1994; presented at TREC-3, November 2–4, 1994, and published in NIST Special Publication 500-225, Proceedings of the Third Text REtrieval Conference. ([pages.nist.gov](https://pages.nist.gov/trec-browser/trec3/proceedings/))",
   "authors": [
-    "M. Beaulieu",
-    "P. Willett",
-    "S. E. Robertson",
-    "S. Walker"
+    "M Gatford",
+    "M M Hancock-Beaulieu",
+    "S E Robertson",
+    "S Jones",
+    "S Walker"
   ],
   "keywords": [
-    "ad-hoc-retrieval",
-    "evaluation",
-    "feedback-mechanisms",
-    "information-retrieval",
-    "information-retrieval-system",
+    "bm25",
+    "interactive-search",
     "okapi",
-    "probabilistic-models",
-    "ranking-functions",
-    "text-retrieval",
+    "passage-retrieval",
+    "probabilistic-information-retrieval",
+    "query-expansion",
+    "relevance-feedback",
+    "routing",
+    "term-weighting",
     "trec"
   ],
   "category_path": [
     "information_retrieval"
   ],
-  "abstract": "This paper describes the participation of the Okapi information retrieval system in the TREC-3 ad hoc retrieval task. The experiments this year include a new attempt to estimate the best document ranking function, and the application of some techniques involving relevance feedback which were not fully tested in the previous TREC. Other aspects of the experiments were similar to those of last year, including the weighting and feedback system. Results are given and discussed in comparison with those obtained in TREC-2.",
-  "summary": "The paper \"Okapi at TREC-3\" presents the involvement of the Okapi information retrieval system in the TREC-3 conference, focusing on ad hoc retrieval tasks. The research detailed in this paper includes improvements in estimating document ranking functions and relevance feedback mechanisms not thoroughly tested in previous conferences. The Okapi system is evaluated against its performance from TREC-2, with detailed discussions about its weighting and feedback system.\n\nOkapi's developments influenced the domain of text retrieval, notably the probabilistic approach to information retrieval it incorporates, which was a significant advancement for IR systems in the 1990s. The paper contributed to the evolution of probabilistic ranking models, which are integral in modern search engines.\n\nA quick web search reveals the lasting influence of this work, with references present in a variety of subsequent research papers that explore retrieval models and evaluation frameworks. Notable references include:\n\n1. *Robertson, S. et al. (2000). Okapi at TREC-3. Information Retrieval.* [Link](https://link.springer.com/article/10.1023/a:1004031106723)\n2. *Beaulieu, M., & Robertson, S. (2001). Overall evaluation report on the TREC8 ad hoc track. NIST Special Publication.* [Link](https://trec.nist.gov/pubs/trec8/t8_proceedings.html)\n3. *Voorhees, E. M., & Harman, D. K. (2005). TREC: Experiment and Evaluation in Information Retrieval. MIT Press.* [Link](http://books.google.com/books?id=gCJQAAAAMAAJ)\n4. *Robertson, S.E. (2004). Understanding inverse document frequency: on theoretical arguments for IDF. Journal of Documentation.* [Link](https://www.emerald.com/insight/content/doi/10.1108/00220410410560582/full/html)\n\nThese citations confirm the impact of the Okapi system and its developments on the field of information retrieval, cementing its role in advancing probabilistic retrieval models.",
+  "abstract": "The emphasis in TREC-3 has been on further refinement of term-weighting functions; an investigation of run-time passage determination and searching; expansion of ad hoc queries by terms extracted from the top documents retrieved by a trial search; new methods for choosing query expansion terms after relevance feedback, now split into: methods of ranking terms prior to selection; subsequent selection procedures; and the development of a user interface and search procedure within the new TREC interactive search framework.\n\nThe two successes have been in query expansion and in routing term selection. The modified term-weighting functions and passage retrieval have had small beneficial effects. For TREC-3 there were to be topics without the CONCEPTS fields, which had proved to be by far the most useful source of query terms. Query expansion, passage retrieval and the modified weighting functions, used together, have gone a long way towards compensating for this loss.",
+  "summary": "### Paper summary\n\n- The paper reports the City University Okapi system’s TREC-3 experiments in probabilistic information retrieval.\n- It develops **BM25**, a family of weighting functions that extends the Robertson–Sparck Jones probabilistic model with within-document term frequency, query term frequency, and document-length normalization. The experiments generally favored a document-length parameter near 0.75, while the more elaborate nonlinear parameterization provided little additional benefit.\n- Runtime passage retrieval was feasible but computationally expensive. Its standalone gains over whole-document retrieval were modest, although its combination with query expansion produced more noticeable improvements.\n- Query expansion using terms extracted from top-ranked documents in an initial search—without explicit relevance judgments—was unexpectedly effective for ad hoc retrieval, particularly when combined with passage retrieval.\n- For routing, ranking candidate expansion terms with RSV, RSV2, or ARSV produced broadly similar results. A computationally intensive stepwise procedure that accepted or rejected terms according to training-set performance produced substantially better retrospective and predictive results, but raised practical concerns about efficiency and generalization.\n- The interactive experiments introduced phrase handling, user-controlled term sets, relevance feedback, and removal of noisy automatically extracted terms. The authors caution that interactive and automatic results were not directly comparable because the automatic routing experiments used much more relevance information.\n\n### Subsequent influence\n\nThe paper is a primary reference for **Okapi BM25**. Apache Lucene’s documentation explicitly identifies this paper as the work in which BM25 was introduced and provides a production implementation of the model. ([lucene.apache.org](https://lucene.apache.org/core/6_0_0/core/org/apache/lucene/search/similarities/BM25Similarity.html)) BM25 later became the default text-similarity model in Elasticsearch and is also the default similarity for applicable fields in modern Solr configurations, demonstrating direct adoption in widely used search infrastructure. ([elastic.co](https://www.elastic.co/docs/reference/elasticsearch/index-settings/similarity)) The paper is also catalogued as a heavily cited TREC contribution in bibliographic and research-impact records. ([impact.ref.ac.uk](https://impact.ref.ac.uk/CaseStudies/CaseStudy.aspx?Id=44357))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/information_retrieval/okapi-at-trec3.pdf",
   "source_type": "pdf",
   "filepath": "information_retrieval/okapi-at-trec3.pdf",
   "filename": "okapi-at-trec3.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

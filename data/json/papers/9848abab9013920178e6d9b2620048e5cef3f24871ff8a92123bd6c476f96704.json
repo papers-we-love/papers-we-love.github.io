@@ -1,7 +1,7 @@
 {
   "uuid": "9848abab9013920178e6d9b2620048e5cef3f24871ff8a92123bd6c476f96704",
   "title": "Chord: A Scalable Peer-to-peer Lookup Service for Internet Applications",
-  "publication_date": "August 2001",
+  "publication_date": "August 27–31, 2001, ACM SIGCOMM ’01, San Diego, California, USA",
   "authors": [
     "David Karger",
     "Hari Balakrishnan",
@@ -10,26 +10,24 @@
     "Robert Morris"
   ],
   "keywords": [
-    "chord",
-    "decentralization",
-    "dht",
-    "distributed-systems",
-    "hashing",
-    "internet-applications",
-    "load-balancing",
-    "p2p-networks",
+    "consistent-hashing",
+    "decentralized-systems",
+    "distributed-hash-table",
+    "distributed-storage",
+    "fault-tolerance",
+    "key-based-routing",
     "peer-to-peer",
     "scalable-lookup"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "This paper presents Chord, a distributed lookup protocol that addresses the challenging problem of efficient resource location in peer-to-peer applications. Chord supports a single operation: given a key, it maps the key onto a node. Each Chord node needs only a small number of routing information about other nodes. A lookup in Chord is resolved about O(log N) messages, where N is the total number of nodes; this allows the system to scale to large numbers of nodes and frequent node arrivals and departures.",
-  "summary": "The Chord protocol, introduced in this paper, fundamentally influenced the development of distributed hash tables (DHTs) by providing a reliable and efficient method for peer-to-peer connection and resource location. This contribution offered a distinct advantage in terms of scalability and system resilience, relevant to large and dynamic networks. The paper has been highly regarded in the academic community, leading to significant advancements in distributed computing and network systems.\n\nChord's application extends to DHTs utilized in various technologies, including distributed storage systems and content delivery networks. The paper's proposal of using consistent hashing to maintain a balanced load across nodes and offering logarithmic lookup complexity influenced further peer-to-peer network research. The introduction of self-organizing properties and fault tolerance principles also played a crucial role in the development of subsequent P2P systems.\n\nThe paper is highly cited in academic literature, with references in influential works such as \"Kademlia: A Peer-to-Peer Information System Based on the XOR Metric\" for its efficient routing mechanism [https://doi.org/10.1016/j.imavis.2006.09.002] and \"CAN: A Scalable Content-Addressable Network\" for its innovative peer-to-peer system design [https://doi.org/10.1109/TIT.2003.813536]. These citations indicate its broad impact on both theoretical research and practical applications within distributed network systems.",
+  "abstract": "A fundamental problem that confronts peer-to-peer applications is to efficiently locate the node that stores a particular data item. This paper presents Chord, a distributed lookup protocol that addresses this problem. Chord provides support for just one operation: given a key, it maps the key onto a node. Data location can be easily implemented on top of Chord by associating a key with each data item, and storing the key/data item pair at the node to which the key maps. Chord adapts efficiently as nodes join and leave the system, and can answer queries even if the system is continuously changing. Results from theoretical analysis, simulations, and experiments show that Chord is scalable, with communication cost and the state maintained by each node scaling logarithmically with the number of Chord nodes.",
+  "summary": "## Summary\n\nChord presents a decentralized lookup protocol for dynamic peer-to-peer systems. It maps keys and nodes into a circular identifier space using consistent hashing; a key is assigned to the first node encountered clockwise from that key. This arrangement balances responsibility among nodes and limits the amount of data that must move when nodes join or leave.\n\nTo avoid requiring every node to know the complete membership list, Chord augments each node’s immediate successor pointer with a logarithmic-size finger table. Finger entries point to nodes at exponentially increasing distances around the identifier circle. Lookup follows the closest preceding finger toward the target and requires \\(O(\\log N)\\) messages with high probability, while each node maintains \\(O(\\log N)\\) routing state. Node joins and departures require approximately \\(O(\\log^2 N)\\) messages to update routing state in the protocol described by the paper.\n\nCorrectness depends primarily on maintaining successor pointers. Finger tables improve performance but may temporarily be stale. A stabilization protocol periodically repairs successor and predecessor relationships and refreshes fingers, allowing the system to tolerate concurrent joins. Successor lists provide additional failure resilience: after node failures, a node can select the first live successor in its list and continue routing while the rest of the overlay repairs itself. The paper also describes how successor lists can support replication at higher layers.\n\nThe evaluation combines theoretical analysis, simulation, and an Internet prototype. The experiments show logarithmic growth in lookup path length, approximately half of \\(\\log_2 N\\) hops on average in the simulated model, and relatively slow growth in measured lookup latency as the number of nodes increases. The experiments also show that virtual nodes substantially improve load balance, at the cost of additional routing state. Under simultaneous failures, lookup failures were close to the fraction of keys whose responsible nodes had failed, suggesting that the overlay itself generally recovered without widespread routing failure. During continuous churn, state inconsistency caused additional failures, with the rate depending on the relationship between node churn and stabilization frequency.\n\nThe paper’s main limitations include weak exploitation of network locality, no dedicated mechanism for healing partitioned rings, reliance on assumptions about identifier distribution and hash hardness, and limited protection against malicious participants. Authentication, caching, replication, naming, and application-level data consistency are intentionally left to systems built above Chord.\n\n## Influence\n\nChord became a foundational design for distributed hash tables and structured peer-to-peer overlays. The Cooperative File System used DHash on top of Chord to locate and distribute storage blocks, demonstrating a concrete distributed-storage application of the lookup substrate. ([pdos.csail.mit.edu](https://pdos.csail.mit.edu/papers/cfs%3Asosp01/cfs_sosp.pdf)) CoralCDN initially used Chord as its routing layer before replacing it because of requirements involving network-aware clustering, illustrating both the applicability and the limitations of a basic Chord overlay for locality-sensitive content distribution. ([usenix.org](https://www.usenix.org/legacy/events/nsdi04/tech/full_papers/freedman/freedman_html/index.html)) Later work on deployed DHTs explicitly analyzed Chord implementations alongside other systems and identified practical problems arising from non-transitive Internet connectivity, extending the paper’s failure and maintenance concerns into real-world deployment. ([cs.princeton.edu](https://www.cs.princeton.edu/courses/archive/fall09/cos518/papers/ntr.pdf))",
   "raw_url": "http://pdos.csail.mit.edu/papers/chord:sigcomm01/chord_sigcomm.pdf",
   "source_type": "external",
   "filepath": "distributed_systems/README.md",
   "filename": "Chord: A Scalable Peer-to-peer Lookup Service for Internet Applications",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:54"
 }

@@ -1,32 +1,32 @@
 {
   "uuid": "564eb670e5f9c7ce526452da56cad4bf0ec29f47ac8a819947b5d863f908bcc7",
-  "title": "Data types a la carte",
-  "publication_date": "2008",
+  "title": "Data types à la carte",
+  "publication_date": "18 March 2008 (published online); Journal of Functional Programming, volume 18, issue 4, July 2008, pages 423–436",
   "authors": [
     "Wouter Swierstra"
   ],
   "keywords": [
     "algebraic-data-types",
-    "data-types",
-    "extensibility",
+    "coproducts",
+    "expression-problem",
+    "extensible-effects",
+    "folds",
+    "free-monads",
     "functional-programming",
+    "functors",
     "haskell",
-    "modular-programming",
-    "object-oriented-design",
-    "programming-languages",
-    "software-libraries",
-    "type-systems"
+    "modular-interpreters"
   ],
   "category_path": [
     "languages",
     "haskell"
   ],
-  "abstract": "The solution to modular programming is to separate the components we want to vary from those that remain constant. In functional programming, this often means we have to write an interpreter for each combination of features we require. By using the theory of data types as functors, we can define data types by specifying the signatures of their operations independent of their interpretation. Using Haskell’s support for type classes, we systematically manage constraints on individual features separately. We thus obtain modular interpreters and can design, implement, combine, and reuse individual features as required. As a result, data types and their operations can be constructed á la carte.",
-  "summary": "The paper titled \"Data types a la carte\" by Wouter Swierstra, published in 2008, addresses the challenge of modular programming in functional programming languages, particularly Haskell. It provides a solution where data types are defined using the theory of data types as functors and interpreters, allowing the combination and reuse of various features without rewriting them for every new program feature. The paper demonstrates that by leveraging Haskell’s type classes, it is possible to systematically manage constraints on individual features separately, leading to modular interpreters.\n\nThis paper has influenced further research in functional programming and has been referenced in several contexts. A review of its impact shows that it has been cited in various papers focusing on programming language design and modular programming. For example, it has been referenced in the context of algebraic effects in programming languages and modular interpreters, as seen in works like \"Extensible Effects: An Alternative to Monad Transformers\" and \"Design Patterns as Higher-Order Datatypes\".\n\nReferences to this paper can be found in:\n1. \"Extensible Effects: An Alternative to Monad Transformers\" - [Link](https://dl.acm.org/doi/10.1145/2661103.2661105)\n2. \"Design Patterns as Higher-Order Datatypes\" - [Link](https://people.cs.kuleuven.be/~tom.schrijvers/Research/papers/icfp08-design_patterns_as_higher_order_datatypes.pdf)\n3. \"Algebraic Effects, Delimited Control, and the Expression Problem\" - [Link](https://dl.acm.org/doi/10.1145/2775051.2556712)\n4. \"The essence of algebraic effects and handlers\" - [Link](https://dl.acm.org/doi/10.1145/2998390.2998521)\n\nThese citations demonstrate its role in advancing theories related to extensibility and modularity in software design, particularly within the scope of functional programming languages.",
+  "abstract": "This paper describes a technique for assembling both data types and functions from isolated individual components. We also explore how the same technology can be used to combine free monads and, as a result, structure Haskell’s monolithic IO monad.",
+  "summary": "## Summary\n\nThe paper presents a modular approach to the expression problem in Haskell. Recursive data types are represented as fixed points of functors, while individual constructors are isolated as functorial signatures. These signatures can be combined with coproducts, allowing new language constructs to be added without modifying existing datatype definitions or functions.\n\nFunctions over the resulting open datatypes are defined compositionally. Type classes provide separate algebras for individual signatures, and coproduct instances combine those algebras. A generic fold then traverses the complete recursive structure. Type-class-based injections and smart constructors hide the representation details of coproducts, while partial projections support modular pattern matching and transformations. The paper demonstrates the approach with arithmetic expressions, evaluation, pretty-printing, and distributivity-based rewriting.\n\nThe same construction is applied to free monads. Effect operations are represented as functors, combined through coproducts, and interpreted using folds. This provides a typed representation of effect capabilities: a term’s type records which operations it may use. The technique is illustrated with calculator state operations and with a decomposition of selected input/output operations, such as terminal and filesystem effects, instead of placing all effects in a single undifferentiated `IO` monad.\n\nThe approach is limited to structures that can be represented using the proposed functorial and free-monad encodings. The original implementation also relies on overlapping and other non-Haskell-98 type-class extensions, and more complex datatypes, binders, GADTs, and nested datatypes require further machinery.\n\n## Influence\n\nThe approach was subsequently used as a basis for modular compiler construction: Day and Hutton explicitly applied it to modular syntax and semantics for languages with separate computational effects. ([researchgate.net](https://www.researchgate.net/publication/262351170_Towards_Modular_Compilers_for_Effects)) Bahr and Hvitved extended the technique into compositional data types, including support for variable binders through parametric higher-order abstract syntax. ([arxiv.org](https://arxiv.org/abs/1202.2917)) The Haskell `compdata` library operationalized these ideas for type-safe construction, transformation, and analysis of abstract syntax trees. ([stackage.org](https://www.stackage.org/package/compdata)) Later work on scoped and intrinsically typed language representations continued to cite the paper as a foundation for combining modular syntax with free-monad and type-level techniques. ([arxiv.org](https://arxiv.org/abs/2204.05653)) Cambridge’s citation record currently lists more than 200 citations, indicating substantial continuing research influence. ([cambridge.org](https://www.cambridge.org/core/journals/journal-of-functional-programming/article/data-types-a-la-carte/14416CB20C4637164EA9F77097909409))",
   "raw_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/14416CB20C4637164EA9F77097909409/S0956796808006758a.pdf/data-types-a-la-carte.pdf",
   "source_type": "external",
   "filepath": "languages/haskell/README.md",
   "filename": "Data types a la carte",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

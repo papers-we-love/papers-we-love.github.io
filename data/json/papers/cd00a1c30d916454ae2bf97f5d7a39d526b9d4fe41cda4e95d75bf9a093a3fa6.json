@@ -1,29 +1,28 @@
 {
   "uuid": "cd00a1c30d916454ae2bf97f5d7a39d526b9d4fe41cda4e95d75bf9a093a3fa6",
-  "title": "MMTk: A Design Plan for the Next Generation Memory Management Toolkit",
-  "publication_date": "June 20, 2002",
+  "title": "Heap Architectures for Concurrent Languages using Message Passing",
+  "publication_date": "June 20–21, 2002 — ACM SIGPLAN International Symposium on Memory Management (ISMM’02), Berlin, Germany",
   "authors": [
-    "D. Frampton",
-    "K. Veatch",
-    "M. Smith",
-    "S. Blackheath"
+    "Erik Johansson",
+    "Jesper Wilhelmsson",
+    "Konstantinos Sagonas"
   ],
   "keywords": [
-    "memory-management",
-    "programming-languages",
-    "runtime-systems",
-    "software-engineering",
-    "toolkit-design"
+    "concurrent-languages",
+    "erlang",
+    "garbage-collection",
+    "message-passing",
+    "runtime-systems"
   ],
   "category_path": [
     "concurrency"
   ],
-  "abstract": "This paper presents the design of MMTk, a new toolkit for memory management in programming language runtime systems. The paper outlines how MMTk provides a robust and flexible platform for experimenting with and deploying garbage collectors. The key design goals are flexibility, simplicity, and robustness. MMTk achieves these goals through clean separation of concerns, abstract interfaces, and a small core architecture. We present initial experiences and ongoing research work that indicate how MMTk may advance memory management research and practice.",
-  "summary": "The paper \"MMTk: A Design Plan for the Next Generation Memory Management Toolkit\" introduces a toolkit aimed at improving memory management in runtime systems. MMTk emphasizes flexibility, simplicity, and robustness by implementing a modular design with clear interfaces and a core architecture. Designed for researchers and developers, MMTk provides a platform for experimenting with garbage collection techniques. As of now, direct references citing the development and implementation of MMTk are scarce in academic literature or industry reports. However, the principles and methodologies discussed in the paper, particularly concerning separation of concerns and abstraction in memory management, remain relevant to ongoing research in memory management techniques and runtime optimizations.",
+  "abstract": "We discuss alternative heap architectures for languages that rely on automatic memory management and implement concurrency through asynchronous message passing. We describe how interprocess communication and garbage collection happens in each architecture, and extensively discuss the tradeoffs that are involved. In an implementation setting (the Erlang/OTP system) where the rest of the runtime system is unchanged, we present a detailed experimental comparison between these architectures using both synthetic programs and large commercial products as benchmarks.",
+  "summary": "## Summary\n\nThe paper investigates three heap organizations for concurrent languages that communicate through asynchronous message passing, using an otherwise unchanged Erlang/OTP runtime as the experimental platform:\n\n- **Private heaps:** Each process owns its stack and heap. Messages are copied from the sender’s heap to the receiver’s heap. This provides small garbage-collection root sets, direct reclamation when a process terminates, and straightforward per-process resource accounting, but incurs message-copying costs, requires additional memory, and can cause fragmentation.\n- **A shared heap:** All processes allocate compound data and messages in one global heap. Sending a message requires only placing a pointer in the receiver’s mailbox, making communication independent of message size and reducing memory duplication. The tradeoff is that garbage collection must consider the stacks and mailboxes of all processes, potentially increasing pause times and collection costs.\n- **A hybrid architecture:** Processes retain private heaps for local data, while messages are placed in a shared message area. Pointers may point from private areas into the shared area, but not in the reverse direction. This permits independent collection of private heaps while retaining non-copying message transfer. The design depends on escape analysis or programmer annotations to identify data that may leave a process.\n\nThe evaluation uses synthetic workloads and substantial Erlang applications, including the BEAM compiler and NETSim components. The shared-heap implementation generally uses less memory and often executes faster than the private-heap implementation because it avoids copying and fragmentation. In highly concurrent workloads, private heaps devote substantial execution time to interprocess communication, whereas the shared heap substantially reduces that cost. However, shared-heap garbage collection becomes a bottleneck when many processes have substantial live data, and its maximum collection pauses are somewhat longer in such cases. The private-heap design remains advantageous when applications have many processes with small heaps, exploit process termination for reclamation, or have been tuned specifically for copying-based message passing.\n\nThe hybrid prototype performs particularly well on workloads involving long-lived or repeatedly shared messages: it avoids message copying while keeping local garbage collections small and independent. Its broader evaluation was limited because compiler-integrated escape analysis was not yet available. The paper therefore does not identify a universally superior architecture; it presents the shared heap as the preferable default when a choice must be made without workload-specific information, while regarding the hybrid design as a promising combination of communication and garbage-collection benefits.\n\n## Influence and Subsequent Use\n\nA subsequent paper by Carlsson, Sagonas, and Wilhelmsson, *Message Analysis for Concurrent Languages* (2003), cites this work and develops static message analysis to guide memory allocation in concurrent languages. That work preserves the central idea of separating process-local data from data that may be exchanged between processes, while adding analysis and incremental garbage-collection techniques intended to improve responsiveness. ([user.it.uu.se](https://user.it.uu.se/~kostis/Papers/scp_mm.pdf))\n\nThe paper’s tradeoff remains visible in Erlang/OTP. Current Erlang documentation describes per-process stacks and heaps, copying generational garbage collection, and configurable handling of messages either on the process heap or in off-heap fragments. The modern implementation therefore retains the latency and isolation advantages associated with process-local heaps while providing an alternative for workloads with large message queues. ([erlang.org](https://www.erlang.org/doc/apps/erts/garbagecollection.html))\n\nErlang/OTP’s engineering documentation also states that messages are copied before queue insertion and that earlier non-copying approaches were rejected as a poor fit for Erlang’s soft-real-time latency goals. This provides a concrete industry outcome consistent with the paper’s conclusion that communication throughput must be balanced against garbage-collection pause time rather than optimized in isolation. ([erlang.org](https://www.erlang.org/blog/message-passing/))\n\nThe paper was published as an ISMM’02 conference paper, pages 195–206 in bibliographic indexes, with the PDF version identifying the June 20–21, 2002 Berlin conference dates. ([dblp.org](https://dblp.org/pid/s/KonstantinosFSagonas.html))",
   "raw_url": "http://www.fantasi.se/publications/ISMM02.pdf",
   "source_type": "external",
   "filepath": "concurrency/README.md",
   "filename": "Heap Architectures For Concurrent Languages Using Message Passing",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:54"
 }

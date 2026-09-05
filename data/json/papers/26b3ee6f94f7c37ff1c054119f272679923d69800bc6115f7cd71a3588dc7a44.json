@@ -1,27 +1,27 @@
 {
   "uuid": "26b3ee6f94f7c37ff1c054119f272679923d69800bc6115f7cd71a3588dc7a44",
   "title": "Gradual Typing Bibliography",
-  "publication_date": "n/a",
+  "publication_date": "Not stated; this is an HTML bibliography rather than a published research paper.",
   "authors": [],
   "keywords": [
+    "contracts",
     "dynamic-typing",
     "gradual-typing",
-    "gradual-typing-systems",
     "programming-languages",
-    "software-development",
+    "research-bibliography",
+    "software-interoperability",
     "static-typing",
     "type-inference",
-    "type-safety",
     "type-systems",
     "typed-languages"
   ],
   "category_path": [],
-  "abstract": "n/a",
-  "summary": "The provided link leads to an HTML document that catalogs a bibliography of works related to gradual typing in programming languages. Gradual typing is a programming language feature that allows both statically and dynamically typed variables within a single language. It has a significant role in software development as it provides flexibility and ensures type safety, aiding in the transition between static and dynamic typing.\n\nThis bibliography lists various papers and works, providing a comprehensive resource for researchers interested in the field of gradual typing. However, the document itself is not a research paper and does not contain an abstract, defined authors, or a specific publication date.\n\nThe concept of gradual typing has influenced many areas of research in the programming languages community. Although this specific document does not contribute directly to new findings, it serves as a valuable resource by compiling influential research works in the gradual typing area. \n\nIn terms of impact, the bibliography aids researchers in quickly accessing relevant literature, which can accelerate further advancements in type systems and programming language design. No direct citations to this bibliography itself were found as it primarily serves as a curation tool for other scholarly articles.",
+  "abstract": "This bibliography attempts to cover all of the literature on gradual typing, defined as safe interoperability between typed and untyped portions of a single program. It begins with the original work on gradual typing, which was independently presented by four sets of authors in between September 2006 and January 2007, and then covers the extensive subsequent literature, both theoretical and practical.\n\nThe latter sections cover related work. First, early work on safe interoperation, such as the work on contracts. Second, work on type systems (broadly defined) designed to work with existing untyped languages, including recent work done in the context of gradual typing. Work on type system design that also considers issues of interoperability with untyped programs appears in the main section of the bibliography.",
+  "summary": "The supplied URL is a maintained bibliography, not a conventional research paper: it has no paper-author list, publication venue, publication date, or formal abstract. The page identifies Sam Tobin-Hochstadt’s GitHub account as its maintainer and organizes literature on gradual typing, beginning with four independently developed foundational works from September 2006 through January 2007. ([samth.github.io](https://samth.github.io/gradual-typing-bib/))\n\nIts documented influence is primarily bibliographic rather than technical. Later scholarly work cites the bibliography as a comprehensive survey and reference source for the gradual-typing literature, including historical and theoretical discussions of the field. ([paperity.org](https://paperity.org/p/204292655/the-dynamic-practice-and-static-theory-of-gradual-typing)) The page also serves as a package-supported bibliography for Scribble/Racket documents, which provides a practical mechanism for reusing its references in research writing. ([samth.github.io](https://samth.github.io/gradual-typing-bib/))",
   "raw_url": "http://samth.github.io/gradual-typing-bib/",
   "source_type": "external",
   "filepath": "README.md",
   "filename": "Gradual Typing Bibliography",
-  "created_on": "2026-01-24 23:46:58",
-  "summary_received": "2026-01-25 00:11:01"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:53"
 }

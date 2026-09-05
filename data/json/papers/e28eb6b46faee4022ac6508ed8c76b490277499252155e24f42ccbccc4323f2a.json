@@ -1,32 +1,32 @@
 {
   "uuid": "e28eb6b46faee4022ac6508ed8c76b490277499252155e24f42ccbccc4323f2a",
-  "title": "The Early History Of Smalltalk",
-  "publication_date": "1993-08",
+  "title": "The Early History of Smalltalk",
+  "publication_date": "March 1993; ACM SIGPLAN Notices, Volume 28, Issue 3, pages 69–95. Also published in the proceedings of the 2nd ACM SIGPLAN Conference on the History of Programming Languages (HOPL-II).",
   "authors": [
     "Alan C. Kay"
   ],
   "keywords": [
-    "computing-history",
-    "development-environments",
-    "educational-software",
-    "interface-design",
+    "computer-education",
+    "dynabook",
+    "graphical-user-interfaces",
+    "human-computer-symbiosis",
+    "message-passing",
     "object-oriented-programming",
+    "personal-computing",
     "programming-languages",
     "smalltalk",
-    "software-architecture",
-    "software-engineering",
-    "virtual-machines"
+    "software-history"
   ],
   "category_path": [
     "languages",
     "smalltalk"
   ],
-  "abstract": "This paper is a retrospective of the history of Smalltalk, one of the most influential object-oriented programming languages. The development of Smalltalk was driven by the desire to create an environment for learning and innovation. The insights gained from the development process and the evolution of the language are explored, along with the various influences that shaped its design and implementation.",
-  "summary": "The paper \"The Early History Of Smalltalk\" by Alan C. Kay provides a comprehensive retrospective on the development of the Smalltalk programming language, which was pivotal in the evolution of object-oriented programming (OOP). It details the motivations behind the language's creation, primarily to serve as a powerful educational tool and environment for innovation. Smalltalk's development introduced groundbreaking concepts such as a fully integrated development environment, powerful graphics and interface design capabilities, and the use of virtual machines, which have influenced modern software engineering practices. \n\nAlan Kay's work and the Smalltalk language have profoundly impacted computing, laying the groundwork for future OOP languages and concepts, including Java, Python, and C#. A quick search reveals that this paper and Smalltalk have been acknowledged in subsequent research and popular software design principles:\n\n1. DiPaola, S. (2009). \"Exploring a multi-artist and multi-contributor online evolutionary artwork inside Second Life.\" *Leonardo*, 42(1), 94-95. [Link](https://www.jstor.org/stable/20206289)\n2. Ingalls, D., Kaehler, T., Maloney, J., Wallace, S., & Kay, A. (1997). \"Back to the Future: The Story of Squeak, A Practical Smalltalk Written in Itself.\" *ACM SIGPLAN Notices*. [DOI](https://dl.acm.org/doi/10.1145/263700.263754)\n3. Goldberg, A., & Robson, D. (1983). \"Smalltalk-80: the language and its implementation.\" *Addison-Wesley Longman Publishing Co., Inc.*\n\nThe paper is a valuable historical document and continues to be a reference for both academic research and educational purposes in computer science.",
+  "abstract": "Most ideas come from previous ideas. The sixties, particularly in the ARPA community, gave rise to a host of notions about “human-computer symbiosis” through interactive time-shared computers, graphics screens and pointing devices. Advanced computer languages were invented to simulate complex systems such as oil refineries and semi-intelligent behavior. The soon-to-follow paradigm shift of modern personal computing, overlapping window interfaces, and object-oriented design came from seeing the work of the sixties as something more than a “better old thing.” This is, more than a better way: to do mainframe computing; for end-users to invoke functionality; to make data structures more abstract. Instead the promise of exponential growth in computing volume demanded that the sixties be regarded as “almost a new thing” and to find out what the actual “new things” might be. For example, one would computer with a handheld “Dynabook” in a way that would not be possible on a shared mainframe; millions of potential users meant that the user interface would have to become a learning environment along the lines of Montessori and Bruner; and needs for large scope, reduction in complexity, and end-user literacy would require that data and control structures be done away with in favor of a more biological scheme of protected universal cells interacting only through messages that could mimic any desired behavior.\n\nEarly Smalltalk was the first complete realization of these new points of view as parented by its many predecessors in hardware, language and user interface design. It became the exemplar of the new computing, in part, because we were actually trying for a qualitative shift in belief structures—a new Kuhnian paradigm in the same spirit as the invention of the printing press-and thus took highly extreme positions which almost forced these new styles to be invented.",
+  "summary": "### Summary\n\nAlan C. Kay presents a first-person history of the ideas, systems, people, and design pressures that led to Smalltalk. The account traces a lineage from the Burroughs B220, B5000, Sketchpad, Simula, FLEX, Logo, Lisp, Planner, and ARPA human–computer-symbiosis research to the Smalltalk systems developed at Xerox PARC. Its central technical claim is that computation can be organized around protected, universal objects that encapsulate state and behavior and communicate through messages. Kay also connects this model to personal computing, overlapping-window interfaces, direct manipulation, extensibility, virtual machines, interactive development, and programming environments intended to support learning.\n\nThe paper documents the progression from Smalltalk-71 and Smalltalk-72 through Smalltalk-76 and Smalltalk-80, emphasizing the practical role of implementation, incremental modification, object persistence, polymorphism, inheritance, and user-interface experimentation. It also records the Learning Research Group’s attempts to use Smalltalk with children and nonprogrammers, concluding that programming fluency depends not only on language features but also on the gradual acquisition of design strategies and powerful conceptual abstractions.\n\n### Documented influence\n\n- The ACM bibliographic record identifies the article as a historical account of Smalltalk and reports substantial subsequent citation activity; the record currently lists 190 citations. ([doi.org](https://doi.org/10.1145/155360.155364))\n- Later research on personal programming and object computers cites this paper when describing Smalltalk’s object-oriented model and explicitly builds on Smalltalk- and Squeak-inspired ideas for communicating objects and personal computational environments. ([link.springer.com](https://link.springer.com/article/10.1007/s10270-019-00768-3))\n- Research on computational thinking and computing education cites the paper as part of the intellectual history connecting Smalltalk, procedural literacy, personal computing, and educational programming environments. ([link.springer.com](https://link.springer.com/article/10.1007/s11191-021-00202-5))\n- Work on verified software components cites the paper in connection with “Smalltalk-style” objects, including subtyping, inheritance, self-reference, and late binding. ([link.springer.com](https://link.springer.com/chapter/10.1007/978-3-030-72019-3_5))\n- Scholarly and educational references continue to use the paper as a standard historical source for Smalltalk, personal dynamic media, and the development of object-oriented programming. ([cambridge.org](https://www.cambridge.org/core/books/cultures-of-programming/references/1A8CADBBA3708FD4D0D3A7A195D01D25))\n\nThe available evidence supports treating the paper primarily as an influential historical and conceptual account rather than as a technical specification or a paper that directly introduced a new programming-language implementation. The concrete technical and industrial influence described in later sources is generally attributed to Smalltalk and its descendants; this paper helped preserve, explain, and disseminate that history and its design rationale.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages/smalltalk/The-Early-History-Of-Smalltalk.pdf",
   "source_type": "pdf",
   "filepath": "languages/smalltalk/The-Early-History-Of-Smalltalk.pdf",
   "filename": "The-Early-History-Of-Smalltalk.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

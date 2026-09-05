@@ -1,33 +1,28 @@
 {
   "uuid": "66450397d04e0a04197da835f32054d448a5b42fccba3e85dbbad83309f11745",
   "title": "HyperDex: A Distributed, Searchable Key-Value Store",
-  "publication_date": "2011-10-26",
+  "publication_date": "August 13–17, 2012; ACM SIGCOMM 2012, Helsinki, Finland",
   "authors": [
     "Bernard Wong",
-    "Emil Sit",
+    "Emin Gün Sirer",
     "Robert Escriva"
   ],
   "keywords": [
-    "consistency",
-    "data-partitioning",
-    "decentralized",
-    "distributed-systems",
     "fault-tolerance",
     "key-value-store",
-    "linearizability",
+    "nosql",
     "performance",
-    "scalability",
-    "searchable-store"
+    "strong-consistency"
   ],
   "category_path": [
     "datastores"
   ],
-  "abstract": "HyperDex is a novel distributed key-value store that offers a unique blend of strong consistency guarantees, fault tolerance, and support for efficient search operations. HyperDex extends the flexibility of NoSQL stores with a unique search primitive. This makes it possible to efficiently query and update data without compromising consistency or availability. We have implemented a prototype of HyperDex and evaluated its performance on a variety of workloads. Experimental results show that HyperDex delivers throughput comparable to non-searchable key-value stores and, in some cases, performs better than systems that offer only eventual consistency. These results suggest that HyperDex is a strong candidate for applications requiring both search capabilities and strong guarantees.",
-  "summary": "HyperDex introduces a novel approach to distributed key-value stores by integrating strong consistency and searchable data while maintaining high performance levels. The paper presents HyperDex's unique 'search' primitive, allowing efficient querying of data without sacrificing consistency, which is traditionally a challenge for NoSQL stores. The system's architecture is designed to be both scalable and fault-tolerant, leveraging techniques such as consistent hashing and partitioning.\n\nPerformance evaluations display HyperDex's ability to achieve throughput similar or superior to systems providing only eventual consistency. Thus, HyperDex positions itself as a suitable candidate for applications needing robust data guarantees alongside search capabilities.\n\nHyperDex has influenced subsequent research as indicated by citations in works like \"Scalaris: An open-source, scalable, transactional, peer-to-peer key/value store\" and \"Probabilistic bounded staleness for practical partial quorums\". These citations suggest its impact on the development and understanding of searchable and strongly consistent distributed data stores:  \n- [Probabilistic bounded staleness for practical partial quorums](http://dl.acm.org/citation.cfm?id=2517349)  \n- [Scalaris: An open-source, scalable, transactional, peer-to-peer key/value store](http://dl.acm.org/citation.cfm?id=1378533)  \n\nThis paper has thus made a significant contribution to the fields of database systems and distributed computing by offering a compelling solution that reconciles the often conflicting goals of consistency, availability, and performance.",
+  "abstract": "Distributed key-value stores are now a standard component of high-performance web services and cloud computing applications. While key-value stores offer significant performance and scalability advantages compared to traditional databases, they achieve these properties through a restricted API that limits object retrieval—an object can only be retrieved by the (primary and only) key under which it was inserted. This paper presents HyperDex, a novel distributed key-value store that provides a unique search primitive that enables queries on secondary attributes. The key insight behind HyperDex is the concept of hyperspace hashing in which objects with multiple attributes are mapped into a multidimensional hyperspace. This mapping leads to efficient implementations not only for retrieval by primary key, but also for partially-specified secondary attribute searches and range queries. A novel chaining protocol enables the system to achieve strong consistency, maintain availability and guarantee fault tolerance. An evaluation of the full system shows that HyperDex is 12-13× faster than Cassandra and MongoDB for finding partially specified objects. Additionally, HyperDex achieves 2-4× higher throughput for get/put operations.",
+  "summary": "## Summary\n\nHyperDex proposes a distributed key-value store that supports searches over secondary attributes through **hyperspace hashing**. Objects are mapped to multidimensional coordinates, while servers own regions of that space; this allows clients to prune the set of servers involved in partially specified and range queries. The system addresses high dimensionality through lower-dimensional subspaces and provides strong consistency and fault tolerance through **value-dependent chaining**, which accommodates object relocation as attribute values change.\n\nThe paper influenced subsequent systems research in several concrete ways:\n\n- HyperDex’s hyperspace-hashing approach is cited as the basis for later work on multidimensional distributed data processing, including BBoxDB, which contrasts HyperDex’s support for multidimensional point data with its own support for broader data-stream workloads. ([link.springer.com](https://link.springer.com/article/10.1007/s10619-022-07408-8))\n- Later research directly revisited and extended hyperspace hashing for centralized, GPU-accelerated environments, explicitly identifying HyperDex as the originating distributed design. ([link.springer.com](https://link.springer.com/article/10.1007/s41019-021-00161-5))\n- The Replex datastore used HyperDex as a comparison point and studied an alternative replication/indexing design intended to reduce the storage and write overhead associated with maintaining full copies across subspaces. ([usenix.org](https://www.usenix.org/sites/default/files/atc16_full_proceedings_interior.pdf))\n- The HyperDex implementation was released as open source and remains available as a distributed, searchable, consistent key-value store, providing an artifact for experimentation and reuse. ([github.com](https://github.com/rescrv/HyperDex))\n\nThese references indicate that HyperDex’s primary lasting contribution was as a design point for multidimensional search in distributed key-value stores, particularly the combination of attribute-aware placement, search-space pruning, and replication under changing object locations.",
   "raw_url": "https://cs.uwaterloo.ca/~bernard/hyperdex.pdf",
   "source_type": "external",
   "filepath": "datastores/README.md",
   "filename": "HyperDex: A Distributed, Searchable Key-Value Store",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:54"
 }

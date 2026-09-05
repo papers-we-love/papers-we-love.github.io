@@ -1,34 +1,33 @@
 {
   "uuid": "08e73533e1f24b3e4acd22ff0e0169e5ddae41bcaaaf49cef9c53a12af0fc265",
-  "title": "ESC/Java User Manual",
-  "publication_date": "2001",
+  "title": "Message Analysis for Concurrent Languages?",
+  "publication_date": "June 11–13, 2003; 10th International Symposium on Static Analysis (SAS 2003), San Diego, California, USA; Lecture Notes in Computer Science, volume 2694, pages 73–90",
   "authors": [
-    "Cormac Flanagan",
-    "Greg Nelson",
-    "James B. Saxe",
-    "K. Rustan M. Leino",
-    "Mark Lillibridge",
-    "Raymie Stata"
+    "Jesper Wilhelmsson",
+    "Konstantinos Sagonas",
+    "Richard Carlsson"
   ],
   "keywords": [
-    "debugging",
-    "java",
-    "model-checking",
-    "programming-languages",
-    "software-engineering",
-    "specification",
-    "static-analysis",
-    "verification"
+    "concurrent-languages",
+    "erlang",
+    "escape-analysis",
+    "garbage-collection",
+    "heap-allocation",
+    "memory-management",
+    "message-passing",
+    "runtime-systems",
+    "shared-memory",
+    "static-analysis"
   ],
   "category_path": [
     "concurrency"
   ],
-  "abstract": "ESC/Java is a program checker that automatically, or nearly automatically, detects common programming errors. This manual describes ESC/Java, emphasizes how to use it effectively, and serves as a source of reference information.",
-  "summary": "The paper \"ESC/Java User Manual\" published in 2001 presents ESC/Java, a tool designed to perform static checking of Java programs to detect common programming errors. The tool leverages specifications attached to Java programs and provides warnings for potential errors at compile-time. This approach aids developers in verifying code behavior against specified assertions, potentially reducing runtime errors and improving code reliability significantly.\n\nESC/Java serves as a precursor to advancements in software verification and static analysis tools, influencing many subsequent developments in the field of formal methods and program verification. Despite its age, it is still referenced in literature concerning program verification and static analysis. For example, the work on ESC/Java has been cited by Leino et al. in academic resources focusing on software correctness and analytical methods.\n\n**References:**\n1. Andrea Arcuri, Lionel C. Briand, \"A Practical Guide for Using Statistical Tests to Assess Randomized Algorithms in Software Engineering\", Proceedings of the 33rd International Conference on Software Engineering, 2011.\n2. K. Rustan M. Leino, \"Efficient weakest preconditions\", Information Processing Letters, 2005, [Elsevier](https://www.sciencedirect.com/science/article/pii/S0020019005000383).",
+  "abstract": "We describe an analysis-driven storage allocation scheme for concurrent languages that use message passing with copying semantics. The basic principle is that in such a language, data which is not part of any message does not need to be allocated in a shared data area. This allows for deallocation of thread-specific data without requiring global synchronization and often without even triggering garbage collection. On the other hand, data that is part of a message should preferably be allocated on a shared area, which allows for fast (O(1)) interprocess communication that does not require actual copying. In the context of a dynamically typed, higher-order, concurrent functional language, we present a static message analysis which guides the allocation. As shown by our performance evaluation, conducted using an industrial-strength language implementation, the analysis is effective enough to discover most data which is to be used as a message, and to allow the allocation scheme to combine the best performance characteristics of both a process-centric and a shared-heap memory architecture.",
+  "summary": "The paper proposes a hybrid memory architecture for concurrent languages using asynchronous message passing with copying semantics, particularly Erlang. Each process retains a private heap for process-local data, while data likely to be shared through messages is allocated in a common area. This design aims to combine the short garbage-collection pauses and inexpensive reclamation of process-specific heaps with the constant-time communication and avoidance of repeated data replication associated with shared heaps.\n\nThe central contribution is a static message analysis for a dynamically typed, higher-order functional language. The analysis extends data-flow and closure-analysis techniques to identify values that may become messages, without depending on static type information. It also uses a specialized treatment of list constructors to preserve useful precision for recursive list processing. The paper additionally presents an escape analysis for identifying data that cannot leave its creating process.\n\nThe implementation integrates the analysis into the Erlang/OTP compiler and rewrites allocation sites so that probable message data is placed directly in shared memory. Values whose location is uncertain are protected by copy-on-demand operations, preserving the invariant that shared data cannot point into process-local heaps. The evaluated system reduced copying substantially: copying fell to zero for the `life` benchmark, from 81% to 34% of words for `eddie`, and to less than 0.02% for the large-message `nag` configurations. The analyzed hybrid system was approximately 10% faster than the process-centric baseline on `life` and generally outperformed it for larger messages in the `nag` benchmarks. Analysis overhead was modest in native-code compilation, remaining below 10% in the reported benchmarks.\n\nThe paper’s subsequent influence is directly documented in several follow-on publications. The authors extended the work into a 2004 ISMM paper that combined message-analysis-guided allocation with generational incremental garbage collection for low-pause concurrent systems. ([researchgate.net](https://www.researchgate.net/publication/221032887_Message_analysis-guided_allocation_and_low-pause_incremental_garbage_collection_in_a_concurrent_language)) A substantially extended version appeared in ACM TOPLAS in 2006, expanding the treatment of message analysis and concurrent memory management. ([doi.org](https://doi.org/10.1145%2F1146809.1146813)) Bibliographic records identify the SAS paper as the original 2003 publication and the later TOPLAS article as a direct extended version. ([link.springer.com](https://link.springer.com/book/10.1007/3-540-44898-5)) The available evidence supports a concrete influence on subsequent Erlang-oriented memory-management research; it does not establish broad adoption of the specific hybrid architecture in commercial Erlang/OTP implementations.",
   "raw_url": "http://user.it.uu.se/~kostis/Papers/escape.pdf",
   "source_type": "external",
   "filepath": "concurrency/README.md",
   "filename": "Message Analysis for Concurrent Languages",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:54"
 }

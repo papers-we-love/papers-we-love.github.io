@@ -1,38 +1,38 @@
 {
   "uuid": "8c32da43249a92748e710d9a1659490d7b2e6de468db1fa47288c48a505700e4",
-  "title": "Write-Optimized B-Trees",
-  "publication_date": "2012",
+  "title": "An Introduction to Bε-trees and Write-Optimization",
+  "publication_date": "October 2015; ;login: magazine, Volume 40, Number 5, pages 22–28",
   "authors": [
     "Bradley C. Kuszmaul",
-    "Dinesh Sumanta",
-    "Eric D. D. Silva",
+    "Donald E. Porter",
+    "Jun Yuan",
     "Martin Farach-Colton",
     "Michael A. Bender",
     "Rob Johnson",
-    "Russell Kraner",
-    "William E. Smith"
+    "William Jannen",
+    "Yang Zhan"
   ],
   "keywords": [
+    "b-epsilon-trees",
     "b-trees",
-    "buffers",
-    "concurrency",
-    "data-structures",
-    "database-systems",
+    "buffered-updates",
+    "external-memory-data-structures",
     "file-systems",
-    "multi-core",
-    "performance",
-    "throughput",
+    "key-value-stores",
+    "lsm-trees",
+    "range-queries",
+    "upserts",
     "write-optimization"
   ],
   "category_path": [
     "data_structures"
   ],
-  "abstract": "Recent file systems, such as WAFL, ZFS, and Btrfs, use tree-based organizations for their indices, allocation maps, and directories. However, these systems use update-in-place methods that are suboptimal for write performance. We propose a technique called \"write-optimized B-trees\" (WOBTs) that improves write performance by buffering writes more effectively. We present asymptotically better bounds for writes, without degrading the asymptotic read performance. We also present an experimental study that shows significant throughput improvements, particularly for random writes, compared to traditional B-trees and Log-Structured Merge-trees (LSM-trees).",
-  "summary": "The paper \"Write-Optimized B-Trees\" introduces an innovative data structure aimed at enhancing write performance in file systems by proposing a variant of the B-tree known as the Write-Optimized B-tree (WOBT). The study establishes that traditional file systems, even those utilizing advanced index structures such as WAFL, ZFS, and Btrfs, rely on update-in-place methods that do not capitalize on optimal write efficiency. The authors advocate for the use of WOBTs as a stark improvement in this area, achieving superior write asymptotic bounds while maintaining efficient read operations. Through experimental results, the paper demonstrates considerable improvements in throughput, emphasizing performance gains for random writes when compared to standard B-trees and Log-Structured Merge-trees.\n\nFollowing a search for citations and further implications of this work, it appears the paper has not gained significant traction or direct citation in subsequent research, as no prominent references or applications were found in available literature. This implies that while the findings present an interesting approach to file system optimizations, further adoption or extensions in academic or industrial contexts are limited. Consequently, the impact of WOBTs remains largely within the domain of theoretical exploration without widespread practical application as of the latest available information.",
+  "abstract": "A Bε-tree is an example of a write-optimized data structure and can be used to organize on-disk storage for an application such as a database or file system. A Bε-tree provides a key-value API, similar to a B-tree, but with better performance, particularly for inserts, range queries, and key-value updates. This article describes the Bε-tree, compares its asymptotic performance to B-trees and Log-Structured Merge trees (LSM-trees), and presents real-world performance measurements. After finishing this article, a reader should have a basic understanding of how a Bε-tree works, its performance characteristics, how it compares to other key-value stores, and how to design applications to gain the most performance from a Bε-tree.",
+  "summary": "The article presents Bε-trees as write-optimized external-memory search trees that extend B-trees with message buffers in internal nodes. Inserts, deletes, and upserts are buffered near the root and flushed downward in batches, amortizing I/O costs across many updates. The parameter ε controls the trade-off between branching factor and buffer capacity: smaller ε improves update throughput, while larger ε reduces search overhead. With ε = 1/2, inserts cost approximately O(log_B N / √B), while point queries retain logarithmic complexity with only a constant-factor increase over B-trees. Range queries retain the usual logarithmic search plus scan cost, O(log_B N + k/B). The paper also explains upserts, covering and secondary indices, caching effects, node-size selection, and the differences between Bε-trees and LSM-trees. Its evaluation through the BetrFS research file system reports substantially improved small-file creation and directory-scan performance, while identifying large renames, large deletes, and large sequential writes as limitations.\n\n**Documented influence.** The paper’s concepts were applied in the BetrFS in-kernel file system and were associated with the commercial TokuDB database and its fractal-tree implementation. The BetrFS project describes Bε-trees as the basis of its on-disk organization and identifies fractal trees as a specialized Bε-tree variant. ([betrfs.org](https://www.betrfs.org/)) A later open-source Bε-tree implementation explicitly cites this article and implements buffered message flushing, direct-to-leaf flushing heuristics, and copy-on-write support. ([github.com](https://github.com/KaminariOS/b-epsilon-tree)) The article has also continued to be used as instructional material in external-memory algorithms and modern storage-systems courses. ([courses.compute.dtu.dk](https://courses.compute.dtu.dk/02282/2026/))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/data_structures/b-trees-write-optimization.pdf",
   "source_type": "pdf",
   "filepath": "data_structures/b-trees-write-optimization.pdf",
   "filename": "b-trees-write-optimization.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:51"
 }

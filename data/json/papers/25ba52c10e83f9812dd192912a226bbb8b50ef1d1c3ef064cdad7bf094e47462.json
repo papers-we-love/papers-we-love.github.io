@@ -1,31 +1,30 @@
 {
   "uuid": "25ba52c10e83f9812dd192912a226bbb8b50ef1d1c3ef064cdad7bf094e47462",
-  "title": "Imaging vector fields using line integral convolution",
-  "publication_date": "1993",
+  "title": "Imaging Vector Fields Using Line Integral Convolution",
+  "publication_date": "1993 (Proceedings of ACM SIGGRAPH ’93, Anaheim, California, August 1–6, 1993)",
   "authors": [
     "Brian Cabral",
     "Leith (Casey) Leedom"
   ],
   "keywords": [
-    "computer-graphics",
-    "flow-visualization",
-    "image-processing",
-    "line-integral-convolution",
-    "scientific-visualization",
-    "signal-processing",
+    "convolution",
+    "filtering",
+    "flow-fields",
+    "periodic-motion-filtering",
+    "rendering",
+    "special-effects",
     "texture-synthesis",
-    "vector-fields",
     "visualization"
   ],
   "category_path": [
     "computer_graphics"
   ],
-  "abstract": "A new method called line integral convolution (LIC) is presented for imaging vector fields. The method convolves an input noise texture along the local streamlines of the vector field to produce a filtered texture. The output of the convolution is controlled by the length of the streamline and the filter kernel width. This method can successfully visualize the features of a vector field at any resolution and does not require precise interpolation of the field. LIC has several advantages over spot noise and other vector field visualization techniques, in particular, its application to 3D fields and its use of efficient texture-based rendering hardware. Examples are given of its application in areas such as computational fluid dynamics and finite element modeling.",
-  "summary": "The paper \"Imaging vector fields using line integral convolution\" introduces a novel technique for visualizing vector fields using line integral convolution (LIC). The method involves convolving a noise texture along streamlines of a vector field, which results in a filtered texture that effectively visualizes the field's features across various resolutions. This approach avoids the need for precise interpolation and is advantageous over prior techniques like spot noise, especially when dealing with 3D fields and utilizing efficient texture-based rendering hardware.\n\nThe paper's contribution has been influential in the field of computer graphics and scientific visualization. LIC's application ranges from computational fluid dynamics to finite element modeling, allowing for more effective visual representation of complex data. It has been cited by numerous subsequent works, underscoring its impact on vector field visualization techniques. For instance, the method has been referenced in \"Image-Guided Streamline Placement,\" which further refines flow visualization techniques building upon LIC concepts ([Image-Guided Streamline Placement - IEEE](https://ieeexplore.ieee.org/document/1303739)). Another significant citation includes \"A Survey of Methods for Visualizing Scalar Data on Unstructured Grids\" which points to LIC as a critical advancement in the visualization toolkit for data representation ([A Survey of Methods for Visualizing Scalar Data on Unstructured Grids - CG&A](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3532731/)).\n\nOverall, the approach has established a foundational method in the domain of flow visualization, and its principles continue to inform and guide related research and industry applications.",
+  "abstract": "Imaging vector fields has applications in science, art, image processing and special effects. An effective new approach is to use linear and curvilinear filtering techniques to locally blur textures along a vector field. This approach builds on several previous texture generation and filtering techniques[8, 9, 11, 14, 15, 17, 23]. It is, however, unique because it is local, one-dimensional and independent of any predefined geometry or texture. The technique is general and capable of imaging arbitrary two- and three-dimensional vector fields. The local one-dimensional nature of the algorithm lends itself to highly parallel and efficient implementations. Furthermore, the curvilinear filter is capable of rendering detail on very intricate vector fields. Combining this technique with other rendering and image processing techniques — like periodic motion filtering — results in richly informative and striking images. The technique can also produce novel special effects.",
+  "summary": "## Summary\n\nThe paper introduces **Line Integral Convolution (LIC)**, a method for visualizing dense two- and three-dimensional vector fields by filtering an input texture along locally integrated streamlines. Unlike icon placement, particle tracing, and earlier texture-synthesis approaches, LIC is local, one-dimensional, independent of a predefined texture or geometry, and applicable to dense fields.\n\nThe method improves on straight-line DDA convolution by advecting a streamline forward and backward through neighboring grid cells. It computes a weighted line integral of the input texture along that streamline and normalizes the result by the integral of the filter kernel. The paper also discusses aliasing control through low-pass filtering, treatment of null vectors and singularities, fixed versus variable normalization, and the performance trade-off between accuracy and speed. Periodic, phase-shifted filters are introduced to convey vector direction through animation, while variations in integration length or post-processing can encode vector magnitude.\n\nThe approach is generalized to three-dimensional scalar fields, which can then be rendered volumetrically. Demonstrated applications include scientific flow visualization, image stylization, woven-surface textures, wind-field visualization, vector-magnitude overlays, and motion blur. On the hardware reported in the paper, two-dimensional LIC processed approximately 3,000 cells per second, compared with approximately 30,000 for DDA convolution; the three-dimensional implementation processed approximately 1,200 cells per second before thresholding optimizations.\n\n### Influence\n\nSubsequent work extended LIC to curvilinear-grid and parametric-surface flow visualization, including real-time implementations using texture-mapping hardware. ([graphics.stanford.edu](https://graphics.stanford.edu/papers/flowvis/)) Stalling and Hege developed a faster, resolution-independent LIC algorithm using error-controlled numerical integration and reported an order-of-magnitude reduction in computational cost relative to the original method. ([webdoc.sub.gwdg.de](https://webdoc.sub.gwdg.de/ebook/ah/2001/zib-webdoc/paperweb/abstracts/sc-94-37/default.htm)) Cabral and Leedom later published a parallel LIC implementation, directly pursuing the paper’s observation that the method is well suited to parallel computation. ([dblp.org](https://dblp.org/pid/79/6575)) Later instructional and research materials describe extensions including GPU implementations, oriented LIC, multiresolution inputs, time-varying-data techniques, and integration with volume rendering. ([history.siggraph.org](https://history.siggraph.org/wp-content/uploads/2021/08/1997-08-Course-Contents-Texture-Synthesis-with-Line-Integral-Convolution.pdf)) These references document LIC’s continuing use as a foundational dense vector-field visualization technique.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/computer_graphics/imaging_vector_fields_using_line_integral_convolution.pdf",
   "source_type": "pdf",
   "filepath": "computer_graphics/imaging_vector_fields_using_line_integral_convolution.pdf",
   "filename": "imaging_vector_fields_using_line_integral_convolution.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:50"
 }

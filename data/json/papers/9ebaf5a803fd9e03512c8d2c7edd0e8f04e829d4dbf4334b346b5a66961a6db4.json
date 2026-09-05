@@ -1,33 +1,33 @@
 {
   "uuid": "9ebaf5a803fd9e03512c8d2c7edd0e8f04e829d4dbf4334b346b5a66961a6db4",
   "title": "Zab: High-performance broadcast for primary-backup systems",
-  "publication_date": "2011-02-14",
+  "publication_date": "June 27–30, 2011 — 2011 IEEE/IFIP 41st International Conference on Dependable Systems and Networks (DSN 2011), pp. 245–256",
   "authors": [
     "Benjamin C. Reed",
     "Flavio P. Junqueira",
     "Marco Serafini"
   ],
   "keywords": [
-    "broadcast",
-    "consensus",
-    "distributed-systems",
+    "asynchronous-consensus",
+    "atomic-broadcast",
+    "crash-recovery",
+    "distributed-algorithms",
     "fault-tolerance",
-    "high-performance",
-    "ordering-guarantees",
+    "leader-election",
     "primary-backup",
-    "replication",
-    "zab",
+    "quorum-systems",
+    "replicated-state-machines",
     "zookeeper"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "Zab is a primary-backup replication protocol that provides ordered broadcast and includes mechanisms to overcome limitations of existing approaches. In particular, Zab incorporates a new strengthened primary commitment mechanism to prevent leading primary failures from propagating incorrect data. Experiments show that the protocol has stable performance under high load, due to its flow control and pipelining mechanism, while allowing the system to enforce leader election safely to ensure progress.",
-  "summary": "The paper titled \"Zab: High-performance broadcast for primary-backup systems\" presents Zab, a replication protocol specifically designed for use in primary-backup systems. This protocol aims to provide ordered broadcast services while incorporating mechanisms to handle leading primary failures effectively. The significant innovation in this protocol is a new primary commitment mechanism that prevents the propagation of incorrect data following the failure of a leading primary node. Scalability and fault-tolerance of the system are enhanced through its flow control and pipelining mechanisms.\n\nUpon conducting a web search, Zab is crucial in the architecture of Apache ZooKeeper, a well-known coordination service for distributed applications, which uses Zab for leader election and atomic broadcast. The Apache ZooKeeper [ZooKeeper documentation](https://zookeeper.apache.org/doc/r3.4.14/zookeeperInternals.html) explicitly references Zab as its core consensus protocol.\n\nThe paper has been influential in developing distributed systems that require reliable coordination and consistency across nodes. While specific direct citations of this paper are not abundantly mentioned in other research papers, the implementation of Zab in Apache ZooKeeper indicates its practical significance in the domain of distributed systems and consensus algorithms.",
+  "abstract": "Zab is a crash-recovery atomic broadcast algorithm we designed for the ZooKeeper coordination service. ZooKeeper implements a primary-backup scheme in which a primary process executes clients operations and uses Zab to propagate the corresponding incremental state changes to backup processes¹. Due the dependence of an incremental state change on the sequence of changes previously generated, Zab must guarantee that if it delivers a given state change, then all other changes it depends upon must be delivered first. Since primaries may crash, Zab must satisfy this requirement despite crashes of primaries.\n\nApplications using ZooKeeper demand high-performance from the service, and consequently, one important goal is the ability of having multiple outstanding client operations at a time. Zab enables multiple outstanding state changes by guaranteeing that at most one primary is able to broadcast state changes and have them incorporated into the state, and by using a synchronization phase while establishing a new primary. Before this synchronization phase completes, a new primary does not broadcast new state changes. Finally, Zab uses an identification scheme for state changes that enables a process to easily identify missing changes. This feature is key for efficient recovery.\n\nExperiments and experience so far in production show that our design enables an implementation that meets the performance requirements of our applications. Our implementation of Zab can achieve tens of thousands of broadcasts per second, which is sufficient for demanding systems such as our Web-scale applications.",
+  "summary": "### Paper summary\n\nZab is a crash-recovery atomic broadcast protocol designed for ZooKeeper’s primary-backup replication model. Its central contribution is **primary order**, which preserves the order of state changes both within one primary’s tenure and across successive primaries. This is necessary because ZooKeeper transactions are incremental, non-commutative updates whose correctness depends on applying them in sequence.\n\nThe protocol uses three phases: discovery, synchronization, and broadcast. Discovery selects a prospective leader and identifies the most advanced surviving transaction history. Synchronization establishes the leader and causes a quorum to adopt and deliver the selected history before new transactions can be broadcast. Broadcast then disseminates transactions in increasing zxid order, requiring stable-storage acknowledgments from a quorum before committing them. A zxid combines an epoch number with a per-epoch counter, allowing missing suffixes of transaction histories to be identified efficiently during recovery.\n\nThe paper argues that ordinary Paxos does not directly provide the required primary-order behavior when multiple transactions are outstanding, unless proposals are serialized or batched. Zab instead permits a continuous stream of outstanding transactions while retaining ordering and recovery guarantees. The reported Java implementation achieved tens of thousands of broadcasts per second; performance was primarily limited by leader network bandwidth when disk write caching was enabled, while disabling the cache made the system substantially more I/O-bound.\n\n### Influence\n\nZab became the atomic broadcast foundation of ZooKeeper. Apache’s documentation describes ZooKeeper’s synchronization mechanism as a quorum-based atomic messaging system using ordered proposals, persistent acknowledgments, and transaction identifiers that expose the global order. ([zookeeper.apache.org](https://zookeeper.apache.org/doc/r3.4.5/zookeeperInternals.html))\n\nSubsequent research formalized and generalized the paper’s primary-order concept. *On Barriers and the Gap between Active and Passive Replication* explicitly analyzes Zab alongside other primary-order atomic broadcast protocols and characterizes the synchronization barrier required when changing primaries. ([arxiv.org](https://arxiv.org/abs/1308.2979))\n\nThe protocol has also been used as a subject for formal specification, testing, and systems research. A later study developed a TLA+ specification of Zab and used it to guide testing of the ZooKeeper implementation, while storage-recovery work has adapted Zab’s epoch-and-index transaction identifiers for protocol-aware recovery. ([arxiv.org](https://arxiv.org/abs/2302.02703))\n\nThe paper was published in the 2011 IEEE/IFIP 41st International Conference on Dependable Systems and Networks, held June 27–30, 2011. ([proceedings.com](https://www.proceedings.com/12170.html))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/zab-high-performance-broadcast-for-primary-backup-systems.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/zab-high-performance-broadcast-for-primary-backup-systems.pdf",
   "filename": "zab-high-performance-broadcast-for-primary-backup-systems.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

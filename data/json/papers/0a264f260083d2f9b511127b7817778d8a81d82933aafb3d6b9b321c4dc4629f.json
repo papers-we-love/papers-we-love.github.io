@@ -1,32 +1,32 @@
 {
   "uuid": "0a264f260083d2f9b511127b7817778d8a81d82933aafb3d6b9b321c4dc4629f",
-  "title": "Jails: Confining the Omnipotent Root",
-  "publication_date": "2000",
+  "title": "Jails: Confining the omnipotent root.",
+  "publication_date": "May 22–25, 2000; Proceedings of the 2nd International System Administration and Networking Conference (SANE 2000), Maastricht, The Netherlands",
   "authors": [
-    "Paul-Henning Kamp",
-    "Robert Watson"
+    "Poul-Henning Kamp",
+    "Robert N. M. Watson"
   ],
   "keywords": [
+    "container-security",
+    "filesystem-isolation",
     "freebsd",
     "jails",
     "multi-tenancy",
-    "operating-systems",
+    "network-isolation",
+    "operating-system-virtualization",
     "process-isolation",
-    "resource-management",
-    "root-access",
-    "security",
-    "system-administration",
-    "virtualization"
+    "root-privilege-confinement",
+    "virtual-private-servers"
   ],
   "category_path": [
     "operating_systems"
   ],
-  "abstract": "The jail mechanism has been present in the FreeBSD operating system since early 2000. Jails were originally designed and implemented as a mechanism for providing additional security to service providers by partitioning system operations into separate environments. The jail mechanism builds on traditional Unix system administration concepts and techniques to provide flexibility, extensibility, and simplicity. Unlike a chroot environment, a jail limits access to system resources in a principled way, including the ability to separate superuser privileges, network addresses, and file systems. This paper describes the jail mechanism, design decisions, implementation details, known weaknesses, and future directions for the development of the jail mechanism.",
-  "summary": "The paper \"Jails: Confining the Omnipotent Root\" presents the jail mechanism introduced in the FreeBSD operating system around 2000. The authors, Paul-Henning Kamp and Robert Watson, developed this system to enhance security and system administration by partitioning system operations into isolated environments or jails. These jails extend beyond traditional Unix environments like chroot by adding a structured method to contain superuser privileges, segregate network addresses, and isolate file systems. This makes it vital for multi-tenancy setups where separation of privileges is essential.\n\nThis paper's impact can be seen extensively in the evolution of operating system security models and virtualization technologies. It has been cited in numerous academic and technical studies discussing the concept of lightweight virtualization. The methodology influenced the development of other container-based technologies, like modern Linux containers and Docker.\n\nNotable references include:\n\n- Watson, R. et al., \"Capsicum: Practical Capabilities for UNIX,\" which builds on concepts introduced in jails to implement more fine-grained control of process privileges ([source](https://www.cl.cam.ac.uk/research/security/capsicum/)).\n- Red Hat's implementation of SELinux which includes ideas about segmentation and isolation found in FreeBSD jails ([source](https://www.redhat.com/en/topics/security/what-is-selinux)).\n\nThrough these and other references, the utility and adaptation of the jail model have influenced computing paths in security and isolation strategies, maintaining relevance for over two decades. Other specific citations may exist, but those listed are indicative of the overall academic and technical tendencies influenced by this paper.",
+  "abstract": "The traditional UNIX security model is simple but inexpressive. Adding fine-grained access control improves the expressiveness, but often dramatically increases both the cost of system management and implementation complexity. In environments with a more complex management model, with delegation of some management functions to parties under varying degrees of trust, the base UNIX model and most natural extensions are inappropriate at best. Where multiple mutually untrusting parties are introduced, ‘‘inappropriate’’ rapidly transitions to ‘‘nightmarish’’, especially with regards to data integrity and privacy protection.\n\nThe FreeBSD ‘‘Jail’’ facility provides the ability to partition the operating system environment, while maintaining the simplicity of the UNIX ‘‘root’’ model. In Jail, users with privilege find that the scope of their requests is limited to the jail, allowing system administrators to delegate management capabilities for each virtual machine environment. Creating virtual machines in this manner has many potential uses; the most popular thus far has been for providing virtual machine services in Internet Service Provider environments.",
+  "summary": "### Impact\n\nThe paper introduced and documented FreeBSD Jails as an operating-system-level partitioning mechanism that confines filesystem access, process visibility and interaction, network resources, and privileged operations while preserving the familiar UNIX root model. The implementation was incorporated into FreeBSD 4.0-RELEASE and was deployed particularly for virtual private server services. ([papers.freebsd.org](https://papers.freebsd.org/2000/phk-jails/))\n\nThe design remains part of FreeBSD’s supported virtualization stack. Current FreeBSD documentation describes jails as virtualizing filesystem, user, and networking access, and states that FreeBSD’s OCI-compatible containers use the same underlying jail technology. ([docs.freebsd.org](https://docs.freebsd.org/en/books/handbook/jails/))\n\nSubsequent systems and research on operating-system isolation, container security, and virtualization cite the paper as an early reference point for jail- and container-style confinement. These citations demonstrate continued technical relevance, but do not by themselves establish that a particular later system directly derived its implementation from this paper. ([doi.org](https://doi.org/10.1145/1600176.1600186))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/operating_systems/jails-confining-the-omnipotent-root..pdf",
   "source_type": "pdf",
   "filepath": "operating_systems/jails-confining-the-omnipotent-root..pdf",
   "filename": "jails-confining-the-omnipotent-root..pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:56"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

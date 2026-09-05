@@ -1,37 +1,36 @@
 {
   "uuid": "42b3c32dcc8a4914deb62927d674b82ba23ae5164554e3d20dc9b5098092888c",
   "title": "Copysets: Reducing the Frequency of Data Loss in Cloud Storage",
-  "publication_date": "2013",
+  "publication_date": "June 2013 — 2013 USENIX Annual Technical Conference (USENIX ATC ’13), San Jose, California, pp. 37–48",
   "authors": [
-    "Bruce Kens",
-    "H. Gobioff",
-    "Jimmy Lin",
-    "Neil Murphy",
-    "Sanjay Ghemawat",
-    "Sriram Sankar",
-    "Sunil Kumar"
+    "Asaf Cidon",
+    "John Ousterhout",
+    "Mendel Rosenblum",
+    "Ryan Stutsman",
+    "Sachin Katti",
+    "Stephen Rumble"
   ],
   "keywords": [
-    "availability",
     "cloud-storage",
-    "copysets",
+    "combinatorial-design",
+    "copyset-replication",
+    "correlated-failures",
     "data-loss",
-    "data-management",
-    "data-reliability",
     "distributed-systems",
-    "google-cloud",
-    "replication",
-    "storage-systems"
+    "fault-tolerance",
+    "hdfs",
+    "ramcloud",
+    "replication"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "We introduce the concept of a copyset, a novel way of defining the redundancy characteristics for objects stored in a distributed storage system. Copysets minimize the probability of data loss by decreasing the probability of simultaneous node failure affecting a large number of distinct copy sets.",
-  "summary": "This paper presents a new methodology for improving data reliability in large-scale distributed storage systems through a concept called \"copysets.\" The authors propose using copysets to reduce the frequency of data loss events by limiting the number of simultaneous failures. Copysets alter the distribution of redundancy by changing how replicas are grouped, which in turn impacts the system's ability to withstand multiple node failures.\n\nThe core contribution of the paper is the introduction of copyset designs, distinct from traditional replication methods. By distributing data across these copysets, the method achieves better fault tolerance when compared to conventional replication techniques. Tests demonstrate that using copysets significantly reduces the expected number of distinct data losses. The paper includes multiple theoretical and experimental analyses on how copysets decrease the probability of data loss and illustrates its effectiveness compared to previous methods.\n\nIn terms of its impact, there does not seem to be direct citations of this specific work; however, concepts similar to copysets are often discussed in the context of storage redundancy in cloud infrastructure. Researchers continually pursue methods to minimize data risks, and techniques like these can influence storage design, as evident in ongoing studies and improvements within tech companies focused on data reliability. Given its publication through Google's platform, this work aligns with broader efforts in distributed storage solutions at large cloud providers. A search did not reveal any direct referencing papers or key industry adoption explicitly citing this paper.",
+  "abstract": "Random replication is widely used in data center storage systems to prevent data loss. However, random replication is almost guaranteed to lose data in the common scenario of simultaneous node failures due to cluster-wide power outages. Due to the high fixed cost of each incident of data loss, many data center operators prefer to minimize the frequency of such events at the expense of losing more data in each event.\n\nWe present Copyset Replication, a novel general-purpose replication technique that significantly reduces the frequency of data loss events. We implemented and evaluated Copyset Replication on two open source data center storage systems, HDFS and RAMCloud, and show it incurs a low overhead on all operations. Such systems require that each node’s data be scattered across several nodes for parallel data recovery and access. Copyset Replication presents a near optimal trade-off between the number of nodes on which the data is scattered and the probability of data loss. For example, in a 5000-node RAMCloud cluster under a power outage, Copyset Replication reduces the probability of data loss from 99.99% to 0.15%. For Facebook’s HDFS cluster, it reduces the probability from 22.8% to 0.78%.",
+  "summary": "## Paper summary\n\nThe paper identifies a cluster-wide power outage as a correlated-failure scenario in which conventional random replication can lose data even when each individual chunk has a low probability of losing all replicas. The central observation is that the probability of losing at least one chunk depends strongly on the number of distinct **copysets**—sets of nodes containing all replicas of a chunk.\n\nCopyset Replication reduces this probability by restricting replica placement to a carefully constructed collection of copysets. The system first generates random permutations of the nodes and partitions each permutation into groups of size equal to the replication factor. During replication, the primary replica may be placed according to the storage system’s normal policy, while secondary replicas are selected from a copyset containing the primary node. The number of permutations is chosen to provide a target scatter width, preserving parallel recovery and access while keeping the number of distinct copysets low.\n\nThe authors show that minimal copyset constructions increase the number of copysets approximately linearly with scatter width, whereas random replication can increase it on the order of the scatter width raised to the replication factor minus one. In simulations using a 5,000-node cluster and three replicas, the reported probability of data loss under a 1% concurrent-node failure decreases from 99.99% to 0.15% for RAMCloud and from 22.8% to 0.78% for Facebook’s HDFS configuration. The approach is near-optimal when scatter width is substantially smaller than cluster size: the evaluation reports more than 90% of optimal scatter width, including approximately 98% for the HDFS configuration.\n\nThe trade-off is that Copyset Replication does not reduce the expected amount of data lost over repeated failures; it changes the distribution from frequent, smaller incidents to rarer, larger incidents. It can also increase recovery traffic, create higher worst-case replica load because of copyset overlaps, and complicate node addition and removal. In the reported HDFS experiments, recovery was approximately 5–20% slower on a 39-node test cluster. In RAMCloud, normal operations and master recovery showed negligible overhead, while backup recovery took 1.10 seconds versus 0.73 seconds for random replication and re-replicated approximately three times as much data.\n\n## Subsequent research and industry use\n\nThe paper received the Best Student Paper award at USENIX ATC ’13. ([usenix.org](https://www.usenix.org/conference/atc13/technical-sessions/presentation/cidon)) Subsequent research treated Copyset Replication as a reference layout for reliability analysis; for example, a later reliability model compared random, shifted, and Copyset layouts in replicated storage systems. ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S0743731517300497)) The DXRAM storage-system work discusses adapting copyset replica distribution to reduce data-loss probability, indicating use of the idea beyond the original HDFS and RAMCloud evaluation. ([arxiv.org](https://arxiv.org/abs/1807.03562))\n\nThe concept also influenced distributed-storage engineering designs. A CockroachDB design RFC proposed dividing stores into copysets, preferring to place a range’s replicas within one copyset, while retaining locality constraints and addressing node membership changes and rebalancing. ([fossies.org](https://fossies.org/linux/cockroach/docs/RFCS/20181204_copysets.md)) Facebook’s LogDevice documentation uses “copyset” for the set of storage nodes holding a record’s replicas and selects copysets subject to replication and failure-domain policies, although the documentation does not establish that its implementation is identical to the algorithm in this paper. ([logdevice.io](https://logdevice.io/docs/Concepts.html))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/copysets-reducing-the-frequency-of-data-loss-in-cloud-storage.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/copysets-reducing-the-frequency-of-data-loss-in-cloud-storage.pdf",
   "filename": "copysets-reducing-the-frequency-of-data-loss-in-cloud-storage.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:51"
 }

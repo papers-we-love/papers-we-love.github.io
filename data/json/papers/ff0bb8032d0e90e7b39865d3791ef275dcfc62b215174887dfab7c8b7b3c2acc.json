@@ -1,40 +1,36 @@
 {
   "uuid": "ff0bb8032d0e90e7b39865d3791ef275dcfc62b215174887dfab7c8b7b3c2acc",
   "title": "Flat Datacenter Storage",
-  "publication_date": "2013",
+  "publication_date": "October 2012, 10th USENIX Symposium on Operating Systems Design and Implementation (OSDI ’12)",
   "authors": [
-    "Andrew Heydon",
-    "Håkon Ingstad",
-    "Morny Feter",
-    "Moty Feter",
-    "Paul Battre",
-    "Raymond Goldszmidt",
-    "Sanjay Ghemawat",
-    "Shivakumar Venkataraman",
-    "Siddharth Jampani",
-    "Stephen Lloyd"
+    "Edmund B. Nightingale",
+    "Jeremy Elson",
+    "Jinliang Fan",
+    "Jon Howell",
+    "Owen Hofmann",
+    "Yutaka Suzue"
   ],
   "keywords": [
-    "availability",
-    "datacenter",
+    "blob-storage",
+    "data-locality",
+    "data-striping",
+    "datacenter-networks",
     "distributed-storage",
-    "file-system",
-    "filesystem-availability",
-    "google-infrastructure",
-    "low-latency",
-    "performance",
-    "storage",
-    "storage-infrastructure"
+    "dynamic-work-allocation",
+    "failure-recovery",
+    "full-bisection-bandwidth",
+    "metadata-striping",
+    "replication"
   ],
   "category_path": [
     "datastores"
   ],
-  "abstract": "We describe the design and implementation of Flat Datacenter Storage (FDS). FDS is a cluster storage system which is designed specifically to use cheap commodity hardware and a uniform architecture to provide data storage, management, and processing in a scalable and efficient fashion. FDS is deployed internally at Google, where it provides storage for a variety of workloads. It is highly available, fault tolerant, and offers strong consistency semantics.",
-  "summary": "The paper \"Flat Datacenter Storage\" presents the design and implementation of a storage system tailored for Google's infrastructure. Emphasizing scalability and efficiency, FDS utilizes commodity hardware and maintains strong consistency and fault tolerance. This system has been implemented at Google to support various workloads.\n\nUpon reviewing the influence and impact of this paper, it appears it contributed significantly to discussions on scalable storage solutions leveraging commodity hardware. As per [Google Scholar](https://scholar.google.com/scholar?cluster=16477685372790915744), the work influenced further research on distributed file systems and storage clusters.\n\nSubsequent papers and implementations that reference or are influenced by this work include:\n1. \"Bigtable: A Distributed Storage System for Structured Data\" which discusses scalable storage systems.\n2. \"Spanner: Google's Globally-Distributed Database\" which focuses on synchronization and consistency across distributed databases.\n3. \"Google File System\" which explores file systems in distributed environments.\n\nFDS's architectural principles have inspired new frameworks and contributed to evolving practices around using commodity hardware for cloud storage solutions.",
+  "abstract": "Flat Datacenter Storage (FDS) is a high-performance, fault-tolerant, large-scale, locality-oblivious blob store. Using a novel combination of full bisection bandwidth networks, data and metadata striping, and flow control, FDS multiplexes an application’s large-scale I/O across the available throughput and latency budget of every disk in a cluster. FDS therefore makes many optimizations around data locality unnecessary. Disks also communicate with each other at their full bandwidth, making recovery from disk failures extremely fast. FDS is designed for datacenter scale, fully distributing metadata operations that might otherwise become a bottleneck.\n\nFDS applications achieve single-process read and write performance of more than 2GB/s. We measure recovery of 92GB data lost to disk failure in 6.2 s and recovery from a total machine failure with 655GB of data in 33.7 s. Application performance is also high: we describe our FDS-based sort application which set the 2012 world record for disk-to-disk sorting.",
+  "summary": "## Summary\n\nFlat Datacenter Storage presents a locality-oblivious blob store designed for datacenters with full-bisection-bandwidth networks. It divides blobs into fixed-size tracts, uses tractservers that access raw disks directly, and places tracts deterministically through a cached tract locator table. This avoids putting individual data locations on the critical path of reads and writes while distributing both data and per-blob metadata across the storage cluster.\n\nThe design combines uniform striping, asynchronous I/O, deep read-ahead/write-ahead, and application-level RTS/CTS flow control. Because computation is independent of storage location, applications can dynamically assign small units of work to workers, reducing the effect of heterogeneous hardware and stragglers. Replication is integrated into the locator table, and failures trigger table-version changes and parallel re-replication across the remaining disks. The paper also discusses failure domains, cluster growth, variable replication, and the trade-off between high performance and weak consistency.\n\nIn a testbed of approximately 1,000 disks, FDS achieved aggregate remote read and write throughput of up to 67 GB/s and single-process throughput above 2 GB/s. It recovered 92 GB after a disk failure in 6.2 seconds and approximately 655 GB after a seven-disk machine failure in 33.7 seconds. An FDS-based sorting system processed 1,401 GB in 59 seconds in the general-purpose Daytona category and 1,470 GB in 59.4 seconds in the Indy category, establishing the 2012 MinuteSort records. The evaluated applications also included stock-market-data analysis and web-index serving.\n\n## Influence\n\nThe paper’s architectural ideas were used directly in Blizzard, a later Microsoft Research system for cloud-scale block storage. Blizzard selected FDS as its low-level storage substrate and adopted the use of full-bisection-bandwidth networking and related congestion-control techniques to provide high-performance remote block storage to unmodified POSIX and Win32 applications. ([microsoft.com](https://www.microsoft.com/en-us/research/wp-content/uploads/2014/04/blizzard.pdf))\n\nSubsequent distributed-file-system literature treats FDS as a representative example of shared-disk-like storage and computed data placement, particularly for systems operating over flat datacenter networks. A later survey identifies FDS’s deterministic placement and load-balancing techniques as notable extensions of this design approach. ([doi.org](https://doi.org/10.1145/3465405)) The work also had a documented industry-facing impact through its 2012 MinuteSort records, which demonstrated that remote, general-purpose blob storage could achieve competitive large-scale data-processing performance without relying on storage locality. ([microsoft.com](https://www.microsoft.com/en-us/research/blog/data-fast-lane/))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/datastores/flat-datacenter-storage.pdf",
   "source_type": "pdf",
   "filepath": "datastores/flat-datacenter-storage.pdf",
   "filename": "flat-datacenter-storage.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:51"
 }

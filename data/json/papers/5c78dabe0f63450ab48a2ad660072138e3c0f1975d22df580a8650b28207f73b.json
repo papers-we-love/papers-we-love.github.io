@@ -1,30 +1,33 @@
 {
   "uuid": "5c78dabe0f63450ab48a2ad660072138e3c0f1975d22df580a8650b28207f73b",
   "title": "Contiki - a Lightweight and Flexible Operating System for Tiny Networked Sensors",
-  "publication_date": "2004",
+  "publication_date": "November 2004 — First IEEE Workshop on Embedded Networked Sensors (EmNetS-I), Tampa, Florida, USA",
   "authors": [
-    "Adam Dunkels"
+    "Adam Dunkels",
+    "Björn Grönvall",
+    "Thiemo Voigt"
   ],
   "keywords": [
     "contiki",
-    "embedded-systems",
-    "event-driven-programming",
-    "memory-management",
-    "networked-systems",
-    "operating-system",
-    "resource-scheduling",
-    "sensor-networks",
-    "tinyos"
+    "dynamic-linking",
+    "dynamic-loading",
+    "embedded-operating-systems",
+    "event-driven-kernel",
+    "internet-of-things",
+    "over-the-air-programming",
+    "preemptive-multithreading",
+    "resource-constrained-devices",
+    "wireless-sensor-networks"
   ],
   "category_path": [
     "unikernels"
   ],
-  "abstract": "Recent advances in microelectronics have made it feasible to develop low-cost, low-power delay-tolerant sensor networks. This paper introduces Contiki, a lightweight and flexible operating system for tiny networked sensors. Contiki is designed to run on small memory devices and allows dynamic loading and unloading of programs. It supports both multi-threading and event-driven programming, making it portable and efficient for a wide range of applications. With Contiki, networked sensors can be set up easily, and the system is designed to be highly modular, making it adaptable to different hardware platforms and application domains.",
-  "summary": "Contiki is a pioneering operating system designed by Adam Dunkels in 2004 for use in networked sensors and embedded systems. The system's lightweight nature and flexibility allow it to run efficiently on devices with very limited resources. Its ability to dynamically load and unload programs improves adaptability and ease of management in sensor networks. \n\nContiki has influenced subsequent research and development in the field of sensor networks and resource-constrained systems. The system's modular design and dual support for multi-threading and event-driven programming have been widely referenced as significant innovations in resource management. Key areas of impact include its application to the Internet of Things (IoT) devices and its influence on other operating systems designed for low-power wireless sensors.\n\nContiki is frequently cited in works that focus on improving real-time operating systems for small devices, such as in research papers and technical developments concerning energy efficiency and network protocol stack optimization in sensor networks.\n\nFor further references, you can see the following citations: [Secure D2D Communication in 5G Heterogeneous Network Using Smart Security](https://ieeexplore.ieee.org/document/7470312), [IoT in 5G Mobile Technologies](https://www.sciencedirect.com/science/article/pii/S1877050917315761). These works are examples demonstrating where the principles set forth in Contiki have furthered research on efficient sensor networks and IoT infrastructure.",
+  "abstract": "Wireless sensor networks are composed of large numbers of tiny networked devices that communicate untethered. For large scale networks it is important to be able to dynamically download code into the network. In this paper we present Contiki, a lightweight operating system with support for dynamic loading and replacement of individual programs and services. Contiki is built around an event-driven kernel but provides optional preemptive multi-threading that can be applied to individual processes. We show that dynamic loading and unloading is feasible in a resource constrained environment, while keeping the base system lightweight and compact.",
+  "summary": "## Summary\n\nThe paper introduces Contiki, an operating system for highly resource-constrained wireless sensor nodes. Its central design combines a lightweight event-driven kernel with dynamically loadable programs and services. The system separates a relatively stable core from applications and services that can be loaded, unloaded, or replaced during operation. This design reduces the amount of code that must be transmitted when updating deployed sensor networks and permits individual communication stacks, device drivers, and application components to be updated independently.\n\nContiki processes communicate through asynchronous and synchronous events and optional polling handlers. Normal event-driven execution uses a single shared stack, reducing RAM consumption compared with systems that allocate a separate stack for every thread. For applications that require blocking or long-running computation, Contiki provides preemptive multithreading as an optional library rather than as a mandatory kernel facility. Consequently, only applications that need separate thread stacks incur the associated memory overhead.\n\nThe paper also presents a service abstraction based on dynamically linked interfaces, version numbers, function tables, and service stubs. Services can preserve their process identifiers during replacement and can optionally transfer state to a newer implementation. Communication functionality is implemented using this service model, enabling multiple communication stacks or independently replaceable protocol components. The implementation uses native machine code and runtime relocation rather than an interpreted virtual machine, preserving execution efficiency while supporting dynamic updates.\n\nExperiments on MSP430 and AVR-based platforms demonstrate that the system can remain compact while supporting dynamic loading. The reported example configuration occupies approximately 3.9 KB of compiled code on both architectures, excluding variable space determined by process count, event-queue size, and thread-stack allocation. In a 40-node application, replacing an individual application component over the air took about two minutes, compared with more than thirty minutes for manual reprogramming of the complete system. Preemption allowed the node to continue responding to incoming packets during an approximately eight-second computation, with only a small increase in response time.\n\n## Influence\n\nThe design was extended by COOJA, a cross-level simulator for Contiki that enabled simultaneous simulation at the network, operating-system, and machine-instruction levels. This made Contiki-based development and evaluation possible across multiple abstraction levels in one environment. ([ri.diva-portal.org](https://ri.diva-portal.org/smash/get/diva2%3A1041180/FULLTEXT01.pdf))\n\nThe Contiki approach subsequently developed into Contiki-NG, an open-source operating system for next-generation IoT devices. Contiki-NG retains the original project’s resource-constrained and cross-platform orientation while emphasizing standardized IPv6-based protocols, modern microcontrollers, security, and dependable low-power communication. ([docs.contiki-ng.org](https://docs.contiki-ng.org/en/release-v5.1/doc/project/More-about-Contiki-NG.html))\n\nLater research has used Contiki and COOJA as experimental platforms for routing, congestion control, intrusion detection, IoT gateway architectures, and protocol evaluation. For example, published studies have used Contiki/COOJA for performance assessment of low-power wireless and IoT networking systems. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC6263716/))\n\nBibliographic records identify the paper as a refereed 2004 conference publication in the IEEE EmNetS-I/LCN publication record, with DOI 10.1109/LCN.2004.38 and pages 455–462. ([ccs-labs.org](https://www.ccs-labs.org/bib/dunkels2004contiki/))",
   "raw_url": "http://dunkels.com/adam/dunkels04contiki.pdf",
   "source_type": "external",
   "filepath": "unikernels/README.md",
   "filename": "Contiki - a lightweight and flexible operating system for tiny networked sensors",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:05"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:57"
 }

@@ -1,7 +1,7 @@
 {
   "uuid": "0b7cf3f8f755f07d20bb91a49d1a9e0232e869013099259d005d499b6af15e79",
   "title": "Sparrow: Distributed, Low Latency Scheduling",
-  "publication_date": "November 3-6, 2013",
+  "publication_date": "November 3–6, 2013; ACM Symposium on Operating Systems Principles (SOSP ’13), Farmington, Pennsylvania, USA",
   "authors": [
     "Ion Stoica",
     "Kay Ousterhout",
@@ -9,26 +9,26 @@
     "Patrick Wendell"
   ],
   "keywords": [
-    "cloud-computing",
-    "cluster-computing",
-    "distributed-systems",
-    "latency-optimization",
-    "low-latency",
-    "parallel-computing",
-    "real-time-systems",
-    "resource-management",
-    "scheduling",
-    "task-scheduling"
+    "batch-sampling",
+    "cluster-scheduling",
+    "data-analytics",
+    "distributed-scheduling",
+    "fair-sharing",
+    "fault-tolerance",
+    "late-binding",
+    "load-balancing",
+    "low-latency-systems",
+    "parallel-jobs"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "This paper presents Sparrow, a scheduling system designed to provide low latency, scalable, and fault-tolerant scheduling for parallel jobs. Sparrow uses a combination of randomized sampling and late binding to achieve low latency and high throughput. Experiments show that Sparrow can make scheduling decisions in milliseconds and achieves higher throughput on large clusters than existing approaches. Sparrow’s decentralized design provides fault tolerance by allowing schedulers to operate independently, making Sparrow suitable for both private clusters and public clouds.",
-  "summary": "Sparrow is a scheduling system designed to address challenges in low latency and high throughput scheduling for parallel jobs on clusters. The paper was presented at the 2013 ACM Symposium on Operating Systems Principles (SOSP), highlighting Sparrow's use of randomized sampling and late binding, which allows the system to make scheduling decisions within milliseconds compared to traditional methods. Additionally, its decentralized design enhances fault tolerance, making it suitable for use in both private cluster environments and public cloud infrastructures. \n\nSparrow's introduction influenced further research into low latency task scheduling and scheduling frameworks for real-time analytics in distributed systems. For instance, it was referenced by subsequent works focused on refining scheduling models (e.g., \"A survey of decentralized online task allocation among different agents in the era of IoT\" - [Springer Link](https://link.springer.com/article/10.1007/s11241-017-9277-4)) as well as improved scheduling performance in big data frameworks.\n\nDespite its influence, specific applications or deployments of Sparrow technology in industry are not evident from a quick search, suggesting its impact is primarily within academic research and theoretical exploration of distributed systems and scheduling algorithms.",
+  "abstract": "Large-scale data analytics frameworks are shifting towards shorter task durations and larger degrees of parallelism to provide low latency. Scheduling highly parallel jobs that complete in hundreds of milliseconds poses a major challenge for task schedulers, which will need to schedule millions of tasks per second on appropriate machines while offering millisecond-level latency and high availability. We demonstrate that a decentralized, randomized sampling approach provides near-optimal performance while avoiding the throughput and availability limitations of a centralized design. We implement and deploy our scheduler, Sparrow, on a 110-machine cluster and demonstrate that Sparrow performs within 12% of an ideal scheduler.",
+  "summary": "## Summary\n\nSparrow addresses the scheduling of highly parallel jobs composed of short, sub-second tasks, where centralized schedulers can become throughput and availability bottlenecks. It proposes a stateless, decentralized architecture in which multiple schedulers independently assign work to workers using randomized probes.\n\nThe system combines two principal techniques:\n\n- **Batch sampling:** Instead of selecting worker machines independently for each task, a scheduler samples a larger pool for the entire job and assigns tasks to the least-loaded machines in that pool. This shares placement information across tasks and avoids the exponential degradation of per-task sampling as job parallelism increases.\n- **Late binding:** Workers place reservations rather than immediately accepting tasks. When a reservation reaches the front of a worker’s queue, the worker requests the task from the scheduler. The scheduler assigns tasks to the first workers that become ready, reducing errors caused by stale queue-length information and concurrent scheduling races.\n\nSparrow also supports per-job and per-task placement constraints, strict priorities, weighted fair sharing, and scheduler failover. Its design deliberately omits or approximates features such as bin packing, gang scheduling, preemption, and complex inter-job constraints in order to preserve low latency and high throughput.\n\nIn evaluation on a 110-machine Amazon EC2 cluster, Sparrow scheduled TPC-H workloads with median query response times within 12% of an idealized scheduler, achieved median queueing delays below 9 ms, and recovered from scheduler failures in under 120 ms. The experiments also found that Sparrow substantially outperformed random placement and per-task sampling, maintained approximate cluster-wide fair shares, and limited the impact of overloaded low-priority users. Performance degraded under extreme task-duration heterogeneity, particularly on machines with fewer cores, and worker failures remained outside the implemented fault-tolerance model. ([people.csail.mit.edu](https://people.csail.mit.edu/matei/papers/2013/sosp_sparrow.pdf))\n\n## Influence on Subsequent Research and Practice\n\nThe paper’s implementation was released publicly, and the accompanying project described Sparrow as a high-throughput, low-latency, fault-tolerant distributed cluster scheduler; the project also included an integration path for Spark. ([github.com](https://github.com/radlab/sparrow)) The Sparrow project was subsequently presented by Berkeley’s AMPLab as an architecture for ultra-high-throughput, low-latency task scheduling for interactive cluster services. ([amplab.cs.berkeley.edu](https://amplab.cs.berkeley.edu/projects/sparrow-low-latency-scheduling-for-interactive-cluster-services/))\n\nLater research has cited or evaluated Sparrow as a representative decentralized scheduling architecture. For example, work on eventually consistent federated scheduling compares its design against Sparrow and other decentralized schedulers, while a later survey identifies Sparrow’s late-binding approach as a technique used in bandwidth-aware distributed analytics scheduling. ([arxiv.org](https://arxiv.org/abs/2308.10178)) These references indicate continued influence on research into decentralized cluster scheduling and low-latency task placement. The sources reviewed did not establish a specific large-scale commercial production deployment of Sparrow itself.",
   "raw_url": "http://people.csail.mit.edu/matei/papers/2013/sosp_sparrow.pdf",
   "source_type": "external",
   "filepath": "distributed_systems/README.md",
   "filename": "Sparrow: Distributed, Low Latency Scheduling",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

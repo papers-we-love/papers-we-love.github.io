@@ -1,34 +1,33 @@
 {
   "uuid": "e7f2656c1e15fd362d9d85107ef95e047b40fedec2818ac0b8eca7d977afd1bc",
-  "title": "Integrating Rx and async for direct-style reactive streams",
-  "publication_date": "No specific publication date available",
+  "title": "RAY: Integrating Rx and Async for Direct-Style Reactive Streams",
+  "publication_date": "October 28, 2013 — ACM SPLASH 2013 Workshop on Reactivity, Events and Modularity (REM 2013)",
   "authors": [
-    "Elliott Bing",
-    "Jason Harrison",
-    "Paul Taylor"
+    "Heather Miller",
+    "Philipp Haller"
   ],
   "keywords": [
+    "async-await",
     "asynchronous-programming",
-    "concurrent-programming",
-    "direct-style-programming",
-    "functional-recoding",
-    "integration-frameworks",
-    "programming-paradigm",
+    "non-blocking-concurrency",
+    "observable-streams",
+    "operational-semantics",
+    "reactive-extensions",
     "reactive-programming",
     "reactive-streams",
-    "software-development",
-    "stream-processing"
+    "scala",
+    "state-machines"
   ],
   "category_path": [
     "languages-paradigms",
     "functional_reactive_programming"
   ],
-  "abstract": "The increasing complexity of distributed systems and user interfaces demands higher-order abstractions that make reactive programming and asynchronous dataflows easier to reason about. A common approach is to integrate reactive streams, such as reactive extensions (Rx), with asynchronous, non-blocking programming models, such as async and await in C#. In this paper, we introduce a method that combines Rx and async to enable direct-style, reactive stream processing. We present the design and implementation of a new programming model that reduces the cognitive load required to understand complex asynchronous dataflows, without sacrificing the ability to reuse existing reactive or asynchronous libraries. This integration facilitates a more intuitive and expressive programming style, especially in applications with intricate event-driven architectures.",
-  "summary": "The paper \"Integrating Rx and async for direct-style reactive streams\" offers a novel approach that combines reactive extensions (Rx) with asynchronous programming (e.g., async/await) to provide direct-style programming for reactive streams. This method aims to simplify understanding complex asynchronous dataflows in distributed systems and GUIs by reducing cognitive load while retaining the ability to reuse libraries. The integration proposed allows for more intuitive and expressive programming, particularly beneficial for event-driven architectures. \n\nUpon reviewing literature and citation indexes, there were no specific citations or demonstrable impacts of this particular paper on subsequent academic research or industry applications. The concepts discussed, however, align with ongoing trends in software development, emphasizing the relevance of this research in contexts that require effective handling of asynchronous and reactive programming paradigms.",
+  "abstract": "Languages like F#, C#, and recently also Scala, provide “async” extensions which aim to make asynchronous programming easier by avoiding an inversion of control that is inherent in traditional callback-based programming models (for the purpose of this paper called the “Async” model). This paper outlines a novel approach to integrate the Async model with observable streams of the Reactive Extensions model which is best-known from the .NET platform, and of which popular implementations exist for Java, Ruby, and other widespread languages. We outline the translation of “Reactive Async” programs to efficient state machines, in a way that generalizes the state machine translation of regular Async programs. Finally, we sketch a formalization of the Reactive Async model in terms of a small-step operational semantics.",
+  "summary": "## Summary\n\nThe paper proposes **RAY**, a Scala-oriented programming model that combines direct-style asynchronous programming with the observable streams of the Reactive Extensions model. Whereas conventional `async`/`await` abstractions primarily address computations that eventually produce one result, reactive streams can produce multiple values, terminate normally, fail, or remain active indefinitely. RAY therefore extends the Async model to support stream-oriented suspension and production.\n\nThe central constructs are `rasync`, `awaitNext`, `awaitNextOrDone`, and `yieldNext`. A `rasync` block creates an observable stream. `awaitNext` suspends execution until the input stream produces a value, while `awaitNextOrDone` represents either a next value or stream completion using `Option`. `yieldNext` publishes arbitrarily many values from within a reactive asynchronous computation. These constructs allow programs such as stream forwarders and event collectors to be written in direct style rather than through explicit callbacks or higher-order stream combinators.\n\nThe proposed implementation translates RAY programs into efficient state machines. The translation uses an observable flow pool to represent the output stream, non-blocking channels to buffer incoming events, and subscriptions that resume suspended continuations when events arrive. The design also closes subscriptions when an asynchronous computation terminates. The paper sketches a small-step operational semantics for the model, including rules for yielding values, completing observables, suspending on input streams, resuming suspended computations, and maintaining dormant queues so that events are not lost while a computation is between await operations.\n\nA later paper by the same authors, **“A Formal Model for Direct-style Asynchronous Observables,”** developed the formal treatment further and presented correctness properties including an observable protocol and subject reduction. ([csc.kth.se](https://www.csc.kth.se/~phaller/nwpt2015/nwpt2015.pdf)) A subsequent 2016 paper, **“Reactive Async: Expressive Deterministic Concurrency,”** reused the Reactive Async direction in a broader deterministic-concurrency model based on cells, adding support for dynamic and cyclic dependencies, fallbacks, a Scala implementation, and case studies involving JVM bytecode analysis. ([kth.diva-portal.org](https://kth.diva-portal.org/smash/record.jsf?pid=diva2%3A1054687))\n\nThe available evidence indicates a documented influence on subsequent programming-languages research, particularly the authors’ later formalization and deterministic-concurrency work. The search did not identify a well-documented production deployment or industry adoption specifically attributable to this paper; the concrete implementation evidence is primarily associated with Scala research prototypes and libraries. The paper’s publication venue and date are corroborated by EPFL and the REM 2013 workshop program. ([epfl.ch](https://www.epfl.ch/labs/lamp/?p=397))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages-paradigms/functional_reactive_programming/ray-integrating-rx-and-async-for-direct-style-reactive-streams.pdf",
   "source_type": "pdf",
   "filepath": "languages-paradigms/functional_reactive_programming/ray-integrating-rx-and-async-for-direct-style-reactive-streams.pdf",
   "filename": "ray-integrating-rx-and-async-for-direct-style-reactive-streams.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

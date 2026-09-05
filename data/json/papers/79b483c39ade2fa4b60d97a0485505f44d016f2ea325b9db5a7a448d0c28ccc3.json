@@ -1,33 +1,33 @@
 {
   "uuid": "79b483c39ade2fa4b60d97a0485505f44d016f2ea325b9db5a7a448d0c28ccc3",
-  "title": "A New Storage Architecture for Consistent and Durable Data Structures Using Non-volatile Memory",
-  "publication_date": "June 2016",
+  "title": "HermitCore: A Unikernel for Extreme Scale Computing",
+  "publication_date": "June 1, 2016 — Proceedings of the 6th International Workshop on Runtime and Operating Systems for Supercomputers (ROSS ’16), Kyoto, Japan",
   "authors": [
-    "David Labrecque",
-    "Swapnil Bhirud",
-    "Willy Zwaenepoel"
+    "Jens Breitbart",
+    "Simon Pickartz",
+    "Stefan Lankes"
   ],
   "keywords": [
-    "computer-architecture",
-    "consistency",
-    "data-integrity",
-    "data-structures",
-    "durability",
-    "memory-management",
-    "memory-persistence",
-    "non-volatile-memory",
-    "storage-architecture",
-    "system-performance"
+    "extreme-scale-computing",
+    "high-performance-computing",
+    "low-os-noise",
+    "mpi",
+    "multi-kernel",
+    "numa",
+    "openmp",
+    "operating-systems",
+    "scalability",
+    "unikernel"
   ],
   "category_path": [
     "unikernels"
   ],
-  "abstract": "Emerging byte-addressable non-volatile memory technologies provide an opportunity to rethink storage architectures. This paper introduces NV-Log, a novel logging mechanism for building consistent and durable data structures using non-volatile memories. NV-Log is an application-transparent, high-performance, and easy-to-use logging mechanism. It can significantly improve the performance of systems that rely on logging for consistency and durability while maintaining data integrity and crash consistency. Through extensive experiments, we demonstrate that NV-Log can outperform traditional mechanisms by up to an order of magnitude in several scenarios.",
-  "summary": "The paper, \"A New Storage Architecture for Consistent and Durable Data Structures Using Non-volatile Memory\", explores the potential of non-volatile memory technologies to transform storage architectures. The authors, Swapnil Bhirud, David Labrecque, and Willy Zwaenepoel, introduce NV-Log, a novel logging mechanism designed for consistency and durability in data structures utilizing non-volatile memories. NV-Log is distinguished by its application transparency, high performance, and ease of use, aiming to significantly enhance system performance while maintaining data integrity. Their experiments demonstrate NV-Log's superiority over traditional logging mechanisms, with performance improvements of up to an order of magnitude in specific scenarios.\n\nDespite its detailed exploration and promising results, this paper has not been widely cited in subsequent research or industry applications as of now. A deeper examination of its methodology or comparison to emerging technologies might provide valuable insights into its potential future influence in the field. However, no significant references or impacts were found during a web search. This lack of citation might also suggest that the paper's concepts have yet to be integrated into mainstream storage solutions or possibly have been absorbed into broader research without direct citation.",
+  "abstract": "We expect that the size and the complexity of future supercomputers will increase on their path to exascale systems and beyond. Therefore, system software has to adapt to the complexity of these systems for a simplification of the development of scalable applications. In this paper, we present a unikernel operating system design for HPC. It extends the multi-kernel approach while providing better programmability and scalability for hierarchical systems, such as HLRS’ Hazel Hen, which base on multiple cluster-on-a-chip processors. We prove the scalability of the design via micro benchmarks by taking the example of HermitCore—our prototype implementation of the new design.",
+  "summary": "The paper introduced HermitCore, a unikernel design for high-performance computing that combines unikernel and multi-kernel concepts. Its design isolates computation from a conventional Linux system, supports execution on bare metal or within virtual machines, uses a hierarchical organization aligned with NUMA hardware, and targets reduced operating-system overhead and noise. The authors evaluated the prototype with microbenchmarks addressing system-call costs, operating-system interference, OpenMP overhead, and inter-kernel communication.\n\nSubsequent work developed the same research line in two directions. A 2017 paper by the same authors studied HermitCore as a low-noise unikernel for extreme-scale systems. The project was later rewritten in Rust as RustyHermit, with the project documentation explicitly identifying HermitCore as its starting point. HermitCore also served as the basis for HermiTux, which extended the design toward binary compatibility with unmodified Linux applications. ([hermit-os.org](https://hermit-os.org/))\n\nThe project subsequently evolved into the Hermit operating-system project, which continues to target scalable and predictable runtimes for high-performance and cloud computing. In the sources reviewed, the documented influence is primarily on subsequent unikernel and operating-system research; no specific commercial deployment attributable to this paper was identified. ([hermitcore.org](https://hermitcore.org/))",
   "raw_url": "https://dl.acm.org/citation.cfm?id=2931093",
   "source_type": "external",
   "filepath": "unikernels/README.md",
   "filename": "HermitCore: A Unikernel for Extreme Scale Computing",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:05"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:57"
 }

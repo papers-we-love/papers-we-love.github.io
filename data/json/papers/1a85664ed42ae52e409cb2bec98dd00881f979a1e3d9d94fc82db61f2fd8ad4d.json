@@ -1,35 +1,37 @@
 {
   "uuid": "1a85664ed42ae52e409cb2bec98dd00881f979a1e3d9d94fc82db61f2fd8ad4d",
   "title": "OSv—Optimizing the Operating System for Virtual Machines",
-  "publication_date": "June 2014",
+  "publication_date": "June 19–20, 2014; 2014 USENIX Annual Technical Conference (USENIX ATC ’14), Philadelphia, PA",
   "authors": [
     "Avi Kivity",
-    "Christoph Hellwig",
+    "Don Marti",
     "Dor Laor",
-    "Eduardo Habkost",
-    "Martin Rotschild"
+    "Glauber Costa",
+    "Nadav Har’El",
+    "Pekka Enberg",
+    "Vlad Zolotarov"
   ],
   "keywords": [
     "cloud-computing",
     "hypervisors",
-    "kernel-optimization",
-    "kvm",
+    "library-os",
+    "linux-compatibility",
     "memory-management",
+    "network-performance",
     "operating-systems",
-    "performance",
-    "scalability",
+    "system-scheduling",
     "unikernels",
-    "virtualization"
+    "virtual-machines"
   ],
   "category_path": [
     "unikernels"
   ],
-  "abstract": "In the last decade, virtualization has gone from being a promising technology to the basis of most data centers. However, today’s virtual machines use the same operating systems as physical machines—operating systems that were designed to share hardware between mutually-untrusting applications. These traditional operating systems are less than optimal when deployed in a virtual machine, causing performance and efficiency issues. OSv is a new operating system designed specifically for running a single application on a virtual machine. By rethinking the traditional interface between the operating system kernel, virtual machine monitor, and application, OSv eliminates many of the sources of inefficiency and complexity present in traditional operating systems. Novel techniques in OS design are proposed to significantly improve performance in key workloads while retaining the strong isolation across virtual machines and easy application porting that virtualization provides. This paper explores these trade-offs and presents an experimental evaluation of OSv running key workloads on KVM over IBM’s Cloud Workload Factory.",
-  "summary": "The paper titled \"OSv—Optimizing the Operating System for Virtual Machines\" addresses issues of inefficiency and complexity in traditional operating systems when deployed in virtualized environments. It introduces OSv, an operating system tailored for running a single application on virtual machines, optimizing performance by simplifying the interface between the OS kernel, the virtual machine monitor, and applications. This paper is significant in the realm of virtualization as it proposes optimizations for memory management, kernel size reduction, and execution flow, aiming to improve cloud computing environments.\n\nOSv innovates by leveraging the concept of unikernels, which package applications and libraries in a single bootable image, reducing the overhead of a traditional OS. Through experimental evaluations on KVM over IBM’s Cloud Workload Factory, OSv demonstrates enhanced performance for key workloads. Its influence is evident in subsequent research on operating systems designed for cloud environments and the usage of unikernels to attain better scalability and resource efficiency.\n\nFurther research has been inspired by this work, including exploration in the field of unikernels and optimizing operating systems for specific applications in cloud computing contexts. A Google Scholar search reveals citations of OSv in various contexts, such as [unikernel development](https://unikernel.org/posts/2017-06-19-research-overview/), and further discussions on [cloud computing enhancements](https://ieeexplore.ieee.org/document/8073997). This indicates its contribution to the growing interest in specialized operating systems designed to maximize the benefits of virtualization technology.",
+  "abstract": "Virtual machines in the cloud typically run existing general-purpose operating systems such as Linux. We notice that the cloud’s hypervisor already provides some features, such as isolation and hardware abstraction, which are duplicated by traditional operating systems, and that this duplication comes at a cost.\n\nWe present the design and implementation of OSv, a new guest operating system designed specifically for running a single application on a virtual machine in the cloud. It addresses the duplication issues by using a low-overhead library-OS-like design. It runs existing applications written for Linux, as well as new applications written for OSv. We demonstrate that OSv is able to efficiently run a variety of existing applications. We demonstrate its sub-second boot time, small OS image and how it makes more memory available to the application. For unmodified network-intensive applications, we demonstrate up to 25% increase in throughput and 47% decrease in latency. By using non-POSIX network APIs, we can further improve performance and demonstrate a 290% increase in Memcached throughput.",
+  "summary": "## Impact\n\nThe paper’s documented influence is primarily as a reference implementation and experimental platform for unikernel and cloud-operating-system research. The associated OSv project remains open source and continues to describe OSv as a Linux-binary-compatible unikernel for running single applications in virtual machines. ([github.com](https://github.com/cloudius-systems/osv))\n\nSubsequent research has directly reused or evaluated OSv. Iso-UniK was implemented by modifying OSv to add multi-process isolation using memory-protection keys, demonstrating that the paper’s single-address-space design could serve as a base for further isolation research. ([link.springer.com](https://link.springer.com/article/10.1186/s42400-020-00051-9)) Other studies benchmarked OSv against Linux, Docker, conventional virtual machines, and other unikernels for network performance, parallel workloads, lightweight virtualization, and edge computing. ([media.taricorp.net](https://media.taricorp.net/performance-evaluation-unikernels.pdf)) More recent work has also targeted OSv specifically for security hardening through address-space randomization. ([arxiv.org](https://arxiv.org/abs/2602.11445))\n\nThese references establish continued research and open-source development around OSv’s architecture and implementation. The sources located support its role as a reusable research platform and representative unikernel, but do not by themselves establish broad production deployment across industry.",
   "raw_url": "https://www.usenix.org/system/files/conference/atc14/atc14-paper-kivity.pdf",
   "source_type": "external",
   "filepath": "unikernels/README.md",
   "filename": "OSv—optimizing the operating system for virtual machines",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:05"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:57"
 }

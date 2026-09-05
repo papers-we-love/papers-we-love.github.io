@@ -1,23 +1,21 @@
 {
   "uuid": "c7161cdef0770631a91b7ee7a91b01042cd54da70cd5ea7fe5a3552eaf12711e",
-  "title": "A Systematic Review in Software Engineering",
-  "publication_date": "2004",
+  "title": "Systematic Review in Software Engineering",
+  "publication_date": "May 2005; Technical Report RT–ES 679/05, COPPE/UFRJ/PESC, Rio de Janeiro, Brazil",
   "authors": [
-    "Barbara Kitchenham",
-    "David Budgen",
-    "John Bailey",
-    "Mark Turner",
-    "O. Pearl Brereton",
-    "Sue Linkman"
+    "Ana Candida Cruz Natali",
+    "Guilherme Horta Travassos",
+    "Jorge Biolchini",
+    "Paula Gomes Mian"
   ],
   "keywords": [
-    "data-analysis",
     "data-extraction",
-    "data-synthesis",
-    "evidence-based",
+    "empirical-software-engineering",
+    "evidence-based-software-engineering",
+    "literature-review",
     "meta-analysis",
-    "research-methodology",
-    "research-questions",
+    "research-synthesis",
+    "review-protocol",
     "software-engineering",
     "study-selection",
     "systematic-review"
@@ -25,12 +23,12 @@
   "category_path": [
     "systematic_review"
   ],
-  "abstract": "Background: Systematic literature reviews, almost unknown in software engineering, are a comprehensive approach to identifying, interpreting, and summarising existing evidence. Aim: The aim of this paper is to review and evaluate the use of systematic literature reviews and also to develop guidelines for their use in software engineering. Method: We use examples from existing literature reviews and from our own systematic review to illustrate the issues that arise in the various stages of a systematic literature review. Results: Our research shows that few systematic reviews have been conducted in software engineering to date but those that have provide useful information about existing research and identify knowledge gaps. Conclusions: Systematic literature reviews can provide a rigorous basis for identifying where there are good examples of evidence-based practice in software engineering and where more research is needed.",
-  "summary": "This paper is a seminal work on the application of systematic literature reviews (SLRs) in software engineering. It introduces the concept as commonplace in medical research but almost unknown in software engineering as of its publication in 2004. The authors provide a comprehensive guideline on conducting SLRs within the software domain, suggesting a framework for identifying and analyzing existing research comprehensively.\n\nThe influence of this paper in academic circles is significant. By seeking to introduce a more rigorous methodological approach, the paper has guided subsequent research in the field by supporting the development of evidence-based software engineering. It has been widely referenced for developing further studies and guidelines, such as in Budgen et al.'s report on evidence-based software engineering (https://dl.acm.org/doi/10.1145/1368088.1368122) and in the guidelines by Dybå et al. on research synthesis in software engineering (https://ieeexplore.ieee.org/abstract/document/5072517).\n\nAdditionally, the paper's insights have sparked discussions and developments in software engineering practices aimed at increasing the reliance on solid empirical evidence for decision making. Despite its academic orientation, the principles encapsulated in the paper have influenced industry perspectives where methodological soundness and evidential bases have gained traction.",
+  "abstract": "Systematic review is a scientific methodology that can be used to integrate empirical research on SE. Though its importance, conducting systematic reviews is not a simple task. It evolves performing complex actives and understanding specific concepts and terms that may be unknown to researches.\n\nThe difficulties found during the systematic reviews execution pointed the need to investing research efforts in developing systematic reviews planning and execution methodologies. Therefore, we defined a systematic review conduction process. This process aims at guiding researches when performing systematic reviews.\n\nTo facilitate the execution of this process, we developed a review protocol template. This template was based on systematic review protocols developed in the medical area, on the guidelines proposed by [Kitchenham, 2004] and the protocol example found in [Mendes and Kitchenham, 2004]. Its objective is to serve as a guideline to SE researchers when conducting the systematic reviews. The template leads researchers through each step of the systematic review process, defining clearly the content of each protocol section.\n\nAnother issue is that systematic reviews require an additional conduction effort. The review must be planned before execution and the whole process must be documented, including, intermediary results. However, our experience on conducting systematic reviews shows that most part of the efforts is concentrated at the execution phase of the process. Searching and evaluating studies still represent a bottleneck in the literature review process.",
+  "summary": "## Paper summary\n\nThis technical report introduces systematic reviews as a formal research method for collecting, evaluating, comparing, and synthesizing evidence about focused software-engineering questions. It distinguishes systematic reviews from conventional literature reviews by emphasizing an explicit protocol, predefined questions and eligibility criteria, reproducible search procedures, quality evaluation, standardized data extraction, and documented synthesis. Meta-analysis is presented as one possible quantitative synthesis technique, but the report also recognizes narrative and comparative forms of synthesis.\n\nThe proposed process comprises review planning, execution, and result analysis, with continuous documentation and checkpoints for evaluating the protocol and search execution. Its protocol template structures the work around question formulation; source selection; study selection; information extraction; and results summarization. The template includes practical elements such as keywords and synonyms, search strings, inclusion and exclusion criteria, study-quality evaluation, extraction forms, reviewer-disagreement resolution, sensitivity analysis, publication-bias assessment, and recommendations for applying results.\n\nThe report argues that software engineering cannot simply replicate medical systematic-review practice. Software-engineering interventions are often performed by practitioners who know which technique they are using, making blinding difficult; techniques interact with other lifecycle activities; and causal effects may be difficult to isolate. In addition, the field had fragmented empirical evidence, limited replication, and no equivalent of a centralized evidence-synthesis infrastructure.\n\nA pilot involving four master’s students found that the template could guide inexperienced researchers through the process. The pilot also indicated that searching for and evaluating studies consumed most of the effort. In the included example, a search found 125 studies but only one satisfied the selection criteria, illustrating both the value and cost of explicit screening.\n\n## Influence\n\nThe report’s documented influence is primarily methodological. A subsequent 2007 publication by overlapping authors extended the template-oriented approach by presenting a scientific research ontology for describing systematic-review and experimental-software-engineering knowledge. ([alarcos.esi.uclm.es](https://alarcos.esi.uclm.es/per/fpino/CS_07_sep_fjpino2007/Articulos/Software%20Quality%20Journal/Documentos%20base/biolchini.pdf)) Later software-engineering review research explicitly treated Biolchini et al. (2005) as one of the foundational guideline sources and examined how systematic-review practice evolved in the field. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0950584913001560)) Individual later studies have also reported using the Biolchini protocol or guidelines, including a 2020 systematic literature review in model-driven engineering. ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S0950584920300689)) The available evidence supports influence on software-engineering research methods; no specific industrial deployment or product adoption attributable to this report was identified in the search.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/systematic_review/systematic-review-in-software-engineering.pdf",
   "source_type": "pdf",
   "filepath": "systematic_review/systematic-review-in-software-engineering.pdf",
   "filename": "systematic-review-in-software-engineering.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:56"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:53"
 }

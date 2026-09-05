@@ -1,34 +1,32 @@
 {
   "uuid": "24a357321a5bf479c4cb518bc889b4e2a425b8fe3cd59e97043c05979d8b5c94",
-  "title": "Ballista: A Fault Injection-based Automated Testing Service for Dependability Validation",
-  "publication_date": "June 1999",
+  "title": "Comparing the Robustness of POSIX Operating Systems",
+  "publication_date": "June 15–18, 1999; 29th Annual International Symposium on Fault-Tolerant Computing (FTCS-29), Madison, Wisconsin, USA",
   "authors": [
-    "Darren Heimbigner",
     "John DeVale",
-    "Philip J. Koopman",
-    "Shing chi Cheung",
-    "Williy E. Hasselbring"
+    "Philip Koopman"
   ],
   "keywords": [
-    "automated-testing",
-    "dependability-validation",
-    "distributed-systems",
-    "error-detection",
+    "ballista",
+    "c-library",
     "exception-handling",
-    "fault-injection",
+    "fault-tolerance",
+    "multi-version-software",
+    "operating-systems",
+    "posix",
     "robustness-testing",
-    "service-oriented-architecture",
-    "software-reliability"
+    "software-diversity",
+    "system-calls"
   ],
   "category_path": [
     "unikernels"
   ],
-  "abstract": "Ballista is an experimental testing service designed for blind, automated software testing to explore the dependability limit of application programs via fault injection. Ballista aims to scale fault injection testing methods to provide an unbiased foundation for specification-based testing of commercial off-the-shelf (COTS) software as well as custom applications. We outline a scalable validation framework, describe our prototype implementation for testing ANSI C POSIX APIs, and present validation results that demonstrate the applicability and limitations of service-oriented fault injection.",
-  "summary": "The paper titled 'Ballista: A Fault Injection-based Automated Testing Service for Dependability Validation' explores an innovative approach for dependability testing of software systems using fault injection. The authors have developed an experimental testing service named Ballista, which is designed to autonomously test application programs for robustness by injecting faults and evaluating the program's response. The focus is on providing unbiased, scalable testing for commercial off-the-shelf (COTS) software and custom applications, particularly targeting ANSI C POSIX APIs in the prototype implementation.\n\nBallista is significant in its method of blind, automated testing to assess software reliability and robustness without prior knowledge of the system design. It extends fault injection methods into a service-oriented framework, adopting a scalable validation process to handle a diverse range of applications. The prototype demonstrated the feasibility and potential limitations, highlighting the need for robust exception handling and error detection mechanisms in software.\n\nUpon a review of related research, it appears that this work has influenced further studies in the domain of fault injection and software reliability testing. Its concepts have been used as a basis for more advanced fault injection tools and methodologies. For example, subsequent studies have cited the Ballista approach for its novel automated testing capabilities and its application to COTS systems ([source 1](https://link.springer.com/article/10.1007/s10664-007-9040-y), [source 2](https://ieeexplore.ieee.org/document/1546730)). These citations demonstrate Ballista's role as a foundational work in the field, contributing to ongoing advancements in software dependability testing.",
+  "abstract": "Critical system designers are turning to off-the-shelf operating system (OS) software to reduce costs and time-to-market. Unfortunately, general-purpose OSes do not always respond to exceptional conditions robustly, either accepting exceptional values without complaint, or suffering abnormal task termination. Even though direct measurement is impractical, this paper uses a multi-version comparison technique to reveal a 6% to 19% normalized rate at which exceptional parameter values cause no error report in commercial POSIX OS implementations. Additionally, 168 functions across 13 OSes are compared to reveal common mode robustness failures. While the best single OS has a 12.6% robustness failure rate for system calls, 3.8% of failures are common across all 13 OSes examined. However, combining C library calls with system calls increases these rates to 29.5% for the best single OS and 17.0% for common mode failures. These results suggest that OS implementations are not completely diverse, and that C library functions are both less diverse and less robust than system calls.",
+  "summary": "### Impact\n\n- The paper established a large-scale empirical application of Ballista robustness testing and multi-version comparison to commercial POSIX implementations, documenting silent failures, abnormal terminations, catastrophic failures, and common-mode behavior across operating systems. ([users.ece.cmu.edu](https://users.ece.cmu.edu/~koopman/ballista/ftcs99/ftcs99.pdf))\n- Its results were subsequently expanded into the peer-reviewed article *The Exception Handling Effectiveness of POSIX Operating Systems* in **IEEE Transactions on Software Engineering**, which analyzed up to 233 POSIX functions across 15 operating-system implementations and further quantified exception-handling failures. ([users.ece.cmu.edu](https://users.ece.cmu.edu/~koopman/ballista/tse2000/index.html))\n- The Ballista project made the POSIX robustness test suite available for comparing operating systems and different versions of the same system, supporting reproduction and practical testing beyond the original study. ([users.ece.cmu.edu](https://users.ece.cmu.edu/~koopman/ballista/ostest/index.html))\n- Later Ballista-related work extended the approach to other APIs, including Microsoft Win32, and subsequent robustness-testing research cited the project as an antecedent for scalable interface testing and for testing autonomy software. ([scribd.com](https://www.scribd.com/doc/288790525/dsn-2000))",
   "raw_url": "https://users.ece.cmu.edu/~koopman/ballista/ftcs99/ftcs99.pdf",
   "source_type": "external",
   "filepath": "unikernels/README.md",
   "filename": "Comparing the robustness of POSIX operating systems",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:05"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:57"
 }

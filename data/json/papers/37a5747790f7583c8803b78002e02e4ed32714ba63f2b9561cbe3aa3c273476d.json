@@ -1,31 +1,31 @@
 {
   "uuid": "37a5747790f7583c8803b78002e02e4ed32714ba63f2b9561cbe3aa3c273476d",
-  "title": "Early LISP History: 1956-1959",
-  "publication_date": "1991",
+  "title": "Early LISP History (1956-1959)",
+  "publication_date": "August 6, 1984; Proceedings of the 1984 ACM Symposium on LISP and Functional Programming, pp. 299-310",
   "authors": [
     "Herbert Stoyan"
   ],
   "keywords": [
     "artificial-intelligence",
-    "computing-theory",
     "functional-programming",
-    "history-of-computing",
-    "john-mccarthy",
-    "language-design",
+    "garbage-collection",
+    "interpreters",
+    "lambda-calculus",
     "lisp",
-    "programming-languages",
-    "recursive-functions",
-    "symbolic-computation"
+    "programming-language-history",
+    "s-expressions",
+    "symbolic-computation",
+    "symbolic-expressions"
   ],
   "category_path": [
     "comp_sci_fundamentals_and_history"
   ],
-  "abstract": "This paper is a comprehensive examination of the conceptual origins and initial development of LISP, a pioneering programming language in the domain of artificial intelligence and symbolic computation. By exploring the contributions of key figures such as John McCarthy, the paper delves into LISP's foundational ideas, shedding light on its recursive function theory basis, its unique representation methods, and its influence on future computing paradigms. The historical narrative serves as an insightful backdrop to understanding LISP's enduring impact on both theoretical and practical aspects of computer science.",
-  "summary": "The paper \"Early LISP History: 1956-1959\" by Herbert Stoyan examines the conceptual origins and initial development of LISP, a key programming language integral to artificial intelligence and symbolic computation. The paper outlines contributions from pivotal figures such as John McCarthy and discusses LISP's basis in recursive function theory and its representation methods. Stoyan's narrative positions LISP not just as a programming language but as a revolutionary catalyst in computing paradigms. Despite its historical focus, the paper provides critical insights into the enduring impact of LISP on both theoretical and practical dimensions of computer science.\n\nUpon reviewing scholarly databases and web searches, it appears this specific paper has limited direct citations in subsequent academic works. However, in the broader context, LISP and its foundational concepts have been extensively discussed and built upon in numerous research papers and books concerning programming languages, artificial intelligence, and computer science education ([reference 1](https://www.tandfonline.com/doi/abs/10.1080/00388230802112775), [reference 2](https://dl.acm.org/doi/10.1145/800025.1198364)). While Stoyan's paper may not be frequently cited directly, the topics and the historical insights it provides have been influential in understanding the broader trajectory of computing history and the development of programming paradigms.",
+  "abstract": "This paper describes the development of LISP from McCarthy's first research in the topic of programming languages for AI until the stage when the LISP1 implementation had developed into a serious program (May 1959). We show the steps that led to LISP and the various proposals for LISP interpreters (between November 1958 and May 1959). The paper contains some correcting details of our book (32).",
+  "summary": "## Summary\n\nHerbert Stoyan reconstructs the development of LISP from John McCarthy’s early work on programming languages for artificial intelligence through the emergence of a functioning LISP 1 implementation in May 1959. The paper emphasizes that LISP was not originally conceived as a purely functional language grounded directly in mathematical function theory. Instead, it developed incrementally from practical concerns about representing symbolic information, describing procedures concisely, and supporting artificial-intelligence research.\n\nThe account begins with McCarthy’s 1955 Dartmouth proposal for a language suitable for expressing knowledge, arguments, self-reference, and intelligent behavior. It then traces the influence of Newell and Simon’s list-processing work and McCarthy’s attempt to combine list manipulation with FORTRAN. This work produced the FORTRAN List Processing Language and exposed conceptual limitations in treating symbolic structures as machine words and addresses rather than as a distinct domain of symbolic expressions.\n\nThe paper identifies several ideas that became central to LISP: conditional expressions, recursion, functional arguments, function composition, symbolic differentiation, `maplist`, list-based program representation, quotation, and the use of lists to represent both programs and data. It also follows the transition from early FORTRAN-like proposals to a separate language after it became clear that recursion, higher-order functions, and conditional expressions could not be added cleanly to FORTRAN or ALGOL-style languages.\n\nA substantial part of the reconstruction concerns the sequence of early interpreter designs between late 1958 and spring 1959. Stoyan describes the introduction of the name LISP, the development of `apply` and `eval`, the use of substitution and association lists, the emergence of S-expressions, and implementation problems involving variable binding, functional arguments, and recursive evaluation. The paper presents these early interpreter designs critically, noting that several contained errors and that their implementation history is partly uncertain because many intermediate documents were lost.\n\nThe paper also describes practical implementation work on the IBM 704, including hand translation into SAP assembly language, stack management, function-call conventions, free-storage management, and the emergence of automatic garbage collection. By May 1959, LISP had become a usable system for symbolic algebra and electrical-network analysis, although it still lacked later sequential constructs such as `PROG` and `PROGN`.\n\n## Research and industry influence\n\nThe paper’s documented influence is primarily historiographical rather than a direct contribution to programming-language implementation. It became a recognized source for reconstructing LISP’s early development: the ACM record identifies it as a historical account of LISP’s evolution and reports 11 citations, while bibliographic records preserve it as a standard reference for the 1956–1959 period. ([doi.org](https://doi.org/10.1145/800055.802047)) John McCarthy’s historical archive explicitly points readers to Stoyan’s account and states that Stoyan’s analysis of the surviving documents provided a more accurate picture than McCarthy’s own recollections. ([www-formal.stanford.edu](https://www-formal.stanford.edu/jmc/history/)) The Computer History Museum’s guide to the Stoyan collection also catalogs the paper as part of the documentary record used to preserve LISP history. ([archive.computerhistory.org](https://archive.computerhistory.org/resources/access/text/finding-aids/102703236-Stoyan/102703236-Stoyan.pdf))\n\nThe paper is subsequently cited in historical surveys and bibliographies of functional programming and LISP, including a NASA survey of functional programming and later accounts of LISP’s origins. ([ntrs.nasa.gov](https://ntrs.nasa.gov/api/citations/19870002073/downloads/19870002073.pdf?attachment=true)) No evidence was found that the paper itself directly drove an industrial language implementation or commercial technology; its concrete impact is instead as a source for scholarship, archival preservation, and historical interpretation of LISP’s formation.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/comp_sci_fundamentals_and_history/early-lisp-history-1956-1959-herbert-stoyan-html-rendering.pdf",
   "source_type": "pdf",
   "filepath": "comp_sci_fundamentals_and_history/early-lisp-history-1956-1959-herbert-stoyan-html-rendering.pdf",
   "filename": "early-lisp-history-1956-1959-herbert-stoyan-html-rendering.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:50"
 }

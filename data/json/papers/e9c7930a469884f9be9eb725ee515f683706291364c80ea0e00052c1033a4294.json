@@ -1,31 +1,31 @@
 {
   "uuid": "e9c7930a469884f9be9eb725ee515f683706291364c80ea0e00052c1033a4294",
-  "title": "Viewing Control Structures as Patterns of Passing Messages",
-  "publication_date": "1977",
+  "title": "VIEWING CONTROL STRUCTURES as PATTERNS of PASSING MESSAGES",
+  "publication_date": "June 1977, Artificial Intelligence, Volume 8, Issue 3, pages 323–364; originally issued as MIT Artificial Intelligence Memo 410 in December 1976",
   "authors": [
     "Carl Hewitt"
   ],
   "keywords": [
     "actor-model",
-    "computer-science-theory",
-    "concurrent-computing",
-    "control-concurrency",
     "control-structures",
     "distributed-systems",
+    "event-diagrams",
+    "iteration",
     "message-passing",
-    "parallel-computation",
+    "parallel-processing",
+    "plasma",
     "programming-languages",
-    "systems-architecture"
+    "recursion"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "Recent insights into programs viewed as patterns for passing messages have led to the actor model as a useful way to organize computations. In this model we use the notion of actors, which are active, have mail addresses, can carry on their own computations, create more actors via replication, send messages to other actors, and make such decisions as which computations to carry on in response to received messages. This paper presents some of the basic concepts and examples.",
-  "summary": "The paper \"Viewing Control Structures as Patterns of Passing Messages\" by Carl Hewitt, published in 1977, introduces the actor model as a foundational concept for understanding computations via message-passing. It describes how actors, as independent computational entities, can interact through communication, offering a powerful way to design concurrent systems.\n\nImpact on further research is notably through the influence this model had in the development of concurrent programming languages and systems. For example, the actor model is a conceptual basis for languages like Erlang, which is widely used in systems requiring high concurrency, such as telecommunications. The programming languages Scala and Akka also incorporate the actor model into their frameworks.\n\nWhile extensive web searches reveal that specific academic papers may not directly cite this specific paper, the actor model itself has been extensively cited and used, particularly in studies related to concurrent and parallel programming. The influence of Carl Hewitt's work is reflected in many modern concurrent computing practices and distributed systems architecture.\n\nKey references for further reading include papers on the actor model itself and its applications in modern programming:\n- [Actor model on Wikipedia](https://en.wikipedia.org/wiki/Actor_model)\n- [Erlang's application of the actor model](https://erlang.org/doc/reference_manual/processes.html)\n- [Akka and actor-based concurrency](https://doc.akka.io/docs/akka/current/typed/actors.html)",
+  "abstract": "The purpose of this paper is to discuss some organizational aspects of programs using the actor model of computation. In this paper we present an approach to modelling intelligence in terms of a society of communicating knowledge-based problem-solving experts. In turn each of the experts can be viewed as a society that can be further decomposed in the same way until the primitive actors of the system are reached. We are investigating the nature of the communication mechanisms needed for effective problem-solving by a society of experts and the conventions of discourse that make this possible. In this way we hope eventually to develop a framework adequate for the discussion of the central issues of problem-solving involving parallel versus serial processing and centralization versus decentralization of control and information storage.\n\nThis paper demonstrates how actor message passing can be used to understand control structures as patterns of passing messages in serial processing. This paper is a pre-requisite for successors which treat issues of parallelism and communication within the framework established here. The ability to analyze or synthesize any kind of control structure as a pattern of passing messages among the members of a society provides an important tool for understanding control structures. Ultimately, we hope to be able to characterize various control structures in common use by societies in terms of patterns of passing messages. This paper makes a small step in this direction by showing how to characterize familiar control structures such as iteration and recursion in these terms.",
+  "summary": "### Main contribution\n\nCarl Hewitt presents the actor model as a framework for describing computation through local actors that communicate by passing messages. An actor is characterized by its behavior and its direct acquaintances rather than by a shared global state or a prescribed physical representation. The paper introduces actor transmission, request/reply communication, continuations, envelopes, pattern matching, and the PLASMA language for expressing actor behavior.\n\nThe central analytical device is the event diagram, which represents causal and incidental relationships among message-passing events. Using these diagrams, the paper explains ordinary request/reply behavior, recursive computation, and iterative computation as distinct patterns of communication. Recursion is represented by constructing a chain of continuation actors, while iteration reuses a continuation and maintains a bounded amount of working state. This provides an operational explanation for why tail-recursive computations can be implemented with constant additional storage.\n\nThe paper also argues for modular distribution of knowledge among communicating experts and against unnecessarily complex or “hairy” control structures. It advocates progressive refinement: begin with a high-level, goal-oriented behavioral description and successively introduce domain-specific knowledge and optimizations. Examples include incremental generators, lazy or delayed computation, sequence processing, and packagers that provide named, protected access to components of structured messages.\n\n### Influence and subsequent research\n\nThe paper’s actor formulation was followed by formal work that gave actor computation operational semantics, compositionality, testing equivalences, and fairness properties. In particular, Agha, Mason, Smith, and Talcott developed a formal actor language and semantic foundation for open distributed systems in 1997. ([cambridge.org](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/E9A5266BA5D37A1856D50C939679F31C/S095679689700261Xa.pdf/div-class-title-a-foundation-for-actor-computation-div.pdf))\n\nHewitt’s model was also developed into a broader theory of concurrent computation and distributed systems. Gul Agha’s 1986 book produced syntactic and denotational models of the actor paradigm and addressed concurrency and large-scale parallel systems. ([mitpress.mit.edu](https://mitpress.mit.edu/9780262511414/actors/))\n\nThe paper is repeatedly cited in later work on distributed decision-making, agent-oriented systems, stream-processing architectures, and formal actor semantics. These references support the conclusion that its main lasting contribution was foundational: it helped frame control flow, modularity, and concurrency in terms of communicating computational entities rather than centralized state and procedure control. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/0167923687900716))\n\nThe journal publication is independently cataloged as Carl Hewitt’s article in *Artificial Intelligence*, volume 8, issue 3, June 1977, pages 323–364. ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/0004370277900339))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/viewing-control-structures-as-patterns-of-passing-messages.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/viewing-control-structures-as-patterns-of-passing-messages.pdf",
   "filename": "viewing-control-structures-as-patterns-of-passing-messages.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

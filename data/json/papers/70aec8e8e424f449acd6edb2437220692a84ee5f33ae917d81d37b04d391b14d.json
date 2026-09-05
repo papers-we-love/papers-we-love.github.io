@@ -1,32 +1,36 @@
 {
   "uuid": "70aec8e8e424f449acd6edb2437220692a84ee5f33ae917d81d37b04d391b14d",
-  "title": "Network Challenges of Data Recovery in Erasure-coded Distributed Storage Systems",
-  "publication_date": "2010",
+  "title": "A Solution to the Network Challenges of Data Recovery in Erasure-coded Distributed Storage Systems: A Study on the Facebook Warehouse Cluster",
+  "publication_date": "June 27–28, 2013; 5th USENIX Workshop on Hot Topics in Storage and File Systems (HotStorage ’13)",
   "authors": [
-    "Hakim Weatherspoon",
-    "John D. Kubiatowicz"
+    "Dhruba Borthakur",
+    "Dikang Gu",
+    "Hairong Kuang",
+    "K. V. Rashmi",
+    "Kannan Ramchandran",
+    "Nihar B. Shah"
   ],
   "keywords": [
-    "cross-rack-traffic",
-    "data-reconstruction",
     "data-recovery",
-    "data-storage-efficiency",
     "distributed-storage",
-    "distributed-systems",
-    "erasure-coded-systems",
-    "failure-recovery",
-    "network-challenges",
-    "stripe-failures"
+    "erasure-coding",
+    "facebook-warehouse-cluster",
+    "fault-tolerance",
+    "hadoop-hdfs",
+    "network-bandwidth",
+    "piggybacked-rs",
+    "reed-solomon-codes",
+    "repair-bandwidth"
   ],
   "category_path": [
     "datastores"
   ],
-  "abstract": "Erasure coding is an efficient redundancy mechanism to achieve data reliability in distributed storage systems. While reducing storage overhead, erasure coding increases the amount of traffic necessary for data recovery after a failure. To recover lost data, a failed storage node requires data from some of the surviving nodes. In this paper, we identify and explore the challenges that arise from this data recovery process in erasure-coded storage systems. Specifically, we investigate the effect of data loss recovery on inter-rack and intra-rack traffic in two popular distributed storage systems: Hadoop and Ceph. We quantify the amount of traffic generated in these systems for different failure scenarios and show that small failure sizes and distributed striping have a significant impact on both the amount of traffic generated and the recovery duration. Based on the results of our analysis, we discuss techniques to improve the efficiency of erasure-coded data recovery by focusing on reducing recovery traffic.",
-  "summary": "This paper discusses the challenges involved in data recovery within erasure-coded distributed storage systems, particularly Hadoop and Ceph. The researchers highlight the increased network traffic required for data recovery after node failures, which can affect both inter-rack and intra-rack traffic. The analysis indicates that small failure sizes and distributed striping lead to increased traffic and recovery duration. The paper's findings are significant for improving storage efficiency and recovery processes in distributed systems. \n\nUpon reviewing available literature and databases, there are no widely acknowledged or specifically cited references indicating an impact of this paper on subsequent research or industry practices. However, the topics discussed remain relevant to the continued development of storage systems. Given the ongoing evolution of distributed systems and cloud storage solutions, the concepts investigated in this work continue to inform understanding and improvements in erasure coding strategies. For further reading on the topic, see [Google Scholar](https://scholar.google.com) for articles on \"erasure coded storage systems\".",
+  "abstract": "Erasure codes, such as Reed-Solomon (RS) codes, are being increasingly employed in data centers to combat the cost of reliably storing large amounts of data. Although these codes provide optimal storage efficiency, they require significantly high network and disk usage during recovery of missing data.\n\nIn this paper, we first present a study on the impact of recovery operations of erasure-coded data on the data-center network, based on measurements from Facebook’s warehouse cluster in production. To the best of our knowledge, this is the first study of its kind available in the literature. Our study reveals that recovery of RS-coded data results in a significant increase in network traffic, more than a hundred terabytes per day, in a cluster storing multiple petabytes of RS-coded data.\n\nTo address this issue, we present a new storage code using our recently proposed Piggybacking framework, that reduces the network and disk usage during recovery by 30% in theory, while also being storage optimal and supporting arbitrary design parameters. The implementation of the proposed code in the Hadoop Distributed File System (HDFS) is underway. We use the measurements from the warehouse cluster to show that the proposed code would lead to a reduction of close to fifty terabytes of cross-rack traffic per day.",
+  "summary": "The paper documents the network cost of repairing Reed–Solomon-coded data at Facebook’s warehouse cluster and proposes Piggybacked-RS codes. The production measurements reported a median of more than 95,500 recovered blocks and more than 180 TB of cross-rack traffic per day. Piggybacked-RS was designed to preserve MDS storage efficiency and failure tolerance while reducing recovery disk reads and network downloads by approximately 30% in theory; the paper estimated a reduction exceeding 50 TB of cross-rack traffic per day.\n\nSubsequent work treated the paper as an early systems study motivating repair-bandwidth-aware erasure coding. Later research cited Piggybacked-RS in discussions of recovery-efficient codes, including work on fast reconstruction in erasure-coded data centers and studies of erasure coding in clustered file systems. ([doi.org](https://doi.org/10.1145/3708994)) A recent survey of erasure coding identifies this line of work as part of the research shift toward reducing recovery bandwidth while retaining storage efficiency. ([doi.org](https://doi.org/10.1145/3708994)) The work was presented at HotStorage ’13, and the authors’ proposed HDFS implementation and production-scale evaluation were identified as future work at the time. ([usenix.org](https://www.usenix.org/conference/hotstorage13/workshop-program/presentation/rashmi))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/datastores/network-challenges-of-data-recovery-in-erasure-coded-distributed-storage-systems.pdf",
   "source_type": "pdf",
   "filepath": "datastores/network-challenges-of-data-recovery-in-erasure-coded-distributed-storage-systems.pdf",
   "filename": "network-challenges-of-data-recovery-in-erasure-coded-distributed-storage-systems.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:51"
 }

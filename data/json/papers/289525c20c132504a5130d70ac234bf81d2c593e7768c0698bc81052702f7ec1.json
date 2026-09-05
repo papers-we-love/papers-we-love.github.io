@@ -1,32 +1,32 @@
 {
   "uuid": "289525c20c132504a5130d70ac234bf81d2c593e7768c0698bc81052702f7ec1",
-  "title": "The C++ Programming Language and its Applications",
-  "publication_date": "October 1987",
+  "title": "Why C++ is not just an Object-Oriented Programming Language",
+  "publication_date": "October 1995; Addendum to the proceedings of the 10th annual conference on Object-oriented programming systems, languages, and applications (Addendum) — OOPSLA ’95",
   "authors": [
     "Bjarne Stroustrup"
   ],
   "keywords": [
-    "c++",
-    "efficiency",
-    "language-design",
-    "oop",
-    "programming-language",
-    "software-development",
-    "software-engineering",
-    "system-programming",
-    "type-safety",
-    "use-cases"
+    "abstraction",
+    "c-plus-plus",
+    "encapsulation",
+    "generic-programming",
+    "inheritance",
+    "multi-paradigm-programming",
+    "object-oriented-programming",
+    "polymorphism",
+    "standard-template-library",
+    "static-type-safety"
   ],
   "category_path": [
     "languages",
     "C++"
   ],
-  "abstract": "The purpose of this paper is to present the key design, programming, and language-technical concepts underpinning C++. A special emphasis is placed on the relatively recent features of the language. C++ is presented as an example of the class of general-purpose programming languages aimed at supporting systems design and programming through strong abstraction and type-checking features, and efficient execution.",
-  "summary": "The paper by Bjarne Stroustrup is a foundational document presented at the OOPSLA '87 conference. It provides insights into the development and features of the C++ programming language, highlighting its innovations in type safety and efficiency in system programming contexts. The paper discusses key design principles, emphasizing type-checking and abstraction mechanisms which were pioneering at the time of introduction.\n\nWhile C++ as a language has evolved considerably since 1987, the core principles laid out in this paper remain influential in modern software engineering. C++ has been instrumental in various domains, such as game development, high-performance systems, and real-time computing, due in large part to the balance of speed and abstraction it offers. A search for references to this paper indicates that many discussions on C++ development and enhancements in the following decades reflect foundational concepts from this document. However, this specific paper does not frequently appear in direct citations in contemporary research, likely due to the subsequent extensive literature encompassing modern C++ versions. Nonetheless, the ideas presented in this paper continue to resonate with programming language design discussions, as seen in the ongoing improvements and updates in C++. For example, later works on language evolution and new paradigms have built on these early insights ([Stroustrup's contributions](https://www.bjarne-stroustrup.com) continue to be widely acknowledged in retrospectives on programming languages).",
+  "abstract": "C++ directly supports a variety of programming styles. In this, C++ deliberately differs from languages designed to support a single way of writing programs. This paper briefly presents key programming styles directly supported by C++ and argues that the support for multiple styles is one of its major strengths. The styles presented include: traditional C-style, concrete classes, abstract classes, traditional class hierarchies, abstract classes and class hierarchies, and generic programming. To provide a context for this overview, I discuss criteria for a reasonable and useful definition of ‘‘object-oriented programming.’’",
+  "summary": "The paper argues that C++ should be understood as a multi-paradigm language rather than as a language restricted to a single, “pure” object-oriented style. It defines object-oriented programming in practical terms as direct support for abstraction through classes and objects, inheritance, and run-time polymorphism. It then presents a broader set of C++ techniques, including concrete types, namespaces, abstract interfaces, class hierarchies, and generic programming. The central design principle is to represent concepts and relationships directly, efficiently, and affordably, while preserving static type safety, interoperability with other languages, and run-time performance. ([stroustrup.com](https://www.stroustrup.com/oopsla.pdf))\n\nThe paper’s continuing influence is primarily visible in C++ education, language documentation, and historical accounts of the language. The official ISO C++ FAQ explicitly directs readers to this paper to explain why writing exclusively “pure” object-oriented code is not a C++ ideal. ([isocpp.org](https://isocpp.org/wiki/faq/how-to-learn-cpp)) A later historical account by Stroustrup repeats the paper’s characterization of C++ as a multi-paradigm language and cites the paper when discussing C++ programming styles. ([nzdr.ru](https://www.nzdr.ru/data/media/biblio/kolxoz/Cs/CsPl/Proceedings%20of%20the%20third%20ACM%20SIGPLAN%20conference%20on%20History%20of%20programming%20languages%20%28ACM%2C%202007%29%28484s%29_CsPl_.pdf)) The paper is also widely cataloged and cited as part of the literature surrounding C++ generic programming and the Standard Template Library, although the sources located do not establish a measurable causal effect on a particular subsequent research result or industrial system. ([dblp.uni-trier.de](https://dblp.uni-trier.de/rec/journals/oopsm/Stroustrup95.html))",
   "raw_url": "http://www.stroustrup.com/oopsla.pdf",
   "source_type": "external",
   "filepath": "languages/C++/README.md",
   "filename": "Why C++ is not just an Object-Oriented Programming Language-Original",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

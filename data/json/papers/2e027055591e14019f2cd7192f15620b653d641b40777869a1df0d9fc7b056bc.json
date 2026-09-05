@@ -1,34 +1,33 @@
 {
   "uuid": "2e027055591e14019f2cd7192f15620b653d641b40777869a1df0d9fc7b056bc",
-  "title": "Time provisioning evaluation of KVM, Docker and Unikernels in a Cloud Platform",
-  "publication_date": "2019",
+  "title": "Time provisioning Evaluation of KVM, Docker and Unikernels in a Cloud Platform",
+  "publication_date": "May 16–19, 2016, 16th IEEE/ACM International Symposium on Cluster, Cloud, and Grid Computing (CCGrid 2016), pp. 277–280",
   "authors": [
-    "Christian Westphal",
-    "Leonardo Karnopp",
-    "Lisandro Zambenedetti Granville",
-    "Luiz Fernando Bittencourt"
+    "Bruno Xavier",
+    "Luis Jersak",
+    "Tiago Ferreto"
   ],
   "keywords": [
     "cloud-computing",
-    "cloud-platform",
+    "cloud-platforms",
     "docker",
-    "infrastructure",
+    "instance-provisioning",
     "kvm",
+    "openstack",
+    "osv",
     "performance-evaluation",
-    "resource-management",
-    "time-provisioning",
     "unikernels",
     "virtualization"
   ],
   "category_path": [
     "unikernels"
   ],
-  "abstract": "The use of cloud computing provides elasticity by dynamically leveraging the efficient use of allocated resources. To effectively achieve elasticity, resources on cloud platforms must be provisioned at a fast pace. In this work, we perform an evaluation of provisioning times of three virtualization technologies, Kernel-based Virtual Machine (KVM), Docker, and Unikernels, in terms of performance and efficiency on cloud platforms. Our results show significant differences among these technologies considering the infrastructure's performance requirements.",
-  "summary": "This paper presents an evaluation of the time provisioning of three virtualization technologies—Kernel-based Virtual Machine (KVM), Docker, and Unikernels—within the context of cloud platforms. The research specifically focuses on how these technologies differ in terms of performance and efficiency when resources need to be provisioned rapidly for elasticity in cloud environments. Key findings highlight that each technology offers distinct advantages and trade-offs in terms of provisioning speed and resource utilization.\n\nThe paper adds to the field of cloud computing by providing empirical data on the comparative performance of these technologies, aiding in informed decision-making for infrastructure design and deployment in cloud-based systems.\n\nUpon conducting a web search, I could not find any specific mentions or citations of this paper in other research or industrial applications. Its impact on further research or industry appears to be minimal at this time.",
+  "abstract": "Unikernels are a promising alternative for application deployment in cloud platforms. They comprise a very small footprint, providing better deployment agility and portability among virtualization platforms. Similar to Linux containers, they are a lightweight alternative for deploying distributed applications based on microservices. However, the comparison of unikernels with other virtualization options regarding the concurrent provisioning of instances, as in the case of microservices-based applications, is still lacking. This paper provides an evaluation of KVM (Virtual Machines), Docker (Containers), and OSv (Unikernel), when provisioning multiple instances concurrently in an OpenStack cloud platform. We confirmed that OSv outperforms the other options and also identified opportunities for optimization.",
+  "summary": "## Summary\n\nThe paper evaluates concurrent instance provisioning for Linux/KVM virtual machines, Docker containers, and OSv unikernels in an OpenStack Kilo deployment. Using Rally and OSProfiler, the authors measure three parts of the provisioning workflow: instance or operating-system startup, image creation, and OpenStack overhead. The experiment uses a two-node environment and provisions 10, 20, and 30 instances concurrently. The tested images are 1.2 GB for Linux/KVM, 342 MB for Docker, and 88 MB for OSv.\n\nOSv and Docker exhibit sub-second startup behavior, while Linux/KVM startup time increases substantially as concurrency grows. OSv and Linux/KVM have comparable image-preparation behavior because both use QCOW2 images, although the much smaller OSv image reduces the image-copy cost. Docker experiences degradation during concurrent image import because image decompression and metadata processing are serialized by the Docker API. OpenStack service communication and coordination also form a major component of total provisioning time, particularly as concurrency increases.\n\nFor the tested workload, the reported total times are approximately 13 seconds for OSv/KVM and Linux/KVM and 22 seconds for Docker at 10 concurrent instances; at 30 instances, OSv/KVM takes approximately 22 seconds, Linux/KVM approximately 22 seconds, and Docker approximately 38 seconds. The authors conclude that OSv provides the best provisioning performance under the experiment’s uncached, repeated-image conditions. They identify cached Docker layers, incremental deployment, full-stack applications, and OpenStack workflow optimization as important subjects for further study.\n\n## Subsequent research\n\nThe clearest documented academic continuation located in the search was *An Unikernels Provisioning Architecture for OpenStack* (2018), authored by Luis Augusto Dias Knob, Bruno Gomes Xavier, and Tiago Ferreto. That work develops an optimized OpenStack provisioning architecture for OSv, moving image reconstruction toward the compute node, supporting concurrent compilation, and addressing the image-transfer and reconstruction bottlenecks identified in the earlier evaluation. ([repositorio.pucrs.br](https://repositorio.pucrs.br/dspace/bitstream/10923/14186/2/An_Unikernels_Provisioning_Architecture_for_OpenStack.pdf))\n\nThe search found evidence of continued citation in later unikernel and cloud-virtualization literature, but no verifiable industry deployment or product adoption explicitly attributable to this paper. The paper’s publication venue, date, bibliographic metadata, and author ordering were cross-checked against the PUCRS repository and conference records. ([repositorio.pucrs.br](https://repositorio.pucrs.br/dspace/bitstream/10923/14178/2/Time_provisioning_evaluation_of_KVM_Docker_and_Unikernels_in_a_Cloud_Platform.pdf))",
   "raw_url": "http://repositorio.pucrs.br/dspace/bitstream/10923/14178/2/Time_provisioning_evaluation_of_KVM_Docker_and_Unikernels_in_a_Cloud_Platform.pdf",
   "source_type": "external",
   "filepath": "unikernels/README.md",
   "filename": "Time Provisioning Evaluation of KVM, Docker and Unikernels in a Cloud Platform",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:05"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:57"
 }

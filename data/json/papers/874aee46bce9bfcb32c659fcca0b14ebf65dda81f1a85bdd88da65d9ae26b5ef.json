@@ -1,30 +1,31 @@
 {
   "uuid": "874aee46bce9bfcb32c659fcca0b14ebf65dda81f1a85bdd88da65d9ae26b5ef",
-  "title": "The On-Line Encyclopedia of Integer Sequences",
-  "publication_date": "2003",
+  "title": "The Packing of Spheres",
+  "publication_date": "January 1984; Scientific American, volume 250, number 1, pages 116–125",
   "authors": [
     "N. J. A. Sloane"
   ],
   "keywords": [
-    "database",
-    "discrete-mathematics",
-    "integer-sequences",
-    "mathematics",
-    "oeis",
-    "online-encyclopedia",
-    "research-tool",
-    "scientific-computing",
-    "sequence-classification"
+    "covering-problem",
+    "digital-communications",
+    "e8-lattice",
+    "error-correcting-codes",
+    "high-dimensional-geometry",
+    "kissing-number",
+    "lattice-packing",
+    "leech-lattice",
+    "quantization",
+    "sphere-packing"
   ],
   "category_path": [
     "mathematics"
   ],
-  "abstract": "The On-Line Encyclopedia of Integer Sequences (or OEIS) is a database of integer sequences that was started in 1996 and now contains over 60,000 sequences. It has become a useful resource for mathematicians and other scientists, with many publications citing OEIS sequences. The current database is maintained by N. J. A. Sloane and was preceded by two books of sequences compiled by the same author.",
-  "summary": "The paper discusses the creation and evolution of the On-Line Encyclopedia of Integer Sequences (OEIS), emphasizing its importance in the field of mathematics and scientific computing. Initially begun in 1996, the OEIS has grown to include over 60,000 integer sequences, serving as a vital resource for mathematicians and scientists engaged in sequence-related research. It is maintained by N. J. A. Sloane, who had previously compiled two books on the subject.\n\nThe OEIS has been extensively cited in the mathematical community, functioning as a reference tool for researchers investigating properties of sequences or seeking similarities between different mathematical phenomena. The utility of OEIS is not limited to mathematics but extends to areas such as computer science, where algorithm research involving sequences can benefit from insights provided by the database.\n\nInfluence of this paper can be seen in numerous works that utilize OEIS. For instance, it is steadily referenced as a standard repository in sequence-related research. The OEIS community-driven approach has inspired other open-access databases in different scientific domains, encouraging collaborative knowledge building and resource sharing.\n\nThe OEIS has been integral to the advancement of discrete mathematics and is recognized as a crucial asset for ongoing research in scientific computing and algorithm development. However, specific web references or citations showing its direct influence in subsequent research could not be found within the limited timeframe of this search. For more comprehensive citations and influence see [OEIS Wiki on known uses](https://oeis.org/wiki/Works_citing_OEIS).",
+  "abstract": "What is the densest way to arrange identical spheres in space? There has been much progress on the problem, particularly in 24 dimensions, and the results can be applied to digital signaling",
+  "summary": "This is an expository account of sphere packing in Euclidean spaces from one through many dimensions. It introduces the three-dimensional close-packing problem, the kissing-number and covering problems, and the use of coordinate geometry to generalize circles and spheres to arbitrary dimensions. The article explains how lattice packings are constructed, emphasizing the laminated lattices, the face-centered-cubic packing, the $E_8$ lattice in eight dimensions, and the Leech lattice in 24 dimensions. It also describes connections between sphere packing and digital communications: code words can be represented as points in high-dimensional space, reliable transmission requires a minimum separation between points, and minimizing transmission power corresponds to placing code points near the origin. Quantization is presented as a covering problem, with hexagonal arrangements yielding lower average error in two dimensions than square arrangements.\n\nThe paper is primarily a broad mathematical and scientific exposition rather than a new technical theorem. Its documented influence is mainly dissemination and reference: Sloane’s bibliography identifies it as a widely circulated overview of sphere packings, lattices, and quadratic forms, and later educational materials assign it as background for work on sphere packing, coding theory, and optimal configurations. ([neilsloane.com](https://neilsloane.com/doc/pub.html)) Subsequent discussions of sphere packing and communications continued to use the geometric correspondence described in the article, including explanations of error-correcting codes for deep-space communication and modern digital systems. ([scientificamerican.com](https://www.scientificamerican.com/article/a-new-tool-to-help-mathematics-pack/)) The article also helped frame the relationship between high-dimensional packings, coding theory, quantization, and finite-group theory, although the sources located here do not establish a specific industrial system as a direct implementation of this particular article. The publication metadata and descriptive text are confirmed by Scientific American’s article record. ([scientificamerican.com](https://www.scientificamerican.com/article/the-packing-of-spheres/))",
   "raw_url": "http://neilsloane.com/doc/Me109.pdf",
   "source_type": "external",
   "filepath": "mathematics/README.md",
   "filename": "Packing of Spheres",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:56"
 }

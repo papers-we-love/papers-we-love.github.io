@@ -1,31 +1,26 @@
 {
   "uuid": "c301315b5a5bcda758586bc4c66891537105438cdcd51b3b48023134e9e5efd6",
-  "title": "Least Common Ancestors Revisited",
-  "publication_date": "2004",
+  "title": "The LCA Problem Revisited",
+  "publication_date": "April 10–14, 2000, LATIN 2000: Theoretical Informatics, 4th Latin American Symposium, Punta del Este, Uruguay; published in Lecture Notes in Computer Science, volume 1776, pages 88–94. The manuscript is dated May 16, 2000.",
   "authors": [
-    "Dan Breslauer",
-    "Omer Berkman"
+    "Martín Farach-Colton",
+    "Michael A. Bender"
   ],
   "keywords": [
-    "algorithm-design",
-    "computational-complexity",
-    "computational-theory",
+    "cartesian-tree",
     "data-structures",
-    "dynamic-trees",
-    "graph-theory",
-    "least-common-ancestor",
-    "parallel-computing",
-    "tree-algorithms"
+    "least-common-ancestor-lca",
+    "range-minimum-query-rmq"
   ],
   "category_path": [
     "data_structures"
   ],
-  "abstract": "We revisit the problem of least common ancestors (LCA), whose efficient solution is central to many applications such as finding lowest matches in phylogenetic trees, sorting suffixes, and finding nearest common ancestors in databases of historical data. We introduce two new algorithms, one of which reduces the space requirement for preprocessing a tree down to linear space while maintaining constant query time. The second algorithm, which is implicit, requires neither space nor preprocessing and answers queries by examining the tree structure each time a query is issued. We show that our new algorithms have advantages over previous solutions both in theory and practice.",
-  "summary": "The paper entitled \"Least Common Ancestors Revisited\" by Omer Berkman and Dan Breslauer, focuses on optimizing the solution for the least common ancestor (LCA) problem, which is significant in areas like phylogenetic tree analysis, suffix sorting, and historical data processing. The authors present two new algorithms: one with efficient linear space for preprocessing and constant query time, and another implicit algorithm that eliminates the need for preprocessing altogether by re-evaluating the tree structure with each query. These algorithms improve upon previous methods by enhancing both theoretical performance and practical implementation. \n\nUpon review of citations and references in subsequent works, this paper has influenced areas like tree data structure optimization and their applications in various computational problems. Later works such as the paper by Harel and Tarjan's survey on path compression techniques reference it concerning theoretical improvements ([Link](https://scholar.google.com/scholar?cites=4920474637064684294)). Additionally, it has been cited for applications in biological data analysis and database systems, by using LCA problem solutions in querying hierarchical data structures ([Link](https://academic.oup.com/bioinformatics/article/20/6/923/216672)). These citations indicate its practical influence in computer science and biology-related fields. However, comprehensive adoption in industry seems limited primarily to its theoretical contributions.",
+  "abstract": "We present a very simple algorithm for the Least Common Ancestor problem. We thus dispel the frequently held notion that an optimal LCA computation is unwieldy and unimplementable. Interestingly, this algorithm is a sequentialization of a previously known PRAM algorithm of Berkman, Breslauer, Galil, Schieber, and Vishkin [1].",
+  "summary": "The paper presents a simple linear-preprocessing, constant-query-time algorithm for the static Least Common Ancestor (LCA) problem. Its main idea is to reduce LCA queries to Range Minimum Queries (RMQ) over the level sequence of an Euler tour of the rooted tree. Because adjacent values in this sequence differ by exactly one, the resulting problem is a restricted ±1 RMQ problem.\n\nThe authors solve ±1 RMQ using a block decomposition. Queries within a block are answered by precomputed lookup tables over normalized block types; queries spanning multiple blocks are answered using the minima of the boundary fragments together with a sparse-table structure over block minima. This yields linear preprocessing and space with constant-time queries. They then show that general RMQ can be reduced back to LCA by constructing the Cartesian tree of the input array in linear time. Together, these reductions establish a close algorithmic equivalence between LCA and RMQ.\n\nThe paper’s influence is visible in subsequent RMQ, LCA, and longest-common-extension (LCE) research. Fischer and Heun’s later work developed theoretical and practical improvements to RMQ structures and explicitly built on the LCA/RMQ framework associated with this paper. ([link.springer.com](https://link.springer.com/book/10.1007/11780441)) The reduction and its lookup-table/block-decomposition strategy are also routinely presented in advanced algorithms courses and lecture materials. ([www3.dcc.fc.up.pt](https://www3.dcc.fc.up.pt/~pribeiro/aulas/taa1920/handouts.html)) The paper received the Imre Simon Test-of-Time Award at LATIN 2012, recognizing it as the most influential eligible LATIN paper. ([microsoft.com](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/beatcs107.pdf))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/data_structures/lca-revisited.pdf",
   "source_type": "pdf",
   "filepath": "data_structures/lca-revisited.pdf",
   "filename": "lca-revisited.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:51"
 }

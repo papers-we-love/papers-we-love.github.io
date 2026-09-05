@@ -1,32 +1,34 @@
 {
   "uuid": "072af113e122b04b115870e8abe6549203593309096aa5bba5ba4c012a4e8368",
   "title": "Eluding Carnivores: File Sharing with Strong Anonymity",
-  "publication_date": "May 2002",
+  "publication_date": "August 1, 2004; published in the Proceedings of the 11th ACM SIGOPS European Workshop, Leuven, Belgium, September 19–22, 2004",
   "authors": [
-    "Michael J. Freedman",
-    "Robert Morris"
+    "Doğan Engin",
+    "Emin Gun Sirer",
+    "Mark Robson",
+    "Sharad Goel"
   ],
   "keywords": [
-    "anonymity-protocols",
     "anonymous-file-sharing",
-    "censorship-resistance",
-    "decentralized-networks",
-    "distributed-systems",
-    "file-distribution",
-    "network-security",
-    "peer-to-peer",
+    "dc-nets",
+    "dining-cryptographers-networks",
+    "intersection-attacks",
+    "pastry-overlay",
+    "peer-to-peer-networks",
+    "planetlab",
     "privacy",
-    "strong-anonymity"
+    "strong-anonymity",
+    "sybil-resistance"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "We present Tarzan, a peer-to-peer anonymous IP network overlay and a file-sharing system. Tarzan is designed to provide strong anonymity and robustness against current adversaries known as Carnivores, which are widely used for surveillance. The system utilizes both encryption and a layered network topology to obfuscate the network paths. We describe several aspects of Tarzan including structure, data flow, and possible attacks resistant to the design choices.",
-  "summary": "The paper \"Eluding Carnivores: File Sharing with Strong Anonymity\" introduces Tarzan, a peer-to-peer overlay network aimed at providing strong anonymity for users against surveillance. Authored by Michael J. Freedman and Robert Morris and published in May 2002, it outlines the design of a file-sharing system that utilizes encryption and a layered network topology to hide user identities and activities from network adversaries. This work contributes significantly to the field of computer security and distributed systems by offering a robust method for maintaining user anonymity in file-sharing networks.\n\nA web search for this paper indicates that it is often referenced in studies relating to network anonymity and peer-to-peer systems, reflecting its importance in these areas. The Tarzan system proposed in this paper has been cited in subsequent works focusing on improving network anonymity protocols and conducting anonymization effectiveness analyses. For instance, the paper has been referenced in discussions of network privacy solutions, like those seeking to enhance existing anonymization mechanisms ([source](https://link.springer.com/chapter/10.1007/978-3-540-30205-6_4), [source](https://ieeexplore.ieee.org/document/6554877)). However, specific widespread industry adoption of this particular system is not evident from available data, indicating its primary influence remains within academic and research-focused initiatives.",
+  "abstract": "Anonymity is increasingly important for networked applications amidst concerns over censorship and privacy. This paper outlines the design of HerbivoreFS, a scalable and efficient file sharing system that provides strong anonymity. HerbivoreFS provides computational guarantees that even adversaries able to monitor all network traffic cannot deduce the identity of a sender or receiver beyond an anonymizing clique of k peers. HerbivoreFS achieves scalability by partitioning the global network into smaller anonymizing cliques. Measurements on PlanetLab indicate that the system achieves high anonymous bandwidth when deployed on the Internet.",
+  "summary": "## Summary\n\nThe paper presents **HerbivoreFS**, a peer-to-peer file-sharing system built on the Herbivore anonymous communication protocol. Its central contribution is the application of dining-cryptographers networks (DC-nets) to a scalable Internet setting by partitioning participants into smaller anonymizing cliques. Within each clique, all members contribute to every transmission, preventing a global passive observer from identifying a sender or receiver more precisely than the clique, subject to the stated cryptographic assumptions.\n\nThe design combines a Pastry-based overlay, computational puzzles to limit Sybil attacks, clique membership management, anonymous reservation and transmission rounds, and replication-based defenses against intersection attacks. The prototype was implemented in Java and C and evaluated on PlanetLab; the paper reports that parallel protocol instances enabled comparatively high anonymous bandwidth, although performance depended on clique size and the slowest participant link.\n\nSubsequent anonymity research cites Herbivore as an early practical attempt to scale DC-net-style communication. In particular, the Dissent research line discusses Herbivore and contrasts its clique-based DC-net approach with later systems designed to improve scalability, accountability, and resistance to disruption. ([dedis.cs.yale.edu](https://dedis.cs.yale.edu/dissent/papers/tr1472.pdf)) Cornell’s project documentation also records a related Herbivore technical report and identifies the paper as part of the system’s research lineage. ([cs.cornell.edu](https://www.cs.cornell.edu/people/egs/herbivore/documentation.html)) The available sources establish influence on later academic work and teaching materials, but do not provide reliable evidence of significant industry deployment. Bibliographic metadata confirms the paper’s 2004 ACM SIGOPS European Workshop publication. ([researchgate.net](https://www.researchgate.net/publication/220757769_Eluding_carnivores_File_sharing_with_strong_anonymity))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/eluding-carnivores-file-sharing-with-strong-anonymity.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/eluding-carnivores-file-sharing-with-strong-anonymity.pdf",
   "filename": "eluding-carnivores-file-sharing-with-strong-anonymity.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:51"
 }

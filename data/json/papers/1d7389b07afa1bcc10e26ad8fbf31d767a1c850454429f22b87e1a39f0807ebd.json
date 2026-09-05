@@ -1,35 +1,34 @@
 {
   "uuid": "1d7389b07afa1bcc10e26ad8fbf31d767a1c850454429f22b87e1a39f0807ebd",
-  "title": "Lambda Refactoring in Practice",
-  "publication_date": "2013",
+  "title": "Crossing the Gap from Imperative to Functional Programming through Refactoring",
+  "publication_date": "August 18–26, 2013 (ESEC/FSE ’13, Saint Petersburg, Russia)",
   "authors": [
-    "Chien-An Chen",
-    "Chung-Hsien Chiang",
+    "Alex Gyori",
     "Danny Dig",
-    "Ralph E. Johnson"
+    "Jan Lahoda",
+    "Lyle Franklin"
   ],
   "keywords": [
-    "code-elegance",
+    "automated-refactoring",
     "functional-programming",
-    "improved-readability",
-    "java",
-    "lambda-refactoring",
-    "program-transformation",
-    "refactoring-tools",
-    "software-engineering",
-    "software-maintenance",
-    "software-productivity"
+    "imperative-programming",
+    "java-8",
+    "java-streams",
+    "lambda-expressions",
+    "parallelism",
+    "refactoring",
+    "software-maintenance"
   ],
   "category_path": [
     "languages-paradigms",
     "functional_programming"
   ],
-  "abstract": "Refactoring is a technique to restructure code in order to improve its readability, maintainability, and extensibility, while preserving its behavior. This paper reports on our experience with a new refactoring—lambda refactoring—to transform existing Java code to take advantage of lambda expressions. Specifically, this refactoring transforms anonymous classes, inner classes, and functional interfaces into functionally equivalent lambda expressions. The refactoring saves developers' time to manually transform existing code to use lambda expressions. We also created a refactoring tool that performs this transformation automatically. We evaluated the usability and correctness of our tool on 16 open-source projects comprising 2,431 KLOC. Our results show that 81% of the refactorings are accepted by developers, 92.4% are correct, and the time savings can be significant—the tool reduces the transformation time from 15 minutes to 2 seconds. However, challenges remain because some transformations require semantic preservation or context-sensitive checks.",
-  "summary": "This paper explores the practical application of lambda refactoring in Java, focusing on transforming anonymous classes, inner classes, and functional interfaces into lambda expressions. It introduces a tool that automates this refactoring process, providing substantial time savings. Evaluated on 16 open-source projects, the tool showed a high level of accuracy and developer acceptance. The findings highlight that while lambda refactoring can significantly optimize Java code for readability and maintainability, semantic challenges persist. \n\nUpon reviewing its impact, no direct citations or widespread adoption in industry standards were found related to this specific refactoring approach in Java. However, the paper contributes to the broader field of automatic refactoring tools in software engineering and enriches discussions on integrating functional programming features into object-oriented programming languages. The approach promotes the utilization of lambda expressions, paving the way for more elegant and performant coding practices.",
+  "abstract": "Java 8 introduces two functional features: lambda expressions and functional operations like map or filter that apply a lambda expression over the elements of a Collection. Refactoring existing code to use these new features enables explicit but unobtrusive parallelism and makes the code more succinct. However, refactoring is tedious: it requires changing many lines of code. It is also error-prone: the programmer must reason about the control-, data-flow, and side-effects. Fortunately, refactorings can be automated. We designed and implemented LambdaFicator, a tool which automates two refactorings. The first refactoring converts anonymous inner classes to lambda expressions. The second refactoring converts for loops that iterate over Collections to functional operations that use lambda expressions. Using 9 open-source projects, we have applied these two refactorings 1263 and 1709 times, respectively. The results show that LambdaFicator is useful: (i) it is widely applicable, (ii) it reduces the code bloat, (iii) it increases programmer productivity, and (iv) it is accurate.",
+  "summary": "## Summary\n\nThe paper introduces LambdaFicator, an automated refactoring tool for migrating imperative Java code toward the functional features introduced in Java 8. It supports two transformations: converting anonymous inner classes into lambda expressions, and converting enhanced `for` loops over collections into chains of stream operations such as `map`, `filter`, `reduce`, `forEach`, `anyMatch`, and `noneMatch`. The transformations are designed to preserve behavior while addressing Java-specific scoping rules, type inference, variable shadowing, control flow, side effects, and the distinction between lazy and eager stream operations. ([dig.cs.illinois.edu](https://dig.cs.illinois.edu/papers/lambdaRefactoring.pdf))\n\nThe tool uses explicit safety preconditions and a variable-availability analysis to infer operation chains. Its evaluation covered nine open-source Java projects totaling approximately 1.1 million source lines. It converted 55% of examined anonymous inner classes and 46.02% of enhanced `for` loops. Anonymous-inner-class conversions reduced source code by 2,213 lines and achieved reported precision and recall of 100% in the sampled evaluation. For-loop conversions inferred 1,709 operation chains, with an average chain length of 2.72; the reported precision was 0.90 and recall was 0.92. Testing and manual inspection found no semantic regressions in the evaluated transformations. ([dig.cs.illinois.edu](https://dig.cs.illinois.edu/papers/lambdaRefactoring.pdf))\n\n## Subsequent influence\n\nThe paper established an early practical approach to automated migration from imperative Java loops to Java 8 functional constructs. Its ideas were followed by work porting the enhanced-`for`-loop lambda refactoring from NetBeans to Eclipse, explicitly using the paper as a reference for bringing equivalent automated refactoring to another IDE. ([researchgate.net](https://www.researchgate.net/publication/301464799_Porting_the_NetBeans_Java_8_enhanced_for_loop_lambda_expression_refactoring_to_eclipse)) Later research on semantics-oriented Java stream refactoring, including Kayak, cited this work while pursuing safer and more broadly applicable transformations of external iteration into stream pipelines. ([cprover.org](https://www.cprover.org/refactoring/kayak-paper.pdf)) Subsequent studies and tools for automatic Java Stream API refactoring also cite the paper as prior work on analyzing constraints and preserving semantics during imperative-to-functional transformation. ([researchgate.net](https://www.researchgate.net/publication/335398342_Automatic_Refactoring_of_Java_Code_Using_the_Stream_API))",
   "raw_url": "http://dig.cs.illinois.edu/papers/lambdaRefactoring.pdf",
   "source_type": "external",
   "filepath": "languages-paradigms/functional_programming/README.md",
   "filename": "Crossing the Gap from Imperative to Functional Programming through Refactoring",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

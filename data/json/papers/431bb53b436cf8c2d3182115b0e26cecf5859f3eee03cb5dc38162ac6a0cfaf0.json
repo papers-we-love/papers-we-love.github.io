@@ -1,7 +1,7 @@
 {
   "uuid": "431bb53b436cf8c2d3182115b0e26cecf5859f3eee03cb5dc38162ac6a0cfaf0",
-  "title": "NTRU Prime: Reducing Attack Surface at Low Cost",
-  "publication_date": "April 4, 2016",
+  "title": "NTRU Prime",
+  "publication_date": "May 11, 2016",
   "authors": [
     "Chitchanok Chuengsatiansup",
     "Christine van Vredendaal",
@@ -9,26 +9,26 @@
     "Tanja Lange"
   ],
   "keywords": [
-    "algorithm-design",
-    "cryptographic-security",
-    "cryptography",
-    "efficient-cryptography",
-    "key-exchange-protocol",
+    "constant-time-implementation",
+    "ideal-lattices",
+    "key-encapsulation",
     "lattice-based-cryptography",
     "ntru",
+    "polynomial-multiplication",
     "post-quantum-cryptography",
-    "prime-fields",
-    "security-analysis"
+    "public-key-encryption",
+    "ring-lwe",
+    "security"
   ],
   "category_path": [
     "cryptography"
   ],
-  "abstract": "This paper presents NTRU Prime, a lattice-based cryptosystem that addresses potential vulnerabilities in existing NTRU cryptosystems by considering its modifications to reduce attack surfaces while maintaining efficiency. NTRU Prime retains the primary characteristics of the NTRU family such as integrating public keys of short and fixed size with relatively small ciphertexts, but avoids using rings that allow attackers to rapidly find the shortest vector. NTRU Prime provides robustness against physical attack vectors, and an efficiently computable, algorithmically comparable level of security against both classical and quantum computers, in particular focusing on relevance in a post-quantum cryptographic context.",
-  "summary": "NTRU Prime is a notable contribution to post-quantum cryptography, focusing on enhancing security by modifying the structure of classical NTRU cryptosystems to protect against potential attack vectors. Since its publication, it has been influential in discussions around lattice-based cryptography, offering insights into safer cryptographic protocol designs particularly in regard to quantum computing challenges. Search results show that NTRU Prime is referenced in works such as the IEEE Paper 'Lattice-based Key Exchange on Reconfigurable Hardware,' which explores its application in key exchange protocols [link](https://ieeexplore.ieee.org/document/8408495). Papers like 'Assessing the Impact of Quantum Computers on Security of Future Integrated Circuits' published in MDPI Electronics also cite NTRU Prime in discussing cryptography's future role in secure and reliable post-quantum environments [link](https://www.mdpi.com/2079-9292/8/4/421). These references underscore its role in shaping ongoing cryptographic research toward quantum-resistant solutions.",
+  "abstract": "Several ideal-lattice-based cryptosystems have been broken by recent attacks that exploit special structures of the rings used in those cryptosystems. The same structures are also used in the leading proposals for post-quantum lattice-based cryptography, including the classic NTRU cryptosystem and typical Ring-LWE-based cryptosystems.\nThis paper proposes NTRU Prime, which tweaks NTRU to use rings without these structures; proposes Streamlined NTRU Prime, which optimizes NTRU Prime from an implementation perspective; finds high-security post-quantum parameters for Streamlined NTRU Prime; and optimizes a constant-time implementation of those parameters. The performance results are surprisingly competitive with the best previous speeds for lattice-based cryptography.",
+  "summary": "## Summary\n\nThe paper proposes **NTRU Prime**, a modification of NTRU intended to reduce exposure to attacks that exploit algebraic structure in commonly used rings. It recommends using a prime-degree polynomial with a large Galois group, specifically \\(x^p-x-1\\), together with a prime modulus \\(q\\) for which the polynomial remains irreducible modulo \\(q\\). This makes the quotient a field and removes several useful factorizations, subfields, homomorphisms, and automorphisms present in classic NTRU and many Ring-LWE constructions.\n\nThe paper then presents **Streamlined NTRU Prime**, a key-encapsulation mechanism optimized for implementation. Its design uses small ternary polynomials, rounded ciphertexts, SHA-512-derived session keys and key confirmation, and a decapsulation procedure that verifies the recovered input. For the concrete parameter set \\((p,q,t)=(739,9829,204)\\), the authors claim a conservative estimated pre-quantum security level of \\(2^{215}\\), giving margin above their target of more than \\(2^{128}\\) post-quantum security. The bound \\(q\\geq48t+1\\) guarantees correct decoding for all valid inputs, avoiding the decryption-failure behavior that complicates many lattice-based systems.\n\nThe implementation replaces number-theoretic transforms with a combination of Toom-6 multiplication, refined Karatsuba multiplication, schoolbook multiplication at the lowest level, and vectorization on Intel Haswell. The reported multiplication cost is approximately 50,000 cycles per operation, with a public key of about 1,232 bytes and a ciphertext of about 1,141 bytes for the case-study parameters. The broader engineering message is that conservative algebraic choices need not impose a prohibitive performance penalty when the multiplication strategy and encoding are redesigned together.\n\n## Subsequent influence\n\nThe later `sntrup761` instantiation of Streamlined NTRU Prime was incorporated into hybrid SSH key exchange implementations. The protocol was implemented in TinySSH and OpenSSH, became the default OpenSSH key-exchange method in 2022, and was subsequently documented as the widely deployed hybrid `sntrup761x25519-sha512` in RFC 9941, published in April 2026. ([datatracker.ietf.org](https://datatracker.ietf.org/doc/html/draft-ietf-sshm-ntruprime-ssh-00)) The paper therefore influenced both subsequent implementation work on constant-time NTRU Prime and practical deployment of post-quantum protection in SSH. Later implementation and hardware research continues to optimize `sntrup761`, including polynomial multiplication and hardware acceleration. ([ntruprime.cr.yp.to](https://ntruprime.cr.yp.to/papers.html))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/cryptography/ntru-prime.pdf",
   "source_type": "pdf",
   "filepath": "cryptography/ntru-prime.pdf",
   "filename": "ntru-prime.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:50"
 }

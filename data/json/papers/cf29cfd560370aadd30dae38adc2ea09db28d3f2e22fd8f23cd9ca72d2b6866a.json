@@ -1,29 +1,34 @@
 {
   "uuid": "cf29cfd560370aadd30dae38adc2ea09db28d3f2e22fd8f23cd9ca72d2b6866a",
-  "title": "DIVERSITY: An Objective Measure of Semantic Distance in Ontologies",
-  "publication_date": "May 2011",
+  "title": "Making Programs Forget: Enforcing Lifetime For Sensitive Data",
+  "publication_date": "May 2011, 13th Workshop on Hot Topics in Operating Systems (HotOS XIII), Napa, California",
   "authors": [
-    "Shailendra Raj Mehta",
-    "Sudheendra Kambhampati Kannan"
+    "Byung-Gon Chun",
+    "Gautam Altekar",
+    "Jayanthkumar Kannan",
+    "Petros Maniatis"
   ],
   "keywords": [
-    "diversity-measurement",
-    "information-retrieval",
-    "information-theory",
-    "knowledge-representation",
-    "ontologies",
-    "semantic-distance",
-    "semantic-web"
+    "application-integrity",
+    "checkpointing",
+    "dynamic-taint-tracking",
+    "guaranteed-data-lifetime",
+    "operating-systems",
+    "perturbed-replay",
+    "secure-deletion",
+    "sensitive-data",
+    "state-reincarnation",
+    "symbolic-execution"
   ],
   "category_path": [
     "security"
   ],
-  "abstract": "Semantic Web ontologies offer the potential to provide more precise answers to complex queries than statistical search engines. The labeling of semantic content can support similarity inference, improving searching and information retrieval quality. In this paper, we argue for the development of a measure of diversity that quantifies the semantic distance between concepts in an ontology. We define such a measure based on an extension of traditional methodologies in distance and similarity measurement across taxonomical trees. This measure is intended to help distinguish between semantic properties accurately, and facilitate innovative solutions in diverse areas such as knowledge representation in artificial intelligence, natural language processing, and diverse web applications.",
-  "summary": "This paper introduces a concept of measuring semantic distance termed 'diversity' within ontological structures. The authors propose a methodology to quantify this semantic distance to improve information retrieval and searching quality using Semantic Web ontologies. The motivation behind this measure is to provide more accurate answers to complex queries compared to traditional statistical search engines. Although direct references and applications of this work in later research or industry applications are limited, the paper's ideas align with ongoing developments in information retrieval and Semantic Web advancements, where precision in knowledge representation is crucial. Further information about the paper's influence could not be confirmed through direct citations, indicating it may serve as one of many foundational pieces contributing to the evolving discourse in these fields. Since the publication date is in 2011, it might have been overshadowed by more recent advances in ontology research and Semantic Web technologies. No direct influential citations of this work were found through a quick web search.",
+  "abstract": "This paper introduces guaranteed data lifetime, a novel system property ensuring that sensitive data cannot be retrieved from a system beyond a specified time. The trivial way to achieve this is to “reboot”; however, this is disruptive from the user’s perspective, and may not even eliminate disk copies. We discuss an alternate approach based on state re-incarnation where data expiry is completely transparent to the user, and can be used even if the system is not designed a priori to provide the property.",
+  "summary": "The paper introduces **guaranteed data lifetime**, the property that sensitive data supplied to an application should become irretrievable from the local system after a specified lifetime. It targets legacy applications that may retain data in application memory, operating-system buffers, caches, files, swap, or other components without explicit support for secure expiration.\n\nThe proposed mechanism, called **state re-incarnation**, checkpoints an application before sensitive input is delivered, logs subsequent inputs and nondeterministic results, and restores the checkpoint when the data expires. The system then replays the logged execution while replacing the sensitive input with a non-sensitive substitute. The resulting application state is intended to preserve non-sensitive user-visible effects while eliminating state derived from the expired data. The paper considers omission, ordinary substitution, and consistent substitution; consistent substitution uses symbolic execution and constraint solving to preserve the original control flow as closely as possible.\n\nThe main technical challenges are fidelity, pervasive coverage of all data-retention locations, containment of information shared with other processes or remote systems, and performance. The authors identify a fundamental tension between secrecy and fidelity: a substitute that preserves more application behavior may necessarily reveal properties such as the sensitive input’s length or control-flow constraints. The paper therefore proposes leakage thresholds and application shutdown as a fallback when acceptable fidelity cannot be achieved.\n\nThe work presents a preliminary Valgrind-based logging experiment using Bash. Of 33,481 executed instructions, 266 processed tainted input, generating 9,730 constraints. The authors estimate that continuous logging could incur approximately 3× overhead in representative client-side settings, while replay could run on a shadow application image. The paper is primarily a design proposal; it does not report a complete, general-purpose implementation or demonstrate that the proposed guarantees hold across arbitrary applications and system components. ([usenix.org](https://www.usenix.org/events/hotos11/tech/final_files/Kannan.pdf))\n\nSubsequent research cited the paper as an approach based on snapshotting, rollback, and replay for removing private state. *Eternal Sunshine of the Spotless Machine: Protecting Privacy with Ephemeral Channels* pursued a different, hypervisor-based design for forensic deniability, motivated by persistent traces in operating-system and peripheral buffers. *Gone, But Not Forgotten: The Current State of Private Computing* explicitly contrasts the paper’s replay-based approach with its proposed system-level private-computing service, noting the replay method’s implementation complexity and overhead. These works indicate that the paper helped frame data lifetime and post-use trace removal as system-wide privacy problems, while later designs explored stronger isolation and more pervasive erasure mechanisms. ([cs.utexas.edu](https://www.cs.utexas.edu/users/witchel/pubs/dunn12osdi-lacuna.pdf))",
   "raw_url": "https://www.usenix.org/events/hotos11/tech/final_files/Kannan.pdf",
   "source_type": "external",
   "filepath": "security/README.md",
   "filename": "Making Programs Forget: Enforcing Lifetime For Sensitive Data (2011)",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:56"
 }

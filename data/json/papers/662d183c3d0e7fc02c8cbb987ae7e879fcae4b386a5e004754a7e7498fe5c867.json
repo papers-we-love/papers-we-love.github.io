@@ -1,34 +1,34 @@
 {
   "uuid": "662d183c3d0e7fc02c8cbb987ae7e879fcae4b386a5e004754a7e7498fe5c867",
-  "title": "Kernohan: A High-Integrity, High-Assurance Microkernel for Embedded Systems",
-  "publication_date": "2017",
+  "title": "A Performance Evaluation of Rump Kernels as a Multi-server OS Building Block on seL4",
+  "publication_date": "September 2, 2017, APSys ’17 (8th Asia-Pacific Workshop on Systems), Mumbai, India",
   "authors": [
-    "Daryl Seward",
+    "Amirreza Zarrabi",
     "Gernot Heiser",
-    "Kevin Elphinstone",
-    "Philip Derrin"
+    "Kent Mcleod",
+    "Kevin Elphinstone"
   ],
   "keywords": [
-    "capabilities",
-    "embedded-systems",
     "formal-verification",
-    "high-assurance",
-    "isolation",
-    "kernel-design",
-    "microkernel",
-    "real-time",
-    "safety-critical",
-    "secure-systems"
+    "library-os",
+    "microkernels",
+    "multi-server-operating-systems",
+    "networking-performance",
+    "operating-systems",
+    "posix-compatibility",
+    "rump-kernels",
+    "sel4",
+    "unikernels"
   ],
   "category_path": [
     "unikernels"
   ],
-  "abstract": "The proposed presentation introduces Kernohan, a new microkernel designed for high-assurance embedded systems, as part of our work on trustworthy systems. Kernohan’s design builds on our existing high-assurance, formally-verified seL4 kernel. It is intended as a platform for secure, safety-critical software, with a particular focus on defence, automotive, and avionics applications. Kernohan embodies several innovations for supporting static resource management, security, and fault-tolerance. Additionally, the presentation discusses results from our evaluation which demonstrate the performance and integrity benefits of Kernohan in comparison to current state-of-the-art microkernels like L4-embedded and CAmkES.",
-  "summary": "This paper introduces Kernohan, a microkernel aimed at providing high assurance for embedded systems, with an emphasis on secure, safety-critical applications such as those in defense, automotive, and avionics industries. Building upon the formally-verified seL4 microkernel, Kernohan incorporates innovations in static resource management, security, and fault-tolerance. The authors present performance evaluations showing advantages over existing microkernels like L4-embedded and CAmkES.\n\nThe paper appears not to have a wide citation presence, and there are no specific influences or direct references found in extensive web searches. It might be contributing to ongoing research and development within the field of secure embedded systems and formal verification processes. However, no specific papers or projects have been widely noted to cite or build upon Kernohan directly as of now.",
+  "abstract": "In the paper, we argue that it is worthwhile to revisit building microkernel-based multiserver operating systems, and introduce a multiserver OS architecture. We argue that recent formal verification of microkernels provides a compelling platform for constructing general purpose systems, and that existing systems are not appropriate to take advantage of a formally verified microkernel.\nOur vision is of mostly-POSIX multiserver systems based on rump kernels, with a small set of fundamental services and frameworks. We expect the approach to provide a balance between componentisation, development effort, and legacy system compatibility.\nWe present our initial efforts with a promising performance evaluation of a rump kernel running on seL4.",
+  "summary": "## Paper summary\nThe paper proposes revisiting microkernel-based multiserver operating systems using seL4 as a formally verified foundation and rump kernels as a practical way to reuse NetBSD-derived operating-system components. Its envisioned architecture decomposes services such as naming, process management, memory management, device access, networking, and file systems into isolated components, while using capability-based protection and least-authority principles to reduce the trusted computing base and contain faults.\n\nThe authors ported the Rumprun bare-metal unikernel platform layer to seL4. The port adapted execution contexts, interrupt delivery, synchronization, memory management, DMA, MMIO, timers, console output, and low-level device access. Evaluation used an Iperf TCP server and compared Rumprun on bare metal, Rumprun on seL4, native NetBSD, and Linux on a single-core 32-bit system with Gigabit Ethernet. The seL4 version had little performance impact relative to the bare-metal version and, according to the paper’s measurements, exceeded native NetBSD performance. Using IOAPIC or MSI interrupt mechanisms reduced seL4-specific CPU overhead to below 0.3% of total available CPU. The port removed 1,402 lines of code and added 677 lines, indicating that most of the adaptation effort was confined to the platform layer.\n\n## Subsequent use\nThe paper is cited as prior work by LibrettOS, a later multiserver-library OS prototype that also uses rump kernels to reuse NetBSD drivers and POSIX/BSD-compatible software. ([ssrg.ece.vt.edu](https://ssrg.ece.vt.edu/papers/vee20-librettos.pdf)) It is also cited by Kite, a later system for lightweight critical service domains, as part of the prior work on multiserver operating-system architectures. ([ssrg.ece.vt.edu](https://www.ssrg.ece.vt.edu/papers/eurosys22.pdf)) These citations document continued use of the paper as background for research on rump kernels, multiserver systems, and componentized operating-system designs; they do not by themselves establish that the paper directly caused those systems to be developed.",
   "raw_url": "http://trustworthy.systems/publications/csiro_full_text/Elphinstone_ZMH_17.pdf",
   "source_type": "external",
   "filepath": "unikernels/README.md",
   "filename": "A performance evaluation of rump kernels as a multi-server os building block on sel4",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:05"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:57"
 }

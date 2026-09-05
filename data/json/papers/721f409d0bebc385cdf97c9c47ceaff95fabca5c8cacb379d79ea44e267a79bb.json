@@ -1,31 +1,32 @@
 {
   "uuid": "721f409d0bebc385cdf97c9c47ceaff95fabca5c8cacb379d79ea44e267a79bb",
-  "title": "Unleashing the Power of Unikernels with Rump Kernels",
-  "publication_date": "October 2014",
+  "title": "Rump Kernels No OS? No Problem!",
+  "publication_date": "October 2014; ;login: USENIX, Vol. 39, No. 5, pp. 11–17",
   "authors": [
-    "Antti Kantee"
+    "Antti Kantee",
+    "Justin Cormack"
   ],
   "keywords": [
-    "cloud-computing",
-    "lightweight-systems",
-    "module-reusability",
+    "anykernel",
+    "hypercalls",
+    "kernel-drivers",
+    "library-os",
+    "netbsd",
     "operating-systems",
-    "os-design",
+    "posix",
     "rump-kernels",
-    "software-development",
-    "systems-architecture",
-    "unikernels",
-    "virtualization"
+    "systems-software",
+    "unikernels"
   ],
   "category_path": [
     "unikernels"
   ],
-  "abstract": "Recent advances made in cloud computing have made the concept of an operating system, and by extension hardware architecture, less rigid. Even complex protocols and standards are not a prerequisite for all computing environments. This kind of freedom yields opportunities for rethinking the operating system altogether, often combining with virtualization to reduce the operating system down to a set of specialized libraries running directly on top of a hypervisor - referred to as a unikernel. Unikernels have been proposed as a way to reduce the overhead present in traditional operating systems and increase the security by reducing code complexity and attack surface.",
-  "summary": "The paper \"Unleashing the Power of Unikernels with Rump Kernels\" by Antti Kantee explores the promising potential of unikernels to revolutionize operating system design by utilizing rump kernels. This approach enables the kernel to operate as a set of reusable, lightweight modules, optimized for specific tasks and environments, such as cloud computing. Unikernels offer advantages like reduced overhead, enhanced security through minimized code complexity, and reduced attack surfaces compared to traditional operating systems. While the paper focuses on the theoretical and practical implementation aspects of unikernels, its influence is gradually seen in the development of specialized software systems and cloud-based architectures. \n\nUnikernels have since been discussed in various research initiatives, and the paper has contributed to an increased understanding and interest in leveraging minimalized kernels for efficiency and security. Significant follow-up research and implementations that reference this work include: \n- \"An Analysis of Security and Privacy Issues in UNIX-Like Operating Systems\" by Li Zhang et al. \n- \"Efficient Cloud Computing with Unikernels\" by Mihir Shah and others. \n- \"Future of Hypervisor and Unikernel Integration\" by Rafael Smith et al. \n\nThese sources demonstrate the practical adoption and ongoing exploration of unikernel technology across various applications in computer science.",
+  "abstract": "We present rump kernels, a cornucopia of portable, componentized kernel-quality drivers such as file systems, networking drivers, and POSIX system call handlers. Rump kernels rely on the anykernel architecture inherent in NetBSD, and can be built from any vintage of the NetBSD source tree. The technology is stable, as far as that term can be used to describe anything related to operating system kernel internals, and has been developed in NetBSD since 2007.\n\nEverything we described in this article is available as BSD-licensed open source via rumpkernel.org. Pointers to usual community-type elements for discussing use cases and contributions are also available from rumpkernel.org. We welcome your contributions.",
+  "summary": "### Influence and subsequent use\n\nThe paper helped establish rump kernels as a reusable approach for running largely unmodified NetBSD kernel components outside a conventional monolithic kernel. Subsequent work used rump kernels in LibrettOS, a multiserver/library OS prototype that reused NetBSD drivers and extended the rumprun environment for multicore systems and direct hardware access. ([arxiv.org](https://arxiv.org/abs/2002.08928))\n\nThe approach was also integrated into the Genode OS Framework for reusable NetBSD file-system and cryptographic-device support. ([genode.org](https://genode.org/documentation/release-notes/14.02)) NetBSD documentation records continuing applications in automated kernel testing, user-space kernel development, and isolating untrusted file-system drivers from the host kernel. ([wiki.netbsd.org](https://wiki.netbsd.org/rumpkernel/))",
   "raw_url": "https://www.usenix.org/system/files/login/articles/login_1410_03_kantee.pdf",
   "source_type": "external",
   "filepath": "unikernels/README.md",
   "filename": "Rump Kernels: No OS? No Problem!",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:05"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:57"
 }

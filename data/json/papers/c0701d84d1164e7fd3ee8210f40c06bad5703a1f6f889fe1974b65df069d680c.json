@@ -1,31 +1,31 @@
 {
   "uuid": "c0701d84d1164e7fd3ee8210f40c06bad5703a1f6f889fe1974b65df069d680c",
   "title": "An Industrial-Strength Audio Search Algorithm",
-  "publication_date": "2003",
+  "publication_date": "October 27, 2003; Proceedings of the 4th International Conference on Music Information Retrieval (ISMIR 2003), Baltimore, Maryland, USA, pp. 7–13.",
   "authors": [
     "Avery Li-Chun Wang"
   ],
   "keywords": [
-    "audio-recognition",
-    "audio-search",
-    "digital-signal-processing",
-    "feature-extraction",
-    "fingerprinting",
-    "industrial-applications",
-    "query-processing",
-    "robustness",
-    "spectrogram",
-    "time-frequency-analysis"
+    "acoustic-search",
+    "audio-fingerprinting",
+    "combinatorial-hashing",
+    "constellation-maps",
+    "content-identification",
+    "music-information-retrieval",
+    "noise-robustness",
+    "scalable-search",
+    "signal-processing",
+    "spectrogram-peaks"
   ],
   "category_path": [
     "audio_comp_sci"
   ],
-  "abstract": "An industrial strength content-based audio identification system has been implemented at Shazam Entertainment Ltd. The techniques used in the system are robust to noise distortions and allow very large databases of audio files to be searched while maintaining query times of only a few seconds. The central hypothesis is that audio signals can be characterized by a sparse set of time-frequency features, which optimally represent salient characteristics of the signals. These features must adhere to strict invariances to distortions that naturally occur in a consumer-user setting. The methods used to extract these features from an audio waveform are well known, but specific optimizations of these methods can make them more applicable to large-scale data analysis.",
-  "summary": "The paper \"An Industrial-Strength Audio Search Algorithm\" by Avery Li-Chun Wang outlines a powerful audio fingerprinting technique used by Shazam Entertainment to identify and search through large databases of audio content rapidly and with noise robustness. The technique is based on identifying unique time-frequency features within audio signals that remain consistent despite environmental distortions, making it ideal for consumer use cases. The research in this paper has been influential in the development of audio recognition technologies, providing a foundation for Shazam's search services and inspiring similar technologies and applications in audio identification. \n\nThe algorithm's success in practical applications showcases the importance of feature extraction and optimization in digital signal processing. Subsequent research has continued to explore advancements in audio recognition, often referencing foundational work such as this, as evidenced by its frequent citation in scholarly articles and patents related to audio fingerprinting. Notable examples can be found in works exploring enhancements in audio query speed and accuracy by comparing binary fingerprints. This paper appears in many discussions on platforms like [Google Scholar](https://scholar.google.com/) linking its methodologies as a reference point. Shazam's implementation, informed by this paper, has set a precedent in both academic research and commercial applications of audio recognition technologies.",
+  "abstract": "We have developed and commercially deployed a flexible audio search engine. The algorithm is noise and distortion resistant, computationally efficient, and massively scalable, capable of quickly identifying a short segment of music captured through a cellphone microphone in the presence of foreground voices and other dominant noise, and through voice codec compression, out of a database of over a million tracks. The algorithm uses a combinatorially hashed time-frequency constellation analysis of the audio, yielding unusual properties such as transparency, in which multiple tracks mixed together may each be identified. Furthermore, for applications such as radio monitoring, search times on the order of a few milliseconds per query are attained, even on a massive music database.",
+  "summary": "The paper describes the audio-fingerprinting system developed and commercially deployed by Shazam. It represents audio as a sparse constellation map of robust spectrogram peaks, discarding amplitude information to reduce sensitivity to equalization and other filtering. Nearby peaks are paired within target zones to form compact hashes containing two frequency coordinates and their temporal separation. These hashes are indexed with track and time-offset information, allowing a query to retrieve candidate matches efficiently from a large database.\n\nCandidate tracks are scored by examining whether matched hashes share a common time offset. A genuine match produces a concentrated peak in the offset histogram, whereas accidental hash collisions are dispersed. This provides a computationally inexpensive alternative to more general geometric-registration methods and supports rapid rejection of false matches. The system is designed to balance hash entropy, robustness, storage overhead, recognition probability, and false-positive thresholds.\n\nThe reported experiments show recognition under substantial additive noise, GSM compression, dropouts, voice interference, and mixtures of multiple tracks. For the tested 10,000-track database, 50% recognition occurred at approximately −9, −6, and −3 dB signal-to-noise ratio for 15-, 10-, and 5-second samples without GSM compression; with GSM compression, the corresponding levels were approximately −3, 0, and +4 dB. Reported search times ranged from roughly 5–500 milliseconds for a 20,000-track database, with radio-quality queries taking less than 10 milliseconds under suitable settings.\n\nThe work became a foundational reference for spectral-peak audio fingerprinting. Later music-information-retrieval teaching materials present its peak-based constellation approach as a widely used audio-identification method, and subsequent fingerprinting systems—including open implementations and research on robust retrieval—explicitly reproduce or build on its constellation maps, pairwise hashes, and time-offset voting strategy. ([audiolabs-erlangen.de](https://www.audiolabs-erlangen.de/resources/MIR/FMP/C7/C7S1_AudioIdentification.html)) The paper is bibliographically identified as an ISMIR 2003 conference paper by independent scholarly indexes, with the conference publication dated October 27, 2003. ([dblp.org](https://dblp.org/rec/conf/ismir/Wang03.html))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/audio_comp_sci/shazam-audio-search-algorithm.pdf",
   "source_type": "pdf",
   "filepath": "audio_comp_sci/shazam-audio-search-algorithm.pdf",
   "filename": "shazam-audio-search-algorithm.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:50"
 }

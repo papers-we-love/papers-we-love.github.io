@@ -1,33 +1,31 @@
 {
   "uuid": "f271560c84c85f95e5e591f2b0a0f3f485e85a0526fdb98aa1994cc8fafa37ae",
-  "title": "Freer Monads, More Extensible Effects",
-  "publication_date": "2013",
+  "title": "Extensible Effects: An Alternative to Monad Transformers",
+  "publication_date": "September 23–24, 2013; Haskell ’13, Boston, Massachusetts, USA. Published in the Proceedings of the 2013 ACM SIGPLAN Symposium on Haskell, pages 59–70.",
   "authors": [
-    "Hiromi Ishii",
-    "Oleg Kiselyov",
-    "Simon Peyton Jones"
+    "Amr Sabry",
+    "Cameron Swords",
+    "Oleg Kiselyov"
   ],
   "keywords": [
-    "delimited-control",
-    "effect-handlers",
-    "extensible-effects",
-    "freer-monads",
-    "functional-programming",
-    "haskell",
-    "modular-systems",
-    "monads",
-    "type-systems"
+    "coroutine",
+    "effect-handler",
+    "effect-interaction",
+    "monad",
+    "monad-transformer",
+    "open-union",
+    "type-and-effect-system"
   ],
   "category_path": [
     "languages",
     "haskell"
   ],
-  "abstract": "Extensible effects are an alternative to monad transformers for computing with effects in Haskell. They are distinct in three salient ways:\n\n1. They are built upon the freer monad, which is like the usual monad but without the `return` and `>>=` operations hardcoded. Instead, they are reconstructed from first principles at each use site.\n\n2. They are built using an open union, hence can be combined freely outside of the limitations of concatenative monads.\n\n3. Being based on the freer monad, they facilitate efficient interpretation and handling of effects via first-class delimited control, which allows multiple interpreters to cooperate, yielding a more intuitive and efficient approach to handling complex effects.\n\nWe demonstrate how to program with freer monads and extensible effects through a series of examples. We also show how to construct interpreters for these effects and reclaim certain monad transformer features at the same time.",
-  "summary": "The paper \"Freer Monads, More Extensible Effects\" by Oleg Kiselyov, Hiromi Ishii, and Simon Peyton Jones introduces extensible effects as an alternative to monad transformers in functional programming, specifically Haskell. The authors build upon the concept of freer monads, which provide more flexibility than traditional monads by not relying on hardcoded operations like `return` and `>>=`. Instead, these operations are derived from first principles when required.\n\nThe paper contrasts extensible effects from monad transformers by demonstrating their construction via an open union and a freer monad. This approach mitigates some of the limitations of monad transformers, facilitating more modular and intuitive code by allowing multiple interpreters to efficiently handle complex effects through first-class delimited control.\n\nThe authors provide several examples and discuss constructing interpreters for these effects, showcasing how features similar to monad transformers can be retained.\n\nSearch results indicate the paper has been cited and discussed in various Haskell and functional programming communities, suggesting influence in educational resources about extensible effects and experimentation within the Haskell compiler's community enhancements.\n\nCited references:\n1. http://hackage.haskell.org/package/extensible-effects\n2. https://wiki.haskell.org/Extensible_effects\n3. https://www.researchgate.net/publication/269112880_Freer_Monads_more_extensible_effects\n4. https://github.com/snowleopard/supercompilation/wiki/Extensible-effects-module",
+  "abstract": "We design and implement a library that solves the long-standing problem of combining effects without imposing restrictions on their interactions (such as static ordering). Effects arise from interactions between a client and an effect handler (interpreter); interactions may vary throughout the program and dynamically adapt to execution conditions. Existing code that relies on monad transformers may be used with our library with minor changes, gaining efficiency over long monad stacks. In addition, our library has greater expressiveness, allowing for practical idioms that are inefficient, cumbersome, or outright impossible with monad transformers.\nOur alternative to a monad transformer stack is a single monad, for the coroutine-like communication of a client with its handler. Its type reflects possible requests, i.e., possible effects of a computation. To support arbitrary effects and their combinations, requests are values of an extensible union type, which allows adding and, notably, subtracting summands. Extending and, upon handling, shrinking of the union of possible requests is reflected in its type, yielding a type-and-effect system for Haskell. The library is lightweight, generalizing the extensible exception handling to other effects and accurately tracking them in types.",
+  "summary": "## Main contribution\n\nThe paper presents **extensible effects**, a Haskell library intended as an alternative to statically ordered monad-transformer stacks. Effectful computations use a single `Eff r` monad, where `r` records the currently possible effects. Effects are represented as requests sent from clients to handlers; handlers interpret requests they understand and relay other requests upstream. This replaces a centralized authority with composable, user-defined handlers. ([okmij.org](https://okmij.org/ftp/Haskell/extensible/exteff.pdf))\n\nThe central type-level mechanism is an **open union** of effect requests. The union can be extended when computations introduce effects and reduced when handlers remove them. Consequently, the type system can reject computations with unhandled effects. The implementation uses type-indexed unions and `Typeable`-based dispatch, with constant-time injection and projection relative to the number of effects in the union. ([okmij.org](https://okmij.org/ftp/Haskell/extensible/exteff.pdf))\n\nThe authors show that the framework can express standard Reader, State, exception, nondeterminism, tracing, and lifted-monad effects in an MTL-like style. More significantly, it supports effect interactions that require different handler orders in different parts of a program. The paper demonstrates this with exception recovery combined with nondeterminism and with dynamic binding interleaved with coroutines—cases that are cumbersome or impossible to express using one statically fixed monad-transformer ordering. ([okmij.org](https://okmij.org/ftp/Haskell/extensible/exteff.pdf))\n\n## Subsequent influence\n\nA direct follow-up, **“Freer Monads, More Extensible Effects”** by Kiselyov and Ishii, reconstructs the approach from free-monad representations, removes the `Functor` constraint through freer monads, and develops a more efficient implementation. ([okmij.org](https://okmij.org/ftp/Haskell/extensible/more.pdf)) The later work on **Parameterized Extensible Effects and Session Types** explicitly builds on the add/subtract effect-set idea and connects extensible type-state effects with session types. ([doi.org](https://doi.org/10.1145/2976022.2976034))\n\nThe paper is also directly cited or acknowledged as foundational work by subsequent Haskell effect libraries and implementations, including `freer-effects`, `polysemy`, and `eff`. These projects apply or extend the paper’s general approach of typed, composable effect descriptions and handlers. ([github.com](https://github.com/IxpertaSolutions/freer-effects)) The reviewed sources provide evidence of substantial influence on subsequent research and Haskell-library development, but do not establish a specific industrial deployment attributable directly to this paper.",
   "raw_url": "http://okmij.org/ftp/Haskell/extensible/exteff.pdf",
   "source_type": "external",
   "filepath": "languages/haskell/README.md",
   "filename": "Extensible Effects: An Alternative to Monad Transformers",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

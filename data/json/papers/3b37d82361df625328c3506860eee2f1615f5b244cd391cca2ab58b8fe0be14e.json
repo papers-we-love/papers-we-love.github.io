@@ -1,32 +1,34 @@
 {
   "uuid": "3b37d82361df625328c3506860eee2f1615f5b244cd391cca2ab58b8fe0be14e",
   "title": "How the Hidden Hand Shapes the Market for Software Reliability",
-  "publication_date": "2000",
+  "publication_date": "June 2006, First IEEE Workshop on Applied Software Reliability (WASR 2006), Philadelphia, Pennsylvania",
   "authors": [
-    "Michael D. Smith",
-    "William L. Golenko"
+    "Coimbatore Chandersekaran",
+    "Danny Dolev",
+    "Ken Birman",
+    "Robbert van Renesse"
   ],
   "keywords": [
-    "dependability",
+    "byzantine-fault-tolerance",
+    "distributed-computing-theory",
     "distributed-systems",
-    "economic-principles",
-    "hidden-hand",
-    "incentive-structures",
-    "market-dynamics",
-    "market-forces",
-    "software-markets",
+    "market-failure",
+    "reliable-multicast",
+    "research-commercialization",
     "software-reliability",
-    "system-design"
+    "technology-adoption",
+    "transactions",
+    "virtual-synchrony"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "This paper examines the market for software reliability, specifically looking at how market forces shape the reliability characteristics of commercially produced software systems. We characterize the impact of market structure on reliability as an efficiency-game and highlight the role that software producers expect pricing structures to play in signaling market demands for reliability. Using an agency theory framework, we describe incentive alignment techniques that could help software developers to internalize some of their product's reliability costs.",
-  "summary": "The paper, \"How the Hidden Hand Shapes the Market for Software Reliability,\" analyzes the interplay between market forces and software reliability outcomes through the lens of economic principles. By applying an agency theory framework, the authors identify techniques to align incentives between developers and end-users to enhance software reliability. Though the paper was published in 2000, it highlights perennial issues in the software market such as the impact of market structures on system dependability and how economic incentives significantly influence software design priorities.\n\nIn conducting a brief review, no direct contemporary research or industry publications citing this paper were discovered. However, its insights into economic incentives and market structure potentially contribute to the broader discourse on software dependability and reliability engineering, aspects that remain central to current distributed systems and economic policy analysis for technology markets.",
+  "abstract": "Since the 18th century, economists have recognized that absent government intervention, market forces determine the pricing and ultimate fate of technologies. Our contention is that the “hidden hand” explains a series of market failures impacting products in the field of software reliability. If reliability solutions are to reach mainstream developers, greater attention must be paid to market economics and drivers.",
+  "summary": "## Summary\n\nThe paper argues that the adoption of software-reliability technologies is shaped not only by technical merit, but also by market conditions. Technologies must fit standard development practices, provide a credible long-term process and support model, and demonstrate reductions in the total cost of building, deploying, and operating complete systems.\n\nThe authors compare three areas of distributed-systems research:\n\n- **Transactions:** Transactional systems became commercially successful because they offered a practical programming model for concurrency, speculation, and fault tolerance, particularly when data and code could be cleanly separated. Attempts to extend transactions to broader distributed settings often failed because of performance overhead, scalability limitations, implementation complexity, and expensive multi-phase commit mechanisms.\n- **Reliable multicast and virtual synchrony:** These technologies provided strong mechanisms for replicating state and coordinating failures, and they were used in specialized systems and embedded in commercial products. However, they did not achieve the broad market success of database transactions. The paper attributes this to low-level interfaces, surprising scalability constraints, weak integration with prevailing software-platform trends, narrow replication assumptions, small customer bases, high prices, and the need for extensive consulting and development services.\n- **Distributed-computing theory:** The authors argue that theoretical results can have limited practical influence when they rely on unrealistic system models or are communicated in ways that confuse practitioners. They use asynchronous consensus and Byzantine agreement as contrasting examples. Practical Byzantine-fault-tolerance work is presented as evidence that theory can achieve commercial relevance when reformulated around realistic network and threat models.\n\nThe paper identifies several recurring causes of market failure: incomplete “whole story” solutions, incompatibility with mainstream platforms, high deployment and maintenance costs, unclear economic value, insufficient product continuity and support, and research assumptions that do not reflect operational environments. It also notes a structural conflict in which platform vendors may have limited incentives to commoditize reliability features that help differentiate their own high-margin products.\n\nThe recommendations are to evaluate systems on realistic platforms, engage with users and vendors, articulate benefits in economic terms, address deployment and management requirements, provide a path for long-term maintenance and support, use realistic models—including stochastic models where appropriate—and clarify intellectual-property policies that may obstruct academic–industry collaboration. The authors distinguish between research intended primarily for theoretical understanding and research intended to influence commercial practice; only the latter should be evaluated directly by market impact.\n\n## Evidence of Subsequent Influence\n\nThe paper was published as part of the First IEEE Workshop on Applied Software Reliability in June 2006. ([ptolemy.berkeley.edu](https://ptolemy.berkeley.edu/projects/truststc/pubs/search/2006.htm)) Subsequent technical literature continued to cite it as part of the history of virtual-synchrony replication and distributed-systems reliability. ([ptolemy.berkeley.edu](https://ptolemy.berkeley.edu/projects/truststc/pubs/713/History%20of%20the%20Virtual%20Synchrony%20Replication%20Model%202010.pdf)) It is also included in curated distributed-systems reading collections and has been discussed in later practitioner-oriented commentary about the relationship between distributed-systems research, industry adoption, and commercial incentives. ([paperswelove.org](https://paperswelove.org/papers/categories/distributed_systems/)) The available evidence supports continued citation and discussion, but does not establish that the paper itself directly caused a specific industrial product or research program.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/how-the-hidden-hand-shapes-the-market-for-software-reliability.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/how-the-hidden-hand-shapes-the-market-for-software-reliability.pdf",
   "filename": "how-the-hidden-hand-shapes-the-market-for-software-reliability.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:51"
 }

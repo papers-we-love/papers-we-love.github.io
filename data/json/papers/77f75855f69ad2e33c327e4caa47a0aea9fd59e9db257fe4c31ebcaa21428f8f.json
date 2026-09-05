@@ -1,25 +1,27 @@
 {
   "uuid": "77f75855f69ad2e33c327e4caa47a0aea9fd59e9db257fe4c31ebcaa21428f8f",
   "title": "A Unified Theory of Garbage Collection",
-  "publication_date": "November 5, 2019",
+  "publication_date": "October 24–28, 2004; OOPSLA 2004, Proceedings of the 19th Annual ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications; published in ACM SIGPLAN Notices 39(10), October 2004",
   "authors": [
-    "Ryan Doenges"
+    "David F. Bacon",
+    "Perry Cheng",
+    "V.T. Rajan"
   ],
   "keywords": [
-    "computer-science-theory",
-    "garbage-collection",
-    "memory-management",
-    "programming-languages"
+    "graph-algorithms",
+    "mark-and-sweep",
+    "reference-counting",
+    "tracing"
   ],
   "category_path": [
     "garbage_collection"
   ],
-  "abstract": "In high-level programming languages, garbage collection (GC) takes a significant role in automatic management and recycling of memory. Although various different algorithms for garbage collection exist, the underlying principles of how these algorithms function are the same. This blog post explores a unified theory of garbage collection, detailing the foundational concepts that underlie most collector implementations, from reference counting to mark and sweep, and beyond. By understanding the commonalities, we can gain insights into the trade-offs and performance characteristics of different garbage collection strategies.",
-  "summary": "The paper \"A Unified Theory of Garbage Collection\" by Ryan Doenges discusses the fundamental principles that underpin various garbage collection algorithms employed in high-level programming languages. It serves as an educational piece by exploring commonalities across different garbage collection techniques, which include reference counting and the mark-and-sweep approach. The paper elucidates the intrinsic properties and performance trade-offs associated with each method. While the paper presents a consolidation of theoretical knowledge useful for practitioners and students alike, it appears to be a blog post rather than a formal academic publication, as it was not published in a peer-reviewed conference or journal. This has resulted in minimal direct citations or extensive academic influence. However, the concepts discussed are foundational in computer science and continue to inform the design and implementation of garbage collection mechanisms in programming languages. Further inquiry into the topic could involve investigation into materials related to the same concepts, as listed by [Garbage Collection (Computer Programming) on Wikipedia](https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)).",
+  "abstract": "Tracing and reference counting are uniformly viewed as being fundamentally different approaches to garbage collection that possess very distinct performance properties. We have implemented high-performance collectors of both types, and in the process observed that the more we optimized them, the more similarly they behaved — that they seem to share some deep structure.\n\nWe present a formulation of the two algorithms that shows that they are in fact duals of each other. Intuitively, the difference is that tracing operates on live objects, or “matter”, while reference counting operates on dead objects, or “anti-matter”. For every operation performed by the tracing collector, there is a precisely corresponding anti-operation performed by the reference counting collector.\n\nUsing this framework, we show that all high-performance collectors (for example, deferred reference counting and generational collection) are in fact hybrids of tracing and reference counting. We develop a uniform cost-model for the collectors to quantify the trade-offs that result from choosing different hybridizations of tracing and reference counting. This allows the correct scheme to be selected based on system performance requirements and the expected properties of the target application.",
+  "summary": "The paper develops a unified mathematical and algorithmic framework for garbage collection. Its central result is that tracing and reference counting can be understood as dual processes: tracing tracks reachable objects, whereas reference counting tracks objects becoming unreachable. The paper formalizes this relationship using graph traversal, fixed-point semantics, and corresponding work-list algorithms.\n\nIt further argues that practical high-performance collectors are hybrids of the two approaches. Deferred reference counting, generational collection, and multi-heap collectors are analyzed as different assignments of tracing and reference-counting responsibilities across roots, heap regions, and inter-region references. A common cost model is introduced to compare time and space overheads and to guide collector selection for different workloads.\n\nThe framework has continued to serve as a reference point in garbage-collection research and education. The *Garbage Collection Handbook* includes a dedicated treatment of the unified theory, and later instructional material explicitly uses the paper’s duality and fixed-point formulation to explain tracing, reference counting, and hybrid collectors. ([gchandbook.org](https://gchandbook.org/contents.html)) A recent research paper on concurrent partial tracing explicitly identifies Bacon, Cheng, and Rajan as the source of the partial-tracing formulation and revisits that design for safe, concurrent memory reclamation. ([jhyeon.kim](https://jhyeon.kim/papers/pldi26.pdf)) The search found clear research and educational influence, but no publicly documented production system whose design is directly attributed to this paper. The paper’s bibliographic record and abstract were verified against IBM Research metadata and the paper text. ([research.ibm.com](https://research.ibm.com/publications/a-unified-theory-of-garbage-collection))",
   "raw_url": "https://www.cs.cornell.edu/courses/cs6120/2019fa/blog/unified-theory-gc/",
   "source_type": "external",
   "filepath": "garbage_collection/README.md",
   "filename": "A Unified Theory of Garbage Collection",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

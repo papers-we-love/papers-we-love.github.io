@@ -1,30 +1,32 @@
 {
   "uuid": "49853ba2b389b2b63a7fc79bef1f15a17fe5a8f84d47692f92ff83db28636588",
-  "title": "Probabilistic Latent Semantic Analysis",
-  "publication_date": "1999",
+  "title": "Cassandra - A Decentralized Structured Storage System",
+  "publication_date": "October 2009; published in the Proceedings of the 3rd ACM SIGOPS International Workshop on Large Scale Distributed Systems and Middleware (LADIS '09), held October 10–11, 2009. A journal version appeared in ACM SIGOPS Operating Systems Review 44(2) in April 2010.",
   "authors": [
-    "Thomas Hofmann"
+    "Avinash Lakshman",
+    "Prashant Malik"
   ],
   "keywords": [
-    "data-clustering",
-    "information-retrieval",
-    "latent-variable-models",
-    "machine-learning",
-    "plsa",
-    "probabilistic-latent-semantic-analysis",
-    "text-analysis",
-    "topic-modeling",
-    "unsupervised-learning"
+    "apache-cassandra",
+    "column-families",
+    "consistent-hashing",
+    "data-replication",
+    "distributed-storage",
+    "eventual-consistency",
+    "fault-tolerance",
+    "high-availability",
+    "structured-storage",
+    "write-throughput"
   ],
   "category_path": [
     "datastores"
   ],
-  "abstract": "Probabilistic Latent Semantic Analysis is a novel statistical technique for the analysis of two-mode and co-occurrence data, which has applications in information retrieval and filtering, natural language processing, machine learning from text, and in related areas. The approach is based on a statistical latent class model which is closely related to the aspect model in physics, the multinomial PCA in population genetics, and the finite mixture decomposition in statistics. Compared to standard Latent Semantic Analysis that is based on singular value decomposition, the proposed method has a solid statistical foundation and defines a proper generative model of the data. Therefore, generalizations for dealing with polyadic data and for capturing term correlations conditional on the state of a latent variable are more naturally expressed and computationally attractive than in latent semantic indexing. Experimental results demonstrate convincing improvements over existing algebraic model and over direct term matching methods.",
-  "summary": "In \"Probabilistic Latent Semantic Analysis\" (PLSA), Thomas Hofmann introduces a statistical method for analyzing two-mode and co-occurrence data, which is particularly useful in information retrieval and natural language processing. The PLSA method differs from traditional Latent Semantic Analysis by introducing a generative model to represent data, making it more robust and versatile for various applications like capturing term correlations and dealing with complex data relations.\n\nThe paper has been heavily cited in the field of topic modeling and data clustering, and it laid the groundwork for subsequent models like Latent Dirichlet Allocation (LDA) which further advances the methodology introduced by Hofmann. PLSA has been used as a basis to improve algorithms in text mining, and information retrieval tasks, significantly impacting the development of natural language processing applications.\n\nThe influence of this paper can be seen in works like \"Latent Dirichlet Allocation\" by Blei et al., and \"Text Mining: Applications and Theory\" by Srivastava and Sahami, among others. [\"Latent Dirichlet Allocation\" reference](https://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf) is one of the prominent works that discuss and build upon the foundations laid by Hofmann's PLSA.\n\nOverall, the paper is noted for bringing a solid statistical basis to the domain of latent semantic analysis, and it continues to be an important reference in machine learning and data analysis fields.",
+  "abstract": "Cassandra is a distributed storage system for managing very large amounts of structured data spread out across many commodity servers, while providing highly available service with no single point of failure. Cassandra aims to run on top of an infrastructure of hundreds of nodes (possibly spread across different data centers). At this scale, small and large components fail continuously. The way Cassandra manages the persistent state in the face of these failures drives the reliability and scalability of the software systems relying on this service. While in many ways Cassandra resembles a database and shares many design and implementation strategies therewith, Cassandra does not support a full relational data model; instead, it provides clients with a simple data model that supports dynamic control over data layout and format. Cassandra system was designed to run on cheap commodity hardware and handle high write throughput while not sacrificing read efficiency.",
+  "summary": "- The paper presents Cassandra as a decentralized, highly available structured-storage system designed for large clusters of commodity servers and continuous component failure. Its design combines consistent-hash-based partitioning, configurable replication, quorum-oriented reads and writes, gossip-based membership and failure detection, and a log-structured local persistence engine. ([cs.cornell.edu](https://www.cs.cornell.edu/projects/ladis2009/papers/lakshman-ladis2009.pdf))\n- The system was developed at Facebook for Inbox Search and was already serving production traffic when Facebook open-sourced Cassandra in 2008. It subsequently entered the Apache Incubator in 2009 and graduated as an Apache top-level project on February 17, 2010. ([engineering.fb.com](https://engineering.fb.com/2010/11/15/core-infra/the-underlying-technology-of-messages/))\n- The documented architecture became the basis of the Apache Cassandra project and was adopted in industry deployments. The Apache Software Foundation reported early production use by organizations including Cisco WebEx, Digg, Facebook, Rackspace, Reddit, and Twitter; current Apache case studies list deployments at companies including Netflix, Uber, eBay, Discord, and Walmart. These records establish concrete industry adoption of the system described by the paper, but do not by themselves measure the paper’s causal influence on each deployment. ([news.apache.org](https://news.apache.org/foundation/entry/the_apache_software_foundation_announces3))\n- The paper is also used as a foundational reference in later literature concerning NoSQL databases, distributed storage, replication, and large-scale data systems. ([cir.nii.ac.jp](https://cir.nii.ac.jp/crid/1361418520279814656))",
   "raw_url": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.161.6751&rep=rep1&type=pdf",
   "source_type": "external",
   "filepath": "datastores/README.md",
   "filename": "Cassandra - A Decentralized Structured Storage System",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:54"
 }

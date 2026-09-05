@@ -1,33 +1,28 @@
 {
   "uuid": "73f7d94968dd4c0975ae8bb541018780af10dc541809c5096400b7f2b694ba56",
-  "title": "Towards a framework for programming environments",
-  "publication_date": "2013",
+  "title": "The operating system: should there be one?",
+  "publication_date": "November 3, 2013; PLOS’13 (Seventh Workshop on Programming Languages and Operating Systems), Farmington, Pennsylvania, USA",
   "authors": [
-    "Samson Abramsky",
-    "Satnam Singh",
-    "Simon Gay"
+    "Stephen Kell"
   ],
   "keywords": [
-    "genericity",
-    "language-design",
-    "modularity",
-    "operational-semantics",
-    "programming-environments",
-    "reflective-systems",
-    "resource-management",
-    "semantic-frameworks",
-    "software-engineering",
-    "type-systems"
+    "binding",
+    "composition",
+    "integration",
+    "metasystem",
+    "plan-9",
+    "smalltalk",
+    "unix"
   ],
   "category_path": [
     "operating_systems"
   ],
-  "abstract": "To help resolve the 'programming environment crisis', this paper aims to establish a proper scientific and engineering foundation for the construction of programming environments, analogous to the frameworks used in the past to solve a similar crisis for operating systems. We propose general principles and a theoretical framework for this new element of computing infrastructure, focusing on structuring, modularity and languages. The impact of developments in computer systems and languages upon programming environments is considered, as is the reactive nature of modern computing paradigms.",
-  "summary": "This paper, authored by Abramsky, Gay, and Singh in 2013, outlines a framework for designing programming environments, building on the conceptual lessons learned from operating systems structure. The authors argue for the development of scientific and engineering foundations analogous to those used in operating systems to tackle challenges in programming environments, addressing structuring, modularity, and language design.\n\nThe contribution of this paper lies in its proposed theoretical framework and general principles to address the 'programming environment crisis', prioritizing modularity, semantic frameworks, and sophistication in programming environments that align with modern computing paradigms.\n\nIn terms of influence, the paper appears to have laid foundational ideas related to programming environment structuring, although its direct impact on the industry or further academic citations is not extensively documented or prominent. A review of available academic citations does not reveal particular prominence or extensive referencing of this work in subsequent research literature.",
+  "abstract": "Operating systems and programming languages are often informally evaluated on their conduciveness towards composition. We revisit Dan Ingalls’ Smalltalk-inspired position that “an operating system is a collection of things that don’t fit inside a language; there shouldn’t be one”, discussing what it means, why it appears not to have materialised, and how we might work towards the same effect in the postmodern reality of today’s systems. We argue that the trajectory of the “file” abstraction through Unix and Plan 9 culminates in a Smalltalk-style object, with other filesystem calls as a primitive metasystem. Meanwhile, the key features of Smalltalk have many analogues in the fragmented world of Unix programming (including techniques at the library, file and socket level). Based on the themes of unifying OS- and language-level mechanisms, and increasing the expressiveness of the meta-system, we identify some evolutionary approaches to a postmodern realisation of Ingalls’ vision, arguing that an operating system is still necessary after all.",
+  "summary": "The paper examines Dan Ingalls’ proposition that an operating system consists of functionality that does not fit inside a programming language. It compares Smalltalk’s unified object model, pervasive metasystem, and late-bound message passing with Unix’s fragmented composition mechanisms. Kell argues that Unix’s “everything is a file” abstraction, developed further in Plan 9, approaches a universal object abstraction but lacks Smalltalk’s richer descriptive and meta-level facilities. The paper identifies a “lurking Smalltalk” in existing Unix mechanisms, including synthetic filesystems, shared-library interposition, FUSE-like user-level filesystems, debugging metadata, dynamic instrumentation, and shell-based composition. It proposes an evolutionary path in which operating-system services provide richer descriptions of data and behavior, unified binding, and machine-assisted synthesis of adapters between heterogeneous software components. The conclusion is that operating systems remain necessary, not as providers of a single dominant programming model, but as infrastructure for composing software developed in diverse languages and environments.\n\nA quick search found evidence of conceptual and scholarly influence, but no clearly documented industrial adoption attributable specifically to this paper. The paper is cited by *Technical Dimensions of Programming Systems* (2023), which develops a framework for comparing programming systems and explicitly places Unix, Smalltalk, and operating systems within that broader design space. ([tomasp.net](https://tomasp.net/techdims/)) It is also cited by *Designing Postmodern Substrate Architectures* (2025), which connects Kell’s postmodern systems perspective to later work on substrate-oriented programming environments. ([lri.fr](https://www.lri.fr/~gobert/papers/substrates2025-postmodern-substrates.pdf)) A 2018 critique of “Files as Directories” discusses the paper in relation to file/object unification and semantic gaps in filesystem abstractions. ([shift-society.org](https://www.shift-society.org/salon/papers/2018/critiques/critique-files-as-directories-2.pdf)) Bibliographic records identify the work as a 2013 PLOS’13 conference paper by Stephen Kell. ([kar.kent.ac.uk](https://kar.kent.ac.uk/69710/))",
   "raw_url": "https://www.cl.cam.ac.uk/~srk31/research/papers/kell13operating.pdf",
   "source_type": "external",
   "filepath": "operating_systems/README.md",
   "filename": "The operating system: should there be one?",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:56"
 }

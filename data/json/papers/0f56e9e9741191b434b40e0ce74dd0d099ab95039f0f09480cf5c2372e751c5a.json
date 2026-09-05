@@ -1,34 +1,39 @@
 {
   "uuid": "0f56e9e9741191b434b40e0ce74dd0d099ab95039f0f09480cf5c2372e751c5a",
-  "title": "What are you thinking? A probe into the upper echelons of the movie recommendation crowd",
-  "publication_date": "May 2013",
+  "title": "B4: Experience with a Globally-Deployed Software Defined WAN",
+  "publication_date": "August 12–16, 2013; ACM SIGCOMM 2013, Hong Kong, China",
   "authors": [
-    "Anne Haake",
-    "Houshang Darabi",
-    "Mansoureh Takaffoli",
-    "Roy Rada"
+    "Alok Kumar",
+    "Amin Vahdat",
+    "Arjun Singh",
+    "Jim Wanderer",
+    "Jonathan Zolla",
+    "Joon Ong",
+    "Junlan Zhou",
+    "Leon Poutievski",
+    "Min Zhu",
+    "Stephen Stuart",
+    "Subbaiah Venkata",
+    "Subhasree Mandal",
+    "Sushant Jain",
+    "Urs Hölzle"
   ],
   "keywords": [
-    "collaborative-filtering",
-    "data-analysis",
-    "decision-making",
-    "movie-recommendations",
-    "netflix-prize",
-    "opinion-leader",
-    "recommendation-systems",
-    "social-influence",
-    "user-behavior",
-    "user-communities"
+    "centralized-traffic-engineering",
+    "openflow",
+    "routing",
+    "software-defined-networking",
+    "wide-area-networks"
   ],
   "category_path": [
     "networks"
   ],
-  "abstract": "The Netflix Prize fostered progress in movie recommendation systems. In this study, data from this competition is reanalyzed in order to understand the behavior of users who strongly influence other users. We identify a subset of users whose ratings are highly predicted by the crowd and analyze the extent of this influence. The implications of these results are that discovery and profiling of “opinion leaders” or “early adopters” can benefit both customers and providers. The results also demonstrate a methodology for mining mass data to identify opinion leaders and better understand their characteristics.",
-  "summary": "The paper titled \"What are you thinking? A probe into the upper echelons of the movie recommendation crowd\" was published in May 2013 by authors Houshang Darabi, Mansoureh Takaffoli, Anne Haake, and Roy Rada. It focuses on understanding the behavior of influential users within the context of the Netflix Prize dataset, which is a well-known basis for developing and optimizing movie recommendation systems. The research aims at identifying 'opinion leaders' by analyzing user ratings that are highly predictable by the overall crowd. This discovery has implications for both service providers and customers by helping refine targeting marketing efforts and enhancing user experience.\n\nKey takeaways include the methodology introduced for detecting influential users and dissecting their impact within collaborative filtering environments. The approach presents a step towards profiling such users which could potentially improve recommendations and marketing strategies. Although the direct revolutionary impact of this paper on academic and industrial developments isn't extensively documented, its significance can be viewed through its exploration of user influence within digital recommendation landscapes.\n\nA search reveals references discussing influence in recommendation systems and collaborative filtering, highlighting themes similar to those in this study but no direct citations were found explicitly linked to this paper.",
+  "abstract": "We present the design, implementation, and evaluation of B4, a private WAN connecting Google’s data centers across the planet. B4 has a number of unique characteristics: i) massive bandwidth requirements deployed to a modest number of sites, ii) elastic traffic demand that seeks to maximize average bandwidth, and iii) full control over the edge servers and network, which enables rate limiting and demand measurement at the edge. These characteristics led to a Software Defined Networking architecture using OpenFlow to control relatively simple switches built from merchant silicon. B4’s centralized traffic engineering service drives links to near 100% utilization, while splitting application flows among multiple paths to balance capacity against application priority/demands. We describe experience with three years of B4 production deployment, lessons learned, and areas for future work.",
+  "summary": "The paper became a commonly cited production case study for software-defined networking and software-defined WAN design. The Open Networking Foundation lists it among foundational SDN application and WAN readings. ([opennetworking.org](https://opennetworking.org/sdn-resources/sdn-reading-list/sdn-applications/))\n\nA direct follow-on study, *B4 and After*, reports how Google evolved the system to address substantially larger traffic volumes and tunnel counts through hierarchical topology, partitioned control domains, and decentralized traffic engineering. ([people.eecs.berkeley.edu](https://people.eecs.berkeley.edu/~sylvia/cs268-2019/papers/b4-after.pdf)) Subsequent SDN and SD-WAN surveys and research papers continue to cite B4 as an example of centralized traffic engineering deployed at operational scale. ([ouci.dntb.gov.ua](https://ouci.dntb.gov.ua/en/works/4KoMXkJ4/))",
   "raw_url": "https://dl.acm.org/citation.cfm?id=2486019",
   "source_type": "external",
   "filepath": "networks/README.md",
   "filename": "B4: Experience with a Globally-Deployed Software Defined WAN",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:56"
 }

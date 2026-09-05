@@ -1,34 +1,32 @@
 {
   "uuid": "7dff9507804836a9363e580ce54d576bbb4f35a43408b9d53426a4eb2591ee1f",
-  "title": "Stasis: Flexible transactional storage",
-  "publication_date": "2007",
+  "title": "Stasis: Flexible Transactional Storage",
+  "publication_date": "November 6–8, 2006; 7th USENIX Symposium on Operating Systems Design and Implementation (OSDI '06), Seattle, Washington, USA",
   "authors": [
-    "Edward lewi",
-    "Ryan Sears",
-    "Steve Heller",
-    "Wilson Hsieh"
+    "Eric Brewer",
+    "Russell Sears"
   ],
   "keywords": [
     "concurrency-control",
-    "crash-recovery",
-    "data-structures",
+    "data-layout",
     "database-systems",
-    "logging",
-    "persistence",
-    "recovery-algorithms",
-    "stasis",
-    "system-design",
-    "transactional-storage"
+    "file-systems",
+    "lsn-free-pages",
+    "nested-top-actions",
+    "transactional-storage",
+    "user-defined-operations",
+    "write-ahead-logging",
+    "zero-copy-io"
   ],
   "category_path": [
     "datastores"
   ],
-  "abstract": "This paper describes a flexible transactional storage layer called Stasis. Stasis provides applications with features typically found in databases, such as transaction support, durability, consistency, and isolation, but allows applications to implement their own data models. By exposing a simple, low-level interface, Stasis enables developers to manage persistent data without incurring the overhead of an entire database management system. Stasis is especially useful for applications with complex recovery requirements or that require efficient support for interactions between data model and storage system. We demonstrate the effectiveness of Stasis by providing several examples of its use and showing the ease with which it can be tailored to a variety of applications. Stasis can also serve as a foundation for the development of new storage systems. We describe our implementation of the ARIES recovery algorithm and other innovations in logging, including our integrated approach to memory and storage allocation, and tools for handling log-structured artifacts efficiently. These techniques provide the reliability and availability standard of databases with the flexibility of custom data management solutions outside of legacy databases.",
-  "summary": "The paper \"Stasis: Flexible transactional storage\" introduces a novel transactional storage layer named Stasis that combines features of database systems with flexible data management options. Stasis bolsters the development of applications requiring complex recovery algorithms by implementing a low-level interface, sidestepping the typical overhead of full-fledged database systems. It utilizes techniques such as the ARIES recovery algorithm combined with its own innovations in logging, enhanced storage, and memory allocation capabilities.\n\nWhile no direct industrial or academic references to the Stasis paper were found in initial query results, the principles and solutions it offers in terms of transactional storage systems are foundational and likely influential in constructing flexible, durable storage solutions. This would have implications for designing database backends and applications needing specialized storage capabilities beyond the scope of existing DBMS approaches.",
+  "abstract": "An increasing range of applications requires robust support for atomic, durable and concurrent transactions. Databases provide the default solution, but force applications to interact via SQL and to forfeit control over data layout and access mechanisms. We argue there is a gap between DBMSs and file systems that limits designers of data-oriented applications.\nStasis is a storage framework that incorporates ideas from traditional write-ahead logging algorithms and file systems. It provides applications with flexible control over data structures, data layout, robustness, and performance. Stasis enables the development of unforeseen variants on transactional storage by generalizing write-ahead logging algorithms. Our partial implementation of these ideas already provides specialized (and cleaner) semantics to applications.\nWe evaluate the performance of a traditional transactional storage system based on Stasis, and show that it performs favorably relative to existing systems. We present examples that make use of custom access methods, modified buffer manager semantics, direct log file manipulation, and LSN-free pages. These examples facilitate sophisticated performance optimizations such as zero-copy I/O. These extensions are composable, easy to implement and significantly improve performance.",
+  "summary": "Stasis proposes a bottom-up transactional storage framework intended to bridge the gap between monolithic DBMSs and application-specific storage systems. Its central contributions are user-defined redo/undo operations, composable transactional data structures, nested top actions for concurrent updates, customizable locking and buffer-management policies, and LSN-free pages based on deterministic blind updates. The evaluation reports competitive performance with Berkeley DB, more than 6,000 transactions per second in the reported high-concurrency hash-table experiment, up to a fourfold speedup over an in-process MySQL implementation for an object-persistence workload, and nearly doubled performance from object-persistence optimizations.\n\nThe paper’s documented research influence includes the bLSM project: the bLSM implementation was built on Stasis and reused its region allocator, buffer manager, and write-ahead logging support for metadata and space allocation. ([awoc.wolski.fi](https://awoc.wolski.fi/dlib/access-methods/SR12-bLSM.pdf)) A separate line of work on “unbundled” database kernels cited Stasis as an example of placing access methods above a transactional layer and developed a related architecture that separates transactional coordination from data components. ([microsoft.com](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/CIDR-final.pdf)) These references show concrete influence on subsequent research prototypes and database-architecture proposals. The sources reviewed do not establish broad commercial adoption of the Stasis implementation itself.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/datastores/stasis-flexible-transactional-storage.pdf",
   "source_type": "pdf",
   "filepath": "datastores/stasis-flexible-transactional-storage.pdf",
   "filename": "stasis-flexible-transactional-storage.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:51"
 }

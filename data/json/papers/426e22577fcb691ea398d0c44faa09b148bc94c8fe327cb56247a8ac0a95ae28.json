@@ -1,33 +1,33 @@
 {
   "uuid": "426e22577fcb691ea398d0c44faa09b148bc94c8fe327cb56247a8ac0a95ae28",
   "title": "Byzantine Chain Replication",
-  "publication_date": "April 22, 2015",
+  "publication_date": "December 18–20, 2012; 16th International Conference on Principles of Distributed Systems (OPODIS 2012), Rome, Italy; Lecture Notes in Computer Science, volume 7702, pages 345–359. ([dblp.org](https://dblp.org/db/conf/opodis/index))",
   "authors": [
-    "Barbara Liskov",
-    "Miguel Castro",
-    "Rodrigo Rodrigues"
+    "Chi Ho",
+    "Nicolas Schiper",
+    "Robbert van Renesse"
   ],
   "keywords": [
+    "asynchronous-systems",
+    "berkeleydb",
+    "byzantine-failures",
     "byzantine-fault-tolerance",
     "chain-replication",
-    "consensus",
-    "data-redundancy",
-    "database-replication",
     "distributed-systems",
+    "dynamic-reconfiguration",
     "fault-tolerance",
-    "reliability",
-    "replication-protocols",
+    "replicated-databases",
     "state-machine-replication"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "This paper presents the Byzantine Chain Replication (BCR) protocol, a new way to provide Byzantine fault tolerance (BFT) for state machine replication in asynchronous settings with optimal resource usage. Unlike previous Byzantine fault-tolerant protocols that incur high costs, BCR achieves strong consistency and availability with only 2f+1 replicas. The protocol combines chain replication with Byzantine fault-tolerant mechanisms to enhance reliability and throughput, making it suitable for critical applications that require fault-tolerant distributed data services. We provide a detailed description of the BCR protocol, including its operation, fault model, and a rigorous theoretical analysis of its safety and liveness properties.",
-  "summary": "The paper \"Byzantine Chain Replication\" introduces a novel protocol designed to enhance Byzantine fault tolerance in state machine replication while minimizing resource costs. This is achieved through a unique combination of chain replication and Byzantine fault-tolerant strategies, optimizing both reliability and throughput.\n\nThe Byzantine Chain Replication (BCR) protocol requires only 2f+1 replicas to maintain strong consistency and availability in the presence of Byzantine faults. The paper provides an in-depth analysis of BCR's operation and fault model, alongside theoretical assurances of its safety and liveness properties.\n\nWhile comprehensive use cases or citations in subsequent research and industry applications were not found in an immediate search, this protocol contributes significantly to the theoretical foundations of distributed systems, particularly in fault tolerance and replication protocols. The impact on future research can potentially enhance the development of more efficient, reliable distributed data services, especially in environments where fault tolerance is crucial.\n\nFurther information about the influence of this paper could be obtained through more detailed citation analysis in specialized databases like Google Scholar or Semantic Scholar.",
+  "abstract": "We present a new class of Byzantine-tolerant State Machine Replication protocols for asynchronous environments that we term Byzantine Chain Replication. We demonstrate two implementations that present different trade-offs between performance and security, and compare these with related work. Leveraging an external reconfiguration service, these protocols are not based on Byzantine consensus, do not require majority-based quorums during normal operation, and the set of replicas is easy to reconfigure.\nOne of the implementations is instantiated with t+1 replicas to tolerate t failures and is useful in situations where perimeter security makes malicious attacks unlikely. Applied to in-memory BerkeleyDB replication, it supports 20,000 transactions per second while a fully Byzantine implementation supports 12,000 transactions per second—about 70% of the throughput of a non-replicated database.",
+  "summary": "The paper introduces **Byzantine Chain Replication**, a class of asynchronous Byzantine-tolerant state-machine replication protocols that combines chain-based request processing with an external reconfiguration service. Its central design choice is to avoid Byzantine consensus and majority quorums during failure-free operation, while using signed histories, order proofs, checkpointing, and reconfiguration to preserve safety across failures and configuration changes.\n\nThe authors present **Shuttle** in two forms: CRC Shuttle, which uses `t+1` replicas and targets accidental or non-malicious failures, and HMAC Shuttle, which uses `2t+1` replicas and tolerates arbitrary Byzantine failures. In the reported BerkeleyDB experiments with `t=1`, CRC-style chain replication reached approximately 20,000 transactions per second, while fully Byzantine HMAC Shuttle reached approximately 12,000 transactions per second, or about 70% of the throughput of a non-replicated database.\n\nThe clearest documented research follow-on is **BChain: Byzantine Replication with High Throughput and Embedded Reconfiguration** (2014). BChain explicitly builds on chain-based Byzantine replication, develops an embedded reconfiguration mechanism called re-chaining, and evaluates an NFS implementation under fault-free and failure conditions. ([escholarship.org](https://escholarship.org/uc/item/5ht7n9d4)) Subsequent distributed-systems and blockchain research also cites Byzantine Chain Replication, including work on Byzantine blockchain consensus and BFT performance evaluation. ([ouci.dntb.gov.ua](https://ouci.dntb.gov.ua/en/works/42ZnZke4/)) The search found evidence of continued academic influence, but no reliable evidence that the specific Shuttle implementation was deployed as an industry production system.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/byzantine-chain-replication.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/byzantine-chain-replication.pdf",
   "filename": "byzantine-chain-replication.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:51"
 }

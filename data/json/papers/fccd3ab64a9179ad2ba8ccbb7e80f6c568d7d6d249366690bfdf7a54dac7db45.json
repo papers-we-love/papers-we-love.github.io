@@ -1,32 +1,31 @@
 {
   "uuid": "fccd3ab64a9179ad2ba8ccbb7e80f6c568d7d6d249366690bfdf7a54dac7db45",
   "title": "Theory in Programming Practice",
-  "publication_date": "2004",
+  "publication_date": "August 2006; revised December 2012",
   "authors": [
-    "Matthew Flatt",
-    "Robert Bruce Findler"
+    "Jayadev Misra"
   ],
   "keywords": [
-    "model",
-    "practical-guide",
-    "programming-languages",
-    "programming-practice",
+    "cryptography",
+    "data-compression",
+    "error-correction",
+    "finite-state-machines",
+    "functional-programming",
+    "parallel-recursion",
     "programming-theory",
-    "scheme",
-    "semantics",
-    "software-engineering",
-    "teaching-programming",
-    "tools"
+    "recursion-and-induction",
+    "regular-expressions",
+    "relational-databases"
   ],
   "category_path": [
     "languages-theory"
   ],
-  "abstract": "We present four instances of the productive use of computer science theory in programming practice. Three are in the context of developing DrScheme, a popular programming environment for use with the Scheme programming language. One is in the context of teaching programming languages, which also uses DrScheme extensively.",
-  "summary": "This paper discusses four instances where computer science theory has been productively applied to programming practice, specifically within the context of the DrScheme programming environment (now known as Racket). DrScheme is utilized extensively for educational purposes in teaching programming languages. The authors, Robert Bruce Findler and Matthew Flatt, explore how theoretical principles have guided practical implementations in the development and usage of DrScheme.\n\nA quick web search reveals that DrScheme, as a pedagogical tool, is widely cited in academic literature concerning programming education and environments. It was particularly influential in the development of the Racket language and IDE, which are used in many computer science curricula today. The paper has laid groundwork by showing the importance of integrating theory with practical tool development, emphasizing the significant role of theory in advancing programming environments.\n\nThough the influence is primarily within educational contexts and programming environment enhancements, its emphasis on theory as a guide for practical development frameworks has had a lasting impact on the field of education in programming languages. DrScheme has been referenced in various educational resources and continues to influence new generations of programmers through its evolved form in Racket.\n\nReferences:\n1. https://conservancy.umn.edu/handle/11299/215987\n2. https://dl.acm.org/doi/10.1145/1297027.1297033\n3. https://web.archive.org/web/20160304002436/http://www.plt-scheme.org/",
+  "abstract": "No abstract or summary section is provided in the paper.",
+  "summary": "## Summary\n\n*Theory in Programming Practice* is a set of course notes presenting practical applications of computer-science theory. It covers lossless compression through Huffman and Lempel–Ziv coding; error detection and correction using parity, Hamming, and Reed–Muller codes; cryptographic concepts including RSA, digital signatures, oblivious transfer, and Diffie–Hellman key exchange; finite-state machines, transducers, regular expressions, and structured state machines; recursive and functional programming in Haskell; relational data models and query optimization; exact string-matching algorithms including Rabin–Karp, Knuth–Morris–Pratt, and Boyer–Moore; and powerlists for expressing and reasoning about recursive parallel algorithms.\n\nThe central methodological theme is that formal structures, algebraic laws, invariants, induction, and abstraction can reduce implementation effort while supporting correctness arguments and efficiency analysis. The final chapter develops powerlists as a recursive data structure for parallel computation and uses them to give compact formulations of permutations, prefix sums, Gray codes, FFT, and parallel sorting.\n\nThe document is primarily an educational text rather than a conventional research paper. Its most identifiable research influence is the powerlist framework. Misra’s powerlist work was subsequently extended to hypercube-oriented parallel algorithms and additional list structures by Kornerup and collaborators. ([researchgate.net](https://www.researchgate.net/publication/2428912_Data_Structures_for_Parallel_Recursion)) Powerlist algebra was also mechanically formalized in ACL2, including correctness studies of Batcher sorting, prefix sums, FFT-related algorithms, Gray codes, and adders. ([cs.uwyo.edu](https://www.cs.uwyo.edu/~ruben/static/pdf/powerlist-algebra.pdf)) Later work continued to describe PowerLists as a high-level abstraction for recursive, data-parallel algorithms and applied the ideas to parallel-programming frameworks. ([scitepress.org](https://www.scitepress.org/publishedPapers/2020/93441/pdf/index.html)) The University of Texas course materials confirm that the text was used as the textbook for CS 337, whose stated goal was to demonstrate applications of theory in practical programming. ([cs.utexas.edu](https://www.cs.utexas.edu/~misra/))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages-theory/theory-in-programming-practice.pdf",
   "source_type": "pdf",
   "filepath": "languages-theory/theory-in-programming-practice.pdf",
   "filename": "theory-in-programming-practice.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

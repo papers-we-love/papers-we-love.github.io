@@ -1,35 +1,35 @@
 {
   "uuid": "8bb89b2f2b03d95f5afcb8da2d7102ce79ffaadee71cf3de28b6372b9d3d26ce",
   "title": "The Scalable Commutativity Rule: Designing Scalable Software for Multicore Processors",
-  "publication_date": "March 2013",
+  "publication_date": "November 3–6, 2013, SOSP ’13 (24th ACM Symposium on Operating Systems Principles), Farmington, Pennsylvania, USA",
   "authors": [
     "Austin T. Clements",
     "Eddie Kohler",
     "M. Frans Kaashoek",
     "Nickolai Zeldovich",
-    "Robert Tappan Morris"
+    "Robert T. Morris"
   ],
   "keywords": [
-    "commutativity-rule",
-    "hardware-software-interaction",
+    "commuter",
+    "concolic-testing",
+    "conflict-free-access",
+    "interface-design",
     "multicore-processors",
     "operating-systems",
-    "parallel-computing",
-    "performance-optimization",
+    "posix",
     "scalable-commutativity",
-    "scalable-software",
-    "software-architecture",
-    "software-design"
+    "software-scalability",
+    "symbolic-execution"
   ],
   "category_path": [
     "operating_systems"
   ],
-  "abstract": "Scalability is an important goal and a major challenge in software design for multicore processors. Unfortunately, most software today does not scale well: increasing core counts improve performance much slower than predicted by the hardware increase alone. This paper introduces a new design rule, called the scalable commutativity rule, which holds that whenever interface operations commute, implementations can be made to scale. This rule leads to a new, general interest in commutativity as a guiding principle for software design. The paper describes commutativity conditions for a wide range of common system interfaces and creates a new practical framework, called the commutativity design technique, which helps developers apply this principle. The authors support their rule with examples and a prototype tool, called COMMUTER, to check existing software for scalable operations.",
-  "summary": "The paper titled \"The Scalable Commutativity Rule: Designing Scalable Software for Multicore Processors\" was published in March 2013 by authors Austin T. Clements, M. Frans Kaashoek, Nickolai Zeldovich, Robert Tappan Morris, and Eddie Kohler. It introduces the scalable commutativity rule which posits that interface operations that commute can be designed to scale efficiently on multicore processors. This principle directs attention to commutativity as a key aspect in software design, promoting a focus on interface operations for achieving scalability.\n\nA primary contribution of the paper is the commutativity design technique, a framework applying this rule by outlining commutativity conditions across various system interfaces. To aid in implementation, the authors provide a tool named COMMUTER to identify scalable operations within existing software systems.\n\nThe impact of this work is notable in the field of parallel computing and software architecture, as it offers a foundational rule for designing scalable software that can better leverage multicore hardware advancements. \n\nSubsequent research has cited this work when exploring scalable designs and optimization in operating systems and software layers. For instance, it has been referenced in studies focused on improving scalability in distributed systems and enhancing the efficiency of concurrent programming paradigms. Despite its influence, further references and broader citations in industry applications are limited, suggesting scope for future exploration in applying these principles.\n\nFor instance, the paper has been cited in:\n- [Performance and scalability analysis of operating systems](https://www.dl.acm.org/reference?id=10.1145/some-citation1)\n- [Optimizing commutativity in distributed systems](https://www.example.com/reference?id=45678)\n\nOverall, the rule and the accompanying tools provided in this study have contributed to advancing research and understanding in creating efficient, scalable solutions in software design for multicore processors.",
+  "abstract": "What fundamental opportunities for scalability are latent in interfaces, such as system call APIs? Can scalability opportunities be identified even before any implementation exists, simply by considering interface specifications? To answer these questions this paper introduces the following rule: Whenever interface operations commute, they can be implemented in a way that scales. This rule aids developers in building more scalable software starting from interface design and carrying on through implementation, testing, and evaluation.\n\nTo help developers apply the rule, a new tool named COMMUTER accepts high-level interface models and generates tests of operations that commute and hence could scale. Using these tests, COMMUTER can evaluate the scalability of an implementation. We apply COMMUTER to 18 POSIX calls and use the results to guide the implementation of a new research operating system kernel called sv6. Linux scales for 68% of the 13,664 tests generated by COMMUTER for these calls, and COMMUTER finds many problems that have been observed to limit application scalability. sv6 scales for 99% of the tests.",
+  "summary": "## Summary\n\nThe paper introduces the scalable commutativity rule: when interface operations commute—meaning their execution order is not distinguishable through the interface—there exists an implementation whose memory accesses are conflict-free in that situation. The authors define SIM commutativity, a state-dependent, interface-based, and monotonic form of commutativity suitable for complex system interfaces, and provide a constructive proof of the rule.\n\nThe paper also presents **COMMUTER**, a toolchain consisting of symbolic interface analysis, test generation, and dynamic memory-access tracing. Applied to 18 POSIX calls, COMMUTER generated 13,664 tests. Linux 3.8 was conflict-free for 9,389 tests, while the authors’ sv6 research kernel was conflict-free for 13,528 tests. The resulting designs used techniques including per-core allocation, radix arrays, deferred reclamation, scalable reference counting, optimistic checks, RCU, and weaker interface ordering. Microbenchmarks and a mail-server workload showed that modified, more-commutative interfaces scaled substantially better than standard POSIX interfaces on an 80-core system.\n\nThe work received the SOSP ’13 Best Paper award and was subsequently disseminated in an ACM Transactions on Computer Systems extended version and a 2017 Communications of the ACM article. ([usenix.org](https://www.usenix.org/conference/atc14/technical-sessions/presentation/scalable-commutativity-rule-designing-scalable)) The project also led to continued public tooling and systems research around COMMUTER, sv6, and interface-level multicore scalability. ([pdos.csail.mit.edu](https://pdos.csail.mit.edu/projects/multicore.html)) A later paper identified a flaw in the original proof and supplied a revised, mechanically verified Coq proof, demonstrating direct follow-on research on the paper’s formal foundations. ([arxiv.org](https://arxiv.org/abs/1809.09550)) Subsequent systems papers continue to cite the scalable commutativity rule when discussing kernel bottlenecks and scalable system design, although the available evidence does not establish broad industrial adoption as a standard engineering methodology. ([usenix.org](https://www.usenix.org/publications/loginonline/diciclo-data-intensive-container-isolation-multitenant-clouds))",
   "raw_url": "https://people.csail.mit.edu/nickolai/papers/clements-sc.pdf",
   "source_type": "external",
   "filepath": "operating_systems/README.md",
   "filename": "The Scalable Commutativity Rule: Designing Scalable Software for Multicore Processors",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:56"
 }

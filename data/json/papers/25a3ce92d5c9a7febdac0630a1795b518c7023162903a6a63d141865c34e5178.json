@@ -1,32 +1,29 @@
 {
   "uuid": "25a3ce92d5c9a7febdac0630a1795b518c7023162903a6a63d141865c34e5178",
-  "title": "Wormholes and Time Travel (Appendix from the book \"A Tour of the Calculus\", 1996)",
-  "publication_date": "1996",
+  "title": "Wormholes: Introducing Effects to FRP",
+  "publication_date": "September 13, 2012; presented at Haskell’12 in Copenhagen, Denmark; published in ACM SIGPLAN Notices 47(12), December 2012",
   "authors": [
-    "David Berlinski"
+    "Daniel Winograd-Cort",
+    "Paul Hudak"
   ],
   "keywords": [
+    "arrows",
     "causality",
-    "closed-timelike-curves",
-    "cosmology",
-    "einstein-field-equations",
-    "general-relativity",
-    "hawking-radiation",
-    "quantum-mechanics",
-    "theoretical-physics",
-    "time-travel",
-    "wormholes"
+    "functional-reactive-programming",
+    "resource-types",
+    "side-effects",
+    "stream-processing"
   ],
   "category_path": [
     "languages-paradigms",
     "functional_reactive_programming"
   ],
-  "abstract": "The concept of wormholes in general relativity provides a fascinating intellectual construct for exploring possibilities in physics, notably time travel. Wormholes are solutions to the Einstein field equations, suggesting that they are shortcuts through space-time. Although speculative, discussions on wormholes touch on the feasibility of creating closed timelike curves and the implications such constructs might have for causality.",
-  "summary": "The paper \"Wormholes and Time Travel\" by David Berlinski serves as an appendix to the book \"A Tour of the Calculus\" and focuses on the theoretical underpinnings of wormholes within the framework of general relativity. The paper explores the possibility of using wormholes as a means for time travel by proposing the existence of closed timelike curves (CTCs). Particular emphasis is placed on the theoretical implications of wormholes, including potential violations of causality principles. Despite its speculative nature, the concept of wormholes continues to intrigue physicists and has been a subject of extensive theoretical investigation.\n\nA quick search shows that discussions about wormholes, time travel, and their implications on causality have significantly influenced both academic research and popular science. Numerous papers since then have referenced the ideas explored here, including Hawking's discussions on chronology protection (Hawking, S., 1992, Physical Review D), which mentions concerns over closed timelike curves and potential paradoxes associated with time travel. However, specific references to Berlinski's paper are scarce. The theoretical foundation it explores remains relevant in theoretical physics, particularly concerning causality and the constraints imposed by quantum mechanics.\n\nOverall, Berlinski's treatment of the subject reflects the enduring intrigue and complexity surrounding wormholes in theoretical physics.",
+  "abstract": "Functional reactive programming (FRP) is a useful model for programming real-time and reactive systems in which one defines a signal function to process a stream of input values into a stream of output values. However, performing side effects (e.g. memory mutation or input/output) in this model is tricky and typically unsafe. In previous work, Winograd-Cort et al. [2012] introduced resource types and wormholes to address this problem.\n\nThis paper better motivates, expands upon, and formalizes the notion of a wormhole to fully unlock its potential. We show, for example, that wormholes can be used to define the concept of causality. This in turn allows us to provide behaviors such as looping, a core component of most languages, without building it directly into the language. We also improve upon our previous design by making wormholes less verbose and easier to use.\n\nTo formalize the notion of a wormhole, we define an extension to the simply typed lambda calculus, complete with typing rules and operational semantics. In addition, we present a new form of semantic transition that we call a temporal transition to specify how an FRP program behaves over time and to allow us to better reason about causality. As our model is designed for a Haskell implementation, the semantics are lazy. Finally, with the language defined, we prove that our wormholes indeed allow side effects to be performed safely in an FRP framework.",
+  "summary": "### Paper summary\n\nThe paper introduces **wormholes**, a mechanism for controlled side effects and non-local communication in arrow-based functional reactive programming. A wormhole is split into a read endpoint, called a *whitehole*, and a write endpoint, called a *blackhole*. Resource types ensure that each endpoint is used at most once, preventing conflicting access to physical or virtual resources.\n\nThe authors formalize the system as an extension of the simply typed lambda calculus with products, resource-typed signal functions, resource interaction, and dynamically created virtual resources. Its operational semantics separates ordinary lazy evaluation, instantaneous signal-function execution, and a temporal transition that advances the program one time step. The temporal model ensures that reads observe values from the previous step, thereby enforcing causality.\n\nA significant result is that causal looping and delay can be constructed from wormholes rather than provided as primitive language features. The paper proves resource safety: a well-typed signal function accesses only resources listed in its type and interacts with each such resource at most once per time step. The theoretical design supports dynamic wormhole creation, although the authors identify limitations in implementing the full type-level resource-set machinery in Haskell.\n\n### Subsequent influence\n\nThe clearest later research extension is *Functional Reactive Programming with Effects, A More Permissive Approach* by Dabrowski and Ischard, which explicitly extends WORMHOLES, relaxes its single-use restriction for internal resources, and provides a translation back to effect-free Yampa programs. ([arxiv.org](https://arxiv.org/abs/2503.06162)) The original authors also continued this line of FRP research in their 2014 work on settable and non-interfering signal functions, which targets broader static optimization opportunities for arrowized FRP. ([danwc.com](https://www.danwc.com/data/nichoiceICFP2014.pdf)) A later Coq-oriented formalization project separately identifies Wormholes as a language to formalize and studies subsets of its semantics. ([univ-orleans.fr](https://www.univ-orleans.fr/lifo/membres/chouquet/pdf/sesterce/sesterce_jordan.pdf))\n\nI found no reliable evidence of documented industry adoption or production-system use of the specific wormhole mechanism.",
   "raw_url": "https://www.danwc.com/data/Winograd-Cort-Wormholes.pdf",
   "source_type": "external",
   "filepath": "languages-paradigms/functional_reactive_programming/README.md",
   "filename": "Wormholes: Introducing Effects to FRP",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:56"
 }

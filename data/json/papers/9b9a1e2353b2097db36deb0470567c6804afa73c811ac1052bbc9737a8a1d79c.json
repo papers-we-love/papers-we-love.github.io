@@ -1,34 +1,34 @@
 {
   "uuid": "9b9a1e2353b2097db36deb0470567c6804afa73c811ac1052bbc9737a8a1d79c",
   "title": "Functional Programming with Bananas, Lenses, Envelopes and Barbed Wire",
-  "publication_date": "April 1991",
+  "publication_date": "August 26–30, 1991, FPCA ’91 (5th ACM Conference on Functional Programming Languages and Computer Architecture), published in Lecture Notes in Computer Science, volume 523",
   "authors": [
     "Erik Meijer",
     "Maarten Fokkinga",
     "Ross Paterson"
   ],
   "keywords": [
+    "algebraic-data-types",
     "anamorphisms",
-    "calculus-of-programs",
     "catamorphisms",
     "category-theory",
-    "formal-methods",
     "functional-programming",
     "hylomorphisms",
+    "lazy-evaluation",
     "paramorphisms",
-    "program-transformation",
+    "program-calculation",
     "recursion-schemes"
   ],
   "category_path": [
     "languages-paradigms",
     "functional_programming"
   ],
-  "abstract": "Much work has been done in the area of program transformation, but relatively little that takes a calculational approach using a single uniform formalism. In this paper, we design a particular class of recursion operators, called morphisms and comorphisms, for datatypes, and show that these suffice to express many recursive functions in a concise way using just a few basic notions from category theory.",
-  "summary": "This paper is a seminal work in the field of functional programming, introducing a calculational approach to program transformation using morphisms and comorphisms for datatypes. By employing concepts from category theory, the authors propose using a standard set of recursion operators to express recursive functions concisely. This work has been influential in the development of advanced algorithms in functional programming languages like Haskell and has contributed to an improved understanding of recursion schemes.\n\nUpon web search, several scholarly works cite this paper, demonstrating its impact on subsequent academic research. For instance, it has influenced research on generic programming and the development of libraries that leverage recursion schemes to facilitate program transformation. Google's \"Scholar\" shows multiple citations: [Google Scholar](https://scholar.google.com/scholar?cluster=11738150959703020178).\n\nOverall, this paper has laid a foundational framework for researchers exploring advanced concepts in functional programming and has influenced the development of techniques and libraries in the Haskell programming community.",
+  "abstract": "We develop a calculus for lazy functional programming based on recursion operators associated with data type definitions. For these operators we derive various algebraic laws that are useful in deriving and manipulating programs. We shall show that all example functions in Bird and Wadler's \"Introduction to Functional Programming\" can be expressed using these operators.",
+  "summary": "### Summary\n\nThe paper develops an algebraic calculus for lazy functional programs by making common recursion patterns explicit rather than embedding them in unrestricted recursive definitions. It introduces notation and laws for four principal recursion schemes: catamorphisms for consuming recursive data, anamorphisms for generating it, hylomorphisms for combining generation and consumption, and paramorphisms for recursive computations that retain access to substructures. The treatment is generalized from lists to algebraic data types represented as least fixed points of functors in the category of complete partial orders, allowing finite, infinite, and partial values to be handled within one semantic framework.\n\nThe paper derives evaluation rules, uniqueness properties, induction principles, fusion laws, fixed-point laws, and promotion laws for these schemes. It demonstrates how the laws support program calculation and optimization, including unfold–simplify–fold transformations, tupling, accumulation of arguments, linear-time reversal, one-pass average computation, and the decomposition of hylomorphisms into anamorphisms followed by catamorphisms. It also connects parametrized data types with functorial map operations, free types, map–reduce factorization, and monads.\n\n### Influence\n\nSubsequent work continues to use the paper’s recursion-scheme vocabulary and algebraic approach. A later study on recursive program synthesis explicitly uses algebraic data types and recursion schemes to structure candidate programs, reduce the search space, and avoid ill-formed recursive candidates; its authors cite this paper as the source for the catamorphism notation and related schemes. ([lambdadays.org](https://www.lambdadays.org/static/upload/media/1552664964525206synthesizingrecursivefunctionswithbananaslensesenvelopesandbarbedwirekrzysztofkrawiec.pdf)) Later research has also developed unified frameworks and practical expositions for structured recursion schemes, describing them as tools for constructing, optimizing, and reasoning about programs over inductive and coinductive data types. ([arxiv.org](https://arxiv.org/abs/2202.13633)) Hylomorphisms originating in this line of work have additionally been applied to algorithmic optimization, including dynamic-programming techniques based on memoization. ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/abs/10.1002/spe.2887)) The paper was published as part of the FPCA 1991 proceedings, where it appears as a 21-page chapter by Meijer, Fokkinga, and Paterson. ([link.springer.com](https://link.springer.com/book/10.1007/3-540-54396-1)) No specific commercial or industrial deployment directly attributing a product or production system to this paper was identified in the sources reviewed.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages-paradigms/functional_programming/functional-programming-with-bananas-lenses-envelops-and-barbed-wire.pdf",
   "source_type": "pdf",
   "filepath": "languages-paradigms/functional_programming/functional-programming-with-bananas-lenses-envelops-and-barbed-wire.pdf",
   "filename": "functional-programming-with-bananas-lenses-envelops-and-barbed-wire.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

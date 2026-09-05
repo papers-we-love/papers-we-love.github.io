@@ -1,32 +1,32 @@
 {
   "uuid": "285e71bf56470620ff6080be39a416ea5de0ec855750983f50471712226b1d6a",
   "title": "Distributed Snapshots: Determining Global States of Distributed Systems",
-  "publication_date": "November 1985",
+  "publication_date": "February 1985, ACM Transactions on Computer Systems, Volume 3, Number 1, pages 63–75",
   "authors": [
-    "Leslie Lamport",
-    "Vijay S. K. Garg"
+    "K. Mani Chandy",
+    "Leslie Lamport"
   ],
   "keywords": [
-    "algorithms",
-    "asynchronous-networks",
-    "concurrent-computing",
-    "consistency",
-    "distributed-debugging",
+    "asynchronous-systems",
+    "checkpointing",
+    "distributed-deadlock-detection",
+    "distributed-snapshots",
     "distributed-systems",
     "fault-tolerance",
-    "global-state",
-    "state-checkpointing",
-    "system-reliability"
+    "global-states",
+    "message-passing",
+    "stable-property-detection",
+    "termination-detection"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "This paper presents a simple algorithm for determining a set of consistent global states of a distributed system. This algorithm requires that the system processes send messages to one another and receive acknowledgments for them. By the use of this algorithm, unwanted states such as \"lost\" messages, duplicates, etc., may be eliminated and the received messages may be successfully synchronized. This method solves the problem of determining global states using only a constant amount of additional memory and causes only an insignificant increase in message traffic.",
-  "summary": "The paper \"Distributed Snapshots: Determining Global States of Distributed Systems\" introduces a novel algorithm to capture consistent global states in distributed systems. Authored by Leslie Lamport and Vijay S. K. Garg, it was published in November 1985. The algorithm detailed in the paper is pivotal for improving the reliability and debugging processes of distributed systems by addressing issues like lost or duplicate messages through message acknowledgments and synchronization.\n\nThe significant contribution of this work lies in its ability to solve the global state determination problem using minimal resources while maintaining system performance. The method's efficiency in memory usage and message overhead has made it a foundational technique in distributed systems research.\n\nThis paper has been extensively cited and has influenced subsequent developments in distributed computing and systems design. Some impactful contributions include:\n\n1. Chandy, K. Mani, et al. \"A Distributed Simulation Algorithms for Logical Clock Synchronization.\" This paper builds on global state capture techniques, based on the principles introduced by Lamport and Garg. [Link to Paper](https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.14.6788)\n\n2. Garg, V.S., \"Advances in distributed computing: Concepts and Design Models.\" This book encapsulates various applications of distributed systems algorithms inspired by early foundational work from influential papers like Lamport's. [Link to Book](https://www.bookdepository.com/Advances-Distributed-Computing/9780471723882)\n\n3. Alvaro, Peter, et al. \"Lineage-driven fault injection.\" This work uses related techniques to identify flaws in distributed systems, expanding upon methodologies for system reliability. [Link to Paper](https://www.usenix.org/legacy/events/nsdi15/tech/full_papers/alvaro/alvaro.pdf)\n\nThis paper contributes significantly to distributed systems by laying groundwork for consistency and reliability algorithms, with a tangible influence on both academic research and practical applications in industry.",
+  "abstract": "This paper presents an algorithm by which a process in a distributed system determines a global state of the system during a computation. Many problems in distributed systems can be cast in terms of the problem of detecting global states. For instance, the global state detection algorithm helps to solve an important class of problems: stable property detection. A stable property is one that persists: once a stable property becomes true it remains true thereafter. Examples of stable properties are “computation has terminated,” “ the system is deadlocked” and “all tokens in a token ring have disappeared.” The stable property detection problem is that of devising algorithms to detect a given stable property. Global state detection can also be used for checkpointing.",
+  "summary": "The paper introduces the Chandy–Lamport distributed snapshot algorithm for recording a consistent global state of an asynchronous distributed system without stopping or otherwise altering the underlying computation. Processes record their local states, while marker messages delimit the messages that were in transit on each incoming channel. Under the paper’s assumptions—reliable, FIFO, finite-delay channels—the resulting collection of process and channel states is a meaningful global state. The correctness argument establishes that the recorded state is reachable from the state at which recording began and that the system can proceed from the recorded state to the state at which recording terminates. This property supports detection of stable conditions such as termination and deadlock, as well as checkpointing.\n\nThe paper became a foundation for subsequent distributed-snapshot research. Later work developed variants for synchronous communication and repeated snapshots, examined limitations and modifications under different system assumptions, and produced formal machine-checked proofs of the algorithm and its stable-property-detection application. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/0304397587900053))\n\nThe algorithm also influenced industry systems. Apache Flink documents its fault-tolerance mechanism as a variant of Chandy–Lamport snapshotting, using asynchronous barriers to create consistent snapshots of distributed operator state and input positions for checkpoint-based recovery. ([nightlies.apache.org](https://nightlies.apache.org/flink/flink-docs-stable/docs/learn-flink/fault_tolerance/))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/distributed-snapshots-determining-global-states-of-distributed-systems.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/distributed-snapshots-determining-global-states-of-distributed-systems.pdf",
   "filename": "distributed-snapshots-determining-global-states-of-distributed-systems.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:51"
 }

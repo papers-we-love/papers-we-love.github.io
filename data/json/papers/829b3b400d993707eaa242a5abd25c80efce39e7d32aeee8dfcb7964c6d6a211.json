@@ -1,7 +1,7 @@
 {
   "uuid": "829b3b400d993707eaa242a5abd25c80efce39e7d32aeee8dfcb7964c6d6a211",
   "title": "Ceph: A Scalable, High-Performance Distributed File System",
-  "publication_date": "November 2006",
+  "publication_date": "November 2006; Proceedings of the 7th Conference on Operating Systems Design and Implementation (OSDI ’06)",
   "authors": [
     "Carlos Maltzahn",
     "Darrell D. E. Long",
@@ -10,26 +10,26 @@
     "Scott A. Brandt"
   ],
   "keywords": [
-    "ceph",
-    "cluster-storage",
-    "data-reliability",
-    "distributed-file-system",
+    "crush",
+    "data-replication",
+    "distributed-file-systems",
     "fault-tolerance",
     "high-performance-computing",
+    "metadata-management",
     "object-storage",
-    "petabyte-storage",
-    "posix-compliance",
+    "posix",
+    "rados",
     "scalability"
   ],
   "category_path": [
     "distributed-file-systems"
   ],
-  "abstract": "We present the design and implementation of Ceph, a distributed file system that provides excellent performance, reliability, and scalability. The system is designed for Petabyte-scale storage clusters, providing a highly reliable architecture that diverts metadata activity from a single point of failure, as in many existing file system designs, to an architecture that distributes everything as evenly as possible across the entire system. By eliminating the file server as a point of progress for maintenance tasks, Ceph achieves seamless scaling and improved performance. Additionally, the paper describes our design goals and their realization, and provides a quantitative evaluation of Ceph's mechanisms and properties.",
-  "summary": "Ceph is a distributed file system that offers excellent performance, scalability, and reliability for large storage clusters. It was designed to overcome limitations in traditional file systems, particularly by removing single points of failure and distributing metadata activities across the system. The system provides a highly reliable and fault-tolerant architecture, which supports scalability to petabytes of storage while maintaining POSIX compliance.\n\nThe paper has had a significant impact on both research and industry, influencing the design and development of modern distributed storage solutions. Ceph's architecture has been implemented widely in various storage systems and has even been integrated into cloud platforms, including the OpenStack cloud computing platform, where it serves as a backend for storage services [1]. The paper is highly cited in the field for its novel approach to handling large-scale data storage and has been referenced in subsequent research papers addressing distributed and cloud storage systems [2], [3]. Ceph's implementation of object storage, cluster management, and POSIX-compliance are key contributions that are being leveraged in contemporary distributed and cloud file systems.\n\n**References**:\n1. \"OpenStack and Ceph,\" [https://opendev.org/openstack/openstack-chef-ceph](https://opendev.org/openstack/openstack-chef-ceph).\n2. Weil, S. A., et al. (2007). \"Ceph: A Scalable, High-Performance Distributed File System,\" In Proceedings of the 7th Symposium on Operating Systems Design and Implementation (OSDI), [ACM Digital Library](https://dl.acm.org/doi/10.1145/1294261.1294269).\n3. Sage A. Weil's personal page, [https://sageweil.com](https://sageweil.com).",
+  "abstract": "We have developed Ceph, a distributed file system that provides excellent performance, reliability, and scalability. Ceph maximizes the separation between data and metadata management by replacing allocation tables with a pseudo-random data distribution function (CRUSH) designed for heterogeneous and dynamic clusters of unreliable object storage devices (OSDs). We leverage device intelligence by distributing data replication, failure detection and recovery to semi-autonomous OSDs running a specialized local object file system. A dynamic distributed metadata cluster provides extremely efficient metadata management and seamlessly adapts to a wide range of general purpose and scientific computing file system workloads. Performance measurements under a variety of workloads show that Ceph has excellent I/O performance and scalable metadata management, supporting more than 250,000 metadata operations per second.",
+  "summary": "## Summary\n\nThe paper presents Ceph as a distributed, near-POSIX file system designed for petabyte-scale and highly dynamic storage clusters. Its architecture separates namespace metadata from file-data I/O: metadata operations are handled by a dynamically partitioned metadata-server cluster, while clients communicate directly with object storage devices for data access.\n\nThe central technical contribution is the replacement of explicit allocation tables with CRUSH, a deterministic pseudo-random placement function. Clients, metadata servers, and storage devices can independently calculate object locations from object identifiers and the cluster map. This reduces metadata overhead, limits data movement when devices are added or removed, supports weighted placement, and enables replica placement across failure domains.\n\nThe object store, RADOS, delegates replication, failure detection, recovery, and cluster adaptation to semi-autonomous storage devices. The prototype separates update visibility from durable disk commitment: writes are acknowledged after replication into OSD memory and receive a later commit notification after safe persistence. Ceph also introduces Dynamic Subtree Partitioning, which moves metadata subtrees among metadata servers according to recent workload and selectively replicates or hashes hot directories.\n\nThe reported prototype results include nearly linear OSD throughput scaling until network saturation and more than 250,000 metadata operations per second with a 128-node metadata-server cluster. The evaluation also identifies limitations, including imperfect metadata scaling under heavily shared read workloads, prototype-level client and FUSE issues, and unimplemented metadata-server recovery and security mechanisms.\n\n## Influence on research and industry\n\nThe work became the foundational research publication for the Ceph storage system. The Ceph project’s historical account states that the paper appeared at OSDI in 2006, that Ceph code was released as open source under the LGPL, and that the design subsequently evolved into a production storage platform used in cloud, research, and enterprise environments. ([ceph.com](https://www.ceph.com/en/foundation/history/))\n\nIts architectural ideas were carried into later Ceph development, including the RADOS object-storage model and CRUSH-based placement. Subsequent systems research continued to analyze Ceph’s design and operational experience; for example, a later SOSP paper explicitly studies lessons from a decade of Ceph evolution and the suitability of conventional file systems as distributed-storage backends. ([pdl.cmu.edu](https://pdl.cmu.edu/PDL-FTP/Storage/ceph-exp-sosp19.pdf))\n\nIn industry, Ceph became integrated with OpenStack as a backend for block and image storage, with official OpenStack documentation describing Ceph RBD use for services including Glance, Cinder, and Nova. ([docs.openstack.org](https://docs.openstack.org/kolla-ansible/wallaby/reference/storage/external-ceph-guide.html))",
   "raw_url": "https://ceph.io/assets/pdfs/weil-ceph-osdi06.pdf",
   "source_type": "external",
   "filepath": "distributed-file-systems/README.md",
   "filename": "Ceph",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:54"
 }

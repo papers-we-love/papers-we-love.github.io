@@ -1,32 +1,26 @@
 {
   "uuid": "d2e9e53d5ceedcfcb126ad2afcfbddcfffa281a12fae885a628fa416415b076c",
-  "title": "Concatenative Programming: An Overlooked Paradigm",
-  "publication_date": "July 2008",
+  "title": "CONCATENATIVE PROGRAMMING\nAn Overlooked Paradigm in Functional Programming",
+  "publication_date": "2009; Proceedings of the 4th International Conference on Software and Data Technologies (ICSOFT 2009), Sofia, Bulgaria, July 26–29, 2009",
   "authors": [
-    "John C. Fox"
+    "Dominikus Herzberg",
+    "Tim Reichert"
   ],
   "keywords": [
-    "code-manipulation",
-    "combinatory-logic",
-    "concatenative-programming",
-    "forth",
+    "concatenative-languages",
     "functional-programming",
-    "joy",
-    "program-transformation",
-    "programming-paradigms",
-    "stack-based-languages",
-    "tacit-programming"
+    "language-oriented-programming"
   ],
   "category_path": [
     "languages-paradigms",
     "functional_programming"
   ],
-  "abstract": "The aim of this article is to bring a relatively obscure and potentially valuable programming practice to the attention of programmers. Concatenative languages, named for their method of combining programs, have largely gone unnoticed by developers, despite their potential for simplifying program manipulation and transformation. Such languages encourage thinking of programs as simple compositions of functions, which could benefit program design and development.",
-  "summary": "This paper introduces 'concatenative programming' as a paradigmatic approach that remains largely unknown within the mainstream programming community. It presents the central notion of concatenative languages, which build programs through the composition of functions, leveraging a stack-based execution model. The paper compares concatenative programming with more familiar paradigms, especially functional programming, highlighting similarities with combinatory logic and differences with traditional imperative languages. The research mentions historical languages such as Forth and Joy, which embody these principles, and explains the paradigm's benefits in terms of program manipulation, transformation, and brevity.\n\nUpon conducting a web search, this paper seems to have not left a significant footprint in terms of citations in further research or industry applications. The concept of concatenative programming, as discussed, has primarily remained within niche areas of language development and theory. The paper's detailed explanation does serve as an introductory point for those exploring advanced language features and concepts in programming paradigms, but no direct citations or widespread adoption stemming from this paper are readily apparent. This limits its visible impact on further mainstream programming development.",
+  "abstract": "Based on the state of our ongoing research into Language-Driven Software Development (LDSD) and Language-Oriented Programming (LOP) we argue that the yet relatively unknown paradigm of concatenative programming is valuable for fundamental software engineering research and might prove to be a suitable foundation for future programming. To be sound, we formally introduce Concat, our research prototype of a purely functional concatenative language. The simplicity of Concat is contrasted by its expressiveness and a richness of inspiring approaches. Concatenative languages contribute a fresh and different sight on functional programming, which might help tackle challenges in LDSD/LOP from a new viewpoint.",
+  "summary": "The paper presents concatenative programming as a functional, stack-oriented, homoiconic, and largely variable-free paradigm suited to language experimentation and software engineering. It formally defines Concat using words, quotations, concatenation, substitution rules, stack functions, function composition, and a homomorphic relationship between syntax and semantics. The authors argue that this structure supports macros, localized code extraction, refactoring, formal reasoning, refinement, and compact program composition. They also discuss possible applications to pattern-recognition systems, stream processing, process descriptions, and language-oriented software development, while using Factor as evidence that concatenative techniques can support substantial practical language implementations.\n\nA web search found evidence of continued niche research influence rather than broad industry adoption. Later work on the Functional Machine Calculus cites this paper when positioning sequencing and higher-order stack languages within the development of functional calculi. ([people.bath.ac.uk](https://people.bath.ac.uk/wbh22/Unsharing/pdf/2022-FMC.pdf)) The paper is also listed in subsequent bibliographies and surveys of concatenative-language research, including work on typed concatenative languages and concatenative calculus. ([www2.ccs.neu.edu](https://www2.ccs.neu.edu/racket/pubs/dissertation-kleffner.pdf)) I found no reliable evidence that Concat itself, or this paper directly, led to widespread industrial adoption.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages-paradigms/functional_programming/concatenative-programming-an-overlooked-paradigm.pdf",
   "source_type": "pdf",
   "filepath": "languages-paradigms/functional_programming/concatenative-programming-an-overlooked-paradigm.pdf",
   "filename": "concatenative-programming-an-overlooked-paradigm.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

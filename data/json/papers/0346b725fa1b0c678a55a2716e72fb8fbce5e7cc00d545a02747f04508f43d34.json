@@ -1,33 +1,26 @@
 {
   "uuid": "0346b725fa1b0c678a55a2716e72fb8fbce5e7cc00d545a02747f04508f43d34",
-  "title": "High Performance Erlang (HiPE) Performance Deconstructed",
-  "publication_date": "2004",
+  "title": "Message Analysis-Guided Allocation and Low-Pause Incremental Garbage Collection in a Concurrent Language",
+  "publication_date": "October 24–25, 2004; Proceedings of the Fourth ACM SIGPLAN International Symposium on Memory Management (ISMM’04), Vancouver, British Columbia, Canada",
   "authors": [
-    "Erik Johansson",
     "Jesper Wilhelmsson",
     "Konstantinos Sagonas"
   ],
   "keywords": [
-    "beam",
-    "compilation",
-    "compiler-optimization",
-    "erlang-runtiime",
-    "functional-languages",
-    "garbage-collection",
-    "haskell",
-    "hipe",
-    "low-level-programming",
-    "native-code"
+    "concurrent-languages",
+    "erlang",
+    "incremental-and-real-time-garbage-collection",
+    "thread-local-heaps"
   ],
   "category_path": [
     "memory_management"
   ],
-  "abstract": "Erlang is a concurrent functional language designed for programming large industrial real-time systems. The current Erlang implementation - based on a virtual machine interpreter - is considered to be quite efficient, especially for applications that have to support concurrency and continuous operation. Up to now there has been limited information on how Erlang performs in comparison with other languages such as Haskell and no direct comparison of efficiency between native code and emulated versions of Erlang. This paper presents a comprehensive evaluation of the performance of the HiPE system, an extension of the Erlang/OTP system, which generates native code. Contrary to previous work, which only discusses the performance of HiPE-compiling modules running in an emulator, our work focuses on the performance of full applications written mostly in Erlang/HiPE. Besides classical functional language benchmarks, we also measure the performance of typical Erlang applications and compare them with corresponding Haskell applications. The measurements were performed on a large SMP machine.",
-  "summary": "The paper provides a detailed analysis of High Performance Erlang (HiPE), focusing on performance gains when using native code compilation in comparison to virtual machine interpretation. The authors examine full Erlang applications, contrasting previous studies that focused primarily on HiPE-compiled modules within an emulator. This paper benchmarks the performance of HiPE and compares it with Haskell applications using classical functional language benchmarks. Notable findings of the research highlight significant efficiency improvements when Erlang applications are run in native code compared to emulation. \n\nA web search indicates that this paper is foundational in the exploration of native compilation for Erlang, influencing subsequent research on improving and deploying HiPE in industrial settings. It has contributed to further studies and implementation practices concerning the optimization of Erlang runtime systems. Some influential citations that reference this work include:\n\n1. \"Migrating a Metacomputer to a Metacomputing Evaluation Framework,\" by E. Gran and S. F. Tommesen, discussing performance optimization techniques in distributed systems. \n2. \"Performance Modeling for Web Applications,\" by R. Dubey et al., which examines programming optimizations in high-performance computing applications.\n3. \"A Study of Memory Management Techniques for Large-Scale Web Services,\" by T. Nygård and O. Seljebu, focusing on garbage collection and optimizations in Erlang-based applications.\n\nThese citations affirm the paper's impact on enhancing the understanding of compiling techniques and runtime optimizations within the Erlang programming environment.",
+  "abstract": "We present a memory management scheme for a concurrent programming language where communication occurs using message-passing with copying semantics. The runtime system is built around process-local heaps, which frees the memory manager from redundant synchronization in a multithreaded implementation and allows the memory reclamation of process-local heaps to be a private business and to often take place without garbage collection. The allocator is guided by a static analysis which speculatively allocates data possibly used as messages in a shared memory area. To respect the (soft) real-time requirements of the language, we develop a generational, incremental garbage collection scheme tailored to the characteristics of this runtime system. The collector imposes no overhead on the mutator, requires no costly barrier mechanisms, and has a relatively small space overhead. We have implemented these schemes in the context of an industrial-strength implementation of a concurrent functional language used to develop large-scale, highly concurrent, embedded applications. Our measurements across a range of applications indicate that the incremental collector substantially reduces pause times, imposes only very small overhead on the total runtime, and achieves a high degree of mutator utilization.",
+  "summary": "The paper introduced a hybrid memory architecture for Erlang-style message-passing concurrency: process-local heaps are used by default, while statically identified potential messages are allocated in a shared message area. It paired this design with a generational incremental collector using copying collection for the young generation and incremental mark-and-sweep for the old generation. The design avoids per-object header words and costly read or write barriers, relying instead on pointer-directionality invariants, forwarding-pointer storage, remembered sets, and low-cost process activation checks.\n\nThe evaluation reported substantially shorter message-area collection pauses than a non-incremental collector, with comparatively small effects on total execution time for most benchmarks. The work-based collector supported fine-grained collection quanta, while the time-based collector demonstrated pauses targeted around a 1 ms quantum, subject to small deadline extensions.\n\nThe most clearly documented subsequent influence is a substantially extended journal version, “Efficient memory management for concurrent programs that use message passing,” published in *Science of Computer Programming* in 2006. That article explicitly identifies this ISMM paper as its conference predecessor and develops the memory-management architecture and collector in greater detail. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0167642306000773)) The original work was also situated directly in the Erlang/OTP development context; contemporary bibliographic material records the hybrid architecture and associated techniques as part of the Erlang/OTP runtime-system research program. ([user.it.uu.se](https://user.it.uu.se/~kostis/Papers/ismm04.pdf)) Subsequent publications cite the paper as work on incremental garbage collection for message-passing and concurrent systems, but the available sources do not establish broad adoption of this exact collector in commercial Erlang/OTP releases.",
   "raw_url": "http://user.it.uu.se/~kostis/Papers/ismm04.pdf",
   "source_type": "external",
   "filepath": "memory_management/README.md",
   "filename": "Message Analysis Guided Allocation and Low Pause Incremental GC in a Concurrent Language",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:56"
 }

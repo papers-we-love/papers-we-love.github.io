@@ -1,34 +1,28 @@
 {
   "uuid": "3e1d85a716ece7c0d15d81d8f35a93417aafd5ddd5a58071221432a0d198fca8",
   "title": "Instant Architecture",
-  "publication_date": "2003",
+  "publication_date": "July 2003; ACM Transactions on Graphics, volume 22, issue 3, pp. 669–677; Proceedings of ACM SIGGRAPH 2003",
   "authors": [
-    "Frédéric Sillion",
+    "François Sillion",
     "Michael Wimmer",
     "Peter Wonka",
     "William Ribarsky"
   ],
   "keywords": [
-    "3d-modeling",
     "architecture",
-    "automatic-destruction",
-    "city-planning",
-    "efficient-construction",
-    "graphic-manifestation",
-    "instant-architecture",
-    "interactive-visualization",
-    "procedural-modeling",
-    "urban-simulation"
+    "building-design",
+    "grammars",
+    "modeling"
   ],
   "category_path": [
     "computer_graphics"
   ],
-  "abstract": "We introduce a novel system for instantly generating architectural content. Our method replaces traditional labor-intensive modeling techniques by procedural methods. By developing a comprehensive automatic architecture generator, we enable unprecedented levels of speed and flexibility in 3D modeling of large urban environments, as well as entirely new kinds of applications in design and simulation. Our system can be used to create highly detailed architectural models with minimal input from the user, who can interactively guide the process to achieve desired results. Our contributions include a method for rapid generation of diverse architectural styles and an intuitive visual interface for user interaction.",
-  "summary": "The paper titled \"Instant Architecture\" presents a novel system for generating architectural content rapidly using procedural methods, replacing traditional manual modeling. This technology facilitates the generation of detailed 3D models of urban environments with speed and flexibility, enabling applications in design and simulation. The system allows for interactive user input, making it adaptable to different architectural styles.\n\nOn examining references and prior citations, the paper is cited broadly in the context of urban simulation and procedural modeling. Noteworthy citations include:\n\n1. [Procedural modeling of buildings](https://doi.org/10.1145/1276377.1276473) - Müller et al. in ACM Transactions on Graphics discusses similar procedural methods in architecture.\n2. [Computer Graphics Forum](https://doi.org/10.1111/j.1467-8659.2010.01746.x) - A paper by Parish and Müller exploring procedural techniques.\n\nAlthough it did not trigger a paradigmatic shift, \"Instant Architecture\" contributed significantly to the efficiency improvements in architectural modeling and finds use in urban planning and virtual environment creation. The system is cited in various research studies focusing on enhancing interactive visualization and efficient construction of architectural simulations.",
+  "abstract": "This paper presents a new method for the automatic modeling of architecture. Building designs are derived using split grammars, a new type of parametric set grammar based on the concept of shape. The paper also introduces an attribute matching system and a separate control grammar, which offer the flexibility required to model buildings using a large variety of different styles and design ideas. Through the adaptive nature of the design grammar used, the created building designs can either be generic or adhere closely to a specified goal, depending on the amount of data available.",
+  "summary": "### Paper summary\n\nThe paper introduces a procedural framework for automatically generating detailed architectural models from a shared database of design rules. Its central formalism, the **split grammar**, is a restricted three-dimensional set grammar operating on attributed, parameterized geometric shapes. Split rules subdivide a shape while preserving its occupied volume, whereas conversion rules replace one basic shape with another contained within the original volume. These restrictions make the grammar suitable for automatic derivation while preventing the uncontrolled growth and geometric overlap associated with some growth-oriented grammars.\n\nThe framework separates spatial structure from final appearance. The split grammar recursively derives a building layout, including façades and architectural elements such as windows, doors, cornices, and wall sections. Attributes attached to shapes and rules subsequently determine material and geometry. Attributes also express high-level goals, such as style, complexity, symmetry, shop presence, or vertical and horizontal emphasis.\n\nTwo mechanisms provide control over automatic rule selection. The **attribute-matching system** compares intervals, containment requirements, priorities, and statistical preferences associated with a current shape and candidate rules. Deterministic matching first eliminates incompatible rules; stochastic selection then chooses among compatible alternatives while using per-building random values to preserve coherence. The **control grammar** is a separate attributed context-free grammar that distributes design decisions spatially—for example, consistently across a floor, façade column, or selected region—rather than applying them independently and randomly.\n\nThe authors implemented a database of approximately 250 rules and 40 attributes using ten basic shapes. Generated buildings generally contained between 1,000 and 100,000 polygons and required roughly one to three seconds to create on the reported hardware. The examples demonstrate façade variation, coherent ornamentation, nontrivial three-dimensional floor plans, cylindrical structures, and iterative refinement as additional design goals are specified. The principal limitation is that highly complex architectural details and configurations must be supplied as terminal shapes or handled by separate modeling tools. The authors also note that practical urban applications would require substantially larger rule databases and more user-friendly authoring tools.\n\n### Influence on subsequent research\n\nThe paper established split grammars as an important foundation for procedural architectural modeling. A direct successor, **Procedural Modeling of Buildings** (2006), developed the CGA shape grammar approach for producing detailed building shells and is explicitly part of the same research lineage. ([cg.tuwien.ac.at](https://www.cg.tuwien.ac.at/research/publications/2003/Wonka-2003-Ins/)) Later work extended split-grammar methods to curved and conic architectural geometry, addressing limitations of the original box-oriented formulation. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0097849317300134)) Subsequent research and applications have also reused or adapted split-grammar concepts for architectural reconstruction, user-facing procedural modeling, and alternative environments such as Minecraft. ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S0097849310000749)) These references document a continuing research influence on grammar-based procedural modeling; the sources reviewed here do not by themselves establish a specific commercial deployment of this paper’s original implementation. The publication metadata and date are corroborated by the TU Wien research record. ([cg.tuwien.ac.at](https://www.cg.tuwien.ac.at/research/publications/2003/Wonka-2003-Ins/))",
   "raw_url": "http://www.peterwonka.net/Publications/pdfs/2003.SG.Wonka.InstantArchitecture.high.pdf",
   "source_type": "external",
   "filepath": "computer_graphics/README.md",
   "filename": "Instant Architecture",
-  "created_on": "2026-01-24 23:46:58",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:54"
 }

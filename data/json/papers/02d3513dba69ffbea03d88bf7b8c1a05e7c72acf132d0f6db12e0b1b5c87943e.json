@@ -1,32 +1,27 @@
 {
   "uuid": "02d3513dba69ffbea03d88bf7b8c1a05e7c72acf132d0f6db12e0b1b5c87943e",
   "title": "Push-Pull Functional Reactive Programming",
-  "publication_date": "2009",
+  "publication_date": "September 3, 2009; Haskell ’09, Edinburgh, Scotland, UK; Proceedings of the 2nd ACM SIGPLAN Symposium on Haskell, pages 25–36",
   "authors": [
     "Conal Elliott"
   ],
   "keywords": [
-    "composability",
+    "concurrency",
+    "data-driven",
     "demand-driven",
-    "event-driven-programming",
-    "frp",
     "functional-reactive-programming",
-    "laziness",
-    "performance",
-    "programming-models",
-    "push-pull",
-    "reactive-systems"
+    "semantics"
   ],
   "category_path": [
     "languages-paradigms",
     "functional_reactive_programming"
   ],
-  "abstract": "Functional Reactive Programming (FRP) systems have traditionally been categorized into \"pull\" and \"push\" paradigms. Events are processed eagerly or lazily, respectively, by notifying observers or by permitting them to demand updates. Naive pull-based systems can suffer time and space leaks due to legacy resource retention. Its push-based dual can be inefficient by doing redundant work, including unnecessary computations. This paper describes a hybrid approach that combines push and pull processing to achieve ideal efficiency: neither allowing time nor space leaks, while enabling efficient demand-driven execution.",
-  "summary": "The paper titled \"Push-Pull Functional Reactive Programming\" by Conal Elliott, published in 2009, presents a novel hybrid approach for Functional Reactive Programming (FRP) by combining the \"push\" and \"pull\" paradigms. The aim is to mitigate the inefficiencies and limitations associated with each paradigm when used in isolation. Pull-based systems, while lazy, can lead to time and space inefficiencies, whereas push-based systems may perform redundant computations. Elliott proposes a new model which leverages both paradigms to achieve optimal efficiency, providing a more robust framework for reactive systems. \n\nThe hybrid approach aims to eliminate the time and space leaks prevalent in naive pull-based systems and reduce computational redundancy associated with push-based systems. This paper is significant in enhancing the performance and composability of reactive programming models, especially in scenarios demanding efficient event-driven execution.\n\nThe impact of this work is noted in various domains of FRP, as it aids in the design of more efficient reactive systems, influencing both academic research and practical implementations of FRP in software systems. The concepts discussed in Elliott's work have been cited in subsequent research, such as Lambert Meertens' \"Evaluating the Instant Player Programming Model for Interactive Applications\" and Nilsson et al.'s work on \"Functional Reactive Programming, Continued\", which further explore and validate push-pull mechanisms in FRP systems. The hybrid model suggests pathways towards effective demand-driven execution without compromising performance, which has implications for improving the design of contemporary programming languages and paradigms.",
+  "abstract": "Functional reactive programming (FRP) has simple and powerful semantics, but has resisted efficient implementation. In particular, most past implementations have used demand-driven sampling, which accommodates FRP’s continuous time semantics and fits well with the nature of functional programming. Consequently, values are wastefully recomputed even when inputs don’t change, and reaction latency can be as high as the sampling period. This paper presents a way to implement FRP that combines data- and demand-driven evaluation, in which values are recomputed only when necessary, and reactions are nearly instantaneous. The implementation is rooted in a new simple formulation of FRP and its semantics and so is easy to understand and reason about. On the road to a new implementation, we’ll meet some old friends (monoids, functors, applicative functors, monads, morphisms, and improving values) and make some new friends (functional future values, reactive normal form, and concurrent “unambiguous choice”).",
+  "summary": "The paper develops a hybrid implementation model for functional reactive programming that combines push-based evaluation for discrete changes with pull-based evaluation for continuous time. Its central decomposition represents reactive behaviors as reactive values composed with time functions. Reactive values expose discrete phase changes and can be evaluated and cached incrementally, while time functions retain demand-driven sampling for continuously varying quantities.\n\nThe paper also gives a denotationally grounded interface based largely on standard algebraic abstractions, including functors, applicative functors, monoids, and monads. It represents events as future reactive values, introduces improving values to expose partial information about future times, and uses concurrent “unambiguous choice” to obtain faster results while preserving deterministic semantics. Monotonic sampling further avoids repeatedly searching through past event occurrences when behaviors are sampled in chronological order.\n\nSubsequent work and implementations explicitly reference these ideas. The `scalaz-reactive` library describes itself as a high-performance functional reactive library and adopts core representations corresponding to behaviors, events, reactive values, future values, and time functions. ([github.com](https://github.com/scalaz/scalaz-reactive)) The PureScript `hareactive` library states that it is highly inspired by this paper and implements higher-order FRP with continuous time. ([pursuit.purescript.org](https://pursuit.purescript.org/packages/purescript-hareactive/0.0.8)) A later implementation thesis identifies the paper’s separation of discrete and continuous signals as the basis for implementing a hybrid system intended to improve performance and reaction latency. ([newtraell.cs.uchicago.edu](https://newtraell.cs.uchicago.edu/files/phd_paper/lamonts.pdf)) FRP educational and research materials also cite the paper as a useful account of mapping FRP’s semantic model to an applicative and functor-based API. ([github.com](https://github.com/HeinrichApfelmus/frp-guides))",
   "raw_url": "http://conal.net/papers/push-pull-frp/push-pull-frp.pdf",
   "source_type": "external",
   "filepath": "languages-paradigms/functional_reactive_programming/README.md",
   "filename": "Push-Pull Functional Reactive Programming",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:56"
 }

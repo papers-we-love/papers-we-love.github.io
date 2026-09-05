@@ -1,34 +1,32 @@
 {
   "uuid": "baffed1e50ce11ac0d1164d6a6cfca18d034951cfe25bde18f375188671d8295",
   "title": "Operators on Inhomogeneous Time Series",
-  "publication_date": "1995-08-18",
+  "publication_date": "February 1, 2000 (Olsen & Associates Working Paper No. 324); journal version published in 2001 in the International Journal of Theoretical and Applied Finance, 4(1), 147–177",
   "authors": [
-    "Eamonn Keogh",
-    "Jessica Lin",
-    "Li Wei",
-    "Sami Lonardi"
+    "Gilles O. Zumbach",
+    "Ulrich A. Müller"
   ],
   "keywords": [
-    "approximation",
-    "data-mining",
-    "dynamic-time-warping",
-    "hierarchical-clustering",
-    "inhomogeneous-data",
-    "pattern-discovery",
-    "sax",
-    "similarity-search",
-    "symbolic-aggregate",
-    "time-series"
+    "convolution",
+    "derivative",
+    "exponential-moving-average",
+    "high-frequency-finance",
+    "inhomogeneous-time-series",
+    "macroscopic-operators",
+    "microscopic-operators",
+    "moving-average",
+    "operators",
+    "volatility"
   ],
   "category_path": [
     "time_series"
   ],
-  "abstract": "Time series is a ubiquitous data type in many disciplines, however the massive size of time series makes it difficult to analyze using traditional data mining techniques. Reducing the dimensionality of time series is critical. Although much research effort has been put into dimensionality reduction of time series, most previous work has focused on offline data, which are inhomogeneous, and can be represented by multiple segments, each with their own statistical properties. In this paper, we introduce several operators defined on inhomogeneous time series that reflect its unique properties and demonstrate their use with comprehensive experiments.",
-  "summary": "The paper \"Operators on Inhomogeneous Time Series\" explores the challenges associated with analyzing time series data, which is prevalent across numerous disciplines but often difficult to manage due to its large size. The study emphasizes the importance of dimensionality reduction in making time series data more manageable and introduces novel operators specifically designed for processing inhomogeneous time series.\n\nKey contributions include the introduction of specialized operators that capture the unique characteristics of time series data divided into multiple segments with distinct statistical features. The authors demonstrate the efficacy of these operators through a series of comprehensive experiments.\n\nThe impact of this paper is noticeable in the field of data mining and time series analysis, particularly in how researchers approach the problem of handling inhomogeneous time series data. It has influenced subsequent research by inspiring novel approaches to symbolic aggregate approximation and the application of dynamic time warping for similarity search. The paper's methodologies have also proven useful in applications involving hierarchical clustering and pattern discovery.\n\nWhile the paper itself appears to have made a contribution primarily in academia, further concrete references to its impact in industry are not prevalent. Nonetheless, its foundational concepts have fed into broader machine learning and data mining literature.",
+  "abstract": "We present a toolbox to compute and extract information from inhomogeneous (i.e. unequally spaced) time series. The toolbox contains a large set of operators, mapping from the space of inhomogeneous time series to itself. These operators are computationally efficient (time and memory-wise) and suitable for stochastic processes. This makes them attractive for processing high-frequency data in finance and other fields. Using a basic set of operators, we easily construct more powerful combined operators which cover a wide set of typical applications. The operators are classified in macroscopic operators (that have a limit value when the sampling frequency goes to infinity) and microscopic operators (that strongly depend on the actual sampling). For inhomogeneous data, macroscopic operators are more robust and more important. Examples of macroscopic operators are (exponential) moving averages, differentials, derivatives, moving volatilities, etc ...",
+  "summary": "## Summary\n\nThe paper develops a computational framework for analyzing unequally spaced time series, with particular emphasis on high-frequency financial data. Its central idea is to represent common time-series transformations as operators that map one inhomogeneous time series into another. The framework explicitly accounts for irregular observation times rather than first forcing the data onto a regular grid.\n\nThe paper distinguishes **macroscopic operators**, whose behavior becomes stable as sampling frequency increases, from **microscopic operators**, whose output depends strongly on the precise sampling pattern. It argues that macroscopic operators are generally more robust for irregular data. The main operator families include exponential and ordinary moving averages, iterated moving averages, differential and derivative operators, moving norms, variances, standard deviations, skewness, kurtosis, correlations, volatility measures, and windowed Fourier transforms.\n\nA major technical contribution is the use of causal convolution kernels adapted to irregular sampling. The authors show how exponential moving averages can be evaluated recursively and efficiently in both time and memory. They also analyze initialization and finite-history effects, deriving practical build-up intervals and explaining how kernel shape and tail length affect responsiveness and estimation error. Repeated exponential moving averages are used to construct smoother, approximately rectangular kernels without the abrupt cutoff associated with a simple rectangular moving average.\n\nThe differential operator is designed to estimate returns on irregularly sampled data while reducing the noise and computational inefficiency associated with directly evaluating a lagged value at an irregular time. The paper further introduces normalized derivative and volatility constructions, emphasizing that volatility depends on two separate time scales: the return horizon and the averaging horizon. This distinction is important for comparing estimates across frequencies and for conditional volatility forecasting.\n\nThe framework is demonstrated on irregular foreign-exchange observations, including USD/CHF data. The examples show that the operators can identify market shocks, intraday volatility patterns, changing distributional shape, and trading activity. Microscopic operators are used for tick-related quantities such as tick frequency and activity, while macroscopic operators are preferred for quantities intended to be robust to sampling irregularity.\n\n## Subsequent use and influence\n\nThe paper became part of the technical foundation cited in later high-frequency-finance work. The authors’ operator framework was incorporated into the discussion and implementation of high-frequency time-series methods in *An Introduction to High-Frequency Finance*, which cites the 2001 journal article. ([sciencedirect.com](https://www.sciencedirect.com/book/9780122796715/an-introduction-to-high-frequency-finance))\n\nThe NAG Library’s time-series documentation cites the paper and documents routines for iterated exponential moving averages over irregularly spaced observations, providing evidence of dissemination into numerical software used for applied time-series analysis. ([afs.enea.it](https://www.afs.enea.it/software/libnag/nagdoc_fl24/pdf/G13/g13mff.pdf))\n\nLater research on irregularly sampled measurements cites the paper when extending time-series monitoring methods to nonuniform observations. ([papers.phmsociety.org](https://www.papers.phmsociety.org/index.php/phmconf/article/view/2562)) The framework is also cited in subsequent financial-market research concerning volatility, realized measures, and market dynamics. ([ideas.repec.org](https://ideas.repec.org/a/wsi/ijtafx/v04y2001i01ns0219024901000900.html))\n\nA U.S. patent application concerning market-condition measurement describes composing time-series operators and cites the Zumbach–Müller work, indicating use of the operator perspective in a financial-technology context. ([patents.justia.com](https://patents.justia.com/patent/20030149648))\n\nThe available evidence supports concrete reuse and citation in high-frequency finance, numerical time-series software, irregular-sampling research, and financial technology. It does not establish that the paper was the sole origin of these later methods or that its framework became a dominant industry standard.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/time_series/operators-on-inhomogeneous-time-series.pdf",
   "source_type": "pdf",
   "filepath": "time_series/operators-on-inhomogeneous-time-series.pdf",
   "filename": "operators-on-inhomogeneous-time-series.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:56"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:53"
 }

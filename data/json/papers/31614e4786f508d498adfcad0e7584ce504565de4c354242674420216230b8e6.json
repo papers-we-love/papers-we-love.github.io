@@ -1,31 +1,34 @@
 {
   "uuid": "31614e4786f508d498adfcad0e7584ce504565de4c354242674420216230b8e6",
-  "title": "Formal Certification of a Compiler Back-end or: Programming a Compiler with a Proof Assistant",
-  "publication_date": "June 2004",
+  "title": "Coq: The world’s best macro assembler?",
+  "publication_date": "September 16–18, 2013; Proceedings of the 15th International Symposium on Principles and Practice of Declarative Programming (PPDP 2013), Madrid, Spain; published by ACM",
   "authors": [
-    "Xavier Leroy"
+    "Andrew Kennedy",
+    "Jonas B. Jensen",
+    "Nick Benton",
+    "Pierre-Evariste Dagand"
   ],
   "keywords": [
-    "compilers",
     "coq",
-    "correctness-proofs",
-    "formal-methods",
+    "dependent-types",
+    "embedded-dsl",
     "formal-verification",
-    "mechanized-proof",
-    "program-verification",
-    "proof-assistants",
-    "software-engineering",
-    "software-reliability"
+    "machine-code-verification",
+    "separation-logic",
+    "ssreflect",
+    "type-classes",
+    "verified-assembler",
+    "x86-architecture"
   ],
   "category_path": [
     "faults_and_verification"
   ],
-  "abstract": "We describe the formal verification of a moderately-optimizing compiler back-end for the C minor programming language. The compiler is implemented and specified in the Coq proof assistant. In addition to the executable code of the compiler, extensive formal proofs of semantic preservation of transformations and similar correctness properties are constructed and verified inside the Coq system. The compiler backend translates C minor to PowerPC assembly code through several intermediate languages. We show how the use of a proof assistant such as Coq can increase confidence in the correctness of industrial-strength software, making the daunting goal of fully certified software more realistic, given powerful tools and better methodologies.",
-  "summary": "The paper \"Formal Certification of a Compiler Back-end or: Programming a Compiler with a Proof Assistant\" by Xavier Leroy explores the formal verification of a compiler back-end. Using the Coq proof assistant, the paper presents the implementation and specification of a compiler for the C minor programming language. It emphasizes the utility of Coq in enhancing confidence in software correctness through formal proofs of semantic preservation and correctness over several intermediate representations leading to PowerPC assembly code.\n\nThe research has catalyzed further investigation into formal methods in software engineering, particularly in compiler verification. Leroy's approach has been influential in forming grounds for certified software development, evident in other projects and papers that cite this work, such as:\n- CompCert (https://hal.inria.fr/inria-00439210)\n- \"Verified Software Toolchain\" by Appel et al., (https://doi.org/10.1145/1810295.1810366)\n- \"Compiling Functional Languages by Proof\" by Nakata et al. (https://link.springer.com/chapter/10.1007/978-3-642-22913-8_4)\n\nThese references demonstrate the paper's impact on the industry and academia, furthering the development of verified and trusted compilers through mechanized proof and formal verification methodologies.",
+  "abstract": "We describe a Coq formalization of a subset of the x86 architecture. One emphasis of the model is brevity: using dependent types, type classes and notation we give the x86 semantics a makeover that counters its reputation for baroqueness. We model bits, bytes, and memory concretely using functions that can be computed inside Coq itself; concrete representations are mapped across to mathematical objects in the SSREFLECT library (naturals, and integers modulo 2 n ) to prove theorems. Finally, we use notation to support conventional assembly code syntax inside Coq, including lexically-scoped labels. Ordinary Coq definitions serve as a powerful “macro” feature for everything from simple conditionals and loops to stack-allocated local variables and procedures with parameters. Assembly code can be assembled within Coq, producing a sequence of hex bytes. The assembler enjoys a correctness theorem relating machine code in memory to a separation-logic formula suitable for program verification.",
+  "summary": "## Overview\n\nThe paper presents a Coq-based framework for modeling, programming, assembling, and reasoning about a subset of the x86 instruction-set architecture. Its central design goal is to keep the formalization executable and relatively concise while retaining strong typing and machine-level fidelity. The authors use dependent types, type classes, implicit coercions, indexed inductive types, monadic abstractions, and custom notation to make low-level code readable inside Coq.\n\n## Technical contributions\n\n- **Executable machine model:** Bits and words are represented concretely as tuples of booleans, with types parameterized by word length. The model includes bytes, 16-bit words, 32-bit words, 64-bit words, registers, flags, memory, instruction decoding, and instruction execution.\n- **Mathematical reasoning over concrete data:** Concrete bit-vector representations are connected to natural numbers and integers modulo powers of two through the SSReflect/Mathematical Components ecosystem. This allows arithmetic properties, such as associativity of addition, to be proved using established algebraic lemmas.\n- **Structured memory and I/O abstractions:** Memory is represented as finite partial maps implemented using tries. Reader and writer terms provide functional, imperative, and logical interpretations of byte sequences, supporting reuse across decoding, encoding, execution, and specification.\n- **Assembly embedded in Coq:** Custom notation supports assembly syntax resembling Intel notation. Lexically scoped labels are implemented using higher-order abstract syntax, while ordinary Coq definitions act as user-defined macros.\n- **Verified assembly:** The framework can assemble programs inside Coq into hexadecimal machine code. The authors prove that instruction decoding is a left inverse of encoding and establish that assembling code preserves the relevant correctness properties.\n- **Program-level abstractions:** The system supports loops, conditionals, procedures, stack-allocated locals, calling conventions, data directives, and scoped labels. Examples include factorial computation, a Game of Life implementation, and a regular-expression compiler targeting x86 machine code.\n- **Verification connection:** Assembled machine code is related to separation-logic specifications, enabling machine-level programs to be verified within the same environment used to define and assemble them.\n\n## Evaluation and limitations\n\nThe paper reports that the concrete bit-vector implementation is executable inside Coq, achieving approximately 150,000 32-bit increments per second and 11,000 32-bit additions on the reported test machine. The model deliberately covers only a subset of x86, and several aspects remain incomplete, including branch-displacement decisions, richer memory permissions, and some external executable-format tooling. The authors also identify scalability concerns: computation performed directly inside Coq can be slower and more memory-intensive than extracted native code, and opaque definitions in supporting libraries can interfere with computation.\n\n## Significance and subsequent influence\n\nThe paper was later presented as a **PPDP 2023 10-Year Most Influential Paper**, indicating formal recognition by the conference community of its longer-term influence. ([2023.splashcon.org](https://2023.splashcon.org/details/ppdp-2023/5/10-Year-Most-Influential-Paper-Talk-Coq-the-world-s-best-macro-assembler-)) Its approach has also been explicitly cited as inspiration for later verified-assembler experiments, including an experimental Lean 4 macro assembler targeting zkEVM-related development; that project describes itself as inspired by the paper but is not evidence of production or industrial deployment. ([github.com](https://github.com/Verified-zkEVM/evm-asm)) The search found references in subsequent formal-verification and instruction-set work, but no independently documented industrial product adoption directly attributable to this paper. The paper’s concrete legacy is therefore primarily methodological: integrating executable ISA models, embedded assembly notation, verified encoding, and program specifications in a single proof-assistant environment. ([microsoft.com](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/12/coqasm.pdf))",
   "raw_url": "https://research.microsoft.com/en-us/um/people/nick/coqasm.pdf",
   "source_type": "external",
   "filepath": "faults_and_verification/README.md",
   "filename": "Coq: The world’s best macro assembler?",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

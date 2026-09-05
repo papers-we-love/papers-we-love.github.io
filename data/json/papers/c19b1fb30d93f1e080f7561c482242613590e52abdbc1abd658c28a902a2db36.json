@@ -1,32 +1,32 @@
 {
   "uuid": "c19b1fb30d93f1e080f7561c482242613590e52abdbc1abd658c28a902a2db36",
-  "title": "Making reliable distributed systems in the presence of software errors",
-  "publication_date": "December 2003",
+  "title": "A History of Erlang",
+  "publication_date": "June 9–10, 2007 (HOPL-III: Proceedings of the Third ACM SIGPLAN Conference on History of Programming Languages, San Diego, California, USA)",
   "authors": [
     "Joe Armstrong"
   ],
   "keywords": [
-    "actor-model",
-    "concurrency",
+    "concurrency-oriented-programming",
     "distributed-systems",
     "erlang",
+    "erlang-otp",
     "fault-tolerance",
-    "productivity",
-    "programming-language",
-    "software-errors",
-    "systems-engineering",
-    "telecommunications"
+    "functional-programming",
+    "hot-code-replacement",
+    "message-passing",
+    "telecommunications",
+    "virtual-machines"
   ],
   "category_path": [
     "languages",
     "erlang"
   ],
-  "abstract": "This thesis is about Erlang, a concurrent programming language designed for programming reliable industrial applications. Erlang was designed to make it easier to program fault-tolerant distributed software systems. I describe the requirements for such a language, the history of its design and its implementation, and some of the applications written in Erlang. I also describe a novel style of programming, error detection, and recovery, which is used to construct reliable systems that continue to work despite the presence of software errors.",
-  "summary": "Joe Armstrong's paper presents the design and implementation of Erlang, a programming language developed to create reliable distributed systems in the telecommunications industry, focusing on managing software errors effectively. It details Erlang's concurrency model, which is largely influenced by the actor model, enabling fault-tolerant and scalable systems.\n\nThe paper significantly impacted both academic research and industry practices, particularly in fields requiring high-reliability concurrent computations. Erlang's influence is evidenced in its adoption by industry leaders such as Ericsson for building robust telecommunications systems. Furthermore, its concurrency principles inspired subsequent languages and frameworks.\n\nAcademic references to this paper or its concepts can be found in articles about the development of programming languages designed for concurrent and distributed systems. For instance, researchers have cited this work in studies on improving fault tolerance in distributed applications and during comparative analyses of concurrency models.\n\n1. Armstrong, J. (2007). \"A history of Erlang.\" *Proceedings of the third ACM SIGPLAN conference on History of programming languages*. [DOI:10.1145/1238844.1238850](https://dl.acm.org/doi/10.1145/1238844.1238850)\n2. Cesarini, F., & Vinoski, S. (2009). \"Erlang Programming: A Concurrent Approach to Software Development.\" [O'Reilly Media](https://www.oreilly.com/library/view/erlang-programming/9780596803940/).\n3. He, J., Joshi, N., & Singh, I. (2019). \"Comparative study of fault tolerance features in concurrent programming languages.\" *Journal of Systemics, Cybernetics and Informatics.* [ResearchGate](https://www.researchgate.net/publication/337673843_Comparative_study_of_fault_tolerance_features_in_concurrent_programming_languages).\n\nThe influence of Erlang and the principles detailed in Armstrong's paper continue to resonate across both current academic inquiries into distributed systems and practical, industry-scale projects.",
+  "abstract": "Erlang was designed for writing concurrent programs that “run forever.” Erlang uses concurrent processes to structure the program. These processes have no shared memory and communicate by asynchronous message passing. Erlang processes are lightweight and belong to the language, not the operating system. Erlang has mechanisms to allow programs to change code “on the fly” so that programs can evolve and change as they run. These mechanisms simplify the construction of software for implementing non-stop systems.\nThis paper describes the history of Erlang. Material for the paper comes from a number of different sources. These include personal recollections, discussions with colleagues, old newspaper articles and scanned copies of Erlang manuals, photos and computer listings and articles posted to Usenet mailing lists.",
+  "summary": "## Paper summary\n\n- Erlang originated at Ericsson's Computer Science Laboratory in 1986 as an attempt to improve the development of highly concurrent, distributed, fault-tolerant telecommunications systems. Its requirements were shaped by telephone exchanges, which had to manage very large numbers of simultaneous activities, tolerate software and hardware failures, operate under soft real-time constraints, and support maintenance and code upgrades without service interruption.\n\n- The language's central architectural decisions were lightweight language-level processes, isolated memory, asynchronous message passing, and copying rather than shared mutable data. These choices were intended to prevent one process from corrupting another, simplify distributed failure recovery, and make systems easier to compose. Selective receive, mailboxes, links, supervision-oriented recovery, and dynamic code replacement emerged from practical experimentation with telephony applications.\n\n- Erlang evolved from experiments combining Prolog, functional programming, and concurrency. Early implementations were written in Prolog; the JAM virtual machine and later BEAM substantially improved execution speed and code compactness. The language subsequently gained functional features, binary and bit-level processing, distributed execution, real-time databases through Mnesia and ETS, static analysis through Dialyzer, and reusable OTP behaviors for client-server systems, event handling, finite-state machines, and supervision.\n\n- Industrial use was decisive in Erlang's maturation. The ACS/Dunder prototype reported substantially higher productivity than comparable PLEX implementations, although Erlang was initially considered too slow for production. The AXD301 project demonstrated that Erlang and OTP could support a large, distributed, highly reliable telecommunications product with millions of lines of code, dynamic reconfiguration, processor failover, and reported nine-nines reliability.\n\n- The paper identifies two unplanned historical turning points: the collapse of Ericsson's AXE-N project in 1995, which created an opportunity to deploy Erlang in a major product, and Ericsson's 1998 ban on Erlang for new development, which encouraged the 1998 open-source release and accelerated adoption outside Ericsson. Armstrong characterizes the resulting programming model as concurrency-oriented programming: systems consist of isolated components that communicate through asynchronous protocols.\n\n- The paper's broader lessons are that prototypes can guide language design before formal specifications are feasible, practical demonstrations are often more persuasive than theory, and implementation constraints can distort programming practice. It also identifies unresolved issues, including atom-table limits, imperfect process isolation, weak distributed security, difficult foreign-code integration, insufficient protocol specification, and limited support for treating modules and code versions as first-class entities.\n\n## Documented subsequent influence\n\nThe paper is repeatedly cited as a historical and technical source in later work concerning Erlang's concurrency model, secure distributed Erlang systems, and language implementations. For example, a dissertation on concurrency support for Idris and Erlang cites it when introducing Erlang's process-based model; a later workshop paper on secure Erlang systems cites it as background for Erlang's design and history; and other academic bibliographies use it as the standard historical account of Erlang's development. These citations demonstrate continued use as a foundational reference, although they do not by themselves establish that specific technical mechanisms were directly derived from this paper. ([lenary.co.uk](https://lenary.co.uk/publications/Elliott_BSc_Dissertation.pdf))\n\nPublication metadata identifies the work as a peer-reviewed HOPL-III conference paper presented in San Diego on June 9–10, 2007. ([explore.openaire.eu](https://explore.openaire.eu/search/publication?pid=10.1145%2F1238844.1238850))",
   "raw_url": "https://www.labouseur.com/courses/erlang/history-of-erlang-armstrong.pdf",
   "source_type": "external",
   "filepath": "languages/erlang/README.md",
   "filename": "A History of Erlang",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

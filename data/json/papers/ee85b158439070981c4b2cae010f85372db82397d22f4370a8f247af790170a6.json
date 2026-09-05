@@ -1,39 +1,28 @@
 {
   "uuid": "ee85b158439070981c4b2cae010f85372db82397d22f4370a8f247af790170a6",
-  "title": "Robust Physical-World Attacks on Deep Learning Visual Classification",
-  "publication_date": "2018-10-15",
+  "title": "Unikernels as Processes",
+  "publication_date": "October 11–13, 2018 (SoCC ’18, ACM Symposium on Cloud Computing)",
   "authors": [
-    "Amir Rahmati",
-    "Atul Prakash",
-    "Bo Li",
-    "Chaowei Xiao",
-    "Dawn Song",
-    "Earlence Fernandes",
-    "Ivan Evtimov",
-    "Kevin Eykholt",
-    "Tadayoshi Kohno"
+    "Dan Williams",
+    "Martin Lucina",
+    "Nikhil Prakash",
+    "Ricardo Koller"
   ],
   "keywords": [
-    "adversarial-examples",
-    "computer-vision",
-    "deep-learning",
-    "image-classification",
-    "machine-learning",
-    "neural-networks",
-    "physical-world-attacks",
-    "robust-attacks",
+    "cloud-computing",
     "security",
-    "visual-classification"
+    "unikernels",
+    "virtualization"
   ],
   "category_path": [
     "unikernels"
   ],
-  "abstract": "Deep neural networks (DNNs) have been widely adopted in various visual classification applications. Despite their great success, recent studies found that DNNs are vulnerable to adversarial examples in the digital world, where inputs are artificially perturbed to mislead DNNs into making incorrect predictions. In this work, we demonstrate that physically realizable adversarial perturbations can be generated to attack DNNs in the physical world. We develop robust attack algorithms that are capable of achieving this goal. We empirically validate the effectiveness of our attacks under various conditions, including different physical environments and object distances, and evaluate potential defenses.",
-  "summary": "The paper, \"Robust Physical-World Attacks on Deep Learning Visual Classification,\" focuses on demonstrating physical-world adversarial attacks on deep learning models used for visual classification tasks. The authors successfully generate adversarial examples that can alter neural network predictions in physical environments, showing that theoretical vulnerabilities in digital settings can be transferred to real-world scenarios. The paper introduces robust attack strategies that maintain their efficacy across varying physical circumstances, such as changes in environment and object distance.\n\nThis research highlighted significant security concerns for deep learning models, particularly in applications involving autonomous systems and surveillance, where physical-world robustness is critical. It has influenced subsequent research to further explore physical adversarial examples and robustness improvements for neural networks. The paper's findings are frequently cited in subsequent studies addressing real-world machine learning security.\n\nFor instance, the work by Athalye et al. (2018) in \"Synthesizing Robust Adversarial Examples\" ([arXiv:1707.07397](https://arxiv.org/abs/1707.07397)) builds upon the methodologies discussed, illustrating continues efforts to refine physical adversarial methods and understand their implications. Moreover, studies like \"Adversarial T-shirt! Evading Person Detectors in A Physical World\" by Xu et al. (2019) further implement concepts from this paper to design clothes that can evade person detection models, demonstrating the practical impact of these adversarial tactics in ongoing research efforts within the field of computer vision and security.",
+  "abstract": "System virtualization (e.g., the virtual machine abstraction) has been established as the de facto standard form of isolation in multi-tenant clouds. More recently, unikernels have emerged as a way to reuse VM isolation while also being lightweight by eliminating the general purpose OS (e.g., Linux) from the VM. Instead, unikernels directly run the application (linked with a library OS) on the virtual hardware. In this paper, we show that unikernels do not actually require a virtual hardware abstraction, but can achieve similar levels of isolation when running as processes by leveraging existing kernel system call whitelisting mechanisms. Moreover, we show that running unikernels as processes reduces hardware requirements, enables the use of standard process debugging and management tooling, and improves the already impressive performance that unikernels exhibit.",
+  "summary": "The paper presents a process-based execution model for unikernels in which a restricted “tender” process replaces the virtual-machine monitor. Using system-call whitelisting, specifically Linux seccomp, the prototype—called **nabla**—maps the unikernel’s narrow hypercall interface to a correspondingly narrow host system-call interface. The evaluation reports fewer host-kernel interactions, a 98% reduction in accessible kernel functions relative to an unrestricted process, up to 245% higher throughput, up to 73% shorter startup time, and 20% greater memory density compared with the virtualized execution model.\n\nThe work subsequently informed software projects built around the same design. The Solo5 project introduced the `spt` sandboxed-process target for running Solo5-based unikernels as user processes under strict seccomp-BPF isolation, while Nabla Containers applied Solo5-based library-OS techniques to container isolation. These developments provide concrete evidence that the paper’s process-based unikernel model influenced subsequent unikernel tooling and container-runtime research and development. ([people.cs.vt.edu](https://people.cs.vt.edu/djwillia/papers/socc18-unikernels_as_processes.pdf))",
   "raw_url": "https://dl.acm.org/doi/pdf/10.1145/3267809.3267845",
   "source_type": "external",
   "filepath": "unikernels/README.md",
   "filename": "Unikernels As Processes",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:05"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:57"
 }

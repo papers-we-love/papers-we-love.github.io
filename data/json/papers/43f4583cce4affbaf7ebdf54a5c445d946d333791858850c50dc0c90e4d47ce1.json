@@ -1,31 +1,31 @@
 {
   "uuid": "43f4583cce4affbaf7ebdf54a5c445d946d333791858850c50dc0c90e4d47ce1",
-  "title": "General Self-Similarity: An Overview",
-  "publication_date": "1995",
+  "title": "General self-similarity: an overview",
+  "publication_date": "November 15, 2004 (arXiv version 1); published in 2007 in *Real and Complex Singularities: Proceedings of the Australian-Japanese Workshop*, based on the workshop held September 5–8, 2005.",
   "authors": [
-    "Ilija Vukotic"
+    "Tom Leinster"
   ],
   "keywords": [
-    "chaos-theory",
-    "complex-systems",
-    "fractal",
-    "mathematical-modeling",
-    "pattern-recognition",
-    "scalability",
+    "category-theory",
+    "coalgebra",
+    "fixed-points",
+    "fractal-spaces",
+    "presheaves",
+    "recursive-definitions",
     "self-similarity",
-    "signal-processing",
-    "statistical-analysis",
-    "time-series"
+    "terminal-coalgebra",
+    "topological-spaces",
+    "universal-solutions"
   ],
   "category_path": [
     "machine_learning"
   ],
-  "abstract": "Self-similarity is a property of objects that appear the same at different scales. It has been studied in various fields, from mathematics to nature. This paper provides an overview of self-similarity, its mathematical foundations, and applications. The use of self-similarity in signal processing, image compression, and other domains is discussed, highlighting the importance of this concept in both theoretical research and practical applications.",
-  "summary": "The paper \"General Self-Similarity: An Overview\" by Ilija Vukotic presents a comprehensive overview of self-similarity a fundamental concept found across various fields such as mathematics, signal processing, and natural phenomena. The paper outlines the mathematical foundations and significant applications of self-similarity, emphasizing its role in practical areas like image compression and signal processing.\n\nA web search indicates limited direct references to this paper in subsequent research literature or industry applications. While it contributes to the broader understanding of self-similarity, its standalone impact on further research and industry advancements remains minimal. Researchers interested in the general concept of self-similarity have likely built on the overarching ideas presented in this and other works, rather than referring specifically to this paper.",
+  "abstract": "Consider a self-similar space X. A typical situation is that X looks like several copies of itself glued to several copies of another space Y , and that Y looks like several copies of itself glued to several copies of X—or the same kind of thing with more than two spaces. Thus, we have a system of simultaneous equations in which the right-hand sides (the gluing instructions) are ‘higher-dimensional formulas’.\nThis idea is developed in detail in [Lei1] and [Lei2]. The present informal seminar notes explain the theory in outline.",
+  "summary": "The paper presents an intrinsic, category-theoretic framework for describing spaces through recursive gluing equations. A self-similarity system consists of a small category indexing the component spaces and a two-sided module encoding how copies of those spaces are glued together. This data induces an endofunctor, and the intended spaces are characterized as a terminal coalgebra, or universal solution, of that endofunctor.\n\nThe framework generalizes Freyd’s characterization of the unit interval as two copies of itself glued end to end. Leinster introduces nondegenerate functors to prevent the construction from collapsing to trivial solutions, extends the theory from sets to topological spaces, and states existence and recognition results for universal solutions. The paper highlights examples including intervals, products of self-similar spaces, simplices, Cantor spaces, Sierpiński gaskets, iterated-function-system attractors, and Julia sets. Its principal topological conclusion is that, under the broad definition used, a space is self-similar exactly when it is compact and metrizable; with discrete indexing categories, the corresponding class is the totally disconnected compact metrizable spaces.\n\nThe document is explicitly an overview of two technical preprints, and the underlying theory was later consolidated and substantially developed in Leinster’s 2011 *A general theory of self-similarity*, which superseded those preprints. ([arxiv.org](https://arxiv.org/abs/math/0411343)) Subsequent work in coalgebra and theoretical computer science cites the overview and its companion papers as background for categorical treatments of recursive program schemes and coalgebraic constructions. ([www8.cs.fau.de](https://www8.cs.fau.de/ext/milius/publications/files/mm_calco.pdf)) Leinster’s later materials on coalgebraic topology also use the work as a reference for universal properties of recursively defined spaces. ([webhomes.maths.ed.ac.uk](https://webhomes.maths.ed.ac.uk/~tl/pisa/)) The available evidence indicates research influence in category theory, coalgebra, and mathematical exposition; no specific industrial deployment or product use of this overview was identified.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/machine_learning/General-self-similarity--an-overview.pdf",
   "source_type": "pdf",
   "filepath": "machine_learning/General-self-similarity--an-overview.pdf",
   "filename": "General-self-similarity--an-overview.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

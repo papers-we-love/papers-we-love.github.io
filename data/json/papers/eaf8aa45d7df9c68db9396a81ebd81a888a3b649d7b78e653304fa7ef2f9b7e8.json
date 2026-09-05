@@ -1,31 +1,34 @@
 {
   "uuid": "eaf8aa45d7df9c68db9396a81ebd81a888a3b649d7b78e653304fa7ef2f9b7e8",
   "title": "A Note on Distributed Computing",
-  "publication_date": "April 1, 1994",
+  "publication_date": "November 1994; Sun Microsystems Laboratories Technical Report SMLI TR-94-29",
   "authors": [
-    "Alan Wollrath",
+    "Ann Wollrath",
     "Geoff Wyant",
     "Jim Waldo",
-    "Samuel C. Kendall"
+    "Sam Kendall"
   ],
   "keywords": [
-    "client-server",
-    "compatability",
+    "concurrency",
     "distributed-computing",
+    "distributed-objects",
     "distributed-systems",
-    "java-runtime",
-    "networked-objects",
+    "interface-design",
+    "latency",
+    "memory-access",
+    "network-file-system",
+    "partial-failure",
     "remote-procedure-call"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "In this paper, we examine how a simple interface from one network address space to another can be done using Remote Procedure Call (RPC). We discuss some of the problems in trying to mirror a centralized computing architecture in a distributed environment and propose solutions based on our experiences with the implementation of a large, commercial, distributed application. We conclude that while RPC is a useful mechanism, it must be combined with other techniques to provide a complete solution for some applications.",
-  "summary": "The paper \"A Note on Distributed Computing\" explores the complexities of implementing a networked object system using Remote Procedure Call (RPC). The authors discuss challenges in adapting centralized computing paradigms to distributed architectures and propose solutions derived from their experience with a commercial distributed application. They emphasize that RPC should be used with complementary techniques to solve specific application problems, rather than as a standalone solution.\n\nThis paper has had a significant impact on the field of distributed systems. Its insights into the limitations and necessary adaptations of RPC influenced the development of more robust distributed systems and Java-based networked technologies. The authors' work contributed to early thoughts on Java's runtime environment and networked objects, laying groundwork for technologies like RMI (Remote Method Invocation) and influencing the design of CORBA and other distributed middleware systems that followed.\n\nThis paper is cited by many subsequent works discussing the limitations of RPC and the evolution of distributed systems frameworks. Some influential citations include:\n- **Birman, K. V. (1993).** Building Secure and Reliable Network Applications. Cornell University. [Link](https://dl.acm.org/doi/10.5555/235239).\n- **Tanenbaum, A. S., & Steen, M. V. (2002).** Distributed Systems: Principles and Paradigms. Prentice Hall.\n\nFurther exploration for exact citations might be needed as the web search was limited, yet general references to its ideas are dominant in distributed systems discussions.",
+  "abstract": "We argue that objects that interact in a distributed system need to be dealt with in ways that are intrinsically different from objects that interact in a single address space. These differences are required because distributed systems require that the programmer be aware of latency, have a different model of memory access, and take into account issues of concurrency and partial failure. We look at a number of distributed systems that have attempted to paper over the distinction between local and remote objects, and show that such systems fail to support basic requirements of robustness and reliability. These failures have been masked in the past by the small size of the distributed systems that have been built. In the enterprise-wide distributed systems foreseen in the near future, however, such a masking will be impossible.\nWe conclude by discussing what is required of both systems-level and application-level programmers and designers if one is to take distribution seriously.",
+  "summary": "The paper rejects the unified-object vision in which local and remote objects can be used interchangeably without affecting program design. It argues that distributed computing differs fundamentally from local computing in four areas: latency, memory access, partial failure, and concurrency. Latency makes fine-grained remote interaction expensive; address-space-local pointers cannot be used remotely; partial failures create indeterminate outcomes that have no direct local analogue; and distributed systems introduce asynchronous interactions without a single authority for resource management, synchronization, or recovery.\n\nThe paper further argues that these issues cannot be treated merely as implementation-level “quality of service.” Robustness, retry behavior, idempotence, duplicate suppression, locking, and recovery semantics must be represented in protocols and interfaces. Its discussion of NFS illustrates the consequences of adapting a local file-system interface to a distributed setting: soft mounts expose failures in ways that can corrupt applications, while hard mounts conceal failures by causing clients to block. The paper recommends keeping the distinction between local and remote objects visible to programmers, specifying whether interfaces are intended for local or remote use, and providing a middle ground for objects in separate address spaces on the same machine.\n\nThe paper has been used as a conceptual reference in subsequent distributed-object and programming-language research. Cook, Ibrahim, Tilevich, and Wiedermann explicitly use it as a guide for their work on language design for distributed objects, citing its analysis of latency, memory access, partial failure, and concurrency while motivating larger-granularity remote operations such as batching. ([people.cs.vt.edu](https://people.cs.vt.edu/tilevich/papers/rbi-position.pdf)) Later research on automatic distribution describes the paper as a blueprint for Java RMI and examines its implications for transparent distribution. ([citeseerx.ist.psu.edu](https://citeseerx.ist.psu.edu/document?doi=a2b26f3f53178a8e9f32c00e3f10be8ea8fdc8df&repid=rep1&type=pdf)) Oracle’s Java RMI documentation directs developers to the paper when discussing failure and recovery, while Java RMI requires remote methods to account for communication-related failures through RemoteException. ([docs.oracle.com](https://docs.oracle.com/javase/6/docs/technotes/guides/rmi/hello/hello-world.html)) Accounts of the Jini project also identify the paper’s distinctions between local and distributed design as central to that project’s design approach. ([informit.com](https://www.informit.com/store/jini-specifications-edited-by-ken-arnold-9780201726176)) The paper was subsequently published as a chapter in *Mobile Object Systems* in 1996. ([dblp.org](https://dblp.org/pid/91/3861))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/a-note-on-distributed-computing.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/a-note-on-distributed-computing.pdf",
   "filename": "a-note-on-distributed-computing.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:51"
 }

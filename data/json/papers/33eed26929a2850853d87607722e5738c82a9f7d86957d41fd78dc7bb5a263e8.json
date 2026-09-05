@@ -1,28 +1,31 @@
 {
   "uuid": "33eed26929a2850853d87607722e5738c82a9f7d86957d41fd78dc7bb5a263e8",
   "title": "Programming Languages: Application and Interpretation",
-  "publication_date": "2003",
+  "publication_date": "November 16, 2012 (Second Edition)",
   "authors": [
     "Shriram Krishnamurthi"
   ],
   "keywords": [
-    "functional-programming",
+    "closures",
+    "continuations",
+    "contracts",
+    "desugaring",
+    "garbage-collection",
     "interpreters",
-    "language-semantics",
-    "program-semantics",
+    "lexical-scoping",
+    "mutation",
     "programming-languages",
-    "syntax-analysis",
     "type-systems"
   ],
   "category_path": [
     "languages-theory"
   ],
-  "abstract": "A heavy reliance on examples and a well-designed syntax marked the text. The text was intended to provide a solid foundation in the basic concepts of programming languages, with a focus on functional programming. The concepts of programming languages, their interpretation, and the syntax and semantics were discussed with practical examples.",
-  "summary": "The book titled \"Programming Languages: Application and Interpretation\" by Shriram Krishnamurthi serves as an educational resource primarily for teaching programming languages and their semantics. It emphasizes practical aspects such as interpreters, type systems, and functional programming. The book has been utilized in various university courses to teach these concepts to students. There is limited direct evidence of its impact on specific research papers or industry outcomes beyond its educational use. The text laid groundwork for teaching methods in programming language courses across multiple institutions.\n\nFor example, Brown University has utilized Krishnamurthi's work in their courses, credited as a comprehensive resource for understanding programming language implementation and theory (https://cs.brown.edu/courses/cs173/2021/B.html). Similarly, this book has influenced courses at Northeastern University and other educational institutions (https://course.ccs.neu.edu/cs4410/). This presence in academia underscores its influence as a foundational text, rather than as a direct precursor to new technologies or research findings.",
+  "abstract": "No abstract is included in the paper. The document is a book-length instructional text rather than a conventional research paper.",
+  "summary": "## Overview\n\n*Programming Languages: Application and Interpretation* is a practical and conceptual introduction to programming-language implementation. It develops a language incrementally, using Racket and Typed PLAI to demonstrate how syntax, semantics, interpreters, desugaring, runtime representations, and static and dynamic program analyses relate to one another.\n\nThe book begins with parsing and abstract syntax trees, then constructs interpreters for arithmetic and function languages. It explains substitution, environments, lexical scope, closures, eager and lazy application, and the distinction between implementation strategy and language semantics. Mutation is introduced through boxes and variables, motivating the separation between environments, which preserve lexical bindings, and stores, which model mutable locations and persistent state.\n\nSubsequent material develops recursion and cyclic data, object systems, inheritance, prototypes, multiple inheritance, mixins, traits, and dynamic dispatch. The treatment of memory management compares manual reclamation, reference counting, conservative garbage collection, and precise garbage collection, emphasizing soundness, completeness, reachability, and representation constraints.\n\nThe book also examines desugaring and macros as syntax-to-syntax transformations, including hygienic macro expansion, identifier capture, continuation-passing style, generators, threads, and first-class continuations. Its chapters on types cover type soundness, progress and preservation, parametric polymorphism, type inference through constraint generation and unification, union and intersection types, recursive types, subtyping, and object types. Contracts provide the corresponding dynamic perspective, including higher-order contracts, deferred checking, mutation, contract composition, and blame assignment.\n\nThe final discussion compares eager, lazy, call-by-name, call-by-need, and reactive application semantics. It explains how laziness requires suspended computations and strictness points, while reactive programming constructs dataflow graphs and must address evaluation order and glitches.\n\n## Main contributions and takeaways\n\n- Interpreters provide an executable account of language semantics and expose design choices that are often hidden by host-language implementations.\n- Environments and stores separate lexical scope from mutable state, providing a useful implementation model for closures and mutation.\n- Desugaring can reduce a language core, add expressive surface constructs, and serve as a general program-transformation mechanism.\n- Continuations expose the relationship between control flow, stacks, generators, coroutines, threads, and web-program structure.\n- Static types and dynamic contracts enforce different classes of invariants, with distinct trade-offs in precision, timing, expressiveness, and error reporting.\n- Application semantics—including eager, lazy, and reactive evaluation—substantially affect observable behavior, resource use, mutation, and program structure.\n\n## Documented influence\n\nThe author’s official PLAI site reports that the text has been used by more than fifty academic institutions and describes *Programming and Programming Languages* as a later pedagogical branch whose second half revises material from PLAI’s second edition. ([plai.org](https://www.plai.org/)) A later programming-languages education text, *Centering Humans in the Programming Languages*, explicitly identifies PLAI as an influence on its emphasis on implementation-based coursework and frequent understanding checks. ([users.wpi.edu](https://users.wpi.edu/~rbohrer/pub/splashe23.pdf)) The book is also cited as a teaching resource in subsequent programming-languages and computing-education materials. ([doi.org](https://doi.org/10.1145/3649823))\n\nThe available evidence supports a documented influence primarily on programming-language education and the design of subsequent instructional texts. I did not find reliable evidence in the searched sources establishing a specific industrial system whose implementation directly derives from this edition.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages-theory/programming-languages-application-and-interpretation.pdf",
   "source_type": "pdf",
   "filepath": "languages-theory/programming-languages-application-and-interpretation.pdf",
   "filename": "programming-languages-application-and-interpretation.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

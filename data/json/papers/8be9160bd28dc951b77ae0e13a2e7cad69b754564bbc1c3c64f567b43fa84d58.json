@@ -1,31 +1,27 @@
 {
   "uuid": "8be9160bd28dc951b77ae0e13a2e7cad69b754564bbc1c3c64f567b43fa84d58",
-  "title": "An Economic Approach to “Sticky Minds” and “Walled Gardens”",
-  "publication_date": "2002",
+  "title": "Emergent Economies for Role Playing Games",
+  "publication_date": "2012 (International Journal of Intelligent Games & Simulation, Vol. 7, No. 3, pp. 35–48)",
   "authors": [
-    "Ian Parberry"
+    "Ian Parberry",
+    "Jonathon Doran"
   ],
   "keywords": [
-    "consumer-behavior",
-    "digital-markets",
-    "economic-approach",
-    "game-theory",
-    "internet-economics",
-    "lock-in",
-    "network-effects",
-    "online-commerce",
-    "sticky-minds",
-    "walled-gardens"
+    "agent-intelligence",
+    "autonomous-trading-agents",
+    "economics",
+    "machine-learning",
+    "role-playing-games"
   ],
   "category_path": [
     "economics"
   ],
-  "abstract": "The ability for a supplier of digital content to gain and hold a captive audience is an important concept that drives many business strategies on the Internet. This paper explains and expands on these strategies using concepts from classical and modern economics, analyzing both text and graphic advertising. The idea is to persuade a potential customer to visit and stay within a particular “walled garden”, increasing the chance that they will become a paying customer. Decay of knowledge that exists in such a world is represented by a Markov chain that makes a transition to a state of pure ignorance at a constant rate. Some interesting applications of computer science in analyzing these competing models for modern online commerce are expanded upon in the conclusion.",
-  "summary": "The paper \"An Economic Approach to 'Sticky Minds' and 'Walled Gardens'\" published by Ian Parberry in 2002, explores the strategies used by digital content suppliers to attract and retain consumers within 'walled gardens', utilizing concepts from both classical and modern economics. This work delves into the implications of consumer lock-in and network effects in online markets, applying computer science principles such as Markov chains to model knowledge decay and consumer behavior over time. Extensive web searches yield limited direct citation of this paper in subsequent research literature, indicating its niche application primarily confined to the intersection of economic models and digital market analysis without broader adoption in mainstream economic or technological discourse.",
+  "abstract": "We present a novel application of economics to the problem of determining prices for goods and services within computer role playing games, particularly those with persistent worlds. These games typically determine prices a priori, and leave them fixed for the game’s duration. Unlike the real world, games are judged by the amount of interest they generate within players, and we believe that allowing prices to be changed in response to player actions adds interesting gameplay elements. The field of economics provides a rich body of literature discussing how prices may be determined, and we have adapted these ideas into an economic model suitable for use with role playing games. Our price update algorithms provide interesting behaviour, while preserving stability under a range of conditions. Our experiments simulate daily trading over 5 year intervals in order to produce evidence of short-term and long-term behavior. Our results indicate that the novel economic model we present is sufficiently stable, resilient, and consistent with behaviors of real world economies to merit implementation in role playing games.",
+  "summary": "### Summary\n\n- The paper presents an agent-based economic model for role-playing games in which NPCs maintain individual price beliefs, submit bids and asks through a double auction, produce and consume commodities, and update their beliefs based on successful or unsuccessful trades. NPC roles are dynamically reallocated: unprofitable agents become bankrupt and are replaced by agents assigned to more profitable professions. ([ianparberry.com](https://ianparberry.com/pubs/econ.pdf))\n- Experiments with a fantasy-oriented production system and randomly generated production rules reported bounded price fluctuations, recovery after supply shocks, role reallocation, and low computational and memory requirements. The authors also reported testing approximately 1.5 billion randomly generated economies, of which about 2.7 million passed their behavioral screening criteria. ([ianparberry.com](https://ianparberry.com/pubs/econ.pdf))\n- The clearest evidence of subsequent practical influence located in the search was implementation-oriented rather than a substantial peer-reviewed research lineage. The open-source **bazaarBot** project describes itself as a free-market simulator based on this paper, and the project’s documentation identifies the paper as its underlying model. ([github.com](https://github.com/larsiusprime/bazaarBot)) A separate Unity-based **EconSim** project likewise states that it is based on the paper and implements related features such as agent price beliefs, commodity dependencies, auctions, bankruptcy, and profession changes. ([github.com](https://github.com/omikun/EconSim))\n- A contemporary game-development article also describes implementing the paper’s method as an open-source economics engine, indicating dissemination of the model among game developers. ([gamedev.net](https://gamedev.net/tutorials/programming/general-and-gameplay-programming/bazaarbot-an-open-source-economics-engine-r3206)) Beyond these implementation references, the search did not identify a clearly documented body of later research that directly extends or evaluates this specific model.",
   "raw_url": "https://ianparberry.com/pubs/econ.pdf",
   "source_type": "external",
   "filepath": "economics/README.md",
   "filename": "Emergent Economies for Role Playing Games (2012)",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

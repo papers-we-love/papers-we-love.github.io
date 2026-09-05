@@ -1,30 +1,34 @@
 {
   "uuid": "edb86bbd4f2ed030c4233a9d604911e66d2e0a5d4932f36935bbd95e41ac7f14",
   "title": "Common Ground and Coordination in Joint Activity",
-  "publication_date": "2004",
+  "publication_date": "May 11, 2005 (published as Chapter 6 in Organizational Simulation; the manuscript is dated June 7, 2004)",
   "authors": [
-    "David R. Millen",
-    "John F. Patterson"
+    "David D. Woods",
+    "Gary Klein",
+    "Jeffrey M. Bradshaw",
+    "Paul J. Feltovich"
   ],
   "keywords": [
-    "collaboration",
+    "automation",
+    "cognitive-systems-engineering",
     "common-ground",
-    "communication",
-    "coordination",
-    "human-computer-interaction",
+    "coordination-breakdown",
+    "directability",
+    "human-agent-teamwork",
+    "interpredictability",
     "joint-activity",
-    "partnerships",
-    "shared-understanding"
+    "shared-understanding",
+    "team-coordination"
   ],
   "category_path": [
     "software_engineering_orgs"
   ],
-  "abstract": "In this paper, we examine the processes by which people attending to a common set of events practice coordination. We focus on the role of common ground - the set of facts, assumptions, and mutual knowledge that people share in a conversation - in establishing and maintaining that coordination. Our experimental results indicate that having a common ground helps participants coordinate more easily and successfully in completing joint activities.",
-  "summary": "The paper titled \"Common Ground and Coordination in Joint Activity\" by David R. Millen and John F. Patterson, published in 2004, explores the dynamic processes through which individuals practice coordination when engaging with a common set of events. Central to this coordination is the concept of 'common ground,' which consists of shared facts, assumptions, and mutual knowledge among participants in a joint activity. The researchers conducted experimental studies to demonstrate that a well-established common ground significantly eases the coordination process, leading to more successful joint activities.\n\nAfter a detailed examination of interaction patterns, the authors assert that common ground is essential for effective collaboration and communication, particularly in settings requiring a high degree of synchrony and shared understanding.\n\nIn conducting a web search for this paper's influence, no specific citations or widespread impact on subsequent research or industrial practices were readily found, suggesting that while the paper contributes to the academic examination of joint activities and collaboration, it might not have had a significant direct impact on later works or practical applications. Further exploration across different scholarly databases might be necessary to uncover any citation in niche academic or industrial domains.",
+  "abstract": "Generalizing the concepts of joint activity developed by Clark (1996), we describe key aspects of team coordination. Joint activity depends on interpredictability of the participants’ attitudes and actions. Such interpredictability is based on common ground—pertinent knowledge, beliefs and assumptions that are shared among the involved parties. Joint activity assumes a basic compact, which is an agreement (often tacit) to facilitate coordination and prevent its breakdown. One aspect of the Basic Compact is the commitment to some degree of aligning multiple goals. A second aspect is that all parties are expected to bear their portion of the responsibility to establish and sustain common ground and to repair it as needed.\nWe apply our understanding of these features of joint activity to account for issues in the design of automation. Research in software and robotic agents seeks to understand and satisfy requirements for the basic aspects of joint activity. Given the widespread demand for increasing the effectiveness of team play for complex systems that work closely and collaboratively with people, observed shortfalls in these current research efforts are ripe for further exploration and study.",
+  "summary": "## Summary\n\nThe paper develops a framework for understanding coordination as **joint activity**: an extended, interdependent activity in which participants intend to work together and produce a genuinely multi-party outcome. Its central concept is **common ground**, defined as the pertinent mutual knowledge, beliefs, and assumptions that allow participants to anticipate one another’s actions and communicate efficiently.\n\nThe authors argue that joint activity rests on a tacit **Basic Compact**. Participants commit to working together, aligning or accommodating their goals, making their actions sufficiently predictable, maintaining shared understanding, repairing misunderstandings, and signaling if they withdraw from the activity. Common ground is not treated as a fixed shared mental state. It is an ongoing process of preparation, clarification, updating, monitoring, anomaly detection, and repair.\n\nEffective coordination requires three properties: **interpredictability**, **common ground**, and **directability**. Interpredictability allows participants to anticipate one another’s actions. Common ground supports abbreviated communication and coordinated interpretation. Directability allows participants to modify one another’s actions as circumstances and priorities change. The paper describes coordination as a choreography of phases, each involving entry, action, and exit. Signals, agreements, conventions, precedents, and salient features of the work environment help coordinate transitions between phases, but they also impose coordination costs.\n\nA major failure mode is the **Fundamental Common Ground Breakdown**. This occurs when one participant assumes that another possesses important knowledge, while the second participant lacks that knowledge and does not realize it is expected. Because neither party detects the mismatch, subsequent actions are interpreted through incompatible assumptions. The discrepancy can grow until a coordination surprise, accident, or performance failure exposes it. The paper emphasizes that higher-level evidence, such as receiving or acknowledging a message, does not reliably demonstrate that the recipient understood and acted on its intended meaning.\n\nThe framework is applied to automation and human-agent teamwork. The authors argue that automation should behave as a team player by supporting the Basic Compact, acting predictably while remaining directable, signaling its status and intentions, interpreting human signals, negotiating goals, participating in coordination phases, managing attention, and controlling coordination costs. Automation that acts silently, hides its internal state, or changes behavior without making its intentions observable can create the same common-ground failures found in human teams. The paper therefore favors collaborative autonomy and mixed-initiative interaction over systems that pursue autonomy without sufficient transparency, negotiability, or responsiveness to human goals.\n\n## Influence and subsequent use\n\nThe paper has been explicitly cited in later research on coordination modeling, including work that uses the Joint Activity model as a conceptual framework and combines it with more operational models of communication, coordination, and multi-agent situation awareness. ([researchgate.net](https://www.researchgate.net/publication/227992178_Common_Ground_and_Coordination_in_Joint_Activity)) It has also been cited in research on adaptive organizational coordination, where the need to maintain and cultivate shared knowledge is extended to settings with changing organizational structures and participants. ([doi.org](https://doi.org/10.1007/978-3-642-02377-4_6))\n\nLater healthcare research has used the paper’s concepts when defining coordination, reconciliation of information, and maintenance of common ground in collaborative clinical work and simulation-based teamwork. ([humanfactors.jmir.org](https://humanfactors.jmir.org/2016/2/e27/)) The paper consequently appears to have contributed a recurring conceptual vocabulary for human teamwork, healthcare coordination, adaptive organizations, and human-agent or human-robot interaction. The available evidence supports influence through citation and conceptual reuse; it does not establish that the paper alone caused specific industrial deployments or standardized practices.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/software_engineering_orgs/common-ground-and-coordination-in-joint-activity.pdf",
   "source_type": "pdf",
   "filepath": "software_engineering_orgs/common-ground-and-coordination-in-joint-activity.pdf",
   "filename": "common-ground-and-coordination-in-joint-activity.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:56"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:53"
 }

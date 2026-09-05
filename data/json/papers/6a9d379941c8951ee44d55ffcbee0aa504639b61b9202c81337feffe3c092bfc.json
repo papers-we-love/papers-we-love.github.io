@@ -1,32 +1,32 @@
 {
   "uuid": "6a9d379941c8951ee44d55ffcbee0aa504639b61b9202c81337feffe3c092bfc",
   "title": "New Directions in Cryptography",
-  "publication_date": "November 1976",
+  "publication_date": "November 30, 1976; IEEE Transactions on Information Theory, volume 22, issue 6, pages 644–654",
   "authors": [
     "Martin E. Hellman",
     "Whitfield Diffie"
   ],
   "keywords": [
-    "cryptography",
-    "data-privacy",
-    "data-security",
+    "authentication",
+    "computational-complexity",
+    "cryptanalysis",
+    "diffie-hellman-key-exchange",
     "digital-signatures",
-    "encryption",
-    "information-security",
+    "discrete-logarithm-problem",
     "key-distribution",
-    "key-exchange",
-    "public-key",
-    "secure-communication"
+    "one-way-functions",
+    "public-key-cryptography",
+    "trapdoor-functions"
   ],
   "category_path": [
     "cryptography"
   ],
-  "abstract": "The developments in this paper are the result of a number of intense discussions between the authors and others interested in secure communication over insecure channels. While acknowledging the importance of prior symmetrical encryption methods, the paper reports conclusive new methods for establishing secure communication in public. A method presented allows for two parties who have never met before to agree on a secret shared key over an unsecured channel. This method relies on the computational difficulty of certain mathematical problems which make \"guessing\" the secret key a practically impossible task.",
-  "summary": "The seminal paper 'New Directions in Cryptography' by Whitfield Diffie and Martin E. Hellman, published in November 1976, introduced groundbreaking concepts in cryptography, including public key cryptography and key exchange methods. This work marked the shift from traditional symmetric key cryptography to asymmetric cryptography, a fundamental cornerstone in modern cryptographic practices. In particular, the Diffie-Hellman key exchange protocol proposed in this paper facilitates secure communications over an unsecured channel, laying the groundwork for secure electronic communications as we know today.\n\nThe idea that cryptographic keys could be shared over public channels without compromising secure communication was revolutionary, altering the landscape of digital security and influencing further developments in cryptographic algorithms, such as RSA encryption, which followed shortly after.\n\nThe impact of this paper has been profound, influencing both academic research and practical applications in digital communications, ranging from secure emails to Internet protocols such as HTTPS that safeguard online transactions. This work has been referenced extensively in literature (e.g., [RFC 2631 on Diffie-Hellman Key Agreement Method](https://datatracker.ietf.org/doc/html/rfc2631)) and remains a critical resource in both theoretical and applied cryptography, showcasing its lasting relevance and foundational importance in the field. Despite its age, 'New Directions in Cryptography' continues to be a pivotal reference point for developments in secure digital communications.",
+  "abstract": "Two kinds of contemporary developments in cryptography are examined. Widening applications of teleprocessing have given rise to a need for new types of cryptographic systems, which minimize the need for secure key distribution channels and supply the equivalent of a written signature. This paper suggests ways to solve these currently open problems. It also discusses how the theories of communication and computation are beginning to provide the tools to solve cryptographic problems of long standing.",
+  "summary": "The paper identifies two central problems in network cryptography: establishing private communication without a prearranged secure channel and authenticating digital messages in a manner analogous to handwritten signatures. It distinguishes conventional symmetric-key systems from public-key cryptosystems, in which encryption and decryption use related but distinct keys and the public key can be openly distributed. It also distinguishes public-key cryptosystems from public-key distribution systems, whose purpose is to allow two parties to establish a shared secret over an insecure channel.\n\nThe paper gives the foundational finite-field exponentiation construction now known as Diffie–Hellman key exchange. Each participant publishes a value derived from a secret exponent, and both independently compute the same shared value. The security argument is based on the presumed computational difficulty of the discrete logarithm problem. The authors explicitly acknowledge that the construction's security depends on the absence of substantially faster algorithms and that, at the time, a proof connecting discrete-logarithm difficulty to recovery of the shared key was unavailable.\n\nThe paper also formulates public-key cryptosystems as systems with efficiently computable inverse transformations whose corresponding secret inverse is infeasible to derive from the public transformation. It connects these systems to digital signatures, one-way functions, trapdoor one-way functions, and authentication protocols. Lamport-style one-time authentication methods and hashed-password login procedures are discussed as partial solutions. The paper further relates cryptography to computational complexity, including the classes P and NP, NP-complete problems, and the knapsack problem, while noting that worst-case complexity results do not by themselves establish practical cryptographic security.\n\nIts influence was substantial. The paper's public-key framework and key-agreement construction became the basis for later standardized Diffie–Hellman protocols; RFC 2631 explicitly identifies the 1976 work as describing a method for two parties to agree on a shared secret and standardizes a practical variant for Internet use. ([rfc-editor.org](https://www.rfc-editor.org/info/rfc2631/)) NIST historical and technical publications identify the 1976 work as introducing public-key cryptography for solving key-management problems and connect its concepts to digital signatures, public-key infrastructure, and standardized key-establishment mechanisms. ([nist.gov](https://www.nist.gov/blogs/cybersecurity-insights/cornerstone-cybersecurity-cryptographic-standards-and-50-year-evolution)) Later standards and protocols extended the same ideas to elliptic-curve Diffie–Hellman and Internet security systems, including TLS and SSH. ([rfc-editor.org](https://www.rfc-editor.org/info/rfc6090/))",
   "raw_url": "http://www-ee.stanford.edu/~hellman/publications/24.pdf",
   "source_type": "external",
   "filepath": "cryptography/README.md",
   "filename": "New Directions in Cryptography (1976)",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:54"
 }

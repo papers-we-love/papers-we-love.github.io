@@ -1,31 +1,25 @@
 {
   "uuid": "60f7cf4e0679c76a453be58f15991c932e86d733360b8ab05c1cbbe0f2cdfa65",
   "title": "Time, Clocks, and the Ordering of Events in a Distributed System",
-  "publication_date": "1978",
+  "publication_date": "July 1978; Communications of the ACM, Volume 21, Number 7, pp. 558–565",
   "authors": [
     "Leslie Lamport"
   ],
   "keywords": [
-    "causality",
-    "computer-science",
-    "concurrency",
+    "clock-synchronization",
+    "computer-networks",
     "distributed-systems",
-    "event-ordering",
-    "happens-before",
-    "logical-clocks",
-    "network-systems",
-    "synchronization",
-    "temporal-ordering"
+    "multiprocess-systems"
   ],
   "category_path": [
     "concurrency"
   ],
-  "abstract": "This paper investigates the concept of ordering of events in a distributed system and introduces the notion of a logical clock, which captures the causal relationship between events. The use of logical clocks aids in providing a partial ordering of events, which is critical for the execution of distributed algorithms. The importance of time and clocks in maintaining consistency within distributed systems is discussed, providing theoretical grounding for understanding how distributed processes can have a consistent view of time without relying on synchronized physical clocks.",
-  "summary": "Leslie Lamport's paper \"Time, Clocks, and the Ordering of Events in a Distributed System\" introduced a fundamental concept in the field of distributed systems: logical clocks. The notion addresses the challenge of consistently ordering events across distributed systems without relying on synchronized physical clocks. Lamport proposed logical clocks to provide partial ordering of events, thus facilitating better execution and understanding of distributed algorithms. \n\nThe influence of this paper extends widely in computer science, particularly within distributed systems and concurrent algorithm research. It has influenced many subsequent works, including consensus algorithms such as Paxos. The \"happens-before\" relationship defined in the paper is crucial in the design of distributed protocols and debugging tools.\n\nFor example, in their work \"Implementing Fault-Tolerant Services Using the State Machine Approach: A Tutorial\" (https://dl.acm.org/doi/10.1145/141695.141700), Fred B. Schneider referenced Lamport's logical clocks as foundational for understanding state machine replication concepts in fault-tolerant systems. Similarly, the book \"Distributed Systems: Principles and Paradigms\" by Tanenbaum and van Steen (https://www.distributed-systems.net) highlights the importance of Lamport's work in understanding time and ordering in distributed systems.\n\nThe paper's significant impact is also evident in modern distributed technologies where concepts such as vector clocks and other logical time methods derive from Lamport's original work. Despite being published in 1978, it remains a heavily cited and influential paper.",
+  "abstract": "The concept of one event happening before another in a distributed system is examined, and is shown to define a partial ordering of the events. A distributed algorithm is given for synchronizing a system of logical clocks which can be used to totally order the events. The use of the total ordering is illustrated with a method for solving synchronization problems. The algorithm is then specialized for synchronizing physical clocks, and a bound is derived on how far out of synchrony the clocks can become.",
+  "summary": "## Summary\n\nThe paper establishes that events in a distributed system do not necessarily have a single, globally observable chronological order. Instead, the **happened-before** relation captures causal precedence: events are ordered when they occur sequentially within one process, when one event sends a message and another receives it, or transitively through such relationships. Events that cannot causally affect one another are concurrent.\n\nLamport introduces **logical clocks** as numerical assignments to events. The clocks need not measure physical time; they must only preserve causal order. Each process increments its clock between successive events, timestamps outgoing messages, and advances its clock when receiving a message with a later timestamp. These rules ensure that if event `a` happened before event `b`, then the timestamp of `a` is smaller than the timestamp of `b`.\n\nBecause logical timestamps may be equal for concurrent events, the paper adds a fixed ordering of processes to break ties and thereby constructs a consistent total ordering of all events. This ordering is used to present a fully distributed mutual-exclusion algorithm: processes exchange timestamped requests, acknowledgments, and releases, maintain local request queues, and grant access only when a request is locally known to precede all competing requests.\n\nThe paper generalizes this approach to distributed state-machine execution. If every process learns the same commands and applies them in the same total order, each process can independently simulate the same state machine and maintain consistent state without centralized storage. The approach, as presented, assumes reliable communication and active participation by all processes; a failed or indefinitely delayed process can prevent progress.\n\nThe paper also identifies a limitation of purely logical ordering. External events, such as a human telephone conversation, can create an ordering that the distributed system cannot observe, leading to behavior that conflicts with users’ perceptions. The paper discusses physical-clock synchronization as a way to constrain this discrepancy. Under bounded clock drift, bounded message-delay uncertainty, and regular communication over a strongly connected network, it derives an upper bound on clock divergence and gives a resynchronization procedure.\n\n## Influence\n\nThe paper became a foundational reference for distributed-systems research. Leslie Lamport’s account identifies its central contribution as using timestamps to construct a total order consistent with causal order and connecting that mechanism to distributed state-machine implementation. The work received the 2000 PODC Influential Paper Award and an ACM SIGOPS Hall of Fame Award in 2007. ([microsoft.com](https://www.microsoft.com/en-us/research/publication/time-clocks-ordering-events-distributed-system/))\n\nSubsequent research extended the scalar logical-clock model into partially ordered or vector-clock systems. Fidge’s later survey describes partially ordered logical clocks as tools for representing causality and analyzing, testing, and debugging distributed computations, while later work by Mattern developed related virtual-time and global-state techniques. ([courses.csail.mit.edu](https://courses.csail.mit.edu/6.895/fall02/papers/Fidge/ieeecomputer.pdf))\n\nThe paper’s causal-ordering framework also became relevant to replicated and highly available storage research. For example, Amazon’s Dynamo describes object versioning and application-assisted conflict resolution in a production storage system designed for large-scale availability, illustrating the continued systems relevance of causality-aware event and version management. ([amazon.science](https://www.amazon.science/publications/dynamo-amazons-highly-available-key-value-store))",
   "raw_url": "https://lamport.azurewebsites.net/pubs/time-clocks.pdf",
   "source_type": "external",
   "filepath": "concurrency/README.md",
   "filename": "Time, Clocks, and the Ordering of Events in a Distributed System",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:54"
 }

@@ -1,33 +1,29 @@
 {
   "uuid": "d537333c2912a02c8dd0cfd84fec5463d590cb455ea6492240ef9145b8b2fe2e",
-  "title": "Digital Storytelling for Reflection and Engagement at Work",
-  "publication_date": "2015",
+  "title": "IncludeOS: A Minimal, Resource Efficient Unikernel for Cloud Services",
+  "publication_date": "November 30–December 3, 2015; 2015 IEEE 7th International Conference on Cloud Computing Technology and Science (CloudCom), Vancouver, BC, Canada, pp. 250–257",
   "authors": [
-    "Andrew Morrison",
-    "Gry Wennberg",
-    "Mads Hobye"
+    "Alf-Andre Walla",
+    "Alfred Bratterud",
+    "Hårek Haugerud",
+    "Kyrre M. Begnum",
+    "Paal E. Engelstad"
   ],
   "keywords": [
-    "communication",
-    "design-research",
-    "digital-storytelling",
-    "narrative-practices",
-    "organizational-development",
-    "organizational-learning",
-    "participatory-design",
-    "reflection",
-    "self-reflection",
-    "work-engagement"
+    "full-virtualization",
+    "library-os",
+    "unikernel",
+    "virtio"
   ],
   "category_path": [
     "unikernels"
   ],
-  "abstract": "This paper discusses an exploratory study of digital storytelling in work organizational settings. It is based on design projects undertaken with different work groups in Norway. The paper outlines approaches to the research and use of digital storytelling as well as issues relating to developing an understanding of the frames of digital interaction and design. It also considers how digital storytelling might be applied as a means for encouraging self-reflection and enhancing work engagement.",
-  "summary": "This research paper explores the concept of digital storytelling in organizational settings, focusing on how it can foster reflection and engagement in the workplace. Conducted in Norway through design projects with various workgroups, the research presents digital storytelling as a tool to promote self-reflection and improve work engagement and organizational learning. The study outlines methodologies of design research and participatory design relating to digital storytelling, narrative practices aimed at boosting employee engagement, and fostering communication. \n\nUpon reviewing references and citations, it appears that this paper has been cited occasionally in subsequent studies focusing on narrative techniques and digital storytelling in organizational contexts. However, the overall impact in terms of broad scholarly citation appears limited. No significant adoption in industry or mass academic interest traceable through available academic databases and citation indices was found. Thus, while the paper adds to the academic insight into digital storytelling, extensive evidence of its influence on future research or practical implementation in industries is relatively sparse.",
+  "abstract": "The emergence of cloud computing as a ubiquitous platform for elastically scaling services has generated need and opportunity for new types of operating systems. A service that needs to be both elastic and resource efficient needs A) highly specialized components, and B) to run with minimal resource overhead. Classical general purpose operating systems designed for extensive hardware support are by design far from meeting these requirements. In this paper we present IncludeOS, a single tasking library operating system for cloud services, written from scratch in C++. Key features include: extremely small disk- and memory footprint, efficient asynchronous I/O, OS-library where only what your service needs gets included, and only one device driver by default (virtio). As a test case a bootable disk image consisting of a simple DNS server with OS included is shown to require only 158 kb of disk space and to require 5-20% less CPU-time, depending on hardware, compared to the same binary running on Linux.",
+  "summary": "## Paper summary\n\nThe paper introduces IncludeOS, a C++ library operating system designed to run a single cloud service directly on virtualized x86 hardware. Instead of booting a general-purpose operating system and then launching an application, IncludeOS links only the operating-system functionality required by the service into one bootable image. Its design emphasizes minimal resource usage, asynchronous I/O, compile-time composition, modular networking components, and support for the virtio device model. The system follows a “zero-overhead” principle: unused operating-system functionality should not be included in the resulting image.\n\nThe prototype evaluation used a DNS service. The resulting bootable image required approximately 158 KB of disk space and used 5–20% less CPU time than the same binary running on Linux, depending on the hardware configuration. The paper also reports substantially lower memory requirements than conventional virtual machines and an approximately 0.3-second boot time for a minimal IncludeOS instance. At publication time, the implementation was incomplete in areas including full TCP and IPv6 support, filesystems, 64-bit support, and multicore execution.\n\n## Influence and subsequent use\n\nSubsequent work explicitly extended or evaluated IncludeOS. A 2017 paper developed multicore support for IncludeOS, building on its minimal event-driven architecture. The PHP2Uni project used IncludeOS as a target platform for compiling PHP applications into unikernels. Later research evaluated IncludeOS for firewall-based network functions and for function execution in serverless computing. Security research also used IncludeOS as a case study, identifying limitations in protections such as ASLR, W^X, stack canaries, and memory-integrity defenses. ([researchgate.net](https://www.researchgate.net/publication/314009682_Making_the_Case_for_Highly_Efficient_Multicore_Enabled_Unikernels_With_IncludeOS))\n\nThe IncludeOS project continued as open-source software and documented support for cloud and virtualized environments, with later project materials reporting smaller images and faster boot times than those described in the original paper. The available evidence indicates influence primarily through continued research, prototyping, and evaluation of unikernel-based cloud and network services; the search did not establish broad commercial deployment attributable to this paper. ([includeos.org](https://includeos.org/))",
   "raw_url": "http://oda.oslomet.no/oda-xmlui/bitstream/handle/10642/3189/1321835.pdf",
   "source_type": "external",
   "filepath": "unikernels/README.md",
   "filename": "IncludeOS: A minimal, resource efficient unikernel for cloud services",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:05"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:57"
 }

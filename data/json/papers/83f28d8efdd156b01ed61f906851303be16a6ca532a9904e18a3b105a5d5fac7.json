@@ -1,29 +1,26 @@
 {
   "uuid": "83f28d8efdd156b01ed61f906851303be16a6ca532a9904e18a3b105a5d5fac7",
-  "title": "Continuous shading of curved surfaces",
-  "publication_date": "February 1971",
+  "title": "Continuous Shading of Curved Surfaces",
+  "publication_date": "June 1971, IEEE Transactions on Computers, Vol. C-20, No. 6, pp. 623–629",
   "authors": [
     "Henri Gouraud"
   ],
   "keywords": [
-    "3d-rendering",
-    "computer-graphics",
+    "coons-patches",
     "curved-surfaces",
-    "graphics-algorithms",
-    "light-modeling",
-    "rendering",
-    "shading",
-    "smooth-shading"
+    "halftone",
+    "hidden-line-removal",
+    "shading"
   ],
   "category_path": [
     "computer_graphics"
   ],
-  "abstract": "An improved solution to the problem of realistic image production is presented in this dissertation. The surfaces of a polyhedral object are shaded by means of continuous shading techniques: the reflectivity of the object is derived from a fixed local reflectivity and an assumed light direction. No modeling of shadows or multiple reflections is provided but an attempt is made to visualize images as realistically as possible under this limitation.",
-  "summary": "The paper \"Continuous shading of curved surfaces\" by Henri Gouraud is a seminal work in the field of computer graphics, specifically in shading techniques. It introduces what is now known as 'Gouraud shading', a method for smoothing out the colors across the surface of 3D models to simulate the appearance of a more continuous and realistic color gradient rather than having flat shading per polygon.\n\nGouraud shading calculates vertex colors and then interpolates these colors across the surfaces, which creates a smoother transition of colors and enhances the realism of the rendered object. This technique became fundamental in real-time computer graphics due to its balance between computational efficiency and visual aesthetics.\n\nThe introduction of Gouraud shading has greatly influenced both academic research and the video game industry. It laid the groundwork for more advanced shading and rendering techniques that followed, such as Phong shading and more complex algorithms used in modern computer graphics. \n\nThe impact of this paper can be seen through its frequent citation in subsequent research and its fundamental place in graphics textbooks, such as \"Computer Graphics: Principles and Practice\".\n\nFurther evidence of its influence can be found in references:\n1. Foley, J.D., van Dam, A., Feiner, S.K., Hughes, J.F. \"Computer Graphics: Principles and Practice,\" Addison-Wesley.\n2. Watt, A. \"3D Computer Graphics,\" Addison-Wesley.\n3. Catmull, E.E. \"A Subdivision Algorithm for Computer Display of Curved Surfaces,\" University of Utah, June 1974, which built upon shading methods.",
+  "abstract": "A procedure for computing shaded pictures of curved surfaces is presented. The surface is approximated by small polygons in order to solve easily the hidden-parts problem, but the shading of each polygon is computed so that discontinuities of shade are eliminated across the surface and a smooth appearance is obtained. In order to achieve speed efficiency, the technique developed by Watkins is used which makes possible a hardware implementation of this algorithm.",
+  "summary": "## Summary\n\nHenri Gouraud presents an algorithm for rendering visually smooth images of curved surfaces represented by polygonal meshes. The central problem is that assigning one constant intensity to each polygon makes curved objects appear faceted. Gouraud addresses this by estimating a surface normal at each polygon vertex from the normals of adjacent polygons, computing illumination at the vertices, and interpolating the resulting intensities across each polygon. Because shared vertices receive consistent values, intensity discontinuities between neighboring polygons are suppressed while the underlying polygonal representation remains suitable for hidden-surface processing.\n\nThe method is designed for scan-line rasterization. Intensities are interpolated along polygon edges and then across each scan line, allowing the renderer to calculate shades incrementally rather than evaluating the complete lighting model independently at every image point. The paper combines this interpolation strategy with the fast scan-conversion approach developed by Watkins and discusses its suitability for hardware implementation. The resulting images demonstrate that relatively coarse polygonal approximations can produce substantially smoother and more realistic depictions of curved objects, although the polygonal silhouette remains visible and the method does not model shadows or multiple reflections.\n\nThe paper became the basis of what is now called **Gouraud shading**. Subsequent computer-graphics teaching materials and rendering references describe the technique as interpolating vertex colors or illumination values across polygons, and OpenGL documentation identifies this interpolation as a standard rasterization operation. ([page.mi.fu-berlin.de](https://page.mi.fu-berlin.de/block/htw-lehre/wise2012_2013/bel_und_rend/skripte/gouraud1971.pdf)) Its principal tradeoff—lower computational cost than per-pixel lighting but reduced accuracy for small or rapidly varying highlights—also motivated later shading methods, including Phong shading. ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/001044859599796B)) The paper has been repeatedly cited in computer-graphics textbooks, surveys, and subsequent rendering research, including *Real-Time Rendering*. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/009784939090014O))",
   "raw_url": "http://page.mi.fu-berlin.de/block/htw-lehre/wise2015_2016/bel_und_rend/skripte/gouraud1971.pdf",
   "source_type": "external",
   "filepath": "computer_graphics/README.md",
   "filename": "Continuous shading of curved surfaces",
-  "created_on": "2026-01-24 23:46:58",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:54"
 }

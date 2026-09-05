@@ -1,35 +1,42 @@
 {
   "uuid": "4e94af6619d018ea93e6c0dc3c85a5cdbb39d84c2d188283620d97b6e67d77c7",
   "title": "Epidemic Algorithms for Replicated Database Maintenance",
-  "publication_date": "1989",
+  "publication_date": "January 1989; Xerox PARC technical report CSL-89-1. An earlier version appeared in the Proceedings of the Sixth Annual ACM Symposium on Principles of Distributed Computing (PODC), Vancouver, August 1987.",
   "authors": [
     "Alan Demers",
     "Carl Hauser",
     "Dan Greene",
+    "Dan Swinehart",
+    "Don Woods",
+    "Doug Terry",
+    "Howard Sturgis",
     "John Larson",
-    "Wesley Irish"
+    "Mark Gealy",
+    "Scott Shenker",
+    "Sue Manning",
+    "Wes Irish"
   ],
   "keywords": [
-    "consistency-models",
-    "data-replication",
-    "database-maintenance",
-    "distributed-computing",
+    "anti-entropy",
+    "consistency",
     "distributed-systems",
-    "epidemic-algorithms",
-    "fault-tolerance",
-    "gossip-protocols",
+    "electronic-mail",
+    "epidemiology",
+    "eventual-consistency",
+    "name-service",
     "replicated-databases",
-    "scalability"
+    "rumor-mongering",
+    "rumors"
   ],
   "category_path": [
     "gossip"
   ],
-  "abstract": "The paper discusses a class of algorithms, called epidemic algorithms, for maintaining replicated databases in distributed systems. These algorithms are based on concepts analogous to the spread of a virus in a biological population, where updates are propagated upon contact between hosts.",
-  "summary": "The paper \"Epidemic Algorithms for Replicated Database Maintenance\" introduces a novel class of algorithms specifically designed for maintaining replicated databases within distributed systems. The central metaphor guiding these algorithms is the spread of information akin to how viruses or diseases propagate within biological populations. This propagation method allows for gradual updating of database replicas across distributed networks without the need for a centralized control mechanism. The mechanism ensures robustness in settings characterized by high fault tolerance requirements and network partitions.\n\nThese epidemic algorithms, also referred to as gossip protocols, provide a unique approach to achieving eventual consistency in distributed databases. Such methods have been particularly vital in scenarios where systems demand high scalability and efficiency, with application in both theoretical and practical implementations of distributed database technology.\n\nIn conducting a web search for the paper's influence, it is evident that the concepts outlined have significantly influenced further research in distributed computing and database systems. Works such as \"The Gossip Problem\" by Karp et al. (DOI: 10.1109/SFCS.2000.892406) leverage similar principles. Additionally, influential distributed storage systems, including Amazon's Dynamo (DOI: 10.1145/1323293.1294281), cite epidemic algorithms as foundational to achieving fault-tolerant data replication. Despite the paper's age, the algorithmic concepts it introduced remain crucial in modern applications, including peer-to-peer networks and large-scale data streaming systems.",
+  "abstract": "When a database is replicated at many sites, maintaining mutual consistency among the sites in the face of updates is a significant problem. This paper describes several randomized algorithms for distributing updates and driving the replicas toward consistency. The algorithms are very simple and require few guarantees from the underlying communication system, yet they ensure that the effect of every update is eventually reflected in all replicas. The cost and performance of the algorithms are tuned by choosing appropriate distributions in the randomization step. The algorithms are closely analogous to epidemics, and the epidemiology literature aids in understanding their behavior. One of the algorithms has been implemented in the Clearinghouse servers of the Xerox Corporate Internet, solving long-standing problems of high traffic and database inconsistency.",
+  "summary": "The paper established a foundational framework for applying epidemic or gossip-style communication to replicated database maintenance. It compared direct mail, anti-entropy, and rumor mongering, analyzing their trade-offs in propagation delay, network traffic, reliability, and residual inconsistency. It also introduced practical mechanisms for handling deletions, including timestamped death certificates and dormant death certificates, and showed how topology-aware partner selection could reduce traffic on critical network links. The Xerox Clearinghouse implementation provided an early industry deployment and reported reductions of more than four times in average link traffic and more than thirty times on certain critical links relative to uniform partner selection.\n\nThe work was subsequently extended in research on transaction-oriented epidemic replication. For example, a 2003 IEEE Transactions on Knowledge and Data Engineering paper explicitly develops epidemic algorithms for replicated databases using causally delivered transaction log records, including pessimistic, optimistic, and quorum-based variants. ([researchgate.net](https://www.researchgate.net/publication/3297201_Epidemic_algorithms_for_replicated_databases)) The original work also became a commonly cited foundation for later gossip-protocol research; the ACM record identifies the 1987 PODC publication and reports substantial subsequent citation. ([doi.org](https://doi.org/10.1145/41840.41841)) Industry discussions have connected the Xerox epidemic approach to modern gossip-based group-membership and failure-detection systems such as SWIM, although that connection is described retrospectively rather than as a direct implementation lineage in the paper itself. ([hashicorp.com](https://www.hashicorp.com/id/resources/from-the-first-photocopy-to-modern-failure-detection-in-distributed-systems))",
   "raw_url": "http://bitsavers.informatik.uni-stuttgart.de/pdf/xerox/parc/techReports/CSL-89-1_Epidemic_Algorithms_for_Replicated_Database_Maintenance.pdf",
   "source_type": "external",
   "filepath": "gossip/README.md",
   "filename": "Epidemic Algorithms for Replicated Database Maintenance",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

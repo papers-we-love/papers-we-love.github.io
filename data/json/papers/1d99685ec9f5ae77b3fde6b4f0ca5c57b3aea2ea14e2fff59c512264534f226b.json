@@ -1,32 +1,27 @@
 {
   "uuid": "1d99685ec9f5ae77b3fde6b4f0ca5c57b3aea2ea14e2fff59c512264534f226b",
-  "title": "Implementing the Omega Failure Detector in the Crash-Recovery Failure Model",
-  "publication_date": "2004",
+  "title": "Implementing the Omega failure detector in the crash-recovery failure model",
+  "publication_date": "May 2009 (Journal of Computer and System Sciences, volume 75, issue 3, pages 178–189; available online November 1, 2008)",
   "authors": [
-    "Damien Martin",
-    "Marcos K. Aguilera",
-    "Sergio Rajsbaum"
+    "Cristian Martín",
+    "Ernesto Jiménez",
+    "Mikel Larrea"
   ],
   "keywords": [
-    "algorithmic-design",
-    "asynchronous-systems",
     "consensus",
-    "crash-recovery-failure-model",
-    "distributed-systems",
-    "failure-detection",
-    "fault-tolerance",
-    "omega-failure-detector",
-    "synchronization"
+    "distributed-algorithms",
+    "eventual-leader-election",
+    "omega-failure-detector"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "The Omega failure detector is the least expensive failure detector ever for solving consensus in asynchronous systems where less than half the processes can crash. In this paper, we incorporate it into a crash-recovery model. We show that it is possible to wait for all processes to recover before solving consensus with Omega. As part of the solution, we provide an algorithm that makes use of reliable delivery to all destinations to provide reliable delivery to a majority of alive peers.",
-  "summary": "The paper \"Implementing the Omega Failure Detector in the Crash-Recovery Failure Model\" by Damien Martin, Sergio Rajsbaum, and Marcos K. Aguilera presents an implementation of the Omega failure detector in scenarios that consider the crash-recovery failure model. This approach is significant for distributed systems since it allows consensus in asynchronous systems where fewer than half of the processes can fail and recover. The work shows that the Omega failure detector can be effectively utilized in systems by waiting for all processes to recover, meaning it is possible to attain reliable consensus across systems dealing with temporal process failures. The authors provide an algorithm that relies on reliable message delivery to a majority of live processes, establishing a fault-tolerant approach in the presence of process crashes and recoveries.\n\nIn terms of influence, this paper contributes to the area of distributed systems, particularly in enhancing fault tolerance and synchronization strategies in asynchronous systems. The Omega failure detector concept has been utilized in subsequent research to improve understanding of fault-tolerance mechanisms in distributed systems.\n\nHowever, through a web search, no specific papers directly cite or reference this particular implementation outline within the immediate literature available for this paper. This suggests a specialized application scope at the time of its publication or that it is a foundational work referenced in broader reviews or indirectly via discussions on failure detection mechanisms in distributed systems.",
+  "abstract": "Unreliable failure detectors are mechanisms providing information about process failures, that allow to solve several problems in asynchronous systems, e.g., Consensus. A particular failure detector, Omega, provides an eventual leader election functionality. This paper addresses the implementation of Omega in the crash-recovery failure model. We first propose an algorithm assuming that processes are reachable from the correct process that crashes and recovers a minimum number of times. Then, we propose two algorithms which assume only that processes are reachable from some correct process. Besides this, one of the algorithms requires the membership to be known a priori, while the other two do not.",
+  "summary": "The paper studies how to implement the Omega failure detector when processes may crash and later recover, including processes that recover infinitely often. The system model permits directed, partially connected communication networks containing both eventually timely links and lossy asynchronous links. Processes use stable storage to preserve incarnation numbers and, when needed, their current leader across recoveries.\n\nThe authors adapt the specification of Omega to crash-recovery systems. Instead of requiring eventual agreement only among permanently correct processes, the proposed specification requires that, after some point, every active process—whether correct or unstable—trust the same correct process. This accounts for the fact that an unstable process cannot determine whether it will eventually remain up or continue to recover repeatedly.\n\nThree algorithms are presented. The first does not require prior knowledge of membership and elects the correct process with the smallest identifier among those having the minimum incarnation number. It requires eventual timely reachability from that particular process to all correct and unstable processes. The second assumes that membership is known and requires eventual timely reachability from some correct process. It propagates vectors of suspicion counters and eventually selects the correct process with the smallest stabilized suspicion value, using identifiers to break ties. The third removes the prior-membership requirement by dynamically propagating membership information and suspicion values; a self-punishment mechanism handles processes that may not be observed by other processes.\n\nThe correctness arguments establish that, under the stated reachability and eventual-timeliness assumptions, all active processes eventually trust one common correct process permanently. The algorithms also use increasing timeouts and incarnation numbers to prevent unstable processes and transient communication delays from permanently disrupting leader selection. For the second and third algorithms, periodic traffic is bounded by the product of the number of processes and the number of directed links; the first algorithm can require rebroadcasting over up to quadratic many links in the worst case.\n\nThe paper’s documented influence is primarily academic. Later work explicitly treats these algorithms as prior crash-recovery implementations of Omega and develops a communication-efficient algorithm that removes the need for stable storage. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S002001900900310X)) A subsequent study formalizes communication efficiency and near-efficiency for crash-recovery leader election and presents algorithms using stable storage and, under stronger assumptions, no stable storage. ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S0164121211001476)) Later research also extends the setting to systems combining crash-recovery and omission failures, citing this paper as an earlier Omega implementation and using its crash-recovery leader-election framework as related work. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S002001901630148X)) The sources located document research extensions, but no specific industry deployment of this paper’s algorithms.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/implementing-the-omega-failure-detector-in-crash-recovery-failure-model.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/implementing-the-omega-failure-detector-in-crash-recovery-failure-model.pdf",
   "filename": "implementing-the-omega-failure-detector-in-crash-recovery-failure-model.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:51"
 }

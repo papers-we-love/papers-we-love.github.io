@@ -1,34 +1,33 @@
 {
   "uuid": "71a1655cf012e34febbe52cda2005de9870f714cb1ee5136def1857d0df156e5",
   "title": "Signal/Collect: Graph Algorithms for the (Semantic) Web",
-  "publication_date": "2012",
+  "publication_date": "November 7–11, 2010; 9th International Semantic Web Conference (ISWC 2010), Shanghai, China; published in Lecture Notes in Computer Science, volume 6496, pages 764–780",
   "authors": [
-    "Andreas Hofer",
-    "Martin Georg Grossmann",
-    "Michel Mattheisen",
-    "Sebastian Michel"
+    "Abraham Bernstein",
+    "Philip Stutz",
+    "William Cohen"
   ],
   "keywords": [
-    "adaptive-systems",
-    "declarative-programming",
-    "distributed-systems",
+    "asynchronous-computation",
+    "distributed-computing",
     "graph-algorithms",
-    "large-scale-data",
-    "parallel-computing",
-    "rdf-graphs",
+    "graph-processing",
+    "mapreduce",
+    "pagerank",
+    "rdfs-inference",
     "semantic-web",
     "signal-collect",
-    "web-algorithms"
+    "synchronous-computation"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "In this work, we take the position that classic graph algorithms (e.g. PageRank) can be naturally described—and implemented—as continually examining and updating embeddable atomic statements (edges or labeled edges and nodes representing triples) of the form: subject-predicate-object. Building on this concept as the underlying principle of computation, we propose a new programming model, “Signal/Collect”. We then design and implement a system that, given input data like explicit RDF and some graph analytic operations (e.g. inferencing, ranking), processes the data in a parallel and loosely coupled manner to produce a scalable and efficient system. Finally, we show empirical evidence in support of our method by implementing selected benchmark tasks for the semantic web.",
-  "summary": "The paper \"Signal/Collect: Graph Algorithms for the (Semantic) Web\" proposes a novel programming model, \"Signal/Collect,\" which aims to address the challenges of implementing graph algorithms efficiently on the semantic web. It introduces a system that leverages this model to process graph data such as RDF in a scalable manner. The authors argue that traditional graph algorithms can be adapted to naturally operate on subject-predicate-object triples, foundational in semantic web data representation.\n\nThe authors implement a system that processes input data in a parallel and loosely coupled way, which is crucial for scalability in handling large datasets typical of the web. The system showcases its scalability and effectiveness through empirical evaluations using various tasks relevant to the semantic web, such as inferencing and ranking.\n\nIn terms of impact, the Signal/Collect model provides a foundational framework that has been influential in subsequent research on applying graph algorithms to web data and large-scale parallel processing systems. However, a thorough search did not reveal significant direct academic citations or practical implementations in major industry projects beyond academic exploratory work. Consequently, the direct impact appears to be more theoretical, serving as a springboard for further research in related domains without a prominent presence in widely-cited follow-on work or industry adaptations. No specific influential citations or industry references were found, suggesting that the paper's primary role has been educational and foundational.",
+  "abstract": "The Semantic Web graph is growing at an incredible pace, enabling opportunities to discover new knowledge by interlinking and analyzing previously unconnected data sets. This confronts researchers with a conundrum: Whilst the data is available the programming models that facilitate scalability and the infrastructure to run various algorithms on the graph are missing.\nSome use MapReduce – a good solution for many problems. However, even some simple iterative graph algorithms do not map nicely to that programming model requiring programmers to shoehorn their problem to the MapReduce model.\nThis paper presents the Signal/Collect programming model for synchronous and asynchronous graph algorithms. We demonstrate that this abstraction can capture the essence of many algorithms on graphs in a concise and elegant way by giving Signal/Collect adaptations of various relevant algorithms. Furthermore, we built and evaluated a prototype Signal/Collect framework that executes algorithms in our programming model. We empirically show that this prototype transparently scales and that guiding computations by scoring as well as asynchronousity can greatly improve the convergence of some example algorithms. We released the framework under the Apache License 2.0 (at http://www.ifi.uzh.ch/ddis/research/sc).",
+  "summary": "## Summary\n\nThe paper introduces **Signal/Collect**, a vertex-and-edge programming model for iterative computation over typed graphs. Vertices maintain state and collect incoming signals; edges compute and transmit signals from source vertices to targets. The model supports synchronous bulk-synchronous execution, score-guided execution, asynchronous execution, custom schedulers, multiple vertex and edge types, weighted edges, conditional computation phases, and aggregation.\n\nThe authors demonstrate the model with single-source shortest path, RDFS subclass inference, vertex coloring, PageRank, and loopy belief propagation. Their prototype, implemented in Scala, parallelizes computations across worker threads on a shared-memory machine and can initialize graph structures from SPARQL queries. Experiments report near-linear speedup for one large shortest-path workload, substantial reductions in PageRank work through score-guided execution on some graphs, and cases where eager asynchronous execution converges while synchronous execution does not. The evaluation is limited because the prototype was initially single-machine and shared-memory, and because only a small set of algorithms and graph structures was tested. ([code.garrettmills.dev](https://code.garrettmills.dev/Archives/papers-we-love_papers-we-love/raw/commit/49cb6db953b46a68df18f5d799511cc88260aeff/distributed_systems/signal-%26-collect-graph-algorithms-for-the-%28semantic%29-web.pdf))\n\n## Subsequent influence\n\nThe work was followed by a substantially expanded Signal/Collect publication, which generalized the application scope and reported a distributed implementation capable of processing a graph with more than 1.4 billion vertices and 6.6 billion edges on eight machines. ([journals.sagepub.com](https://journals.sagepub.com/doi/abs/10.3233/SW-150176)) The project’s later documentation continues to describe distributed execution, score-guided signaling and collecting, convergence detection, and asynchronous processing as core features. ([uzh.github.io](https://uzh.github.io/signal-collect/documentation.html)) The programming model also influenced subsequent graph-processing software, including the Clojure/ClojureScript `fabric` infrastructure, which explicitly describes itself as Signal/Collect-inspired. ([github.com](https://github.com/thi-ng/fabric)) Later graph-processing and temporal-graph publications cite the paper as part of the development of vertex-centric and asynchronous graph-processing systems. ([doi.org](https://doi.org/10.1145/3184558.3186934))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/signal-%26-collect-graph-algorithms-for-the-(semantic)-web.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/signal-&-collect-graph-algorithms-for-the-(semantic)-web.pdf",
   "filename": "signal-&-collect-graph-algorithms-for-the-(semantic)-web.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:51"
 }

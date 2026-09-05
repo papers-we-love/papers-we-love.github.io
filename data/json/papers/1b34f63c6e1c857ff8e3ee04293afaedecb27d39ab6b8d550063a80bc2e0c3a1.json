@@ -1,28 +1,22 @@
 {
   "uuid": "1b34f63c6e1c857ff8e3ee04293afaedecb27d39ab6b8d550063a80bc2e0c3a1",
-  "title": "Why Research in Distributed Systems is Hard",
-  "publication_date": "January 2004",
+  "title": "How to Read a Paper",
+  "publication_date": "July 2007; ACM SIGCOMM Computer Communication Review, Volume 37, Number 3, pages 83–84",
   "authors": [
     "S. Keshav"
   ],
   "keywords": [
-    "complexity",
-    "consistency",
-    "design-strategies",
-    "distributed-systems",
-    "evaluation-methods",
-    "fault-tolerance",
-    "network-synchronization",
-    "research-challenges",
-    "scalability"
+    "hints",
+    "paper",
+    "reading"
   ],
   "category_path": [],
-  "abstract": "In this position paper I discuss some aspects of the practical difficulties that make research in distributed systems challenging. I believe (along with others, such as Dijkstra [1]) that research should not be undertaken unless its goal is simplicity. My point of view is pragmatic: I want to build systems that work in the real world. Towards this end, I pose six challenges to be met: simple systems, concrete metrics, ease of implementation, reusability of components, scalable design and effective measurement.",
-  "summary": "This paper by S. Keshav, published in January 2004, addresses the practical difficulties associated with conducting research in the field of distributed systems. Keshav, aligning with the philosophy of simplicity advocated by Dijkstra, emphasizes the pragmatic goal of building systems that are functional in real-world applications. The paper identifies six key challenges to pursue, including designing simple systems, establishing concrete metrics, ensuring ease of implementation, reusability of components, scalable design, and effective measurement.\n\nThe paper has been cited by subsequent research publications that explore similar challenges in distributed systems. Notably, it highlights the importance of simplicity and practicality in system design, an idea that resonates in later works focusing on building scalable and reusable distributed systems. However, a specific search did not reveal any direct industrial applications or a large number of academic citations, which suggests the paper primarily served as a thought-provoking position paper within the academic community rather than being directly utilized in industry.\n\nReferences to the ideas in this paper are primarily found in academic discussions around the complexity and implementation of distributed systems:\n\n1. Resonating ideas on simplicity in the design of distributed systems: https://dl.acm.org/doi/10.1145/3408000\n2. Challenges in distributed systems and related practical implementations: https://ijcai.org/proceedings/2020/567\n3. Discussions on scalability and reusability in distributed systems: https://www.sciencedirect.com/science/article/pii/S0167739X20300285",
+  "abstract": "Researchers spend a great deal of time reading research papers. However, this skill is rarely taught, leading to much wasted effort. This article outlines a practical and efficient three-pass method for reading research papers. I also describe how to use this method to do a literature survey.",
+  "summary": "## Overview\n\nThe paper presents a structured three-pass method for reading research papers, replacing linear reading with progressively deeper levels of analysis. The first pass is a five-to-ten-minute scan of the title, abstract, introduction, headings, conclusions, and references. Its purpose is to establish the paper’s category, context, apparent correctness, contributions, and clarity, and to determine whether further reading is warranted.\n\nThe second pass involves more careful reading while postponing proofs and other fine details. Readers should examine figures, diagrams, graphs, labels, error bars, and relevant unread references. The goal is to understand the paper’s main argument and supporting evidence well enough to explain it to another person.\n\nThe third pass is intended for papers that must be understood in depth, such as papers being reviewed or directly extended. Readers attempt to virtually re-implement the work, challenge its assumptions, reconstruct its reasoning, and identify strengths, weaknesses, missing citations, and methodological problems. The paper also extends the approach to literature surveys by recommending an iterative process of finding recent papers, identifying shared citations and recurring authors, and examining leading venues.\n\n## Influence and subsequent use\n\nThe method has been adopted as explicit reading guidance in university research and graduate courses. For example, MIT’s hardware-security course recommends Keshav’s three-pass approach as part of its paper-reading guidance, and Georgia Tech course materials present the approach as a framework for reading papers in a fault-tolerant-computing course. ([shd.mit.edu](https://shd.mit.edu/2024/paperReadingGuidance.html))\n\nLater research-oriented guidance has also incorporated the method. An engineering guide to reading and evaluating primary literature describes its paper-reading procedure as based on Keshav’s three-pass approach. ([researchgate.net](https://www.researchgate.net/publication/382485809_Effective_reading_practices_for_engineering_research_articles_an_engineer%27s_guide_to_reading_critiquing_and_evaluating_primary_lliterature)) The available evidence supports an influence primarily on research training, academic curricula, and scholarly reading practice; no specific industrial deployment or commercial product use was identified in the search. The paper’s bibliographic record is also preserved and circulated through multiple university course repositories. ([systems.cs.columbia.edu](https://systems.cs.columbia.edu/ds2-class/papers/keshav-paper.pdf))",
   "raw_url": "http://ccr.sigcomm.org/online/files/p83-keshavA.pdf",
   "source_type": "external",
   "filepath": "README.md",
   "filename": "How to read a paper",
-  "created_on": "2026-01-24 23:46:58",
-  "summary_received": "2026-01-25 00:11:01"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:53"
 }

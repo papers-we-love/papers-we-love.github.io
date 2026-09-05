@@ -1,32 +1,28 @@
 {
   "uuid": "a2ab674dc5b205d149a5b48641fbbfb3b9098988b5d08e047e942512af916471",
   "title": "ScatterAlloc: Massively Parallel Dynamic Memory Allocation for the GPU",
-  "publication_date": "November 2011, SC '11 ACM/IEEE International Conference for High Performance Computing, Networking, Storage and Analysis",
+  "publication_date": "May 13–14, 2012; 2012 Innovative Parallel Computing (InPar 2012), San Jose, United States",
   "authors": [
-    "Daniel Cederman",
-    "Philippas Tsigas"
+    "Bernhard Kainz",
+    "Dieter Schmalstieg",
+    "Markus Steinberger",
+    "Michael Kenzel"
   ],
   "keywords": [
-    "cuda",
     "dynamic-memory-allocation",
-    "fragmentation",
     "gpu",
-    "high-performance-computing",
-    "memory-management",
-    "parallel-computing",
-    "performance-analysis",
-    "scalability",
-    "scatteralloc"
+    "hashing",
+    "massively-parallel"
   ],
   "category_path": [
     "memory_management"
   ],
-  "abstract": "In this paper we present a dynamic memory allocator designed for the massively parallel GPU. General purpose computing on graphics processor units (GPGPUs) has become more accessible through environments like CUDA, and now we are facing more advanced and complex algorithms running on GPUs. However, dynamic memory allocation has not yet been fully explored on GPUs. In this paper we propose ScatterAlloc, a general purpose dynamic memory allocator for use on the GPU and on other many-core architectures. ScatterAlloc uses a novel ScatterSlot and bit-modulo technique to achieve low memory fragmentation and high performance. The performance of ScatterAlloc is evaluated by comparing it with traditional allocation schemes such as sequential fits, and also with other recently published memory allocators in synthetic benchmarks. The experiments show that ScatterAlloc is exceptionally fast, under heavy load it still maintains a low and stable execution time, and has less fragmentation than suffix-tree based allocators.",
-  "summary": "The paper titled \"ScatterAlloc: Massively Parallel Dynamic Memory Allocation for the GPU\" by Daniel Cederman and Philippas Tsigas, presented at the SC '11 conference, introduces a novel memory allocator called ScatterAlloc for GPUs that exhibits low memory fragmentation and high performance. The allocator outperforms traditional methods like sequential fits and other contemporary solutions by maintaining stability and efficiency even under heavy loads.\n\nScatterAlloc introduced innovative memory handling techniques such as the ScatterSlot and bit-modulo to address challenges faced by dynamic memory allocation in massively parallel architectures. This paper has been crucial in advancing the methodology for handling dynamic memory on GPUs, providing a substantial enhancement to applications requiring intense memory management capabilities.\n\nA web search shows that ScatterAlloc influences subsequent research and development in high-performance computing, particularly in memory management on GPUs and other parallel platforms. For example, a paper titled \"Dynamic Memory Allocators for Many-Core Architectures: A Survey\" published in the ACM Computing Surveys references ScatterAlloc as part of the evolution of allocator design strategies. The research community has recognized ScatterAlloc for its innovative approach, as seen in its mention in multiple academic discussions regarding dynamic memory management systems.",
+  "abstract": "In this paper, we analyze the special requirements of a dynamic memory allocator that is designed for massively parallel architectures such as Graphics Processing Units (GPUs). We show that traditional strategies, which work well on CPUs, are not well suited for the use on GPUs and present the thorough design of ScatterAlloc, which can efficiently deal with hundreds of requests in parallel. Our allocator greatly reduces collisions and congestion by scattering memory requests based on hashing. We analyze ScatterAlloc in terms of allocation speed, data access time and fragmentation, and compare it to current state-of-the-art allocators, including the one provided with the NVIDIA CUDA toolkit. Our results show, that ScatterAlloc clearly outperforms these other approaches, yielding speed-ups between 10 to 100.",
+  "summary": "### Paper summary\n\nThe paper addresses dynamic memory allocation under GPU execution models, where hundreds or thousands of threads may issue requests concurrently and where synchronization, global-memory latency, SIMD execution, and cache behavior make conventional CPU-oriented allocators ineffective. It establishes correctness, allocation/deallocation speed, memory-access efficiency, scalability, low divergence, coalesced access, and limited memory consumption as key design objectives.\n\nScatterAlloc uses fixed-size pages grouped into super blocks. Each page is divided into equally sized chunks, with page-usage metadata consisting of a chunk size, an allocation counter, and bit fields identifying occupied chunks. A second bit-field hierarchy supports pages containing up to 1,024 chunks. Allocation requests are distributed with a hash function based on requested size and multiprocessor identity. This reduces contention on individual pages while encouraging cache-friendly placement for threads executing on the same multiprocessor and adjacent placement for threads within a warp. Atomic operations are used for page acquisition, counters, and bit masks, but the design attempts to distribute these operations rather than concentrating them on a global list or queue.\n\nThe allocator trades some external fragmentation for substantially better parallel scalability. It supports reuse of freed pages, metadata for avoiding nearly full regions, and a separate strategy for requests larger than one page. In the reported experiments on an NVIDIA Quadro 6000, ScatterAlloc's allocation performance remained nearly independent of the number of concurrent threads. At full GPU utilization, it was reported as approximately 100 times faster than the CUDA toolkit allocator and up to 10 times faster than XMalloc with SIMD optimization. Its internal fragmentation was comparable to list-based allocators, while its memory placement produced slightly faster data access in some tested configurations.\n\n### Subsequent research and implementation impact\n\nLater GPU-allocation research continued to cite ScatterAlloc as an early design based on scattering allocation activity to reduce contention. The 2015 *Register Efficient Dynamic Memory Allocator for GPUs* cites it among prior GPU allocator designs, while NVIDIA Research's 2019 *Throughput-Oriented GPU Memory Allocation* explicitly describes using a similar collision-avoidance idea and identifies ScatterAlloc's bitmap-based tracking and hashing of atomic updates as related techniques. ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/10.1111/cgf.12666))\n\nThe algorithm was also preserved and extended in open-source implementations. The `mallocMC` project states that it supports the ScatterAlloc algorithm and evolved from a fork of the original project; related repositories document continued CUDA use and further development of the allocator. ([github.com](https://github.com/ax3l/scatteralloc)) More recent GPU-memory-management literature continues to list ScatterAlloc as a reference point when discussing highly parallel runtime allocation, although the available evidence supports citation and technical reuse rather than a claim that it became a standard industry allocator. ([pmc.ncbi.nlm.nih.gov](https://pmc.ncbi.nlm.nih.gov/articles/PMC9357265/))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/memory_management/scatteralloc-massively-parallel-dynamic-memory-allocation-for-the-gpu.pdf",
   "source_type": "pdf",
   "filepath": "memory_management/scatteralloc-massively-parallel-dynamic-memory-allocation-for-the-gpu.pdf",
   "filename": "scatteralloc-massively-parallel-dynamic-memory-allocation-for-the-gpu.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:56"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

@@ -1,36 +1,39 @@
 {
   "uuid": "407ad55e8f215b44da1de28c2408a5ef7ab53e8197944e8e546e30d041b5fe5a",
-  "title": "FlowDroid: Precise Context, Flow, Field, Objectsensitive and Lifecycle-aware Taint Analysis for Android Apps",
-  "publication_date": "July 2014",
+  "title": "FlowDroid: Precise Context, Flow, Field, Object-sensitive and Lifecycle-aware Taint Analysis for Android Apps",
+  "publication_date": "June 2014, Proceedings of the 35th ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI ’14), Edinburgh, United Kingdom",
   "authors": [
+    "Alexandre Bartel",
     "Christian Fritz",
     "Damien Octeau",
     "Eric Bodden",
+    "Jacques Klein",
     "Patrick McDaniel",
     "Siegfried Rasthofer",
-    "Steven Arzt"
+    "Steven Arzt",
+    "Yves Le Traon"
   ],
   "keywords": [
-    "android-apps",
-    "context-sensitive",
-    "field-sensitive",
-    "flow-sensitive",
-    "flowdroid",
-    "information-flow-analysis",
-    "lifecycle-aware",
-    "object-sensitive",
-    "taint-analysis",
-    "watermarking"
+    "android",
+    "callback-analysis",
+    "context-sensitivity",
+    "droidbench",
+    "field-sensitivity",
+    "information-flow",
+    "lifecycle-analysis",
+    "object-sensitivity",
+    "static-analysis",
+    "taint-analysis"
   ],
   "category_path": [
     "android"
   ],
-  "abstract": "Taint analysis has become an essential technique for securing Android applications. Various tools have been introduced, but many lack efficiency and precision. To address this, we propose FlowDroid, a novel and highly precise context, flow, field, object-sensitive and lifecycle-aware static taint analysis tool for Android applications. FlowDroid features highly precise modeling of the Android lifecycle, supports complex configurations, and has excellent performance due to flow-sensitive data flow analysis combined with precise modeling of control-flow. Additionally, we evaluated FlowDroid on 500 open-source applications from the F-Droid repository and several malware applications indicating the tool's competitiveness with other taint analyses in both precision and recall, while allowing us to discover previously unknown security vulnerabilities in Android apps.",
-  "summary": "FlowDroid is a prominent tool for static taint analysis of Android applications that emphasizes precision and lifecycle awareness. The paper by Steven Arzt et al., published in July 2014, outlines the architecture and capabilities of FlowDroid, highlighting its context, flow, field, object-sensitivity, and lifecycle awareness. The tool aims to improve upon existing taint analysis tools by increasing precision without compromising performance. FlowDroid was evaluated on 500 open-source applications from the F-Droid repository, demonstrating effectiveness in finding security vulnerabilities, including previously unknown ones.\n\nIn terms of impact, FlowDroid has been widely cited in subsequent research, serving as a foundational tool for Android app security studies. It is noted for its precision and ability to model the Android lifecycle effectively. Articles such as \"Precision and scalability trade-offs in static analysis of Android apps\" by Z. Li et al. and \"Optimizing static security analysis with meta-analyses: solution, proof of concept, and validation\" by A. Iannillo et al. reference FlowDroid, highlighting its influence on improving static analysis methodologies (https://hal.archives-ouvertes.fr/hal-02303113). The technique's effectiveness and efficiency have cemented FlowDroid as a significant contribution in the realm of mobile security analysis.",
+  "abstract": "Today’s smartphones are a ubiquitous source of private and confidential data. At the same time, smartphone users are plagued by carelessly programmed apps that leak important data by accident, and by malicious apps that exploit their given privileges to copy such data intentionally. While existing static taint-analysis approaches have the potential of detecting such data leaks ahead of time, all approaches for Android use a number of coarse-grain approximations that can yield high numbers of missed leaks and false alarms. In this work we thus present FLOWDROID, a novel and highly precise static taint analysis for Android applications. A precise model of Android’s lifecycle allows the analysis to properly handle callbacks invoked by the Android framework, while context, flow, field and object-sensitivity allows the analysis to reduce the number of false alarms. Novel on-demand algorithms help FLOWDROID maintain high efficiency and precision at the same time. We also propose DROIDBENCH, an open test suite for evaluating the effectiveness and accuracy of taint-analysis tools specifically for Android apps. As we show through a set of experiments using SecuriBench Micro, DROIDBENCH, and a set of well-known Android test applications, FLOWDROID finds a very high fraction of data leaks while keeping the rate of false positives low. On DROIDBENCH, FLOWDROID achieves 93% recall and 86% precision, greatly outperforming the commercial tools IBM AppScan Source and Fortify SCA. FLOWDROID successfully finds leaks in a subset of 500 apps from Google Play and about 1,000 malware apps from the VirusShare project.",
+  "summary": "## Summary\n\nFlowDroid established a precise static-taint-analysis design for Android by combining lifecycle and callback modeling with context-, flow-, field-, and object-sensitive analysis. Its accompanying DroidBench suite provided a reusable benchmark for evaluating Android taint-analysis tools. The paper was published at PLDI ’14 in 2014. ([ris.uni-paderborn.de](https://ris.uni-paderborn.de/record/5189))\n\nSubsequent research built directly on or evaluated against FlowDroid. IccTA combined FlowDroid with Epicc to analyze inter-component and inter-application data flows, using FlowDroid for lifecycle modeling and taint propagation. ([bodden.de](https://www.bodden.de/2014/04/30/iccta-vs-didfail-inter-component-inter-application-data-flow-analysis-in-android-applications/)) Later tools and studies, including DroidInfer, FastDroid, TaintBench, and ReproDroid, treated FlowDroid as a reference implementation or baseline for Android taint-analysis accuracy, scalability, benchmarking, and reproducibility. ([cs.rpi.edu](https://www.cs.rpi.edu/research/pdf/15-01.pdf))\n\nThe open-source FlowDroid project continues to provide an implementation and library for Android and Java data-flow analysis; its maintainers state that it is used in academic and industrial research. ([github.com](https://github.com/secure-software-engineering/FlowDroid)) Extensions have also used FlowDroid as a foundation for specialized analyses, such as reflection-aware leak detection and sensor-focused privacy analysis. ([arxiv.org](https://arxiv.org/abs/1612.05343))",
   "raw_url": "http://www.bodden.de/pubs/far+14flowdroid.pdf",
   "source_type": "external",
   "filepath": "android/README.md",
   "filename": "FlowDroid: Precise Context, Flow, Field, Object-sensitive and Lifecycle-aware Taint Analysis for Android Apps",
-  "created_on": "2026-01-24 23:46:58",
-  "summary_received": "2026-01-25 00:11:01"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:53"
 }

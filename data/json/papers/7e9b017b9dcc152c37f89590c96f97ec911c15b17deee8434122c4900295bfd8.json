@@ -1,33 +1,27 @@
 {
   "uuid": "7e9b017b9dcc152c37f89590c96f97ec911c15b17deee8434122c4900295bfd8",
   "title": "The Google File System",
-  "publication_date": "October 2003",
+  "publication_date": "October 19–22, 2003; SOSP’03, 19th ACM Symposium on Operating Systems Principles, Bolton Landing, New York, USA",
   "authors": [
     "Howard Gobioff",
     "Sanjay Ghemawat",
     "Shun-Tak Leung"
   ],
   "keywords": [
-    "chunk-server",
-    "data-reliability",
-    "data-replication",
-    "distributed-file-system",
+    "clustered-storage",
+    "data-storage",
     "fault-tolerance",
-    "google",
-    "high-performance",
-    "large-scale-data",
-    "master-server",
     "scalability"
   ],
   "category_path": [
     "distributed-file-systems"
   ],
-  "abstract": "We have designed and implemented the Google File System, a scalable distributed file system for large distributed data-intensive applications. It provides fault tolerance while running on inexpensive commodity hardware, and it delivers high aggregate performance to a large number of clients. While sharing many of the same goals as previous distributed file systems, our design has been driven by observations of our application workloads and technological environment, both current and anticipated, that reflect a marked departure from some earlier file system assumptions. This has led us to reexamine traditional choices and explore radically different design points. The file system has been successfully deployed as the storage platform for the generation and processing of data for Google's search services. It is widely used within Google as well as across our data-processing pipelines including MapReduce.",
-  "summary": "The paper titled \"The Google File System\" details the architecture and motivation behind Google's design of a scalable, distributed file system optimized for large distributed data-intensive applications. The Google File System (GFS) provides fault tolerance and performance efficiency by leveraging inexpensive commodity hardware. Some of the system's distinguishing features include data replication across multiple servers, a single master for metadata management, and a chunkserver strategy for storage management.\n\nThe paper's key insights into distributed systems include observations about real-world application workloads and technology trends, influencing Google's decisions to deviate from traditional file system assumptions. GFS has become the backbone of Google's storage needs, supporting various data processing tasks, including its well-known MapReduce model.\n\nSince publication, this paper has significantly influenced both academia and industry as a seminal work in the design of distributed file systems. It laid the groundwork for various other systems and inspired technologies such as the Hadoop Distributed File System (HDFS), which closely mirrors GFS design principles. The paper is frequently cited as a primary reference in subsequent research into distributed storage solutions, scalability issues, and performance optimization in data processing systems.\n\nFor more references and instances of its impact, you can check:\n- [Apache Hadoop Project](https://hadoop.apache.org/)\n- [A view of cloud computing](https://doi.org/10.1145/1721654.1721672)\n- [HDFS Architecture Guide](https://hadoop.apache.org/docs/r1.2.1/hdfs_design.html)\n- [MapReduce: Simplified Data Processing on Large Clusters](https://research.google/pubs/pub62/)\n- [Bigtable: A Distributed Storage System for Structured Data](https://research.google/pubs/pub27898/)",
+  "abstract": "We have designed and implemented the Google File System, a scalable distributed file system for large distributed data-intensive applications. It provides fault tolerance while running on inexpensive commodity hardware, and it delivers high aggregate performance to a large number of clients.\n\nWhile sharing many of the same goals as previous distributed file systems, our design has been driven by observations of our application workloads and technological environment, both current and anticipated, that reflect a marked departure from some earlier file system assumptions. This has led us to reexamine traditional choices and explore radically different design points.\n\nThe file system has successfully met our storage needs. It is widely deployed within Google as the storage platform for the generation and processing of data used by our service as well as research and development efforts that require large data sets. The largest cluster to date provides hundreds of terabytes of storage across thousands of disks on over a thousand machines, and it is concurrently accessed by hundreds of clients.\n\nIn this paper, we present file system interface extensions designed to support distributed applications, discuss many aspects of our design, and report measurements from both micro-benchmarks and real world use.",
+  "summary": "## Summary\n\nThe paper presents a distributed file system designed for Google’s large-scale, data-intensive workloads. Its central design choices are a single metadata master, replicated fixed-size chunks managed by chunkservers, direct client-to-chunkserver data transfer, leases for ordering mutations, relaxed consistency semantics, atomic record append, copy-on-write snapshots, checksumming, and automatic re-replication and recovery. The system prioritizes sustained aggregate throughput and operational resilience over POSIX compatibility, low latency, and efficient small-file or random-write workloads.\n\nThe paper had concrete influence beyond the original GFS deployment. Google later identified GFS as the basis for the Hadoop Distributed File System (HDFS), extending the paper’s architectural ideas into a widely used open-source big-data platform. ([cloudplatform.googleblog.com](https://cloudplatform.googleblog.com/2014/01/easier-faster-lower-cost-big-data-processing-with-the-google-cloud-storage-connector-for-hadoop.html)) Google’s Bigtable system also used GFS to store its logs and data files, demonstrating GFS’s role as infrastructure for subsequent distributed data systems. ([research.google.com](https://research.google.com/archive/bigtable-osdi06.pdf)) Within Google, Colossus became the successor to GFS and addressed scaling limitations of the original centralized metadata architecture while retaining its role as a foundational cluster-level storage system. ([cloud.google.com](https://cloud.google.com/blog/products/storage-data-transfer/a-peek-behind-colossus-googles-file-system))",
   "raw_url": "https://static.googleusercontent.com/media/research.google.com/en//archive/gfs-sosp2003.pdf",
   "source_type": "external",
   "filepath": "distributed-file-systems/README.md",
   "filename": "Google (GFS)",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:54"
 }

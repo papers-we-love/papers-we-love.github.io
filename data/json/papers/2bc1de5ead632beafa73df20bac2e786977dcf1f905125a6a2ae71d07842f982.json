@@ -1,38 +1,40 @@
 {
   "uuid": "2bc1de5ead632beafa73df20bac2e786977dcf1f905125a6a2ae71d07842f982",
-  "title": "Dapper, a Large-Scale Distributed Systems Tracing Infrastructure",
-  "publication_date": "2010",
+  "title": "MillWheel: Fault-Tolerant Stream Processing at Internet Scale",
+  "publication_date": "August 2013 (Proceedings of the VLDB Endowment, Vol. 6, No. 11; VLDB 2013)",
   "authors": [
-    "Benjamin H. Sigelman",
-    "Chitra Venkatramani",
-    "Donald Beaver",
-    "Luiz André Barroso",
-    "Mandelin Plakal",
-    "Mike Burrows",
-    "Pat Stephenson",
-    "Stephen Jaspan"
+    "Alex Balikov",
+    "Daniel Mills",
+    "Josh Haberman",
+    "Kaya Bekiroglu",
+    "Paul Nordstrom",
+    "Reuven Lax",
+    "Sam McVeety",
+    "Sam Whittle",
+    "Slava Chernyak",
+    "Tyler Akidau"
   ],
   "keywords": [
-    "cloud-computing",
-    "data-collection",
     "distributed-systems",
-    "google",
-    "instrumentation",
-    "monitoring",
-    "performance-analysis",
+    "event-time-processing",
+    "exactly-once-processing",
+    "fault-tolerance",
+    "low-watermarks",
+    "out-of-order-data",
+    "persistent-state",
     "scalability",
-    "system-diagnosis",
-    "tracing"
+    "stream-processing",
+    "timers"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "Dapper is a large scale distributed systems tracing infrastructure that has been used at Google for over three years. Although Google’s production environment differs in several important respects from common open-source environments, many aspects of our design can easily be applied elsewhere. This paper describes Google’s motivation for creating this distributed tracing infrastructure and provides a detailed description of Dapper’s design and implementation. We also present examples of how analyzing production traces has benefited various teams, illustrating Dapper’s impact on the daily lives of developers at Google.",
-  "summary": "The paper titled \"Dapper, a Large-Scale Distributed Systems Tracing Infrastructure\" published in 2010 by Benjamin H. Sigelman and colleagues describes the development and implementation of Dapper, an infrastructure for distributed tracing at Google. The Dapper system was designed to enable developers to trace and debug distributed systems effectively, thereby enhancing performance analysis and monitoring capabilities.\n\nDapper has significantly influenced the field of distributed systems and has laid foundational work for other tracing tools like OpenTracing and OpenTelemetry, which have been widely adopted in industry. According to scholarly resources, Dapper's design principles have been integral in establishing best practices for tracing in cloud environments. For instance, the paper is extensively cited in works discussing distributed tracing frameworks and their implementation across large-scale systems, some of which can be seen in newer developments of distributed tracing technology such as Jaeger and Zipkin. \n\nDapper's impact is particularly notable in improving system diagnosis, scalability, and performance analysis across complex distributed environments. This work continues to be a crucial reference in academic literature (e.g., https://dl.acm.org/doi/10.5555/2387880.2387904, https://researchgate.net/publication/313347243_Distributed_Tracing_in_Practice), evident by it being cited in papers related to performance monitoring frameworks and system instrumentation research.\n\nThus, the contributions of this paper extend beyond Google's infrastructure, providing key insights and building blocks for modern distributed tracing solutions.",
+  "abstract": "MillWheel is a framework for building low-latency data-processing applications that is widely used at Google. Users specify a directed computation graph and application code for individual nodes, and the system manages persistent state and the continuous flow of records, all within the envelope of the framework’s fault-tolerance guarantees.\nThis paper describes MillWheel’s programming model as well as its implementation. The case study of a continuous anomaly detector in use at Google serves to motivate how many of MillWheel’s features are used. MillWheel’s programming model provides a notion of logical time, making it simple to write time-based aggregations. MillWheel was designed from the outset with fault tolerance and scalability in mind. In practice, we find that MillWheel’s unique combination of scalability, fault tolerance, and a versatile programming model lends itself to a wide variety of problems at Google.",
+  "summary": "MillWheel presents a general-purpose programming model and execution framework for low-latency stream processing at Google scale. Applications are expressed as directed graphs of user-defined computations that process `(key, value, timestamp)` records. Computations execute serially for each key but can run in parallel across keys, allowing the framework to handle partitioning, load balancing, persistent state, timers, and record delivery without requiring application authors to implement distributed-systems recovery logic.\n\nThe central design contribution is the integration of persistent per-key state, logical event time, low watermarks, and timers with fault-tolerant execution. Low watermarks provide a monotonic estimate that all work up to a particular timestamp has been observed, enabling correct handling of out-of-order data and event-time windowing. Timers can be triggered by wall-clock time or low-watermark progress. Exactly-once processing is implemented through record identifiers, deduplication, atomic state updates, and checkpointed productions. State, timers, and pending outputs are kept within a consistency envelope, while sequencer tokens prevent stale or “zombie” workers from modifying state after ownership changes.\n\nThe implementation uses replicated storage such as Bigtable or Spanner, key-interval sharding, dynamic load balancing, fine-grained checkpointing, and a centralized, shardable authority for globally consistent low-watermark tracking. The system supports both strong productions, which checkpoint outputs before delivery, and weaker optimizations for applications whose computations are already idempotent. Reported experiments demonstrated millisecond-scale record-delivery latency, approximately constant median latency as deployments grew from 20 to 2,000 CPUs, modest additional watermark lag per pipeline stage, and a twofold reduction in normalized CPU load from framework-level caching. The paper also identifies limitations: highly skewed keys, non-checkpointable operations, and workloads whose progress is blocked by severe input delay.\n\nThe paper had a documented influence on subsequent stream-processing abstractions. The later Google Dataflow model explicitly describes itself as being based partly on MillWheel, extending its ideas around event time, watermarks, windowing, triggers, and the trade-offs among correctness, latency, and cost. ([vldb.org](https://www.vldb.org/pvldb/vol8/p1792-Akidau.pdf)) Apache Beam subsequently adopted the Dataflow model as the basis of a portable programming layer for batch and streaming pipelines across multiple execution engines, including Google Cloud Dataflow, Apache Flink, and Apache Spark. ([beam.apache.org](https://beam.apache.org/documentation/runners/capability-matrix/)) Later surveys identify MillWheel and the Dataflow model as influential in popularizing watermarks, out-of-order processing, and trigger-based stream computation, while subsequent systems research continues to cite MillWheel for its state-management and strong-production approach. ([link.springer.com](https://link.springer.com/article/10.1007/s00778-023-00819-8))",
   "raw_url": "http://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/41378.pdf",
   "source_type": "external",
   "filepath": "distributed_systems/README.md",
   "filename": "MillWheel: Fault-Tolerant Stream Processing at Internet Scale",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

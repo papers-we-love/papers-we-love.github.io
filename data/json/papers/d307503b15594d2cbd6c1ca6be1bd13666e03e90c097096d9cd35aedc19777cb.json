@@ -1,33 +1,31 @@
 {
   "uuid": "d307503b15594d2cbd6c1ca6be1bd13666e03e90c097096d9cd35aedc19777cb",
   "title": "Consensus in the Presence of Partial Synchrony",
-  "publication_date": "April 1988",
+  "publication_date": "April 1988, Journal of the Association for Computing Machinery, Vol. 35, No. 2, pp. 288–323; preliminary version presented at the 3rd ACM Symposium on Principles of Distributed Computing in August 1984",
   "authors": [
     "Cynthia Dwork",
     "Larry Stockmeyer",
     "Nancy Lynch"
   ],
   "keywords": [
-    "asynchronous-networks",
-    "consensus",
-    "distributed-systems",
+    "agreement-problem",
+    "byzantine-generals-problem",
+    "commit-problem",
+    "consensus-problem",
+    "distributed-clock",
+    "distributed-computing",
     "fault-tolerance",
-    "message-systems",
-    "network-delays",
-    "partial-synchrony",
-    "reliability",
-    "synchronous-models",
-    "timing-models"
+    "partially-synchronous-system"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "This paper presents a set of new results and techniques concerning synchronous and asynchronous systems where there is uncertainty about process speeds and message delivery time. A model of computation is introduced, which lies between synchronous and asynchronous models: we call it the partially synchronous model. It takes advantage of the fact that, although absolute certainty about timing cannot be guaranteed, it is often realistic to assume some constraints on the time required for message delivery and on relative process speeds. Within this model, we show the impossibility of consensus with a faulty process, even with only one failure, in asynchronous systems. We introduce a protocol that achieves consensus using less conservative assumptions about timing than previous protocols, in both distributed systems and fault tolerance fields. We show that consensus is achievable if the partially synchronous behavior is assumed and at least n - 1 / 3 faulty processes exist. We conclude by discussing several extensions of our models, results, and techniques.",
-  "summary": "The paper 'Consensus in the Presence of Partial Synchrony' by Cynthia Dwork, Nancy Lynch, and Larry Stockmeyer was published in April 1988. This foundational work introduces the concept of partial synchrony in distributed systems, which lies in between fully synchronous and asynchronous models of computation. The authors presented a new consensus protocol that operates under this model, providing fault-tolerance even in the presence of certain timing uncertainties. This paper has profoundly impacted the field of distributed systems by influencing subsequent research on consensus algorithms and fault-tolerant systems.\n\nThe work is frequently cited in research on distributed systems, consensus algorithms, and blockchain technologies. Particularly, the models and techniques presented have influenced designs in reliable message passing and timing constraints management in networks with partial synchrony constraints.\n\nThis paper is notably instrumental in forming the theoretical basis for many subsequent advances in reliable computing, including many protocols and systems that require consensus under timing constraints or partial failures.\n\nReferences to this paper or its concepts are found in works like \"Impossibility of Distributed Consensus with One Faulty Process\" by Fischer, Lynch, and Paterson, and it has further inspired algorithms in practical applications of distributed ledgers and blockchain consensus mechanisms.\n\n**Citations:**\n\n- Fisher, Lynch, and Paterson's work on \"Impossibility of Distributed Consensus with One Faulty Process\" ([source](https://dl.acm.org/doi/10.1145/3149.214121)).\n- Influence on Byzantine Fault Tolerance and blockchain consensus algorithms, as discussed in works like \"The Practical Byzantine Fault Tolerance Algorithm\" ([source](http://pmg.csail.mit.edu/papers/osdi99.pdf)).\n\nDespite diligent searching, these citations and impacts represent just a subset of the broader influence this work has had on distributed systems research.",
+  "abstract": "The concept of partial synchrony in a distributed system is introduced. Partial synchrony lies between the cases of a synchronous system and an asynchronous system. In a synchronous system, there is a known fixed upper bound Δ on the time required for a message to be sent from one processor to another and a known fixed upper bound Φ on the relative speeds of different processors. In an asynchronous system no fixed upper bounds Δ and Φ exist. In one version of partial synchrony, fixed bounds Δ and Φ exist, but they are not known a priori. The problem is to design protocols that work correctly in the partially synchronous system regardless of the actual values of the bounds Δ and Φ. In another version of partial synchrony, the bounds are known, but are only guaranteed to hold starting at some unknown time T, and protocols must be designed to work correctly regardless of when time T occurs. Fault-tolerant consensus protocols are given for various cases of partial synchrony and various fault models. Lower bounds that show in most cases that our protocols are optimal with respect to the number of faults tolerated are also given. Our consensus protocols for partially synchronous processors use new protocols for fault-tolerant “distributed clocks” that allow partially synchronous processors to reach some approximately common notion of time.",
+  "summary": "### Paper summary\nThe paper introduces partial synchrony as a system model between full synchrony and asynchrony. It studies two variants: one in which message-delay and processor-speed bounds exist but are unknown, and another in which the bounds are known but become valid only after an unknown global stabilization time. The authors define consensus correctness through consistency, termination, and either strong or weak unanimity.\n\nThe main construction first solves consensus in a round-based model and then simulates that model under progressively weaker timing assumptions. The protocols use phases, value locks, quorum acknowledgments, and—where necessary—authenticated broadcast or a broadcast simulation. For systems with partially synchronous processors, the paper develops fault-tolerant distributed clocks that provide processors with sufficiently synchronized logical time. The resulting protocols achieve polynomial time and message complexity in the relevant system parameters.\n\nThe paper characterizes fault thresholds for its principal models. With partially synchronous communication, and also when both communication and processors are partially synchronous, fail-stop and omission faults require N ≥ 2t + 1, while authenticated and unauthenticated Byzantine faults require N ≥ 3t + 1. With synchronous communication and partially synchronous processors, stronger results are possible for fail-stop faults and authenticated Byzantine faults: N ≥ t for fail-stop faults and N ≥ 2t + 1 for authenticated Byzantine faults, with the strongest-unanimity result requiring signed initial values. Matching or near-matching lower bounds are established, including impossibility results for insufficient processor counts.\n\n### Subsequent influence\nThe paper became a foundational reference for the partially synchronous model and for reasoning about consensus liveness after an unknown stabilization period. Its results are recognized as important contributions to distributed computing; the work received the 2007 Dijkstra Prize. ([dwork.seas.harvard.edu](https://dwork.seas.harvard.edu/publications/consensus-presence-partial-synchrony)) Later research continues to use partial synchrony as the system assumption for Byzantine consensus and explicitly analyzes protocols such as PBFT, Tendermint, HotStuff, and SBFT under that assumption. ([arxiv.org](https://arxiv.org/abs/2008.04167)) The available sources document substantial research influence; they do not by themselves establish a specific industrial deployment directly attributable to this paper.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/consensus-in-presence-of-partial-synchrony.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/consensus-in-presence-of-partial-synchrony.pdf",
   "filename": "consensus-in-presence-of-partial-synchrony.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:51"
 }

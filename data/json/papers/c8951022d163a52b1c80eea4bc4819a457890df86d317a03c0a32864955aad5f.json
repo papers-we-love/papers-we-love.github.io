@@ -1,32 +1,32 @@
 {
   "uuid": "c8951022d163a52b1c80eea4bc4819a457890df86d317a03c0a32864955aad5f",
-  "title": "Blue Screen of Death: A Simple and Flexible Color Equalization Method",
-  "publication_date": "1982",
+  "title": "Blue Screen Matting",
+  "publication_date": "August 1996; Proceedings of SIGGRAPH ’96, New Orleans, Louisiana, August 5–9, 1996, pp. 259–268",
   "authors": [
     "Alvy Ray Smith",
     "James F. Blinn"
   ],
   "keywords": [
-    "blue-screen",
-    "cinematography",
-    "color-equalization",
-    "color-transformation",
-    "digital-images",
-    "film-industry",
-    "graphics",
-    "image-processing",
-    "photography",
-    "visual-effects"
+    "alpha-channel",
+    "backing-impurities",
+    "backing-shadows",
+    "blue-screen-matting",
+    "blue-spill",
+    "chromakey",
+    "compositing",
+    "constant-color-matting",
+    "separating-surfaces",
+    "triangulation-matting"
   ],
   "category_path": [
     "computer_graphics"
   ],
-  "abstract": "A color equalization algorithm for blue screen matting is introduced. In this color coordinate transformation, one color (generally blue) may be mapped by linear transformations of such strength and type that it is equalized to any shade including white or black. As a result, the effective color of matte scenes shot against blue screen backdrops can be controlled, allowing computer image compositing. The transformation is effective and easy to implement and can be used to equalize the color of blue (and spill-over) in blue-screen photography.",
-  "summary": "The paper \"Blue Screen of Death: A Simple and Flexible Color Equalization Method\" by Alvy Ray Smith and James F. Blinn was published in 1982. This study introduces a color equalization algorithm that transforms color coordinates to allow effective compositing of scenes shot against blue screen backdrops, commonly used in visual effects.\n\nThe authors describe a method where one color, typically blue, is mapped using linear transformations to equalize it to any shade, including white or black, which aids in controlling the effective color of matte scenes. This process is fundamental to computer-generated imagery (CGI) and special effects in the film industry, providing a flexible and efficient technique to manage blue-screen photography challenges.\n\nUpon conducting a web search, this paper appears to be well-regarded in the fields of computer graphics and digital effects, particularly for its contribution to blue-screen compositing techniques. However, specific citations of how this paper influenced later works or industry adoption are sparse and direct mentions were not found in mainstream scholarly databases. Nonetheless, its foundational role in the color-processing techniques used for visual effects in cinematography is implicit and indicates a significant impact in those domains.",
+  "abstract": "A classical problem of imaging—the matting problem—is separation of a non-rectangular foreground image from a (usually) rectangular background image—for example, in a film frame, extraction of an actor from a background scene to allow substitution of a different background. Of the several attacks on this difficult and persistent problem, we discuss here only the special case of separating a desired foreground image from a background of a constant, or almost constant, backing color. This backing color has often been blue, so the problem, and its solution, have been called blue screen matting. However, other backing colors, such as yellow or (increasingly) green, have also been used, so we often generalize to constant color matting. The mathematics of constant color matting is presented and proven to be unsolvable as generally practiced. This, of course, flies in the face of the fact that the technique is commonly used in film and video, so we demonstrate constraints on the general problem that lead to solutions, or at least significantly prune the search space of solutions. We shall also demonstrate that an algorithmic solution is possible by allowing the foreground object to be shot against two constant backing colors—in fact, against two completely arbitrary backings so long as they differ everywhere.",
+  "summary": "## Summary\n\nThe paper formulates blue-screen matting as the recovery of an uncomposited foreground color and opacity from a foreground image composited over a known backing color. Using premultiplied-alpha compositing, it writes the image-formation model as \\(C_f=C_o+(1-\\alpha_o)C_k\\), where the unknown foreground has three premultiplied color components and one alpha value.\n\nThe central theoretical result is that ordinary single-background matting is underdetermined: three color equations must recover four unknowns, producing infinitely many mathematically valid foregrounds and mattes. Consequently, a fully general single-image algorithm cannot identify the intended solution without additional assumptions, constraints, or human guidance.\n\nThe authors then derive several solvable or partially solvable cases. If the foreground contains no blue and the backing is pure blue, alpha can be recovered directly from the blue channel. If the foreground obeys a linear color relationship—covering gray, near-gray, and flesh-colored objects—alpha can also be obtained analytically. These constraints provide a mathematical interpretation of practical color-difference methods associated with Petro Vlahos and Ultimatte.\n\nThe principal algorithmic contribution is triangulation matting. By photographing the same, registered foreground against two different known backing colors, the unknown foreground color can be eliminated and alpha recovered directly. The paper generalizes this result using linear algebra to arbitrary backing colors, provided the two backings differ at each pixel. It further describes least-squares solutions for overdetermined systems involving more than two backing images.\n\nThe method is effective for static or repeatable scenes, but sensitive to camera misregistration, exposure changes, brightness variation, and noise. These errors generally bias the result toward excess transparency and can create thin transparent artifacts around fine lines. The authors also discuss physical alpha bounds that reduce, but do not eliminate, the solution space; blue-spill modeling; backing shadows; backing impurities; and limitations of color-space separating-surface approaches.\n\n## Influence and subsequent use\n\nThe paper placed traditional blue-screen matting on an explicit algebraic footing and introduced the term and method commonly known as triangulation matting. Later research has cited its two-background formulation as a basis for recovering mattes and foreground colors in static scenes. For example, subsequent work on boundary matting identifies Smith and Blinn’s method as a seminal multi-background approach, while later real-time systems adapt the same mathematical idea to simultaneous image capture for video. ([graphics.stanford.edu](https://graphics.stanford.edu/courses/cs148-09-fall/papers/smith-blinn.pdf))\n\nThe triangulation equations have also been used in practical reconstruction and data-acquisition systems, including opacity-hull and image-based 3D-scanning work that obtains opacity mattes from multiple controlled backgrounds. The method is additionally used in computer-vision and computer-graphics instruction as a way to generate matte ground truth for evaluating natural-image matting algorithms. ([people.csail.mit.edu](https://people.csail.mit.edu/addy/research/ngan_sm_thesis.pdf))\n\nA Stanford retrospective records that an equivalent two-background technique had been independently used in Hanna-Barbera’s production pipeline before the paper, while noting that Smith and Blinn’s publication provided a formal derivation and broader generalization. ([graphics.stanford.edu](https://www.graphics.stanford.edu/papers/merging-sig81/))",
   "raw_url": "https://graphics.stanford.edu/courses/cs148-09-fall/papers/smith-blinn.pdf",
   "source_type": "external",
   "filepath": "computer_graphics/README.md",
   "filename": "Blue Screen Matting",
-  "created_on": "2026-01-24 23:46:58",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:54"
 }

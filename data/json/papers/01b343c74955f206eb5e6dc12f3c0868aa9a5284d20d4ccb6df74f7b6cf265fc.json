@@ -1,34 +1,31 @@
 {
   "uuid": "01b343c74955f206eb5e6dc12f3c0868aa9a5284d20d4ccb6df74f7b6cf265fc",
-  "title": "A Constant Algorithm for Implementing the LFU Cache Eviction Scheme",
-  "publication_date": "2004",
+  "title": "An O(1) algorithm for implementing the LFU cache eviction scheme",
+  "publication_date": "August 16, 2010",
   "authors": [
-    "Allan Borodin",
-    "Rafail Ostrovsky",
-    "Shai Ben-David",
-    "Yuval Rabani"
+    "Anirban Mitra",
+    "Dhruv Matani",
+    "Ketan Shah"
   ],
   "keywords": [
-    "algorithm-design",
     "cache-eviction",
     "cache-management",
-    "complexity-theory",
-    "computational-theory",
-    "computer-systems",
+    "constant-time-algorithms",
     "data-structures",
+    "hash-tables",
     "lfu-cache",
-    "memory-management",
-    "performance-optimization"
+    "linked-lists",
+    "web-caching"
   ],
   "category_path": [
     "caching"
   ],
-  "abstract": "We present a constant-time algorithm for managing a Least-Frequently-Used (LFU) cache. Our scheme requires the storage of a single 16-bit integer counter at each cache location and also employs integer operations that are potentially size-independent, with no algorithmically critical sections being dependent on the cache size. Our analysis implies that it is possible to implement the basic LFU data structure needed by the cache replacement algorithm with O(1) memory accesses and operations per cache insertion, deletion, and access. This solves, to a large extent, the longstanding open problem of implementing the LFU scheme efficiently for general cache sizes.",
-  "summary": "The paper \"A Constant Algorithm for Implementing the LFU Cache Eviction Scheme\" presents an algorithmic advancement in cache management by developing a constant-time algorithm for implementing the Least-Frequently-Used (LFU) cache eviction scheme. The authors propose a technique that utilizes a 16-bit counter for each cache location, enhancing the efficiency of the LFU caching mechanism. This work addresses a significant problem in cache memory management by enabling O(1) operations in terms of insertion, deletion, and access, independent of cache size.\n\nIn terms of impact, this paper's algorithm has been pivotal in theoretical discussions of cache management systems and has provided a baseline for further research especially in the areas of algorithmic efficiency and data structures for memory management systems. Subsequent research papers, such as \"Efficient Cache Management Algorithms,\" have cited this work in the exploration of efficient cache replacement strategies (see: J. Doe et al., *Efficient Cache Management Algorithms*, 2010). However, there is limited direct practical implementation in industry as newer cache management techniques have evolved.\n\nOverall, the paper is a foundational academic contribution that has been referenced for its theoretical insights but has seen limited direct adaptation in practical systems development due to the rapid evolution of cache eviction techniques.",
+  "abstract": "Cache eviction algorithms are used widely in operating systems, databases and other systems that use caches to speed up execution by caching data that is used by the application. There are many policies such as MRU (Most Recently Used), MFU (Most Frequently Used), LRU (Least Recently Used) and LFU (Least Frequently Used) which each have their advantages and drawbacks and are hence used in specific scenarios. By far, the most widely used algorithm is LRU, both for its O(1) speed of operation as well as its close resemblance to the kind of behaviour that is expected by most applications. The LFU algorithm also has behaviour desirable by many real world workloads. However, in many places, the LRU algorithm is is preferred over the LFU algorithm because of its lower run time complexity of O(1) versus O(log n). We present here an LFU cache eviction algorithm that has a runtime complexity of O(1) for all of its operations, which include insertion, access and deletion(eviction).",
+  "summary": "## Summary\n\nThe paper presents an LFU cache implementation with constant-time insertion, lookup, and eviction. Its design combines a hash table for key-based access with two levels of linked-list organization: an ordered list of frequency buckets and a per-frequency list of items. Each cached item stores a pointer to its current frequency bucket, allowing accesses to move an item to the next frequency in constant time. Eviction selects an item from the first frequency bucket, also in constant time.\n\nThe paper’s algorithm has been used as a reference implementation pattern in subsequent software projects. For example, Go implementations explicitly describe themselves as based on the paper, while Python documentation states that its frequency-list implementation follows the paper’s algorithm. A TypeScript implementation likewise identifies the paper as the basis for its O(1) cache operations. ([pkg.go.dev](https://pkg.go.dev/github.com/dgrijalva/lfu-go))\n\nThe work has also been cited in later systems research, including storage and cache-management papers. A USENIX FAST paper lists it as a reference, and a later study of delayed-eviction caching cites it when discussing constant-time LFU candidate selection. ([usenix.org](https://www.usenix.org/system/files/fast24-shakiba.pdf))\n\nThese references indicate concrete influence as a commonly reused data-structure design for LFU caches, particularly in educational and open-source implementations. The available evidence does not establish broad adoption of this exact algorithm in major commercial caching systems.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/caching/a-constant-algorithm-for-implementing-the-lfu-cache-eviction-scheme.pdf",
   "source_type": "pdf",
   "filepath": "caching/a-constant-algorithm-for-implementing-the-lfu-cache-eviction-scheme.pdf",
   "filename": "a-constant-algorithm-for-implementing-the-lfu-cache-eviction-scheme.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:50"
 }

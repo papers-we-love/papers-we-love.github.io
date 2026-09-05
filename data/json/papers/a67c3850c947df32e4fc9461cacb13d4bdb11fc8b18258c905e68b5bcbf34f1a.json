@@ -1,31 +1,31 @@
 {
   "uuid": "a67c3850c947df32e4fc9461cacb13d4bdb11fc8b18258c905e68b5bcbf34f1a",
-  "title": "No Motion Garbage Collection",
-  "publication_date": "1992",
+  "title": "The Treadmill: Real-Time Garbage Collection Without Motion Sickness",
+  "publication_date": "March 1992; ACM SIGPLAN Notices, volume 27, issue 3, pages 66–70",
   "authors": [
-    "H. Baker"
+    "Henry G. Baker"
   ],
   "keywords": [
-    "benchmarking",
-    "compiler-design",
-    "computer-programming",
-    "computer-science",
-    "garbage-collection",
-    "memory-allocation",
+    "ada",
+    "fragmentation",
+    "incremental-garbage-collection",
+    "lisp",
     "memory-management",
-    "performance-optimization",
-    "programming-languages",
-    "technical-computing"
+    "non-copying-garbage-collection",
+    "read-barrier",
+    "real-time-garbage-collection",
+    "treadmill-collector",
+    "tricolor-marking"
   ],
   "category_path": [
     "garbage_collection"
   ],
-  "abstract": "This paper describes a method for implementing a garbage collector that can collect and reuse storage that is only partially garbage, efficiently. This method uses no stop-and-copy technique. The storage is divided into regions, with garbage within each region being released in a lazy fashion, and regions themselves being collected when most of the regions consist of garbage. Thus, garbage accumulation is limited, but copying overhead is minimized.",
-  "summary": "The paper \"No Motion Garbage Collection\" by H. Baker, published in 1992, presents a method for implementing garbage collection in programming languages that avoids the need for stop-and-copy techniques. This method divides storage into regions, collecting garbage in a lazy fashion to minimize the overhead associated with copying. By limiting garbage accumulation without requiring extensive copying, the technique optimizes memory management.\n\nThis approach to garbage collection has had a notable influence in the field of memory management systems. It contributed to the ongoing development of techniques that efficiently manage memory without significant performance drawbacks, and has been cited in subsequent research exploring alternatives to traditional garbage collection methods.\n\nFurther references to this approach can be seen in academic discussions and research papers about optimizing memory usage in programming languages. While no specific industry applications directly cite this method as foundational, the principles of optimizing non-moving garbage collection have informed various modern approaches in memory management research and compiler design. For more detail on its influences, see the following:\n\n1. \"A family of real-time garbage collectors\" by D. L. Detlefs et al.\n2. \"Concurrent cycle collection in reference counted systems\" by D. F. Bacon and V. T. Rajan\n3. \"The garbage collection handbook: The art of automatic memory management\" by R. Jones et al.",
+  "abstract": "A simple real-time garbage collection algorithm is presented which does not copy, thereby avoiding some of the problems caused by the asynchronous motion of objects. This in-place \"treadmill\" garbage collection scheme has approximately the same complexity as other non-moving garbage collectors, thus making it usable in a high-level language implementation where some pointers cannot be traced. The treadmill is currently being used in a Lisp system built in Ada.",
+  "summary": "The paper presents the Treadmill, an incremental real-time garbage collector that avoids physically moving objects. It combines tricolor marking with circular doubly linked lists whose contiguous regions represent free, grey, black, and newly allocated objects. Allocation and collector progress are advanced by moving list-boundary pointers, while a read barrier ensures that the mutator does not access unmarked objects. The design preserves bounded-time collection operations and is suitable for systems in which some pointers cannot be traced, including conservative environments. Its principal limitation is storage management for differently sized immobile objects: free-list search and fragmentation can weaken worst-case allocation guarantees. The paper reports use in a Lisp system implemented in Ada. ([plover.com](https://plover.com/~mjd/misc/hbaker-archive/NoMotionGC.html))\n\nSubsequent research treated the Treadmill as a standard non-copying real-time collection technique. Later work developed memory-efficient variants based on the Treadmill and deployed such a collector in the SPIN operating-system kernel and Modula-3 programs, while also addressing fragmentation and space utilization. ([citeseerx.ist.psu.edu](https://citeseerx.ist.psu.edu/document?doi=fafe93e4fc99b4003adbbcdbfa4a1db2061f8e3f&repid=rep1&type=pdf)) The algorithm is also documented in modern garbage-collection surveys and textbooks as a representative real-time, non-moving collector, indicating continuing influence on research, teaching, and collector design discussions. ([doi.org](https://doi.org/10.1002/cpe.4902)) There is evidence of later implementations and engineering discussions referring to the technique, but the sources reviewed do not establish broad commercial-industry adoption of Baker’s original implementation.",
   "raw_url": "http://plover.com/~mjd/misc/hbaker-archive/NoMotionGC.html",
   "source_type": "external",
   "filepath": "garbage_collection/README.md",
   "filename": "The Treadmill: Real-Time Garbage Collection Without Motion Sickness",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

@@ -1,31 +1,31 @@
 {
   "uuid": "2e6d91c55a841fd662480222335840a8915ec2decc783c955510ca0debda3067",
-  "title": "A Theoretician's Guide to the Experimental Analysis of Algorithms",
-  "publication_date": "2004",
+  "title": "A Theoretician’s Guide to the Experimental Analysis of Algorithms",
+  "publication_date": "November 25, 2001; subsequently published in 2002 in Data Structures, Near Neighbor Searches, and Methodology: Fifth and Sixth DIMACS Implementation Challenges, DIMACS Series in Discrete Mathematics and Theoretical Computer Science, Volume 59, pp. 215–250.",
   "authors": [
-    "Catherine McGeoch"
+    "David S. Johnson"
   ],
   "keywords": [
-    "algorithm-design",
-    "algorithms",
+    "algorithm-analysis",
+    "algorithm-engineering",
     "benchmarking",
-    "complexity-analysis",
     "computational-experiments",
-    "data-analysis",
-    "empirical-study",
-    "experimental-analysis",
+    "data-visualization",
+    "experimental-algorithmics",
+    "experimental-design",
+    "heuristic-algorithms",
     "performance-evaluation",
-    "theoretical-computer-science"
+    "reproducibility"
   ],
   "category_path": [
     "experimental_algorithmics"
   ],
-  "abstract": "The major goal of analysis of algorithms is to improve performance. In this article we discuss how this goal can be furthered by supplementing traditional asymptotic analysis with experimental studies. The main thesis is that such studies provide insights that are hard to obtain by theoretical analysis alone. They provide a basis for validating theoretical results and frequently lead to suggestive ideas that help guide subsequent theoretical efforts. Experimental analysis often reveals characteristic performance patterns that can be applied directly to optimize algorithm design choices. It also identifies pitfalls of theoretical models, and helps to focus analytic attention on problem areas where more detailed theory can lead to significant performance gains.",
-  "summary": "Catherine McGeoch's paper, \"A Theoretician's Guide to the Experimental Analysis of Algorithms,\" has become an important resource in the computational field, emphasizing the importance of complementing theoretical analysis of algorithms with experimental studies. The paper argues that experimental analysis can offer significant insights that theoretical analysis may miss, such as validating theoretical results, driving algorithm optimization, and identifying theoretical model limitations. This approach has been influential in guiding subsequent research in algorithm design and performance evaluation. However, specific references or citations indicating the widespread impact of the paper were limited, predominately because it serves as a conceptual guide rather than a direct influence on a particular technological advancement. Despite this, its ideas are central in disciplines where empirical validation of computational models is crucial. The paper is referenced in educational materials and methodological discussions about algorithmic research, such as in [this ACM digital library entry](https://dl.acm.org/doi/10.5555/1525323).",
+  "abstract": "This paper presents an informal discussion of issues that arise when one attempts to analyze algorithms experimentally. It is based on lessons learned by the author over the course of more than a decade of experimentation, survey paper writing, refereeing, and lively discussions with other experimentalists. Although written from the perspective of a theoretical computer scientist, it is intended to be of use to researchers from all fields who want to study algorithms experimentally. It has two goals: first, to provide a useful guide to new experimentalists about how such work can best be performed and written up, and second, to challenge current researchers to think about whether their own work might be improved from a scientific point of view. With the latter purpose in mind, the author hopes that at least a few of his recommendations will be considered controversial.",
+  "summary": "## Overview\n\nDavid S. Johnson presents a methodological guide to experimental analysis of algorithms, arguing that worst-case and average-case theory cannot by themselves characterize real-world performance. The paper distinguishes four motivations for implementing algorithms: applying them to a practical problem, comparing competing methods in a “horse race,” understanding algorithmic behavior, and generating conjectures about average-case performance.\n\nThe central framework consists of ten principles: perform newsworthy experiments; connect the study to prior literature; use testbeds that support general conclusions; design experiments efficiently; use reasonably efficient implementations; ensure reproducibility; ensure comparability; report the full story; draw justified conclusions and seek explanations; and present data informatively. Johnson develops these principles through concrete recommendations, including exploratory experimentation, variance reduction, bootstrapping, self-documenting programs, benchmark-based machine calibration, profiling, normalized running-time plots, and preservation of code, data, instances, and parameter settings.\n\nThe paper repeatedly warns against narrow or misleading evaluations. Examples include relying on unstructured random instances, using already-solved testbeds, comparing results measured on uncalibrated machines, hand-tuning parameters without documenting the process, using running time as an ill-defined stopping rule, reporting only the best result from randomized runs, hiding anomalies, extrapolating asymptotic behavior from small instances, and presenting tables or figures that obscure rather than clarify trends. A recurring theme is that experimental results should support conclusions that are scientifically meaningful beyond the exact implementation, machine, and instances used.\n\n## Influence and subsequent use\n\nThe paper became part of the methodological literature surrounding experimental algorithmics and algorithm engineering. The American Mathematical Society published it as a chapter in the 2002 DIMACS volume on implementation challenges, a collection explicitly focused on high-quality experimental research in algorithms and data structures. ([bookstore.ams.org](https://bookstore.ams.org/DIMACS/59)) A 2020 historical review of experimental algorithmics describes it as a summary of Johnson’s reflections on how experimental algorithmics should be conducted and reported, and calls it “mandatory reading” for researchers in the area. ([pesc.coppe.ufrj.br](https://pesc.coppe.ufrj.br/~celina/ftp/j/0101-7438.2020.040.00236329.pdf))\n\nIts continued use is also visible in education and methodological guidance: it has been assigned as required reading in MIT algorithm-engineering courses and listed as recommended literature in university algorithm-engineering curricula. ([jshun.csail.mit.edu](https://jshun.csail.mit.edu/6506-s24/lectures/lecture1.pdf)) Later works on algorithm engineering, experimental methods, and guidelines for experimental algorithmics continue to cite it as a foundational reference. ([doi.org](https://doi.org/10.1007/978-0-387-30162-4_464)) These sources support the conclusion that the paper’s principal impact has been methodological: it helped formalize expectations for credible, reproducible, comparable, and interpretable empirical evaluation of algorithms rather than introducing a specific algorithmic technique or industrial system.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/experimental_algorithmics/a-theoreticians-guide-to-the-experimental-analysis-of-algorithms.pdf",
   "source_type": "pdf",
   "filepath": "experimental_algorithmics/a-theoreticians-guide-to-the-experimental-analysis-of-algorithms.pdf",
   "filename": "a-theoreticians-guide-to-the-experimental-analysis-of-algorithms.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

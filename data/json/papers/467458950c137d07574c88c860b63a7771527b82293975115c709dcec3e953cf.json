@@ -1,36 +1,37 @@
 {
   "uuid": "467458950c137d07574c88c860b63a7771527b82293975115c709dcec3e953cf",
-  "title": "Barrelfish: A Multikernel OS for Multicore Hardware",
-  "publication_date": "March 2008",
+  "title": "Embracing diversity in the Barrelfish manycore operating system",
+  "publication_date": "June 24, 2008, Workshop on Managed Many-Core Systems (MMCS’08), Boston, Massachusetts, USA",
   "authors": [
-    "Abraham Welc",
+    "Adrian Schüpbach",
     "Andrew Baumann",
     "Paul Barham",
-    "Pierre-Evarist Gaudry",
-    "Reto Schüpbach",
-    "Timothy Harris"
+    "Rebecca Isaacs",
+    "Simon Peter",
+    "Tim Harris",
+    "Timothy Roscoe"
   ],
   "keywords": [
     "barrelfish",
-    "computer-architecture",
-    "distributed-systems",
-    "inter-core-communication",
-    "monitoring-systems",
-    "multicore",
-    "multikernel",
-    "operating-systems",
-    "parallel-computing",
-    "scalability"
+    "core-diversity",
+    "hardware-heterogeneity",
+    "manycore-operating-systems",
+    "non-uniform-memory-access",
+    "numa",
+    "operating-system-scheduling",
+    "resource-allocation",
+    "system-diversity",
+    "system-knowledge-base"
   ],
   "category_path": [
     "unikernels"
   ],
-  "abstract": "Recent trends in computer architecture have radically changed the landscape of systems software. Multicore processors, non-uniform memory access architectures, and the growing importance of accelerators mean that OS developers face the challenge of building systems for hardware whose characteristics vary widely. Barrelfish is a new operating system designed from the ground up for scalability through increased use of message passing and more extensive use of distributed data structures in the OS. In this paper, we describe the rationale behind the Barrelfish architecture, and the detailed design of the system and implementation of core OS components, we also show early results evaluating the system.",
-  "summary": "The paper \"Barrelfish: A Multikernel OS for Multicore Hardware\" introduces the concept of a multikernel operating system designed to address challenges posed by multicore processors. The architecture of Barrelfish focuses on scalability and takes advantage of message passing and distributed data structures. The authors present a detailed design and examine core OS components, providing early evaluation results.\n\nBarrelfish has influenced subsequent research in operating systems and computer architecture, particularly in scalability and inter-core communication mechanisms. It has been cited by many studies and papers exploring efficient OS designs for multicore and distributed systems. For example, it is referenced in research examining the scalability of operating systems like \"A Scalable Operating System for Manycore Processors\" (https://ieeexplore.ieee.org/document/5506313) and studies on interconnect networks for scalability as in \"Interconnects for large-scale systems-on-chip\" (https://www.sciencedirect.com/science/article/abs/pii/S016764230900194X).\n\nThe paper has had a notable impact by inspiring further exploration into non-traditional OS structures for modern hardware, reflecting its relevance in ongoing developments in system software. As of the latest available updates, Barrelfish has continued to be a reference point for discussions around the creation of adaptable and scalable operating systems for emerging multicore and heterogeneous architectures.",
+  "abstract": "We discuss diversity and heterogeneity in manycore computer systems, and identify three distinct types of diversity, all of which present challenges to operating system designers and application writers alike. We observe that most current research work has concentrated on a narrow form of one of these (non-uniform memory access) to the exclusion of the others, and show with measurement why this makes sense in the short term.\n\nHowever, we claim that this is not viable in the long term given current processor and system roadmaps, and present our approach to dealing with both heterogeneous hardware within a single system, and the increasing diversity of complete system configurations: we directly represent detailed system information in an expressive “system knowledge base” accessible to applications and OS subsystems alike, and use this to control tasks such as scheduling and resource allocation.",
+  "summary": "### Summary\n\nThe paper argues that manycore operating systems must address three forms of hardware diversity: non-uniformity within a machine, diversity among processor cores, and diversity across complete system configurations. Its measurements on contemporary Intel and AMD systems show that memory-access latency can vary substantially with topology, while differences in interprocessor-interrupt and device-access latency were smaller. The authors therefore propose moving beyond abstractions that present hardware as a uniform SMP machine.\n\nThe central design proposal is the **system knowledge base (SKB)**: a queryable representation of hardware topology, device characteristics, runtime measurements, and prior hardware knowledge. The SKB is intended to support operating-system policy and application-level decisions, including scheduling, resource allocation, device-buffer placement, and cache-aware thread placement. The design separates policy representations from performance-critical mechanism data structures, keeping SKB queries off the fast path while allowing the system to continue operating if the SKB is temporarily unavailable.\n\nThe paper’s subsequent influence is documented primarily within the Barrelfish research project. Later Barrelfish work incorporated the system knowledge base into end-to-end multicore scheduling and used it for tasks including multicast routing, device configuration, interrupt routing, and scheduling. ([barrelfish.org](https://barrelfish.org/publications/barrelfish_hotpar10.pdf)) The SKB also supported follow-on work on database–operating-system co-design, adaptive scheduling, and performance discovery on Barrelfish. ([research-collection.ethz.ch](https://www.research-collection.ethz.ch/items/69246b44-919d-4b3b-ba50-08669297effb)) The broader Barrelfish project subsequently developed the multikernel architecture, which treated multicore hardware as a distributed system and became a reference point for later multicore operating-system research. ([barrelfish.org](https://barrelfish.org/documentation.html))",
   "raw_url": "http://www.barrelfish.org/publications/barrelfish_mmcs08.pdf",
   "source_type": "external",
   "filepath": "unikernels/README.md",
   "filename": "Embracing diversity in the Barrelfish manycore operating system",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:05"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:57"
 }

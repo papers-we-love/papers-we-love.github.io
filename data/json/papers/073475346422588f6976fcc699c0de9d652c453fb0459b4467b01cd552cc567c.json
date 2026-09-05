@@ -1,35 +1,36 @@
 {
   "uuid": "073475346422588f6976fcc699c0de9d652c453fb0459b4467b01cd552cc567c",
-  "title": "Identifying and Avoiding Biased Terminology in Online Threat Descriptions",
-  "publication_date": "August 2016",
+  "title": "Ranking Relevance in Yahoo Search",
+  "publication_date": "August 13–17, 2016; KDD '16, the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, San Francisco, CA, USA",
   "authors": [
-    "Alan Ritter",
-    "Dan Jurafsky",
-    "Jure Leskovec",
-    "Yuening Zhang",
-    "Zi Yin"
+    "Changsung Kang",
+    "Chikashi Nobata",
+    "Dawei Yin",
+    "Hongbo Deng",
+    "Hua Ouyang",
+    "Jean-Marc Langlois",
+    "Jianhui Chen",
+    "Jiliang Tang",
+    "Mianwei Zhou",
+    "Tim Daly Jr.",
+    "Yi Chang",
+    "Yuening Hu"
   ],
   "keywords": [
-    "bias-detection",
-    "biased-terminology",
-    "computational-linguistics",
-    "data-analysis",
-    "linguistic-bias",
-    "natural-language-processing",
-    "online-communication",
-    "online-threats",
-    "sentiment-analysis",
-    "text-classification"
+    "deep-learning",
+    "learning-to-rank",
+    "query-rewriting",
+    "semantic-matching"
   ],
   "category_path": [
     "search-engines"
   ],
-  "abstract": "We present a novel method to identify biased terminology in online threat descriptions written in natural language. Our approach uses linguistic and statistical techniques to analyze large datasets of text descriptions, identifying common patterns of biased language. We then provide guidelines for generating unbiased descriptions that anyone can confidently trust. Our model helps mitigate potential biases in crowdsourced data and has substantial implications for improving data quality in many applications of machine learning and natural language processing.",
-  "summary": "This research paper proposes a methodology for detecting biased terminology in online threat descriptions using natural language processing. The authors leverage linguistic and statistical techniques to analyze text from datasets, aiming to improve the quality of data used in machine learning applications by reducing bias in descriptions. Their work builds on existing theories of computational linguistics and text classification, focusing on the detection of biased language patterns and offering guidelines for creating unbiased content. Although initial searches yield limited direct citations of this paper, it contributes to the broader discourse on bias detection in natural language processing. It likely influences ongoing research by enhancing methodologies to ensure data quality and reliability, relevant to fields such as sentiment analysis, text classification, and computational social science. Similar works can be found in publications related to linguistic bias and bias in natural language processing modeling. No other specific influential references or broader industry applications were identified in this initial search.",
+  "abstract": "Search engines play a crucial role in our daily lives. Relevance is the core problem of a commercial search engine. It has attracted thousands of researchers from both academia and industry and has been studied for decades. Relevance in a modern search engine has gone far beyond text matching, and now involves tremendous challenges. The semantic gap between queries and URLs is the main barrier for improving base relevance. Clicks help provide hints to improve relevance, but unfortunately for most tail queries, the click information is too sparse, noisy, or missing entirely. For comprehensive relevance, the recency and location sensitivity of results is also critical.\n\nIn this paper, we give an overview of the solutions for relevance in the Yahoo search engine. We introduce three key techniques for base relevance – ranking functions, semantic matching features and query rewriting. We also describe solutions for recency sensitive relevance and location sensitive relevance. This work builds upon 20 years of existing efforts on Yahoo search, summarizes the most recent advances and provides a series of practical relevance solutions. The reported performance is based on Yahoo’s commercial search engine, where tens of billions of URLs are indexed and served by the ranking system.",
+  "summary": "## Summary\n\nThis paper presents a practical, web-scale relevance system developed and deployed for Yahoo Search. Its central argument is that effective search ranking must address not only query–document text matching, but also vocabulary mismatch, sparse behavioral data for tail queries, freshness, and geographic intent.\n\nThe system uses a multi-stage architecture. A lightweight first pass retrieves and filters candidates, a core ranking model scores query–URL pairs, and a later contextual reranker uses information from the candidate set as a whole. The core model, LogisticRank, applies gradient-boosted decision trees with logistic loss and label-dependent gradient scaling. In Yahoo’s production evaluation, it reduced bad top-ranked URLs by 40% and improved DCG5 by 5% relative to the comparison ranking methods.\n\nTo address semantic mismatch and long-tail queries, the paper introduces three complementary features: click similarity learned through propagation over a query–document click graph, translated text matching based on statistical machine translation, and deep semantic matching based on neural embeddings trained from click data. Query rewriting is formulated as a machine-translation problem from user-query language to document language. Rewrites are blended with results from the original query rather than blindly replacing it, reducing the risk that an incorrect rewrite changes the user’s intent. Together, the semantic features improved the baseline by 2.89% in DCG5, while the complete system—including LogisticRank, semantic features, and query rewriting—improved DCG5 by approximately 7% over the older GBRank-based system and by approximately 9% for tail queries.\n\nThe paper also describes specialized ranking components for recency-sensitive and location-sensitive queries. Freshness is incorporated through an additive freshness model activated by a time-sensitivity classifier. Location ranking adds distance-based boosting only when both relevance and geographic proximity support the result; the reported offline DCG5 improvement was 6.92%, with a 4.78% CTR improvement in an online bucket test.\n\n## Influence and subsequent use\n\nThe paper received the KDD 2016 Best Paper Award in the Applied Data Science Track and documented techniques that were already operating in Yahoo’s commercial search engine. ([yindawei.com](https://www.yindawei.com/research/)) Later work and surveys have continued to cite it as an example of industrial relevance ranking that combines learning-to-rank, click-derived semantic matching, query rewriting, and specialized freshness or location signals. In particular, a 2026 survey of deep learning to rank in industrial search explicitly includes the paper in its discussion of relevance-ranking systems, while practitioner literature uses it as a reference when explaining query matching through lexical, graph-based, and embedding methods. These references demonstrate continued visibility and reuse as an industrial-search case study, but they do not by themselves establish that later systems directly reproduced Yahoo’s implementation. ([ouci.dntb.gov.ua](https://ouci.dntb.gov.ua/en/works/4grPDanE/))",
   "raw_url": "https://www.kdd.org/kdd2016/papers/files/adf0361-yinA.pdf",
   "source_type": "external",
   "filepath": "search-engines/README.md",
   "filename": "Yahoo",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:56"
 }

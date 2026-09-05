@@ -1,7 +1,7 @@
 {
   "uuid": "9126cf3b930fd7be2de6248f82565c9b970482eb063bdc30be8c1b29c86b2167",
   "title": "Bigtable: A Distributed Storage System for Structured Data",
-  "publication_date": "October 2006, OSDI",
+  "publication_date": "November 7, 2006; 7th USENIX Symposium on Operating Systems Design and Implementation (OSDI '06), Seattle, Washington, USA",
   "authors": [
     "Andrew Fikes",
     "Deborah A. Wallach",
@@ -14,26 +14,26 @@
     "Wilson C. Hsieh"
   ],
   "keywords": [
-    "bigtable",
-    "cassandra",
-    "data-storage",
+    "compaction",
+    "distributed-storage",
     "distributed-systems",
-    "google",
-    "hbase",
-    "indexing",
-    "performance",
+    "fault-tolerance",
+    "nosql",
     "scalability",
-    "structured-data"
+    "sstables",
+    "structured-data",
+    "tablets",
+    "wide-column-database"
   ],
   "category_path": [
     "datastores"
   ],
-  "abstract": "Bigtable is a distributed storage system for managing structured data that is designed to scale to a very large size: petabytes of data across thousands of commodity servers. Many projects at Google store data in Bigtable, including web indexing, Google Earth, and Google Finance. These applications place very different demands on Bigtable, both in terms of data size and latency requirements. Despite these varied demands, Bigtable has successfully provided a flexible, high-performance solution for all of these Google products. In this paper, we describe the simple data model provided by Bigtable, which gives clients dynamic control over data layout and format, and we describe the design and implementation of Bigtable.",
-  "summary": "The paper \"Bigtable: A Distributed Storage System for Structured Data\" was published by Fay Chang et al. in October 2006 at the OSDI conference. Bigtable was developed by Google to manage structured data and is designed for scalability across thousands of servers, potentially handling petabytes of data. This system has been successfully integrated into several Google products, such as web indexing, Google Earth, and Google Finance, due to its flexible data model and high performance. \n\nBigtable has significantly influenced both academic research and industrial applications. In academia, it has inspired further research into distributed storage systems, data models, and database performance. It is often cited in works discussing NoSQL databases and large-scale data management. The system's principles have been implemented in popular open-source projects like Apache Hadoop's HBase and Apache Cassandra, which have been extensively discussed in various research papers and technical blogs detailing modern data infrastructure (for example, the survey paper on NoSQL databases https://ieeexplore.ieee.org/document/7006512, or the performance comparison study https://link.springer.com/article/10.1007/s10115-013-0691-z). These projects have been instrumental in bringing Bigtable's underlying concepts to organizations beyond Google, including Facebook (which developed Cassandra) and many enterprises leveraging HBase for scalable data storage solutions.",
+  "abstract": "Bigtable is a distributed storage system for managing structured data that is designed to scale to a very large size: petabytes of data across thousands of commodity servers. Many projects at Google store data in Bigtable, including web indexing, Google Earth, and Google Finance. These applications place very different demands on Bigtable, both in terms of data size (from URLs to web pages to satellite imagery) and latency requirements (from backend bulk processing to real-time data serving). Despite these varied demands, Bigtable has successfully provided a flexible, high-performance solution for all of these Google products. In this paper we describe the simple data model provided by Bigtable, which gives clients dynamic control over data layout and format, and we describe the design and implementation of Bigtable.",
+  "summary": "## Summary\n\nBigtable presents a distributed storage system for large-scale structured and semi-structured data. Its data model is a sparse, persistent, multidimensional sorted map indexed by row key, column key, and timestamp. Rows are maintained in lexicographic order and are atomically readable and writable, while column families provide a manageable unit for access control, compression, memory placement, and schema organization. Versioned cells and configurable garbage collection allow applications to retain either a fixed number of versions or values within a specified time interval.\n\nThe system partitions tables into tablets, each covering a contiguous range of rows. Tablets are dynamically split, assigned to tablet servers, and rebalanced by a master. Clients communicate directly with tablet servers for data operations, avoiding the master as a request bottleneck. Tablet locations are maintained through a three-level metadata hierarchy, with client-side caching and prefetching reducing lookup overhead.\n\nPersistent tablet state is stored in Google File System using immutable SSTables, a commit log, and an in-memory memtable. Writes are logged and later incorporated into SSTables through minor, merging, and major compactions. Reads merge the memtable with the relevant SSTables. Immutable files simplify concurrency, tablet splitting, deletion cleanup, and recovery. Additional optimizations include locality groups, in-memory data placement, block and scan caches, Bloom filters, grouped commit logging, log sorting during recovery, and staged compaction before tablet migration.\n\nThe evaluation shows that Bigtable scales substantially as tablet servers are added, although scaling is limited by shared network capacity, CPU contention, load imbalance, and the cost of transferring large storage blocks for small random reads. Sequential access, scans, writes, and memory-resident reads perform considerably better than disk-based random reads. Production examples demonstrate the model's applicability to web crawling, analytics, satellite imagery, personalized search, batch processing, and latency-sensitive serving workloads.\n\nThe authors emphasize operational lessons: distributed systems must account for corruption, clock skew, hung machines, asymmetric partitions, dependency failures, quota exhaustion, and maintenance events; monitoring must cover both infrastructure and client behavior; and simple, clear protocols are preferable to unnecessarily general mechanisms. The paper deliberately favors single-row atomicity and schema-level control over a full relational model or general distributed transactions.\n\n## Influence\n\nThe paper became a foundational reference for wide-column and large-scale NoSQL storage. Apache HBase describes itself as an open-source distributed database modeled after Google Bigtable and implements Bigtable-like capabilities on Hadoop and HDFS. ([hbase.apache.org](https://hbase.apache.org/2.3/)) Google also identifies Bigtable as an inspiration for HBase and Cassandra. ([cloud.google.com](https://cloud.google.com/bigtable))\n\nThe design subsequently became available as Google Cloud Bigtable, a managed service that exposes Bigtable-style storage through client libraries and an HBase-compatible interface, connecting the original research design to cloud production workloads and the broader Hadoop ecosystem. ([docs.cloud.google.com](https://docs.cloud.google.com/bigtable/docs/overview?hl=en)) The paper was presented at OSDI '06 on November 7, 2006, and was recognized as a Best Paper. ([usenix.org](https://www.usenix.org/conference/osdi-06/bigtable-distributed-storage-system-structured-data))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/datastores/bigtable-a-distributed-storage-system-for-structured-data.pdf",
   "source_type": "pdf",
   "filepath": "datastores/bigtable-a-distributed-storage-system-for-structured-data.pdf",
   "filename": "bigtable-a-distributed-storage-system-for-structured-data.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:51"
 }

@@ -1,32 +1,32 @@
 {
   "uuid": "5b35d85350f0f7aab1d796f805f45ee6e8d0eb59b9a921370f9693895b1c0f25",
-  "title": "Gender Differences in Grief after the Death of a Parent",
-  "publication_date": "December 11, 2012",
+  "title": "Datacenter Traffic Control: Understanding Techniques and Trade-offs",
+  "publication_date": "December 14, 2017 (online publication); IEEE Communications Surveys & Tutorials, Vol. 20, No. 2, Second Quarter 2018, pp. 1492–1525",
   "authors": [
-    "Alan R. Kemp",
-    "Clarissa J. Humphrey"
+    "Cauligi S. Raghavendra",
+    "Mohammad Noormohammadpour"
   ],
   "keywords": [
-    "bereavement",
-    "coping-mechanisms",
-    "emotional-response",
-    "gender-differences",
-    "grief-reactions",
-    "grieving-process",
-    "parental-death",
-    "parental-loss",
-    "psychological-impact",
-    "sociocultural-factors"
+    "datacenters",
+    "flow-prioritization",
+    "load-balancing",
+    "management-schemes",
+    "multipath-routing",
+    "trade-offs",
+    "traffic-control",
+    "traffic-scheduling",
+    "traffic-shaping",
+    "transmission-control"
   ],
   "category_path": [
     "networks"
   ],
-  "abstract": "This study examined gender differences in the experience of grief during the initial six months following the death of a parent. One hundred and seventy-seven adults, who had lost a parent, completed self-administered questionnaires related to demographic characteristics, pre-death characteristics of the parent-offspring relationship, circumstances of the parental death, social support, coping strategies, and grief symptoms. The findings revealed women experienced a higher level of grief symptoms compared to men. Additionally, different predictors of grief symptoms were identified for men and women. These differences are discussed in terms of sociocultural perspectives and implications for counseling.",
-  "summary": "This paper investigates how men and women experience grief differently after the death of a parent within the first six months of their loss. The study involved 177 participants and utilized self-administered questionnaires to collect data on multiple aspects, such as demographic characteristics, the parent-offspring relationship, and coping strategies. The research found that women report higher levels of grief symptoms than men. It identified that predictors of grief symptoms vary between genders, suggesting that sociocultural factors influence these differences. \n\nA brief review of its influence or references reveals limited specific citational impact in subsequent research or industry applications. The nature of the study places it primarily within academic investigations about grief and does not show a significant presence in broader industry or research citations as of the current date. This observation may indicate the paper serves more as an insightful academic resource rather than a widely-referenced cornerstone in further studies or practical applications. No concrete citations in other discipline-expanding research could be verified at this time.",
+  "abstract": "Datacenters provide cost-effective and flexible access to scalable compute and storage resources necessary for today’s cloud computing needs. A typical datacenter is made up of thousands of servers connected with a large network and usually managed by one operator. To provide quality access to the variety of applications and services hosted on datacenters and maximize performance, it deems necessary to use datacenter networks effectively and efficiently. Datacenter traffic is often a mix of several classes with different priorities and requirements. This includes user-generated interactive traffic, traffic with deadlines, and long-running traffic. To this end, custom transport protocols and traffic management techniques have been developed to improve datacenter network performance. In this tutorial paper, we review the general architecture of datacenter networks, various topologies proposed for them, their traffic properties, general traffic control challenges in datacenters and general traffic control objectives. The purpose of this paper is to bring out the important characteristics of traffic control in datacenters and not to survey all existing solutions (as it is virtually impossible due to massive body of existing research). We hope to provide readers with a wide range of options and factors while considering a variety of traffic control mechanisms. We discuss various characteristics of datacenter traffic control including management schemes, transmission control, traffic shaping, prioritization, load balancing, multipathing, and traffic scheduling. Next, we point to several open challenges as well as new and interesting networking paradigms. At the end of this paper, we briefly review inter-datacenter networks that connect geographically dispersed datacenters which have been receiving increasing attention recently and pose interesting and novel research problems. To measure the performance of datacenter networks, different performance metrics have been used such as flow completion times, deadline miss rate, throughput and fairness. Depending on the application and user requirements, some metrics may need more attention. While investigating different traffic control techniques, we point out the trade-offs involved in terms of costs, complexity and performance. We find that a combination of different traffic control techniques may be necessary at particular entities and layers in the network to improve the variety of performance metrics. We also find that despite significant research efforts, there are still open problems that demand further attention from the research community.",
+  "summary": "The paper is a tutorial and taxonomy of traffic control in datacenter networks. It characterizes datacenter architectures, network topologies, traffic workloads, control objectives, and the trade-offs among cost, implementation complexity, throughput, latency, fairness, and deadline performance. It organizes the design space around management schemes, transmission control, traffic shaping, prioritization, load balancing, multipath routing, and traffic scheduling. Its principal conclusion is that no single mechanism optimizes all relevant objectives; effective systems may require combinations of techniques deployed at different network entities and protocol layers. The paper also identifies unresolved problems involving heterogeneous workloads, changing traffic matrices, scalability, fault tolerance, and inter-datacenter networking. ([people.cs.pitt.edu](https://people.cs.pitt.edu/~znati/Courses/WANs/Dir-Rel/COMST_IEEE_FINAL.pdf))\n\nSubsequent research has cited the paper as a foundational survey when structuring work on datacenter transport control, flow scheduling, resource scheduling for inter-datacenter transfers, and programmable datacenter traffic engineering. Later survey and research papers use its taxonomy and references to position newer mechanisms, including scheduling and traffic-engineering approaches. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S1389128618303931)) A quick search found evidence of continuing academic influence, but no specific commercial product or industry deployment directly attributing its design to this paper.",
   "raw_url": "https://osf.io/6qzxc/",
   "source_type": "external",
   "filepath": "networks/README.md",
   "filename": "Datacenter Traffic Control: Understanding Techniques and Trade-offs",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:56"
 }

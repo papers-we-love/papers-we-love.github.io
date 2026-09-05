@@ -1,0 +1,37 @@
+{
+  "uuid": "24dd3c332d1abb1d81283cfc2d9211ef37bcadf66d4d22e8ccb9f256e3fc30f6",
+  "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+  "publication_date": "March 2023; published as a conference paper at ICLR 2023 (original arXiv submission: October 6, 2022; version 3 revised March 10, 2023)",
+  "authors": [
+    "Dian Yu",
+    "Izhak Shafran",
+    "Jeffrey Zhao",
+    "Karthik Narasimhan",
+    "Nan Du",
+    "Shunyu Yao",
+    "Yuan Cao"
+  ],
+  "keywords": [
+    "chain-of-thought",
+    "embodied-agents",
+    "interactive-decision-making",
+    "knowledge-retrieval",
+    "language-model-prompting",
+    "large-language-models",
+    "llm-agents",
+    "reasoning-and-acting",
+    "tool-use",
+    "web-navigation"
+  ],
+  "category_path": [
+    "artificial_intelligence"
+  ],
+  "abstract": "While large language models (LLMs) have demonstrated impressive performance across tasks in language understanding and interactive decision making, their abilities for reasoning (e.g. chain-of-thought prompting) and acting (e.g. action plan generation) have primarily been studied as separate topics. In this paper, we explore the use of LLMs to generate both reasoning traces and task-specific actions in an interleaved manner, allowing for greater synergy between the two: reasoning traces help the model induce, track, and update action plans as well as handle exceptions, while actions allow it to interface with and gather additional information from external sources such as knowledge bases or environments. We apply our approach, named ReAct, to a diverse set of language and decision making tasks and demonstrate its effectiveness over state-of-the-art baselines in addition to improved human interpretability and trustworthiness. Concretely, on question answering (HotpotQA) and fact verification (Fever), ReAct overcomes prevalent issues of hallucination and error propagation in chain-of-thought reasoning by interacting with a simple Wikipedia API, and generating human-like task-solving trajectories that are more interpretable than baselines without reasoning traces. Furthermore, on two interactive decision making benchmarks (ALFWorld and WebShop), ReAct outperforms imitation and reinforcement learning methods by an absolute success rate of 34% and 10% respectively, while being prompted with only one or two in-context examples.",
+  "summary": "## Contribution and method\n\nThe paper introduces ReAct, a prompting paradigm in which a language model interleaves free-form reasoning traces with task-specific actions. Actions interact with an external environment and produce observations; reasoning traces update the agent's working context, decompose goals, track progress, reformulate searches, handle exceptions, and select subsequent actions. The method is evaluated primarily with few-shot prompting of PaLM-540B, with additional experiments using GPT-3 and smaller models through fine-tuning. ([arxiv.org](https://arxiv.org/abs/2210.03629))\n\n## Experiments and findings\n\nReAct is tested on HotpotQA, FEVER, ALFWorld, and WebShop. On knowledge-intensive tasks, it improves over acting-only prompting and outperforms chain-of-thought on FEVER, while remaining slightly behind chain-of-thought on HotpotQA when used alone. Combining ReAct with self-consistency chain-of-thought performs best among the prompting variants reported for these tasks. Human analysis found that ReAct produced fewer hallucinated facts than chain-of-thought, although it remained vulnerable to reasoning errors, uninformative searches, repetitive action loops, and ambiguity in dataset labels.\n\nOn interactive decision-making tasks, ReAct improves over action-only prompting. Its best reported ALFWorld configuration reaches 71% average success, compared with 45% for the best action-only trial and 37% for the reported BUTLER baseline. On WebShop, ReAct reaches a 40.0% success rate versus 30.1% for action-only prompting and 28.7% for the previous IL+RL method. Fine-tuning on 3,000 generated trajectories makes ReAct the strongest of the compared methods for the reported smaller-model HotpotQA experiments. The paper also demonstrates that humans can correct an agent by editing reasoning traces rather than changing model parameters.\n\n## Limitations\n\nThe approach depends on the language model learning both the reasoning format and the domain-specific action space from a small number of demonstrations. Long-horizon tasks can exceed the context-length budget, and the method's reasoning traces are not guaranteed to be faithful explanations of the model's underlying computation. Performance is also sensitive to search quality, decoding strategy, prompt selection, and the available action space. The paper identifies larger-scale human-written data, multitask training, and integration with reinforcement learning as directions for further development.\n\n## Subsequent research and practical influence\n\nThe paper became a reference point for tool-using and agentic language-model research. Later work explicitly describes new systems as extensions of ReAct; for example, RAISE adds short- and long-term memory to a ReAct-style conversational-agent architecture, while ReST meets ReAct develops self-improvement procedures for multi-step agents operating over external knowledge. ([arxiv.org](https://arxiv.org/abs/2401.02777))\n\nThe ReAct control loop has also been incorporated into practical agent-development tooling. LangChain/LangGraph provides a ReAct agent template implementing the iterative sequence of reasoning, tool execution, observation, and repetition, and the Hugging Face engineering documentation presents ReAct-style prompting as a way to connect language models to tools. These examples indicate adoption of the paper's central interaction pattern in open-source agent frameworks, although they do not establish that every production agent uses the original prompting procedure unchanged. ([github.com](https://github.com/langchain-ai/react-agent))\n\nOverall, the paper's concrete impact was to popularize a simple, reusable abstraction—reason, act through a tool or environment, observe, and repeat—for constructing language-model agents. Its influence is visible in subsequent research on memory-augmented agents, self-improving tool users, embodied systems, and software frameworks for tool-calling agents. ([mlanthology.org](https://mlanthology.org/iclr/2023/yao2023iclr-react/))",
+  "raw_url": "https://arxiv.org/pdf/2210.03629.pdf",
+  "source_type": "external",
+  "filepath": "artificial_intelligence/README.md",
+  "filename": "ReAct: Synergizing Reasoning and Acting in Language Models (2023)",
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:53"
+}

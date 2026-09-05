@@ -1,32 +1,28 @@
 {
   "uuid": "853f06c18c75d456b851ce4fccd5d6473a68faa6024c917de13fe139f1e7e42d",
-  "title": "The Google File System",
-  "publication_date": "2003",
+  "title": "A Fast String Searching Algorithm",
+  "publication_date": "October 1977, Communications of the ACM, Volume 20, Number 10, pages 762–772",
   "authors": [
-    "Howard Gobioff",
-    "Sanjay Ghemawat",
-    "Shun-Tak Leung"
+    "J Strother Moore",
+    "Robert S. Boyer"
   ],
   "keywords": [
-    "chunkservers",
-    "data-replication",
-    "data-streaming",
-    "distributed-file-system",
-    "fault-tolerance",
-    "google-file-system",
-    "large-scale-computing",
-    "metadata-management",
-    "performance-optimizations"
+    "bibliographic-search",
+    "computational-complexity",
+    "information-retrieval",
+    "linear-time-bound",
+    "pattern-matching",
+    "text-editing"
   ],
   "category_path": [
     "pattern_stringology"
   ],
-  "abstract": "We have designed and implemented the Google File System, a scalable distributed file system for large distributed data-intensive applications. It provides fault tolerance while running on inexpensive commodity hardware, and it delivers high aggregate performance to a large number of clients. While sharing many of the same goals as previous distributed file systems, our design has been driven by observations of our application workloads and technological environment, both current and anticipated, that reflect a marked departure from some earlier file system assumptions. This has led us to reexamine traditional choices and explore radically different design points. The file system has been in wide use at Google for more than two years now; it is the underlying storage system for many of our production services as well as research and engineering efforts. In this paper, we present the system's design, discuss many of the implementation issues, and trace the lessons we have learned.",
-  "summary": "The Google File System (GFS), presented in this paper, is a distributed file system developed at Google to support its extensive applications and data requirements. It is designed to manage large volumes of data and provide fault tolerance by utilizing inexpensive, distributed storage solutions. Some of its key features include chunk replication, distributed metadata management, and performance optimizations tailored for Google's needs. The system aims to enhance fault-tolerance and support high-throughput and reliability across a large number of client processes.\n\nGFS has significantly influenced the design of subsequent distributed file systems and storage solutions. It inspired the development of Hadoop Distributed File System (HDFS), which has become a cornerstone of many big data technologies used worldwide ([Shvachko et al., 2010](https://ieeexplore.ieee.org/document/5439706)). Additionally, the paper's concepts have underpinned advancements in cloud storage systems and have been integral in shaping industry approaches to data-intensive computing environments.\n\nFor further citation, the paper has been referenced extensively and has over 10,000 citations according to Google Scholar, underscoring its impact in both academia and industry ([Google Scholar citations](https://scholar.google.com/scholar?cites=52913231)).",
+  "abstract": "An algorithm is presented that searches for the location, \"i,\" of the first occurrence of a character string, \"pat,\" in another string, \"string.\" During the search operation, the characters of pat are matched starting with the last character of pat. The information gained by starting the match at the end of the pattern often allows the algorithm to proceed in large jumps through the text being searched. Thus the algorithm has the unusual property that, in most cases, not all of the first i characters of string are inspected. The number of characters actually inspected (on the average) decreases as a function of the length of pat. For a random English pattern of length 5, the algorithm will typically inspect i/4 characters of string before finding a match at i. Furthermore, the algorithm has been implemented so that (on the average) fewer than i + patlen machine instructions are executed. These conclusions are supported with empirical evidence and a theoretical analysis of the average behavior of the algorithm. The worst case behavior of the algorithm is linear in i + patlen, assuming the availability of array space for tables linear in patlen plus the size of the alphabet.",
+  "summary": "The paper introduced the Boyer–Moore string-searching algorithm, using right-to-left pattern comparison together with preprocessing tables that permit substantial shifts after mismatches. It established strong average-case performance, including behavior that can inspect fewer text characters than the text position being searched, while retaining linear worst-case behavior under the stated assumptions. ([cs.utexas.edu](https://www.cs.utexas.edu/~moore/publications/fstrpos.pdf))\n\nSubsequent research treated Boyer–Moore as a central baseline for practical string searching and developed variants such as Horspool’s simplified algorithm and later optimized families of skip-loop methods. ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/10.1002/spe.4380100608)) The algorithm also became part of the practical background for later systems research, including hardware acceleration of string matching in programmable network ASICs, where it is discussed as a well-known approach and as a comparison point for newer methods. ([cs.yale.edu](https://www.cs.yale.edu/homes/soule/pubs/sosr2019.pdf))",
   "raw_url": "https://web.archive.org/web/20220912024717/https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.13.9460&rep=rep1&type=pdf",
   "source_type": "external",
   "filepath": "pattern_stringology/README.md",
   "filename": "Fast String Searching",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:56"
 }

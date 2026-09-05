@@ -1,33 +1,32 @@
 {
   "uuid": "919e56417e6df98970775b170f286db1568709b421d9cfa3ff948f69ab3bf201",
   "title": "The Case for Determinism in Database Systems",
-  "publication_date": "September 2010",
+  "publication_date": "September 2010; Proceedings of the VLDB Endowment, Vol. 3, Nos. 1–2, pp. 70–80; presented at the 36th International Conference on Very Large Data Bases (VLDB 2010), Singapore. ([cir.nii.ac.jp](https://cir.nii.ac.jp/crid/1360861293306045440))",
   "authors": [
-    "Daniel J. Abadi",
-    "Miguel Ferreira",
-    "Samuel Madden"
+    "Alexander Thomson",
+    "Daniel J. Abadi"
   ],
   "keywords": [
+    "active-replication",
     "concurrency-control",
-    "data-processing",
-    "database-systems",
-    "determinism",
+    "database-replication",
+    "deadlock-avoidance",
+    "deterministic-databases",
     "distributed-databases",
-    "error-handling",
-    "failure-recovery",
-    "performance-optimization",
-    "scalability",
-    "transaction-management"
+    "horizontal-scalability",
+    "main-memory-oltp",
+    "transaction-processing",
+    "two-phase-commit"
   ],
   "category_path": [
     "datastores"
   ],
-  "abstract": "We argue that determinism can significantly simplify the design and implementation of database systems in environments where scalability, reliability, and high availability are crucial. Unlike traditional nondeterministic systems, which require complex concurrency control and recovery mechanisms to ensure correctness, deterministic systems are inherently correct by construction. By executing transactions in a predetermined order, deterministic systems obviate the need for distributed locking, complex deadlock detection, and complicated rollback protocols. We describe how to implement determinism in database systems and outline the architectural implications of adopting a deterministic approach. Our results show that determinism can achieve competitive performance, reliability, and availability without sacrificing consistency.",
-  "summary": "This paper, titled \"The Case for Determinism in Database Systems\", argues for the advantages of deterministic execution in database management systems. The authors present a strong case for adopting determinism to simplify the design of scalable and reliable database systems, highlighting benefits such as eliminating the need for complex concurrency controls and recovery mechanisms. The paper describes implementation strategies for determinism and explores its architectural impacts. By executing transactions in a predetermined order, deterministic systems avoid common issues like distributed locking and deadlock, thus streamlining transaction management.\n\nThe concept of determinism detailed in this paper has influenced various follow-up research studies exploring efficient database management and transaction processing. For instance, the paper has been cited in further works including \"Deterministic Transaction Execution in Distributed Database Systems: On Scalability and Performance\" (https://dl.acm.org/doi/10.1145/1000000) and \"Advancing Deterministic Database Design\" (https://ieeexplore.ieee.org/document/1000001), indicating its contribution to advancing database design discussions. However, there is limited evidence of immediate direct adoption in industry systems, as the primary discussion remains within academic research avenues.",
+  "abstract": "Replication is a widely used method for achieving high availability in database systems. Due to the nondeterminism inherent in traditional concurrency control schemes, however, special care must be taken to ensure that replicas don’t diverge. Log shipping, eager commit protocols, and lazy synchronization protocols are well-understood methods for safely replicating databases, but each comes with its own cost in availability, performance, or consistency.\n\nIn this paper, we propose a distributed database system which combines a simple deadlock avoidance technique with concurrency control schemes that guarantee equivalence to a predetermined serial ordering of transactions. This effectively removes all nondeterminism from typical OLTP workloads, allowing active replication with no synchronization overhead whatsoever. Further, our system eliminates the requirement for two-phase commit for any kind of distributed transaction, even across multiple nodes within the same replica. By eschewing deadlock detection and two-phase commit, our system under many workloads outperforms traditional systems that allow nondeterministic transaction reordering.",
+  "summary": "### Summary\n\nThe paper argues that database systems should reconsider nondeterministic transaction ordering for modern, short, predominantly in-memory OLTP workloads. It proposes executing transactions in a manner equivalent to a predetermined serial order, using ordered locking and an execution-to-completion rule. This design enables replicas receiving the same ordered transaction stream to reach the same state without synchronization during execution, while also avoiding deadlock detection. For distributed transactions, deterministic execution can reduce or eliminate the need for two-phase commit because failures are handled through replicated execution and recovery rather than nondeterministic transaction aborts.\n\nThe prototype experiments show that deterministic execution performs similarly to traditional two-phase locking when transactions are short and predictable, but can suffer severe queueing or “clogging” when an early transaction stalls. For partitioned TPC-C workloads with increasing numbers of multipartition transactions, however, the deterministic prototype degrades more gracefully than traditional locking because it avoids holding locks throughout two-phase commit. Transactions whose complete read/write sets are not initially known are handled through deterministic decomposition and retry; the measured cost is small when dependency records have low volatility.\n\n### Influence\n\nThe paper’s ideas were developed further in **Calvin: Fast Distributed Transactions for Partitioned Database Systems** (SIGMOD 2012), which explicitly uses deterministic ordering, deterministic locking, replication of transaction inputs, and elimination of distributed commit protocols to support scalable distributed ACID transactions. ([15799.courses.cs.cmu.edu](https://15799.courses.cs.cmu.edu/fall2013/static/papers/p1-thomson.pdf)) The authors’ subsequent 2014 experimental study evaluated the advantages and disadvantages of deterministic database systems, confirming deadlock avoidance as a major performance benefit while documenting costs involving execution flexibility, overload handling, preprocessing, and transactions whose accessed data is not known in advance. ([cs.umd.edu](https://www.cs.umd.edu/~abadi/papers/determinism-eval.pdf))\n\nSubsequent deterministic database research, including work on workload-aware partitioning and blockchain-oriented transaction systems, continues to cite the paper as an early formulation of deterministic transaction processing for replication and distributed execution. ([cs.nthu.edu.tw](https://www.cs.nthu.edu.tw/~shwu/pubs/shwu-sigmod-21.pdf)) The available evidence supports clear influence on later research prototypes and system designs, especially Calvin; it does not by itself establish broad commercial adoption of the specific prototype described in this paper.",
   "raw_url": "http://cs-www.cs.yale.edu/homes/dna/papers/determinism-vldb10.pdf",
   "source_type": "external",
   "filepath": "datastores/README.md",
   "filename": "The Case for Determinism in Database Systems",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:54"
 }

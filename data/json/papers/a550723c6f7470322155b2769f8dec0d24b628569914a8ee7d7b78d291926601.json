@@ -1,32 +1,25 @@
 {
   "uuid": "a550723c6f7470322155b2769f8dec0d24b628569914a8ee7d7b78d291926601",
-  "title": "Level Ancestor Problem Simplified",
-  "publication_date": "2004",
+  "title": "The Level Ancestor Problem simplified",
+  "publication_date": "June 16, 2004 (Theoretical Computer Science, Volume 321, Issue 1, pages 5–12); earlier conference version presented at LATIN 2002, April 3–6, 2002",
   "authors": [
     "Martín Farach-Colton",
     "Michael A. Bender"
   ],
   "keywords": [
-    "algorithm",
-    "ancestor-query",
-    "array-representation",
     "data-structures",
     "level-ancestor-problem",
-    "path-compression",
-    "preprocessing",
-    "range-minima",
-    "succinct-data-structures",
-    "trees"
+    "rooted-trees"
   ],
   "category_path": [
     "data_structures"
   ],
-  "abstract": "The level ancestor problem is a fundamental data structuring problem in which one preprocesses a rooted tree T and answers queries of the form, \"find the h-th node on the path from a vertex to the root of T.\" The history of the problem goes back almost twenty years. Algorithms of varying levels of practicality have been discovered as researchers have worked towards constant-time \"random access\" queries. In this paper, we give the first simple solution achieving constant time per query after O(n) preprocessing. The natural way to solve the level ancestor problem is to simulate a binary search for the node. Instead, we reduce the problem to the range minima problem on the heavy path decomposition of the tree. The range minima problem is then solved in constant time via a known reduction to the lowest common ancestor problem. Finally, we encode the structure of the tree via an Euler tour and the structure of the range minima problem through the Cartesian tree, which is defined in terms of the Euler tour.",
-  "summary": "The paper titled \"Level Ancestor Problem Simplified\" by Michael A. Bender and Martín Farach-Colton, published in 2004, addresses the challenge of efficiently solving the level ancestor problem—a task fundamental to data structures involving trees. The authors present a pioneering solution that achieves constant query time after linear preprocessing, which is noted for its simplicity compared to previous approaches. Instead of utilizing binary search techniques, the solution leverages the range minima problem on the heavy path decomposition of a tree, further linking it to the lowest common ancestor problem using a Cartesian tree defined in the context of an Euler tour.\n\nThe impact of this research paper primarily lies in its contribution to the theoretical understanding and practical algorithm design for tree data structures. The techniques discussed have been foundational in evolving methods to optimize query efficiencies in hierarchical data solutions and have influenced subsequent studies in computational tree problems. A web search indicates that this paper is frequently cited in later works focusing on advanced data structure design, further emphasizing its role in advancing computer science research in efficient algorithm design.\n\nOne such reference citing this paper is the work by Fischer and Heun (2007) on succinct data structures for range minimum queries [1]. Another important reference is the study by Berkman et al. (2007) regarding implicit dictionaries and their applications [2]. These citations underscore the paper's significance in inspiring and solidifying approaches to handle complex querying problems efficiently. However, beyond academic circles, explicit applications of this work in industry have not been widely documented.\n\n1. Fischer, J., & Heun, V. (2007). Theoretical Computer Science, 115(1): “A New Succinct Representation of RMQ-Information and Improvements in the RMQ-Problem by Generating Cartesian Trees,” doi:10.1016/j.theoreticalcomputerarchitecture.2007.06\n2. Berkman, O., M., & Vishkin, U. (2007). “Chunked RAMs: Implicit Dictionaries Supporting Caching with Applications to Caches and Construction of EREW-PRAMs,” Math of Computation, 142(5), doi:10.1098/rspb.2007.2106",
+  "abstract": "We present a simple algorithm for the Level Ancestor Problem. A Level Ancestor Query LA(v; d) requests the depth d ancestor of node v. The Level Ancestor Problem is to preprocess a given rooted tree T to support level ancestor queries. While optimal solutions to this problem already exist, our new optimal solution is simple enough to be taught and implemented.",
+  "summary": "The paper presents a simple static data structure for answering level-ancestor queries on a rooted tree. Given a node and a target depth, the query returns the node’s ancestor at that depth. The authors develop several progressively stronger components: a full lookup table, power-of-two jump pointers, and a ladder decomposition based on long root-to-leaf paths. Combining jump pointers with ladders gives constant-time queries after \\(O(n\\log n)\\) preprocessing. The final macro–micro-tree construction reduces preprocessing to \\(O(n)\\) while preserving \\(O(1)\\) query time and linear space. The construction assigns jump pointers only to a sparse set of nodes, handles the resulting macro-tree with ladders, and exhaustively tabulates the bounded-size microtree shapes.\n\nThe paper’s principal contribution is therefore not a new asymptotic bound—the linear-preprocessing, constant-query bound was already known—but a substantially simpler and more implementable presentation of an optimal static algorithm. Later work explicitly characterized this algorithm as the simplest known solution for the static serial-RAM problem and used its component algorithms as baselines in an empirical comparison of level-ancestor implementations. ([arxiv.org](https://arxiv.org/abs/0909.1030))\n\nSubsequent research continued to cite the paper as a foundational static level-ancestor result. For example, later work on resilient level-ancestor queries in dynamic trees cites it in its treatment of static-tree level-ancestor structures, while extending the problem to fault-tolerant and update-capable settings. ([doi.org](https://doi.org/10.1007/s00453-022-01046-3)) The sources reviewed document continued research use, teaching, and implementation-oriented evaluation, but do not establish a specific industrial product deployment attributable to this paper.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/data_structures/level-ancestor-simplified.pdf",
   "source_type": "pdf",
   "filepath": "data_structures/level-ancestor-simplified.pdf",
   "filename": "level-ancestor-simplified.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:51"
 }

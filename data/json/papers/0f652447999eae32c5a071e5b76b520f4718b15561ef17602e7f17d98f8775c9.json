@@ -1,29 +1,31 @@
 {
   "uuid": "0f652447999eae32c5a071e5b76b520f4718b15561ef17602e7f17d98f8775c9",
-  "title": "Extensible Pattern Matching for Extensible Languages",
-  "publication_date": "1998",
+  "title": "Extensible Pattern Matching in an Extensible Language",
+  "publication_date": "June 14, 2011 (arXiv submission); presented at the 22nd Symposium on Implementation and Application of Functional Languages (IFL 2010), September 2010; preprint dated October 2010.",
   "authors": [
-    "Daan Leijen",
-    "Erik Meijer"
+    "Sam Tobin-Hochstadt"
   ],
   "keywords": [
-    "computational-expressions",
-    "extensible-languages",
+    "compiler-implementation",
+    "domain-specific-languages",
     "functional-programming",
-    "open-constructs",
+    "hygienic-macros",
+    "language-extension",
+    "macro-systems",
+    "match-expanders",
     "pattern-matching",
-    "programming-languages",
-    "type-systems"
+    "racket",
+    "scheme"
   ],
   "category_path": [
     "pattern_matching"
   ],
-  "abstract": "We describe a novel approach to adding flexible pattern matching facilities to programming languages, based on a combination of pattern matching and constructor classes. By classifying and abstracting patterns over datatype constructors, this approach provides pattern matching libraries with the same conciseness and ease-of-use as regular pattern matching, while simultaneously being extensible in a type-safe manner. Our technique can be directly applied to both functional and object-oriented languages and bridges the gap between open polymorphic variants and closed algebraic datatypes. We illustrate our technique by extending a small functional language with pattern matching facilities.",
-  "summary": "The paper \"Extensible Pattern Matching for Extensible Languages\" by Daan Leijen and Erik Meijer introduces a method to integrate flexible pattern matching capabilities into programming languages. This is achieved through a new approach that combines pattern matching with constructor classes, offering a concise, user-friendly yet extensible and type-safe pattern matching framework. This approach is adaptable for both functional and object-oriented languages, effectively bridging open polymorphic variants and closed algebraic datatypes. The technique is exemplified by the implementation in a small functional language. \n\nIn a brief web search, the impact of this paper is not prominently cited in subsequent influential research works or industrial applications. Therefore, it seems that while the concepts introduced could be beneficial, they have not significantly influenced further research or notable industry projects. The absence of direct citations suggests that this work remains relatively specialized or that its impact has been integrated into broader works without explicit attribution.",
+  "abstract": "Pattern matching is a widely used technique in functional languages, especially those in the ML and Haskell traditions, where it is at the core of the semantics. In languages in the Lisp tradition, in contrast, pattern matching is typically provided by libraries built with macros. We present match, a sophisticated pattern matcher for Racket, implemented as language extension using macros. The system supports novel and widely-useful pattern-matching forms, and is itself extensible. The extensibility of match is implemented via a general technique for creating extensible language extensions.",
+  "summary": "The paper presents Racket’s `match` as a macro-based language extension rather than a fixed core-language feature. Its central contribution is **match expanders**: hygienic compile-time transformers that allow users to define new pattern forms by translating them into existing patterns. The implementation combines this extensibility mechanism with compiled pattern matching, sequence patterns, predicate patterns, application/view patterns, and support for user-defined structures.\n\nThe paper’s ideas influenced subsequent Scheme standardization work. SRFI 262, “Extensible pattern matcher,” explicitly describes its design as closely inspired by Racket’s matcher and adopts an analogous transformer-based mechanism for defining new pattern syntax. ([srfi.schemers.org](https://srfi.schemers.org/srfi-262/srfi-262.html)) The GNU Emacs `pcase` implementation also cites this paper as a presentation of ideas that significantly influenced its later design. ([github.com](https://github.com/emacs-mirror/emacs/blob/master/lisp/emacs-lisp/pcase.el)) The paper additionally documents applications of match expanders in Racket, including domain-specific rewrite-rule languages and abstraction libraries for views. ([ccs.neu.edu](https://www.ccs.neu.edu/~samth/match-ifl-full.pdf))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/pattern_matching/extensible-pattern-matching-extensible-language.pdf",
   "source_type": "pdf",
   "filepath": "pattern_matching/extensible-pattern-matching-extensible-language.pdf",
   "filename": "extensible-pattern-matching-extensible-language.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:56"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:53"
 }

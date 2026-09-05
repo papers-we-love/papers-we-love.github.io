@@ -1,37 +1,36 @@
 {
   "uuid": "9d55873eaf95d491c4adbf634a800a9b18a8e2d3aa230b86a5c83633a0f811b4",
   "title": "IX: A Protected Dataplane Operating System for High Throughput and Low Latency",
-  "publication_date": "October 5-7, 2014",
+  "publication_date": "October 6–8, 2014 — 11th USENIX Symposium on Operating Systems Design and Implementation (OSDI ’14), Broomfield, Colorado",
   "authors": [
     "Adam Belay",
     "Ana Klimovic",
+    "Christos Kozyrakis",
     "Edouard Bugnion",
     "George Prekas",
-    "Marton Volk",
-    "Mothy Roscoe",
-    "Steven Grosbøl"
+    "Samuel Grossman"
   ],
   "keywords": [
+    "adaptive-batching",
+    "datacenter-systems",
     "dataplane-operating-system",
-    "high-throughput",
-    "isolation",
-    "ix-os",
-    "low-latency",
-    "network-performance",
-    "operating-systems",
-    "protected-dataplane",
-    "scalability",
-    "virtualization"
+    "hardware-virtualization",
+    "high-throughput-networking",
+    "kernel-bypass",
+    "low-latency-networking",
+    "multicore-scalability",
+    "network-stack",
+    "zero-copy"
   ],
   "category_path": [
     "unikernels"
   ],
-  "abstract": "Modern datacenter applications demand high network throughput while maintaining low latency and providing scaling to many cores. The IX operating system addresses these requirements by restructuring the kernel into a control and dataplane, allowing applications to efficiently access hardware resources. This paper investigates the design and implementation of IX, exploring how it reduces latency and increases throughput in scenario with high request rates. The IX architecture protects application traffic, isolates applications from each other, and supports a large number of concurrent connections. It relies on modern hardware features to offer protection and virtualization typically found in datacenters.",
-  "summary": "The paper \"IX: A Protected Dataplane Operating System for High Throughput and Low Latency\" was presented at the 11th USENIX Symposium on Operating Systems Design and Implementation (OSDI) in October 2014. The authors introduced IX, a new operating system architecture designed to support high-throughput, low-latency network operations in datacenter environments. By separating control and dataplane functionalities, IX allows applications to efficiently access hardware resources while maintaining isolation and protection. It leverages modern hardware capabilities to enhance network performance and scalability.\n\nThe paper has influenced subsequent research and systems development in the realm of high-performance and efficient virtualization techniques for datacenters. IX’s design has been referenced and built upon in research exploring the optimization of network stack performance in virtualized environments. For instance, later works, such as those on kernel-bypass techniques and RDMA (Remote Direct Memory Access) improvements, have cited IX as a foundational study in achieving low-latency networking within datacenters.\n\nReferences to this paper can be found in:\n- Mittal, R., Sherry, J., Ratnasamy, S., & Arvind Krishnamurthy. (2015). \"A Study of Linux Network Stack Performance Models\", USENIX Association (https://dl.acm.org/doi/abs/10.5555/2813767.2813785)\n- Bangun, P., et al. (2016). \"Optimizing Network Virtualization Performance over Cloud Management Platforms\". IEEE Xplore (https://ieeexplore.ieee.org/document/7604706)\n- Li, J., et al. (2017). \"The Power of Deduplication in Flash-based Solid State Drives: Insight from Realtime IO Path Analysis\". Springer (https://link.springer.com/chapter/10.1007/978-3-319-62024-9_65)\n\nThese examples demonstrate the impact and continuous relevance of the IX operating system’s architectural innovations in the field of operating systems and network virtualization.",
+  "abstract": "The conventional wisdom is that aggressive networking requirements, such as high packet rates for small messages and microsecond-scale tail latency, are best addressed outside the kernel, in a user-level networking stack. We present IX, a dataplane operating system that provides high I/O performance, while maintaining the key advantage of strong protection offered by existing kernels. IX uses hardware virtualization to separate management and scheduling functions of the kernel (control plane) from network processing (dataplane). The dataplane architecture builds upon a native, zero-copy API and optimizes for both bandwidth and latency by dedicating hardware threads and networking queues to dataplane instances, processing bounded batches of packets to completion, and by eliminating coherence traffic and multi-core synchronization. We demonstrate that IX outperforms Linux and state-of-the-art, user-space network stacks significantly in both throughput and end-to-end latency. Moreover, IX improves the throughput of a widely deployed, key-value store by up to 3.6× and reduces tail latency by more than 2×.",
+  "summary": "## Summary\n\nIX proposes a protected dataplane operating system for datacenter workloads that require both very high packet rates and microsecond-scale tail latency. Its central architectural separation places conventional management, resource allocation, and compatibility services in a Linux-based control plane, while dedicated dataplane instances execute network processing and application logic on assigned hardware threads and NIC queues. Hardware virtualization provides isolation among the control plane, dataplanes, and application code.\n\nThe dataplane combines four main techniques: run-to-completion processing, bounded adaptive batching, a native asynchronous zero-copy API, and flow-consistent assignment of traffic to queues and cores. These choices reduce intermediate buffering, kernel-transition overhead, cache inefficiency, synchronization, and cache-coherence traffic. The API exposes network flow-control state directly to applications and supports batched operations through shared-memory request and event arrays.\n\nIn the authors’ evaluation on Intel 10-GbE hardware, IX achieved 5.7 μs one-way latency for 64-byte messages, saturated a 10-GbE link with three cores, reached 8.8 million 64-byte round trips per second in the tested configuration, and scaled to four bonded 10-GbE interfaces. It also sustained useful performance with up to 250,000 concurrent connections. A memcached port improved throughput by up to 3.6× at a 500 μs 99th-percentile latency target, while reducing unloaded latency by approximately half. The prototype’s limitations included reliance on trusted dataplane code, lack of IOMMU and SR-IOV support, static rather than dynamic resource allocation in the evaluation, and the requirement that latency-sensitive application threads avoid long-running or blocking work.\n\n## Influence\n\nThe work was subsequently developed into a broader IX operating-system study published in *ACM Transactions on Computer Systems*, adding dynamic control-plane resource and energy-management experiments and reporting larger memcached gains in the extended system. ([mast.stanford.edu](https://mast.stanford.edu/pubs/the_ix_operating_system/)) The authors also released an open-source IX implementation, making the dataplane architecture and supporting code available for further experimentation. ([github.com](https://github.com/ix-project/ix)) Later systems research continued to investigate related combinations of dedicated data paths, zero-copy communication, kernel protection, and low-latency networking; for example, StackMap explicitly presents a protected OS network service with a zero-copy data path and cites IX as relevant prior work. ([usenix.org](https://www.usenix.org/conference/atc16/technical-sessions/presentation/yasukata)) Bibliographic aggregation records substantial subsequent scholarly citation of the paper, although citation counts vary by database and should not be interpreted as a direct measure of practical deployment. ([rankless.org](https://www.rankless.org/hit-papers/10.5555/2685048.2685053))",
   "raw_url": "https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-belay.pdf",
   "source_type": "external",
   "filepath": "unikernels/README.md",
   "filename": "IX: A Protected Dataplane Operating System for High Throughput and Low Latency",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:05"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:57"
 }

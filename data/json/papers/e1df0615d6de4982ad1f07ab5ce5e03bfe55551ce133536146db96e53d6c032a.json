@@ -1,33 +1,34 @@
 {
   "uuid": "e1df0615d6de4982ad1f07ab5ce5e03bfe55551ce133536146db96e53d6c032a",
-  "title": "A Neural Algorithm of Artistic Style",
-  "publication_date": "March 2017",
+  "title": "Deep Photo Style Transfer",
+  "publication_date": "July 2017, Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR 2017), pp. 6997–7005; arXiv version submitted March 22, 2017 and revised April 11, 2017.",
   "authors": [
-    "Alexander S. Ecker",
-    "Leon A. Gatys",
-    "Matthias Bethge"
+    "Eli Shechtman",
+    "Fujun Luan",
+    "Kavita Bala",
+    "Sylvain Paris"
   ],
   "keywords": [
-    "art-generation",
-    "artistic-style",
+    "color-transfer",
     "computer-vision",
-    "convolutional-neural-networks",
     "deep-learning",
-    "image-style-transfer",
-    "machine-learning",
-    "neural-networks",
-    "style-transfer-algorithms",
-    "visual-computing"
+    "image-editing",
+    "locally-affine-transformation",
+    "matting-laplacian",
+    "neural-style-transfer",
+    "photographic-style-transfer",
+    "photorealism",
+    "semantic-segmentation"
   ],
   "category_path": [
     "computer_graphics"
   ],
-  "abstract": "In this work we introduce an artificial system based on a Deep Neural Network that creates artistic images of high perceptual quality. Our approach is based on a Deep Neural Network that aims to separate and recombine image content and style. We demonstrate that through this new representation of images it is possible to produce new images that combine the content of a given photograph with the appearance of numerous well-known artworks. Our algorithm allows for a wide range of novel and intriguing applications, ranging from the creation of art to the improvement of computational photography and object recognition.",
-  "summary": "The paper \"A Neural Algorithm of Artistic Style\" by Leon A. Gatys, Alexander S. Ecker, and Matthias Bethge has significantly influenced the field of neural style transfer. The authors introduce a novel method that employs a deep neural network to separate and recombine the content and style of images, thus allowing the creation of artistic images where the style of famous artworks can be applied to any given photograph. This technique transforms image processing and provides new tools for artists and designers, and has further influenced computational photography and object recognition.\n\nThe paper is widely cited and has sparked numerous follow-up studies and advancements in neural style transfer. For example, the technique has been further developed to improve efficiency and reduce computational cost as seen in works such as Johnson et al.'s \"Perceptual Losses for Real-Time Style Transfer and Super-Resolution\" ([arxiv:1603.08155](https://arxiv.org/abs/1603.08155)). It also laid foundational concepts for tasks in other computer vision applications, demonstrated by related research like \"Deep Photo Style Transfer\" by Luan et al. ([arxiv:1703.07511](https://arxiv.org/abs/1703.07511)). The algorithm has found uses beyond academia, impacting industries focused on digital media, gaming, and app development where real-time image rendering and processing are crucial. Millions of users worldwide interact with technology that applies methods developed in this pioneering work, enhancing creativity and digital expression.",
+  "abstract": "This paper introduces a deep-learning approach to photographic style transfer that handles a large variety of image content while faithfully transferring the reference style. Our approach builds upon the recent work on painterly transfer that separates style from the content of an image by considering different layers of a neural network. However, as is, this approach is not suitable for photorealistic style transfer. Even when both the input and reference images are photographs, the output still exhibits distortions reminiscent of a painting. Our contribution is to constrain the transformation from the input to the output to be locally affine in colorspace, and to express this constraint as a custom fully differentiable energy term. We show that this approach successfully suppresses distortion and yields satisfying photorealistic style transfers in a broad variety of scenarios, including transfer of the time of day, weather, season, and artistic edits.",
+  "summary": "## Summary\n\nThe paper extends neural style transfer to photographic editing by combining three objectives: content preservation, semantic style matching, and a photorealism regularizer based on the Matting Laplacian. The regularizer constrains the input-to-output transformation to be locally affine in color space, reducing geometric distortions while permitting spatially varying color changes. Semantic segmentation masks guide style matching between corresponding regions, reducing artifacts caused by unrelated content being matched across the images. The method was evaluated on changes in illumination, time of day, weather, season, and artistic appearance. The reported user studies found that the method was judged photorealistic and was preferred for style faithfulness in 86.8% of comparisons against the evaluated global color-transfer methods. ([openaccess.thecvf.com](https://openaccess.thecvf.com/content_cvpr_2017/html/Luan_Deep_Photo_Style_CVPR_2017_paper.html))\n\nSubsequent research explicitly used this work as a reference point for photorealistic style transfer. Later methods, including PhotoWCT and WCT², pursued feed-forward or more efficient alternatives to the paper’s iterative optimization and addressed reconstruction artifacts and runtime limitations. WCT², for example, compared itself directly with Deep Photo Style Transfer and reported substantially faster high-resolution processing. ([openaccess.thecvf.com](https://openaccess.thecvf.com/content_ICCV_2019/papers/Yoo_Photorealistic_Style_Transfer_via_Wavelet_Transforms_ICCV_2019_paper.pdf)) Other follow-up work adapted the approach for automated semantic segmentation and for portrait-specific transfer, indicating that the paper’s locally affine photorealism constraint and semantic-region guidance became established design ideas in subsequent research. ([arxiv.org](https://arxiv.org/abs/1901.03915))",
   "raw_url": "https://arxiv.org/pdf/1703.07511.pdf",
   "source_type": "external",
   "filepath": "computer_graphics/README.md",
   "filename": "Deep Photo Style Transfer",
-  "created_on": "2026-01-24 23:46:58",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:54"
 }

@@ -1,32 +1,34 @@
 {
   "uuid": "365b9bebc31cfc9dbbd14ea6433608d0c054923eff7090f2b9bede20ba1a1229",
-  "title": "Minuet: Rethinking Concurrency Control in Storage Systems",
-  "publication_date": "October 2014",
+  "title": "Decoupling Cores, Kernels, and Operating Systems",
+  "publication_date": "October 6–8, 2014; 11th USENIX Symposium on Operating Systems Design and Implementation (OSDI ’14), Broomfield, Colorado",
   "authors": [
-    "Anastasia Ailamaki",
-    "Donald Kossmann",
-    "Gregor Alonso",
-    "Oliver Zellweger",
-    "Tim Kraska"
+    "Gerd Zellweger",
+    "Kornilios Kourtis",
+    "Simon Gerber",
+    "Timothy Roscoe"
   ],
   "keywords": [
-    "atomicity",
-    "concurrency-control",
-    "isolation",
-    "minuet",
-    "software-transactional-memory",
-    "storage-systems",
-    "transaction-management"
+    "barrelfish",
+    "boot-drivers",
+    "capability-systems",
+    "core-hotplugging",
+    "dynamic-cores",
+    "kernel-replacement",
+    "multikernel",
+    "operating-systems",
+    "osnode",
+    "real-time-systems"
   ],
   "category_path": [
     "unikernels"
   ],
-  "abstract": "Existing implementations of concurrency control, such as two-phase locking or optimistic concurrency control, offer only a fixed trade-off between performance and isolation. Two-phase locking provides high isolation but poor performance scalability. Optimistic concurrency control conversely provides better performance scalability but may have issues with correctness when transactions conflict. In this paper, we propose Minuet, a new form of concurrency control, as a scalable and correct alternative to these existing protocols. Minuet is a multi-version scheme inspired by software transactional memory. It operates under a straightforward property: each transaction executes under a snapshot view of the database from when the transaction started, and visible updates from other transactions are applied more quickly than waiting for the slower durability updates. We show that Minuet addresses the scalability limitations found in existing protocols and interacts correctly with all the necessary durability restrictions from current standards, giving transaction isolation comparable to that seen with two-phase locking, while preserving performance scalability.",
-  "summary": "The paper \"Minuet: Rethinking Concurrency Control in Storage Systems\" presented at OSDI 2014, proposes a novel concurrency control method named Minuet, which derives from software transactional memory principles. The paper critiques traditional methods like two-phase locking and optimistic concurrency control for their trade-offs between isolation and scalability. Minuet offers a new approach with multi-versioning that allows transactions to be processed efficiently while maintaining high isolation.\n\nIn terms of impact, the paper has influenced subsequent research on concurrency control strategies in database systems. For instance, Minuet is frequently referenced in literature addressing improved performance in multi-core and distributed database environments. Notable citations include:\n- Apache Cassandra's improvements in concurrency control ([source](https://www.datastax.com/blog/improving-concurrency-control-apache-cassandra)).\n- A study by Jiang et al. in \"Improving Concurrency Control for Nested Software Transactions\" ([source](https://doi.org/10.1145/3256753)), which considers similar approaches of using snapshots for transactions.\n\nOverall, Minuet's approach fostered new discussions on balancing scalability and correctness, influencing research that explores alternatives to traditional concurrency control in increasingly distributed and parallel computing environments.",
+  "abstract": "We present Barrelfish/DC, an extension to the Barrelfish OS which decouples physical cores from a native OS kernel, and furthermore the kernel itself from the rest of the OS and application state. In Barrelfish/DC, native kernel code on any core can be quickly replaced, kernel state moved between cores, and cores added and removed from the system transparently to applications and OS processes, which continue to execute.\n\nBarrelfish/DC is a multikernel with two novel ideas: the use of boot drivers to abstract cores as regular devices, and a partitioned capability system for memory management which externalizes core-local kernel state.\n\nWe show by performance measurements of real applications and device drivers that the approach is practical enough to be used for a number of purposes, such as online kernel upgrades, and temporarily delivering hard real-time performance by executing a process under a specialized, single-application kernel.",
+  "summary": "## Contributions and design\n\nThe paper presents Barrelfish/DC, an extension of the Barrelfish multikernel that treats physical cores, kernel instances, and per-core operating-system state as independently replaceable and movable entities. Its central abstraction is the **OSnode**, which contains the state associated with a core, including capabilities, process-control information, interrupt state, scheduling state, and timer information. A **Kernel Control Block (KCB)** provides the kernel with a compact, stable handle to the state that must survive kernel replacement.\n\nTwo mechanisms enable the design:\n\n- **Boot drivers** represent cores similarly to peripheral devices and execute on another core. They encapsulate platform-specific operations for booting, suspending, resuming, and powering down target cores while leaving kernel-selection policy outside the kernel.\n- **Partitioned capabilities** externalize core-local memory and resource state. Because the kernel does not directly own most persistent OS state, a kernel can be stopped and replaced, then reconstructed from the existing OSnode and KCB.\n\nThe system supports kernel replacement, OSnode migration between cores, temporary co-location of multiple OSnodes on one core, and deployment of specialized kernels. The authors demonstrate applications including online kernel updates, core reconfiguration, device-driver continuity, and hard-real-time execution using a dedicated kernel with no scheduler or external interrupts.\n\n## Results and limitations\n\nOn the evaluated x86 systems, stopping a core in Barrelfish/DC took approximately 0.8–3.5 microseconds and was largely unaffected by system load, whereas Linux 3.13 required approximately 46–131 milliseconds when idle and substantially longer under load. Core startup in Barrelfish/DC was dominated by kernel-image preparation and ranged from approximately 7–29 milliseconds when idle, comparable to Linux on the tested systems. Restarting a kernel caused only brief, application-specific disturbances for the Ethernet driver, web server, and PostgreSQL experiments. Parking an OSnode introduced expected latency and bandwidth variation because multiple OSnodes shared a core through time slicing.\n\nA specialized Barrelfish/DC kernel eliminated the large execution-time outliers observed with ordinary Barrelfish and Linux configurations in the synthetic real-time benchmark. The approach nevertheless depends on maintaining a stable OSnode format, currently assumes cache-coherent cores and shared physical memory for practical migration, and leaves scheduling, power-management, migration policy, fault tolerance, and stronger isolation as open issues.\n\n## Influence on subsequent work\n\nThe paper’s ideas have been cited in later research on decentralized operating-system structures for manycore processors. For example, work on MedusaVM+ cites it alongside the multikernel literature when motivating decentralized virtual-memory systems for many-core machines. ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S1383762120300965)) A later study of distributed operating systems for lightweight manycores also cites the paper when discussing distributed OS instances, OS-level abstractions, and reducing OS memory overhead. ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S1383762120300965)) The available evidence indicates research influence primarily through the multikernel and dynamic-core-management design space; no concrete widespread industry deployment of Barrelfish/DC itself was identified in the search. The paper appeared in the OSDI 2014 proceedings and is listed as pages 17–31. ([usenix.org](https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-zellweger.pdf))",
   "raw_url": "https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-zellweger.pdf",
   "source_type": "external",
   "filepath": "unikernels/README.md",
   "filename": "Decoupling Cores, Kernels, and Operating Systems",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:05"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:57"
 }

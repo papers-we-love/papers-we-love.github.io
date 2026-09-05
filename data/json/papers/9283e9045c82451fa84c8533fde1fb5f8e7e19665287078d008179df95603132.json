@@ -1,37 +1,37 @@
 {
   "uuid": "9283e9045c82451fa84c8533fde1fb5f8e7e19665287078d008179df95603132",
   "title": "Epidemic Algorithms for Replicated Database Maintenance",
-  "publication_date": "1987",
+  "publication_date": "January 1989; Xerox PARC technical report CSL-89-1. An earlier version appeared in the Proceedings of the Sixth Annual ACM Symposium on Principles of Distributed Computing, Vancouver, August 1987.",
   "authors": [
     "Alan Demers",
     "Carl Hauser",
     "Dan Greene",
-    "Dan S. Swinehart",
+    "Dan Swinehart",
+    "Don Woods",
     "Doug Terry",
     "Howard Sturgis",
     "John Larson",
+    "Mark Gealy",
     "Scott Shenker",
-    "Wesley Irish"
+    "Sue Manning",
+    "Wes Irish"
   ],
   "keywords": [
     "consistency",
-    "database-maintenance",
-    "distributed-computing",
-    "distributed-systems",
-    "epidemic-algorithms",
-    "fault-tolerance",
-    "gossip-based-protocols",
-    "replicated-database"
+    "electronic-mail",
+    "epidemiology",
+    "name-service",
+    "rumors"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "We consider the problem of maintaining consistency among copies of a replicated database in a distributed system. Our solution uses epidemic algorithms, which are fast, simple, and robust. These properties make epidemic algorithms attractive for database maintenance in a distributed system, particularly in one with high communication cost or frequent component failure. Database users at individual network sites may read or update copies of logical data objects. Network sites communicate in pairwise, and updates are propagated by the \"gossip\" mechanism of unreliable rumor spreading. An update progresses through the system in such a way that all sites will eventually agree on the final value of the updated data object even though temporary disagreements may exist as an update progresses. We examine the performance of various epidemic algorithms under update loads and communication protocols that might be encountered in a realistic distributed system. We also describe several variants and related approaches, and compare our work with a variety of other techniques for maintaining pieces of data among distributed copies. Finally, we conclude with some speculation about future uses of epidemic algorithms.",
-  "summary": "The paper \"Epidemic Algorithms for Replicated Database Maintenance\" by Alan Demers et al., published in 1987, presents a pioneering approach using epidemic algorithms to maintain consistency in distributed database systems. The paper introduces the concept of using a \"gossip\" mechanism, inspired by epidemic spreading, to ensure all nodes in the network eventually agree on the final data state despite temporary inconsistencies. The proposed algorithms are characterized by their simplicity, robustness, and efficiency, which make them suitable for environments with high communication costs or frequent failures. These algorithms are particularly advantageous in distributed systems where ensuring data consistency is critical.\n\nEpidemic algorithms have significantly influenced the development of distributed systems and have been incorporated into various systems over time. The ideas presented in the paper are foundational to modern techniques for data consistency in distributed databases and have been extended in subsequent research and industry applications. For instance, the anti-entropy and gossip-based protocols used in systems like Cassandra and Dynamo draw on ideas similar to those discussed in the paper.\n\nDespite the paper's age, it's frequently referenced in discussions about data replication strategies and consistency models in distributed systems. Some examples of works citing this paper include [Cassandra](http://cassandra.apache.org/) and [Amazon's Dynamo](https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf), which employ similar gossip protocols for node synchronization and data consistency. Additionally, systems like [Riak](http://basho.com/riak/) adopt and adapt these concepts for decentralized architectures. The longevity and continued relevance of epidemic algorithms illustrate their robust design and applicability in solving complex distributed computing challenges.",
+  "abstract": "When a database is replicated at many sites, maintaining mutual consistency among the sites in the face of updates is a significant problem. This paper describes several randomized algorithms for distributing updates and driving the replicas toward consistency. The algorithms are very simple and require few guarantees from the underlying communication system, yet they ensure that the effect of every update is eventually reflected in all replicas. The cost and performance of the algorithms are tuned by choosing appropriate distributions in the randomization step. The algorithms are closely analogous to epidemics, and the epidemiology literature aids in understanding their behavior. One of the algorithms has been implemented in the Clearinghouse servers of the Xerox Corporate Internet, solving long-standing problems of high traffic and database inconsistency.",
+  "summary": "The paper is an early systematic treatment of **epidemic, or gossip-style, algorithms** for maintaining eventual consistency among widely replicated databases. It compares direct mail, anti-entropy, and rumor mongering using propagation delay, network traffic, and residual inconsistency as key metrics. Its main design recommendations are to use randomized pairwise exchanges, favor pull or push-pull over push when repairing sparse inconsistencies, use checksums or timestamp-oriented exchange to reduce the cost of full database comparison, and combine fast but probabilistic rumor spreading with periodic anti-entropy when complete coverage is required.\n\nThe paper also addresses deletion through timestamped death certificates and proposes dormant certificates to reduce storage costs while limiting the resurrection of obsolete data. Its topology-aware partner-selection experiments showed that nonuniform distributions could substantially reduce traffic on critical links; the resulting anti-entropy method was deployed in Xerox’s Clearinghouse service.\n\nLater distributed-systems research adopted closely related mechanisms. The SWIM membership protocol explicitly cites this paper and uses infection-style dissemination to spread membership updates with slowly growing, approximately logarithmic dissemination latency. ([cs.cornell.edu](https://www.cs.cornell.edu/projects/quicksilver/public_pdfs/SWIM.pdf)) Amazon’s Dynamo subsequently implemented anti-entropy replica synchronization using Merkle trees and used randomized gossip to propagate membership changes, illustrating the continued industry relevance of the paper’s replica-repair and epidemic-dissemination patterns. ([cdn.amazon.science](https://cdn.amazon.science/ac/1d/eb50c4064c538c8ac440ce6a1d91/dynamo-amazons-highly-available-key-value-store.pdf)) A later survey-style research work on non-uniform replication also lists the paper alongside Dynamo and Cassandra as part of the development of replicated-storage techniques. ([drops.dagstuhl.de](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.OPODIS.2017.24))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/epidemic-algorithms-for-replicated-database-maintenance.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/epidemic-algorithms-for-replicated-database-maintenance.pdf",
   "filename": "epidemic-algorithms-for-replicated-database-maintenance.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:51"
 }

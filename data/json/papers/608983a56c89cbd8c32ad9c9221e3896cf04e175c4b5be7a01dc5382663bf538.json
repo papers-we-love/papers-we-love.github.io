@@ -1,37 +1,37 @@
 {
   "uuid": "608983a56c89cbd8c32ad9c9221e3896cf04e175c4b5be7a01dc5382663bf538",
   "title": "Spartan: A Distributed Array Framework with Smart Tiling",
-  "publication_date": "2015",
+  "publication_date": "July 8, 2015; Proceedings of the 2015 USENIX Annual Technical Conference (USENIX ATC ’15), held July 8–10, 2015, Santa Clara, California, USA",
   "authors": [
-    "Ben Y. Zhao",
-    "Cheng Chen",
-    "Fan Wu",
-    "Guan Wang",
-    "Haitao Doug Liu",
-    "Sheng Zhong",
-    "Yang Song"
+    "Chien-Chin Huang",
+    "Jinyang Li",
+    "Jorge Ortiz",
+    "Qi Chen",
+    "Russell Power",
+    "Zhaoguo Wang",
+    "Zhen Xiao"
   ],
   "keywords": [
-    "cloud-computing",
-    "data-parallel-computation",
-    "distributed-array",
-    "fault-tolerance",
+    "array-programming",
+    "automatic-tiling",
+    "data-locality",
+    "distributed-arrays",
+    "distributed-systems",
+    "expression-graphs",
     "high-performance-computing",
-    "large-scale-data-processing",
-    "mapreduce",
-    "parallel-processing",
-    "scalability",
-    "smart-tiling"
+    "lazy-evaluation",
+    "network-communication",
+    "parallel-computing"
   ],
   "category_path": [
     "datastores"
   ],
-  "abstract": "Spartan is a distributed array framework that offers efficient, flexible, and automated optimization of array operations on large datasets spanning multiple dimensions. Spartan allows users to express their algorithms using arrays, and optimizes execution using a concept called smart tiling. Spartan's design generalizes the map-reduce model to declarative array operations, integrating an adaptive optimization engine that automatically decomposes computations into tiles of controlled sizes that can be executed efficiently in a distributed environment. With smart tiling, Spartan allows users to achieve higher performance by leveraging data locality, load balancing, and to adaptively optimize across memory hierarchies and network topologies.",
-  "summary": "The paper \"Spartan: A Distributed Array Framework with Smart Tiling\" introduces a framework called Spartan, designed for efficient processing of large-scale multi-dimensional array data across distributed systems. The framework utilizes a concept known as smart tiling, which optimizes data locality and load balancing by decomposing computations into manageable tiles. This generalizes the map-reduce model to declarative array operations, enhancing performance in distributed environments. \n\nIn terms of influence, this paper has been cited in various research works considering enhancements in distributed computing frameworks and optimizing data processing operations. As an example, it was cited by the paper \"Optimizing Overlapping Pattern Matching via Data-Parallel Applications on Distributed Platforms\" ([DOI: 10.1145/3308109.3308516](https://dl.acm.org/doi/10.1145/3308109.3308516)), which explores optimizations in data-parallel applications. The concepts presented in Spartan have contributed to the ongoing discussions and developments around distributed array processing and smart tiling strategies in high-performance and cloud computing environments.",
+  "abstract": "Application programmers in domains like machine learning, scientific computing, and computational biology are accustomed to using powerful, high productivity array languages such as MatLab, R and NumPy. Distributed array frameworks aim to scale array programs across machines. However, maximizing the locality of access to distributed arrays is an unsolved problem; such locality is critical for high performance. This paper presents Spartan, a distributed array framework that automatically determines how to best partition (aka “tile”) n-dimensional arrays and to co-locate data with computation to maximize locality. Spartan combines a lazy-evaluation based, optimizing frontend with a distributed tiled array backend. Central to Spartan’s design is a small number of carefully chosen parallel high-level operators, which form the expression graph captured by Spartan’s frontend during runtime. These operators simplify the programming of distributed applications. More importantly, their well-defined semantics allow Spartan’s runtime to calculate the costs of different tiling strategies and pick the best one for evaluating the entire expression graph. Using Spartan, we have implemented 12 applications from a variety of domains including machine learning and scientific computing. Our evaluations show that Spartan’s automatic tiling mechanism leads to good and scalable performance while eliminating the need for manual tiling.",
+  "summary": "## Overview\n\nSpartan is a distributed array framework intended to provide NumPy-like abstractions while scaling array computations across a cluster. Its central problem is **tiling**: deciding how multidimensional arrays should be partitioned across workers and how computation should be placed near the data to minimize network communication. The paper argues that manual partitioning can achieve good performance but imposes substantial complexity on application programmers.\n\nThe system uses a two-layer architecture. A Python frontend captures array operations lazily and represents them as an expression graph. A distributed backend then executes the optimized graph using in-memory tiled arrays and parallel worker tasks. Because arrays are immutable at the operator level, expression graphs are acyclic and can expose how an array is used across multiple operations before execution begins.\n\nSpartan expresses array computations through five restricted high-level operators: `map`, `filter`, `fold`, `scan`, and `join_update`. Their constrained semantics make data-access patterns and communication costs explicit. For example, `map` favors identical tilings for all input arrays, reductions favor partitioning along the reduction axis, and `join_update` models computations such as matrix multiplication that combine tiles and aggregate updates. Views such as slicing and axis swapping allow the system to reason about logical transformations without necessarily copying data.\n\nThe tiling optimizer converts the expression graph into a weighted tiling graph. Candidate nodes represent alternative layouts, including row-wise, column-wise, block, and duplicated layouts. Edge weights estimate the communication cost associated with incompatible layouts or remote reads and updates. Since finding the globally optimal tiling is NP-complete, Spartan uses a greedy heuristic that processes highly connected operator groups first and selects the locally least-cost choice. Array duplication is supported when memory permits, which is particularly useful when the same array is repeatedly accessed along different axes, as in alternating least squares. Sparse arrays receive additional treatment through sampling, adaptive cost updates, and fine-grained tiles for work stealing.\n\nThe implementation supports more than 50 NumPy built-ins and executes user-defined NumPy functions on tiles. Workers maintain distributed in-memory arrays, while matching tiling hints cause corresponding regions of arrays to be co-located. The backend also checkpoints completed operator results to durable storage for failure recovery.\n\nThe evaluation covered 12 applications from machine learning, data mining, scientific computing, and computational finance on a local cluster and Amazon EC2. The optimizer selected the same layouts as a brute-force minimum-communication baseline for the evaluated applications, while reducing optimization time substantially: for a 14-operator alternating-least-squares computation, brute-force search took more than 500 seconds compared with 0.06 seconds for Spartan’s optimizer. The system also demonstrated scalable behavior for many workloads and achieved a reported 1.7× speedup over Presto on a k-means benchmark using one billion points. However, the optimizer considers network communication rather than cache locality or all other hardware effects; its greedy search is not optimal in general; `join_update` may require user hints; and workloads such as large-scale alternating least squares can remain communication-bound even with duplication.\n\n## Influence and subsequent work\n\nThe search found evidence that Spartan’s tiling formulation continued to influence research on distributed matrix partitioning. *Distributed Matrix Tiling Using a Hypergraph Labeling Formulation* explicitly identifies Spartan as a closely related runtime tiling model and develops a hypergraph-based formulation, additional hardness results, and a greedy algorithm for distributed matrix tiling. ([researchgate.net](https://www.researchgate.net/publication/353061286_Distributed_Matrix_Tiling_Using_A_Hypergraph_Labeling_Formulation)) The original project was also maintained as an open-source implementation whose documentation describes lazy NumPy-like array expressions, compilation, optimization, and execution on a distributed backend. ([github.com](https://github.com/spartan-array/spartan/blob/master/README.md)) The available evidence indicates primarily research and prototype-software influence; the search did not identify a clearly documented industrial product adoption of Spartan itself. The publication metadata and authorship were cross-checked against the USENIX record. ([usenix.org](https://www.usenix.org/conference/atc15/technical-session/presentation/huang-chien-chin))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/datastores/spartan-a-distributed-array-framework-with-smart-tiling.pdf",
   "source_type": "pdf",
   "filepath": "datastores/spartan-a-distributed-array-framework-with-smart-tiling.pdf",
   "filename": "spartan-a-distributed-array-framework-with-smart-tiling.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:51"
 }

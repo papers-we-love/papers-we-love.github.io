@@ -1,31 +1,32 @@
 {
   "uuid": "6adba05bea4b061ceecf77f03961a34df4c7ba2e4b7d72cc01d37901260a2273",
-  "title": "An Introduction to the Theory of Tilings",
-  "publication_date": "1987",
+  "title": "Tilings",
+  "publication_date": "January 25, 2005 (arXiv:math/0501170v3); published in The Mathematical Intelligencer, volume 32, issue 4, 2010, pages 32–43",
   "authors": [
-    "G.C. Shephard"
+    "Federico Ardila",
+    "Richard P. Stanley"
   ],
   "keywords": [
+    "aperiodic-tilings",
+    "coloring-arguments",
     "combinatorics",
-    "geometric-structures",
-    "geometry",
-    "mathematical-tiling",
-    "mathematics",
-    "patterns",
-    "plane-tiling",
-    "symmetry",
-    "tesselation",
-    "tiling-theory"
+    "domino-tilings",
+    "pentominoes",
+    "plane-tilings",
+    "polyominoes",
+    "random-tilings",
+    "tiling-enumeration",
+    "tilings"
   ],
   "category_path": [
     "mathematics"
   ],
-  "abstract": "This paper is intended to be an elementary introduction to the theory of tilings. It is based on two lectures given at the meetings of the British Mathematical Colloquium held at Bangor in 1977 and Lancaster in 1979.",
-  "summary": "**Summary**\n\nThe paper titled \"An Introduction to the Theory of Tilings\" by G.C. Shephard, published in 1987, serves as a foundational text for those interested in the study of tiling-theory. It offers a comprehensive overview of the mathematical concepts involved in tiling and has been used as a fundamental reference for researchers exploring geometric and combinatorial aspects of tiling.\n\n### Influence\nThis paper has had a profound influence primarily in mathematical tiling and related fields. It is often cited by researchers dealing with symmetry, patterns, and tessellations in geometry. While it does not appear to have directly influenced industrial applications, it has significantly contributed to academic research, as noted in later studies such as *The Mathematical Intelligencer* and works on geometric symmetry.\n\n### References\n1. The paper has been referenced in research concerning symmetry in tilings and further theoretical developments, such as the symmetry studies in \"The Mathematical Intelligencer\".\n2. [The Mathematical Intelligencer](https://link.springer.com/journal/283) has cited the work in discussions on geometric symmetry. The exact citations of the paper in follow-up research can be accessed in libraries hosting archives of mathematical journals and publications.\n\nHowever, a more thorough citation record was not readily available in public domains or recent databases. The work remains mainly within foundational and educational circles rather than extending into specific technological or industrial implementations.",
+  "abstract": "A survey of tilings in the plane for a general audience.",
+  "summary": "## Overview\n\nThis paper is an expository survey of mathematical tiling problems, ranging from elementary puzzles to results involving combinatorics, algebra, probability, mathematical logic, electrical networks, and crystallography. It presents tilings as coverings of a region by prescribed pieces without overlap and organizes the discussion around existence, enumeration, approximation, structure, randomness, transformations, and infinite-plane behavior. The paper is based on Richard Stanley’s Clay Public Lecture at the IAS/Park City Mathematics Institute in July 2004. ([claymath.org](https://www.claymath.org/resource/tilings/))\n\n## Main mathematical ideas\n\n- **Existence and obstructions:** Simple coloring arguments prove impossibility results, such as the inability to tile a chessboard with two opposite corners removed using dominoes, or a 10 × 10 board with 1 × 4 rectangles. More sophisticated invariants, including nonabelian group-valued invariants, detect information that ordinary colorings cannot capture. Conway’s characterization of triangular hexagon arrays tiled by tribones is given as an example.\n- **Exact enumeration:** The survey presents the Fisher–Temperley–Kasteleyn formula for domino tilings of even rectangles and the particularly simple formula \\(2^{n(n+1)/2}\\) for domino tilings of the Aztec diamond of order \\(n\\). The underlying methods include Pfaffians, determinants, and transfer matrices.\n- **Asymptotic enumeration:** Rather than focusing only on exact counts, the paper compares exponential growth rates through “degrees of freedom per square.” It contrasts square regions with Aztec diamonds and introduces the Catalan-constant-based growth constant for large square boards.\n- **Certificates of impossibility:** Hall’s marriage theorem is applied to domino tilings. If a region is not tileable, one can identify a collection of cells of one color having fewer neighboring cells of the other color, yielding a concise and verifiable obstruction.\n- **Rectangles tiled by rectangles:** The de Bruijn–Klarner characterization is stated for when an \\(m\\times n\\) rectangle can be tiled by \\(a\\times b\\) rectangles. The paper also discusses tiling a square with similar rectangles and the role of algebraic numbers and the real parts of their conjugate roots.\n- **Perfect squared rectangles:** A correspondence between squared-rectangle dissections and electrical networks is developed. Square side lengths correspond to electrical currents, while the governing equations correspond to Kirchhoff’s laws and Ohm’s law. This explains uniqueness up to scaling for a proposed layout, although positivity and distinctness of the resulting lengths are additional constraints.\n- **Random tilings:** Random domino tilings can display large-scale deterministic structure despite local disorder. For large Aztec diamonds, the Arctic circle theorem describes a frozen outer region surrounding a fluctuating central region.\n- **Relations between tilings:** A local flip replaces two parallel dominoes in a 2 × 2 square by the perpendicular pair. Thurston’s theorem states that for a region without holes, any domino tiling can be transformed into any other through a sequence of such flips.\n- **Infinite and aperiodic tilings:** The survey discusses an unresolved tiling problem involving infinitely many rectangles whose total area is one, undecidability phenomena for polyomino tilings, the 17 plane crystallographic groups, and Penrose tilings. These examples show how tiling theory connects finite combinatorial questions with infinite structures and mathematical logic.\n\n## Influence and dissemination\n\nThe paper appears to have functioned primarily as an accessible survey and teaching resource rather than as a source of a single new theorem. It was subsequently published in *The Mathematical Intelligencer*, translated into German and Spanish, used as the basis for a 2006 tilings seminar, and recommended in later expository material such as *Proofs from the Book*. It is also cited by later work discussing self-similar polygonal tilings. These records document continued expository and educational use, but do not by themselves establish that the paper introduced the underlying research results it surveys. ([klein.mit.edu](https://klein.mit.edu/~rstan/pubs/index.html))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/mathematics/tilings.pdf",
   "source_type": "pdf",
   "filepath": "mathematics/tilings.pdf",
   "filename": "tilings.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:52"
 }

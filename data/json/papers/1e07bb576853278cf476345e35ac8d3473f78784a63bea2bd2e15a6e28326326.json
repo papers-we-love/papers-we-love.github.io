@@ -1,34 +1,37 @@
 {
   "uuid": "1e07bb576853278cf476345e35ac8d3473f78784a63bea2bd2e15a6e28326326",
-  "title": "Dive into Deep Learning",
-  "publication_date": "September 2018",
+  "title": "On the Fly Orchestration of Unikernels: Tuning and Performance Evaluation of Virtual Infrastructure Managers",
+  "publication_date": "September 17, 2018 (arXiv preprint); published in IEEE Transactions on Cloud Computing, volume 9, issue 2, pages 710–723, 2021. ([arxiv.org](https://arxiv.org/abs/1809.07701))",
   "authors": [
-    "Alexander J. Smola",
-    "Aston Zhang",
-    "Mu Li",
-    "Zachary C. Lipton"
+    "Claudio Pisa",
+    "Florian Schmidt",
+    "Francesco Lombardo",
+    "Giuseppe Siracusano",
+    "Paolo Lungaroni",
+    "Pier Luigi Ventre",
+    "Stefano Salsano"
   ],
   "keywords": [
-    "artificial-intelligence",
-    "computer-vision",
-    "deep-learning",
-    "gpu-computing",
-    "machine-learning",
-    "natural-language-processing",
-    "neural-networks",
-    "optimization",
-    "reinforcement-learning",
-    "supervised-learning"
+    "clickos-unikernel",
+    "network-function-virtualization",
+    "nomad",
+    "open-source",
+    "openstack",
+    "openvim",
+    "performance",
+    "tuning",
+    "virtual-infrastructure-manager",
+    "virtual-network-function"
   ],
   "category_path": [
     "unikernels"
   ],
-  "abstract": "This open-source book represents our attempt to make deep learning approachable, teaching students what works, what doesn’t, and how to reason about deep learning methods. We provide full chapters on modern codes and concept explanations on a breadth of topics in deep learning, including experimental design, ethical considerations, applications, and more.",
-  "summary": "\"Dive into Deep Learning\" is an open-source book that aims to make deep learning accessible and informative. Authored by Aston Zhang, Zachary C. Lipton, Mu Li, and Alexander J. Smola, the paper was published in September 2018. It covers a wide range of topics relevant to deep learning, including optimization, computer vision, and natural language processing, with practical code examples and detailed concepts.\n\nThis book has been influential in the educational space, particularly for university-level courses and self-learners interested in machine learning. The book offers extensive code examples and exercises, enhancing its utility as a practical guide for both beginners and advanced learners.\n\nThrough a comprehensive teaching methodology, it bridges the gap between theory and application, offering insights into practical experimental design and ethical considerations in AI.\n\nIn searching for its impact, the book is often cited as a resource in academic courses across MIT, Stanford, and other top institutions, serving as either a primary textbook or supplementary reading material. It is frequently used in MOOCs and coding bootcamps as well. The following are a few references that discuss or cite the book:\n\n- [Dive into Deep Learning as a course at MIT](https://d2l.ai/chapter_preface/index.html)\n- [Curriculum reference at Stanford](https://web.stanford.edu/class/stats385/)\n- [Berkeley course reference](https://cs.berkeley.edu/~jrs/)\n\nWhile primarily an educational resource, its extensive exploration of deep learning paradigms has made it a valuable contribution to academic and practical AI fields.",
+  "abstract": "Network operators are facing significant challenges meeting the demand for more bandwidth, agile infrastructures, innovative services, while keeping costs low. Network Functions Virtualization (NFV) and Cloud Computing are emerging as key trends of 5G network architectures, providing flexibility, fast instantiation times, support of Commercial Off The Shelf hardware and significant cost savings. NFV leverages Cloud Computing principles to move the data-plane network functions from expensive, closed and proprietary hardware to the so-called Virtual Network Functions (VNFs). In this paper we deal with the management of virtual computing resources (Unikernels) for the execution of VNFs. This functionality is performed by the Virtual Infrastructure Manager (VIM) in the NFV MANagement and Orchestration (MANO) reference architecture. We discuss the instantiation process of virtual resources and propose a generic reference model, starting from the analysis of three open source VIMs, namely OpenStack, Nomad and OpenVIM. We improve the aforementioned VIMs introducing the support for special-purpose Unikernels and aiming at reducing the duration of the instantiation process. We evaluate some performance aspects of the VIMs, considering both stock and tuned versions. The VIM extensions and performance evaluation tools are available under a liberal open source licence.",
+  "summary": "### Summary\n\nThe paper investigates whether general-purpose virtual infrastructure managers can support the rapid deployment of ClickOS-based Micro-VNFs for highly dynamic NFV scenarios. It develops a reference model separating VIM core functions, local components, and the compute resource or hypervisor, then maps the model onto OpenStack, Nomad, and OpenVIM using Xen.\n\nThe authors modify all three systems to boot diskless ClickOS Unikernels and create tuned variants that remove operations unnecessary for specialized, diskless workloads. The main optimizations include bypassing block-device handling, simplifying guest configuration, avoiding unnecessary image copying and interface resets, reducing communication overhead, and improving work-queue polling behavior.\n\nUnder the paper’s experimental setup, stock OpenStack required approximately 2.1 seconds to instantiate a ClickOS VM; tuning reduced this to approximately 1.5 seconds. Nomad required approximately 0.3 seconds, or approximately 0.2 seconds when notification delay was excluded, and local artifact storage reduced driver overhead by about 30 milliseconds. OpenVIM required approximately 1 second in its stock configuration, approximately 0.4 seconds after software tuning, and approximately 0.15 seconds after moving its database-related components to a ramdisk. However, OpenVIM’s latency increased substantially under load, primarily because of libvirt and Xen xenstore overhead; with 300 background VMs, the measured libvirt component reached approximately 0.4 seconds.\n\nThe central conclusion is that Unikernel-specific orchestration can substantially reduce deployment latency, but existing VIMs still fall short of the millisecond-scale requirements associated with the most demanding Superfluid NFV scenarios. The authors identify modularity, selective workflow execution, integration with Unikernel build toolchains, optimized Xen toolstacks, and pre-instantiation as important directions for further work.\n\n### Influence and subsequent use\n\nA web search found the paper cited as related work in later research on benchmarking open-source NFV MANO systems, indicating that its VIM-performance methodology and NFV orchestration analysis were used as background for subsequent MANO evaluations. ([sciencedirect.com](https://www.sciencedirect.com/science/article/abs/pii/S0140366420305946)) The paper is also listed among the publications associated with the European Commission’s 5G EVE validation project, providing evidence of connection to an applied 5G experimentation program, although the available record does not establish that the specific implementations were deployed operationally. ([cordis.europa.eu](https://cordis.europa.eu/project/id/815074/results)) The authors’ VIM modifications and evaluation tools were released as open-source artifacts, supporting reproducibility and reuse. ([arxiv.org](https://arxiv.org/abs/1809.07701))",
   "raw_url": "https://arxiv.org/pdf/1809.07701.pdf",
   "source_type": "external",
   "filepath": "unikernels/README.md",
   "filename": "On the Fly Orchestration of Unikernels: Tuning and Performance Evaluation of Virtual Infrastructure Managers",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:05"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:57"
 }

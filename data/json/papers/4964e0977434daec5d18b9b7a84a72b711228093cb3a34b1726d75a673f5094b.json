@@ -1,31 +1,31 @@
 {
   "uuid": "4964e0977434daec5d18b9b7a84a72b711228093cb3a34b1726d75a673f5094b",
-  "title": "On Computable Numbers, with an Application to the Entscheidungsproblem",
-  "publication_date": "1936",
+  "title": "ON COMPUTABLE NUMBERS, WITH AN APPLICATION TO THE ENTSCHEIDUNGSPROBLEM",
+  "publication_date": "1937; Proceedings of the London Mathematical Society, Series 2, Volume 42, Issue 1, pages 230–265. The paper was received on 28 May 1936 and read on 12 November 1936.",
   "authors": [
-    "A. M. Turing"
+    "A. M. TURING"
   ],
   "keywords": [
-    "algorithm-theory",
-    "automata-theory",
     "computability",
+    "computable-functions",
+    "computable-numbers",
+    "diagonalization",
+    "effective-calculability",
     "entscheidungsproblem",
-    "formal-systems",
-    "halting-problem",
-    "logic",
-    "mechanical-calculation",
-    "turing-machine",
-    "uncomputable-functions"
+    "lambda-calculus",
+    "turing-machines",
+    "undecidability",
+    "universal-machine"
   ],
   "category_path": [
     "comp_sci_fundamentals_and_history"
   ],
-  "abstract": "The \"computable\" numbers may be described briefly as the real numbers whose expressions as a decimal are calculable by finite means. Although the subject of this paper is ostensibly the computable numbers, it is almost equally easy to define and investigate computable functions of an integral variable or a real or computable variable, etc. We will proceed to do this, and also to show that the computable numbers include all numbers which could naturally be regarded as computable. According to my definition, a number is computable if its decimal can be written down by a machine.",
-  "summary": "In his seminal 1936 paper, Alan M. Turing introduced the concept of 'computable numbers,' which can be calculated by a theoretical construct now known as the Turing Machine. This abstract computational device laid the groundwork for modern theories of computation and computability. Central to Turing's argument was the negative resolution of the Entscheidungsproblem, a challenge in formal logic to identify an algorithm that could correctly resolve all mathematical statements. Turing demonstrated that such an algorithm could not exist because there are problems that are inherently uncomputable. \n\nThe impact of Turing's work is profound and widespread. It has influenced fields as diverse as computability theory, algorithms, programming language design, and even the philosophy of mind by shaping ideas on artificial intelligence and the concept of mechanical calculation. The concept of a 'Turing Machine' remains fundamental to computer science as a model of general computing processes. \n\nTuring's paper has been cited extensively and inspired a wide array of research, including but not limited to Turing's work on the artificial intelligence test known as the Turing Test, and ongoing research into quantum computing. Some influential citations include:\n- Davis, M. (1958). 'Computability and Unsolvability'. McGraw-Hill Book Company. [source](https://books.google.com/books/about/Computability_and_Unsolvability.html?id=h0mAuwEACAAJ)\n- Hodges, A. (1983). 'Alan Turing: The Enigma'. Princeton University Press. [source](https://press.princeton.edu/titles/10108.html)\n- Sipser, M. (2006). 'Introduction to the Theory of Computation'. Cengage Learning. [source](http://denninginstitute.com/modules/toc/4.html) \n\nThe paper continues to be a cornerstone in both theoretical and applied disciplines, underscoring the limitations and capabilities of computation in the context of both classical systems and emerging computational models.",
+  "abstract": "The “computable” numbers may be described briefly as the real numbers whose expressions as a decimal are calculable by finite means. Although the subject of this paper is ostensibly the computable numbers, it is almost equally easy to define and investigate computable functions of an integral variable or a real or computable variable, computable predicates, and so forth. The fundamental problems involved are, however, the same in each case, and I have chosen the computable numbers for explicit treatment as involving the least cumbrous technique. I hope shortly to give an account of the relations of the computable numbers, functions, and so forth to one another. This will include a development of the theory of functions of a real variable expressed in terms of computable numbers. According to my definition, a number is computable if its decimal can be written down by a machine.\n\nIn §§ 9, 10 I give some arguments with the intention of showing that the computable numbers include all numbers which could naturally be regarded as computable. In particular, I show that certain large classes of numbers are computable. They include, for instance, the real parts of all algebraic numbers, the real parts of the zeros of the Bessel functions, the numbers π, e, etc. The computable numbers do not, however, include all definable numbers, and an example is given of a definable number which is not computable.\n\nAlthough the class of computable numbers is so great, and in many ways similar to the class of real numbers, it is nevertheless enumerable. In § 8 I examine certain arguments which would seem to prove the contrary. By the correct application of one of these arguments, conclusions are reached which are superficially similar to those of Gödel. These results have valuable applications. In particular, it is shown (§ 11) that the Hilbertian Entscheidungsproblem can have no solution.\n\nIn a recent paper Alonzo Church has introduced an idea of “effective calculability”, which is equivalent to my “computability”, but is very differently defined. Church also reaches similar conclusions about the Entscheidungsproblem. The proof of equivalence between “computability” and “effective calculability” is outlined in an appendix to the present paper.",
+  "summary": "## Summary and documented influence\n\nTuring formalizes computation using machines with a finite set of internal configurations, a symbol-bearing tape, and a scanning head that can read, write, erase, and move. He defines computable sequences and numbers, encodes machine descriptions as integers, and constructs a universal computing machine capable of simulating any machine when supplied with its description. The paper also develops diagonal arguments showing that computable sequences are enumerable while certain definable sequences are not computable, and it proves that no general mechanical procedure can decide whether an arbitrary machine is circle-free or whether it will ever print a specified symbol. Turing then reduces the Entscheidungsproblem for the functional calculus to this machine-printing problem, establishing that the Entscheidungsproblem has no general solution.\n\nThe paper became a foundational work in computability theory and theoretical computer science. Later scholarly accounts identify it as pioneering the theory of computation and as introducing the abstract machines now known as Turing machines; the same work, together with contemporaneous work by Church, initiated systematic research into problems that cannot be solved by Turing-machine procedures. ([academic.oup.com](https://academic.oup.com/book/42030/chapter-abstract/355741875))\n\nIts universal-machine construction also supplied a conceptual model for general-purpose computers: a single machine can execute different procedures when given different encoded descriptions. Historical scholarship connects this idea to the stored-program principle, while noting that the precise historical relationship between Turing’s 1936 work and later computer designs remains a subject of scholarly discussion rather than a simple one-step attribution. ([academic.oup.com](https://academic.oup.com/book/42030/chapter/355741875))\n\nThe paper’s undecidability results continue to serve as reference points in research on computability, programming-language theory, formal verification, and the limits of algorithmic decision procedures. Later scholarship also revisits the exact relationship between Turing’s 1936 arguments and the modern formulation of the halting problem, indicating that commonly repeated historical summaries should be stated with care. ([academic.oup.com](https://academic.oup.com/logcom/article/36/1/exaf075/8417148))",
   "raw_url": "http://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf",
   "source_type": "external",
   "filepath": "comp_sci_fundamentals_and_history/README.md",
   "filename": "Turing, On computable numbers, with an application to the Entscheidungsproblem",
-  "created_on": "2026-01-24 23:46:58",
-  "summary_received": "2026-01-25 00:11:01"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:54"
 }

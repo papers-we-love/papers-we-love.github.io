@@ -1,31 +1,30 @@
 {
   "uuid": "74921812e30779aab69ce97c35d96d1bdfb8122895082088174a51ad38b9a22f",
-  "title": "Extensible Effects: An Alternative to Monad Transformers",
-  "publication_date": "March 2013",
+  "title": "Freer Monads, More Extensible Effects",
+  "publication_date": "September 3–4, 2015; Proceedings of the 2015 ACM SIGPLAN Symposium on Haskell, pp. 94–105. ([okmij.org](https://okmij.org/ftp/Haskell/extensible/))",
   "authors": [
-    "Amr Sabry",
+    "Hiromi Ishii",
     "Oleg Kiselyov"
   ],
   "keywords": [
-    "effect-systems",
-    "extensible-effects",
-    "functional-programming",
-    "haskell",
-    "modularity",
-    "monad-transformers",
-    "software-abstraction",
-    "type-systems"
+    "coroutine",
+    "effect-handler",
+    "effect-interaction",
+    "free-monad",
+    "kan-extension",
+    "open-union",
+    "type-and-effect-system"
   ],
   "category_path": [
     "languages",
     "haskell"
   ],
-  "abstract": "In this paper, we investigate an alternative to monad transformers for modularly constructing computations with effects. We show that effects are not handlers but, instead, something to be sent to a handler which chooses how to interpret them. Effects can be combined using a sum (also known as a coproduct). Our approach does not require any knowledge of category theory and provides fast and more convenient effect dispatch with concise and clear syntax, while preserving the comprehensibility and guarantees of monadic approaches.",
-  "summary": "The paper titled 'Extensible Effects: An Alternative to Monad Transformers' by Oleg Kiselyov and Amr Sabry, published in March 2013, presents a novel approach to handling effects in Haskell programs using extensible effects instead of traditional monad transformers. The authors propose a system where effects are dispatched to handlers, thus avoiding some of the complexities associated with monad transformers. This approach does not necessitate category theory knowledge, offering a balance between expressiveness and simplicity. The extensible effects framework allows for more modular and efficient effect management in functional programming, and is faster in effect dispatching compared to monad transformers.\n\nThe concept introduced in this paper has influenced subsequent research in effect systems and modular programming paradigms in Haskell and other functional languages. Notably, the paper inspired further exploration and enhancements in effectful computation frameworks, evidenced by its citations in various academic works such as:\n1. *Haskell Symposium 2014* paper titled \"Towards Explicit Effect Subtyping for Scoped Operations\" which builds on the extensible effects concept. [DOI: 10.1145/2633366.2633372](https://dl.acm.org/doi/10.1145/2633366.2633372)\n2. Ongoing conversations and blog posts in the Haskell community illustrate its significance in practical, scalable software design, highlighting its utility in improving code readability and modularity.\n\nAlthough the paper does not seem to have a direct industry application extractable from the sources reviewed, it contributes significantly to academic discourse on improving effect-handling mechanisms, especially in the realm of functional programming.",
+  "abstract": "We present a rational reconstruction of extensible effects, the recently proposed alternative to monad transformers, as the confluence of efforts to make effectful computations compose. Free monads and then extensible effects emerge from the straightforward term representation of an effectful computation, as more and more boilerplate is abstracted away. The generalization process further leads to freer monads, constructed without the Functor constraint. The continuation exposed in freer monads can then be represented as an efficient type-aligned data structure. The end result is the algorithmically efficient extensible effects library, which is not only more comprehensible but also faster than earlier implementations. As an illustration of the new library, we show three surprisingly simple applications: non-determinism with committed choice (LogicT), catching IO exceptions in the presence of other effects, and the semi-automatic management of file handles and other resources through monadic regions. We extensively use and promote the new sort of ‘laziness’, which underlies the left Kan extension: instead of performing an operation, keep its operands and pretend it is done.",
+  "summary": "## Summary\n\nThe paper develops extensible effects by progressively abstracting a direct algebraic representation of effectful computations. It first derives free monads from request signatures, then introduces **freer monads**, which store each operation’s continuation explicitly and therefore do not require the operation signature to be a `Functor`. This construction is presented as an instance of the left Kan extension: instead of immediately performing a structural operation such as mapping, the representation records its operands and defers the operation.\n\nExtensibility is obtained by combining freer monads with an **open union** of effect signatures. Type-level effect membership permits effectful client code to remain polymorphic over additional effects, while modular interpreters can handle or encapsulate individual effects. The paper emphasizes that effect interpretation order, rather than a fixed transformer-stack order, determines effect interaction.\n\nThe initial freer-monad representation has quadratic behavior for left-associated binds. The paper addresses this by representing continuations as heterogeneous, type-aligned queues (`FTCQueue`). Appending continuation segments becomes constant-time on average, reducing the problematic example from quadratic to linear time. Benchmarks report strong performance for deep effect stacks and substantial improvements over the earlier extensible-effects implementation. However, the approach remains much slower than specialized `State` implementations in the single-effect benchmark, largely because GHC optimizes conventional state-transformer code particularly well.\n\nThree applications demonstrate the expressiveness of the framework: non-determinism with committed choice, interception of IO exceptions while preserving other effect state, and statically scoped resource management through monadic regions. The paper’s central technical result is that a freer-monad representation, an open-union effect system, modular handlers, and type-aligned continuation queues can provide a comparatively general and efficient alternative to monad transformers.\n\n## Influence\n\nThe paper directly influenced Haskell libraries such as `freer-simple`, whose documentation identifies it as an implementation based on this work. ([hdiff.luite.com](https://hdiff.luite.com/file/freer-simple/1.0.0.0/README.md)) Its freer-monad and open-union design also became part of the broader implementation lineage of extensible-effect libraries; contemporary documentation for the Scala `eff` library explicitly describes itself as based on these ideas. ([atnos-org.github.io](https://atnos-org.github.io/eff/index.html)) Later educational and language-library work continues to cite the paper and use its freer construction as a reference point, including Lean libraries implementing free monads without a `Functor` requirement. ([freely.endofunctor.dev](https://freely.endofunctor.dev/)) The available evidence supports a concrete influence on subsequent effect-system libraries and teaching materials, but does not establish broad industrial adoption.",
   "raw_url": "http://okmij.org/ftp/Haskell/extensible/more.pdf",
   "source_type": "external",
   "filepath": "languages/haskell/README.md",
   "filename": "Freer Monads, More Extensible Effects",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:55"
 }

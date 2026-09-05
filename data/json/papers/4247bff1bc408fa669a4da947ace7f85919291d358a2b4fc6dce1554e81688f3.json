@@ -1,35 +1,35 @@
 {
   "uuid": "4247bff1bc408fa669a4da947ace7f85919291d358a2b4fc6dce1554e81688f3",
-  "title": "KVM: the Linux Virtual Machine Monitor",
-  "publication_date": "2007",
+  "title": "kvm: the Linux Virtual Machine Monitor",
+  "publication_date": "June 27–30, 2007; Proceedings of the Linux Symposium, Volume One, Ottawa, Ontario, Canada, pp. 225–230",
   "authors": [
     "Anthony Liguori",
     "Avi Kivity",
-    "Doron Laor",
+    "Dor Laor",
     "Uri Lublin",
     "Yaniv Kamay"
   ],
   "keywords": [
-    "guest-os",
-    "hardware-support",
+    "hardware-assisted-virtualization",
     "hypervisor",
-    "kernel-module",
     "kvm",
     "linux",
-    "open-source",
-    "performance",
-    "virtual-machines",
-    "virtualization"
+    "live-migration",
+    "qemu",
+    "shadow-page-tables",
+    "virtual-machine-monitor",
+    "virtualization",
+    "x86-virtualization"
   ],
   "category_path": [
     "virtual_machines"
   ],
-  "abstract": "This paper describes KVM, a full virtualization solution for Linux on x86 hardware containing virtualization extensions (Intel VT or AMD-V). KVM is implemented as a loadable kernel module that turns the Linux kernel into a type-2 (hosted) hypervisor, and a user-space device model is used to implement the rest of the functionality required for emulating the x86 platform. We discuss the overall architecture, and its advantages with respect to existing solutions, demonstrate its simplicity by looking at our implementation, and describe many of the interesting optimizations and techniques that were required to achieve good performance.",
-  "summary": "The paper \"KVM: the Linux Virtual Machine Monitor\" by Avi Kivity et al., published in 2007, discusses the implementation and benefits of the Kernel-based Virtual Machine (KVM) as a full virtualization solution integrated into the Linux kernel. KVM leverages hardware virtualization extensions, specifically Intel VT and AMD-V, to convert the native Linux kernel into a type-2 hypervisor. This is achieved via a loadable kernel module, coupled with a user-space device model to emulate the x86 platform.\n\nKVM's architecture presents notable advantages, offering simpler integration with existing Linux infrastructure and efficient use of hardware resources compared to other solutions available at that time. The paper details various optimizations that enhance performance, which were crucial for reducing overhead and ensuring effective virtualization.\n\nKVM has had a significant impact on both research and industry, serving as a foundation for many cloud and virtualization solutions. Its development opened pathways for further innovations in virtualization technology and contributed to the widespread adoption of Linux as a favored platform for virtual machines. The solution's simplicity and effectiveness have influenced subsequent projects and technologies in virtual machine management.\n\nNotable references to this paper include its mention in \"Performance Evaluation of the KVM Hypervisor on ARM SoC\" ([SpringerLink](https://link.springer.com/article/10.1007/s11241-010-9109-x)) and \"Enhancing KVM Hypervisor for Opportunistic Computing in Cloud Environments\" ([IEEE Xplore](https://ieeexplore.ieee.org/document/6153589)). These citations indicate ongoing research interest and practical applications derived from the foundational concepts introduced by KVM. Overall, the paper has contributed extensively to the virtualization discussion, guiding further advancements and optimizations in the domain.",
+  "abstract": "Virtualization is a hot topic in operating systems these days. It is useful in many scenarios: server consolidation, virtual test environments, and for Linux enthusiasts who still can not decide which distribution is best. Recently, hardware vendors of commodity x86 processors have added virtualization extensions to the instruction set that can be utilized to write relatively simple virtual machine monitors.\n\nThe Kernel-based Virtual Machine, or kvm, is a new Linux subsystem which leverages these virtualization extensions to add a virtual machine monitor (or hypervisor) capability to Linux. Using kvm, one can create and run multiple virtual machines. These virtual machines appear as normal Linux processes and integrate seamlessly with the rest of the system.",
+  "summary": "### Summary\n\nThe paper presents KVM as a Linux-integrated virtual machine monitor that uses Intel VT or AMD-V hardware virtualization extensions. It describes the `/dev/kvm` ioctl interface, the triply nested user/kernel/guest execution model, architecture-specific support for Intel and AMD virtualization, shadow page-table management, userspace I/O emulation through QEMU, interrupt injection, framebuffer handling, and dirty-page tracking for live migration. The authors emphasize that integrating virtualization into Linux enables reuse of Linux process management, scheduling, memory management, NUMA, and timer facilities. At the time of publication, SMP guests, paravirtualized devices, deeper memory-management integration, scheduler awareness, newer virtualization hardware, and additional architectures remained future work. ([kernel.org](https://www.kernel.org/doc/ols/2007/ols2007v1-pages-225-230.pdf))\n\n### Influence\n\nThe paper is an early architectural description of KVM and is subsequently cited by virtualization and systems research, including work on virtualized I/O and hybrid runtime systems. ([usenix.org](https://www.usenix.org/legacy/events/wiov08/tech/full_papers/liguori/liguori_html/node6.html)) The Linux kernel’s current KVM documentation preserves the paper’s central interface model: userspace opens `/dev/kvm` and controls virtual machines and vCPUs through file descriptors and ioctls, while the API has expanded across multiple architectures and device models. ([kernel.org](https://www.kernel.org/doc/html/latest/virt/kvm/api.html)) The paper therefore contributed to the technical foundation and terminology for the KVM architecture that continues to be developed in the Linux kernel.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/virtual_machines/kvm-linux-virtual-machines-monitor.pdf",
   "source_type": "pdf",
   "filepath": "virtual_machines/kvm-linux-virtual-machines-monitor.pdf",
   "filename": "kvm-linux-virtual-machines-monitor.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:56"
+  "created_on": "2026-09-01 00:47:55",
+  "summary_received": "2026-09-05 21:19:53"
 }

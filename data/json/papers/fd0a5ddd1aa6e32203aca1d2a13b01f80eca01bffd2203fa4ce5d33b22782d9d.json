@@ -1,30 +1,32 @@
 {
   "uuid": "fd0a5ddd1aa6e32203aca1d2a13b01f80eca01bffd2203fa4ce5d33b22782d9d",
-  "title": "Consensus algorithms for parallel machines",
-  "publication_date": "March 1994",
+  "title": "Soft Typing",
+  "publication_date": "June 26–28, 1991; Proceedings of the ACM SIGPLAN’91 Conference on Programming Language Design and Implementation (PLDI ’91), Toronto, Ontario, Canada, pp. 278–292",
   "authors": [
-    "Eli Gafni"
+    "Mike Fagan",
+    "Robert Cartwright"
   ],
   "keywords": [
-    "algorithms",
-    "consensus",
-    "distributed-computing",
-    "failure-models",
-    "fault-tolerance",
-    "parallel-machines",
-    "paxos",
-    "processes",
-    "synchronization"
+    "dynamic-typing",
+    "functional-programming",
+    "hindley-milner",
+    "programming-languages",
+    "recursive-types",
+    "runtime-checks",
+    "scheme",
+    "soft-typing",
+    "static-type-inference",
+    "union-types"
   ],
   "category_path": [
     "languages-theory"
   ],
-  "abstract": "This paper addresses the problem of consensus in message-passing systems: A group of processes must agree on a common value despite initial disagreements and process crashes. Previous work has shown that the consensus problem can be solved in the presence of crash failures, even if up to f processes out of a total of n can crash if and only if the system is synchronous, that is, it operates in real-time and there are known bounds on message delay and process execution. The consensus problem in systems that are not completely synchronous had, until now, evaded solution. In this paper, we provide consensus algorithms whose time complexity matches theoretical lower bound in a partial synchrony. In the presence of eventual synchrony, f crash failures can be tolerated, provided n > 2f.",
-  "summary": "The paper \"Consensus algorithms for parallel machines\" by Eli Gafni, published in March 1994, explores the consensus problem in message-passing systems with a focus on partial synchrony—a topic that had been unresolved in non-completely synchronous systems. The author proposes consensus algorithms that match the theoretical lower bound for time complexity under partial synchronous conditions. This is significant because it advances the understanding of how consensus can be achieved even in non-deterministic and less predictable environments, which are common in distributed systems. Gafni's work addresses system conditions where eventual synchrony is present, allowing for the toleration of up to 'f' crash failures provided 'n > 2f' holds, broadening the applicability and robustness of distributed systems.\n\nThe concepts and solutions proposed in this paper have had far-reaching impacts on subsequent research in distributed computing, particularly influencing fault-tolerant protocols and synchronization algorithms. Notably, the paper has been referenced in context with the popular Paxos algorithm, which has been fundamental to designing systems that require strong consistency and coordination despite failure conditions. However, explicit references to this paper's influence in subsequent research were not readily found from the search conducted. It is reasonable to infer its contributions are deeply integrated into foundational thoughts and systems in distributed consensus and have influenced various fault-tolerant mechanisms in distributed systems today.",
+  "abstract": "In an effort to avoid improper use of program functions, modern programming languages employ some kind of preventative type system. These type systems can be classified as either static or dynamic. Static type systems detect \"ill-typed\" program phrases at compile-time, whereas dynamic type systems detect \"ill-typed\" phrases at run-time. Static typing systems have two important advantages over dynamically typed systems: First, they provide important feedback to the programmer by detecting a large class of program errors before execution. Second, they extract information that a compiler can exploit to produce more efficient code. The price paid for these advantages, however, is a loss of expressiveness and modularity. It is easy to prove that a static type system for an \"interesting\" programming language necessarily excludes some \"good\" programs. This paper focuses on the problem of designing programming systems that retain the all the expressiveness of dynamic typing, but still offer the early error detection and improved optimization opportunities of static typing. To that end, we introduce a concept called soft typing. The key concept of soft typing is that a type checker need not reject programs containing statically \"ill-typed\" phrases. Instead, the soft type checker inserts explicit run-time checks. Thus, there are two issues to be addressed in the design of soft typing systems. First, the typing mechanism must provide reasonable feedback to programmers accustomed to dynamically typed-languages. Current static systems fail to satisfy the programmer's intuition about correctness on many programs. Second, a soft typing system must sensibly insert run-time checks (when necessary). This paper develops a type system and checking algorithms that are suitable for soft typing a significant class of programming languages.",
+  "summary": "The paper introduced **soft typing**, an alternative to purely static or purely dynamic typing. Its central technique is to infer types without rejecting programs that cannot be completely typed, inserting explicit run-time checks where static analysis is insufficient. The proposed system extends Hindley–Milner-style inference with union and recursive types. Metadata sources identify the work as a PLDI ’91 paper by Robert Cartwright and Mike Fagan, presented in Toronto on June 26–28, 1991. ([dblp.dagstuhl.de](https://dblp.dagstuhl.de/rec/conf/pldi/CartwrightF91.html))\n\nSubsequent work extended the approach to Scheme features such as mutation and continuations, developed more precise set-based analyses used in the DrScheme/MrFlow ecosystem, and applied related soft-typing ideas to exception analysis. Later research explicitly treats soft typing as an early foundation for gradual and hybrid typing, including systems for Scheme and conditional-type inference. ([cs.rice.edu](https://www.cs.rice.edu/CS/PLT/Publications/Java/sigplan39-4.pdf))",
   "raw_url": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.24.9333&rep=rep1&type=pdf",
   "source_type": "external",
   "filepath": "languages-theory/README.md",
   "filename": "Soft Typing",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:56"
 }

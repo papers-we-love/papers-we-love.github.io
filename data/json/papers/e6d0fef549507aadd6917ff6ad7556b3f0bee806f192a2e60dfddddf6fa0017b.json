@@ -1,35 +1,35 @@
 {
   "uuid": "e6d0fef549507aadd6917ff6ad7556b3f0bee806f192a2e60dfddddf6fa0017b",
-  "title": "All You Need is Ears: A Multi-Sensory Embodied Agent",
-  "publication_date": "January 2019",
+  "title": "Interpretable machine learning: definitions, methods, and applications",
+  "publication_date": "January 14, 2019 (arXiv version 1); published in Proceedings of the National Academy of Sciences on October 16, 2019, with issue date October 29, 2019, volume 116, issue 44, pages 22071–22080. ([arxiv.org](https://arxiv.org/abs/1901.04592))",
   "authors": [
-    "Adrià Colomé",
-    "Carme Torras",
-    "Felix Gimeno",
-    "Marta R. Costa-jussá",
-    "María García Ortiz"
+    "Bin Yu",
+    "Chandan Singh",
+    "Karl Kumbier",
+    "Reza Abbasi-Asl",
+    "W. James Murdoch"
   ],
   "keywords": [
-    "artificial-intelligence",
-    "audio-processing",
-    "convolutional-neural-networks",
-    "deep-learning",
-    "embodied-agents",
-    "multi-modal-perception",
-    "multi-sensory-agents",
-    "neurological-modeling",
-    "robotics",
-    "sensor-fusion"
+    "descriptive-accuracy",
+    "explainable-ai",
+    "interpretable-machine-learning",
+    "machine-learning-interpretability",
+    "model-based-interpretability",
+    "pdr-framework",
+    "post-hoc-interpretability",
+    "predictive-accuracy",
+    "relevancy",
+    "stability"
   ],
   "category_path": [
     "machine_learning"
   ],
-  "abstract": "We propose a multi-sensory neural network that enables an embodied agent to process aliased audio-visual observations in partially observable environments. Working towards this goal, we introduce a semi-supervised approach to enhance linguistic capabilities by combining audio and visual information, and illustrate its ability to disambiguate language conditioned on visual context. We present an exhaustive set of experiments demonstrating how the fusion of audio and visual sensory signals helps to perform challenging tasks like audio-visual speaker diarization and speech recognition. These experiments reveal that our proposed approach exceeds single-modality models in segments with multi-sensory input, this being particularly relevant for real-world applications where observations are often ambiguous and carry inherent uncertainty.",
-  "summary": "The paper introduces a multi-sensory neural network architecture for processing audio-visual inputs in embodied agents operating in partially observable environments. The authors propose a semi-supervised learning strategy that leverages the combination of auditory and visual information to enhance language interpretation capabilities. By conducting numerous experiments, the paper demonstrates that integrating multiple sensory modalities can significantly improve performance in tasks such as speaker diarization and speech recognition, especially under ambiguous conditions. \n\nA web search reveals that there isn't a significant number of highly cited or industry-acknowledged works directly referencing this paper. However, related fields such as embodied AI and multi-modal sensory integration continue to be of considerable interest in both academia and industry. It is plausible that this work contributes to the foundational understanding and the development of similar models, aiding progress in AI handling multi-modal sensory data. Without substantial direct citations or known direct applications, we focus on its potential contributions to the structure and learning of multi-modal models, particularly in uncertain and partially observable real-world scenarios. For more information visit the [arXiv page](https://arxiv.org/abs/1901.04592).",
+  "abstract": "Machine-learning models have demonstrated great success in learning complex patterns that enable them to make predictions about unobserved data. In addition to using models for prediction, the ability to interpret what a model has learned is receiving an increasing amount of attention. However, this increased focus has led to considerable confusion about the notion of interpretability. In particular, it is unclear how the wide array of proposed interpretation methods are related, and what common concepts can be used to evaluate them.\n\nWe aim to address these concerns by defining interpretability in the context of machine learning and introducing the Predictive, Descriptive, Relevant (PDR) framework for discussing interpretations. The PDR framework provides three overarching desiderata for evaluation: predictive accuracy, descriptive accuracy and relevancy, with relevancy judged relative to a human audience. Moreover, to help manage the deluge of interpretation methods, we introduce a categorization of existing techniques into model-based and post-hoc categories, with sub-groups including sparsity, modularity and simulatability. To demonstrate how practitioners can use the PDR framework to evaluate and understand interpretations, we provide numerous real-world examples. These examples highlight the often under-appreciated role played by human audiences in discussions of interpretability. Finally, based on our framework, we discuss limitations of existing methods and directions for future work. We hope that this work will provide a common vocabulary that will make it easier for both practitioners and researchers to discuss and choose from the full range of interpretation methods.",
+  "summary": "## Summary\n\nThe paper defines interpretable machine learning as using machine-learning models to extract relevant knowledge about domain relationships in data. It emphasizes that interpretability is audience- and problem-dependent rather than a single intrinsic property of a model.\n\nIts central contribution is the **Predictive, Descriptive, Relevant (PDR) framework**:\n\n- **Predictive accuracy:** whether the model adequately represents the underlying data relationships.\n- **Descriptive accuracy:** whether the interpretation faithfully captures what the model has learned.\n- **Relevancy:** whether the interpretation provides useful insight for a specific audience and domain problem.\n\nThe paper places interpretation within a data-science life cycle and distinguishes between **model-based interpretability**, which constrains the model to make its learned relationships easier to understand, and **post-hoc interpretability**, which analyzes an already-trained model without changing it. Model-based methods include sparsity, simulatability, modularity, domain-based feature engineering, and model-based feature engineering. Post-hoc methods include dataset-level and prediction-level analyses, feature and interaction importance, statistical summaries, visualizations, influence functions, and alternative explanation formats.\n\nA recurring methodological requirement is **stability**: interpretations should remain meaningful under appropriate perturbations of the data, model, or training procedure. The authors also distinguish interpretability from causal inference, noting that ordinary interpretation generally describes associations rather than causal effects.\n\nThe paper identifies unresolved problems in evaluating descriptive accuracy and relevancy. It recommends simulation studies, comparison with prior scientific knowledge, direct use in domain problems, and human-subject studies as partial evaluation strategies. It further argues that future work should develop more accurate intrinsically interpretable models, better feature-engineering tools, improved formats for explaining black-box models, and methods that use interpretations to correct or improve predictive models.\n\n## Influence\n\nSubsequent research has cited the paper as a framework for organizing interpretability terminology and methods. Later taxonomy and survey work uses it when discussing definitions, evaluation criteria, model-based versus post-hoc approaches, and the role of human audiences in explanation design. ([springerlink.fh-diploma.de](https://springerlink.fh-diploma.de/article/10.1007/s10618-022-00867-8)) A 2026 bibliometric analysis also includes the paper among influential works in the explainable-AI literature, indicating continued use as a reference point for mapping the field. ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/full/10.1002/asmb.70091))",
   "raw_url": "https://arxiv.org/pdf/1901.04592.pdf",
   "source_type": "external",
   "filepath": "machine_learning/README.md",
   "filename": "Interpretable machine learning: definitions, methods, and applications",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:56"
 }

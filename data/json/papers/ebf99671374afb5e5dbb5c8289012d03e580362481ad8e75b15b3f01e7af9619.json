@@ -1,30 +1,31 @@
 {
   "uuid": "ebf99671374afb5e5dbb5c8289012d03e580362481ad8e75b15b3f01e7af9619",
-  "title": "How do they pay you for longer articles?",
-  "publication_date": "October 2015",
+  "title": "Arrakis: The Operating System Is the Control Plane",
+  "publication_date": "November 2015; ACM Transactions on Computer Systems, Volume 33, Number 4, Article 11; 30 pages. The journal article is based on a prior publication at OSDI 2014.",
   "authors": [
-    "Eric Gilbert"
+    "Arvind Krishnamurthy",
+    "Dan R. K. Ports",
+    "Doug Woos",
+    "Irene Zhang",
+    "Jialin Li",
+    "Simon Peter",
+    "Thomas Anderson",
+    "Timothy Roscoe"
   ],
   "keywords": [
-    "article-length",
-    "content-marketplaces",
-    "content-pricing",
-    "digital-economy",
-    "journalism",
-    "long-form-content",
-    "media-studies",
-    "news-industry",
-    "online-media"
+    "io-virtualization",
+    "kernel-bypass",
+    "sr-iov"
   ],
   "category_path": [
     "unikernels"
   ],
-  "abstract": "We use Mechanical Turk to measure what people believe online writers should be paid for longer articles. We find that readers (1) generally think an article should be a little over twice as expensive to write when it’s roughly five times as long; (2) tend to believe that someone writing a 25-paragraph piece should earn $90, on average; and (3) expect editors to pass along cost savings associated with shorter articles to readers.",
-  "summary": "The paper titled \"How do they pay you for longer articles?\" by Eric Gilbert, published in October 2015, investigates the perceived value of longer online articles and their payment structures. Through an empirical study using Amazon Mechanical Turk, the research highlights that readers believe longer articles are worth more, but not proportionally more; a fivefold increase in length is perceived as deserving just twice the payment. It suggests that a 25-paragraph piece should earn around $90. Despite the specific focus on content pricing, the paper is part of broader discourses intersecting media studies and the digital economy.\n\nUpon reviewing its impact, the paper hasn't significantly influenced academic literature or industry practices as of the last reviewed year. Google Scholar and other citation databases show limited referencing and application of Gilbert's findings beyond its immediate publication context. Additionally, no critical industry shifts or policy changes appear to directly credit this study. Thus, it represents a precise yet niche inquiry into content pricing within digital journalism, and its insights remain more anecdotally recognized than widely adopted.\n\nFor further exploration, see:\n- [Google Scholar citations](https://scholar.google.com/scholar?cites=2812806)",
+  "abstract": "Recent device hardware trends enable a new approach to the design of network server operating systems. In a traditional operating system, the kernel mediates access to device hardware by server applications to enforce process isolation as well as network and disk security. We have designed and implemented a new operating system, Arrakis, that splits the traditional role of the kernel in two. Applications have direct access to virtualized I/O devices, allowing most I/O operations to skip the kernel entirely, while the kernel is re-engineered to provide network and disk protection without kernel mediation of every operation. We describe the hardware and software changes needed to take advantage of this new abstraction, and we illustrate its power by showing improvements of 2 to 5× in latency and 9× throughput for a popular persistent NoSQL store relative to a well-tuned Linux implementation.",
+  "summary": "### Main contribution\n\nArrakis proposes dividing operating-system responsibilities into a **control plane** and a **data plane**. The kernel configures resources, establishes protection boundaries, and manages exceptional operations, while applications access virtualized network and storage devices directly through user-level software. Hardware mechanisms such as SR-IOV, IOMMUs, virtual network interfaces, filtering, and virtual storage identifiers enforce isolation without requiring the kernel to mediate every I/O operation.\n\nThe authors implement a prototype by extending the Barrelfish operating system and evaluate it with network services, a distributed object cache, a persistent Redis-based NoSQL store, an IP-layer middlebox, and an HTTP load balancer. The prototype reduces operating-system overheads associated with scheduling, kernel crossings, packet demultiplexing, and data movement. For the Redis workload, the paper reports approximately 2× lower read latency, 5× lower write latency, and 9× higher write throughput than a well-tuned Linux implementation. The evaluation also shows that substantial benefits can be obtained through a POSIX-compatible interface, with further gains available through native asynchronous and zero-copy interfaces.\n\n### Subsequent influence\n\nThe paper received the Best Paper award at OSDI 2014 and became a cited reference point for protected dataplane and kernel-bypass operating-system research. Later work on Tardis explicitly places Arrakis among the systems that motivated user-space dataplane operating systems, while identifying Arrakis’s dependence on available hardware virtualization features and its relatively coarse hardware resource controls as design limitations addressed by Tardis’s memory-protection-key and lightweight-activation approach. ([usenix.org](https://www.usenix.org/conference/osdi14/technical-sessions/presentation/peter))\n\nThe broader Arrakis research program also led to follow-on work on FlexNIC, which continued the project’s investigation of hardware-supported, application-level packet processing. Arrakis is additionally cited in subsequent networking research discussing kernel-bypass and high-performance packet-processing architectures. ([arrakis.cs.washington.edu](https://arrakis.cs.washington.edu/publications/))\n\nA quick search did not identify a specific commercial product or deployment that explicitly attributes its design to this paper; the clearest documented influence is within subsequent academic research and systems coursework.",
   "raw_url": "https://dl.acm.org/citation.cfm?id=2812806",
   "source_type": "external",
   "filepath": "unikernels/README.md",
   "filename": "Arrakis: The Operating System Is the Control Plane",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:05"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:57"
 }

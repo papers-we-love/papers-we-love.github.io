@@ -1,36 +1,35 @@
 {
   "uuid": "356a6f26fa99fd9f9264d8b3c41227a2e812777eca590c5e4b2f3601b310947f",
-  "title": "Kelips: Building an Efficient and Stable P2P DHT Through Increased Memory and Background Overhead",
-  "publication_date": "2003",
+  "title": "Kelips*: Building an Efficient and Stable P2P DHT Through Increased Memory and Background Overhead",
+  "publication_date": "February 21–22, 2003 — 2nd International Workshop on Peer-to-Peer Systems (IPTPS 2003), Berkeley, California, USA; revised papers",
   "authors": [
-    "Arvind Krishnamurthy",
-    "Dilip Goswami",
-    "John Noll",
-    "Phil Hauser",
-    "Scott Shenker",
-    "Stefan J. Langley"
+    "Al Demers",
+    "Indranil Gupta",
+    "Ken Birman",
+    "Prakash Linga",
+    "Robbert van Renesse"
   ],
   "keywords": [
-    "distributed-hash-tables",
-    "failure-recovery",
-    "gossip-protocols",
-    "kelips",
-    "memory-usage",
-    "overlay-networks",
-    "p2p-networks",
-    "peer-to-peer",
-    "scalability",
-    "system-stability"
+    "affinity-groups",
+    "churn-resilience",
+    "constant-time-lookup",
+    "distributed-hash-table",
+    "fault-tolerance",
+    "file-index-replication",
+    "gossip-protocol",
+    "load-balancing",
+    "network-locality",
+    "peer-to-peer"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "Kelips is a new P2P (peer-to-peer) DHT (distributed hash table) that exploits increased available memory and background overhead to achieve (1) short lookup times, (2) robustness to network membership changes such as failures and node arrivals and departures, and (3) eventually consistent key lookups and system membership. Our main contributions are: (i) an architecture that provides an efficient implementation of DHTs using more memory and background overhead; (ii) the use of a gossip protocol to efficiently handle system membership changes; and (iii) the evaluation of this architecture both analytically and through simulations.",
-  "summary": "Kelips introduces a novel approach to constructing efficient and stable peer-to-peer distributed hash tables (DHTs) by utilizing increased memory and background processing. This approach reduces lookup times and enhances system stability, even amidst frequent network membership changes such as node arrivals, departures, and failures. The system employs a gossip protocol to handle these changes efficiently, ensuring consistent key lookups and membership information.\n\nThe paper has influenced subsequent research in the development and improvement of P2P systems and DHTs. It is frequently cited in research exploring efficient design architectures for distributed systems, particularly in environments where network conditions are volatile. Papers such as \"Scalable Distributed Data Structures for Internet Applications\" by M. Castro et al., and \"A Survey of Peer-to-Peer Content Distribution Technologies\" by M. Roussopoulos et al., reference Kelips to either compare performance benchmarks or derive new algorithms that further enhance DHT efficiencies.\n\nIn industry, advancements in peer-to-peer networking, as seen in blockchain-based technologies and distributed file systems, utilize concepts introduced by Kelips to address scalability and robustness challenges. However, more extensive adoption and direct industrial applications are less documented compared to academic citations.\n\nCitations:\n- Castro, M., et al. \"Scalable Distributed Data Structures for Internet Applications.\"\n- Roussopoulos, M., et al. \"A Survey of Peer-to-Peer Content Distribution Technologies.\"",
+  "abstract": "A peer-to-peer (p2p) distributed hash table (DHT) system allows hosts to join and fail silently (or leave), as well as to insert and retrieve files (objects). This paper explores a new point in design space in which increased memory usage and constant background communication overheads are tolerated to reduce file lookup times and increase stability to failures and churn. Our system, called Kelips, uses peer-to-peer gossip to partially replicate file index information. In Kelips, (a) under normal conditions, file lookups are resolved with O(1) time and complexity (i.e., independent of system size), and (b) membership changes (e.g., even when a large number of nodes fail) are detected and disseminated to the system quickly. Per-node memory requirements are small in medium-sized systems. When there are failures, lookup success is ensured through query rerouting. Kelips achieves load balancing comparable to existing systems. Locality is supported by using topologically aware gossip mechanisms. Initial results of an ongoing experimental study are also discussed.",
+  "summary": "## Summary\n\nKelips investigates a deliberate tradeoff of increased per-node memory and continuous background communication for faster and more stable distributed-hash-table lookups. Nodes are assigned to virtual affinity groups using consistent hashing. Each node maintains partial membership information for its own group, a small set of contacts for every other group, and replicated file-index records, called filetuples. Gossip disseminates membership and file-index updates, while heartbeat expiration removes stale state.\n\nWith approximately √n affinity groups, the system requires O(√n) soft state per node while providing O(1) lookup time and message complexity under normal conditions. Multi-hop, multi-try query routing compensates for incomplete or stale state and node failures. File insertion uses a similar routing mechanism to improve load distribution, with normal-case insertion cost growing as O(log(√n)). Round-trip-time-aware gossip and contact selection provide a degree of network locality.\n\nThe prototype experiments, conducted in emulated environments of up to a few thousand nodes, reported reasonably balanced filetuple distributions. In one 1,000-node experiment, 66.2% of insertions succeeded on the first try, 33% on the second, and 0.8% on the third. In a test where 500 of 1,000 nodes failed simultaneously, lookups failed only when the file’s homenode had also failed; membership and filetuple state stabilized shortly afterward. The evaluation was preliminary, did not address replication of the files themselves, and explicitly omitted privacy and security considerations.\n\n## Influence\n\nSubsequent research applied Kelips directly to peer-to-peer web caching. The churn-resistant peer-to-peer web caching system was built on the Kelips routing substrate, and Kache was implemented over Kelips to provide one-hop, locality-aware cache lookup under churn. ([dprg.cs.uiuc.edu](https://dprg.cs.uiuc.edu/data/files/2003/A_Churn_Resistant.pdf)) Later DHT research and surveys cited Kelips as a representative constant-hop design that achieves low lookup latency through O(√N)-scale replication or routing state, including comparative discussions of CoDoNS, Beehive, and related systems. ([cs.cornell.edu](https://www.cs.cornell.edu/people/egs/beehive/beehive-related.php)) The sources reviewed provide evidence of influence on subsequent P2P caching and DHT research, but no specific production-industry deployment of Kelips itself was identified. The publication metadata is corroborated by the Springer proceedings record, which lists the paper on pages 160–169 with the five authors above. ([link.springer.com](https://link.springer.com/book/10.1007/b11823))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/kelips-building-an-efficient-and-stable-p2p-dht-through-increased-memory-and-background-overhead.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/kelips-building-an-efficient-and-stable-p2p-dht-through-increased-memory-and-background-overhead.pdf",
   "filename": "kelips-building-an-efficient-and-stable-p2p-dht-through-increased-memory-and-background-overhead.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:51"
 }

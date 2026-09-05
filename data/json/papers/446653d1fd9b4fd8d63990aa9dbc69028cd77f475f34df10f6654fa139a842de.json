@@ -1,31 +1,27 @@
 {
   "uuid": "446653d1fd9b4fd8d63990aa9dbc69028cd77f475f34df10f6654fa139a842de",
-  "title": "Cloud Networking Challenges and Opportunities for Innovations",
-  "publication_date": "December 2015",
+  "title": "Enterprise IoT Security and Scalability: How Unikernels can Improve the Status Quo",
+  "publication_date": "7 December 2016; 9th IEEE/ACM International Conference on Utility and Cloud Computing (UCC 2016), Shanghai, China",
   "authors": [
-    "Chadi Assi",
-    "Mohammad A. Salahuddin",
-    "Yahia A. Samhan",
-    "Yaser Ghanem"
+    "Alfred Bratterud",
+    "Andreas Happe",
+    "Bob Duncan"
   ],
   "keywords": [
-    "cloud-networking",
-    "communication",
-    "infrastructure",
-    "innovations",
-    "resource-management",
-    "security",
-    "services"
+    "attack-surface",
+    "cloud-security-and-privacy",
+    "complexity",
+    "compliance"
   ],
   "category_path": [
     "unikernels"
   ],
-  "abstract": "The rapid growth of cloud networking has brought enormous benefits to society. However, such growth has also introduced several challenges that need to be addressed in order to harness its full potentials. This paper explores various cloud networking issues including security, energy efficiency, and monitoring, which are important pillars for realizing innovations in this realm. We discuss some of the challenges facing cloud networking and identify key enablers for innovations that will foster the development of future solutions.",
-  "summary": "The paper \"Cloud Networking Challenges and Opportunities for Innovations\" by Chadi Assi, Yaser Ghanem, Yahia A. Samhan, and Mohammad A. Salahuddin, published in December 2015, outlines the primary challenges and opportunities within cloud networking, particularly in relation to security, energy efficiency, and monitoring. The authors highlight the importance of addressing these challenges to unlock the full potential of cloud networking innovations.\n\nIn a broader context, this paper contributes to the ongoing conversation on optimizing service delivery and resource management in cloud infrastructures. It identifies specific areas where innovation can occur to improve the effectiveness and efficiency of cloud networks.\n\nA quick search for this paper's impact shows it has been cited by other works focusing on cloud security and resource management in cloud computing. These citations reflect ongoing research into refining and overcoming the challenges mentioned by the authors, with particular focus on securing cloud networks and enhancing communication infrastructure. However, detailed direct impact in industry applications or notable further breakthroughs directly attributed to this paper could not be specifically determined from available research databases as of now.\n\nOverall, the paper provides a foundation for future research aimed at developing innovative solutions to improve cloud networking, emphasizing the importance of solving current challenges to foster greater advancement in the field.",
+  "abstract": "Cloud computing has been a great enabler for both the Internet of Things and Big Data. However, as with all new computing developments, development of the technology is usually much faster than consideration for, and development of, solutions for security and privacy. In a previous paper, we proposed that a unikernel solution could be used to improve security and privacy in a cloud scenario. In this paper, we outline how we might apply this approach to the Internet of Things, which can demonstrate an improvement over existing approaches.",
+  "summary": "### Summary\n\nThe paper examines security, privacy, scalability, and manageability problems created by large-scale Internet of Things deployments connected to cloud, fog, and edge-computing infrastructure. It argues that conventional enterprise security models, particularly perimeter-oriented firewall architectures, are poorly suited to geographically distributed, resource-constrained, and heterogeneous IoT environments.\n\nThe proposed approach is to use unikernels across the IoT processing chain, including devices, intermediate processing nodes, cloudlets, and central cloud servers. The authors identify several expected benefits: reduced attack surface through minimal software images, lower memory and processing requirements, reuse of application code across hardware platforms, improved isolation, simplified deployment, atomic or rollback-capable updates, event-driven execution, energy efficiency, and dynamic scale-out. Stateless unikernels are also presented as suitable for rapidly starting and discarding processing instances and for moving workloads between central clouds and edge locations.\n\nThe paper emphasizes that unikernels are not a complete solution. Large deployments still require substantial infrastructure for provisioning, monitoring, logging, lifecycle management, and secure debugging. Hardware virtualization support is also uneven across IoT devices, and the single-process, stateless model limits compatibility with existing software. The authors additionally identify verifiable computing and cryptographic techniques as necessary for protecting the integrity and confidentiality of sensitive data.\n\n### Evidence of subsequent use and influence\n\nThe paper has continued to be cited in later unikernel, IoT, edge-computing, and systems research. The University of Aberdeen research record reports 19 Scopus citations and identifies the work as a published UCC 2016 conference contribution. ([abdn.elsevierpure.com](https://abdn.elsevierpure.com/en/publications/enterprise-iot-security-and-scalability-how-unikernels-can-improv/)) Later publications cite it in discussions of embedded-IoT unikernel deployment, edge offloading, unikernel isolation, and lightweight unikernel systems. ([repositum.tuwien.at](https://repositum.tuwien.at/bitstream/20.500.12708/2968/2/Amort%20Jan%20-%202017%20-%20Evaluating%20the%20unikernel%20concept%20for%20the%20deployment%20of...pdf)) A systematic literature review of software-defined networking for IoT also includes the paper as part of its discussion of IoT research. ([open-access.bcu.ac.uk](https://www.open-access.bcu.ac.uk/13605/1/Toward_Software-Defined_Networking-Based_IoT_Frameworks_A_Systematic_Literature_Review_Taxonomy_Open_Challenges_and_Prospects.pdf)) These records establish continued scholarly reuse of the paper’s topic and proposal, but do not by themselves demonstrate that specific systems or industry products were directly derived from it.",
   "raw_url": "http://aura.abdn.ac.uk/bitstream/handle/2164/7988/PID4488667.pdf?sequence=1&isAllowed=y",
   "source_type": "external",
   "filepath": "unikernels/README.md",
   "filename": "Enterprise IoT security and scalability: how unikernels can improve the status Quo",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:05"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:57"
 }

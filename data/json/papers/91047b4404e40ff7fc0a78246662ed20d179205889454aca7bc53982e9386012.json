@@ -1,31 +1,31 @@
 {
   "uuid": "91047b4404e40ff7fc0a78246662ed20d179205889454aca7bc53982e9386012",
   "title": "The Slab Allocator: An Object-Caching Kernel Memory Allocator",
-  "publication_date": "1994",
+  "publication_date": "June 8, 1994 — USENIX Summer 1994 Technical Conference, Boston, Massachusetts",
   "authors": [
     "Jeff Bonwick"
   ],
   "keywords": [
-    "dynamic-memory-allocation",
-    "kernel",
-    "memory-efficiency",
+    "cache-utilization",
+    "debugging-tools",
+    "kernel-memory-allocation",
+    "kernel-performance",
+    "memory-fragmentation",
     "memory-management",
     "object-caching",
+    "object-coloring",
     "operating-systems",
-    "performance",
-    "resource-allocation",
-    "slab-allocator",
-    "unix"
+    "slab-allocator"
   ],
   "category_path": [
     "memory_management"
   ],
-  "abstract": "Most general-purpose operating systems provide a memory management facility called the kernel memory allocator. Typically the kernel memory allocator provides variable-size memory allocation through a set of zones, each of which satisfies requests for different size and build. This results in poor memory utilization when the memory allocation pattern is not uniform over time. This paper presents a new kernel memory allocator called the slab allocator. The slab allocator improves the efficiency of object-based allocation by caching recently freed objects so that they can be quickly reallocated. The slab allocator includes a number of optimizations aimed at increasing the effective memory bandwidth and utilization, including \"coloring\" to reduce cache conflicts. We present measurements which show that the slab allocator can improve system performance substantially relative to other strategies. We also show that the concept of \"slab allocation\" is quite general, applying to a wide variety of resource management problems beyond memory.",
-  "summary": "This paper introduces the slab allocator, a new kernel memory allocator designed to improve memory utilization and performance through object-based caching, as opposed to traditional zone-based allocators. By caching recently freed objects, the slab allocator avoids memory fragmentation and allows faster object reallocation, thereby increasing the efficiency of resource allocation in Unix-based operating systems. The slab allocator also includes advanced techniques such as \"coloring\" to minimize cache conflicts, contributing to increased memory bandwidth. The paper presents empirical data demonstrating improved system performance with the slab allocator over previous methods.\n\nThe slab allocator has had a significant impact on the field of operating systems. It is widely used in Unix-like operating systems, including Solaris, and later adapted into Linux, influencing the design of memory allocators across various operating systems. The slab allocator's focus on caching and reuse principles has informed the development of various memory management subsystems.\n\n**Impact and References:**\n1. [Solaris Operating System: Design and Implementation](https://www.solarisinternals.com/wiki/index.php/Solaris_Internals)\n2. Linux Kernel's use and documentation of the slab allocator: [Linux Kernel Documentation on Slab Allocator](https://www.kernel.org/doc/html/latest/mm/slab.html)\n3. Broader discussions on memory allocation and Unix-like OS functionalities can be found in academic settings such as MIT's course materials and similar open resources.",
+  "abstract": "This paper presents a comprehensive design overview of the SunOS 5.4 kernel memory allocator. This allocator is based on a set of object-caching primitives that reduce the cost of allocating complex objects by retaining their state between uses. These same primitives prove equally effective for managing stateless memory (e.g. data pages and temporary buffers) because they are space-efficient and fast. The allocator's object caches respond dynamically to global memory pressure, and employ an object-coloring scheme that improves the system's overall cache utilization and bus balance. The allocator also has several statistical and debugging features that can detect a wide range of problems throughout the system.",
+  "summary": "### Contribution\nThe paper presents the SunOS 5.4 kernel memory allocator, centered on object caches that retain initialized objects after deallocation. This avoids repeatedly constructing and destroying frequently used kernel objects and provides fast allocation and release operations. Memory is organized into caches for particular object types, with slabs serving as the principal backing units. The design also applies to stateless memory, including data pages and temporary buffers. ([usenix.org](https://www.usenix.org/legacy/publications/library/proceedings/bos94/bonwick.html))\n\nThe allocator addresses both performance and memory efficiency. Slab organization limits search overhead and reduces fragmentation, while cache-specific policies allow the allocator to respond to system-wide memory pressure by reclaiming unused slabs. Object coloring varies object placement within slabs to improve processor-cache utilization and memory-bus balance. Statistical reporting and debugging facilities provide visibility into allocator behavior and help detect memory-management errors. ([boki1.github.io](https://boki1.github.io/notes/ObjectCachingKernelSlabAllocator.html))\n\n### Influence\nThe design directly influenced subsequent kernel implementations. The historical Linux `mm/slab.c` implementation identifies itself as an implementation of Bonwick’s slab allocator and explicitly cites the 1994 paper; it also documents implementation differences from the original design. ([kernel.googlesource.com](https://kernel.googlesource.com/pub/scm/linux/kernel/git/history/history/%2B/refs/tags/2.3.99pre10-2/mm/slab.c)) Slab allocation has also been incorporated into other systems, including the L4 environment, which provides a slab allocator for managing equally sized memory objects. ([os.inf.tu-dresden.de](https://os.inf.tu-dresden.de/l4env/doc/html/slab/index.html))\n\nBonwick and Jonathan Adams later extended the approach with per-processor magazines and the vmem resource allocator to improve multiprocessor scalability and support allocation of resources beyond kernel memory. That work reported deployment in Solaris 8 and performance improvements exceeding 50 percent on system-level benchmarks, demonstrating the continuing industrial use and extension of the original allocator concepts. ([usenix.org](https://www.usenix.org/conference/2001-usenix-annual-technical-conference/magazines-and-vmem-extending-slab-allocator-many))",
   "raw_url": "https://www.usenix.org/legacy/publications/library/proceedings/bos94/full_papers/bonwick.a",
   "source_type": "external",
   "filepath": "memory_management/README.md",
   "filename": "ASCII version",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:56"
 }

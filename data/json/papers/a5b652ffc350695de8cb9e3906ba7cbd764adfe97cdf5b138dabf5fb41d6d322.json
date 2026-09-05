@@ -1,35 +1,33 @@
 {
   "uuid": "a5b652ffc350695de8cb9e3906ba7cbd764adfe97cdf5b138dabf5fb41d6d322",
   "title": "Epidemic Broadcast Trees",
-  "publication_date": "May 2007",
+  "publication_date": "October 2007 (26th IEEE International Symposium on Reliable Distributed Systems, Beijing, China); technical report version dated May 2007",
   "authors": [
-    "A. Demers",
-    "D. Kostoulas",
-    "D. Psaltoulis",
-    "I. Gupta",
-    "K. Birman"
+    "José Pereira",
+    "João Leitão",
+    "Luís Rodrigues"
   ],
   "keywords": [
-    "broadcast-trees",
-    "data-redundancy",
     "distributed-systems",
-    "epidemic-algorithms",
+    "epidemic-broadcast",
     "fault-tolerance",
-    "network-topology",
-    "overlay-networks",
-    "peer-to-peer",
-    "scalability",
-    "self-healing"
+    "gossip-protocols",
+    "multicast",
+    "peer-to-peer-overlays",
+    "plumtree",
+    "reliable-broadcast",
+    "spanning-trees",
+    "tree-repair"
   ],
   "category_path": [
     "data_structures"
   ],
-  "abstract": "We present a reliable and efficient multicast protocol, called T-Rex, which can tolerate massive failures caused by process crashes or network partitions in large systems. Traditional reliable multicast protocols, which guarantee that all members of a group receive a message, have been designed assuming that failures are rare events. However, outages at server farms (e.g., having thousands of servers), load-conscious batch schedulers, fast client mobility in wireless or ad-hoc settings, mis-configured firewalls, unanticipated cascading failures, catastrophic regional failures, and hostile attacks, can lead to massive network failures and partitions where such protocols may be ineffective. We examine whether epidemic multicast protocols can offer an effective solution to this problem and find, rather surprisingly, that they may not scale to million-node systems due to redundant message duplication. Therefore, we propose Epidemic Broadcast Trees (EBT), a approach communicating by growing logical trees in an epidemic fashion, creating message redundancy without overloading systems. These trees are self-healing and adapt to topology changes effectively without compromising message delivery guarantees.",
-  "summary": "The paper titled \"Epidemic Broadcast Trees\" introduces the T-Rex protocol, which addresses reliable multicast in large systems prone to massive failures and network partitions. Traditional multicast protocols face limitations in such failure-prone environments. The paper explores epidemic multicast protocols and highlights their inefficiencies in large-scale applications due to excessive message duplication.\n\nTo address this, the authors propose Epidemic Broadcast Trees (EBT), where logical trees are constructed using epidemic techniques to ensure reliable message dissemination. EBTs are designed for scalability, self-healing, and to manage network topology changes without burdening the system with redundant messages. This approach is significant in distributed systems, allowing robust communication in dynamic and failure-prone networks.\n\nRegarding the research impact of this paper, there is limited direct citing in subsequent academic work or industry application based on available search results. Therefore, any substantial influence from this paper has either not been extensively documented in readily available sources or exists in more niche or undocumented scenarios.",
+  "abstract": "There is an inherent trade-off between epidemic and deterministic tree-based broadcast primitives. Tree-based approaches have a small message complexity in steady-state but are very fragile in the presence of faults. Gossip, or epidemic, protocols have a higher message complexity but also offer much higher resilience.\nThis paper proposes an integrated broadcast scheme that combines both approaches. We use a low cost scheme to build and maintain broadcast trees embedded on a gossip-based overlay. The protocol sends the message payload preferably via tree branches but uses the remaining links of the gossip overlay for fast recovery and expedite tree healing. Experimental evaluation presented in the paper shows that our new strategy has a low overhead and that is able to support large number of faults while maintaining a high reliability.",
+  "summary": "The paper introduces **Plumtree**, a push-lazy-push broadcast protocol that combines the efficiency of tree-based multicast with the resilience of epidemic gossip. It operates over a random, partially connected overlay maintained by a peer-sampling service such as HyParView.\n\nEach node divides its overlay neighbors into **eager** and **lazy** peers. Full message payloads are sent eagerly along selected links, whose evolution forms a spanning broadcast tree. Lazy peers receive compact `IHAVE` announcements rather than the payload. If a node does not receive the corresponding payload through its eager links before a timeout, it sends a `GRAFT` request to a lazy neighbor, retrieves the message, and promotes that link into the eager tree. Duplicate payloads cause `PRUNE` messages, removing redundant eager links. This mechanism allows the protocol to construct, repair, and gradually optimize the tree without requiring a separate multicast infrastructure.\n\nThe protocol is evaluated through PeerSim simulations involving 10,000 nodes and a HyParView overlay. In stable operation, Plumtree reduces relative payload redundancy to approximately zero after tree construction, compared with a redundancy value near three for the evaluated eager-gossip baseline. It retains high reliability under continual failures, although failures increase delivery-hop variability and temporarily introduce redundant traffic during healing. Under massive failures, reliability degrades sharply when the underlying overlay becomes disconnected—particularly above roughly 70% simultaneous node failure—but the protocols recover after the overlay is repaired. Sender-specific trees provide the best latency, while shared trees can suffer from sender-location bias; the proposed optimization reduces this bias at the cost of additional control traffic.\n\nThe paper’s main contribution is the demonstration that a low-cost, self-organizing tree can be embedded within a resilient gossip overlay, using non-tree links both as a recovery mechanism and as a source of tree-healing information. The design influenced subsequent dissemination systems. The libp2p Episub specification explicitly adopts Plumtree for multicast-tree construction, repair, and optimization, combining it with HyParView-style membership management. ([github.com](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/episub.md)) Plumtree was also adopted in the Riak distributed datastore’s cluster-metadata subsystem; an account from NOVA reports reduced redundant messaging and approximately 66% faster dissemination after adoption. ([fct.unl.pt](https://www.fct.unl.pt/en/news/2015/03/participation-ricon-2014)) Later implementations, including iroh-gossip and other open-source libraries, continue to use the eager/lazy peer split, `IHAVE` announcements, grafting, and pruning principles described in the paper. ([docs.rs](https://docs.rs/iroh-gossip/latest/iroh_gossip/proto/index.html))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/data_structures/epidemic-broadcast-trees.pdf",
   "source_type": "pdf",
   "filepath": "data_structures/epidemic-broadcast-trees.pdf",
   "filename": "epidemic-broadcast-trees.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:51"
 }

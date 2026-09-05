@@ -1,7 +1,7 @@
 {
   "uuid": "e41ec399bf2f0ede5f5526b8f4ecb789858f6f10aca2b0062ebf1088b24a2798",
   "title": "Significantly Improving Lossy Compression for Scientific Data Sets Based on Multidimensional Prediction and Error-Controlled Quantization",
-  "publication_date": "2014-06-27",
+  "publication_date": "June 30, 2017; published in the Proceedings of the 2017 IEEE 31st International Parallel and Distributed Processing Symposium (IPDPS 2017), held May 29–June 2, 2017",
   "authors": [
     "Dingwen Tao",
     "Franck Cappello",
@@ -9,26 +9,26 @@
     "Zizhong Chen"
   ],
   "keywords": [
-    "data-compression",
-    "data-reduction",
+    "error-bounded-compression",
     "error-controlled-quantization",
     "high-performance-computing",
+    "huffman-coding",
     "lossy-compression",
     "multidimensional-prediction",
-    "prediction-based-compression",
-    "quantization-error-control",
-    "scientific-computation",
-    "scientific-data"
+    "parallel-compression",
+    "prediction-hitting-rate",
+    "scientific-data-compression",
+    "variable-length-encoding"
   ],
   "category_path": [
     "data_compression"
   ],
-  "abstract": "Data explosion in scientific simulations creates a grand challenge for storage and I/O performance in high-performance computing (HPC). Lossy prediction-based compression can significantly reduce the data size while meeting the error requirement as set by user. Existing prediction-based lossy compressors, however, suffer from low prediction accuracy and high quantization error. This paper presents novel prediction methods by incorporating a combination of Lorenzo predictor and multidimensional linear-regression predictor to improve compression ratio with controlled error. Our proposed method can significantly better preserve data high resolution and precision. We evaluate our method under nine scientific data sets, and demonstrate the overall improvement in prediction accuracy and compression ratio. The proposed algorithm is designed to support parallel execution and is ready to be leveraged in modern parallel computing systems such as Intel MIC and GPUs. Our evaluation indicates that the compression ratio achieved by our algorithm doubles the state-of-the-art prediction-based compression algorithms. The proposed solution is integrated in SZ, a state-of-the-art scientific data compression framework, and is released as open-source software.",
-  "summary": "The paper \"Significantly Improving Lossy Compression for Scientific Data Sets Based on Multidimensional Prediction and Error-Controlled Quantization\" introduces advanced techniques for data compression in scientific computing. By leveraging a mix of Lorenzo predictors and multidimensional linear-regression predictors, the authors significantly enhance prediction accuracy and compression ratios while managing quantization errors. Originally published in 2014, this paper influenced subsequent research and technologies around high-performance computing (HPC) data reduction methods. \n\nUpon examination, [later works](https://ieeexplore.ieee.org/document/7456224) investigating similar data compression topics within scientific data contexts cite this research. Furthermore, [other research](https://dl.acm.org/doi/10.1145/3126908.3126925) exploring scientific computation efficiency acknowledges the predictive improvements this research introduces. Additionally, implementations such as the open-source \"SZ\" framework continue to integrate developments from this paper. This paper has helped refine algorithms in fields demanding efficient storage and effective computation with large datasets.",
+  "abstract": "Today’s HPC applications are producing extremely large amounts of data, such that data storage and analysis are becoming more challenging for scientific research. In this work, we design a new error-controlled lossy compression algorithm for large-scale scientific data. Our key contribution is significantly improving the prediction hitting rate (or prediction accuracy) for each data point based on its nearby data values along multiple dimensions. We derive a series of multilayer prediction formulas and their unified formula in the context of data compression. One serious challenge is that the data prediction has to be performed based on the preceding decompressed values during the compression in order to guarantee the error bounds, which may degrade the prediction accuracy in turn. We explore the best layer for the prediction by considering the impact of compression errors on the prediction accuracy. Moreover, we propose an adaptive error-controlled quantization encoder, which can further improve the prediction hitting rate considerably. The data size can be reduced significantly after performing the variable-length encoding because of the uneven distribution produced by our quantization encoder. We evaluate the new compressor on production scientific data sets and compare it with many other state-of-the-art compressors: GZIP, FPZIP, ZFP, SZ-1.1, and ISABELA. Experiments show that our compressor is the best in class, especially with regard to compression factors (or bit-rates) and compression errors (including RMSE, NRMSE, and PSNR). Our solution is better than the second-best solution by more than a 2x increase in the compression factor and 3.8x reduction in the normalized root mean squared error on average, with reasonable error bounds and user-desired bit-rates.",
+  "summary": "The paper introduces SZ-1.4, an error-bounded lossy compressor for multidimensional scientific floating-point data. Its main technical contributions are a multilayer multidimensional predictor, selection of the prediction depth using decompressed rather than original values, adaptive error-controlled quantization, and Huffman-based variable-length encoding of the resulting nonuniform quantization codes. The resulting algorithm has overall linear time complexity and supports parallel processing by independently compressing data partitions.\n\nOn the evaluated climate, X-ray, and hurricane data sets, the authors report higher compression factors and lower RMSE/NRMSE than GZIP, FPZIP, ZFP, SZ-1.1, and ISABELA under the tested error bounds. The principal trade-offs are lower sequential throughput than ZFP and application-dependent autocorrelation of compression errors; the paper also reports near-linear parallel scaling through 1,024 processes, with efficiency declining to approximately 90% at the largest tested scale.\n\nThe work influenced subsequent scientific-compression research primarily through the SZ-1.4 design and implementation. Later work used SZ-1.4 as a reference compressor when developing SIMD CPU acceleration, reporting improvements in rate-distortion performance and speed relative to SZ-1.4. ([arxiv.org](https://arxiv.org/abs/2201.04614)) Z-checker subsequently treated SZ-1.4 as a principal compressor in a broader framework for evaluating compression quality across scientific applications and metrics. ([journals.sagepub.com](https://journals.sagepub.com/doi/10.1177/1094342017737147)) Later research on unstructured-mesh compression explicitly redesigned the prediction stage of SZ and describes SZ-1.4’s Lorenzo-prediction, quantization, and encoding pipeline as a baseline. ([onlinelibrary.wiley.com](https://onlinelibrary.wiley.com/doi/10.1111/cgf.15097)) Survey literature likewise places SZ-1.4 among the foundational prediction-based, error-bounded scientific compressors that motivated later developments in prediction, quantization, and quality control. ([doi.org](https://doi.org/10.1145%2F3733104))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/data_compression/Significantly_Improving_Lossy_Compression_for_Scientific_Data_Sets_Based_on_Multidimensional_Prediction_and_Error-Controlled_Quantization.pdf",
   "source_type": "pdf",
   "filepath": "data_compression/Significantly_Improving_Lossy_Compression_for_Scientific_Data_Sets_Based_on_Multidimensional_Prediction_and_Error-Controlled_Quantization.pdf",
   "filename": "Significantly_Improving_Lossy_Compression_for_Scientific_Data_Sets_Based_on_Multidimensional_Prediction_and_Error-Controlled_Quantization.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:53",
+  "summary_received": "2026-09-05 21:19:50"
 }

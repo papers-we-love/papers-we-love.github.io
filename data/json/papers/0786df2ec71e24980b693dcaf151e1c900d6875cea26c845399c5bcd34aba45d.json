@@ -1,34 +1,34 @@
 {
   "uuid": "0786df2ec71e24980b693dcaf151e1c900d6875cea26c845399c5bcd34aba45d",
-  "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
-  "publication_date": "May 2018",
+  "title": "A Universal Music Translation Network",
+  "publication_date": "May 23, 2018 (arXiv version 2; originally submitted May 21, 2018); published at the 7th International Conference on Learning Representations (ICLR 2019), May 6–9, 2019.",
   "authors": [
-    "Jacob Devlin",
-    "Kenton Lee",
-    "Kristina Toutanova",
-    "Ming-Wei Chang"
+    "Adam Polyak",
+    "Lior Wolf",
+    "Noam Mor",
+    "Yaniv Taigman"
   ],
   "keywords": [
-    "contextual-representations",
-    "deep-learning",
-    "language-understanding",
-    "masked-language-modeling",
-    "natural-language-processing",
-    "pre-training",
-    "sentence-prediction",
-    "token-prediction",
-    "transfer-learning",
-    "transformers"
+    "audio-generation",
+    "autoencoder",
+    "domain-adaptation",
+    "domain-confusion",
+    "instrument-conversion",
+    "music-style-transfer",
+    "music-translation",
+    "representation-learning",
+    "unsupervised-learning",
+    "wavenet"
   ],
   "category_path": [
     "artificial_intelligence"
   ],
-  "abstract": "We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers. Unlike recent language representation models, BERT is designed to pre-train deep bidirectional representations by jointly conditioning on both left and right context in all layers. As a result, the pre-trained BERT model can be fine-tuned with just one additional output layer to create state-of-the-art models for a wide range of tasks, such as question answering and language inference, without substantial task-specific architecture modifications. BERT is conceptually simple and empirically powerful. It advances the state of the art for eleven NLP tasks, including achieving 93.2% accuracy on the Stanford Question Answering Dataset (SQuAD v1.1) and 82.1% on the Multi-Genre Natural Language Inference (MNLI) task.",
-  "summary": "BERT, introduced in this paper, represents a significant advancement in Natural Language Processing (NLP) by leveraging the masked language model and next sentence prediction to pre-train deep bidirectional transformers. Its pre-training approach allows for the creation of state-of-the-art models applicable to various NLP tasks without extensive task-specific architecture changes. Since its introduction, BERT has facilitated numerous breakthroughs in language representation and understanding, notably in tasks ranging from question answering to language inference. It has been frequently cited in research throughout the NLP community, influencing subsequent developments like GPT and XLNet. Notable works citing BERT include:\n\n- Bai, Y., et al. 2021. \"Illustrations of the BERT Pretraining Model's Internal Mechanics.\" [Springer](https://link.springer.com).\n- Liu, Y., et al. 2019. \"RoBERTa: A Robustly Optimized BERT Pretraining Approach for NLP Tasks.\" [arXiv](https://arxiv.org/pdf/1907.11692.pdf).\n- Lan, Z., et al. 2019. \"ALBERT: A Lite BERT for Self-Supervised Learning of Language Representations.\" [ICLR](https://openreview.net/pdf?id=H1eA7AEtvS).\n\nThese references underscore BERT's substantial influence in enhancing both the theoretical foundations and practical applications of transformer-based models in NLP.",
+  "abstract": "We present a method for translating music across musical instruments, genres, and styles. This method is based on a multi-domain wavenet autoencoder, with a shared encoder and a disentangled latent space that is trained end-to-end on waveforms. Employing a diverse training dataset and large net capacity, the domain-independent encoder allows us to translate even from musical domains that were not seen during training. The method is unsupervised and does not rely on supervision in the form of matched samples between domains or musical transcriptions. We evaluate our method on NSynth, as well as on a dataset collected from professional musicians, and achieve convincing translations, even when translating from whistling, potentially enabling the creation of instrumental music by untrained humans.",
+  "summary": "## Paper summary\n\nThe paper introduces an unsupervised neural architecture for translating audio between musical instruments, genres, and styles without parallel recordings or musical transcriptions. It uses one shared WaveNet-like convolutional encoder and multiple autoregressive WaveNet decoders, with one decoder associated with each output musical domain. The encoder maps inputs into a domain-independent latent representation, while the selected decoder reconstructs the audio in the desired target domain.\n\nTwo mechanisms are central to the method. First, locally perturbing the pitch of randomly selected portions of one-second training segments discourages the encoder from memorizing waveform details and encourages higher-level musical representations. Second, a domain-confusion classifier is trained adversarially against the encoder so that the latent representation contains less information about the source domain. During inference, the input is passed through the shared encoder and directly into the decoder for the selected target domain.\n\nThe model was trained on six classical-music domains, including orchestral, string-quartet, organ, piano, harpsichord, and vocal-orchestral recordings. Evaluation compared translations into piano against conversions made by three professional musicians. Human evaluators rated the system below the musicians in audio quality and translation success, but automatic pitch-based measures showed strong preservation of musical content and timing. Additional experiments indicated that the encoder could process previously unseen domains, including swing jazz, metal guitar, instrumental Chinese music, NSynth instruments, and whistling. The learned embeddings also preserved pitch information across instruments, and interpolation between embeddings produced reportedly seamless transitions.\n\nThe main technical contribution is the combination of a universal encoder, domain-specific autoregressive decoders, domain-confusion training, and pitch-based augmentation for cross-domain raw-audio translation. Important limitations include relatively low generated-audio quality, the computational cost of autoregressive WaveNet inference, dependence on 8-bit μ-law audio quantization, and the inability of the ablation models to train successfully without augmentation or domain confusion.\n\n## Subsequent research and industry uptake\n\nThe work was published as an ICLR 2019 conference paper, establishing it as a peer-reviewed contribution rather than only an arXiv report. ([openreview.net](https://openreview.net/pdf?id=HJGkisCcKm)) Facebook Research subsequently released an implementation, pretrained models, training instructions, inference tools, and audio samples, providing a concrete software artifact for reproduction and experimentation. ([github.com](https://github.com/facebookresearch/music-translation))\n\nA quick search found evidence of continued use primarily as a reference implementation and research baseline: later academic work and project reports cite or reimplement the method for music-style and instrument translation, including an extension targeting Indian instruments. ([github.com](https://github.com/HyunLee103/Music_Style_Transfer)) The available evidence does not establish widespread commercial deployment or a distinct industrial product directly derived from this paper; its clearest documented impact is methodological and educational, through reuse of its architecture and open-source implementation. ([github.com](https://github.com/facebookresearch/music-translation))",
   "raw_url": "https://arxiv.org/pdf/1805.07848.pdf",
   "source_type": "external",
   "filepath": "artificial_intelligence/README.md",
   "filename": "A Universal Music Translation Network (2018)",
-  "created_on": "2026-01-24 23:46:58",
-  "summary_received": "2026-01-25 00:11:01"
+  "created_on": "2026-09-01 00:47:59",
+  "summary_received": "2026-09-05 21:19:53"
 }

@@ -1,7 +1,7 @@
 {
   "uuid": "ba7641d7c9e1daa69249f0b312421414633c7db9c6765bb75c674f0efefbd033",
-  "title": "Flipping Bits in Memory Without Accessing Them: An Experimental Study of DRAM Disturbance Errors",
-  "publication_date": "June 2014",
+  "title": "Flipping Bits in Memory Without Accessing Them:\nAn Experimental Study of DRAM Disturbance Errors",
+  "publication_date": "June 14–18, 2014; ACM/IEEE 41st International Symposium on Computer Architecture (ISCA 2014), Minneapolis, Minnesota, USA",
   "authors": [
     "Chris Fallin",
     "Chris Wilkerson",
@@ -14,26 +14,26 @@
     "Yoongu Kim"
   ],
   "keywords": [
-    "bit-flipping",
     "disturbance-errors",
     "dram",
-    "errors",
-    "experimental-study",
-    "hardware-issues",
-    "memory-access",
-    "memory-errors",
+    "ecc",
+    "fault-injection",
+    "hardware-security",
+    "memory-refresh",
     "memory-reliability",
-    "row-hammer"
+    "memory-security",
+    "para",
+    "rowhammer"
   ],
   "category_path": [
     "security"
   ],
-  "abstract": "As DRAM cells continue to scale down to smaller dimensions, they become more vulnerable to interference. One such form of interference, referred to as disturbance errors, can be induced in cells that are physically proximate to cells being frequently accessed. In this work, we show that it is possible to induce disturbance errors in most DRAM memory modules (more than 80 percent of the available test samples) of three major DRAM manufacturers by performing reads to only one address. We call this phenomenon Row Hammer. We analyze the properties of these disturbance errors experimentally and provide a comprehensive characterization of the Row Hammer phenomenon. Our findings indicate that these errors are the results of the interaction between susceptible DRAM cells and aggressive memory access patterns. Our study shows that manipulating the physical memory layout and the access pattern might be exploited by malicious software to cause disturbance errors, which can potentially lead to compromise of system integrity in certain systems. This paper provides a brief overview of our experimental methodology, summarizes our experimental results, and discusses solution and future research directions to reduce DRAM disturbance errors induced by Row Hammer.",
-  "summary": "The paper 'Flipping Bits in Memory Without Accessing Them: An Experimental Study of DRAM Disturbance Errors' presents a significant exploration of the Row Hammer phenomenon, where bit flips in DRAM are induced by frequently accessing specific memory rows. The authors show that more than 80% of DRAM modules from major manufacturers are vulnerable to such errors. They discuss the potential of malicious exploitation by manipulating memory access patterns, which raises serious security concerns.\n\nThis study has influenced subsequent research focused on both understanding and mitigating Row Hammer effects in DRAM. The impact is particularly relevant in the field of hardware security, where researchers have developed strategies to detect and prevent such attacks. Numerous papers have cited and built upon this work, contributing to advancements in memory reliability and security.\n\nFor instance, the paper 'A New Approach to Row Hammer Mitigation' discusses novel hardware-based solutions to counteract Row Hammer ([source](https://ieeexplore.ieee.org/document/8883683)). Another study, 'Memory Errors: The Past, the Present, and the Future' provides a comprehensive survey of memory errors influenced by this research ([source](https://dl.acm.org/doi/abs/10.1145/3386360)). These examples showcase the substantial influence of the paper in furthering memory and security research.",
+  "abstract": "Memory isolation is a key property of a reliable and secure computing system — an access to one memory address should not have unintended side effects on data stored in other addresses. However, as DRAM process technology scales down to smaller dimensions, it becomes more difficult to prevent DRAM cells from electrically interacting with each other. In this paper, we expose the vulnerability of commodity DRAM chips to disturbance errors. By reading from the same address in DRAM, we show that it is possible to corrupt data in nearby addresses. More specifically, activating the same row in DRAM corrupts data in nearby rows. We demonstrate this phenomenon on Intel and AMD systems using a malicious program that generates many DRAM accesses. We induce errors in most DRAM modules (110 out of 129) from three major DRAM manufacturers. From this we conclude that many deployed systems are likely to be at risk. We identify the root cause of disturbance errors as the repeated toggling of a DRAM row’s wordline, which stresses inter-cell coupling effects that accelerate charge leakage from nearby rows. We provide an extensive characterization study of disturbance errors and their behavior using an FPGA-based testing platform. Among our key findings, we show that (i) it takes as few as 139K accesses to induce an error and (ii) up to one in every 1.7K cells is susceptible to errors. After examining various potential ways of addressing the problem, we propose a low-overhead solution to prevent the errors.",
+  "summary": "## Summary\n\nThis paper provides the first detailed, real-system demonstration and broad characterization of what became known as the **RowHammer** vulnerability. Repeatedly activating and precharging DRAM rows can cause charge leakage and bit flips in nearby victim rows, violating memory-isolation assumptions. Across 129 DDR3 modules, the authors observed disturbance errors in 110 modules and showed that a user-level program could induce errors on Intel and AMD systems. The paper also proposed **PARA** (probabilistic adjacent row activation), a stateless mitigation that refreshes neighboring rows with low probability and was estimated to impose very little performance overhead. ([people.inf.ethz.ch](https://people.inf.ethz.ch/omutlu/pub/dram-row-hammer_isca14.pdf))\n\nThe paper directly influenced subsequent security research. In 2015, Google Project Zero explicitly built on this work to demonstrate RowHammer-based privilege-escalation exploits, including corruption of page-table entries and a Native Client sandbox escape. ([googleprojectzero.blogspot.com](https://googleprojectzero.blogspot.com/2015/03/exploiting-dram-rowhammer-bug-to-gain.html)) Google also released an open-source userland RowHammer testing program based on the problem described by the paper. ([github.com](https://github.com/google/rowhammer-test)) Later retrospective research identifies this paper as the starting point for extensive follow-up work on RowHammer attacks, DRAM characterization, and mitigation mechanisms. Subsequent work examined techniques including double-sided hammering, remote and browser-based attacks, Target Row Refresh, and newer hammering methods such as Half-Double. ([arxiv.org](https://arxiv.org/abs/1904.09724)) Industry-facing documentation also records DRAM mitigations such as targeted row refresh and maximum-activate-count mechanisms in later memory standards. ([googleprojectzero.blogspot.com](https://googleprojectzero.blogspot.com/2015/03/exploiting-dram-rowhammer-bug-to-gain.html))",
   "raw_url": "https://people.inf.ethz.ch/omutlu/pub/dram-row-hammer_isca14.pdf",
   "source_type": "external",
   "filepath": "security/README.md",
   "filename": "DRAM Row Hammer (2014)",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:56"
 }

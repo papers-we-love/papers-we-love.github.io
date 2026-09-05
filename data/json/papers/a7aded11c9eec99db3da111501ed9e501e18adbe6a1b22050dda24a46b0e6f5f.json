@@ -1,33 +1,36 @@
 {
   "uuid": "a7aded11c9eec99db3da111501ed9e501e18adbe6a1b22050dda24a46b0e6f5f",
-  "title": "Fast, Accurate Detection of 802.11 Wireless Rogue Access Points",
-  "publication_date": "2008",
+  "title": "Large-scale cluster management at Google with Borg",
+  "publication_date": "April 21–24, 2015; EuroSys’15, Bordeaux, France",
   "authors": [
-    "Brian A. Holloway",
-    "Geoffrey W. Anderson",
-    "Michael F. Chan"
+    "Abhishek Verma",
+    "David Oppenheimer",
+    "Eric Tune",
+    "John Wilkes",
+    "Luis Pedrosa",
+    "Madhukar Korupolu"
   ],
   "keywords": [
-    "802-11",
-    "anomaly-detection",
-    "cybersecurity",
-    "information-security",
-    "intrusion-detection",
-    "network-monitoring",
-    "network-security",
-    "rogue-access-points",
-    "wireless-network-security",
-    "wireless-networks"
+    "cluster-management",
+    "containerization",
+    "data-center-computing",
+    "distributed-systems",
+    "fault-tolerance",
+    "high-availability",
+    "performance-isolation",
+    "resource-reclamation",
+    "resource-scheduling",
+    "task-packing"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "8401 and other acts such as Sarbanes-Oxley and PCI mandates require automated inventory of hardware assets including wireless access points. As businesses increase their reliance on wireless LANs, an increasing number of rogue access points pose an urgent security problem. Unauthorized access, policy violations, exposure to phishing and data exfiltration are some of the immediate threats. In this paper, we present a method that is computationally lightweight, efficient and accurate, to reliably identify unauthorized access points from trace data recorded by standard wireless network monitoring hardware. Our methods have been implemented in several commercial offerings.",
-  "summary": "**Summary of the Paper:**\n\nThis paper presents a method developed for detecting rogue access points in 802.11 wireless networks. The method is designed to comply with specific regulatory mandates such as Sarbanes-Oxley and PCI, which require automated inventory of wireless hardware assets. The authors present a solution that leverages lightweight computations to identify unauthorized access points efficiently and accurately using trace data from standard wireless network monitors. The methods introduced have been integrated into various commercial products, indicating their practical applicability.\n\n**Impact and Subsequent Research or Industry Use:**\n\nIn the years following its publication, this paper has influenced research and development in the field of wireless network security. The techniques proposed in the paper contributed to advancements in intrusion detection methodologies, particularly in identifying anomalies within wireless networks. Commercial products have integrated these methods, showing their importance and utility in enhancing cybersecurity. However, there are no significant newer research papers that directly cite this work, possibly due to the proprietary nature of implementations and commercial integrations.",
+  "abstract": "Google’s Borg system is a cluster manager that runs hundreds of thousands of jobs, from many thousands of different applications, across a number of clusters each with up to tens of thousands of machines.\n\nIt achieves high utilization by combining admission control, efficient task-packing, over-commitment, and machine sharing with process-level performance isolation. It supports high-availability applications with runtime features that minimize fault-recovery time, and scheduling policies that reduce the probability of correlated failures. Borg simplifies life for its users by offering a declarative job specification language, name service integration, real-time job monitoring, and tools to analyze and simulate system behavior.\n\nWe present a summary of the Borg system architecture and features, important design decisions, a quantitative analysis of some of its policy decisions, and a qualitative examination of lessons learned from a decade of operational experience with it.",
+  "summary": "The paper describes Borg, Google’s production cluster-management system for running long-lived services and batch workloads across cells containing thousands to tens of thousands of heterogeneous machines. Its architecture combines a replicated Borgmaster backed by Paxos, a separate scheduler, and Borglet agents on worker machines. Borg uses declarative job specifications, priorities and quota-based admission control, constraint-aware scheduling, preemption, fine-grained resource requests, package caching, failure-domain spreading, and cgroup-based isolation. It also provides stable naming, health monitoring, logging, checkpointing, and the Fauxmaster simulator.\n\nThe evaluation argues that high utilization depends on pooling heterogeneous workloads rather than separating production and batch jobs, using large cells to reduce fragmentation, supporting fine-grained resource requests, and reclaiming unused reserved capacity for lower-priority work. In the evaluated workloads, separating production and non-production tasks would require approximately 20–30% more machines, while resource reclamation enabled about 20% of the workload to run using reclaimed resources. The paper also reports scheduler optimizations—score caching, equivalence classes, and relaxed randomization—that reduced full-workload scheduling from more than three days without them to typically a few hundred seconds.\n\nThe paper’s documented industry influence is particularly direct: Google later described Borg, Omega, and Kubernetes together, using Borg’s operational experience to explain Kubernetes design choices such as pods, labels, services, introspection, and an API-server-centered architecture. ([research.google](https://research.google/pubs/borg-omega-and-kubernetes/)) Subsequent research also used the paper and its associated Google cluster traces as a baseline; the 2020 study “Borg: the Next Generation” performed a longitudinal comparison of newer 2019 Borg traces with the 2011 trace discussed in this work. ([github.com](https://github.com/google/cluster-data/blob/master/bibliography.bib)) Google’s publication record confirms the paper’s EuroSys 2015 venue, author list, and abstract. ([research.google](https://research.google/pubs/large-scale-cluster-management-at-google-with-borg/))",
   "raw_url": "http://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/43438.pdf",
   "source_type": "external",
   "filepath": "distributed_systems/README.md",
   "filename": "Large-scale cluster management at Google with Borg",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:03"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:54"
 }

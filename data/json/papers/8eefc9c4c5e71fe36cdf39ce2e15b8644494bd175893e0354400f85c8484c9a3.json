@@ -1,35 +1,34 @@
 {
   "uuid": "8eefc9c4c5e71fe36cdf39ce2e15b8644494bd175893e0354400f85c8484c9a3",
-  "title": "Dada: A Crowdsourced Data Marketplace for Machine Learning",
-  "publication_date": "April 2019",
+  "title": "Communication and Code Dependency Effects on Software Code Quality: An Empirical Analysis of Herbsleb Hypothesis",
+  "publication_date": "April 22, 2019 (first arXiv submission); revised March 21, 2022 (version 3; the PDF states “Preprint submitted to Journal of Systems and Software March 22, 2022”)",
   "authors": [
-    "Angad Koul",
-    "Desiree Dicochea",
-    "Esteban Saenzi",
-    "Fang-Yi Yu",
-    "Lise Getoor"
+    "Amritanshu Agrawal",
+    "Joymallya Chakraborty",
+    "Suvodeep Majumder",
+    "Tim Menzies"
   ],
   "keywords": [
-    "crowdsourced-data",
-    "crowdsourcing",
-    "data-collection",
-    "data-marketplace",
-    "data-quality",
-    "data-synthesis",
-    "incentive-models",
-    "machine-learning",
-    "platform-design",
-    "privacy"
+    "code-interaction",
+    "code-quality",
+    "communication",
+    "developer-networks",
+    "hero-developers",
+    "open-source-software",
+    "social-coding",
+    "social-interaction",
+    "software-defects",
+    "software-metrics"
   ],
   "category_path": [
     "software_engineering_orgs"
   ],
-  "abstract": "Machine learning (ML) systems are driven by data, but acquiring high-quality data can be a technical, legal, and logistical challenge. We present Dada, a new crowdsourced data marketplace that allows participants to share data for ML. Dada enables users to earn rewards by providing data for models, and uses blockchain technology to ensure transparency and fair allocation of rewards. We discuss Dada’s platform model, key challenges in crowdsourced data marketplaces, and potential paths forward.",
-  "summary": "Dada proposes a blockchain-based platform for creating a marketplace where participants can share data intended for machine learning applications. The system incentivizes users by rewarding them for sharing their data, thereby addressing common challenges related to technical, legal, and logistical constraints in obtaining high-quality datasets for ML purposes. Dada ensures transparency and fair reward distribution through its decentralized ledger technology. \n\n*Influence and Citations*: \n1. Di Ciccio, C., et al. (2020). 'A Review of Blockchain-Based Approaches to Secure Private Data Sharing in the Internet of Things'. [ResearchGate](https://www.researchgate.net/publication/341523444_A_Review_of_Blockchain-Based_Approaches_to_Secure_Private_Data_Sharing_in_the_Internet_of_Things)\n2. Xu, W., et al. (2020). 'Data Markets and Privacy Concerns: The Role of Regulation and Data Aggregation Schemes'. [Springer](https://link.springer.com/chapter/10.1007/978-3-030-50561-8_13)\n3. Yadav, D., et al. (2021). 'Blockchain Technology and Its Applications to Crowdsourcing: A Comprehensive Survey'. [IEEE Xplore](https://ieeexplore.ieee.org/document/9394160)\n\nDada’s innovative approach has been influential in research related to blockchain applications in data sharing and privacy, capturing the intersection of crowdsourcing, data quality, and platform design. The paper spurred further discussions on blockchain and incentives in data marketplaces, influencing subsequent works that explore data privacy and secure data sharing solutions.",
+  "abstract": "Prior literature has suggested that in many projects 80% or more of the contributions are made by a small called group of around 20% of the development team. Most prior studies deprecate a reliance on such a small inner group of “heroes”, arguing that it causes bottlenecks in development and communication. Despite this, such projects are very common in open source projects. So what exactly is the impact of “heroes” in code quality?\nHerbsleb argues that if code is strongly connected yet their developers are not, then that code will be buggy. To test the Hersleb hypothesis, we develop and apply two metrics of (a) “social-ness’ and (b) “hero-ness” that measure (a) how much one developer comments on the issues of another; and (b) how much one developer changes another developer’s code (and “heroes” are those that change the most code, all around the system). In a result endorsing the Hersleb hypothesis, in over 1000 open source projects, we find that “social-ness” is a statistically stronger indicate for code quality (number of bugs) than “hero-ness”.\nHence we say that debates over the merits of “hero-ness” is subtly misguided. Our results suggest that the real benefits of these so-called “heroes” is not so much the code they generate but the pattern of communication required when the interaction between a large community of programmers passes through a small group of centralized developers.\nTo say that another way, to build better code, build better communication flows between core developers and the rest.\nIn order to allow other researchers to confirm/improve/refute our results, all our scripts and data are available, on-line at our online Github repository.",
+  "summary": "### Summary\n\nThe paper empirically examines the relationship between developer communication, code interaction, and defect introduction in more than 1,000 open-source GitHub projects. It constructs code-interaction graphs from commit history and blame information, social-interaction graphs from issue discussions, and identifies likely bug-introducing commits using keyword-based commit-message analysis combined with the SZZ approach. Developers are classified as “heroes” or “non-heroes” using percentile thresholds for code and social interaction.\n\nThe study reports that centralized “hero” structures are common. Developers with high levels of code or social interaction introduce fewer buggy commits than less-connected developers. Across nine combinations of code and social activity, the lowest defect levels are associated especially with high social interaction, including cases where code interaction is only low or moderate. The authors therefore conclude that the results support the Herbsleb hypothesis: when interacting code is produced or maintained by developers who do not communicate sufficiently, defect introduction is more likely.\n\nThe paper’s limitations include GitHub-focused sampling, possible incomplete observation of communication outside issue trackers, reliance on heuristic commit-message classification for bug fixes, possible role misclassification, and limited generalizability to proprietary development. The results are observational and should not be interpreted as establishing that centralization itself causes better quality.\n\n### Evidence of subsequent influence\n\nSearch results show that the work has been cited as prior research in later software-engineering studies, including *Different, Really! A Comparison of Highly-Configurable Systems and Single Systems*, and in other academic papers discussing GitHub development, contributor organization, and software-project structure. ([stairs.ics.uci.edu](https://stairs.ics.uci.edu/papers/2022/Different.pdf)) It has also been discussed in a practitioner-oriented review that summarizes its findings about “hero projects” and developer communication. ([neverworkintheory.org](https://neverworkintheory.org/2021/09/10/why-software-projects-need-heroes.html)) A 2025 OpenTofu contribution-process RFC cites the paper when discussing centralized, high-trust roles and communication in open-source communities, providing a concrete example of its concepts being used in industry or project-governance discussion. ([fossies.org](https://fossies.org/linux/opentofu/rfc/20251211-contribution-docs.md))\n\nThe available evidence supports citation and conceptual reuse, but does not establish broad or measurable adoption of the paper’s specific metrics or recommendations in software-industry practice.",
   "raw_url": "https://arxiv.org/pdf/1904.09954.pdf",
   "source_type": "external",
   "filepath": "software_engineering_orgs/README.md",
   "filename": "Why Software Projects need Heroes (Lessons Learned from 1100+ Projects) (2019)",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:01",
+  "summary_received": "2026-09-05 21:19:56"
 }

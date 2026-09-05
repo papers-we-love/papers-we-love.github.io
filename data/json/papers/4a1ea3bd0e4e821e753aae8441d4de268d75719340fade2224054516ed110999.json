@@ -1,7 +1,7 @@
 {
   "uuid": "4a1ea3bd0e4e821e753aae8441d4de268d75719340fade2224054516ed110999",
-  "title": "Consistency Tradeoffs in Modern Distributed Database System Design: CAP is only part of the story",
-  "publication_date": "2010-06-01",
+  "title": "Consistency Tradeoffs in Modern Distributed Database System Design",
+  "publication_date": "February 2012 (IEEE Computer, volume 45, issue 2, pages 37–42)",
   "authors": [
     "Daniel J. Abadi"
   ],
@@ -9,23 +9,23 @@
     "availability",
     "cap-theorem",
     "consistency",
-    "database-design",
-    "distributed-database",
-    "fault-tolerance",
+    "data-replication",
+    "distributed-databases",
     "latency",
     "pacelc",
     "partition-tolerance",
-    "tradeoffs"
+    "quorum-protocols",
+    "wide-area-networks"
   ],
   "category_path": [
     "datastores"
   ],
-  "abstract": "The most widely discussed consistency tradeoff \"theorem\" is the CAP \"theorem\" that colloquially states that one has to choose two out of the three properties of consistency, availability, and partition-tolerance. We propose a new understanding of consistency tradeoffs, the PACELC model, that builds on the CAP theorem but specifies the tradeoff between consistency and latency in the case where there is no partition. Consequently, a well designed distributed system needs to take into account consistency/latency tradeoffs as well as consistency/availability tradeoffs. We review several well known distributed systems and show how our analysis leads to insight into their design.",
-  "summary": "The paper \"Consistency Tradeoffs in Modern Distributed Database System Design: CAP is only part of the story\" by Daniel J. Abadi introduces the PACELC model, expanding on the traditional CAP theorem, which highlights the tradeoff between consistency, availability, and partition-tolerance in distributed systems. The PACELC model adds an analysis of consistency versus latency when the system is not partitioned, providing a more comprehensive view of design tradeoffs in distributed databases. This enhanced understanding is crucial for database designers to make informed decisions on system behavior under different conditions.\n\nThe impact of this paper is evident in various academic discussions and implementations. For example, PACELC has been referenced in studies such as \"An Evaluation of Distributed Storage Systems under Consistency and Latency Tradeoffs\" by K. Jagdish et al., and industrial adaptation can be seen in the design of systems like Amazon DynamoDB. The model helps guide practical design decisions by clarifying the often complicated tradeoffs faced by distributed system architects. The PACELC theorem has been cited extensively as it offers a more nuanced view beyond the CAP theorem.\n\nReferences:\n1. K. Jagdish, \"An Evaluation of Distributed Storage Systems under Consistency and Latency Tradeoffs,\" [link](https://example.org/jagdish-study)\n2. \"PACELC: A More Complete and Informative Way to Explain the CAP Theorem in Cloud DBMS,\" [link](https://example.org/cloud-dbms-article)\n3. Abadi, D. J., 2010. \"Consistency Tradeoffs in Modern Distributed Database System Design: CAP is only part of the story.\" PDF retrieved from [Yale CS Dept.](http://cs-www.cs.yale.edu/homes/dna/papers/abadi-pacelc.pdf)",
+  "abstract": "The CAP theorem’s impact on modern distributed database system design is more limited than is often perceived. Another tradeoff—between consistency and latency—has had a more direct influence on several well-known DDBSs. A proposed new formulation, PACELC, unifies this tradeoff with CAP.",
+  "summary": "### Summary\n\nThe paper argues that the CAP theorem is frequently misinterpreted as imposing consistency and availability restrictions during normal operation. CAP applies specifically when a network partition occurs; in the absence of a partition, it does not prevent a distributed database from providing strong consistency and high availability simultaneously. The paper identifies a separate and continuously present tradeoff between consistency and latency, arising primarily from data replication. Synchronous replication and quorum-based coordination can improve consistency but increase latency, especially across wide-area networks, while asynchronous replication and geographically local reads can reduce latency at the cost of stale or inconsistent reads.\n\nThe paper uses Dynamo, Cassandra, Riak, PNUTS, MongoDB, BigTable, VoltDB/H-Store, and Megastore to illustrate these design choices. It then proposes PACELC: if there is a partition, a system trades off availability and consistency; else, during normal operation, it trades off latency and consistency. The paper classifies several distributed databases using this framework, including Dynamo, Cassandra, and Riak as PA/EL systems, PNUTS as PC/EL, MongoDB as PA/EC, and systems such as Megastore, BigTable, HBase, and VoltDB/H-Store as PC/EC.\n\nSubsequent research adopted PACELC as a framework for analyzing distributed-storage tradeoffs. A 2014 study on consistency-latency tradeoffs cited this paper and developed PCAP systems for Cassandra and Riak, including geo-distributed deployments with consistency and latency service-level objectives. ([assured-cloud-computing.illinois.edu](https://assured-cloud-computing.illinois.edu/files/2014/03/Characterizing-and-Adapting-the-Consistancy-Latency-Tradeoff-in-Distributed-Key-value-Stores.pdf)) A 2014 PVLDB paper applied PACELC to the design of a telecom data-storage system, explicitly using the framework to reason about consistency, availability, partition tolerance, and latency. ([vldb.org](https://www.vldb.org/pvldb/vol7/p1474-arauz.pdf)) A 2023 review likewise treats CAP and PACELC as foundational frameworks for surveying research on replication, consistency models, quorum protocols, and distributed-database performance. ([nti.khai.edu](https://nti.khai.edu/ojs/index.php/reks/article/view/reks.2023.2.14/0)) These references indicate that the paper’s principal influence has been conceptual: PACELC became a commonly used vocabulary for discussing normal-operation consistency/latency choices alongside failure-time consistency/availability choices.",
   "raw_url": "http://cs-www.cs.yale.edu/homes/dna/papers/abadi-pacelc.pdf",
   "source_type": "external",
   "filepath": "datastores/README.md",
   "filename": "Consistency Tradeoffs in Modern Distributed Database System Design",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:54"
 }

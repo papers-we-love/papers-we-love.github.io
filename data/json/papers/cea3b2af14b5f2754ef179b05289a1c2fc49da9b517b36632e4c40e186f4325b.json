@@ -1,33 +1,32 @@
 {
   "uuid": "cea3b2af14b5f2754ef179b05289a1c2fc49da9b517b36632e4c40e186f4325b",
-  "title": "Zab: High-performance broadcasting using a non-blocking voting scheme",
-  "publication_date": "2008",
+  "title": "A simple totally ordered broadcast protocol",
+  "publication_date": "September 15–17, 2008; Proceedings of the 2nd Workshop on Large-Scale Distributed Systems and Middleware (LADIS ’08), Yorktown Heights, New York, USA. ([dblp.uni-trier.de](https://dblp.uni-trier.de/db/conf/ladis/ladis2008.html))",
   "authors": [
-    "Benjamin C. Reed",
-    "Flavio P. Junqueira",
-    "Marco Serafini"
+    "Benjamin Reed",
+    "Flavio P. Junqueira"
   ],
   "keywords": [
     "atomic-broadcast",
-    "broadcasting",
-    "consensus",
+    "crash-recovery",
     "distributed-systems",
     "fault-tolerance",
-    "high-performance",
-    "non-blocking-voting",
-    "replicated-services",
-    "system-reliability",
+    "leader-election",
+    "primary-backup-replication",
+    "quorum-consensus",
+    "replicated-state-machine",
+    "totally-ordered-broadcast",
     "zookeeper"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "In this paper we present ZAB, a protocol for achieving high-throughput strongly consistent replication, while avoiding blocking or inhibiting normal operations after a leader failure. Our protocol addresses the complex problem of choosing between ordering of broadcasts and availability during leader failure and recovery. We describe an implementation of the Zab protocol that forms the backbone of the system synchronization of ZooKeeper, a coordination service for distributed applications.",
-  "summary": "The paper titled \"Zab: High-performance broadcasting using a non-blocking voting scheme\" introduces the Zab protocol, a broadcast protocol that ensures high-throughput and strongly consistent replication without blocking during leader failures. This protocol is fundamental for distributed systems needing reliable broadcast services. The implementation described in the paper is used within ZooKeeper, which is a key coordination service for distributed applications. This has been influential in developing systems that require fail-safe and consistent replication mechanisms. \n\nThe paper addresses key challenges in distributed systems by dealing with the trade-off between message ordering and availability during failures. The Zab protocol has been influential, as evidenced by references in other research works. Notably, it is cited in the \"ZooKeeper: Wait-free coordination for Internet-scale systems\" paper (https://dl.acm.org/doi/10.1145/1863103.1863117), which highlights its impact on ZooKeeper's development, a critical component in Apache Hadoop's ecosystem, and other large-scale distributed systems relying on Apache ZooKeeper for synchronization and configuration maintenance. This demonstrates its significance in the field of distributed systems and its practical applicability to real-world problems involving system reliability and performance.",
+  "abstract": "This is a short overview of a totally ordered broadcast protocol used by ZooKeeper, called Zab. It is conceptually easy to understand, is easy to implement, and gives high performance. In this paper we present the requirements ZooKeeper makes on Zab, we show how the protocol is used, and we give an overview of how the protocol works.",
+  "summary": "## Summary\n\nThe paper presents Zab, a leader-based totally ordered broadcast protocol developed for the ZooKeeper coordination service. ZooKeeper maintains replicated in-memory state across a small ensemble of servers and uses Zab to ensure that write transactions are applied consistently at every replica.\n\nZab is designed around several guarantees: reliable delivery, total order, causal order, and a prefix property ensuring that proposals made by a leader before a delivered message cannot be lost. These guarantees are necessary because ZooKeeper transactions may be conditional, state-dependent, and non-idempotent before the leader converts them into idempotent state-record transactions.\n\nThe protocol has two operating modes. In broadcast mode, a leader assigns each proposal a monotonically increasing transaction identifier called a zxid, sends the proposal to followers over FIFO TCP channels, and waits for acknowledgements from a quorum. Once the proposal is durably recorded by the quorum, the leader issues a COMMIT and delivers the transaction. Followers deliver the transaction after receiving the COMMIT. This design permits multiple proposals in flight and avoids waiting for every server, improving throughput and availability during follower failures.\n\nRecovery mode handles leader failures and loss of quorum. A newly elected leader must contain all transactions that may already have been committed, synchronize a quorum of followers, and ensure that transactions from the previous leader are either committed or discarded consistently. Zab uses epochs in the high-order bits of zxids to distinguish leadership periods and permits uncommitted proposals from older epochs to be skipped safely. Persistent transaction logs, snapshots, batching, and idempotent transactions support crash recovery and allow replay without requiring strict at-most-once delivery.\n\n## Influence and adoption\n\nThe paper established the initial concise description of Zab as the atomic-broadcast layer underlying ZooKeeper. Apache ZooKeeper documentation continues to identify Zab as the protocol used to propagate state changes and describes its leader-based recovery, prefix-ordering, and unique-sequence-number mechanisms. ([cwiki.apache.org](https://cwiki.apache.org/confluence/spaces/ZOOKEEPER/pages/24189846/Zab1.0))\n\nThe work was subsequently developed into the more formal paper “Zab: High-performance broadcast for primary-backup systems,” which introduced and analyzed primary order and provided a fuller treatment of recovery and performance. ([researchgate.net](https://www.researchgate.net/publication/224248727_Zab_High-performance_broadcast_for_primary-backup_systems))\n\nIts principal industry impact is through ZooKeeper, an Apache coordination service used as infrastructure by systems including Kafka, Hadoop, and HBase. The current Apache ZooKeeper project describes the service as a coordination system used by these distributed platforms, although that statement concerns ZooKeeper as a whole rather than independently measuring the impact of this specific paper. ([zookeeper.apache.org](https://zookeeper.apache.org/index.html))",
   "raw_url": "http://diyhpl.us/~bryan/papers2/distributed/distributed-systems/zab.totally-ordered-broadcast-protocol.2008.pdf",
   "source_type": "external",
   "filepath": "distributed_systems/README.md",
   "filename": "A simple totally ordered broadcast protocol",
-  "created_on": "2026-01-24 23:46:59",
-  "summary_received": "2026-01-25 00:11:02"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:54"
 }

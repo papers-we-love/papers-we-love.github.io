@@ -1,32 +1,32 @@
 {
   "uuid": "edded4267f24db2ceb8343d1655e6a590a7fb8d6442f293176cc4736a919fca6",
-  "title": "Hyperbolic 3-Manifolds that Fiber over the Circle",
-  "publication_date": "1996",
+  "title": "Conway's ZIP Proof",
+  "publication_date": "May 1999 — American Mathematical Monthly, volume 106, issue 5, pages 393–399",
   "authors": [
-    "C. D. Hodgson",
-    "S. A. Bleiler"
+    "George K. Francis",
+    "Jeffrey R. Weeks"
   ],
   "keywords": [
-    "3-manifolds",
-    "circle-fibering",
-    "fiber-bundles",
-    "geometric-structures",
-    "geometry",
-    "hyperbolic-manifolds",
-    "manifold-theory",
-    "mathematical-analysis",
-    "three-dimensional-geometry",
-    "topology"
+    "classification-theorem",
+    "closed-surfaces",
+    "crosscaps",
+    "crosshandles",
+    "euler-characteristic",
+    "handles",
+    "homeomorphism",
+    "orientability",
+    "surface-topology",
+    "triangulation"
   ],
   "category_path": [
     "mathematics"
   ],
-  "abstract": "This paper studies the geometry of hyperbolic 3-manifolds which fiber over the circle, with the fibers being surfaces with punctures. It is shown that the complete hyperbolic structure on these manifolds can be described by a simple canonical ideal triangulation.",
-  "summary": "The paper \"Hyperbolic 3-Manifolds that Fiber over the Circle\" by S. A. Bleiler and C. D. Hodgson published in 1996 delves into the geometric structures of hyperbolic 3-manifolds that fiber over the circle, particularly focusing on manifolds where the fibers are punctured surfaces. The key contributions of this work include demonstrating that such manifolds can be characterized by complete hyperbolic structures and described via simple canonical ideal triangulations.\n\nA quick web search reveals that this paper has had limited direct influence on subsequent publications or industry applications. It serves primarily as a foundation in complex geometric studies related to hyperbolic manifolds and has implications in the broader field of geometric topology. This paper is often referenced in academic contexts where deep mathematical and topological properties of manifolds are studied; however, it has not led to significant applied or transformative uses outside this specific area of academic research.",
+  "abstract": "Surfaces arise naturally in many different forms, in branches of mathematics ranging from complex analysis to dynamical systems. The Classification Theorem, known since the 1860's, asserts that all closed surfaces, despite their diverse origins and seemingly diverse forms, are topologically equivalent to spheres with some number of handles or crosscaps. The proofs found in most modern textbooks follow that of Seifert and Threlfall [5]. Seifert and Threlfall's proof, while satisfyingly constructive, requires that a given surface be brought into a somewhat artificial standard form. Here we present a completely new proof, discovered by John H. Conway in about 1992, which retains the constructive nature of [5] while eliminating the irrelevancies of the standard form. Conway calls it his Zero Irrelevancy Proof, or \"ZIP proof,\" and asks that it always be called by this name, remarking that \"otherwise there's a real danger that its origin would be lost, since everyone who hears it immediately regards it as the obvious proof.\" We trust that Conway's ingenious proof will replace the customary textbook repetition of Seifert-Threlfall in favor of a lighter, fat-free nouvelle cuisine approach that retains all the classical flavor of elementary topology.",
+  "summary": "## Summary\n\nThe paper presents John H. Conway’s “Zero Irrelevancy Proof,” or ZIP proof, of the classification theorem for compact surfaces. Its central device is a **zip-pair**: boundary segments are treated as halves of a zipper, and zipping them together produces the elementary topological features used in the classification. Depending on the number of boundary components and the relative orientations of the zips, the operation produces a handle, crosshandle, cap, or crosscap.\n\nThe proof begins with a triangulated surface. All edge identifications are temporarily undone, leaving a collection of triangular pieces, each regarded as a sphere with a perforation. The paper proves that re-zipping any pair preserves the property of being “ordinary,” meaning homeomorphic to a finite collection of spheres equipped with handles, crosshandles, crosscaps, and perforations. Re-zipping all pairs therefore reconstructs the original surface while establishing that it has one of these forms.\n\nTwo conversion results then reduce the list of possible building blocks. A crosshandle is shown to be homeomorphic to two crosscaps. In addition, in the presence of a crosscap, a handle can be replaced by a crosshandle. Consequently, a connected closed surface is homeomorphic either to a sphere with handles only, or to a sphere with crosscaps only. The paper also identifies the distinguishing invariants: orientable surfaces with \\(n\\) handles have Euler number \\(2-2n\\), while nonorientable surfaces with \\(n\\) crosscaps have Euler number \\(2-n\\).\n\n## Documented influence\n\nThe paper’s identifiable influence is primarily pedagogical and expository rather than industrial. It is explicitly presented by MathWorld as a streamlined alternative to the traditional Seifert–Threlfall proof of the classification theorem. ([mathworld.wolfram.com](https://mathworld.wolfram.com/ClassificationTheoremofSurfaces.html)) The proof has also been incorporated into university teaching materials, including Stanford’s CS 468 schedule and an IIT Guwahati course covering topology and computational geometry. ([graphics.stanford.edu](https://graphics.stanford.edu/courses/cs468-02-fall/schedule.html)) N. J. Wildberger later presented an algebraic version of the ZIP approach in an algebraic-topology lecture. ([youtube.com](https://www.youtube.com/watch?v=-GJs7_NdLm8)) The authors’ supplementary webpage documents continued use of the paper’s illustrations for mathematical communication. ([new.math.uiuc.edu](https://new.math.uiuc.edu/zipproof/)) No specific industry adoption or engineering application directly referencing this paper was identified in the search.",
   "raw_url": "https://www.maths.ed.ac.uk/~v1ranick/papers/francisweeks.pdf",
   "source_type": "external",
   "filepath": "mathematics/README.md",
   "filename": "Conway's ZIP proof",
-  "created_on": "2026-01-24 23:47:00",
-  "summary_received": "2026-01-25 00:11:04"
+  "created_on": "2026-09-01 00:48:00",
+  "summary_received": "2026-09-05 21:19:56"
 }

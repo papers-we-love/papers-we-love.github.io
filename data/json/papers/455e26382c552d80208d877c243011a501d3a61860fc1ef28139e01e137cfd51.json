@@ -1,32 +1,33 @@
 {
   "uuid": "455e26382c552d80208d877c243011a501d3a61860fc1ef28139e01e137cfd51",
-  "title": "A Protocol for Scalable Anonymous Communication",
-  "publication_date": "October 2004",
+  "title": "P⁵: A Protocol for Scalable Anonymous Communication",
+  "publication_date": "May 2002; Proceedings of the 2002 IEEE Symposium on Security and Privacy, Oakland, California, USA, pp. 58–70. An extended journal version was published in the Journal of Computer Security on December 22, 2005.",
   "authors": [
-    "Matthew K. Reiter",
-    "Michael J. Freedman"
+    "Aravind Srinivasan",
+    "Bobby Bhattacharjee",
+    "Rob Sherwood"
   ],
   "keywords": [
-    "anonymity",
     "anonymous-communication",
-    "communication",
-    "distributed-systems",
-    "networking",
+    "broadcast-hierarchy",
+    "packet-level-simulation",
+    "peer-to-peer",
     "privacy",
-    "protocols",
-    "scalability",
-    "scalable-protocol",
-    "security"
+    "public-key-cryptography",
+    "receiver-anonymity",
+    "sender-anonymity",
+    "traffic-analysis-resistance",
+    "unlinkability"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "This paper presents the design, analysis, and implementation of a scalable protocol for anonymous communication. Our protocol, which we refer to as the Dining Cryptographers Protocol, addresses shortcomings in prior anonymous communication systems. Specifically, our protocol achieves rigorous anonymity guarantees with high probability, constant-factor overhead, and O(log n) scaling, where n denotes the number of participants in the communication. Additionally, the protocols address the issues of combining mixes and DC-nets and reducing the total costs of communication, while providing strong anonymity properties.",
-  "summary": "The paper \"A Protocol for Scalable Anonymous Communication\" by Michael J. Freedman and Matthew K. Reiter proposes a novel protocol to facilitate anonymous communication with improved scalability and security. The protocol, known as the Dining Cryptographers Protocol, offers a solution to the deficiencies in previous systems by ensuring stronger anonymity with high probability, constant overhead, and log-based scaling. This advancement is particularly significant for network privacy and security as it addresses challenges in integrating existing systems and minimizing communication costs.\n\nUpon conducting a web search, there appear to be no direct citations or significant influences of this paper on subsequent research or industry-specific applications. It seems the work may have been more theoretical in nature and has not been commonly cited in later works. However, it contributes to the ongoing research dialogue concerning anonymous communication protocols within distributed systems by providing an alternative perspective on achieving scalability alongside anonymity.",
+  "abstract": "We present a protocol for anonymous communication over the Internet. Our protocol, called P⁵ (Peer-to-Peer Personal Privacy Protocol) provides sender-, receiver-, and sender-receiver anonymity. P⁵ is designed to be implemented over the current Internet protocols, and does not require any special infrastructure support. A novel feature of P⁵ is that it allows individual participants to trade-off degree of anonymity for communication efficiency, and hence can be used to scalably implement large anonymous groups. We present a description of P⁵, an analysis of its anonymity and communication efficiency, and evaluate its performance using detailed packet-level simulations.",
+  "summary": "### Summary\n\nP⁵ proposes a peer-to-peer anonymous communication protocol based on a hierarchy of logical broadcast channels. Users are mapped to channels using hashes of public keys and choose channel depths according to local security and efficiency requirements. Higher-level channels provide larger anonymity sets but impose greater bandwidth costs and reliability penalties; users may move toward smaller channels when they prefer greater communication efficiency.\n\nThe protocol combines fixed-size, per-hop encrypted packets with constant-rate signal and noise traffic. This is intended to prevent a passive adversary capable of monitoring all network links and correlating packets from distinguishing communication traffic from cover traffic. Routing keys and lateral channel connections are used to reduce the number of inter-channel crossings while preserving the separation between communication identities and routing identities. The paper also analyzes correlation, intersection, difference, denial-of-service, and colluding “mob” attacks, and identifies active adversaries able to inject traffic across large portions of the network as a limitation.\n\nPacket-level simulations indicate that the design can support thousands of participants with short average paths. In the reported 8,192-user experiment, average inter-channel distance remained below one channel crossing, while the average end-to-end path was approximately 13 hops. The principal cost is bandwidth and packet loss: stronger anonymity requires larger broadcast groups and therefore more replicated traffic. The authors present P⁵ as a scalable design point between global broadcast anonymity and more bandwidth-efficient but weaker anonymity systems.\n\nThe work influenced subsequent anonymous-communication research primarily as an established broadcast-based peer-to-peer design point. Later surveys and systems, including Herbivore, classify P⁵ alongside other early anonymous overlay protocols and compare its tree-broadcast approach with multicast and DC-net alternatives. The Tor design literature specifically identifies P⁵ and Herbivore as broadcast-based peer-to-peer anonymity systems, contrasting them with circuit-based designs such as Tarzan and MorphMix. ([cs.princeton.edu](https://www.cs.princeton.edu/courses/archive/fall09/cos518/papers/tor.pdf)) The protocol was also cited as prior work in research on unreliable-overlay anonymity, including Information Slicing. ([usenix.org](https://www.usenix.org/legacy/events/nsdi07/tech/full_papers/katti/katti_html/paper.html)) There is evidence of substantial academic uptake, including hundreds of indexed citations, but the sources reviewed do not establish deployment of P⁵ itself as a widely used industry system. ([researchgate.net](https://www.researchgate.net/publication/220713731_P5_A_Protocol_for_Scalable_Anonymous_Communication))",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/p5-a-protocal-for-scalable-anonymous-communication.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/p5-a-protocal-for-scalable-anonymous-communication.pdf",
   "filename": "p5-a-protocal-for-scalable-anonymous-communication.pdf",
-  "created_on": "2026-01-24 19:24:56",
-  "summary_received": "2026-01-24 19:57:55"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:51"
 }

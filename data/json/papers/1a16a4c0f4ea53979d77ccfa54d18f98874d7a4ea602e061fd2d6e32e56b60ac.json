@@ -1,33 +1,32 @@
 {
   "uuid": "1a16a4c0f4ea53979d77ccfa54d18f98874d7a4ea602e061fd2d6e32e56b60ac",
   "title": "Chain Replication for Supporting High Throughput and Availability",
-  "publication_date": "2004",
+  "publication_date": "December 6–8, 2004; 6th Symposium on Operating Systems Design and Implementation (OSDI ’04), San Francisco, California; USENIX Association, pp. 91–104",
   "authors": [
-    "Danny Dolev",
-    "Robbert van Renesse",
-    "Yuval Amir"
+    "Fred B. Schneider",
+    "Robbert van Renesse"
   ],
   "keywords": [
-    "availability",
     "chain-replication",
-    "data-consistency",
+    "data-recovery",
     "distributed-storage",
-    "distributed-systems",
+    "fail-stop-systems",
     "fault-tolerance",
+    "high-availability",
     "high-throughput",
-    "replication-protocols",
-    "scalability",
-    "system-reliability"
+    "primary-backup-replication",
+    "replica-placement",
+    "strong-consistency"
   ],
   "category_path": [
     "distributed_systems"
   ],
-  "abstract": "In this paper, we present a new replication protocol, chain replication, designed for shared-data services that are under high update throughput demands. Our protocol has two important characteristics. First, it provides the highest levels of both consistency and availability attainable in the presence of server failures. Second, it provides these guarantees in a design that is very easy to implement and which integrates gracefully with a wide range of data partitioning and placement strategies. We describe in detail the design and implementation of chain replication, a comparison to existing techniques, and a performance evaluation.",
-  "summary": "The paper \"Chain Replication for Supporting High Throughput and Availability\" introduces a replication protocol named chain replication that targets shared-data services requiring high update throughput. The protocol is designed to ensure high consistency and availability despite server failures, aiming for implementation simplicity and wide compatibility with various data management strategies.\n\nThis paper has influenced further research in distributed systems by introducing a reliable replication method that enhances both data consistency and system availability. It is particularly noted for scalability and fault tolerance, traits significant to large-scale distributed storage systems. Further citational support and impact of this paper can be validated through several references:\n\n1. [Distributed algorithms in disk-based storage systems](https://www.usenix.org/legacy/events/osdi04/tech/zhang/zhang_html/) discusses the importance of replication protocols like chain replication.\n2. [Foundation of cloud computing's storage protocols](https://www.microsoft.com/en-us/research/publication/the-chiron-file-system-a-computer-at-the-head-in-linux/) cites this paper's contribution to cloud infrastructure resilience.\n3. [Consensus-based Fault-Tolerant Replication](https://www.cs.cornell.edu/projects/quicksilver/papers/sosp93.pdf), where chain replication is highlighted for its consistency traits.\n4. [VLDB 2012](http://vldb.org/pvldb/vol5/p49_prabhakaran_vldb2012_bulletin.pdf) outlines chain replication's role in improving performance in data systems.\n5. [Paxos-like Consensus in Networked Storage](https://hal.inria.fr/hal-01234567/file/some-report.pdf) acknowledges chain replication's consistency and availability benefits.\n\nThe academic traction of this research reveals its foundational nature in enhancing both theoretical frameworks and practical applications of distributed systems.",
+  "abstract": "Chain replication is a new approach to coordinating clusters of fail-stop storage servers. The approach is intended for supporting large-scale storage services that exhibit high throughput and availability without sacrificing strong consistency guarantees. Besides outlining the chain replication protocols themselves, simulation experiments explore the performance characteristics of a prototype implementation. Throughput, availability, and several object-placement strategies (including schemes based on distributed hash table routing) are discussed.",
+  "summary": "## Main contribution\n\nThe paper introduces **chain replication**, a replication protocol for storage services that need high throughput, high availability, and strong consistency simultaneously. Replicas for each object are arranged in a linear chain. Updates enter at the head, are computed once, and are propagated through the chain to the tail. Queries are served by the tail, which is the replica guaranteed to contain all completed updates. This organization provides a single serialization point for operations while separating update and query workloads between the head and tail. The paper was published as part of OSDI ’04 in December 2004. ([usenix.org](https://www.usenix.org/conference/osdi-04/chain-replication-supporting-high-throughput-and-availability))\n\n## Protocol and fault handling\n\nThe protocol assumes fail-stop servers and reliable FIFO communication between neighboring replicas. A master service detects failures and reconfigures chains. When the head fails, its successor becomes the new head. When the tail fails, its predecessor becomes the new tail; because the predecessor may contain updates not yet present at the failed tail, those updates become completed as part of the reconfiguration. When an internal replica fails, the predecessor forwards any potentially unpropagated updates to the successor before normal processing resumes. New replicas are added at the tail and initialized from the current tail while concurrent updates are tracked and forwarded.\n\n## Evaluation and findings\n\nThe prototype and simulations compare chain replication with primary/backup replication and weaker variants that allow queries at arbitrary replicas. Chain replication generally matches or exceeds primary/backup throughput because query processing is assigned to the tail rather than competing with update processing at a single primary. The weaker variants perform better for highly query-dominated workloads, but can perform worse once updates exceed roughly 15 percent of requests and do not provide the same strong consistency guarantees. Replication factor has little effect on throughput when requests can be pipelined, although it affects availability and recovery behavior.\n\nThe availability experiments show that replica placement and recovery parallelism are critical. Consecutive placement on a hash ring limits parallel recovery and requires increasing the replication factor as the system grows to maintain a target mean time between unavailability. Random placement can provide more recovery parallelism; with sufficient servers and parallel recovery, it eventually offers better availability than ring-based placement. The paper therefore treats placement and repair scheduling as central parts of reliable large-scale storage design, rather than as independent implementation details.\n\n## Subsequent research and industry use\n\nThe paper’s design was directly extended by **CRAQ**, which describes itself as an improvement on chain replication intended to increase read throughput by allowing replicas other than the tail to serve reads while preserving strong consistency. ([usenix.org](https://www.usenix.org/conference/usenix-09/object-storage-craq-high-throughput-chain-replication-read-mostly-workloads)) Later work such as **Harmonia** explicitly implements and evaluates chain replication as a target protocol, addressing the tail’s read-throughput bottleneck with in-network conflict detection; its evaluation reports near-linear read scalability and up to 10× throughput improvement at a replication factor of 10. ([arxiv.org](https://arxiv.org/abs/1904.08964))\n\nThe design has also been used in industry. Meta’s **Delta** storage service is described as a highly available, strongly consistent system based on chain replication. Its later design adds apportioned queries so that all chain members can serve reads after checking whether their local versions are committed, while retaining the chain’s consistency properties. ([engineering.fb.com](https://engineering.fb.com/2022/05/04/data-infrastructure/delta/)) These examples show a continuing pattern: chain replication’s core update path and failure-recovery model are retained, while later systems optimize read scalability, automated repair, placement, and geo-replication.",
   "raw_url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/chain-replication-for-supporting-high-throughput-and-availability.pdf",
   "source_type": "pdf",
   "filepath": "distributed_systems/chain-replication-for-supporting-high-throughput-and-availability.pdf",
   "filename": "chain-replication-for-supporting-high-throughput-and-availability.pdf",
-  "created_on": "2026-01-24 19:24:55",
-  "summary_received": "2026-01-24 19:57:54"
+  "created_on": "2026-09-01 00:47:54",
+  "summary_received": "2026-09-05 21:19:51"
 }
