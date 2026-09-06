@@ -1,0 +1,154 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>SPECIALISING DYNAMIC TECHNIQUES FOR IMPLEMENTING THE RUBY PROGRAMMING LANGUAGE | Papers We Love</title>
+        <meta name="description" content="The Ruby programming language is dynamically typed, uses dynamic and late bound dispatch for all operators, method calls and many control structures, and provides extensive metaprogramming and introspective tooling functionality. Unlike other languag" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="SPECIALISING DYNAMIC TECHNIQUES FOR IMPLEMENTING THE RUBY PROGRAMMING LANGUAGE | Papers We Love" />
+        <meta property="og:description" content="The Ruby programming language is dynamically typed, uses dynamic and late bound dispatch for all operators, method calls and many control structures, and provides extensive metaprogramming and introspective tooling functionality. Unlike other languag" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/specialising-dynamic-techniques-for-implementing-t-d23489ac/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:00">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">SPECIALISING DYNAMIC TECHNIQUES FOR IMPLEMENTING THE RUBY PROGRAMMING LANGUAGE</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Chris Seaton</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://chrisseaton.com/phd/specialising-ruby.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: 2015 (Doctor of Philosophy thesis, University of Manchester)</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>The Ruby programming language is dynamically typed, uses dynamic and late bound dispatch for all operators, method calls and many control structures, and provides extensive metaprogramming and introspective tooling functionality. Unlike other languages where these features are available, in Ruby their use is not avoided and key parts of the Ruby ecosystem use them extensively, even for inner-loop operations. This makes a high-performance implementation of Ruby problematic. Existing implementations either do not attempt to dynamically optimise Ruby programs, or achieve relatively limited success in optimising Ruby programs containing these features.
+
+One way that the community has worked around the limitations of existing Ruby implementations is to write extension modules in the C programming language. These are statically compiled and then dynamically linked into the Ruby implementation. Compared to equivalent Ruby, this C code is often more efficient for computationally intensive code. However the interface that these C extensions provides is defined by the non-optimising reference implementation of Ruby. Implementations which want to optimise by using different internal representations must do extensive copying to provide the same interface. This then limits the performance of the C extensions in those implementations.
+
+This leaves Ruby in the difficult position where it is not only difficult to implement the language efficiently, but the previous workaround for that problem, C extensions, also limits efforts to improve performance.
+
+This thesis describes an implementation of the Ruby programming language which embraces the Ruby language and optimises specifically for Ruby as it is used in practice. It provides a high performance implementation of Ruby’s dynamic features, at the same time as providing a high performance implementation of C extensions. The implementation provides a high level of compatibility with existing Ruby implementations and does not limit the available features in order to achieve high performance.
+
+Common to all the techniques that are described in this thesis is the concept of specialisation. The conventional approach taken to optimise a dynamic language such as Ruby is to profile the program as it runs. Feedback from the profiling can then be used to specialise the program for the data and control flow it is actually experiencing. This thesis extends and advances that idea by specialising for conditions beyond normal data and control flow.
+
+Programs that call a method, or lookup a variable or constant by dynamic name rather than literal syntax can be specialised for the dynamic name by generalising inline caches. Debugging and introspective tooling is implemented by specialising the code for debug conditions such as the presence of a breakpoint or an attached tracing tool. C extensions are interpreted and dynamically optimised rather than being statically compiled, and the interface which the C code is programmed against is provided as an abstraction over the underlying implementation which can then independently specialise.
+
+The techniques developed in this thesis have a significant impact on performance of both synthetic benchmarks and kernels from real-world Ruby programs. The implementation of Ruby which has been developed achieves an order of magnitude or better increase in performance compared to the next-best implementation. In many cases the techniques are ‘zero-overhead’, in that the generated machine code is exactly the same for when the most dynamic features of Ruby are used, as when only static features are used.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <p>The thesis presents JRuby+Truffle, an implementation strategy for Ruby based on self-optimising AST interpreters, partial evaluation, speculative optimisation, and deoptimisation. Its principal contributions are dispatch chains for efficient metaprogramming, wrapper nodes for low-overhead debugging, guest-language safepoints for runtime inspection and control, and interpreted and optimised support for Ruby C extensions. The thesis reports substantial peak-performance improvements on synthetic benchmarks and production-library kernels, while retaining broad Ruby compatibility. (<a href="https://chrisseaton.com/phd/specialising-ruby.pdf">chrisseaton.com</a>)</p>
+
+<p>Observable subsequent influence includes the publication and independent evaluation of dispatch chains in work on Ruby and Smalltalk metaprogramming, where the technique was presented as a generalized polymorphic inline cache applicable to both meta-tracing and partial-evaluation JITs. (<a href="https://stefan-marr.de/papers/pldi-marr-et-al-zero-overhead-metaprogramming/">stefan-marr.de</a>) The debugging and safepoint ideas were incorporated into later Truffle infrastructure: the Truffle API provides a debugger abstraction with sessions and breakpoints, and current Truffle documentation exposes guest-language safepoints for thread-local actions, polling, interruption, and tooling. (<a href="https://www.graalvm.org/truffle/javadoc/com/oracle/truffle/api/debug/Debugger.html">graalvm.org</a>) A related patent also describes assumption-based guest-language safepoints, deoptimisation, and execution of actions across guest threads. (<a href="https://patents.google.com/patent/US9880931B2/en">patents.google.com</a>) These sources establish adoption and continuation of the techniques in the Truffle/Graal ecosystem, but do not establish that the thesis was the sole causal origin of every later implementation.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/languages/Ruby/">languages/Ruby</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/debugging/">debugging</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/dynamic-languages/">dynamic languages</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/just-in-time-compilation/">just in time compilation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/language-implementation/">language implementation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/language-interoperability/">language interoperability</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/metaprogramming/">metaprogramming</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/native-extensions/">native extensions</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/ruby/">ruby</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/safepoints/">safepoints</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/self-optimising-ast-interpreters/">self optimising ast interpreters</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:00
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

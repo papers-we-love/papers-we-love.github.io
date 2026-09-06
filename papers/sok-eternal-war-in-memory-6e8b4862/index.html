@@ -1,0 +1,156 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>SoK: Eternal War in Memory | Papers We Love</title>
+        <meta name="description" content="Memory corruption bugs in software written in low-level languages like C or C++ are one of the oldest problems in computer security. The lack of safety in these languages allows attackers to alter the program’s behavior or take full control over it b" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="SoK: Eternal War in Memory | Papers We Love" />
+        <meta property="og:description" content="Memory corruption bugs in software written in low-level languages like C or C++ are one of the oldest problems in computer security. The lack of safety in these languages allows attackers to alter the program’s behavior or take full control over it b" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/sok-eternal-war-in-memory-6e8b4862/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">SoK: Eternal War in Memory</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Dawn Song</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">László Szekeres</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Mathias Payer</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Tao Wei</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/security/sok-eternal-war-in-memory.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: May 2013 — 34th IEEE Symposium on Security and Privacy (S&P 2013), Oakland, pp. 48–62</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Memory corruption bugs in software written in low-level languages like C or C++ are one of the oldest problems in computer security. The lack of safety in these languages allows attackers to alter the program’s behavior or take full control over it by hijacking its control flow. This problem has existed for more than 30 years and a vast number of potential solutions have been proposed, yet memory corruption attacks continue to pose a serious threat. Real world exploits show that all currently deployed protections can be defeated.
+This paper sheds light on the primary reasons for this by describing attacks that succeed on today’s systems. We systematize the current knowledge about various protection techniques by setting up a general model for memory corruption attacks. Using this model we show what policies can stop which attacks. The model identifies weaknesses of currently deployed techniques, as well as other proposed protections enforcing stricter policies.
+We analyze the reasons why protection mechanisms implementing stricter polices are not deployed. To achieve wide adoption, protection mechanisms must support a multitude of features and must satisfy a host of requirements. Especially important is performance, as experience shows that only solutions whose overhead is in reasonable bounds get deployed.
+A comparison of different enforceable policies helps designers of new protection mechanisms in finding the balance between effectiveness (security) and efficiency. We identify some open research problems, and provide suggestions on improving the adoption of newer techniques.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h3 id="summary">Summary</h3>
+
+<p>The paper presents a systematization of memory-corruption attacks and defenses for software written in unsafe low-level languages. It models exploitation as a sequence of stages: creating an invalid pointer, dereferencing it, corrupting or disclosing internal state, determining a target value or address, using a corrupted pointer or variable, and finally executing code or using corrupted data. From this model, it distinguishes four attack outcomes: code-corruption attacks, control-flow hijacking, data-only attacks, and information leaks.</p>
+
+<p>The authors classify defenses according to the security policies they enforce. These include memory safety, code integrity, code-pointer integrity, address-space randomization, data-space randomization, control-flow integrity, data-flow integrity, and non-executable data. The analysis shows that deployed mechanisms such as stack cookies, DEP/W⊕X, and ASLR address only portions of the attack process. In particular, code-reuse attacks and information leaks can bypass combinations of these mechanisms.</p>
+
+<p>The paper compares proposed defenses using protection strength, false positives and negatives, performance overhead, memory overhead, source and binary compatibility, and modularity. Its principal conclusion is that stronger deterministic policies—especially complete memory safety, data integrity, and control-flow integrity—are technically more robust, but their adoption is constrained by runtime cost, incompatibility with legacy binaries and libraries, and difficulties supporting separately compiled modules. The paper identifies approximately 10% runtime overhead as a practical adoption boundary, while noting that several stronger approaches impose substantially higher costs.</p>
+
+<h3 id="influence">Influence</h3>
+
+<p>The paper’s attack-and-mitigation model was later used explicitly as an analytical framework in CHERI research. A CHERI technical report describes <em>Eternal War in Memory</em> as providing an “excellent categorisation and decomposition” of exploits arising from memory-safety violations and states that its analysis was used as a framework for evaluating CHERI’s effectiveness. (<a href="https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-858.pdf">cl.cam.ac.uk</a>) A later CHERI dissertation likewise states that the paper’s model inspired the memory-protection component of a more comprehensive memory-operations framework. (<a href="https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-975.pdf">cl.cam.ac.uk</a>) The paper is also repeatedly cited in subsequent memory-safety and security-system research, including later work on memory tagging and kernel security invariants. (<a href="https://www.usenix.org/system/files/woot24-proceedings-interior.pdf">usenix.org</a>) These references establish continued research influence; the sources reviewed do not establish that the paper itself directly caused a specific commercial product deployment.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/security/">security</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/address-space-randomization/">address space randomization</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/code-reuse-attacks/">code reuse attacks</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/control-flow-integrity/">control flow integrity</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/data-flow-integrity/">data flow integrity</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/exploit-mitigation/">exploit mitigation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/memory-corruption/">memory corruption</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/memory-safety/">memory safety</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/return-oriented-programming/">return oriented programming</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/software-security/">software security</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/use-after-free/">use after free</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

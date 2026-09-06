@@ -1,0 +1,156 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Transactional Client-Server Cache Consistency: Alternatives and Performance | Papers We Love</title>
+        <meta name="description" content="Client-server database systems based on a page server model can exploit client memory resources by caching copies of pages across transaction boundaries. Caching reduces the need to obtain data from servers or other sites on the network. In order to " />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Transactional Client-Server Cache Consistency: Alternatives and Performance | Papers We Love" />
+        <meta property="og:description" content="Client-server database systems based on a page server model can exploit client memory resources by caching copies of pages across transaction boundaries. Caching reduces the need to obtain data from servers or other sites on the network. In order to " />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/transactional-client-server-cache-consistency-alte-33e1f433/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:00">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Transactional Client-Server Cache Consistency: Alternatives and Performance</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Michael J. Carey</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Michael J. Franklin</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Miron Livny</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://drum.lib.umd.edu/bitstream/handle/1903/751/CS-TR-3511.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: September 1995 (University of Maryland Technical Report CS-TR-3511; also UMIACS TR 95-84)</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Client-server database systems based on a page server model can exploit client memory resources by caching copies of pages across transaction boundaries. Caching reduces the need to obtain data from servers or other sites on the network. In order to ensure that such caching does not result in the violation of transaction semantics, a cache consistency maintenance algorithm is required. Many such algorithms have been proposed in the literature and, as all provide the same functionality, performance is a primary concern in choosing among them. In this paper we provide a taxonomy that describes the design space for transactional cache consistency maintenance algorithms and show how proposed algorithms relate to one another. We then investigate the performance of six of these algorithms, and use these results to examine the tradeoffs inherent in the design choices identified in the taxonomy. The insight gained in this manner is then used to reflect upon the characteristics of other algorithms that have been proposed. The results show that the interactions among dimensions of the design space can impact performance in many ways, and that classifications of algorithms as simply "pessimistic" or "optimistic" do not accurately characterize the similarities and differences among the many possible cache consistency algorithms.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="main-contribution">Main contribution</h2>
+
+<p>The paper studies cache consistency for page-server client-server database systems that retain database pages in client memory across transaction boundaries. It frames client caching as dynamic replication with “second-class ownership”: the server remains authoritative for durability and availability, while clients hold temporary cached copies. Because cached pages may become stale, the system must preserve one-copy serializability through a cache-consistency protocol.</p>
+
+<p>The authors introduce a taxonomy organized primarily around <strong>invalid-access prevention</strong>. Detection-based protocols permit stale copies to remain in client caches and validate accesses before commit. Avoidance-based protocols use a read-one/write-all strategy to prevent transactions from accessing stale data in the first place. The taxonomy further distinguishes when validity or write intentions are checked, whether update notifications are propagated or used for invalidation, how long write permissions are retained, and whether conflicting remote consistency actions wait for or preempt local transactions.</p>
+
+<p>The performance study compares six algorithms from three families: Caching Two-Phase Locking, Callback Locking, and Optimistic Two-Phase Locking. It uses a discrete-event simulation with workloads representing private data, hot/cold locality with sharing, uniform access, and one-way information feeding. The evaluation measures throughput, message traffic, cache hit rates, aborts, and related resource costs.</p>
+
+<p>The central result is that no cache-consistency policy is uniformly best. Avoidance-based methods generally outperform synchronous detection when locality is high because cached reads avoid server round trips, but their remote callbacks and invalidations become costly as sharing increases. Deferring write-intention declarations reduces communication, but can raise abort rates under contention. Retaining write permissions across transactions helps when locality is high and updates remain local, but hurts when remote reads frequently conflict with retained permissions. Invalidation is generally more robust than propagation: propagation can waste substantial network bandwidth when updated copies are not subsequently used, although it performs well in directional feed workloads where many readers repeatedly consume the same updated data.</p>
+
+<p>The broader conclusion is that “pessimistic” versus “optimistic” is too coarse a classification. Performance depends on interactions among consistency mechanisms, locality, sequential sharing, contention, cache size, network cost, and workload directionality. The study therefore motivates adaptive policies, particularly policies that dynamically choose permission retention or invalidation versus propagation.</p>
+
+<h2 id="subsequent-influence">Subsequent influence</h2>
+
+<p>The work was subsequently published as a peer-reviewed ACM Transactions on Database Systems article in September 1997, with the same authors and title, spanning pages 315–363. (<a href="https://www.sigmod.org/publications/dblp/db/journals/tods/tods22.html">sigmod.org</a>) The University of Maryland’s DIMSUM publication list places it within a continuing research program on client-server object databases and lists later work on adaptive fine-grained sharing using callback-based techniques. (<a href="https://www.cs.umd.edu/projects/dimsum/papers/">cs.umd.edu</a>) Later cache-consistency research continued to cite the paper when discussing transactional caching, version-based consistency, mobile data management, and application data caches. (<a href="https://www.researchgate.net/publication/220241935_Exploiting_Versions_for_Transactional_Cache_Consistency">researchgate.net</a>) The available evidence supports influence as a research reference and design framework; it does not establish widespread direct adoption of one of the evaluated protocols in commercial database products.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/distributed_systems/">distributed systems</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/cache-coherence/">cache coherence</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/client-caching/">client caching</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/client-server-databases/">client server databases</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/concurrency-control/">concurrency control</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/data-shipping/">data shipping</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-databases/">distributed databases</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/one-copy-serializability/">one copy serializability</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/performance-evaluation/">performance evaluation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/replicated-data/">replicated data</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/transactional-cache-consistency/">transactional cache consistency</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:00
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

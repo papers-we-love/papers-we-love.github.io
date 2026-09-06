@@ -1,0 +1,148 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Can Programming Be Liberated from the von Neumann Style? A Functional Style and Its Algebra of Programs | Papers We Love</title>
+        <meta name="description" content="Conventional programming languages are growing ever more enormous, but not stronger. Inherent defects at the most basic level cause them to be both fat and weak: their primitive word-at-a-time style of programming inherited from their common ancestor" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Can Programming Be Liberated from the von Neumann Style? A Functional Style and Its Algebra of Programs | Papers We Love" />
+        <meta property="og:description" content="Conventional programming languages are growing ever more enormous, but not stronger. Inherent defects at the most basic level cause them to be both fat and weak: their primitive word-at-a-time style of programming inherited from their common ancestor" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/can-programming-be-liberated-from-the-von-neumann--d7630e0f/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:00">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Can Programming Be Liberated from the von Neumann Style? A Functional Style and Its Algebra of Programs</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">John Backus</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://dl.acm.org/doi/pdf/10.1145/359576.359579" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: August 1978, Communications of the ACM, Volume 21, Number 8, pages 613–641</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Conventional programming languages are growing ever more enormous, but not stronger. Inherent defects at the most basic level cause them to be both fat and weak: their primitive word-at-a-time style of programming inherited from their common ancestor—the von Neumann computer, their close coupling of semantics to state transitions, their division of programming into a world of expressions and a world of statements, their inability to effectively use powerful combining forms for building new programs from existing ones, and their lack of useful mathematical properties for reasoning about programs.
+
+An alternative functional style of programming is founded on the use of combining forms for creating programs. Functional programs deal with structured data, are often nonrepetitive and nonrecursive, are hierarchically constructed, do not name their arguments, and do not require the complex machinery of procedure declarations to become generally applicable. Combining forms can use high level programs to build still higher level ones in a style not possible in conventional languages.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h3 id="main-contribution">Main contribution</h3>
+<p>John Backus criticizes conventional imperative languages as abstractions closely tied to the von Neumann architecture. He argues that variables, assignment, sequential control flow, and the separation between expressions and statements make programs difficult to compose, transform, verify, and reason about mathematically. The paper proposes an alternative functional, or function-level, style in which programs are constructed from functions and combining forms rather than from assignments and explicitly named variables. (<a href="https://www.hinkali.com/Education/BackusTuringLecture1977.pdf">hinkali.com</a>)</p>
+
+<p>The proposed language, FP, operates on structured data and emphasizes composition, construction, selection, application to all elements, insertion, and related higher-order combining mechanisms. Backus presents an algebra of programs in which programs themselves are objects of algebraic manipulation. Equational laws are intended to support program transformation, correctness reasoning, and analysis of termination and behavior. The paper also describes an applicative model of computation and illustrates how larger programs can be built hierarchically from smaller components. (<a href="https://www.hinkali.com/Education/BackusTuringLecture1977.pdf">hinkali.com</a>)</p>
+
+<h3 id="influence">Influence</h3>
+<p>The paper helped establish function-level programming and stimulated subsequent work on FP implementations and related program-transformation techniques. Documented follow-on projects include Berkeley FP, parallel implementations of FP, and Backus’s later work on function-level semantics and optimization. (<a href="https://softwarepreservation.computerhistory.org/FP/">softwarepreservation.computerhistory.org</a>) The paper is also cited in the Haskell 98 language report, indicating its continuing place in the intellectual history of functional-language research, although Haskell follows the lambda-calculus tradition rather than adopting FP’s exact function-level model. (<a href="https://www.haskell.org/definition/haskell98-report.pdf">haskell.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/languages-theory/">languages theory</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/algebra-of-programs/">algebra of programs</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/applicative-computing-systems/">applicative computing systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/applicative-state-transition-systems/">applicative state transition systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/combining-forms/">combining forms</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/functional-forms/">functional forms</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/functional-programming/">functional programming</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/metacomposition/">metacomposition</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/program-correctness/">program correctness</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/program-termination/">program termination</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/program-transformation/">program transformation</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:00
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

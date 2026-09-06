@@ -1,0 +1,150 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>“Why Should I Trust You?” Explaining the Predictions of Any Classifier | Papers We Love</title>
+        <meta name="description" content="Despite widespread adoption, machine learning models remain mostly black boxes. Understanding the reasons behind predictions is, however, quite important in assessing trust, which is fundamental if one plans to take action based on a prediction, or w" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="“Why Should I Trust You?” Explaining the Predictions of Any Classifier | Papers We Love" />
+        <meta property="og:description" content="Despite widespread adoption, machine learning models remain mostly black boxes. Understanding the reasons behind predictions is, however, quite important in assessing trust, which is fundamental if one plans to take action based on a prediction, or w" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/why-should-i-trust-you-explaining-the-predictions--37efd190/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:00">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">“Why Should I Trust You?” Explaining the Predictions of Any Classifier</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Carlos Guestrin</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Marco Tulio Ribeiro</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Sameer Singh</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: August 13, 2016; Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD 2016), San Francisco, CA, USA</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Despite widespread adoption, machine learning models remain mostly black boxes. Understanding the reasons behind predictions is, however, quite important in assessing trust, which is fundamental if one plans to take action based on a prediction, or when choosing whether to deploy a new model. Such understanding also provides insights into the model, which can be used to transform an untrustworthy model or prediction into a trustworthy one.
+
+In this work, we propose LIME, a novel explanation technique that explains the predictions of any classifier in an interpretable and faithful manner, by learning an interpretable model locally around the prediction. We also propose a method to explain models by presenting representative individual predictions and their explanations in a non-redundant way, framing the task as a submodular optimization problem. We demonstrate the flexibility of these methods by explaining different models for text (e.g. random forests) and image classification (e.g. neural networks). We show the utility of explanations via novel experiments, both simulated and with human subjects, on various scenarios that require trust: deciding if one should trust a prediction, choosing between models, improving an untrustworthy classifier, and identifying why a classifier should not be trusted.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <ul>
+  <li>The paper introduced <strong>LIME</strong> (Local Interpretable Model-agnostic Explanations), establishing a widely used approach for explaining black-box predictions through local, sparse surrogate models. It also introduced <strong>SP-LIME</strong>, which selects representative and non-redundant instances for model-level inspection. The paper was published in the KDD 2016 proceedings on August 13, 2016. (<a href="https://doi.org/10.1145/2939672.2939778">doi.org</a>)</li>
+  <li>Its direct software influence is documented by the authors’ open-source <code>lime</code> project, which implements explanations for text, tabular, image, and regression models and explicitly identifies the paper as its basis. (<a href="https://github.com/marcotcr/lime">github.com</a>)</li>
+  <li>The method was subsequently integrated into broader interpretability tooling: InterpretML provides a <code>LimeTabular</code> implementation and presents LIME as a black-box local explanation method. (<a href="https://interpret.ml/docs/lime.html">interpret.ml</a>)</li>
+  <li>Follow-on research extended and evaluated the approach. <strong>Anchors</strong> developed a rule-based successor to linear LIME; later work provided theoretical analysis of LIME’s coefficients and studied instability arising from sampling and instance-dependent explanation quality. (<a href="https://arxiv.org/abs/1611.05817">arxiv.org</a>)</li>
+  <li>The sources reviewed establish substantial research and open-source tooling influence, but do not by themselves establish a specific commercial deployment by an industry company.</li>
+</ul>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/machine_learning/">machine learning</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/black-box-models/">black box models</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/explainable-ai/">explainable ai</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/human-in-the-loop/">human in the loop</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/lime/">lime</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/local-explanations/">local explanations</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/machine-learning/">machine learning</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/model-agnostic-explanations/">model agnostic explanations</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/model-interpretability/">model interpretability</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/submodular-optimization/">submodular optimization</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/trustworthy-ai/">trustworthy ai</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:00
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

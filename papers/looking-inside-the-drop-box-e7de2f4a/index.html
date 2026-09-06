@@ -1,0 +1,149 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Looking inside the (Drop) box | Papers We Love</title>
+        <meta name="description" content="Dropbox is a cloud based file storage service used by more than 100 million users. In spite of its widespread popularity, we believe that Dropbox as a platform hasn’t been analyzed extensively enough from a security standpoint. Also, the previous wor" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Looking inside the (Drop) box | Papers We Love" />
+        <meta property="og:description" content="Dropbox is a cloud based file storage service used by more than 100 million users. In spite of its widespread popularity, we believe that Dropbox as a platform hasn’t been analyzed extensively enough from a security standpoint. Also, the previous wor" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/looking-inside-the-drop-box-e7de2f4a/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:01">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Looking inside the (Drop) box</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Dhiru Kholia</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Przemysław Węgrzyn</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://www.usenix.org/system/files/conference/woot13/woot13-kholia.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: August 13, 2013 — 7th USENIX Workshop on Offensive Technologies (WOOT ’13), Washington, D.C.</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Dropbox is a cloud based file storage service used by more than 100 million users. In spite of its widespread popularity, we believe that Dropbox as a platform hasn’t been analyzed extensively enough from a security standpoint. Also, the previous work on the security analysis of Dropbox has been heavily censored. Moreover, the existing Python bytecode reversing techniques are not enough for reversing hardened applications like Dropbox.
+
+This paper presents new and generic techniques, to reverse engineer frozen Python applications, which are not limited to just the Dropbox world. We describe a method to bypass Dropbox’s two factor authentication and hijack Dropbox accounts. Additionally, generic techniques to intercept SSL data using code injection techniques and monkey patching are presented.
+
+We believe that our biggest contribution is to open up the Dropbox platform to further security analysis and research. Dropbox will / should no longer be a black box.
+
+Finally, we describe the design and implementation of an open-source version of Dropbox client (and yes, it runs on ARM too).</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <p>The paper presents a practical methodology for reversing hardened, frozen Python applications. Its approach combines process injection, runtime access to Python objects, custom marshalling, opcode recovery, and decompilation, avoiding the need to recover Dropbox’s changing bytecode-encryption algorithms directly. The authors apply these methods to expose Dropbox’s internal client API, intercept SSL data before encryption or after decryption, demonstrate weaknesses in the client’s authentication design, and implement an open-source-compatible client.</p>
+
+<p>Subsequent work explicitly built on these results. A later Dropbox security paper cited this paper as the basis for extracting the <code>host_id</code> token, analyzing the client’s authentication mechanism, and using reflective DLL injection and <code>LD_PRELOAD</code>; it then extended the analysis to newer Dropbox versions and RAM-based token extraction. (<a href="https://www.cpp.edu/polysec/project/dropbox/dropbox-paper.pdf">cpp.edu</a>) The paper’s Dropbox analysis was also reused as a concrete industry example in a later presentation on software obfuscation, specifically illustrating ciphered bytecode, opcode permutation, and a modified runtime as anti-reversing techniques. (<a href="https://compil2019.minesparis.psl.eu/wp-content/uploads/2019/02/BeatriceCreusillet-Obfuscation-quarkslab.pdf">compil2019.minesparis.psl.eu</a>) USENIX records the work as a WOOT ’13 conference paper published in August 2013. (<a href="https://www.usenix.org/conference/woot13/workshop-program/presentation/kholia">usenix.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/security/">security</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/account-hijacking/">account hijacking</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/cloud-storage-security/">cloud storage security</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/code-injection/">code injection</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/dropbox-security/">dropbox security</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/monkey-patching/">monkey patching</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/python-bytecode/">python bytecode</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/reverse-engineering/">reverse engineering</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/software-obfuscation/">software obfuscation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/ssl-interception/">ssl interception</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/two-factor-authentication/">two factor authentication</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:01
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

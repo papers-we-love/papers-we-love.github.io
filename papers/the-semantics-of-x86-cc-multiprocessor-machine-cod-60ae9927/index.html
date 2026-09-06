@@ -1,0 +1,153 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>The Semantics of x86-CC Multiprocessor Machine Code | Papers We Love</title>
+        <meta name="description" content="Multiprocessors are now dominant, but real multiprocessors do not provide the sequentially consistent memory that is assumed by most work on semantics and verification. Instead, they have subtle relaxed (or weak) memory models, usually described only" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="The Semantics of x86-CC Multiprocessor Machine Code | Papers We Love" />
+        <meta property="og:description" content="Multiprocessors are now dominant, but real multiprocessors do not provide the sequentially consistent memory that is assumed by most work on semantics and verification. Instead, they have subtle relaxed (or weak) memory models, usually described only" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/the-semantics-of-x86-cc-multiprocessor-machine-cod-60ae9927/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:59">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">The Semantics of x86-CC Multiprocessor Machine Code</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Francesco Zappa Nardelli</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Jade Alglave</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Magnus O. Myreen</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Peter Sewell</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Scott Owens</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Susmit Sarkar</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Thomas Braibant</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Tom Ridge</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://www.cl.cam.ac.uk/~pes20/weakmemory/popl09.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: January 21, 2009; Proceedings of the 36th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages (POPL 2009), January 18–24, 2009</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Multiprocessors are now dominant, but real multiprocessors do not provide the sequentially consistent memory that is assumed by most work on semantics and verification. Instead, they have subtle relaxed (or weak) memory models, usually described only in ambiguous prose, leading to widespread confusion.
+
+We develop a rigorous and accurate semantics for x86 multiprocessor programs, from instruction decoding to relaxed memory model, mechanised in HOL. We test the semantics against actual processors and the vendor litmus-test examples, and give an equivalent abstract-machine characterisation of our axiomatic memory model. For programs that are (in some precise sense) data-race free, we prove in HOL that their behaviour is sequentially consistent. We also contrast the x86 model with some aspects of Power and ARM behaviour.
+
+This provides a solid intuition for low-level programming, and a sound foundation for future work on verification, static analysis, and compilation of low-level concurrent code.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>The paper develops <strong>x86-CC</strong>, a formal semantics for x86 multiprocessor machine code that combines instruction decoding, instruction-level event semantics, and a relaxed memory model. The model represents executions using per-processor view orders, reads-from relations, per-location write serialization, lock serialization, preserved program order, and a causality relation. This framework captures behaviors that cannot be represented by a single sequentially consistent interleaving, including executions in which processors observe writes to different locations in different orders.</p>
+
+<p>The instruction semantics covers a substantial core of 32-bit x86 instructions and addressing modes. It is parameterized over sequential and event-based combinators, allowing the same instruction definitions to support both sequential execution and weak-memory reasoning. The decoding function is formalized in HOL directly from vendor opcode documentation.</p>
+
+<p>The authors validate the model using three forms of testing: an executable checker for enumerating valid executions, litmus tests run on several Intel and AMD multiprocessors, and randomized testing of sequential instruction semantics against an Intel Pentium 4. The paper also proves that, under the paper’s x86-specific notion of data-race freedom, valid executions can be represented by sequentially consistent executions. An equivalent abstract-machine characterization uses per-processor FIFO write queues and per-location write serializations.</p>
+
+<p>The paper’s later addendum is important: the authors report that x86-CC was too restrictive with respect to at least some observed hardware behaviors and that the underlying vendor specifications were problematic as programming models. This work directly motivated the subsequent <strong>x86-TSO</strong> model, which replaced x86-CC with a simpler model based on write buffers and was intended to better match hardware and programmer expectations. The Cambridge project page now advises focusing on x86-TSO for most purposes because x86-CC is unsound with respect to observed processor behavior. (<a href="https://citeseerx.ist.psu.edu/document?doi=e949f00933afc88cfc8982c2becb5971635085d9&amp;repid=rep1&amp;type=pdf">citeseerx.ist.psu.edu</a>)</p>
+
+<p>The principal lasting contribution of x86-CC was therefore methodological as well as technical: it demonstrated how vendor memory-ordering prose, machine-code semantics, mechanized proofs, litmus testing, and hardware experiments could be integrated into a rigorous architecture model. Its limitations also exposed the need to validate formal architecture specifications empirically, leading to the more widely used x86-TSO line of work. The paper is subsequently documented as a foundational predecessor to x86-TSO in later formal-memory-model literature. (<a href="https://citeseerx.ist.psu.edu/document?doi=e9b39d468b8431d754c5c0b6ffc4c3867dcf4e33&amp;repid=rep1&amp;type=pdf">citeseerx.ist.psu.edu</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/concurrency/">concurrency</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/relaxed-memory-models/">relaxed memory models</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/semantics/">semantics</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:59
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

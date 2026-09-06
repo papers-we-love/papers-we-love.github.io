@@ -1,0 +1,162 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Effective Inter-Component Communication Mapping in Android with Epicc: An Essential Step Towards Holistic Security Analysis | Papers We Love</title>
+        <meta name="description" content="Many threats present in smartphones are the result of interactions between application components, not just artifacts of single components. However, current techniques for identifying inter-application communication are ad hoc and do not scale to lar" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Effective Inter-Component Communication Mapping in Android with Epicc: An Essential Step Towards Holistic Security Analysis | Papers We Love" />
+        <meta property="og:description" content="Many threats present in smartphones are the result of interactions between application components, not just artifacts of single components. However, current techniques for identifying inter-application communication are ad hoc and do not scale to lar" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/effective-inter-component-communication-mapping-in-38b8253a/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:59">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Effective Inter-Component Communication Mapping in Android with Epicc: An Essential Step Towards Holistic Security Analysis</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Alexandre Bartel</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Damien Octeau</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Eric Bodden</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Jacques Klein</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Patrick McDaniel</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Somesh Jha</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Yves Le Traon</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://docteau.github.io/pubs/octeau-sec13.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: August 14–16, 2013; Proceedings of the 22nd USENIX Security Symposium, Washington, D.C., USA</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Many threats present in smartphones are the result of interactions between application components, not just artifacts of single components. However, current techniques for identifying inter-application communication are ad hoc and do not scale to large numbers of applications. In this paper, we reduce the discovery of inter-component communication (ICC) in smartphones to an instance of the Interprocedural Distributive Environment (IDE) problem, and develop a sound static analysis technique targeted to the Android platform. We apply this analysis to 1,200 applications selected from the Play store and characterize the locations and substance of their ICC. Experiments show that full specifications for ICC can be identified for over 93% of ICC locations for the applications studied. Further the analysis scales well; analysis of each application took on average 113 seconds to complete. Epicc, the resulting tool, finds ICC vulnerabilities with far fewer false positives than the next best tool. In this way, we develop a scalable vehicle to extend current security analysis to entire collections of applications as well as the interfaces they export.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>The paper formalizes Android Intent-based inter-component communication (ICC) analysis as an Interprocedural Distributive Environment problem and introduces Epicc, a static-analysis tool for recovering ICC source and sink specifications. The analysis models explicit, implicit, mixed, and dynamically registered broadcast communication, including component targets, actions, categories, permissions, and extra-data keys. It combines string analysis, points-to and call-graph construction, IDE-based interprocedural data-flow analysis, and database-backed matching of component entry and exit points.</p>
+
+<p>In experiments on 1,200 Google Play applications, Epicc recovered unambiguous ICC specifications for 91.65% of locations in a random sample and 94.18% in a popular-application sample. The reported average processing time was approximately 38 seconds per application for the random sample and 144 seconds per application for the larger popular-application sample. Compared with ComDroid, Epicc reported 32% fewer potential vulnerabilities, which the authors attribute primarily to more precise call-graph construction and flow-, branch-, and context-sensitive tracking. The main limitations were incomplete handling of URIs and Content Providers, plus potential unsoundness involving reflection, native code, and approximated component lifecycles.</p>
+
+<h3 id="influence-on-subsequent-research">Influence on subsequent research</h3>
+
+<ul>
+  <li>Epicc established a reusable foundation for Android ICC resolution. IccTA later combined Epicc-derived ICC information with FlowDroid-style taint analysis to detect privacy leaks across Android components and applications. (<a href="https://publica.fraunhofer.de/entities/publication/2f57e205-5883-454d-8a88-0be3da7d0270">publica.fraunhofer.de</a>)</li>
+  <li>The authors’ subsequent IC3 work replaced Epicc’s specialized object models with composite constant propagation and the COAL specification language. That work explicitly compares itself with Epicc and reports substantially fewer potential component links, improving precision for downstream analyses. (<a href="https://docteau.github.io/pubs/octeau-icse15.pdf">docteau.github.io</a>)</li>
+  <li>PRIMO extended this line of work to market-scale ICC analysis by ranking likely false-positive links. Its authors describe Epicc and IC3 as the ICC-value computation components underlying later large-scale link analysis. (<a href="https://patrickmcdaniel.org/pubs/popl16.pdf">patrickmcdaniel.org</a>)</li>
+  <li>Later research continued to use Epicc as a reference point while addressing its coverage limitations. RAICC, for example, identifies that established tools including Epicc primarily model documented ICC APIs and proposes techniques for revealing atypical ICC paths. (<a href="https://github.com/JordanSamhi/RAICC">github.com</a>)</li>
+  <li>Subsequent evaluations have treated Epicc, or its successor IC3, as a baseline ICC-resolution technique and have identified remaining completeness and precision challenges for static Android ICC analysis. (<a href="https://arxiv.org/abs/2111.05649">arxiv.org</a>)</li>
+</ul>
+
+<p>The search found clear influence on subsequent Android program-analysis research, including ICC resolution, privacy-leak detection, large-scale analysis, and atypical-communication modeling. It did not provide reliable evidence of a specific commercial or industry deployment of Epicc itself.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/android/">android</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/android-security/">android security</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/application-collusion/">application collusion</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/component-hijacking/">component hijacking</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/ide-analysis/">ide analysis</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/information-flow-analysis/">information flow analysis</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/intent-analysis/">intent analysis</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/inter-application-communication/">inter application communication</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/inter-component-communication/">inter component communication</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/soot/">soot</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/static-analysis/">static analysis</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:59
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

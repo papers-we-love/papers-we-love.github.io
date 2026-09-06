@@ -1,0 +1,147 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Managing Update Conflicts in Bayou, a Weakly Connected Replicated Storage System | Papers We Love</title>
+        <meta name="description" content="Bayou is a replicated, weakly consistent storage system designed for a mobile computing environment that includes portable machines with less than ideal network connectivity. To maximize availability, users can read and write any accessible replica. " />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Managing Update Conflicts in Bayou, a Weakly Connected Replicated Storage System | Papers We Love" />
+        <meta property="og:description" content="Bayou is a replicated, weakly consistent storage system designed for a mobile computing environment that includes portable machines with less than ideal network connectivity. To maximize availability, users can read and write any accessible replica. " />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/managing-update-conflicts-in-bayou-a-weakly-connec-895bba0a/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:00">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Managing Update Conflicts in Bayou, a Weakly Connected Replicated Storage System</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Alan J. Demers</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Carl H. Hauser</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Douglas B. Terry</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Karin Petersen</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Marvin M. Theimer</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Mike J. Spreitzer</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://www.cs.utexas.edu/~lorenzo/corsi/cs380d/papers/p172-terry.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: December 3, 1995; presented at the Fifteenth ACM Symposium on Operating Systems Principles (SOSP '95), December 3–6, 1995; published in ACM SIGOPS Operating Systems Review, Volume 29, Issue 5, pp. 172–182.</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Bayou is a replicated, weakly consistent storage system designed for a mobile computing environment that includes portable machines with less than ideal network connectivity. To maximize availability, users can read and write any accessible replica. Bayou’s design has focused on supporting application-specific mechanisms to detect and resolve the update conflicts that naturally arise in such a system, ensuring that replicas move towards eventual consistency, and defining a protocol by which the resolution of update conflicts stabilizes. It includes novel methods for conflict detection, called dependency checks, and per-write conflict resolution based on client-provided merge procedures. To guarantee eventual consistency, Bayou servers must be able to roll-back the effects of previously executed writes and redo them according to a global serialization order. Furthermore, Bayou permits clients to observe the results of all writes received by a server, including tentative writes whose conflicts have not been ultimately resolved. This paper presents the motivation for and design of these mechanisms and describes the experiences gained with an initial implementation of the system.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <p>Bayou presents a weakly consistent, fully replicated storage system for mobile and intermittently connected environments. Clients may read from and write to any reachable replica, while servers exchange updates through pair-wise anti-entropy sessions. Each write carries an application-defined dependency check and a per-write merge procedure, allowing conflicts to be detected and resolved according to application semantics rather than only at the file or record level. Writes are initially tentative; deterministic execution in a globally defined order, together with rollback and replay, drives replicas toward eventual consistency. A primary server commits writes and thereby stabilizes their results, while clients may inspect either tentative or committed data. The prototype demonstrated these ideas using a meeting-room scheduler and a bibliographic database, with security provided through public-key authentication and signed access-control certificates. The design’s principal trade-off is that applications must explicitly tolerate tentative, weakly consistent results and participate in conflict handling.</p>
+
+<p>The paper influenced subsequent highly available storage research. Amazon’s Dynamo paper explicitly cites Bayou as a system supporting disconnected operation, eventual consistency, and application-level conflict resolution, while distinguishing Dynamo’s key-value and large-scale service-oriented design from Bayou’s relational and mobile-computing focus. Dynamo also adopted the broader design pattern of allowing continued reads and writes during failures and resolving divergent versions through application-assisted mechanisms. (<a href="https://doi.org/10.1145/224056.224070">doi.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/datastores/">datastores</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/anti-entropy/">anti entropy</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/conflict-resolution/">conflict resolution</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/dependency-checks/">dependency checks</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-storage/">distributed storage</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/eventual-consistency/">eventual consistency</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/merge-procedures/">merge procedures</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/mobile-computing/">mobile computing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/optimistic-replication/">optimistic replication</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/replicated-databases/">replicated databases</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/weakly-consistent-replication/">weakly consistent replication</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:00
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

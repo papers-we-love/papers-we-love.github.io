@@ -1,0 +1,158 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Paxos Made Moderately Complex | Papers We Love</title>
+        <meta name="description" content="For anybody who has ever tried to implement it, Paxos is by no means a simple protocol, even though it is based on relatively simple invariants. This paper provides imperative pseudo-code for the full Paxos (or Multi-Paxos) protocol without shying aw" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Paxos Made Moderately Complex | Papers We Love" />
+        <meta property="og:description" content="For anybody who has ever tried to implement it, Paxos is by no means a simple protocol, even though it is based on relatively simple invariants. This paper provides imperative pseudo-code for the full Paxos (or Multi-Paxos) protocol without shying aw" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/paxos-made-moderately-complex-5ac4ed77/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Paxos Made Moderately Complex</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Robbert van Renesse</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/paxos-made-moderately-complex.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: March 25, 2011 (date shown on the supplied manuscript PDF); a substantially expanded version by Robbert van Renesse and Deniz Altinbuken was published in ACM Computing Surveys on February 17, 2015.</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>For anybody who has ever tried to implement it, Paxos is by no means a simple protocol, even though it is based on relatively simple invariants. This paper provides imperative pseudo-code for the full Paxos (or Multi-Paxos) protocol without shying away from discussing various implementation details. The initial description avoids optimizations that complicate comprehension. Next we discuss liveness, and list various optimizations that make the protocol practical.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>The paper presents an operational description of Multi-Paxos for replicated state machines in an asynchronous message-passing environment with crash failures. It decomposes the protocol into replicas, leaders, scouts, commanders, and acceptors, and explains their behavior with imperative pseudocode.</p>
+
+<p>Replicas assign client commands to numbered log slots and execute commands only after a decision has been learned for the corresponding slot. The safety argument is organized around invariants: a slot cannot have two different decided commands; replicas execute decided commands in slot order; replicas’ application states therefore remain equivalent; and replica progress does not move backward.</p>
+
+<p>Acceptors provide durable logical memory for consensus. Ballot numbers impose an ordering on competing attempts, while majority intersection prevents a later ballot from selecting a value inconsistent with an earlier chosen value. Leaders use scouts to establish a ballot and recover previously accepted proposals, then use commanders to obtain acceptance for proposals. The central inductive argument is that leaders must preserve previously chosen values when moving to higher ballots; this ensures that no slot receives conflicting decisions.</p>
+
+<p>The paper distinguishes safety from liveness. Safety can hold despite failures and indefinitely delayed messages, but unrestricted asynchrony permits competing leaders to repeatedly preempt one another. Progress therefore requires additional practical assumptions, such as bounded clock drift and eventual message-delay bounds, together with failure detection or adaptive timeouts that allow one leader to remain effective long enough to complete decisions.</p>
+
+<p>The initial presentation is intentionally impractical. The paper then discusses reducing acceptor state and phase-one messages, garbage collection, co-locating protocol roles, optimizing read-only commands, using leases, persisting state, and recovering from failures. These techniques connect the abstract protocol to implementable replicated services.</p>
+
+<h2 id="influence-and-subsequent-use">Influence and Subsequent Use</h2>
+
+<p>The manuscript’s role-oriented pseudocode and invariant-based explanation have been used as teaching and implementation material. The DSLabs distributed-systems laboratory explicitly recommends the paper when teaching Paxos-based state-machine replication, and subsequent student and open-source projects report implementing Multi-Paxos by following its architecture and protocol roles. (<a href="https://ellismichael.com/dslabs/">ellismichael.com</a>)</p>
+
+<p>A later research paper, <em>Moderately Complex Paxos Made Simple</em>, directly builds on the protocol variant described here. It develops higher-level executable specifications for Multi-Paxos, reconfiguration, preemption, state reduction, and failure detection, and uses TLA+ to machine-check safety properties. (<a href="https://arxiv.org/abs/1704.00082">arxiv.org</a>)</p>
+
+<p>The expanded journal version appeared in ACM Computing Surveys in 2015, with Robbert van Renesse and Deniz Altinbuken as authors. It formalized a reconfigurable Multi-Paxos presentation and supplied additional variants and implementation guidance. (<a href="https://doi.org/10.1145/2673577">doi.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/distributed_systems/">distributed systems</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/asynchronous-systems/">asynchronous systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/crash-failures/">crash failures</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-consensus/">distributed consensus</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-systems/">distributed systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/failure-detection/">failure detection</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/fault-tolerance/">fault tolerance</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/multi-paxos/">multi paxos</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/paxos/">paxos</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/replicated-state-machines/">replicated state machines</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/state-machine-replication/">state machine replication</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

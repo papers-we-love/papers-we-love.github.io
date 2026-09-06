@@ -1,0 +1,161 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Live Migration of Virtual Machines | Papers We Love</title>
+        <meta name="description" content="Migrating operating system instances across distinct physical hosts is a useful tool for administrators of data centers and clusters: It allows a clean separation between hardware and software, and facilitates fault management, load balancing, and lo" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Live Migration of Virtual Machines | Papers We Love" />
+        <meta property="og:description" content="Migrating operating system instances across distinct physical hosts is a useful tool for administrators of data centers and clusters: It allows a clean separation between hardware and software, and facilitates fault management, load balancing, and lo" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/live-migration-of-virtual-machines-915b417a/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:55">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Live Migration of Virtual Machines</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Andrew Warfield</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Christian Limpach</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Christopher Clark</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Eric Jul</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Ian Pratt</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Jacob Gorm Hansen</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Keir Fraser</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Steven Hand</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/virtual_machines/live-migration-of-virtual-machines.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: May 2005; 2nd Symposium on Networked Systems Design & Implementation (NSDI '05), Boston, MA</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Migrating operating system instances across distinct physical hosts is a useful tool for administrators of data centers and clusters: It allows a clean separation between hardware and software, and facilitates fault management, load balancing, and low-level system maintenance.
+By carrying out the majority of migration while OSes continue to run, we achieve impressive performance with minimal service downtimes; we demonstrate the migration of entire OS instances on a commodity cluster, recording service downtimes as low as 60ms. We show that that our performance is sufficient to make live migration a practical tool even for servers running interactive loads.
+In this paper we consider the design options for migrating OSes running services with liveness constraints, focusing on data center and cluster environments. We introduce and analyze the concept of writable working set, and present the design, implementation and evaluation of high-performance OS migration built on top of the Xen VMM.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>The paper presents a live migration mechanism for Xen that moves a running operating-system instance between physical hosts while keeping service interruption brief. Its central technique is iterative pre-copy: memory pages are copied while the virtual machine continues executing, modified pages are recopied in later rounds, and the VM is paused only briefly to transfer the remaining state and CPU registers. The authors introduce the writable working set (WWS) as a way to characterize frequently modified pages that limit the effectiveness of pre-copy migration.</p>
+
+<p>The system combines dirty-page tracking through Xen shadow page tables, adaptive migration bandwidth, transactional failure handling, and network redirection using unsolicited ARP replies. It assumes a well-connected cluster and network-attached storage, while leaving wide-area migration and local-disk migration as future work. In the evaluation, an 800 MB SPECweb99 VM migrated in 71 seconds with 210 ms of downtime, while a 64 MB Quake 3 server experienced 60 ms of downtime. A synthetic workload that dirtied memory faster than the network could transfer it produced 3.5 seconds of downtime, demonstrating a fundamental limitation of pre-copy migration.</p>
+
+<h2 id="influence">Influence</h2>
+
+<p>The paper helped establish iterative pre-copy migration, dirty-page tracking, workload-dependent writable sets, and bandwidth/downtime trade-offs as standard topics in virtual-machine migration research. Later work explicitly treats pre-copy as the traditional baseline when developing post-copy migration, and subsequent surveys identify pre-copy as a commonly used approach across Xen, VMware, KVM, Hyper-V, and other virtualization platforms. (<a href="https://cir.nii.ac.jp/crid/1363670319032509952">cir.nii.ac.jp</a>)</p>
+
+<p>Research following this work expanded the problem space to post-copy migration, hybrid pre/post-copy schemes, migration-cost modeling, downtime prediction, and network-contention management. These directions directly address limitations identified by the paper, especially repeated copying of hot pages, unpredictable migration duration, and competition between migration traffic and application traffic. (<a href="https://www.sciencedirect.com/science/article/pii/S0167739X16301133">sciencedirect.com</a>)</p>
+
+<p>The operational goals demonstrated in the paper—moving running VMs for maintenance, load balancing, host evacuation, and resource management—are reflected in current virtualization platforms. Xen documents live migration as a supported mechanism for moving running VMs between physical servers, while Microsoft Hyper-V and Google Compute Engine document live migration for maintenance, balancing, and infrastructure management. These deployments show that live migration became an established industry capability, although the available sources do not by themselves establish that each implementation directly derives from this paper. (<a href="https://xenbits.xen.org/docs/unstable/features/migration.html">xenbits.xen.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/virtual_machines/">virtual machines</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/data-centers/">data centers</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/fault-management/">fault management</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/live-migration/">live migration</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/load-balancing/">load balancing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/network-bandwidth-adaptation/">network bandwidth adaptation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/pre-copy-migration/">pre copy migration</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/virtual-machines/">virtual machines</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/virtualization/">virtualization</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/writable-working-set/">writable working set</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/xen/">xen</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:55
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

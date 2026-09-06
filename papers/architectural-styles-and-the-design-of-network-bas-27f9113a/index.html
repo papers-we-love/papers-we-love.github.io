@@ -1,0 +1,156 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Architectural Styles and the Design of Network-based Software Architectures | Papers We Love</title>
+        <meta name="description" content="The World Wide Web has succeeded in large part because its software architecture has been designed to meet the needs of an Internet-scale distributed hypermedia system. The Web has been iteratively developed over the past ten years through a series o" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Architectural Styles and the Design of Network-based Software Architectures | Papers We Love" />
+        <meta property="og:description" content="The World Wide Web has succeeded in large part because its software architecture has been designed to meet the needs of an Internet-scale distributed hypermedia system. The Web has been iteratively developed over the past ten years through a series o" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/architectural-styles-and-the-design-of-network-bas-27f9113a/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:59">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Architectural Styles and the Design of Network-based Software Architectures</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Roy Thomas Fielding</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://roy.gbiv.com/pubs/dissertation/fielding_dissertation.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: 2000 (Ph.D. dissertation, University of California, Irvine)</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>The World Wide Web has succeeded in large part because its software architecture has been designed to meet the needs of an Internet-scale distributed hypermedia system. The Web has been iteratively developed over the past ten years through a series of modifications to the standards that define its architecture. In order to identify those aspects of the Web that needed improvement and avoid undesirable modifications, a model for the modern Web architecture was needed to guide its design, definition, and deployment.
+Software architecture research investigates methods for determining how best to partition a system, how components identify and communicate with each other, how information is communicated, how elements of a system can evolve independently, and how all of the above can be described using formal and informal notations. My work is motivated by the desire to understand and evaluate the architectural design of network-based application software through principled use of architectural constraints, thereby obtaining the functional, performance, and social properties desired of an architecture. An architectural style is a named, coordinated set of architectural constraints.
+This dissertation defines a framework for understanding software architecture via architectural styles and demonstrates how styles can be used to guide the architectural design of network-based application software. A survey of architectural styles for network-based applications is used to classify styles according to the architectural properties they induce on an architecture for distributed hypermedia. I then introduce the Representational State Transfer (REST) architectural style and describe how REST has been used to guide the design and development of the architecture for the modern Web.
+REST emphasizes scalability of component interactions, generality of interfaces, independent deployment of components, and intermediary components to reduce interaction latency, enforce security, and encapsulate legacy systems. I describe the software engineering principles guiding REST and the interaction constraints chosen to retain those principles, contrasting them to the constraints of other architectural styles.
+Finally, I describe the lessons learned from applying REST to the design of the Hypertext Transfer Protocol and Uniform Resource Identifier standards, and from their subsequent deployment in Web client and server software.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="overview">Overview</h2>
+
+<p>Fielding presents a framework for analyzing software architecture as a set of run-time components, connectors, data elements, configurations, and architectural constraints. Architectural styles are treated as named sets of coordinated constraints whose effects can be evaluated through the properties they induce, such as scalability, performance, simplicity, modifiability, visibility, portability, and reliability.</p>
+
+<p>The dissertation surveys network-based architectural styles—including pipe-and-filter, replication, client-server, layered systems, mobile code, event-based integration, and distributed objects—and evaluates their trade-offs for distributed hypermedia. It argues that architecture should be selected according to application requirements rather than adopted as a universal solution.</p>
+
+<p>The central contribution is Representational State Transfer (REST), derived incrementally from client-server separation, stateless communication, caching, a uniform interface, layered systems, and optional code-on-demand. REST’s uniform interface is defined through four constraints: identification of resources, manipulation of resources through representations, self-descriptive messages, and hypermedia as the engine of application state. The resource abstraction separates a conceptual target from its potentially changing representations, allowing implementations to evolve behind a stable interface. Stateless interactions and cacheable responses support scalability and efficiency, while layered intermediaries enable caching, security enforcement, protocol translation, load balancing, and legacy-system encapsulation.</p>
+
+<p>The dissertation applies REST as a design and evaluation model to URI and HTTP standardization and to deployed Web software, including Apache and libwww-perl. It also identifies architectural mismatches, including URI-embedded session identifiers and cookie-based state, where deployed mechanisms conflict with REST’s goals of statelessness, visibility, cacheability, and independent evolution.</p>
+
+<h2 id="influence">Influence</h2>
+
+<p>The dissertation is widely recognized as the work that introduced and formally articulated REST as an architectural style for distributed hypermedia. A later ESEC/FSE paper by Fielding and collaborators describes REST as continuing to guide understanding of the Web and traces related architectural styles inspired by its principles. (<a href="https://research.google/pubs/reflections-on-the-rest-architectural-style-and-principled-design-of-the-modern-web-architecture/">research.google</a>) The University of California, Irvine dissertation archive identifies the work as a dissertation defining the REST architecture, while the University of Pennsylvania’s Online Books Page describes it as the dissertation that introduced REST. (<a href="https://ics.uci.edu/~fielding/pubs/dissertation/top.htm">ics.uci.edu</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/api_design/">api design</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/architectural-styles/">architectural styles</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-systems/">distributed systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/http/">http</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/hypermedia/">hypermedia</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/network-based-applications/">network based applications</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/rest/">rest</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/scalability/">scalability</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/software-architecture/">software architecture</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/uniform-interface/">uniform interface</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/web-architecture/">web architecture</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:59
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

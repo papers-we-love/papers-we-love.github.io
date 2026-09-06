@@ -1,0 +1,150 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>A Wait-Free Stack | Papers We Love</title>
+        <meta name="description" content="In this paper, we describe a novel algorithm to create a concurrent wait-free stack. To the best of our knowledge, this is the first wait-free algorithm for a general purpose stack. In the past, researchers have proposed restricted wait-free implemen" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="A Wait-Free Stack | Papers We Love" />
+        <meta property="og:description" content="In this paper, we describe a novel algorithm to create a concurrent wait-free stack. To the best of our knowledge, this is the first wait-free algorithm for a general purpose stack. In the past, researchers have proposed restricted wait-free implemen" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/a-wait-free-stack-7965a843/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">A Wait-Free Stack</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Pooja Aggarwal</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Seep Goel</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Smruti R. Sarangi</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/non_blocking_algorithms/a-wait-free-stack.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: October 1, 2015 (arXiv preprint); published in 2016 in the proceedings of the 12th International Conference on Distributed Computing and Internet Technology (ICDCIT 2016), held January 15–18, 2016</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>In this paper, we describe a novel algorithm to create a concurrent wait-free stack. To the best of our knowledge, this is the first wait-free algorithm for a general purpose stack. In the past, researchers have proposed restricted wait-free implementations of stacks, lock-free implementations, and efficient universal constructions that can support wait-free stacks. The crux of our wait-free implementation is a fast pop operation that does not modify the stack top; instead, it walks down the stack till it finds a node that is unmarked. It marks it but does not delete it. Subsequently, it is lazily deleted by a cleanup operation. This operation keeps the size of the stack in check by not allowing the size of the stack to increase beyond a factor of W as compared to the actual size. All our operations are wait-free and linearizable.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <p>The paper presents a linked-list-based concurrent stack intended to provide both <strong>wait-freedom</strong> and <strong>linearizability</strong>. Its principal design choice is to separate logical removal from physical deletion. A <code>pop</code> operation reads the top once, traverses predecessor links, and atomically marks the first unmarked node. Marking is the logical linearization event for a successful pop; an empty result is returned when traversal reaches the sentinel. Because pop operations do not modify the top pointer, multiple pops can proceed concurrently and do not directly contend with pushes.</p>
+
+<p>Pushes use an announce array, monotonically increasing phase numbers, and helping. Threads help the oldest pending push so that a delayed thread cannot starve. A successful push first attaches its node through an atomic next-pointer update and then advances the top pointer. The top-pointer update is the push linearization point. The protocol ensures that a push request is inserted at most once, even when multiple threads help it.</p>
+
+<p>Marked nodes are physically removed lazily. The cleanup mechanism groups nodes into ranges of size <code>W</code>; when sufficient activity has occurred for a range, one cleanup request is selected and helped by participating threads. Cleanup bypasses a contiguous sequence of marked nodes by changing a predecessor link. This bounds the list’s physical size by a factor related to <code>W</code> and the number of logically live stack elements, preventing pop traversals from growing without limit.</p>
+
+<p>The claimed worst-case complexities are <code>O(N)</code> for ordinary pushes, <code>O(NWS)</code> for cleanup-sensitive operations, and <code>O(NWS)</code> worst-case for pop, where <code>N</code> is the number of threads, <code>S</code> is the logical stack size, and <code>W</code> is the cleanup parameter. The paper reports an amortized pop cost of <code>O(NS)</code> across groups of <code>W</code> operations. Thus, the design trades inexpensive common-case operations for infrequent, potentially expensive cleanup; choosing <code>W</code> is workload-dependent. The implementation relies on atomic compare-and-set, atomic marking, fetch-and-add-style counters, and automatic or otherwise safe memory reclamation.</p>
+
+<p>The work was initially released as arXiv:1510.00116 on October 1, 2015, and subsequently appeared as an ICDCIT 2016 Springer chapter, pages 43–55. (<a href="https://arxiv.org/abs/1510.00116">arxiv.org</a>) A later wait-free array-based stack, FA-Stack, represents the same broader research direction—practical wait-free stacks with bounded operation steps—but the available source does not establish that it directly derives from this paper. (<a href="https://www.researchgate.net/publication/320886284_FA-Stack_A_Fast_Array-based_Stack_with_Wait-free_Progress_Guarantee">researchgate.net</a>) More recent work on wait-free deques treats a stack as a restricted deque and reports a wait-free stack with polylogarithmic amortized step complexity, demonstrating continued progress on the complexity and scalability challenges addressed by this paper. (<a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol286-opodis2023/LIPIcs.OPODIS.2023.17/LIPIcs.OPODIS.2023.17.pdf">drops.dagstuhl.de</a>) The search found no clear evidence of substantial industry adoption or an explicit direct technical lineage from this specific implementation; its documented impact is primarily as an early general-purpose wait-free stack design within concurrent-algorithm research.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/non_blocking_algorithms/">non blocking algorithms</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/compare-and-set/">compare and set</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/concurrent-data-structures/">concurrent data structures</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/concurrent-stack/">concurrent stack</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/garbage-collection/">garbage collection</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/helping/">helping</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/linearizability/">linearizability</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/lock-free/">lock free</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/memory-reclamation/">memory reclamation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/non-blocking-algorithms/">non blocking algorithms</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/wait-free/">wait free</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

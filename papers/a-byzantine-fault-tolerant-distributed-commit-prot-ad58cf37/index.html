@@ -1,0 +1,141 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>A Byzantine Fault Tolerant Distributed Commit Protocol | Papers We Love</title>
+        <meta name="description" content="In this paper, we present a Byzantine fault tolerant distributed commit protocol for transactions running over untrusted networks. The traditional two-phase commit protocol is enhanced by replicating the coordinator and by running a Byzantine agreeme" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="A Byzantine Fault Tolerant Distributed Commit Protocol | Papers We Love" />
+        <meta property="og:description" content="In this paper, we present a Byzantine fault tolerant distributed commit protocol for transactions running over untrusted networks. The traditional two-phase commit protocol is enhanced by replicating the coordinator and by running a Byzantine agreeme" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/a-byzantine-fault-tolerant-distributed-commit-prot-ad58cf37/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">A Byzantine Fault Tolerant Distributed Commit Protocol</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Wenbing Zhao</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/byzantine-fault-tolerant-distributed-commit-protocol.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: September 25–26, 2007; Proceedings of the Third IEEE International Symposium on Dependable, Autonomic and Secure Computing (DASC 2007), Columbia, Maryland, USA</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>In this paper, we present a Byzantine fault tolerant distributed commit protocol for transactions running over untrusted networks. The traditional two-phase commit protocol is enhanced by replicating the coordinator and by running a Byzantine agreement algorithm among the coordinator replicas. Our protocol can tolerate Byzantine faults at the coordinator replicas and a subset of malicious faults at the participants. A decision certificate, which includes a set of registration records and a set of votes from participants, is used to facilitate the coordinator replicas to reach a Byzantine agreement on the outcome of each transaction. The certificate also limits the ways a faulty replica can use towards non-atomic termination of transactions, or semantically incorrect transaction outcomes.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <p>The paper proposes BFTDC, a Byzantine fault-tolerant extension of two-phase commit for distributed transactions operating over untrusted networks. Instead of relying on a single coordinator, it replicates the coordinator across <code>3f + 1</code> replicas and tolerates up to <code>f</code> Byzantine coordinator failures. Coordinator replicas execute an adapted Byzantine agreement protocol for each transaction, while participants accept a commit or abort decision only after receiving at least <code>f + 1</code> matching signed decisions, ensuring that at least one decision came from a correct coordinator replica. (<a href="https://arxiv.org/abs/cs/0612083">arxiv.org</a>)</p>
+
+<p>The central mechanism is a decision certificate containing signed participant-registration records and signed participant votes. The certificate binds the proposed outcome to a particular transaction and allows backup replicas to verify that the primary’s proposal is consistent with the known participant set and votes. The protocol combines this certificate with Byzantine-agreement phases analogous to pre-prepare, prepare, and commit. The authors provide informal arguments for three safety properties: a committed transaction must include all correct participants and their commit votes; correct coordinator replicas must agree on one outcome; and correct participants must terminate atomically.</p>
+
+<p>The protocol assumes authenticated communication and unforgeable digital signatures. It places stronger restrictions on the initiator and on the behavior that can be tolerated from participants than on coordinator replicas: arbitrary Byzantine coordinator faults are addressed, whereas only selected participant behaviors—such as sending conflicting votes—are covered. Liveness additionally depends on bounded message and processing delays, with increasing timeouts used during view changes. The implementation integrates the protocol with the Kandula WS-AtomicTransaction framework, Apache Axis, and WSS4J. In the reported 20-server testbed, the prototype added approximately 200–400 milliseconds of latency as the number of participants increased from two to ten, while end-to-end latency increased by roughly 20–30% relative to the signed-message 2PC comparison.</p>
+
+<p>The paper was published in DASC 2007, held in Columbia, Maryland, on September 25–26, 2007. (<a href="https://dblp.org/db/conf/dasc/index.html">dblp.org</a>) A closely related academic follow-on is Honglei Zhang’s 2007 Cleveland State University thesis, which expands the approach into a broader Byzantine-fault-tolerant coordination framework covering transaction activation, registration, completion, and distributed commit; it retains the decision-certificate idea and incorporates the mechanisms into a WS-AT framework. (<a href="https://engagedscholarship.csuohio.edu/etdarchive/801/">engagedscholarship.csuohio.edu</a>) Another later research effort, “Azvasa,” investigates Byzantine-fault-tolerant distributed commit with proactive recovery and proposes reducing agreement phases and message overhead. (<a href="https://scixplorer.org/abs/2009etet.conf..138M/abstract">scixplorer.org</a>) The search found evidence of continued academic development of Byzantine-tolerant transaction coordination, but no reliable evidence of direct production-industry adoption of this specific BFTDC protocol.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/distributed_systems/">distributed systems</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/byzantine-agreement/">byzantine agreement</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-transaction/">distributed transaction</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/fault-tolerance/">fault tolerance</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/two-phase-commit/">two phase commit</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/web-services/">web services</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

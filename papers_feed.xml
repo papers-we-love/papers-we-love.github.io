@@ -1,0 +1,1192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Papers We Love - Papers</title>
+  <subtitle>Computer science papers from the Papers We Love repository.</subtitle>
+  <id>https://paperswelove.org/papers/</id>
+  <link href="https://paperswelove.org/papers/"/>
+  <link href="https://paperswelove.org/papers_feed.xml" rel="self" type="application/atom+xml"/>
+  <author>
+    <name>Papers We Love</name>
+  </author>
+  <updated>2026-09-01T00:48:01+00:00</updated>
+  <entry>
+    <title>FADES: Fine-Grained Edge Offloading with Unikernels</title>
+    <id>https://paperswelove.org/papers/fades-fine-grained-edge-offloading-with-unikernels-feb4ec0c/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/fades-fine-grained-edge-offloading-with-unikernels-feb4ec0c/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Aaron Yi Ding, Jörg Ott, Vittorio Cozzolino</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;FADES is an edge offloading architecture that empowers us to run compact, single purpose tasks at the edge of the network to support a variety of IoT and cloud services. The design principle behind FADES is to efficiently exploit the resources of constrained edge devices through fine-grained computation offloading. FADES takes advantage of MirageOS unikernels to isolate and embed application logic in concise Xen-bootable images. We have implemented FADES and evaluated the system performance under various hardware and network conditions. Our results show that FADES can effectively strike a balance between running complex applications in the cloud and simple operations at the edge. As a solid step to enable fine-grained edge offloading, our experiments also reveal the limitation of existing IoT hardware and virtualization platforms, which shed light on future research to bring unikernel into IoT domain.&lt;/p&gt;&lt;p&gt;&lt;a href="http://home.in.tum.de/~ding/files/fades-pre-camera.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Tardigrade: Leveraging Lightweight Virtual Machines to Easily and Efficiently Construct Fault-Tolerant Services</title>
+    <id>https://paperswelove.org/papers/tardigrade-leveraging-lightweight-virtual-machines-fe547893/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/tardigrade-leveraging-lightweight-virtual-machines-fe547893/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Andrew Baumann, Andrew Warfield, Dutch T. Meyer, Jacob R. Lorch, Lisa Glendenning</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Many services need to survive machine failures, but designing and deploying fault-tolerant services can be difficult and error-prone. In this work, we present Tardigrade, a system that deploys an existing, unmodified binary as a fault-tolerant service. Tardigrade replicates the service on several machines so that it continues running even when some of them fail. Yet, it keeps the service states synchronized so clients see strongly consistent results. To achieve this efficiently, we use lightweight virtual machine replication. A lightweight virtual machine is a process sandboxed so that its external dependencies are completely encapsulated, enabling it to be migrated across machines. To let unmodified binaries run within such a sandbox, the sandbox also contains a library OS providing the expected API. We evaluate Tardigrade’s performance and demonstrate its applicability to a variety of services, showing that it can convert these services into fault-tolerant ones transparently and efficiently.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.usenix.org/node/189029"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spectre Attacks: Exploiting Speculative Execution</title>
+    <id>https://paperswelove.org/papers/spectre-attacks-exploiting-speculative-execution-f93adbbe/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/spectre-attacks-exploiting-speculative-execution-f93adbbe/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Anders Fogh, Daniel Genkin, Daniel Gruss, Jann Horn, Michael Schwarz, Mike Hamburg, Moritz Lipp, Paul Kocher, Stefan Mangard, Thomas Prescher, Werner Haas, Yuval Yarom</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Modern processors use branch prediction and speculative execution to maximize performance. For example, if the destination of a branch depends on a memory value that is in the process of being read, CPUs will try to guess the destination and attempt to execute ahead. When the memory value finally arrives, the CPU either discards or commits the speculative computation. Speculative logic is unfaithful in how it executes, can access the victim’s memory and registers, and can perform operations with measurable side effects.
+
+Spectre attacks involve inducing a victim to speculatively perform operations that would not occur during correct program execution and which leak the victim’s confidential information via a side channel to the adversary. This paper describes practical attacks that combine methodology from side channel attacks, fault attacks, and return-oriented programming that can read arbitrary memory from the victim’s process. More broadly, the paper shows that speculative execution implementations violate the security assumptions underpinning numerous software security mechanisms, including operating system process separation, containerization, just-in-time (JIT) compilation, and countermeasures to cache timing and side-channel attacks. These attacks represent a serious threat to actual systems since vulnerable speculative execution capabilities are found in microprocessors from Intel, AMD, and ARM that are used in billions of devices.
+
+While makeshift processor-specific countermeasures are possible in some cases, sound solutions will require fixes to processor designs as well as updates to instruction set architectures (ISAs) to give hardware architects and software developers a common understanding as to what computation state CPU implementations are (and are not) permitted to leak.&lt;/p&gt;&lt;p&gt;&lt;a href="https://spectreattack.com/spectre.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>One VM to Rule Them All</title>
+    <id>https://paperswelove.org/papers/one-vm-to-rule-them-all-f8e77f8b/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/one-vm-to-rule-them-all-f8e77f8b/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Andreas Wöß, Christian Humer, Christian Wimmer, Doug Simon, Gilles Duboscq, Gregor Richards, Lukas Stadler, Mario Wolczko, Thomas Würthinger</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Building high-performance virtual machines is a complex and expensive undertaking; many popular languages still have low-performance implementations. We describe a new approach to virtual machine (VM) construction that amortizes much of the effort in initial construction by allowing new languages to be implemented with modest additional effort. The approach relies on abstract syntax tree (AST) interpretation where a node can rewrite itself to a more specialized or more general node, together with an optimizing compiler that exploits the structure of the interpreter. The compiler uses speculative assumptions and deoptimization in order to produce efficient machine code. Our initial experience suggests that high performance is attainable while preserving a modular and layered architecture, and that new high-performance language implementations can be obtained by writing little more than a stylized interpreter.&lt;/p&gt;&lt;p&gt;&lt;a href="http://lafo.ssw.uni-linz.ac.at/papers/2013_Onward_OneVMToRuleThemAll.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Jitsu: Just-In-Time Summoning of Unikernels</title>
+    <id>https://paperswelove.org/papers/jitsu-just-in-time-summoning-of-unikernels-f79bc70e/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/jitsu-just-in-time-summoning-of-unikernels-f79bc70e/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Amir Chaudhry, Anil Madhavapeddy, Balraj Singh, Dave Scott, David Sheets, Ian Leslie, Jon Crowcroft, Jon Ludlam, Magnus Skjegstad, Richard Mortier, Thomas Gazagnaire, Thomas Leonard</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Network latency is a problem for all cloud services. It can be mitigated by moving computation out of remote datacenters by rapidly instantiating local services near the user. This requires an embedded cloud platform on which to deploy multiple applications securely and quickly. We present Jitsu, a new Xen toolstack that satisfies the demands of secure multi-tenant isolation on resource-constrained embedded ARM devices. It does this by using unikernels: lightweight, compact, single address space, memory-safe virtual machines (VMs) written in a high-level language. Using fast shared memory channels, Jitsu provides a directory service that launches unikernels in response to network traffic and masks boot latency. Our evaluation shows Jitsu to be a power-efficient and responsive platform for hosting cloud services in the edge network while preserving the strong isolation guarantees of a type-1 hypervisor.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.usenix.org/system/files/conference/nsdi15/nsdi15-paper-madhavapeddy.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Zanzibar: Google’s Consistent, Global Authorization System</title>
+    <id>https://paperswelove.org/papers/zanzibar-googles-consistent-global-authorization-s-f706c272/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/zanzibar-googles-consistent-global-authorization-s-f706c272/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Abhishek Parmar, Alexander Golynski, Christina D. Richards, Jeffrey L. Korn, Kevin Graney, Lea Kissner, Mengzhi Wang, Mike Burrows, Nathan Germer, Nina Kang, Pratik Dave, Ramon Caceres, Ruoming Pang, Zhifeng Chen</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Determining whether online users are authorized to access digital objects is central to preserving privacy. This paper presents the design, implementation, and deployment of Zanzibar, a global system for storing and evaluating access control lists. Zanzibar provides a uniform data model and configuration language for expressing a wide range of access control policies from hundreds of client services at Google, including Calendar, Cloud, Drive, Maps, Photos, and YouTube. Its authorization decisions respect causal ordering of user actions and thus provide external consistency amid changes to access control lists and object contents. Zanzibar scales to trillions of access control lists and millions of authorization requests per second to support services used by billions of people. It has maintained 95th-percentile latency of less than 10 milliseconds and availability of greater than 99.999% over 3 years of production use.&lt;/p&gt;&lt;p&gt;&lt;a href="https://research.google/pubs/pub48190/"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Unikernels as Processes</title>
+    <id>https://paperswelove.org/papers/unikernels-as-processes-ee85b158/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/unikernels-as-processes-ee85b158/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Dan Williams, Martin Lucina, Nikhil Prakash, Ricardo Koller</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;System virtualization (e.g., the virtual machine abstraction) has been established as the de facto standard form of isolation in multi-tenant clouds. More recently, unikernels have emerged as a way to reuse VM isolation while also being lightweight by eliminating the general purpose OS (e.g., Linux) from the VM. Instead, unikernels directly run the application (linked with a library OS) on the virtual hardware. In this paper, we show that unikernels do not actually require a virtual hardware abstraction, but can achieve similar levels of isolation when running as processes by leveraging existing kernel system call whitelisting mechanisms. Moreover, we show that running unikernels as processes reduces hardware requirements, enables the use of standard process debugging and management tooling, and improves the already impressive performance that unikernels exhibit.&lt;/p&gt;&lt;p&gt;&lt;a href="https://dl.acm.org/doi/pdf/10.1145/3267809.3267845"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Arrakis: The Operating System Is the Control Plane</title>
+    <id>https://paperswelove.org/papers/arrakis-the-operating-system-is-the-control-plane-ebf99671/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/arrakis-the-operating-system-is-the-control-plane-ebf99671/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Arvind Krishnamurthy, Dan R. K. Ports, Doug Woos, Irene Zhang, Jialin Li, Simon Peter, Thomas Anderson, Timothy Roscoe</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Recent device hardware trends enable a new approach to the design of network server operating systems. In a traditional operating system, the kernel mediates access to device hardware by server applications to enforce process isolation as well as network and disk security. We have designed and implemented a new operating system, Arrakis, that splits the traditional role of the kernel in two. Applications have direct access to virtualized I/O devices, allowing most I/O operations to skip the kernel entirely, while the kernel is re-engineered to provide network and disk protection without kernel mediation of every operation. We describe the hardware and software changes needed to take advantage of this new abstraction, and we illustrate its power by showing improvements of 2 to 5× in latency and 9× throughput for a popular persistent NoSQL store relative to a well-tuned Linux implementation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://dl.acm.org/citation.cfm?id=2812806"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Looking inside the (Drop) box</title>
+    <id>https://paperswelove.org/papers/looking-inside-the-drop-box-e7de2f4a/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/looking-inside-the-drop-box-e7de2f4a/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Dhiru Kholia, Przemysław Węgrzyn</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Dropbox is a cloud based file storage service used by more than 100 million users. In spite of its widespread popularity, we believe that Dropbox as a platform hasn’t been analyzed extensively enough from a security standpoint. Also, the previous work on the security analysis of Dropbox has been heavily censored. Moreover, the existing Python bytecode reversing techniques are not enough for reversing hardened applications like Dropbox.
+
+This paper presents new and generic techniques, to reverse engineer frozen Python applications, which are not limited to just the Dropbox world. We describe a method to bypass Dropbox’s two factor authentication and hijack Dropbox accounts. Additionally, generic techniques to intercept SSL data using code injection techniques and monkey patching are presented.
+
+We believe that our biggest contribution is to open up the Dropbox platform to further security analysis and research. Dropbox will / should no longer be a black box.
+
+Finally, we describe the design and implementation of an open-source version of Dropbox client (and yes, it runs on ARM too).&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.usenix.org/system/files/conference/woot13/woot13-kholia.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Can SPDY Really Make the Web Faster?</title>
+    <id>https://paperswelove.org/papers/can-spdy-really-make-the-web-faster-d54feb63/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/can-spdy-really-make-the-web-faster-d54feb63/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Gareth Tyson, Michael Welzl, Yehia Elkhatib</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;HTTP is a successful Internet technology on top of which a lot of the web resides. However, limitations with its current specification have encouraged some to look for the next generation of HTTP. In SPDY, Google has come up with such a proposal that has growing community acceptance, especially after being adopted by the IETF HTTPbis-WG as the basis for HTTP/2.0. SPDY has the potential to greatly improve web experience with little deployment overhead, but we still lack an understanding of its true potential in different environments. This paper offers a comprehensive evaluation of SPDY’s performance using extensive experiments. We identify the impact of network characteristics and website infrastructure on SPDY’s potential page loading benefits, finding that these factors are decisive for an optimal SPDY deployment strategy. Through exploring such key aspects that affect SPDY, and accordingly HTTP/2.0, we feed into the wider debate regarding the impact of future protocols.&lt;/p&gt;&lt;p&gt;&lt;a href="http://www.eecs.qmul.ac.uk/~tysong/files/IFIPNetworking14.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Two Years of Experience with a µ-Kernel Based OS</title>
+    <id>https://paperswelove.org/papers/two-years-of-experience-with-a-kernel-based-os-d54a1c21/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/two-years-of-experience-with-a-kernel-based-os-d54a1c21/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Dietmar Heinrichs, Gyula Szalay, Jochen Liedtke, Rudolf Ruland, Ulrich Bartling, Uwe Beyer</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;This paper describes the basic components of the L3 operating system and the experiences of the first two years using it. The system results from scientific research, but is addressed to commercial application. It is based on a small kernel handling tasks, threads and dataspaces. User level device drivers and file systems are described as examples of flexible OS services realized outside the kernel.&lt;/p&gt;&lt;p&gt;&lt;a href="https://dl.acm.org/citation.cfm?id=122124"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>IncludeOS: A Minimal, Resource Efficient Unikernel for Cloud Services</title>
+    <id>https://paperswelove.org/papers/includeos-a-minimal-resource-efficient-unikernel-f-d537333c/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/includeos-a-minimal-resource-efficient-unikernel-f-d537333c/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Alf-Andre Walla, Alfred Bratterud, Hårek Haugerud, Kyrre M. Begnum, Paal E. Engelstad</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;The emergence of cloud computing as a ubiquitous platform for elastically scaling services has generated need and opportunity for new types of operating systems. A service that needs to be both elastic and resource efficient needs A) highly specialized components, and B) to run with minimal resource overhead. Classical general purpose operating systems designed for extensive hardware support are by design far from meeting these requirements. In this paper we present IncludeOS, a single tasking library operating system for cloud services, written from scratch in C++. Key features include: extremely small disk- and memory footprint, efficient asynchronous I/O, OS-library where only what your service needs gets included, and only one device driver by default (virtio). As a test case a bootable disk image consisting of a simple DNS server with OS included is shown to require only 158 kb of disk space and to require 5-20% less CPU-time, depending on hardware, compared to the same binary running on Linux.&lt;/p&gt;&lt;p&gt;&lt;a href="http://oda.oslomet.no/oda-xmlui/bitstream/handle/10642/3189/1321835.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>uniprof: A Unikernel Stack Profiler</title>
+    <id>https://paperswelove.org/papers/uniprof-a-unikernel-stack-profiler-d12f846e/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/uniprof-a-unikernel-stack-profiler-d12f846e/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Florian Schmidt</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Unikernels are increasingly gaining traction in real-world deployments, especially for NFV and microservices, where their low footprint and high performance are especially beneficial. However, they still suffer from a lack of tools to support developers. uniprof is a stack profiler that supports Xen unikernels on x86 and ARM and does not requires any code changes or instrumentation. Its high speed and low overhead (0.1% at 100 samples/s) makes it usable even in production environments, allowing the collection of realistic and highly credible data.&lt;/p&gt;&lt;p&gt;&lt;a href="https://flosch.eu/papers/2017-sigcomm-uniprof.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Making Programs Forget: Enforcing Lifetime For Sensitive Data</title>
+    <id>https://paperswelove.org/papers/making-programs-forget-enforcing-lifetime-for-sens-cf29cfd5/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/making-programs-forget-enforcing-lifetime-for-sens-cf29cfd5/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Byung-Gon Chun, Gautam Altekar, Jayanthkumar Kannan, Petros Maniatis</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;This paper introduces guaranteed data lifetime, a novel system property ensuring that sensitive data cannot be retrieved from a system beyond a specified time. The trivial way to achieve this is to “reboot”; however, this is disruptive from the user’s perspective, and may not even eliminate disk copies. We discuss an alternate approach based on state re-incarnation where data expiry is completely transparent to the user, and can be used even if the system is not designed a priori to provide the property.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.usenix.org/events/hotos11/tech/final_files/Kannan.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>The rump kernel: A tool for driver development and a toolkit for applications</title>
+    <id>https://paperswelove.org/papers/the-rump-kernel-a-tool-for-driver-development-and--cee41fc4/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/the-rump-kernel-a-tool-for-driver-development-and--cee41fc4/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Justin Cormack</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;The NetBSD rump kernel is a way to run device drivers outside the kernel. Until recently the most common use was as a tool for running tests on NetBSD subsystems. In the last two years much more infrastructure has been built around it so that a much wider set of uses are possible. I cover some of these new uses in this paper, in particular using the rump kernel as a tool for driver development, and as a way to use it to run NetBSD applications in new environments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.netbsd.org/gallery/presentations/justin/2015_AsiaBSDCon/justincormack-abc2015.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Studying Attitudes and Social Norms in Agile Software Development</title>
+    <id>https://paperswelove.org/papers/studying-attitudes-and-social-norms-in-agile-softw-cba23f5e/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/studying-attitudes-and-social-norms-in-agile-softw-cba23f5e/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Lucas Gren</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;The purpose of this paper is to review research on attitudes and social norms and connect it to the agile software development context. Furthermore, I propose additional theories from social psychology (mainly the theory of planned behavior and using the degree of internalization of social norms) that would most certainly be useful for further sense-making of human factors-related research on agile teams.&lt;/p&gt;&lt;p&gt;&lt;a href="https://arxiv.org/pdf/1904.09225.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Flexible Operating System Internals: The Design and Implementation of the Anykernel and Rump Kernels</title>
+    <id>https://paperswelove.org/papers/flexible-operating-system-internals-the-design-and-c45e100b/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/flexible-operating-system-internals-the-design-and-c45e100b/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Antti Kantee</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;The monolithic kernel architecture is significant in the real world due to the large amount of working and proven code. However, the architecture is not without problems: testing and development is difficult, virtualizing kernel services can be done only by duplicating the entire kernel, and security is weak due to a single domain where all code has direct access to everything. Alternate kernel architectures such as the microkernel and exokernel have been proposed to rectify these problems with monolithic kernels. However, alternate system structures do not address the common desire of using a monolithic kernel when the abovementioned problems do not apply. We propose a flexible anykernel architecture which enables running kernel drivers in a variety of configurations, examples of which include microkernel-style servers and application libraries. A monolithic kernel is shown to be convertible into an anykernel with a reasonable amount of effort and without introducing performance-hindering indirection layers. The original monolithic mode of operation is preserved after the anykernel adjustments, and alternate modes of operation for drivers are available as a runtime choice. For non-monolithic modes of operation, the rump kernel is introduced as a lightweight container for drivers. A rump kernel runs on top of a hypervisor which offers high-level primitives such as thread scheduling and virtual memory. A production quality implementation for the NetBSD open source OS has been done. The anykernel architecture and rump kernels are evaluated both against four years of real-world experience from daily NetBSD development as well as against synthetic benchmarks.&lt;/p&gt;&lt;p&gt;&lt;a href="https://aaltodoc.aalto.fi/bitstream/handle/123456789/6318/isbn9789526049175.pdf?sequence=1"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>The Multikernel: A new OS architecture for scalable multicore systems</title>
+    <id>https://paperswelove.org/papers/the-multikernel-a-new-os-architecture-for-scalable-bf5a32f7/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/the-multikernel-a-new-os-architecture-for-scalable-bf5a32f7/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Adrian Schüpbach, Akhilesh Singhania, Andrew Baumann, Paul Barham, Pierre-Evariste Dagand, Rebecca Isaacs, Simon Peter, Tim Harris, Timothy Roscoe</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Commodity computer systems contain more and more processor cores and exhibit increasingly diverse architectural tradeoffs, including memory hierarchies, interconnects, instruction sets and variants, and IO configurations. Previous high-performance computing systems have scaled in specific cases, but the dynamic nature of modern client and server workloads, coupled with the impossibility of statically optimizing an OS for all workloads and hardware variants pose serious challenges for operating system structures.
+
+We argue that the challenge of future multicore hardware is best met by embracing the networked nature of the machine, rethinking OS architecture using ideas from distributed systems. We investigate a new OS structure, the multikernel, that treats the machine as a network of independent cores, assumes no inter-core sharing at the lowest level, and moves traditional OS functionality to a distributed system of processes that communicate via message-passing.
+
+We have implemented a multikernel OS to show that the approach is promising, and we describe how traditional scalability problems for operating systems (such as memory management) can be effectively recast using messages and can exploit insights from distributed systems and networking. An evaluation of our prototype on multicore systems shows that, even on present-day machines, the performance of a multikernel is comparable with a conventional OS, and can scale better to support future hardware.&lt;/p&gt;&lt;p&gt;&lt;a href="http://www.cse.iitd.ac.in/~sbansal/csl862-os/readings/barrelfish.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>The Impact of Operating System Structure on Memory System Performance</title>
+    <id>https://paperswelove.org/papers/the-impact-of-operating-system-structure-on-memory-baf999fa/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/the-impact-of-operating-system-structure-on-memory-baf999fa/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Brian N. Bershad, J. Bradley Chen</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;In this paper we evaluate the memory system behavior of two distinctly different implementations of the UNIX operating system: DEC’s Ultrix, a monolithic system, and Mach 3.0 with CMU’s UNIX server, a microkernel-based system. In our evaluation we use combined system and user memory reference traces of thirteen industry-standard workloads. We show that the microkernel-based system executes substantially more non-idle system instructions for an equivalent workload than the monolithic system. Furthermore, the average instruction for programs running on Mach has a higher cost, in terms of memory cycles per instruction, than on Ultrix. In the context of our traces, we explore a number of popular assertions about the memory system behavior of modern operating systems, paying special attention to the effect that Mach’s microkernel architecture has on system performance. Our results indicate that many, but not all of the assertions are true, and that a few, while true, have only negligible impact on real system performance.&lt;/p&gt;&lt;p&gt;&lt;a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.52.4651&amp;rep=rep1&amp;type=pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Flipping Bits in Memory Without Accessing Them:
+An Experimental Study of DRAM Disturbance Errors</title>
+    <id>https://paperswelove.org/papers/flipping-bits-in-memory-without-accessing-them-an--ba7641d7/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/flipping-bits-in-memory-without-accessing-them-an--ba7641d7/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Chris Fallin, Chris Wilkerson, Donghyuk Lee, Jeremie Kim, Ji Hye Lee, Konrad Lai, Onur Mutlu, Ross Daly, Yoongu Kim</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Memory isolation is a key property of a reliable and secure computing system — an access to one memory address should not have unintended side effects on data stored in other addresses. However, as DRAM process technology scales down to smaller dimensions, it becomes more difficult to prevent DRAM cells from electrically interacting with each other. In this paper, we expose the vulnerability of commodity DRAM chips to disturbance errors. By reading from the same address in DRAM, we show that it is possible to corrupt data in nearby addresses. More specifically, activating the same row in DRAM corrupts data in nearby rows. We demonstrate this phenomenon on Intel and AMD systems using a malicious program that generates many DRAM accesses. We induce errors in most DRAM modules (110 out of 129) from three major DRAM manufacturers. From this we conclude that many deployed systems are likely to be at risk. We identify the root cause of disturbance errors as the repeated toggling of a DRAM row’s wordline, which stresses inter-cell coupling effects that accelerate charge leakage from nearby rows. We provide an extensive characterization study of disturbance errors and their behavior using an FPGA-based testing platform. Among our key findings, we show that (i) it takes as few as 139K accesses to induce an error and (ii) up to one in every 1.7K cells is susceptible to errors. After examining various potential ways of addressing the problem, we propose a low-overhead solution to prevent the errors.&lt;/p&gt;&lt;p&gt;&lt;a href="https://people.inf.ethz.ch/omutlu/pub/dram-row-hammer_isca14.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Teaching Garbage Collection without Implementing Compilers or Interpreters</title>
+    <id>https://paperswelove.org/papers/teaching-garbage-collection-without-implementing-c-b7a73996/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/teaching-garbage-collection-without-implementing-c-b7a73996/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Arjun Guha, Gregory H. Cooper, Jay McCarthy, Robert Bruce Findler, Shriram Krishnamurthi</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Given the widespread use of memory-safe languages, students must understand garbage collection well. Following a constructivist philosophy, an effective approach would be to have them implement garbage collectors. Unfortunately, a full implementation depends on substantial knowledge of compilers and runtime systems, which many courses do not cover or cannot assume.
+
+This paper presents an instructive approach to teaching gc, where students implement it atop a simplified stack and heap. Our approach eliminates enormous curricular dependencies while preserving the essence of gc algorithms. We take pains to enable testability, comprehensibility, and facilitates debugging. Our approach has been successfully classroom-tested for several years at several institutions.&lt;/p&gt;&lt;p&gt;&lt;a href="https://cs.brown.edu/~sk/Publications/Papers/Published/cgkmf-teach-gc/paper.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>A Taxonomy of Suffix Array Construction Algorithms</title>
+    <id>https://paperswelove.org/papers/a-taxonomy-of-suffix-array-construction-algorithms-b6fdd2c4/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/a-taxonomy-of-suffix-array-construction-algorithms-b6fdd2c4/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Andrew H. Turpin, Simon J. Puglisi, W. F. Smyth</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;In 1990 Manber &amp; Myers proposed suffix arrays as a space-saving alternative to suffix trees and described the first algorithms for suffix array construction and use. Since that time, and especially in the last few years, suffix array construction algorithms have proliferated in bewildering abundance. This survey paper attempts to provide simple high-level descriptions of these numerous algorithms that highlight both their distinctive features and their commonalities, while avoiding as much as possible the complexities of implementation details. New hybrid algorithms are also described. We provide comparisons of the algorithms’ worst-case time complexity and use of additional space, together with results of recent experimental test runs on many of their implementations.&lt;/p&gt;&lt;p&gt;&lt;a href="http://www.cas.mcmaster.ca/~bill/best/algorithms/07Taxonomy.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>BREACH: REVIVING THE CRIME ATTACK</title>
+    <id>https://paperswelove.org/papers/breach-reviving-the-crime-attack-b5cec472/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/breach-reviving-the-crime-attack-b5cec472/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Angelo (Ángel) Prado, Neal Harris, Yoel Gluck</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;No abstract or summary section appears in the paper.&lt;/p&gt;&lt;p&gt;&lt;a href="http://breachattack.com/resources/BREACH%20-%20SSL,%20gone%20in%2030%20seconds.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>KylinX: A Dynamic Library Operating System for Simplified and Efficient Cloud Virtualization</title>
+    <id>https://paperswelove.org/papers/kylinx-a-dynamic-library-operating-system-for-simp-a83593a3/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/kylinx-a-dynamic-library-operating-system-for-simp-a83593a3/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Chengfei Zhang, Dongsheng Li, Guihai Chen, Huiba Li, Jon Crowcroft, Kai Yu, Yaozheng Wang, Yiming Zhang, Yongqiang Xiong</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Unikernel specializes a minimalistic LibOS and a target application into a standalone single-purpose virtual machine (VM) running on a hypervisor, which is referred to as (virtual) appliance. Compared to traditional VMs, Unikernel appliances have smaller memory footprint and lower overhead while guaranteeing the same level of isolation. On the downside, Unikernel strips off the process abstraction from its monolithic appliance and thus sacrifices flexibility, efficiency, and applicability.
+
+This paper examines whether there is a balance embracing the best of both Unikernel appliances (strong isolation) and processes (high flexibility/efficiency). We present KylinX, a dynamic library operating system for simplified and efficient cloud virtualization by providing the pVM (process-like VM) abstraction. A pVM takes the hypervisor as an OS and the Unikernel appliance as a process allowing both page-level and library-level dynamic mapping. At the page level, KylinX supports pVM fork plus a set of API for inter-pVM communication (IpC). At the library level, KylinX supports shared libraries to be linked to a Unikernel appliance at runtime. KylinX enforces mapping restrictions against potential threats. KylinX can fork a pVM in about 1.3 ms and link a library to a running pVM in a few ms, both comparable to process fork on Linux (about 1 ms). Latencies of KylinX IpCs are also comparable to that of UNIX IPCs.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.usenix.org/conference/atc18/presentation/zhang-yiming"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>My VM is Lighter (and Safer) than your Container</title>
+    <id>https://paperswelove.org/papers/my-vm-is-lighter-and-safer-than-your-container-a44da27f/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/my-vm-is-lighter-and-safer-than-your-container-a44da27f/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Costin Lupu, Costin Raiciu, Felipe Huici, Filipe Manco, Florian Schmidt, Jose Mendes, Kenichi Yasukata, Simon Kuenzer, Sumit Sati</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Containers are in great demand because they are lightweight when compared to virtual machines. On the downside, containers offer weaker isolation than VMs, to the point where people run containers in virtual machines to achieve proper isolation. In this paper, we examine whether there is indeed a strict tradeoff between isolation (VMs) and efficiency (containers). We find that VMs can be as nimble as containers, as long as they are small and the toolstack is fast enough.
+
+We achieve lightweight VMs by using unikernels for specialized applications and with Tinyx, a tool that enables creating tailor-made, trimmed-down Linux virtual machines. By themselves, lightweight virtual machines are not enough to ensure good performance since the virtualization control plane (the toolstack) becomes the performance bottleneck. We present LightVM, a new virtualization solution based on Xen that is optimized to offer fast boot-times regardless of the number of active VMs. LightVM features a complete redesign of Xen’s control plane, transforming its centralized operation to a distributed one where interactions with the hypervisor are reduced to a minimum. LightVM can boot a VM in 2.3ms, comparable to fork/exec on Linux (1ms), and two orders of magnitude faster than Docker. LightVM can pack thousands of LightVM guests on modest hardware with memory and CPU usage comparable to that of processes.&lt;/p&gt;&lt;p&gt;&lt;a href="https://dl.acm.org/citation.cfm?id=3132763"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>An Ethical Examination of the Internet Census 2012 Dataset: A Menlo Report Case Study</title>
+    <id>https://paperswelove.org/papers/an-ethical-examination-of-the-internet-census-2012-a3525a10/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/an-ethical-examination-of-the-internet-census-2012-a3525a10/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>David Dittrich, Katherine Carpenter, Manish Karir</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;In 2012, an anonymous individual used basic techniques such as default or no passwords on Internet access equipment to get unauthorized access and install a scanning botnet on hundreds of thousands of commodity network devices around the world. Making efforts to minimize potential harm, this individual still took actions that would never be sanctioned by an academic ethics review board (and which violated computer trespass statutes around the globe), to perform an unprecedented internet-wide scan at a scale and speed never seen before. Then, some results and the raw data were published for anyone to access, raising a host of ethical and legal questions. One central question is whether researchers who, but for the illegally obtained data, could not ethically or legally perform the same experiment or produce the same data themselves should use that data. Or might the lack of community condemnation for performing such potentially illegal and unethical experiments create a situation where researchers are effectively encouraging law breaking by those willing to risk getting caught to create data that is otherwise not justifiable to create, simply to allow researchers to get around ethical restrictions? In this paper we examine this event in the context of the guiding principles outlined in the Menlo Report in an attempt to better understand the ethical implications of such actions.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.researchgate.net/publication/279069631_The_Internet_Census_2012_Dataset_An_Ethical_Examination"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>llamaOS: A Solution for Virtualized High-Performance Computing Clusters</title>
+    <id>https://paperswelove.org/papers/llamaos-a-solution-for-virtualized-high-performanc-a2336cd7/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/llamaos-a-solution-for-virtualized-high-performanc-a2336cd7/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Philip A. Wilsey, William A. Magato</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;For most use cases, the benefits of modern virtu-alization technologies vastly exceed the impact of the runtime computational overhead they introduce. However, for high-performance computing (HPC) systems, the additional overhead is often detrimental to critical elements of application performance. This work presents llamaOS (Low-LAtency Minimal Appliance Operating System) as a new approach to circumvent the overhead of virtualization and provide performance capabilities superior to even equivalent native (nonvirtual) systems. Within the llamaOS virtual environment, traditional system level services can be optimized for a specific target application domain. For example, a specialized networking framework, named llamaNET, is designed specifically for low-latency message passing communication. Performance studies show llamaNET provides a 70% reduction in network latency over native TCP for message sizes less than 8 kilobytes, while at the same time providing slightly higher communication throughput for larger sizes. This improvement in communication performance directly translates to overall application speedup for software that exhibits fine-grain parallelism.&lt;/p&gt;&lt;p&gt;&lt;a href="https://ieeexplore.ieee.org/document/6969511"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>ClickOS and the Art of Network Function Virtualization</title>
+    <id>https://paperswelove.org/papers/clickos-and-the-art-of-network-function-virtualiza-9ff1615d/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/clickos-and-the-art-of-network-function-virtualiza-9ff1615d/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Costin Raiciu, Felipe Huici, Joao Martins, Michio Honda, Mohamed Ahmed, Roberto Bifulco, Vladimir Olteanu</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Over the years middleboxes have become a fundamental part of today’s networks. Despite their usefulness, they come with a number of problems, many of which arise from the fact that they are hardware-based: they are costly, difficult to manage, and their functionality is hard or impossible to change, to name a few.
+
+To address these issues, there is a recent trend towards network function virtualization (NFV), in essence proposing to turn these middleboxes into software-based, virtualized entities. Towards this goal we introduce ClickOS, a high-performance, virtualized software middlebox platform. ClickOS virtual machines are small (5MB), boot quickly (about 30 milliseconds), add little delay (45 microseconds) and over one hundred of them can be concurrently run while saturating a 10Gb pipe on a commodity server. We further implement a wide range of middleboxes including a firewall, a carrier-grade NAT and a load balancer and show that ClickOS can handle packets in the millions per second.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-martins.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>IX: A Protected Dataplane Operating System for High Throughput and Low Latency</title>
+    <id>https://paperswelove.org/papers/ix-a-protected-dataplane-operating-system-for-high-9d55873e/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/ix-a-protected-dataplane-operating-system-for-high-9d55873e/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Adam Belay, Ana Klimovic, Christos Kozyrakis, Edouard Bugnion, George Prekas, Samuel Grossman</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;The conventional wisdom is that aggressive networking requirements, such as high packet rates for small messages and microsecond-scale tail latency, are best addressed outside the kernel, in a user-level networking stack. We present IX, a dataplane operating system that provides high I/O performance, while maintaining the key advantage of strong protection offered by existing kernels. IX uses hardware virtualization to separate management and scheduling functions of the kernel (control plane) from network processing (dataplane). The dataplane architecture builds upon a native, zero-copy API and optimizes for both bandwidth and latency by dedicating hardware threads and networking queues to dataplane instances, processing bounded batches of packets to completion, and by eliminating coherence traffic and multi-core synchronization. We demonstrate that IX outperforms Linux and state-of-the-art, user-space network stacks significantly in both throughput and end-to-end latency. Moreover, IX improves the throughput of a widely deployed, key-value store by up to 3.6× and reduces tail latency by more than 2×.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-belay.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>On the resemblance and containment of documents</title>
+    <id>https://paperswelove.org/papers/on-the-resemblance-and-containment-of-documents-973f823a/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/on-the-resemblance-and-containment-of-documents-973f823a/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Andrei Z. Broder</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Given two documents A and B we define two mathematical notions: their resemblance r(A, B) and their containment c(A, B) that seem to capture well the informal notions of “roughly the same” and “roughly contained.” The basic idea is to reduce these issues to set intersection problems that can be easily evaluated by a process of random sampling that can be done independently for each document. Furthermore, the resemblance can be evaluated using a fixed size sample for each document. This paper discusses the mathematical properties of these measures and the efficient implementation of the sampling process using Rabin fingerprints.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.cs.princeton.edu/courses/archive/spr05/cos598E/bib/broder97resemblance.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>And then there were none: a stall-free real-time garbage collector for reconfigurable hardware</title>
+    <id>https://paperswelove.org/papers/and-then-there-were-none-a-stall-free-real-time-ga-91a94aba/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/and-then-there-were-none-a-stall-free-real-time-ga-91a94aba/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>David F. Bacon, Perry Cheng, Sunil Shukla</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Researchers have developed a garbage collector synthesized directly to hardware, which is capable of collecting a heap of uniform objects completely concurrently. These uniform heaps are composed entirely of objects of a fixed shape where the size of the data fields and the location of pointers of each object are fixed. The stall-free collector can be used directly with programs hand-written in hardware description languages. It can also be part of a hardware 'runtime system' used by high-level language systems including dynamic memory allocation. Three collectors are compared in terms of memory usage, clock frequency, throughput, and application stalls, using an allocation-intensive application. The researchers also present analytic closed-form worst-case bounds for the minimum heap size required for 0-stall real-time behavior, which are empirically validated.&lt;/p&gt;&lt;p&gt;&lt;a href="https://cacm.acm.org/magazines/2013/12/169948-and-then-there-were-none/fulltext"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>The Slab Allocator: An Object-Caching Kernel Memory Allocator</title>
+    <id>https://paperswelove.org/papers/the-slab-allocator-an-object-caching-kernel-memory-91047b44/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/the-slab-allocator-an-object-caching-kernel-memory-91047b44/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Jeff Bonwick</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;This paper presents a comprehensive design overview of the SunOS 5.4 kernel memory allocator. This allocator is based on a set of object-caching primitives that reduce the cost of allocating complex objects by retaining their state between uses. These same primitives prove equally effective for managing stateless memory (e.g. data pages and temporary buffers) because they are space-efficient and fast. The allocator's object caches respond dynamically to global memory pressure, and employ an object-coloring scheme that improves the system's overall cache utilization and bus balance. The allocator also has several statistical and debugging features that can detect a wide range of problems throughout the system.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.usenix.org/legacy/publications/library/proceedings/bos94/full_papers/bonwick.a"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>The Slab Allocator: An Object-Caching Kernel Memory Allocator</title>
+    <id>https://paperswelove.org/papers/the-slab-allocator-an-object-caching-kernel-memory-8f595ad8/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/the-slab-allocator-an-object-caching-kernel-memory-8f595ad8/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Jeff Bonwick</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;This paper presents a comprehensive design overview of the SunOS 5.4 kernel memory allocator. This allocator is based on a set of object-caching primitives that reduce the cost of allocating complex objects by retaining their state between uses. These same primitives prove equally effective for managing stateless memory (e.g. data pages and temporary buffers) because they are space-efficient and fast.
+
+The allocator’s object caches respond dynamically to global memory pressure, and employ an object-coloring scheme that improves the system’s overall cache utilization and bus balance. The allocator also has several statistical and debugging features that can detect a wide range of problems throughout the system.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.usenix.org/legacy/publications/library/proceedings/bos94/bonwick.html"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Communication and Code Dependency Effects on Software Code Quality: An Empirical Analysis of Herbsleb Hypothesis</title>
+    <id>https://paperswelove.org/papers/communication-and-code-dependency-effects-on-softw-8eefc9c4/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/communication-and-code-dependency-effects-on-softw-8eefc9c4/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Amritanshu Agrawal, Joymallya Chakraborty, Suvodeep Majumder, Tim Menzies</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Prior literature has suggested that in many projects 80% or more of the contributions are made by a small called group of around 20% of the development team. Most prior studies deprecate a reliance on such a small inner group of “heroes”, arguing that it causes bottlenecks in development and communication. Despite this, such projects are very common in open source projects. So what exactly is the impact of “heroes” in code quality?
+Herbsleb argues that if code is strongly connected yet their developers are not, then that code will be buggy. To test the Hersleb hypothesis, we develop and apply two metrics of (a) “social-ness’ and (b) “hero-ness” that measure (a) how much one developer comments on the issues of another; and (b) how much one developer changes another developer’s code (and “heroes” are those that change the most code, all around the system). In a result endorsing the Hersleb hypothesis, in over 1000 open source projects, we find that “social-ness” is a statistically stronger indicate for code quality (number of bugs) than “hero-ness”.
+Hence we say that debates over the merits of “hero-ness” is subtly misguided. Our results suggest that the real benefits of these so-called “heroes” is not so much the code they generate but the pattern of communication required when the interaction between a large community of programmers passes through a small group of centralized developers.
+To say that another way, to build better code, build better communication flows between core developers and the rest.
+In order to allow other researchers to confirm/improve/refute our results, all our scripts and data are available, on-line at our online Github repository.&lt;/p&gt;&lt;p&gt;&lt;a href="https://arxiv.org/pdf/1904.09954.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>The Scalable Commutativity Rule: Designing Scalable Software for Multicore Processors</title>
+    <id>https://paperswelove.org/papers/the-scalable-commutativity-rule-designing-scalable-8bb89b2f/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/the-scalable-commutativity-rule-designing-scalable-8bb89b2f/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Austin T. Clements, Eddie Kohler, M. Frans Kaashoek, Nickolai Zeldovich, Robert T. Morris</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;What fundamental opportunities for scalability are latent in interfaces, such as system call APIs? Can scalability opportunities be identified even before any implementation exists, simply by considering interface specifications? To answer these questions this paper introduces the following rule: Whenever interface operations commute, they can be implemented in a way that scales. This rule aids developers in building more scalable software starting from interface design and carrying on through implementation, testing, and evaluation.
+
+To help developers apply the rule, a new tool named COMMUTER accepts high-level interface models and generates tests of operations that commute and hence could scale. Using these tests, COMMUTER can evaluate the scalability of an implementation. We apply COMMUTER to 18 POSIX calls and use the results to guide the implementation of a new research operating system kernel called sv6. Linux scales for 68% of the 13,664 tests generated by COMMUTER for these calls, and COMMUTER finds many problems that have been observed to limit application scalability. sv6 scales for 99% of the tests.&lt;/p&gt;&lt;p&gt;&lt;a href="https://people.csail.mit.edu/nickolai/papers/clements-sc.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>A Fast String Searching Algorithm</title>
+    <id>https://paperswelove.org/papers/a-fast-string-searching-algorithm-853f06c1/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/a-fast-string-searching-algorithm-853f06c1/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>J Strother Moore, Robert S. Boyer</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;An algorithm is presented that searches for the location, "i," of the first occurrence of a character string, "pat," in another string, "string." During the search operation, the characters of pat are matched starting with the last character of pat. The information gained by starting the match at the end of the pattern often allows the algorithm to proceed in large jumps through the text being searched. Thus the algorithm has the unusual property that, in most cases, not all of the first i characters of string are inspected. The number of characters actually inspected (on the average) decreases as a function of the length of pat. For a random English pattern of length 5, the algorithm will typically inspect i/4 characters of string before finding a match at i. Furthermore, the algorithm has been implemented so that (on the average) fewer than i + patlen machine instructions are executed. These conclusions are supported with empirical evidence and a theoretical analysis of the average behavior of the algorithm. The worst case behavior of the algorithm is linear in i + patlen, assuming the availability of array space for tables linear in patlen plus the size of the alphabet.&lt;/p&gt;&lt;p&gt;&lt;a href="https://web.archive.org/web/20220912024717/https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.13.9460&amp;rep=rep1&amp;type=pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>An Updated Performance Comparison of Virtual Machines and Linux Containers</title>
+    <id>https://paperswelove.org/papers/an-updated-performance-comparison-of-virtual-machi-831220a6/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/an-updated-performance-comparison-of-virtual-machi-831220a6/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Alexandre Ferreira, Juan Rubio, Ram Rajamony, Wes Felter</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Cloud computing makes extensive use of virtual machines because they permit workloads to be isolated from one another and for the resource usage to be somewhat controlled. In this paper, we explore the performance of traditional virtual machine (VM) deployments, and contrast them with the use of Linux containers. We use KVM as a representative hypervisor and Docker as a container manager. Our results show that containers result in equal or better performance than VMs in almost all cases. Both VMs and containers require tuning to support I/O-intensive applications. We also discuss the implications of our performance results for future cloud architectures.&lt;/p&gt;&lt;p&gt;&lt;a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.471.9242&amp;rep=rep1&amp;type=pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>END-TO-END ARGUMENTS IN SYSTEM DESIGN</title>
+    <id>https://paperswelove.org/papers/end-to-end-arguments-in-system-design-80cd7a3d/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/end-to-end-arguments-in-system-design-80cd7a3d/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>D.D. Clark, D.P. Reed, J.H. Saltzer</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;This paper presents a design principle that helps guide placement of functions among the modules of a distributed computer system. The principle, called the end-to-end argument, suggests that functions placed at low levels of a system may be redundant or of little value when compared with the cost of providing them at that low level. Examples discussed in the paper include bit error recovery, security using encryption, duplicate message suppression, recovery from system crashes, and delivery acknowledgement. Low level mechanisms to support these functions are justified only as performance enhancements.&lt;/p&gt;&lt;p&gt;&lt;a href="https://web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Why Silent Updates Boost Security</title>
+    <id>https://paperswelove.org/papers/why-silent-updates-boost-security-7f37f5d3/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/why-silent-updates-boost-security-7f37f5d3/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Stefan Frei, Thomas Duebendorfer</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Security fixes and feature improvements don’t benefit the end user of software if the update mechanism and strategy is not effective. In this paper we analyze the effectiveness of different Web browsers update mechanisms; from Google Chrome’s silent update mechanism to Opera’s update requiring a full re-installation. We use anonymized logs from Google’s world wide distributed Web servers. An analysis of the logged HTTP user-agent strings that Web browsers report when requesting any Web page is used to measure the daily browser version shares in active use. To the best of our knowledge, this is the first global scale measurement of Web browser update effectiveness comparing four different Web browser update strategies including Google Chrome. Our measurements prove that silent updates and little dependency on the underlying operating system are most effective to get users of Web browsers to surf the Web with the latest browser version. However, there is still room for improvement as we found. Google Chrome’s advantageous silent update mechanism has been open sourced in April 2009. We recommend any software vendor to seriously consider deploying silent updates as this benefits both the vendor and the user, especially for widely used attack-exposed applications like Web browsers and browser plug-ins.&lt;/p&gt;&lt;p&gt;&lt;a href="http://tik-old.ee.ethz.ch/file/ef72343372ca8659a9ae8a98873167c0/TIKReport302.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Unikernel-based Approach for Software-Defined Security in Cloud Infrastructures</title>
+    <id>https://paperswelove.org/papers/unikernel-based-approach-for-software-defined-secu-79db6ac1/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/unikernel-based-approach-for-software-defined-secu-79db6ac1/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Maxime Compastié, Mohamed Kassi-Lahlou, Olivier Festor, Ruan He, Rémi Badonnel</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;In this paper, we propose an approach for software-defined security in cloud infrastructures. More specifically, we show to what extent this programmability can contribute to the protection of cloud services, through the generation of secured unikernel images. These ones are instantiated in the form of lightweight virtual machines, whose attack surface is limited and whose security is driven by a security orchestrator. We introduce a method for generating secured unikernel images in an on-the-fly manner. This one permits to lead to specific and constrained resources, that integrate security mechanisms as soon as the image generation phase. These ones may be built in a reactive or proactive manner, in order to address elasticity requirements. Finally, we detail a prototyping and extensive series of experiments that are used to evaluate the benefits and limits of the proposed approach.&lt;/p&gt;&lt;p&gt;&lt;a href="https://hal.inria.fr/hal-01798793/document"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>HermitCore: A Unikernel for Extreme Scale Computing</title>
+    <id>https://paperswelove.org/papers/hermitcore-a-unikernel-for-extreme-scale-computing-79b483c3/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/hermitcore-a-unikernel-for-extreme-scale-computing-79b483c3/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Jens Breitbart, Simon Pickartz, Stefan Lankes</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;We expect that the size and the complexity of future supercomputers will increase on their path to exascale systems and beyond. Therefore, system software has to adapt to the complexity of these systems for a simplification of the development of scalable applications. In this paper, we present a unikernel operating system design for HPC. It extends the multi-kernel approach while providing better programmability and scalability for hierarchical systems, such as HLRS’ Hazel Hen, which base on multiple cluster-on-a-chip processors. We prove the scalability of the design via micro benchmarks by taking the example of HermitCore—our prototype implementation of the new design.&lt;/p&gt;&lt;p&gt;&lt;a href="https://dl.acm.org/citation.cfm?id=2931093"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Xen and the Art of Virtualization</title>
+    <id>https://paperswelove.org/papers/xen-and-the-art-of-virtualization-79a858f3/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/xen-and-the-art-of-virtualization-79a858f3/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Alex Ho, Andrew Warfield, Boris Dragovic, Ian Pratt, Keir Fraser, Paul Barham, Rolf Neugebauer, Steven Hand, Tim Harris</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Numerous systems have been designed which use virtualization to subdivide the ample resources of a modern computer. Some require specialized hardware, or cannot support commodity operating systems. Some target 100% binary compatibility at the expense of performance. Others sacrifice security or functionality for speed. Few offer resource isolation or performance guarantees; most provide only best-effort provisioning, risking denial of service.
+This paper presents Xen, an x86 virtual machine monitor which allows multiple commodity operating systems to share conventional hardware in a safe and resource managed fashion, but without sacrificing either performance or functionality. This is achieved by providing an idealized virtual machine abstraction to which operating systems such as Linux, BSD and Windows XP, can be ported with minimal effort.
+Our design is targeted at hosting up to 100 virtual machine instances simultaneously on a modern server. The virtualization approach taken by Xen is extremely efficient: we allow operating systems such as Linux and Windows XP to be hosted simultaneously for a negligible performance overhead — at most a few percent compared with the unvirtualized case. We considerably outperform competing commercial and freely available solutions in a range of microbenchmarks and system-wide tests.&lt;/p&gt;&lt;p&gt;&lt;a href="http://www.cl.cam.ac.uk/research/srg/netos/papers/2003-xensosp.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>The operating system: should there be one?</title>
+    <id>https://paperswelove.org/papers/the-operating-system-should-there-be-one-73f7d949/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/the-operating-system-should-there-be-one-73f7d949/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Stephen Kell</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Operating systems and programming languages are often informally evaluated on their conduciveness towards composition. We revisit Dan Ingalls’ Smalltalk-inspired position that “an operating system is a collection of things that don’t fit inside a language; there shouldn’t be one”, discussing what it means, why it appears not to have materialised, and how we might work towards the same effect in the postmodern reality of today’s systems. We argue that the trajectory of the “file” abstraction through Unix and Plan 9 culminates in a Smalltalk-style object, with other filesystem calls as a primitive metasystem. Meanwhile, the key features of Smalltalk have many analogues in the fragmented world of Unix programming (including techniques at the library, file and socket level). Based on the themes of unifying OS- and language-level mechanisms, and increasing the expressiveness of the meta-system, we identify some evolutionary approaches to a postmodern realisation of Ingalls’ vision, arguing that an operating system is still necessary after all.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.cl.cam.ac.uk/~srk31/research/papers/kell13operating.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Rump Kernels No OS? No Problem!</title>
+    <id>https://paperswelove.org/papers/rump-kernels-no-os-no-problem-721f409d/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/rump-kernels-no-os-no-problem-721f409d/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Antti Kantee, Justin Cormack</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;We present rump kernels, a cornucopia of portable, componentized kernel-quality drivers such as file systems, networking drivers, and POSIX system call handlers. Rump kernels rely on the anykernel architecture inherent in NetBSD, and can be built from any vintage of the NetBSD source tree. The technology is stable, as far as that term can be used to describe anything related to operating system kernel internals, and has been developed in NetBSD since 2007.
+
+Everything we described in this article is available as BSD-licensed open source via rumpkernel.org. Pointers to usual community-type elements for discussing use cases and contributions are also available from rumpkernel.org. We welcome your contributions.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.usenix.org/system/files/login/articles/login_1410_03_kantee.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Unikernels: The Rise of the Virtual Library Operating System</title>
+    <id>https://paperswelove.org/papers/unikernels-the-rise-of-the-virtual-library-operati-6fb5ec04/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/unikernels-the-rise-of-the-virtual-library-operati-6fb5ec04/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Anil Madhavapeddy, David J. Scott</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;What if all the software layers in a virtual appliance were compiled within the same safe, high-level language framework?&lt;/p&gt;&lt;p&gt;&lt;a href="https://cacm.acm.org/magazines/2014/1/170866-unikernels/fulltext"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Security of OS-level virtualization technologies</title>
+    <id>https://paperswelove.org/papers/security-of-os-level-virtualization-technologies-6e911cd0/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/security-of-os-level-virtualization-technologies-6e911cd0/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Elena Reshetova, Janne Karhunen, N. Asokan, Thomas Nyman</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;The need for flexible, low-overhead virtualization is evident on many fronts ranging from high-density cloud servers to mobile devices. During the past decade OS-level virtualization has emerged as a new, efficient approach for virtualization, with implementations in multiple different Unix-based systems. Despite its popularity, there has been no systematic study of OS-level virtualization from the point of view of security. In this report, we conduct a comparative study of several OS-level virtualization systems, discuss their security and identify some gaps in current solutions.&lt;/p&gt;&lt;p&gt;&lt;a href="https://arxiv.org/pdf/1407.4245v1.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Enabling Fast, Dynamic Network Processing with ClickOS</title>
+    <id>https://paperswelove.org/papers/enabling-fast-dynamic-network-processing-with-clic-6e63ff60/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/enabling-fast-dynamic-network-processing-with-clic-6e63ff60/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Costin Raiciu, Felipe Huici, Joao Martins, Mohamed Ahmed</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Middleboxes are both crucial to today’s networks and ubiquitous, but embed knowledge of today’s protocols and applications to the detriment of those of tomorrow, making the network harder to evolve. SDNs seek to make it easier to extend the network with new functionality, but most of the research effort has focused on the network’s control plane, that is, how packets are switched are routed through a SDN. Given the pervasiveness and importance of middleboxes, we believe that a fully programmable network should also be able to dynamically instantiate and quickly move middlebox functionality. In this paper we shift focus towards making the data plane more programmable by introducing ClickOS, a tiny, Xen-based virtual machine that can run a wide range of middleboxes. ClickOS is small (5MB when running), can be instantiated in very small times (roughly 30 milliseconds) and can fill up a 10Gb pipe while concurrently running 128 vms on a low-cost commodity server.&lt;/p&gt;&lt;p&gt;&lt;a href="http://conferences.sigcomm.org/sigcomm/2013/papers/hotsdn/p67.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Breaking Up is Hard to Do: Security and Functionality in a Commodity Hypervisor</title>
+    <id>https://paperswelove.org/papers/breaking-up-is-hard-to-do-security-and-functionali-6d75cf23/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/breaking-up-is-hard-to-do-security-and-functionali-6d75cf23/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Mihir Sudarshan Nanavati</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Virtualization platforms have grown with an increasing demand for new technologies, with the modern enterprise-ready virtualization platform being a complex, feature-rich piece of software. Despite the small size of hypervisors, the trusted computing base (TCB) of most enterprise platforms is larger than that of most monolithic commodity operating systems. Several key components of the Xen platform reside in a special, highly-privileged virtual machine or the “Control VM”. We present Xoar, a modified version of the Xen platform that retrofits the modularity and isolation principles championed by microkernels onto a mature virtualization platform. Xoar divides the large, shared control VM of Xen’s TCB into a set of independent, isolated, single purpose components called shards. Shards improve security in several ways: components are restricted to the least privilege necessary for functioning and any sharing between guest VMs is explicitly configurable and auditable in tune with the desired risk exposure policies. Microrebooting components at configurable frequencies reduces the temporal attack surface. Our approach does not require any existing functionality to be sacrificed and allows components to be reused rather than rewritten from scratch. The low performance overhead leads us to believe that Xoar is viable alternative for deployment in enterprise environments.&lt;/p&gt;&lt;p&gt;&lt;a href="https://open.library.ubc.ca/media/download/pdf/24/1.0052016/1"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>A Performance Evaluation of Rump Kernels as a Multi-server OS Building Block on seL4</title>
+    <id>https://paperswelove.org/papers/a-performance-evaluation-of-rump-kernels-as-a-mult-662d183c/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/a-performance-evaluation-of-rump-kernels-as-a-mult-662d183c/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Amirreza Zarrabi, Gernot Heiser, Kent Mcleod, Kevin Elphinstone</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;In the paper, we argue that it is worthwhile to revisit building microkernel-based multiserver operating systems, and introduce a multiserver OS architecture. We argue that recent formal verification of microkernels provides a compelling platform for constructing general purpose systems, and that existing systems are not appropriate to take advantage of a formally verified microkernel.
+Our vision is of mostly-POSIX multiserver systems based on rump kernels, with a small set of fundamental services and frameworks. We expect the approach to provide a balance between componentisation, development effort, and legacy system compatibility.
+We present our initial efforts with a promising performance evaluation of a rump kernel running on seL4.&lt;/p&gt;&lt;p&gt;&lt;a href="http://trustworthy.systems/publications/csiro_full_text/Elphinstone_ZMH_17.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>The Clive Operating System</title>
+    <id>https://paperswelove.org/papers/the-clive-operating-system-64bdb078/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/the-clive-operating-system-64bdb078/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Francisco J. Ballesteros</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Clive is an operating system aimed at providing simple and high performance construction of network and cloud services. Currently it is used hosted on other systems to support further development of the system. In the future it will also run on native blades. Clive introduces new file system technology and novel interfaces for the construction of networked system.&lt;/p&gt;&lt;p&gt;&lt;a href="http://github.com/fjballest/docs/blob/master/clivesys.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Contiki - a Lightweight and Flexible Operating System for Tiny Networked Sensors</title>
+    <id>https://paperswelove.org/papers/contiki-a-lightweight-and-flexible-operating-syste-5c78dabe/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/contiki-a-lightweight-and-flexible-operating-syste-5c78dabe/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Adam Dunkels, Björn Grönvall, Thiemo Voigt</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Wireless sensor networks are composed of large numbers of tiny networked devices that communicate untethered. For large scale networks it is important to be able to dynamically download code into the network. In this paper we present Contiki, a lightweight operating system with support for dynamic loading and replacement of individual programs and services. Contiki is built around an event-driven kernel but provides optional preemptive multi-threading that can be applied to individual processes. We show that dynamic loading and unloading is feasible in a resource constrained environment, while keeping the base system lightweight and compact.&lt;/p&gt;&lt;p&gt;&lt;a href="http://dunkels.com/adam/dunkels04contiki.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Datacenter Traffic Control: Understanding Techniques and Trade-offs</title>
+    <id>https://paperswelove.org/papers/datacenter-traffic-control-understanding-technique-5b35d853/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/datacenter-traffic-control-understanding-technique-5b35d853/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Cauligi S. Raghavendra, Mohammad Noormohammadpour</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Datacenters provide cost-effective and flexible access to scalable compute and storage resources necessary for today’s cloud computing needs. A typical datacenter is made up of thousands of servers connected with a large network and usually managed by one operator. To provide quality access to the variety of applications and services hosted on datacenters and maximize performance, it deems necessary to use datacenter networks effectively and efficiently. Datacenter traffic is often a mix of several classes with different priorities and requirements. This includes user-generated interactive traffic, traffic with deadlines, and long-running traffic. To this end, custom transport protocols and traffic management techniques have been developed to improve datacenter network performance. In this tutorial paper, we review the general architecture of datacenter networks, various topologies proposed for them, their traffic properties, general traffic control challenges in datacenters and general traffic control objectives. The purpose of this paper is to bring out the important characteristics of traffic control in datacenters and not to survey all existing solutions (as it is virtually impossible due to massive body of existing research). We hope to provide readers with a wide range of options and factors while considering a variety of traffic control mechanisms. We discuss various characteristics of datacenter traffic control including management schemes, transmission control, traffic shaping, prioritization, load balancing, multipathing, and traffic scheduling. Next, we point to several open challenges as well as new and interesting networking paradigms. At the end of this paper, we briefly review inter-datacenter networks that connect geographically dispersed datacenters which have been receiving increasing attention recently and pose interesting and novel research problems. To measure the performance of datacenter networks, different performance metrics have been used such as flow completion times, deadline miss rate, throughput and fairness. Depending on the application and user requirements, some metrics may need more attention. While investigating different traffic control techniques, we point out the trade-offs involved in terms of costs, complexity and performance. We find that a combination of different traffic control techniques may be necessary at particular entities and layers in the network to improve the variety of performance metrics. We also find that despite significant research efforts, there are still open problems that demand further attention from the research community.&lt;/p&gt;&lt;p&gt;&lt;a href="https://osf.io/6qzxc/"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>k-ANONYMITY: A MODEL FOR PROTECTING PRIVACY</title>
+    <id>https://paperswelove.org/papers/k-anonymity-a-model-for-protecting-privacy-524971b2/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/k-anonymity-a-model-for-protecting-privacy-524971b2/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>LATANYA SWEENEY</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Consider a data holder, such as a hospital or a bank, that has a privately held collection of person-specific, field structured data. Suppose the data holder wants to share a version of the data with researchers. How can a data holder release a version of its private data with scientific guarantees that the individuals who are the subjects of the data cannot be re-identified while the data remain practically useful? The solution provided in this paper includes a formal protection model named k-anonymity and a set of accompanying policies for deployment. A release provides k-anonymity protection if the information for each person contained in the release cannot be distinguished from at least k-1 individuals whose information also appears in the release. This paper also examines re-identification attacks that can be realized on releases that adhere to k-anonymity unless accompanying policies are respected. The k-anonymity protection model is important because it forms the basis on which the real-world systems known as Datafly, µ-Argus and k-Similar provide guarantees of privacy protection.&lt;/p&gt;&lt;p&gt;&lt;a href="https://epic.org/wp-content/uploads/privacy/reidentification/Sweeney_Article.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>STATECHARTS: A VISUAL FORMALISM FOR COMPLEX SYSTEMS</title>
+    <id>https://paperswelove.org/papers/statecharts-a-visual-formalism-for-complex-systems-46a2275a/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/statecharts-a-visual-formalism-for-complex-systems-46a2275a/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>David Harel</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;We present a broad extension of the conventional formalism of state machines and state diagrams, that is relevant to the specification and design of complex discrete-event systems, such as multi-computer real-time systems, communication protocols and digital control units. Our diagrams, which we call statecharts, extend conventional state-transition diagrams with essentially three elements, dealing, respectively, with the notions of hierarchy, concurrency and communication. These transform the language of state diagrams into a highly structured and economical description language. Statecharts are thus compact and expressive—small diagrams can express complex behavior—as well as compositional and modular. When coupled with the capabilities of computerized graphics, statecharts enable viewing the description at different levels of detail, and make even very large specifications manageable and comprehensible. In fact, we intend to demonstrate here that statecharts counter many of the objections raised against conventional state diagrams, and thus appear to render specification by diagrams an attractive and plausible approach. Statecharts can be used either as a stand-alone behavioral description or as part of a more general design methodology that deals also with the system’s other aspects, such as functional decomposition and data-flow specification. We also discuss some practical experience that was gained over the last three years in applying the statechart formalism to the specification of a particularly complex system.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.weizmann.ac.il/math/harel/sites/math.harel/files/users/user56/Statecharts.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Embracing diversity in the Barrelfish manycore operating system</title>
+    <id>https://paperswelove.org/papers/embracing-diversity-in-the-barrelfish-manycore-ope-46745895/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/embracing-diversity-in-the-barrelfish-manycore-ope-46745895/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Adrian Schüpbach, Andrew Baumann, Paul Barham, Rebecca Isaacs, Simon Peter, Tim Harris, Timothy Roscoe</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;We discuss diversity and heterogeneity in manycore computer systems, and identify three distinct types of diversity, all of which present challenges to operating system designers and application writers alike. We observe that most current research work has concentrated on a narrow form of one of these (non-uniform memory access) to the exclusion of the others, and show with measurement why this makes sense in the short term.
+
+However, we claim that this is not viable in the long term given current processor and system roadmaps, and present our approach to dealing with both heterogeneous hardware within a single system, and the increasing diversity of complete system configurations: we directly represent detailed system information in an expressive “system knowledge base” accessible to applications and OS subsystems alike, and use this to control tasks such as scheduling and resource allocation.&lt;/p&gt;&lt;p&gt;&lt;a href="http://www.barrelfish.org/publications/barrelfish_mmcs08.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Enterprise IoT Security and Scalability: How Unikernels can Improve the Status Quo</title>
+    <id>https://paperswelove.org/papers/enterprise-iot-security-and-scalability-how-uniker-446653d1/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/enterprise-iot-security-and-scalability-how-uniker-446653d1/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Alfred Bratterud, Andreas Happe, Bob Duncan</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Cloud computing has been a great enabler for both the Internet of Things and Big Data. However, as with all new computing developments, development of the technology is usually much faster than consideration for, and development of, solutions for security and privacy. In a previous paper, we proposed that a unikernel solution could be used to improve security and privacy in a cloud scenario. In this paper, we outline how we might apply this approach to the Internet of Things, which can demonstrate an improvement over existing approaches.&lt;/p&gt;&lt;p&gt;&lt;a href="http://aura.abdn.ac.uk/bitstream/handle/2164/7988/PID4488667.pdf?sequence=1&amp;isAllowed=y"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Exterminate All Operating System Abstractions</title>
+    <id>https://paperswelove.org/papers/exterminate-all-operating-system-abstractions-41f4e51e/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/exterminate-all-operating-system-abstractions-41f4e51e/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Dawson R. Engler, M. Frans Kaashoek</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;The defining tragedy of the operating systems community has been the definition of an operating system as software that both multiplexes and abstracts physical resources. The view that the OS should abstract the hardware is based on the assumption that it is possible both to define abstractions that are appropriate for all areas and to implement them to perform efficiently in all situations. We believe that the fallacy of this quixotic goal is self-evident, and that the operating system problems of the last two decades (poor performance, poor reliability, poor adaptability, and inflexibility) can be traced back to it. The solution we propose is simple: complete elimination of operating system abstractions by lowering the operating system interface to the hardware level.&lt;/p&gt;&lt;p&gt;&lt;a href="http://studies.ac.upc.es/doctorat/ENGRAP/hotos-jeremiad.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Protecting Browser State from Web Privacy Attacks</title>
+    <id>https://paperswelove.org/papers/protecting-browser-state-from-web-privacy-attacks-3c754eb1/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/protecting-browser-state-from-web-privacy-attacks-3c754eb1/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Andrew Bortz, Collin Jackson, Dan Boneh, John C Mitchell</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Through a variety of means, including a range of browser cache methods and inspecting the color of a visited hyperlink, client-side browser state can be exploited to track users against their wishes. This tracking is possible because persistent, client-side browser state is not properly partitioned on per-site basis in current browsers. We address this problem by refining the general notion of a “same-origin” policy and implementing two browser extensions that enforce this policy on the browser cache and visited links.
+
+We also analyze various degrees of cooperation between sites to track users, and show that even if long-term browser state is properly partitioned, it is still possible for sites to use modern web features to bounce users between sites and invisibly engage in cross-domain tracking of their visitors. Cooperative privacy attacks are an unavoidable consequence of all persistent browser state that affects the behavior of the browser, and disabling or frequently expiring this state is the only way to achieve true privacy against colluding parties.&lt;/p&gt;&lt;p&gt;&lt;a href="https://crypto.stanford.edu/sameorigin/sameorigin.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>A survey of coordinated attacks and collaborative intrusion detection</title>
+    <id>https://paperswelove.org/papers/a-survey-of-coordinated-attacks-and-collaborative--397d4936/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/a-survey-of-coordinated-attacks-and-collaborative--397d4936/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Chenfeng Vincent Zhou, Christopher Leckie, Shanika Karunasekera</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Coordinated attacks, such as large-scale stealthy scans, worm outbreaks and distributed denial-of-service (DDoS) attacks, occur in multiple networks simultaneously. Such attacks are extremely difficult to detect using isolated intrusion detection systems (IDSs) that monitor only a limited portion of the Internet. In this paper, we summarize the current research directions in detecting such attacks using collaborative intrusion detection systems (CIDSs). In particular, we highlight two main challenges in CIDS research: CIDS architectures and alert correlation algorithms. We review the current CIDS approaches in terms of these two challenges. We conclude by highlighting opportunities for an integrated solution to large-scale collaborative intrusion detection.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.sciencedirect.com/science/article/pii/S016740480900073X"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Web-Scale Responsive Visual Search at Bing</title>
+    <id>https://paperswelove.org/papers/web-scale-responsive-visual-search-at-bing-37d2f2ee/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/web-scale-responsive-visual-search-at-bing-37d2f2ee/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Arun Sacheti, Houdong Hu, Jiapei Huang, Li Huang, Linjun Yang, Meenaz Merchant, Pavel Komlev, Xi (Stephen) Chen, Yan Wang, Ye Wu</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;In this paper, we introduce a web-scale general visual search system deployed in Microsoft Bing. The system accommodates tens of billions of images in the index, with thousands of features for each image, and can respond in less than 200 ms. In order to overcome the challenges in relevance, latency, and scalability in such large scale of data, we employ a cascaded learning-to-rank framework based on various latest deep learning visual features, and deploy in a distributed heterogeneous computing platform. Quantitative and qualitative experiments show that our system is able to support various applications on Bing website and apps.&lt;/p&gt;&lt;p&gt;&lt;a href="https://arxiv.org/pdf/1802.04914.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Unikernel Monitors: Extending Minimalism Outside of the Box</title>
+    <id>https://paperswelove.org/papers/unikernel-monitors-extending-minimalism-outside-of-3756140b/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/unikernel-monitors-extending-minimalism-outside-of-3756140b/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Dan Williams, Ricardo Koller</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Recently, unikernels have emerged as an exploration of minimalist software stacks to improve the security of applications in the cloud. In this paper, we propose extending the notion of minimalism beyond an individual virtual machine to include the underlying monitor and the interface it exposes. We propose unikernel monitors. Each unikernel is bundled with a tiny, specialized monitor that only contains what the unikernel needs both in terms of interface and implementation. Unikernel monitors improve isolation through minimal interfaces, reduce complexity, and boot unikernels quickly. Our initial prototype, ukvm, is less than 5% the code size of a traditional monitor, and boots MirageOS unikernels in as little as 10ms (8× faster than a traditional monitor).&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.usenix.org/system/files/conference/hotcloud16/hotcloud16_williams.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Decoupling Cores, Kernels, and Operating Systems</title>
+    <id>https://paperswelove.org/papers/decoupling-cores-kernels-and-operating-systems-365b9beb/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/decoupling-cores-kernels-and-operating-systems-365b9beb/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Gerd Zellweger, Kornilios Kourtis, Simon Gerber, Timothy Roscoe</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;We present Barrelfish/DC, an extension to the Barrelfish OS which decouples physical cores from a native OS kernel, and furthermore the kernel itself from the rest of the OS and application state. In Barrelfish/DC, native kernel code on any core can be quickly replaced, kernel state moved between cores, and cores added and removed from the system transparently to applications and OS processes, which continue to execute.
+
+Barrelfish/DC is a multikernel with two novel ideas: the use of boot drivers to abstract cores as regular devices, and a partitioned capability system for memory management which externalizes core-local kernel state.
+
+We show by performance measurements of real applications and device drivers that the approach is practical enough to be used for a number of purposes, such as online kernel upgrades, and temporarily delivering hard real-time performance by executing a process under a specialized, single-application kernel.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-zellweger.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Extensibility, Safety and Performance in the SPIN Operating System</title>
+    <id>https://paperswelove.org/papers/extensibility-safety-and-performance-in-the-spin-o-30860a28/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/extensibility-safety-and-performance-in-the-spin-o-30860a28/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Brian N. Bershad, Craig Chambers, David Becker, Emin Gün Sirer, Marc E. Fiuczynski, Przemysław Pardyak, Stefan Savage, Susan Eggers</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;This paper describes the motivation, architecture and performance of SPIN, an extensible operating system. SPIN provides an extension infrastructure, together with a core set of extensible services, that allow applications to safely change the operating system’s interface and implementation. Extensions allow an application to specialize the underlying operating system in order to achieve a particular level of performance and functionality. SPIN uses language and link-time mechanisms to inexpensively export fine-grained interfaces to operating system services. Extensions are written in a type safe language, and are dynamically linked into the operating system kernel. This approach offers extensions rapid access to system services, while protecting the operating system code executing within the kernel address space. SPIN and its extensions are written in Modula-3 and run on DEC Alpha workstations.&lt;/p&gt;&lt;p&gt;&lt;a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.117.6702&amp;rep=rep1&amp;type=pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>On-the-Fly TCP Acceleration with Miniproxy</title>
+    <id>https://paperswelove.org/papers/on-the-fly-tcp-acceleration-with-miniproxy-2ea25fdf/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/on-the-fly-tcp-acceleration-with-miniproxy-2ea25fdf/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Felipe Huici, Giuseppe Siracusano, Nicola Blefari Melazzi, Roberto Bifulco, Simon Kuenzer, Stefano Salsano</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;TCP proxies are basic building blocks for many advanced middleboxes. In this paper we present Miniproxy, a TCP proxy built on top of a specialized minimalistic cloud operating system. Miniproxy’s connection handling performance is comparable to that of full-fledged GNU/Linux TCP proxy implementations, but its minimalistic footprint enables new use cases. Specifically, Miniproxy requires as little as 6 MB to run and boots in tens of milliseconds, enabling massive consolidation, on-the-fly instantiation and edge cloud computing scenarios. We demonstrate the benefits of Miniproxy by implementing and evaluating a TCP acceleration use case.&lt;/p&gt;&lt;p&gt;&lt;a href="https://arxiv.org/pdf/1605.06285.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Time provisioning Evaluation of KVM, Docker and Unikernels in a Cloud Platform</title>
+    <id>https://paperswelove.org/papers/time-provisioning-evaluation-of-kvm-docker-and-uni-2e027055/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/time-provisioning-evaluation-of-kvm-docker-and-uni-2e027055/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Bruno Xavier, Luis Jersak, Tiago Ferreto</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Unikernels are a promising alternative for application deployment in cloud platforms. They comprise a very small footprint, providing better deployment agility and portability among virtualization platforms. Similar to Linux containers, they are a lightweight alternative for deploying distributed applications based on microservices. However, the comparison of unikernels with other virtualization options regarding the concurrent provisioning of instances, as in the case of microservices-based applications, is still lacking. This paper provides an evaluation of KVM (Virtual Machines), Docker (Containers), and OSv (Unikernel), when provisioning multiple instances concurrently in an OpenStack cloud platform. We confirmed that OSv outperforms the other options and also identified opportunities for optimization.&lt;/p&gt;&lt;p&gt;&lt;a href="http://repositorio.pucrs.br/dspace/bitstream/10923/14178/2/Time_provisioning_evaluation_of_KVM_Docker_and_Unikernels_in_a_Cloud_Platform.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>A Case for High Performance Computing with Virtual Machines</title>
+    <id>https://paperswelove.org/papers/a-case-for-high-performance-computing-with-virtual-2ca8f1ea/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/a-case-for-high-performance-computing-with-virtual-2ca8f1ea/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Bulent Abali, Dhabaleswar K. Panda, Jiuxing Liu, Wei Huang</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Virtual machine (VM) technologies are experiencing a resurgence in both industry and research communities. VMs offer many desirable features such as security, ease of management, OS customization, performance isolation, checkpointing, and migration, which can be very beneficial to the performance and the manageability of high performance computing (HPC) applications. However, very few HPC applications are currently running in a virtualized environment due to the performance overhead of virtualization. Further, using VMs for HPC also introduces additional challenges such as management and distribution of OS images.
+
+In this paper we present a case for HPC with virtual machines by introducing a framework which addresses the performance and management overhead associated with VM-based computing. Two key ideas in our design are: Virtual Machine Monitor (VMM) bypass I/O and scalable VM image management. VMM-bypass I/O achieves high communication performance for VMs by exploiting the OS-bypass feature of modern high speed interconnects such as InfiniBand. Scalable VM image management significantly reduces the overhead of distributing and managing VMs in large scale clusters. Our current implementation is based on the Xen VM environment and InfiniBand. However, many of our ideas are readily applicable to other VM environments and high speed interconnects.
+
+We carry out detailed analysis on the performance and management overhead of our VM-based HPC framework. Our evaluation shows that HPC applications can achieve almost the same performance as those running in a native, non-virtualized environment. Therefore, our approach holds promise to bring the benefits of VMs to HPC applications with very little degradation in performance.&lt;/p&gt;&lt;p&gt;&lt;a href="http://mvapich.cse.ohio-state.edu/static/media/publications/abstract/huangwei-ics06.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Meltdown: Reading Kernel Memory from User Space</title>
+    <id>https://paperswelove.org/papers/meltdown-reading-kernel-memory-from-user-space-2a47912d/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/meltdown-reading-kernel-memory-from-user-space-2a47912d/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Anders Fogh, Daniel Genkin, Daniel Gruss, Jann Horn, Michael Schwarz, Mike Hamburg, Moritz Lipp, Paul Kocher, Stefan Mangard, Thomas Prescher, Werner Haas, Yuval Yarom</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;The security of computer systems fundamentally relies on memory isolation, e.g., kernel address ranges are marked as non-accessible and are protected from user access. In this paper, we present Meltdown. Meltdown exploits side effects of out-of-order execution on modern processors to read arbitrary kernel-memory locations including personal data and passwords. Out-of-order execution is an indispensable performance feature and present in a wide range of modern processors. The attack is independent of the operating system, and it does not rely on any software vulnerabilities. Meltdown breaks all security guarantees provided by address space isolation as well as paravirtualized environments and, thus, every security mechanism building upon this foundation. On affected systems, Meltdown enables an adversary to read memory of other processes or virtual machines in the cloud without any permissions or privileges, affecting millions of customers and virtually every user of a personal computer. We show that the KAISER defense mechanism for KASLR has the important (but inadvertent) side effect of impeding Meltdown. We stress that KAISER must be deployed immediately to prevent large-scale exploitation of this severe information leakage.&lt;/p&gt;&lt;p&gt;&lt;a href="https://meltdownattack.com/meltdown.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Comparing the Robustness of POSIX Operating Systems</title>
+    <id>https://paperswelove.org/papers/comparing-the-robustness-of-posix-operating-system-24a35732/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/comparing-the-robustness-of-posix-operating-system-24a35732/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>John DeVale, Philip Koopman</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Critical system designers are turning to off-the-shelf operating system (OS) software to reduce costs and time-to-market. Unfortunately, general-purpose OSes do not always respond to exceptional conditions robustly, either accepting exceptional values without complaint, or suffering abnormal task termination. Even though direct measurement is impractical, this paper uses a multi-version comparison technique to reveal a 6% to 19% normalized rate at which exceptional parameter values cause no error report in commercial POSIX OS implementations. Additionally, 168 functions across 13 OSes are compared to reveal common mode robustness failures. While the best single OS has a 12.6% robustness failure rate for system calls, 3.8% of failures are common across all 13 OSes examined. However, combining C library calls with system calls increases these rates to 29.5% for the best single OS and 17.0% for common mode failures. These results suggest that OS implementations are not completely diverse, and that C library functions are both less diverse and less robust than system calls.&lt;/p&gt;&lt;p&gt;&lt;a href="https://users.ece.cmu.edu/~koopman/ballista/ftcs99/ftcs99.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Exokernel: An Operating System Architecture for Application-Level Resource Management</title>
+    <id>https://paperswelove.org/papers/exokernel-an-operating-system-architecture-for-app-2049bf3b/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/exokernel-an-operating-system-architecture-for-app-2049bf3b/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Dawson R. Engler, James O’Toole Jr., M. Frans Kaashoek</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Traditional operating systems limit the performance, flexibility, and functionality of applications by fixing the interface and implementation of operating system abstractions such as interprocess communication and virtual memory. The exokernel operating system architecture addresses this problem by providing application-level management of physical resources. In the exokernel architecture, a small kernel securely exports all hardware resources through a low-level interface to untrusted library operating systems. Library operating systems use this interface to implement system objects and policies. This separation of resource protection from management allows application-specific customization of traditional operating system abstractions by extending, specializing, or even replacing libraries.
+
+We have implemented a prototype exokernel operating system. Measurements show that most primitive kernel operations (such as exception handling and protected control transfer) are ten to 100 times faster than in Ultrix, a mature monolithic UNIX operating system. In addition, we demonstrate that an exokernel allows applications to control machine resources in ways not possible in traditional operating systems. For instance, virtual memory and interprocess communication abstractions are implemented entirely within an application-level library. Measurements show that application-level virtual memory and interprocess communication primitives are five to 40 times faster than Ultrix’s kernel primitives. Compared to state-of-the-art implementations from the literature, the prototype exokernel system is at least five times faster on operations such as exception dispatching and interprocess communication.&lt;/p&gt;&lt;p&gt;&lt;a href="http://pages.cs.wisc.edu/~remzi/Classes/736/Spring2014/Papers/exo-sosp95.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>On the Fly Orchestration of Unikernels: Tuning and Performance Evaluation of Virtual Infrastructure Managers</title>
+    <id>https://paperswelove.org/papers/on-the-fly-orchestration-of-unikernels-tuning-and--1e07bb57/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/on-the-fly-orchestration-of-unikernels-tuning-and--1e07bb57/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Claudio Pisa, Florian Schmidt, Francesco Lombardo, Giuseppe Siracusano, Paolo Lungaroni, Pier Luigi Ventre, Stefano Salsano</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Network operators are facing significant challenges meeting the demand for more bandwidth, agile infrastructures, innovative services, while keeping costs low. Network Functions Virtualization (NFV) and Cloud Computing are emerging as key trends of 5G network architectures, providing flexibility, fast instantiation times, support of Commercial Off The Shelf hardware and significant cost savings. NFV leverages Cloud Computing principles to move the data-plane network functions from expensive, closed and proprietary hardware to the so-called Virtual Network Functions (VNFs). In this paper we deal with the management of virtual computing resources (Unikernels) for the execution of VNFs. This functionality is performed by the Virtual Infrastructure Manager (VIM) in the NFV MANagement and Orchestration (MANO) reference architecture. We discuss the instantiation process of virtual resources and propose a generic reference model, starting from the analysis of three open source VIMs, namely OpenStack, Nomad and OpenVIM. We improve the aforementioned VIMs introducing the support for special-purpose Unikernels and aiming at reducing the duration of the instantiation process. We evaluate some performance aspects of the VIMs, considering both stock and tuned versions. The VIM extensions and performance evaluation tools are available under a liberal open source licence.&lt;/p&gt;&lt;p&gt;&lt;a href="https://arxiv.org/pdf/1809.07701.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>OSv—Optimizing the Operating System for Virtual Machines</title>
+    <id>https://paperswelove.org/papers/osvoptimizing-the-operating-system-for-virtual-mac-1a85664e/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/osvoptimizing-the-operating-system-for-virtual-mac-1a85664e/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Avi Kivity, Don Marti, Dor Laor, Glauber Costa, Nadav Har’El, Pekka Enberg, Vlad Zolotarov</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Virtual machines in the cloud typically run existing general-purpose operating systems such as Linux. We notice that the cloud’s hypervisor already provides some features, such as isolation and hardware abstraction, which are duplicated by traditional operating systems, and that this duplication comes at a cost.
+
+We present the design and implementation of OSv, a new guest operating system designed specifically for running a single application on a virtual machine in the cloud. It addresses the duplication issues by using a low-overhead library-OS-like design. It runs existing applications written for Linux, as well as new applications written for OSv. We demonstrate that OSv is able to efficiently run a variety of existing applications. We demonstrate its sub-second boot time, small OS image and how it makes more memory available to the application. For unmodified network-intensive applications, we demonstrate up to 25% increase in throughput and 47% decrease in latency. By using non-POSIX network APIs, we can further improve performance and demonstrate a 290% increase in Memcached throughput.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.usenix.org/system/files/conference/atc14/atc14-paper-kivity.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>A Persistent System in Real Use - Experiences of the First 13 Years -</title>
+    <id>https://paperswelove.org/papers/a-persistent-system-in-real-use-experiences-of-the-17db25b3/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/a-persistent-system-in-real-use-experiences-of-the-17db25b3/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Jochen Liedtke</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Eumel and its advanced successor L3 are operating systems built by GMD which have been used, for 13 years and 4 years respectively, as production systems in business and education. More than 2000 Eumel systems and 500 L3 systems have been shipped since 1979 and 1988. Both systems rely heavily on the paradigm of persistence (including fault-surviving persistence). Both data and processes, in principle all objects are persistent, files are implemented by means of persistent objects (not vice versa) etc.
+
+In addition to the principles and mechanisms of Eumel/L3, general and specific experiences are described: these relate to the design, implementation and maintenance of the systems over the last 13 years. For general purpose timesharing systems the idea is powerful and elegant, it can be efficiently implemented, but making a system really usable is hard work.&lt;/p&gt;&lt;p&gt;&lt;a href="https://os.itec.kit.edu/downloads/publ_1993_liedtke_persistent-system-in-real-use.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Broken Promises of Privacy: Responding to the Surprising Failure of Anonymization</title>
+    <id>https://paperswelove.org/papers/broken-promises-of-privacy-responding-to-the-surpr-16dd0859/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/broken-promises-of-privacy-responding-to-the-surpr-16dd0859/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Paul Ohm</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Computer scientists have recently undermined our faith in the privacyprotecting power of anonymization, the name for techniques that protect the privacy of individuals in large databases by deleting information like names and social security numbers. These scientists have demonstrated that they can often “reidentify” or “deanonymize” individuals hidden in anonymized data with astonishing ease.
+
+By understanding this research, we realize we have made a mistake, labored beneath a fundamental misunderstanding, which has assured us much less privacy than we have assumed. This mistake pervades nearly every information privacy law, regulation, and debate, yet regulators and legal scholars have paid it scant attention. We must respond to the surprising failure of anonymization, and this Article provides the tools to do so.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.uclalawreview.org/broken-promises-of-privacy-responding-to-the-surprising-failure-of-anonymization-2/"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>B4: Experience with a Globally-Deployed Software Defined WAN</title>
+    <id>https://paperswelove.org/papers/b4-experience-with-a-globally-deployed-software-de-0f56e9e9/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/b4-experience-with-a-globally-deployed-software-de-0f56e9e9/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Alok Kumar, Amin Vahdat, Arjun Singh, Jim Wanderer, Jonathan Zolla, Joon Ong, Junlan Zhou, Leon Poutievski, Min Zhu, Stephen Stuart, Subbaiah Venkata, Subhasree Mandal, Sushant Jain, Urs Hölzle</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;We present the design, implementation, and evaluation of B4, a private WAN connecting Google’s data centers across the planet. B4 has a number of unique characteristics: i) massive bandwidth requirements deployed to a modest number of sites, ii) elastic traffic demand that seeks to maximize average bandwidth, and iii) full control over the edge servers and network, which enables rate limiting and demand measurement at the edge. These characteristics led to a Software Defined Networking architecture using OpenFlow to control relatively simple switches built from merchant silicon. B4’s centralized traffic engineering service drives links to near 100% utilization, while splitting application flows among multiple paths to balance capacity against application priority/demands. We describe experience with three years of B4 production deployment, lessons learned, and areas for future work.&lt;/p&gt;&lt;p&gt;&lt;a href="https://dl.acm.org/citation.cfm?id=2486019"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Unikernels Everywhere: The Case for Elastic CDNs</title>
+    <id>https://paperswelove.org/papers/unikernels-everywhere-the-case-for-elastic-cdns-0d685a3c/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/unikernels-everywhere-the-case-for-elastic-cdns-0d685a3c/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Anton Ivanov, Felipe Huici, Filipe Manco, Florian Schmidt, Jose Mendes, Kenichi Yasukata, Michio Honda, Simon Kuenzer, Yuri Volchkov</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Video streaming dominates the Internet’s overall traffic mix, with reports stating that it will constitute 90% of all consumer traffic by 2019. Most of this video is delivered by Content Delivery Networks (CDNs), and, while they optimize QoE metrics such as buffering ratio and start-up time, no single CDN provides optimal performance. In this paper we make the case for elastic CDNs, the ability to build virtual CDNs on-the-fly on top of shared, third-party infrastructure at a scale. To bring this idea closer to reality we begin by large-scale simulations to quantify the effects that elastic CDNs would have if deployed, and build and evaluate MiniCache, a specialized, minimalistic virtualized content cache that runs on the Xen hypervisor. MiniCache is able to serve content at rates of up to 32 Gb/s and handle up to 600K reqs/sec on a single CPU core, as well as boot in about 90 milliseconds on x86 and around 370 milliseconds on ARM32.&lt;/p&gt;&lt;p&gt;&lt;a href="https://dl.acm.org/citation.cfm?id=3050757"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Improving IPC by Kernel Design</title>
+    <id>https://paperswelove.org/papers/improving-ipc-by-kernel-design-0b2b89c0/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/improving-ipc-by-kernel-design-0b2b89c0/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Jochen Liedtke</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Inter-process communication (ipc) has to be fast and effective, otherwise programmers will not use remote procedure calls (RPC), multithreading and multitasking adequately. Thus ipc performance is vital for modern operating systems, especially μ-kernel based ones. Surprisingly, most μ-kernels exhibit poor ipc performance, typically requiring 100 μs for a short message transfer on a modern processor, running with 50 MHz clock rate. In contrast, we achieve 5 μs; a twentyfold improvement. This paper describes the methods and principles used, starting from the architectural design and going down to the coding level. There is no single trick to obtaining this high performance; rather, a synergetic approach in design and implementation on all levels is needed. The methods and their synergy are illustrated by applying them to a concrete example, the L3 μ-kernel (an industrial-quality operating system in daily use at several hundred sites). The main ideas are to guide the complete kernel design by the ipc requirements, and to make heavy use of the concept of virtual address space inside the μ-kernel itself. As the L3 experiment shows, significant performance gains are possible: compared with Mach, they range from a factor of 22 (8-byte messages) to 3 (4-Kbyte messages). Although hardware specific details influence both the design and implementation, these techniques are applicable to the whole class of conventional general purpose von Neumann processors supporting virtual addresses. Furthermore, the effort required is reasonably small, for example the dedicated parts of the μ-kernel can be concentrated in a single medium sized module.&lt;/p&gt;&lt;p&gt;&lt;a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.55.9939&amp;rep=rep1&amp;type=pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Ranking Relevance in Yahoo Search</title>
+    <id>https://paperswelove.org/papers/ranking-relevance-in-yahoo-search-07347534/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/ranking-relevance-in-yahoo-search-07347534/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Changsung Kang, Chikashi Nobata, Dawei Yin, Hongbo Deng, Hua Ouyang, Jean-Marc Langlois, Jianhui Chen, Jiliang Tang, Mianwei Zhou, Tim Daly Jr., Yi Chang, Yuening Hu</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Search engines play a crucial role in our daily lives. Relevance is the core problem of a commercial search engine. It has attracted thousands of researchers from both academia and industry and has been studied for decades. Relevance in a modern search engine has gone far beyond text matching, and now involves tremendous challenges. The semantic gap between queries and URLs is the main barrier for improving base relevance. Clicks help provide hints to improve relevance, but unfortunately for most tail queries, the click information is too sparse, noisy, or missing entirely. For comprehensive relevance, the recency and location sensitivity of results is also critical.
+
+In this paper, we give an overview of the solutions for relevance in the Yahoo search engine. We introduce three key techniques for base relevance – ranking functions, semantic matching features and query rewriting. We also describe solutions for recency sensitive relevance and location sensitive relevance. This work builds upon 20 years of existing efforts on Yahoo search, summarizes the most recent advances and provides a series of practical relevance solutions. The reported performance is based on Yahoo’s commercial search engine, where tens of billions of URLs are indexed and served by the ranking system.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.kdd.org/kdd2016/papers/files/adf0361-yinA.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Using kernel hypervisors to secure applications</title>
+    <id>https://paperswelove.org/papers/using-kernel-hypervisors-to-secure-applications-059642ed/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/using-kernel-hypervisors-to-secure-applications-059642ed/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Raymond Lu, Richard O'Brien, Terrence Mitchem</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;The paper describes an approach for selectively controlling COTS components to provide robustness and security. Using the concept of a loadable module, “kernel hypervisors” have been implemented on a Linux kernel. These kernel hypervisors provide unbypassable security wrappers for application specific security requirements and can be used to provide replication services as well. A framework has been developed based on a master kernel hypervisor whose job is to coordinate installation and removal of individual client kernel hypervisors and to provide a means for management of these clients. The framework allows client kernel hypervisors to be stacked so that a variety of application specific policies can be implemented, each by means of its own kernel hypervisor. The hypervisors run in the kernel, but since they are loadable modules, they do not require that the kernel be modified. Kernel hypervisors have a number of potential applications, including protecting user systems from malicious active content downloaded via a Web browser and wrapping servers and firewall services for limiting possible compromises.&lt;/p&gt;&lt;p&gt;&lt;a href="https://ieeexplore.ieee.org/abstract/document/646188"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>The Slab Allocator: An Object-Caching Kernel Memory Allocator</title>
+    <id>https://paperswelove.org/papers/the-slab-allocator-an-object-caching-kernel-memory-039b07a3/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/the-slab-allocator-an-object-caching-kernel-memory-039b07a3/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Jeff Bonwick</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;This paper presents a comprehensive design overview of the SunOS 5.4 kernel memory allocator. This allocator is based on a set of object-caching primitives that reduce the cost of allocating complex objects by retaining their state between uses. These same primitives prove equally effective for managing stateless memory (e.g. data pages and temporary buffers) because they are space-efficient and fast. The allocator’s object caches respond dynamically to global memory pressure, and employ an object-coloring scheme that improves the system’s overall cache utilization and bus balance. The allocator also has several statistical and debugging features that can detect a wide range of problems throughout the system.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.usenix.org/legacy/publications/library/proceedings/bos94/full_papers/bonwick.ps"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Message Analysis-Guided Allocation and Low-Pause Incremental Garbage Collection in a Concurrent Language</title>
+    <id>https://paperswelove.org/papers/message-analysis-guided-allocation-and-low-pause-i-0346b725/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/message-analysis-guided-allocation-and-low-pause-i-0346b725/" type="text/html"/>
+    <published>2026-09-01T00:48:01+00:00</published>
+    <updated>2026-09-01T00:48:01+00:00</updated>
+    <author>
+      <name>Jesper Wilhelmsson, Konstantinos Sagonas</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;We present a memory management scheme for a concurrent programming language where communication occurs using message-passing with copying semantics. The runtime system is built around process-local heaps, which frees the memory manager from redundant synchronization in a multithreaded implementation and allows the memory reclamation of process-local heaps to be a private business and to often take place without garbage collection. The allocator is guided by a static analysis which speculatively allocates data possibly used as messages in a shared memory area. To respect the (soft) real-time requirements of the language, we develop a generational, incremental garbage collection scheme tailored to the characteristics of this runtime system. The collector imposes no overhead on the mutator, requires no costly barrier mechanisms, and has a relatively small space overhead. We have implemented these schemes in the context of an industrial-strength implementation of a concurrent functional language used to develop large-scale, highly concurrent, embedded applications. Our measurements across a range of applications indicate that the incremental collector substantially reduces pause times, imposes only very small overhead on the total runtime, and achieves a high degree of mutator utilization.&lt;/p&gt;&lt;p&gt;&lt;a href="http://user.it.uu.se/~kostis/Papers/ismm04.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Soft Typing</title>
+    <id>https://paperswelove.org/papers/soft-typing-fd0a5ddd/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/soft-typing-fd0a5ddd/" type="text/html"/>
+    <published>2026-09-01T00:48:00+00:00</published>
+    <updated>2026-09-01T00:48:00+00:00</updated>
+    <author>
+      <name>Mike Fagan, Robert Cartwright</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;In an effort to avoid improper use of program functions, modern programming languages employ some kind of preventative type system. These type systems can be classified as either static or dynamic. Static type systems detect "ill-typed" program phrases at compile-time, whereas dynamic type systems detect "ill-typed" phrases at run-time. Static typing systems have two important advantages over dynamically typed systems: First, they provide important feedback to the programmer by detecting a large class of program errors before execution. Second, they extract information that a compiler can exploit to produce more efficient code. The price paid for these advantages, however, is a loss of expressiveness and modularity. It is easy to prove that a static type system for an "interesting" programming language necessarily excludes some "good" programs. This paper focuses on the problem of designing programming systems that retain the all the expressiveness of dynamic typing, but still offer the early error detection and improved optimization opportunities of static typing. To that end, we introduce a concept called soft typing. The key concept of soft typing is that a type checker need not reject programs containing statically "ill-typed" phrases. Instead, the soft type checker inserts explicit run-time checks. Thus, there are two issues to be addressed in the design of soft typing systems. First, the typing mechanism must provide reasonable feedback to programmers accustomed to dynamically typed-languages. Current static systems fail to satisfy the programmer's intuition about correctness on many programs. Second, a soft typing system must sensibly insert run-time checks (when necessary). This paper develops a type system and checking algorithms that are suitable for soft typing a significant class of programming languages.&lt;/p&gt;&lt;p&gt;&lt;a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.24.9333&amp;rep=rep1&amp;type=pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>HaLoop: Efficient Iterative Data Processing on Large Clusters</title>
+    <id>https://paperswelove.org/papers/haloop-efficient-iterative-data-processing-on-larg-f60e4bd6/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/haloop-efficient-iterative-data-processing-on-larg-f60e4bd6/" type="text/html"/>
+    <published>2026-09-01T00:48:00+00:00</published>
+    <updated>2026-09-01T00:48:00+00:00</updated>
+    <author>
+      <name>Bill Howe, Magdalena Balazinska, Michael D. Ernst, Yingyi Bu</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;The growing demand for large-scale data mining and data analysis applications has led both industry and academia to design new types of highly scalable data-intensive computing platforms. MapReduce and Dryad are two popular platforms in which the dataflow takes the form of a directed acyclic graph of operators. These platforms lack built-in support for iterative programs, which arise naturally in many applications including data mining, web ranking, graph analysis, model fitting, and so on. This paper presents HaLoop, a modified version of the Hadoop MapReduce framework that is designed to serve these applications. HaLoop not only extends MapReduce with programming support for iterative applications, it also dramatically improves their efficiency by making the task scheduler loop-aware and by adding various caching mechanisms. We evaluated HaLoop on real queries and real datasets. Compared with Hadoop, on average, HaLoop reduces query runtimes by 1.85, and shuffles only 4% of the data between mappers and reducers.&lt;/p&gt;&lt;p&gt;&lt;a href="http://homes.cs.washington.edu/~billhowe/pubs/HaLoop.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Extensible Effects: An Alternative to Monad Transformers</title>
+    <id>https://paperswelove.org/papers/extensible-effects-an-alternative-to-monad-transfo-f271560c/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/extensible-effects-an-alternative-to-monad-transfo-f271560c/" type="text/html"/>
+    <published>2026-09-01T00:48:00+00:00</published>
+    <updated>2026-09-01T00:48:00+00:00</updated>
+    <author>
+      <name>Amr Sabry, Cameron Swords, Oleg Kiselyov</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;We design and implement a library that solves the long-standing problem of combining effects without imposing restrictions on their interactions (such as static ordering). Effects arise from interactions between a client and an effect handler (interpreter); interactions may vary throughout the program and dynamically adapt to execution conditions. Existing code that relies on monad transformers may be used with our library with minor changes, gaining efficiency over long monad stacks. In addition, our library has greater expressiveness, allowing for practical idioms that are inefficient, cumbersome, or outright impossible with monad transformers.
+Our alternative to a monad transformer stack is a single monad, for the coroutine-like communication of a client with its handler. Its type reflects possible requests, i.e., possible effects of a computation. To support arbitrary effects and their combinations, requests are values of an extensible union type, which allows adding and, notably, subtracting summands. Extending and, upon handling, shrinking of the union of possible requests is reflected in its type, yielding a type-and-effect system for Haskell. The library is lightweight, generalizing the extensible exception handling to other effects and accurately tracking them in types.&lt;/p&gt;&lt;p&gt;&lt;a href="http://okmij.org/ftp/Haskell/extensible/exteff.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Top 10 algorithms in data mining</title>
+    <id>https://paperswelove.org/papers/top-10-algorithms-in-data-mining-f195ce71/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/top-10-algorithms-in-data-mining-f195ce71/" type="text/html"/>
+    <published>2026-09-01T00:48:00+00:00</published>
+    <updated>2026-09-01T00:48:00+00:00</updated>
+    <author>
+      <name>Angus Ng, Bing Liu, Dan Steinberg, David J. Hand, Geoffrey J. McLachlan, Hiroshi Motoda, J. Ross Quinlan, Joydeep Ghosh, Michael Steinbach, Philip S. Yu, Qiang Yang, Vipin Kumar, Xindong Wu, Zhi-Hua Zhou</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;This paper presents the top 10 data mining algorithms identified by the IEEE International Conference on Data Mining (ICDM) in December 2006: C4.5, k-Means, SVM, Apriori, EM, PageRank, AdaBoost, k NN, Naive Bayes, and CART. These top 10 algorithms are among the most influential data mining algorithms in the research community. With each algorithm, we provide a description of the algorithm, discuss the impact of the algorithm, and review current and further research on the algorithm. These 10 algorithms cover classification, clustering, statistical learning, association analysis, and link mining, which are all among the most important topics in data mining research and development.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.researchgate.net/publication/29467751_Top_10_algorithms_in_data_mining"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>THE SWIRLDS HASHGRAPH CONSENSUS ALGORITHM: FAIR, FAST, BYZANTINE FAULT TOLERANCE</title>
+    <id>https://paperswelove.org/papers/the-swirlds-hashgraph-consensus-algorithm-fair-fas-f0e49b33/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/the-swirlds-hashgraph-consensus-algorithm-fair-fas-f0e49b33/" type="text/html"/>
+    <published>2026-09-01T00:48:00+00:00</published>
+    <updated>2026-09-01T00:48:00+00:00</updated>
+    <author>
+      <name>Leemon Baird</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;A new system, the Swirlds hashgraph consensus algorithm, is proposed for replicated state machines with guaranteed Byzantine fault tolerance. It achieves fairness, in the sense that it is difficult for an attacker to manipulate which of two transactions will be chosen to be first in the consensus order. It has complete asynchrony, no leaders, no round robin, no proof-of-work, eventual consensus with probability one, and high speed in the absence of faults. It is based on a gossip protocol, in which the participants don’t just gossip about transactions. They gossip about gossip. They jointly build a hashgraph reflecting all of the gossip events. This allows Byzantine agreement to be achieved through virtual voting. Alice does not send Bob a vote over the Internet. Instead, Bob calculates what vote Alice would have sent, based on his knowledge of what Alice knows. This yields fair Byzantine agreement on a total order for all transactions, with very little communication overhead beyond the transactions themselves.&lt;/p&gt;&lt;p&gt;&lt;a href="https://swirlds.com/downloads/SWIRLDS-TR-2016-01.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Traits: A Mechanism for Fine-grained Reuse</title>
+    <id>https://paperswelove.org/papers/traits-a-mechanism-for-fine-grained-reuse-f033666c/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/traits-a-mechanism-for-fine-grained-reuse-f033666c/" type="text/html"/>
+    <published>2026-09-01T00:48:00+00:00</published>
+    <updated>2026-09-01T00:48:00+00:00</updated>
+    <author>
+      <name>Andrew P. Black, Nathanael Schärli, Oscar Nierstrasz, Roel Wuyts, Stéphane Ducasse</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Inheritance is well-known and accepted as a mechanism for reuse in object-oriented languages. Unfortunately, due to the coarse granularity of inheritance, it may be difficult to decompose an application into an optimal class hierarchy that maximizes software reuse. Existing schemes based on single inheritance, multiple inheritance, or mixins, all pose numerous problems for reuse. To overcome these problems we propose traits, pure units of reuse consisting only of methods. We develop a formal model of traits that establishes how traits can be composed, either to form other traits, or to form classes. We also outline an experimental validation in which we apply traits to refactor a non-trivial application into composable units.&lt;/p&gt;&lt;p&gt;&lt;a href="http://scg.unibe.ch/archive/papers/Duca06bTOPLASTraits.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>MoviPill: Improving Medication Compliance for Elders Using a Mobile Persuasive Social Game</title>
+    <id>https://paperswelove.org/papers/movipill-improving-medication-compliance-for-elder-ef3acab3/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/movipill-improving-medication-compliance-for-elder-ef3acab3/" type="text/html"/>
+    <published>2026-09-01T00:48:00+00:00</published>
+    <updated>2026-09-01T00:48:00+00:00</updated>
+    <author>
+      <name>Mauro Cherubini, Nuria Oliver, Rodrigo de Oliveira</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Medication compliance is a critical component in the success of any medical treatment. However, only 50% of patients correctly adhere to their prescription regimens. Mobile and ubiquitous technologies have been proposed to tackle this challenge, mainly in the form of memory aid solutions that remind patients to take their pills. However, most of these methods do not engage patients in shifting their behavior towards better compliance. In this paper, we propose and evaluate a mobile phone-based game called MoviPill that persuades patients to be more adherent to their medication prescription by means of social competition. In a 6-week user study conducted with 18 elders, the use of MoviPill improved both their compliance to take the daily medication and also the accuracy of the drug intake time according to the prescribed time. Moreover, the improvement in the latter increased from 43% to 56% when we considered only participants that had any interest in games, which reveals the importance of applying persuasive techniques in a personalized manner. We conclude with a set of implications for the design of persuasive mobile solutions in this domain.&lt;/p&gt;&lt;p&gt;&lt;a href="http://www.ic.unicamp.br/~oliveira/doc/Ubicomp2010_MoviPill.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Fusion for Free
+Efficient Algebraic Effect Handlers</title>
+    <id>https://paperswelove.org/papers/fusion-for-free-efficient-algebraic-effect-handler-edf3ea2e/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/fusion-for-free-efficient-algebraic-effect-handler-edf3ea2e/" type="text/html"/>
+    <published>2026-09-01T00:48:00+00:00</published>
+    <updated>2026-09-01T00:48:00+00:00</updated>
+    <author>
+      <name>Nicolas Wu, Tom Schrijvers</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Algebraic effect handlers are a recently popular approach for modelling side-effects that separates the syntax and semantics of effectful operations. The shape of syntax is captured by functors, and free monads over these functors denote syntax trees. The semantics is captured by algebras, and effect handlers pass these over the syntax trees to interpret them into a semantic domain.
+This approach is inherently modular: different functors can be composed to make trees with richer structure. Such trees are interpreted by applying several handlers in sequence, each removing the syntactic constructs it recognizes. Unfortunately, the construction and traversal of intermediate trees is painfully inefficient and has hindered the adoption of the handler approach.
+This paper explains how a sequence of handlers can be fused into one, so that multiple tree traversals can be reduced to a single one and no intermediate trees need to be allocated. At the heart of this optimization is keeping the notion of a free monad abstract, thus enabling a change of representation that opens up the possibility of fusion. We demonstrate how the ensuing code can be inlined at compile time to produce efficient handlers.&lt;/p&gt;&lt;p&gt;&lt;a href="https://people.cs.kuleuven.be/~tom.schrijvers/Research/papers/mpc2015.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Conway's ZIP Proof</title>
+    <id>https://paperswelove.org/papers/conways-zip-proof-edded426/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/conways-zip-proof-edded426/" type="text/html"/>
+    <published>2026-09-01T00:48:00+00:00</published>
+    <updated>2026-09-01T00:48:00+00:00</updated>
+    <author>
+      <name>George K. Francis, Jeffrey R. Weeks</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Surfaces arise naturally in many different forms, in branches of mathematics ranging from complex analysis to dynamical systems. The Classification Theorem, known since the 1860's, asserts that all closed surfaces, despite their diverse origins and seemingly diverse forms, are topologically equivalent to spheres with some number of handles or crosscaps. The proofs found in most modern textbooks follow that of Seifert and Threlfall [5]. Seifert and Threlfall's proof, while satisfyingly constructive, requires that a given surface be brought into a somewhat artificial standard form. Here we present a completely new proof, discovered by John H. Conway in about 1992, which retains the constructive nature of [5] while eliminating the irrelevancies of the standard form. Conway calls it his Zero Irrelevancy Proof, or "ZIP proof," and asks that it always be called by this name, remarking that "otherwise there's a real danger that its origin would be lost, since everyone who hears it immediately regards it as the obvious proof." We trust that Conway's ingenious proof will replace the customary textbook repetition of Seifert-Threlfall in favor of a lighter, fat-free nouvelle cuisine approach that retains all the classical flavor of elementary topology.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.maths.ed.ac.uk/~v1ranick/papers/francisweeks.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Bimodal Multicast</title>
+    <id>https://paperswelove.org/papers/bimodal-multicast-ec7a1cd5/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/bimodal-multicast-ec7a1cd5/" type="text/html"/>
+    <published>2026-09-01T00:48:00+00:00</published>
+    <updated>2026-09-01T00:48:00+00:00</updated>
+    <author>
+      <name>Kenneth P. Birman, Mark Hayden, Mihai Budiu, Oznur Ozkasap, Yaron Minsky, Zhen Xiao</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;There are many methods for making a multicast protocol “reliable.” At one end of the spectrum, a reliable multicast protocol might offer atomicity guarantees, such as all-or-nothing delivery, delivery ordering, and perhaps additional properties such as virtually synchronous addressing. At the other are protocols that use local repair to overcome transient packet loss in the network, offering “best effort” reliability. Yet none of this prior work has treated stability of multicast delivery as a basic reliability property, such as might be needed in an internet radio, television, or conferencing application. This article looks at reliability with a new goal: development of a multicast protocol which is reliable in a sense that can be rigorously quantified and includes throughput stability guarantees. We characterize this new protocol as a “bimodal multicast” in reference to its reliability model, which corresponds to a family of bimodal probability distributions. Here, we introduce the protocol, provide a theoretical analysis of its behavior, review experimental results, and discuss some candidate applications. These confirm that bimodal multicast is reliable, scalable, and that the protocol provides remarkably stable delivery throughput.&lt;/p&gt;&lt;p&gt;&lt;a href="http://www.csl.mtu.edu/cs6461/www/Reading/Birman99.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Defining Gamification - A Service Marketing Perspective</title>
+    <id>https://paperswelove.org/papers/defining-gamification-a-service-marketing-perspect-ec5b869b/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/defining-gamification-a-service-marketing-perspect-ec5b869b/" type="text/html"/>
+    <published>2026-09-01T00:48:00+00:00</published>
+    <updated>2026-09-01T00:48:00+00:00</updated>
+    <author>
+      <name>Juho Hamari, Kai Huotari</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;During recent years “gamification” has gained significant attention among practitioners and game scholars. However, the current understanding of gamification has been solely based on the act of adding systemic game elements into services. In this paper, we propose a new definition for gamification, which emphases the experiential nature of games and gamification, instead of the systemic understanding. Furthermore, we tie this definition to theory from service marketing because majority of gamification implementations aim towards goals of marketing, which brings to the discussion the notion of how customer / user is always ultimately the creator of value. Since now, the main venue for academic discussion on gamification has mainly been the HCI community. We find it relevant both for industry practitioners as well as for academics to study how gamification can fit in the body of knowledge of existing service literature because the goals and the means of gamification and marketing have a significant overlap.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.researchgate.net/publication/259841647_Defining_Gamification_-_A_Service_Marketing_Perspective"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Optimal Bidding in On-line Auctions</title>
+    <id>https://paperswelove.org/papers/optimal-bidding-in-on-line-auctions-eaaac740/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/optimal-bidding-in-on-line-auctions-eaaac740/" type="text/html"/>
+    <published>2026-09-01T00:48:00+00:00</published>
+    <updated>2026-09-01T00:48:00+00:00</updated>
+    <author>
+      <name>Dimitris Bertsimas, Georgia Perakis, Jeffrey Hawkins</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;On-line auctions are arguably one of the most important and distinctly new applications of the Internet. The predominant player in on-line auctions, eBay, has over 42 million users, and it was the host of over $9.3 billion worth of goods sold in the year 2001. Using methods from approximate dynamic programming and integer programming, we design algorithms for optimally bidding for a single item in an on-line auction, and in simultaneous or overlapping multiple on-line auctions. We report computational evidence using data from eBay’s web site from 1772 completed auctions for personal digital assistants and from 4208 completed auctions for stamp collections that shows that (a) the optimal dynamic policy outperforms simple but widely used static heuristic rules for a single auction, and (b) a new approach for the multiple auctions problem that uses the value functions of single auctions found by dynamic programming in an integer programming framework produces high quality solutions fast and reliably.&lt;/p&gt;&lt;p&gt;&lt;a href="http://www.mit.edu/~dbertsim/papers/Revenue%20Management/Optimal%20Bidding%20in%20Online%20Auctions.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>No Silver Bullet - Essence and Accidents of Software Engineering</title>
+    <id>https://paperswelove.org/papers/no-silver-bullet-essence-and-accidents-of-software-ea00616a/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/no-silver-bullet-essence-and-accidents-of-software-ea00616a/" type="text/html"/>
+    <published>2026-09-01T00:48:00+00:00</published>
+    <updated>2026-09-01T00:48:00+00:00</updated>
+    <author>
+      <name>Frederick P. Brooks Jr.</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;All software construction involves essential tasks, the fashioning of the complex conceptual structures that compose the abstract software entity, and accidental tasks, the representation of these abstract entities in programming languages and the mapping of these onto machine languages within space and speed constraints. Most of the big past gains in software productivity have come from removing artificial barriers that have made the accidental tasks inordinately hard, such as severe hardware constraints, awkward programming languages, lack of machine time. How much of what software engineers now do is still devoted to the accidental, as opposed to the essential? Unless it is more than 9/10 of all effort, shrinking all the accidental activities to zero time will not give an order of magnitude improvement.
+
+Therefore it appears that the time has come to address the essential parts of the software task, those concerned with fashioning abstract conceptual structures of great complexity. I suggest:
+
+• exploiting the mass market to avoid constructing what can be bought.
+• using rapid prototyping as part of a planned iteration in establishing software requirements.
+• growing software organically, adding more and more function to systems as they are run, used, and tested.
+• identifying and developing the great conceptual designers of the rising generation.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.semanticscholar.org/paper/No-Silver-Bullet-Essence-and-Accidents-of-Software-Brooks/ed0759b7001f8be53bb4282750e98198b359307d"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Towards a Next Generation Data Center Architecture: Scalability and Commoditization</title>
+    <id>https://paperswelove.org/papers/towards-a-next-generation-data-center-architecture-e9952d5f/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/towards-a-next-generation-data-center-architecture-e9952d5f/" type="text/html"/>
+    <published>2026-09-01T00:48:00+00:00</published>
+    <updated>2026-09-01T00:48:00+00:00</updated>
+    <author>
+      <name>Albert Greenberg, David A. Maltz, Parantap Lahiri, Parveen Patel, Sudipta Sengupta</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Applications hosted in today’s data centers suffer from internal fragmentation of resources, rigidity, and bandwidth constraints imposed by the architecture of the network connecting the data center’s servers. Conventional architectures statically map web services to Ethernet VLANs, each constrained in size to a few hundred servers owing to control plane overheads. The IP routers used to span traffic across VLANs and the load balancers used to spray requests within a VLAN across servers are realized via expensive customized hardware and proprietary software. Bisection bandwidth is low, severely constraining distributed computation. Further, the conventional architecture concentrates traffic in a few pieces of hardware that must be frequently upgraded and replaced to keep pace with demand - an approach that directly contradicts the prevailing philosophy in the rest of the data center, which is to scale out (adding more cheap components) rather than scale up (adding more power and complexity to a small number of expensive components). Commodity switching hardware is now becoming available with programmable control interfaces and with very high port speeds at very low port cost, making this the right time to redesign the data center networking infrastructure. In this paper, we describe Monsoon, a new network architecture, which scales and commoditizes data center networking. Monsoon realizes a simple mesh-like architecture using programmable commodity layer-2 switches and servers. In order to scale to 100,000 servers or more, Monsoon makes modifications to the control plane (e.g., source routing) and to the data plane (e.g., hot-spot free multipath routing via Valiant Load Balancing). It disaggregates the function of load balancing into a group of regular servers, with the result that load balancing server hardware can be distributed amongst racks in the data center leading to greater agility and less fragmentation. The architecture creates a huge, flexible switching domain, supporting any server/any service and unfragmented server capacity at low cost.&lt;/p&gt;&lt;p&gt;&lt;a href="http://research.microsoft.com/pubs/79348/presto27-greenberg.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>The Go Programming Language</title>
+    <id>https://paperswelove.org/papers/the-go-programming-language-e953c854/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/the-go-programming-language-e953c854/" type="text/html"/>
+    <published>2026-09-01T00:48:00+00:00</published>
+    <updated>2026-09-01T00:48:00+00:00</updated>
+    <author>
+      <name>Ken Thompson, Rob Pike, Robert Griesemer</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;No abstract appears in the document.&lt;/p&gt;&lt;p&gt;&lt;a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.138.6297&amp;rep=rep1&amp;type=pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Interpretable machine learning: definitions, methods, and applications</title>
+    <id>https://paperswelove.org/papers/interpretable-machine-learning-definitions-methods-e6d0fef5/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/interpretable-machine-learning-definitions-methods-e6d0fef5/" type="text/html"/>
+    <published>2026-09-01T00:48:00+00:00</published>
+    <updated>2026-09-01T00:48:00+00:00</updated>
+    <author>
+      <name>Bin Yu, Chandan Singh, Karl Kumbier, Reza Abbasi-Asl, W. James Murdoch</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Machine-learning models have demonstrated great success in learning complex patterns that enable them to make predictions about unobserved data. In addition to using models for prediction, the ability to interpret what a model has learned is receiving an increasing amount of attention. However, this increased focus has led to considerable confusion about the notion of interpretability. In particular, it is unclear how the wide array of proposed interpretation methods are related, and what common concepts can be used to evaluate them.
+
+We aim to address these concerns by defining interpretability in the context of machine learning and introducing the Predictive, Descriptive, Relevant (PDR) framework for discussing interpretations. The PDR framework provides three overarching desiderata for evaluation: predictive accuracy, descriptive accuracy and relevancy, with relevancy judged relative to a human audience. Moreover, to help manage the deluge of interpretation methods, we introduce a categorization of existing techniques into model-based and post-hoc categories, with sub-groups including sparsity, modularity and simulatability. To demonstrate how practitioners can use the PDR framework to evaluate and understand interpretations, we provide numerous real-world examples. These examples highlight the often under-appreciated role played by human audiences in discussions of interpretability. Finally, based on our framework, we discuss limitations of existing methods and directions for future work. We hope that this work will provide a common vocabulary that will make it easier for both practitioners and researchers to discuss and choose from the full range of interpretation methods.&lt;/p&gt;&lt;p&gt;&lt;a href="https://arxiv.org/pdf/1901.04592.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>The ϕ Accrual Failure Detector</title>
+    <id>https://paperswelove.org/papers/the-accrual-failure-detector-e673d3f8/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/the-accrual-failure-detector-e673d3f8/" type="text/html"/>
+    <published>2026-09-01T00:48:00+00:00</published>
+    <updated>2026-09-01T00:48:00+00:00</updated>
+    <author>
+      <name>Naohiro Hayashibara, Rami Yared, Takuya Katayama, Xavier Défago</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Detecting failures is a fundamental issue for fault-tolerance in distributed systems. Recently, many people have come to realize that failure detection ought to be provided as some form of generic service, similar to IP address lookup or time synchronization. However, this has not been successful so far. One of the reasons is the difficulty to satisfy several application requirements simultaneously when using classical failure detectors. We present a novel abstraction, called accrual failure detectors, that emphasizes flexibility and expressiveness and can serve as a basic building block to implementing failure detectors in distributed systems. Instead of providing information of a boolean nature (trust vs. suspect), accrual failure detectors output a suspicion level on a continuous scale. The principal merit of this approach is that it favors a nearly complete decoupling between application requirements and the monitoring of the environment.
+
+In this paper, we describe an implementation of such an accrual failure detector, that we call the ϕ failure detector. The particularity of the ϕ failure detector is that it dynamically adjusts to current network conditions the scale on which the suspicion level is expressed. We analyzed the behavior of our ϕ failure detector over an intercontinental communication link during several days. Our experimental results show that our ϕ failure detector performs equally well as other known adaptive failure detection mechanisms, with an improved flexibility.&lt;/p&gt;&lt;p&gt;&lt;a href="https://dspace.jaist.ac.jp/dspace/bitstream/10119/4784/1/IS-RR-2004-010.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>A New Data Structure for Cumulative Frequency Tables</title>
+    <id>https://paperswelove.org/papers/a-new-data-structure-for-cumulative-frequency-tabl-e1ff2f45/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/a-new-data-structure-for-cumulative-frequency-tabl-e1ff2f45/" type="text/html"/>
+    <published>2026-09-01T00:48:00+00:00</published>
+    <updated>2026-09-01T00:48:00+00:00</updated>
+    <author>
+      <name>Peter M. Fenwick</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;A new method (the ‘binary indexed tree’) is presented for maintaining the cumulative frequencies which are needed to support dynamic arithmetic data compression. It is based on a decomposition of the cumulative frequencies into portions which parallel the binary representation of the index of the table element (or symbol). The operations to traverse the data structure are based on the binary coding of the index. In comparison with previous methods, the binary indexed tree is faster, using more compact data and simpler code. The access time for all operations is either constant or proportional to the logarithm of the table size. In conjunction with the compact data structure, this makes the new method particularly suitable for large symbol alphabets.&lt;/p&gt;&lt;p&gt;&lt;a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.14.8917&amp;rep=rep1&amp;type=pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>ETHEREUM: A SECURE DECENTRALISED GENERALISED TRANSACTION LEDGER</title>
+    <id>https://paperswelove.org/papers/ethereum-a-secure-decentralised-generalised-transa-de75f70e/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/ethereum-a-secure-decentralised-generalised-transa-de75f70e/" type="text/html"/>
+    <published>2026-09-01T00:48:00+00:00</published>
+    <updated>2026-09-01T00:48:00+00:00</updated>
+    <author>
+      <name>Gavin Wood</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;The blockchain paradigm when coupled with cryptographically-secured transactions has demonstrated its utility through a number of projects, with Bitcoin being one of the most notable ones. Each such project can be seen as a simple application on a decentralised, but singleton, compute resource. We can call this paradigm a transactional singleton machine with shared-state.
+
+Ethereum implements this paradigm in a generalised manner. Furthermore it provides a plurality of such resources, each with a distinct state and operating code but able to interact through a message-passing framework with others. We discuss its design, implementation issues, the opportunities it provides and the future hurdles we envisage.&lt;/p&gt;&lt;p&gt;&lt;a href="https://ethereum.github.io/yellowpaper/paper.pdf"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Event-Driven FRP</title>
+    <id>https://paperswelove.org/papers/event-driven-frp-dba14749/</id>
+    <link rel="alternate" href="https://paperswelove.org/papers/event-driven-frp-dba14749/" type="text/html"/>
+    <published>2026-09-01T00:48:00+00:00</published>
+    <updated>2026-09-01T00:48:00+00:00</updated>
+    <author>
+      <name>Paul Hudak, Walid Taha, Zhanyong Wan</name>
+    </author>
+    <content type="html">&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Functional Reactive Programming (FRP) is a high-level declarative language for programming reactive systems. Previous work on FRP has demonstrated its utility in applications ranging from animation and graphical user interfaces to robotics. FRP has a continuous-time denotational semantics that is elegant and expressive. But FRP provides no guarantees on resource consumption, and so is unsuitable for more demanding applications. Recently we identified a resource bounded sub-language of FRP called Real-Time FRP (RT-FRP).
+
+Experience using RT-FRP in the micro-controller domain has revealed a shortcoming of RT-FRP in the event-driven setting. To deal with this shortcoming, we present a more general language called Event-driven FRP (E-FRP). The new language allows us to express heavily event-oriented computations in a natural manner.
+
+The focus of this paper is on compilation, which had not been addressed with RT-FRP. We formally define a compilation strategy for E-FRP into imperative code. By giving a formal operational semantics to a small imperative language, we also show that compilation is correct. We are currently building a compiler from RT-FRP which includes a back-end for generating code for the PIC16C66 micro-controller.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.researchgate.net/publication/2415013_Event-driven_FRP"&gt;Read the paper&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+</feed>

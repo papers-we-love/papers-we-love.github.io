@@ -1,0 +1,144 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Authoritative Sources in a Hyperlinked Environment | Papers We Love</title>
+        <meta name="description" content="The network structure of a hyperlinked environment can be a rich source of information about the content of the environment, provided we have effective means for understanding it. We develop a set of algorithmic tools for extracting information from " />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Authoritative Sources in a Hyperlinked Environment | Papers We Love" />
+        <meta property="og:description" content="The network structure of a hyperlinked environment can be a rich source of information about the content of the environment, provided we have effective means for understanding it. We develop a set of algorithmic tools for extracting information from " />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/authoritative-sources-in-a-hyperlinked-environment-a8503fe2/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Authoritative Sources in a Hyperlinked Environment</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Jon M. Kleinberg</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/information_retrieval/authoritative-sources-in-a-hyperlinked-environment.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: 1999-09-01; Journal of the ACM, Volume 46, Issue 5, pp. 604–632. Preliminary versions appeared in the ACM–SIAM Symposium on Discrete Algorithms in 1998 and as an IBM Research Report in May 1997. ([bishtref.com](https://bishtref.com/articles/10.1145/324133.324140))</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>The network structure of a hyperlinked environment can be a rich source of information about the content of the environment, provided we have effective means for understanding it. We develop a set of algorithmic tools for extracting information from the link structures of such environments, and report on experiments that demonstrate their effectiveness in a variety of contexts on the World Wide Web. The central issue we address within our framework is the distillation of broad search topics, through the discovery of “authoritative” information sources on such topics. We propose and test an algorithmic formulation of the notion of authority, based on the relationship between a set of relevant authoritative pages and the set of “hub pages” that join them together in the link structure. Our formulation has connections to the eigenvectors of certain matrices associated with the link graph; these connections in turn motivate additional heuristics for link-based analysis.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <p>The paper introduced the hubs-and-authorities model now commonly associated with the Hyperlink-Induced Topic Search (HITS) algorithm. It represents Web pages as a directed graph, constructs a query-focused subgraph from text-search results and neighboring pages, and iteratively computes mutually reinforcing authority and hub scores. In matrix terms, the authority and hub vectors correspond to principal eigenvectors of $A^T A$ and $A A^T$, respectively. Non-principal eigenvectors are proposed for identifying multiple topical communities, including separated communities associated with ambiguous or polarized queries.</p>
+
+<p>The work influenced subsequent research on Web link analysis, including studies of HITS variants, stability, spam resistance, topic drift, and unified comparisons between HITS, PageRank, and related algorithms. Later evaluations examined HITS at Web scale and found that its effectiveness depended on query specificity and was broadly comparable to other link-based features in some settings. (<a href="https://www.microsoft.com/en-us/research/publication/hits-on-the-web-how-does-it-compare/">microsoft.com</a>)</p>
+
+<p>The paper also had a documented industry connection: Ask Jeeves reported that its Teoma search technology ranked pages using authority within subject-matter communities, a design closely aligned with the paper’s distinction between popularity and topical authority. (<a href="https://www.sec.gov/Archives/edgar/data/1054298/000095013405005083/f06557e10vk.htm">sec.gov</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/information_retrieval/">information retrieval</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/eigenvectors/">eigenvectors</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/hits-algorithm/">hits algorithm</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/hubs-and-authorities/">hubs and authorities</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/hypertext/">hypertext</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/information-retrieval/">information retrieval</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/link-analysis/">link analysis</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/spectral-analysis/">spectral analysis</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/topic-distillation/">topic distillation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/web-search/">web search</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/world-wide-web/">world wide web</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->
