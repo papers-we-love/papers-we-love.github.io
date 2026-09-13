@@ -1,0 +1,139 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>A Fast String Searching Algorithm | Papers We Love</title>
+        <meta name="description" content="An algorithm is presented that searches for the location, "i," of the first occurrence of a character string, "pat," in another string, "string." During the search operation, the characters of pat are matched starting with the last character of pat. " />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="A Fast String Searching Algorithm | Papers We Love" />
+        <meta property="og:description" content="An algorithm is presented that searches for the location, "i," of the first occurrence of a character string, "pat," in another string, "string." During the search operation, the characters of pat are matched starting with the last character of pat. " />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/a-fast-string-searching-algorithm-853f06c1/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:01">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">A Fast String Searching Algorithm</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">J Strother Moore</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Robert S. Boyer</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://web.archive.org/web/20220912024717/https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.13.9460&rep=rep1&type=pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: October 1977, Communications of the ACM, Volume 20, Number 10, pages 762–772</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>An algorithm is presented that searches for the location, "i," of the first occurrence of a character string, "pat," in another string, "string." During the search operation, the characters of pat are matched starting with the last character of pat. The information gained by starting the match at the end of the pattern often allows the algorithm to proceed in large jumps through the text being searched. Thus the algorithm has the unusual property that, in most cases, not all of the first i characters of string are inspected. The number of characters actually inspected (on the average) decreases as a function of the length of pat. For a random English pattern of length 5, the algorithm will typically inspect i/4 characters of string before finding a match at i. Furthermore, the algorithm has been implemented so that (on the average) fewer than i + patlen machine instructions are executed. These conclusions are supported with empirical evidence and a theoretical analysis of the average behavior of the algorithm. The worst case behavior of the algorithm is linear in i + patlen, assuming the availability of array space for tables linear in patlen plus the size of the alphabet.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <p>The paper introduced the Boyer–Moore string-searching algorithm, using right-to-left pattern comparison together with preprocessing tables that permit substantial shifts after mismatches. It established strong average-case performance, including behavior that can inspect fewer text characters than the text position being searched, while retaining linear worst-case behavior under the stated assumptions. (<a href="https://www.cs.utexas.edu/~moore/publications/fstrpos.pdf">cs.utexas.edu</a>)</p>
+
+<p>Subsequent research treated Boyer–Moore as a central baseline for practical string searching and developed variants such as Horspool’s simplified algorithm and later optimized families of skip-loop methods. (<a href="https://onlinelibrary.wiley.com/doi/10.1002/spe.4380100608">onlinelibrary.wiley.com</a>) The algorithm also became part of the practical background for later systems research, including hardware acceleration of string matching in programmable network ASICs, where it is discussed as a well-known approach and as a comparison point for newer methods. (<a href="https://www.cs.yale.edu/homes/soule/pubs/sosr2019.pdf">cs.yale.edu</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/pattern_stringology/">pattern stringology</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/bibliographic-search/">bibliographic search</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/computational-complexity/">computational complexity</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/information-retrieval/">information retrieval</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/linear-time-bound/">linear time bound</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/pattern-matching/">pattern matching</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/text-editing/">text editing</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:01
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

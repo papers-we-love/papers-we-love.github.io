@@ -1,0 +1,150 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Epidemic Algorithms for Replicated Database Maintenance | Papers We Love</title>
+        <meta name="description" content="When a database is replicated at many sites, maintaining mutual consistency among the sites in the face of updates is a significant problem. This paper describes several randomized algorithms for distributing updates and driving the replicas toward c" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Epidemic Algorithms for Replicated Database Maintenance | Papers We Love" />
+        <meta property="og:description" content="When a database is replicated at many sites, maintaining mutual consistency among the sites in the face of updates is a significant problem. This paper describes several randomized algorithms for distributing updates and driving the replicas toward c" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/epidemic-algorithms-for-replicated-database-mainte-9283e904/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Epidemic Algorithms for Replicated Database Maintenance</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Alan Demers</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Carl Hauser</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Dan Greene</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Dan Swinehart</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Don Woods</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Doug Terry</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Howard Sturgis</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">John Larson</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Mark Gealy</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Scott Shenker</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Sue Manning</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Wes Irish</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/epidemic-algorithms-for-replicated-database-maintenance.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: January 1989; Xerox PARC technical report CSL-89-1. An earlier version appeared in the Proceedings of the Sixth Annual ACM Symposium on Principles of Distributed Computing, Vancouver, August 1987.</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>When a database is replicated at many sites, maintaining mutual consistency among the sites in the face of updates is a significant problem. This paper describes several randomized algorithms for distributing updates and driving the replicas toward consistency. The algorithms are very simple and require few guarantees from the underlying communication system, yet they ensure that the effect of every update is eventually reflected in all replicas. The cost and performance of the algorithms are tuned by choosing appropriate distributions in the randomization step. The algorithms are closely analogous to epidemics, and the epidemiology literature aids in understanding their behavior. One of the algorithms has been implemented in the Clearinghouse servers of the Xerox Corporate Internet, solving long-standing problems of high traffic and database inconsistency.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <p>The paper is an early systematic treatment of <strong>epidemic, or gossip-style, algorithms</strong> for maintaining eventual consistency among widely replicated databases. It compares direct mail, anti-entropy, and rumor mongering using propagation delay, network traffic, and residual inconsistency as key metrics. Its main design recommendations are to use randomized pairwise exchanges, favor pull or push-pull over push when repairing sparse inconsistencies, use checksums or timestamp-oriented exchange to reduce the cost of full database comparison, and combine fast but probabilistic rumor spreading with periodic anti-entropy when complete coverage is required.</p>
+
+<p>The paper also addresses deletion through timestamped death certificates and proposes dormant certificates to reduce storage costs while limiting the resurrection of obsolete data. Its topology-aware partner-selection experiments showed that nonuniform distributions could substantially reduce traffic on critical links; the resulting anti-entropy method was deployed in Xerox’s Clearinghouse service.</p>
+
+<p>Later distributed-systems research adopted closely related mechanisms. The SWIM membership protocol explicitly cites this paper and uses infection-style dissemination to spread membership updates with slowly growing, approximately logarithmic dissemination latency. (<a href="https://www.cs.cornell.edu/projects/quicksilver/public_pdfs/SWIM.pdf">cs.cornell.edu</a>) Amazon’s Dynamo subsequently implemented anti-entropy replica synchronization using Merkle trees and used randomized gossip to propagate membership changes, illustrating the continued industry relevance of the paper’s replica-repair and epidemic-dissemination patterns. (<a href="https://cdn.amazon.science/ac/1d/eb50c4064c538c8ac440ce6a1d91/dynamo-amazons-highly-available-key-value-store.pdf">cdn.amazon.science</a>) A later survey-style research work on non-uniform replication also lists the paper alongside Dynamo and Cassandra as part of the development of replicated-storage techniques. (<a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.OPODIS.2017.24">drops.dagstuhl.de</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/distributed_systems/">distributed systems</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/consistency/">consistency</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/electronic-mail/">electronic mail</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/epidemiology/">epidemiology</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/name-service/">name service</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/rumors/">rumors</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

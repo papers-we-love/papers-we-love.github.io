@@ -1,0 +1,168 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>A History of Erlang | Papers We Love</title>
+        <meta name="description" content="Erlang was designed for writing concurrent programs that “run forever.” Erlang uses concurrent processes to structure the program. These processes have no shared memory and communicate by asynchronous message passing. Erlang processes are lightweight" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="A History of Erlang | Papers We Love" />
+        <meta property="og:description" content="Erlang was designed for writing concurrent programs that “run forever.” Erlang uses concurrent processes to structure the program. These processes have no shared memory and communicate by asynchronous message passing. Erlang processes are lightweight" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/a-history-of-erlang-c19b1fb3/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:00">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">A History of Erlang</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Joe Armstrong</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://www.labouseur.com/courses/erlang/history-of-erlang-armstrong.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: June 9–10, 2007 (HOPL-III: Proceedings of the Third ACM SIGPLAN Conference on History of Programming Languages, San Diego, California, USA)</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Erlang was designed for writing concurrent programs that “run forever.” Erlang uses concurrent processes to structure the program. These processes have no shared memory and communicate by asynchronous message passing. Erlang processes are lightweight and belong to the language, not the operating system. Erlang has mechanisms to allow programs to change code “on the fly” so that programs can evolve and change as they run. These mechanisms simplify the construction of software for implementing non-stop systems.
+This paper describes the history of Erlang. Material for the paper comes from a number of different sources. These include personal recollections, discussions with colleagues, old newspaper articles and scanned copies of Erlang manuals, photos and computer listings and articles posted to Usenet mailing lists.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="paper-summary">Paper summary</h2>
+
+<ul>
+  <li>
+    <p>Erlang originated at Ericsson’s Computer Science Laboratory in 1986 as an attempt to improve the development of highly concurrent, distributed, fault-tolerant telecommunications systems. Its requirements were shaped by telephone exchanges, which had to manage very large numbers of simultaneous activities, tolerate software and hardware failures, operate under soft real-time constraints, and support maintenance and code upgrades without service interruption.</p>
+  </li>
+  <li>
+    <p>The language’s central architectural decisions were lightweight language-level processes, isolated memory, asynchronous message passing, and copying rather than shared mutable data. These choices were intended to prevent one process from corrupting another, simplify distributed failure recovery, and make systems easier to compose. Selective receive, mailboxes, links, supervision-oriented recovery, and dynamic code replacement emerged from practical experimentation with telephony applications.</p>
+  </li>
+  <li>
+    <p>Erlang evolved from experiments combining Prolog, functional programming, and concurrency. Early implementations were written in Prolog; the JAM virtual machine and later BEAM substantially improved execution speed and code compactness. The language subsequently gained functional features, binary and bit-level processing, distributed execution, real-time databases through Mnesia and ETS, static analysis through Dialyzer, and reusable OTP behaviors for client-server systems, event handling, finite-state machines, and supervision.</p>
+  </li>
+  <li>
+    <p>Industrial use was decisive in Erlang’s maturation. The ACS/Dunder prototype reported substantially higher productivity than comparable PLEX implementations, although Erlang was initially considered too slow for production. The AXD301 project demonstrated that Erlang and OTP could support a large, distributed, highly reliable telecommunications product with millions of lines of code, dynamic reconfiguration, processor failover, and reported nine-nines reliability.</p>
+  </li>
+  <li>
+    <p>The paper identifies two unplanned historical turning points: the collapse of Ericsson’s AXE-N project in 1995, which created an opportunity to deploy Erlang in a major product, and Ericsson’s 1998 ban on Erlang for new development, which encouraged the 1998 open-source release and accelerated adoption outside Ericsson. Armstrong characterizes the resulting programming model as concurrency-oriented programming: systems consist of isolated components that communicate through asynchronous protocols.</p>
+  </li>
+  <li>
+    <p>The paper’s broader lessons are that prototypes can guide language design before formal specifications are feasible, practical demonstrations are often more persuasive than theory, and implementation constraints can distort programming practice. It also identifies unresolved issues, including atom-table limits, imperfect process isolation, weak distributed security, difficult foreign-code integration, insufficient protocol specification, and limited support for treating modules and code versions as first-class entities.</p>
+  </li>
+</ul>
+
+<h2 id="documented-subsequent-influence">Documented subsequent influence</h2>
+
+<p>The paper is repeatedly cited as a historical and technical source in later work concerning Erlang’s concurrency model, secure distributed Erlang systems, and language implementations. For example, a dissertation on concurrency support for Idris and Erlang cites it when introducing Erlang’s process-based model; a later workshop paper on secure Erlang systems cites it as background for Erlang’s design and history; and other academic bibliographies use it as the standard historical account of Erlang’s development. These citations demonstrate continued use as a foundational reference, although they do not by themselves establish that specific technical mechanisms were directly derived from this paper. (<a href="https://lenary.co.uk/publications/Elliott_BSc_Dissertation.pdf">lenary.co.uk</a>)</p>
+
+<p>Publication metadata identifies the work as a peer-reviewed HOPL-III conference paper presented in San Diego on June 9–10, 2007. (<a href="https://explore.openaire.eu/search/publication?pid=10.1145%2F1238844.1238850">explore.openaire.eu</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/languages/erlang/">languages/erlang</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/concurrency-oriented-programming/">concurrency oriented programming</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-systems/">distributed systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/erlang/">erlang</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/erlang-otp/">erlang otp</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/fault-tolerance/">fault tolerance</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/functional-programming/">functional programming</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/hot-code-replacement/">hot code replacement</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/message-passing/">message passing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/telecommunications/">telecommunications</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/virtual-machines/">virtual machines</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:00
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

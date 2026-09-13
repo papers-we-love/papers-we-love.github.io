@@ -1,0 +1,150 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>P⁵: A Protocol for Scalable Anonymous Communication | Papers We Love</title>
+        <meta name="description" content="We present a protocol for anonymous communication over the Internet. Our protocol, called P⁵ (Peer-to-Peer Personal Privacy Protocol) provides sender-, receiver-, and sender-receiver anonymity. P⁵ is designed to be implemented over the current Intern" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="P⁵: A Protocol for Scalable Anonymous Communication | Papers We Love" />
+        <meta property="og:description" content="We present a protocol for anonymous communication over the Internet. Our protocol, called P⁵ (Peer-to-Peer Personal Privacy Protocol) provides sender-, receiver-, and sender-receiver anonymity. P⁵ is designed to be implemented over the current Intern" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/p-a-protocol-for-scalable-anonymous-communication-455e2638/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">P⁵: A Protocol for Scalable Anonymous Communication</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Aravind Srinivasan</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Bobby Bhattacharjee</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Rob Sherwood</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/p5-a-protocal-for-scalable-anonymous-communication.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: May 2002; Proceedings of the 2002 IEEE Symposium on Security and Privacy, Oakland, California, USA, pp. 58–70. An extended journal version was published in the Journal of Computer Security on December 22, 2005.</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>We present a protocol for anonymous communication over the Internet. Our protocol, called P⁵ (Peer-to-Peer Personal Privacy Protocol) provides sender-, receiver-, and sender-receiver anonymity. P⁵ is designed to be implemented over the current Internet protocols, and does not require any special infrastructure support. A novel feature of P⁵ is that it allows individual participants to trade-off degree of anonymity for communication efficiency, and hence can be used to scalably implement large anonymous groups. We present a description of P⁵, an analysis of its anonymity and communication efficiency, and evaluate its performance using detailed packet-level simulations.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h3 id="summary">Summary</h3>
+
+<p>P⁵ proposes a peer-to-peer anonymous communication protocol based on a hierarchy of logical broadcast channels. Users are mapped to channels using hashes of public keys and choose channel depths according to local security and efficiency requirements. Higher-level channels provide larger anonymity sets but impose greater bandwidth costs and reliability penalties; users may move toward smaller channels when they prefer greater communication efficiency.</p>
+
+<p>The protocol combines fixed-size, per-hop encrypted packets with constant-rate signal and noise traffic. This is intended to prevent a passive adversary capable of monitoring all network links and correlating packets from distinguishing communication traffic from cover traffic. Routing keys and lateral channel connections are used to reduce the number of inter-channel crossings while preserving the separation between communication identities and routing identities. The paper also analyzes correlation, intersection, difference, denial-of-service, and colluding “mob” attacks, and identifies active adversaries able to inject traffic across large portions of the network as a limitation.</p>
+
+<p>Packet-level simulations indicate that the design can support thousands of participants with short average paths. In the reported 8,192-user experiment, average inter-channel distance remained below one channel crossing, while the average end-to-end path was approximately 13 hops. The principal cost is bandwidth and packet loss: stronger anonymity requires larger broadcast groups and therefore more replicated traffic. The authors present P⁵ as a scalable design point between global broadcast anonymity and more bandwidth-efficient but weaker anonymity systems.</p>
+
+<p>The work influenced subsequent anonymous-communication research primarily as an established broadcast-based peer-to-peer design point. Later surveys and systems, including Herbivore, classify P⁵ alongside other early anonymous overlay protocols and compare its tree-broadcast approach with multicast and DC-net alternatives. The Tor design literature specifically identifies P⁵ and Herbivore as broadcast-based peer-to-peer anonymity systems, contrasting them with circuit-based designs such as Tarzan and MorphMix. (<a href="https://www.cs.princeton.edu/courses/archive/fall09/cos518/papers/tor.pdf">cs.princeton.edu</a>) The protocol was also cited as prior work in research on unreliable-overlay anonymity, including Information Slicing. (<a href="https://www.usenix.org/legacy/events/nsdi07/tech/full_papers/katti/katti_html/paper.html">usenix.org</a>) There is evidence of substantial academic uptake, including hundreds of indexed citations, but the sources reviewed do not establish deployment of P⁵ itself as a widely used industry system. (<a href="https://www.researchgate.net/publication/220713731_P5_A_Protocol_for_Scalable_Anonymous_Communication">researchgate.net</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/distributed_systems/">distributed systems</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/anonymous-communication/">anonymous communication</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/broadcast-hierarchy/">broadcast hierarchy</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/packet-level-simulation/">packet level simulation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/peer-to-peer/">peer to peer</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/privacy/">privacy</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/public-key-cryptography/">public key cryptography</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/receiver-anonymity/">receiver anonymity</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/sender-anonymity/">sender anonymity</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/traffic-analysis-resistance/">traffic analysis resistance</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/unlinkability/">unlinkability</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

@@ -1,0 +1,163 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Operators on Inhomogeneous Time Series | Papers We Love</title>
+        <meta name="description" content="We present a toolbox to compute and extract information from inhomogeneous (i.e. unequally spaced) time series. The toolbox contains a large set of operators, mapping from the space of inhomogeneous time series to itself. These operators are computat" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Operators on Inhomogeneous Time Series | Papers We Love" />
+        <meta property="og:description" content="We present a toolbox to compute and extract information from inhomogeneous (i.e. unequally spaced) time series. The toolbox contains a large set of operators, mapping from the space of inhomogeneous time series to itself. These operators are computat" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/operators-on-inhomogeneous-time-series-baffed1e/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Operators on Inhomogeneous Time Series</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Gilles O. Zumbach</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Ulrich A. Müller</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/time_series/operators-on-inhomogeneous-time-series.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: February 1, 2000 (Olsen & Associates Working Paper No. 324); journal version published in 2001 in the International Journal of Theoretical and Applied Finance, 4(1), 147–177</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>We present a toolbox to compute and extract information from inhomogeneous (i.e. unequally spaced) time series. The toolbox contains a large set of operators, mapping from the space of inhomogeneous time series to itself. These operators are computationally efficient (time and memory-wise) and suitable for stochastic processes. This makes them attractive for processing high-frequency data in finance and other fields. Using a basic set of operators, we easily construct more powerful combined operators which cover a wide set of typical applications. The operators are classified in macroscopic operators (that have a limit value when the sampling frequency goes to infinity) and microscopic operators (that strongly depend on the actual sampling). For inhomogeneous data, macroscopic operators are more robust and more important. Examples of macroscopic operators are (exponential) moving averages, differentials, derivatives, moving volatilities, etc ...</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>The paper develops a computational framework for analyzing unequally spaced time series, with particular emphasis on high-frequency financial data. Its central idea is to represent common time-series transformations as operators that map one inhomogeneous time series into another. The framework explicitly accounts for irregular observation times rather than first forcing the data onto a regular grid.</p>
+
+<p>The paper distinguishes <strong>macroscopic operators</strong>, whose behavior becomes stable as sampling frequency increases, from <strong>microscopic operators</strong>, whose output depends strongly on the precise sampling pattern. It argues that macroscopic operators are generally more robust for irregular data. The main operator families include exponential and ordinary moving averages, iterated moving averages, differential and derivative operators, moving norms, variances, standard deviations, skewness, kurtosis, correlations, volatility measures, and windowed Fourier transforms.</p>
+
+<p>A major technical contribution is the use of causal convolution kernels adapted to irregular sampling. The authors show how exponential moving averages can be evaluated recursively and efficiently in both time and memory. They also analyze initialization and finite-history effects, deriving practical build-up intervals and explaining how kernel shape and tail length affect responsiveness and estimation error. Repeated exponential moving averages are used to construct smoother, approximately rectangular kernels without the abrupt cutoff associated with a simple rectangular moving average.</p>
+
+<p>The differential operator is designed to estimate returns on irregularly sampled data while reducing the noise and computational inefficiency associated with directly evaluating a lagged value at an irregular time. The paper further introduces normalized derivative and volatility constructions, emphasizing that volatility depends on two separate time scales: the return horizon and the averaging horizon. This distinction is important for comparing estimates across frequencies and for conditional volatility forecasting.</p>
+
+<p>The framework is demonstrated on irregular foreign-exchange observations, including USD/CHF data. The examples show that the operators can identify market shocks, intraday volatility patterns, changing distributional shape, and trading activity. Microscopic operators are used for tick-related quantities such as tick frequency and activity, while macroscopic operators are preferred for quantities intended to be robust to sampling irregularity.</p>
+
+<h2 id="subsequent-use-and-influence">Subsequent use and influence</h2>
+
+<p>The paper became part of the technical foundation cited in later high-frequency-finance work. The authors’ operator framework was incorporated into the discussion and implementation of high-frequency time-series methods in <em>An Introduction to High-Frequency Finance</em>, which cites the 2001 journal article. (<a href="https://www.sciencedirect.com/book/9780122796715/an-introduction-to-high-frequency-finance">sciencedirect.com</a>)</p>
+
+<p>The NAG Library’s time-series documentation cites the paper and documents routines for iterated exponential moving averages over irregularly spaced observations, providing evidence of dissemination into numerical software used for applied time-series analysis. (<a href="https://www.afs.enea.it/software/libnag/nagdoc_fl24/pdf/G13/g13mff.pdf">afs.enea.it</a>)</p>
+
+<p>Later research on irregularly sampled measurements cites the paper when extending time-series monitoring methods to nonuniform observations. (<a href="https://www.papers.phmsociety.org/index.php/phmconf/article/view/2562">papers.phmsociety.org</a>) The framework is also cited in subsequent financial-market research concerning volatility, realized measures, and market dynamics. (<a href="https://ideas.repec.org/a/wsi/ijtafx/v04y2001i01ns0219024901000900.html">ideas.repec.org</a>)</p>
+
+<p>A U.S. patent application concerning market-condition measurement describes composing time-series operators and cites the Zumbach–Müller work, indicating use of the operator perspective in a financial-technology context. (<a href="https://patents.justia.com/patent/20030149648">patents.justia.com</a>)</p>
+
+<p>The available evidence supports concrete reuse and citation in high-frequency finance, numerical time-series software, irregular-sampling research, and financial technology. It does not establish that the paper was the sole origin of these later methods or that its framework became a dominant industry standard.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/time_series/">time series</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/convolution/">convolution</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/derivative/">derivative</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/exponential-moving-average/">exponential moving average</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/high-frequency-finance/">high frequency finance</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/inhomogeneous-time-series/">inhomogeneous time series</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/macroscopic-operators/">macroscopic operators</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/microscopic-operators/">microscopic operators</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/moving-average/">moving average</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/operators/">operators</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/volatility/">volatility</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

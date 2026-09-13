@@ -1,0 +1,155 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Xen and the Art of Virtualization | Papers We Love</title>
+        <meta name="description" content="Numerous systems have been designed which use virtualization to subdivide the ample resources of a modern computer. Some require specialized hardware, or cannot support commodity operating systems. Some target 100% binary compatibility at the expense" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Xen and the Art of Virtualization | Papers We Love" />
+        <meta property="og:description" content="Numerous systems have been designed which use virtualization to subdivide the ample resources of a modern computer. Some require specialized hardware, or cannot support commodity operating systems. Some target 100% binary compatibility at the expense" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/xen-and-the-art-of-virtualization-79a858f3/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:01">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Xen and the Art of Virtualization</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Alex Ho</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Andrew Warfield</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Boris Dragovic</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Ian Pratt</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Keir Fraser</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Paul Barham</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Rolf Neugebauer</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Steven Hand</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Tim Harris</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://www.cl.cam.ac.uk/research/srg/netos/papers/2003-xensosp.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: October 19–22, 2003; SOSP’03, 19th ACM Symposium on Operating Systems Principles, Bolton Landing, New York, USA</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Numerous systems have been designed which use virtualization to subdivide the ample resources of a modern computer. Some require specialized hardware, or cannot support commodity operating systems. Some target 100% binary compatibility at the expense of performance. Others sacrifice security or functionality for speed. Few offer resource isolation or performance guarantees; most provide only best-effort provisioning, risking denial of service.
+This paper presents Xen, an x86 virtual machine monitor which allows multiple commodity operating systems to share conventional hardware in a safe and resource managed fashion, but without sacrificing either performance or functionality. This is achieved by providing an idealized virtual machine abstraction to which operating systems such as Linux, BSD and Windows XP, can be ported with minimal effort.
+Our design is targeted at hosting up to 100 virtual machine instances simultaneously on a modern server. The virtualization approach taken by Xen is extremely efficient: we allow operating systems such as Linux and Windows XP to be hosted simultaneously for a negligible performance overhead — at most a few percent compared with the unvirtualized case. We considerably outperform competing commercial and freely available solutions in a range of microbenchmarks and system-wide tests.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>The paper presents Xen, a type-1 x86 virtual machine monitor designed to multiplex hardware among multiple mutually distrustful guest operating systems while preserving application compatibility, resource isolation, and near-native performance. Its central design choice is <strong>paravirtualization</strong>: guest kernels are modified to use a virtual machine interface that exposes operations difficult to virtualize efficiently on x86, while guest application binaries remain unmodified. The interface includes validated page-table updates, lower-privilege guest execution, hypercalls, asynchronous events, virtual timers, shared-memory I/O rings, virtual network interfaces, and virtual block devices. A privileged management domain, later known as <strong>dom0</strong>, performs domain construction and higher-level control; Xen itself aims to keep policy separate from low-level enforcement. (<a href="https://www.cl.cam.ac.uk/research/srg/netos/papers/2003-xensosp.pdf">cl.cam.ac.uk</a>)</p>
+
+<p>The evaluation reports that XenoLinux generally performs close to native Linux. It achieved within approximately 1% of native performance on the SPEC WEB99 workload, incurred about 3% overhead for Linux kernel compilation, and substantially outperformed VMware Workstation and User-Mode Linux on several system-level and microbenchmark workloads. Xen also demonstrated resource differentiation among domains, limited degradation under disruptive workloads, and operation across as many as 128 domains with a 7.5% aggregate-throughput reduction under an intentionally demanding scheduling experiment. The authors identify disk scheduling, page-table update costs, and the lack of SMP guest support as limitations of the prototype. (<a href="https://www.cl.cam.ac.uk/research/srg/netos/papers/2003-xensosp.pdf">cl.cam.ac.uk</a>)</p>
+
+<h2 id="influence">Influence</h2>
+
+<p>The work helped establish paravirtualization and the domain/dom0 management model as important designs for practical server virtualization. Xen was first released publicly in 2003 and has continued as an open hypervisor project; current Xen documentation retains the hypervisor, domains, dom0, resource isolation, and guest-facing interfaces central to the paper. (<a href="https://handbook.xenproject.org/users/introduction.html">handbook.xenproject.org</a>)</p>
+
+<p>The paper was subsequently used as a basis for empirical follow-up research: <em>Xen and the Art of Repeated Research</em> explicitly repeated and extended its performance study, framing open-source virtualization as a mechanism for transferring systems research into production environments. Ian Pratt’s <em>Xen and the Art of Virtualization Revisited</em> later documented Xen’s evolution from a research project toward enterprise software and examined subsequent paravirtualization and hardware/software co-design. (<a href="https://www.usenix.org/conference/2004-usenix-annual-technical-conference/xen-and-art-repeated-research">usenix.org</a>)</p>
+
+<p>The design also influenced industry virtualization infrastructure. AWS documentation describes early EC2 instances as using a privileged Amazon Linux virtual machine functioning as Xen’s dom0, demonstrating adoption of the paper’s control-domain model in commercial cloud infrastructure. Xen-related platforms and tools continue to support cloud and infrastructure use cases. (<a href="https://docs.aws.amazon.com/whitepapers/latest/security-design-of-aws-nitro-system/traditional-virtualization-primer.html">docs.aws.amazon.com</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/virtual_machines/">virtual machines</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/hypervisors/">hypervisors</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/paravirtualization/">paravirtualization</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/virtual-machine-monitors/">virtual machine monitors</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:01
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

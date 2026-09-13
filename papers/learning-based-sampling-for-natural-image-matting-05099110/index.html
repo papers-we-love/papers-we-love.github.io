@@ -1,0 +1,164 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Learning-based Sampling for Natural Image Matting | Papers We Love</title>
+        <meta name="description" content="The goal of natural image matting is the estimation of opacities of a user-defined foreground object that is essential in creating realistic composite imagery. Natural matting is a challenging process due to the high number of unknowns in the mathema" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Learning-based Sampling for Natural Image Matting | Papers We Love" />
+        <meta property="og:description" content="The goal of natural image matting is the estimation of opacities of a user-defined foreground object that is essential in creating realistic composite imagery. Natural matting is a challenging process due to the high number of unknowns in the mathema" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/learning-based-sampling-for-natural-image-matting-05099110/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:59">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Learning-based Sampling for Natural Image Matting</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Cengiz Öztireli</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Jingwei Tang</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Markus Gross</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Tunç Ozan Aydın</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Yağız Aksoy</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Tang_Learning-Based_Sampling_for_Natural_Image_Matting_CVPR_2019_paper.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: June 2019, Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2019), pp. 3055–3063</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>The goal of natural image matting is the estimation of opacities of a user-defined foreground object that is essential in creating realistic composite imagery. Natural matting is a challenging process due to the high number of unknowns in the mathematical modeling of the problem, namely the opacities as well as the foreground and background layer colors, while the original image serves as the single observation. In this paper, we propose the estimation of the layer colors through the use of deep neural networks prior to the opacity estimation. The layer color estimation is a better match for the capabilities of neural networks, and the availability of these colors substantially increase the performance of opacity estimation due to the reduced number of unknowns in the compositing equation. A prominent approach to matting in parallel to ours is called sampling-based matting, which involves gathering color samples from known-opacity regions to predict the layer colors. Our approach outperforms not only the previous hand-crafted sampling algorithms, but also current data-driven methods. We hence classify our method as a hybrid sampling- and learning-based approach to matting, and demonstrate the effectiveness of our approach through detailed ablation studies using alternative network architectures.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="approach">Approach</h2>
+
+<p>The paper proposes decomposing natural image matting into layer-color estimation followed by alpha-opacity estimation. Instead of asking one network to infer the alpha matte while simultaneously accounting for unknown foreground and background colors, the method first predicts the hidden background and foreground colors in the unknown-opacity region. A final matting network then uses the input image, trimap, and predicted layer colors to estimate the alpha matte.</p>
+
+<p>The background is estimated with a modified image-inpainting network. The input image is provided as guidance, and the background loss is evaluated only in the unknown-opacity region, encouraging the network to recover the actual obscured background rather than hallucinate merely plausible content. The foreground sampling network uses the predicted background as an additional input and is trained with both an L1 foreground-color loss and a compositional loss that measures reconstruction of the observed image.</p>
+
+<p>The final matting network combines alpha and compositional losses with an alpha-gradient loss. The gradient term is intended to preserve sharp, high-frequency transitions that can be blurred when only pixelwise alpha and compositional losses are used. The system also employs extensive dynamic augmentation: foreground layering, random trimap dilation, horizontal flipping, randomly selected MS COCO backgrounds, scale variation, and color transformations of foreground images.</p>
+
+<h2 id="results">Results</h2>
+
+<p>Experiments on the Adobe matting dataset and the standard alpha-matting benchmark show that predicted background colors provide the largest ablation improvement, while predicted foreground colors provide an additional but smaller improvement. Dynamic augmentation improves both SAD and MSE, and the gradient loss reduces undesirable blur. The sampling predictions also improve performance when used with more than one final matting architecture, suggesting that the main contribution is not tied to a single alpha-prediction network.</p>
+
+<p>On the benchmark reported in the paper, the proposed method achieved the strongest overall results among the compared methods at the time of submission and required approximately 0.6 seconds per benchmark image. Because foreground colors are estimated before alpha prediction, the output can also be used for compositing without a separate foreground-color post-processing step.</p>
+
+<h2 id="limitations">Limitations</h2>
+
+<p>The method can fail when its background or foreground color predictions are inaccurate. In such cases, supplying erroneous color estimates to the final matting network may produce a worse matte than a model that does not use sampling predictions. The authors identify broader and more diverse training data for the sampling networks as a possible way to reduce these failures.</p>
+
+<h2 id="subsequent-research-and-industry-relevance">Subsequent research and industry relevance</h2>
+
+<p>The paper is cited in later image-matting surveys and research as an example of learning-based or hybrid sampling-based matting, placing it within the transition from hand-crafted color-sampling methods toward neural methods that exploit image structure and texture. (<a href="https://www.mdpi.com/2076-3417/13/11/6512">mdpi.com</a>) A related patent family describes an implementation using background-sampling, foreground-sampling, and matting networks, and explicitly documents applications of the same general pipeline to image matting. (<a href="https://patents.google.com/patent/US10984558">patents.google.com</a>) The available evidence supports academic continuation and technology disclosure; it does not establish a specific commercial product deployment attributable to this paper. The CVF record identifies the paper as a CVPR 2019 publication by the listed authors, with the conference publication occurring in June 2019. (<a href="https://openaccess.thecvf.com/content_CVPR_2019/html/Tang_Learning-Based_Sampling_for_Natural_Image_Matting_CVPR_2019_paper.html">openaccess.thecvf.com</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/computer_graphics/">computer graphics</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/alpha-matte/">alpha matte</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/alpha-matting/">alpha matting</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/background-estimation/">background estimation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/data-augmentation/">data augmentation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/deep-neural-networks/">deep neural networks</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/foreground-estimation/">foreground estimation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/image-compositing/">image compositing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/image-inpainting/">image inpainting</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/learning-based-sampling/">learning based sampling</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/natural-image-matting/">natural image matting</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:59
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

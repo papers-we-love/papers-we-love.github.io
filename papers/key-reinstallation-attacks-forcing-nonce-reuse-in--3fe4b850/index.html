@@ -1,0 +1,160 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Key Reinstallation Attacks: Forcing Nonce Reuse in WPA2 | Papers We Love</title>
+        <meta name="description" content="We introduce the key reinstallation attack. This attack abuses design or implementation flaws in cryptographic protocols to reinstall an already-in-use key. This resets the key’s associated parameters such as transmit nonces and receive replay counte" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Key Reinstallation Attacks: Forcing Nonce Reuse in WPA2 | Papers We Love" />
+        <meta property="og:description" content="We introduce the key reinstallation attack. This attack abuses design or implementation flaws in cryptographic protocols to reinstall an already-in-use key. This resets the key’s associated parameters such as transmit nonces and receive replay counte" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/key-reinstallation-attacks-forcing-nonce-reuse-in--3fe4b850/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:59">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Key Reinstallation Attacks: Forcing Nonce Reuse in WPA2</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Frank Piessens</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Mathy Vanhoef</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://papers.mathyvanhoef.com/ccs2017.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: October 30–November 3, 2017 (CCS’17, the 24th ACM Conference on Computer and Communications Security)</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>We introduce the key reinstallation attack. This attack abuses design or implementation flaws in cryptographic protocols to reinstall an already-in-use key. This resets the key’s associated parameters such as transmit nonces and receive replay counters. Several types of cryptographic Wi-Fi handshakes are affected by the attack.
+All protected Wi-Fi networks use the 4-way handshake to generate a fresh session key. So far, this 14-year-old handshake has remained free from attacks, and is even proven secure. However, we show that the 4-way handshake is vulnerable to a key reinstallation attack. Here, the adversary tricks a victim into reinstalling an already-in-use key. This is achieved by manipulating and replaying handshake messages. When reinstalling the key, associated parameters such as the incremental transmit packet number (nonce) and receive packet number (replay counter) are reset to their initial value. Our key reinstallation attack also breaks the PeerKey, group key, and Fast BSS Transition (FT) handshake. The impact depends on the handshake being attacked, and the data-confidentiality protocol in use. Simplified, against AES-CCMP an adversary can replay and decrypt (but not forge) packets. This makes it possible to hijack TCP streams and inject malicious data into them. Against WPA-TKIP and GCMP the impact is catastrophic: packets can be replayed, decrypted, and forged. Because GCMP uses the same authentication key in both communication directions, it is especially affected.
+Finally, we confirmed our findings in practice, and found that every Wi-Fi device is vulnerable to some variant of our attacks. Notably, our attack is exceptionally devastating against Android 6.0: it forces the client into using a predictable all-zero encryption key.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>The paper introduces <strong>key reinstallation attacks</strong>, in which an adversary causes a device to reinstall a cryptographic key that is already in use. Reinstallation resets state associated with the key, especially transmit nonces and receive replay counters. Reusing a nonce with the same key can expose weaknesses in the underlying confidentiality and integrity protocol.</p>
+
+<p>The principal attack targets the WPA/WPA2 4-way handshake. The attacker manipulates traffic so that the authenticator retransmits handshake message 3. If the client accepts that retransmission after the session key has already been installed, it reinstalls the same Pairwise Transient Key and resets its packet-number state. The authors develop practical variants using a channel-based man-in-the-middle position, implementation-specific behavior, and race conditions between the host processor and wireless network interface.</p>
+
+<p>The paper extends the analysis to the PeerKey, group key, and 802.11r Fast BSS Transition handshakes. The group-key attack resets a client’s receive replay counter and enables replay of broadcast or multicast frames. The FT attack targets the access point by replaying a reassociation request; in the implementations tested, this causes the AP to reinstall the session key and reuse packet numbers. Some attacks may also occur without an active adversary when handshake messages are lost and retransmitted.</p>
+
+<p>The consequences depend on the data-confidentiality protocol. With AES-CCMP, nonce reuse enables packet decryption and replay, but the authors do not demonstrate practical arbitrary packet forgery. With TKIP, recovery of the weak Michael message-integrity key enables packet forgery in one direction. With GCMP, nonce reuse permits recovery of the GHASH authentication key, enabling packet forgery in both directions because the same authentication key is used for both traffic directions. These capabilities can support TCP-stream hijacking and injection into unencrypted HTTP connections. The study also identifies an especially severe implementation flaw in wpa_supplicant versions 2.4 and 2.5 and Android 6.0, where the attack can cause installation of an all-zero temporal key.</p>
+
+<p>A central result is that existing formal security proofs did not capture the vulnerability because they modeled key secrecy and authentication but did not specify when, or how many times, negotiated keys could be installed. The proposed mitigations are to prevent installation of an already-installed key from resetting nonce and replay-counter state, or to ensure that each freshly negotiated key is installed only once during a handshake. The paper also recommends more precise protocol specifications, continued implementation testing, and nonce-misuse-resistant encryption modes.</p>
+
+<h2 id="influence-on-research-and-industry">Influence on research and industry</h2>
+
+<p>The work became associated with the <strong>KRACK</strong> vulnerability disclosure. CERT/CC coordinated disclosure and documented the issue as affecting WPA/WPA2 handshake processing; vendors subsequently issued implementation-specific advisories and patches. (<a href="https://kb.cert.org/vuls/id/228519">kb.cert.org</a>)</p>
+
+<p>The paper also prompted subsequent formal work on WPA2 modeling. A later USENIX Security study explicitly describes its model as the first sufficiently detailed model to detect KRACK attacks, including interactions among the four-way handshake, group-key handshake, WNM sleep mode, and data confidentiality. (<a href="https://www.usenix.org/system/files/sec20-cremers.pdf">usenix.org</a>)</p>
+
+<p>The authors’ later technical addendum reported additional key-reinstallation issues involving TDLS and WNM Sleep Mode, extending the scope beyond the handshakes analyzed in the original paper. (<a href="https://www.krackattacks.com/">krackattacks.com</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/cryptography/">cryptography</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/attacks/">attacks</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/handshake/">handshake</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/initialization-vector/">initialization vector</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/key-reinstallation/">key reinstallation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/network-security/">network security</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/nonce-reuse/">nonce reuse</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/packet-number/">packet number</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/security-protocols/">security protocols</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/wpa2/">wpa2</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:59
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

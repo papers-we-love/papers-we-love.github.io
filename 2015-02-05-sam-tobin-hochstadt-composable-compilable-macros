@@ -1,0 +1,31 @@
+<iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/pK2E63mhRxI" frameborder="0" allowfullscreen=""></iframe>
+
+<p>READMORE</p>
+
+<p><a href="https://www.cs.utah.edu/plt/publications/macromod.pdf"><strong>Composable and Compilable Macros</strong></a> introduces the Racket module system, which addresses the following problem: When you have macros that run programs at compile-time, how does this interact with separate compilation and ahead-of-time compilation. The paper introduces “phases”, which enable Racket to behave the same regardless of when and how you compile your program. It also introduces the idea of writing different modules in different languages, which is now used for systems like Typed Racket.</p>
+
+<p><strong>Links</strong></p>
+
+<p><a href="http://bit.ly/1KNwpjC">Slides</a> <a href="https://www.mixcloud.com/paperswelove/sam-tobin-hochstadt-on-composable-and-compilable-macros/">Audio</a> <a href="https://www.youtube.com/redirect?q=http%3A%2F%2Fwww.meetup.com%2Fpapers-we-love%2Fevents%2F220021234%2F&amp;redir_token=vcCgfsZQJCCQgFtPF6xQWDsM67x8MTQyNzA2NDQ4NUAxNDI2OTc4MDg1">Meetup</a></p>
+
+<p><strong>Bio</strong></p>
+
+<p>Sam Tobin-Hochstadt (<a href="http://twitter.com/samth">@samth</a>) is an Assistant Professor in the School of Informatics and Computing at Indiana University. He has worked on dynamic languages, type systems, module systems, and metaprogramming, including creating the Typed Racket system and popularizing the phrase “scripts to programs.” He is a member of the ECMA TC39 working group responsible for standardizing JavaScript, where he co-designed the module system for ES6, the next version of JavaScript. He received his PhD in 2010 from Northeastern University under Matthias Felleisen.</p>
+
+<hr />
+
+<p style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+<a href="https://www.twosigma.com/"><img src="/images/TwoSigma_RGB.jpg" alt="TwoSigma" title="TwoSigma - Platinum Sponsor of Papers We Love NYC" style="width: 200px; margin: 0 1em 0 0;" /></a> <span style="flex: 1;">The <strong>New York Chapter</strong> would like to thank our platinum sponsor <a href="http://www.twosigma.com">TwoSigma</a> for helping to make this meetup possible.</span>
+</p>
+
+<hr />
+
+<p><strong>Additional resources</strong></p>
+
+<ul>
+  <li><em>Syntactic Abstraction in Scheme</em>, Dybvig Hieb &amp; Bruggeman, Lisp and Symbolic Computation 1993</li>
+  <li><em>Macros that Work Together</em>, Flatt, Findler, Culpepper, &amp; Darais, JFP 2012</li>
+  <li><em>Submodules in Racket</em>, Flatt GPCE 2013</li>
+  <li><em>Implicit phasing for R6RS libraries</em>, Ghuloum &amp; Dybvig, ICFP 2007</li>
+  <li><em>Extending the scope of syntactic abstraction</em>, Waddell &amp; Dybvig, POPL 1999</li>
+</ul>

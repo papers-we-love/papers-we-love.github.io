@@ -1,0 +1,158 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>REPRESENTING GAME DIALOGUE AS EXPRESSIONS IN FIRST-ORDER LOGIC | Papers We Love</title>
+        <meta name="description" content="Despite advancements in graphics, physics, and artificial intelligence, modern video games are still lacking in believable dialogue generation. The more complex and interactive stories in modern games may allow the player to experience different path" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="REPRESENTING GAME DIALOGUE AS EXPRESSIONS IN FIRST-ORDER LOGIC | Papers We Love" />
+        <meta property="og:description" content="Despite advancements in graphics, physics, and artificial intelligence, modern video games are still lacking in believable dialogue generation. The more complex and interactive stories in modern games may allow the player to experience different path" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/representing-game-dialogue-as-expressions-in-first-a5046f34/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">REPRESENTING GAME DIALOGUE AS EXPRESSIONS IN FIRST-ORDER LOGIC</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Kaylen Wheeler</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/logic_and_programming/representing-game-dialogue-as-expressions-in-first-order-logic.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: May 2013</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Despite advancements in graphics, physics, and artificial intelligence, modern video games are still lacking in believable dialogue generation. The more complex and interactive stories in modern games may allow the player to experience different paths in dialogue trees, but such trees are still required to be manually created by authors. Recently, there has been research on methods of creating emergent believable behaviour, but these are lacking true dialogue construction capabilities. Because the mapping of natural language to meaningful computational representations (logical forms) is a difficult problem, an important first step may be to develop a means of representing in-game dialogue as logical expressions. This thesis introduces and describes a system for representing dialogue as first-order logic predicates, demonstrates its equivalence with current dialogue authoring techniques, and shows how this representation is more dynamic and flexible.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h3 id="overview">Overview</h3>
+
+<p>This master’s thesis proposes representing game dialogue as first-order-logic expressions rather than as arbitrary strings embedded in manually authored dialogue trees. The implementation uses Clojure, <code>core.logic</code>, and MiniKanren-style relational programming. The representation is intended to be computationally meaningful, unambiguous, and structurally manipulable.</p>
+
+<p>The system combines three main mechanisms:</p>
+
+<ul>
+  <li><strong>Higher-order predicates:</strong> Dialogue utterances are represented as executable predicates, allowing agents to pose nested questions and reason about how other agents would respond. This is demonstrated with a Knights-and-Knaves scenario involving simple theory-of-mind reasoning.</li>
+  <li><strong>Polymorphic response functions:</strong> Message types are modeled using metadata, type hierarchies, and multimethod dispatch. This allows responses to depend on the conversational function of an utterance, such as greeting, offering, informing, or querying.</li>
+  <li><strong>Rules and modifiers:</strong> Agents can update internal state through assertions, retractions, and changes to stored facts. Rules connect state changes to message-based triggers, supporting emotion, memory, and social-behavior models.</li>
+</ul>
+
+<p>Two scenarios evaluate the approach. In “Bobby and Sally,” autonomous agents use dialogue to influence emotional state, with Bobby selecting actions based on predicted effects of Sally’s rules. In “Lovecraft Country,” the system reproduces the behavior of an existing dialogue tree while also allowing dialogue variation based on agent attributes, memories, emotional thresholds, and additional agents. The thesis therefore argues that the proposed representation can subsume the expressive behavior of dialogue trees while enabling more dynamic reuse and recombination of authored data.</p>
+
+<h3 id="documented-influence">Documented influence</h3>
+
+<p>A concrete later research use appears in <em>Modeling Autobiographical Memory for Believable Agents</em>, which cites Wheeler’s thesis when discussing robust memory as a support system for believable agent behavior and identifies integration with Wheeler’s dialogue system as a potential direction for more dynamic interactions. (<a href="https://ojs.aaai.org/index.php/AIIDE/article/download/12686/12534">ojs.aaai.org</a>)</p>
+
+<p>The thesis is also listed in the miniKanren research community’s catalog of work related to the ecosystem, but the sources searched do not establish a broad industry adoption or a large subsequent research lineage directly attributable to it. (<a href="https://minikanren.org/">minikanren.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/logic_and_programming/">logic and programming</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/autonomous-agents/">autonomous agents</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/believable-characters/">believable characters</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/dialogue-systems/">dialogue systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/emergent-behavior/">emergent behavior</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/first-order-logic/">first order logic</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/game-development/">game development</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/game-dialogue/">game dialogue</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/interactive-fiction/">interactive fiction</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/logic-programming/">logic programming</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/natural-language-processing/">natural language processing</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

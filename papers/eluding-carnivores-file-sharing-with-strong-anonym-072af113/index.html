@@ -1,0 +1,149 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Eluding Carnivores: File Sharing with Strong Anonymity | Papers We Love</title>
+        <meta name="description" content="Anonymity is increasingly important for networked applications amidst concerns over censorship and privacy. This paper outlines the design of HerbivoreFS, a scalable and efficient file sharing system that provides strong anonymity. HerbivoreFS provid" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Eluding Carnivores: File Sharing with Strong Anonymity | Papers We Love" />
+        <meta property="og:description" content="Anonymity is increasingly important for networked applications amidst concerns over censorship and privacy. This paper outlines the design of HerbivoreFS, a scalable and efficient file sharing system that provides strong anonymity. HerbivoreFS provid" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/eluding-carnivores-file-sharing-with-strong-anonym-072af113/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Eluding Carnivores: File Sharing with Strong Anonymity</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Doğan Engin</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Emin Gun Sirer</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Mark Robson</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Sharad Goel</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/eluding-carnivores-file-sharing-with-strong-anonymity.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: August 1, 2004; published in the Proceedings of the 11th ACM SIGOPS European Workshop, Leuven, Belgium, September 19–22, 2004</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Anonymity is increasingly important for networked applications amidst concerns over censorship and privacy. This paper outlines the design of HerbivoreFS, a scalable and efficient file sharing system that provides strong anonymity. HerbivoreFS provides computational guarantees that even adversaries able to monitor all network traffic cannot deduce the identity of a sender or receiver beyond an anonymizing clique of k peers. HerbivoreFS achieves scalability by partitioning the global network into smaller anonymizing cliques. Measurements on PlanetLab indicate that the system achieves high anonymous bandwidth when deployed on the Internet.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>The paper presents <strong>HerbivoreFS</strong>, a peer-to-peer file-sharing system built on the Herbivore anonymous communication protocol. Its central contribution is the application of dining-cryptographers networks (DC-nets) to a scalable Internet setting by partitioning participants into smaller anonymizing cliques. Within each clique, all members contribute to every transmission, preventing a global passive observer from identifying a sender or receiver more precisely than the clique, subject to the stated cryptographic assumptions.</p>
+
+<p>The design combines a Pastry-based overlay, computational puzzles to limit Sybil attacks, clique membership management, anonymous reservation and transmission rounds, and replication-based defenses against intersection attacks. The prototype was implemented in Java and C and evaluated on PlanetLab; the paper reports that parallel protocol instances enabled comparatively high anonymous bandwidth, although performance depended on clique size and the slowest participant link.</p>
+
+<p>Subsequent anonymity research cites Herbivore as an early practical attempt to scale DC-net-style communication. In particular, the Dissent research line discusses Herbivore and contrasts its clique-based DC-net approach with later systems designed to improve scalability, accountability, and resistance to disruption. (<a href="https://dedis.cs.yale.edu/dissent/papers/tr1472.pdf">dedis.cs.yale.edu</a>) Cornell’s project documentation also records a related Herbivore technical report and identifies the paper as part of the system’s research lineage. (<a href="https://www.cs.cornell.edu/people/egs/herbivore/documentation.html">cs.cornell.edu</a>) The available sources establish influence on later academic work and teaching materials, but do not provide reliable evidence of significant industry deployment. Bibliographic metadata confirms the paper’s 2004 ACM SIGOPS European Workshop publication. (<a href="https://www.researchgate.net/publication/220757769_Eluding_carnivores_File_sharing_with_strong_anonymity">researchgate.net</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/distributed_systems/">distributed systems</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/anonymous-file-sharing/">anonymous file sharing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/dc-nets/">dc nets</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/dining-cryptographers-networks/">dining cryptographers networks</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/intersection-attacks/">intersection attacks</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/pastry-overlay/">pastry overlay</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/peer-to-peer-networks/">peer to peer networks</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/planetlab/">planetlab</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/privacy/">privacy</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/strong-anonymity/">strong anonymity</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/sybil-resistance/">sybil resistance</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

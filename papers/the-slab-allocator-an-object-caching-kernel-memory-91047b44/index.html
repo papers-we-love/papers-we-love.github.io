@@ -1,0 +1,148 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>The Slab Allocator: An Object-Caching Kernel Memory Allocator | Papers We Love</title>
+        <meta name="description" content="This paper presents a comprehensive design overview of the SunOS 5.4 kernel memory allocator. This allocator is based on a set of object-caching primitives that reduce the cost of allocating complex objects by retaining their state between uses. Thes" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="The Slab Allocator: An Object-Caching Kernel Memory Allocator | Papers We Love" />
+        <meta property="og:description" content="This paper presents a comprehensive design overview of the SunOS 5.4 kernel memory allocator. This allocator is based on a set of object-caching primitives that reduce the cost of allocating complex objects by retaining their state between uses. Thes" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/the-slab-allocator-an-object-caching-kernel-memory-91047b44/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:01">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">The Slab Allocator: An Object-Caching Kernel Memory Allocator</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Jeff Bonwick</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://www.usenix.org/legacy/publications/library/proceedings/bos94/full_papers/bonwick.a" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: June 8, 1994 — USENIX Summer 1994 Technical Conference, Boston, Massachusetts</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>This paper presents a comprehensive design overview of the SunOS 5.4 kernel memory allocator. This allocator is based on a set of object-caching primitives that reduce the cost of allocating complex objects by retaining their state between uses. These same primitives prove equally effective for managing stateless memory (e.g. data pages and temporary buffers) because they are space-efficient and fast. The allocator's object caches respond dynamically to global memory pressure, and employ an object-coloring scheme that improves the system's overall cache utilization and bus balance. The allocator also has several statistical and debugging features that can detect a wide range of problems throughout the system.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h3 id="contribution">Contribution</h3>
+<p>The paper presents the SunOS 5.4 kernel memory allocator, centered on object caches that retain initialized objects after deallocation. This avoids repeatedly constructing and destroying frequently used kernel objects and provides fast allocation and release operations. Memory is organized into caches for particular object types, with slabs serving as the principal backing units. The design also applies to stateless memory, including data pages and temporary buffers. (<a href="https://www.usenix.org/legacy/publications/library/proceedings/bos94/bonwick.html">usenix.org</a>)</p>
+
+<p>The allocator addresses both performance and memory efficiency. Slab organization limits search overhead and reduces fragmentation, while cache-specific policies allow the allocator to respond to system-wide memory pressure by reclaiming unused slabs. Object coloring varies object placement within slabs to improve processor-cache utilization and memory-bus balance. Statistical reporting and debugging facilities provide visibility into allocator behavior and help detect memory-management errors. (<a href="https://boki1.github.io/notes/ObjectCachingKernelSlabAllocator.html">boki1.github.io</a>)</p>
+
+<h3 id="influence">Influence</h3>
+<p>The design directly influenced subsequent kernel implementations. The historical Linux <code>mm/slab.c</code> implementation identifies itself as an implementation of Bonwick’s slab allocator and explicitly cites the 1994 paper; it also documents implementation differences from the original design. (<a href="https://kernel.googlesource.com/pub/scm/linux/kernel/git/history/history/%2B/refs/tags/2.3.99pre10-2/mm/slab.c">kernel.googlesource.com</a>) Slab allocation has also been incorporated into other systems, including the L4 environment, which provides a slab allocator for managing equally sized memory objects. (<a href="https://os.inf.tu-dresden.de/l4env/doc/html/slab/index.html">os.inf.tu-dresden.de</a>)</p>
+
+<p>Bonwick and Jonathan Adams later extended the approach with per-processor magazines and the vmem resource allocator to improve multiprocessor scalability and support allocation of resources beyond kernel memory. That work reported deployment in Solaris 8 and performance improvements exceeding 50 percent on system-level benchmarks, demonstrating the continuing industrial use and extension of the original allocator concepts. (<a href="https://www.usenix.org/conference/2001-usenix-annual-technical-conference/magazines-and-vmem-extending-slab-allocator-many">usenix.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/memory_management/">memory management</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/cache-utilization/">cache utilization</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/debugging-tools/">debugging tools</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/kernel-memory-allocation/">kernel memory allocation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/kernel-performance/">kernel performance</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/memory-fragmentation/">memory fragmentation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/memory-management/">memory management</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/object-caching/">object caching</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/object-coloring/">object coloring</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/operating-systems/">operating systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/slab-allocator/">slab allocator</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:01
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

@@ -1,0 +1,153 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>REAL-TIME CHORD RECOGNITION FOR LIVE PERFORMANCE | Papers We Love</title>
+        <meta name="description" content="This paper describes work aimed at creating an efficient, real-time, robust and high performance chord recognition system for use on a single instrument in a live performance context. An improved chroma calculation method is combined with a classific" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="REAL-TIME CHORD RECOGNITION FOR LIVE PERFORMANCE | Papers We Love" />
+        <meta property="og:description" content="This paper describes work aimed at creating an efficient, real-time, robust and high performance chord recognition system for use on a single instrument in a live performance context. An improved chroma calculation method is combined with a classific" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/real-time-chord-recognition-for-live-performance-2d1031ad/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:53">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">REAL-TIME CHORD RECOGNITION FOR LIVE PERFORMANCE</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Adam M. Stark</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Mark D. Plumbley</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/audio_comp_sci/real-time-chord-detection.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: August 16–21, 2009 — Proceedings of the 2009 International Computer Music Conference (ICMC 2009), Montreal, Canada, pp. 85–88</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>This paper describes work aimed at creating an efficient, real-time, robust and high performance chord recognition system for use on a single instrument in a live performance context. An improved chroma calculation method is combined with a classification technique based on masking out expected note positions in the chromagram and minimising the residual energy. We demonstrate that our approach can be used to classify a wide range of chords, in real-time, on a frame by frame basis. We present these analysis techniques as externals for Max/MSP.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>The paper presents a frame-based chord-recognition system designed for real-time analysis of a single polyphonic instrument in live performance. It targets 108 chord labels spanning major, minor, diminished, augmented, suspended, major-seventh, minor-seventh, and dominant-seventh qualities.</p>
+
+<p>The system first computes a 12-bin chromagram from a windowed short-time Fourier transform. Instead of accumulating all spectral energy within fixed frequency bands, it searches for the maximum spectral peak near the expected locations of the first two harmonics. This reduces noise sensitivity and permits limited inharmonicity. The analysis focuses on two octaves, from C3 to C5, using an 11,025 Hz sampling rate and 8,192-sample frames.</p>
+
+<p>For classification, each candidate chord is represented by a binary note mask. The method removes the masked note positions and measures the normalized residual energy in the remaining chroma bins; the chord with the smallest residual is selected. Additional heuristics address chromagram ambiguities among augmented and suspended chords and compensate for overtone-related “ghost notes,” particularly fifths caused by third harmonics.</p>
+
+<p>Evaluation used 1,440 randomly selected frames from 180 guitar chords played on two guitars. The system achieved 94.0% root-note accuracy, 93.1% root-plus-quality accuracy, and 92.7% accuracy when additional chord intervals were also required. Performance was strongest for diminished, dominant-seventh, major-seventh, and major/minor chords, and weaker for augmented and suspended chords because some have identical chromagram representations. The proposed classifier exceeded nearest-neighbour classification by 1.2 percentage points and weighted-sum classification by 20.1 percentage points at the most detailed evaluation level.</p>
+
+<p>The paper’s documented influence is primarily practical and methodological. The authors later released a C++ implementation of the chromagram and chord-detection algorithm, explicitly identifying it as an implementation of this paper’s approach. That implementation has subsequently been reused or ported in community software, including TypeScript/browser and Rust projects for real-time chord detection. (<a href="https://github.com/adamstark/Chord-Detector-and-Chromagram">github.com</a>) The paper is also cited in later surveys and research on automatic chord recognition, including work covering the field’s development over two decades and later guitar-chord recognition systems. (<a href="https://c4dm.eecs.qmul.ac.uk/research/publications/">c4dm.eecs.qmul.ac.uk</a>)</p>
+
+<p>The authors identify whole-performance evaluation and the possible use of temporal models such as hidden Markov models as directions for subsequent work. The evidence located supports continued citation and software reuse, but does not establish broad commercial adoption attributable specifically to this paper. (<a href="https://openresearch.surrey.ac.uk/esploro/outputs/conferencePresentation/Real-time-chord-recognition-for-live-performance/99513191602346">openresearch.surrey.ac.uk</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/audio_comp_sci/">audio comp sci</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/chord-detection/">chord detection</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/chromagram/">chromagram</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/digital-signal-processing/">digital signal processing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/harmonic-analysis/">harmonic analysis</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/live-performance/">live performance</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/max-msp/">max msp</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/music-information-retrieval/">music information retrieval</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/pitch-class-profile/">pitch class profile</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/polyphonic-audio/">polyphonic audio</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/real-time-chord-recognition/">real time chord recognition</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:53
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

@@ -1,0 +1,153 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Flexible Operating System Internals: The Design and Implementation of the Anykernel and Rump Kernels | Papers We Love</title>
+        <meta name="description" content="The monolithic kernel architecture is significant in the real world due to the large amount of working and proven code. However, the architecture is not without problems: testing and development is difficult, virtualizing kernel services can be done " />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Flexible Operating System Internals: The Design and Implementation of the Anykernel and Rump Kernels | Papers We Love" />
+        <meta property="og:description" content="The monolithic kernel architecture is significant in the real world due to the large amount of working and proven code. However, the architecture is not without problems: testing and development is difficult, virtualizing kernel services can be done " />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/flexible-operating-system-internals-the-design-and-c45e100b/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:01">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Flexible Operating System Internals: The Design and Implementation of the Anykernel and Rump Kernels</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Antti Kantee</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://aaltodoc.aalto.fi/bitstream/handle/123456789/6318/isbn9789526049175.pdf?sequence=1" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: 2012; public defense on December 7, 2012, at Aalto University</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>The monolithic kernel architecture is significant in the real world due to the large amount of working and proven code. However, the architecture is not without problems: testing and development is difficult, virtualizing kernel services can be done only by duplicating the entire kernel, and security is weak due to a single domain where all code has direct access to everything. Alternate kernel architectures such as the microkernel and exokernel have been proposed to rectify these problems with monolithic kernels. However, alternate system structures do not address the common desire of using a monolithic kernel when the abovementioned problems do not apply. We propose a flexible anykernel architecture which enables running kernel drivers in a variety of configurations, examples of which include microkernel-style servers and application libraries. A monolithic kernel is shown to be convertible into an anykernel with a reasonable amount of effort and without introducing performance-hindering indirection layers. The original monolithic mode of operation is preserved after the anykernel adjustments, and alternate modes of operation for drivers are available as a runtime choice. For non-monolithic modes of operation, the rump kernel is introduced as a lightweight container for drivers. A rump kernel runs on top of a hypervisor which offers high-level primitives such as thread scheduling and virtual memory. A production quality implementation for the NetBSD open source OS has been done. The anykernel architecture and rump kernels are evaluated both against four years of real-world experience from daily NetBSD development as well as against synthetic benchmarks.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>The dissertation proposes the <strong>anykernel</strong> architecture, in which kernel drivers are structured so that the same largely unmodified code can operate in multiple execution models: as part of a conventional monolithic kernel, as an application library, or as an isolated microkernel-style or remote service. Its implementation vehicle is the <strong>rump kernel</strong>, a lightweight virtualized kernel instance containing only the support layers and driver components required for a particular use case.</p>
+
+<p>The design partitions NetBSD kernel functionality into a minimally dependent base, orthogonal subsystem layers called factions, and drivers. Support not essential to the driver—such as memory management, host scheduling, and I/O primitives—is delegated to the host through a hypercall interface. The implementation avoids pervasive indirection by using source-code restructuring, function pointers, weak symbols, generated interfaces, and symbol-namespace rewriting. It also provides local, microkernel, and remote client models, enabling direct library calls, host-kernel-mediated services, and system-call-style access over local or network sockets.</p>
+
+<p>The evaluation demonstrates three principal benefits. First, rump kernels isolate potentially faulty drivers, particularly file-system drivers processing untrusted disk images, while preserving ordinary user-facing file-system interfaces. Second, they enable reuse of kernel implementations in applications such as file-system utilities and <code>makefs</code>, substantially reducing duplicate implementation effort. Third, they support rapid, isolated kernel testing and development: NetBSD used rump kernels in close to 1,000 test cases, allowing crashes to terminate individual test processes rather than the test host. The reported implementation typically bootstrapped in approximately 10 milliseconds with roughly 700 kB–1.5 MB of memory overhead, although costs varied by configuration. Local system calls were faster than native system calls in the reported experiments, while remote calls were dominated by IPC and copy-in/copy-out overhead.</p>
+
+<p>The work’s principal limitation is that rump kernels do not provide a complete independent virtual-memory environment: page faults, memory protection, and much scheduling are delegated to the host. Remote clients also face ABI and data-structure compatibility constraints. Consequently, the architecture is best understood as selective driver virtualization rather than full operating-system virtualization.</p>
+
+<h2 id="subsequent-influence-and-use">Subsequent influence and use</h2>
+
+<p>Concrete evidence of subsequent uptake includes continued use of rump kernels in NetBSD’s automated testing infrastructure. The NetBSD project identifies rump kernels as backends for continuous tests, directly connecting the dissertation’s testing model to ongoing project practice. (<a href="https://wiki.netbsd.org/rumpkernel/">wiki.netbsd.org</a>)</p>
+
+<p>The rumpkernel project describes the dissertation as the technical reference for the operating principles and terminology of rump kernels, indicating that the work became foundational documentation for the surrounding software ecosystem. (<a href="https://rumpkernel.github.io/">rumpkernel.github.io</a>)</p>
+
+<p>The concepts were subsequently applied beyond the original NetBSD testing and file-system use cases. A Xen Project account describes the development of Rumprun, a unikernel environment built around reusable rump-kernel components and the anykernel approach. (<a href="https://xenproject.org/blog/on-rump-kernels-and-the-rumprun-unikernel/">xenproject.org</a>) The NetBSD TCP/IP stack was also integrated with DPDK, demonstrating use of rump-derived networking components with a high-performance packet-processing framework. (<a href="https://www.dpdk.org/netbsd-tcp-ip-port-on-dpdk-using-rump-framework/">dpdk.org</a>)</p>
+
+<p>Later systems research has cited the dissertation in work on flexible OS isolation and related componentized or library-based operating-system designs, including FlexOS. This establishes scholarly influence through citation, although the cited sources do not by themselves demonstrate that the dissertation was the sole origin of those later systems. (<a href="https://owl.eu.com/papers/flexos-asplos22.pdf">owl.eu.com</a>)</p>
+
+<p>The bibliographic metadata and abstract were cross-checked against Aalto University’s research portal, which identifies the work as a 2012 doctoral thesis by Antti Kantee. (<a href="https://research.aalto.fi/en/publications/flexible-operating-system-internals-the-design-and-implementation/">research.aalto.fi</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/unikernels/">unikernels</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/implementation/">implementation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/open-source/">open source</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/operating-system-kernel-architecture/">operating system kernel architecture</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:01
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->
