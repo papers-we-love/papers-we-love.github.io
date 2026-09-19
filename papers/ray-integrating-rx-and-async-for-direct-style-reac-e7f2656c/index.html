@@ -1,0 +1,151 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>RAY: Integrating Rx and Async for Direct-Style Reactive Streams | Papers We Love</title>
+        <meta name="description" content="Languages like F#, C#, and recently also Scala, provide “async” extensions which aim to make asynchronous programming easier by avoiding an inversion of control that is inherent in traditional callback-based programming models (for the purpose of thi" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="RAY: Integrating Rx and Async for Direct-Style Reactive Streams | Papers We Love" />
+        <meta property="og:description" content="Languages like F#, C#, and recently also Scala, provide “async” extensions which aim to make asynchronous programming easier by avoiding an inversion of control that is inherent in traditional callback-based programming models (for the purpose of thi" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/ray-integrating-rx-and-async-for-direct-style-reac-e7f2656c/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">RAY: Integrating Rx and Async for Direct-Style Reactive Streams</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Heather Miller</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Philipp Haller</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages-paradigms/functional_reactive_programming/ray-integrating-rx-and-async-for-direct-style-reactive-streams.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: October 28, 2013 — ACM SPLASH 2013 Workshop on Reactivity, Events and Modularity (REM 2013)</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Languages like F#, C#, and recently also Scala, provide “async” extensions which aim to make asynchronous programming easier by avoiding an inversion of control that is inherent in traditional callback-based programming models (for the purpose of this paper called the “Async” model). This paper outlines a novel approach to integrate the Async model with observable streams of the Reactive Extensions model which is best-known from the .NET platform, and of which popular implementations exist for Java, Ruby, and other widespread languages. We outline the translation of “Reactive Async” programs to efficient state machines, in a way that generalizes the state machine translation of regular Async programs. Finally, we sketch a formalization of the Reactive Async model in terms of a small-step operational semantics.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>The paper proposes <strong>RAY</strong>, a Scala-oriented programming model that combines direct-style asynchronous programming with the observable streams of the Reactive Extensions model. Whereas conventional <code>async</code>/<code>await</code> abstractions primarily address computations that eventually produce one result, reactive streams can produce multiple values, terminate normally, fail, or remain active indefinitely. RAY therefore extends the Async model to support stream-oriented suspension and production.</p>
+
+<p>The central constructs are <code>rasync</code>, <code>awaitNext</code>, <code>awaitNextOrDone</code>, and <code>yieldNext</code>. A <code>rasync</code> block creates an observable stream. <code>awaitNext</code> suspends execution until the input stream produces a value, while <code>awaitNextOrDone</code> represents either a next value or stream completion using <code>Option</code>. <code>yieldNext</code> publishes arbitrarily many values from within a reactive asynchronous computation. These constructs allow programs such as stream forwarders and event collectors to be written in direct style rather than through explicit callbacks or higher-order stream combinators.</p>
+
+<p>The proposed implementation translates RAY programs into efficient state machines. The translation uses an observable flow pool to represent the output stream, non-blocking channels to buffer incoming events, and subscriptions that resume suspended continuations when events arrive. The design also closes subscriptions when an asynchronous computation terminates. The paper sketches a small-step operational semantics for the model, including rules for yielding values, completing observables, suspending on input streams, resuming suspended computations, and maintaining dormant queues so that events are not lost while a computation is between await operations.</p>
+
+<p>A later paper by the same authors, <strong>“A Formal Model for Direct-style Asynchronous Observables,”</strong> developed the formal treatment further and presented correctness properties including an observable protocol and subject reduction. (<a href="https://www.csc.kth.se/~phaller/nwpt2015/nwpt2015.pdf">csc.kth.se</a>) A subsequent 2016 paper, <strong>“Reactive Async: Expressive Deterministic Concurrency,”</strong> reused the Reactive Async direction in a broader deterministic-concurrency model based on cells, adding support for dynamic and cyclic dependencies, fallbacks, a Scala implementation, and case studies involving JVM bytecode analysis. (<a href="https://kth.diva-portal.org/smash/record.jsf?pid=diva2%3A1054687">kth.diva-portal.org</a>)</p>
+
+<p>The available evidence indicates a documented influence on subsequent programming-languages research, particularly the authors’ later formalization and deterministic-concurrency work. The search did not identify a well-documented production deployment or industry adoption specifically attributable to this paper; the concrete implementation evidence is primarily associated with Scala research prototypes and libraries. The paper’s publication venue and date are corroborated by EPFL and the REM 2013 workshop program. (<a href="https://www.epfl.ch/labs/lamp/?p=397">epfl.ch</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/languages-paradigms/functional_reactive_programming/">languages paradigms/functional reactive programming</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/async-await/">async await</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/asynchronous-programming/">asynchronous programming</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/non-blocking-concurrency/">non blocking concurrency</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/observable-streams/">observable streams</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/operational-semantics/">operational semantics</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/reactive-extensions/">reactive extensions</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/reactive-programming/">reactive programming</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/reactive-streams/">reactive streams</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/scala/">scala</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/state-machines/">state machines</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

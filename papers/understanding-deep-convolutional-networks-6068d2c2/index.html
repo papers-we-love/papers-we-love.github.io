@@ -1,0 +1,153 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Understanding Deep Convolutional Networks | Papers We Love</title>
+        <meta name="description" content="Deep convolutional networks provide state of the art classifications and regressions results over many high-dimensional problems. We review their architecture, which scatters data with a cascade of linear filter weights and non-linearities. A mathema" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Understanding Deep Convolutional Networks | Papers We Love" />
+        <meta property="og:description" content="Deep convolutional networks provide state of the art classifications and regressions results over many high-dimensional problems. We review their architecture, which scatters data with a cascade of linear filter weights and non-linearities. A mathema" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/understanding-deep-convolutional-networks-6068d2c2/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Understanding Deep Convolutional Networks</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Stéphane Mallat</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/machine_learning/Understanding-Deep-Convolutional-Networks.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: April 13, 2016; Philosophical Transactions of the Royal Society A, volume 374, issue 2065, article 20150203. An arXiv version was posted on January 19, 2016.</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Deep convolutional networks provide state of the art classifications and regressions results over many high-dimensional problems. We review their architecture, which scatters data with a cascade of linear filter weights and non-linearities. A mathematical framework is introduced to analyze their properties. Computations of invariants involve multiscale contractions, the linearization of hierarchical symmetries, and sparse separations. Applications are discussed.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>Stéphane Mallat presents a mathematical framework for understanding deep convolutional networks as cascades of linear filtering, nonlinear contraction, and progressive dimensionality reduction. The central objective is to explain how such networks can reduce variability while preserving the separation between classes or regression targets.</p>
+
+<p>The paper characterizes supervised learning as a high-dimensional interpolation problem and distinguishes three related goals: separation of inputs with different outputs, linearization of the target function, and invariance to transformations that preserve the target. It treats translations and diffeomorphisms as representative local symmetries and argues that convolutional architectures are appropriate because convolutions are covariant to translations.</p>
+
+<p>Wavelets provide the paper’s basic mechanism for separating signal variations by scale, orientation, or frequency. A low-pass averaging operation provides local translation invariance, while wavelet convolutions preserve multiscale information. Applying a modulus or rectifier removes oscillatory phase or sign information and produces contractive representations that are stable to small deformations. The paper emphasizes that sparsity limits the loss of discriminative information during these nonlinear contractions.</p>
+
+<p>The scattering transform is presented as a mathematically analyzable special case of a deep convolutional network. First-order scattering coefficients capture localized invariant structure, while second-order coefficients capture interactions between structures at different scales and orientations. Higher-order coefficients generally have rapidly decreasing energy for the image and audio settings considered. Reconstruction experiments indicate that second-order scattering captures non-Gaussian texture geometry more effectively than covariance statistics alone, while sparse wavelet representations can retain substantial information despite strong averaging.</p>
+
+<p>For general learned CNNs, the paper proposes interpreting channel combinations as mechanisms for transporting and factorizing increasingly complex groups of local symmetries. In this view, each layer contracts variability along symmetry directions while using multiple network fibers to preserve classification margins. The fibers act as separation channels for inputs near class boundaries, and deeper representations become more invariant, specialized, and sparse. The framework connects learned filters to generalized convolutions over hierarchical symmetry groups, although the groups themselves are conceptual structures rather than explicitly computed objects.</p>
+
+<p>The paper identifies several unresolved problems, including complexity bounds, approximation theorems for high-dimensional functions, and guaranteed convergence of filter optimization. Its lasting contribution is primarily conceptual and mathematical: it links CNN design to wavelet analysis, invariant representations, deformation stability, sparsity, and hierarchical symmetry factorization.</p>
+
+<h2 id="subsequent-influence">Subsequent influence</h2>
+
+<p>The paper has been used as a theoretical reference in later work on deep-network approximation, downsampling, geometric deep learning, and stability. For example, subsequent mathematical analyses of multichannel deep CNNs cite it alongside universality and approximation results, while later work on nonlinear operators for geometric deep learning cites its symmetry-based interpretation of convolutional representations. (<a href="https://doi.org/10.1155/2023%2F8208424">doi.org</a>)</p>
+
+<p>Its scattering-based perspective also continued through research on wavelet scattering for audio, textures, molecular-energy regression, generative modeling, and learned scattering representations. Mallat’s later publication record documents this research trajectory, and reviews of deep-learning theory explicitly describe scattering transforms as a source of deformation-stable, low-variance representations. (<a href="https://www.di.ens.fr/~mallat/biblio.html">di.ens.fr</a>)</p>
+
+<p>The published article is a single-author review and theoretical perspective rather than a new training algorithm or industrial system. The available evidence supports influence on subsequent research on invariant and geometric representations, but does not establish that the paper directly caused adoption of a specific commercial CNN architecture. (<a href="https://pubmed.ncbi.nlm.nih.gov/26953183/">pubmed.ncbi.nlm.nih.gov</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/machine_learning/">machine learning</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/deep-convolutional-neural-networks/">deep convolutional neural networks</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/learning/">learning</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/wavelets/">wavelets</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

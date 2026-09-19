@@ -1,0 +1,149 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Imaging Vector Fields Using Line Integral Convolution | Papers We Love</title>
+        <meta name="description" content="Imaging vector fields has applications in science, art, image processing and special effects. An effective new approach is to use linear and curvilinear filtering techniques to locally blur textures along a vector field. This approach builds on sever" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Imaging Vector Fields Using Line Integral Convolution | Papers We Love" />
+        <meta property="og:description" content="Imaging vector fields has applications in science, art, image processing and special effects. An effective new approach is to use linear and curvilinear filtering techniques to locally blur textures along a vector field. This approach builds on sever" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/imaging-vector-fields-using-line-integral-convolut-25ba52c1/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:53">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Imaging Vector Fields Using Line Integral Convolution</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Brian Cabral</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Leith (Casey) Leedom</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/computer_graphics/imaging_vector_fields_using_line_integral_convolution.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: 1993 (Proceedings of ACM SIGGRAPH ’93, Anaheim, California, August 1–6, 1993)</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Imaging vector fields has applications in science, art, image processing and special effects. An effective new approach is to use linear and curvilinear filtering techniques to locally blur textures along a vector field. This approach builds on several previous texture generation and filtering techniques[8, 9, 11, 14, 15, 17, 23]. It is, however, unique because it is local, one-dimensional and independent of any predefined geometry or texture. The technique is general and capable of imaging arbitrary two- and three-dimensional vector fields. The local one-dimensional nature of the algorithm lends itself to highly parallel and efficient implementations. Furthermore, the curvilinear filter is capable of rendering detail on very intricate vector fields. Combining this technique with other rendering and image processing techniques — like periodic motion filtering — results in richly informative and striking images. The technique can also produce novel special effects.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>The paper introduces <strong>Line Integral Convolution (LIC)</strong>, a method for visualizing dense two- and three-dimensional vector fields by filtering an input texture along locally integrated streamlines. Unlike icon placement, particle tracing, and earlier texture-synthesis approaches, LIC is local, one-dimensional, independent of a predefined texture or geometry, and applicable to dense fields.</p>
+
+<p>The method improves on straight-line DDA convolution by advecting a streamline forward and backward through neighboring grid cells. It computes a weighted line integral of the input texture along that streamline and normalizes the result by the integral of the filter kernel. The paper also discusses aliasing control through low-pass filtering, treatment of null vectors and singularities, fixed versus variable normalization, and the performance trade-off between accuracy and speed. Periodic, phase-shifted filters are introduced to convey vector direction through animation, while variations in integration length or post-processing can encode vector magnitude.</p>
+
+<p>The approach is generalized to three-dimensional scalar fields, which can then be rendered volumetrically. Demonstrated applications include scientific flow visualization, image stylization, woven-surface textures, wind-field visualization, vector-magnitude overlays, and motion blur. On the hardware reported in the paper, two-dimensional LIC processed approximately 3,000 cells per second, compared with approximately 30,000 for DDA convolution; the three-dimensional implementation processed approximately 1,200 cells per second before thresholding optimizations.</p>
+
+<h3 id="influence">Influence</h3>
+
+<p>Subsequent work extended LIC to curvilinear-grid and parametric-surface flow visualization, including real-time implementations using texture-mapping hardware. (<a href="https://graphics.stanford.edu/papers/flowvis/">graphics.stanford.edu</a>) Stalling and Hege developed a faster, resolution-independent LIC algorithm using error-controlled numerical integration and reported an order-of-magnitude reduction in computational cost relative to the original method. (<a href="https://webdoc.sub.gwdg.de/ebook/ah/2001/zib-webdoc/paperweb/abstracts/sc-94-37/default.htm">webdoc.sub.gwdg.de</a>) Cabral and Leedom later published a parallel LIC implementation, directly pursuing the paper’s observation that the method is well suited to parallel computation. (<a href="https://dblp.org/pid/79/6575">dblp.org</a>) Later instructional and research materials describe extensions including GPU implementations, oriented LIC, multiresolution inputs, time-varying-data techniques, and integration with volume rendering. (<a href="https://history.siggraph.org/wp-content/uploads/2021/08/1997-08-Course-Contents-Texture-Synthesis-with-Line-Integral-Convolution.pdf">history.siggraph.org</a>) These references document LIC’s continuing use as a foundational dense vector-field visualization technique.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/computer_graphics/">computer graphics</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/convolution/">convolution</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/filtering/">filtering</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/flow-fields/">flow fields</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/periodic-motion-filtering/">periodic motion filtering</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/rendering/">rendering</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/special-effects/">special effects</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/texture-synthesis/">texture synthesis</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/visualization/">visualization</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:53
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

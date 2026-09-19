@@ -1,0 +1,158 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Event-Driven FRP | Papers We Love</title>
+        <meta name="description" content="Functional Reactive Programming (FRP) is a high-level declarative language for programming reactive systems. Previous work on FRP has demonstrated its utility in applications ranging from animation and graphical user interfaces to robotics. FRP has a" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Event-Driven FRP | Papers We Love" />
+        <meta property="og:description" content="Functional Reactive Programming (FRP) is a high-level declarative language for programming reactive systems. Previous work on FRP has demonstrated its utility in applications ranging from animation and graphical user interfaces to robotics. FRP has a" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/event-driven-frp-dba14749/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:00">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Event-Driven FRP</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Paul Hudak</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Walid Taha</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Zhanyong Wan</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://www.researchgate.net/publication/2415013_Event-driven_FRP" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: December 20, 2001; published in Lecture Notes in Computer Science, volume 2257, as part of the Proceedings of PADL 2002 (January 19–20, 2002), pages 155–172.</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Functional Reactive Programming (FRP) is a high-level declarative language for programming reactive systems. Previous work on FRP has demonstrated its utility in applications ranging from animation and graphical user interfaces to robotics. FRP has a continuous-time denotational semantics that is elegant and expressive. But FRP provides no guarantees on resource consumption, and so is unsuitable for more demanding applications. Recently we identified a resource bounded sub-language of FRP called Real-Time FRP (RT-FRP).
+
+Experience using RT-FRP in the micro-controller domain has revealed a shortcoming of RT-FRP in the event-driven setting. To deal with this shortcoming, we present a more general language called Event-driven FRP (E-FRP). The new language allows us to express heavily event-oriented computations in a natural manner.
+
+The focus of this paper is on compilation, which had not been addressed with RT-FRP. We formally define a compilation strategy for E-FRP into imperative code. By giving a formal operational semantics to a small imperative language, we also show that compilation is correct. We are currently building a compiler from RT-FRP which includes a back-end for generating code for the PIC16C66 micro-controller.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h3 id="contribution">Contribution</h3>
+
+<p>The paper introduces Event-Driven Functional Reactive Programming (E-FRP), a resource-bounded subset of Functional Reactive Programming designed for systems driven by multiple external events. It generalizes Real-Time FRP by replacing its single implicit global clock with multiple mutually exclusive event sources. Behaviors change only when events occur, and event processing is divided into computation and state-update phases. These restrictions provide a simpler operational model and support predictable execution for interrupt-driven embedded systems.</p>
+
+<p>The central technical contribution is a formally specified compilation strategy from E-FRP into a small imperative language. The authors give operational semantics for the target language and establish that the compilation preserves the behavior of the source program. The paper also presents a robot-controller example targeting a PIC16C66 microcontroller. The formally specified generated code is intentionally conservative; the paper notes that practical implementations can apply global optimizations to produce more efficient code. (<a href="https://www.researchgate.net/publication/2415013_Event-driven_FRP">researchgate.net</a>)</p>
+
+<h3 id="influence">Influence</h3>
+
+<p>The work directly led to subsequent research on <strong>E-FRP with priorities</strong>, which extended the compilation strategy to support prioritized and preemptive event handling while preserving the original high-level semantics and resource guarantees. (<a href="https://websrv.cecs.uci.edu/~papers/esweek07/emsoft/p221.pdf">websrv.cecs.uci.edu</a>)</p>
+
+<p>E-FRP was also incorporated into later analyses of reactive programming as an example of a discrete, event-driven FRP model with explicit update ordering and glitch-avoidance properties. The model was cited in research on asynchronous FRP and Elm, and in surveys that classified reactive systems according to their treatment of time, events, evaluation, and dependency propagation. (<a href="https://doi.org/10.1145/2499370.2462161">doi.org</a>)</p>
+
+<p>More recently, Reactive Vega used E-FRP semantics as a basis for declarative interactive visualization, retaining event-driven propagation and two-phase updates while combining them with streaming-data and incremental-recomputation techniques. This demonstrates an extension of the paper’s event-driven dataflow ideas beyond embedded controllers into interactive web visualization systems. (<a href="https://citeseerx.ist.psu.edu/document?doi=ee42b9c1658b3805ebce537f6e632677587c3baf&amp;repid=rep1&amp;type=pdf">citeseerx.ist.psu.edu</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/languages-paradigms/functional_reactive_programming/">languages paradigms/functional reactive programming</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/compiler-correctness/">compiler correctness</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/embedded-systems/">embedded systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/event-driven-programming/">event driven programming</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/formal-semantics/">formal semantics</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/functional-reactive-programming/">functional reactive programming</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/imperative-code-generation/">imperative code generation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/microcontrollers/">microcontrollers</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/reactive-systems/">reactive systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/real-time-systems/">real time systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/resource-bounded-computation/">resource bounded computation</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:00
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

@@ -1,0 +1,160 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>EPITAXIS A System for Syntactic and Semantic Software Queries using Deductive Retrieval and Symbolic Execution | Papers We Love</title>
+        <meta name="description" content="Modern computer hardware (multi-core, multi gigahertz processors with gigabytes of RAM and terabytes of disk) along with IDEs allows programmers to build computer programs which are bigger and more complex than they can understand or keep in their wo" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="EPITAXIS A System for Syntactic and Semantic Software Queries using Deductive Retrieval and Symbolic Execution | Papers We Love" />
+        <meta property="og:description" content="Modern computer hardware (multi-core, multi gigahertz processors with gigabytes of RAM and terabytes of disk) along with IDEs allows programmers to build computer programs which are bigger and more complex than they can understand or keep in their wo" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/epitaxis-a-system-for-syntactic-and-semantic-softw-2abb730c/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">EPITAXIS A System for Syntactic and Semantic Software Queries using Deductive Retrieval and Symbolic Execution</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">James Benvenuto</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/faults_and_verification/epitaxis-a-system-for-syntactic-and-semantic-software-queries.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: 2010; Ph.D. dissertation, University of California, Irvine</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Modern computer hardware (multi-core, multi gigahertz processors with gigabytes of RAM and terabytes of disk) along with IDEs allows programmers to build computer programs which are bigger and more complex than they can understand or keep in their working memories. Additionally, the problems these programs are designed to model are ever more complicated. Consequently, programs are full of inconsistencies, mistakes, and incompleteness's. These problems are difficult to detect, difficult to locate, and difficult to correct. Often a change is made by a programmer to fix a problem for which understanding all the repercussions of the change is difficult. Consequently, further bugs are introduced into the code base. Because of the pervasiveness of software in society and the potential severity of the consequences of bugs, software developers need ever better tools to help them understand, navigate, and follow the consequences of their development and maintenance activities. This dissertation presents a novel framework based on tree/graph searching and parsing, deductive retrieval, dynamic analysis, symbolic execution, aspect oriented programming, and an open interpreter to allow a software developer to navigate, locate features, find bugs, and abstract information in software. The system is designed to have a fast modify-test cycle such that the programmer can search and test the software as it is being edited without time consuming recompilation, reinstrumenting, or database repopulating each time an edit is made to the code base. The system is language independent, requiring only files to specify the language grammar, control flow graph transformation, and execution semantics. In addition, because of the flexibility and programmability of the system it is an excellent environment to perform further research on program analysis techniques such as dynamic analysis, symbolic execution and abstract interpretation. A prototype system has been built along with data files for the C programming language which demonstrates the feasibility of the system and its ability to scale to "modern-sized" programs.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="overview">Overview</h2>
+
+<p>The dissertation presents <strong>Epitaxis</strong>, an interactive framework for querying and analyzing software across lexical, syntactic, static-semantic, dynamic-semantic, and abstract levels. Its central design is a unified representation combining a complete lexical token list, a bidirectionally linked abstract syntax tree, an executable control-flow graph, and virtual abstract semantic graphs that are constructed through rule-based deduction when needed.</p>
+
+<p>The system uses an object-oriented, Prolog-like search language based on unification, backtracking, structural traversal, rule application, and memoization. Queries can identify lexical patterns, navigate syntax trees, derive control-flow structures, infer relationships through rules, inspect symbolic execution states, and search abstract structures accumulated from earlier analyses. The approach is intended to avoid the need for a separately hard-coded representation for every analysis.</p>
+
+<p>A major contribution is the integration of an open symbolic interpreter with the query engine. The interpreter operates at the source level rather than on compiled machine or assembly code, preserving source constructs, types, declarations, member names, and casting information. It supports concrete and symbolic values, proxy values and addresses, interval-based value representations, symbolic memory, constraint propagation, multi-path execution, configurable loop-step limits, and collection or assertion points. These facilities allow the system to detect runtime singularities such as null dereferences, invalid memory accesses, uninitialized reads, and out-of-bounds indexing, while also collecting higher-level information about values, function calls, structure members, and data-flow relationships.</p>
+
+<p>The prototype was implemented in an augmented LISP environment and supplied with language-specific definitions for C. Incremental reparsing allows a modified source line to be tokenized and integrated into the existing syntax structure without reparsing the entire program. On a 392,690-line C code base, the system reportedly required 88 seconds and 1.3 GB of memory to scan and parse the code, followed by 86 seconds and an additional 97 MB to construct the control-flow graph. Syntactic searches over the code base found 12,180 function definitions in 0.124 seconds, 88,581 function calls in 1.235 seconds, and 1,076 unused local variables in 11.468 seconds.</p>
+
+<p>The symbolic-execution experiments demonstrate both capability and limitations. Epitaxis found the target error in the symbolic string-input example in 0.312 seconds. On the 169-line <code>tr.c</code> utility, it found seven errors and reached approximately 85% code coverage before exhausting memory, with one reported error attributed to malformed input and several others associated with incomplete modeling of <code>argv</code>. On a 1,294-line retrieval function, configurable loop-step limits substantially affected coverage and error detection; the two-step mode reached 91.41% reported code coverage and found 16 null-pointer errors before exhausting available memory. The experiments also expose the expected path-explosion and memory-growth problems of symbolic execution.</p>
+
+<p>The dissertation’s advanced analysis uses collection points and formal concept analysis to summarize information gathered across execution paths. Concept lattices expose relationships among structure fields, predicate types, union usage, nested member accesses, and function-related values. This illustrates how the framework can support analyses concerned with data representation and conceptual invariants rather than only directly observable crashes.</p>
+
+<h2 id="main-limitations">Main limitations</h2>
+
+<p>The prototype supports only C, has limited modeling of the external environment and standard library, does not understand the normal structure of <code>argc</code> and <code>argv</code>, lacks embedded-assembly support, and relies on a comparatively weak constraint system. Breadth-first symbolic execution causes path and memory growth, and the dissertation does not provide a broad comparative evaluation against contemporary program-query or symbolic-execution systems.</p>
+
+<h2 id="influence-and-subsequent-use">Influence and subsequent use</h2>
+
+<p>The University of California, Irvine research repository confirms the dissertation’s 2010 publication metadata and identifies James Benvenuto as its sole author. (<a href="https://its.uci.edu/research_products/phd-dissertation-epitaxis-a-system-for-syntactic-and-semantic-software-queries-using-deductive-retrieval-and-symbolic-execution/">its.uci.edu</a>) A quick search did not identify clear, verifiable scholarly citations demonstrating substantial subsequent research adoption or commercial deployment of the Epitaxis system. The work did receive at least one documented community-dissemination event: Papers We Love listed a September 28, 2016 Los Angeles talk by Jim Benvenuto on Epitaxis. (<a href="https://paperswelove.org/2016/news/september-meetups/">paperswelove.org</a>) The available evidence therefore supports dissemination as a software-research presentation, but not a significant documented downstream influence on industry or later academic systems.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/faults_and_verification/">faults and verification</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/abstract-syntax-trees/">abstract syntax trees</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/control-flow-graphs/">control flow graphs</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/deductive-retrieval/">deductive retrieval</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/incremental-parsing/">incremental parsing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/program-analysis/">program analysis</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/program-query-systems/">program query systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/semantic-search/">semantic search</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/software-verification/">software verification</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/symbolic-execution/">symbolic execution</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/syntactic-search/">syntactic search</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

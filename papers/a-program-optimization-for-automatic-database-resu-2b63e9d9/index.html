@@ -1,0 +1,185 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>A Program Optimization for Automatic Database Result Caching | Papers We Love</title>
+        <meta name="description" content="Most popular Web applications rely on persistent databases based on languages like SQL for declarative specification of data models and the operations that read and modify them. As applications scale up in user base, they often face challenges respon" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="A Program Optimization for Automatic Database Result Caching | Papers We Love" />
+        <meta property="og:description" content="Most popular Web applications rely on persistent databases based on languages like SQL for declarative specification of data models and the operations that read and modify them. As applications scale up in user base, they often face challenges respon" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/a-program-optimization-for-automatic-database-resu-2b63e9d9/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:53">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">A Program Optimization for Automatic Database Result Caching</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Adam Chlipala</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Ziv Scully</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/caching/a-program-optimization-for-automatic-database-result-caching.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: January 2017; Proceedings of the 44th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages (POPL '17), Paris, France</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Most popular Web applications rely on persistent databases based on languages like SQL for declarative specification of data models and the operations that read and modify them. As applications scale up in user base, they often face challenges responding quickly enough to the high volume of requests. A common aid is caching of database results in the application’s memory space, taking advantage of program-specific knowledge of which caching schemes are sound and useful, embodied in handwritten modifications that make the program less maintainable. These modifications also require nontrivial reasoning about the read-write dependencies across operations. In this paper, we present a compiler optimization that automatically adds sound SQL caching to Web applications coded in the Ur/Web domain-specific functional language, with no modifications required to source code. We use a custom cache implementation that supports concurrent operations without compromising the transactional semantics of the database abstraction. Through experiments with microbenchmarks and production Ur/Web applications, we show that our optimization in many cases enables an easy doubling or more of an application’s throughput, requiring nothing more than passing an extra command-line flag to the compiler.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="contribution">Contribution</h2>
+
+<p>The paper presents <strong>Sqlcache</strong>, a compiler optimization that automatically adds sound caching to database-backed Ur/Web applications. Its objective is to eliminate the manual cache-management code normally required to maintain query-result caches while preserving the database abstraction’s transactional behavior.</p>
+
+<h2 id="core-approach">Core approach</h2>
+
+<p>Ur/Web represents SQL queries as parsed and type-checked abstract syntax trees rather than arbitrary strings. This gives the compiler sufficient structural information to analyze database dependencies without performing general string or pointer analysis. Sqlcache uses this representation to:</p>
+
+<ul>
+  <li>identify query-dependent computations that can be cached, including derived HTML or response text rather than only raw database rows;</li>
+  <li>use the free Ur/Web variables in a computation as cache keys;</li>
+  <li>compare every relevant query-update pair in the whole program;</li>
+  <li>formulate conditions under which an update can change a query result; and</li>
+  <li>simplify those conditions using a congruence-closure-style procedure to derive cache-invalidation recipes.</li>
+</ul>
+
+<p>For updates, the analysis considers rows entering a query result, leaving a query result, or remaining in the result while changing in selected fields. The resulting invalidations can be precise: for example, an update may invalidate only cache entries associated with an old and new key rather than flushing an entire cache.</p>
+
+<h2 id="cache-implementation-and-consistency">Cache implementation and consistency</h2>
+
+<p>The runtime cache is implemented as a hash-table-backed prefix tree. Storage timestamps are associated with cached leaves, while invalidation timestamps are associated with prefix nodes. This permits invalidation in time independent of the number of cached entries, although checks and stores take time proportional to the statically fixed number of keys. When an invalidation does not specify a prefix, the implementation conservatively invalidates a larger set of entries.</p>
+
+<p>Transactional behavior is maintained with transaction locks and data locks. Stores are delayed until a transaction commits successfully, preventing aborted or restarted transactions from publishing invalid results. The design also handles concurrent checks and stores, including a race in which multiple transactions compute the same value concurrently. Runtime monitoring disables caches whose hit-to-invalidation ratios are too low, reducing overhead and lock contention for workloads where caching is ineffective.</p>
+
+<h2 id="instrumentation-strategy">Instrumentation strategy</h2>
+
+<p>Sqlcache initially identifies individual query computations, then attempts to cache larger enclosing expressions. This allows it to reuse complete response fragments or pages when their effects are limited to database reads and response output. The implementation supports caching output-writing effects, but conservatively avoids expressions with other effects, including database updates.</p>
+
+<p>The analysis supports a substantial subset of SQL, including joins, unions, nested queries in <code>FROM</code>, grouping, aggregation, ordering, limits, and offsets through conservative approximations. Cascading triggers and several advanced query constructs are not modeled precisely, which can prevent caching or cause unnecessary invalidation.</p>
+
+<h2 id="evaluation">Evaluation</h2>
+
+<p>Experiments compare the compiler-generated cache with an alternative called Dyncache, which caches raw query results and invalidates entries at table granularity but does not provide Sqlcache’s fine-grained invalidation or caching of derived computations. On the reported TechEmpower workloads, Sqlcache produced speedups ranging from roughly fourfold to more than eightfold for several read-oriented tests, and more than fivefold for the Fortunes benchmark. In the write-heavy data-updates test, runtime monitoring deactivated ineffective caches, leaving performance close to the baseline.</p>
+
+<p>On the Dinners production application, Sqlcache improved throughput by approximately 30× over the baseline, while Dyncache produced a much smaller improvement. On the Course Management application, Sqlcache achieved about a twofold advantage at higher concurrency and retained a substantial lead under moderate write loads. These results support the paper’s central claim that compiler-inferred caching can provide large performance improvements without source-code changes or programmer-written invalidation logic.</p>
+
+<h2 id="limitations-and-significance">Limitations and significance</h2>
+
+<p>The implementation is sound only for a single application server; distributed cache coherence is left for future work. Compile-time analysis can also become expensive for large applications, and unsupported SQL features, time-dependent queries, and side effects limit cache coverage. The work’s main technical significance is the combination of static query/update dependency analysis, automatically generated invalidation, response-level caching, and concurrency control that preserves transactional semantics.</p>
+
+<h2 id="subsequent-influence">Subsequent influence</h2>
+
+<p>The paper is cited as an example of language-assisted and compiler-based database caching in later work. <em>Incremental Relational Lenses</em> distinguishes its incremental recomputation approach from Sqlcache, noting that Sqlcache caches query results and derived data but generally recomputes results from scratch after invalidation. (<a href="https://www.researchgate.net/publication/326223023_Incremental_Relational_Lenses">researchgate.net</a>) A later system and thesis on <em>Cachematic</em> discusses SQLCache as a closely related design and uses it as part of the context for automatic invalidation in application-level caching. (<a href="https://odr.chalmers.se/bitstreams/790e57b4-74f0-4f4a-861a-9a691e19e0d1/download">odr.chalmers.se</a>) A survey of application-level caching likewise identifies Sqlcache as a compiler optimization that generates caching logic for database queries, while noting its specific implementation in Ur/Web. (<a href="https://www.researchgate.net/publication/345215571_Understanding_Application-Level_Caching_in_Web_Applications_A_Comprehensive_Introduction_and_Survey_of_State-of-the-Art">researchgate.net</a>)</p>
+
+<p>The implementation was integrated into the open-source Ur/Web distribution, and contemporary reporting described its use as a compiler/runtime modification that could be enabled by recompiling applications rather than changing application source code. (<a href="https://adam.chlipala.net/papers/SqlcachePOPL17/">adam.chlipala.net</a>) The available evidence supports influence primarily as a research reference and implemented Ur/Web technology; it does not establish broad adoption as a general-purpose industry caching system.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/caching/">caching</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/automatic-caching/">automatic caching</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/cache-invalidation/">cache invalidation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/compiler-optimization/">compiler optimization</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/database-caching/">database caching</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/program-analysis/">program analysis</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/query-caching/">query caching</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/sql/">sql</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/transactional-semantics/">transactional semantics</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/ur-web/">ur web</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/web-applications/">web applications</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:53
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

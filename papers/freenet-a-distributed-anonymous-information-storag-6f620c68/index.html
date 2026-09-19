@@ -1,0 +1,157 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Freenet: A Distributed Anonymous Information Storage and Retrieval System | Papers We Love</title>
+        <meta name="description" content="We describe Freenet, an adaptive peer-to-peer network application that permits the publication, replication, and retrieval of data while protecting the anonymity of both authors and readers. Freenet operates as a network of identical nodes that colle" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Freenet: A Distributed Anonymous Information Storage and Retrieval System | Papers We Love" />
+        <meta property="og:description" content="We describe Freenet, an adaptive peer-to-peer network application that permits the publication, replication, and retrieval of data while protecting the anonymity of both authors and readers. Freenet operates as a network of identical nodes that colle" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/freenet-a-distributed-anonymous-information-storag-6f620c68/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:53">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Freenet: A Distributed Anonymous Information Storage and Retrieval System</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Brandon Wiley</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Ian Clarke</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Oskar Sandberg</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Theodore W. Hong</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/datastores/freenet-a-distributed-anonymous-information-and-retrieval-system.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: 2001 (published in Designing Privacy Enhancing Technologies, Lecture Notes in Computer Science, volume 2009, pages 46–66; based on work presented at the International Workshop on Design Issues in Anonymity and Unobservability, Berkeley, California, USA, July 2000)</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>We describe Freenet, an adaptive peer-to-peer network application that permits the publication, replication, and retrieval of data while protecting the anonymity of both authors and readers. Freenet operates as a network of identical nodes that collectively pool their storage space to store data files and cooperate to route requests to the most likely physical location of data. No broadcast search or centralized location index is employed. Files are referred to in a location-independent manner, and are dynamically replicated in locations near requestors and deleted from locations where there is no interest. It is infeasible to discover the true origin or destination of a file passing through the network, and difficult for a node operator to determine or be held responsible for the actual physical contents of her own node.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="contributions-and-technical-approach">Contributions and technical approach</h2>
+
+<p>The paper presents Freenet as a decentralized, adaptive peer-to-peer system for anonymous publication and retrieval. Nodes collectively provide storage and routing without a central index or broadcast search. Files are identified with cryptographic keys, including keyword-signed keys, signed-subspace keys, and content-hash keys. Requests use local routing decisions, backtracking, hop limits, and caching; successful requests progressively replicate popular data along the request path and improve future routing. Storage is managed as an LRU cache, so files persist according to demand rather than through permanent placement.</p>
+
+<p>The design combines anonymity for publishers and readers with plausible deniability for node operators. However, the paper explicitly acknowledges limitations: basic Freenet does not hide requested keys from nodes on the path, key names may be vulnerable to dictionary attacks, and stronger anonymity requires optional mix-style pre-routing. The security discussion also identifies malicious modification, storage-flooding, key-substitution, and traffic-analysis attacks.</p>
+
+<p>Simulation results reported by the authors indicate that routing performance improves as the network adapts. In their experiments, median request path length fell to approximately six hops after convergence, scaled approximately logarithmically in networks of up to one million simulated nodes, and remained below 20 hops with random failure of up to 30% of nodes. These results were presented as evidence that adaptive routing and a small-world-like topology could provide scalability and fault tolerance.</p>
+
+<h2 id="influence-on-later-research-and-industry">Influence on later research and industry</h2>
+
+<p>The paper directly motivated subsequent research on Freenet routing. A 2004 study analyzed workload effects in Freenet, proposed replacing its basic LRU routing-table policy with a clustering-oriented policy, and reported improved request hit rates while retaining comparable successful-request hop counts. (<a href="https://www.sciencedirect.com/science/article/abs/pii/S1389128604001550">sciencedirect.com</a>)</p>
+
+<p>It also led to architectural follow-up work. The 2010 “Dark Freenet” paper described a successor architecture that allowed nodes to restrict connections to trusted peers, strengthening privacy and protecting participants in environments where operating a public node could create risks. (<a href="https://www.researchgate.net/publication/228552753_Private_Communication_Through_a_Network_of_Trusted_Connections_The_Dark_Freenet">researchgate.net</a>)</p>
+
+<p>In practice, the Freenet project continued implementing and operating the system originally described by the paper; the project characterizes the 2001 work as foundational to its decentralized anonymous-storage platform. (<a href="https://freenet.org/faq/">freenet.org</a>) The sources checked provide clear evidence of influence on anonymous-storage and peer-to-peer research and of continued project development, but do not establish broad commercial industry adoption.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/datastores/">datastores</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/adaptive-routing/">adaptive routing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/anonymous-information-storage/">anonymous information storage</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/anonymous-publishing/">anonymous publishing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/censorship-resistance/">censorship resistance</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/content-addressing/">content addressing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/decentralized-storage/">decentralized storage</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-hash-tables/">distributed hash tables</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-systems/">distributed systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/fault-tolerance/">fault tolerance</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/peer-to-peer-networks/">peer to peer networks</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:53
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

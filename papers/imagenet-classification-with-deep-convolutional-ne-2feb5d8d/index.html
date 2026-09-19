@@ -1,0 +1,150 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>ImageNet Classification with Deep Convolutional Neural Networks | Papers We Love</title>
+        <meta name="description" content="We trained a large, deep convolutional neural network to classify the 1.2 million high-resolution images in the ImageNet LSVRC-2010 contest into the 1000 different classes. On the test data, we achieved top-1 and top-5 error rates of 37.5% and 17.0% " />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="ImageNet Classification with Deep Convolutional Neural Networks | Papers We Love" />
+        <meta property="og:description" content="We trained a large, deep convolutional neural network to classify the 1.2 million high-resolution images in the ImageNet LSVRC-2010 contest into the 1000 different classes. On the test data, we achieved top-1 and top-5 error rates of 37.5% and 17.0% " />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/imagenet-classification-with-deep-convolutional-ne-2feb5d8d/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:00">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">ImageNet Classification with Deep Convolutional Neural Networks</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Alex Krizhevsky</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Geoffrey E. Hinton</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Ilya Sutskever</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: 2012; Advances in Neural Information Processing Systems 25 (NIPS 2012), presented December 6, 2012</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>We trained a large, deep convolutional neural network to classify the 1.2 million high-resolution images in the ImageNet LSVRC-2010 contest into the 1000 different classes. On the test data, we achieved top-1 and top-5 error rates of 37.5% and 17.0% which is considerably better than the previous state-of-the-art. The neural network, which has 60 million parameters and 650,000 neurons, consists of five convolutional layers, some of which are followed by max-pooling layers, and three fully-connected layers with a final 1000-way softmax. To make training faster, we used non-saturating neurons and a very efficient GPU implementation of the convolution operation. To reduce overfitting in the fully-connected layers we employed a recently-developed regularization method called “dropout” that proved to be very effective. We also entered a variant of this model in the ILSVRC-2012 competition and achieved a winning top-5 test error rate of 15.3%, compared to 26.2% achieved by the second-best entry.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>The paper presents a large supervised convolutional neural network, later widely known as AlexNet, trained on ImageNet for 1000-class image classification. The model used five convolutional layers followed by three fully connected layers, ReLU activations, max-pooling, local response normalization, dropout, data augmentation, stochastic gradient descent with momentum, and training distributed across two GPUs. It contained approximately 60 million parameters and was trained on roughly 1.2 million images.</p>
+
+<p>The central empirical result was a top-1 error rate of 37.5% and a top-5 error rate of 17.0% on ILSVRC-2010, substantially improving on previous methods. A related ensemble and pretraining strategy achieved a 15.3% top-5 error rate in ILSVRC-2012, compared with 26.2% for the second-best competition entry. The experiments also showed that ReLU activations substantially accelerated optimization, data augmentation and dropout reduced overfitting, and increasing convolutional depth improved accuracy.</p>
+
+<p>The paper had a documented influence on subsequent computer-vision research. VGGNet explicitly describes its architecture as an effort to improve the original Krizhevsky et al. configuration, retains design elements such as ReLU activations, 224×224 inputs, three fully connected layers, and ImageNet training, and replaces the large early filters with deeper stacks of 3×3 convolutions. VGGNet models were subsequently used as transferable feature representations for object detection, semantic segmentation, image captioning, and other recognition tasks. (<a href="https://arxiv.org/abs/1409.1556">arxiv.org</a>)</p>
+
+<p>NeurIPS later identified the work as a paper with a major impact on the machine-learning community, noting that its 2012 ImageNet result far surpassed the state of the art at the time. (<a href="https://blog.neurips.cc/2022/">blog.neurips.cc</a>) The paper therefore contributed concrete architectural and training practices that became standard reference points for later deep visual-recognition systems, while its strongest directly documented influence is in subsequent ImageNet-based CNN research. (<a href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf">papers.nips.cc</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/machine_learning/">machine learning</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/computer-vision/">computer vision</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/convolutional-neural-networks/">convolutional neural networks</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/data-augmentation/">data augmentation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/deep-learning/">deep learning</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/dropout/">dropout</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/gpu-computing/">gpu computing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/image-classification/">image classification</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/imagenet/">imagenet</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/relu/">relu</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/supervised-learning/">supervised learning</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:00
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->
