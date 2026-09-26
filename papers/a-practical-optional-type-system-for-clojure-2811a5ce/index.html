@@ -1,0 +1,145 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>A Practical Optional Type System for Clojure | Papers We Love</title>
+        <meta name="description" content="Dynamic programming languages often abandon the advantages of static type checking in favour of their characteristic convenience and flexibility. Static type checking eliminates many common user errors at compile-time that are otherwise unnoticed, or" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="A Practical Optional Type System for Clojure | Papers We Love" />
+        <meta property="og:description" content="Dynamic programming languages often abandon the advantages of static type checking in favour of their characteristic convenience and flexibility. Static type checking eliminates many common user errors at compile-time that are otherwise unnoticed, or" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/a-practical-optional-type-system-for-clojure-2811a5ce/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">A Practical Optional Type System for Clojure</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Ambrose Bonnaire-Sergeant</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages/clojure/a-practical-optional-type-system-for-clojure.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: 2012; Honours dissertation submitted to the School of Computer Science and Software Engineering, The University of Western Australia</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Dynamic programming languages often abandon the advantages of static type checking in favour of their characteristic convenience and flexibility. Static type checking eliminates many common user errors at compile-time that are otherwise unnoticed, or are caught later in languages without static type checking. A recent trend is to aim to combine the advantages of both kinds of languages by adding optional static type systems to languages without static type checking, while preserving the idioms and style of the language.
+
+This dissertation describes my work on designing an optional static type system for the Clojure programming language, a dynamically typed dialect of Lisp, based on the lessons learnt from several projects, primarily Typed Racket. This work includes designing and building a type checker for Clojure running on the Java Virtual Machine. Several experiments are conducted using this prototype, particularly involving existing Clojure code that is sufficiently complicated that type checking increases confidence that the code is correct. For example, nearly all of algo.monads, a Clojure Contrib library for monadic programming, is able to be type checked. Most monad, monad transformer, and monadic function definitions can be type checked, usually by adding type annotations in natural places like function definitions.
+
+There is significant future work to fully type check all Clojure features and idioms. For example, multimethod definitions and functions with particular constraints on the number of variable arguments they accept (particularly functions taking only an even number of variable arguments) are troublesome. Also, there are desirable features from the Typed Racket project that are missing, such as automatic runtime contract generation and a sophisticated blame system, both which are designed to improve error messages when mixing typed and untyped code in similar systems.
+
+Overall, the work described in this dissertation leads to the conclusion that it appears to be both practical and useful to design and implement an optional static type system for the Clojure programming language.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h3 id="summary">Summary</h3>
+
+<p>The dissertation presents Typed Clojure, an optional static type checker for JVM Clojure intended to preserve common dynamic-language idioms. Its design is primarily adapted from Typed Racket and combines bidirectional checking, local type inference, occurrence typing, union and intersection types, singleton types, polymorphism, heterogeneous map types, variable-arity polymorphism, and specialized support for Java interoperability. The system is implemented as a library that analyzes Clojure abstract syntax trees and checks namespaces using programmer annotations at natural definition boundaries.</p>
+
+<p>The evaluation demonstrates that the prototype can type-check substantial examples involving Java reflection, sequence-processing idioms, monadic abstractions, monad transformers, and some highly polymorphic code. The results are mixed: most of <code>algo.monads</code> can be checked, while the red-black-tree experiment causes the prototype to hang and the conduit port requires substantial simplification. The dissertation identifies multimethods, even-numbered variable-arity functions, records, runtime contracts, blame tracking, and portability to other Clojure dialects as important unresolved problems.</p>
+
+<p>The work directly led to later research on Typed Clojure. The author’s research record identifies a subsequent peer-reviewed paper, <em>Practical Optional Types for Clojure</em>, published at ESOP 2016 with Rowan Davies and Sam Tobin-Hochstadt. (<a href="https://ambrosebs.com/">ambrosebs.com</a>) A later dissertation, <em>Typed Clojure in Theory and Practice</em>, formalized additional features, proved a model type-sound, and evaluated Typed Clojure usage in more than 19,000 lines of real-world code. (<a href="https://thesis.ambrosebs.com/">thesis.ambrosebs.com</a>) The implementation also continued as the open-source <code>core.typed</code> project and was subsequently moved to the <code>typedclojure</code> repository for newer Clojure versions. (<a href="https://github.com/clojure/core.typed">github.com</a>) These sources document clear continuation and implementation impact, but the available quick-search evidence does not establish broad influence on unrelated type-system research or sustained industry adoption beyond the Typed Clojure ecosystem.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/languages/clojure/">languages/clojure</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/clojure/">clojure</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/optional-type-systems/">optional type systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/programming-languages/">programming languages</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

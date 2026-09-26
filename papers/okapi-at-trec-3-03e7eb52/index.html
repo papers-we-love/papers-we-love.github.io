@@ -1,0 +1,159 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Okapi at TREC-3 | Papers We Love</title>
+        <meta name="description" content="The emphasis in TREC-3 has been on further refinement of term-weighting functions; an investigation of run-time passage determination and searching; expansion of ad hoc queries by terms extracted from the top documents retrieved by a trial search; ne" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Okapi at TREC-3 | Papers We Love" />
+        <meta property="og:description" content="The emphasis in TREC-3 has been on further refinement of term-weighting functions; an investigation of run-time passage determination and searching; expansion of ad hoc queries by terms extracted from the top documents retrieved by a trial search; ne" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/okapi-at-trec-3-03e7eb52/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Okapi at TREC-3</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">M Gatford</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">M M Hancock-Beaulieu</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">S E Robertson</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">S Jones</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">S Walker</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/information_retrieval/okapi-at-trec3.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: 1994; presented at TREC-3, November 2–4, 1994, and published in NIST Special Publication 500-225, Proceedings of the Third Text REtrieval Conference. ([pages.nist.gov](https://pages.nist.gov/trec-browser/trec3/proceedings/))</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>The emphasis in TREC-3 has been on further refinement of term-weighting functions; an investigation of run-time passage determination and searching; expansion of ad hoc queries by terms extracted from the top documents retrieved by a trial search; new methods for choosing query expansion terms after relevance feedback, now split into: methods of ranking terms prior to selection; subsequent selection procedures; and the development of a user interface and search procedure within the new TREC interactive search framework.
+
+The two successes have been in query expansion and in routing term selection. The modified term-weighting functions and passage retrieval have had small beneficial effects. For TREC-3 there were to be topics without the CONCEPTS fields, which had proved to be by far the most useful source of query terms. Query expansion, passage retrieval and the modified weighting functions, used together, have gone a long way towards compensating for this loss.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h3 id="paper-summary">Paper summary</h3>
+
+<ul>
+  <li>The paper reports the City University Okapi system’s TREC-3 experiments in probabilistic information retrieval.</li>
+  <li>It develops <strong>BM25</strong>, a family of weighting functions that extends the Robertson–Sparck Jones probabilistic model with within-document term frequency, query term frequency, and document-length normalization. The experiments generally favored a document-length parameter near 0.75, while the more elaborate nonlinear parameterization provided little additional benefit.</li>
+  <li>Runtime passage retrieval was feasible but computationally expensive. Its standalone gains over whole-document retrieval were modest, although its combination with query expansion produced more noticeable improvements.</li>
+  <li>Query expansion using terms extracted from top-ranked documents in an initial search—without explicit relevance judgments—was unexpectedly effective for ad hoc retrieval, particularly when combined with passage retrieval.</li>
+  <li>For routing, ranking candidate expansion terms with RSV, RSV2, or ARSV produced broadly similar results. A computationally intensive stepwise procedure that accepted or rejected terms according to training-set performance produced substantially better retrospective and predictive results, but raised practical concerns about efficiency and generalization.</li>
+  <li>The interactive experiments introduced phrase handling, user-controlled term sets, relevance feedback, and removal of noisy automatically extracted terms. The authors caution that interactive and automatic results were not directly comparable because the automatic routing experiments used much more relevance information.</li>
+</ul>
+
+<h3 id="subsequent-influence">Subsequent influence</h3>
+
+<p>The paper is a primary reference for <strong>Okapi BM25</strong>. Apache Lucene’s documentation explicitly identifies this paper as the work in which BM25 was introduced and provides a production implementation of the model. (<a href="https://lucene.apache.org/core/6_0_0/core/org/apache/lucene/search/similarities/BM25Similarity.html">lucene.apache.org</a>) BM25 later became the default text-similarity model in Elasticsearch and is also the default similarity for applicable fields in modern Solr configurations, demonstrating direct adoption in widely used search infrastructure. (<a href="https://www.elastic.co/docs/reference/elasticsearch/index-settings/similarity">elastic.co</a>) The paper is also catalogued as a heavily cited TREC contribution in bibliographic and research-impact records. (<a href="https://impact.ref.ac.uk/CaseStudies/CaseStudy.aspx?Id=44357">impact.ref.ac.uk</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/information_retrieval/">information retrieval</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/bm25/">bm25</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/interactive-search/">interactive search</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/okapi/">okapi</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/passage-retrieval/">passage retrieval</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/probabilistic-information-retrieval/">probabilistic information retrieval</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/query-expansion/">query expansion</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/relevance-feedback/">relevance feedback</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/routing/">routing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/term-weighting/">term weighting</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/trec/">trec</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

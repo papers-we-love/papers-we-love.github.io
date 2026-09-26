@@ -1,0 +1,155 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>IX: A Protected Dataplane Operating System for High Throughput and Low Latency | Papers We Love</title>
+        <meta name="description" content="The conventional wisdom is that aggressive networking requirements, such as high packet rates for small messages and microsecond-scale tail latency, are best addressed outside the kernel, in a user-level networking stack. We present IX, a dataplane o" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="IX: A Protected Dataplane Operating System for High Throughput and Low Latency | Papers We Love" />
+        <meta property="og:description" content="The conventional wisdom is that aggressive networking requirements, such as high packet rates for small messages and microsecond-scale tail latency, are best addressed outside the kernel, in a user-level networking stack. We present IX, a dataplane o" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/ix-a-protected-dataplane-operating-system-for-high-9d55873e/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:01">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">IX: A Protected Dataplane Operating System for High Throughput and Low Latency</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Adam Belay</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Ana Klimovic</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Christos Kozyrakis</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Edouard Bugnion</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">George Prekas</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Samuel Grossman</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-belay.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: October 6–8, 2014 — 11th USENIX Symposium on Operating Systems Design and Implementation (OSDI ’14), Broomfield, Colorado</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>The conventional wisdom is that aggressive networking requirements, such as high packet rates for small messages and microsecond-scale tail latency, are best addressed outside the kernel, in a user-level networking stack. We present IX, a dataplane operating system that provides high I/O performance, while maintaining the key advantage of strong protection offered by existing kernels. IX uses hardware virtualization to separate management and scheduling functions of the kernel (control plane) from network processing (dataplane). The dataplane architecture builds upon a native, zero-copy API and optimizes for both bandwidth and latency by dedicating hardware threads and networking queues to dataplane instances, processing bounded batches of packets to completion, and by eliminating coherence traffic and multi-core synchronization. We demonstrate that IX outperforms Linux and state-of-the-art, user-space network stacks significantly in both throughput and end-to-end latency. Moreover, IX improves the throughput of a widely deployed, key-value store by up to 3.6× and reduces tail latency by more than 2×.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>IX proposes a protected dataplane operating system for datacenter workloads that require both very high packet rates and microsecond-scale tail latency. Its central architectural separation places conventional management, resource allocation, and compatibility services in a Linux-based control plane, while dedicated dataplane instances execute network processing and application logic on assigned hardware threads and NIC queues. Hardware virtualization provides isolation among the control plane, dataplanes, and application code.</p>
+
+<p>The dataplane combines four main techniques: run-to-completion processing, bounded adaptive batching, a native asynchronous zero-copy API, and flow-consistent assignment of traffic to queues and cores. These choices reduce intermediate buffering, kernel-transition overhead, cache inefficiency, synchronization, and cache-coherence traffic. The API exposes network flow-control state directly to applications and supports batched operations through shared-memory request and event arrays.</p>
+
+<p>In the authors’ evaluation on Intel 10-GbE hardware, IX achieved 5.7 μs one-way latency for 64-byte messages, saturated a 10-GbE link with three cores, reached 8.8 million 64-byte round trips per second in the tested configuration, and scaled to four bonded 10-GbE interfaces. It also sustained useful performance with up to 250,000 concurrent connections. A memcached port improved throughput by up to 3.6× at a 500 μs 99th-percentile latency target, while reducing unloaded latency by approximately half. The prototype’s limitations included reliance on trusted dataplane code, lack of IOMMU and SR-IOV support, static rather than dynamic resource allocation in the evaluation, and the requirement that latency-sensitive application threads avoid long-running or blocking work.</p>
+
+<h2 id="influence">Influence</h2>
+
+<p>The work was subsequently developed into a broader IX operating-system study published in <em>ACM Transactions on Computer Systems</em>, adding dynamic control-plane resource and energy-management experiments and reporting larger memcached gains in the extended system. (<a href="https://mast.stanford.edu/pubs/the_ix_operating_system/">mast.stanford.edu</a>) The authors also released an open-source IX implementation, making the dataplane architecture and supporting code available for further experimentation. (<a href="https://github.com/ix-project/ix">github.com</a>) Later systems research continued to investigate related combinations of dedicated data paths, zero-copy communication, kernel protection, and low-latency networking; for example, StackMap explicitly presents a protected OS network service with a zero-copy data path and cites IX as relevant prior work. (<a href="https://www.usenix.org/conference/atc16/technical-sessions/presentation/yasukata">usenix.org</a>) Bibliographic aggregation records substantial subsequent scholarly citation of the paper, although citation counts vary by database and should not be interpreted as a direct measure of practical deployment. (<a href="https://www.rankless.org/hit-papers/10.5555/2685048.2685053">rankless.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/unikernels/">unikernels</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/adaptive-batching/">adaptive batching</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/datacenter-systems/">datacenter systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/dataplane-operating-system/">dataplane operating system</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/hardware-virtualization/">hardware virtualization</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/high-throughput-networking/">high throughput networking</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/kernel-bypass/">kernel bypass</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/low-latency-networking/">low latency networking</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/multicore-scalability/">multicore scalability</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/network-stack/">network stack</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/zero-copy/">zero copy</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:01
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

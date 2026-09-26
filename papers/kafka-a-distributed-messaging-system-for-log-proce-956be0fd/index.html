@@ -1,0 +1,139 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Kafka: a Distributed Messaging System for Log Processing | Papers We Love</title>
+        <meta name="description" content="Log processing has become a critical component of the data pipeline for consumer internet companies. We introduce Kafka, a distributed messaging system that we developed for collecting and delivering high volumes of log data with low latency. Our sys" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Kafka: a Distributed Messaging System for Log Processing | Papers We Love" />
+        <meta property="og:description" content="Log processing has become a critical component of the data pipeline for consumer internet companies. We introduce Kafka, a distributed messaging system that we developed for collecting and delivering high volumes of log data with low latency. Our sys" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/kafka-a-distributed-messaging-system-for-log-proce-956be0fd/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:00">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Kafka: a Distributed Messaging System for Log Processing</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Jay Kreps</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Jun Rao</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Neha Narkhede</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://notes.stephenholiday.com/Kafka.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: June 12, 2011; NetDB'11, 6th International Workshop on Networking Meets Databases, Athens, Greece</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Log processing has become a critical component of the data pipeline for consumer internet companies. We introduce Kafka, a distributed messaging system that we developed for collecting and delivering high volumes of log data with low latency. Our system incorporates ideas from existing log aggregators and messaging systems, and is suitable for both offline and online message consumption. We made quite a few unconventional yet practical design choices in Kafka to make our system efficient and scalable. Our experimental results show that Kafka has superior performance when compared to two popular messaging systems. We have been using Kafka in production for some time and it is processing hundreds of gigabytes of new data each day.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <p>The paper presents Kafka as a distributed messaging system designed specifically for high-volume log collection and delivery. Its central abstraction is a partitioned, append-only log: producers publish records to topics, brokers store topic partitions as sequential segment files, and consumers retrieve records using offsets. Consumers maintain their own positions, enabling replay, independent consumption by multiple consumer groups, and efficient handling of both real-time and batch workloads. The design emphasizes sequential I/O, batching, operating-system page caching, zero-copy transfer through <code>sendfile</code>, and minimal broker-side delivery state. Partitioning provides scalability and parallelism while preserving ordering within each partition. The system provides at-least-once delivery and per-partition ordering, but the original design lacks built-in replication and can lose unconsumed data when a broker fails. In the reported experiments, Kafka achieved substantially higher producer and consumer throughput than ActiveMQ and RabbitMQ under the tested configurations. The LinkedIn deployment unified online services, offline analytics, Hadoop loading, and data-warehouse ingestion around a common event-streaming infrastructure. (<a href="https://notes.stephenholiday.com/Kafka.pdf">notes.stephenholiday.com</a>)</p>
+
+<p>The paper’s documented influence is visible in the subsequent development of Apache Kafka. Apache’s documentation retains the paper’s core model of partitioned logs, consumer-controlled offsets, retention, replay, and partition-based parallelism, while later Kafka versions add replication and stronger fault-tolerance mechanisms. (<a href="https://kafka.apache.org/08/documentation.html">kafka.apache.org</a>) Apache’s official publications list also identifies subsequent research and engineering work on replicated Kafka logging, LinkedIn’s real-time activity-data pipeline, Kafka and Samza, and nearline/offline data integration. (<a href="https://kafka.apache.org/community/books_and_papers/">kafka.apache.org</a>) Industry adoption extended the design to ETL, monitoring, log collection, event processing, and large-scale data pipelines; a USENIX industry tutorial documented Kafka use at companies including LinkedIn, Twitter, and Netflix. (<a href="https://www.usenix.org/conference/lisa15/training-program/session/apache-kafka-scratch">usenix.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/distributed_systems/">distributed systems</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed/">distributed</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/log-processing/">log processing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/messaging/">messaging</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/online/">online</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/throughput/">throughput</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:00
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

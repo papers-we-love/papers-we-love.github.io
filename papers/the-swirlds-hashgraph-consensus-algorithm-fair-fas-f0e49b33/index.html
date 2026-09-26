@@ -1,0 +1,159 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>THE SWIRLDS HASHGRAPH CONSENSUS ALGORITHM: FAIR, FAST, BYZANTINE FAULT TOLERANCE | Papers We Love</title>
+        <meta name="description" content="A new system, the Swirlds hashgraph consensus algorithm, is proposed for replicated state machines with guaranteed Byzantine fault tolerance. It achieves fairness, in the sense that it is difficult for an attacker to manipulate which of two transacti" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="THE SWIRLDS HASHGRAPH CONSENSUS ALGORITHM: FAIR, FAST, BYZANTINE FAULT TOLERANCE | Papers We Love" />
+        <meta property="og:description" content="A new system, the Swirlds hashgraph consensus algorithm, is proposed for replicated state machines with guaranteed Byzantine fault tolerance. It achieves fairness, in the sense that it is difficult for an attacker to manipulate which of two transacti" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/the-swirlds-hashgraph-consensus-algorithm-fair-fas-f0e49b33/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:00">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">THE SWIRLDS HASHGRAPH CONSENSUS ALGORITHM: FAIR, FAST, BYZANTINE FAULT TOLERANCE</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Leemon Baird</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://swirlds.com/downloads/SWIRLDS-TR-2016-01.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: May 31, 2016 (revision date: March 18, 2018)</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>A new system, the Swirlds hashgraph consensus algorithm, is proposed for replicated state machines with guaranteed Byzantine fault tolerance. It achieves fairness, in the sense that it is difficult for an attacker to manipulate which of two transactions will be chosen to be first in the consensus order. It has complete asynchrony, no leaders, no round robin, no proof-of-work, eventual consensus with probability one, and high speed in the absence of faults. It is based on a gossip protocol, in which the participants don’t just gossip about transactions. They gossip about gossip. They jointly build a hashgraph reflecting all of the gossip events. This allows Byzantine agreement to be achieved through virtual voting. Alice does not send Bob a vote over the Internet. Instead, Bob calculates what vote Alice would have sent, based on his knowledge of what Alice knows. This yields fair Byzantine agreement on a total order for all transactions, with very little communication overhead beyond the transactions themselves.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>The paper proposes the Swirlds hashgraph consensus algorithm for replicated state machines operating under strong Byzantine assumptions: fewer than one-third of members may be malicious, colluding, and able to delay or delete messages, while messages repeatedly sent between honest members eventually get through. The protocol is asynchronous and nondeterministic, achieving consensus with probability one rather than relying on deterministic termination.</p>
+
+<p>Its central data structure is a directed acyclic graph of signed events. Each event records a creator, payload, timestamp, self-parent, and other-parent. Members repeatedly use random-peer gossip, while the events record the history of that communication—“gossip about gossip.” Because participants reconstruct the same ancestry and communication relationships, they can infer one another’s votes locally. This virtual voting eliminates separate vote messages and is intended to keep communication overhead close to the cost of disseminating the transactions themselves.</p>
+
+<p>The algorithm assigns events to rounds and identifies the first event created by each member in a round as a witness. Virtual elections determine whether witnesses are famous. Periodic coin rounds provide nondeterministic progress when an adversary keeps votes divided. Famous witnesses then act as judges: an event receives a consensus round when all unique famous witnesses in that round have received it, and its consensus timestamp is calculated as a median of the relevant member timestamps. Events are ordered first by received round, then by consensus timestamp, and finally by a deterministic signature-based tie-breaker.</p>
+
+<p>The Byzantine-fault argument depends on the definition of “strongly seeing.” If an event strongly sees one branch of a fork through events created by more than two-thirds of members, no event in a consistent hashgraph can strongly see the other branch. This prevents a Byzantine member from using a fork to make honest members derive incompatible virtual votes. The paper concludes that every event created by an honest member eventually receives a fixed position in the total order with probability one, assuming the stated communication, signature, and hash-function conditions.</p>
+
+<p>The paper also describes weighted, proof-of-stake generalizations; signed consensus states that permit historical data to be discarded after checkpointing; bandwidth optimizations; faster election behavior under normal network conditions; and implementation techniques for efficiently testing strong visibility.</p>
+
+<h2 id="influence-and-subsequent-use">Influence and subsequent use</h2>
+
+<ul>
+  <li>Later distributed-ledger surveys identify the paper as an early asynchronous Byzantine-fault-tolerant protocol based on a DAG, gossip about gossip, and virtual voting. (<a href="https://doi.org/10.1145/3579845">doi.org</a>)</li>
+  <li>Subsequent DAG-consensus research, including the Teegraph work, cites the paper as prior work while developing related DAG-based consensus mechanisms for IoT data sharing. (<a href="https://www.mdpi.com/2079-9292/12/11/2393">mdpi.com</a>)</li>
+  <li>In industry, Hedera identifies this document as the original Hashgraph consensus paper and implements the hashgraph approach in its public distributed ledger. (<a href="https://hedera.com/knowledge-center/">hedera.com</a>)</li>
+  <li>On January 19, 2022, the Hedera Governing Council announced that it had voted to purchase the hashgraph algorithm’s intellectual-property rights from Swirlds and committed to open-sourcing the consensus code. (<a href="https://hedera.com/blog/hedera-governing-council-votes-to-purchase-hashgraph-ip-commits-to-open-source-worlds-most-advanced-distributed-ledger-technology/">hedera.com</a>)</li>
+</ul>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/distributed_systems/">distributed systems</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/byzantine/">byzantine</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/byzantine-agreement/">byzantine agreement</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/byzantine-fault-tolerance/">byzantine fault tolerance</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-consensus/">distributed consensus</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/fairness/">fairness</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/gossip-about-gossip/">gossip about gossip</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/hashgraph/">hashgraph</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/replicated-state-machine/">replicated state machine</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/swirlds/">swirlds</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/virtual-voting/">virtual voting</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:00
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

@@ -1,0 +1,157 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>The ϕ Accrual Failure Detector | Papers We Love</title>
+        <meta name="description" content="Detecting failures is a fundamental issue for fault-tolerance in distributed systems. Recently, many people have come to realize that failure detection ought to be provided as some form of generic service, similar to IP address lookup or time synchro" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="The ϕ Accrual Failure Detector | Papers We Love" />
+        <meta property="og:description" content="Detecting failures is a fundamental issue for fault-tolerance in distributed systems. Recently, many people have come to realize that failure detection ought to be provided as some form of generic service, similar to IP address lookup or time synchro" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/the-accrual-failure-detector-e673d3f8/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:00">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">The ϕ Accrual Failure Detector</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Naohiro Hayashibara</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Rami Yared</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Takuya Katayama</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Xavier Défago</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://dspace.jaist.ac.jp/dspace/bitstream/10119/4784/1/IS-RR-2004-010.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: May 10, 2004 (JAIST Technical Report IS-RR-2004-010); subsequently published in the Proceedings of the 23rd IEEE International Symposium on Reliable Distributed Systems (SRDS 2004), October 2004, pp. 66–78.</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Detecting failures is a fundamental issue for fault-tolerance in distributed systems. Recently, many people have come to realize that failure detection ought to be provided as some form of generic service, similar to IP address lookup or time synchronization. However, this has not been successful so far. One of the reasons is the difficulty to satisfy several application requirements simultaneously when using classical failure detectors. We present a novel abstraction, called accrual failure detectors, that emphasizes flexibility and expressiveness and can serve as a basic building block to implementing failure detectors in distributed systems. Instead of providing information of a boolean nature (trust vs. suspect), accrual failure detectors output a suspicion level on a continuous scale. The principal merit of this approach is that it favors a nearly complete decoupling between application requirements and the monitoring of the environment.
+
+In this paper, we describe an implementation of such an accrual failure detector, that we call the ϕ failure detector. The particularity of the ϕ failure detector is that it dynamically adjusts to current network conditions the scale on which the suspicion level is expressed. We analyzed the behavior of our ϕ failure detector over an intercontinental communication link during several days. Our experimental results show that our ϕ failure detector performs equally well as other known adaptive failure detection mechanisms, with an improved flexibility.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>The paper introduces <strong>accrual failure detectors</strong>, which replace the conventional binary <code>trust</code>/<code>suspect</code> output with a continuously increasing suspicion level. This separates environmental monitoring from application-specific interpretation: different applications can apply different thresholds or use the suspicion value directly to trigger graduated responses. The abstraction is specified by properties including asymptotic completeness for faulty processes, eventual monotonicity after failure, bounded suspicion for correct processes, and reset behavior when a correct process continues to produce heartbeats.</p>
+
+<p>The authors present the <strong>ϕ failure detector</strong> as an implementation of this abstraction. It maintains a sliding window of heartbeat inter-arrival times, estimates their mean and variance using a normal distribution, and computes suspicion as the negative base-10 logarithm of the probability that the next heartbeat will be later than the elapsed time since the most recent heartbeat. Thus, a threshold of 1, 2, or 3 corresponds approximately to 10%, 1%, or 0.1% likelihood, respectively, that a suspicion will be contradicted by a late heartbeat under the model.</p>
+
+<p>The evaluation used a one-week Japan–Switzerland UDP experiment involving approximately 5.8 million received heartbeat samples. The results showed the expected trade-off: higher thresholds substantially reduced the average mistake rate but increased detection time, particularly beyond thresholds around 10–11 in the tested environment. Larger sampling windows improved accuracy, with diminishing returns at larger sizes. Compared with the Chen and Bertier adaptive failure detectors, the ϕ detector achieved broadly comparable performance while allowing multiple applications to choose independent suspicion thresholds. The authors concluded that this flexibility did not impose a significant performance penalty in their wide-area-network experiment.</p>
+
+<h2 id="influence-and-subsequent-use">Influence and subsequent use</h2>
+
+<p>The abstraction was later formalized in work by Défago, Urbán, Hayashibara, and Katayama on the definition and specification of accrual failure detectors, published at the 2005 International Conference on Dependable Systems and Networks. (<a href="https://www.coord.c.titech.ac.jp/publications/">coord.c.titech.ac.jp</a>)</p>
+
+<p>The approach also influenced distributed-systems middleware. Akka documents its cluster failure detector as an implementation of the ϕ accrual failure detector and exposes configuration for heartbeat history, suspicion thresholds, and tolerance for pauses or network irregularities. (<a href="https://doc.akka.io/libraries/akka-core/current/typed/failure-detector.html">doc.akka.io</a>) Hazelcast likewise provides a configurable Phi Accrual Failure Detector based on the paper, using a sliding window of heartbeat intervals and adaptive mean and variance estimates. (<a href="https://docs.hazelcast.com/hazelcast/5.2/clusters/phi-accrual-detector">docs.hazelcast.com</a>) These documented integrations show that the paper’s continuous suspicion model became a practical mechanism for failure detection in production-oriented cluster software. The cited sources provide concrete evidence of research formalization and industry-oriented middleware adoption; no stronger claim about overall citation impact is made here.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/gossip/">gossip</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/accrual-failure-detectors/">accrual failure detectors</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/adaptive-failure-detectors/">adaptive failure detectors</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-systems/">distributed systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/failure-detection/">failure detection</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/false-positives/">false positives</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/fault-tolerance/">fault tolerance</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/heartbeat-monitoring/">heartbeat monitoring</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/network-reliability/">network reliability</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/quality-of-service/">quality of service</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/suspicion-level/">suspicion level</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:00
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

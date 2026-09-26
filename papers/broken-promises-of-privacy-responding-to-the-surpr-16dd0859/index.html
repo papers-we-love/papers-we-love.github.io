@@ -1,0 +1,149 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Broken Promises of Privacy: Responding to the Surprising Failure of Anonymization | Papers We Love</title>
+        <meta name="description" content="Computer scientists have recently undermined our faith in the privacyprotecting power of anonymization, the name for techniques that protect the privacy of individuals in large databases by deleting information like names and social security numbers." />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Broken Promises of Privacy: Responding to the Surprising Failure of Anonymization | Papers We Love" />
+        <meta property="og:description" content="Computer scientists have recently undermined our faith in the privacyprotecting power of anonymization, the name for techniques that protect the privacy of individuals in large databases by deleting information like names and social security numbers." />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/broken-promises-of-privacy-responding-to-the-surpr-16dd0859/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:01">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Broken Promises of Privacy: Responding to the Surprising Failure of Anonymization</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Paul Ohm</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://www.uclalawreview.org/broken-promises-of-privacy-responding-to-the-surprising-failure-of-anonymization-2/" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: August 18, 2010 (UCLA Law Review, volume 57, issue 6, pp. 1701–1777)</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Computer scientists have recently undermined our faith in the privacyprotecting power of anonymization, the name for techniques that protect the privacy of individuals in large databases by deleting information like names and social security numbers. These scientists have demonstrated that they can often “reidentify” or “deanonymize” individuals hidden in anonymized data with astonishing ease.
+
+By understanding this research, we realize we have made a mistake, labored beneath a fundamental misunderstanding, which has assured us much less privacy than we have assumed. This mistake pervades nearly every information privacy law, regulation, and debate, yet regulators and legal scholars have paid it scant attention. We must respond to the surprising failure of anonymization, and this Article provides the tools to do so.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h3 id="summary">Summary</h3>
+
+<p>Paul Ohm argues that the prevailing belief that removing names, Social Security numbers, and other explicit identifiers can make datasets effectively anonymous is technically and legally unsound. Drawing on reidentification research, including studies involving demographic records, online search histories, and movie-rating data, the article shows that seemingly innocuous attributes can be linked with external information to identify individuals and reveal sensitive facts. The central claim is that data can often be useful or strongly anonymous, but not both at the same time.</p>
+
+<p>The article contends that this problem destabilizes privacy laws and regulatory frameworks that rely on personally identifiable information (PII) as a threshold for protection or that create exemptions for “anonymized” data. Ohm recommends moving away from a binary distinction between personal and nonpersonal data, abandoning the assumption that anonymization is a reliable privacy guarantee, and using terminology that describes privacy-protective effort without implying successful anonymity. He proposes assessing reidentification risk contextually, taking account of the data-handling technique, whether disclosure is public or restricted, the amount and sensitivity of the data, the availability of outside information, and the likely incentives and capabilities of adversaries.</p>
+
+<p>The article rejects several incomplete responses, including relying solely on after-the-fact compensation, waiting for technical solutions to eliminate the problem, or prohibiting reidentification. It instead supports a combination of comprehensive privacy regulation, sector-specific rules, restrictions on data retention and dissemination, controlled access, auditing, aggregation, and privacy-preserving techniques such as differential privacy. The conclusion emphasizes that regulation must balance the risks of information flows against competing interests such as research, innovation, security, and free expression. (<a href="https://studylib.net/doc/18564732/paul-ohm---ucla-law-review">studylib.net</a>)</p>
+
+<h3 id="influence">Influence</h3>
+
+<p>Subsequent scholarship has treated the article as a major legal articulation of the limits of deidentification. Later work on “functional anonymisation” identifies Ohm’s argument as perhaps the most influential anti-anonymization position and develops a contextual alternative that evaluates anonymization within a broader data environment. (<a href="https://www.sciencedirect.com/science/article/pii/S0267364918300116">sciencedirect.com</a>) Princeton researchers also state that the article helped spur legal and policy debate over how to respond to reidentification research, including consideration of differential privacy and contractual or legal controls on data use. (<a href="https://blog.citp.princeton.edu/2014/07/09/no-silver-bullet-de-identification-still-doesnt-work/">blog.citp.princeton.edu</a>) The paper continues to be cited in discussions of health-data privacy, big-data governance, deidentification, differential privacy, and the legal meaning of personal data. (<a href="https://georgetownlawtechreview.org/differential-privacy-raising-the-bar/GLTR-11-2016/">georgetownlawtechreview.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/privacy/">privacy</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/anonymization/">anonymization</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/data-protection-directive/">data protection directive</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/deidentification/">deidentification</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/hipaa/">hipaa</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/information-privacy/">information privacy</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/privacy/">privacy</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/reidentification/">reidentification</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:01
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->
