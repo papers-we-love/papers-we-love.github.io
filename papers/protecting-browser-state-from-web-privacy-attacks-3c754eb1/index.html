@@ -1,0 +1,143 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Protecting Browser State from Web Privacy Attacks | Papers We Love</title>
+        <meta name="description" content="Through a variety of means, including a range of browser cache methods and inspecting the color of a visited hyperlink, client-side browser state can be exploited to track users against their wishes. This tracking is possible because persistent, clie" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Protecting Browser State from Web Privacy Attacks | Papers We Love" />
+        <meta property="og:description" content="Through a variety of means, including a range of browser cache methods and inspecting the color of a visited hyperlink, client-side browser state can be exploited to track users against their wishes. This tracking is possible because persistent, clie" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/protecting-browser-state-from-web-privacy-attacks-3c754eb1/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:01">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Protecting Browser State from Web Privacy Attacks</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Andrew Bortz</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Collin Jackson</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Dan Boneh</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">John C Mitchell</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://crypto.stanford.edu/sameorigin/sameorigin.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: May 23–26, 2006 (WWW 2006, 15th International Conference on the World Wide Web, Edinburgh, Scotland)</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Through a variety of means, including a range of browser cache methods and inspecting the color of a visited hyperlink, client-side browser state can be exploited to track users against their wishes. This tracking is possible because persistent, client-side browser state is not properly partitioned on per-site basis in current browsers. We address this problem by refining the general notion of a “same-origin” policy and implementing two browser extensions that enforce this policy on the browser cache and visited links.
+
+We also analyze various degrees of cooperation between sites to track users, and show that even if long-term browser state is properly partitioned, it is still possible for sites to use modern web features to bounce users between sites and invisibly engage in cross-domain tracking of their visitors. Cooperative privacy attacks are an unavoidable consequence of all persistent browser state that affects the behavior of the browser, and disabling or frequently expiring this state is the only way to achieve true privacy against colluding parties.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <p>The paper generalizes the browser same-origin principle beyond JavaScript and cookies to persistent browser state, stating that only the site that stores information should later be able to read or modify it. It classifies tracking as single-session, multiple-session, cooperative, semi-cooperative, and non-cooperative, and explains why third-party cookie blocking alone cannot prevent all forms of tracking.</p>
+
+<p>Its technical contributions focus on two previously under-protected state mechanisms. First, it describes cache-timing, DNS-cache, cache-metadata, and cached-content attacks, and proposes partitioning cache entries according to the embedding and hosting sites. Second, it analyzes visited-link history attacks, including “chameleon” phishing pages and link-based identifiers, and proposes origin-aware history partitioning. The authors implemented these defenses as Firefox extensions and showed that cooperative sites can still link identities through redirects, popups, hyperlinks, and other navigation mechanisms even when browser state is partitioned.</p>
+
+<p>The paper’s central design idea has continued into later browser privacy work. A subsequent research dissertation explicitly cites this paper as prior work on same-origin caching and reports that Chrome shipped visited-link partitioning to all users in Chrome 136 in 2025, while proposing the approach to web standards bodies. (<a href="https://escholarship.org/content/qt5cc77207/qt5cc77207.pdf">escholarship.org</a>) Mozilla’s Firefox State Partitioning applies a related double-keying model to client-side state using both the resource origin and top-level site; Firefox documents this as covering storage as well as network state such as HTTP, image, script, stylesheet, and DNS caches. The feature was enabled by default in Firefox 103. (<a href="https://developer.mozilla.org/en-US/docs/Web/Privacy/Guides/State_Partitioning">developer.mozilla.org</a>) W3C privacy guidance likewise defines partitions as user-agent boundaries intended to prevent recognition across contexts and recommends preventing cross-partition recognition unless the user intends it. (<a href="https://www.w3.org/TR/privacy-principles/">w3.org</a>) These developments represent concrete industry and standards adoption of the paper’s broader principle: persistent browser state should be isolated according to the user’s browsing context rather than shared globally across sites. The paper was published in WWW 2006, pages 737–744. (<a href="https://doi.org/10.1145%2F1135777.1135884">doi.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/privacy/">privacy</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/phishing/">phishing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/privacy/">privacy</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/web-browser-design/">web browser design</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/web-spoofing/">web spoofing</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:01
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

@@ -1,0 +1,151 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Optimal Purely Functional Priority Queues | Papers We Love</title>
+        <meta name="description" content="Brodal recently introduced the first implementation of imperative priority queues to support findMin, insert, and meld in O(1) worst-case time, and deleteMin in O(log n) worst-case time. These bounds are asymptotically optimal among all comparison-ba" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Optimal Purely Functional Priority Queues | Papers We Love" />
+        <meta property="og:description" content="Brodal recently introduced the first implementation of imperative priority queues to support findMin, insert, and meld in O(1) worst-case time, and deleteMin in O(log n) worst-case time. These bounds are asymptotically optimal among all comparison-ba" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/optimal-purely-functional-priority-queues-16bddf90/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Optimal Purely Functional Priority Queues</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Chris Okasaki</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Gerth Stølting Brodal</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages-paradigms/functional_programming/optimal-purely-functional-priority-queues.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: October 1996 (BRICS Report Series RS-96-37); subsequently published in Journal of Functional Programming, volume 6, issue 6, November 1996</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Brodal recently introduced the first implementation of imperative priority queues to support findMin, insert, and meld in O(1) worst-case time, and deleteMin in O(log n) worst-case time. These bounds are asymptotically optimal among all comparison-based priority queues. In this paper, we adapt Brodal’s data structure to a purely functional setting. In doing so, we both simplify the data structure and clarify its relationship to the binomial queues of Vuillemin, which support all four operations in O(log n) time. Specifically, we derive our implementation from binomial queues in three steps: first, we reduce the running time of insert to O(1) by eliminating the possibility of cascading links; second, we reduce the running time of findMin to O(1) by adding a global root to hold the minimum element; and finally, we reduce the running time of meld to O(1) by allowing priority queues to contain other priority queues. Each of these steps is expressed using ML-style functors. The last transformation, known as data-structural bootstrapping, is an interesting application of higher-order functors and recursive structures.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <p>The paper develops a persistent, purely functional priority queue with worst-case bounds of <strong>O(1)</strong> for <code>findMin</code>, <code>insert</code>, and <code>meld</code>, and <strong>O(log n)</strong> for <code>deleteMin</code>. It derives the structure incrementally from ordinary binomial queues:</p>
+
+<ul>
+  <li><strong>Skew binomial queues</strong> replace ordinary binary-rank behavior with skew-binary behavior, ensuring that insertion performs at most one link rather than a cascade of links.</li>
+  <li><strong>A global root</strong> stores the minimum element explicitly, reducing <code>findMin</code> to constant time.</li>
+  <li><strong>Data-structural bootstrapping</strong> represents a priority queue as a primitive priority queue containing recursively structured priority queues. This reduces <code>meld</code> to insertion into the underlying structure while preserving persistence.</li>
+</ul>
+
+<p>The implementation is expressed using Standard ML functors. The paper also discusses representation optimizations, the effect of lazy evaluation on worst-case versus amortized bounds, and the difficulty of supporting operations such as <code>decreaseKey</code> and arbitrary deletion in a purely functional setting. The resulting bounds are presented as asymptotically optimal for comparison-based priority queues. (<a href="https://resolve.cambridge.org/core/services/aop-cambridge-core/content/view/1A799209383FD6535F90715192863C13/S095679680000201Xa.pdf/optimal_purely_functional_priority_queues.pdf">resolve.cambridge.org</a>)</p>
+
+<p>The work influenced subsequent functional-data-structure research and implementations. Its bootstrapped skew-binomial design was implemented in Haskell-oriented libraries; for example, the Scalaz <code>Heap</code> documentation explicitly identifies its implementation as based on the paper. A Haskell community report also documents a Coq-verified implementation of the paper’s priority queues, distributed as the <code>meldable-heap</code> package. (<a href="https://scalaz.github.io/scalaz/scalaz-2.9.1-6.0.2/doc.sxr/scalaz/Heap.scala.html">scalaz.github.io</a>) Bibliographic services record later citations in research on skew-binary numeral systems, heaps, verification, and functional programming, indicating continued use of the paper as a reference for persistent meldable priority queues. (<a href="https://www.cambridge.org/core/journals/journal-of-functional-programming/article/optimal-purely-functional-priority-queues/1A799209383FD6535F90715192863C13">cambridge.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/languages-paradigms/functional_programming/">languages paradigms/functional programming</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/binomial-queues/">binomial queues</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/data-structural-bootstrapping/">data structural bootstrapping</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/higher-order-functors/">higher order functors</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/meldable-heaps/">meldable heaps</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/persistent-data-structures/">persistent data structures</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/priority-queues/">priority queues</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/purely-functional-data-structures/">purely functional data structures</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/skew-binomial-queues/">skew binomial queues</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/standard-ml/">standard ml</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/worst-case-complexity/">worst case complexity</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

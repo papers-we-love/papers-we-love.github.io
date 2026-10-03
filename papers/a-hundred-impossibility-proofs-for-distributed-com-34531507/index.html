@@ -1,0 +1,170 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>A Hundred Impossibility Proofs for Distributed Computing | Papers We Love</title>
+        <meta name="description" content="This talk is about impossibility results in the area of distributed computing. In this category, I include not just results that say that a particular task cannot be accomplished, but also lower bound results, which say that a task cannot be accompli" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="A Hundred Impossibility Proofs for Distributed Computing | Papers We Love" />
+        <meta property="og:description" content="This talk is about impossibility results in the area of distributed computing. In this category, I include not just results that say that a particular task cannot be accomplished, but also lower bound results, which say that a task cannot be accompli" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/a-hundred-impossibility-proofs-for-distributed-com-34531507/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:53">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">A Hundred Impossibility Proofs for Distributed Computing</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Nancy A. Lynch</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/a-hundred-impossibility-proofs-for-distributed-computing.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: August 1989 (Proceedings of the Eighth Annual ACM Symposium on Principles of Distributed Computing, PODC ’89; ACM records the publication date as June 1, 1989)</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>This talk is about impossibility results in the area of distributed computing. In this category, I include not just results that say that a particular task cannot be accomplished, but also lower bound results, which say that a task cannot be accomplished within a certain bound on cost.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="overview">Overview</h2>
+
+<p>Nancy Lynch presents a survey of more than one hundred impossibility and lower-bound results in distributed computing. The paper does not establish one new theorem; instead, it organizes existing results, explains their proof techniques, provides historical context, and identifies common principles underlying apparently different impossibility arguments. The surveyed topics include shared-memory resource allocation, distributed consensus, shared registers, computation in rings and other networks, communication protocols, and miscellaneous distributed tasks. (<a href="https://groups.csail.mit.edu/tds/papers/Lynch/podc89.pdf">groups.csail.mit.edu</a>)</p>
+
+<h2 id="central-insight">Central insight</h2>
+
+<p>The paper identifies the limitation imposed by <strong>local knowledge</strong> as the fundamental idea behind the surveyed results. A process must behave identically in executions that are indistinguishable from its local perspective. Impossibility proofs exploit this fact by constructing executions or configurations that look the same to selected processes but require incompatible behavior. The paper emphasizes that precise formal models are essential because small changes in timing, failures, communication, fairness, or process capabilities can change the result.</p>
+
+<h2 id="main-proof-techniques">Main proof techniques</h2>
+
+<ul>
+  <li><strong>Pigeonhole arguments:</strong> Limited shared-memory values force different executions to produce indistinguishable states.</li>
+  <li><strong>Scenario and indistinguishability arguments:</strong> Carefully constructed executions make processes behave as though they were in different systems or fault scenarios.</li>
+  <li><strong>Chain arguments:</strong> A sequence of executions changes one relevant feature at a time, forcing a contradiction between neighboring executions.</li>
+  <li><strong>Bivalence arguments:</strong> A configuration from which both decisions remain possible is shown to persist or to lead to a contradiction with termination.</li>
+  <li><strong>Symmetry and distance arguments:</strong> Indistinguishable processes or limited communication distance prevent leader election, coordination, or efficient computation.</li>
+  <li><strong>Communication-structure arguments:</strong> Message diagrams, message stealing, finite-state limitations, and graph constructions establish lower bounds for protocols and networks.</li>
+  <li><strong>Reductions:</strong> Results for one problem or model are transferred to another through simulations or problem transformations.</li>
+</ul>
+
+<h2 id="results-surveyed">Results surveyed</h2>
+
+<p>The discussion covers lower bounds on shared-memory size for mutual exclusion and resource allocation; process counts, rounds, messages, and timing conditions for consensus; asynchronous consensus impossibility in the presence of failures; limits on commit, synchronization, and register implementation; message complexity in rings, complete graphs, meshes, and general networks; communication-protocol limitations; database availability under network partitions; termination detection; and hardware coordination problems. Particular attention is given to how stronger communication primitives, authentication, randomization, synchrony, or failure assumptions can avoid or weaken an impossibility result.</p>
+
+<h2 id="methodological-conclusions">Methodological conclusions</h2>
+
+<p>Lynch argues that impossibility work depends heavily on well-designed problem statements and models. Specifications should be precise, crisp, sufficiently general, and no stronger than necessary. Models must describe admissible executions, liveness assumptions, control of actions, and the interaction between algorithms and their environments. The paper also observes that attempts to prove impossibility can generate useful positive results: failed proofs may expose counterexample algorithms, while successful proofs can indicate which assumptions must be added to make a task solvable.</p>
+
+<h2 id="influence">Influence</h2>
+
+<p>The paper became an established survey reference for distributed-computing impossibility theory. Fich and Ruppert’s 2003 survey explicitly describes itself as building on Lynch’s survey while extending coverage of models, complexity measures, and proof techniques. (<a href="https://www.researchgate.net/publication/220567008_Hundreds_of_impossibility_results_for_distributed_computing">researchgate.net</a>) Later research continues to cite it as background for impossibility, consensus, and lower-bound arguments, including work presented at DISC 2023. (<a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.DISC.2023.4">drops.dagstuhl.de</a>) The paper has also been used as recommended or assigned reading in distributed-systems courses, including courses at the University of Chicago, the University of Illinois, and Harvard. (<a href="https://www.classes.cs.uchicago.edu/archive/2014/spring/23310-1/CMSC23310_SPR14_Syllabus.pdf">classes.cs.uchicago.edu</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/distributed_systems/">distributed systems</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/asynchronous-systems/">asynchronous systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-computing/">distributed computing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-consensus/">distributed consensus</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/fault-tolerance/">fault tolerance</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/formal-modeling/">formal modeling</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/impossibility/">impossibility</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/lower-bounds/">lower bounds</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/mutual-exclusion/">mutual exclusion</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/shared-memory/">shared memory</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/symmetry/">symmetry</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:53
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

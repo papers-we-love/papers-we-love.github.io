@@ -1,0 +1,148 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>THE FAST JOHNSON–LINDENSTRAUSS TRANSFORM AND APPROXIMATE NEAREST NEIGHBORS | Papers We Love</title>
+        <meta name="description" content="We introduce a new low-distortion embedding of ℓ₂ᵈ into ℓₚᴼ⁽ˡᵒᵍ ⁿ⁾ (p = 1, 2) called the fast Johnson–Lindenstrauss transform (FJLT). The FJLT is faster than standard random projections and just as easy to implement. It is based upon the precondition" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="THE FAST JOHNSON–LINDENSTRAUSS TRANSFORM AND APPROXIMATE NEAREST NEIGHBORS | Papers We Love" />
+        <meta property="og:description" content="We introduce a new low-distortion embedding of ℓ₂ᵈ into ℓₚᴼ⁽ˡᵒᵍ ⁿ⁾ (p = 1, 2) called the fast Johnson–Lindenstrauss transform (FJLT). The FJLT is faster than standard random projections and just as easy to implement. It is based upon the precondition" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/the-fast-johnsonlindenstrauss-transform-and-approx-165ba557/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:00">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">THE FAST JOHNSON–LINDENSTRAUSS TRANSFORM AND APPROXIMATE NEAREST NEIGHBORS</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">BERNARD CHAZELLE</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">NIR AILON</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://www.cs.princeton.edu/~chazelle/pubs/FJLT-sicomp09.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: January 2009; published electronically May 28, 2009</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>We introduce a new low-distortion embedding of ℓ₂ᵈ into ℓₚᴼ⁽ˡᵒᵍ ⁿ⁾ (p = 1, 2) called the fast Johnson–Lindenstrauss transform (FJLT). The FJLT is faster than standard random projections and just as easy to implement. It is based upon the preconditioning of a sparse projection matrix with a randomized Fourier transform. Sparse random projections are unsuitable for low-distortion embeddings. We overcome this handicap by exploiting the “Heisenberg principle” of the Fourier transform, i.e., its local-global duality. The FJLT can be used to speed up search algorithms based on low-distortion embeddings in ℓ₁ and ℓ₂. We consider the case of approximate nearest neighbors in ℓ₂ᵈ. We provide a faster algorithm using classical projections, which we then speed up further by plugging in the FJLT. We also give a faster algorithm for searching over the hypercube.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h3 id="main-contribution">Main contribution</h3>
+
+<p>The paper introduces the fast Johnson–Lindenstrauss transform (FJLT), a computationally efficient alternative to dense random Johnson–Lindenstrauss projections. It embeds a finite set of points from ℓ₂ᵈ into ℓ₁ᵏ or ℓ₂ᵏ with target dimension k = O(ε⁻² log n), while preserving norms and pairwise distances within a multiplicative factor of approximately 1 ± ε.</p>
+
+<p>The transform has the form Φ = PHD, where D is a random diagonal sign matrix, H is a normalized Walsh–Hadamard transform, and P is a sparse random projection matrix. The Walsh–Hadamard/sign preconditioning spreads the mass of sparse or concentrated input vectors across coordinates. This allows the subsequent sparse projection to achieve concentration guarantees that it would not obtain on its own. The resulting application time is O(d log d + min{dε⁻² log n, ε⁻ᵖ⁻⁴ logᵖ⁺¹ n}) for p ∈ {1,2}; the d log d term comes from the fast Walsh–Hadamard transform, while the remaining work depends on the sparsity of P.</p>
+
+<p>The paper applies the ℓ₁ version of the transform to approximate nearest-neighbor search in Euclidean space. Its data structure uses n^{O(ε⁻²)} storage and answers queries in O(d log d + ε⁻³ log² n) time, improving the cost of repeatedly applying dense dimension-reduction maps. The algorithm first obtains a coarse candidate using a random one-dimensional projection, then narrows the search through a bounded binary search supported by discretization and lookup tables. A separate construction improves approximate nearest-neighbor search over the Hamming cube to O((d + ε⁻² log n) log d) query time, using sparse matrix structure and finite-field linear algebra.</p>
+
+<h3 id="influence-on-later-research">Influence on later research</h3>
+
+<p>The FJLT became a foundation for subsequent work on faster and more structured dimension-reduction methods. Later research revisited the sparse projection analysis and showed that the embedding time can be reduced further by using an even sparser matrix, together with a matching lower bound for that analysis. (<a href="https://arxiv.org/abs/2204.01800">arxiv.org</a>)</p>
+
+<p>The transform has also been used as a structural template for butterfly-network linear operators. A 2021 paper represented the FJLT as a butterfly network followed by coordinate projection and applied this design to reduced-parameter neural-network layers, reporting nearly linear parameter counts and empirical training and inference improvements. (<a href="https://proceedings.mlr.press/v161/ailon21a.html">proceedings.mlr.press</a>)</p>
+
+<p>FJLT constructions have additionally been incorporated into randomized numerical linear-algebra methods, including work on matrix approximation and regression, where fast embeddings reduce the cost of processing high-dimensional data. (<a href="https://jmlr.org/papers/volume13/drineas12a/drineas12a.pdf">jmlr.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/machine_learning/">machine learning</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/approximate-nearest-neighbors/">approximate nearest neighbors</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/dimension-reduction/">dimension reduction</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/random-matrices/">random matrices</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:00
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

@@ -1,0 +1,143 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>New Directions in Cloud Programming | Papers We Love</title>
+        <meta name="description" content="Nearly twenty years after the launch of AWS, it remains difficult for most developers to harness the enormous potential of the cloud. In this paper we lay out an agenda for a new generation of cloud programming research aimed at bringing research ide" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="New Directions in Cloud Programming | Papers We Love" />
+        <meta property="og:description" content="Nearly twenty years after the launch of AWS, it remains difficult for most developers to harness the enormous potential of the cloud. In this paper we lay out an agenda for a new generation of cloud programming research aimed at bringing research ide" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/new-directions-in-cloud-programming-5c458d6f/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:59">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">New Directions in Cloud Programming</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Alvin Cheung</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Joseph M. Hellerstein</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Mae Milano</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Natacha Crooks</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://blog.acolyer.org/" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: January 10–13, 2021 (11th Annual Conference on Innovative Data Systems Research, CIDR ’21)</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Nearly twenty years after the launch of AWS, it remains difficult for most developers to harness the enormous potential of the cloud. In this paper we lay out an agenda for a new generation of cloud programming research aimed at bringing research ideas to programmers in an evolutionary fashion. Key to our approach is a separation of distributed programs into a PACT of four facets: Program semantics, Availablity, Consistency and Targets of optimization. We propose to migrate developers gradually to PACT programming by lifting familiar code into our more declarative level of abstraction. We then propose a multi-stage compiler that emits human-readable code at each stage that can be hand-tuned by developers seeking more control. Our agenda raises numerous research challenges across multiple areas including language design, query optimization, transactions, distributed consistency, compilers and program synthesis.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <p>The supplied URL is the homepage of Adrian Colyer’s <em>Morning Paper</em> blog rather than a paper-specific page. The homepage’s top post links to and discusses this paper, so the extraction is based on <em>New Directions in Cloud Programming</em>. (<a href="https://blog.acolyer.org/">blog.acolyer.org</a>)</p>
+
+<p>The paper proposes PACT—Program semantics, Availability, Consistency, and Targets for optimization—as a decomposition for cloud programming. It presents Hydro as a research agenda and language stack intended to lift familiar sequential or distributed programs into declarative intermediate representations, compile them through multiple human-readable stages, and ultimately execute them through the Hydroflow runtime. The approach combines ideas from declarative languages, dataflow, reactive programming, distributed consistency, program synthesis, and multi-objective deployment optimization. (<a href="https://cidrdb.org/cidr2021/papers/cidr2021_paper16.pdf">cidrdb.org</a>)</p>
+
+<p>The paper’s clearest subsequent influence is the continuing Hydro research project. The project identifies this work as its original vision paper and reports follow-on systems and research on Hydroflow, automated compilation for distributed programs, CRDT synthesis, streaming semantics, and rule-driven optimization of distributed protocols. A later SIGMOD paper applies query-rewrite techniques to distributed-protocol scaling, reporting 5× throughput improvement for two-phase commit and 3× for Paxos in its evaluated implementations. (<a href="https://hydro.run/research/">hydro.run</a>) The associated Hydroflow implementation and documentation also explicitly trace the project back to this paper, indicating direct engineering continuation rather than merely conceptual citation. (<a href="https://github.com/mingweisamuel/hydroflow">github.com</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/availability/">availability</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/cloud-optimization/">cloud optimization</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/cloud-programming/">cloud programming</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/compiler-design/">compiler design</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/consistency/">consistency</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/dataflow/">dataflow</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/declarative-programming/">declarative programming</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-systems/">distributed systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/program-synthesis/">program synthesis</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/reactive-programming/">reactive programming</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:59
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

@@ -1,0 +1,154 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Time provisioning Evaluation of KVM, Docker and Unikernels in a Cloud Platform | Papers We Love</title>
+        <meta name="description" content="Unikernels are a promising alternative for application deployment in cloud platforms. They comprise a very small footprint, providing better deployment agility and portability among virtualization platforms. Similar to Linux containers, they are a li" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Time provisioning Evaluation of KVM, Docker and Unikernels in a Cloud Platform | Papers We Love" />
+        <meta property="og:description" content="Unikernels are a promising alternative for application deployment in cloud platforms. They comprise a very small footprint, providing better deployment agility and portability among virtualization platforms. Similar to Linux containers, they are a li" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/time-provisioning-evaluation-of-kvm-docker-and-uni-2e027055/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:01">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Time provisioning Evaluation of KVM, Docker and Unikernels in a Cloud Platform</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Bruno Xavier</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Luis Jersak</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Tiago Ferreto</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://repositorio.pucrs.br/dspace/bitstream/10923/14178/2/Time_provisioning_evaluation_of_KVM_Docker_and_Unikernels_in_a_Cloud_Platform.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: May 16–19, 2016, 16th IEEE/ACM International Symposium on Cluster, Cloud, and Grid Computing (CCGrid 2016), pp. 277–280</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Unikernels are a promising alternative for application deployment in cloud platforms. They comprise a very small footprint, providing better deployment agility and portability among virtualization platforms. Similar to Linux containers, they are a lightweight alternative for deploying distributed applications based on microservices. However, the comparison of unikernels with other virtualization options regarding the concurrent provisioning of instances, as in the case of microservices-based applications, is still lacking. This paper provides an evaluation of KVM (Virtual Machines), Docker (Containers), and OSv (Unikernel), when provisioning multiple instances concurrently in an OpenStack cloud platform. We confirmed that OSv outperforms the other options and also identified opportunities for optimization.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>The paper evaluates concurrent instance provisioning for Linux/KVM virtual machines, Docker containers, and OSv unikernels in an OpenStack Kilo deployment. Using Rally and OSProfiler, the authors measure three parts of the provisioning workflow: instance or operating-system startup, image creation, and OpenStack overhead. The experiment uses a two-node environment and provisions 10, 20, and 30 instances concurrently. The tested images are 1.2 GB for Linux/KVM, 342 MB for Docker, and 88 MB for OSv.</p>
+
+<p>OSv and Docker exhibit sub-second startup behavior, while Linux/KVM startup time increases substantially as concurrency grows. OSv and Linux/KVM have comparable image-preparation behavior because both use QCOW2 images, although the much smaller OSv image reduces the image-copy cost. Docker experiences degradation during concurrent image import because image decompression and metadata processing are serialized by the Docker API. OpenStack service communication and coordination also form a major component of total provisioning time, particularly as concurrency increases.</p>
+
+<p>For the tested workload, the reported total times are approximately 13 seconds for OSv/KVM and Linux/KVM and 22 seconds for Docker at 10 concurrent instances; at 30 instances, OSv/KVM takes approximately 22 seconds, Linux/KVM approximately 22 seconds, and Docker approximately 38 seconds. The authors conclude that OSv provides the best provisioning performance under the experiment’s uncached, repeated-image conditions. They identify cached Docker layers, incremental deployment, full-stack applications, and OpenStack workflow optimization as important subjects for further study.</p>
+
+<h2 id="subsequent-research">Subsequent research</h2>
+
+<p>The clearest documented academic continuation located in the search was <em>An Unikernels Provisioning Architecture for OpenStack</em> (2018), authored by Luis Augusto Dias Knob, Bruno Gomes Xavier, and Tiago Ferreto. That work develops an optimized OpenStack provisioning architecture for OSv, moving image reconstruction toward the compute node, supporting concurrent compilation, and addressing the image-transfer and reconstruction bottlenecks identified in the earlier evaluation. (<a href="https://repositorio.pucrs.br/dspace/bitstream/10923/14186/2/An_Unikernels_Provisioning_Architecture_for_OpenStack.pdf">repositorio.pucrs.br</a>)</p>
+
+<p>The search found evidence of continued citation in later unikernel and cloud-virtualization literature, but no verifiable industry deployment or product adoption explicitly attributable to this paper. The paper’s publication venue, date, bibliographic metadata, and author ordering were cross-checked against the PUCRS repository and conference records. (<a href="https://repositorio.pucrs.br/dspace/bitstream/10923/14178/2/Time_provisioning_evaluation_of_KVM_Docker_and_Unikernels_in_a_Cloud_Platform.pdf">repositorio.pucrs.br</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/unikernels/">unikernels</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/cloud-computing/">cloud computing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/cloud-platforms/">cloud platforms</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/docker/">docker</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/instance-provisioning/">instance provisioning</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/kvm/">kvm</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/openstack/">openstack</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/osv/">osv</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/performance-evaluation/">performance evaluation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/unikernels/">unikernels</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/virtualization/">virtualization</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:01
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

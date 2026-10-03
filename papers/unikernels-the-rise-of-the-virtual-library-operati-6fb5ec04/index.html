@@ -1,0 +1,153 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Unikernels: The Rise of the Virtual Library Operating System | Papers We Love</title>
+        <meta name="description" content="What if all the software layers in a virtual appliance were compiled within the same safe, high-level language framework?" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Unikernels: The Rise of the Virtual Library Operating System | Papers We Love" />
+        <meta property="og:description" content="What if all the software layers in a virtual appliance were compiled within the same safe, high-level language framework?" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/unikernels-the-rise-of-the-virtual-library-operati-6fb5ec04/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:01">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Unikernels: The Rise of the Virtual Library Operating System</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Anil Madhavapeddy</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">David J. Scott</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://cacm.acm.org/magazines/2014/1/170866-unikernels/fulltext" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: January 2014; Communications of the ACM, Vol. 57, No. 1, pp. 61–69</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>What if all the software layers in a virtual appliance were compiled within the same safe, high-level language framework?</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="overview">Overview</h2>
+
+<p>The paper presents <strong>MirageOS</strong>, a library operating system that compiles an application, its required operating-system functionality, configuration, and runtime into a specialized virtual-machine image called a <strong>unikernel</strong>. The resulting image runs directly on a hypervisor such as Xen and performs a single application-specific function rather than providing a general-purpose multiuser operating system. (<a href="https://cacm.acm.org/magazines/2014/1/170866-unikernels/fulltext">cacm.acm.org</a>)</p>
+
+<p>The design is motivated by the overhead and complexity of conventional cloud software stacks, which commonly combine a hypervisor, a general-purpose operating-system kernel, user-space processes, system libraries, configuration files, and managed-language runtimes. MirageOS instead uses OCaml modules, static type checking, explicit dependency tracking, metaprogramming, and whole-program compilation to remove unused functionality and specialize the deployed system. The approach is intended to reduce binary size, boot time, resource consumption, configuration complexity, and attack surface while enabling stronger compile-time reasoning about interfaces and resource use.</p>
+
+<p>The paper describes a development workflow in which applications can initially be built as ordinary Unix programs and later recompiled against MirageOS libraries and Xen device interfaces. Its architecture separates portable library interfaces from target-specific implementations, allowing the same application logic to be compiled for Unix, Xen, simulators, kernel modules, or JavaScript environments. The paper also discusses practical examples involving Web servers, networking, storage, distributed services, and cloud-management components.</p>
+
+<p>The authors identify important trade-offs. Unikernels generally require application adaptation to the library-OS programming model, and static specialization means that configuration changes can require recompilation and redeployment. The model also increases demands on cloud orchestration systems because many small virtual machines may be created, destroyed, and restarted. The paper contrasts MirageOS with other approaches, including HaLVM, OSv, rump kernels, and Drawbridge, emphasizing that the unikernel design space includes both clean-slate systems and compatibility-oriented systems.</p>
+
+<h2 id="subsequent-influence">Subsequent influence</h2>
+
+<p>The article helped disseminate the library-OS and unikernel model to the systems and cloud-computing communities. Subsequent work by the MirageOS group explored just-in-time creation of unikernels for elastic services in <strong>Jitsu</strong>, extending the paper’s emphasis on rapid deployment and fine-grained VM specialization. (<a href="https://www.usenix.org/system/files/conference/nsdi15/nsdi15-paper-madhavapeddy.pdf">usenix.org</a>) Later projects such as <strong>Unikraft</strong> developed reusable build systems and library ecosystems intended to make specialized unikernels practical for a broader range of existing applications; its published research includes work on network functions, compatibility layers, isolation, elastic CDNs, and performance-oriented deployment. (<a href="https://unikraft.org/community/papers">unikraft.org</a>) Research after the paper also examined the security assumptions of unikernels more critically, including their limited support for some conventional operating-system protections and the resulting attack-surface questions. (<a href="https://arxiv.org/abs/2406.01872">arxiv.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/unikernels/">unikernels</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/attack-surface/">attack surface</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/cloud-computing/">cloud computing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/hypervisors/">hypervisors</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/library-operating-systems/">library operating systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/mirageos/">mirageos</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/ocaml/">ocaml</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/static-compilation/">static compilation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/type-safety/">type safety</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/unikernels/">unikernels</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/virtualization/">virtualization</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:01
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

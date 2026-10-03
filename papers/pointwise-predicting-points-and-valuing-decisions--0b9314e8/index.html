@@ -1,0 +1,147 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>POINTWISE: Predicting Points and Valuing Decisions in Real Time with NBA Optical Tracking Data | Papers We Love</title>
+        <meta name="description" content="Basketball is a game of decisions; at any moment, a player can change the character of a possession by choosing to pass, dribble, or shoot. The current state of basketball analytics, however, provides no way to quantitatively evaluate the vast majori" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="POINTWISE: Predicting Points and Valuing Decisions in Real Time with NBA Optical Tracking Data | Papers We Love" />
+        <meta property="og:description" content="Basketball is a game of decisions; at any moment, a player can change the character of a possession by choosing to pass, dribble, or shoot. The current state of basketball analytics, however, provides no way to quantitatively evaluate the vast majori" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/pointwise-predicting-points-and-valuing-decisions--0b9314e8/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">POINTWISE: Predicting Points and Valuing Decisions in Real Time with NBA Optical Tracking Data</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Alexander D’Amour</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Dan Cervone</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Kirk Goldsberry</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Luke Bornn</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/sports_analytics/2014-ssac-pointwise-predicting-points-and-valuing-decisions-in-real-time.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: February 28–March 1, 2014; 8th MIT Sloan Sports Analytics Conference, 2014 Research Paper Competition</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Basketball is a game of decisions; at any moment, a player can change the character of a possession by choosing to pass, dribble, or shoot. The current state of basketball analytics, however, provides no way to quantitatively evaluate the vast majority of decisions that players make, as most metrics are driven by events that occur at or near the end of a possession, such as points, turnovers, and assists. We propose a framework for using player-tracking data to assign a point value to each moment of a possession by computing how many points the offense is expected to score by the end of the possession, a quantity we call expected possession value (EPV). EPV allows analysts to evaluate every decision made during a basketball game – whether it is to pass, dribble, or shoot – opening the door for a multitude of new metrics and analyses of basketball that quantify value in terms of points. In this paper, we propose a modeling framework for estimating EPV, present results of EPV computations performed using player-tracking data from the 2012-13 season, and provide several examples of EPV-derived metrics that answer real basketball questions.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <p>The paper introduced <strong>expected possession value (EPV)</strong>, a continuous estimate of the points an offense is expected to score from the current spatial configuration of a possession. Its central contribution was to move basketball evaluation beyond terminal events such as shots, assists, and turnovers by valuing intermediate decisions, including movement, passing, and shot selection. The proposed model combined a Markov assumption, competing-risks models for discrete actions, spatial effects, and a coarsened Markov-chain representation of court states. The paper also demonstrated derived metrics such as EPV-added over replacement and shot satisfaction.</p>
+
+<p>The framework was subsequently developed into a more technical research article, <em>A Multiresolution Stochastic Process Model for Predicting Basketball Possession Outcomes</em>, which formalized the multiresolution stochastic-process approach and further developed hierarchical spatiotemporal transition models. (<a href="https://arxiv.org/abs/1408.0777">arxiv.org</a>) Subsequent research applied related EPV ideas beyond basketball, including a fine-grained model for valuing soccer possessions. (<a href="https://arxiv.org/abs/2011.09426">arxiv.org</a>) Later basketball work, such as <em>DeepHoops</em>, used spatiotemporal tracking data and deep learning to produce continuously updated expected-point predictions for possessions, extending the paper’s emphasis on micro-action evaluation. (<a href="https://arxiv.org/abs/1902.08081">arxiv.org</a>)</p>
+
+<p>The authors also released a public demonstration repository containing code and data for an NBA EPV model, providing a concrete research and educational artifact based on the framework. (<a href="https://github.com/dcervone/EPVDemo">github.com</a>) The method received contemporaneous public coverage describing its potential use in evaluating on-court decisions and player performance, but the sources reviewed here do not establish that this specific 2014 implementation was adopted operationally by an NBA team. (<a href="https://news.harvard.edu/gazette/story/2014/03/bringing-order-to-the-court/">news.harvard.edu</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/sports_analytics/">sports analytics</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/basketball-analytics/">basketball analytics</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/competing-risks/">competing risks</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/decision-analysis/">decision analysis</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/expected-possession-value/">expected possession value</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/markov-models/">markov models</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/nba/">nba</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/optical-tracking/">optical tracking</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/player-evaluation/">player evaluation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/spatiotemporal-modeling/">spatiotemporal modeling</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/sports-analytics/">sports analytics</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

@@ -1,0 +1,150 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Microreboot – A Technique for Cheap Recovery | Papers We Love</title>
+        <meta name="description" content="A significant fraction of software failures in large-scale Internet systems are cured by rebooting, even when the exact failure causes are unknown. However, rebooting can be expensive, causing nontrivial service disruption or downtime even when clust" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Microreboot – A Technique for Cheap Recovery | Papers We Love" />
+        <meta property="og:description" content="A significant fraction of software failures in large-scale Internet systems are cured by rebooting, even when the exact failure causes are unknown. However, rebooting can be expensive, causing nontrivial service disruption or downtime even when clust" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/microreboot-a-technique-for-cheap-recovery-bfc2e8fd/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:59">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Microreboot – A Technique for Cheap Recovery</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Armando Fox</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">George Candea</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Greg Friedman</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Shinichi Kawamoto</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Yuichi Fujiki</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://www.usenix.org/legacy/event/osdi04/tech/full_papers/candea/candea.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: December 6–8, 2004; 6th Symposium on Operating Systems Design and Implementation (OSDI ’04), San Francisco, California</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>A significant fraction of software failures in large-scale Internet systems are cured by rebooting, even when the exact failure causes are unknown. However, rebooting can be expensive, causing nontrivial service disruption or downtime even when clusters and failover are employed. In this work we use separation of process recovery from data recovery to enable microrebooting – a fine-grain technique for surgically recovering faulty application components, without disturbing the rest of the application. We evaluate microrebooting in an Internet auction system running on an application server. Microreboots recover most of the same failures as full reboots, but do so an order of magnitude faster and result in an order of magnitude savings in lost work. This cheap form of recovery engenders a new approach to high availability: microreboots can be employed at the slightest hint of failure, prior to node failover in multi-node clusters, even when mistakes in failure detection are likely; failure and recovery can be masked from end users through transparent call-level retries; and systems can be rejuvenated by parts, without ever being shut down.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h3 id="summary">Summary</h3>
+
+<p>The paper introduces <strong>microrebooting</strong>, a recovery technique that restarts only a faulty application component rather than an entire process, virtual machine, or node. It relies on fine-grained component isolation, externalized persistent and session state, loosely coupled dependencies, retryable requests, and lease-based resource management. The prototype extends JBoss and converts the RUBiS auction application into a crash-only system. Experiments show that component microreboots recover most tested application-level failures, typically in roughly 0.4–0.8 seconds, compared with approximately 19 seconds for a JVM/JBoss restart. Under the tested workload, microreboots reduced failed requests by 98%, preserved session state held outside the rebooted component, maintained more stable cluster response times, and enabled memory-leak rejuvenation without taking the application fully offline. The approach was less effective for failures involving the JVM, operating system, external unmanaged resources, persistent database corruption, or unsafe shared state.</p>
+
+<h3 id="research-influence">Research influence</h3>
+
+<p>Subsequent research explicitly cited the paper as the basis for fine-grained recovery work in legacy storage-controller software. Seshadri and colleagues extended the idea from component restart toward dynamic, thread-level state restoration using dependency tracking and recovery protocols. (<a href="https://www.usenix.org/legacy/event/fast09/tech/full_papers/seshadri/seshadri_html/index.html">usenix.org</a>) Otherworld later applied the microreboot concept at the operating-system-kernel level, preserving running applications while replacing a failed kernel. (<a href="https://www.usenix.org/legacy/event/hotdep08/tech/full_papers/depoutovitch/depoutovitch_html/index.html">usenix.org</a>) The concept also became part of the broader recovery-oriented and self-healing-systems research literature. (<a href="https://onlinelibrary.wiley.com/doi/full/10.1002/spe.2250">onlinelibrary.wiley.com</a>) The quick search found clear evidence of continued research use, but did not establish a specific commercial deployment attributable directly to this paper.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/crash_only/">crash only</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/cheap-recovery/">cheap recovery</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/component-isolation/">component isolation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/crash-only-software/">crash only software</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-systems/">distributed systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/failure-management/">failure management</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/fault-tolerance/">fault tolerance</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/high-availability/">high availability</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/microreboot/">microreboot</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/software-rejuvenation/">software rejuvenation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/state-segregation/">state segregation</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:59
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

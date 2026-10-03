@@ -1,0 +1,155 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Making a fast curry: push/enter vs. eval/apply for higher-order languages | Papers We Love</title>
+        <meta name="description" content="Higher-order languages that encourage currying are typically implemented using one of two basic evaluation models: push/enter or eval/apply. Implementors use their intuition and qualitative judgements to choose one model or the other. Our goal in thi" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Making a fast curry: push/enter vs. eval/apply for higher-order languages | Papers We Love" />
+        <meta property="og:description" content="Higher-order languages that encourage currying are typically implemented using one of two basic evaluation models: push/enter or eval/apply. Implementors use their intuition and qualitative judgements to choose one model or the other. Our goal in thi" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/making-a-fast-curry-pushenter-vs-evalapply-for-hig-ea241892/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Making a fast curry: push/enter vs. eval/apply for higher-order languages</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Simon Marlow</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Simon Peyton Jones</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages/haskell/making-a-fast-curry-push-enter-versus-eval-apply-for-higher-order-languages.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: Journal of Functional Programming, Volume 16, Issues 4–5, July 2006, pp. 415–449; published online August 10, 2006. An earlier version appeared at ICFP 2004 in September 2004, pp. 4–15.</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Higher-order languages that encourage currying are typically implemented using one of two basic evaluation models: push/enter or eval/apply. Implementors use their intuition and qualitative judgements to choose one model or the other. Our goal in this paper is to provide, for the first time, a more substantial basis for this choice, based on our qualitative and quantitative experience of implementing both models in a state-of-the-art compiler for Haskell. Our conclusion is simple, and contradicts our initial intuition: compiled implementations should use eval/apply.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="overview">Overview</h2>
+
+<p>The paper compares two implementation models for curried function application when the function being called is not statically known. In <strong>push/enter</strong>, arguments are placed on the stack and the function is entered; the callee determines the function’s arity and consumes, returns, or retains arguments as appropriate. In <strong>eval/apply</strong>, the caller evaluates the function to a value and then applies the appropriate number of arguments, using runtime information about arity and partial applications.</p>
+
+<p>The authors present a common operational framework for both models and describe how each maps onto a real implementation of Haskell. The analysis covers function closures, partial applications, thunks, update frames, call continuations, stack layouts, garbage collection, and the treatment of over-saturated and under-saturated calls. Push/enter can avoid some intermediate closure creation, but it requires an unusual stack representation containing pending arguments. This complicates accurate stack walking, garbage collection, runtime-system design, and compilation through portable intermediate languages such as C. Eval/apply instead places more responsibility on the caller and uses explicit call continuations, yielding a more conventional runtime structure.</p>
+
+<p>Measurements using the Glasgow Haskell Compiler found that the execution costs of the two models were broadly similar across a substantial benchmark suite. The expected performance advantage of push/enter did not provide a consistent overall benefit. Because eval/apply was substantially simpler in its interaction with stack management, garbage collection, code generation, and runtime support, the authors concluded that compiled implementations should use eval/apply. The paper reports that GHC adopted eval/apply as a consequence of this evaluation.</p>
+
+<h2 id="subsequent-influence">Subsequent influence</h2>
+
+<p>The paper became a recurring reference point in discussions of higher-order calling conventions and currying. Later work on verified higher-order uncurrying explicitly contrasts native multi-argument calling, push/enter, and eval/apply, citing this paper when discussing the runtime costs of partial applications and higher-arity calls. (<a href="https://www.researchgate.net/publication/225236398_A_verified_framework_for_higher-order_uncurrying_optimizations">researchgate.net</a>)</p>
+
+<p>It is also cited by later research on functional-language implementation, including <em>Making a Faster Curry with Extensional Types</em>, which revisits efficient treatment of curried functions and lists the paper as prior work. (<a href="https://simon.peytonjones.org/assets/pdfs/making-a-faster-curry.pdf">simon.peytonjones.org</a>) The implementation model described by Marlow and Peyton Jones is referenced in research on GHC’s runtime behavior, where GHC is characterized as using eval/apply for unknown function application. (<a href="https://www.readkong.com/page/faster-laziness-using-dynamic-pointer-tagging-7731044">readkong.com</a>)</p>
+
+<p>Outside academic research, the paper has been used as implementation guidance in language projects such as Elm, whose documentation cites it while describing optimizations that combine known curried arguments into fewer runtime calls. (<a href="https://elm-lang.org/news/0.8">elm-lang.org</a>) Current GHC bytecode infrastructure also contains specialized apply instructions and partial-application allocation operations, indicating that the implementation issues studied by the paper remain relevant to functional-language runtimes. (<a href="https://ghc.gitlab.haskell.org/ghc/doc/libraries/ghc-9.15-inplace/src/GHC.ByteCode.Instr.html">ghc.gitlab.haskell.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/languages/haskell/">languages/haskell</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/arity-matching/">arity matching</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/compiler-implementation/">compiler implementation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/currying/">currying</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/eval-apply/">eval apply</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/functional-language-implementation/">functional language implementation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/haskell/">haskell</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/higher-order-languages/">higher order languages</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/lazy-evaluation/">lazy evaluation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/push-enter/">push enter</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/runtime-systems/">runtime systems</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->
