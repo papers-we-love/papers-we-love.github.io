@@ -1,0 +1,186 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Communication Theory of Secrecy Systems* | Papers We Love</title>
+        <meta name="description" content="The problems of cryptography and secrecy systems furnish an interesting application of communication theory. In this paper a theory of secrecy systems is developed. The approach is on a theoretical level and is intended to complement the treatment fo" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Communication Theory of Secrecy Systems* | Papers We Love" />
+        <meta property="og:description" content="The problems of cryptography and secrecy systems furnish an interesting application of communication theory. In this paper a theory of secrecy systems is developed. The approach is on a theoretical level and is intended to complement the treatment fo" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/communication-theory-of-secrecy-systems-2b9fee6a/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:53">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Communication Theory of Secrecy Systems*</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">C. E. Shannon</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/cryptography/communication-theory-of-secrecy-systems.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: October 1949, Bell System Technical Journal, Volume 28, Issue 4, pages 656–715</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>The problems of cryptography and secrecy systems furnish an interesting application of communication theory. In this paper a theory of secrecy systems is developed. The approach is on a theoretical level and is intended to complement the treatment found in standard works on cryptography. There, a detailed study is made of the many standard types of codes and ciphers, and of the ways of breaking them. We will be more concerned with the general mathematical structure and properties of secrecy systems.
+
+The treatment is limited in certain ways. First, there are three general types of secrecy system: (1) concealment systems, including such methods as invisible ink, concealing a message in an innocent text, or in a fake covering cryptogram, or other methods in which the existence of the message is concealed from the enemy; (2) privacy systems, for example speech inversion, in which special equipment is required to recover the message; (3) “true” secrecy systems where the meaning of the message is concealed by cipher, code, etc., although its existence is not hidden, and the enemy is assumed to have any special equipment necessary to intercept and record the transmitted signal. We consider only the third type—concealment systems are primarily a psychological problem, and privacy systems a technological one.
+
+Secondly, the treatment is limited to the case of discrete information where the message to be enciphered consists of a sequence of discrete symbols, each chosen from a finite set. These symbols may be letters in a language, words of a language, amplitude levels of a “quantized” speech or video signal, etc., but the main emphasis and thinking has been concerned with the case of letters.
+
+The paper is divided into three parts. The main results will now be briefly summarized. The first part deals with the basic mathematical structure of secrecy systems. As in communication theory a language is considered to be represented by a stochastic process which produces a discrete sequence of symbols in accordance with some system of probabilities. Associated with a language there is a certain parameter D which we call the redundancy of the language. D measures, in a sense, how much a text in the language can be reduced in length without losing any information. As a simple example, since u always follows q in English words, the u may be omitted without loss. Considerable reductions are possible in English due to the statistical structure of the language, the high frequencies of certain letters or words, etc. Redundancy is of central importance in the study of secrecy systems.
+
+A secrecy system is defined abstractly as a set of transformations of one space (the set of possible messages) into a second space (the set of possible cryptograms). Each particular transformation of the set corresponds to enciphering with a particular key. The transformations are supposed reversible (non-singular) so that unique deciphering is possible when the key is known. Each key and therefore each transformation is assumed to have an a priori probability associated with it—the probability of choosing that key. Similarly each possible message is assumed to have an associated a priori probability, determined by the underlying stochastic process. These probabilities for the various keys and messages are actually the enemy cryptanalyst’s a priori probabilities for the choices in question, and represent his a priori knowledge of the situation.
+
+To use the system a key is first selected and sent to the receiving point. The choice of a key determines a particular transformation in the set forming the system. Then a message is selected and the particular transformation corresponding to the selected key applied to this message to produce a cryptogram. This cryptogram is transmitted to the receiving point by a channel and may be intercepted by the enemy. At the receiving end the inverse of the particular transformation is applied to the cryptogram to recover the original message.
+
+If the enemy intercepts the cryptogram he can calculate from it the a posteriori probabilities of the various possible messages and keys which might have produced this cryptogram. This set of a posteriori probabilities constitutes his knowledge of the key and message after the interception. “Knowledge” is thus identified with a set of propositions having associated probabilities. The calculation of the a posteriori probabilities is the generalized problem of cryptanalysis.
+
+As an example of these notions, in a simple substitution cipher with random key there are 26! transformations, corresponding to the 26! ways we can substitute for 26 different letters. These are all equally likely and each therefore has an a priori probability 1/26!. If this is applied to “normal English” the cryptanalyst being assumed to have no knowledge of the message source other than that it is producing English text, the a priori probabilities of various messages of N letters are merely their relative frequencies in normal English text.
+
+If the enemy intercepts N letters of cryptograms in this system his probabilities change. If N is large enough (say 50 letters) there is usually a single message of a posteriori probability nearly unity, while all others have a total probability nearly zero. Thus there is an essentially unique “solution” to the cryptogram. For N smaller (say N = 15) there will usually be many messages and keys of comparable probability, with no single one nearly unity. In this case there are multiple “solutions” to the cryptogram.
+
+Considering a secrecy system to be represented in this way, as a set of transformations of one set of elements into another, there are two natural combining operations which produce a third system from two given systems. The first combining operation is called the product operation and corresponds to enciphering the message with the first secrecy system R and enciphering the resulting cryptogram with the second system S, the keys for R and S being chosen independently. The second combining operation is “weighted addition,” corresponding to making a preliminary choice as to whether system R or S is to be used with probabilities p and q, respectively. Secrecy systems with these two combining operations form essentially a linear associative algebra with a unit element.
+
+Among the many possible secrecy systems there is one type with many special properties. This type is called a “pure” system. A system is pure if all keys are equally likely and if for any three transformations Ti, Tj, Tk in the set the product TiTj−1Tk is also a transformation in the set. With a pure cipher it is shown that all keys are essentially equivalent—they all lead to the same set of a posteriori probabilities. Furthermore, when a given cryptogram is intercepted there is a set of messages that might have produced this cryptogram, a “residue class,” and the a posteriori probabilities of messages in this class are proportional to the a priori probabilities. All the information the enemy has obtained by intercepting the cryptogram is a specification of the residue class. Many of the common ciphers are pure systems, including simple substitution with random key. In this case the residue class consists of all messages with the same pattern of letter repetitions as the intercepted cryptogram.
+
+Two systems R and S are defined to be “similar” if there exists a fixed transformation A with an inverse A−1 such that R = AS. If R and S are similar, a one-to-one correspondence between the resulting cryptograms can be set up leading to the same a posteriori probabilities. The two systems are cryptanalytically the same.
+
+The second part of the paper deals with the problem of “theoretical secrecy.” How secure is a system against cryptanalysis when the enemy has unlimited time and manpower available for the analysis of intercepted cryptograms? The problem is closely related to questions of communication in the presence of noise, and the concepts of entropy and equivocation developed for the communication problem find a direct application in this part of cryptography.
+
+“Perfect Secrecy” is defined by requiring of a system that after a cryptogram is intercepted by the enemy the a posteriori probabilities of this cryptogram representing various messages be identically the same as the a priori probabilities of the same messages before the interception. It is shown that perfect secrecy is possible but requires, if the number of messages is finite, the same number of possible keys. If the message is thought of as being constantly generated at a given “rate” R, key must be generated at the same or a greater rate.
+
+If a secrecy system with a finite key is used, and N letters of cryptogram are intercepted, there will be, for the enemy, a certain set of messages with certain probabilities that this cryptogram could represent. As N increases the field usually narrows down until eventually there is a unique “solution” to the cryptogram; one message with probability essentially unity while all others are practically zero. A quantity H(N) is defined, called the equivocation, which measures in a statistical way how near the average cryptogram of N letters is to a unique solution; that is, how uncertain the enemy is of the original message after intercepting a cryptogram of N letters. Various properties of the equivocation are deduced—for example, the equivocation of the key never increases with increasing N. This equivocation is a theoretical secrecy index—theoretical in that it allows the enemy unlimited time to analyse the cryptogram.
+
+The function H(N) for a certain idealized type of cipher called the random cipher is determined. With certain modifications this function can be applied to many cases of practical interest. This gives a way of calculating approximately how much intercepted material is required to obtain a solution to a secrecy system. It appears from this analysis that with ordinary languages and the usual types of ciphers (not codes) this “unicity distance” is approximately H(K)/D. Here H(K) is a number measuring the “size” of the key space. If all keys are a priori equally likely H(K) is the logarithm of the number of possible keys. D is the redundancy of the language and measures the amount of “statistical constraint” imposed by the language. In simple substitution with random key H(K) is log 26! or about 20 and D (in decimal digits per letter) is about .7 for English. Thus unicity occurs at about 30 letters.
+
+It is possible to construct secrecy systems with a finite key for certain “languages” in which the equivocation does not approach zero as N→∞. In this case, no matter how much material is intercepted, the enemy still does not obtain a unique solution to the cipher but is left with many alternatives, all of reasonable probability. Such systems are called ideal systems. It is possible in any language to approximate such behavior—i.e., to make the approach to zero of H(N) recede out to arbitrarily large N. However, such systems have a number of drawbacks, such as complexity and sensitivity to errors in transmission of the cryptogram.
+
+The third part of the paper is concerned with “practical secrecy.” Two systems with the same key size may both be uniquely solvable when N letters have been intercepted, but differ greatly in the amount of labor required to effect this solution. An analysis of the basic weaknesses of secrecy systems is made. This leads to methods for constructing systems which will require a large amount of work to solve. Finally, a certain incompatibility among the various desirable qualities of secrecy systems is discussed.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <p>Shannon develops an information-theoretic model of cryptographic secrecy. A secrecy system is represented as a probabilistic family of reversible transformations from messages to cryptograms, with uncertainty assigned to both messages and keys. This formalization allows cryptanalysis to be treated as Bayesian inference: interception changes the adversary’s posterior distribution over possible messages and keys.</p>
+
+<p>The paper introduces the language redundancy parameter and connects statistical regularities in plaintext to the solvability of ciphers. It defines algebraic operations for composing secrecy systems, including weighted selection among systems and sequential product encryption. It also distinguishes pure systems, whose keys induce equivalent cryptanalytic problems, from mixed systems, and characterizes pure systems through residue classes of mutually confusable messages and cryptograms.</p>
+
+<p>The central security measure is equivocation, the conditional entropy remaining about the message or key after ciphertext is observed. Shannon defines perfect secrecy as the condition that ciphertext does not change the message distribution. For finite message spaces, he proves that perfect secrecy requires at least as many possible keys as messages and gives the Latin-square construction underlying the one-time pad. For message sources with redundancy, he shows that the required key rate can be reduced to the source’s information rate, while perfect secrecy for unrestricted message lengths still requires an effectively unbounded key stream.</p>
+
+<p>For finite-key systems, Shannon models the decline of uncertainty as ciphertext accumulates. In the random-cipher approximation, the unicity distance—the amount of ciphertext expected to reduce the plausible solution set to essentially one—is approximately the key entropy divided by the language redundancy. The paper applies this framework to classical systems such as substitution, transposition, and Vigenère ciphers, while noting corrections caused by incomplete key usage, preserved letter frequencies, and boundary effects in natural language.</p>
+
+<p>The paper separates theoretical secrecy from practical secrecy. A cipher may have negligible equivocation and therefore a unique solution while still requiring impractical computational effort to find it. Shannon therefore defines a work characteristic and analyzes attacks based on statistical tests, incremental key recovery, probable words, and trial strategies that partition the key space. He argues that secure practical designs should use substantial portions of the key in producing each ciphertext element and should make the relationships among key variables, plaintext variables, and observable statistics difficult to decompose.</p>
+
+<p>The final design principles are diffusion and confusion. Diffusion spreads plaintext redundancy into long-range ciphertext statistics; confusion makes the relationship between key structure and ciphertext statistics complex. Shannon proposes mixing transformations built from repeated noncommuting operations, while recognizing a trade-off: stronger mixing can increase cryptanalytic work but also causes greater error propagation. More generally, the paper identifies an incompatibility among secrecy, key size, operational simplicity, error resistance, and message expansion, framing cryptographic design as a compromise among these criteria.</p>
+
+<p><strong>Influence.</strong> The paper established terminology and analytical tools that became part of information-theoretic security. Its equivocation-based treatment was extended to communication models with an eavesdropper in Wyner’s wiretap-channel work, which studies secrecy through the eavesdropper’s equivocation and secrecy-capacity trade-offs. (<a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/j.1538-7305.1975.tb02040.x">onlinelibrary.wiley.com</a>) Later historical analysis also identifies Shannon’s confusion and diffusion concepts as informing the substitution and permutation components used in Lucifer and DES. (<a href="https://eprint.iacr.org/2022/100.pdf">eprint.iacr.org</a>) The paper’s bibliographic record is confirmed by the publisher as a Bell System Technical Journal article published in October 1949, volume 28, issue 4, pages 656–715. (<a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/j.1538-7305.1949.tb00928.x">onlinelibrary.wiley.com</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/cryptography/">cryptography</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/confusion/">confusion</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/cryptanalysis/">cryptanalysis</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/cryptography/">cryptography</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/diffusion/">diffusion</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/equivocation/">equivocation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/information-theory/">information theory</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/one-time-pad/">one time pad</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/perfect-secrecy/">perfect secrecy</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/secrecy-systems/">secrecy systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/unicity-distance/">unicity distance</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:53
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

@@ -1,0 +1,170 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>TAO: Facebook’s Distributed Data Store for the Social Graph | Papers We Love</title>
+        <meta name="description" content="We introduce a simple data model and API tailored for serving the social graph, and TAO, an implementation of this model. TAO is a geographically distributed data store that provides efficient and timely access to the social graph for Facebook’s dema" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="TAO: Facebook’s Distributed Data Store for the Social Graph | Papers We Love" />
+        <meta property="og:description" content="We introduce a simple data model and API tailored for serving the social graph, and TAO, an implementation of this model. TAO is a geographically distributed data store that provides efficient and timely access to the social graph for Facebook’s dema" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/tao-facebooks-distributed-data-store-for-the-socia-8ae96824/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:53">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">TAO: Facebook’s Distributed Data Store for the Social Graph</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Anthony Giardullo</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Dmitri Petrov</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">George Cabrera</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Harry Li</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Hui Ding</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Jack Ferris</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Lovro Puzar</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Mark Marchukov</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Nathan Bronson</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Peter Dimov</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Prasad Chakka</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Sachin Kulkarni</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Venkat Venkataramani</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Yee Jiun Song</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Zach Amsden</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/datastores/tao-facebook-distributed-datastore.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: June 2013, 2013 USENIX Annual Technical Conference (USENIX ATC ’13), San Jose, California</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>We introduce a simple data model and API tailored for serving the social graph, and TAO, an implementation of this model. TAO is a geographically distributed data store that provides efficient and timely access to the social graph for Facebook’s demanding workload using a fixed set of queries. It is deployed at Facebook, replacing memcache for many data types that fit its model. The system runs on thousands of machines, is widely distributed, and provides access to many petabytes of data. TAO can process a billion reads and millions of writes each second.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="paper-summary">Paper summary</h2>
+
+<p>TAO is a geographically distributed, read-optimized data store designed to serve Facebook’s highly customized social-graph workload. It replaces application-managed look-aside caching for suitable data types while retaining MySQL as the persistent storage layer. The system exposes a deliberately restricted graph model consisting of typed objects and directed associations, together with APIs for object operations and association-list queries such as counts, ranges, time ranges, additions, deletions, and type changes.</p>
+
+<p>The architecture separates persistent storage from graph-aware caching. Data is partitioned into logical shards, with objects assigned permanently to shards and associations stored according to their source object. Within each region, leader caches coordinate access to databases and serialize writes, while follower tiers serve clients and scale read throughput. Multiple geographic regions maintain complete copies of the graph through asynchronous master/slave replication. This design keeps reads local to a region while sending writes to the region that masters each shard.</p>
+
+<p>TAO favors availability, read performance, and machine efficiency over strong consistency. Its normal consistency model is eventual consistency, with read-after-write consistency generally provided within a single follower tier. Cache invalidation and refill messages propagate asynchronously, while version numbers, repair jobs, failover mechanisms, shard cloning, and client-side caching address races, failures, and hot objects. Critical reads can be routed to the master region when stronger freshness is required.</p>
+
+<p>The production workload is overwhelmingly read-oriented: in the reported sample, reads accounted for 99.8% of API requests, the overall read cache hit rate was 96.4%, and replication lag was below one second for 85% of the tracing period. The deployment processed approximately one billion reads and millions of writes per second over many petabytes, demonstrating that a constrained data model combined with hierarchical caching and relaxed consistency could support web-scale social-graph serving.</p>
+
+<h2 id="influence">Influence</h2>
+
+<p>The clearest documented follow-on is <strong>RAMP-TAO</strong>, which explicitly builds on TAO to add atomic-visibility and read-transaction guarantees without redesigning the underlying highly available, read-optimized store. The follow-on work reports that partial transactional updates occurred in approximately 1 in 1,500 batched reads and presents a protocol with 0.42% memory overhead, while allowing more than 99.9% of reads to complete in one local-cache round trip. (<a href="https://engineering.fb.com/2021/08/18/core-infra/ramp-tao/">engineering.fb.com</a>)</p>
+
+<p>RAMP-TAO demonstrates a direct research and engineering influence: TAO’s original separation of caching, replication, and consistency concerns became the foundation for layering stronger guarantees selectively, rather than imposing transactional overhead on all workloads. Meta described this approach as applicable beyond TAO to other large-scale, read-optimized systems. (<a href="https://engineering.fb.com/2021/08/18/core-infra/ramp-tao/">engineering.fb.com</a>)</p>
+
+<p>The original paper was published as a USENIX ATC 2013 conference paper in June 2013, with the bibliographic details and author list confirmed by USENIX. (<a href="https://www.usenix.org/biblio/tao-facebook%E2%80%99s-distributed-data-store-social-graph">usenix.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/datastores/">datastores</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-caching/">distributed caching</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-data-store/">distributed data store</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/eventual-consistency/">eventual consistency</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/fault-tolerance/">fault tolerance</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/geo-replication/">geo replication</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/graph-database/">graph database</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/mysql/">mysql</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/read-optimized-storage/">read optimized storage</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/scalable-systems/">scalable systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/social-graph/">social graph</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:53
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

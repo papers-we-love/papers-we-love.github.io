@@ -1,0 +1,151 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Making Programs Forget: Enforcing Lifetime For Sensitive Data | Papers We Love</title>
+        <meta name="description" content="This paper introduces guaranteed data lifetime, a novel system property ensuring that sensitive data cannot be retrieved from a system beyond a specified time. The trivial way to achieve this is to “reboot”; however, this is disruptive from the user’" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Making Programs Forget: Enforcing Lifetime For Sensitive Data | Papers We Love" />
+        <meta property="og:description" content="This paper introduces guaranteed data lifetime, a novel system property ensuring that sensitive data cannot be retrieved from a system beyond a specified time. The trivial way to achieve this is to “reboot”; however, this is disruptive from the user’" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/making-programs-forget-enforcing-lifetime-for-sens-cf29cfd5/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:01">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Making Programs Forget: Enforcing Lifetime For Sensitive Data</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Byung-Gon Chun</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Gautam Altekar</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Jayanthkumar Kannan</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Petros Maniatis</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://www.usenix.org/events/hotos11/tech/final_files/Kannan.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: May 2011, 13th Workshop on Hot Topics in Operating Systems (HotOS XIII), Napa, California</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>This paper introduces guaranteed data lifetime, a novel system property ensuring that sensitive data cannot be retrieved from a system beyond a specified time. The trivial way to achieve this is to “reboot”; however, this is disruptive from the user’s perspective, and may not even eliminate disk copies. We discuss an alternate approach based on state re-incarnation where data expiry is completely transparent to the user, and can be used even if the system is not designed a priori to provide the property.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <p>The paper introduces <strong>guaranteed data lifetime</strong>, the property that sensitive data supplied to an application should become irretrievable from the local system after a specified lifetime. It targets legacy applications that may retain data in application memory, operating-system buffers, caches, files, swap, or other components without explicit support for secure expiration.</p>
+
+<p>The proposed mechanism, called <strong>state re-incarnation</strong>, checkpoints an application before sensitive input is delivered, logs subsequent inputs and nondeterministic results, and restores the checkpoint when the data expires. The system then replays the logged execution while replacing the sensitive input with a non-sensitive substitute. The resulting application state is intended to preserve non-sensitive user-visible effects while eliminating state derived from the expired data. The paper considers omission, ordinary substitution, and consistent substitution; consistent substitution uses symbolic execution and constraint solving to preserve the original control flow as closely as possible.</p>
+
+<p>The main technical challenges are fidelity, pervasive coverage of all data-retention locations, containment of information shared with other processes or remote systems, and performance. The authors identify a fundamental tension between secrecy and fidelity: a substitute that preserves more application behavior may necessarily reveal properties such as the sensitive input’s length or control-flow constraints. The paper therefore proposes leakage thresholds and application shutdown as a fallback when acceptable fidelity cannot be achieved.</p>
+
+<p>The work presents a preliminary Valgrind-based logging experiment using Bash. Of 33,481 executed instructions, 266 processed tainted input, generating 9,730 constraints. The authors estimate that continuous logging could incur approximately 3× overhead in representative client-side settings, while replay could run on a shadow application image. The paper is primarily a design proposal; it does not report a complete, general-purpose implementation or demonstrate that the proposed guarantees hold across arbitrary applications and system components. (<a href="https://www.usenix.org/events/hotos11/tech/final_files/Kannan.pdf">usenix.org</a>)</p>
+
+<p>Subsequent research cited the paper as an approach based on snapshotting, rollback, and replay for removing private state. <em>Eternal Sunshine of the Spotless Machine: Protecting Privacy with Ephemeral Channels</em> pursued a different, hypervisor-based design for forensic deniability, motivated by persistent traces in operating-system and peripheral buffers. <em>Gone, But Not Forgotten: The Current State of Private Computing</em> explicitly contrasts the paper’s replay-based approach with its proposed system-level private-computing service, noting the replay method’s implementation complexity and overhead. These works indicate that the paper helped frame data lifetime and post-use trace removal as system-wide privacy problems, while later designs explored stronger isolation and more pervasive erasure mechanisms. (<a href="https://www.cs.utexas.edu/users/witchel/pubs/dunn12osdi-lacuna.pdf">cs.utexas.edu</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/security/">security</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/application-integrity/">application integrity</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/checkpointing/">checkpointing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/dynamic-taint-tracking/">dynamic taint tracking</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/guaranteed-data-lifetime/">guaranteed data lifetime</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/operating-systems/">operating systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/perturbed-replay/">perturbed replay</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/secure-deletion/">secure deletion</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/sensitive-data/">sensitive data</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/state-reincarnation/">state reincarnation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/symbolic-execution/">symbolic execution</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:01
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

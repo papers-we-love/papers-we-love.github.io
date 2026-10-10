@@ -1,0 +1,156 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Ideal Hash Trees | Papers We Love</title>
+        <meta name="description" content="Hash Trees with nearly ideal characteristics are described. These Hash Trees require no initial root hash table yet are faster and use significantly less space than chained or double hash trees. Insert, search and delete times are small and constant," />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Ideal Hash Trees | Papers We Love" />
+        <meta property="og:description" content="Hash Trees with nearly ideal characteristics are described. These Hash Trees require no initial root hash table yet are faster and use significantly less space than chained or double hash trees. Insert, search and delete times are small and constant," />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/ideal-hash-trees-04d06b99/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:53">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Ideal Hash Trees</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Phil Bagwell</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/data_structures/ideal-hash-trees.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: 2001 (EPFL technical report; bibliographic records variously identify October or November 2001)</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Hash Trees with nearly ideal characteristics are described. These Hash Trees require no initial root hash table yet are faster and use significantly less space than chained or double hash trees. Insert, search and delete times are small and constant, independent of key set size, operations are O(1). Small worst-case times for insert, search and removal operations can be guaranteed and misses cost less than successful searches. Array Mapped Tries(AMT), first described in Fast and Space Efficient Trie Searches, Bagwell [2000], form the underlying data structure. The concept is then applied to external disk or distributed storage to obtain an algorithm that achieves single access searches, close to single access inserts and greater than 80 percent disk block load factors. Comparisons are made with Linear Hashing, Litwin, Neimat, and Schneider [1993] and B-Trees, R.Bayer and E.M.McCreight [1972]. In addition two further applications of AMTs are briefly described, namely, Class/Selector dispatch tables and IP Routing tables. Each of the algorithms has a performance and space usage that is comparable to contemporary implementations but simpler.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h3 id="technical-contribution">Technical contribution</h3>
+
+<p>The paper introduces Hash Array Mapped Tries (HAMTs), combining hashing with Array Mapped Tries. A key is hashed, and successive groups of hash bits select levels of a trie. Each trie node uses a bitmap to identify occupied positions and a compact array containing only the corresponding non-empty entries. This avoids allocating a full array of pointers at every node while preserving direct indexing and good cache locality. With a 32-way branching factor, five hash bits are consumed at each level, and population-count operations locate entries in the compact arrays.</p>
+
+<p>The proposed in-memory structure supports search, insertion, and deletion. Collisions are resolved by extending the trie with additional levels; if the available hash bits are exhausted, the key is rehashed using the trie level. Lazy resizing of the root table reduces the growth cost, while pooled allocation and incremental defragmentation control memory overhead. The paper reports near-constant measured operation times over key sets ranging from thousands to millions of entries, with space usage dependent on the root-table resize factor. It also describes a fallback using the complete key to guarantee a bound proportional to key length when hash differentiation takes unusually long.</p>
+
+<p>The paper further proposes Partition Hashing for external and distributed storage. Buckets are divided according to hash-order partition points, and neighboring buckets can share records before a split is required. Simulations report one-access searches, approximately 1.1 accesses per insertion at load factors above 80 percent, and higher load factors when additional insertion accesses are accepted. The same partition-table approach is extended to distributed files, ordered storage, IP routing, and class-selector method dispatch.</p>
+
+<h3 id="influence-on-later-research-and-industry">Influence on later research and industry</h3>
+
+<p>HAMT became a foundational design for persistent associative maps and sets. Later implementations adapted Bagwell’s mutable structure using path copying and structural sharing; this approach is used in Clojure’s persistent hash maps and in persistent collection implementations associated with Scala. (<a href="https://en.wikipedia.org/wiki/Persistent_data_structure">en.wikipedia.org</a>)</p>
+
+<p>Subsequent research refined the representation for immutable JVM collections. The CHAMP structure, described as a compressed hash-array mapped prefix tree, targets lower memory use and faster iteration and equality operations; Scala’s immutable <code>HashMap</code> identifies itself as a CHAMP implementation and cites that work. (<a href="https://ir.cwi.nl/pub/24029/24029B.pdf">ir.cwi.nl</a>)</p>
+
+<p>The HAMT design has also been incorporated into systems-oriented software. The IPLD HashMap specification uses a HAMT-based layout and combines it with CHAMP mutation and canonicalization rules for content-addressed storage. CPython’s source includes an internal HAMT implementation for immutable dictionary operations. (<a href="https://ipld.io/specs/advanced-data-layouts/hamt/spec/">ipld.io</a>)</p>
+
+<p>Thus, the paper’s principal lasting impact is the use of bitmap-compressed hash tries as a practical implementation technique for memory-efficient, persistent, and distributed associative collections.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/data_structures/">data structures</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/array-mapped-tries/">array mapped tries</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/database/">database</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-storage/">distributed storage</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/hash-array-mapped-tries/">hash array mapped tries</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/hash-tables/">hash tables</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/hashing/">hashing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/partition-hashing/">partition hashing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/routers/">routers</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/routing/">routing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/searching/">searching</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:53
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

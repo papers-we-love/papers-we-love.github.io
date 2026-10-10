@@ -1,0 +1,168 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Decoupling Cores, Kernels, and Operating Systems | Papers We Love</title>
+        <meta name="description" content="We present Barrelfish/DC, an extension to the Barrelfish OS which decouples physical cores from a native OS kernel, and furthermore the kernel itself from the rest of the OS and application state. In Barrelfish/DC, native kernel code on any core can " />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Decoupling Cores, Kernels, and Operating Systems | Papers We Love" />
+        <meta property="og:description" content="We present Barrelfish/DC, an extension to the Barrelfish OS which decouples physical cores from a native OS kernel, and furthermore the kernel itself from the rest of the OS and application state. In Barrelfish/DC, native kernel code on any core can " />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/decoupling-cores-kernels-and-operating-systems-365b9beb/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:01">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Decoupling Cores, Kernels, and Operating Systems</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Gerd Zellweger</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Kornilios Kourtis</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Simon Gerber</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Timothy Roscoe</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-zellweger.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: October 6–8, 2014; 11th USENIX Symposium on Operating Systems Design and Implementation (OSDI ’14), Broomfield, Colorado</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>We present Barrelfish/DC, an extension to the Barrelfish OS which decouples physical cores from a native OS kernel, and furthermore the kernel itself from the rest of the OS and application state. In Barrelfish/DC, native kernel code on any core can be quickly replaced, kernel state moved between cores, and cores added and removed from the system transparently to applications and OS processes, which continue to execute.
+
+Barrelfish/DC is a multikernel with two novel ideas: the use of boot drivers to abstract cores as regular devices, and a partitioned capability system for memory management which externalizes core-local kernel state.
+
+We show by performance measurements of real applications and device drivers that the approach is practical enough to be used for a number of purposes, such as online kernel upgrades, and temporarily delivering hard real-time performance by executing a process under a specialized, single-application kernel.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="contributions-and-design">Contributions and design</h2>
+
+<p>The paper presents Barrelfish/DC, an extension of the Barrelfish multikernel that treats physical cores, kernel instances, and per-core operating-system state as independently replaceable and movable entities. Its central abstraction is the <strong>OSnode</strong>, which contains the state associated with a core, including capabilities, process-control information, interrupt state, scheduling state, and timer information. A <strong>Kernel Control Block (KCB)</strong> provides the kernel with a compact, stable handle to the state that must survive kernel replacement.</p>
+
+<p>Two mechanisms enable the design:</p>
+
+<ul>
+  <li><strong>Boot drivers</strong> represent cores similarly to peripheral devices and execute on another core. They encapsulate platform-specific operations for booting, suspending, resuming, and powering down target cores while leaving kernel-selection policy outside the kernel.</li>
+  <li><strong>Partitioned capabilities</strong> externalize core-local memory and resource state. Because the kernel does not directly own most persistent OS state, a kernel can be stopped and replaced, then reconstructed from the existing OSnode and KCB.</li>
+</ul>
+
+<p>The system supports kernel replacement, OSnode migration between cores, temporary co-location of multiple OSnodes on one core, and deployment of specialized kernels. The authors demonstrate applications including online kernel updates, core reconfiguration, device-driver continuity, and hard-real-time execution using a dedicated kernel with no scheduler or external interrupts.</p>
+
+<h2 id="results-and-limitations">Results and limitations</h2>
+
+<p>On the evaluated x86 systems, stopping a core in Barrelfish/DC took approximately 0.8–3.5 microseconds and was largely unaffected by system load, whereas Linux 3.13 required approximately 46–131 milliseconds when idle and substantially longer under load. Core startup in Barrelfish/DC was dominated by kernel-image preparation and ranged from approximately 7–29 milliseconds when idle, comparable to Linux on the tested systems. Restarting a kernel caused only brief, application-specific disturbances for the Ethernet driver, web server, and PostgreSQL experiments. Parking an OSnode introduced expected latency and bandwidth variation because multiple OSnodes shared a core through time slicing.</p>
+
+<p>A specialized Barrelfish/DC kernel eliminated the large execution-time outliers observed with ordinary Barrelfish and Linux configurations in the synthetic real-time benchmark. The approach nevertheless depends on maintaining a stable OSnode format, currently assumes cache-coherent cores and shared physical memory for practical migration, and leaves scheduling, power-management, migration policy, fault tolerance, and stronger isolation as open issues.</p>
+
+<h2 id="influence-on-subsequent-work">Influence on subsequent work</h2>
+
+<p>The paper’s ideas have been cited in later research on decentralized operating-system structures for manycore processors. For example, work on MedusaVM+ cites it alongside the multikernel literature when motivating decentralized virtual-memory systems for many-core machines. (<a href="https://www.sciencedirect.com/science/article/abs/pii/S1383762120300965">sciencedirect.com</a>) A later study of distributed operating systems for lightweight manycores also cites the paper when discussing distributed OS instances, OS-level abstractions, and reducing OS memory overhead. (<a href="https://www.sciencedirect.com/science/article/abs/pii/S1383762120300965">sciencedirect.com</a>) The available evidence indicates research influence primarily through the multikernel and dynamic-core-management design space; no concrete widespread industry deployment of Barrelfish/DC itself was identified in the search. The paper appeared in the OSDI 2014 proceedings and is listed as pages 17–31. (<a href="https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-zellweger.pdf">usenix.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/unikernels/">unikernels</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/barrelfish/">barrelfish</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/boot-drivers/">boot drivers</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/capability-systems/">capability systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/core-hotplugging/">core hotplugging</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/dynamic-cores/">dynamic cores</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/kernel-replacement/">kernel replacement</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/multikernel/">multikernel</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/operating-systems/">operating systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/osnode/">osnode</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/real-time-systems/">real time systems</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:01
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

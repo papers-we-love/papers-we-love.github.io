@@ -1,0 +1,157 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Jitsu: Just-In-Time Summoning of Unikernels | Papers We Love</title>
+        <meta name="description" content="Network latency is a problem for all cloud services. It can be mitigated by moving computation out of remote datacenters by rapidly instantiating local services near the user. This requires an embedded cloud platform on which to deploy multiple appli" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Jitsu: Just-In-Time Summoning of Unikernels | Papers We Love" />
+        <meta property="og:description" content="Network latency is a problem for all cloud services. It can be mitigated by moving computation out of remote datacenters by rapidly instantiating local services near the user. This requires an embedded cloud platform on which to deploy multiple appli" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/jitsu-just-in-time-summoning-of-unikernels-f79bc70e/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:01">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Jitsu: Just-In-Time Summoning of Unikernels</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Amir Chaudhry</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Anil Madhavapeddy</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Balraj Singh</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Dave Scott</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">David Sheets</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Ian Leslie</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Jon Crowcroft</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Jon Ludlam</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Magnus Skjegstad</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Richard Mortier</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Thomas Gazagnaire</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Thomas Leonard</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://www.usenix.org/system/files/conference/nsdi15/nsdi15-paper-madhavapeddy.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: May 4–6, 2015, 12th USENIX Symposium on Networked Systems Design and Implementation (NSDI ’15), Oakland, California, USA</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Network latency is a problem for all cloud services. It can be mitigated by moving computation out of remote datacenters by rapidly instantiating local services near the user. This requires an embedded cloud platform on which to deploy multiple applications securely and quickly. We present Jitsu, a new Xen toolstack that satisfies the demands of secure multi-tenant isolation on resource-constrained embedded ARM devices. It does this by using unikernels: lightweight, compact, single address space, memory-safe virtual machines (VMs) written in a high-level language. Using fast shared memory channels, Jitsu provides a directory service that launches unikernels in response to network traffic and masks boot latency. Our evaluation shows Jitsu to be a power-efficient and responsive platform for hosting cloud services in the edge network while preserving the strong isolation guarantees of a type-1 hypervisor.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <ul>
+  <li>The paper presents <strong>Jitsu</strong>, a Xen-based toolstack for launching memory-safe MirageOS unikernels on demand, particularly on resource-constrained ARM devices. Its main mechanisms are optimized VM creation, zero-copy shared-memory communication through <strong>Conduits</strong>, and <strong>Synjitsu</strong>, a proxy that transfers TCP state after the target unikernel has booted.</li>
+  <li>The evaluation reports cold-start response times of approximately 300–350 ms on ARM and about 30 ms on x86, while preserving type-1 hypervisor isolation. The implementation also demonstrated substantially lower startup latency than the Docker configuration evaluated by the authors.</li>
+  <li>A documented follow-on research project is <strong>Fractal: Automated Application Scaling</strong>, which provides extensions and an API over Jitsu for application-controlled replica creation, lifecycle management, failure recovery, and traffic distribution. (<a href="https://arxiv.org/abs/1902.09636">arxiv.org</a>)</li>
+  <li>The associated open-source Jitsu implementation continued as a DNS server and VM-management system capable of booting unikernels on demand; its repository documents support for MirageOS and Rumprun and multiple virtualization backends. (<a href="https://github.com/mirage/jitsu">github.com</a>)</li>
+  <li>The sources reviewed show clear influence on subsequent unikernel and self-scaling systems research, but they do not provide evidence of a specific commercial or industrial deployment of Jitsu itself. The paper’s bibliographic identity and publication details are corroborated by USENIX and DBLP. (<a href="https://www.usenix.org/conference/nsdi15/technical-sessions/presentation/madhavapeddy">usenix.org</a>)</li>
+</ul>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/unikernels/">unikernels</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/arm-virtualization/">arm virtualization</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/edge-computing/">edge computing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/embedded-cloud/">embedded cloud</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/low-latency/">low latency</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/memory-safety/">memory safety</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/multi-tenant-isolation/">multi tenant isolation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/on-demand-deployment/">on demand deployment</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/shared-memory-communication/">shared memory communication</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/unikernels/">unikernels</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/xen/">xen</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:01
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

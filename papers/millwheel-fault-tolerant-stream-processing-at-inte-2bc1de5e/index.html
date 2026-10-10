@@ -1,0 +1,156 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>MillWheel: Fault-Tolerant Stream Processing at Internet Scale | Papers We Love</title>
+        <meta name="description" content="MillWheel is a framework for building low-latency data-processing applications that is widely used at Google. Users specify a directed computation graph and application code for individual nodes, and the system manages persistent state and the contin" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="MillWheel: Fault-Tolerant Stream Processing at Internet Scale | Papers We Love" />
+        <meta property="og:description" content="MillWheel is a framework for building low-latency data-processing applications that is widely used at Google. Users specify a directed computation graph and application code for individual nodes, and the system manages persistent state and the contin" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/millwheel-fault-tolerant-stream-processing-at-inte-2bc1de5e/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:00">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">MillWheel: Fault-Tolerant Stream Processing at Internet Scale</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Alex Balikov</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Daniel Mills</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Josh Haberman</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Kaya Bekiroglu</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Paul Nordstrom</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Reuven Lax</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Sam McVeety</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Sam Whittle</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Slava Chernyak</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Tyler Akidau</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/41378.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: August 2013 (Proceedings of the VLDB Endowment, Vol. 6, No. 11; VLDB 2013)</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>MillWheel is a framework for building low-latency data-processing applications that is widely used at Google. Users specify a directed computation graph and application code for individual nodes, and the system manages persistent state and the continuous flow of records, all within the envelope of the framework’s fault-tolerance guarantees.
+This paper describes MillWheel’s programming model as well as its implementation. The case study of a continuous anomaly detector in use at Google serves to motivate how many of MillWheel’s features are used. MillWheel’s programming model provides a notion of logical time, making it simple to write time-based aggregations. MillWheel was designed from the outset with fault tolerance and scalability in mind. In practice, we find that MillWheel’s unique combination of scalability, fault tolerance, and a versatile programming model lends itself to a wide variety of problems at Google.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <p>MillWheel presents a general-purpose programming model and execution framework for low-latency stream processing at Google scale. Applications are expressed as directed graphs of user-defined computations that process <code>(key, value, timestamp)</code> records. Computations execute serially for each key but can run in parallel across keys, allowing the framework to handle partitioning, load balancing, persistent state, timers, and record delivery without requiring application authors to implement distributed-systems recovery logic.</p>
+
+<p>The central design contribution is the integration of persistent per-key state, logical event time, low watermarks, and timers with fault-tolerant execution. Low watermarks provide a monotonic estimate that all work up to a particular timestamp has been observed, enabling correct handling of out-of-order data and event-time windowing. Timers can be triggered by wall-clock time or low-watermark progress. Exactly-once processing is implemented through record identifiers, deduplication, atomic state updates, and checkpointed productions. State, timers, and pending outputs are kept within a consistency envelope, while sequencer tokens prevent stale or “zombie” workers from modifying state after ownership changes.</p>
+
+<p>The implementation uses replicated storage such as Bigtable or Spanner, key-interval sharding, dynamic load balancing, fine-grained checkpointing, and a centralized, shardable authority for globally consistent low-watermark tracking. The system supports both strong productions, which checkpoint outputs before delivery, and weaker optimizations for applications whose computations are already idempotent. Reported experiments demonstrated millisecond-scale record-delivery latency, approximately constant median latency as deployments grew from 20 to 2,000 CPUs, modest additional watermark lag per pipeline stage, and a twofold reduction in normalized CPU load from framework-level caching. The paper also identifies limitations: highly skewed keys, non-checkpointable operations, and workloads whose progress is blocked by severe input delay.</p>
+
+<p>The paper had a documented influence on subsequent stream-processing abstractions. The later Google Dataflow model explicitly describes itself as being based partly on MillWheel, extending its ideas around event time, watermarks, windowing, triggers, and the trade-offs among correctness, latency, and cost. (<a href="https://www.vldb.org/pvldb/vol8/p1792-Akidau.pdf">vldb.org</a>) Apache Beam subsequently adopted the Dataflow model as the basis of a portable programming layer for batch and streaming pipelines across multiple execution engines, including Google Cloud Dataflow, Apache Flink, and Apache Spark. (<a href="https://beam.apache.org/documentation/runners/capability-matrix/">beam.apache.org</a>) Later surveys identify MillWheel and the Dataflow model as influential in popularizing watermarks, out-of-order processing, and trigger-based stream computation, while subsequent systems research continues to cite MillWheel for its state-management and strong-production approach. (<a href="https://link.springer.com/article/10.1007/s00778-023-00819-8">link.springer.com</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/distributed_systems/">distributed systems</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-systems/">distributed systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/event-time-processing/">event time processing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/exactly-once-processing/">exactly once processing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/fault-tolerance/">fault tolerance</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/low-watermarks/">low watermarks</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/out-of-order-data/">out of order data</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/persistent-state/">persistent state</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/scalability/">scalability</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/stream-processing/">stream processing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/timers/">timers</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:00
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

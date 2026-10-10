@@ -1,0 +1,147 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Significantly Improving Lossy Compression for Scientific Data Sets Based on Multidimensional Prediction and Error-Controlled Quantization | Papers We Love</title>
+        <meta name="description" content="Today’s HPC applications are producing extremely large amounts of data, such that data storage and analysis are becoming more challenging for scientific research. In this work, we design a new error-controlled lossy compression algorithm for large-sc" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Significantly Improving Lossy Compression for Scientific Data Sets Based on Multidimensional Prediction and Error-Controlled Quantization | Papers We Love" />
+        <meta property="og:description" content="Today’s HPC applications are producing extremely large amounts of data, such that data storage and analysis are becoming more challenging for scientific research. In this work, we design a new error-controlled lossy compression algorithm for large-sc" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/significantly-improving-lossy-compression-for-scie-e41ec399/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:53">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Significantly Improving Lossy Compression for Scientific Data Sets Based on Multidimensional Prediction and Error-Controlled Quantization</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Dingwen Tao</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Franck Cappello</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Sheng Di</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Zizhong Chen</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/data_compression/Significantly_Improving_Lossy_Compression_for_Scientific_Data_Sets_Based_on_Multidimensional_Prediction_and_Error-Controlled_Quantization.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: June 30, 2017; published in the Proceedings of the 2017 IEEE 31st International Parallel and Distributed Processing Symposium (IPDPS 2017), held May 29–June 2, 2017</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Today’s HPC applications are producing extremely large amounts of data, such that data storage and analysis are becoming more challenging for scientific research. In this work, we design a new error-controlled lossy compression algorithm for large-scale scientific data. Our key contribution is significantly improving the prediction hitting rate (or prediction accuracy) for each data point based on its nearby data values along multiple dimensions. We derive a series of multilayer prediction formulas and their unified formula in the context of data compression. One serious challenge is that the data prediction has to be performed based on the preceding decompressed values during the compression in order to guarantee the error bounds, which may degrade the prediction accuracy in turn. We explore the best layer for the prediction by considering the impact of compression errors on the prediction accuracy. Moreover, we propose an adaptive error-controlled quantization encoder, which can further improve the prediction hitting rate considerably. The data size can be reduced significantly after performing the variable-length encoding because of the uneven distribution produced by our quantization encoder. We evaluate the new compressor on production scientific data sets and compare it with many other state-of-the-art compressors: GZIP, FPZIP, ZFP, SZ-1.1, and ISABELA. Experiments show that our compressor is the best in class, especially with regard to compression factors (or bit-rates) and compression errors (including RMSE, NRMSE, and PSNR). Our solution is better than the second-best solution by more than a 2x increase in the compression factor and 3.8x reduction in the normalized root mean squared error on average, with reasonable error bounds and user-desired bit-rates.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <p>The paper introduces SZ-1.4, an error-bounded lossy compressor for multidimensional scientific floating-point data. Its main technical contributions are a multilayer multidimensional predictor, selection of the prediction depth using decompressed rather than original values, adaptive error-controlled quantization, and Huffman-based variable-length encoding of the resulting nonuniform quantization codes. The resulting algorithm has overall linear time complexity and supports parallel processing by independently compressing data partitions.</p>
+
+<p>On the evaluated climate, X-ray, and hurricane data sets, the authors report higher compression factors and lower RMSE/NRMSE than GZIP, FPZIP, ZFP, SZ-1.1, and ISABELA under the tested error bounds. The principal trade-offs are lower sequential throughput than ZFP and application-dependent autocorrelation of compression errors; the paper also reports near-linear parallel scaling through 1,024 processes, with efficiency declining to approximately 90% at the largest tested scale.</p>
+
+<p>The work influenced subsequent scientific-compression research primarily through the SZ-1.4 design and implementation. Later work used SZ-1.4 as a reference compressor when developing SIMD CPU acceleration, reporting improvements in rate-distortion performance and speed relative to SZ-1.4. (<a href="https://arxiv.org/abs/2201.04614">arxiv.org</a>) Z-checker subsequently treated SZ-1.4 as a principal compressor in a broader framework for evaluating compression quality across scientific applications and metrics. (<a href="https://journals.sagepub.com/doi/10.1177/1094342017737147">journals.sagepub.com</a>) Later research on unstructured-mesh compression explicitly redesigned the prediction stage of SZ and describes SZ-1.4’s Lorenzo-prediction, quantization, and encoding pipeline as a baseline. (<a href="https://onlinelibrary.wiley.com/doi/10.1111/cgf.15097">onlinelibrary.wiley.com</a>) Survey literature likewise places SZ-1.4 among the foundational prediction-based, error-bounded scientific compressors that motivated later developments in prediction, quantization, and quality control. (<a href="https://doi.org/10.1145%2F3733104">doi.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/data_compression/">data compression</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/error-bounded-compression/">error bounded compression</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/error-controlled-quantization/">error controlled quantization</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/high-performance-computing/">high performance computing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/huffman-coding/">huffman coding</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/lossy-compression/">lossy compression</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/multidimensional-prediction/">multidimensional prediction</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/parallel-compression/">parallel compression</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/prediction-hitting-rate/">prediction hitting rate</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/scientific-data-compression/">scientific data compression</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/variable-length-encoding/">variable length encoding</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:53
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

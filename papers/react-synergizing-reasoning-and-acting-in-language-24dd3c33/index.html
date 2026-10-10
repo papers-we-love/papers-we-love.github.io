@@ -1,0 +1,166 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>ReAct: Synergizing Reasoning and Acting in Language Models | Papers We Love</title>
+        <meta name="description" content="While large language models (LLMs) have demonstrated impressive performance across tasks in language understanding and interactive decision making, their abilities for reasoning (e.g. chain-of-thought prompting) and acting (e.g. action plan generatio" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="ReAct: Synergizing Reasoning and Acting in Language Models | Papers We Love" />
+        <meta property="og:description" content="While large language models (LLMs) have demonstrated impressive performance across tasks in language understanding and interactive decision making, their abilities for reasoning (e.g. chain-of-thought prompting) and acting (e.g. action plan generatio" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/react-synergizing-reasoning-and-acting-in-language-24dd3c33/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:59">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">ReAct: Synergizing Reasoning and Acting in Language Models</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Dian Yu</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Izhak Shafran</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Jeffrey Zhao</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Karthik Narasimhan</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Nan Du</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Shunyu Yao</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Yuan Cao</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://arxiv.org/pdf/2210.03629.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: March 2023; published as a conference paper at ICLR 2023 (original arXiv submission: October 6, 2022; version 3 revised March 10, 2023)</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>While large language models (LLMs) have demonstrated impressive performance across tasks in language understanding and interactive decision making, their abilities for reasoning (e.g. chain-of-thought prompting) and acting (e.g. action plan generation) have primarily been studied as separate topics. In this paper, we explore the use of LLMs to generate both reasoning traces and task-specific actions in an interleaved manner, allowing for greater synergy between the two: reasoning traces help the model induce, track, and update action plans as well as handle exceptions, while actions allow it to interface with and gather additional information from external sources such as knowledge bases or environments. We apply our approach, named ReAct, to a diverse set of language and decision making tasks and demonstrate its effectiveness over state-of-the-art baselines in addition to improved human interpretability and trustworthiness. Concretely, on question answering (HotpotQA) and fact verification (Fever), ReAct overcomes prevalent issues of hallucination and error propagation in chain-of-thought reasoning by interacting with a simple Wikipedia API, and generating human-like task-solving trajectories that are more interpretable than baselines without reasoning traces. Furthermore, on two interactive decision making benchmarks (ALFWorld and WebShop), ReAct outperforms imitation and reinforcement learning methods by an absolute success rate of 34% and 10% respectively, while being prompted with only one or two in-context examples.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="contribution-and-method">Contribution and method</h2>
+
+<p>The paper introduces ReAct, a prompting paradigm in which a language model interleaves free-form reasoning traces with task-specific actions. Actions interact with an external environment and produce observations; reasoning traces update the agent’s working context, decompose goals, track progress, reformulate searches, handle exceptions, and select subsequent actions. The method is evaluated primarily with few-shot prompting of PaLM-540B, with additional experiments using GPT-3 and smaller models through fine-tuning. (<a href="https://arxiv.org/abs/2210.03629">arxiv.org</a>)</p>
+
+<h2 id="experiments-and-findings">Experiments and findings</h2>
+
+<p>ReAct is tested on HotpotQA, FEVER, ALFWorld, and WebShop. On knowledge-intensive tasks, it improves over acting-only prompting and outperforms chain-of-thought on FEVER, while remaining slightly behind chain-of-thought on HotpotQA when used alone. Combining ReAct with self-consistency chain-of-thought performs best among the prompting variants reported for these tasks. Human analysis found that ReAct produced fewer hallucinated facts than chain-of-thought, although it remained vulnerable to reasoning errors, uninformative searches, repetitive action loops, and ambiguity in dataset labels.</p>
+
+<p>On interactive decision-making tasks, ReAct improves over action-only prompting. Its best reported ALFWorld configuration reaches 71% average success, compared with 45% for the best action-only trial and 37% for the reported BUTLER baseline. On WebShop, ReAct reaches a 40.0% success rate versus 30.1% for action-only prompting and 28.7% for the previous IL+RL method. Fine-tuning on 3,000 generated trajectories makes ReAct the strongest of the compared methods for the reported smaller-model HotpotQA experiments. The paper also demonstrates that humans can correct an agent by editing reasoning traces rather than changing model parameters.</p>
+
+<h2 id="limitations">Limitations</h2>
+
+<p>The approach depends on the language model learning both the reasoning format and the domain-specific action space from a small number of demonstrations. Long-horizon tasks can exceed the context-length budget, and the method’s reasoning traces are not guaranteed to be faithful explanations of the model’s underlying computation. Performance is also sensitive to search quality, decoding strategy, prompt selection, and the available action space. The paper identifies larger-scale human-written data, multitask training, and integration with reinforcement learning as directions for further development.</p>
+
+<h2 id="subsequent-research-and-practical-influence">Subsequent research and practical influence</h2>
+
+<p>The paper became a reference point for tool-using and agentic language-model research. Later work explicitly describes new systems as extensions of ReAct; for example, RAISE adds short- and long-term memory to a ReAct-style conversational-agent architecture, while ReST meets ReAct develops self-improvement procedures for multi-step agents operating over external knowledge. (<a href="https://arxiv.org/abs/2401.02777">arxiv.org</a>)</p>
+
+<p>The ReAct control loop has also been incorporated into practical agent-development tooling. LangChain/LangGraph provides a ReAct agent template implementing the iterative sequence of reasoning, tool execution, observation, and repetition, and the Hugging Face engineering documentation presents ReAct-style prompting as a way to connect language models to tools. These examples indicate adoption of the paper’s central interaction pattern in open-source agent frameworks, although they do not establish that every production agent uses the original prompting procedure unchanged. (<a href="https://github.com/langchain-ai/react-agent">github.com</a>)</p>
+
+<p>Overall, the paper’s concrete impact was to popularize a simple, reusable abstraction—reason, act through a tool or environment, observe, and repeat—for constructing language-model agents. Its influence is visible in subsequent research on memory-augmented agents, self-improving tool users, embodied systems, and software frameworks for tool-calling agents. (<a href="https://mlanthology.org/iclr/2023/yao2023iclr-react/">mlanthology.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/artificial_intelligence/">artificial intelligence</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/chain-of-thought/">chain of thought</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/embodied-agents/">embodied agents</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/interactive-decision-making/">interactive decision making</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/knowledge-retrieval/">knowledge retrieval</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/language-model-prompting/">language model prompting</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/large-language-models/">large language models</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/llm-agents/">llm agents</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/reasoning-and-acting/">reasoning and acting</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/tool-use/">tool use</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/web-navigation/">web navigation</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:59
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

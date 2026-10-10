@@ -1,0 +1,146 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Enterprise IoT Security and Scalability: How Unikernels can Improve the Status Quo | Papers We Love</title>
+        <meta name="description" content="Cloud computing has been a great enabler for both the Internet of Things and Big Data. However, as with all new computing developments, development of the technology is usually much faster than consideration for, and development of, solutions for sec" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Enterprise IoT Security and Scalability: How Unikernels can Improve the Status Quo | Papers We Love" />
+        <meta property="og:description" content="Cloud computing has been a great enabler for both the Internet of Things and Big Data. However, as with all new computing developments, development of the technology is usually much faster than consideration for, and development of, solutions for sec" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/enterprise-iot-security-and-scalability-how-uniker-446653d1/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:01">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Enterprise IoT Security and Scalability: How Unikernels can Improve the Status Quo</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Alfred Bratterud</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Andreas Happe</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Bob Duncan</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://aura.abdn.ac.uk/bitstream/handle/2164/7988/PID4488667.pdf?sequence=1&isAllowed=y" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: 7 December 2016; 9th IEEE/ACM International Conference on Utility and Cloud Computing (UCC 2016), Shanghai, China</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Cloud computing has been a great enabler for both the Internet of Things and Big Data. However, as with all new computing developments, development of the technology is usually much faster than consideration for, and development of, solutions for security and privacy. In a previous paper, we proposed that a unikernel solution could be used to improve security and privacy in a cloud scenario. In this paper, we outline how we might apply this approach to the Internet of Things, which can demonstrate an improvement over existing approaches.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h3 id="summary">Summary</h3>
+
+<p>The paper examines security, privacy, scalability, and manageability problems created by large-scale Internet of Things deployments connected to cloud, fog, and edge-computing infrastructure. It argues that conventional enterprise security models, particularly perimeter-oriented firewall architectures, are poorly suited to geographically distributed, resource-constrained, and heterogeneous IoT environments.</p>
+
+<p>The proposed approach is to use unikernels across the IoT processing chain, including devices, intermediate processing nodes, cloudlets, and central cloud servers. The authors identify several expected benefits: reduced attack surface through minimal software images, lower memory and processing requirements, reuse of application code across hardware platforms, improved isolation, simplified deployment, atomic or rollback-capable updates, event-driven execution, energy efficiency, and dynamic scale-out. Stateless unikernels are also presented as suitable for rapidly starting and discarding processing instances and for moving workloads between central clouds and edge locations.</p>
+
+<p>The paper emphasizes that unikernels are not a complete solution. Large deployments still require substantial infrastructure for provisioning, monitoring, logging, lifecycle management, and secure debugging. Hardware virtualization support is also uneven across IoT devices, and the single-process, stateless model limits compatibility with existing software. The authors additionally identify verifiable computing and cryptographic techniques as necessary for protecting the integrity and confidentiality of sensitive data.</p>
+
+<h3 id="evidence-of-subsequent-use-and-influence">Evidence of subsequent use and influence</h3>
+
+<p>The paper has continued to be cited in later unikernel, IoT, edge-computing, and systems research. The University of Aberdeen research record reports 19 Scopus citations and identifies the work as a published UCC 2016 conference contribution. (<a href="https://abdn.elsevierpure.com/en/publications/enterprise-iot-security-and-scalability-how-unikernels-can-improv/">abdn.elsevierpure.com</a>) Later publications cite it in discussions of embedded-IoT unikernel deployment, edge offloading, unikernel isolation, and lightweight unikernel systems. (<a href="https://repositum.tuwien.at/bitstream/20.500.12708/2968/2/Amort%20Jan%20-%202017%20-%20Evaluating%20the%20unikernel%20concept%20for%20the%20deployment%20of...pdf">repositum.tuwien.at</a>) A systematic literature review of software-defined networking for IoT also includes the paper as part of its discussion of IoT research. (<a href="https://www.open-access.bcu.ac.uk/13605/1/Toward_Software-Defined_Networking-Based_IoT_Frameworks_A_Systematic_Literature_Review_Taxonomy_Open_Challenges_and_Prospects.pdf">open-access.bcu.ac.uk</a>) These records establish continued scholarly reuse of the paper’s topic and proposal, but do not by themselves demonstrate that specific systems or industry products were directly derived from it.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/unikernels/">unikernels</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/attack-surface/">attack surface</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/cloud-security-and-privacy/">cloud security and privacy</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/complexity/">complexity</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/compliance/">compliance</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:01
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->
