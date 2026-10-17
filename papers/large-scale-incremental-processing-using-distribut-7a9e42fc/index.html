@@ -1,0 +1,173 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Large-scale Incremental Processing Using Distributed Transactions and Notifications | Papers We Love</title>
+        <meta name="description" content="Updating an index of the web as documents are crawled requires continuously transforming a large repository of existing documents as new documents arrive. This task is one example of a class of data processing tasks that transform a large repository " />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Large-scale Incremental Processing Using Distributed Transactions and Notifications | Papers We Love" />
+        <meta property="og:description" content="Updating an index of the web as documents are crawled requires continuously transforming a large repository of existing documents as new documents arrive. This task is one example of a class of data processing tasks that transform a large repository " />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/large-scale-incremental-processing-using-distribut-7a9e42fc/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Large-scale Incremental Processing Using Distributed Transactions and Notifications</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Daniel Peng</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Frank Dabek</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/large-scale-incremental-processing-using-distributed-transactions-and-notifications.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: October 4–6, 2010; 9th USENIX Symposium on Operating Systems Design and Implementation (OSDI ’10), Vancouver, BC, Canada</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Updating an index of the web as documents are crawled requires continuously transforming a large repository of existing documents as new documents arrive. This task is one example of a class of data processing tasks that transform a large repository of data via small, independent mutations. These tasks lie in a gap between the capabilities of existing infrastructure. Databases do not meet the storage or throughput requirements of these tasks: Google’s indexing system stores tens of petabytes of data and processes billions of updates per day on thousands of machines. MapReduce and other batch-processing systems cannot process small updates individually as they rely on creating large batches for efficiency.
+
+We have built Percolator, a system for incrementally processing updates to a large data set, and deployed it to create the Google web search index. By replacing a batch-based indexing system with an indexing system based on incremental processing using Percolator, we process the same number of documents per day, while reducing the average age of documents in Google search results by 50%.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h3 id="overview">Overview</h3>
+
+<p>The paper introduces <strong>Percolator</strong>, a system for incrementally transforming extremely large datasets through many small, concurrent updates. Its motivating application was Google’s web-search index, where repeatedly running large MapReduce pipelines over the entire document repository created latency proportional to repository size and discarded work from previous runs. Percolator instead provides random access to a multi-petabyte repository, allowing processing costs to depend primarily on newly arrived or changed data. The system was deployed for Google’s search-indexing pipeline, later known as Caffeine. (<a href="https://research.google/pubs/large-scale-incremental-processing-using-distributed-transactions-and-notifications/">research.google</a>)</p>
+
+<h3 id="core-design">Core design</h3>
+
+<p>Percolator is built on Bigtable and GFS. It adds two major abstractions: distributed transactions and observers. Transactions provide cross-row and cross-table updates with ACID snapshot-isolation semantics. Observers are application-defined computations invoked when specified columns change; they form a chain in which one observer performs work and writes data that can trigger downstream observers.</p>
+
+<p>The transaction protocol uses multiversion data, lock, and write metadata stored in Bigtable columns. A client obtains a strictly increasing start timestamp, buffers writes, and performs a two-phase commit. During prewrite, it checks for conflicting writes or locks, records the new data at the start timestamp, and installs locks. One lock is designated as the primary lock, while secondary locks refer to it. During commit, the client obtains a commit timestamp, replaces the primary lock with a write record, and then finalizes the secondary cells. The primary lock acts as the synchronization point for recovery: other clients can determine whether a failed transaction committed and either roll its locks back or roll them forward.</p>
+
+<p>Reads use the transaction’s start timestamp to select a consistent snapshot. A reader waits when it encounters a visible conflicting lock, then follows a write record to the corresponding version of the data. The design deliberately uses snapshot isolation rather than serializability, which improves read efficiency but permits anomalies such as write skew. Percolator also avoids a centralized transaction manager and global deadlock detector, accepting higher conflict latency in exchange for scalability across thousands of machines.</p>
+
+<h3 id="notification-model">Notification model</h3>
+
+<p>Observers are triggered through notification metadata. A notification column acts as a hint that an observed cell may require processing, while per-observer acknowledgment columns record the most recent successful execution. This supports <strong>message collapsing</strong>: multiple writes may result in a single observer execution, and at most one observer transaction commits for a particular observed-column change. The notification mechanism is intentionally separate from the triggering transaction, so it organizes computation but does not itself provide atomic maintenance of invariants.</p>
+
+<p>Workers find pending notifications through distributed scans over a separate Bigtable locality group. Advisory locks reduce duplicate scanning, and the implementation uses randomized scanning with relocation when workers begin to cluster around the same table regions. The system also provides weaker, non-transactional notifications for high-contention cells; these avoid transactional conflicts but may cause multiple observer executions.</p>
+
+<h3 id="evaluation-and-trade-offs">Evaluation and trade-offs</h3>
+
+<p>Compared with Google’s previous MapReduce-based indexing pipeline, the Percolator-based system processed the same daily crawl volume while reducing median document-processing latency by more than two orders of magnitude. The paper reports that the average age of documents appearing in search results fell by nearly 50 percent. In a synthetic clustering workload, Percolator processed newly arrived documents in roughly two seconds at a low crawl rate, whereas MapReduce required approximately twenty minutes to rescan the repository. Percolator’s advantage diminished at high update rates, where random lookups became more expensive than sequentially scanning the repository; in the reported configuration, Percolator saturated near a 40-percent-per-hour crawl rate.</p>
+
+<p>The improvement required substantially more resources. The production incremental index used approximately twice the resources of the replaced system at the same crawl rate, and Percolator incurred significant RPC and metadata overhead relative to raw Bigtable. Microbenchmarks showed approximately fourfold write overhead for single-cell transactions, largely due to conflict checks and lock-management operations. A TPC-E-like benchmark demonstrated near-linear scaling from 11 to 15,000 CPU cores, but the authors estimated roughly thirty times more CPU per transaction than a contemporary single-machine commercial database. These costs were accepted because the system supported Internet-scale data, incremental updates, and resilience to machine failures rather than low-latency OLTP workloads.</p>
+
+<h3 id="influence-on-subsequent-systems-and-industry">Influence on subsequent systems and industry</h3>
+
+<p>The paper’s transaction design became a documented influence on <strong>TiKV</strong> and <strong>TiDB</strong>. TiKV explicitly describes its distributed transaction implementation as inspired by Percolator and adopts the primary/secondary-key model, timestamp oracle, multiversion data, locks, and write records, while replacing Bigtable’s storage layer with RocksDB and Raft. TiDB documentation likewise identifies Google’s Percolator transaction model as the basis for its distributed two-phase-commit design. (<a href="https://tikv.org/deep-dive/distributed-transaction/percolator/">tikv.org</a>)</p>
+
+<p>The observer and notification ideas also influenced <strong>Apache Fluo</strong>, which was proposed as a distributed transaction and notification system for incrementally processing large datasets stored in Apache Accumulo. Its proposal explicitly identifies Percolator as the model for combining transactional updates with notification-triggered computation. (<a href="https://cwiki.apache.org/confluence/display/incubator/FluoProposal">cwiki.apache.org</a>)</p>
+
+<p>Overall, the paper established a practical design point between batch processing and traditional databases: use a scalable distributed key-value store, add client-coordinated transactions and timestamp-based versioning, and organize computation around changes rather than repeated full-repository scans. Its documented influence is especially clear in distributed transactional key-value systems and incremental data-processing frameworks.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/distributed_systems/">distributed systems</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/bigtable/">bigtable</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/database-notifications/">database notifications</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-storage/">distributed storage</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-transactions/">distributed transactions</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/incremental-processing/">incremental processing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/mapreduce/">mapreduce</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/observer-pattern/">observer pattern</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/snapshot-isolation/">snapshot isolation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/two-phase-commit/">two phase commit</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/web-indexing/">web indexing</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

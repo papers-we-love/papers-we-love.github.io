@@ -1,0 +1,146 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Breaking Up is Hard to Do: Security and Functionality in a Commodity Hypervisor | Papers We Love</title>
+        <meta name="description" content="Virtualization platforms have grown with an increasing demand for new technologies, with the modern enterprise-ready virtualization platform being a complex, feature-rich piece of software. Despite the small size of hypervisors, the trusted computing" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Breaking Up is Hard to Do: Security and Functionality in a Commodity Hypervisor | Papers We Love" />
+        <meta property="og:description" content="Virtualization platforms have grown with an increasing demand for new technologies, with the modern enterprise-ready virtualization platform being a complex, feature-rich piece of software. Despite the small size of hypervisors, the trusted computing" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/breaking-up-is-hard-to-do-security-and-functionali-6d75cf23/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:01">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Breaking Up is Hard to Do: Security and Functionality in a Commodity Hypervisor</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Mihir Sudarshan Nanavati</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://open.library.ubc.ca/media/download/pdf/24/1.0052016/1" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: June 2011; Master of Science thesis in Computer Science, The University of British Columbia (Vancouver)</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Virtualization platforms have grown with an increasing demand for new technologies, with the modern enterprise-ready virtualization platform being a complex, feature-rich piece of software. Despite the small size of hypervisors, the trusted computing base (TCB) of most enterprise platforms is larger than that of most monolithic commodity operating systems. Several key components of the Xen platform reside in a special, highly-privileged virtual machine or the “Control VM”. We present Xoar, a modified version of the Xen platform that retrofits the modularity and isolation principles championed by microkernels onto a mature virtualization platform. Xoar divides the large, shared control VM of Xen’s TCB into a set of independent, isolated, single purpose components called shards. Shards improve security in several ways: components are restricted to the least privilege necessary for functioning and any sharing between guest VMs is explicitly configurable and auditable in tune with the desired risk exposure policies. Microrebooting components at configurable frequencies reduces the temporal attack surface. Our approach does not require any existing functionality to be sacrificed and allows components to be reused rather than rewritten from scratch. The low performance overhead leads us to believe that Xoar is viable alternative for deployment in enterprise environments.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <ul>
+  <li>The thesis presents <strong>Xoar</strong>, a modified Xen architecture that decomposes the monolithic control VM into isolated, single-purpose shards. The design applies microkernel principles—least privilege, reduced sharing, explicit auditing, and independently restartable components—while retaining compatibility with existing Xen functionality and guest VMs. (<a href="https://www.mihirnanavati.com/papers/thesis-msc.pdf">mihirnanavati.com</a>)</li>
+  <li>The evaluation reports that Xoar reduced the trusted code associated with guest-memory access from the Linux control VM to a substantially smaller nanOS-based component, while maintaining near-baseline performance. The reported overhead for a Linux-kernel build was less than 1%, and network throughput decreased by approximately 1–2.5% in the tested configuration. (<a href="https://www.mihirnanavati.com/papers/thesis-msc.pdf">mihirnanavati.com</a>)</li>
+  <li>The work was subsequently published in expanded form with Patrick Colp, Jun Zhu, William Aiello, George Coker, Tim Deegan, Peter Loscocco, and Andrew Warfield at the 23rd ACM Symposium on Operating Systems Principles in October 2011. (<a href="https://www.microsoft.com/en-us/research/publication/breaking-up-is-hard-to-do-security-and-functionality-in-a-commodity-hypervisor/?lang=ja">microsoft.com</a>)</li>
+  <li>Subsequent research cited Xoar as an example of decomposing the management domain into service VMs. For example, the Self-Service Cloud model used a related privilege-separation approach to divide administrative responsibilities among system-wide, per-client, and service domains. Later work on secure VM management also identified Xoar as prior research on management-VM disaggregation. (<a href="https://pages.cs.wisc.edu/~vg/papers/ccs2012a/ccs2012a_html/index.html">pages.cs.wisc.edu</a>)</li>
+  <li>The checked sources provide evidence of continuing research influence, but do not establish that Xoar itself became a broadly deployed commercial hypervisor product.</li>
+</ul>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/unikernels/">unikernels</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/cloud-computing/">cloud computing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/fault-isolation/">fault isolation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/hypervisor-security/">hypervisor security</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/least-privilege/">least privilege</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/microkernels/">microkernels</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/microrebooting/">microrebooting</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/service-vms/">service vms</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/trusted-computing-base/">trusted computing base</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/virtualization/">virtualization</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/xen/">xen</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:01
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

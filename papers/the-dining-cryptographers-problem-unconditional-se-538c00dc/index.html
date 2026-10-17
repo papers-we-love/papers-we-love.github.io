@@ -1,0 +1,141 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>The Dining Cryptographers Problem: Unconditional Sender and Recipient Untraceability | Papers We Love</title>
+        <meta name="description" content="Keeping confidential who sends which messages, in a world where any physical transmission can be traced to its origin, seems impossible. The solution presented here is unconditionally or cryptographically secure, depending on whether it is based on o" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="The Dining Cryptographers Problem: Unconditional Sender and Recipient Untraceability | Papers We Love" />
+        <meta property="og:description" content="Keeping confidential who sends which messages, in a world where any physical transmission can be traced to its origin, seems impossible. The solution presented here is unconditionally or cryptographically secure, depending on whether it is based on o" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/the-dining-cryptographers-problem-unconditional-se-538c00dc/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">The Dining Cryptographers Problem: Unconditional Sender and Recipient Untraceability</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">David Chaum</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/the-dining-cryptographers-problem.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: 1988; Journal of Cryptology, Volume 1, Issue 1, pages 65–75</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Keeping confidential who sends which messages, in a world where any physical transmission can be traced to its origin, seems impossible. The solution presented here is unconditionally or cryptographically secure, depending on whether it is based on one-time-use keys or on public keys, respectively. It can be adapted to address efficiently a wide variety of practical considerations.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>David Chaum introduces the dining cryptographers network, or <strong>DC-net</strong>, as a method for achieving anonymous communication even when individual physical transmissions could otherwise be traced. In the basic protocol, participants share random secret bits pairwise. Each participant publicly announces the XOR of the secret bits they hold, while a sender inverts their announcement. Because every shared secret contributes twice to the overall XOR, the aggregate output reveals whether an odd or even number of participants transmitted, but does not reveal which participant transmitted. With one-time-use random keys, the sender-untraceability guarantee is unconditional; with keys established or expanded using public-key techniques, the guarantee is computational.</p>
+
+<p>The protocol is generalized from the three-person dinner example to arbitrary connected key-sharing graphs. Participants correspond to vertices and shared keys to edges. An observer’s anonymity sets are the connected components that remain after removing edges known to that observer. Chaum proves, using the incidence matrix of the graph over GF(2), that the observed outputs reveal no more information about the participants in an anonymity set than the parity of their inversions. Thus, within an appropriate connected component, individual senders remain indistinguishable from the observer’s perspective.</p>
+
+<p>The paper analyzes how graph topology affects collusion resistance. Complete graphs provide strong protection against individual observers but require a quadratic number of shared keys. Sparse graphs reduce setup costs but can expose messages when colluders control separating vertices or edges. The paper also discusses hierarchical key-sharing structures, ring and broadcast implementations, message collisions, key establishment, encryption for recipient confidentiality, digital signatures for authentication, and mechanisms for detecting or excluding disruptive participants. Recipient untraceability may require a reliable broadcast mechanism, while sender untraceability follows from the masking properties of the shared keys.</p>
+
+<p>The paper influenced subsequent anonymous-communication research by establishing DC-nets as a foundational construction for anonymous broadcast and by identifying their principal engineering limitations, especially collisions, bandwidth costs, and denial-of-service through disruption. Later systems extended the construction with accountability and verifiability. <strong>Dissent</strong> uses shuffled-send DC-nets to support anonymous group messaging while making disruptive behavior attributable to a group member. (<a href="https://people.eecs.berkeley.edu/~henrycg/pubs/ccs10dissent/">people.eecs.berkeley.edu</a>) <strong>Verdict</strong> applies public-key cryptography and zero-knowledge proofs to create proactively verifiable DC-nets that can detect and exclude misbehavior before it disrupts communication. (<a href="https://people.eecs.berkeley.edu/~henrycg/pubs/sec13proactively/">people.eecs.berkeley.edu</a>) The DC protocol has also been used as a benchmark for formal, machine-assisted proofs of anonymity, and later work has adapted DC-net ideas to applications including secure aggregation. (<a href="https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-785.html">cl.cam.ac.uk</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/distributed_systems/">distributed systems</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/pseudonymity/">pseudonymity</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/unconditional-security/">unconditional security</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/untraceability/">untraceability</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

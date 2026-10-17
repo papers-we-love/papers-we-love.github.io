@@ -1,0 +1,154 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>A Response to Cheriton and Skeen’s Criticism of Causal and Totally Ordered Communication | Papers We Love</title>
+        <meta name="description" content="In a paper to be presented at the 1993 ACM Symposium on Operating Systems Principles, Cheriton and Skeen offer their understanding of causal and total ordering as a communication property. I find their paper highly critical of Isis, and unfairly so, " />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="A Response to Cheriton and Skeen’s Criticism of Causal and Totally Ordered Communication | Papers We Love" />
+        <meta property="og:description" content="In a paper to be presented at the 1993 ACM Symposium on Operating Systems Principles, Cheriton and Skeen offer their understanding of causal and total ordering as a communication property. I find their paper highly critical of Isis, and unfairly so, " />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/a-response-to-cheriton-and-skeens-criticism-of-cau-53217c87/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">A Response to Cheriton and Skeen’s Criticism of Causal and Totally Ordered Communication</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Ken Birman</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/a-response-to-cheriton-and-skeens-criticism-of-causal-and-totally-ordered-communication.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: October 15, 1993; subsequently published in ACM SIGOPS Operating Systems Review, Volume 28, Number 1, January 1994, pages 11–21</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>In a paper to be presented at the 1993 ACM Symposium on Operating Systems Principles, Cheriton and Skeen offer their understanding of causal and total ordering as a communication property. I find their paper highly critical of Isis, and unfairly so, for a number of reasons. In this paper I present some responses to their criticism, and also explain why I find their discussion of causal and total communication ordering to be distorted and incomplete.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>Ken Birman’s paper responds to David Cheriton and Dale Skeen’s criticism of causally and totally ordered communication, particularly their critique of the Isis system. Birman argues that their analysis is incomplete because it treats causal and total ordering primarily as isolated communication properties rather than as components of a broader execution model incorporating process groups, reliable multicast, and virtual synchrony.</p>
+
+<p>The paper defends the use of causal ordering as a practical mechanism for simplifying distributed-system development. Birman’s central claim is that system-provided ordering can reduce application complexity, debugging effort, and the likelihood of inconsistent outcomes after failures. He emphasizes that causal ordering is not intended to express every application-specific dependency or to solve every consistency problem; instead, it provides a useful baseline guarantee that can be combined with stronger, application-specific mechanisms when needed.</p>
+
+<p>Birman challenges several objections raised by Cheriton and Skeen. He argues that the performance cost of causal ordering is often less significant than delays caused by flow control, resource management, and congestion. He also contends that examples involving external communication paths or application-specific ordering do not invalidate system-provided causal guarantees. Comparisons with pipes, streams, caches, and network-news systems are used to illustrate why preserving communication order can be valuable even when not every individual ordering relationship is semantically essential.</p>
+
+<p>A recurring theme is that ordering guarantees should be evaluated together with failure semantics. Birman argues that Isis and virtual synchrony prevent problematic gaps in the causal past that could otherwise arise when failures interact with atomic multicast. Thus, the contribution defended in the paper is not merely CATOCS ordering in isolation, but the combination of ordering, failure handling, membership management, and a programming model intended to support highly available and consistent distributed applications.</p>
+
+<h3 id="influence-and-subsequent-use">Influence and subsequent use</h3>
+
+<p>The paper became part of the documented CATOCS controversy and was published alongside related responses and comments in <em>Operating Systems Review</em>. It continues to be cited in historical accounts of fault-tolerance research and appears in distributed-systems reading lists and research-paper collections, where it is taught alongside work on causal consistency, distributed transactions, replication, and large-scale storage systems. (<a href="https://dblp.org/db/journals/sigops/sigops28.html">dblp.org</a>)</p>
+
+<p>The available evidence supports a continuing historical and pedagogical influence, but does not establish that a particular industry system was directly based on this response. The paper’s broader position—that strong communication and failure guarantees can simplify reliable distributed programming—forms part of the intellectual background for later discussions of replication, consistency, and the trade-offs surrounding the CATOCS debate. (<a href="https://sigops.org/s/conferences/sosp/2015/history/05-birman.pdf">sigops.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/distributed_systems/">distributed systems</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/causal-ordering/">causal ordering</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/communication-models/">communication models</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-computing/">distributed computing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-systems/">distributed systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/fault-tolerance/">fault tolerance</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/isis-toolkit/">isis toolkit</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/process-groups/">process groups</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/reliable-multicast/">reliable multicast</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/total-ordering/">total ordering</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/virtual-synchrony/">virtual synchrony</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

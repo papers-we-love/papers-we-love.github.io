@@ -1,0 +1,152 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Lightweight Locking for Main Memory Database Systems | Papers We Love</title>
+        <meta name="description" content="Locking is widely used as a concurrency control mechanism in database systems. As more OLTP databases are stored mostly or entirely in memory, transactional throughput is less and less limited by disk IO, and lock managers increasingly become perform" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Lightweight Locking for Main Memory Database Systems | Papers We Love" />
+        <meta property="og:description" content="Locking is widely used as a concurrency control mechanism in database systems. As more OLTP databases are stored mostly or entirely in memory, transactional throughput is less and less limited by disk IO, and lock managers increasingly become perform" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/lightweight-locking-for-main-memory-database-syste-111435fb/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:00">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Lightweight Locking for Main Memory Database Systems</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Alexander Thomson</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Daniel J. Abadi</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Kun Ren</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://cs-www.cs.yale.edu/homes/dna/papers/vll-vldb13.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: 2012; Proceedings of the VLDB Endowment, Volume 6, Number 2, pages 145–156. The paper was presented at the 39th International Conference on Very Large Data Bases, August 26–30, 2013, Riva del Garda, Trento, Italy.</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Locking is widely used as a concurrency control mechanism in database systems. As more OLTP databases are stored mostly or entirely in memory, transactional throughput is less and less limited by disk IO, and lock managers increasingly become performance bottlenecks.
+
+In this paper, we introduce very lightweight locking (VLL), an alternative approach to pessimistic concurrency control for main-memory database systems that avoids almost all overhead associated with traditional lock manager operations. We also propose a protocol called selective contention analysis (SCA), which enables systems implementing VLL to achieve high transactional throughput under high contention workloads. We implement these protocols both in a traditional single-machine multi-core database server setting and in a distributed database where data is partitioned across many commodity machines in a shared-nothing cluster. Our experiments show that VLL dramatically reduces locking overhead and thereby increases transactional throughput in both settings.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h3 id="main-contribution">Main contribution</h3>
+<p>The paper proposes <strong>very lightweight locking (VLL)</strong> for main-memory database systems. Instead of maintaining a centralized hash table containing per-record lock queues, VLL stores two counters with each record: one for exclusive-lock requests and one for shared-lock requests. Transactions request their complete read and write sets atomically, and a partition-local transaction queue determines execution order and prevents deadlock.</p>
+
+<p>VLL substantially reduces lock-management work by avoiding linked-list operations, lock-table lookups, and much of the associated latching and cache-miss overhead. Its principal limitation is that the compact counters do not preserve enough dependency information to identify every transaction that could safely run. <strong>Selective contention analysis (SCA)</strong> addresses this limitation by reconstructing relevant conflicts only when the system would otherwise be idle or unable to make progress.</p>
+
+<p>The evaluation reports approximately 2% locking overhead for VLL versus approximately 21% for traditional two-phase locking at low contention. Isolated per-transaction locking costs were reported as 20.13 microseconds for traditional 2PL, 20.16 microseconds for deterministic Calvin locking, 1.8 microseconds for multi-threaded VLL, and 0.71 microseconds for single-threaded VLL. Under workloads permitting deadlocks, VLL with SCA exceeded traditional 2PL by at least 163% in most tested cases and by as much as 18× at extreme contention. In distributed experiments, VLL with SCA achieved similar scalability to Calvin, outperformed Calvin by up to 33% in some low-contention configurations, and substantially outperformed serial H-Store-style execution as multi-partition transactions increased.</p>
+
+<h3 id="subsequent-influence">Subsequent influence</h3>
+<p>The work was extended into a 2015 <em>VLDB Journal</em> article, which generalized VLL and SCA to range locking through the VLLR design. (<a href="https://www.vldb.org/vldb_journal/index.php?id=1342&amp;option=com_article_manager&amp;view=article">vldb.org</a>) A later 2021 study on dependence-cognizant locking explicitly builds on VLL and SCA, implements its alternative locking design in Calvin, and evaluates it against VLL/SCA in multicore and shared-nothing database settings. (<a href="https://onlinelibrary.wiley.com/doi/10.1155/2021/6654461">onlinelibrary.wiley.com</a>) The available evidence indicates continued academic follow-up and algorithmic extensions; the search did not identify a clearly documented commercial database product adoption of VLL itself.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/datastores/">datastores</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/concurrency-control/">concurrency control</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/deterministic-databases/">deterministic databases</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-systems/">distributed systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/lightweight-locking/">lightweight locking</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/lock-manager/">lock manager</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/main-memory-databases/">main memory databases</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/multi-core-systems/">multi core systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/scalable-transactions/">scalable transactions</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/selective-contention-analysis/">selective contention analysis</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/transaction-processing/">transaction processing</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:00
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->
