@@ -1,0 +1,143 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Datacenter Traffic Control: Understanding Techniques and Trade-offs | Papers We Love</title>
+        <meta name="description" content="Datacenters provide cost-effective and flexible access to scalable compute and storage resources necessary for today’s cloud computing needs. A typical datacenter is made up of thousands of servers connected with a large network and usually managed b" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Datacenter Traffic Control: Understanding Techniques and Trade-offs | Papers We Love" />
+        <meta property="og:description" content="Datacenters provide cost-effective and flexible access to scalable compute and storage resources necessary for today’s cloud computing needs. A typical datacenter is made up of thousands of servers connected with a large network and usually managed b" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/datacenter-traffic-control-understanding-technique-5b35d853/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:01">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Datacenter Traffic Control: Understanding Techniques and Trade-offs</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Cauligi S. Raghavendra</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Mohammad Noormohammadpour</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://osf.io/6qzxc/" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: December 14, 2017 (online publication); IEEE Communications Surveys & Tutorials, Vol. 20, No. 2, Second Quarter 2018, pp. 1492–1525</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Datacenters provide cost-effective and flexible access to scalable compute and storage resources necessary for today’s cloud computing needs. A typical datacenter is made up of thousands of servers connected with a large network and usually managed by one operator. To provide quality access to the variety of applications and services hosted on datacenters and maximize performance, it deems necessary to use datacenter networks effectively and efficiently. Datacenter traffic is often a mix of several classes with different priorities and requirements. This includes user-generated interactive traffic, traffic with deadlines, and long-running traffic. To this end, custom transport protocols and traffic management techniques have been developed to improve datacenter network performance. In this tutorial paper, we review the general architecture of datacenter networks, various topologies proposed for them, their traffic properties, general traffic control challenges in datacenters and general traffic control objectives. The purpose of this paper is to bring out the important characteristics of traffic control in datacenters and not to survey all existing solutions (as it is virtually impossible due to massive body of existing research). We hope to provide readers with a wide range of options and factors while considering a variety of traffic control mechanisms. We discuss various characteristics of datacenter traffic control including management schemes, transmission control, traffic shaping, prioritization, load balancing, multipathing, and traffic scheduling. Next, we point to several open challenges as well as new and interesting networking paradigms. At the end of this paper, we briefly review inter-datacenter networks that connect geographically dispersed datacenters which have been receiving increasing attention recently and pose interesting and novel research problems. To measure the performance of datacenter networks, different performance metrics have been used such as flow completion times, deadline miss rate, throughput and fairness. Depending on the application and user requirements, some metrics may need more attention. While investigating different traffic control techniques, we point out the trade-offs involved in terms of costs, complexity and performance. We find that a combination of different traffic control techniques may be necessary at particular entities and layers in the network to improve the variety of performance metrics. We also find that despite significant research efforts, there are still open problems that demand further attention from the research community.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <p>The paper is a tutorial and taxonomy of traffic control in datacenter networks. It characterizes datacenter architectures, network topologies, traffic workloads, control objectives, and the trade-offs among cost, implementation complexity, throughput, latency, fairness, and deadline performance. It organizes the design space around management schemes, transmission control, traffic shaping, prioritization, load balancing, multipath routing, and traffic scheduling. Its principal conclusion is that no single mechanism optimizes all relevant objectives; effective systems may require combinations of techniques deployed at different network entities and protocol layers. The paper also identifies unresolved problems involving heterogeneous workloads, changing traffic matrices, scalability, fault tolerance, and inter-datacenter networking. (<a href="https://people.cs.pitt.edu/~znati/Courses/WANs/Dir-Rel/COMST_IEEE_FINAL.pdf">people.cs.pitt.edu</a>)</p>
+
+<p>Subsequent research has cited the paper as a foundational survey when structuring work on datacenter transport control, flow scheduling, resource scheduling for inter-datacenter transfers, and programmable datacenter traffic engineering. Later survey and research papers use its taxonomy and references to position newer mechanisms, including scheduling and traffic-engineering approaches. (<a href="https://www.sciencedirect.com/science/article/pii/S1389128618303931">sciencedirect.com</a>) A quick search found evidence of continuing academic influence, but no specific commercial product or industry deployment directly attributing its design to this paper.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/networks/">networks</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/datacenters/">datacenters</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/flow-prioritization/">flow prioritization</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/load-balancing/">load balancing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/management-schemes/">management schemes</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/multipath-routing/">multipath routing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/trade-offs/">trade offs</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/traffic-control/">traffic control</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/traffic-scheduling/">traffic scheduling</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/traffic-shaping/">traffic shaping</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/transmission-control/">transmission control</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:01
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

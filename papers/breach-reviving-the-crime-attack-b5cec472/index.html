@@ -1,0 +1,148 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>BREACH: REVIVING THE CRIME ATTACK | Papers We Love</title>
+        <meta name="description" content="No abstract or summary section appears in the paper." />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="BREACH: REVIVING THE CRIME ATTACK | Papers We Love" />
+        <meta property="og:description" content="No abstract or summary section appears in the paper." />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/breach-reviving-the-crime-attack-b5cec472/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:01">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">BREACH: REVIVING THE CRIME ATTACK</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Angelo (Ángel) Prado</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Neal Harris</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Yoel Gluck</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://breachattack.com/resources/BREACH%20-%20SSL,%20gone%20in%2030%20seconds.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: July 12, 2013</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>No abstract or summary section appears in the paper.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h3 id="paper-summary">Paper summary</h3>
+<p>The paper demonstrates that TLS-protected web traffic can remain vulnerable to compression side-channel attacks even when TLS-level compression is disabled. The attack targets HTTP responses compressed with gzip/DEFLATE that contain both attacker-controlled input and secrets such as CSRF tokens. By inducing repeated requests and observing encrypted response lengths, an attacker can use compression behavior as an oracle to recover secrets character by character. The authors report recovering an entire CSRF token from Microsoft Outlook Web Access with approximately 95% reliability, often in under 30 seconds. The paper also describes practical techniques for addressing Huffman-coding noise, block-cipher alignment, false positives, false negatives, and encoding constraints. (<a href="https://breachattack.com/resources/BREACH%20-%20SSL%2C%20gone%20in%2030%20seconds.pdf">breachattack.com</a>)</p>
+
+<p>The paper evaluates several mitigations, including separating secrets from attacker-controlled data into different compression contexts, disabling HTTP compression, masking secrets, rate-limiting requests, and strengthening CSRF protection. It concludes that separating secrets from user input or disabling compression provides the clearest protection, although both may impose implementation or performance costs. (<a href="https://breachattack.com/resources/BREACH%20-%20SSL%2C%20gone%20in%2030%20seconds.pdf">breachattack.com</a>)</p>
+
+<h3 id="influence">Influence</h3>
+<p>The paper became a cited reference in HTTP protocol security guidance. RFC 9114 explicitly identifies BREACH as an example of compression attacks and requires implementations on secure channels not to compress confidential and attacker-controlled content together unless separate compression contexts are used; it also discusses padding as a mitigation. (<a href="https://www.rfc-editor.org/rfc/rfc9114.html">rfc-editor.org</a>) Subsequent research developed more systematic defenses, including Debreach, which uses static analysis, program instrumentation, and compressor changes to prevent sensitive data from influencing compression output while retaining compression for other content. (<a href="https://arxiv.org/abs/1909.05977">arxiv.org</a>) Other work proposed server-side response-size randomization, such as the HTB mitigation, specifically to reduce the effectiveness of BREACH attacks. (<a href="https://www.iit.comillas.edu/publicacion/revista/en/1913/HTB%3A_a_very_effective_method_to_protect_web_servers_against_BREACH_attack_to_HTTPS">iit.comillas.edu</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/security/">security</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/breach-attack/">breach attack</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/compression-side-channel/">compression side channel</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/crime-attack/">crime attack</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/csrf-tokens/">csrf tokens</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/deflate/">deflate</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/gzip/">gzip</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/http-compression/">http compression</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/tls/">tls</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/traffic-analysis/">traffic analysis</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/web-security/">web security</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:01
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

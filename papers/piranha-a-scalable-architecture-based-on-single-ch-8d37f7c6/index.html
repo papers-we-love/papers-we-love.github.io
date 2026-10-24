@@ -1,0 +1,154 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Piranha: A Scalable Architecture Based on Single-Chip Multiprocessing | Papers We Love</title>
+        <meta name="description" content="The microprocessor industry is currently struggling with higher development costs and longer design times that arise from exceedingly complex processors that are pushing the limits of instruction-level parallelism. Meanwhile, such designs are especia" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Piranha: A Scalable Architecture Based on Single-Chip Multiprocessing | Papers We Love" />
+        <meta property="og:description" content="The microprocessor industry is currently struggling with higher development costs and longer design times that arise from exceedingly complex processors that are pushing the limits of instruction-level parallelism. Meanwhile, such designs are especia" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/piranha-a-scalable-architecture-based-on-single-ch-8d37f7c6/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:59">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Piranha: A Scalable Architecture Based on Single-Chip Multiprocessing</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Andreas Nowatzyk</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Barton Sano</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Ben Verghese</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Kourosh Gharachorloo</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Luiz André Barroso</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Robert McNamara</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Robert Stets</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Scott Smith</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Shaz Qadeer</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://barroso.org/publications/isca00.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: June 2000; Proceedings of the 27th Annual International Symposium on Computer Architecture (ISCA), Vancouver, Canada</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>The microprocessor industry is currently struggling with higher development costs and longer design times that arise from exceedingly complex processors that are pushing the limits of instruction-level parallelism. Meanwhile, such designs are especially ill suited for important commercial applications, such as on-line transaction processing (OLTP), which suffer from large memory stall times and exhibit little instruction-level parallelism. Given that commercial applications constitute by far the most important market for high-performance servers, the above trends emphasize the need to consider alternative processor designs that specifically target such workloads. The abundance of explicit thread-level parallelism in commercial workloads, along with advances in semiconductor integration density, identify chip multiprocessing (CMP) as potentially the most promising approach for designing processors targeted at commercial servers.
+
+This paper describes the Piranha system, a research prototype being developed at Compaq that aggressively exploits chip multiprocessing by integrating eight simple Alpha processor cores along with a two-level cache hierarchy onto a single chip. Piranha also integrates further on-chip functionality to allow for scalable multiprocessor configurations to be built in a glueless and modular fashion. The use of simple processor cores combined with an industry-standard ASIC design methodology allow us to complete our prototype within a short time-frame, with a team size and investment that are an order of magnitude smaller than that of a commercial microprocessor. Our detailed simulation results show that while each Piranha processor core is substantially slower than an aggressive next-generation processor, the integration of eight cores onto a single chip allows Piranha to outperform next-generation processors by up to 2.9 times (on a per chip basis) on important workloads such as OLTP. This performance advantage can approach a factor of five by using full-custom instead of ASIC logic. In addition to exploiting chip multiprocessing, the Piranha prototype incorporates several other unique design choices including a shared second-level cache with no inclusion, a highly optimized cache coherence protocol, and a novel I/O architecture.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <p>Piranha was an early influential proposal for using multiple relatively simple processor cores, rather than a single increasingly complex core, to exploit thread-level parallelism in commercial server workloads. Its design combined eight Alpha cores with shared on-chip caching, integrated memory controllers, directory-based coherence, and scalable interconnect support. The paper’s experimental results established a concrete case for CMP designs optimized for throughput-oriented workloads, reporting up to 2.9× performance over an aggressive single-core design for OLTP and projecting nearly 5× for a full-custom implementation. (<a href="https://barroso.org/publications/isca00.pdf">barroso.org</a>)</p>
+
+<p>Subsequent CMP research cited Piranha as an antecedent for investigating cache-capacity, replication, and communication tradeoffs in multicore cache hierarchies. For example, later work on CMP cache organization explicitly lists Piranha among the prior designs motivating shared-cache and replication techniques. (<a href="https://www.iscaconf.hosting.acm.org/isca2005/papers/06A-03.PDF">iscaconf.hosting.acm.org</a>) The architecture also influenced later research on programmable coherence and scalable shared-memory systems; subsequent work identifies Piranha as one of the early machines exploring programmable coherence, memory, and interconnect mechanisms. (<a href="https://www.researchgate.net/publication/220771058_Piranha_A_Scalable_Architecture_Based_on_Single-Chip_Multiprocessing">researchgate.net</a>)</p>
+
+<p>Its broader industry significance was later recognized in the ACM-IEEE Eckert-Mauchly Award materials, which describe Piranha as one of the first multicore architectures to propose multiple simpler “wimpy” cores and state that aspects of its design were adopted in subsequent commercial processors. (<a href="https://awards.acm.org/xpages/eckert-mauchly/index">awards.acm.org</a>) The authors also produced a follow-up industry-oriented publication on exploiting single-chip multiprocessing, indicating that the project continued to inform server-processor design discussions beyond the original ISCA paper. (<a href="https://www.barroso.org/publications.html">barroso.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/computer_architecture/">computer architecture</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/cache-coherence/">cache coherence</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/chip-multiprocessing/">chip multiprocessing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/commercial-workloads/">commercial workloads</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/directory-protocol/">directory protocol</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/multicore-processors/">multicore processors</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/non-inclusive-cache/">non inclusive cache</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/online-transaction-processing/">online transaction processing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/processor-design/">processor design</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/scalable-interconnect/">scalable interconnect</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/shared-memory-multiprocessors/">shared memory multiprocessors</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:59
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

@@ -1,0 +1,159 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Web-Scale Responsive Visual Search at Bing | Papers We Love</title>
+        <meta name="description" content="In this paper, we introduce a web-scale general visual search system deployed in Microsoft Bing. The system accommodates tens of billions of images in the index, with thousands of features for each image, and can respond in less than 200 ms. In order" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Web-Scale Responsive Visual Search at Bing | Papers We Love" />
+        <meta property="og:description" content="In this paper, we introduce a web-scale general visual search system deployed in Microsoft Bing. The system accommodates tens of billions of images in the index, with thousands of features for each image, and can respond in less than 200 ms. In order" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/web-scale-responsive-visual-search-at-bing-37d2f2ee/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:01">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Web-Scale Responsive Visual Search at Bing</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Arun Sacheti</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Houdong Hu</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Jiapei Huang</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Li Huang</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Linjun Yang</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Meenaz Merchant</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Pavel Komlev</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Xi (Stephen) Chen</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Yan Wang</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Ye Wu</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://arxiv.org/pdf/1802.04914.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: August 19–23, 2018 — Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD 2018), Applied Data Science Track. The arXiv version was submitted on February 14, 2018 and revised on February 20, 2018. ([arxiv.org](https://arxiv.org/abs/1802.04914))</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>In this paper, we introduce a web-scale general visual search system deployed in Microsoft Bing. The system accommodates tens of billions of images in the index, with thousands of features for each image, and can respond in less than 200 ms. In order to overcome the challenges in relevance, latency, and scalability in such large scale of data, we employ a cascaded learning-to-rank framework based on various latest deep learning visual features, and deploy in a distributed heterogeneous computing platform. Quantitative and qualitative experiments show that our system is able to support various applications on Bing website and apps.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>The paper describes a production visual-search system deployed in Microsoft Bing for searching across a general web-scale image index containing tens of billions of images. Its design addresses three competing requirements: relevance, response latency, and storage scalability.</p>
+
+<p>The system uses a three-stage retrieval and ranking pipeline. First, Level-0 matching applies a sharded inverted index based on Bag-of-Visual-Words representations to reduce the search space by roughly four orders of magnitude. Level-1 ranking uses a relatively inexpensive deep neural network feature and Product Quantization (PQ) to reduce the candidate set from millions to thousands. Level-2 ranking retrieves richer visual features and applies a LambdaMART model that combines multiple signals, including DNN embeddings, category features, face features, color, object-detection outputs, text-matching signals, and deduplication features.</p>
+
+<p>The visual representations are produced by several CNN architectures, including AlexNet, ZFSPPNet, GoogleNet, GoogleNetBN, and ResNet-50. The authors train models using Bing-specific data, human relevance judgments, web-scraped data, classification objectives, pairwise ranking loss, and triplet loss. Object detection, using Faster R-CNN and SSD, supports interactive hotspots and helps isolate objects such as fashion and furniture items. The system also detects shopping intent and can return related products with merchant and price information.</p>
+
+<p>To reduce memory and computation costs, the system applies PCA followed by PQ. For example, a 2048-dimensional ResNet representation is compressed from approximately 8 KB to 25 bytes per image. The visual-word representation uses approximately 64 bytes per image. Features and indexes are distributed across hundreds of machines, with SSD-based storage used for faster random access. CPU inference is optimized through vectorized low-level implementations, multithreading, caching, and a graph-based feature-extraction runtime; GPU deployment is reported to accelerate feature extraction by roughly 10–20 times for applicable models.</p>
+
+<p>On the reported evaluation set, the proposed multi-feature system achieves NDCG@5 of 74.20, compared with 70.81 for the strongest listed single-feature PQ baseline. PCA and PQ cause modest relevance reductions for the tested ResNet feature, lowering NDCG@5 from 71.84 for the raw feature to 70.81 after quantization. Reported median-style 50% latencies are 174 ms for an image already present in the index and 1083 ms for a user-uploaded image; feature extraction accounts for much of the latter cost, while cascaded ranking is reported at 49 ms.</p>
+
+<p>The evaluation has important limitations: relevance is measured on a constrained set of candidate images using human pairwise judgments, and the reported NDCG primarily evaluates final reranking rather than the complete billions-scale retrieval process. The paper therefore presents an engineering account of how approximate indexing, cascaded ranking, compressed representations, distributed retrieval, and heterogeneous hardware can jointly make general visual search practical.</p>
+
+<h2 id="influence-and-subsequent-use">Influence and subsequent use</h2>
+
+<p>The paper became a documented reference point for later commercial visual-search work. Alibaba’s contemporaneous KDD system described a separate large-scale visual-search architecture for e-commerce, addressing similar production concerns such as deep feature learning, object localization, indexing, reranking, and high-throughput serving. (<a href="https://www.kdd.org/kdd2018/accepted-papers/view/visual-search-at-alibaba">kdd.org</a>) Later Microsoft work on web-scale generic object detection explicitly cited the Bing visual-search system as an example of using object detection to improve visual-search engagement and relevance, extending the object-understanding component toward a broader production detection platform. (<a href="https://www.researchgate.net/publication/353050799_Web-Scale_Generic_Object_Detection_at_Microsoft_Bing">researchgate.net</a>) The paper is also cited in subsequent visual-search, e-commerce retrieval, and content-based image-retrieval literature as a production-scale example of combining deep representations with cascaded retrieval and compressed indexing. (<a href="https://doi.org/10.1145/3404835.3462950">doi.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/search-engines/">search engines</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/content-based-image-retrieval/">content based image retrieval</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/deep-learning/">deep learning</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/image-understanding/">image understanding</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/object-detection/">object detection</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:01
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

@@ -1,0 +1,172 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>FrTime: Functional Reactive Programming in PLT Scheme | Papers We Love</title>
+        <meta name="description" content="Functional Reactive Programming (FRP) supports the declarative construction of reactive systems through signals, or time-varying values. In this paper, we present a new language called FrTime, which provides FRP-style signals atop a dialect of Scheme" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="FrTime: Functional Reactive Programming in PLT Scheme | Papers We Love" />
+        <meta property="og:description" content="Functional Reactive Programming (FRP) supports the declarative construction of reactive systems through signals, or time-varying values. In this paper, we present a new language called FrTime, which provides FRP-style signals atop a dialect of Scheme" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/frtime-functional-reactive-programming-in-plt-sche-bcf5589e/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">FrTime: Functional Reactive Programming in PLT Scheme</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Gregory Cooper</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Shriram Krishnamurthi</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages-paradigms/functional_reactive_programming/frp-in-plt-scheme.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: April 2004 (Brown University Technical Report CS-03-20)</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Functional Reactive Programming (FRP) supports the declarative construction of reactive systems through signals, or time-varying values. In this paper, we present a new language called FrTime, which provides FRP-style signals atop a dialect of Scheme. We introduce the language with a few examples and discuss its implementation. FrTime uses impure features, such as state and asynchronous communication, to model time and to control evaluation. The use of such features yields a scalable, event-driven implementation with several important advantages. Specifically, it eases integration with other systems, supports distribution of signals across a network, and permits various benign impurities. To illustrate the language’s expressive power, we present a concise implementation of a networked, multi-player paddle-ball game in FrTime.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="overview">Overview</h2>
+
+<p>The paper presents FrTime, a Scheme-based implementation of Functional Reactive Programming (FRP) integrated into the DrScheme environment. FrTime extends a mostly functional subset of PLT Scheme with <strong>signals</strong>, which represent time-varying values. Signals are divided into <strong>behaviors</strong>, which have values continuously available over time, and <strong>events</strong>, which represent discrete occurrences such as keystrokes, mouse actions, or network messages.</p>
+
+<h2 id="core-programming-model">Core programming model</h2>
+
+<p>FrTime automatically lifts primitive function applications over behaviors, allowing programmers to combine constants and time-varying values using ordinary Scheme expressions. Events are processed with combinators such as mapping, filtering, merging, accumulation, and holding the latest occurrence as a behavior. This model lets programmers describe dependencies declaratively rather than manually updating state and coordinating callbacks.</p>
+
+<p>The paper demonstrates the model with clocks, animations, interactive graphics, mutable parameter cells, and a networked multiplayer paddle-ball game. The game uses behaviors for positions and scores, events for collisions and updates, and remote events for communication between machines.</p>
+
+<h2 id="implementation">Implementation</h2>
+
+<p>Unlike earlier FRP implementations based primarily on pure functional techniques and synchronous evaluation, FrTime represents each signal with a mutable data structure containing an update procedure and its most recently computed value. A signal manager maintains the dependency graph and processes asynchronous messages through a queue. Updates propagate from changed signals to dependent signals in a breadth-first, bottom-up order. Timed signals use an alarm queue, while optimizations avoid propagating unchanged values and prevent duplicate scheduling.</p>
+
+<p>This design introduces brief periods in which related behaviors may be inconsistent. The authors treat this as a deliberate engineering trade-off and identify model checking and limited synchronization mechanisms as possible ways to improve reasoning and robustness.</p>
+
+<h2 id="main-contributions-and-implications">Main contributions and implications</h2>
+
+<p>The implementation strategy provides four concrete benefits:</p>
+
+<ul>
+  <li><strong>Distributed signals:</strong> Events can be transmitted as messages and exposed through local proxies on other machines.</li>
+  <li><strong>System integration:</strong> Asynchronous message queues allow external GUI libraries and other imperative systems to provide input and consume signal updates without polling.</li>
+  <li><strong>Resource efficiency:</strong> Event-driven propagation performs work in proportion to the rate of actual changes rather than recomputing the entire signal network at a fixed global sampling rate. The reported experiments show advantages for large systems with heterogeneous update frequencies.</li>
+  <li><strong>Benign impurity:</strong> Mutation, input/output, imperative drawing, and mutable cells can be used while preserving automatic propagation of dependent signal values. This supports interactive experimentation and querying current behavior values from the development environment.</li>
+</ul>
+
+<h2 id="influence-and-subsequent-use">Influence and subsequent use</h2>
+
+<p>The work was followed by research that developed FrTime’s design and semantic foundations more fully. The authors’ later paper, <em>Embedding Dynamic Dataflow in a Call-by-Value Language</em>, describes FrTime as an embedding of dynamic dataflow in Scheme, presents a formal evaluation model, and discusses incremental program construction and integration with existing code. (<a href="https://static.cs.brown.edu/~sk/Publications/Papers/Published/ck-frtime/">static.cs.brown.edu</a>) The FrTime language remains documented and packaged in the Racket ecosystem; the current documentation explicitly lists this 2004 paper alongside later papers as a design reference. (<a href="https://plt.cs.northwestern.edu/snapshots/current/doc/frtime/index.html">plt.cs.northwestern.edu</a>)</p>
+
+<p>Related work also applied FrTime to practical GUI integration by adapting the MrEd object-oriented toolkit and developing a spreadsheet prototype. (<a href="https://cs.brown.edu/people/sk/Publications/Papers/Published/ick-adapt-oo-fwk-frp/">cs.brown.edu</a>) A later master’s thesis used FrTime as the reactive foundation for real-time computer musical performers, demonstrating application beyond graphics and user interfaces. (<a href="https://digitalcommons.calpoly.edu/theses/410/">digitalcommons.calpoly.edu</a>) The available evidence therefore indicates sustained influence on subsequent FRP research, Racket tooling, GUI integration, and experimental interactive applications, but does not establish broad industrial adoption.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/languages-paradigms/functional_reactive_programming/">languages paradigms/functional reactive programming</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/asynchronous-communication/">asynchronous communication</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/dataflow-programming/">dataflow programming</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-signals/">distributed signals</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/event-driven-computation/">event driven computation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/functional-reactive-programming/">functional reactive programming</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/incremental-computation/">incremental computation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/interactive-programming/">interactive programming</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/reactive-systems/">reactive systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/scheme/">scheme</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/time-varying-values/">time varying values</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

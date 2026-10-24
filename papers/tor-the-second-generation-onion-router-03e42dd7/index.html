@@ -1,0 +1,152 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Tor: The Second-Generation Onion Router | Papers We Love</title>
+        <meta name="description" content="We present Tor, a circuit-based low-latency anonymous communication service. This second-generation Onion Routing system addresses limitations in the original design by adding perfect forward secrecy, congestion control, directory servers, integrity " />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Tor: The Second-Generation Onion Router | Papers We Love" />
+        <meta property="og:description" content="We present Tor, a circuit-based low-latency anonymous communication service. This second-generation Onion Routing system addresses limitations in the original design by adding perfect forward secrecy, congestion control, directory servers, integrity " />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/tor-the-second-generation-onion-router-03e42dd7/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Tor: The Second-Generation Onion Router</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Nick Mathewson</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Paul Syverson</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Roger Dingledine</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/tor-the-second-generation-onion-router.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: August 2004, 13th USENIX Security Symposium (USENIX Security 04), San Diego, California, pages 303–320. ([usenix.org](https://www.usenix.org/conference/13th-usenix-security-symposium/tor-second-generation-onion-router))</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>We present Tor, a circuit-based low-latency anonymous communication service. This second-generation Onion Routing system addresses limitations in the original design by adding perfect forward secrecy, congestion control, directory servers, integrity checking, configurable exit policies, and a practical design for location-hidden services via rendezvous points. Tor works on the real-world Internet, requires no special privileges or kernel modifications, requires little synchronization or coordination between nodes, and provides a reasonable tradeoff between anonymity, usability, and efficiency. We briefly describe our experiences with an international network of more than 30 nodes. We close with a list of open problems in anonymous communication.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h3 id="paper-summary">Paper summary</h3>
+
+<p>The paper presents Tor as a deployable, low-latency anonymity network for TCP applications. Users establish circuits through multiple onion routers, with each router learning only its neighboring hops. Traffic is transmitted in fixed-size cells and protected by layered symmetric encryption. The design emphasizes practical deployment, usability, portability, and a balance between anonymity and network efficiency.</p>
+
+<p>Its main technical contributions are incremental, telescoping circuit construction with ephemeral Diffie–Hellman keys and perfect forward secrecy; multiplexing multiple TCP streams over shared circuits; fixed-size cells; decentralized congestion control and rate limiting; signed directory information distributed by trusted directory servers; configurable exit policies; end-to-end integrity checks at stream edges; and rendezvous-point protocols for location-hidden services. The paper also separates transport anonymity from application-level protocol cleaning, relying on interfaces such as SOCKS and external tools such as Privoxy for application-specific filtering.</p>
+
+<p>The security analysis explicitly limits Tor’s guarantees. The system is not designed to defeat a global passive adversary or strong end-to-end timing and volume-correlation attacks. It also omits mixing, padding, and traffic shaping because the authors considered their cost and practical effectiveness unresolved. Other acknowledged risks include malicious or compromised relays, directory-server compromise, denial-of-service attacks, exit abuse, website fingerprinting, and failures caused by node churn.</p>
+
+<h3 id="influence">Influence</h3>
+
+<p>The paper became the principal design reference for Tor and described the architecture that developed into the Tor network. The Tor Project identifies it as the paper that became Tor’s design, and the work received the USENIX Security Test of Time Award in 2014. (<a href="https://www.usenix.org/legacy/events/sec04/tech/">usenix.org</a>) Subsequent work has evaluated and extended Tor’s directory system, circuit construction, performance, hidden services, and resistance to traffic analysis; for example, later research evaluated Tor as a mechanism for anonymizing DNS/ONS queries and measured its latency and privacy tradeoffs. (<a href="https://blog.torproject.org/top-changes-tor-2004-design-paper-part-2/">blog.torproject.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/distributed_systems/">distributed systems</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/anonymous-communication/">anonymous communication</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/congestion-control/">congestion control</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/directory-servers/">directory servers</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/hidden-services/">hidden services</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/low-latency-anonymity/">low latency anonymity</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/onion-routing/">onion routing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/perfect-forward-secrecy/">perfect forward secrecy</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/rendezvous-points/">rendezvous points</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/tor/">tor</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/traffic-analysis/">traffic analysis</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

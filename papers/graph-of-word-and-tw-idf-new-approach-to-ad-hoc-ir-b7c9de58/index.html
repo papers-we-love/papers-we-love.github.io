@@ -1,0 +1,147 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Graph-of-word and TW-IDF: New Approach to Ad Hoc IR | Papers We Love</title>
+        <meta name="description" content="In this paper, we introduce novel document representation (graph-of-word) and retrieval model (TW-IDF) for ad hoc IR. Questioning the term independence assumption behind the traditional bag-of-word model, we propose a different representation of a do" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Graph-of-word and TW-IDF: New Approach to Ad Hoc IR | Papers We Love" />
+        <meta property="og:description" content="In this paper, we introduce novel document representation (graph-of-word) and retrieval model (TW-IDF) for ad hoc IR. Questioning the term independence assumption behind the traditional bag-of-word model, we propose a different representation of a do" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/graph-of-word-and-tw-idf-new-approach-to-ad-hoc-ir-b7c9de58/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Graph-of-word and TW-IDF: New Approach to Ad Hoc IR</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">François Rousseau</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Michalis Vazirgiannis</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/information_retrieval/graph_of_word_and_tw_idf.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: October 27–November 1, 2013; CIKM’13, San Francisco, California, USA</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>In this paper, we introduce novel document representation (graph-of-word) and retrieval model (TW-IDF) for ad hoc IR. Questioning the term independence assumption behind the traditional bag-of-word model, we propose a different representation of a document that captures the relationships between the terms using an unweighted directed graph of terms. From this graph, we extract at indexing time meaningful term weights (TW) that replace traditional term frequencies (TF) and from which we define a novel scoring function, namely TW-IDF, by analogy with TF-IDF. This approach leads to a retrieval model that consistently and significantly outperforms BM25 and in some cases its extension BM25+ on various standard TREC datasets. In particular, experiments show that counting the number of different contexts in which a term occurs inside a document is more effective and relevant to search than considering an overall concave term frequency in the context of ad hoc IR.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>The paper proposes <strong>graph-of-word</strong>, an alternative to the bag-of-words representation for ad hoc information retrieval. A document is represented as an unweighted directed graph: vertices are unique terms, and directed edges connect terms that co-occur within a fixed sliding window, with direction encoding term order. The authors use the indegree of a term as its graph-based term weight (TW), replacing traditional term frequency (TF) in the inverted index. The resulting <strong>TW-IDF</strong> scoring function applies pivoted document-length normalization and inverse document frequency.</p>
+
+<p>The experiments use four TREC collections—Disks 1&amp;2, Disks 4&amp;5, WT10G, and GOV2—and compare TW-IDF with TF-IDF, BM25, Piv+, and BM25+. With the default slope parameter of 0.003, TW-IDF achieves higher MAP than BM25 on all four collections and higher P@10 on all four collections in the reported untuned comparison. The authors interpret the improvement as evidence that counting the number of distinct contexts in which a term occurs is more useful for retrieval than counting its total occurrences with a concave TF normalization. The model does not require explicit concave or lower-bounding normalization, although it still benefits from document-length pivoting.</p>
+
+<p>The paper identifies several limitations and future directions: normalized weighted graphs, graph representations of document collections, and applications to summarization and phrasal indexing.</p>
+
+<h3 id="subsequent-influence">Subsequent influence</h3>
+
+<p>Later research explicitly cites the paper as an early graph-based term-weighting and document-representation method. It is referenced in work on general graph-based text representations, including <em>Bag of Textual Graphs</em> (2019), and in later discussions of graph-based retrieval and passage reranking. A subsequent dissertation also describes graph-of-word and TW-IDF as methods that capture term relationships and compute graph-based term weights. These references indicate continued use of the paper as background for graph-based text modeling, but the sources located do not establish widespread industrial deployment of TW-IDF itself. (<a href="https://asistdl.onlinelibrary.wiley.com/doi/10.1002/asi.24167">asistdl.onlinelibrary.wiley.com</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/information_retrieval/">information retrieval</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/graph-based-term-weighting/">graph based term weighting</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/graph-of-word/">graph of word</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/graph-representation-of-document/">graph representation of document</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/ir-theory/">ir theory</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/scoring-functions/">scoring functions</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/tw-idf/">tw idf</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

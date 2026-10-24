@@ -1,0 +1,148 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Monad Transformers and Modular Interpreters | Papers We Love</title>
+        <meta name="description" content="We show how a set of building blocks can be used to construct programming language interpreters, and present implementations of such building blocks capable of supporting many commonly known features, including simple expressions, three different fun" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Monad Transformers and Modular Interpreters | Papers We Love" />
+        <meta property="og:description" content="We show how a set of building blocks can be used to construct programming language interpreters, and present implementations of such building blocks capable of supporting many commonly known features, including simple expressions, three different fun" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/monad-transformers-and-modular-interpreters-54503a0d/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:00">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Monad Transformers and Modular Interpreters</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Mark Jones</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Paul Hudak</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Sheng Liang</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://dl.acm.org/doi/pdf/10.1145/199448.199528" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: January 25, 1995 (POPL '95, Proceedings of the 22nd ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages, San Francisco, California, January 23–25, 1995)</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>We show how a set of building blocks can be used to construct programming language interpreters, and present implementations of such building blocks capable of supporting many commonly known features, including simple expressions, three different function call mechanisms (call-by-name, call-by-value and lazy evaluation), references and assignment, nondeterminism, first-class continuations, and program tracing.
+
+The underlying mechanism of our system is monad transformers, a simple form of abstraction for introducing a wide range of computational behaviors, such as state, I/O, continuations, and exceptions.
+
+Our work is significant in the following respects. First, we have succeeded in designing a fully modular interpreter based on monad transformers that includes features missing from Steele's, Espinosa's, and Wadler's earlier efforts. Second, we have found new ways to lift monad operations through monad transformers, in particular difficult cases not achieved in Moggi's original work. Third, we have demonstrated that interactions between features are reflected in liftings and that semantics can be changed by reordering monad transformers. Finally, we have implemented our interpreter in Gofer, whose constructor classes provide just the added power over Haskell's type classes to allow precise and convenient expression of our ideas. This implementation includes a method for constructing extensible unions and a form of subtyping that is interesting in its own right.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <p>The paper establishes a modular approach to programming-language interpreter construction in which individual language features are represented by reusable monad transformers. It demonstrates composition of features including environments, state, errors, continuations, nondeterminism, lazy evaluation, references, and tracing, and analyzes how operation lifting and transformer ordering determine feature interactions and semantics. The implementation in Gofer also introduced techniques for extensible unions and type-class-based abstraction.</p>
+
+<p>The work had documented influence on subsequent Haskell development. A history of Haskell identifies it as the first demonstration of a modular interpreter in Haskell using monad transformers and reports that it helped motivate extensions to type classes and the development of the monad transformer library. (<a href="https://cse.msu.edu/~cse452/Readings/a12-hudak.pdf">cse.msu.edu</a>) The Haskell <code>transformers</code> documentation continues to use a reduced version of the paper’s interpreter architecture as an example of composing I/O, exceptions, environments, and mutable state. (<a href="https://xmonad.github.io/xmonad-docs/transformers-0.5.6.2/Control-Monad-Trans-Class.html">xmonad.github.io</a>) Later research extended the same modular-monadic methodology to static analysis: <em>Galois Transformers and Modular Abstract Interpreters</em> explicitly builds on this approach to compose language-independent analysis abstractions and transport soundness properties through transformer stacks. (<a href="https://arxiv.org/abs/1411.3962">arxiv.org</a>) Subsequent work on modular interpreters also credits the paper’s extensible-union technique and interpreter decomposition pattern. (<a href="https://eprints.nottingham.ac.uk/11226/1/Thesis.pdf">eprints.nottingham.ac.uk</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/languages/haskell/">languages/haskell</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/computational-effects/">computational effects</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/continuations/">continuations</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/denotational-semantics/">denotational semantics</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/functional-programming/">functional programming</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/gofer/">gofer</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/haskell/">haskell</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/modular-interpreters/">modular interpreters</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/monad-transformers/">monad transformers</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/programming-language-semantics/">programming language semantics</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/type-classes/">type classes</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:00
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->
