@@ -1,0 +1,146 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>HermitCore: A Unikernel for Extreme Scale Computing | Papers We Love</title>
+        <meta name="description" content="We expect that the size and the complexity of future supercomputers will increase on their path to exascale systems and beyond. Therefore, system software has to adapt to the complexity of these systems for a simplification of the development of scal" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="HermitCore: A Unikernel for Extreme Scale Computing | Papers We Love" />
+        <meta property="og:description" content="We expect that the size and the complexity of future supercomputers will increase on their path to exascale systems and beyond. Therefore, system software has to adapt to the complexity of these systems for a simplification of the development of scal" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/hermitcore-a-unikernel-for-extreme-scale-computing-79b483c3/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:01">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">HermitCore: A Unikernel for Extreme Scale Computing</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Jens Breitbart</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Simon Pickartz</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Stefan Lankes</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://dl.acm.org/citation.cfm?id=2931093" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: June 1, 2016 — Proceedings of the 6th International Workshop on Runtime and Operating Systems for Supercomputers (ROSS ’16), Kyoto, Japan</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>We expect that the size and the complexity of future supercomputers will increase on their path to exascale systems and beyond. Therefore, system software has to adapt to the complexity of these systems for a simplification of the development of scalable applications. In this paper, we present a unikernel operating system design for HPC. It extends the multi-kernel approach while providing better programmability and scalability for hierarchical systems, such as HLRS’ Hazel Hen, which base on multiple cluster-on-a-chip processors. We prove the scalability of the design via micro benchmarks by taking the example of HermitCore—our prototype implementation of the new design.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <p>The paper introduced HermitCore, a unikernel design for high-performance computing that combines unikernel and multi-kernel concepts. Its design isolates computation from a conventional Linux system, supports execution on bare metal or within virtual machines, uses a hierarchical organization aligned with NUMA hardware, and targets reduced operating-system overhead and noise. The authors evaluated the prototype with microbenchmarks addressing system-call costs, operating-system interference, OpenMP overhead, and inter-kernel communication.</p>
+
+<p>Subsequent work developed the same research line in two directions. A 2017 paper by the same authors studied HermitCore as a low-noise unikernel for extreme-scale systems. The project was later rewritten in Rust as RustyHermit, with the project documentation explicitly identifying HermitCore as its starting point. HermitCore also served as the basis for HermiTux, which extended the design toward binary compatibility with unmodified Linux applications. (<a href="https://hermit-os.org/">hermit-os.org</a>)</p>
+
+<p>The project subsequently evolved into the Hermit operating-system project, which continues to target scalable and predictable runtimes for high-performance and cloud computing. In the sources reviewed, the documented influence is primarily on subsequent unikernel and operating-system research; no specific commercial deployment attributable to this paper was identified. (<a href="https://hermitcore.org/">hermitcore.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/unikernels/">unikernels</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/extreme-scale-computing/">extreme scale computing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/high-performance-computing/">high performance computing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/low-os-noise/">low os noise</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/mpi/">mpi</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/multi-kernel/">multi kernel</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/numa/">numa</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/openmp/">openmp</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/operating-systems/">operating systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/scalability/">scalability</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/unikernel/">unikernel</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:01
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

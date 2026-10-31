@@ -1,0 +1,151 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>A Performance Evaluation of Rump Kernels as a Multi-server OS Building Block on seL4 | Papers We Love</title>
+        <meta name="description" content="In the paper, we argue that it is worthwhile to revisit building microkernel-based multiserver operating systems, and introduce a multiserver OS architecture. We argue that recent formal verification of microkernels provides a compelling platform for" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="A Performance Evaluation of Rump Kernels as a Multi-server OS Building Block on seL4 | Papers We Love" />
+        <meta property="og:description" content="In the paper, we argue that it is worthwhile to revisit building microkernel-based multiserver operating systems, and introduce a multiserver OS architecture. We argue that recent formal verification of microkernels provides a compelling platform for" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/a-performance-evaluation-of-rump-kernels-as-a-mult-662d183c/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:01">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">A Performance Evaluation of Rump Kernels as a Multi-server OS Building Block on seL4</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Amirreza Zarrabi</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Gernot Heiser</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Kent Mcleod</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Kevin Elphinstone</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://trustworthy.systems/publications/csiro_full_text/Elphinstone_ZMH_17.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: September 2, 2017, APSys ’17 (8th Asia-Pacific Workshop on Systems), Mumbai, India</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>In the paper, we argue that it is worthwhile to revisit building microkernel-based multiserver operating systems, and introduce a multiserver OS architecture. We argue that recent formal verification of microkernels provides a compelling platform for constructing general purpose systems, and that existing systems are not appropriate to take advantage of a formally verified microkernel.
+Our vision is of mostly-POSIX multiserver systems based on rump kernels, with a small set of fundamental services and frameworks. We expect the approach to provide a balance between componentisation, development effort, and legacy system compatibility.
+We present our initial efforts with a promising performance evaluation of a rump kernel running on seL4.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="paper-summary">Paper summary</h2>
+<p>The paper proposes revisiting microkernel-based multiserver operating systems using seL4 as a formally verified foundation and rump kernels as a practical way to reuse NetBSD-derived operating-system components. Its envisioned architecture decomposes services such as naming, process management, memory management, device access, networking, and file systems into isolated components, while using capability-based protection and least-authority principles to reduce the trusted computing base and contain faults.</p>
+
+<p>The authors ported the Rumprun bare-metal unikernel platform layer to seL4. The port adapted execution contexts, interrupt delivery, synchronization, memory management, DMA, MMIO, timers, console output, and low-level device access. Evaluation used an Iperf TCP server and compared Rumprun on bare metal, Rumprun on seL4, native NetBSD, and Linux on a single-core 32-bit system with Gigabit Ethernet. The seL4 version had little performance impact relative to the bare-metal version and, according to the paper’s measurements, exceeded native NetBSD performance. Using IOAPIC or MSI interrupt mechanisms reduced seL4-specific CPU overhead to below 0.3% of total available CPU. The port removed 1,402 lines of code and added 677 lines, indicating that most of the adaptation effort was confined to the platform layer.</p>
+
+<h2 id="subsequent-use">Subsequent use</h2>
+<p>The paper is cited as prior work by LibrettOS, a later multiserver-library OS prototype that also uses rump kernels to reuse NetBSD drivers and POSIX/BSD-compatible software. (<a href="https://ssrg.ece.vt.edu/papers/vee20-librettos.pdf">ssrg.ece.vt.edu</a>) It is also cited by Kite, a later system for lightweight critical service domains, as part of the prior work on multiserver operating-system architectures. (<a href="https://www.ssrg.ece.vt.edu/papers/eurosys22.pdf">ssrg.ece.vt.edu</a>) These citations document continued use of the paper as background for research on rump kernels, multiserver systems, and componentized operating-system designs; they do not by themselves establish that the paper directly caused those systems to be developed.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/unikernels/">unikernels</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/formal-verification/">formal verification</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/library-os/">library os</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/microkernels/">microkernels</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/multi-server-operating-systems/">multi server operating systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/networking-performance/">networking performance</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/operating-systems/">operating systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/posix-compatibility/">posix compatibility</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/rump-kernels/">rump kernels</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/sel4/">sel4</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/unikernels/">unikernels</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:01
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

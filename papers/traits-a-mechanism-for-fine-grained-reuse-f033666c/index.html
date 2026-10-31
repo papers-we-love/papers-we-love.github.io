@@ -1,0 +1,160 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Traits: A Mechanism for Fine-grained Reuse | Papers We Love</title>
+        <meta name="description" content="Inheritance is well-known and accepted as a mechanism for reuse in object-oriented languages. Unfortunately, due to the coarse granularity of inheritance, it may be difficult to decompose an application into an optimal class hierarchy that maximizes " />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Traits: A Mechanism for Fine-grained Reuse | Papers We Love" />
+        <meta property="og:description" content="Inheritance is well-known and accepted as a mechanism for reuse in object-oriented languages. Unfortunately, due to the coarse granularity of inheritance, it may be difficult to decompose an application into an optimal class hierarchy that maximizes " />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/traits-a-mechanism-for-fine-grained-reuse-f033666c/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:00">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Traits: A Mechanism for Fine-grained Reuse</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Andrew P. Black</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Nathanael Schärli</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Oscar Nierstrasz</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Roel Wuyts</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Stéphane Ducasse</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://scg.unibe.ch/archive/papers/Duca06bTOPLASTraits.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: March 2006 — ACM Transactions on Programming Languages and Systems, Vol. 28, No. 2, pp. 331–388</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Inheritance is well-known and accepted as a mechanism for reuse in object-oriented languages. Unfortunately, due to the coarse granularity of inheritance, it may be difficult to decompose an application into an optimal class hierarchy that maximizes software reuse. Existing schemes based on single inheritance, multiple inheritance, or mixins, all pose numerous problems for reuse. To overcome these problems we propose traits, pure units of reuse consisting only of methods. We develop a formal model of traits that establishes how traits can be composed, either to form other traits, or to form classes. We also outline an experimental validation in which we apply traits to refactor a non-trivial application into composable units.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>The paper introduces <strong>traits</strong> as fine-grained, reusable units of behavior for object-oriented programs. A trait is a collection of methods that is independent of a class hierarchy and may both provide and require methods. Classes remain organized through single inheritance, while traits specify reusable behavioral differences that can be composed into classes or other traits.</p>
+
+<p>The authors identify limitations in conventional reuse mechanisms. Single inheritance can cause duplicated methods or force behavior into inappropriate locations in a hierarchy. Multiple inheritance introduces method and state conflicts, ambiguous inheritance paths, and difficulties with reusable wrappers. Mixins support reusable wrappers but compose linearly, making composition order significant and causing fragile hierarchies and dispersed glue code.</p>
+
+<p>Traits address these issues through unordered composition and explicit conflict management. Their principal operations are trait sum, overriding, exclusion, and aliasing. Trait sum is associative and commutative, so composition order does not implicitly determine behavior. Conflicts must be resolved explicitly by the composing class or composite trait. Aliasing provides access to an implementation that would otherwise be hidden by overriding, while exclusion removes selected methods from a composition. Traits contain no state, which eliminates state conflicts between reusable components.</p>
+
+<p>A central semantic result is the <strong>flattening property</strong>: a class using traits has the same behavior as an equivalent class in which the trait methods have been inlined. This separates the organization of reusable behavior from runtime class semantics and permits tools to present either a compositional view or a flattened class view. The paper also formalizes method lookup, required and provided methods, well-definedness, reachability through self- and super-sends, and equivalence between refactored class hierarchies.</p>
+
+<p>The implementation in Squeak Smalltalk integrates traits into the language and programming environment. The trait browser exposes provided methods, required methods, conflicts, aliases, overrides, and glue methods. The implementation shares compiled method bodies where possible and preserves the performance characteristics of equivalent single-inheritance code, apart from ordinary accessor-method costs.</p>
+
+<p>The main empirical validation refactors the Smalltalk collection hierarchy. Twenty-nine classes originally containing 635 methods were reorganized using 60 traits, reducing the implementation to 567 methods and approximately 12% less source code. The refactoring also removed inherited methods that had previously been placed too high in the hierarchy and then disabled in inappropriate subclasses. Additional applications address safe metaclass composition and bootstrapping the Smalltalk kernel with traits.</p>
+
+<h2 id="documented-influence">Documented influence</h2>
+
+<p>The paper’s influence is visible in subsequent trait research and implementations. The Software Composition Group reports that traits were implemented in Squeak, became part of the standard Squeak distribution, and were ported or adapted for systems including Perl, Scala, C#, and VisualWorks Smalltalk. (<a href="https://scg.unibe.ch/research/traits">scg.unibe.ch</a>)</p>
+
+<p>Later research directly cites and extends the paper’s model. For example, <em>Typed First-Class Traits</em> develops a statically typed language with first-class traits and dynamic inheritance, while retaining traits as a central abstraction for modular composition. (<a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ECOOP.2018.9">drops.dagstuhl.de</a>) Other subsequent work, including research on nested composition, object inheritance, and formal models of dispatch and overriding, cites the paper as part of the foundations for trait and inheritance research. (<a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ECOOP.2018.22">drops.dagstuhl.de</a>)</p>
+
+<p>The evidence supports a concrete impact on programming-language research and on trait implementations in object-oriented languages. The sources reviewed do not establish a specific commercial product whose design can be attributed solely to this paper.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/design/">design</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/inheritance/">inheritance</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/mixins/">mixins</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/multiple-inheritance/">multiple inheritance</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/reuse/">reuse</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/smalltalk/">smalltalk</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/traits/">traits</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:00
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

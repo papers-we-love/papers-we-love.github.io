@@ -1,0 +1,146 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Predicate Dispatching: A Unified Theory of Dispatch | Papers We Love</title>
+        <meta name="description" content="Predicate dispatching generalizes previous method dispatch mechanisms by permitting arbitrary predicates to control method applicability and by using logical implication between predicates as the overriding relationship. The method selected to handle" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Predicate Dispatching: A Unified Theory of Dispatch | Papers We Love" />
+        <meta property="og:description" content="Predicate dispatching generalizes previous method dispatch mechanisms by permitting arbitrary predicates to control method applicability and by using logical implication between predicates as the overriding relationship. The method selected to handle" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/predicate-dispatching-a-unified-theory-of-dispatch-c2bc267c/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Predicate Dispatching: A Unified Theory of Dispatch</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Craig Chambers</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Craig Kaplan</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Michael Ernst</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages-theory/predicate-dispatching.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: July 20–24, 1998; ECOOP ’98, the 12th European Conference on Object-Oriented Programming, Brussels, Belgium; pp. 186–211</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Predicate dispatching generalizes previous method dispatch mechanisms by permitting arbitrary predicates to control method applicability and by using logical implication between predicates as the overriding relationship. The method selected to handle a message send can depend not just on the classes of the arguments, as in ordinary object-oriented dispatch, but also on the classes of subcomponents, on an argument's state, and on relationships between objects. This simple mechanism subsumes and extends object-oriented single and multiple dispatch, ML-style pattern matching, predicate classes, and classifiers, which can all be regarded as syntactic sugar for predicate dispatching. This paper introduces predicate dispatching, gives motivating examples, and presents its static and dynamic semantics. An implementation of predicate dispatching is available.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <p>The paper established predicate dispatching as a unified model in which arbitrary predicates determine method applicability and logical implication determines method overriding. Subsequent research developed the idea in several directions. Millstein, Frost, Ryder, and Warth proposed a more expressive and modular predicate-dispatch design for Java, explicitly addressing practical limitations of earlier predicate-dispatch languages. (<a href="https://web.cs.ucla.edu/~todd/research/pub.php?id=toplas09">web.cs.ucla.edu</a>)</p>
+
+<p>Related work also explored implementation frameworks for advanced dispatching: ALIA4J treated predicate dispatching as one of the advanced-dispatch mechanisms that language implementations should support. (<a href="https://research.utwente.nl/en/publications/an-overview-of-alia4j-an-execution-model-for-advanced-dispatching/">research.utwente.nl</a>) The concept influenced predicate-oriented programming beyond language prototypes; an industrial case study used predicate fields, a related mechanism for state-dependent object structure, in a mission-critical control system and reported increased flexibility and reduced development effort in several areas. (<a href="https://homes.cs.washington.edu/~mernst/pubs/predicate-fields-oopsla2005.pdf">homes.cs.washington.edu</a>)</p>
+
+<p>The authors also released an implementation, Güd/Dubious, demonstrating the semantics described in the paper. (<a href="https://projectsweb.cs.washington.edu/research/projects/cecil/www/Gud/">projectsweb.cs.washington.edu</a>) These references indicate continued influence on programming-language research and on experiments applying predicate-oriented mechanisms in industrial software, although predicate dispatching itself has not become a mainstream feature of major general-purpose languages.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/languages-theory/">languages theory</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/classifiers/">classifiers</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/dynamic-semantics/">dynamic semantics</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/method-dispatch/">method dispatch</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/multiple-dispatch/">multiple dispatch</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/object-oriented-programming/">object oriented programming</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/pattern-matching/">pattern matching</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/predicate-classes/">predicate classes</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/predicate-dispatching/">predicate dispatching</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/predicate-logic/">predicate logic</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/static-semantics/">static semantics</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

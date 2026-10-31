@@ -1,0 +1,156 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>On Understanding Types, Data Abstraction, and Polymorphism | Papers We Love</title>
+        <meta name="description" content="Our objective is to understand the notion of type in programming languages, present a model of typed, polymorphic programming languages that reflects recent research in type theory, and examine the relevance of recent research to the design of practi" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="On Understanding Types, Data Abstraction, and Polymorphism | Papers We Love" />
+        <meta property="og:description" content="Our objective is to understand the notion of type in programming languages, present a model of typed, polymorphic programming languages that reflects recent research in type theory, and examine the relevance of recent research to the design of practi" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/on-understanding-types-data-abstraction-and-polymo-1f45a709/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">On Understanding Types, Data Abstraction, and Polymorphism</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Luca Cardelli</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Peter Wegner</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages-theory/on-understanding-types-data-abstraction-polymorphism.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: December 1985; ACM Computing Surveys, Vol. 17, No. 4, pp. 471–522</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Our objective is to understand the notion of type in programming languages, present a model of typed, polymorphic programming languages that reflects recent research in type theory, and examine the relevance of recent research to the design of practical programming languages.
+Object-oriented languages provide both a framework and a motivation for exploring the interaction among the concepts of type, data abstraction, and polymorphism, since they extend the notion of type to data abstraction and since type inheritance is an important form of polymorphism. We develop a λ-calculus-based model for type systems that allows us to explore these interactions in a simple setting, unencumbered by complexities of production programming languages.
+The evolution of languages from untyped universes to monomorphic and then polymorphic type systems is reviewed. Mechanisms for polymorphism such as overloading, coercion, subtyping, and parameterization are examined. A unifying framework for polymorphic type systems is developed in terms of the typed λ-calculus augmented to include binding of types by quantification as well as binding of values by abstraction.
+The typed λ-calculus is augmented by universal quantification to model generic functions with type parameters, existential quantification and packaging (information hiding) to model abstract data types, and bounded quantification to model subtypes and type inheritance. In this way we obtain a simple and precise characterization of a powerful type system that includes abstract data types, parametric polymorphism, and multiple inheritance in a single consistent framework. The mechanisms for type checking for the augmented λ-calculus are discussed.
+The augmented typed λ-calculus is used as a programming language for a variety of illustrative examples. We christen this language Fun because fun instead of λ is the functional abstraction keyword and because it is pleasant to deal with.
+Fun is mathematically simple and can serve as a basis for the design and implementation of real programming languages with type facilities that are more powerful and expressive than those of existing programming languages. In particular, it provides a basis for the design of strongly typed object-oriented languages.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <p>The paper develops a unified λ-calculus-based account of types, data abstraction, and polymorphism. It begins by contrasting untyped universes—such as memory words, Lisp S-expressions, λ-expressions, and sets—with typed systems, arguing that types constrain object interactions, protect representations, and enable earlier detection of errors. It distinguishes static typing from strong typing and separates monomorphic languages from polymorphic ones.</p>
+
+<p>The central taxonomy divides polymorphism into <strong>ad-hoc polymorphism</strong> and <strong>universal polymorphism</strong>. Overloading and coercion are treated as ad-hoc mechanisms, while parametric polymorphism and inclusion polymorphism are treated as universal mechanisms. Parametric polymorphism supports functions that operate uniformly across types; inclusion polymorphism supports the use of subtype values in supertype contexts and provides a type-theoretic interpretation of inheritance.</p>
+
+<p>The authors model types as ideals, or suitably well-behaved sets of values, ordered by inclusion. Under this interpretation, subtype relations correspond to set inclusion, and a polymorphic value may belong to multiple types. The model supplies a common semantic basis for simple types, recursive types, parametric polymorphism, abstract types, and inheritance.</p>
+
+<p>The paper extends the typed λ-calculus with three forms of quantification. <strong>Universal quantification</strong> models generic functions and parametric types, including functions such as a polymorphic identity function and generic list operations. <strong>Existential quantification</strong> models abstract data types by packaging a representation together with an interface while hiding the representation from clients. The paper uses packages, points, stacks, and modules to show how existential types express information hiding, representation independence, and first-class modules. Combining universal and existential quantification yields generic abstract data types, such as stacks whose element type is polymorphic while their internal representation is hidden.</p>
+
+<p><strong>Bounded quantification</strong> restricts type variables to subtypes of a specified bound. This provides a formal account of subtype polymorphism and inheritance while preserving relationships between argument and result types. The paper gives record, variant, function, and subrange inclusion rules, explains how records can model multiple inheritance, and uses bounded existential quantification to express abstract types that themselves participate in subtype relations.</p>
+
+<p>The language Fun serves as a compact illustrative notation rather than a proposed production language. Its type system integrates records, variants, functions, recursion, universal quantification, existential packaging, subtyping, and bounded quantification. The authors argue that explicit type information makes checking expressive features comparatively tractable, while fully automatic inference becomes difficult or unavailable once existential types and subtyping are added. They also identify complications involving polymorphic side effects.</p>
+
+<p>The paper’s classification of type systems places first-order systems at the base, with higher-order functions and inheritance developing along separate dimensions, and with universal, existential, and bounded quantification providing increasingly expressive combinations. Its concrete influence is visible in subsequent type-theory and programming-language work: Pierce’s <em>Types and Programming Languages</em> treats universal and existential polymorphism, subtyping, bounded quantification, recursive types, and object-oriented encodings as core topics; later object-calculus work explicitly identifies its subtype formalism as an extension of the bounded-quantification calculus associated with Cardelli and Wegner; and later research on existential types and type classes cites the paper while developing implementations and formal systems for their combination. (<a href="https://mitpress.mit.edu/9780262162098/types-and-programming-languages/">mitpress.mit.edu</a>)</p>
+
+<p>Overall, the paper’s main contribution is a common conceptual and formal vocabulary for relating parametric polymorphism, abstract data types, modules, subtyping, and inheritance. Bibliographic databases identify it as a 1985 ACM Computing Surveys article by Luca Cardelli and Peter Wegner. (<a href="https://dblp.org/rec/journals/csur/CardelliW85">dblp.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/languages-theory/">languages theory</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/data-abstraction/">data abstraction</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/inheritance/">inheritance</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/object-oriented-programming/">object oriented programming</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/polymorphism/">polymorphism</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/type-checking/">type checking</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/type-inference/">type inference</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

@@ -1,0 +1,152 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>The Scalable Commutativity Rule: Designing Scalable Software for Multicore Processors | Papers We Love</title>
+        <meta name="description" content="What fundamental opportunities for scalability are latent in interfaces, such as system call APIs? Can scalability opportunities be identified even before any implementation exists, simply by considering interface specifications? To answer these ques" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="The Scalable Commutativity Rule: Designing Scalable Software for Multicore Processors | Papers We Love" />
+        <meta property="og:description" content="What fundamental opportunities for scalability are latent in interfaces, such as system call APIs? Can scalability opportunities be identified even before any implementation exists, simply by considering interface specifications? To answer these ques" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/the-scalable-commutativity-rule-designing-scalable-8bb89b2f/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:01">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">The Scalable Commutativity Rule: Designing Scalable Software for Multicore Processors</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Austin T. Clements</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Eddie Kohler</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">M. Frans Kaashoek</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Nickolai Zeldovich</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Robert T. Morris</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://people.csail.mit.edu/nickolai/papers/clements-sc.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: November 3–6, 2013, SOSP ’13 (24th ACM Symposium on Operating Systems Principles), Farmington, Pennsylvania, USA</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>What fundamental opportunities for scalability are latent in interfaces, such as system call APIs? Can scalability opportunities be identified even before any implementation exists, simply by considering interface specifications? To answer these questions this paper introduces the following rule: Whenever interface operations commute, they can be implemented in a way that scales. This rule aids developers in building more scalable software starting from interface design and carrying on through implementation, testing, and evaluation.
+
+To help developers apply the rule, a new tool named COMMUTER accepts high-level interface models and generates tests of operations that commute and hence could scale. Using these tests, COMMUTER can evaluate the scalability of an implementation. We apply COMMUTER to 18 POSIX calls and use the results to guide the implementation of a new research operating system kernel called sv6. Linux scales for 68% of the 13,664 tests generated by COMMUTER for these calls, and COMMUTER finds many problems that have been observed to limit application scalability. sv6 scales for 99% of the tests.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>The paper introduces the scalable commutativity rule: when interface operations commute—meaning their execution order is not distinguishable through the interface—there exists an implementation whose memory accesses are conflict-free in that situation. The authors define SIM commutativity, a state-dependent, interface-based, and monotonic form of commutativity suitable for complex system interfaces, and provide a constructive proof of the rule.</p>
+
+<p>The paper also presents <strong>COMMUTER</strong>, a toolchain consisting of symbolic interface analysis, test generation, and dynamic memory-access tracing. Applied to 18 POSIX calls, COMMUTER generated 13,664 tests. Linux 3.8 was conflict-free for 9,389 tests, while the authors’ sv6 research kernel was conflict-free for 13,528 tests. The resulting designs used techniques including per-core allocation, radix arrays, deferred reclamation, scalable reference counting, optimistic checks, RCU, and weaker interface ordering. Microbenchmarks and a mail-server workload showed that modified, more-commutative interfaces scaled substantially better than standard POSIX interfaces on an 80-core system.</p>
+
+<p>The work received the SOSP ’13 Best Paper award and was subsequently disseminated in an ACM Transactions on Computer Systems extended version and a 2017 Communications of the ACM article. (<a href="https://www.usenix.org/conference/atc14/technical-sessions/presentation/scalable-commutativity-rule-designing-scalable">usenix.org</a>) The project also led to continued public tooling and systems research around COMMUTER, sv6, and interface-level multicore scalability. (<a href="https://pdos.csail.mit.edu/projects/multicore.html">pdos.csail.mit.edu</a>) A later paper identified a flaw in the original proof and supplied a revised, mechanically verified Coq proof, demonstrating direct follow-on research on the paper’s formal foundations. (<a href="https://arxiv.org/abs/1809.09550">arxiv.org</a>) Subsequent systems papers continue to cite the scalable commutativity rule when discussing kernel bottlenecks and scalable system design, although the available evidence does not establish broad industrial adoption as a standard engineering methodology. (<a href="https://www.usenix.org/publications/loginonline/diciclo-data-intensive-container-isolation-multitenant-clouds">usenix.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/operating_systems/">operating systems</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/commuter/">commuter</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/concolic-testing/">concolic testing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/conflict-free-access/">conflict free access</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/interface-design/">interface design</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/multicore-processors/">multicore processors</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/operating-systems/">operating systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/posix/">posix</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/scalable-commutativity/">scalable commutativity</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/software-scalability/">software scalability</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/symbolic-execution/">symbolic execution</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:01
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

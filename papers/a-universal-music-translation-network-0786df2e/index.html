@@ -1,0 +1,157 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>A Universal Music Translation Network | Papers We Love</title>
+        <meta name="description" content="We present a method for translating music across musical instruments, genres, and styles. This method is based on a multi-domain wavenet autoencoder, with a shared encoder and a disentangled latent space that is trained end-to-end on waveforms. Emplo" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="A Universal Music Translation Network | Papers We Love" />
+        <meta property="og:description" content="We present a method for translating music across musical instruments, genres, and styles. This method is based on a multi-domain wavenet autoencoder, with a shared encoder and a disentangled latent space that is trained end-to-end on waveforms. Emplo" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/a-universal-music-translation-network-0786df2e/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:59">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">A Universal Music Translation Network</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Adam Polyak</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Lior Wolf</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Noam Mor</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Yaniv Taigman</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://arxiv.org/pdf/1805.07848.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: May 23, 2018 (arXiv version 2; originally submitted May 21, 2018); published at the 7th International Conference on Learning Representations (ICLR 2019), May 6–9, 2019.</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>We present a method for translating music across musical instruments, genres, and styles. This method is based on a multi-domain wavenet autoencoder, with a shared encoder and a disentangled latent space that is trained end-to-end on waveforms. Employing a diverse training dataset and large net capacity, the domain-independent encoder allows us to translate even from musical domains that were not seen during training. The method is unsupervised and does not rely on supervision in the form of matched samples between domains or musical transcriptions. We evaluate our method on NSynth, as well as on a dataset collected from professional musicians, and achieve convincing translations, even when translating from whistling, potentially enabling the creation of instrumental music by untrained humans.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="paper-summary">Paper summary</h2>
+
+<p>The paper introduces an unsupervised neural architecture for translating audio between musical instruments, genres, and styles without parallel recordings or musical transcriptions. It uses one shared WaveNet-like convolutional encoder and multiple autoregressive WaveNet decoders, with one decoder associated with each output musical domain. The encoder maps inputs into a domain-independent latent representation, while the selected decoder reconstructs the audio in the desired target domain.</p>
+
+<p>Two mechanisms are central to the method. First, locally perturbing the pitch of randomly selected portions of one-second training segments discourages the encoder from memorizing waveform details and encourages higher-level musical representations. Second, a domain-confusion classifier is trained adversarially against the encoder so that the latent representation contains less information about the source domain. During inference, the input is passed through the shared encoder and directly into the decoder for the selected target domain.</p>
+
+<p>The model was trained on six classical-music domains, including orchestral, string-quartet, organ, piano, harpsichord, and vocal-orchestral recordings. Evaluation compared translations into piano against conversions made by three professional musicians. Human evaluators rated the system below the musicians in audio quality and translation success, but automatic pitch-based measures showed strong preservation of musical content and timing. Additional experiments indicated that the encoder could process previously unseen domains, including swing jazz, metal guitar, instrumental Chinese music, NSynth instruments, and whistling. The learned embeddings also preserved pitch information across instruments, and interpolation between embeddings produced reportedly seamless transitions.</p>
+
+<p>The main technical contribution is the combination of a universal encoder, domain-specific autoregressive decoders, domain-confusion training, and pitch-based augmentation for cross-domain raw-audio translation. Important limitations include relatively low generated-audio quality, the computational cost of autoregressive WaveNet inference, dependence on 8-bit μ-law audio quantization, and the inability of the ablation models to train successfully without augmentation or domain confusion.</p>
+
+<h2 id="subsequent-research-and-industry-uptake">Subsequent research and industry uptake</h2>
+
+<p>The work was published as an ICLR 2019 conference paper, establishing it as a peer-reviewed contribution rather than only an arXiv report. (<a href="https://openreview.net/pdf?id=HJGkisCcKm">openreview.net</a>) Facebook Research subsequently released an implementation, pretrained models, training instructions, inference tools, and audio samples, providing a concrete software artifact for reproduction and experimentation. (<a href="https://github.com/facebookresearch/music-translation">github.com</a>)</p>
+
+<p>A quick search found evidence of continued use primarily as a reference implementation and research baseline: later academic work and project reports cite or reimplement the method for music-style and instrument translation, including an extension targeting Indian instruments. (<a href="https://github.com/HyunLee103/Music_Style_Transfer">github.com</a>) The available evidence does not establish widespread commercial deployment or a distinct industrial product directly derived from this paper; its clearest documented impact is methodological and educational, through reuse of its architecture and open-source implementation. (<a href="https://github.com/facebookresearch/music-translation">github.com</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/artificial_intelligence/">artificial intelligence</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/audio-generation/">audio generation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/autoencoder/">autoencoder</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/domain-adaptation/">domain adaptation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/domain-confusion/">domain confusion</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/instrument-conversion/">instrument conversion</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/music-style-transfer/">music style transfer</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/music-translation/">music translation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/representation-learning/">representation learning</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/unsupervised-learning/">unsupervised learning</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/wavenet/">wavenet</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:59
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

@@ -1,0 +1,157 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Don’t Settle for Eventual: Scalable Causal Consistency for Wide-Area Storage with COPS | Papers We Love</title>
+        <meta name="description" content="Geo-replicated, distributed data stores that support complex online applications, such as social networks, must provide an “always-on” experience where operations always complete with low latency. Today’s systems often sacrifice strong consistency to" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Don’t Settle for Eventual: Scalable Causal Consistency for Wide-Area Storage with COPS | Papers We Love" />
+        <meta property="og:description" content="Geo-replicated, distributed data stores that support complex online applications, such as social networks, must provide an “always-on” experience where operations always complete with low latency. Today’s systems often sacrifice strong consistency to" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/dont-settle-for-eventual-scalable-causal-consisten-6a01b7b2/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:00">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Don’t Settle for Eventual: Scalable Causal Consistency for Wide-Area Storage with COPS</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">David G. Andersen</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Michael J. Freedman</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Michael Kaminsky</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Wyatt Lloyd</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://www.cs.cmu.edu/~dga/papers/cops-sosp2011.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: October 23–26, 2011; Proceedings of the 23rd ACM Symposium on Operating Systems Principles (SOSP ’11), Cascais, Portugal</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Geo-replicated, distributed data stores that support complex online applications, such as social networks, must provide an “always-on” experience where operations always complete with low latency. Today’s systems often sacrifice strong consistency to achieve these goals, exposing inconsistencies to their clients and necessitating complex application logic. In this paper, we identify and define a consistency model—causal consistency with convergent conflict handling, or causal+—that is the strongest achieved under these constraints.
+
+We present the design and implementation of COPS, a key-value store that delivers this consistency model across the wide-area. A key contribution of COPS is its scalability, which can enforce causal dependencies between keys stored across an entire cluster, rather than a single server like previous systems. The central approach in COPS is tracking and explicitly checking whether causal dependencies between keys are satisfied in the local cluster before exposing writes. Further, in COPS-GT, we introduce get transactions in order to obtain a consistent view of multiple keys without locking or blocking. Our evaluation shows that COPS completes operations in less than a millisecond, provides throughput similar to previous systems when using one server per cluster, and scales well as we increase the number of servers in each cluster. It also shows that COPS-GT provides similar latency, throughput, and scaling to COPS for common workloads.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="main-contribution">Main contribution</h2>
+
+<p>The paper introduces <strong>causal+ consistency</strong>, combining causal consistency with convergent handling of concurrent conflicting writes. Causal consistency preserves dependencies between operations—for example, ensuring that a reference to an object is not visible before the referenced object—while convergent conflict handling ensures that replicas eventually produce the same result for concurrent updates. The default COPS conflict policy is last-writer-wins, implemented using Lamport-timestamp-based versions.</p>
+
+<p>COPS is designed for ALPS systems: systems emphasizing availability, low latency, partition tolerance, and high scalability. Each datacenter contains a locally linearizable, partitioned key-value cluster. Client operations complete locally, while writes are replicated asynchronously to other datacenters. A replicated write is not exposed at a remote cluster until its causal dependencies have been satisfied there. This is implemented with dependency metadata, asynchronous <code>put_after</code> replication, and <code>dep_check</code> operations.</p>
+
+<p>A central systems insight is that causal dependencies can be tracked across independently partitioned servers without imposing a single global serialization point. COPS reduces replication overhead by retaining only “nearest” dependencies: dependencies that transitively cover other dependencies in the causality graph. This allows causal ordering across keys and machines while preserving scale-out behavior.</p>
+
+<p>COPS-GT extends the system with non-blocking get transactions. A transaction first reads all requested keys in parallel, examines their dependency metadata, and then performs a second parallel round only for keys whose versions are too old to form a causally consistent snapshot. The algorithm therefore completes in at most two rounds of local reads and avoids locks and blocking. COPS-GT uses multiple retained versions and dependency metadata, with garbage collection to bound storage overhead.</p>
+
+<p>The evaluation reports sub-millisecond median operation latency. In the single-server experiments, COPS achieves approximately 52 Kops/s for reads and 30 Kops/s for single-dependency writes; COPS-GT achieves similar read latency but lower write throughput because of version and dependency management. Across tested configurations, COPS scales nearly linearly as servers are added to a datacenter. COPS-GT incurs greater overhead for write-heavy and highly interdependent workloads, but approaches COPS performance for read-heavy workloads, larger values, lower dependency rates, and higher inter-operation delays.</p>
+
+<h2 id="influence-on-subsequent-research-and-practice">Influence on subsequent research and practice</h2>
+
+<p>The paper had a clear influence on subsequent causal-consistency research. The authors’ follow-up system, <strong>Eiger</strong>, explicitly builds on COPS and extends its approach from a basic key-value model to Cassandra’s column-family data model, while adding scalable write-only transactions and broader read-only transaction support. (<a href="https://www.cs.cmu.edu/~dga/papers/eiger-nsdi2013.pdf">cs.cmu.edu</a>) Later systems and surveys continued to use COPS as a reference design and comparison point for dependency tracking, causal replication, and non-blocking read-only transactions. (<a href="https://www.sciencedirect.com/science/article/abs/pii/S0167739X17308166">sciencedirect.com</a>)</p>
+
+<p>The available evidence supports substantial research influence, particularly through Eiger and later causal-consistency protocols. The sources reviewed do not establish that the original COPS implementation itself became a widely deployed commercial product; the documented industry connection is primarily through the follow-up Eiger work implemented with Cassandra-related technology. (<a href="https://da-data.blogspot.com/2013/02/caring-about-causality-now-in-cassandra.html">da-data.blogspot.com</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/datastores/">datastores</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/alps-systems/">alps systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/causal-consistency/">causal consistency</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/causal-plus-consistency/">causal plus consistency</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/key-value-storage/">key value storage</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/read-transactions/">read transactions</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/scalable-wide-area-replication/">scalable wide area replication</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:00
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->
