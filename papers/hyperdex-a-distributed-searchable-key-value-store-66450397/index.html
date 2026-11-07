@@ -1,0 +1,150 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>HyperDex: A Distributed, Searchable Key-Value Store | Papers We Love</title>
+        <meta name="description" content="Distributed key-value stores are now a standard component of high-performance web services and cloud computing applications. While key-value stores offer significant performance and scalability advantages compared to traditional databases, they achie" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="HyperDex: A Distributed, Searchable Key-Value Store | Papers We Love" />
+        <meta property="og:description" content="Distributed key-value stores are now a standard component of high-performance web services and cloud computing applications. While key-value stores offer significant performance and scalability advantages compared to traditional databases, they achie" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/hyperdex-a-distributed-searchable-key-value-store-66450397/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:00">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">HyperDex: A Distributed, Searchable Key-Value Store</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Bernard Wong</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Emin Gün Sirer</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Robert Escriva</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://cs.uwaterloo.ca/~bernard/hyperdex.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: August 13–17, 2012; ACM SIGCOMM 2012, Helsinki, Finland</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Distributed key-value stores are now a standard component of high-performance web services and cloud computing applications. While key-value stores offer significant performance and scalability advantages compared to traditional databases, they achieve these properties through a restricted API that limits object retrieval—an object can only be retrieved by the (primary and only) key under which it was inserted. This paper presents HyperDex, a novel distributed key-value store that provides a unique search primitive that enables queries on secondary attributes. The key insight behind HyperDex is the concept of hyperspace hashing in which objects with multiple attributes are mapped into a multidimensional hyperspace. This mapping leads to efficient implementations not only for retrieval by primary key, but also for partially-specified secondary attribute searches and range queries. A novel chaining protocol enables the system to achieve strong consistency, maintain availability and guarantee fault tolerance. An evaluation of the full system shows that HyperDex is 12-13× faster than Cassandra and MongoDB for finding partially specified objects. Additionally, HyperDex achieves 2-4× higher throughput for get/put operations.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>HyperDex proposes a distributed key-value store that supports searches over secondary attributes through <strong>hyperspace hashing</strong>. Objects are mapped to multidimensional coordinates, while servers own regions of that space; this allows clients to prune the set of servers involved in partially specified and range queries. The system addresses high dimensionality through lower-dimensional subspaces and provides strong consistency and fault tolerance through <strong>value-dependent chaining</strong>, which accommodates object relocation as attribute values change.</p>
+
+<p>The paper influenced subsequent systems research in several concrete ways:</p>
+
+<ul>
+  <li>HyperDex’s hyperspace-hashing approach is cited as the basis for later work on multidimensional distributed data processing, including BBoxDB, which contrasts HyperDex’s support for multidimensional point data with its own support for broader data-stream workloads. (<a href="https://link.springer.com/article/10.1007/s10619-022-07408-8">link.springer.com</a>)</li>
+  <li>Later research directly revisited and extended hyperspace hashing for centralized, GPU-accelerated environments, explicitly identifying HyperDex as the originating distributed design. (<a href="https://link.springer.com/article/10.1007/s41019-021-00161-5">link.springer.com</a>)</li>
+  <li>The Replex datastore used HyperDex as a comparison point and studied an alternative replication/indexing design intended to reduce the storage and write overhead associated with maintaining full copies across subspaces. (<a href="https://www.usenix.org/sites/default/files/atc16_full_proceedings_interior.pdf">usenix.org</a>)</li>
+  <li>The HyperDex implementation was released as open source and remains available as a distributed, searchable, consistent key-value store, providing an artifact for experimentation and reuse. (<a href="https://github.com/rescrv/HyperDex">github.com</a>)</li>
+</ul>
+
+<p>These references indicate that HyperDex’s primary lasting contribution was as a design point for multidimensional search in distributed key-value stores, particularly the combination of attribute-aware placement, search-space pruning, and replication under changing object locations.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/datastores/">datastores</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/fault-tolerance/">fault tolerance</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/key-value-store/">key value store</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/nosql/">nosql</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/performance/">performance</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/strong-consistency/">strong consistency</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:00
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

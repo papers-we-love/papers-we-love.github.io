@@ -1,0 +1,152 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Extensible Effects: An Alternative to Monad Transformers | Papers We Love</title>
+        <meta name="description" content="We design and implement a library that solves the long-standing problem of combining effects without imposing restrictions on their interactions (such as static ordering). Effects arise from interactions between a client and an effect handler (interp" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Extensible Effects: An Alternative to Monad Transformers | Papers We Love" />
+        <meta property="og:description" content="We design and implement a library that solves the long-standing problem of combining effects without imposing restrictions on their interactions (such as static ordering). Effects arise from interactions between a client and an effect handler (interp" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/extensible-effects-an-alternative-to-monad-transfo-f271560c/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:00">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Extensible Effects: An Alternative to Monad Transformers</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Amr Sabry</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Cameron Swords</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Oleg Kiselyov</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://okmij.org/ftp/Haskell/extensible/exteff.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: September 23–24, 2013; Haskell ’13, Boston, Massachusetts, USA. Published in the Proceedings of the 2013 ACM SIGPLAN Symposium on Haskell, pages 59–70.</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>We design and implement a library that solves the long-standing problem of combining effects without imposing restrictions on their interactions (such as static ordering). Effects arise from interactions between a client and an effect handler (interpreter); interactions may vary throughout the program and dynamically adapt to execution conditions. Existing code that relies on monad transformers may be used with our library with minor changes, gaining efficiency over long monad stacks. In addition, our library has greater expressiveness, allowing for practical idioms that are inefficient, cumbersome, or outright impossible with monad transformers.
+Our alternative to a monad transformer stack is a single monad, for the coroutine-like communication of a client with its handler. Its type reflects possible requests, i.e., possible effects of a computation. To support arbitrary effects and their combinations, requests are values of an extensible union type, which allows adding and, notably, subtracting summands. Extending and, upon handling, shrinking of the union of possible requests is reflected in its type, yielding a type-and-effect system for Haskell. The library is lightweight, generalizing the extensible exception handling to other effects and accurately tracking them in types.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="main-contribution">Main contribution</h2>
+
+<p>The paper presents <strong>extensible effects</strong>, a Haskell library intended as an alternative to statically ordered monad-transformer stacks. Effectful computations use a single <code>Eff r</code> monad, where <code>r</code> records the currently possible effects. Effects are represented as requests sent from clients to handlers; handlers interpret requests they understand and relay other requests upstream. This replaces a centralized authority with composable, user-defined handlers. (<a href="https://okmij.org/ftp/Haskell/extensible/exteff.pdf">okmij.org</a>)</p>
+
+<p>The central type-level mechanism is an <strong>open union</strong> of effect requests. The union can be extended when computations introduce effects and reduced when handlers remove them. Consequently, the type system can reject computations with unhandled effects. The implementation uses type-indexed unions and <code>Typeable</code>-based dispatch, with constant-time injection and projection relative to the number of effects in the union. (<a href="https://okmij.org/ftp/Haskell/extensible/exteff.pdf">okmij.org</a>)</p>
+
+<p>The authors show that the framework can express standard Reader, State, exception, nondeterminism, tracing, and lifted-monad effects in an MTL-like style. More significantly, it supports effect interactions that require different handler orders in different parts of a program. The paper demonstrates this with exception recovery combined with nondeterminism and with dynamic binding interleaved with coroutines—cases that are cumbersome or impossible to express using one statically fixed monad-transformer ordering. (<a href="https://okmij.org/ftp/Haskell/extensible/exteff.pdf">okmij.org</a>)</p>
+
+<h2 id="subsequent-influence">Subsequent influence</h2>
+
+<p>A direct follow-up, <strong>“Freer Monads, More Extensible Effects”</strong> by Kiselyov and Ishii, reconstructs the approach from free-monad representations, removes the <code>Functor</code> constraint through freer monads, and develops a more efficient implementation. (<a href="https://okmij.org/ftp/Haskell/extensible/more.pdf">okmij.org</a>) The later work on <strong>Parameterized Extensible Effects and Session Types</strong> explicitly builds on the add/subtract effect-set idea and connects extensible type-state effects with session types. (<a href="https://doi.org/10.1145/2976022.2976034">doi.org</a>)</p>
+
+<p>The paper is also directly cited or acknowledged as foundational work by subsequent Haskell effect libraries and implementations, including <code>freer-effects</code>, <code>polysemy</code>, and <code>eff</code>. These projects apply or extend the paper’s general approach of typed, composable effect descriptions and handlers. (<a href="https://github.com/IxpertaSolutions/freer-effects">github.com</a>) The reviewed sources provide evidence of substantial influence on subsequent research and Haskell-library development, but do not establish a specific industrial deployment attributable directly to this paper.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/languages/haskell/">languages/haskell</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/coroutine/">coroutine</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/effect-handler/">effect handler</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/effect-interaction/">effect interaction</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/monad/">monad</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/monad-transformer/">monad transformer</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/open-union/">open union</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/type-and-effect-system/">type and effect system</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:00
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

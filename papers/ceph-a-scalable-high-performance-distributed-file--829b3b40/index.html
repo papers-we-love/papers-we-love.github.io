@@ -1,0 +1,160 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Ceph: A Scalable, High-Performance Distributed File System | Papers We Love</title>
+        <meta name="description" content="We have developed Ceph, a distributed file system that provides excellent performance, reliability, and scalability. Ceph maximizes the separation between data and metadata management by replacing allocation tables with a pseudo-random data distribut" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Ceph: A Scalable, High-Performance Distributed File System | Papers We Love" />
+        <meta property="og:description" content="We have developed Ceph, a distributed file system that provides excellent performance, reliability, and scalability. Ceph maximizes the separation between data and metadata management by replacing allocation tables with a pseudo-random data distribut" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/ceph-a-scalable-high-performance-distributed-file--829b3b40/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:00">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Ceph: A Scalable, High-Performance Distributed File System</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Carlos Maltzahn</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Darrell D. E. Long</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Ethan L. Miller</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Sage A. Weil</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Scott A. Brandt</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://ceph.io/assets/pdfs/weil-ceph-osdi06.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: November 2006; Proceedings of the 7th Conference on Operating Systems Design and Implementation (OSDI ’06)</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>We have developed Ceph, a distributed file system that provides excellent performance, reliability, and scalability. Ceph maximizes the separation between data and metadata management by replacing allocation tables with a pseudo-random data distribution function (CRUSH) designed for heterogeneous and dynamic clusters of unreliable object storage devices (OSDs). We leverage device intelligence by distributing data replication, failure detection and recovery to semi-autonomous OSDs running a specialized local object file system. A dynamic distributed metadata cluster provides extremely efficient metadata management and seamlessly adapts to a wide range of general purpose and scientific computing file system workloads. Performance measurements under a variety of workloads show that Ceph has excellent I/O performance and scalable metadata management, supporting more than 250,000 metadata operations per second.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>The paper presents Ceph as a distributed, near-POSIX file system designed for petabyte-scale and highly dynamic storage clusters. Its architecture separates namespace metadata from file-data I/O: metadata operations are handled by a dynamically partitioned metadata-server cluster, while clients communicate directly with object storage devices for data access.</p>
+
+<p>The central technical contribution is the replacement of explicit allocation tables with CRUSH, a deterministic pseudo-random placement function. Clients, metadata servers, and storage devices can independently calculate object locations from object identifiers and the cluster map. This reduces metadata overhead, limits data movement when devices are added or removed, supports weighted placement, and enables replica placement across failure domains.</p>
+
+<p>The object store, RADOS, delegates replication, failure detection, recovery, and cluster adaptation to semi-autonomous storage devices. The prototype separates update visibility from durable disk commitment: writes are acknowledged after replication into OSD memory and receive a later commit notification after safe persistence. Ceph also introduces Dynamic Subtree Partitioning, which moves metadata subtrees among metadata servers according to recent workload and selectively replicates or hashes hot directories.</p>
+
+<p>The reported prototype results include nearly linear OSD throughput scaling until network saturation and more than 250,000 metadata operations per second with a 128-node metadata-server cluster. The evaluation also identifies limitations, including imperfect metadata scaling under heavily shared read workloads, prototype-level client and FUSE issues, and unimplemented metadata-server recovery and security mechanisms.</p>
+
+<h2 id="influence-on-research-and-industry">Influence on research and industry</h2>
+
+<p>The work became the foundational research publication for the Ceph storage system. The Ceph project’s historical account states that the paper appeared at OSDI in 2006, that Ceph code was released as open source under the LGPL, and that the design subsequently evolved into a production storage platform used in cloud, research, and enterprise environments. (<a href="https://www.ceph.com/en/foundation/history/">ceph.com</a>)</p>
+
+<p>Its architectural ideas were carried into later Ceph development, including the RADOS object-storage model and CRUSH-based placement. Subsequent systems research continued to analyze Ceph’s design and operational experience; for example, a later SOSP paper explicitly studies lessons from a decade of Ceph evolution and the suitability of conventional file systems as distributed-storage backends. (<a href="https://pdl.cmu.edu/PDL-FTP/Storage/ceph-exp-sosp19.pdf">pdl.cmu.edu</a>)</p>
+
+<p>In industry, Ceph became integrated with OpenStack as a backend for block and image storage, with official OpenStack documentation describing Ceph RBD use for services including Glance, Cinder, and Nova. (<a href="https://docs.openstack.org/kolla-ansible/wallaby/reference/storage/external-ceph-guide.html">docs.openstack.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/distributed-file-systems/">distributed file systems</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/crush/">crush</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/data-replication/">data replication</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-file-systems/">distributed file systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/fault-tolerance/">fault tolerance</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/high-performance-computing/">high performance computing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/metadata-management/">metadata management</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/object-storage/">object storage</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/posix/">posix</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/rados/">rados</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/scalability/">scalability</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:00
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

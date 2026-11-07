@@ -1,0 +1,155 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Extensibility, Safety and Performance in the SPIN Operating System | Papers We Love</title>
+        <meta name="description" content="This paper describes the motivation, architecture and performance of SPIN, an extensible operating system. SPIN provides an extension infrastructure, together with a core set of extensible services, that allow applications to safely change the operat" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Extensibility, Safety and Performance in the SPIN Operating System | Papers We Love" />
+        <meta property="og:description" content="This paper describes the motivation, architecture and performance of SPIN, an extensible operating system. SPIN provides an extension infrastructure, together with a core set of extensible services, that allow applications to safely change the operat" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/extensibility-safety-and-performance-in-the-spin-o-30860a28/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:01">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Extensibility, Safety and Performance in the SPIN Operating System</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Brian N. Bershad</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Craig Chambers</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">David Becker</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Emin Gün Sirer</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Marc E. Fiuczynski</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Przemysław Pardyak</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Stefan Savage</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Susan Eggers</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.117.6702&rep=rep1&type=pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: December 1995; Proceedings of the 15th ACM Symposium on Operating Systems Principles (SOSP '95), pages 267–284. The paper is marked “SIGOPS ’95 12/95 CO, USA.”</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>This paper describes the motivation, architecture and performance of SPIN, an extensible operating system. SPIN provides an extension infrastructure, together with a core set of extensible services, that allow applications to safely change the operating system’s interface and implementation. Extensions allow an application to specialize the underlying operating system in order to achieve a particular level of performance and functionality. SPIN uses language and link-time mechanisms to inexpensively export fine-grained interfaces to operating system services. Extensions are written in a type safe language, and are dynamically linked into the operating system kernel. This approach offers extensions rapid access to system services, while protecting the operating system code executing within the kernel address space. SPIN and its extensions are written in Modula-3 and run on DEC Alpha workstations.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="contribution-and-design">Contribution and design</h2>
+
+<p>The paper presents SPIN, an extensible operating system designed to combine application-specific customization, safety, and low overhead. Applications can dynamically install extensions that modify operating-system interfaces or implementations. The system uses four central mechanisms: co-location of extensions with kernel code, compiler-enforced modularity through the type-safe Modula-3 language, logical protection domains, and dynamic event-based call binding. Together, these mechanisms allow extensions to access system services at procedure-call granularity while restricting unauthorized memory access and privileged operations. (<a href="https://www.cs.cmu.edu/~dga/15-712/S11/papers/Bershad95.pdf">cs.cmu.edu</a>)</p>
+
+<p>SPIN provides extensible services for threads, virtual memory, networking, storage, and device access. The authors also demonstrate a UNIX-compatible operating-system server and application-specific extensions for video streaming and web serving. The evaluation compares SPIN with DEC OSF/1 and Mach on the same DEC Alpha platform. The reported measurements show low-cost protected in-kernel calls, competitive conventional communication mechanisms, reduced network latency for in-kernel packet processing, and lower processor utilization for the demonstrated video-server workload. (<a href="https://www.cs.cmu.edu/~dga/15-712/S11/papers/Bershad95.pdf">cs.cmu.edu</a>)</p>
+
+<h2 id="influence">Influence</h2>
+
+<p>The paper directly led to follow-on work on event-based dynamic binding for extensible systems and on programming-language support for safe operating-system extensions. (<a href="https://www.usenix.org/conference/osdi-96/dynamic-binding-extensible-system">usenix.org</a>) Later systems research continued to cite SPIN as an early approach to safe kernel extensibility; for example, work on SLIC identifies SPIN among the research systems that explored support for untrusted operating-system extensions, while subsequent research on kernel plugins discusses SPIN’s use of Modula-3 type safety and trusted compilation as a protection strategy. (<a href="https://www.usenix.org/conference/1998-usenix-annual-technical-conference/slic-extensibility-system-commodity-operating">usenix.org</a>) ACM’s citing-paper record also shows continuing references in research on microkernels, fault isolation, reconfigurable kernel datapaths, and related operating-system mechanisms. (<a href="https://doi.org/10.1145/224056.224077">doi.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/unikernels/">unikernels</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/dynamic-linking/">dynamic linking</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/event-driven-systems/">event driven systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/extensible-operating-systems/">extensible operating systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/kernel-extensions/">kernel extensions</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/microkernels/">microkernels</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/modula-3/">modula 3</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/operating-system-kernels/">operating system kernels</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/protection-domains/">protection domains</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/system-performance/">system performance</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/type-safety/">type safety</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:01
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

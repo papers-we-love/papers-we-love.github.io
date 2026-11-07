@@ -1,0 +1,143 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Analysis of Three Bayesian Network Inference Algorithms: Variable Elimination, Likelihood Weighting, and Gibbs Sampling | Papers We Love</title>
+        <meta name="description" content="In this paper, we describe and analyze three Bayesian network inference algorithms: variable elimination, likelihood weighting, and Gibbs sampling. Variable Elimination is an exact inference algorithm, while likelihood weighting and gibbs sampling ar" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Analysis of Three Bayesian Network Inference Algorithms: Variable Elimination, Likelihood Weighting, and Gibbs Sampling | Papers We Love" />
+        <meta property="og:description" content="In this paper, we describe and analyze three Bayesian network inference algorithms: variable elimination, likelihood weighting, and Gibbs sampling. Variable Elimination is an exact inference algorithm, while likelihood weighting and gibbs sampling ar" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/analysis-of-three-bayesian-network-inference-algor-944d60cb/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:53">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Analysis of Three Bayesian Network Inference Algorithms: Variable Elimination, Likelihood Weighting, and Gibbs Sampling</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Rose F. Liu</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Rusmin Soetjipto</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/artificial_intelligence/3-bayesian-network-inference-algorithm.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: November 4, 2004</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>In this paper, we describe and analyze three Bayesian network inference algorithms: variable elimination, likelihood weighting, and Gibbs sampling. Variable Elimination is an exact inference algorithm, while likelihood weighting and gibbs sampling are approximate inference algorithms. For each algorithm we study thier performance under different conditions. In section 2, we analyze variable elimination and study how different elimination orders affect performance. In section 3, we validate and describe our likelihood weghting implementation. In section 4 we analyze Gibbs sampling and experiment with the effect of burn-in (length of the initial prefix that is thrown away) on estimation accuracy. In section 5 we measure the performance of the two approximate inference algorithms in terms of their running times versus the quality of their results. We also draw conclu￾sions on which algorithm is more appropriate for the different bayesian networks. In section 6, we describe another take on the study of how burn-in affects Gibbs sampling performance.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <p>The paper is an empirical comparison of exact variable elimination with two approximate Bayesian-network inference methods: likelihood weighting and Gibbs sampling. It validates implementations against known results, measures error using Kullback–Leibler divergence, studies the effect of elimination ordering on exact inference, and examines burn-in and sample counts for Gibbs sampling. The experiments report that elimination ordering can dominate variable-elimination runtime; a greedy ordering is usually effective but is not guaranteed to be optimal. Likelihood weighting and Gibbs sampling both become more accurate as sample counts increase, while Gibbs sampling generally benefits from an initial burn-in period. The paper also emphasizes that the best method depends on the network and query: variable elimination performed well on the tested Carpo and Burglary cases, whereas sampling was more practical for the tested Insurance cases. The authors note that the reported timings are implementation-dependent.</p>
+
+<p>A web search found later works that cite the paper as background or a reference, including a 2014 article on Bayesian-network click-through-rate prediction and a 2019 University of National Colombia working paper on comparing Bayesian inference algorithms. (<a href="https://onlinelibrary.wiley.com/doi/10.1155/2014/818203">onlinelibrary.wiley.com</a>) The paper also appears as assigned reading in a Bayesian-network and probabilistic-inference course guide. (<a href="https://faculty.ist.psu.edu/vhonavar/Courses/ai/studyguide.html">faculty.ist.psu.edu</a>) These sources document continued educational and bibliographic reuse, but the search did not identify evidence that this paper directly introduced a widely adopted algorithm, software system, or major subsequent research direction.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/artificial_intelligence/">artificial intelligence</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/approximate-inference/">approximate inference</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/bayesian-networks/">bayesian networks</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/burn-in/">burn in</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/elimination-ordering/">elimination ordering</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/exact-inference/">exact inference</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/gibbs-sampling/">gibbs sampling</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/kl-divergence/">kl divergence</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/likelihood-weighting/">likelihood weighting</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/probabilistic-inference/">probabilistic inference</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/variable-elimination/">variable elimination</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:53
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->
