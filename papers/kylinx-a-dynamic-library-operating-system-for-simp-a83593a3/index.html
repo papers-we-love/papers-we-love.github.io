@@ -1,0 +1,160 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>KylinX: A Dynamic Library Operating System for Simplified and Efficient Cloud Virtualization | Papers We Love</title>
+        <meta name="description" content="Unikernel specializes a minimalistic LibOS and a target application into a standalone single-purpose virtual machine (VM) running on a hypervisor, which is referred to as (virtual) appliance. Compared to traditional VMs, Unikernel appliances have sma" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="KylinX: A Dynamic Library Operating System for Simplified and Efficient Cloud Virtualization | Papers We Love" />
+        <meta property="og:description" content="Unikernel specializes a minimalistic LibOS and a target application into a standalone single-purpose virtual machine (VM) running on a hypervisor, which is referred to as (virtual) appliance. Compared to traditional VMs, Unikernel appliances have sma" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/kylinx-a-dynamic-library-operating-system-for-simp-a83593a3/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:01">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">KylinX: A Dynamic Library Operating System for Simplified and Efficient Cloud Virtualization</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Chengfei Zhang</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Dongsheng Li</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Guihai Chen</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Huiba Li</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Jon Crowcroft</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Kai Yu</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Yaozheng Wang</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Yiming Zhang</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Yongqiang Xiong</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://www.usenix.org/conference/atc18/presentation/zhang-yiming" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: July 11–13, 2018; 2018 USENIX Annual Technical Conference (USENIX ATC ’18), Boston, MA, USA</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Unikernel specializes a minimalistic LibOS and a target application into a standalone single-purpose virtual machine (VM) running on a hypervisor, which is referred to as (virtual) appliance. Compared to traditional VMs, Unikernel appliances have smaller memory footprint and lower overhead while guaranteeing the same level of isolation. On the downside, Unikernel strips off the process abstraction from its monolithic appliance and thus sacrifices flexibility, efficiency, and applicability.
+
+This paper examines whether there is a balance embracing the best of both Unikernel appliances (strong isolation) and processes (high flexibility/efficiency). We present KylinX, a dynamic library operating system for simplified and efficient cloud virtualization by providing the pVM (process-like VM) abstraction. A pVM takes the hypervisor as an OS and the Unikernel appliance as a process allowing both page-level and library-level dynamic mapping. At the page level, KylinX supports pVM fork plus a set of API for inter-pVM communication (IpC). At the library level, KylinX supports shared libraries to be linked to a Unikernel appliance at runtime. KylinX enforces mapping restrictions against potential threats. KylinX can fork a pVM in about 1.3 ms and link a library to a running pVM in a few ms, both comparable to process fork on Linux (about 1 ms). Latencies of KylinX IpCs are also comparable to that of UNIX IPCs.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="overview">Overview</h2>
+
+<p>KylinX extends the Unikernel model with a process-like virtual machine abstraction. It treats the hypervisor as an operating system and each Unikernel appliance as a process, enabling dynamic page mapping and dynamic library mapping while retaining hypervisor-enforced VM isolation. Its page-level mechanisms provide pVM fork and inter-pVM communication through pipes, signals, message queues, and shared memory. Its library-level mechanisms support runtime library linking, online library replacement, and recycling of in-memory domains for faster startup. The prototype modifies MiniOS and the Xen toolstack and enforces restrictions intended to limit security risks from dynamic mappings. (<a href="https://www.usenix.org/system/files/conference/atc18/atc18-zhang-yiming.pdf">usenix.org</a>)</p>
+
+<p>The evaluation reports approximately 1.3 ms pVM-fork latency, library-linking latency of a few milliseconds, and inter-pVM communication latencies comparable to UNIX IPC. Tests using Redis and a web server report greater applicability and performance than static Unikernel appliances while preserving the isolation model assumed by the system. (<a href="https://www.usenix.org/system/files/conference/atc18/atc18-zhang-yiming.pdf">usenix.org</a>)</p>
+
+<h2 id="subsequent-influence">Subsequent influence</h2>
+
+<p>Later research explicitly cites KylinX as prior work on multi-process Unikernels. Iso-UniK compares its fork and pipe performance against KylinX and presents a different design that provides multi-process support using memory-protection keys without requiring hypervisor modifications. (<a href="https://link.springer.com/article/10.1186/s42400-020-00051-9">link.springer.com</a>) The position paper <em>The Case for Intra-Unikernel Isolation</em> uses KylinX as an example of implementing processes by spawning separate Unikernel VM instances, while identifying the resulting per-instance memory footprint and address-space-switching costs as motivations for intra-Unikernel isolation. (<a href="https://www.ssrg.ece.vt.edu/papers/spma20.pdf">ssrg.ece.vt.edu</a>) A later presentation on CHERI-based Unikernels lists KylinX among existing approaches that implement POSIX-style process support by using one Unikernel per process and hypervisor-mediated IPC, contrasting it with proposed single-address-space approaches. (<a href="https://www.cl.cam.ac.uk/research/security/ctsrd/pdfs/cheritech24/02_03_Pierre_Olivier.pdf">cl.cam.ac.uk</a>) The same general architecture also appears as cited prior art in a 2024 patent concerning hypervisor support for multi-process applications, VM cloning, shared pages, and faster Unikernel instantiation. (<a href="https://patents.justia.com/patent/11886900">patents.justia.com</a>)</p>
+
+<p>The available evidence indicates influence primarily as research and architectural prior art. The search found no reliable evidence of broad production deployment by a commercial cloud provider; the project information describes KylinX as a prototype. (<a href="https://nicexlab.com/kylinx/">nicexlab.com</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/unikernels/">unikernels</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/cloud-virtualization/">cloud virtualization</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/dynamic-library-linking/">dynamic library linking</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/inter-process-communication/">inter process communication</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/isolation/">isolation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/library-operating-system/">library operating system</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/mini-os/">mini os</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/process-like-vm/">process like vm</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/unikernel/">unikernel</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/virtual-machines/">virtual machines</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/xen/">xen</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:01
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

@@ -1,0 +1,150 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Freer Monads, More Extensible Effects | Papers We Love</title>
+        <meta name="description" content="We present a rational reconstruction of extensible effects, the recently proposed alternative to monad transformers, as the confluence of efforts to make effectful computations compose. Free monads and then extensible effects emerge from the straight" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Freer Monads, More Extensible Effects | Papers We Love" />
+        <meta property="og:description" content="We present a rational reconstruction of extensible effects, the recently proposed alternative to monad transformers, as the confluence of efforts to make effectful computations compose. Free monads and then extensible effects emerge from the straight" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/freer-monads-more-extensible-effects-74921812/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:00">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Freer Monads, More Extensible Effects</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Hiromi Ishii</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Oleg Kiselyov</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://okmij.org/ftp/Haskell/extensible/more.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: September 3–4, 2015; Proceedings of the 2015 ACM SIGPLAN Symposium on Haskell, pp. 94–105. ([okmij.org](https://okmij.org/ftp/Haskell/extensible/))</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>We present a rational reconstruction of extensible effects, the recently proposed alternative to monad transformers, as the confluence of efforts to make effectful computations compose. Free monads and then extensible effects emerge from the straightforward term representation of an effectful computation, as more and more boilerplate is abstracted away. The generalization process further leads to freer monads, constructed without the Functor constraint. The continuation exposed in freer monads can then be represented as an efficient type-aligned data structure. The end result is the algorithmically efficient extensible effects library, which is not only more comprehensible but also faster than earlier implementations. As an illustration of the new library, we show three surprisingly simple applications: non-determinism with committed choice (LogicT), catching IO exceptions in the presence of other effects, and the semi-automatic management of file handles and other resources through monadic regions. We extensively use and promote the new sort of ‘laziness’, which underlies the left Kan extension: instead of performing an operation, keep its operands and pretend it is done.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>The paper develops extensible effects by progressively abstracting a direct algebraic representation of effectful computations. It first derives free monads from request signatures, then introduces <strong>freer monads</strong>, which store each operation’s continuation explicitly and therefore do not require the operation signature to be a <code>Functor</code>. This construction is presented as an instance of the left Kan extension: instead of immediately performing a structural operation such as mapping, the representation records its operands and defers the operation.</p>
+
+<p>Extensibility is obtained by combining freer monads with an <strong>open union</strong> of effect signatures. Type-level effect membership permits effectful client code to remain polymorphic over additional effects, while modular interpreters can handle or encapsulate individual effects. The paper emphasizes that effect interpretation order, rather than a fixed transformer-stack order, determines effect interaction.</p>
+
+<p>The initial freer-monad representation has quadratic behavior for left-associated binds. The paper addresses this by representing continuations as heterogeneous, type-aligned queues (<code>FTCQueue</code>). Appending continuation segments becomes constant-time on average, reducing the problematic example from quadratic to linear time. Benchmarks report strong performance for deep effect stacks and substantial improvements over the earlier extensible-effects implementation. However, the approach remains much slower than specialized <code>State</code> implementations in the single-effect benchmark, largely because GHC optimizes conventional state-transformer code particularly well.</p>
+
+<p>Three applications demonstrate the expressiveness of the framework: non-determinism with committed choice, interception of IO exceptions while preserving other effect state, and statically scoped resource management through monadic regions. The paper’s central technical result is that a freer-monad representation, an open-union effect system, modular handlers, and type-aligned continuation queues can provide a comparatively general and efficient alternative to monad transformers.</p>
+
+<h2 id="influence">Influence</h2>
+
+<p>The paper directly influenced Haskell libraries such as <code>freer-simple</code>, whose documentation identifies it as an implementation based on this work. (<a href="https://hdiff.luite.com/file/freer-simple/1.0.0.0/README.md">hdiff.luite.com</a>) Its freer-monad and open-union design also became part of the broader implementation lineage of extensible-effect libraries; contemporary documentation for the Scala <code>eff</code> library explicitly describes itself as based on these ideas. (<a href="https://atnos-org.github.io/eff/index.html">atnos-org.github.io</a>) Later educational and language-library work continues to cite the paper and use its freer construction as a reference point, including Lean libraries implementing free monads without a <code>Functor</code> requirement. (<a href="https://freely.endofunctor.dev/">freely.endofunctor.dev</a>) The available evidence supports a concrete influence on subsequent effect-system libraries and teaching materials, but does not establish broad industrial adoption.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/languages/haskell/">languages/haskell</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/coroutine/">coroutine</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/effect-handler/">effect handler</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/effect-interaction/">effect interaction</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/free-monad/">free monad</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/kan-extension/">kan extension</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/open-union/">open union</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/type-and-effect-system/">type and effect system</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:00
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

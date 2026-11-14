@@ -1,0 +1,145 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Why Silent Updates Boost Security | Papers We Love</title>
+        <meta name="description" content="Security fixes and feature improvements don’t benefit the end user of software if the update mechanism and strategy is not effective. In this paper we analyze the effectiveness of different Web browsers update mechanisms; from Google Chrome’s silent " />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Why Silent Updates Boost Security | Papers We Love" />
+        <meta property="og:description" content="Security fixes and feature improvements don’t benefit the end user of software if the update mechanism and strategy is not effective. In this paper we analyze the effectiveness of different Web browsers update mechanisms; from Google Chrome’s silent " />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/why-silent-updates-boost-security-7f37f5d3/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:01">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Why Silent Updates Boost Security</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Stefan Frei</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Thomas Duebendorfer</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://tik-old.ee.ethz.ch/file/ef72343372ca8659a9ae8a98873167c0/TIKReport302.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: May 2009</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Security fixes and feature improvements don’t benefit the end user of software if the update mechanism and strategy is not effective. In this paper we analyze the effectiveness of different Web browsers update mechanisms; from Google Chrome’s silent update mechanism to Opera’s update requiring a full re-installation. We use anonymized logs from Google’s world wide distributed Web servers. An analysis of the logged HTTP user-agent strings that Web browsers report when requesting any Web page is used to measure the daily browser version shares in active use. To the best of our knowledge, this is the first global scale measurement of Web browser update effectiveness comparing four different Web browser update strategies including Google Chrome. Our measurements prove that silent updates and little dependency on the underlying operating system are most effective to get users of Web browsers to surf the Web with the latest browser version. However, there is still room for improvement as we found. Google Chrome’s advantageous silent update mechanism has been open sourced in April 2009. We recommend any software vendor to seriously consider deploying silent updates as this benefits both the vendor and the user, especially for widely used attack-exposed applications like Web browsers and browser plug-ins.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h3 id="overview">Overview</h3>
+
+<p>The paper evaluates how effectively different browser update mechanisms move active users to the latest minor release. The authors analyze anonymized HTTP user-agent logs from Google’s globally distributed Web servers, deduplicate visits using Google PREF cookies, and compare version adoption during the first 21 days after release. The analysis is restricted primarily to minor-version updates within the same browser major version; Microsoft Internet Explorer is not included in the main comparison because its user-agent string did not expose minor-version information. (<a href="https://tik-old.ee.ethz.ch/file/ef72343372ca8659a9ae8a98873167c0/TIKReport302.pdf">tik-old.ee.ethz.ch</a>)</p>
+
+<p>The central finding is that update design strongly affects security exposure. Among the browser releases studied through mid-April 2009, Google Chrome’s silent updater achieved approximately 97% adoption after 21 days, Mozilla Firefox reached approximately 85%, Apple Safari approximately 53% for its best-performing release, and Opera approximately 24%. Firefox had the fastest initial uptake during the first five days, but its adoption curve flattened below Chrome’s eventual level. The authors attribute Chrome’s performance to background discovery, download, and installation with minimal user interaction, while Safari’s weaker results were partly associated with operating-system eligibility requirements and Opera’s results with a manual reinstallation process. (<a href="https://tik-old.ee.ethz.ch/file/ef72343372ca8659a9ae8a98873167c0/TIKReport302.pdf">tik-old.ee.ethz.ch</a>)</p>
+
+<p>The paper identifies several residual causes of incomplete Chrome adoption: updates took effect only after browser restart, users were not initially prompted to restart, some installations used read-only images, insufficient privileges or network filtering could block updates, and modified clients could report stale user-agent strings. It therefore recommends silent updates as a default for widely deployed, attack-exposed software, while suggesting a non-disruptive restart notification for security updates. It also argues that highly exposed applications such as browsers and plug-ins should generally receive security patches as soon as they are available rather than being delayed solely to fit predictable enterprise patch schedules. (<a href="https://tik-old.ee.ethz.ch/file/ef72343372ca8659a9ae8a98873167c0/TIKReport302.pdf">tik-old.ee.ethz.ch</a>)</p>
+
+<h3 id="subsequent-influence">Subsequent influence</h3>
+
+<p>The paper’s measurement approach and conclusions were carried forward by the authors in the later publication <em>Web Browser Security Update Effectiveness</em>, which extended the browser-update analysis and is listed in subsequent scholarly bibliographies alongside the technical report. Later work on software-update behavior, including studies of smart-device updates, user update messages, operating-system upgrades, and system-administrator practices, cites the report as an early empirical source connecting update ergonomics and automation with security outcomes. (<a href="https://www.researchgate.net/publication/220816476_Web_Browser_Security_Update_Effectiveness">researchgate.net</a>)</p>
+
+<p>The findings also received contemporaneous industry and operational attention. Ars Technica reported the Chrome–Firefox advantage over Safari and Opera, while CERT-FR referenced the report in guidance discussing update procedures and the Google Omaha updater. The evidence therefore contributed to the early public and research discussion of background or silent updating as a security mechanism, although the sources located here do not establish that the report alone caused any particular product-policy change. (<a href="https://arstechnica.com/gadgets/2009/05/firefox-chrome-users-more-up-to-date-than-safari-and-opera/">arstechnica.com</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/security/">security</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/update/">update</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/web-browser/">web browser</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:01
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

@@ -1,0 +1,161 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Copysets: Reducing the Frequency of Data Loss in Cloud Storage | Papers We Love</title>
+        <meta name="description" content="Random replication is widely used in data center storage systems to prevent data loss. However, random replication is almost guaranteed to lose data in the common scenario of simultaneous node failures due to cluster-wide power outages. Due to the hi" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Copysets: Reducing the Frequency of Data Loss in Cloud Storage | Papers We Love" />
+        <meta property="og:description" content="Random replication is widely used in data center storage systems to prevent data loss. However, random replication is almost guaranteed to lose data in the common scenario of simultaneous node failures due to cluster-wide power outages. Due to the hi" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/copysets-reducing-the-frequency-of-data-loss-in-cl-42b3c32d/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Copysets: Reducing the Frequency of Data Loss in Cloud Storage</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Asaf Cidon</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">John Ousterhout</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Mendel Rosenblum</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Ryan Stutsman</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Sachin Katti</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Stephen Rumble</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/copysets-reducing-the-frequency-of-data-loss-in-cloud-storage.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: June 2013 — 2013 USENIX Annual Technical Conference (USENIX ATC ’13), San Jose, California, pp. 37–48</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Random replication is widely used in data center storage systems to prevent data loss. However, random replication is almost guaranteed to lose data in the common scenario of simultaneous node failures due to cluster-wide power outages. Due to the high fixed cost of each incident of data loss, many data center operators prefer to minimize the frequency of such events at the expense of losing more data in each event.
+
+We present Copyset Replication, a novel general-purpose replication technique that significantly reduces the frequency of data loss events. We implemented and evaluated Copyset Replication on two open source data center storage systems, HDFS and RAMCloud, and show it incurs a low overhead on all operations. Such systems require that each node’s data be scattered across several nodes for parallel data recovery and access. Copyset Replication presents a near optimal trade-off between the number of nodes on which the data is scattered and the probability of data loss. For example, in a 5000-node RAMCloud cluster under a power outage, Copyset Replication reduces the probability of data loss from 99.99% to 0.15%. For Facebook’s HDFS cluster, it reduces the probability from 22.8% to 0.78%.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="paper-summary">Paper summary</h2>
+
+<p>The paper identifies a cluster-wide power outage as a correlated-failure scenario in which conventional random replication can lose data even when each individual chunk has a low probability of losing all replicas. The central observation is that the probability of losing at least one chunk depends strongly on the number of distinct <strong>copysets</strong>—sets of nodes containing all replicas of a chunk.</p>
+
+<p>Copyset Replication reduces this probability by restricting replica placement to a carefully constructed collection of copysets. The system first generates random permutations of the nodes and partitions each permutation into groups of size equal to the replication factor. During replication, the primary replica may be placed according to the storage system’s normal policy, while secondary replicas are selected from a copyset containing the primary node. The number of permutations is chosen to provide a target scatter width, preserving parallel recovery and access while keeping the number of distinct copysets low.</p>
+
+<p>The authors show that minimal copyset constructions increase the number of copysets approximately linearly with scatter width, whereas random replication can increase it on the order of the scatter width raised to the replication factor minus one. In simulations using a 5,000-node cluster and three replicas, the reported probability of data loss under a 1% concurrent-node failure decreases from 99.99% to 0.15% for RAMCloud and from 22.8% to 0.78% for Facebook’s HDFS configuration. The approach is near-optimal when scatter width is substantially smaller than cluster size: the evaluation reports more than 90% of optimal scatter width, including approximately 98% for the HDFS configuration.</p>
+
+<p>The trade-off is that Copyset Replication does not reduce the expected amount of data lost over repeated failures; it changes the distribution from frequent, smaller incidents to rarer, larger incidents. It can also increase recovery traffic, create higher worst-case replica load because of copyset overlaps, and complicate node addition and removal. In the reported HDFS experiments, recovery was approximately 5–20% slower on a 39-node test cluster. In RAMCloud, normal operations and master recovery showed negligible overhead, while backup recovery took 1.10 seconds versus 0.73 seconds for random replication and re-replicated approximately three times as much data.</p>
+
+<h2 id="subsequent-research-and-industry-use">Subsequent research and industry use</h2>
+
+<p>The paper received the Best Student Paper award at USENIX ATC ’13. (<a href="https://www.usenix.org/conference/atc13/technical-sessions/presentation/cidon">usenix.org</a>) Subsequent research treated Copyset Replication as a reference layout for reliability analysis; for example, a later reliability model compared random, shifted, and Copyset layouts in replicated storage systems. (<a href="https://www.sciencedirect.com/science/article/abs/pii/S0743731517300497">sciencedirect.com</a>) The DXRAM storage-system work discusses adapting copyset replica distribution to reduce data-loss probability, indicating use of the idea beyond the original HDFS and RAMCloud evaluation. (<a href="https://arxiv.org/abs/1807.03562">arxiv.org</a>)</p>
+
+<p>The concept also influenced distributed-storage engineering designs. A CockroachDB design RFC proposed dividing stores into copysets, preferring to place a range’s replicas within one copyset, while retaining locality constraints and addressing node membership changes and rebalancing. (<a href="https://fossies.org/linux/cockroach/docs/RFCS/20181204_copysets.md">fossies.org</a>) Facebook’s LogDevice documentation uses “copyset” for the set of storage nodes holding a record’s replicas and selects copysets subject to replication and failure-domain policies, although the documentation does not establish that its implementation is identical to the algorithm in this paper. (<a href="https://logdevice.io/docs/Concepts.html">logdevice.io</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/distributed_systems/">distributed systems</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/cloud-storage/">cloud storage</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/combinatorial-design/">combinatorial design</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/copyset-replication/">copyset replication</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/correlated-failures/">correlated failures</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/data-loss/">data loss</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-systems/">distributed systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/fault-tolerance/">fault tolerance</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/hdfs/">hdfs</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/ramcloud/">ramcloud</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/replication/">replication</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

@@ -1,0 +1,149 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Transactional storage for geo-replicated systems | Papers We Love</title>
+        <meta name="description" content="We describe the design and implementation of Walter, a key-value store that supports transactions and replicates data across distant sites. A key feature behind Walter is a new property called Parallel Snapshot Isolation (PSI). PSI allows Walter to r" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Transactional storage for geo-replicated systems | Papers We Love" />
+        <meta property="og:description" content="We describe the design and implementation of Walter, a key-value store that supports transactions and replicates data across distant sites. A key feature behind Walter is a new property called Parallel Snapshot Isolation (PSI). PSI allows Walter to r" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/transactional-storage-for-geo-replicated-systems-664bf39b/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:53">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Transactional storage for geo-replicated systems</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Jinyang Li</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Marcos K. Aguilera</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Russell Power</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Yair Sovran</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/datastores/transactional-storage-for-geo-replicated-systems.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: October 23–26, 2011, ACM Symposium on Operating Systems Principles (SOSP ’11), Cascais, Portugal</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>We describe the design and implementation of Walter, a key-value store that supports transactions and replicates data across distant sites. A key feature behind Walter is a new property called Parallel Snapshot Isolation (PSI). PSI allows Walter to replicate data asynchronously, while providing strong guarantees within each site. PSI precludes write-write conflicts, so that developers need not worry about conflict-resolution logic. To prevent write-write conflicts and implement PSI, Walter uses two new and simple techniques: preferred sites and counting sets. We use Walter to build a social networking application and port a Twitter-like application.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h3 id="summary">Summary</h3>
+
+<p>Walter is a geo-replicated transactional key-value store designed to combine low-latency local commits with asynchronous replication between distant sites. Its central contribution is <strong>Parallel Snapshot Isolation (PSI)</strong>: transactions read from a consistent snapshot at their local site; committed concurrent transactions cannot have overlapping write sets; and causal dependencies are preserved across sites. Unlike conventional snapshot isolation, PSI permits different sites to observe non-conflicting transactions in different orders, enabling replication without imposing a global commit order.</p>
+
+<p>The implementation uses multi-version concurrency control, vector timestamps, and per-object histories. <strong>Preferred sites</strong> allow transactions that write objects at their designated sites to commit without cross-site coordination. <strong>Counting sets (csets)</strong> represent set-like or counter-like data through commutative add and remove operations, allowing concurrent updates from different sites without write conflicts. Transactions involving regular objects outside their preferred sites use a slower two-phase commit protocol among the relevant preferred sites.</p>
+
+<p>Walter provides normal and disaster-safe durability, asynchronous propagation, and a distinction between local commitment, disaster-safe durability, and global visibility. Its principal consistency limitation is the possibility of a temporary <strong>long fork</strong>, in which different sites expose different orders of concurrent, non-conflicting updates until replication converges. The prototype supported WaltSocial and a port of ReTwis; experiments on four Amazon EC2 sites reported fast-commit 99.9th-percentile latency of 27 ms, WaltSocial operation latency below 50 ms at the 99.9th percentile, and useful throughput for the evaluated workloads. The design also showed that applications could often avoid slow commits by structuring shared data with csets. (<a href="https://www.cs.cornell.edu/courses/cs6452/2012sp/papers/psi-sosp11.pdf">cs.cornell.edu</a>)</p>
+
+<h3 id="subsequent-influence">Subsequent influence</h3>
+
+<p>Later research used PSI as a formal point of comparison. <em>Seeing is Believing</em> analyzed PSI’s relationship to earlier consistency models, concluding that PSI is equivalent to lazy consistency (PL-2+) under the relevant client-observable semantics and showing how PSI can be enforced without requiring the same per-site ordering constraints as the original formulation. (<a href="https://arxiv.org/abs/1609.06670">arxiv.org</a>) Automated-analysis research subsequently modeled PSI to detect serializability violations in transactional applications, finding long-fork anomalies in TPC-C under PSI. (<a href="https://arxiv.org/abs/1806.08416">arxiv.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/datastores/">datastores</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/asynchronous-replication/">asynchronous replication</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-storage/">distributed storage</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/geo-distributed-systems/">geo distributed systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/key-value-store/">key value store</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/parallel-snapshot-isolation/">parallel snapshot isolation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/transactions/">transactions</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:53
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

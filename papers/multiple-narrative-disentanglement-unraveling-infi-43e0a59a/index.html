@@ -1,0 +1,170 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Multiple Narrative Disentanglement: Unraveling Infinite Jest | Papers We Love</title>
+        <meta name="description" content="Many works (of both fiction and non-fiction) span multiple, intersecting narratives, each of which constitutes a story in its own right. In this work I introduce the task of multiple narrative disentanglement (MND), in which the aim is to tease these" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Multiple Narrative Disentanglement: Unraveling Infinite Jest | Papers We Love" />
+        <meta property="og:description" content="Many works (of both fiction and non-fiction) span multiple, intersecting narratives, each of which constitutes a story in its own right. In this work I introduce the task of multiple narrative disentanglement (MND), in which the aim is to tease these" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/multiple-narrative-disentanglement-unraveling-infi-43e0a59a/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:00">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Multiple Narrative Disentanglement: Unraveling Infinite Jest</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Byron C. Wallace</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://aclanthology.org/N12-1001.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: June 3–8, 2012, NAACL-HLT 2012, Montréal, Canada</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Many works (of both fiction and non-fiction) span multiple, intersecting narratives, each of which constitutes a story in its own right. In this work I introduce the task of multiple narrative disentanglement (MND), in which the aim is to tease these narratives apart by assigning passages from a text to the sub-narratives to which they belong. The motivating example I use is David Foster Wallace’s fictional text Infinite Jest. I selected this book because it contains multiple, interweaving narratives within its sprawling 1,000-plus pages. I propose and evaluate a novel unsupervised approach to MND that is motivated by the theory of narratology. This method achieves strong empirical results, successfully disentangling the threads in Infinite Jest and significantly outperforming baseline strategies in doing so.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="overview">Overview</h2>
+
+<p>The paper introduces <strong>multiple narrative disentanglement (MND)</strong>, an unsupervised task that assigns passages in a text to one or more underlying narrative threads. Unlike conversational-thread disentanglement, where an utterance is generally assigned to one discussion, MND allows passages to belong to multiple intersecting narratives and treats narratives as potentially hierarchical.</p>
+
+<h2 id="method">Method</h2>
+
+<p>The proposed <strong>narrative modeling</strong> pipeline has three stages:</p>
+
+<ol>
+  <li>Segment the text into passages.</li>
+  <li>Extract named entities—primarily characters, organizations, and locations—from each passage.</li>
+  <li>Apply latent Dirichlet allocation (LDA) to the extracted entities rather than to the full text.</li>
+</ol>
+
+<p>The central modeling assumption is that a passage is a mixture of latent narratives, while each narrative is characterized by a distribution over entities. The approach assigns a passage to a narrative when its estimated mixture probability exceeds a threshold and the passage contains at least one highly ranked entity associated with that narrative. The number of narratives is supplied by the user because the hierarchical nature of narrative makes a single objectively correct number difficult to define.</p>
+
+<p>The same entity rankings are also used for focalizer detection: the highest-ranked entity classified as a person is selected as the focalizer of each narrative.</p>
+
+<h2 id="corpus-and-evaluation">Corpus and evaluation</h2>
+
+<p>The evaluation uses a manually annotated version of David Foster Wallace’s <em>Infinite Jest</em>. The author annotated 49 narrative labels across 183 passages, with three principal threads used for the main experiment: the wheelchair-assassin narrative, the Ennet House Drug Recovery House narrative, and the Enfield Tennis Academy narrative. A fourth, more heavily overlapping Incandenza-family narrative was added for a harder test. Because the corpus was annotated by a single person, inter-annotator agreement was unavailable.</p>
+
+<p>The system is compared with round-robin assignment, majority-thread assignment, and full-text topic modeling. For the three main narratives, entity-based narrative modeling achieves a macro-averaged F-score of <strong>0.702</strong>, compared with <strong>0.545</strong> for full-text topic modeling. Its micro-averaged F-score is <strong>0.706</strong>, compared with <strong>0.551</strong> for full-text topic modeling. For the more entangled four-thread experiment, narrative modeling achieves a macro-averaged F-score of <strong>0.67</strong>, compared with <strong>0.56</strong> for full-text topic modeling. Focalizer detection identifies the focalizers of the three main narratives with 100% accuracy in the reported experiment.</p>
+
+<h2 id="main-conclusions-and-limitations">Main conclusions and limitations</h2>
+
+<p>The results support the paper’s claim that modeling entities provides a representation more closely aligned with the actors and locations underlying narrative structure than modeling raw lexical content. The work establishes MND as a distinct computational-literary task and demonstrates that probabilistic, soft multi-label assignments are useful for narratives that intersect. Important limitations include the subjective definition and granularity of narrative annotations, the single-annotator corpus, the need to specify the number of threads in advance, dependence on named-entity recognition quality, and evaluation on one unusually complex novel.</p>
+
+<h2 id="subsequent-research-influence">Subsequent research influence</h2>
+
+<p>The paper’s task formulation and entity-based topic-modeling idea were cited in later computational-literary research. For example, <em>GutenTag: an NLP-driven Tool for Digital Humanities Research in the Project Gutenberg Corpus</em> cites Wallace as prior work motivating automatic narrative extraction with topic-modeling methods. (<a href="https://aclanthology.org/W15-0705/">aclanthology.org</a>) A later computational study of literary text also identifies Wallace’s work as part of the developing body of literature-specific computational-linguistics research. (<a href="https://www.researchgate.net/publication/262369385_Multiple_narrative_disentanglement_unraveling_Infinite_Jest">researchgate.net</a>) The available evidence indicates influence primarily as a methodological reference in computational literary analysis; I found no well-documented industry deployment directly attributable to this paper. The paper’s bibliographic details and publication venue were verified against the ACL Anthology record. (<a href="https://aclanthology.org/N12-1001/">aclanthology.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/machine_learning/">machine learning</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/computational-literary-analysis/">computational literary analysis</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/infinite-jest/">infinite jest</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/latent-dirichlet-allocation/">latent dirichlet allocation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/multiple-narrative-disentanglement/">multiple narrative disentanglement</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/named-entity-recognition/">named entity recognition</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/narrative-focalizer/">narrative focalizer</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/narrative-modeling/">narrative modeling</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/narratology/">narratology</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/story-understanding/">story understanding</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/unsupervised-learning/">unsupervised learning</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:00
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

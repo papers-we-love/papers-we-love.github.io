@@ -1,0 +1,154 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>2Q: A Low Overhead High Performance Buffer Management Replacement Algorithm | Papers We Love</title>
+        <meta name="description" content="In a path-breaking paper last year Pat and Betty O'Neil and Gerhard Weikum proposed a self-tuning improvement to the Least Recently Used (LRU) buffer management algorithm[15]. Their improvement is called LRU/k and advocates giving priority to buffer " />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="2Q: A Low Overhead High Performance Buffer Management Replacement Algorithm | Papers We Love" />
+        <meta property="og:description" content="In a path-breaking paper last year Pat and Betty O'Neil and Gerhard Weikum proposed a self-tuning improvement to the Least Recently Used (LRU) buffer management algorithm[15]. Their improvement is called LRU/k and advocates giving priority to buffer " />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/2q-a-low-overhead-high-performance-buffer-manageme-98fa2c32/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:53">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">2Q: A Low Overhead High Performance Buffer Management Replacement Algorithm</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Dennis Shasha</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Theodore Johnson</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/caching/2q-a-low-overhead-high-performance-buffer-management-replacement-algorithm.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: September 12–15, 1994, VLDB'94 (20th International Conference on Very Large Data Bases), Santiago de Chile, Chile</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>In a path-breaking paper last year Pat and Betty O'Neil and Gerhard Weikum proposed a self-tuning improvement to the Least Recently Used (LRU) buffer management algorithm[15]. Their improvement is called LRU/k and advocates giving priority to buffer pages based on the kth most recent access. (The standard LRU algorithm is denoted LRU/1 according to this terminology.) If P1's kth most recent access is more recent than P2's, then P1 will be replaced after P2. Intuitively, LRU/k for k > 1 is a good strategy, because it gives low priority to pages that have been scanned or to pages that belong to a big randomly accessed file (e.g., the account file in TPC/A). They found that LRU/2 achieves most of the advantage of their method.
+
+The one problem of LRU/2 is the processor overhead to implement it. In contrast to LRU, each page access requires log N work to manipulate a priority queue where N is the number of pages in the buffer.
+
+Question: is there a low overhead way (constant overhead per access as in LRU) to achieve similar page replacement performance to LRU/2?
+Answer: Yes.
+
+Our "Two Queue" algorithm (hereafter 2Q) has constant time overhead, performs as well as LRU/2, and requires no tuning. These results hold for real (DB2 commercial, Swiss bank) traces as well as simulated ones. Based on these experiments, we estimate that 2Q will provide a few percent improvement over LRU without increasing the overhead by more than a constant additive factor.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h3 id="summary">Summary</h3>
+
+<p>The paper introduces <strong>2Q</strong>, a buffer-replacement algorithm intended to obtain the performance benefits of LRU/2 without its priority-queue overhead. It separates recently accessed pages from pages that have demonstrated sustained reuse: <code>A1in</code> is a FIFO queue for newly referenced pages, <code>Am</code> is an LRU queue for pages admitted after evidence of reuse, and <code>A1out</code> is a metadata-only history queue for recently evicted pages. The resulting operations use constant-time list manipulation. Experiments with Zipfian workloads, scans, index/data access patterns, and traces from DB2, a windowing application, and an OLTP system report higher hit rates than LRU and performance generally comparable to LRU/2. The authors recommend allocating approximately 25% of the buffer to <code>A1in</code> and retaining identifiers for roughly 50% of the buffer size in <code>A1out</code>.</p>
+
+<h3 id="influence">Influence</h3>
+
+<p>Subsequent research treated 2Q as a reference cache policy and reused its central ideas. A 2002 USENIX study incorporated 2Q into a fingerprinting tool for identifying operating-system buffer-cache policies and explicitly described its FIFO short-term queue, LRU main queue, and historical metadata queue. (<a href="https://www.usenix.org/legacy/event/usenix02/full_papers/burnett/burnett_html/">usenix.org</a>) The Multi-Queue algorithm adopted a history buffer similar to 2Q’s <code>A1out</code> while extending the design to multiple frequency-sensitive LRU queues for second-level caches. (<a href="https://www.usenix.org/legacy/event/usenix01/full_papers/zhou/zhou_html/node9.html">usenix.org</a>) Later work on energy-efficient buffer caches used 2Q as a baseline and developed variants including chip 2Q, inode 2Q, and hotCold 2Q. (<a href="https://web.eece.maine.edu/~zhu/papers/zhu_NAS_2011.pdf">web.eece.maine.edu</a>) A separate study proposed 2Q* for mail-service storage workloads, directly extending the algorithm for that application domain. (<a href="https://www.tandfonline.com/doi/abs/10.1080/02533839.2012.726023">tandfonline.com</a>) Bibliographic records also list later research applying or comparing against 2Q in self-tuning memory management, query evaluation, distributed databases, multimedia databases, and broadcast-disk systems. (<a href="https://www.sigmod.org/publications/dblp/db/conf/vldb/vldb94-439.html">sigmod.org</a>) These sources establish continued research influence and adaptation; they do not, by themselves, establish broad production deployment of the original algorithm.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/caching/">caching</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/buffer-management/">buffer management</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/cache-locality/">cache locality</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/cache-replacement/">cache replacement</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/database-systems/">database systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/fifo/">fifo</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/lru/">lru</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/lru-k/">lru k</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/lru-queue/">lru queue</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/scan-resistance/">scan resistance</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/working-set/">working set</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:53
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

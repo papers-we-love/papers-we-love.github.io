@@ -1,0 +1,158 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Exokernel: An Operating System Architecture for Application-Level Resource Management | Papers We Love</title>
+        <meta name="description" content="Traditional operating systems limit the performance, flexibility, and functionality of applications by fixing the interface and implementation of operating system abstractions such as interprocess communication and virtual memory. The exokernel opera" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Exokernel: An Operating System Architecture for Application-Level Resource Management | Papers We Love" />
+        <meta property="og:description" content="Traditional operating systems limit the performance, flexibility, and functionality of applications by fixing the interface and implementation of operating system abstractions such as interprocess communication and virtual memory. The exokernel opera" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/exokernel-an-operating-system-architecture-for-app-2049bf3b/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:01">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Exokernel: An Operating System Architecture for Application-Level Resource Management</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Dawson R. Engler</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">James O’Toole Jr.</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">M. Frans Kaashoek</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://pages.cs.wisc.edu/~remzi/Classes/736/Spring2014/Papers/exo-sosp95.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: December 1995, Proceedings of the Fifteenth Symposium on Operating Systems Principles; published December 3, 1995</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Traditional operating systems limit the performance, flexibility, and functionality of applications by fixing the interface and implementation of operating system abstractions such as interprocess communication and virtual memory. The exokernel operating system architecture addresses this problem by providing application-level management of physical resources. In the exokernel architecture, a small kernel securely exports all hardware resources through a low-level interface to untrusted library operating systems. Library operating systems use this interface to implement system objects and policies. This separation of resource protection from management allows application-specific customization of traditional operating system abstractions by extending, specializing, or even replacing libraries.
+
+We have implemented a prototype exokernel operating system. Measurements show that most primitive kernel operations (such as exception handling and protected control transfer) are ten to 100 times faster than in Ultrix, a mature monolithic UNIX operating system. In addition, we demonstrate that an exokernel allows applications to control machine resources in ways not possible in traditional operating systems. For instance, virtual memory and interprocess communication abstractions are implemented entirely within an application-level library. Measurements show that application-level virtual memory and interprocess communication primitives are five to 40 times faster than Ultrix’s kernel primitives. Compared to state-of-the-art implementations from the literature, the prototype exokernel system is at least five times faster on operations such as exception dispatching and interprocess communication.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>The paper proposes the exokernel architecture, which minimizes the trusted kernel and moves the implementation of conventional operating-system abstractions into untrusted, application-level library operating systems. Instead of providing fixed abstractions such as processes, virtual memory, files, and interprocess communication, the kernel securely multiplexes physical resources and exposes them through low-level interfaces. Applications or library operating systems then implement the abstractions and policies most appropriate for their workloads. The central design objective is to separate protection from resource management: the kernel enforces ownership and isolation without needing to understand higher-level resource semantics. (<a href="https://pages.cs.wisc.edu/~remzi/Classes/736/Spring2014/Papers/exo-sosp95.pdf">pages.cs.wisc.edu</a>)</p>
+
+<p>The authors identify three mechanisms for achieving this separation. <strong>Secure bindings</strong> associate applications with resources and allow efficient access checks after authorization has occurred. <strong>Visible revocation</strong> informs application-level software when resources must be reclaimed, allowing it to choose what to release and update its own state. An <strong>abort protocol</strong> allows the kernel to forcibly break bindings when an application fails to respond. Secure bindings may be implemented with hardware mechanisms, cached software structures, or safe application code downloaded into the kernel. The prototype uses capabilities for memory protection, a software translation-lookaside buffer, dynamically compiled packet filters, and application-specific safe handlers for latency-sensitive network processing. (<a href="https://pages.cs.wisc.edu/~remzi/Classes/736/Spring2014/Papers/exo-sosp95.pdf">pages.cs.wisc.edu</a>)</p>
+
+<p>The prototype consists of the Aegis exokernel and the ExOS library operating system. Aegis exports processor time, physical memory, address translation, exceptions, interrupts, and network access. ExOS implements processes, virtual memory, interprocess communication, network protocols, and other higher-level services in application address spaces. This organization allows applications to replace or specialize components without modifying the kernel. Demonstrated examples include application-level pipes, shared-memory communication, lightweight remote procedure calls, configurable page-table structures, trusted RPC variants, and an application-level stride scheduler. (<a href="https://pages.cs.wisc.edu/~remzi/Classes/736/Spring2014/Papers/exo-sosp95.pdf">pages.cs.wisc.edu</a>)</p>
+
+<p>The experimental results support the authors’ main claims, subject to the limitations of a research prototype and best-case microbenchmark methodology. Aegis provides substantially faster exception dispatch, protected control transfer, and system-call paths than Ultrix on the tested DECstation hardware. ExOS provides faster IPC and several virtual-memory operations while adding little overhead to a conventional matrix-multiplication workload. Dynamically generated packet filters and application-specific safe handlers reduce network-processing and round-trip latency, particularly when receiver-side scheduling would otherwise delay responses. The results show that application-level operating-system services can be both efficient and customizable when the underlying kernel interface is sufficiently low-level. (<a href="https://pages.cs.wisc.edu/~remzi/Classes/736/Spring2014/Papers/exo-sosp95.pdf">pages.cs.wisc.edu</a>)</p>
+
+<h2 id="influence-on-later-research-and-systems">Influence on Later Research and Systems</h2>
+
+<p>The work directly led to subsequent Aegis-derived Xok/ExOS research. Later experiments reported that Xok/ExOS could run many unmodified UNIX applications with performance comparable to mature monolithic systems while retaining application-level control over operating-system services. (<a href="https://pdos.csail.mit.edu/papers/exo-sosp97/exo-sosp97.html">pdos.csail.mit.edu</a>)</p>
+
+<p>The library-operating-system model also influenced later systems research. Corey explicitly adopted an exokernel-like organization and library operating systems to let applications control sharing and experiment with alternative mechanisms on multicore systems. (<a href="https://static.usenix.org/event/osdi08/tech/full_papers/boyd-wickizer/boyd-wickizer_html/">static.usenix.org</a>) OSv described its hypervisor as playing an exokernel-like role and its per-VM operating-system instance as a library OS, applying the model to single-application cloud virtual machines. (<a href="https://www.usenix.org/sites/default/files/atc14_full_proceedings.pdf">usenix.org</a>) More recently, BPF for Storage explicitly identified itself as an exokernel-inspired approach, using user-defined code inside the storage path to reduce kernel-layer overhead while retaining protection and resource-translation mechanisms. (<a href="https://www.cs.columbia.edu/~junfeng/papers/bpf-storage/">cs.columbia.edu</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/unikernels/">unikernels</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/application-level-resource-management/">application level resource management</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/dynamic-packet-filters/">dynamic packet filters</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/exokernel/">exokernel</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/interprocess-communication/">interprocess communication</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/library-operating-systems/">library operating systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/operating-systems/">operating systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/protected-control-transfer/">protected control transfer</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/secure-bindings/">secure bindings</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/virtual-memory/">virtual memory</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/visible-resource-revocation/">visible resource revocation</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:01
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

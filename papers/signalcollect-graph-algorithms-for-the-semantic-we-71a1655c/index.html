@@ -1,0 +1,152 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Signal/Collect: Graph Algorithms for the (Semantic) Web | Papers We Love</title>
+        <meta name="description" content="The Semantic Web graph is growing at an incredible pace, enabling opportunities to discover new knowledge by interlinking and analyzing previously unconnected data sets. This confronts researchers with a conundrum: Whilst the data is available the pr" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Signal/Collect: Graph Algorithms for the (Semantic) Web | Papers We Love" />
+        <meta property="og:description" content="The Semantic Web graph is growing at an incredible pace, enabling opportunities to discover new knowledge by interlinking and analyzing previously unconnected data sets. This confronts researchers with a conundrum: Whilst the data is available the pr" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/signalcollect-graph-algorithms-for-the-semantic-we-71a1655c/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Signal/Collect: Graph Algorithms for the (Semantic) Web</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Abraham Bernstein</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Philip Stutz</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">William Cohen</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/signal-%26-collect-graph-algorithms-for-the-(semantic)-web.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: November 7–11, 2010; 9th International Semantic Web Conference (ISWC 2010), Shanghai, China; published in Lecture Notes in Computer Science, volume 6496, pages 764–780</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>The Semantic Web graph is growing at an incredible pace, enabling opportunities to discover new knowledge by interlinking and analyzing previously unconnected data sets. This confronts researchers with a conundrum: Whilst the data is available the programming models that facilitate scalability and the infrastructure to run various algorithms on the graph are missing.
+Some use MapReduce – a good solution for many problems. However, even some simple iterative graph algorithms do not map nicely to that programming model requiring programmers to shoehorn their problem to the MapReduce model.
+This paper presents the Signal/Collect programming model for synchronous and asynchronous graph algorithms. We demonstrate that this abstraction can capture the essence of many algorithms on graphs in a concise and elegant way by giving Signal/Collect adaptations of various relevant algorithms. Furthermore, we built and evaluated a prototype Signal/Collect framework that executes algorithms in our programming model. We empirically show that this prototype transparently scales and that guiding computations by scoring as well as asynchronousity can greatly improve the convergence of some example algorithms. We released the framework under the Apache License 2.0 (at http://www.ifi.uzh.ch/ddis/research/sc).</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>The paper introduces <strong>Signal/Collect</strong>, a vertex-and-edge programming model for iterative computation over typed graphs. Vertices maintain state and collect incoming signals; edges compute and transmit signals from source vertices to targets. The model supports synchronous bulk-synchronous execution, score-guided execution, asynchronous execution, custom schedulers, multiple vertex and edge types, weighted edges, conditional computation phases, and aggregation.</p>
+
+<p>The authors demonstrate the model with single-source shortest path, RDFS subclass inference, vertex coloring, PageRank, and loopy belief propagation. Their prototype, implemented in Scala, parallelizes computations across worker threads on a shared-memory machine and can initialize graph structures from SPARQL queries. Experiments report near-linear speedup for one large shortest-path workload, substantial reductions in PageRank work through score-guided execution on some graphs, and cases where eager asynchronous execution converges while synchronous execution does not. The evaluation is limited because the prototype was initially single-machine and shared-memory, and because only a small set of algorithms and graph structures was tested. (<a href="https://code.garrettmills.dev/Archives/papers-we-love_papers-we-love/raw/commit/49cb6db953b46a68df18f5d799511cc88260aeff/distributed_systems/signal-%26-collect-graph-algorithms-for-the-%28semantic%29-web.pdf">code.garrettmills.dev</a>)</p>
+
+<h2 id="subsequent-influence">Subsequent influence</h2>
+
+<p>The work was followed by a substantially expanded Signal/Collect publication, which generalized the application scope and reported a distributed implementation capable of processing a graph with more than 1.4 billion vertices and 6.6 billion edges on eight machines. (<a href="https://journals.sagepub.com/doi/abs/10.3233/SW-150176">journals.sagepub.com</a>) The project’s later documentation continues to describe distributed execution, score-guided signaling and collecting, convergence detection, and asynchronous processing as core features. (<a href="https://uzh.github.io/signal-collect/documentation.html">uzh.github.io</a>) The programming model also influenced subsequent graph-processing software, including the Clojure/ClojureScript <code>fabric</code> infrastructure, which explicitly describes itself as Signal/Collect-inspired. (<a href="https://github.com/thi-ng/fabric">github.com</a>) Later graph-processing and temporal-graph publications cite the paper as part of the development of vertex-centric and asynchronous graph-processing systems. (<a href="https://doi.org/10.1145/3184558.3186934">doi.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/distributed_systems/">distributed systems</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/asynchronous-computation/">asynchronous computation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-computing/">distributed computing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/graph-algorithms/">graph algorithms</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/graph-processing/">graph processing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/mapreduce/">mapreduce</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/pagerank/">pagerank</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/rdfs-inference/">rdfs inference</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/semantic-web/">semantic web</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/signal-collect/">signal collect</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/synchronous-computation/">synchronous computation</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->
