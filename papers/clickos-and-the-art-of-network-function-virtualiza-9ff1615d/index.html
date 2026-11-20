@@ -1,0 +1,154 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>ClickOS and the Art of Network Function Virtualization | Papers We Love</title>
+        <meta name="description" content="Over the years middleboxes have become a fundamental part of today’s networks. Despite their usefulness, they come with a number of problems, many of which arise from the fact that they are hardware-based: they are costly, difficult to manage, and th" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="ClickOS and the Art of Network Function Virtualization | Papers We Love" />
+        <meta property="og:description" content="Over the years middleboxes have become a fundamental part of today’s networks. Despite their usefulness, they come with a number of problems, many of which arise from the fact that they are hardware-based: they are costly, difficult to manage, and th" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/clickos-and-the-art-of-network-function-virtualiza-9ff1615d/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:01">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">ClickOS and the Art of Network Function Virtualization</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Costin Raiciu</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Felipe Huici</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Joao Martins</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Michio Honda</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Mohamed Ahmed</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Roberto Bifulco</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Vladimir Olteanu</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-martins.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: April 2, 2014; published in the Proceedings of the 11th USENIX Symposium on Networked Systems Design and Implementation (NSDI ’14), held April 2–4, 2014</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Over the years middleboxes have become a fundamental part of today’s networks. Despite their usefulness, they come with a number of problems, many of which arise from the fact that they are hardware-based: they are costly, difficult to manage, and their functionality is hard or impossible to change, to name a few.
+
+To address these issues, there is a recent trend towards network function virtualization (NFV), in essence proposing to turn these middleboxes into software-based, virtualized entities. Towards this goal we introduce ClickOS, a high-performance, virtualized software middlebox platform. ClickOS virtual machines are small (5MB), boot quickly (about 30 milliseconds), add little delay (45 microseconds) and over one hundred of them can be concurrently run while saturating a 10Gb pipe on a commodity server. We further implement a wide range of middleboxes including a firewall, a carrier-grade NAT and a load balancer and show that ClickOS can handle packets in the millions per second.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>The paper introduces ClickOS, a Xen-based NFV platform that combines a minimal MiniOS guest with the Click modular router. Its central design contribution is a specialized high-speed network I/O path: the platform replaces Open vSwitch with an optimized VALE-based switch, moves most netback processing into the control plane, reuses Xen memory grants, and directly maps packet-buffer rings into guest memory. This reduces packet copies, hypercalls, virtual-interface overhead, and other costs in the conventional Xen networking path.</p>
+
+<p>The evaluation reports 5 MB VM images, approximately 30 ms startup time, approximately 45 μs idle packet-processing delay, support for hundreds of concurrently instantiated VMs, and millions of packets per second for several middlebox types. On the tested commodity hardware, ClickOS reaches near line rate for many packet sizes and workloads, although performance declines for minimum-sized packets, long middlebox chains, and configurations constrained by limited CPU parallelism. The system supports reusable Click elements for functions including routing, firewalls, NAT, load balancing, traffic shaping, monitoring, tunneling, and intrusion detection.</p>
+
+<p>Subsequent research used ClickOS as a reference NFV dataplane and as an experimental platform. A later study on ClickOS-based NFV management examined management requirements such as function requests and lifecycle control. (<a href="https://dl.ifip.org/db/conf/cnsm/cnsm2014sdn/BondanSG14.pdf">dl.ifip.org</a>) A 2016 measurement study directly compared ClickOS with SoftNIC, validated many of the original performance results, and identified limitations involving small packets, NF chaining, NUMA placement, NIC queues, and the lack of SMP support. (<a href="https://arxiv.org/abs/1605.05843">arxiv.org</a>) Later NFV surveys describe ClickOS as an influential lightweight VNF platform and preserve its optimized Xen/VALE/netmap architecture as a representative approach to high-performance virtualized packet processing. (<a href="https://www.mdpi.com/1999-5903/14/2/59">mdpi.com</a>) The search found clear evidence of continued research use and benchmarking, but no independently verified evidence in the cited sources of a specific production-industry deployment directly attributable to this paper.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/unikernels/">unikernels</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/clickos/">clickos</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/middleboxes/">middleboxes</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/minios/">minios</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/netmap/">netmap</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/network-function-virtualization/">network function virtualization</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/network-i-o/">network i o</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/service-chaining/">service chaining</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/software-switching/">software switching</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/virtual-machines/">virtual machines</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/xen/">xen</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:01
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

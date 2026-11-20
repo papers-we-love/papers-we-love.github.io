@@ -1,0 +1,151 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Out of the Tar Pit | Papers We Love</title>
+        <meta name="description" content="Complexity is the single major difficulty in the successful development of large-scale software systems. Following Brooks we distinguish accidental from essential difficulty, but disagree with his premise that most complexity remaining in contemporar" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Out of the Tar Pit | Papers We Love" />
+        <meta property="og:description" content="Complexity is the single major difficulty in the successful development of large-scale software systems. Following Brooks we distinguish accidental from essential difficulty, but disagree with his premise that most complexity remaining in contemporar" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/out-of-the-tar-pit-71c3f47e/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:53">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Out of the Tar Pit</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Ben Moseley</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Peter Marks</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/design/out-of-the-tar-pit.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: February 6, 2006; Software Practice Advancement (SPA), 2006</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Complexity is the single major difficulty in the successful development of large-scale software systems. Following Brooks we distinguish accidental from essential difficulty, but disagree with his premise that most complexity remaining in contemporary systems is essential. We identify common causes of complexity and discuss general approaches which can be taken to eliminate them where they are accidental in nature. To make things more concrete we then give an outline for a potential complexity-minimizing approach based on functional programming and Codd’s relational model of data.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>The paper argues that complexity is the principal difficulty in developing and maintaining large-scale software systems. The authors identify mutable state, explicit control flow, and code volume as major sources of complexity because they make systems difficult to understand, test, and reason about. They distinguish <strong>essential complexity</strong>, which is inherent in the users’ problem, from <strong>accidental complexity</strong>, which arises from implementation choices, performance concerns, infrastructure, and other nonessential mechanisms.</p>
+
+<p>The central recommendation is to <strong>avoid</strong> accidental complexity wherever possible and <strong>separate</strong> the complexity that must remain. The proposed architecture divides a system into essential state, essential logic, and accidental state and control. Essential state represents information that must be retained; essential logic expresses domain rules and derived information declaratively; and accidental state and control contain isolated implementation mechanisms such as caching, physical storage decisions, and evaluation strategies. The authors argue that these components should be expressed using restricted, specialized languages so that each can be reasoned about independently.</p>
+
+<p>The paper then sketches <strong>Functional Relational Programming (FRP)</strong>, a hypothetical architecture combining pure functional programming with Codd’s relational model. In FRP, essential state is represented as relations, essential logic is expressed through relational algebra, pure functions, and integrity constraints, and performance optimizations are specified separately as declarative hints. External interaction is handled through feeders, which update relational state, and observers, which produce outputs from changes in derived relations. The paper illustrates the approach with an estate-agency example involving properties, offers, sales, and commissions.</p>
+
+<p>The paper explicitly presented FRP as hypothetical rather than as a validated production architecture. Subsequent work nevertheless includes several explicit experimental implementations or extensions. The Yurt project states that it aims to implement FRP as described in the paper, using relations, relational-algebra queries, integrity constraints, feeders, and observers. (<a href="https://www.yurt-persistence.com/">yurt-persistence.com</a>) Jon Eisen’s Clojure project fyra describes itself as an experimental FRP implementation and reproduces the paper’s relational-algebra style and estate-agency example. (<a href="https://joneisen.me/programming/2015/10/29/fyra-functional-relational.html">joneisen.me</a>) The Cell programming language also explicitly attributes the functional/relational-programming concept to the paper and adopts related principles, including relational state representation, separation of pure computation from state updates, and declarative integrity constraints. (<a href="https://www.cell-lang.net/faq.html">cell-lang.net</a>)</p>
+
+<p>The available evidence indicates conceptual and experimental influence on programming-language and architecture projects, but the search did not identify evidence of widespread industrial adoption or a large empirical evaluation validating the complete FRP architecture.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/design/">design</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/accidental-complexity/">accidental complexity</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/control-flow/">control flow</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/declarative-programming/">declarative programming</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/essential-complexity/">essential complexity</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/functional-programming/">functional programming</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/functional-relational-programming/">functional relational programming</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/mutable-state/">mutable state</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/relational-model/">relational model</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/software-architecture/">software architecture</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/software-complexity/">software complexity</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:53
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

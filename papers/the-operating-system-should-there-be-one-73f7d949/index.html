@@ -1,0 +1,139 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>The operating system: should there be one? | Papers We Love</title>
+        <meta name="description" content="Operating systems and programming languages are often informally evaluated on their conduciveness towards composition. We revisit Dan Ingalls’ Smalltalk-inspired position that “an operating system is a collection of things that don’t fit inside a lan" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="The operating system: should there be one? | Papers We Love" />
+        <meta property="og:description" content="Operating systems and programming languages are often informally evaluated on their conduciveness towards composition. We revisit Dan Ingalls’ Smalltalk-inspired position that “an operating system is a collection of things that don’t fit inside a lan" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/the-operating-system-should-there-be-one-73f7d949/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:01">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">The operating system: should there be one?</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Stephen Kell</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://www.cl.cam.ac.uk/~srk31/research/papers/kell13operating.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: November 3, 2013; PLOS’13 (Seventh Workshop on Programming Languages and Operating Systems), Farmington, Pennsylvania, USA</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Operating systems and programming languages are often informally evaluated on their conduciveness towards composition. We revisit Dan Ingalls’ Smalltalk-inspired position that “an operating system is a collection of things that don’t fit inside a language; there shouldn’t be one”, discussing what it means, why it appears not to have materialised, and how we might work towards the same effect in the postmodern reality of today’s systems. We argue that the trajectory of the “file” abstraction through Unix and Plan 9 culminates in a Smalltalk-style object, with other filesystem calls as a primitive metasystem. Meanwhile, the key features of Smalltalk have many analogues in the fragmented world of Unix programming (including techniques at the library, file and socket level). Based on the themes of unifying OS- and language-level mechanisms, and increasing the expressiveness of the meta-system, we identify some evolutionary approaches to a postmodern realisation of Ingalls’ vision, arguing that an operating system is still necessary after all.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <p>The paper examines Dan Ingalls’ proposition that an operating system consists of functionality that does not fit inside a programming language. It compares Smalltalk’s unified object model, pervasive metasystem, and late-bound message passing with Unix’s fragmented composition mechanisms. Kell argues that Unix’s “everything is a file” abstraction, developed further in Plan 9, approaches a universal object abstraction but lacks Smalltalk’s richer descriptive and meta-level facilities. The paper identifies a “lurking Smalltalk” in existing Unix mechanisms, including synthetic filesystems, shared-library interposition, FUSE-like user-level filesystems, debugging metadata, dynamic instrumentation, and shell-based composition. It proposes an evolutionary path in which operating-system services provide richer descriptions of data and behavior, unified binding, and machine-assisted synthesis of adapters between heterogeneous software components. The conclusion is that operating systems remain necessary, not as providers of a single dominant programming model, but as infrastructure for composing software developed in diverse languages and environments.</p>
+
+<p>A quick search found evidence of conceptual and scholarly influence, but no clearly documented industrial adoption attributable specifically to this paper. The paper is cited by <em>Technical Dimensions of Programming Systems</em> (2023), which develops a framework for comparing programming systems and explicitly places Unix, Smalltalk, and operating systems within that broader design space. (<a href="https://tomasp.net/techdims/">tomasp.net</a>) It is also cited by <em>Designing Postmodern Substrate Architectures</em> (2025), which connects Kell’s postmodern systems perspective to later work on substrate-oriented programming environments. (<a href="https://www.lri.fr/~gobert/papers/substrates2025-postmodern-substrates.pdf">lri.fr</a>) A 2018 critique of “Files as Directories” discusses the paper in relation to file/object unification and semantic gaps in filesystem abstractions. (<a href="https://www.shift-society.org/salon/papers/2018/critiques/critique-files-as-directories-2.pdf">shift-society.org</a>) Bibliographic records identify the work as a 2013 PLOS’13 conference paper by Stephen Kell. (<a href="https://kar.kent.ac.uk/69710/">kar.kent.ac.uk</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/operating_systems/">operating systems</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/binding/">binding</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/composition/">composition</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/integration/">integration</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/metasystem/">metasystem</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/plan-9/">plan 9</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/smalltalk/">smalltalk</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/unix/">unix</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:01
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

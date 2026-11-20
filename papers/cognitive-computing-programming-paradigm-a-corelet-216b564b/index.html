@@ -1,0 +1,155 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Cognitive Computing Programming Paradigm: A Corelet Language for Composing Networks of Neurosynaptic Cores | Papers We Love</title>
+        <meta name="description" content="Marching along the DARPA SyNAPSE roadmap, IBM unveils a trilogy of innovations towards the TrueNorth cognitive computing system inspired by the brain’s function and efficiency. The sequential programming paradigm of the von Neumann architecture is wh" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Cognitive Computing Programming Paradigm: A Corelet Language for Composing Networks of Neurosynaptic Cores | Papers We Love" />
+        <meta property="og:description" content="Marching along the DARPA SyNAPSE roadmap, IBM unveils a trilogy of innovations towards the TrueNorth cognitive computing system inspired by the brain’s function and efficiency. The sequential programming paradigm of the von Neumann architecture is wh" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/cognitive-computing-programming-paradigm-a-corelet-216b564b/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Cognitive Computing Programming Paradigm: A Corelet Language for Composing Networks of Neurosynaptic Cores</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Alexander Andreopoulos</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Andrew S. Cassidy</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Arnon Amir</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Ben Shaw</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Dharmendra S. Modha</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Emmett McQuinn</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Jeffrey A. Kusnitz</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Myron Flickner</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Norm Pass</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Pallab Datta</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Rodrigo Alvarez-Icaza</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Steve K. Esser</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Theodore M. Wong</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">William P. Risk</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages-paradigms/new_paradigms/cognitive-computing-programming-paradigm-corelet-language.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: August 4–9, 2013; 2013 International Joint Conference on Neural Networks (IJCNN 2013), Dallas, Texas, USA</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Marching along the DARPA SyNAPSE roadmap, IBM unveils a trilogy of innovations towards the TrueNorth cognitive computing system inspired by the brain’s function and efficiency. The sequential programming paradigm of the von Neumann architecture is wholly unsuited for TrueNorth. Therefore, as our main contribution, we develop a new programming paradigm that permits construction of complex cognitive algorithms and applications while being efficient for TrueNorth and effective for programmer productivity. The programming paradigm consists of (a) an abstraction for a TrueNorth program, named Corelet, for representing a network of neurosynaptic cores that encapsulates all details except external inputs and outputs; (b) an object-oriented Corelet Language for creating, composing, and decomposing corelets; (c) a Corelet Library that acts as an ever-growing repository of reusable corelets from which programmers compose new corelets; and (d) an end-to-end Corelet Laboratory that is a programming environment which integrates with the TrueNorth architectural simulator, Compass, to support all aspects of the programming cycle from design, through development, debugging, and up to deployment. The new paradigm seamlessly scales from a handful of synapses and neurons to networks of neurosynaptic cores of progressively increasing size and complexity. The utility of the new programming paradigm is underscored by the fact that we have designed and implemented more than 100 algorithms as corelets for TrueNorth in a very short time span.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <p>The paper introduces Corelets as encapsulated, hierarchically composable abstractions for programming IBM’s TrueNorth neuromorphic architecture. A Corelet exposes only external input and output connectors while hiding internal neurons, synaptic weights, cores, and connectivity. The associated object-oriented language provides neuron, neurosynaptic-core, connector, and Corelet abstractions; composition builds larger systems from smaller reusable components, while decomposition removes encapsulation and produces a directly implementable TrueNorth network. The paper also presents a Corelet Library of reusable functional components and a Corelet Laboratory integrated with the Compass simulator for verification, model generation, input/output mapping, simulation, and visualization. A music-composer-recognition system demonstrates the approach using a liquid-state-machine module and hierarchical classifier.</p>
+
+<p>Subsequent work cited the Corelet framework as the programming layer for TrueNorth applications. Research on energy-efficient convolutional networks used Corelets to compile learned network parameters into TrueNorth hardware configuration files, demonstrating a practical bridge from platform-independent model parameters to hardware-specific deployment. (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5068316/">pmc.ncbi.nlm.nih.gov</a>) Other TrueNorth research identified Corelet as the hierarchical, compositional language used to develop applications, including sparse-coding experiments and event-based image-sensor processing. (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6664083/">pmc.ncbi.nlm.nih.gov</a>) The framework also motivated tooling work, including a documented transcompiler from the Fugu language to IBM’s TrueNorth Corelet Programming Environment. (<a href="https://doi.org/10.11578/dc.20201104.5">doi.org</a>) Later surveys and system papers continued to classify Corelet as an early platform-specific programming approach for neuromorphic hardware, while noting that it remained closely tied to TrueNorth rather than becoming a broadly adopted cross-platform standard. (<a href="https://www.researchgate.net/publication/312030914_TrueNorth_Ecosystem_for_Brain-Inspired_Computing_Scalable_Systems_Software_and_Applications">researchgate.net</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/languages-paradigms/new_paradigms/">languages paradigms/new paradigms</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/cognitive-computing/">cognitive computing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/corelet-language/">corelet language</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/event-driven-computing/">event driven computing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/hierarchical-composition/">hierarchical composition</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/neuromorphic-computing/">neuromorphic computing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/neurosynaptic-cores/">neurosynaptic cores</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/object-oriented-programming/">object oriented programming</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/parallel-computing/">parallel computing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/spiking-neural-networks/">spiking neural networks</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/truenorth/">truenorth</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

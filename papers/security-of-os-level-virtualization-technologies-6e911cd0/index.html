@@ -1,0 +1,166 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Security of OS-level virtualization technologies | Papers We Love</title>
+        <meta name="description" content="The need for flexible, low-overhead virtualization is evident on many fronts ranging from high-density cloud servers to mobile devices. During the past decade OS-level virtualization has emerged as a new, efficient approach for virtualization, with i" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Security of OS-level virtualization technologies | Papers We Love" />
+        <meta property="og:description" content="The need for flexible, low-overhead virtualization is evident on many fronts ranging from high-density cloud servers to mobile devices. During the past decade OS-level virtualization has emerged as a new, efficient approach for virtualization, with i" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/security-of-os-level-virtualization-technologies-6e911cd0/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:01">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Security of OS-level virtualization technologies</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Elena Reshetova</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Janne Karhunen</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">N. Asokan</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Thomas Nyman</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://arxiv.org/pdf/1407.4245v1.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: July 16, 2014 (arXiv version 1); conference version published in NordSec 2014, Tromsø, Norway, October 15–17, 2014, pp. 77–93. ([arxiv.org](https://arxiv.org/abs/1407.4245))</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>The need for flexible, low-overhead virtualization is evident on many fronts ranging from high-density cloud servers to mobile devices. During the past decade OS-level virtualization has emerged as a new, efficient approach for virtualization, with implementations in multiple different Unix-based systems. Despite its popularity, there has been no systematic study of OS-level virtualization from the point of view of security. In this report, we conduct a comparative study of several OS-level virtualization systems, discuss their security and identify some gaps in current solutions.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="paper-summary">Paper summary</h2>
+
+<p>The paper presents a comparative security analysis of OS-level virtualization systems, in which multiple isolated user-space environments share a host operating-system kernel. It develops a generic system model covering host user space, the shared kernel, and application or system containers. The analysis considers both container-to-container isolation and isolation between containers and the host.</p>
+
+<p>The authors define an attacker who controls one or more containers and may attempt to compromise other containers, cause denial of service, or obtain unauthorized privileges. From this model, they derive six security requirements:</p>
+
+<ul>
+  <li>process separation;</li>
+  <li>filesystem isolation;</li>
+  <li>device isolation;</li>
+  <li>inter-process communication isolation;</li>
+  <li>network isolation; and</li>
+  <li>resource management.</li>
+</ul>
+
+<p>The study compares FreeBSD Jails, Linux-VServer, Solaris Zones, OpenVZ, Linux Containers, and Cells/Cellrox. It explains two broad implementation strategies: attaching a single container structure to processes, and composing containers from separate namespaces. The latter approach, used prominently in Linux, provides greater flexibility and supports incremental adoption, but introduces additional implementation complexity.</p>
+
+<p>For Linux, the paper analyzes process, user, mount, IPC, and network namespaces, together with pivot-root-based filesystem confinement, virtual Ethernet, MACVLAN, device-control mechanisms, resource limits, and control groups. It emphasizes that individual mechanisms do not automatically provide complete security. For example, mount namespaces alone do not guarantee filesystem isolation, because containers may inherit host-visible mounts; device drivers are generally not namespace-aware; and privileged users inside containers must be carefully constrained through user namespaces and capabilities.</p>
+
+<p>The paper identifies several open problems in the Linux container security model as it existed in 2014: container-aware mandatory access control, incomplete isolation of certain IPC mechanisms, safe access to physical devices, namespace-specific random-number generation, secure device hotplugging, and incomplete consolidation of resource controls into control groups. Its central conclusion is that Linux had largely caught up with earlier container systems in core isolation features, but still required additional mechanisms for strong security guarantees.</p>
+
+<h2 id="subsequent-influence">Subsequent influence</h2>
+
+<p>The paper became a cited reference in container-security research and practice. Aalto University’s publication record reports 43 Scopus citations for the conference publication. (<a href="https://research.aalto.fi/en/publications/security-of-os-level-virtualization-technologies/">research.aalto.fi</a>) It is cited by NISTIR 8176, <em>Security Assurance for Linux Containers</em>, as a source in its discussion of Linux container security assurance. (<a href="https://www.govinfo.gov/content/pkg/GOVPUB-C13-af6f1d2da268173ea5ea702b719bc874/pdf/GOVPUB-C13-af6f1d2da268173ea5ea702b719bc874.pdf">govinfo.gov</a>) A later doctoral thesis explicitly identifies the paper’s system and attacker models, security requirements, comparative survey, and analysis of Linux namespace shortcomings as research contributions. (<a href="https://aaltodoc.aalto.fi/server/api/core/bitstreams/6af36ff0-dc1c-4a98-93c9-cec54b6df86e/content">aaltodoc.aalto.fi</a>) These references indicate that the paper’s principal impact was to provide a structured vocabulary and threat model for evaluating container isolation, rather than to introduce a new container implementation.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/unikernels/">unikernels</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/container-security/">container security</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/device-isolation/">device isolation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/filesystem-isolation/">filesystem isolation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/ipc-isolation/">ipc isolation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/linux-namespaces/">linux namespaces</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/network-isolation/">network isolation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/operating-system-security/">operating system security</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/os-level-virtualization/">os level virtualization</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/process-isolation/">process isolation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/resource-management/">resource management</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:01
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

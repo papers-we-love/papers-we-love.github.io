@@ -1,0 +1,166 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Interpretable machine learning: definitions, methods, and applications | Papers We Love</title>
+        <meta name="description" content="Machine-learning models have demonstrated great success in learning complex patterns that enable them to make predictions about unobserved data. In addition to using models for prediction, the ability to interpret what a model has learned is receivin" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Interpretable machine learning: definitions, methods, and applications | Papers We Love" />
+        <meta property="og:description" content="Machine-learning models have demonstrated great success in learning complex patterns that enable them to make predictions about unobserved data. In addition to using models for prediction, the ability to interpret what a model has learned is receivin" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/interpretable-machine-learning-definitions-methods-e6d0fef5/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:00">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Interpretable machine learning: definitions, methods, and applications</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Bin Yu</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Chandan Singh</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Karl Kumbier</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Reza Abbasi-Asl</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">W. James Murdoch</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://arxiv.org/pdf/1901.04592.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: January 14, 2019 (arXiv version 1); published in Proceedings of the National Academy of Sciences on October 16, 2019, with issue date October 29, 2019, volume 116, issue 44, pages 22071–22080. ([arxiv.org](https://arxiv.org/abs/1901.04592))</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Machine-learning models have demonstrated great success in learning complex patterns that enable them to make predictions about unobserved data. In addition to using models for prediction, the ability to interpret what a model has learned is receiving an increasing amount of attention. However, this increased focus has led to considerable confusion about the notion of interpretability. In particular, it is unclear how the wide array of proposed interpretation methods are related, and what common concepts can be used to evaluate them.
+
+We aim to address these concerns by defining interpretability in the context of machine learning and introducing the Predictive, Descriptive, Relevant (PDR) framework for discussing interpretations. The PDR framework provides three overarching desiderata for evaluation: predictive accuracy, descriptive accuracy and relevancy, with relevancy judged relative to a human audience. Moreover, to help manage the deluge of interpretation methods, we introduce a categorization of existing techniques into model-based and post-hoc categories, with sub-groups including sparsity, modularity and simulatability. To demonstrate how practitioners can use the PDR framework to evaluate and understand interpretations, we provide numerous real-world examples. These examples highlight the often under-appreciated role played by human audiences in discussions of interpretability. Finally, based on our framework, we discuss limitations of existing methods and directions for future work. We hope that this work will provide a common vocabulary that will make it easier for both practitioners and researchers to discuss and choose from the full range of interpretation methods.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>The paper defines interpretable machine learning as using machine-learning models to extract relevant knowledge about domain relationships in data. It emphasizes that interpretability is audience- and problem-dependent rather than a single intrinsic property of a model.</p>
+
+<p>Its central contribution is the <strong>Predictive, Descriptive, Relevant (PDR) framework</strong>:</p>
+
+<ul>
+  <li><strong>Predictive accuracy:</strong> whether the model adequately represents the underlying data relationships.</li>
+  <li><strong>Descriptive accuracy:</strong> whether the interpretation faithfully captures what the model has learned.</li>
+  <li><strong>Relevancy:</strong> whether the interpretation provides useful insight for a specific audience and domain problem.</li>
+</ul>
+
+<p>The paper places interpretation within a data-science life cycle and distinguishes between <strong>model-based interpretability</strong>, which constrains the model to make its learned relationships easier to understand, and <strong>post-hoc interpretability</strong>, which analyzes an already-trained model without changing it. Model-based methods include sparsity, simulatability, modularity, domain-based feature engineering, and model-based feature engineering. Post-hoc methods include dataset-level and prediction-level analyses, feature and interaction importance, statistical summaries, visualizations, influence functions, and alternative explanation formats.</p>
+
+<p>A recurring methodological requirement is <strong>stability</strong>: interpretations should remain meaningful under appropriate perturbations of the data, model, or training procedure. The authors also distinguish interpretability from causal inference, noting that ordinary interpretation generally describes associations rather than causal effects.</p>
+
+<p>The paper identifies unresolved problems in evaluating descriptive accuracy and relevancy. It recommends simulation studies, comparison with prior scientific knowledge, direct use in domain problems, and human-subject studies as partial evaluation strategies. It further argues that future work should develop more accurate intrinsically interpretable models, better feature-engineering tools, improved formats for explaining black-box models, and methods that use interpretations to correct or improve predictive models.</p>
+
+<h2 id="influence">Influence</h2>
+
+<p>Subsequent research has cited the paper as a framework for organizing interpretability terminology and methods. Later taxonomy and survey work uses it when discussing definitions, evaluation criteria, model-based versus post-hoc approaches, and the role of human audiences in explanation design. (<a href="https://springerlink.fh-diploma.de/article/10.1007/s10618-022-00867-8">springerlink.fh-diploma.de</a>) A 2026 bibliometric analysis also includes the paper among influential works in the explainable-AI literature, indicating continued use as a reference point for mapping the field. (<a href="https://onlinelibrary.wiley.com/doi/full/10.1002/asmb.70091">onlinelibrary.wiley.com</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/machine_learning/">machine learning</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/descriptive-accuracy/">descriptive accuracy</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/explainable-ai/">explainable ai</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/interpretable-machine-learning/">interpretable machine learning</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/machine-learning-interpretability/">machine learning interpretability</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/model-based-interpretability/">model based interpretability</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/pdr-framework/">pdr framework</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/post-hoc-interpretability/">post hoc interpretability</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/predictive-accuracy/">predictive accuracy</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/relevancy/">relevancy</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/stability/">stability</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:00
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

@@ -1,0 +1,147 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Asynchronous Functional Reactive Programming for GUIs | Papers We Love</title>
+        <meta name="description" content="Graphical user interfaces (GUIs) mediate many of our interactions with computers. Functional Reactive Programming (FRP) is a promising approach to GUI design, providing high-level, declarative, compositional abstractions to describe user interactions" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Asynchronous Functional Reactive Programming for GUIs | Papers We Love" />
+        <meta property="og:description" content="Graphical user interfaces (GUIs) mediate many of our interactions with computers. Functional Reactive Programming (FRP) is a promising approach to GUI design, providing high-level, declarative, compositional abstractions to describe user interactions" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/asynchronous-functional-reactive-programming-for-g-59e1d354/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:00">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Asynchronous Functional Reactive Programming for GUIs</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Evan Czaplicki</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Stephen Chong</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://people.seas.harvard.edu/~chong/pubs/pldi13-elm.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: June 16–19, 2013; Proceedings of the 34th ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI ’13), Seattle, Washington, USA</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Graphical user interfaces (GUIs) mediate many of our interactions with computers. Functional Reactive Programming (FRP) is a promising approach to GUI design, providing high-level, declarative, compositional abstractions to describe user interactions and time-dependent computations. We present Elm, a practical FRP language focused on easy creation of responsive GUIs. Elm has two major features: simple declarative support for Asynchronous FRP; and purely functional graphical layout.
+
+Asynchronous FRP allows the programmer to specify when the global ordering of event processing can be violated, and thus enables efficient concurrent execution of FRP programs; long-running computation can be executed asynchronously and not adversely affect the responsiveness of the user interface.
+
+Layout in Elm is achieved using a purely functional declarative framework that makes it simple to create and combine text, images, and video into rich multimedia displays.
+
+Together, Elm’s two major features simplify the complicated task of creating responsive and usable GUIs.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>The paper presents <strong>Elm</strong>, a functional reactive programming language for responsive web-based graphical user interfaces. Its central technical contribution is <strong>Asynchronous FRP</strong>: programmers can explicitly mark signal computations whose event ordering need not remain globally synchronized. This permits pipelined and concurrent execution while preserving event order within the portions of a signal graph where ordering matters. Elm also treats signals as discrete and push-based, propagating <code>noChange</code> values to avoid unnecessary recomputation and to preserve the correct behavior of stateful folds.</p>
+
+<p>The authors formalize these ideas in the Featherweight Elm calculus, including a stratified type system that prohibits signals-of-signals, a two-stage evaluation model, and a translation of signal graphs to Concurrent ML. The full language adds purely functional graphical layout, interactive input and time signals, HTTP and JSON support, and an embedding of discrete Arrowized FRP through its Automaton library. An Elm-to-JavaScript compiler demonstrates that the approach can be used to build deployable browser applications, although the paper reports no direct performance evaluation.</p>
+
+<h2 id="influence">Influence</h2>
+
+<p>The paper is an early foundational description of Elm’s FRP model and is cited by subsequent research on reactive programming and formally verified GUI frameworks; for example, <em>A Graphical User Interface Framework for Formal Verification</em> lists it as related prior work. (<a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2021.4">drops.dagstuhl.de</a>) Elm’s later development moved away from the paper’s signal-oriented interface: the official Elm account states that Elm 0.17 replaced signals with subscriptions and emphasized <strong>The Elm Architecture</strong>. The official Elm guide also documents that this architecture inspired Redux, providing a concrete connection to later JavaScript application-architecture practice. (<a href="https://elm-lang.org/news/farewell-to-frp">elm-lang.org</a>) The paper’s publication metadata and citation record are confirmed by ACM, which lists the work as published June 16, 2013, in <em>ACM SIGPLAN Notices</em> and attributes it to Czaplicki and Chong. (<a href="https://doi.org/10.1145/2499370.2462161">doi.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/languages-paradigms/functional_reactive_programming/">languages paradigms/functional reactive programming</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/functional-reactive-programming/">functional reactive programming</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/graphical-user-interfaces/">graphical user interfaces</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:00
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

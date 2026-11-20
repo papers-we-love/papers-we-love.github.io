@@ -1,0 +1,160 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Contiki - a Lightweight and Flexible Operating System for Tiny Networked Sensors | Papers We Love</title>
+        <meta name="description" content="Wireless sensor networks are composed of large numbers of tiny networked devices that communicate untethered. For large scale networks it is important to be able to dynamically download code into the network. In this paper we present Contiki, a light" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Contiki - a Lightweight and Flexible Operating System for Tiny Networked Sensors | Papers We Love" />
+        <meta property="og:description" content="Wireless sensor networks are composed of large numbers of tiny networked devices that communicate untethered. For large scale networks it is important to be able to dynamically download code into the network. In this paper we present Contiki, a light" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/contiki-a-lightweight-and-flexible-operating-syste-5c78dabe/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:01">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Contiki - a Lightweight and Flexible Operating System for Tiny Networked Sensors</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Adam Dunkels</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Björn Grönvall</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Thiemo Voigt</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://dunkels.com/adam/dunkels04contiki.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: November 2004 — First IEEE Workshop on Embedded Networked Sensors (EmNetS-I), Tampa, Florida, USA</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Wireless sensor networks are composed of large numbers of tiny networked devices that communicate untethered. For large scale networks it is important to be able to dynamically download code into the network. In this paper we present Contiki, a lightweight operating system with support for dynamic loading and replacement of individual programs and services. Contiki is built around an event-driven kernel but provides optional preemptive multi-threading that can be applied to individual processes. We show that dynamic loading and unloading is feasible in a resource constrained environment, while keeping the base system lightweight and compact.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>The paper introduces Contiki, an operating system for highly resource-constrained wireless sensor nodes. Its central design combines a lightweight event-driven kernel with dynamically loadable programs and services. The system separates a relatively stable core from applications and services that can be loaded, unloaded, or replaced during operation. This design reduces the amount of code that must be transmitted when updating deployed sensor networks and permits individual communication stacks, device drivers, and application components to be updated independently.</p>
+
+<p>Contiki processes communicate through asynchronous and synchronous events and optional polling handlers. Normal event-driven execution uses a single shared stack, reducing RAM consumption compared with systems that allocate a separate stack for every thread. For applications that require blocking or long-running computation, Contiki provides preemptive multithreading as an optional library rather than as a mandatory kernel facility. Consequently, only applications that need separate thread stacks incur the associated memory overhead.</p>
+
+<p>The paper also presents a service abstraction based on dynamically linked interfaces, version numbers, function tables, and service stubs. Services can preserve their process identifiers during replacement and can optionally transfer state to a newer implementation. Communication functionality is implemented using this service model, enabling multiple communication stacks or independently replaceable protocol components. The implementation uses native machine code and runtime relocation rather than an interpreted virtual machine, preserving execution efficiency while supporting dynamic updates.</p>
+
+<p>Experiments on MSP430 and AVR-based platforms demonstrate that the system can remain compact while supporting dynamic loading. The reported example configuration occupies approximately 3.9 KB of compiled code on both architectures, excluding variable space determined by process count, event-queue size, and thread-stack allocation. In a 40-node application, replacing an individual application component over the air took about two minutes, compared with more than thirty minutes for manual reprogramming of the complete system. Preemption allowed the node to continue responding to incoming packets during an approximately eight-second computation, with only a small increase in response time.</p>
+
+<h2 id="influence">Influence</h2>
+
+<p>The design was extended by COOJA, a cross-level simulator for Contiki that enabled simultaneous simulation at the network, operating-system, and machine-instruction levels. This made Contiki-based development and evaluation possible across multiple abstraction levels in one environment. (<a href="https://ri.diva-portal.org/smash/get/diva2%3A1041180/FULLTEXT01.pdf">ri.diva-portal.org</a>)</p>
+
+<p>The Contiki approach subsequently developed into Contiki-NG, an open-source operating system for next-generation IoT devices. Contiki-NG retains the original project’s resource-constrained and cross-platform orientation while emphasizing standardized IPv6-based protocols, modern microcontrollers, security, and dependable low-power communication. (<a href="https://docs.contiki-ng.org/en/release-v5.1/doc/project/More-about-Contiki-NG.html">docs.contiki-ng.org</a>)</p>
+
+<p>Later research has used Contiki and COOJA as experimental platforms for routing, congestion control, intrusion detection, IoT gateway architectures, and protocol evaluation. For example, published studies have used Contiki/COOJA for performance assessment of low-power wireless and IoT networking systems. (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6263716/">pmc.ncbi.nlm.nih.gov</a>)</p>
+
+<p>Bibliographic records identify the paper as a refereed 2004 conference publication in the IEEE EmNetS-I/LCN publication record, with DOI 10.1109/LCN.2004.38 and pages 455–462. (<a href="https://www.ccs-labs.org/bib/dunkels2004contiki/">ccs-labs.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/unikernels/">unikernels</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/contiki/">contiki</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/dynamic-linking/">dynamic linking</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/dynamic-loading/">dynamic loading</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/embedded-operating-systems/">embedded operating systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/event-driven-kernel/">event driven kernel</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/internet-of-things/">internet of things</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/over-the-air-programming/">over the air programming</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/preemptive-multithreading/">preemptive multithreading</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/resource-constrained-devices/">resource constrained devices</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/wireless-sensor-networks/">wireless sensor networks</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:01
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

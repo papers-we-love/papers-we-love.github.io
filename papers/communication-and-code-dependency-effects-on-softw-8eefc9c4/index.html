@@ -1,0 +1,159 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Communication and Code Dependency Effects on Software Code Quality: An Empirical Analysis of Herbsleb Hypothesis | Papers We Love</title>
+        <meta name="description" content="Prior literature has suggested that in many projects 80% or more of the contributions are made by a small called group of around 20% of the development team. Most prior studies deprecate a reliance on such a small inner group of “heroes”, arguing tha" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Communication and Code Dependency Effects on Software Code Quality: An Empirical Analysis of Herbsleb Hypothesis | Papers We Love" />
+        <meta property="og:description" content="Prior literature has suggested that in many projects 80% or more of the contributions are made by a small called group of around 20% of the development team. Most prior studies deprecate a reliance on such a small inner group of “heroes”, arguing tha" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/communication-and-code-dependency-effects-on-softw-8eefc9c4/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:01">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Communication and Code Dependency Effects on Software Code Quality: An Empirical Analysis of Herbsleb Hypothesis</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Amritanshu Agrawal</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Joymallya Chakraborty</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Suvodeep Majumder</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Tim Menzies</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://arxiv.org/pdf/1904.09954.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: April 22, 2019 (first arXiv submission); revised March 21, 2022 (version 3; the PDF states “Preprint submitted to Journal of Systems and Software March 22, 2022”)</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Prior literature has suggested that in many projects 80% or more of the contributions are made by a small called group of around 20% of the development team. Most prior studies deprecate a reliance on such a small inner group of “heroes”, arguing that it causes bottlenecks in development and communication. Despite this, such projects are very common in open source projects. So what exactly is the impact of “heroes” in code quality?
+Herbsleb argues that if code is strongly connected yet their developers are not, then that code will be buggy. To test the Hersleb hypothesis, we develop and apply two metrics of (a) “social-ness’ and (b) “hero-ness” that measure (a) how much one developer comments on the issues of another; and (b) how much one developer changes another developer’s code (and “heroes” are those that change the most code, all around the system). In a result endorsing the Hersleb hypothesis, in over 1000 open source projects, we find that “social-ness” is a statistically stronger indicate for code quality (number of bugs) than “hero-ness”.
+Hence we say that debates over the merits of “hero-ness” is subtly misguided. Our results suggest that the real benefits of these so-called “heroes” is not so much the code they generate but the pattern of communication required when the interaction between a large community of programmers passes through a small group of centralized developers.
+To say that another way, to build better code, build better communication flows between core developers and the rest.
+In order to allow other researchers to confirm/improve/refute our results, all our scripts and data are available, on-line at our online Github repository.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h3 id="summary">Summary</h3>
+
+<p>The paper empirically examines the relationship between developer communication, code interaction, and defect introduction in more than 1,000 open-source GitHub projects. It constructs code-interaction graphs from commit history and blame information, social-interaction graphs from issue discussions, and identifies likely bug-introducing commits using keyword-based commit-message analysis combined with the SZZ approach. Developers are classified as “heroes” or “non-heroes” using percentile thresholds for code and social interaction.</p>
+
+<p>The study reports that centralized “hero” structures are common. Developers with high levels of code or social interaction introduce fewer buggy commits than less-connected developers. Across nine combinations of code and social activity, the lowest defect levels are associated especially with high social interaction, including cases where code interaction is only low or moderate. The authors therefore conclude that the results support the Herbsleb hypothesis: when interacting code is produced or maintained by developers who do not communicate sufficiently, defect introduction is more likely.</p>
+
+<p>The paper’s limitations include GitHub-focused sampling, possible incomplete observation of communication outside issue trackers, reliance on heuristic commit-message classification for bug fixes, possible role misclassification, and limited generalizability to proprietary development. The results are observational and should not be interpreted as establishing that centralization itself causes better quality.</p>
+
+<h3 id="evidence-of-subsequent-influence">Evidence of subsequent influence</h3>
+
+<p>Search results show that the work has been cited as prior research in later software-engineering studies, including <em>Different, Really! A Comparison of Highly-Configurable Systems and Single Systems</em>, and in other academic papers discussing GitHub development, contributor organization, and software-project structure. (<a href="https://stairs.ics.uci.edu/papers/2022/Different.pdf">stairs.ics.uci.edu</a>) It has also been discussed in a practitioner-oriented review that summarizes its findings about “hero projects” and developer communication. (<a href="https://neverworkintheory.org/2021/09/10/why-software-projects-need-heroes.html">neverworkintheory.org</a>) A 2025 OpenTofu contribution-process RFC cites the paper when discussing centralized, high-trust roles and communication in open-source communities, providing a concrete example of its concepts being used in industry or project-governance discussion. (<a href="https://fossies.org/linux/opentofu/rfc/20251211-contribution-docs.md">fossies.org</a>)</p>
+
+<p>The available evidence supports citation and conceptual reuse, but does not establish broad or measurable adoption of the paper’s specific metrics or recommendations in software-industry practice.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/software_engineering_orgs/">software engineering orgs</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/code-interaction/">code interaction</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/code-quality/">code quality</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/communication/">communication</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/developer-networks/">developer networks</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/hero-developers/">hero developers</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/open-source-software/">open source software</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/social-coding/">social coding</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/social-interaction/">social interaction</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/software-defects/">software defects</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/software-metrics/">software metrics</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:01
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->
