@@ -1,0 +1,162 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Sparrow: Distributed, Low Latency Scheduling | Papers We Love</title>
+        <meta name="description" content="Large-scale data analytics frameworks are shifting towards shorter task durations and larger degrees of parallelism to provide low latency. Scheduling highly parallel jobs that complete in hundreds of milliseconds poses a major challenge for task sch" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Sparrow: Distributed, Low Latency Scheduling | Papers We Love" />
+        <meta property="og:description" content="Large-scale data analytics frameworks are shifting towards shorter task durations and larger degrees of parallelism to provide low latency. Scheduling highly parallel jobs that complete in hundreds of milliseconds poses a major challenge for task sch" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/sparrow-distributed-low-latency-scheduling-0b7cf3f8/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:00">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Sparrow: Distributed, Low Latency Scheduling</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Ion Stoica</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Kay Ousterhout</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Matei Zaharia</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Patrick Wendell</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://people.csail.mit.edu/matei/papers/2013/sosp_sparrow.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: November 3–6, 2013; ACM Symposium on Operating Systems Principles (SOSP ’13), Farmington, Pennsylvania, USA</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Large-scale data analytics frameworks are shifting towards shorter task durations and larger degrees of parallelism to provide low latency. Scheduling highly parallel jobs that complete in hundreds of milliseconds poses a major challenge for task schedulers, which will need to schedule millions of tasks per second on appropriate machines while offering millisecond-level latency and high availability. We demonstrate that a decentralized, randomized sampling approach provides near-optimal performance while avoiding the throughput and availability limitations of a centralized design. We implement and deploy our scheduler, Sparrow, on a 110-machine cluster and demonstrate that Sparrow performs within 12% of an ideal scheduler.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>Sparrow addresses the scheduling of highly parallel jobs composed of short, sub-second tasks, where centralized schedulers can become throughput and availability bottlenecks. It proposes a stateless, decentralized architecture in which multiple schedulers independently assign work to workers using randomized probes.</p>
+
+<p>The system combines two principal techniques:</p>
+
+<ul>
+  <li><strong>Batch sampling:</strong> Instead of selecting worker machines independently for each task, a scheduler samples a larger pool for the entire job and assigns tasks to the least-loaded machines in that pool. This shares placement information across tasks and avoids the exponential degradation of per-task sampling as job parallelism increases.</li>
+  <li><strong>Late binding:</strong> Workers place reservations rather than immediately accepting tasks. When a reservation reaches the front of a worker’s queue, the worker requests the task from the scheduler. The scheduler assigns tasks to the first workers that become ready, reducing errors caused by stale queue-length information and concurrent scheduling races.</li>
+</ul>
+
+<p>Sparrow also supports per-job and per-task placement constraints, strict priorities, weighted fair sharing, and scheduler failover. Its design deliberately omits or approximates features such as bin packing, gang scheduling, preemption, and complex inter-job constraints in order to preserve low latency and high throughput.</p>
+
+<p>In evaluation on a 110-machine Amazon EC2 cluster, Sparrow scheduled TPC-H workloads with median query response times within 12% of an idealized scheduler, achieved median queueing delays below 9 ms, and recovered from scheduler failures in under 120 ms. The experiments also found that Sparrow substantially outperformed random placement and per-task sampling, maintained approximate cluster-wide fair shares, and limited the impact of overloaded low-priority users. Performance degraded under extreme task-duration heterogeneity, particularly on machines with fewer cores, and worker failures remained outside the implemented fault-tolerance model. (<a href="https://people.csail.mit.edu/matei/papers/2013/sosp_sparrow.pdf">people.csail.mit.edu</a>)</p>
+
+<h2 id="influence-on-subsequent-research-and-practice">Influence on Subsequent Research and Practice</h2>
+
+<p>The paper’s implementation was released publicly, and the accompanying project described Sparrow as a high-throughput, low-latency, fault-tolerant distributed cluster scheduler; the project also included an integration path for Spark. (<a href="https://github.com/radlab/sparrow">github.com</a>) The Sparrow project was subsequently presented by Berkeley’s AMPLab as an architecture for ultra-high-throughput, low-latency task scheduling for interactive cluster services. (<a href="https://amplab.cs.berkeley.edu/projects/sparrow-low-latency-scheduling-for-interactive-cluster-services/">amplab.cs.berkeley.edu</a>)</p>
+
+<p>Later research has cited or evaluated Sparrow as a representative decentralized scheduling architecture. For example, work on eventually consistent federated scheduling compares its design against Sparrow and other decentralized schedulers, while a later survey identifies Sparrow’s late-binding approach as a technique used in bandwidth-aware distributed analytics scheduling. (<a href="https://arxiv.org/abs/2308.10178">arxiv.org</a>) These references indicate continued influence on research into decentralized cluster scheduling and low-latency task placement. The sources reviewed did not establish a specific large-scale commercial production deployment of Sparrow itself.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/distributed_systems/">distributed systems</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/batch-sampling/">batch sampling</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/cluster-scheduling/">cluster scheduling</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/data-analytics/">data analytics</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-scheduling/">distributed scheduling</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/fair-sharing/">fair sharing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/fault-tolerance/">fault tolerance</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/late-binding/">late binding</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/load-balancing/">load balancing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/low-latency-systems/">low latency systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/parallel-jobs/">parallel jobs</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:00
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

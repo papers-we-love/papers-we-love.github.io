@@ -1,0 +1,157 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Fortifying Macros | Papers We Love</title>
+        <meta name="description" content="Existing macro systems force programmers to make a choice between clarity of specification and robustness. If they choose clarity, they must forgo validating significant parts of the specification and thus produce low-quality language extensions. If " />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Fortifying Macros | Papers We Love" />
+        <meta property="og:description" content="Existing macro systems force programmers to make a choice between clarity of specification and robustness. If they choose clarity, they must forgo validating significant parts of the specification and thus produce low-quality language extensions. If " />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/fortifying-macros-561b4f89/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:00">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Fortifying Macros</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Matthias Felleisen</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Ryan Culpepper</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://www.ccs.neu.edu/racket/pubs/icfp10-cf.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: September 27–29, 2010 (ICFP’10, Baltimore, Maryland, USA); journal version published online August 15, 2012, in the Journal of Functional Programming, Volume 22, Special Issue 4–5, pp. 439–476. ([cambridge.org](https://www.cambridge.org/core/journals/journal-of-functional-programming/article/fortifying-macros/2AC116FC3DD38075BDF61C464ED35507))</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Existing macro systems force programmers to make a choice between clarity of specification and robustness. If they choose clarity, they must forgo validating significant parts of the specification and thus produce low-quality language extensions. If they choose robustness, they must write in a style that mingles the implementation with the specification and therefore obscures the latter.
+This paper introduces a new language for writing macros.
+With the new macro system, programmers naturally write robust language extensions using easy-to-understand specifications. The system translates these specifications into validators that detect misuses—including violations of context-sensitive constraints—and automatically synthesize appropriate feedback, eliminating the need for ad hoc validation code.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>The paper introduces <strong>syntax-parse</strong>, a domain-specific language for specifying and implementing robust Racket macros. It addresses a central limitation of Macro-By-Example systems such as <code>syntax-rules</code> and <code>syntax-case</code>: declarative patterns can describe basic structure, but complex validation and precise error reporting often require procedural parsing and hand-written checks.</p>
+
+<p>The proposed system extends syntax patterns with annotated pattern variables, reusable and parameterized syntax classes, side conditions carrying failure explanations, action patterns, head patterns, and ellipsis-head patterns. These features allow macro authors to express context-sensitive constraints—including identifier uniqueness, optional and repeated keyword clauses, mutually exclusive options, and dependencies between syntax components—while keeping the specification close to the intended grammar.</p>
+
+<p>A central technical contribution is its failure-reporting algorithm. Alternative parses are explored with backtracking, and failures are ranked by a tree-based notion of parsing progress. The most informative failure, or combined failures when progress is tied, is reported together with an explicitly supplied description or side-condition message. This enables errors to be reported in terms of the macro’s public syntax rather than the lower-level forms produced by expansion.</p>
+
+<p>The paper gives a formal semantics based on a single-elimination backtracking monad whose failures contain progress information and error reasons. Its case studies show practical benefits: rewriting the <code>loop</code> macro substantially improved validation and error handling without the expected doubling of code size, while rewriting the <code>parser</code> macro reduced parsing-related code from an estimated 270 lines to 124 lines while retaining comparable error-reporting quality.</p>
+
+<h2 id="subsequent-influence">Subsequent influence</h2>
+
+<p>The paper’s principal contribution became part of Racket’s macro-programming infrastructure. Current Racket documentation describes <code>syntax/parse</code> as a framework for syntax patterns, <code>syntax-parse</code>, and reusable syntax classes, with automatic error generation based on descriptions and embedded messages. (<a href="https://docs.racket-lang.org/syntax/stxparse.html">docs.racket-lang.org</a>) Racket also provides an introductory tutorial centered on writing robust macros with <code>syntax-parse</code> and syntax classes. (<a href="https://docs.racket-lang.org/syntax/stxparse-intro.html">docs.racket-lang.org</a>)</p>
+
+<p>The approach has been adopted in teaching materials and reusable example packages, including a package containing illustrative macros written with <code>syntax/parse</code>. (<a href="https://docs.racket-lang.org/syntax-parse-example/index.html">docs.racket-lang.org</a>) Later work on Racket-based domain-specific languages explicitly uses <code>syntax-parse</code> annotations to generate descriptive syntax errors, indicating that the paper’s techniques became a practical method for implementing embedded DSLs. (<a href="https://www2.ccs.neu.edu/racket/pubs/oopsla20-bkf.pdf">www2.ccs.neu.edu</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/macros/">macros</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/domain-specific-languages/">domain specific languages</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/error-reporting/">error reporting</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/hygienic-macros/">hygienic macros</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/language-extensions/">language extensions</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/macro-systems/">macro systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/pattern-matching/">pattern matching</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/racket/">racket</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/syntax-classes/">syntax classes</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/syntax-parse/">syntax parse</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/syntax-patterns/">syntax patterns</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:00
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

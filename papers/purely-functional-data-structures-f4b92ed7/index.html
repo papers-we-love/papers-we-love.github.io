@@ -1,0 +1,176 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Purely Functional Data Structures | Papers We Love</title>
+        <meta name="description" content="When a C programmer needs an efficient data structure for a particular problem, he or she can often simply look one up in any of a number of good textbooks or handbooks. Unfortunately, programmers in functional languages such as Standard ML or Haskel" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Purely Functional Data Structures | Papers We Love" />
+        <meta property="og:description" content="When a C programmer needs an efficient data structure for a particular problem, he or she can often simply look one up in any of a number of good textbooks or handbooks. Unfortunately, programmers in functional languages such as Standard ML or Haskel" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/purely-functional-data-structures-f4b92ed7/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Purely Functional Data Structures</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Chris Okasaki</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/languages-paradigms/functional_programming/purely-functional-data-structures.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: September 1996 — PhD dissertation, Carnegie Mellon University, technical report CMU-CS-96-177</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>When a C programmer needs an efficient data structure for a particular problem, he or she can often simply look one up in any of a number of good textbooks or handbooks. Unfortunately, programmers in functional languages such as Standard ML or Haskell do not have this luxury. Although some data structures designed for imperative languages such as C can be quite easily adapted to a functional setting, most cannot, usually because they depend in crucial ways on assignments, which are disallowed, or at least discouraged, in functional languages. To address this imbalance, we describe several techniques for designing functional data structures, and numerous original data structures based on these techniques, including multiple variations of lists, queues, double-ended queues, and heaps, many supporting more exotic features such as random access or efficient catenation.
+
+In addition, we expose the fundamental role of lazy evaluation in amortized functional data structures. Traditional methods of amortization break down when old versions of a data structure, not just the most recent, are available for further processing. This property is known as persistence, and is taken for granted in functional languages. On the surface, persistence and amortization appear to be incompatible, but we show how lazy evaluation can be used to resolve this conflict, yielding amortized data structures that are efficient even when used persistently. Turning this relationship between lazy evaluation and amortization around, the notion of amortization also provides the first practical techniques for analyzing the time requirements of non-trivial lazy programs.
+
+Finally, our data structures offer numerous hints to programming language designers, illustrating the utility of combining strict and lazy evaluation in a single language, and providing non-trivial examples using polymorphic recursion and higher-order, recursive modules.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h3 id="overview">Overview</h3>
+
+<p>This dissertation develops a general methodology for designing efficient data structures in purely functional languages, where destructive updates are unavailable and every updated value can remain accessible as an older version. The central objective is to obtain asymptotic performance comparable to imperative data structures while preserving persistence, structural sharing, and referential transparency.</p>
+
+<p>The main conceptual contribution is the connection between <strong>lazy evaluation, memoization, amortization, and persistence</strong>. Conventional amortized analysis assumes that accumulated credits or potential are spent along a single future execution path. Persistence invalidates that assumption because one version may be reused by multiple future computations. Okasaki replaces accumulated savings with accumulated debt associated with unevaluated computations. Lazy evaluation with memoization ensures that expensive suspended work is performed at most once per shared suspension, while each logical future is charged conservatively for the work it may force.</p>
+
+<p>The dissertation introduces two analysis techniques for lazy persistent structures:</p>
+
+<ul>
+  <li>The <strong>banker’s method</strong>, which assigns debits to locations in a data structure and proves that debits are discharged before the associated suspended computations are forced.</li>
+  <li>The <strong>physicist’s method</strong>, which uses a potential function representing an upper bound on outstanding suspended work.</li>
+</ul>
+
+<p>These methods provide a practical framework for reasoning about the running time of non-trivial lazy programs without pretending that they are strict. The dissertation distinguishes unshared, shared, realized, and unrealized costs, making explicit which suspended computations contribute to actual execution time.</p>
+
+<p>A second major contribution is <strong>scheduling</strong>, which converts many lazy amortized structures into worst-case structures. The approach incrementally forces suspended computations before they are demanded, preventing long cascades of forces. This yields real-time queues and deques and worst-case sortable collections. The dissertation therefore presents strict and lazy evaluation as complementary: laziness supports simple amortized structures, while controlled forcing supports predictable worst-case bounds.</p>
+
+<p>The design techniques developed throughout the work include:</p>
+
+<ul>
+  <li><strong>Lazy rebuilding</strong>, which replaces expensive global rebuilding with suspended rebuilding computations and can be combined with scheduling.</li>
+  <li><strong>Numerical representations</strong>, which model collections after positional number systems. Binary, segmented-binary, and skew-binary representations lead to efficient random-access lists and heaps. In particular, skew-binary random-access lists support constant-time insertion, head, and tail operations with logarithmic lookup and update, while skew binomial heaps support constant-time insertion and logarithmic merge, minimum, and deletion operations.</li>
+  <li><strong>Data-structural bootstrapping</strong>, including structural decomposition for constructing unbounded structures from bounded ones and structural abstraction for deriving efficient join operations from efficient insertion operations. Applications include bootstrapped queues, catenable lists, and bootstrapped heaps.</li>
+  <li><strong>Implicit recursive slowdown</strong>, a lazy counterpart to recursive slowdown that represents partially completed restructuring implicitly as suspended computation. It yields persistent queues, deques, and catenable deques with strong amortized bounds.</li>
+</ul>
+
+<p>The implementations cover queues, real-time queues, deques, catenable lists, catenable deques, random-access lists, heaps, and sortable collections. The accompanying complexity table demonstrates that purely functional implementations can achieve constant-time amortized or worst-case operations for several fundamental abstractions, while retaining persistence.</p>
+
+<h3 id="influence">Influence</h3>
+
+<p>The dissertation was subsequently expanded into the 1998 Cambridge University Press book <em>Purely Functional Data Structures</em>, which has accumulated substantial citation activity; Cambridge reports 171 Crossref citations for the book version. (<a href="https://www.cambridge.org/core/books/purely-functional-data-structures/0409255DA1B48FA731859AC72E34D494">cambridge.org</a>) Its techniques and examples became a standard reference point for subsequent work on persistent sequences, heaps, queues, lazy amortization, and functional data-structure design. Later research continues to develop high-performance purely functional collections, including compressed and parallel purely functional trees for sets, maps, and sequences. (<a href="https://arxiv.org/abs/2204.06077">arxiv.org</a>)</p>
+
+<p>The paper’s industry influence is clearest at the level of the broader persistent-data-structure model rather than through a documented direct implementation lineage. Clojure, for example, provides immutable persistent collections using structural sharing and specifies their performance guarantees for persistent use. Clojure’s official documentation does not, in the sources examined, directly attribute these implementations to Okasaki’s dissertation, so a direct causal claim would be unwarranted. (<a href="https://clojure.org/about/rationale">clojure.org</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/languages-paradigms/functional_programming/">languages paradigms/functional programming</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/amortized-analysis/">amortized analysis</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/data-structural-bootstrapping/">data structural bootstrapping</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/functional-programming/">functional programming</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/lazy-evaluation/">lazy evaluation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/memoization/">memoization</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/numerical-representations/">numerical representations</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/persistent-data-structures/">persistent data structures</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/polymorphic-recursion/">polymorphic recursion</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/purely-functional-data-structures/">purely functional data structures</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/real-time-data-structures/">real time data structures</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

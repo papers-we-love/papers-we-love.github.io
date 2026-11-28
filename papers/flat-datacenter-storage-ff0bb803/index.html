@@ -1,0 +1,159 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Flat Datacenter Storage | Papers We Love</title>
+        <meta name="description" content="Flat Datacenter Storage (FDS) is a high-performance, fault-tolerant, large-scale, locality-oblivious blob store. Using a novel combination of full bisection bandwidth networks, data and metadata striping, and flow control, FDS multiplexes an applicat" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Flat Datacenter Storage | Papers We Love" />
+        <meta property="og:description" content="Flat Datacenter Storage (FDS) is a high-performance, fault-tolerant, large-scale, locality-oblivious blob store. Using a novel combination of full bisection bandwidth networks, data and metadata striping, and flow control, FDS multiplexes an applicat" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/flat-datacenter-storage-ff0bb803/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:53">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Flat Datacenter Storage</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Edmund B. Nightingale</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Jeremy Elson</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Jinliang Fan</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Jon Howell</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Owen Hofmann</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Yutaka Suzue</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/datastores/flat-datacenter-storage.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: October 2012, 10th USENIX Symposium on Operating Systems Design and Implementation (OSDI ’12)</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Flat Datacenter Storage (FDS) is a high-performance, fault-tolerant, large-scale, locality-oblivious blob store. Using a novel combination of full bisection bandwidth networks, data and metadata striping, and flow control, FDS multiplexes an application’s large-scale I/O across the available throughput and latency budget of every disk in a cluster. FDS therefore makes many optimizations around data locality unnecessary. Disks also communicate with each other at their full bandwidth, making recovery from disk failures extremely fast. FDS is designed for datacenter scale, fully distributing metadata operations that might otherwise become a bottleneck.
+
+FDS applications achieve single-process read and write performance of more than 2GB/s. We measure recovery of 92GB data lost to disk failure in 6.2 s and recovery from a total machine failure with 655GB of data in 33.7 s. Application performance is also high: we describe our FDS-based sort application which set the 2012 world record for disk-to-disk sorting.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>Flat Datacenter Storage presents a locality-oblivious blob store designed for datacenters with full-bisection-bandwidth networks. It divides blobs into fixed-size tracts, uses tractservers that access raw disks directly, and places tracts deterministically through a cached tract locator table. This avoids putting individual data locations on the critical path of reads and writes while distributing both data and per-blob metadata across the storage cluster.</p>
+
+<p>The design combines uniform striping, asynchronous I/O, deep read-ahead/write-ahead, and application-level RTS/CTS flow control. Because computation is independent of storage location, applications can dynamically assign small units of work to workers, reducing the effect of heterogeneous hardware and stragglers. Replication is integrated into the locator table, and failures trigger table-version changes and parallel re-replication across the remaining disks. The paper also discusses failure domains, cluster growth, variable replication, and the trade-off between high performance and weak consistency.</p>
+
+<p>In a testbed of approximately 1,000 disks, FDS achieved aggregate remote read and write throughput of up to 67 GB/s and single-process throughput above 2 GB/s. It recovered 92 GB after a disk failure in 6.2 seconds and approximately 655 GB after a seven-disk machine failure in 33.7 seconds. An FDS-based sorting system processed 1,401 GB in 59 seconds in the general-purpose Daytona category and 1,470 GB in 59.4 seconds in the Indy category, establishing the 2012 MinuteSort records. The evaluated applications also included stock-market-data analysis and web-index serving.</p>
+
+<h2 id="influence">Influence</h2>
+
+<p>The paper’s architectural ideas were used directly in Blizzard, a later Microsoft Research system for cloud-scale block storage. Blizzard selected FDS as its low-level storage substrate and adopted the use of full-bisection-bandwidth networking and related congestion-control techniques to provide high-performance remote block storage to unmodified POSIX and Win32 applications. (<a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2014/04/blizzard.pdf">microsoft.com</a>)</p>
+
+<p>Subsequent distributed-file-system literature treats FDS as a representative example of shared-disk-like storage and computed data placement, particularly for systems operating over flat datacenter networks. A later survey identifies FDS’s deterministic placement and load-balancing techniques as notable extensions of this design approach. (<a href="https://doi.org/10.1145/3465405">doi.org</a>) The work also had a documented industry-facing impact through its 2012 MinuteSort records, which demonstrated that remote, general-purpose blob storage could achieve competitive large-scale data-processing performance without relying on storage locality. (<a href="https://www.microsoft.com/en-us/research/blog/data-fast-lane/">microsoft.com</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/datastores/">datastores</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/blob-storage/">blob storage</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/data-locality/">data locality</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/data-striping/">data striping</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/datacenter-networks/">datacenter networks</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-storage/">distributed storage</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/dynamic-work-allocation/">dynamic work allocation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/failure-recovery/">failure recovery</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/full-bisection-bandwidth/">full bisection bandwidth</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/metadata-striping/">metadata striping</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/replication/">replication</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:53
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

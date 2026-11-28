@@ -1,0 +1,121 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Kiran Bhattaram on Failure Detectors | Papers We Love</title>
+        <meta name="description" content="Kiran Bhattaram on Failure Detectors" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Kiran Bhattaram on Failure Detectors | Papers We Love" />
+        <meta property="og:description" content="Kiran Bhattaram on Failure Detectors" />
+        <meta property="og:image" content="https://i.ytimg.com/vi/lwgH2GEos8k/hqdefault.jpg" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="480" />
+        <meta property="og:image:height" content="360" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article video-page" data-pagefind-body itemscope itemtype="https://schema.org/VideoObject">
+  <span data-pagefind-filter="type" style="display:none;">video</span>
+  <h1 itemprop="name">Kiran Bhattaram on Failure Detectors</h1>
+  <meta itemprop="thumbnailUrl" content="https://i.ytimg.com/vi/lwgH2GEos8k/hqdefault.jpg">
+  <meta itemprop="embedUrl" content="https://www.youtube.com/embed/lwgH2GEos8k">
+  <meta itemprop="uploadDate" content="2017-04-13T14:55:47Z">
+  <meta itemprop="duration" content="PT34M44S">
+  <div class="entry-meta">
+    <span class="meta-label">
+      <i class="fa fa-video-camera"></i> Video
+    </span>
+    <div class="meta-text">
+      <span class="meta-date">2017-04-13</span>
+    </div>
+  </div>
+  <section class="video-embed">
+    <iframe src="https://www.youtube.com/embed/lwgH2GEos8k"
+            frameborder="0"
+            allowfullscreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+    </iframe>
+  </section>
+  <section class="video-description" itemprop="description">
+    <p>Meetup: <a href="http://bit.ly/2ob1cR3" target="_blank" rel="noopener">http://bit.ly/2ob1cR3</a> <br>Slides: <a href="http://bit.ly/2paqEe2" target="_blank" rel="noopener">http://bit.ly/2paqEe2</a><br>Audio: <a href="http://bit.ly/2pxsimE" target="_blank" rel="noopener">http://bit.ly/2pxsimE</a></p>
+<p>-----------------------------------------------------------------------------------<br>Sponsored and hosted by Two Sigma (@twosigma)<br>-----------------------------------------------------------------------------------</p>
+<p>Description<br>------------------<br>The problem of consensus is central to many distributed systems algorithms. Failure detectors are central to the way we think about consensus algorithms. In a fully asynchronous system, the FLP impossibility result (<a href="https://groups.csail.mit.edu/tds/papers/Lynch/jacm85.pdf" target="_blank" rel="noopener">https://groups.csail.mit.edu/tds/papers/Lynch/jacm85.pdf</a>) shows that no consensus solution that can tolerate crash failures exists! This simple, stunning result imposed a hard constraint on what could be solved in an asynchronous model.</p>
+<p>The FLP (<a href="http://the-paper-trail.org/blog/a-brief-tour-of-flp-impossibility/" target="_blank" rel="noopener">http://the-paper-trail.org/blog/a-brief-tour-of-flp-impossibility/</a>) result kicked off a flurry of research into ways to circumvent the impossibility result. Failure detectors were the most compelling abstraction proposed. These augmented the asynchronous model just enough to allow consensus, while retaining most of the neat abstractions that make asynchronous systems simple to reason about.</p>
+<p>In this talk, I'll discuss some of the history and background of Chandra and Toueg's failure detector proposal (<a href="http://courses.csail.mit.edu/6.852/08/papers/CT96-JACM.pdf" target="_blank" rel="noopener">http://courses.csail.mit.edu/6.852/08/papers/CT96-JACM.pdf</a>), and discuss some failure detector mechanisms that followed the paper.</p>
+<p>Bio<br>-----<br>Kiran (<a href="https://kiranbot.com" target="_blank" rel="noopener">https://kiranbot.com</a>) (@kiranb) is a software engineer at Stripe. At work, she's thinks a lot about distributed systems fallacies (<a href="https://kiranbot.com/fallacies" target="_blank" rel="noopener">https://kiranbot.com/fallacies</a>) and how we can observe what our software is doing. A normal day working with Kiran involves conversations about operating distributed systems and learning that she made that awesome space dress she's wearing.</p>
+  </section>
+  <footer class="article-metadata">
+    <em>Tags:</em>
+      <span data-pagefind-filter="tag"><a href="/videos/tags/meetup/">meetup</a></span>
+      <span data-pagefind-filter="tag"><a href="/videos/tags/video/">video</a></span>
+      <span data-pagefind-filter="tag"><a href="/videos/tags/failure-detectors/">failure-detectors</a></span>
+      <span data-pagefind-filter="tag"><a href="/videos/tags/papers-we-love/">papers-we-love</a></span>
+      <span data-pagefind-filter="tag"><a href="/videos/tags/paperswelove/">paperswelove</a></span>
+      <span data-pagefind-filter="tag"><a href="/videos/tags/distributed-systems/">distributed-systems</a></span>
+      <span data-pagefind-filter="tag"><a href="/videos/tags/consensus/">consensus</a></span>
+      <span data-pagefind-filter="tag"><a href="/videos/tags/flp/">flp</a></span>
+    <em>Posted by:</em>
+    Papers We Love
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

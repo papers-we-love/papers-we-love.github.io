@@ -1,0 +1,149 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Handlers in Action | Papers We Love</title>
+        <meta name="description" content="Plotkin and Pretnar’s handlers for algebraic effects occupy a sweet spot in the design space of abstractions for effectful computation. By separating effect signatures from their implementation, algebraic effects provide a high degree of modularity, " />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Handlers in Action | Papers We Love" />
+        <meta property="og:description" content="Plotkin and Pretnar’s handlers for algebraic effects occupy a sweet spot in the design space of abstractions for effectful computation. By separating effect signatures from their implementation, algebraic effects provide a high degree of modularity, " />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/handlers-in-action-823a6015/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:00">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Handlers in Action</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Nicolas Oury</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Ohad Kammar</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Sam Lindley</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://homepages.inf.ed.ac.uk/slindley/papers/handlers.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: September 25–27, 2013; ACM SIGPLAN International Conference on Functional Programming (ICFP ’13), Boston, MA, USA</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Plotkin and Pretnar’s handlers for algebraic effects occupy a sweet spot in the design space of abstractions for effectful computation. By separating effect signatures from their implementation, algebraic effects provide a high degree of modularity, allowing programmers to express effectful programs independently of the concrete interpretation of their effects. A handler is an interpretation of the effects of an algebraic computation. The handler abstraction adapts well to multiple settings: pure or impure, strict or lazy, static types or dynamic types.
+
+This is a position paper whose main aim is to popularise the handler abstraction. We give a gentle introduction to its use, a collection of illustrative examples, and a straightforward operational semantics. We describe our Haskell implementation of handlers in detail, outline the ideas behind our OCaml, SML, and Racket implementations, and present experimental results comparing handlers with existing code.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <p>The paper presents algebraic effects and handlers as an alternative foundation for modular effectful programming. Its central distinction is between abstract effect operations and handlers that provide concrete interpretations, allowing effects to be composed and instantiated independently rather than fixed through monad-transformer-stack structure.</p>
+
+<p>The authors illustrate the approach with handlers for state, logging, nondeterminism, failure, input processing, pipes, and aspect-oriented behavior. They distinguish closed handlers, which interpret a complete effect signature, from open handlers, which handle selected operations and forward the rest. They also compare deep handlers, which automatically re-handle resumed continuations, with shallow handlers, which require explicit recursive handling.</p>
+
+<p>The paper introduces λ_eff, a higher-order call-by-push-value calculus with effect operations and handlers. It gives a small-step operational semantics, a type-and-effect system, and proofs of termination and type soundness for well-typed programs. The implementation discussion presents free-monad, codensity-monad, continuation-monad, and delimited-continuation techniques, including a Haskell implementation using type classes and type families and related implementations for OCaml, SML, and Racket.</p>
+
+<p>The benchmarks show that the continuation-monad implementation is generally substantially faster than the free- and codensity-monad implementations, although it remains slower than specialized baseline code in several tests. In the aspect-oriented programming benchmark, handler-based, mixin-based, and hand-coded implementations have nearly identical performance. (<a href="https://homepages.inf.ed.ac.uk/slindley/papers/handlers.pdf">homepages.inf.ed.ac.uk</a>)</p>
+
+<p>The paper had documented subsequent influence. The ACM SIGPLAN citation for its 2023 Most Influential ICFP Paper Award credits it with drawing broader attention to handlers, providing an operational semantics and effect system, and motivating subsequent work and implementations. (<a href="https://sigplan.org/Awards/ICFP/">sigplan.org</a>) Its research impact is also recorded in a 2021 UK Research Excellence Framework case study, which lists the paper among the cited foundations of later effect-handler research. (<a href="https://results2021.ref.ac.uk/impact/3ce549c5-03cf-4336-8f64-98a95823289c?page=1">results2021.ref.ac.uk</a>) Practically, the implementation ideas remain represented in later effect-handler benchmarking infrastructure, where “Handlers in Action” is included alongside systems such as Eff, Effekt, Koka, and OCaml implementations. (<a href="https://github.com/effect-handlers/effect-handlers-bench">github.com</a>) Bibliographic records confirm its publication as an ICFP 2013 conference paper in ACM SIGPLAN Notices, volume 48, issue 9, pages 145–158. (<a href="https://www.research.ed.ac.uk/en/publications/handlers-in-action/">research.ed.ac.uk</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/languages/haskell/">languages/haskell</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/algebraic-effects/">algebraic effects</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/continuations/">continuations</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/effect-handlers/">effect handlers</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/effect-typing/">effect typing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/haskell/">haskell</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/modularity/">modularity</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/monads/">monads</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:00
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

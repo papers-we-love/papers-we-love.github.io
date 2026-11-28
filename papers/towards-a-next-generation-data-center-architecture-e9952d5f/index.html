@@ -1,0 +1,140 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Towards a Next Generation Data Center Architecture: Scalability and Commoditization | Papers We Love</title>
+        <meta name="description" content="Applications hosted in today’s data centers suffer from internal fragmentation of resources, rigidity, and bandwidth constraints imposed by the architecture of the network connecting the data center’s servers. Conventional architectures statically ma" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Towards a Next Generation Data Center Architecture: Scalability and Commoditization | Papers We Love" />
+        <meta property="og:description" content="Applications hosted in today’s data centers suffer from internal fragmentation of resources, rigidity, and bandwidth constraints imposed by the architecture of the network connecting the data center’s servers. Conventional architectures statically ma" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/towards-a-next-generation-data-center-architecture-e9952d5f/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:00">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Towards a Next Generation Data Center Architecture: Scalability and Commoditization</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Albert Greenberg</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">David A. Maltz</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Parantap Lahiri</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Parveen Patel</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Sudipta Sengupta</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://research.microsoft.com/pubs/79348/presto27-greenberg.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: August 22, 2008, PRESTO’08 Workshop at SIGCOMM, Seattle, Washington, USA</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Applications hosted in today’s data centers suffer from internal fragmentation of resources, rigidity, and bandwidth constraints imposed by the architecture of the network connecting the data center’s servers. Conventional architectures statically map web services to Ethernet VLANs, each constrained in size to a few hundred servers owing to control plane overheads. The IP routers used to span traffic across VLANs and the load balancers used to spray requests within a VLAN across servers are realized via expensive customized hardware and proprietary software. Bisection bandwidth is low, severely constraining distributed computation. Further, the conventional architecture concentrates traffic in a few pieces of hardware that must be frequently upgraded and replaced to keep pace with demand - an approach that directly contradicts the prevailing philosophy in the rest of the data center, which is to scale out (adding more cheap components) rather than scale up (adding more power and complexity to a small number of expensive components). Commodity switching hardware is now becoming available with programmable control interfaces and with very high port speeds at very low port cost, making this the right time to redesign the data center networking infrastructure. In this paper, we describe Monsoon, a new network architecture, which scales and commoditizes data center networking. Monsoon realizes a simple mesh-like architecture using programmable commodity layer-2 switches and servers. In order to scale to 100,000 servers or more, Monsoon makes modifications to the control plane (e.g., source routing) and to the data plane (e.g., hot-spot free multipath routing via Valiant Load Balancing). It disaggregates the function of load balancing into a group of regular servers, with the result that load balancing server hardware can be distributed amongst racks in the data center leading to greater agility and less fragmentation. The architecture creates a huge, flexible switching domain, supporting any server/any service and unfragmented server capacity at low cost.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h3 id="summary">Summary</h3>
+
+<p>The paper proposes <strong>Monsoon</strong>, a data-center network architecture designed to replace fragmented VLAN-based designs and specialized, scale-up networking hardware with programmable commodity Layer-2 switches and servers. Its principal mechanisms are: (1) Valiant Load Balancing to distribute traffic across multiple paths and avoid hotspots; (2) a very large flat Layer-2 domain using encapsulation and directory-assisted forwarding; and (3) MAC Rotation and server-based load balancing to distribute requests across arbitrarily located server pools. The design targets data centers with approximately 100,000 servers or more and seeks to provide high aggregate bandwidth, flexible server placement, and scale-out fault tolerance at lower cost. (<a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2008/08/presto27-greenberg.pdf">microsoft.com</a>)</p>
+
+<p>The work directly anticipated Microsoft’s subsequent <strong>VL2</strong> architecture, published at SIGCOMM in 2009. VL2 retained and operationalized several Monsoon ideas—flat addressing, Valiant Load Balancing, end-system address resolution, and large-scale Ethernet semantics—and evaluated them in a prototype data-center network. (<a href="https://www.microsoft.com/en-us/research/publication/vl2-a-scalable-and-flexible-data-center-network/">microsoft.com</a>) Later data-center-networking literature treated Monsoon and VL2 as representative Valiant-Load-Balancing architectures and used them as comparison points for subsequent Clos-based and load-balancing designs. (<a href="https://catalogimages.wiley.com/images/db/pdf/9781119647423.excerpt.pdf">catalogimages.wiley.com</a>) The available evidence therefore supports a concrete research influence on scalable data-center network architecture; I found no reliable evidence in the reviewed sources establishing direct commercial deployment of Monsoon itself.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/datastores/">datastores</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/commoditization/">commoditization</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/data-center-network/">data center network</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:00
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

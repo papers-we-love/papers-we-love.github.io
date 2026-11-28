@@ -1,0 +1,175 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Herbivore: A Scalable and Efficient Protocol for Anonymous Communication | Papers We Love</title>
+        <meta name="description" content="Anonymity is increasingly important for networked applications amidst concerns over censorship and privacy. In this paper, we describe Herbivore, a peer-to-peer, scalable, tamper-resilient communication system that provides provable anonymity and pri" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Herbivore: A Scalable and Efficient Protocol for Anonymous Communication | Papers We Love" />
+        <meta property="og:description" content="Anonymity is increasingly important for networked applications amidst concerns over censorship and privacy. In this paper, we describe Herbivore, a peer-to-peer, scalable, tamper-resilient communication system that provides provable anonymity and pri" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/herbivore-a-scalable-and-efficient-protocol-for-an-dbd80767/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Herbivore: A Scalable and Efficient Protocol for Anonymous Communication</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Emin Gün Sirer</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Mark Robson</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Milo Polte</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Sharad Goel</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/herbivore-a-scalable-and-efficient-protocol-for-anonymous.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: February 2003 — Cornell University Computing and Information Science Technical Report TR2003-1890</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Anonymity is increasingly important for networked applications amidst concerns over censorship and privacy. In this paper, we describe Herbivore, a peer-to-peer, scalable, tamper-resilient communication system that provides provable anonymity and privacy. Building on dining cryptographer networks, Herbivore scales by partitioning the network into anonymizing cliques. Adversaries able to monitor all network traffic cannot deduce the identity of a sender or receiver beyond an anonymizing clique. In addition to strong anonymity, Herbivore simultaneously provides high efficiency and scalability, distinguishing it from other anonymous communication protocols. Performance measurements from a prototype implementation show that the system can achieve high bandwidths and low latencies when deployed over the Internet.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="overview">Overview</h2>
+
+<p>Herbivore is a peer-to-peer anonymous communication protocol designed to combine three properties that the authors identify as difficult to achieve simultaneously: strong protection against traffic analysis, scalability to large networks, and practical bandwidth and latency. It builds on dining cryptographer networks (DC-nets), whose information-theoretic construction hides which participant contributed a message, and organizes the global network into smaller anonymizing cliques.</p>
+
+<h2 id="design-and-contributions">Design and contributions</h2>
+
+<p>Each clique maintains a complete logical key graph, allowing members to conceal the sender and receiver of messages from external observers and from colluding clique members, except for the information implied by the set of honest participants remaining in the clique. Physically, communication uses a rotating star topology. The authors prove that, under their communication model, propagating one anonymously transmitted bit requires at least <code>2(k − 1)</code> transmitted bits, making the star topology communication-optimal for a clique of <code>k</code> nodes.</p>
+
+<p>The protocol operates in rounds with three phases:</p>
+
+<ul>
+  <li><strong>Reservation:</strong> Nodes with data anonymously select transmission slots, reducing collisions without requiring every participant to transmit continuously.</li>
+  <li><strong>Transmission:</strong> Reserved nodes send fixed-size packets through the DC-net. Participants can detect collisions and tampering by comparing the received packet with the packet they intended to transmit.</li>
+  <li><strong>Exit:</strong> Nodes involved in long-lived streams anonymously vote to delay cooperative departures, reducing the effectiveness of intersection attacks caused by changing clique membership.</li>
+</ul>
+
+<p>Herbivore uses a decentralized entry mechanism based on public-key cryptography, one-way functions, computational challenges, and random placement in a virtual key space. This is intended to prevent attackers from choosing a target clique, limit rapid Sybil-style admission, and distribute nodes approximately uniformly. Cliques are maintained within a bounded size range: oversized cliques split, while undersized cliques are disbanded and their members re-enter the network.</p>
+
+<p>The paper analytically derives a reservation-block size that depends on packet size and expected load rather than total clique size. This lets lightly loaded cliques retain relatively high bandwidth while preserving anonymity based on clique membership. The protocol also addresses collusion, topology attacks, node failures, malicious coordinators, statistical analysis, and denial-of-service attacks. Its principal fallback against persistent disruption is for nodes to leave and join another randomly assigned clique.</p>
+
+<h2 id="applications-and-evaluation">Applications and evaluation</h2>
+
+<p>The proposed system can carry encapsulated IP traffic and support anonymous access to conventional Internet services through proxy nodes, although that mode does not conceal the external service’s identity. When both endpoints participate in Herbivore, the protocol can support anonymous messaging and interactive communication. The paper also describes anonymous publishing in which a document is replicated across a clique to prevent the original publisher from being identified through later queries.</p>
+
+<p>A prototype was evaluated over geographically distributed PlanetLab nodes. Because of the testbed’s size, experiments used cliques of 10–40 nodes. The measurements showed bandwidth suitable for web browsing, audio streaming, and highly compressed video under light contention, with latency suitable for messaging. Bandwidth decreased and latency increased as clique size and the number of simultaneous senders grew, while total performance was intended to remain independent of the size of the overall network because the global topology partitions users into cliques.</p>
+
+<h2 id="limitations">Limitations</h2>
+
+<p>The design remains dependent on the slowest participant in a clique and is vulnerable to disruption by malicious participants. It does not eliminate statistical attacks against very long-lived transactions, and anonymity depends on maintaining a sufficiently large honest population within the relevant clique. Access to external services through proxies also provides weaker endpoint anonymity than communication entirely within the Herbivore network. The paper treats the security of the underlying Chord lookup service as a largely separate problem.</p>
+
+<h2 id="influence-on-subsequent-work">Influence on subsequent work</h2>
+
+<p>The paper’s documented influence is primarily academic. Later work on Dissent explicitly characterizes Herbivore as an application of small-scale DC-nets to large-scale anonymous communication, while developing different mechanisms for accountability, disruption handling, and group communication. (<a href="https://dedis.cs.yale.edu/dissent/papers/ccs10/">dedis.cs.yale.edu</a>) Research on information slicing also cites Herbivore as an approach that uses cliques to scale DC-net-based anonymity. (<a href="https://www.usenix.org/legacy/events/nsdi07/tech/full_papers/katti/katti_html/paper.html">usenix.org</a>) The authors’ subsequent work, <em>Eluding Carnivores: File Sharing with Strong Anonymity</em>, presents Herbivore as a practical DC-net implementation and continues its use of small cliques and parallelized communication. (<a href="https://www.cs.cornell.edu/people/egs/cs6460-spring10/herbivore-esigops.pdf">cs.cornell.edu</a>) Cornell’s project and documentation pages further identify Herbivore as deriving from the earlier CliqueNet design and as a system for anonymous file sharing and messaging. (<a href="https://www.cs.cornell.edu/people/egs/herbivore/faq.html">cs.cornell.edu</a>) The sources located document research follow-on and experimental implementations; they do not provide clear evidence of broad commercial or production deployment.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/distributed_systems/">distributed systems</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/anonymous-communication/">anonymous communication</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/anonymous-file-sharing/">anonymous file sharing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/denial-of-service-resistance/">denial of service resistance</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/dining-cryptographers-networks/">dining cryptographers networks</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-hash-tables/">distributed hash tables</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/network-protocols/">network protocols</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/peer-to-peer/">peer to peer</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/privacy/">privacy</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/scalability/">scalability</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/traffic-analysis-resistance/">traffic analysis resistance</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

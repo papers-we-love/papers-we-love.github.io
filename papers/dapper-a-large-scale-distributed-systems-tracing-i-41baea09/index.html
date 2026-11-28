@@ -1,0 +1,163 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Dapper, a Large-Scale Distributed Systems Tracing Infrastructure | Papers We Love</title>
+        <meta name="description" content="Modern Internet services are often implemented as complex, large-scale distributed systems. These applications are constructed from collections of software modules that may be developed by different teams, perhaps in different programming languages, " />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Dapper, a Large-Scale Distributed Systems Tracing Infrastructure | Papers We Love" />
+        <meta property="og:description" content="Modern Internet services are often implemented as complex, large-scale distributed systems. These applications are constructed from collections of software modules that may be developed by different teams, perhaps in different programming languages, " />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/dapper-a-large-scale-distributed-systems-tracing-i-41baea09/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:47:54">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Dapper, a Large-Scale Distributed Systems Tracing Infrastructure</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Benjamin H. Sigelman</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Chandan Shanbhag</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Donald Beaver</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Luiz André Barroso</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Manoj Plakal</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Mike Burrows</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Pat Stephenson</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Saul Jaspan</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://raw.githubusercontent.com/papers-we-love/papers-we-love/refs/heads/main/distributed_systems/dapper-a-large-scale-distributed-tracing-infrastructure.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: April 2010 (Google Technical Report dapper-2010-1)</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Modern Internet services are often implemented as complex, large-scale distributed systems. These applications are constructed from collections of software modules that may be developed by different teams, perhaps in different programming languages, and could span many thousands of machines across multiple physical facilities. Tools that aid in understanding system behavior and reasoning about performance issues are invaluable in such an environment.
+
+Here we introduce the design of Dapper, Google’s production distributed systems tracing infrastructure, and describe how our design goals of low overhead, application-level transparency, and ubiquitous deployment on a very large scale system were met. Dapper shares conceptual similarities with other tracing systems, particularly Magpie [3] and X-Trace [12], but certain design choices were made that have been key to its success in our environment, such as the use of sampling and restricting the instrumentation to a rather small number of common libraries.
+
+The main goal of this paper is to report on our experience building, deploying and using the system for over two years, since Dapper’s foremost measure of success has been its usefulness to developer and operations teams. Dapper began as a self-contained tracing tool but evolved into a monitoring platform which has enabled the creation of many different tools, some of which were not anticipated by its designers. We describe a few of the analysis tools that have been built using Dapper, share statistics about its usage within Google, present some example use cases, and discuss lessons learned so far.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="overview">Overview</h2>
+
+<p>Dapper is Google’s production distributed-tracing infrastructure for following the work performed across services and machines on behalf of an individual request. Its central data model represents a trace as a tree of <strong>spans</strong> connected by parent-child causal relationships. Each span contains timestamps, RPC timing information, identifiers, and optional application annotations. Trace and span identifiers are propagated through common threading, asynchronous control-flow, and RPC libraries, allowing most applications to be traced without application-specific instrumentation.</p>
+
+<p>The design emphasizes three operational requirements: low runtime overhead, application-level transparency, and scalability. Dapper addresses these requirements through instrumentation in a small set of ubiquitous libraries, probabilistic sampling, asynchronous local logging, and out-of-band collection into Bigtable. Sampling is applied both at runtime and, when necessary, during collection; the latter operates on complete traces by hashing the shared trace identifier. The paper also describes an adaptive-sampling approach intended to increase coverage for low-volume services while limiting overhead for high-volume services.</p>
+
+<p>Dapper’s deployment experience showed that distributed tracing could be used not only for interactive latency debugging but also for development, testing, dependency discovery, resource accounting, network-usage analysis, shared-service analysis, and security-policy monitoring. The paper reports that Dapper was deployed across nearly all Google production processes, with most traces requiring no manual propagation support. Its analysis interfaces supported lookup by trace identifier, bulk MapReduce processing, indexed access, execution-pattern aggregation, latency histograms, and interactive trace visualization.</p>
+
+<p>The reported use cases demonstrate several concrete benefits. Dapper helped identify unnecessary serialization on critical paths, incorrect use of database masters instead of replicas, expensive interactions among services, network degradation associated with long-tail latency, dynamically changing service dependencies, and application-level contributors to shared-storage consumption. The paper also documents limitations: coalesced or batched work can be attributed inaccurately, batch workloads require a different unit of tracing, tracing often identifies the slow component without proving the root cause, and kernel-level events are difficult to associate unobtrusively with user-level trace context.</p>
+
+<h2 id="influence-on-later-systems-and-industry">Influence on later systems and industry</h2>
+
+<p>The paper became a widely cited reference for production distributed tracing. Later industry discussions describe Dapper’s trace/span model, context propagation, sampling, and large-scale collection architecture as foundational concepts for systems such as Zipkin, Jaeger, and OpenTelemetry. (<a href="https://research.google/pubs/dapper-a-large-scale-distributed-systems-tracing-infrastructure/">research.google</a>) A survey of microservice tracing specifically identifies Dapper’s use of sampling and restrictive instrumentation as design choices that enabled tracing at very large scale, and notes the subsequent growth of industrial and open-source tracing systems. (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8629732/">pmc.ncbi.nlm.nih.gov</a>) The paper’s influence is therefore both technical and industrial: it provided a production-validated design point that shaped the architecture and terminology of subsequent distributed-observability tools.</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/distributed_systems/">distributed systems</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/context-propagation/">context propagation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-systems/">distributed systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-tracing/">distributed tracing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/latency-analysis/">latency analysis</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/observability/">observability</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/performance-monitoring/">performance monitoring</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/rpc/">rpc</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/scalability/">scalability</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/span-model/">span model</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/trace-sampling/">trace sampling</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:47:54
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

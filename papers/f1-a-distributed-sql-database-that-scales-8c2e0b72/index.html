@@ -1,0 +1,179 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>F1: A Distributed SQL Database That Scales | Papers We Love</title>
+        <meta name="description" content="F1 is a distributed relational database system built at Google to support the AdWords business. F1 is a hybrid database that combines high availability, the scalability of NoSQL systems like Bigtable, and the consistency and usability of traditional " />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="F1: A Distributed SQL Database That Scales | Papers We Love" />
+        <meta property="og:description" content="F1 is a distributed relational database system built at Google to support the AdWords business. F1 is a hybrid database that combines high availability, the scalability of NoSQL systems like Bigtable, and the consistency and usability of traditional " />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/f1-a-distributed-sql-database-that-scales-8c2e0b72/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:00">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">F1: A Distributed SQL Database That Scales</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Bart Samwel</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Ben Handy</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Chad Whipkey</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">David Menestrina</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Eric Rollins</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Himani Apte</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Ian Rae</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Jeff Shute</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">John Cieslewicz</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Kyle Littlefield</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Mircea Oancea</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Radek Vingralek</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Stephan Ellner</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Traian Stancescu</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/41344.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: 2013; Proceedings of the VLDB Endowment, Vol. 6, No. 11; presented at the 39th International Conference on Very Large Data Bases (VLDB 2013), August 26–30, 2013</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>F1 is a distributed relational database system built at Google to support the AdWords business. F1 is a hybrid database that combines high availability, the scalability of NoSQL systems like Bigtable, and the consistency and usability of traditional SQL databases. F1 is built on Spanner, which provides synchronous cross-datacenter replication and strong consistency. Synchronous replication implies higher commit latency, but we mitigate that latency by using a hierarchical schema model with structured data types and through smart application design. F1 also includes a fully functional distributed SQL query engine and automatic change tracking and publishing.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="overview">Overview</h2>
+
+<p>F1 is a distributed relational database developed at Google to replace a sharded MySQL deployment supporting AdWords. Its central design objective is to combine NoSQL-style scalability and availability with SQL usability, secondary indexes, ACID transactions, and strong consistency. F1 is implemented above Spanner, which supplies sharding, synchronous replication, fault tolerance, transaction processing, and globally ordered timestamps. The paper reports that F1 was managing AdWords campaign data in production from early 2012, with more than 100 TB of data, workloads reaching hundreds of thousands of requests per second, and availability of approximately five nines. (<a href="https://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/41344.pdf">static.googleusercontent.com</a>)</p>
+
+<h2 id="system-design">System design</h2>
+
+<p>The system separates mostly stateless F1 servers from the replicated Spanner storage layer. F1 servers can be added or removed without moving data, while additional Spanner capacity triggers transparent data redistribution. Distributed query workloads can use a shared pool of worker processes, and large-scale extraction can integrate with MapReduce.</p>
+
+<p>A key design decision is hierarchical data clustering. Child tables use ancestor keys as prefixes of their primary keys, causing related rows to be stored together in the same Spanner directory. This improves locality, permits range reads and streaming merge-style joins, and reduces the number of participants in common transactions. Protocol Buffer-valued columns provide structured data types that more closely match application objects and can replace child tables when repeated data has a bounded size.</p>
+
+<p>F1 maintains transactionally consistent secondary indexes. Local indexes are co-located with root rows and generally have low incremental transaction cost; global indexes are distributed independently and may introduce additional two-phase-commit participants. The paper identifies large transactions involving global indexes as a scalability limitation and therefore recommends using global indexes selectively and keeping such transactions small.</p>
+
+<p>Schema changes are performed asynchronously and without blocking queries or updates. The protocol restricts the cluster to compatible current and next schemas and decomposes changes into phases. For example, an index can first be introduced for maintenance operations, then enabled for writes, backfilled, and finally exposed for reads. This avoids corruption while different servers transition at different times.</p>
+
+<p>F1 supports snapshot, pessimistic, and optimistic transactions. Optimistic transactions perform an unlocked read phase and validate row modification timestamps during a short commit phase, enabling long-running transactions, transparent server failover, and server-side retries. Their principal weaknesses are insertion phantoms and poor throughput under high contention; parent-table locks or batching can address some of these cases. Flexible lock columns allow concurrency to be tuned from row-level to column-level or deliberately reduced across related child rows.</p>
+
+<p>Change History is implemented as a database-level feature. Transactions record before-and-after values in clustered ChangeBatch records, and publish/subscribe notifications allow consumers to process changes incrementally. The same mechanism supports cache repair: a cache can apply changes after a checkpoint instead of reloading an entire object or dataset.</p>
+
+<h2 id="query-processing-and-performance">Query processing and performance</h2>
+
+<p>F1 offers both centralized execution for short OLTP queries and distributed execution for larger analytical workloads. Its query engine assumes that data is remote, arbitrarily partitioned, and not usefully co-partitioned. It therefore relies heavily on batching, asynchronous reads, streaming operators, hash repartitioning, distributed hash joins, and distributed aggregation. Lookup joins collect large batches of keys before issuing concurrent remote reads, while cluster joins exploit the physical ordering of hierarchically clustered tables.</p>
+
+<p>The design accepts higher low-level storage latency in exchange for scale and consistency. The deployment described in the paper reports read latencies of approximately 5–10 ms and commit latencies of approximately 50–150 ms, with multi-group transactions typically adding further latency through two-phase commit. The authors report that careful schema clustering and application-level batching, parallelism, and asynchronous access kept average end-user latency for the principal AdWords application comparable to the former MySQL system, while improving tail behavior. The cost was higher resource consumption: F1 queries could use roughly an order of magnitude more CPU than comparable MySQL queries because of compression, decompression, distributed processing, and network transfer. (<a href="https://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/41344.pdf">static.googleusercontent.com</a>)</p>
+
+<h2 id="influence">Influence</h2>
+
+<p>The paper helped establish a concrete production example of strongly consistent distributed SQL combining relational interfaces with geo-replication and elastic execution. A documented downstream example is CockroachDB: its SIGMOD 2020 paper explicitly identifies F1 as a source of inspiration for CockroachDB’s distributed execution engine and online schema-change infrastructure, and describes adapting the incremental schema-transition approach used by F1. (<a href="https://www.cockroachlabs.com/pdf/cockroachdb-the-resilient-geo-distributed-sql-database-sigmod-2020.pdf">cockroachlabs.com</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/datastores/">datastores</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/acid-transactions/">acid transactions</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/change-data-capture/">change data capture</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-databases/">distributed databases</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/distributed-sql/">distributed sql</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/geo-replication/">geo replication</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/query-processing/">query processing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/relational-databases/">relational databases</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/schema-evolution/">schema evolution</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/spanner/">spanner</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/strong-consistency/">strong consistency</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:00
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

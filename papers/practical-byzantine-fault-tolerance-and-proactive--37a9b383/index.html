@@ -1,0 +1,146 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Practical Byzantine Fault Tolerance and Proactive Recovery | Papers We Love</title>
+        <meta name="description" content="Our growing reliance on online services accessible on the Internet demands highly available systems that provide correct service without interruptions. Software bugs, operator mistakes, and malicious attacks are a major cause of service interruptions" />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Practical Byzantine Fault Tolerance and Proactive Recovery | Papers We Love" />
+        <meta property="og:description" content="Our growing reliance on online services accessible on the Internet demands highly available systems that provide correct service without interruptions. Software bugs, operator mistakes, and malicious attacks are a major cause of service interruptions" />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/practical-byzantine-fault-tolerance-and-proactive--37a9b383/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:00">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Practical Byzantine Fault Tolerance and Proactive Recovery</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Barbara Liskov</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Miguel Castro</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="http://www.microsoft.com/research/wp-content/uploads/2017/01/p398-castro-bft-tocs.pdf" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: November 2002; ACM Transactions on Computer Systems, Vol. 20, No. 4, pp. 398–461</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Our growing reliance on online services accessible on the Internet demands highly available systems that provide correct service without interruptions. Software bugs, operator mistakes, and malicious attacks are a major cause of service interruptions and they can cause arbitrary behavior, that is, Byzantine faults. This article describes a new replication algorithm, BFT, that can be used to build highly available systems that tolerate Byzantine faults. BFT can be used in practice to implement real services: it performs well, it is safe in asynchronous environments such as the Internet, it incorporates mechanisms to defend against Byzantine-faulty clients, and it recovers replicas proactively. The recovery mechanism allows the algorithm to tolerate any number of faults over the lifetime of the system provided fewer than 1/3 of the replicas become faulty within a small window of vulnerability. BFT has been implemented as a generic program library with a simple interface. We used the library to implement the first Byzantine-fault-tolerant NFS file system, BFS. The BFT library and BFS perform well because the library incorporates several important optimizations, the most important of which is the use of symmetric cryptography to authenticate messages. The performance results show that BFS performs 2% faster to 24% slower than production implementations of the NFS protocol that are not replicated. This supports our claim that the BFT library can be used to build practical systems that tolerate Byzantine faults.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="contribution">Contribution</h2>
+
+<p>The paper presents BFT, a practical state-machine-replication algorithm that tolerates Byzantine failures when fewer than one-third of the replicas are faulty. Its safety property is linearizability, and safety does not depend on synchrony; liveness requires that message delays eventually become bounded. The protocol uses a primary-backup organization, quorum certificates, and the three phases pre-prepare, prepare, and commit. View changes replace an unresponsive or faulty primary while preserving the ordering of committed requests. Clients accept a result after receiving matching replies from at least (f+1) replicas.</p>
+
+<p>The paper also introduces proactive recovery. Replicas periodically recover even when no fault is suspected, refresh authentication keys, verify or repair their state, and rejoin normal operation. This changes the fault model from tolerating fewer than one-third of all replicas over the system lifetime to tolerating an unbounded total number of faults, provided fewer than one-third become faulty within a bounded window of vulnerability. Efficient checkpointing, state transfer, batching, digest replies, tentative execution, and symmetric-key message authentication are used to make the design practical. The authors implemented the BFT library and used it to build BFS, a Byzantine-fault-tolerant NFS service. In the reported experiments, BFS ranged from 2% faster to 24% slower than nonreplicated production NFS implementations. (<a href="https://www.microsoft.com/research/wp-content/uploads/2017/01/p398-castro-bft-tocs.pdf">microsoft.com</a>)</p>
+
+<h2 id="influence">Influence</h2>
+
+<p>The work became a foundational reference for practical Byzantine fault-tolerant state-machine replication. Later research continued to formalize and refine the protocol; for example, Lamport’s <em>Byzantizing Paxos by Refinement</em> explicitly studies the Castro–Liskov algorithm as a refinement of ordinary Paxos and provides formal specifications and a mechanically checked proof. (<a href="https://www.microsoft.com/en-us/research/publication/byzantizing-paxos-refinement/">microsoft.com</a>) Subsequent systems such as SBFT use PBFT as a performance baseline while addressing scalability, communication complexity, and geo-replication; SBFT reports evaluations with more than 200 active replicas and compares its performance with an optimized PBFT implementation. (<a href="https://arxiv.org/abs/1804.01626">arxiv.org</a>)</p>
+
+<p>The protocol family also influenced permissioned blockchain infrastructure. Hyperledger Fabric’s documentation states that its SmartBFT-based ordering service is heavily inspired by BFT-SMaRt, which is described as a non-pipelined version of the seminal PBFT protocol. Fabric provides a production-oriented BFT ordering mode that tolerates fewer than one-third malicious or unreachable ordering nodes, demonstrating the continued use of the paper’s core model in industry software. (<a href="https://hyperledger-fabric.readthedocs.io/en/latest/orderer/ordering_service.html">hyperledger-fabric.readthedocs.io</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/distributed_systems/">distributed systems</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/asynchronous-systems/">asynchronous systems</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/byzantine-fault-tolerance/">byzantine fault tolerance</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/proactive-recovery/">proactive recovery</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/state-machine-replication/">state machine replication</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/state-transfer/">state transfer</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:00
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->

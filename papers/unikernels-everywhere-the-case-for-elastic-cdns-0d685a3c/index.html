@@ -1,0 +1,152 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+        <meta content="width=device-width" name="viewport">
+        <title>Unikernels Everywhere: The Case for Elastic CDNs | Papers We Love</title>
+        <meta name="description" content="Video streaming dominates the Internet’s overall traffic mix, with reports stating that it will constitute 90% of all consumer traffic by 2019. Most of this video is delivered by Content Delivery Networks (CDNs), and, while they optimize QoE metrics " />
+        <meta property="og:site_name" content="Papers We Love" />
+        <meta property="og:title" content="Unikernels Everywhere: The Case for Elastic CDNs | Papers We Love" />
+        <meta property="og:description" content="Video streaming dominates the Internet’s overall traffic mix, with reports stating that it will constitute 90% of all consumer traffic by 2019. Most of this video is delivered by Content Delivery Networks (CDNs), and, while they optimize QoE metrics " />
+        <meta property="og:image" content="http://paperswelove.org/images/papers-we-love-ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="300" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta name="google-site-verification" content="aMC4-woz3t3pTn9EbEL4wIUkYtnYddGFNGee-sqQNb0" />
+        <link href="/stylesheets/font-awesome.min.css" rel="stylesheet" /><link href="/stylesheets/screen.css" rel="stylesheet" />
+        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/atom+xml" title="Papers Atom Feed" href="/papers_feed.xml" />
+        <link href="/favicon.ico" rel="icon" type="image/ico" />
+        <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-53240153-1', 'auto');
+         ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="generic" itemscope itemtype="https://schema.org/WebPage">
+        <section class="nav-top" data-pagefind-ignore>
+  <div class="nav-top-img">
+<a href="/">      <img src="/images/logo-top.svg" alt="Papers We Love" title="Papers We Love | A community for computer science papers" />
+</a>  </div>
+  <nav>
+    <ul class="nav-top-list">
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/videos/">Videos</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="https://github.com/papers-we-love/organizers">Start A Chapter</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+        <div id="main" role="main" itemprop="mainContentOfPage">
+            <article class="hentry article paper-page" data-pagefind-body itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <meta itemprop="url" content="/papers/unikernels-everywhere-the-case-for-elastic-cdns-0d685a3c/">
+  <meta itemprop="dateCreated" content="2026-09-01 00:48:01">
+  <span data-pagefind-filter="type" style="display:none;">paper</span>
+  <h1 itemprop="name">Unikernels Everywhere: The Case for Elastic CDNs</h1>
+  <section class="paper-authors">
+    <ul>
+      <li><strong>Authors:</strong></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Anton Ivanov</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Felipe Huici</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Filipe Manco</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Florian Schmidt</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Jose Mendes</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Kenichi Yasukata</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Michio Honda</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Simon Kuenzer</span></li>
+      <li itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" data-pagefind-filter="author">Yuri Volchkov</span></li>
+    </ul>
+  </section>
+  <div class="entry-meta">
+      <a href="https://dl.acm.org/citation.cfm?id=3050757" target="_blank" rel="noopener" class="read-paper-link"><span class="meta-label"><i class="fa fa-file-text-o"></i> Read the paper</span></a>
+    <div class="meta-text">
+      <span class="meta-date" itemprop="datePublished">Published: April 8–9, 2017; Proceedings of the 13th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments (VEE ’17), Xi’an, China. Published in ACM SIGPLAN Notices, volume 52, issue 7, on July 31, 2017.</span>
+    </div>
+  </div>
+
+  <hr class="paper-meta-divider" />
+
+  <section class="paper-abstract" itemprop="abstract">
+    <h3>📜 Abstract</h3>
+    <p>Video streaming dominates the Internet’s overall traffic mix, with reports stating that it will constitute 90% of all consumer traffic by 2019. Most of this video is delivered by Content Delivery Networks (CDNs), and, while they optimize QoE metrics such as buffering ratio and start-up time, no single CDN provides optimal performance. In this paper we make the case for elastic CDNs, the ability to build virtual CDNs on-the-fly on top of shared, third-party infrastructure at a scale. To bring this idea closer to reality we begin by large-scale simulations to quantify the effects that elastic CDNs would have if deployed, and build and evaluate MiniCache, a specialized, minimalistic virtualized content cache that runs on the Xen hypervisor. MiniCache is able to serve content at rates of up to 32 Gb/s and handle up to 600K reqs/sec on a single CPU core, as well as boot in about 90 milliseconds on x86 and around 370 milliseconds on ARM32.</p>
+  </section>
+
+  <section class="paper-summary" itemprop="description">
+    <h3>✨ Summary</h3>
+    <h2 id="summary">Summary</h2>
+
+<p>The paper proposes <strong>elastic CDNs</strong>: virtual content-delivery networks that can be instantiated dynamically on shared, third-party infrastructure and placed near users according to geography and demand. It introduces <strong>CDNSim</strong>, a flow-level simulator for evaluating large-scale CDN deployments, and <strong>MiniCache</strong>, a specialized content-cache unikernel based on MiniOS and Xen. The system targets wide deployment across x86 and ARM platforms, strong tenant isolation, rapid scale-out and scale-in, high consolidation, and high HTTP performance. The reported prototype boots in approximately 90 milliseconds on x86 and 370 milliseconds on ARM32, achieves up to 32 Gb/s of content throughput and 600K requests per second on one CPU core, and can operate with a minimal memory footprint. The implementation also includes optimizations to Xen, MiniOS, lwIP, and virtualized I/O.</p>
+
+<p>Subsequent work adopted the paper’s central premise of using lightweight unikernel-based virtual machines for dynamic content distribution. A 2018 study proposed an elastic content-distribution platform in which small unikernel VMs host individual or small groups of videos and are created or removed according to detected changes in content popularity. (<a href="https://swn.uom.gr/storage/app/media/publications/conferences/2018/ew2018.pdf">swn.uom.gr</a>) Related research on virtualized CDN architectures, including MOSTO, explored dynamic CDN services using SDN/NFV techniques and cited this work as part of the emerging direction toward programmable and virtualized content delivery. (<a href="https://arxiv.org/abs/1709.04437">arxiv.org</a>) Later unikernel systems research, including Unikraft, also lists the paper among prior work motivating specialized, rapidly deployable unikernels for edge and cloud environments. (<a href="https://research.manchester.ac.uk/files/221574616/unikraft_emsoft20.pdf">research.manchester.ac.uk</a>) The evidence indicates influence primarily on research into elastic content delivery, edge-cloud orchestration, and specialized virtualization rather than documented large-scale commercial deployment of MiniCache itself. (<a href="https://cordis.europa.eu/project/id/777067/results/es">cordis.europa.eu</a>)</p>
+
+  </section>
+
+  <hr class="paper-meta-divider" />
+
+  <footer class="article-metadata">
+    <div class="paper-categories">
+      <em>Category:</em>
+      <span data-pagefind-filter="category"><a href="/papers/categories/unikernels/">unikernels</a></span>
+    </div>
+
+    <div class="paper-keywords">
+      <em>Keywords:</em>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/cdn-simulation/">cdn simulation</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/content-delivery-networks/">content delivery networks</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/edge-computing/">edge computing</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/elastic-cdns/">elastic cdns</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/minicache/">minicache</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/network-function-virtualization/">network function virtualization</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/unikernels/">unikernels</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/video-streaming/">video streaming</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/virtualization/">virtualization</a></span>
+        <span data-pagefind-filter="keyword"><a href="/papers/keywords/xen/">xen</a></span>
+    </div>
+
+    <div class="paper-created">
+      <em>Added:</em> 2026-09-01 00:48:01
+    </div>
+
+    <div class="paper-colophon">
+      <em>Colophon:</em> Abstracts are pulled directly from the paper as-is. Summaries are AI generated which could introduce hallucinations and errors. Please use your judgement when evaluating and double-check sources.
+    </div>
+
+  </footer>
+</article>
+
+        </div>
+
+        <footer class="nav-footer" data-pagefind-ignore itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="Papers We Love">
+  <meta itemprop="url" content="https://paperswelove.org/">
+  <link itemprop="logo" href="https://paperswelove.org/images/papers-we-love-ogp.png">
+  <nav>
+    <ul class="nav-top-list nav-footer-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/papers/categories">Papers</a></li>
+      <li><a href="/chapter">Chapters</a></li>
+      <li><a href="https://github.com/papers-we-love/papers-we-love#contributing-guidelines">Submission Guidelines</a></li>
+      <li><a href="/videos.xml">Video Feed</a></li>
+      <li><a href="/papers_feed.xml">Paper Feed</a></li>
+    </ul>
+  </nav>
+  <h3>&copy; 2026 Papers We Love<sup>SM</sup>, all rights reserved | Watch the videos from <a href="http://pwlconf.org">PWLConf!</a>
+</footer>
+
+    </body>
+</html>
+<!--
+All content and design is Copyright (c) 2026
+Papers We Love, all rights reserved
+-->
